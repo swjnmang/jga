@@ -51,6 +51,7 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
   const [spotifyDevice, setSpotifyDevice] = useState<string | null>(null);
   const [spotifyReady, setSpotifyReady] = useState(false);
   const [spotifyError, setSpotifyError] = useState<string | null>(null);
+  const spotifyPlayerRef = useRef<Spotify.Player | null>(null);
 
   const sendYouTubeCommand = (command: 'playVideo' | 'pauseVideo') => {
     if (!iframeRef.current?.contentWindow) return;
@@ -101,7 +102,6 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
     if (choice?.type !== 'spotify') return;
     if (!spotifyToken) return;
 
-    const existing = document.getElementById('spotify-sdk');
     const ensureScript = () =>
       new Promise<void>((resolve) => {
         if (window.Spotify) return resolve();
@@ -112,21 +112,29 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
         document.body.appendChild(script);
       });
 
-    let player: Spotify.Player | null = null;
-
     const setup = async () => {
       await ensureScript();
 
       window.onSpotifyWebPlaybackSDKReady = () => {
-        player = new window.Spotify.Player({
+        if (spotifyPlayerRef.current) {
+          spotifyPlayerRef.current.disconnect();
+        }
+
+        const player = new window.Spotify.Player({
           name: 'Flex Quiz Player',
           getOAuthToken: (cb) => cb(spotifyToken),
           volume: 0.8
         });
 
+        spotifyPlayerRef.current = player;
+
         player.addListener('ready', ({ device_id }) => {
           setSpotifyDevice(device_id);
           setSpotifyReady(true);
+        });
+
+        player.addListener('player_state_changed', (state) => {
+          setIsPlaying(Boolean(state && !state.paused));
         });
 
         player.addListener('initialization_error', ({ message }) => setSpotifyError(message));
@@ -140,8 +148,9 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
     setup();
 
     return () => {
-      if (player) {
-        player.disconnect();
+      if (spotifyPlayerRef.current) {
+        spotifyPlayerRef.current.disconnect();
+        spotifyPlayerRef.current = null;
       }
     };
   }, [choice?.type, spotifyToken]);
@@ -177,9 +186,31 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
       } else {
         setSpotifyError(null);
         setShowSpotify(false);
+        setIsPlaying(true);
       }
     } catch (_err) {
       setSpotifyError('Wiedergabe konnte nicht gestartet werden');
+    }
+  };
+
+  const pauseSpotify = async () => {
+    if (!spotifyToken || !spotifyDevice) return;
+    try {
+      await fetch(`https://api.spotify.com/v1/me/player/pause?device_id=${spotifyDevice}`, {
+        method: 'PUT',
+        headers: { Authorization: `Bearer ${spotifyToken}` }
+      });
+      setIsPlaying(false);
+    } catch (_err) {
+      // ignore
+    }
+  };
+
+  const toggleSpotify = () => {
+    if (isPlaying) {
+      pauseSpotify();
+    } else {
+      playSpotifyTrack(choice?.type === 'spotify' ? choice.url : '');
     }
   };
 
@@ -238,9 +269,10 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
                   <button
                     type="button"
                     className="rounded-full bg-sand text-ink px-4 py-2 text-sm font-semibold shadow"
-                    onClick={() => playSpotifyTrack(choice.url)}
+                    onClick={toggleSpotify}
+                    disabled={!spotifyReady && !spotifyError}
                   >
-                    Play im Browser
+                    {isPlaying ? 'Pause' : 'Play'}
                   </button>
                   <button
                     type="button"

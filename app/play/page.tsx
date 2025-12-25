@@ -1,10 +1,19 @@
 "use client";
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { cards } from '@/lib/cards';
 import { MediaEmbed } from '@/components/MediaEmbed';
 
 const DURATION = 180;
+
+function shuffle<T>(arr: T[]): T[] {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
 
 type TimerState = {
   secondsLeft: number;
@@ -13,14 +22,16 @@ type TimerState = {
 
 export default function PlayPage() {
   const deck = useMemo(() => cards, []);
+  const shuffledDeck = useMemo(() => shuffle(deck), [deck]);
   const [index, setIndex] = useState(0);
   const [timer, setTimer] = useState<TimerState>({ secondsLeft: DURATION, running: true });
   const [blackedOut, setBlackedOut] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
   const [needsSpotifyAuth, setNeedsSpotifyAuth] = useState<boolean | null>(null);
+  const requestedFullscreen = useRef(false);
 
-  const card = deck[index];
-  const isLast = index === deck.length - 1;
+  const card = shuffledDeck[index];
+  const isLast = index === shuffledDeck.length - 1;
 
   useEffect(() => {
     if (!timer.running) return;
@@ -51,8 +62,24 @@ export default function PlayPage() {
     checkSpotify();
   }, []);
 
+  // Attempt fullscreen after first user interaction.
+  useEffect(() => {
+    const handler = () => {
+      if (requestedFullscreen.current) return;
+      requestedFullscreen.current = true;
+      if (document.fullscreenElement) return;
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen().catch(() => {
+          // ignore user dismissal
+        });
+      }
+    };
+    document.addEventListener('pointerdown', handler, { once: true });
+    return () => document.removeEventListener('pointerdown', handler);
+  }, []);
+
   const nextCard = () => {
-    if (index < deck.length - 1) {
+    if (index < shuffledDeck.length - 1) {
       setIndex((i) => i + 1);
       resetTimer();
       setShowSolution(false);
@@ -97,7 +124,7 @@ export default function PlayPage() {
     <main className="relative mx-auto max-w-4xl px-5 py-10 space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Frage {index + 1} / {deck.length}</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Frage {index + 1} / {shuffledDeck.length}</p>
           <h1 className="text-3xl font-display">Spielmodus</h1>
           <p className="text-sm text-ink/70">Fragen erscheinen direkt, Teams notieren auf leere Karten. Kein QR, nur Flex Quiz.</p>
         </div>
