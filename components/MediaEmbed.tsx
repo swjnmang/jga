@@ -115,7 +115,7 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
     const setup = async () => {
       await ensureScript();
 
-      window.onSpotifyWebPlaybackSDKReady = () => {
+      const initializePlayer = () => {
         if (spotifyPlayerRef.current) {
           spotifyPlayerRef.current.disconnect();
         }
@@ -148,6 +148,12 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
 
         player.connect();
       };
+
+      window.onSpotifyWebPlaybackSDKReady = initializePlayer;
+
+      if (window.Spotify) {
+        initializePlayer();
+      }
     };
 
     setup();
@@ -212,6 +218,10 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
   };
 
   const toggleSpotify = () => {
+    if (!spotifyToken) {
+      setSpotifyError('Spotify Login erforderlich');
+      return;
+    }
     if (isPlaying) {
       pauseSpotify();
     } else {
@@ -275,7 +285,7 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
                     type="button"
                     className="rounded-full bg-sand text-ink px-4 py-2 text-sm font-semibold shadow"
                     onClick={toggleSpotify}
-                    disabled={!spotifyReady && !spotifyError}
+                    disabled={!spotifyToken}
                   >
                     {isPlaying ? 'Pause' : 'Play'}
                   </button>
