@@ -120,6 +120,11 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
           spotifyPlayerRef.current.disconnect();
         }
 
+        if (!window.Spotify) {
+          setSpotifyError('Spotify SDK nicht verfügbar');
+          return;
+        }
+
         const player = new window.Spotify.Player({
           name: 'Flex Quiz Player',
           getOAuthToken: (cb) => cb(spotifyToken),
