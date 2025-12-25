@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Card, MediaPreference } from '@/lib/types';
 
 function toYouTubeEmbed(url: string) {
@@ -45,6 +45,8 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
   const choice = resolveSource(card, preference);
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showSpotify, setShowSpotify] = useState(false);
+  const origin = useMemo(() => (typeof window !== 'undefined' ? window.location.origin : ''), []);
 
   const sendYouTubeCommand = (command: 'playVideo' | 'pauseVideo') => {
     if (!iframeRef.current?.contentWindow) return;
@@ -68,6 +70,7 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
   useEffect(() => {
     // Stop playback when source changes.
     setIsPlaying(false);
+    setShowSpotify(false);
   }, [choice?.type, choice && 'url' in choice ? (choice as any).url : '']);
 
   if (!choice) {
@@ -76,7 +79,8 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
 
   switch (choice.type) {
     case 'youtube': {
-      const embedUrl = (toYouTubeEmbed(choice.url) ?? choice.url) + (choice.url.includes('?') ? '&' : '?') + 'enablejsapi=1&controls=0&rel=0&modestbranding=1';
+      const baseUrl = toYouTubeEmbed(choice.url) ?? choice.url;
+      const embedUrl = `${baseUrl}${baseUrl.includes('?') ? '&' : '?'}enablejsapi=1&controls=0&rel=0&modestbranding=1&playsinline=1${origin ? `&origin=${encodeURIComponent(origin)}` : ''}`;
       return (
         <div className="space-y-2 relative">
           <div className="aspect-video overflow-hidden rounded-2xl card-surface relative bg-ink">
@@ -84,6 +88,7 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
               src={embedUrl}
               className="h-full w-full opacity-0 absolute inset-0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              referrerPolicy="strict-origin-when-cross-origin"
               ref={iframeRef}
               allowFullScreen
               title="Medieninhalt"
@@ -114,13 +119,20 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
               width="100%"
               height="200"
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              className={`w-full transition-opacity ${showSpotify ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
               title="Medieninhalt"
             />
-            <div className="absolute inset-0 flex items-center justify-center text-sand">
-              <div className="rounded-full bg-sand text-ink px-4 py-2 text-sm font-semibold shadow">
-                Play/Pause in Spotify
+            {!showSpotify && (
+              <div className="absolute inset-0 flex items-center justify-center text-sand bg-ink">
+                <button
+                  type="button"
+                  className="rounded-full bg-sand text-ink px-4 py-2 text-sm font-semibold shadow"
+                  onClick={() => setShowSpotify(true)}
+                >
+                  Spotify-Player öffnen
+                </button>
               </div>
-            </div>
+            )}
           </div>
           <a className="text-sm underline" href={choice.url} target="_blank" rel="noreferrer">
             In Spotify öffnen
