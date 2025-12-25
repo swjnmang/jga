@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
-import { CardCategory } from '@/lib/types';
+import { CardCategory, Difficulty } from '@/lib/types';
 
 const STORAGE_KEY = 'jga-custom-cards';
 
@@ -13,6 +13,7 @@ type AdminCard = {
   year: number;
   mediaUrl: string;
   answer: string;
+  difficulty: Difficulty;
 };
 
 export default function SettingsPage() {
@@ -23,7 +24,8 @@ export default function SettingsPage() {
     category: 'music',
     year: new Date().getFullYear(),
     mediaUrl: '',
-    answer: ''
+    answer: '',
+    difficulty: 'leicht'
   });
 
   useEffect(() => {
@@ -104,6 +106,7 @@ export default function SettingsPage() {
               <option value="video">Video</option>
               <option value="quote">Quote</option>
               <option value="image">Bild</option>
+              <option value="country">Länder</option>
             </select>
           </label>
           <label className="text-sm space-y-1">
@@ -114,6 +117,18 @@ export default function SettingsPage() {
               value={draft.year}
               onChange={(e) => setDraft({ ...draft, year: Number(e.target.value) })}
             />
+          </label>
+          <label className="text-sm space-y-1">
+            <span>Schwierigkeit</span>
+            <select
+              className="w-full rounded-xl border border-ink/20 px-3 py-2"
+              value={draft.difficulty}
+              onChange={(e) => setDraft({ ...draft, difficulty: e.target.value as Difficulty })}
+            >
+              <option value="leicht">Leicht</option>
+              <option value="mittel">Mittel</option>
+              <option value="schwer">Schwer</option>
+            </select>
           </label>
           <label className="text-sm space-y-1 md:col-span-2">
             <span>Medien-URL (Spotify/YouTube/Bild/Text-URL)</span>
@@ -163,6 +178,7 @@ export default function SettingsPage() {
                 <div>
                   <p className="font-semibold">{c.title || 'Ohne Titel'} ({c.category})</p>
                   <p className="text-ink/60">{c.year} · {c.mediaUrl}</p>
+                  <p className="text-xs text-ink/60">Schwierigkeit: {c.difficulty}</p>
                 </div>
                 <button
                   type="button"

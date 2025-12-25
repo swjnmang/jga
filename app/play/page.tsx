@@ -121,7 +121,7 @@ export default function PlayPage() {
   const seconds = (timer.secondsLeft % 60).toString().padStart(2, '0');
 
   return (
-    <main className="relative mx-auto max-w-4xl px-5 py-10 space-y-6">
+    <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
       <div className="flex items-center justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Frage {index + 1} / {shuffledDeck.length}</p>
@@ -134,7 +134,7 @@ export default function PlayPage() {
         </div>
       </div>
 
-      <section className="card-surface rounded-2xl p-5 space-y-3">
+      <section className="card-surface rounded-2xl p-4 sm:p-5 space-y-3">
         <div className="flex items-center justify-between">
           <p className="text-xs uppercase tracking-wide text-ink/60">{card.category}</p>
           <span className="text-xs rounded-full bg-ink text-sand px-3 py-1">versteckte Lösung</span>
@@ -153,24 +153,24 @@ export default function PlayPage() {
         )}
       </section>
 
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap gap-3 pb-4 sm:pb-0">
         <button
           type="button"
-          className="rounded-full bg-ink text-sand px-4 py-2 text-sm font-semibold"
+          className="rounded-full bg-ink text-sand px-4 py-3 text-sm font-semibold w-full sm:w-auto text-center"
           onClick={nextCard}
         >
           {isLast ? 'Fertig' : 'Zur nächsten Frage'}
         </button>
         <button
           type="button"
-          className="rounded-full border border-ink/20 px-4 py-2 text-sm"
+          className="rounded-full border border-ink/20 px-4 py-3 text-sm w-full sm:w-auto text-center"
           onClick={resetTimer}
         >
           Timer neu starten
         </button>
         <button
           type="button"
-          className="rounded-full border border-ink/20 px-4 py-2 text-sm"
+          className="rounded-full border border-ink/20 px-4 py-3 text-sm w-full sm:w-auto text-center"
           onClick={() => setShowSolution(true)}
         >
           Lösung

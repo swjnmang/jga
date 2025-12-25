@@ -9,6 +9,7 @@ export const cards: Card[] = [
     cue: 'Starte den Song und ordne ihn zeitlich ein.',
     answer: 'Nirvana — Release 1991 auf dem Album Nevermind.',
     hint: 'Grunge aus Seattle.',
+    difficulty: 'mittel',
     sources: {
       spotify: 'https://open.spotify.com/track/5ghIJDpPoe3CfHMGu71E6T'
     }
@@ -21,6 +22,7 @@ export const cards: Card[] = [
     cue: 'Höre das Zitat oder lese es laut vor.',
     answer: 'Angela Merkel, Pressekonferenz zur Flüchtlingspolitik am 31.08.2015.',
     hint: 'Bundeskanzlerin zur Migrationslage.',
+    difficulty: 'leicht',
     sources: {
       text: '„Wir schaffen das.“'
     }
@@ -33,6 +35,7 @@ export const cards: Card[] = [
     cue: 'Wann war das? Benenne außerdem eine berühmte Persönlichkeit oder einen Ort, der mit diesem Ereignis in Verbindung gesetzt wird.',
     answer: 'Helmut Rahn erzielt das 3:2 im WM-Finale am 04.07.1954.',
     hint: 'Das Wunder von Bern.',
+    difficulty: 'mittel',
     sources: {
       youtube: 'https://www.youtube.com/watch?v=1d3cZsWzV3s'
     }
@@ -45,6 +48,7 @@ export const cards: Card[] = [
     cue: 'Ein Ausschnitt aus einer berühmten Rede.',
     answer: 'Martin Luther King Jr., 28.08.1963, Washington D.C.',
     hint: 'Bürgerrechtsbewegung in den USA.',
+    difficulty: 'mittel',
     sources: {
       youtube: 'https://www.youtube.com/watch?v=vP4iY1TtS3s',
       text: '“I have a dream.”'
@@ -58,6 +62,7 @@ export const cards: Card[] = [
     cue: 'Bild ansehen und chronologisch einordnen. Frage: Wo und wann war das?',
     answer: 'Berlin, 09.11.1989 – Fall der Berliner Mauer.',
     hint: 'Europa, Kalter Krieg.',
+    difficulty: 'leicht',
     sources: {
       image: 'https://placehold.co/900x600/ff7a8a/0f172a?text=Berliner+Mauerfall'
     }
@@ -70,6 +75,7 @@ export const cards: Card[] = [
     cue: 'Bild ansehen und einordnen. Frage: Wo und wann war das?',
     answer: 'Gizeh, ca. 2560 v. Chr. – Cheops-Pyramide.',
     hint: 'Altes Ägypten.',
+    difficulty: 'schwer',
     sources: {
       image: 'https://placehold.co/900x600/d1f3e0/0f172a?text=Cheops-Pyramide'
     }
@@ -82,6 +88,7 @@ export const cards: Card[] = [
     cue: 'Song anhören und einordnen.',
     answer: 'Adele — 2010, Album 21.',
     hint: 'Londoner Sängerin, Durchbruch-Single.',
+    difficulty: 'leicht',
     sources: {
       spotify: 'https://open.spotify.com/track/6j6ZtpxjR0L9gLd7krr6m3'
     }
@@ -94,6 +101,7 @@ export const cards: Card[] = [
     cue: 'Song anhören und einordnen.',
     answer: 'Queen — 1975, Album A Night at the Opera.',
     hint: 'Opernartige Rock-Hymne.',
+    difficulty: 'mittel',
     sources: {
       spotify: 'https://open.spotify.com/track/7tFiyTwD0nx5a1eklYtX2J'
     }
@@ -106,6 +114,7 @@ export const cards: Card[] = [
     cue: 'Song anhören und einordnen.',
     answer: 'Michael Jackson — 1982, Album Thriller.',
     hint: 'King of Pop.',
+    difficulty: 'mittel',
     sources: {
       spotify: 'https://open.spotify.com/track/5ChkMS8OtdzJeqyybCc9R5'
     }
@@ -118,6 +127,7 @@ export const cards: Card[] = [
     cue: 'Song anhören und einordnen.',
     answer: 'Ed Sheeran — 2017, Album ÷.',
     hint: 'Pop-Hit aus UK.',
+    difficulty: 'leicht',
     sources: {
       spotify: 'https://open.spotify.com/track/7qiZfU4dY1lWllzX7mPBI3'
     }
@@ -130,6 +140,7 @@ export const cards: Card[] = [
     cue: 'Song anhören und einordnen.',
     answer: 'The Weeknd — 2019, Album After Hours.',
     hint: 'Synthwave-Revival.',
+    difficulty: 'leicht',
     sources: {
       spotify: 'https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b'
     }
@@ -142,6 +153,7 @@ export const cards: Card[] = [
     cue: 'Song anhören und einordnen.',
     answer: 'a-ha — 1985, Album Hunting High and Low.',
     hint: 'Norwegische Synth-Pop-Band.',
+    difficulty: 'mittel',
     sources: {
       spotify: 'https://open.spotify.com/track/2WfaOiMkCvy7F5fcp2zZ8L'
     }
@@ -154,6 +166,7 @@ export const cards: Card[] = [
     cue: 'Wann war das? Benenne außerdem eine berühmte Persönlichkeit oder einen Ort, der mit diesem Ereignis in Verbindung gesetzt wird.',
     answer: 'Apollo 11, 20.07.1969 — Neil Armstrong betritt den Mond.',
     hint: 'NASA, Kalter Krieg.',
+    difficulty: 'schwer',
     sources: {
       youtube: 'https://www.youtube.com/watch?v=HCt1BwWE2gA'
     }
@@ -166,6 +179,7 @@ export const cards: Card[] = [
     cue: 'Wann war das? Benenne außerdem eine berühmte Persönlichkeit oder einen Ort, der mit diesem Ereignis in Verbindung gesetzt wird.',
     answer: 'Öffnung der innerdeutschen Grenze am 09.11.1989.',
     hint: 'DDR, Grenzöffnung.',
+    difficulty: 'leicht',
     sources: {
       youtube: 'https://www.youtube.com/watch?v=zmRPP2WXX0U'
     }
@@ -178,6 +192,7 @@ export const cards: Card[] = [
     cue: 'Bild ansehen: Wo und wann war das?',
     answer: 'Mond, 20.07.1969 — Apollo 11 Flaggenaufstellung.',
     hint: 'Erste bemannte Mondlandung.',
+    difficulty: 'mittel',
     sources: {
       image: 'https://placehold.co/900x600/0f172a/f6f1e9?text=Apollo+11+1969'
     }
@@ -190,6 +205,7 @@ export const cards: Card[] = [
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
     answer: 'John F. Kennedy, Rice University Speech, 12.09.1962.',
     hint: 'US-Präsident, Raumfahrt-Rede.',
+    difficulty: 'schwer',
     sources: {
       youtube: 'https://www.youtube.com/watch?v=g25G1M4EXrQ',
       text: '“We choose to go to the Moon.”'
@@ -203,6 +219,7 @@ export const cards: Card[] = [
     cue: 'Zitat lesen/anhören.',
     answer: 'Nelson Mandela, 2001.',
     hint: 'Südafrika, Versöhnung.',
+    difficulty: 'mittel',
     sources: {
       text: '“It always seems impossible until it’s done.”'
     }
@@ -215,6 +232,7 @@ export const cards: Card[] = [
     cue: 'Wie heißt das dazugehörige Land und wann wurde es gegründet?',
     answer: 'Bundesrepublik Deutschland – 23.05.1949 (Grundgesetz in Kraft).',
     hint: 'Europa, schwarz-rot-gold.',
+    difficulty: 'leicht',
     sources: {
       image: 'https://placehold.co/900x600/000000/ffce00?text=Deutschland'
     }

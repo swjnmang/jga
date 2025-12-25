@@ -1,5 +1,7 @@
 export type CardCategory = 'music' | 'quote' | 'video' | 'image' | 'country';
 
+export type Difficulty = 'leicht' | 'mittel' | 'schwer';
+
 export type MediaSources = {
   youtube?: string;
   spotify?: string;
@@ -17,6 +19,7 @@ export type Card = {
   cue: string;
   answer: string;
   hint?: string;
+  difficulty: Difficulty;
   sources: MediaSources;
   background?: string;
   color?: string;

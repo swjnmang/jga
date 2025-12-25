@@ -289,13 +289,6 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
                   >
                     {isPlaying ? 'Pause' : 'Play'}
                   </button>
-                  <button
-                    type="button"
-                    className="rounded-full border border-sand/40 text-sand px-4 py-2 text-xs"
-                    onClick={() => setShowSpotify(true)}
-                  >
-                    Spotify-Player öffnen
-                  </button>
                   {spotifyError && <p className="text-xs text-red-200">{spotifyError}</p>}
                   {!spotifyReady && !spotifyError && spotifyToken && (
                     <p className="text-xs text-sand/80">Initialisiere Spotify Player …</p>
@@ -304,9 +297,6 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
               </div>
             )}
           </div>
-          <a className="text-sm underline" href={choice.url} target="_blank" rel="noreferrer">
-            In Spotify öffnen
-          </a>
         </div>
       );
     }
