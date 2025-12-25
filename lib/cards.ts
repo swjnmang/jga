@@ -206,6 +206,18 @@ export const cards: Card[] = [
     sources: {
       text: '“It always seems impossible until it’s done.”'
     }
+  },
+  {
+    id: 'country-germany-flag',
+    title: 'Flagge Deutschlands',
+    category: 'country',
+    year: 1949,
+    cue: 'Wie heißt das dazugehörige Land und wann wurde es gegründet?',
+    answer: 'Bundesrepublik Deutschland – 23.05.1949 (Grundgesetz in Kraft).',
+    hint: 'Europa, schwarz-rot-gold.',
+    sources: {
+      image: 'https://placehold.co/900x600/000000/ffce00?text=Deutschland'
+    }
   }
 ];
 

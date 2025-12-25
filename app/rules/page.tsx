@@ -30,6 +30,7 @@ export default function RulesPage() {
           <li><strong>Video</strong>: Clip ohne Titel.</li>
           <li><strong>Quote</strong>: Nur das Zitat, ohne Jahr/Person.</li>
           <li><strong>Bild</strong>: Frage „Wo und wann war das?”</li>
+          <li><strong>Länder</strong>: Flagge oder Umriss; Frage: „Wie heißt das dazugehörige Land und wann wurde es gegründet?”</li>
         </ul>
       </section>
 

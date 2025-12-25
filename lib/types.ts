@@ -1,4 +1,4 @@
-export type CardCategory = 'music' | 'quote' | 'video' | 'image';
+export type CardCategory = 'music' | 'quote' | 'video' | 'image' | 'country';
 
 export type MediaSources = {
   youtube?: string;
