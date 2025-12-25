@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { useEffect, useRef, useState } from 'react';
 import { Card, MediaPreference } from '@/lib/types';
 
 function toYouTubeEmbed(url: string) {
@@ -42,6 +43,32 @@ type Props = {
 
 export function MediaEmbed({ card, preference, concealMetadata = false }: Props) {
   const choice = resolveSource(card, preference);
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const sendYouTubeCommand = (command: 'playVideo' | 'pauseVideo') => {
+    if (!iframeRef.current?.contentWindow) return;
+    iframeRef.current.contentWindow.postMessage(
+      JSON.stringify({ event: 'command', func: command, args: [] }),
+      '*'
+    );
+  };
+
+  const togglePlay = () => {
+    if (choice?.type !== 'youtube') return;
+    if (isPlaying) {
+      sendYouTubeCommand('pauseVideo');
+      setIsPlaying(false);
+    } else {
+      sendYouTubeCommand('playVideo');
+      setIsPlaying(true);
+    }
+  };
+
+  useEffect(() => {
+    // Stop playback when source changes.
+    setIsPlaying(false);
+  }, [choice?.type, choice && 'url' in choice ? (choice as any).url : '']);
 
   if (!choice) {
     return <p className="text-sm text-ink/70">Keine Quelle hinterlegt.</p>;
@@ -49,22 +76,27 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
 
   switch (choice.type) {
     case 'youtube': {
-      const embedUrl = toYouTubeEmbed(choice.url) ?? choice.url;
+      const embedUrl = (toYouTubeEmbed(choice.url) ?? choice.url) + (choice.url.includes('?') ? '&' : '?') + 'enablejsapi=1&controls=0&rel=0&modestbranding=1';
       return (
         <div className="space-y-2 relative">
-          <div className="aspect-video overflow-hidden rounded-2xl card-surface">
+          <div className="aspect-video overflow-hidden rounded-2xl card-surface relative bg-ink">
             <iframe
               src={embedUrl}
-              className="h-full w-full"
+              className="h-full w-full opacity-0 absolute inset-0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ref={iframeRef}
               allowFullScreen
               title="Medieninhalt"
             />
-            {concealMetadata && (
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/80 to-ink/60 text-sand flex items-center justify-center text-sm font-semibold">
-                Verdeckter Inhalt – nur anhören
-              </div>
-            )}
+            <div className="absolute inset-0 flex items-center justify-center text-sand">
+              <button
+                type="button"
+                className="rounded-full bg-sand text-ink px-4 py-2 text-sm font-semibold shadow"
+                onClick={togglePlay}
+              >
+                {isPlaying ? 'Pause' : 'Play'}
+              </button>
+            </div>
           </div>
           <a className="text-sm underline" href={choice.url} target="_blank" rel="noreferrer">
             Auf YouTube öffnen
@@ -76,7 +108,7 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
       const embedUrl = toSpotifyEmbed(choice.url) ?? choice.url;
       return (
         <div className="space-y-2 relative">
-          <div className="overflow-hidden rounded-2xl card-surface">
+          <div className="overflow-hidden rounded-2xl card-surface relative bg-ink">
             <iframe
               src={embedUrl}
               width="100%"
@@ -84,11 +116,11 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               title="Medieninhalt"
             />
-            {concealMetadata && (
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/80 to-ink/60 text-sand flex items-center justify-center text-sm font-semibold">
-                Verdeckter Inhalt – nur anhören
+            <div className="absolute inset-0 flex items-center justify-center text-sand">
+              <div className="rounded-full bg-sand text-ink px-4 py-2 text-sm font-semibold shadow">
+                Play/Pause in Spotify
               </div>
-            )}
+            </div>
           </div>
           <a className="text-sm underline" href={choice.url} target="_blank" rel="noreferrer">
             In Spotify öffnen
