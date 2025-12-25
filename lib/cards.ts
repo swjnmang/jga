@@ -30,7 +30,7 @@ export const cards: Card[] = [
     title: 'Tor im WM-Finale 1954',
     category: 'video',
     year: 1954,
-    cue: 'Kurzer Clip aus dem Endspiel in Bern.',
+    cue: 'Wann war das? Benenne außerdem eine berühmte Persönlichkeit oder einen Ort, der mit diesem Ereignis in Verbindung gesetzt wird.',
     answer: 'Helmut Rahn erzielt das 3:2 im WM-Finale am 04.07.1954.',
     hint: 'Das Wunder von Bern.',
     sources: {
@@ -151,7 +151,7 @@ export const cards: Card[] = [
     title: 'Mondlandung 1969',
     category: 'video',
     year: 1969,
-    cue: 'Kurzer Clip der ersten Mondlandung.',
+    cue: 'Wann war das? Benenne außerdem eine berühmte Persönlichkeit oder einen Ort, der mit diesem Ereignis in Verbindung gesetzt wird.',
     answer: 'Apollo 11, 20.07.1969 — Neil Armstrong betritt den Mond.',
     hint: 'NASA, Kalter Krieg.',
     sources: {
@@ -163,7 +163,7 @@ export const cards: Card[] = [
     title: 'Mauerfall 1989',
     category: 'video',
     year: 1989,
-    cue: 'TV-Bilder vom Fall der Berliner Mauer.',
+    cue: 'Wann war das? Benenne außerdem eine berühmte Persönlichkeit oder einen Ort, der mit diesem Ereignis in Verbindung gesetzt wird.',
     answer: 'Öffnung der innerdeutschen Grenze am 09.11.1989.',
     hint: 'DDR, Grenzöffnung.',
     sources: {
