@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #0f172a;
+  background-color: #f6f1e9;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f6f1e9;
+  color: #0f172a;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+.card-surface {
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .no-print {
+    display: none;
+  }
+
+  .print-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0.5in;
+    padding: 0;
+  }
+
+  .print-card {
+    page-break-inside: avoid;
+  }
+}
