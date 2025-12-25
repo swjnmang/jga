@@ -15,6 +15,7 @@ Lokale URL: http://localhost:3000
 
 - `/` Landing mit Hauptmenü (Spiel starten, Einstellungen, Spielregeln)
 - `/play` Spielmodus: Fragen direkt anzeigen, 3:00 Timer, „Zur nächsten Frage“
+ - `/play` Spielmodus: Fragen direkt anzeigen, 3:00 Timer, „Zur nächsten Frage“, optional Spotify-Premium Login
 - `/print` Drucklayout: Leere Karten (Front: Team-Lösung, Back: Musterlösung)
 - `/rules` Spielregeln
 - `/settings` Lokales Hinzufügen von Karten (Prototyp, nur Browser-Storage)
@@ -45,3 +46,8 @@ Setze `NEXT_PUBLIC_APP_URL` in `.env.local`, falls du externe Links generierst. 
 
 - Musik/Video werden verdeckt eingebettet (Overlay), Titel/Jahr bleiben verborgen.
 - 3:00 Timer pro Frage; nach Ablauf wird der Bildschirm schwarz, manuell zur nächsten Frage.
+
+## Spotify Login (PKCE)
+
+- Setze `SPOTIFY_CLIENT_ID` in `.env.local`.
+- Beim ersten Besuch von /play erscheint ein Dialog zum Spotify-Premium-Login. Der Flow nutzt PKCE (ohne Client Secret) über `/api/spotify/authorize` → `/api/spotify/callback` und speichert Tokens in HTTP-only Cookies.

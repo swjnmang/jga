@@ -17,6 +17,7 @@ export default function PlayPage() {
   const [timer, setTimer] = useState<TimerState>({ secondsLeft: DURATION, running: true });
   const [blackedOut, setBlackedOut] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
+  const [needsSpotifyAuth, setNeedsSpotifyAuth] = useState<boolean | null>(null);
 
   const card = deck[index];
   const isLast = index === deck.length - 1;
@@ -36,6 +37,19 @@ export default function PlayPage() {
       setTimer((prev) => ({ ...prev, running: false }));
     }
   }, [timer.secondsLeft]);
+
+  useEffect(() => {
+    const checkSpotify = async () => {
+      try {
+        const res = await fetch('/api/spotify/session');
+        const json = await res.json();
+        setNeedsSpotifyAuth(!json.authenticated);
+      } catch (_err) {
+        setNeedsSpotifyAuth(true);
+      }
+    };
+    checkSpotify();
+  }, []);
 
   const nextCard = () => {
     if (index < deck.length - 1) {
@@ -161,6 +175,33 @@ export default function PlayPage() {
           >
             {isLast ? 'Fertig' : 'Zur nächsten Frage'}
           </button>
+        </div>
+      )}
+
+      {needsSpotifyAuth && (
+        <div className="fixed inset-0 z-50 bg-ink/80 backdrop-blur-sm flex items-center justify-center px-4">
+          <div className="max-w-md w-full rounded-2xl bg-sand p-6 space-y-3 shadow-xl text-center">
+            <h2 className="text-xl font-semibold text-ink">Mit Spotify Premium verbinden</h2>
+            <p className="text-sm text-ink/80">
+              Vor dem Start bitte mit deinem Spotify Premium Account anmelden, damit die Songs ohne
+              Werbung und in voller Länge abgespielt werden können.
+            </p>
+            <div className="flex justify-center gap-3 pt-2">
+              <a
+                href="/api/spotify/authorize"
+                className="rounded-full bg-ink text-sand px-4 py-2 text-sm font-semibold"
+              >
+                Spotify Login starten
+              </a>
+              <button
+                type="button"
+                className="rounded-full border border-ink/20 px-4 py-2 text-sm"
+                onClick={() => setNeedsSpotifyAuth(false)}
+              >
+                Später
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </main>
