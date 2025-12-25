@@ -1,10 +1,10 @@
 "use client";
 
+import Link from 'next/link';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { cards } from '@/lib/cards';
+import { cards, getCategories } from '@/lib/cards';
 import { MediaEmbed } from '@/components/MediaEmbed';
-
-const DURATION = 180;
+import { getDefaultSettings, loadSettings, UserSettings } from '@/lib/userSettings';
 
 function shuffle<T>(arr: T[]): T[] {
   const copy = [...arr];
@@ -21,17 +21,41 @@ type TimerState = {
 };
 
 export default function PlayPage() {
-  const deck = useMemo(() => cards, []);
-  const shuffledDeck = useMemo(() => shuffle(deck), [deck]);
+  const availableCategories = useMemo(() => getCategories(cards), []);
+  const defaults = useMemo(() => getDefaultSettings(availableCategories), [availableCategories]);
+  const [settings, setSettings] = useState<UserSettings>(defaults);
+  const filteredDeck = useMemo(
+    () =>
+      shuffle(
+        cards.filter(
+          (c) => settings.categories.includes(c.category) && settings.difficulties.includes(c.difficulty)
+        )
+      ),
+    [settings]
+  );
   const [index, setIndex] = useState(0);
-  const [timer, setTimer] = useState<TimerState>({ secondsLeft: DURATION, running: true });
+  const [timer, setTimer] = useState<TimerState>({ secondsLeft: settings.timerSeconds, running: true });
   const [blackedOut, setBlackedOut] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
   const [needsSpotifyAuth, setNeedsSpotifyAuth] = useState<boolean | null>(null);
   const requestedFullscreen = useRef(false);
 
-  const card = shuffledDeck[index];
-  const isLast = index === shuffledDeck.length - 1;
+  useEffect(() => {
+    const stored = loadSettings(defaults);
+    setSettings(stored);
+    setTimer({ secondsLeft: stored.timerSeconds, running: true });
+    setIndex(0);
+  }, [defaults]);
+
+  useEffect(() => {
+    setIndex(0);
+    setBlackedOut(false);
+    setShowSolution(false);
+    setTimer({ secondsLeft: settings.timerSeconds, running: true });
+  }, [settings]);
+
+  const card = filteredDeck[index];
+  const isLast = index === filteredDeck.length - 1;
 
   useEffect(() => {
     if (!timer.running) return;
@@ -79,7 +103,7 @@ export default function PlayPage() {
   }, []);
 
   const nextCard = () => {
-    if (index < shuffledDeck.length - 1) {
+    if (index < filteredDeck.length - 1) {
       setIndex((i) => i + 1);
       resetTimer();
       setShowSolution(false);
@@ -91,7 +115,7 @@ export default function PlayPage() {
   };
 
   const resetTimer = () => {
-    setTimer({ secondsLeft: DURATION, running: true });
+    setTimer({ secondsLeft: settings.timerSeconds, running: true });
     setBlackedOut(false);
     setShowSolution(false);
   };
@@ -99,18 +123,27 @@ export default function PlayPage() {
   if (!card) {
     return (
       <main className="mx-auto max-w-3xl px-5 py-12 space-y-6 text-center">
-        <h1 className="text-3xl font-display">Alle Fragen durchgespielt</h1>
-        <p className="text-ink/70">Du kannst den Durchlauf neu starten.</p>
-        <button
-          type="button"
-          className="rounded-full bg-ink text-sand px-4 py-2 text-sm font-semibold"
-          onClick={() => {
-            setIndex(0);
-            resetTimer();
-          }}
-        >
-          Neustart
-        </button>
+        <h1 className="text-3xl font-display">Keine Karten aktiv</h1>
+        <p className="text-ink/70">Aktiviere mindestens eine Kategorie und einen Schwierigkeitsgrad in den Einstellungen.</p>
+        <div className="flex items-center justify-center gap-3 flex-wrap">
+          <Link
+            href="/settings"
+            className="rounded-full bg-ink text-sand px-4 py-2 text-sm font-semibold"
+          >
+            Zu den Einstellungen
+          </Link>
+          <button
+            type="button"
+            className="rounded-full border border-ink/20 px-4 py-2 text-sm"
+            onClick={() => {
+              setSettings(defaults);
+              setTimer({ secondsLeft: defaults.timerSeconds, running: true });
+              setIndex(0);
+            }}
+          >
+            Standard aktivieren
+          </button>
+        </div>
       </main>
     );
   }
@@ -124,7 +157,7 @@ export default function PlayPage() {
     <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Frage {index + 1} / {shuffledDeck.length}</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Frage {index + 1} / {filteredDeck.length}</p>
           <h1 className="text-3xl font-display">Spielmodus</h1>
           <p className="text-sm text-ink/70">Fragen erscheinen direkt, Teams notieren auf leere Karten. Kein QR, nur Flex Quiz.</p>
         </div>
