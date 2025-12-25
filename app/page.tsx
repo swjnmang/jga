@@ -7,14 +7,15 @@ export default function HomePage() {
   return (
     <main className="mx-auto max-w-5xl px-6 py-12 space-y-12">
       <section className="space-y-6">
-        <p className="text-sm uppercase tracking-[0.2em] text-ink/70">Timeline Game</p>
+        <p className="text-sm uppercase tracking-[0.2em] text-ink/70">Flex Quiz</p>
         <div className="space-y-4">
           <h1 className="text-4xl md:text-5xl font-display leading-tight">
-            Direkt spielen: abspielen, ordnen, notieren.
+            Flexibel spielen, eigene Fragen, Flex Buttons.
           </h1>
           <p className="text-lg text-ink/80">
-            Kein QR-Scan mehr: Die Fragen erscheinen direkt. Teams schreiben ihre Lösung auf leere
-            Karten und tragen die Musterlösung rückseitig ein.
+            Flex Quiz funktioniert ohne QR-Scans: Fragen erscheinen direkt, Karten bleiben leer für
+            deine eigenen Prompts. Teams können nach jedem Zug einen Flex Button werfen – ist der
+            Flex richtig, gehört ihnen die letzte Karte, sonst ist der Button weg.
           </p>
         </div>
 
@@ -30,6 +31,7 @@ export default function HomePage() {
             <li>1) Drucke leere Karten (Front: Team-Lösung, Back: Musterlösung).</li>
             <li>2) In der App „Spiel starten“: Frage erscheint direkt, Timer 3:00 läuft.</li>
             <li>3) Teams schreiben Lösung auf die leere Karte, Rückseite für Musterlösung.</li>
+            <li>4) Flex Buttons: Nach jedem Zug dürfen andere Teams flexen, richtig = Karte stehlen, falsch = Button verlieren.</li>
           </ul>
           <div className="rounded-xl bg-mint/70 text-ink p-4 text-sm">
             Medien werden direkt gestreamt; keine QR-Codes mehr erforderlich. Eigene Bilder/Zitate

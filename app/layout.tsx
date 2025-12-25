@@ -6,8 +6,8 @@ const display = Space_Grotesk({ subsets: ['latin'], variable: '--font-display' }
 const body = Inter({ subsets: ['latin'], variable: '--font-body' });
 
 export const metadata: Metadata = {
-  title: 'QR Timeline Game',
-  description: 'Karten scannen, Medien abspielen, Ereignisse zeitlich ordnen.',
+  title: 'Flex Quiz',
+  description: 'Flexibles Timeline-Quiz mit eigenen Fragen und Flex Buttons.',
   manifest: '/manifest.webmanifest'
 };
 

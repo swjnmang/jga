@@ -1,6 +1,6 @@
-# Timeline Game (ohne QR)
+# Flex Quiz (ohne QR)
 
-Kartenbasiertes Spiel à la Hitster mit mehreren Kategorien (Musik, Zitate, Videos, Bilder). Kein QR-Scan: Die Fragen erscheinen direkt in der App, Teams nutzen leere Karten zum Beschriften.
+Flexibles Timeline-Quiz mit Flex Buttons und mehreren Kategorien (Musik, Zitate, Videos, Bilder). Kein QR-Scan: Die Fragen erscheinen direkt in der App, Karten bleiben leer für eigene Fragen und Lösungen.
 
 ## Schnellstart
 
@@ -18,6 +18,11 @@ Lokale URL: http://localhost:3000
 - `/print` Drucklayout: Leere Karten (Front: Team-Lösung, Back: Musterlösung)
 - `/rules` Spielregeln
 - `/settings` Lokales Hinzufügen von Karten (Prototyp, nur Browser-Storage)
+
+## Flex Buttons (Kurzfassung)
+
+- Einsatz nach dem Zug eines anderen Teams; bei korrekter Flex-Lösung geht die letzte Karte an dich, sonst ist der Button weg.
+- Buttons verdienst du im eigenen Zug nur, wenn du das Jahr richtig einordnest und zusätzlich Titel/Interpret bzw. Name/Zitatgeber korrekt nennst.
 
 ## Karten konfigurieren
 
