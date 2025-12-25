@@ -167,7 +167,7 @@ export const cards: Card[] = [
     answer: 'Öffnung der innerdeutschen Grenze am 09.11.1989.',
     hint: 'DDR, Grenzöffnung.',
     sources: {
-      youtube: 'https://www.youtube.com/watch?v=vnVuqfXohxc'
+      youtube: 'https://www.youtube.com/watch?v=zmRPP2WXX0U'
     }
   },
   {
