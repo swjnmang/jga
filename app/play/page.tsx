@@ -16,6 +16,7 @@ export default function PlayPage() {
   const [index, setIndex] = useState(0);
   const [timer, setTimer] = useState<TimerState>({ secondsLeft: DURATION, running: true });
   const [blackedOut, setBlackedOut] = useState(false);
+  const [showSolution, setShowSolution] = useState(false);
 
   const card = deck[index];
   const isLast = index === deck.length - 1;
@@ -40,15 +41,18 @@ export default function PlayPage() {
     if (index < deck.length - 1) {
       setIndex((i) => i + 1);
       resetTimer();
+      setShowSolution(false);
     } else {
       setBlackedOut(false);
       setTimer({ secondsLeft: 0, running: false });
+      setShowSolution(false);
     }
   };
 
   const resetTimer = () => {
     setTimer({ secondsLeft: DURATION, running: true });
     setBlackedOut(false);
+    setShowSolution(false);
   };
 
   if (!card) {
@@ -81,7 +85,7 @@ export default function PlayPage() {
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Frage {index + 1} / {deck.length}</p>
           <h1 className="text-3xl font-display">Spielmodus</h1>
-          <p className="text-sm text-ink/70">Lied/Video/Zitat/Bild erscheint direkt, keine QR-Codes.</p>
+          <p className="text-sm text-ink/70">Fragen erscheinen direkt, Teams notieren auf leere Karten. Kein QR, nur Flex Quiz.</p>
         </div>
         <div className="text-right space-y-1">
           <p className="text-xs text-ink/60">Timer</p>
@@ -95,12 +99,17 @@ export default function PlayPage() {
           <span className="text-xs rounded-full bg-ink text-sand px-3 py-1">versteckte Lösung</span>
         </div>
         <p className="text-lg font-semibold">{card.cue}</p>
-        {card.hint && <p className="text-sm text-ink/60">Hinweis: {card.hint}</p>}
         <MediaEmbed
           card={card}
           preference={card.category === 'music' && card.sources.spotify ? 'spotify' : 'auto'}
           concealMetadata
         />
+        {showSolution && (
+          <div className="rounded-xl bg-ink/5 p-4 space-y-2 text-sm text-ink/80">
+            <p className="font-semibold text-ink">Lösung</p>
+            <p className="text-ink">{card.year} – {card.answer}</p>
+          </div>
+        )}
       </section>
 
       <div className="flex flex-wrap gap-3">
@@ -118,11 +127,33 @@ export default function PlayPage() {
         >
           Timer neu starten
         </button>
+        <button
+          type="button"
+          className="rounded-full border border-ink/20 px-4 py-2 text-sm"
+          onClick={() => setShowSolution(true)}
+        >
+          Lösung
+        </button>
       </div>
 
       {blackedOut && (
         <div className="fixed inset-0 z-40 bg-black text-white flex flex-col items-center justify-center gap-4">
           <p className="text-lg font-semibold">Zeit abgelaufen</p>
+          {!showSolution && (
+            <button
+              type="button"
+              className="rounded-full border border-white/40 px-4 py-2 text-sm"
+              onClick={() => setShowSolution(true)}
+            >
+              Lösung
+            </button>
+          )}
+          {showSolution && (
+            <div className="rounded-lg bg-white/10 px-4 py-3 text-sm">
+              <p className="font-semibold">Lösung</p>
+              <p>{card.year} – {card.answer}</p>
+            </div>
+          )}
           <button
             type="button"
             className="rounded-full bg-white text-ink px-4 py-2 text-sm font-semibold"
