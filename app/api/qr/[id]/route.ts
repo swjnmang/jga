@@ -18,7 +18,9 @@ export async function GET(_: Request, { params }: { params: { id: string } }) {
     color: { dark: '#0f172a', light: '#ffffff' }
   });
 
-  return new NextResponse(buffer, {
+  const arrayBuffer = new Uint8Array(buffer).buffer;
+
+  return new NextResponse(arrayBuffer, {
     headers: {
       'Content-Type': 'image/png',
       'Cache-Control': 'public, max-age=31536000, immutable'
