@@ -47,6 +47,10 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
   const [isPlaying, setIsPlaying] = useState(false);
   const [showSpotify, setShowSpotify] = useState(false);
   const origin = useMemo(() => (typeof window !== 'undefined' ? window.location.origin : ''), []);
+  const [spotifyToken, setSpotifyToken] = useState<string | null>(null);
+  const [spotifyDevice, setSpotifyDevice] = useState<string | null>(null);
+  const [spotifyReady, setSpotifyReady] = useState(false);
+  const [spotifyError, setSpotifyError] = useState<string | null>(null);
 
   const sendYouTubeCommand = (command: 'playVideo' | 'pauseVideo') => {
     if (!iframeRef.current?.contentWindow) return;
@@ -72,6 +76,112 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
     setIsPlaying(false);
     setShowSpotify(false);
   }, [choice?.type, choice && 'url' in choice ? (choice as any).url : '']);
+
+  // Fetch Spotify token from server (httpOnly cookie proxied)
+  useEffect(() => {
+    if (choice?.type !== 'spotify') return;
+    const loadToken = async () => {
+      try {
+        const res = await fetch('/api/spotify/token');
+        if (!res.ok) {
+          setSpotifyError('Spotify Login erforderlich');
+          return;
+        }
+        const json = await res.json();
+        setSpotifyToken(json.accessToken as string);
+      } catch (err) {
+        setSpotifyError('Spotify Token konnte nicht geladen werden');
+      }
+    };
+    loadToken();
+  }, [choice?.type]);
+
+  // Load Spotify Web Playback SDK and connect
+  useEffect(() => {
+    if (choice?.type !== 'spotify') return;
+    if (!spotifyToken) return;
+
+    const existing = document.getElementById('spotify-sdk');
+    const ensureScript = () =>
+      new Promise<void>((resolve) => {
+        if (window.Spotify) return resolve();
+        const script = document.createElement('script');
+        script.id = 'spotify-sdk';
+        script.src = 'https://sdk.scdn.co/spotify-player.js';
+        script.onload = () => resolve();
+        document.body.appendChild(script);
+      });
+
+    let player: Spotify.Player | null = null;
+
+    const setup = async () => {
+      await ensureScript();
+
+      window.onSpotifyWebPlaybackSDKReady = () => {
+        player = new window.Spotify.Player({
+          name: 'Flex Quiz Player',
+          getOAuthToken: (cb) => cb(spotifyToken),
+          volume: 0.8
+        });
+
+        player.addListener('ready', ({ device_id }) => {
+          setSpotifyDevice(device_id);
+          setSpotifyReady(true);
+        });
+
+        player.addListener('initialization_error', ({ message }) => setSpotifyError(message));
+        player.addListener('authentication_error', ({ message }) => setSpotifyError(message));
+        player.addListener('account_error', ({ message }) => setSpotifyError(message));
+
+        player.connect();
+      };
+    };
+
+    setup();
+
+    return () => {
+      if (player) {
+        player.disconnect();
+      }
+    };
+  }, [choice?.type, spotifyToken]);
+
+  const playSpotifyTrack = async (url: string) => {
+    if (!spotifyToken) {
+      setSpotifyError('Spotify Login erforderlich');
+      return;
+    }
+    if (!spotifyDevice) {
+      setSpotifyError('Spotify Player noch nicht bereit');
+      return;
+    }
+
+    const match = url.match(/spotify\.com\/track\/([A-Za-z0-9]+)/);
+    const trackId = match ? match[1] : null;
+    if (!trackId) {
+      setSpotifyError('Ungültige Spotify-URL');
+      return;
+    }
+
+    try {
+      const res = await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${spotifyDevice}`, {
+        method: 'PUT',
+        headers: {
+          Authorization: `Bearer ${spotifyToken}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ uris: [`spotify:track:${trackId}`] })
+      });
+      if (!res.ok) {
+        setSpotifyError('Wiedergabe konnte nicht gestartet werden');
+      } else {
+        setSpotifyError(null);
+        setShowSpotify(false);
+      }
+    } catch (_err) {
+      setSpotifyError('Wiedergabe konnte nicht gestartet werden');
+    }
+  };
 
   if (!choice) {
     return <p className="text-sm text-ink/70">Keine Quelle hinterlegt.</p>;
@@ -124,13 +234,26 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
             />
             {!showSpotify && (
               <div className="absolute inset-0 flex items-center justify-center text-sand bg-ink">
-                <button
-                  type="button"
-                  className="rounded-full bg-sand text-ink px-4 py-2 text-sm font-semibold shadow"
-                  onClick={() => setShowSpotify(true)}
-                >
-                  Spotify-Player öffnen
-                </button>
+                <div className="flex flex-col items-center gap-3">
+                  <button
+                    type="button"
+                    className="rounded-full bg-sand text-ink px-4 py-2 text-sm font-semibold shadow"
+                    onClick={() => playSpotifyTrack(choice.url)}
+                  >
+                    Play im Browser
+                  </button>
+                  <button
+                    type="button"
+                    className="rounded-full border border-sand/40 text-sand px-4 py-2 text-xs"
+                    onClick={() => setShowSpotify(true)}
+                  >
+                    Spotify-Player öffnen
+                  </button>
+                  {spotifyError && <p className="text-xs text-red-200">{spotifyError}</p>}
+                  {!spotifyReady && !spotifyError && spotifyToken && (
+                    <p className="text-xs text-sand/80">Initialisiere Spotify Player …</p>
+                  )}
+                </div>
               </div>
             )}
           </div>
