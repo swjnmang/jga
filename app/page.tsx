@@ -7,19 +7,19 @@ export default function HomePage() {
   return (
     <main className="mx-auto max-w-5xl px-6 py-12 space-y-12">
       <section className="space-y-6">
-        <p className="text-sm uppercase tracking-[0.2em] text-ink/70">QR Timeline</p>
+        <p className="text-sm uppercase tracking-[0.2em] text-ink/70">Timeline Game</p>
         <div className="space-y-4">
           <h1 className="text-4xl md:text-5xl font-display leading-tight">
-            Scannen, verdeckt abspielen, zeitlich einordnen.
+            Direkt spielen: abspielen, ordnen, notieren.
           </h1>
           <p className="text-lg text-ink/80">
-            Optimiert für Smartphones: Musik/Video ohne Titel, Zitate nur als Text, Bilder mit der
-            Frage „Wo und wann war das?”.
+            Kein QR-Scan mehr: Die Fragen erscheinen direkt. Teams schreiben ihre Lösung auf leere
+            Karten und tragen die Musterlösung rückseitig ein.
           </p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-3">
-          <MenuCard title="Spiel starten" desc="Öffnet den QR-Scanner" href="/scan" accent="bg-ink text-sand" />
+          <MenuCard title="Spiel starten" desc="Fragen nacheinander anzeigen" href="/play" accent="bg-ink text-sand" />
           <MenuCard title="Einstellungen" desc="Karten lokal ergänzen" href="/settings" />
           <MenuCard title="Spielregeln" desc="Ablauf & Punkte" href="/rules" />
         </div>
@@ -27,13 +27,13 @@ export default function HomePage() {
         <div className="card-surface rounded-2xl p-6 space-y-4">
           <h2 className="font-semibold text-lg">Setup</h2>
           <ul className="space-y-2 text-sm text-ink/80">
-            <li>1) Drucke die QR-Karten über den Karten-Druck.</li>
+            <li>1) Drucke leere Karten (Front: Team-Lösung, Back: Musterlösung).</li>
             <li>2) Teams starten mit der Referenzkarte 1900.</li>
-            <li>3) Scanne Karten, 3:00 Timer läuft, ordne zeitlich ein.</li>
+            <li>3) In der App „Spiel starten“: Frage erscheint direkt, Timer 3:00 läuft.</li>
           </ul>
           <div className="rounded-xl bg-mint/70 text-ink p-4 text-sm">
-            Medien werden direkt von Spotify/YouTube gestreamt. Bilder/Zitate kannst du unter
-            <span className="font-semibold"> public/assets/</span> selbst hosten.
+            Medien werden direkt gestreamt; keine QR-Codes mehr erforderlich. Eigene Bilder/Zitate
+            kannst du unter <span className="font-semibold">public/assets/</span> hosten.
           </div>
           <div className="flex flex-wrap gap-2 text-xs text-ink/70">
             {categories.map((cat) => (

@@ -1,6 +1,6 @@
-# QR Timeline Game
+# Timeline Game (ohne QR)
 
-Kartenbasiertes Spiel à la Hitster mit mehreren Kategorien (Musik, Zitate, Videos, Bilder). Jede Karte enthält einen QR-Code, der auf eine Wiedergabeseite zeigt. Medien werden direkt über YouTube oder Spotify gestreamt; eigene Bilder/Zitate kannst du unter `public/assets/` ablegen.
+Kartenbasiertes Spiel à la Hitster mit mehreren Kategorien (Musik, Zitate, Videos, Bilder). Kein QR-Scan: Die Fragen erscheinen direkt in der App, Teams nutzen leere Karten zum Beschriften.
 
 ## Schnellstart
 
@@ -14,9 +14,8 @@ Lokale URL: http://localhost:3000
 ## Wichtige Seiten
 
 - `/` Landing mit Hauptmenü (Spiel starten, Einstellungen, Spielregeln)
-- `/scan` QR-Scanner (Smartphone-freundlich)
-- `/card/{id}` Wiedergabe + Lösung (Titel/Jahr verdeckt bis Aufdecken)
-- `/print` Drucklayout (Vorder- und Rückseite) mit QR-Codes
+- `/play` Spielmodus: Fragen direkt anzeigen, 3:00 Timer, „Zur nächsten Frage“
+- `/print` Drucklayout: Leere Karten (Front: Team-Lösung, Back: Musterlösung)
 - `/rules` Spielregeln
 - `/settings` Lokales Hinzufügen von Karten (Prototyp, nur Browser-Storage)
 
@@ -35,9 +34,9 @@ Eigenes Hosting: Lege Dateien unter `public/assets/images` oder `public/assets/q
 
 ## QR-Basis-URL
 
-Setze `NEXT_PUBLIC_APP_URL` in `.env.local`, damit die QR-Codes auf die richtige Domain zeigen (z.B. Vercel-URL). Fallback ist `http://localhost:3000`.
+Setze `NEXT_PUBLIC_APP_URL` in `.env.local`, falls du externe Links generierst. Spielmodus benötigt keine QR-Codes mehr.
 
 ## Timer & Verdeckung
 
-- Musik/Video werden verdeckt eingebettet (Overlay), Titel/Jahr sind erst nach "Aufdecken" sichtbar.
-- 3:00 Timer startet nach dem Scan.
+- Musik/Video werden verdeckt eingebettet (Overlay), Titel/Jahr bleiben verborgen.
+- 3:00 Timer pro Frage; nach Ablauf wird der Bildschirm schwarz, manuell zur nächsten Frage.
