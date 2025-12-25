@@ -35,16 +35,9 @@ export default function PrintPage() {
 
 type FrontProps = { cardId: string; title: string; category: string };
 
-function CardFaceFront({ cardId, category }: FrontProps) {
+function CardFaceFront({ cardId }: FrontProps) {
   return (
     <div className="card-surface rounded-2xl p-4 flex flex-col gap-3 border border-ink/10">
-      <div className="flex items-center justify-between">
-        <div>
-          <p className="text-xs uppercase tracking-wide text-ink/60">{category}</p>
-          <p className="text-lg font-semibold">Verdeckter Inhalt</p>
-        </div>
-        <span className="text-xs bg-ink text-sand rounded-full px-3 py-1">QR scannen</span>
-      </div>
       <div className="flex justify-center">
         <img
           src={`/api/qr/${cardId}`}
@@ -52,9 +45,6 @@ function CardFaceFront({ cardId, category }: FrontProps) {
           className="h-40 w-40 object-contain"
         />
       </div>
-      <p className="text-xs text-ink/60 text-center">
-        Scanne den Code, spiele den Inhalt ab und ordne das Ereignis zeitlich ein.
-      </p>
     </div>
   );
 }

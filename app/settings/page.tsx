@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import { CardCategory } from '@/lib/types';
 
@@ -61,6 +62,14 @@ export default function SettingsPage() {
           Prototyp: Karten werden nur im lokalen Browser-Speicher gesichert. Für gemeinsame Nutzung
           oder QR-Druck müssen diese Daten später in eine echte Datenbank / API übernommen werden.
         </p>
+        <div className="flex flex-wrap gap-3 pt-2">
+          <Link
+            href="/print"
+            className="rounded-xl bg-ink text-sand px-4 py-2 text-sm font-semibold shadow"
+          >
+            Alle Karten drucken
+          </Link>
+        </div>
       </div>
 
       <section className="card-surface rounded-2xl p-5 space-y-3">
