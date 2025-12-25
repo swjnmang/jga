@@ -61,7 +61,7 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
               title="Medieninhalt"
             />
             {concealMetadata && (
-              <div className="absolute inset-0 bg-gradient-to-b from-ink/80 to-ink/60 text-sand flex items-center justify-center text-sm font-semibold">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/80 to-ink/60 text-sand flex items-center justify-center text-sm font-semibold">
                 Verdeckter Inhalt – nur anhören
               </div>
             )}
@@ -85,7 +85,7 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
               title="Medieninhalt"
             />
             {concealMetadata && (
-              <div className="absolute inset-0 bg-gradient-to-b from-ink/80 to-ink/60 text-sand flex items-center justify-center text-sm font-semibold">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/80 to-ink/60 text-sand flex items-center justify-center text-sm font-semibold">
                 Verdeckter Inhalt – nur anhören
               </div>
             )}

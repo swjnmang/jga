@@ -13,11 +13,11 @@ export default function RulesPage() {
       <section className="card-surface rounded-2xl p-5 space-y-2">
         <h2 className="text-lg font-semibold">Ablauf</h2>
         <ol className="list-decimal list-inside space-y-1 text-sm text-ink/80">
-          <li>Jedes Team erhält eine Referenzkarte (Jahr 1900) als Startlinie.</li>
-          <li>Reihum scannt ein Team eine neue Karte (QR) und startet die 3:00 Timer-Stoppuhr.</li>
+          <li>Jedes Team erhält leere Karten (Front für Lösung, Rückseite für Musterlösung).</li>
+          <li>Reihum zeigt die App eine neue Frage/Medienkarte, Timer 3:00 startet.</li>
           <li>Ohne Titel/Interpret zu sehen wird der Inhalt abgespielt/angezeigt.</li>
-          <li>Das Team legt die Karte an die Stelle, die zeitlich passt.</li>
-          <li>Aufdecken: Jahr prüfen. Richtig = Karte behalten, falsch = Karte beiseite legen.</li>
+          <li>Team schreibt seine Lösung auf die Karte und legt sie zeitlich ein.</li>
+          <li>Aufdecken/Lösung eintragen: Jahr prüfen. Richtig = behalten, falsch = beiseite.</li>
           <li>Nächste Runde, bis jemand 10 korrekt liegende Karten hat.</li>
         </ol>
       </section>

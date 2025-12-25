@@ -28,8 +28,8 @@ export default function HomePage() {
           <h2 className="font-semibold text-lg">Setup</h2>
           <ul className="space-y-2 text-sm text-ink/80">
             <li>1) Drucke leere Karten (Front: Team-Lösung, Back: Musterlösung).</li>
-            <li>2) Teams starten mit der Referenzkarte 1900.</li>
-            <li>3) In der App „Spiel starten“: Frage erscheint direkt, Timer 3:00 läuft.</li>
+            <li>2) In der App „Spiel starten“: Frage erscheint direkt, Timer 3:00 läuft.</li>
+            <li>3) Teams schreiben Lösung auf die leere Karte, Rückseite für Musterlösung.</li>
           </ul>
           <div className="rounded-xl bg-mint/70 text-ink p-4 text-sm">
             Medien werden direkt gestreamt; keine QR-Codes mehr erforderlich. Eigene Bilder/Zitate

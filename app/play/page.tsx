@@ -96,7 +96,11 @@ export default function PlayPage() {
         </div>
         <p className="text-lg font-semibold">{card.cue}</p>
         {card.hint && <p className="text-sm text-ink/60">Hinweis: {card.hint}</p>}
-        <MediaEmbed card={card} preference="auto" concealMetadata />
+        <MediaEmbed
+          card={card}
+          preference={card.category === 'music' && card.sources.spotify ? 'spotify' : 'auto'}
+          concealMetadata
+        />
       </section>
 
       <div className="flex flex-wrap gap-3">

@@ -10,19 +10,7 @@ export const cards: Card[] = [
     answer: 'Nirvana — Release 1991 auf dem Album Nevermind.',
     hint: 'Grunge aus Seattle.',
     sources: {
-      youtube: 'https://www.youtube.com/watch?v=hTWKbfoikeg',
       spotify: 'https://open.spotify.com/track/5ghIJDpPoe3CfHMGu71E6T'
-    }
-  },
-  {
-    id: 'reference-1900',
-    title: 'Referenzkarte 1900',
-    category: 'image',
-    year: 1900,
-    cue: 'Lege diese Karte als Startpunkt. Alle Teams beginnen mit 1900.',
-    answer: 'Referenzkarte: Jahr 1900 als Startlinie.',
-    sources: {
-      image: 'https://placehold.co/800x600/0f172a/f6f1e9?text=1900+Referenz'
     }
   },
   {
@@ -84,6 +72,139 @@ export const cards: Card[] = [
     hint: 'Altes Ägypten.',
     sources: {
       image: 'https://placehold.co/900x600/d1f3e0/0f172a?text=Cheops-Pyramide'
+    }
+  },
+  {
+    id: 'song-rolling-in-the-deep',
+    title: 'Rolling in the Deep',
+    category: 'music',
+    year: 2010,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Adele — 2010, Album 21.',
+    hint: 'Londoner Sängerin, Durchbruch-Single.',
+    sources: {
+      spotify: 'https://open.spotify.com/track/6j6ZtpxjR0L9gLd7krr6m3'
+    }
+  },
+  {
+    id: 'song-bohemian-rhapsody',
+    title: 'Bohemian Rhapsody',
+    category: 'music',
+    year: 1975,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Queen — 1975, Album A Night at the Opera.',
+    hint: 'Opernartige Rock-Hymne.',
+    sources: {
+      spotify: 'https://open.spotify.com/track/7tFiyTwD0nx5a1eklYtX2J'
+    }
+  },
+  {
+    id: 'song-billie-jean',
+    title: 'Billie Jean',
+    category: 'music',
+    year: 1982,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Michael Jackson — 1982, Album Thriller.',
+    hint: 'King of Pop.',
+    sources: {
+      spotify: 'https://open.spotify.com/track/5ChkMS8OtdzJeqyybCc9R5'
+    }
+  },
+  {
+    id: 'song-shape-of-you',
+    title: 'Shape of You',
+    category: 'music',
+    year: 2017,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Ed Sheeran — 2017, Album ÷.',
+    hint: 'Pop-Hit aus UK.',
+    sources: {
+      spotify: 'https://open.spotify.com/track/7qiZfU4dY1lWllzX7mPBI3'
+    }
+  },
+  {
+    id: 'song-blinding-lights',
+    title: 'Blinding Lights',
+    category: 'music',
+    year: 2019,
+    cue: 'Song anhören und einordnen.',
+    answer: 'The Weeknd — 2019, Album After Hours.',
+    hint: 'Synthwave-Revival.',
+    sources: {
+      spotify: 'https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b'
+    }
+  },
+  {
+    id: 'song-take-on-me',
+    title: 'Take On Me',
+    category: 'music',
+    year: 1985,
+    cue: 'Song anhören und einordnen.',
+    answer: 'a-ha — 1985, Album Hunting High and Low.',
+    hint: 'Norwegische Synth-Pop-Band.',
+    sources: {
+      spotify: 'https://open.spotify.com/track/2WfaOiMkCvy7F5fcp2zZ8L'
+    }
+  },
+  {
+    id: 'video-moon-landing-1969',
+    title: 'Mondlandung 1969',
+    category: 'video',
+    year: 1969,
+    cue: 'Kurzer Clip der ersten Mondlandung.',
+    answer: 'Apollo 11, 20.07.1969 — Neil Armstrong betritt den Mond.',
+    hint: 'NASA, Kalter Krieg.',
+    sources: {
+      youtube: 'https://www.youtube.com/watch?v=HCt1BwWE2gA'
+    }
+  },
+  {
+    id: 'video-berlin-wall-1989',
+    title: 'Mauerfall 1989',
+    category: 'video',
+    year: 1989,
+    cue: 'TV-Bilder vom Fall der Berliner Mauer.',
+    answer: 'Öffnung der innerdeutschen Grenze am 09.11.1989.',
+    hint: 'DDR, Grenzöffnung.',
+    sources: {
+      youtube: 'https://www.youtube.com/watch?v=vnVuqfXohxc'
+    }
+  },
+  {
+    id: 'image-apollo11-flag',
+    title: 'Apollo 11 Flagge',
+    category: 'image',
+    year: 1969,
+    cue: 'Bild ansehen: Wo und wann war das?',
+    answer: 'Mond, 20.07.1969 — Apollo 11 Flaggenaufstellung.',
+    hint: 'Erste bemannte Mondlandung.',
+    sources: {
+      image: 'https://placehold.co/900x600/0f172a/f6f1e9?text=Apollo+11+1969'
+    }
+  },
+  {
+    id: 'quote-kennedy-moon',
+    title: 'We choose to go to the Moon',
+    category: 'quote',
+    year: 1962,
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
+    answer: 'John F. Kennedy, Rice University Speech, 12.09.1962.',
+    hint: 'US-Präsident, Raumfahrt-Rede.',
+    sources: {
+      youtube: 'https://www.youtube.com/watch?v=g25G1M4EXrQ',
+      text: '“We choose to go to the Moon.”'
+    }
+  },
+  {
+    id: 'quote-mandela',
+    title: 'It always seems impossible',
+    category: 'quote',
+    year: 2001,
+    cue: 'Zitat lesen/anhören.',
+    answer: 'Nelson Mandela, 2001.',
+    hint: 'Südafrika, Versöhnung.',
+    sources: {
+      text: '“It always seems impossible until it’s done.”'
     }
   }
 ];
