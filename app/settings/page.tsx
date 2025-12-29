@@ -42,7 +42,7 @@ export default function SettingsPage() {
   };
 
   const handleTimerChange = (value: string) => {
-    const minutes = Number(value);
+    const minutes = Number.parseFloat(value);
     if (Number.isNaN(minutes)) return;
     const seconds = Math.max(30, Math.round(minutes * 60));
     updateSettings({ ...settings, timerSeconds: seconds });
@@ -74,7 +74,7 @@ export default function SettingsPage() {
     updateSettings({ ...settings, language: value });
   };
 
-  const timerMinutes = Math.round(settings.timerSeconds / 60);
+  const timerMinutes = settings.timerSeconds / 60;
   const activeWeightSum = settings.categories.reduce(
     (sum, cat) => sum + (settings.categoryWeights[cat] ?? 0),
     0
@@ -103,6 +103,12 @@ export default function SettingsPage() {
           >
             Standard wiederherstellen
           </button>
+          <Link
+            href="/"
+            className="rounded-xl border border-ink/20 px-4 py-2 text-sm"
+          >
+            Speichern & zurück zum Hauptmenü
+          </Link>
         </div>
       </div>
 
