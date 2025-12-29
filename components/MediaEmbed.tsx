@@ -84,6 +84,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const [spotifyDevice, setSpotifyDevice] = useState<string | null>(null);
   const [spotifyReady, setSpotifyReady] = useState(false);
   const [spotifyError, setSpotifyError] = useState<string | null>(null);
+  const [spotifyLoading, setSpotifyLoading] = useState(false);
   const [embedError, setEmbedError] = useState<string | null>(null);
   const spotifyPlayerRef = useRef<Spotify.Player | null>(null);
   const choiceSignature = useMemo(() => {
@@ -249,6 +250,28 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     };
   }, [choice?.type, spotifyToken]);
 
+  const transferPlayback = async () => {
+    if (!spotifyToken || !spotifyDevice) return;
+    await fetch('https://api.spotify.com/v1/me/player', {
+      method: 'PUT',
+      headers: {
+        Authorization: `Bearer ${spotifyToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ device_ids: [spotifyDevice], play: false })
+    });
+  };
+
+  const activatePlayer = async () => {
+    if (spotifyPlayerRef.current && 'activateElement' in spotifyPlayerRef.current) {
+      try {
+        await (spotifyPlayerRef.current as any).activateElement();
+      } catch (_err) {
+        // ignore
+      }
+    }
+  };
+
   const playSpotifyTrack = async (url: string) => {
     if (!spotifyToken) {
       setSpotifyError('Spotify Login erforderlich');
@@ -266,7 +289,10 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       return;
     }
 
+    setSpotifyLoading(true);
     try {
+      await activatePlayer();
+      await transferPlayback();
       const res = await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${spotifyDevice}`, {
         method: 'PUT',
         headers: {
@@ -277,13 +303,17 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       });
       if (!res.ok) {
         setSpotifyError('Wiedergabe konnte nicht gestartet werden');
+        setIsPlaying(false);
       } else {
         setSpotifyError(null);
-        setShowSpotify(false);
+        setShowSpotify(true);
         setIsPlaying(true);
       }
     } catch (_err) {
       setSpotifyError('Wiedergabe konnte nicht gestartet werden');
+      setIsPlaying(false);
+    } finally {
+      setSpotifyLoading(false);
     }
   };
 
@@ -322,7 +352,6 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     if (isPlaying) {
       pauseSpotify();
     } else {
-      setShowSpotify(true);
       playSpotifyTrack(choice?.type === 'spotify' ? choice.url : '');
       onPlay?.();
     }
@@ -417,7 +446,6 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       );
     }
     case 'spotify': {
-      const embedUrl = toSpotifyEmbed(choice.url) ?? choice.url;
       const showSpotifyFallback = Boolean(embedError || spotifyError || !spotifyReady);
       return (
         <div className="space-y-2 relative">
@@ -426,53 +454,40 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               YouTube-Quelle nicht erreichbar, Spotify wird verwendet.
             </p>
           )}
-          <div className="overflow-hidden rounded-2xl card-surface relative bg-ink">
-            <iframe
-              src={embedUrl}
-              width="100%"
-              height="200"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              className={`w-full transition-opacity ${showSpotify ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-              onError={() => setEmbedError('Spotify-Einbettung ist fehlgeschlagen oder wurde blockiert.')}
-              title="Medieninhalt"
-            />
-            {!showSpotify && (
-              <div className="absolute inset-0 flex items-center justify-center text-sand bg-ink">
-                <div className="flex flex-col items-center gap-3">
-                  <button
-                    type="button"
-                    className="rounded-full bg-sand text-ink px-4 py-2 text-sm font-semibold shadow"
-                    onClick={toggleSpotify}
-                    disabled={!spotifyToken}
-                  >
-                    {isPlaying ? 'Pause' : 'Play'}
-                  </button>
-                  {spotifyError && <p className="text-xs text-red-200">{spotifyError}</p>}
-                  {!spotifyReady && !spotifyError && spotifyToken && (
-                    <div className="text-center space-y-2">
-                      <p className="text-xs text-sand/80">Spotify Player noch nicht bereit.</p>
-                      <div className="flex items-center justify-center gap-2 text-xs">
-                        <button
-                          type="button"
-                          className="rounded-full border border-sand/40 px-3 py-1"
-                          onClick={resetSpotify}
-                        >
-                          Neu verbinden
-                        </button>
-                        <a
-                          href={choice.url}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="rounded-full bg-sand text-ink px-3 py-1 font-semibold"
-                        >
-                          In Spotify öffnen
-                        </a>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            )}
+          <div className="rounded-2xl card-surface relative bg-ink p-4 flex flex-col items-center gap-3 text-sand">
+            <div className="text-center space-y-2">
+              <p className="text-sm font-semibold">Spotify Player</p>
+              {spotifyError && <p className="text-xs text-red-200">{spotifyError}</p>}
+              {!spotifyReady && !spotifyError && spotifyToken && (
+                <p className="text-xs text-sand/80">Spotify Player wird verbunden …</p>
+              )}
+              {!spotifyToken && <p className="text-xs text-red-200">Spotify Login erforderlich</p>}
+            </div>
+            <div className="flex items-center gap-3">
+              <button
+                type="button"
+                className="rounded-full bg-sand text-ink px-4 py-2 text-sm font-semibold shadow disabled:opacity-50"
+                onClick={toggleSpotify}
+                disabled={!spotifyToken || spotifyLoading || !spotifyReady}
+              >
+                {spotifyLoading ? 'Lädt…' : isPlaying ? 'Pause' : 'Play'}
+              </button>
+              <button
+                type="button"
+                className="rounded-full border border-sand/40 px-3 py-2 text-xs"
+                onClick={resetSpotify}
+              >
+                Neu verbinden
+              </button>
+              <a
+                href={choice.url}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-sand/40 px-3 py-2 text-xs"
+              >
+                In Spotify öffnen
+              </a>
+            </div>
           </div>
           {showSpotifyFallback && (
             <div className="rounded-xl bg-ink/10 p-3 text-xs text-ink/80 space-y-2">
