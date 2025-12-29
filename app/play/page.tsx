@@ -79,18 +79,22 @@ export default function PlayPage() {
   const requestedFullscreen = useRef(false);
   const mediaRef = useRef<MediaEmbedHandle | null>(null);
 
-  const requiresPlayStart = (c?: Card) => c?.category === 'music' || c?.category === 'video';
+  const requiresPlayStart = useCallback((c?: Card) => c?.category === 'music' || c?.category === 'video', []);
 
-  const setTimerForCard = useCallback((seconds: number, cardToUse?: Card) => {
-    setTimer({ secondsLeft: seconds, running: !requiresPlayStart(cardToUse) });
-  }, []);
+  const setTimerForCard = useCallback(
+    (seconds: number, cardToUse?: Card) => {
+      setTimer({ secondsLeft: seconds, running: !requiresPlayStart(cardToUse) });
+    },
+    [requiresPlayStart]
+  );
 
   useEffect(() => {
     const stored = loadSettings(defaults);
     setSettings(stored);
-    setTimerForCard(stored.timerSeconds, filteredDeck[0]);
+    const deck = buildWeightedDeck(cards, stored);
+    setTimerForCard(stored.timerSeconds, deck[0]);
     setIndex(0);
-  }, [defaults, filteredDeck, setTimerForCard]);
+  }, [defaults, setTimerForCard]);
 
   useEffect(() => {
     setIndex(0);
