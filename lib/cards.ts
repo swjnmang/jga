@@ -77,7 +77,7 @@ export const cards: Card[] = [
     hint: 'Altes Ägypten.',
     difficulty: 'schwer',
     sources: {
-      image: 'https://placehold.co/900x600/d1f3e0/0f172a?text=Cheops-Pyramide'
+      image: '/assets/images/pyramide.png'
     }
   },
   {
@@ -194,7 +194,7 @@ export const cards: Card[] = [
     hint: 'Erste bemannte Mondlandung.',
     difficulty: 'mittel',
     sources: {
-      image: 'https://placehold.co/900x600/0f172a/f6f1e9?text=Apollo+11+1969'
+      image: '/assets/images/apollo11.jpg'
     }
   },
   {
