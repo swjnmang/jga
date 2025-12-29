@@ -59,6 +59,7 @@ type Props = {
   preference: MediaPreference;
   concealMetadata?: boolean;
   onPlay?: () => void;
+  onPlaybackError?: (id: string, reason?: string) => void;
 };
 
 export type MediaEmbedHandle = {
@@ -66,7 +67,7 @@ export type MediaEmbedHandle = {
 };
 
 export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbed(
-  { card, preference, concealMetadata = false, onPlay }: Props,
+  { card, preference, concealMetadata = false, onPlay, onPlaybackError }: Props,
   ref
 ) {
   const [youtubeUnavailable, setYouTubeUnavailable] = useState(false);
@@ -286,6 +287,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     const trackId = match ? match[1] : null;
     if (!trackId) {
       setSpotifyError('Ungültige Spotify-URL');
+      onPlaybackError?.(card.id, 'invalid-url');
       return;
     }
 
@@ -304,6 +306,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       if (!res.ok) {
         setSpotifyError('Wiedergabe konnte nicht gestartet werden');
         setIsPlaying(false);
+        onPlaybackError?.(card.id, 'play-failed');
       } else {
         setSpotifyError(null);
         setShowSpotify(true);
@@ -312,6 +315,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     } catch (_err) {
       setSpotifyError('Wiedergabe konnte nicht gestartet werden');
       setIsPlaying(false);
+      onPlaybackError?.(card.id, 'exception');
     } finally {
       setSpotifyLoading(false);
     }

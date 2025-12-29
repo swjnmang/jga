@@ -70,13 +70,17 @@ export default function PlayPage() {
   const availableCategories = useMemo(() => getCategories(cards), []);
   const defaults = useMemo(() => getDefaultSettings(availableCategories), [availableCategories]);
   const [settings, setSettings] = useState<UserSettings>(defaults);
-  const filteredDeck = useMemo(() => buildWeightedDeck(cards, settings), [settings]);
+  const [blockedCards, setBlockedCards] = useState<Set<string>>(new Set());
+  const playableCards = useMemo(() => cards.filter((c) => !blockedCards.has(c.id)), [blockedCards]);
+  const filteredDeck = useMemo(() => buildWeightedDeck(playableCards, settings), [playableCards, settings]);
   const [index, setIndex] = useState(0);
   const [timer, setTimer] = useState<TimerState>({ secondsLeft: settings.timerSeconds, running: false });
   const [blackedOut, setBlackedOut] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
   const [needsSpotifyAuth, setNeedsSpotifyAuth] = useState<boolean | null>(null);
   const mediaRef = useRef<MediaEmbedHandle | null>(null);
+  const card = filteredDeck[index];
+  const isLast = index === filteredDeck.length - 1;
 
   const requiresPlayStart = useCallback((c?: Card) => c?.category === 'music' || c?.category === 'video', []);
 
@@ -90,6 +94,15 @@ export default function PlayPage() {
   useEffect(() => {
     const stored = loadSettings(defaults);
     setSettings(stored);
+    const bad = localStorage.getItem('blockedCards');
+    if (bad) {
+      try {
+        const parsed = JSON.parse(bad) as string[];
+        setBlockedCards(new Set(parsed));
+      } catch (_err) {
+        // ignore parse errors
+      }
+    }
     const deck = buildWeightedDeck(cards, stored);
     setTimerForCard(stored.timerSeconds, deck[0]);
     setIndex(0);
@@ -108,8 +121,24 @@ export default function PlayPage() {
     setShowSolution(false);
   }, [filteredDeck, index, settings.timerSeconds, setTimerForCard]);
 
-  const card = filteredDeck[index];
-  const isLast = index === filteredDeck.length - 1;
+  const rememberBlocked = useCallback((set: Set<string>) => {
+    localStorage.setItem('blockedCards', JSON.stringify(Array.from(set)));
+  }, []);
+
+  const markCardBlocked = useCallback(
+    (id: string) => {
+      setBlockedCards((prev) => {
+        const next = new Set(prev);
+        next.add(id);
+        rememberBlocked(next);
+        return next;
+      });
+      if (card?.id === id) {
+        nextCard();
+      }
+    },
+    [card?.id, nextCard, rememberBlocked]
+  );
 
   useEffect(() => {
     if (!timer.running) return;
@@ -140,7 +169,7 @@ export default function PlayPage() {
     checkSpotify();
   }, []);
 
-  const nextCard = () => {
+  const nextCard = useCallback(() => {
     mediaRef.current?.stop();
     if (index < filteredDeck.length - 1) {
       setIndex((i) => i + 1);
@@ -150,7 +179,7 @@ export default function PlayPage() {
       setTimer({ secondsLeft: 0, running: false });
       setShowSolution(false);
     }
-  };
+  }, [filteredDeck.length, index]);
 
   const resetTimer = () => {
     const current = filteredDeck[index];
@@ -231,6 +260,7 @@ export default function PlayPage() {
           preference={card.category === 'music' && card.sources.spotify ? 'spotify' : 'auto'}
           concealMetadata
           onPlay={handleMediaPlay}
+          onPlaybackError={markCardBlocked}
         />
         {showSolution && (
           <div className="rounded-xl bg-ink/5 p-4 space-y-2 text-sm text-ink/80">
