@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import { cards, getCategories } from '@/lib/cards';
-import { CardCategory, Difficulty, Language } from '@/lib/types';
+import { CardCategory, Difficulty } from '@/lib/types';
 import { getDefaultSettings, loadSettings, saveSettings, UserSettings } from '@/lib/userSettings';
 
 const difficultyOptions: { value: Difficulty; label: string }[] = [
@@ -45,14 +45,16 @@ export default function SettingsPage() {
 
   const handleTimerChange = (value: string) => {
     setTimerInput(value);
-    if (value.trim() === '') return;
-    const minutes = Number.parseFloat(value.replace(',', '.'));
+    const minutes = Number.parseFloat(value);
     if (Number.isNaN(minutes)) return;
     const seconds = Math.max(30, Math.round(minutes * 60));
     updateSettings({ ...settings, timerSeconds: seconds });
   };
 
-  const resetDefaults = () => updateSettings(defaults);
+  const resetDefaults = () => {
+    updateSettings(defaults);
+    setTimerInput((defaults.timerSeconds / 60).toString());
+  };
 
   const updateCategoryWeight = (category: CardCategory, value: number) => {
     const weight = Math.min(100, Math.max(0, Math.round(value)));
@@ -74,10 +76,6 @@ export default function SettingsPage() {
     });
   };
 
-  const handleLanguageChange = (value: Language) => {
-    updateSettings({ ...settings, language: value });
-  };
-
   const activeWeightSum = settings.categories.reduce(
     (sum, cat) => sum + (settings.categoryWeights[cat] ?? 0),
     0
@@ -93,6 +91,12 @@ export default function SettingsPage() {
           lokal im Browser gespeichert und wirken sich sofort im Spielmodus aus.
         </p>
         <div className="flex flex-wrap gap-3 pt-2">
+          <Link
+            href="/"
+            className="rounded-xl border border-ink/20 px-4 py-2 text-sm"
+          >
+            Speichern & zurück zum Hauptmenü
+          </Link>
           <button
             type="button"
             onClick={resetDefaults}
@@ -100,12 +104,6 @@ export default function SettingsPage() {
           >
             Standard wiederherstellen
           </button>
-          <Link
-            href="/"
-            className="rounded-xl border border-ink/20 px-4 py-2 text-sm"
-          >
-            Speichern & zurück zum Hauptmenü
-          </Link>
         </div>
       </div>
 
@@ -168,58 +166,27 @@ export default function SettingsPage() {
               );
             })}
           </div>
-          <p className="text-xs text-ink/60">
-            Bei der Ziehung werden die Gewichte relativ zueinander der aktiven Kategorien verwendet. 0%
-            bedeutet, dass eine Kategorie praktisch übersprungen wird.
-          </p>
         </div>
       </section>
 
       <section className="card-surface rounded-2xl p-5 space-y-3">
         <h2 className="text-lg font-semibold">Zeit pro Frage</h2>
-        <p className="text-sm text-ink/70">Standard: 3 Minuten. Eingabe in Minuten, mindestens 0:30.</p>
-        <div className="flex flex-wrap items-center gap-3">
+        <p className="text-sm text-ink/70">Standard: 2 Minuten. Stell die Zeit mit dem Regler ein (min. 0:30).</p>
+        <div className="space-y-2">
           <input
-            type="number"
+            type="range"
             min={0.5}
+            max={5}
             step={0.5}
-            value={loaded ? timerInput : ''}
+            value={loaded ? timerInput : '2'}
             onChange={(e) => handleTimerChange(e.target.value)}
-            className="w-28 rounded-xl border border-ink/20 px-3 py-2 text-sm"
+            className="w-full accent-ink"
           />
-          <span className="text-sm text-ink/70">Minuten pro Frage</span>
-        </div>
-      </section>
-
-      <section className="card-surface rounded-2xl p-5 space-y-3">
-        <h2 className="text-lg font-semibold">Sprache</h2>
-        <p className="text-sm text-ink/70">Wähle die Sprache für Bedienoberfläche und Hinweise.</p>
-        <div className="grid sm:grid-cols-3 gap-3">
-          {(
-            [
-              { value: 'de', label: 'Deutsch', note: 'Standard, volle Abdeckung' },
-              { value: 'en', label: 'English', note: 'English UI labels' },
-              { value: 'fr', label: 'Français', note: 'Libellés en français' }
-            ] as { value: Language; label: string; note: string }[]
-          ).map((option) => {
-            const active = settings.language === option.value;
-            return (
-              <button
-                key={option.value}
-                type="button"
-                onClick={() => handleLanguageChange(option.value)}
-                className={`text-left rounded-xl border px-4 py-3 space-y-1 transition ${
-                  active ? 'border-ink bg-ink text-sand' : 'border-ink/20'
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <span className="font-semibold">{option.label}</span>
-                  {active && <span className="text-xs">✓</span>}
-                </div>
-                <p className="text-xs text-ink/70">{option.note}</p>
-              </button>
-            );
-          })}
+          <div className="flex items-center justify-between text-sm text-ink/70">
+            <span>0:30</span>
+            <span className="font-semibold text-ink">{loaded ? Number(timerInput).toFixed(1) : '2.0'} min</span>
+            <span>5:00</span>
+          </div>
         </div>
       </section>
 

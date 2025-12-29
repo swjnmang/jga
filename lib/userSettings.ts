@@ -1,11 +1,10 @@
-import { CardCategory, Difficulty, Language } from './types';
+import { CardCategory, Difficulty } from './types';
 
 export type UserSettings = {
   timerSeconds: number;
   categories: CardCategory[];
   difficulties: Difficulty[];
   categoryWeights: Record<CardCategory, number>;
-  language: Language;
 };
 
 const STORAGE_KEY = 'jga-user-settings';
@@ -19,11 +18,10 @@ export function getDefaultSettings(availableCategories: CardCategory[]): UserSet
   }, {} as Record<CardCategory, number>);
 
   return {
-    timerSeconds: 180,
+    timerSeconds: 120,
     categories: availableCategories,
     difficulties: ['leicht', 'mittel', 'schwer'],
-    categoryWeights,
-    language: 'de'
+    categoryWeights
   };
 }
 
@@ -50,8 +48,7 @@ export function loadSettings(defaults: UserSettings): UserSettings {
       difficulties:
         parsed.difficulties && parsed.difficulties.length > 0 ? parsed.difficulties : defaults.difficulties,
       timerSeconds: parsed.timerSeconds && parsed.timerSeconds > 0 ? parsed.timerSeconds : defaults.timerSeconds,
-      categoryWeights: weights,
-      language: isLanguage(parsed.language) ? parsed.language : defaults.language
+      categoryWeights: weights
     };
   } catch (_err) {
     return defaults;
@@ -70,10 +67,6 @@ function fillCategoryWeights(
     result[cat] = typeof value === 'number' && value >= 0 ? value : defaults[cat];
   }
   return result;
-}
-
-function isLanguage(value: any): value is Language {
-  return value === 'de' || value === 'en' || value === 'fr';
 }
 
 export function saveSettings(settings: UserSettings) {
