@@ -3,8 +3,9 @@
 import Link from 'next/link';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { cards, getCategories } from '@/lib/cards';
-import { MediaEmbed } from '@/components/MediaEmbed';
+import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
 import { getDefaultSettings, loadSettings, UserSettings } from '@/lib/userSettings';
+import { Card, CardCategory } from '@/lib/types';
 
 function shuffle<T>(arr: T[]): T[] {
   const copy = [...arr];
@@ -20,25 +21,58 @@ type TimerState = {
   running: boolean;
 };
 
+function buildWeightedDeck(allCards: Card[], settings: UserSettings) {
+  const allowed = allCards.filter(
+    (c) => settings.categories.includes(c.category) && settings.difficulties.includes(c.difficulty)
+  );
+
+  const buckets = new Map<CardCategory, Card[]>(
+    settings.categories.map((cat) => [cat, shuffle(allowed.filter((c) => c.category === cat))])
+  );
+
+  const deck: Card[] = [];
+
+  const drawCategory = (availableCats: CardCategory[]) => {
+    const weights = availableCats.map((cat) => Math.max(0, settings.categoryWeights[cat] ?? 0));
+    const total = weights.reduce((a, b) => a + b, 0);
+    const norm = total > 0 ? total : availableCats.length;
+    let r = Math.random() * norm;
+    for (let i = 0; i < availableCats.length; i += 1) {
+      const w = total > 0 ? weights[i] : 1;
+      if (r <= w) return availableCats[i];
+      r -= w;
+    }
+    return availableCats[availableCats.length - 1];
+  };
+
+  let safety = allowed.length * 2 + 10;
+  while (deck.length < allowed.length && safety > 0) {
+    safety -= 1;
+    const availableCats = Array.from(buckets.entries())
+      .filter(([, list]) => list.length > 0)
+      .map(([cat]) => cat);
+    if (availableCats.length === 0) break;
+    const chosen = drawCategory(availableCats);
+    const list = buckets.get(chosen);
+    const card = list?.pop();
+    if (card) deck.push(card);
+  }
+
+  return deck;
+}
+
 export default function PlayPage() {
   const availableCategories = useMemo(() => getCategories(cards), []);
   const defaults = useMemo(() => getDefaultSettings(availableCategories), [availableCategories]);
   const [settings, setSettings] = useState<UserSettings>(defaults);
-  const filteredDeck = useMemo(
-    () =>
-      shuffle(
-        cards.filter(
-          (c) => settings.categories.includes(c.category) && settings.difficulties.includes(c.difficulty)
-        )
-      ),
-    [settings]
-  );
+  const filteredDeck = useMemo(() => buildWeightedDeck(cards, settings), [settings]);
   const [index, setIndex] = useState(0);
   const [timer, setTimer] = useState<TimerState>({ secondsLeft: settings.timerSeconds, running: true });
   const [blackedOut, setBlackedOut] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
   const [needsSpotifyAuth, setNeedsSpotifyAuth] = useState<boolean | null>(null);
   const requestedFullscreen = useRef(false);
+  const mediaRef = useRef<MediaEmbedHandle | null>(null);
 
   useEffect(() => {
     const stored = loadSettings(defaults);
@@ -103,6 +137,7 @@ export default function PlayPage() {
   }, []);
 
   const nextCard = () => {
+    mediaRef.current?.stop();
     if (index < filteredDeck.length - 1) {
       setIndex((i) => i + 1);
       resetTimer();
@@ -174,6 +209,7 @@ export default function PlayPage() {
         </div>
         <p className="text-lg font-semibold">{card.cue}</p>
         <MediaEmbed
+          ref={mediaRef}
           card={card}
           preference={card.category === 'music' && card.sources.spotify ? 'spotify' : 'auto'}
           concealMetadata

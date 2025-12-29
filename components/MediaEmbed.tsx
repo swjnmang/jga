@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
 import { Card, MediaPreference } from '@/lib/types';
 
 function toYouTubeEmbed(url: string) {
@@ -57,7 +57,13 @@ type Props = {
   concealMetadata?: boolean;
 };
 
-export function MediaEmbed({ card, preference, concealMetadata = false }: Props) {
+export type MediaEmbedHandle = {
+  stop: () => void;
+};
+
+export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(
+  ({ card, preference, concealMetadata = false }, ref)
+) => {
   const [youtubeUnavailable, setYouTubeUnavailable] = useState(false);
   const [youtubeChecked, setYouTubeChecked] = useState(false);
   const choice = useMemo(
@@ -268,6 +274,19 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
     }
   };
 
+  useImperativeHandle(ref, () => ({
+    stop: () => {
+      if (choice?.type === 'youtube') {
+        sendYouTubeCommand('pauseVideo');
+      }
+      if (choice?.type === 'spotify') {
+        pauseSpotify();
+      }
+      setIsPlaying(false);
+      setShowSpotify(false);
+    }
+  }));
+
   const toggleSpotify = () => {
     if (!spotifyToken) {
       setSpotifyError('Spotify Login erforderlich');
@@ -396,7 +415,9 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
     default:
       return <p className="text-sm text-ink/70">Keine unterstützte Quelle.</p>;
   }
-}
+});
+
+MediaEmbed.displayName = 'MediaEmbed';
 
 export function SourcePills({ card }: { card: Card }) {
   const pills: { label: string; active: boolean }[] = [

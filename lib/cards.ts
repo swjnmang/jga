@@ -496,6 +496,266 @@ export const cards: Card[] = [
     sources: {
       text: '“Carpe diem. Seize the day, boys.”'
     }
+  },
+  {
+    id: 'flag-de',
+    title: 'Flagge Deutschland',
+    category: 'country',
+    year: 1949,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Deutschland – Schwarz-Rot-Gold, 1949 bestätigt.',
+    hint: 'Mitteleuropa, Trikolore.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/de.png'
+    }
+  },
+  {
+    id: 'flag-fr',
+    title: 'Flagge Frankreich',
+    category: 'country',
+    year: 1794,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Frankreich – Bleu-Blanc-Rouge, 1794 offiziell.',
+    hint: 'Tricolore mit Blau links.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/fr.png'
+    }
+  },
+  {
+    id: 'flag-it',
+    title: 'Flagge Italien',
+    category: 'country',
+    year: 1946,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Italien – Grün-Weiß-Rot, 1946 republikanisch.',
+    hint: 'Vertikale Tricolore, Grün am Mast.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/it.png'
+    }
+  },
+  {
+    id: 'flag-es',
+    title: 'Flagge Spanien',
+    category: 'country',
+    year: 1981,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Spanien – Rot-Gelb-Rot mit Wappen, 1981.',
+    hint: 'Mittelstreifen doppelt so breit.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/es.png'
+    }
+  },
+  {
+    id: 'flag-us',
+    title: 'Flagge USA',
+    category: 'country',
+    year: 1960,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Vereinigte Staaten – Stars and Stripes mit 50 Sternen, seit 1960.',
+    hint: 'Streifen und Sterne.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/us.png'
+    }
+  },
+  {
+    id: 'flag-gb',
+    title: 'Flagge Vereinigtes Königreich',
+    category: 'country',
+    year: 1801,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Vereinigtes Königreich – Union Jack, seit 1801.',
+    hint: 'Überlagerte Kreuze.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/gb.png'
+    }
+  },
+  {
+    id: 'flag-jp',
+    title: 'Flagge Japan',
+    category: 'country',
+    year: 1999,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Japan – Roter Kreis auf Weiß, 1999 gesetzlich bestätigt.',
+    hint: 'Hinomaru.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/jp.png'
+    }
+  },
+  {
+    id: 'flag-cn',
+    title: 'Flagge China',
+    category: 'country',
+    year: 1949,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Volksrepublik China – Rot mit fünf Sternen, 1949.',
+    hint: 'Ein großer, vier kleine Sterne.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/cn.png'
+    }
+  },
+  {
+    id: 'flag-br',
+    title: 'Flagge Brasilien',
+    category: 'country',
+    year: 1889,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Brasilien – Grün, Gelb-Raute und Sternenkugel, 1889.',
+    hint: 'Ordem e Progresso.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/br.png'
+    }
+  },
+  {
+    id: 'flag-in',
+    title: 'Flagge Indien',
+    category: 'country',
+    year: 1947,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Indien – Safran, Weiß, Grün mit Ashoka-Chakra, 1947.',
+    hint: '24-Speichen-Rad.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/in.png'
+    }
+  },
+  {
+    id: 'flag-au',
+    title: 'Flagge Australien',
+    category: 'country',
+    year: 1903,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Australien – Union Jack, Commonwealth Star und Südliches Kreuz, 1903.',
+    hint: 'Blau mit Sternbildern.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/au.png'
+    }
+  },
+  {
+    id: 'flag-ca',
+    title: 'Flagge Kanada',
+    category: 'country',
+    year: 1965,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Kanada – Ahornblatt auf Rot-Weiß-Rot, 1965.',
+    hint: 'Rotes Ahornblatt.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/ca.png'
+    }
+  },
+  {
+    id: 'flag-za',
+    title: 'Flagge Südafrika',
+    category: 'country',
+    year: 1994,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Südafrika – Y-Form mit sechs Farben, 1994.',
+    hint: 'Post-Apartheid Symbol.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/za.png'
+    }
+  },
+  {
+    id: 'flag-se',
+    title: 'Flagge Schweden',
+    category: 'country',
+    year: 1906,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Schweden – Blau mit gelbem Kreuz, 1906.',
+    hint: 'Nordisches Kreuz.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/se.png'
+    }
+  },
+  {
+    id: 'flag-no',
+    title: 'Flagge Norwegen',
+    category: 'country',
+    year: 1821,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Norwegen – Rot mit blauem Kreuz, 1821.',
+    hint: 'Nordisches Kreuz mit Weiß und Blau.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/no.png'
+    }
+  },
+  {
+    id: 'flag-fi',
+    title: 'Flagge Finnland',
+    category: 'country',
+    year: 1918,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Finnland – Weiß mit blauem Kreuz, 1918.',
+    hint: 'Seen, Schnee, Blau-Weiß.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/fi.png'
+    }
+  },
+  {
+    id: 'flag-ar',
+    title: 'Flagge Argentinien',
+    category: 'country',
+    year: 1818,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Argentinien – Hellblau-Weiß mit Sonne, 1818.',
+    hint: 'Sonne der Mai-Revolution.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/ar.png'
+    }
+  },
+  {
+    id: 'flag-mx',
+    title: 'Flagge Mexiko',
+    category: 'country',
+    year: 1968,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Mexiko – Grün, Weiß, Rot mit Adler und Schlange, 1968.',
+    hint: 'Tricolore mit Wappen.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/mx.png'
+    }
+  },
+  {
+    id: 'flag-ch',
+    title: 'Flagge Schweiz',
+    category: 'country',
+    year: 1889,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Schweiz – Rotes Quadrat mit weißem Kreuz, 1889.',
+    hint: 'Quadratische Flagge.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/ch.png'
+    }
+  },
+  {
+    id: 'flag-nl',
+    title: 'Flagge Niederlande',
+    category: 'country',
+    year: 1937,
+    cue: 'Welches Land und seit wann in dieser Form?',
+    answer: 'Niederlande – Rot, Weiß, Blau, 1937.',
+    hint: 'Waagerechte Tricolore.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/nl.png'
+    }
   }
 ];
 

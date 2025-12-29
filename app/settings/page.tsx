@@ -35,7 +35,11 @@ export default function SettingsPage() {
         ? prev.categories.filter((c) => c !== category)
         : [...prev.categories, category];
       if (nextCategories.length === 0) return prev;
-      const next = { ...prev, categories: nextCategories };
+      const updatedWeights = { ...prev.categoryWeights };
+      if (!updatedWeights[category]) {
+        updatedWeights[category] = defaults.categoryWeights[category] ?? 10;
+      }
+      const next = { ...prev, categories: nextCategories, categoryWeights: updatedWeights };
       saveSettings(next);
       return next;
     });
@@ -62,7 +66,19 @@ export default function SettingsPage() {
 
   const resetDefaults = () => updateSettings(defaults);
 
+  const updateCategoryWeight = (category: CardCategory, value: number) => {
+    const weight = Math.min(100, Math.max(0, Math.round(value)));
+    updateSettings({
+      ...settings,
+      categoryWeights: { ...settings.categoryWeights, [category]: weight }
+    });
+  };
+
   const timerMinutes = Math.round(settings.timerSeconds / 60);
+  const activeWeightSum = settings.categories.reduce(
+    (sum, cat) => sum + (settings.categoryWeights[cat] ?? 0),
+    0
+  );
 
   return (
     <main className="mx-auto max-w-4xl px-6 py-10 space-y-6">
@@ -121,7 +137,7 @@ export default function SettingsPage() {
       <section className="card-surface rounded-2xl p-5 space-y-4">
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-lg font-semibold">Kategorien</h2>
-          <p className="text-xs text-ink/60">Mindestens eine aktiv</p>
+          <p className="text-xs text-ink/60">Mindestens eine aktiv, Gewichte steuerbar</p>
         </div>
         <div className="grid sm:grid-cols-3 gap-3">
           {availableCategories.map((category) => {
@@ -143,6 +159,39 @@ export default function SettingsPage() {
               </label>
             );
           })}
+        </div>
+        <div className="space-y-3">
+          <div className="flex items-center justify-between text-xs text-ink/60">
+            <span>Gewichtung der aktiven Kategorien</span>
+            <span>Summe aktiv: {activeWeightSum}% (wird automatisch normalisiert)</span>
+          </div>
+          <div className="space-y-2">
+            {availableCategories.map((category) => {
+              const value = settings.categoryWeights[category] ?? 0;
+              const disabled = !settings.categories.includes(category);
+              return (
+                <label key={category} className="flex flex-col gap-1 text-sm">
+                  <div className="flex items-center justify-between">
+                    <span className="capitalize">{category}</span>
+                    <span className="text-xs text-ink/60">{value}%</span>
+                  </div>
+                  <input
+                    type="range"
+                    min={0}
+                    max={100}
+                    value={value}
+                    onChange={(e) => updateCategoryWeight(category, Number(e.target.value))}
+                    disabled={disabled}
+                    className="accent-ink"
+                  />
+                </label>
+              );
+            })}
+          </div>
+          <p className="text-xs text-ink/60">
+            Bei der Ziehung werden die Gewichte relativ zueinander der aktiven Kategorien verwendet. 0%
+            bedeutet, dass eine Kategorie praktisch übersprungen wird.
+          </p>
         </div>
       </section>
 
