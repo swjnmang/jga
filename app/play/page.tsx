@@ -76,7 +76,6 @@ export default function PlayPage() {
   const [blackedOut, setBlackedOut] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
   const [needsSpotifyAuth, setNeedsSpotifyAuth] = useState<boolean | null>(null);
-  const requestedFullscreen = useRef(false);
   const mediaRef = useRef<MediaEmbedHandle | null>(null);
 
   const requiresPlayStart = useCallback((c?: Card) => c?.category === 'music' || c?.category === 'video', []);
@@ -139,22 +138,6 @@ export default function PlayPage() {
       }
     };
     checkSpotify();
-  }, []);
-
-  // Attempt fullscreen after first user interaction.
-  useEffect(() => {
-    const handler = () => {
-      if (requestedFullscreen.current) return;
-      requestedFullscreen.current = true;
-      if (document.fullscreenElement) return;
-      if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen().catch(() => {
-          // ignore user dismissal
-        });
-      }
-    };
-    document.addEventListener('pointerdown', handler, { once: true });
-    return () => document.removeEventListener('pointerdown', handler);
   }, []);
 
   const nextCard = () => {

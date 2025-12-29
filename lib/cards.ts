@@ -7,7 +7,7 @@ export const cards: Card[] = [
     category: 'music',
     year: 1991,
     cue: 'Starte den Song und ordne ihn zeitlich ein.',
-    answer: 'Nirvana â€” Release 1991 auf dem Album Nevermind.',
+    answer: 'Nirvana — Release 1991 auf dem Album Nevermind.',
     hint: 'Grunge aus Seattle.',
     difficulty: 'mittel',
     sources: {
@@ -19,12 +19,12 @@ export const cards: Card[] = [
     title: 'Wir schaffen das',
     category: 'quote',
     year: 2015,
-    cue: 'HÃ¶re das Zitat oder lese es laut vor.',
-    answer: 'Angela Merkel, Pressekonferenz zur FlÃ¼chtlingspolitik am 31.08.2015.',
+    cue: 'Höre das Zitat oder lese es laut vor.',
+    answer: 'Angela Merkel, Pressekonferenz zur Flüchtlingspolitik am 31.08.2015.',
     hint: 'Bundeskanzlerin zur Migrationslage.',
     difficulty: 'leicht',
     sources: {
-      text: 'â€žWir schaffen das.â€œ'
+      text: '„Wir schaffen das.“'
     }
   },
   {
@@ -32,7 +32,7 @@ export const cards: Card[] = [
     title: 'Tor im WM-Finale 1954',
     category: 'video',
     year: 1954,
-    cue: 'Wann war das? Benenne auÃŸerdem eine berÃ¼hmte PersÃ¶nlichkeit oder einen Ort, der mit diesem Ereignis in Verbindung gesetzt wird.',
+    cue: 'Wann war das? Benenne außerdem eine berühmte Persönlichkeit oder einen Ort, der mit diesem Ereignis in Verbindung gesetzt wird.',
     answer: 'Helmut Rahn erzielt das 3:2 im WM-Finale am 04.07.1954.',
     hint: 'Das Wunder von Bern.',
     difficulty: 'mittel',
@@ -45,13 +45,13 @@ export const cards: Card[] = [
     title: 'I have a dream',
     category: 'quote',
     year: 1963,
-    cue: 'Ein Ausschnitt aus einer berÃ¼hmten Rede.',
+    cue: 'Ein Ausschnitt aus einer berühmten Rede.',
     answer: 'Martin Luther King Jr., 28.08.1963, Washington D.C.',
-    hint: 'BÃ¼rgerrechtsbewegung in den USA.',
+    hint: 'Bürgerrechtsbewegung in den USA.',
     difficulty: 'mittel',
     sources: {
       youtube: 'https://www.youtube.com/watch?v=vP4iY1TtS3s',
-      text: 'â€œI have a dream.â€'
+      text: '“I have a dream.”'
     }
   },
   {
@@ -60,7 +60,7 @@ export const cards: Card[] = [
     category: 'image',
     year: 1989,
     cue: 'Bild ansehen und chronologisch einordnen. Frage: Wo und wann war das?',
-    answer: 'Berlin, 09.11.1989 â€“ Fall der Berliner Mauer.',
+    answer: 'Berlin, 09.11.1989 – Fall der Berliner Mauer.',
     hint: 'Europa, Kalter Krieg.',
     difficulty: 'leicht',
     sources: {
@@ -73,8 +73,8 @@ export const cards: Card[] = [
     category: 'image',
     year: -2560,
     cue: 'Bild ansehen und einordnen. Frage: Wo und wann war das?',
-    answer: 'Gizeh, ca. 2560 v. Chr. â€“ Cheops-Pyramide.',
-    hint: 'Altes Ã„gypten.',
+    answer: 'Gizeh, ca. 2560 v. Chr. – Cheops-Pyramide.',
+    hint: 'Altes Ägypten.',
     difficulty: 'schwer',
     sources: {
       image: 'https://placehold.co/900x600/d1f3e0/0f172a?text=Cheops-Pyramide'
@@ -85,9 +85,9 @@ export const cards: Card[] = [
     title: 'Rolling in the Deep',
     category: 'music',
     year: 2010,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'Adele â€” 2010, Album 21.',
-    hint: 'Londoner SÃ¤ngerin, Durchbruch-Single.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'Adele — 2010, Album 21.',
+    hint: 'Londoner Sängerin, Durchbruch-Single.',
     difficulty: 'leicht',
     sources: {
       spotify: 'https://open.spotify.com/track/6j6ZtpxjR0L9gLd7krr6m3'
@@ -98,8 +98,8 @@ export const cards: Card[] = [
     title: 'Bohemian Rhapsody',
     category: 'music',
     year: 1975,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'Queen â€” 1975, Album A Night at the Opera.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'Queen — 1975, Album A Night at the Opera.',
     hint: 'Opernartige Rock-Hymne.',
     difficulty: 'mittel',
     sources: {
@@ -111,8 +111,8 @@ export const cards: Card[] = [
     title: 'Billie Jean',
     category: 'music',
     year: 1982,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'Michael Jackson â€” 1982, Album Thriller.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'Michael Jackson — 1982, Album Thriller.',
     hint: 'King of Pop.',
     difficulty: 'mittel',
     sources: {
@@ -124,8 +124,8 @@ export const cards: Card[] = [
     title: 'Shape of You',
     category: 'music',
     year: 2017,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'Ed Sheeran â€” 2017, Album Ã·.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'Ed Sheeran — 2017, Album ÷.',
     hint: 'Pop-Hit aus UK.',
     difficulty: 'leicht',
     sources: {
@@ -137,8 +137,8 @@ export const cards: Card[] = [
     title: 'Blinding Lights',
     category: 'music',
     year: 2019,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'The Weeknd â€” 2019, Album After Hours.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'The Weeknd — 2019, Album After Hours.',
     hint: 'Synthwave-Revival.',
     difficulty: 'leicht',
     sources: {
@@ -150,8 +150,8 @@ export const cards: Card[] = [
     title: 'Take On Me',
     category: 'music',
     year: 1985,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'a-ha â€” 1985, Album Hunting High and Low.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'a-ha — 1985, Album Hunting High and Low.',
     hint: 'Norwegische Synth-Pop-Band.',
     difficulty: 'mittel',
     sources: {
@@ -163,8 +163,8 @@ export const cards: Card[] = [
     title: 'Mondlandung 1969',
     category: 'video',
     year: 1969,
-    cue: 'Wann war das? Benenne auÃŸerdem eine berÃ¼hmte PersÃ¶nlichkeit oder einen Ort, der mit diesem Ereignis in Verbindung gesetzt wird.',
-    answer: 'Apollo 11, 20.07.1969 â€” Neil Armstrong betritt den Mond.',
+    cue: 'Wann war das? Benenne außerdem eine berühmte Persönlichkeit oder einen Ort, der mit diesem Ereignis in Verbindung gesetzt wird.',
+    answer: 'Apollo 11, 20.07.1969 — Neil Armstrong betritt den Mond.',
     hint: 'NASA, Kalter Krieg.',
     difficulty: 'schwer',
     sources: {
@@ -176,9 +176,9 @@ export const cards: Card[] = [
     title: 'Mauerfall 1989',
     category: 'video',
     year: 1989,
-    cue: 'Wann war das? Benenne auÃŸerdem eine berÃ¼hmte PersÃ¶nlichkeit oder einen Ort, der mit diesem Ereignis in Verbindung gesetzt wird.',
-    answer: 'Ã–ffnung der innerdeutschen Grenze am 09.11.1989.',
-    hint: 'DDR, GrenzÃ¶ffnung.',
+    cue: 'Wann war das? Benenne außerdem eine berühmte Persönlichkeit oder einen Ort, der mit diesem Ereignis in Verbindung gesetzt wird.',
+    answer: 'Öffnung der innerdeutschen Grenze am 09.11.1989.',
+    hint: 'DDR, Grenzöffnung.',
     difficulty: 'leicht',
     sources: {
       youtube: 'https://www.youtube.com/watch?v=zmRPP2WXX0U'
@@ -190,7 +190,7 @@ export const cards: Card[] = [
     category: 'image',
     year: 1969,
     cue: 'Bild ansehen: Wo und wann war das?',
-    answer: 'Mond, 20.07.1969 â€” Apollo 11 Flaggenaufstellung.',
+    answer: 'Mond, 20.07.1969 — Apollo 11 Flaggenaufstellung.',
     hint: 'Erste bemannte Mondlandung.',
     difficulty: 'mittel',
     sources: {
@@ -202,13 +202,13 @@ export const cards: Card[] = [
     title: 'We choose to go to the Moon',
     category: 'quote',
     year: 1962,
-    cue: 'Zitat anhÃ¶ren/lesen, zeitlich einordnen.',
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
     answer: 'John F. Kennedy, Rice University Speech, 12.09.1962.',
-    hint: 'US-PrÃ¤sident, Raumfahrt-Rede.',
+    hint: 'US-Präsident, Raumfahrt-Rede.',
     difficulty: 'schwer',
     sources: {
       youtube: 'https://www.youtube.com/watch?v=g25G1M4EXrQ',
-      text: 'â€œWe choose to go to the Moon.â€'
+      text: '“We choose to go to the Moon.”'
     }
   },
   {
@@ -216,12 +216,12 @@ export const cards: Card[] = [
     title: 'It always seems impossible',
     category: 'quote',
     year: 2001,
-    cue: 'Zitat lesen/anhÃ¶ren.',
+    cue: 'Zitat lesen/anhören.',
     answer: 'Nelson Mandela, 2001.',
-    hint: 'SÃ¼dafrika, VersÃ¶hnung.',
+    hint: 'Südafrika, Versöhnung.',
     difficulty: 'mittel',
     sources: {
-      text: 'â€œIt always seems impossible until itâ€™s done.â€'
+      text: '“It always seems impossible until it’s done.”'
     }
   },
   {
@@ -229,8 +229,8 @@ export const cards: Card[] = [
     title: 'Flagge Deutschlands',
     category: 'country',
     year: 1949,
-    cue: 'Zu welchem Land gehÃ¶rt diese Flagge und wann wurde es gegrÃ¼ndet?',
-    answer: 'Bundesrepublik Deutschland â€“ 23.05.1949 (Grundgesetz in Kraft).',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Bundesrepublik Deutschland – 23.05.1949 (Grundgesetz in Kraft).',
     hint: 'Europa, schwarz-rot-gold.',
     difficulty: 'leicht',
     sources: {
@@ -243,7 +243,7 @@ export const cards: Card[] = [
     category: 'music',
     year: 1977,
     cue: 'Song anspielen und zeitlich einordnen.',
-    answer: 'David Bowie â€” 1977, aus dem Album "Heroes".',
+    answer: 'David Bowie — 1977, aus dem Album "Heroes".',
     hint: 'Aufgenommen in Berlin.',
     difficulty: 'mittel',
     sources: {
@@ -255,8 +255,8 @@ export const cards: Card[] = [
     title: 'Imagine',
     category: 'music',
     year: 1971,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'John Lennon â€” 1971, Friedenshymne.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'John Lennon — 1971, Friedenshymne.',
     hint: 'Ehemaliger Beatle.',
     difficulty: 'leicht',
     sources: {
@@ -268,8 +268,8 @@ export const cards: Card[] = [
     title: 'Hotel California',
     category: 'music',
     year: 1976,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'Eagles â€” 1976, Klassiker der WestkÃ¼ste.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'Eagles — 1976, Klassiker der Westküste.',
     hint: 'Kalifornische Rockband.',
     difficulty: 'mittel',
     sources: {
@@ -281,8 +281,8 @@ export const cards: Card[] = [
     title: 'Hey Ya!',
     category: 'music',
     year: 2003,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'OutKast â€” 2003, aus Speakerboxxx/The Love Below.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'OutKast — 2003, aus Speakerboxxx/The Love Below.',
     hint: 'Shake it like a Polaroid picture.',
     difficulty: 'leicht',
     sources: {
@@ -294,8 +294,8 @@ export const cards: Card[] = [
     title: 'Lose Yourself',
     category: 'music',
     year: 2002,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'Eminem â€” 2002, Soundtrack zu 8 Mile.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'Eminem — 2002, Soundtrack zu 8 Mile.',
     hint: 'Der Moment, eine Chance.',
     difficulty: 'mittel',
     sources: {
@@ -307,8 +307,8 @@ export const cards: Card[] = [
     title: 'Seven Nation Army',
     category: 'music',
     year: 2003,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'The White Stripes â€” 2003, markante Basslinie.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'The White Stripes — 2003, markante Basslinie.',
     hint: 'Zweier-Band aus Detroit.',
     difficulty: 'leicht',
     sources: {
@@ -320,9 +320,9 @@ export const cards: Card[] = [
     title: 'bad guy',
     category: 'music',
     year: 2019,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'Billie Eilish â€” 2019, DebÃ¼talbum When We All Fall Asleep.',
-    hint: 'FlÃ¼sterpop mit Bass.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'Billie Eilish — 2019, Debütalbum When We All Fall Asleep.',
+    hint: 'Flüsterpop mit Bass.',
     difficulty: 'leicht',
     sources: {
       spotify: 'https://open.spotify.com/track/2Fxmhks0bxGSBdJ92vM42m'
@@ -333,9 +333,9 @@ export const cards: Card[] = [
     title: 'Get Lucky',
     category: 'music',
     year: 2013,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'Daft Punk feat. Pharrell Williams â€” 2013.',
-    hint: 'FranzÃ¶sisches Duo mit Helmen.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'Daft Punk feat. Pharrell Williams — 2013.',
+    hint: 'Französisches Duo mit Helmen.',
     difficulty: 'leicht',
     sources: {
       spotify: 'https://open.spotify.com/track/69kOkLUCkxIZYexIgSG8rq'
@@ -346,8 +346,8 @@ export const cards: Card[] = [
     title: 'Viva La Vida',
     category: 'music',
     year: 2008,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'Coldplay â€” 2008, Album Viva la Vida or Death and All His Friends.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'Coldplay — 2008, Album Viva la Vida or Death and All His Friends.',
     hint: 'Britische Band mit Streicher-Hook.',
     difficulty: 'leicht',
     sources: {
@@ -359,9 +359,9 @@ export const cards: Card[] = [
     title: "Hips Don't Lie",
     category: 'music',
     year: 2006,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'Shakira feat. Wyclef Jean â€” 2006.',
-    hint: 'Kolumbianische SÃ¤ngerin, weltweiter Tanzhit.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'Shakira feat. Wyclef Jean — 2006.',
+    hint: 'Kolumbianische Sängerin, weltweiter Tanzhit.',
     difficulty: 'leicht',
     sources: {
       spotify: 'https://open.spotify.com/track/0EmeFodog0BfCgMzAIvKQp'
@@ -372,8 +372,8 @@ export const cards: Card[] = [
     title: 'Dreams',
     category: 'music',
     year: 1977,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'Fleetwood Mac â€” 1977, Album Rumours.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'Fleetwood Mac — 1977, Album Rumours.',
     hint: 'Soft-Rock-Klassiker.',
     difficulty: 'mittel',
     sources: {
@@ -385,8 +385,8 @@ export const cards: Card[] = [
     title: 'I Want It That Way',
     category: 'music',
     year: 1999,
-    cue: 'Song anhÃ¶ren und einordnen.',
-    answer: 'Backstreet Boys â€” 1999, Boyband-Evergreen.',
+    cue: 'Song anhören und einordnen.',
+    answer: 'Backstreet Boys — 1999, Boyband-Evergreen.',
     hint: 'Tell me why.',
     difficulty: 'leicht',
     sources: {
@@ -398,12 +398,12 @@ export const cards: Card[] = [
     title: 'Tear down this wall',
     category: 'quote',
     year: 1987,
-    cue: 'Zitat anhÃ¶ren/lesen, zeitlich einordnen.',
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
     answer: 'Ronald Reagan, Rede am Brandenburger Tor, 12.06.1987.',
-    hint: 'US-PrÃ¤sident fordert Ã–ffnung der Mauer.',
+    hint: 'US-Präsident fordert Öffnung der Mauer.',
     difficulty: 'mittel',
     sources: {
-      text: 'â€œMr. Gorbachev, tear down this wall!â€'
+      text: '“Mr. Gorbachev, tear down this wall!”'
     }
   },
   {
@@ -411,12 +411,12 @@ export const cards: Card[] = [
     title: 'Yes we can',
     category: 'quote',
     year: 2008,
-    cue: 'Zitat anhÃ¶ren/lesen, zeitlich einordnen.',
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
     answer: 'Barack Obama, Wahlkampfrede 2008.',
-    hint: 'Slogan einer US-PrÃ¤sidentschaftskampagne.',
+    hint: 'Slogan einer US-Präsidentschaftskampagne.',
     difficulty: 'leicht',
     sources: {
-      text: 'â€œYes we can.â€'
+      text: '“Yes we can.”'
     }
   },
   {
@@ -424,12 +424,12 @@ export const cards: Card[] = [
     title: 'Ich bin ein Berliner',
     category: 'quote',
     year: 1963,
-    cue: 'Zitat anhÃ¶ren/lesen, zeitlich einordnen.',
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
     answer: 'John F. Kennedy, Rede in Berlin, 26.06.1963.',
     hint: 'Kaltes Kriegs-Statement.',
     difficulty: 'mittel',
     sources: {
-      text: 'â€œIch bin ein Berliner.â€'
+      text: '“Ich bin ein Berliner.”'
     }
   },
   {
@@ -437,12 +437,12 @@ export const cards: Card[] = [
     title: "Houston, we've had a problem",
     category: 'quote',
     year: 1970,
-    cue: 'Zitat anhÃ¶ren/lesen, zeitlich einordnen.',
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
     answer: 'Jack Swigert/Jim Lovell, Apollo-13-Mission, 13.04.1970.',
     hint: 'Raumfahrt-Notfall.',
     difficulty: 'schwer',
     sources: {
-      text: "â€œHouston, we've had a problem.â€"
+      text: "“Houston, we've had a problem.”"
     }
   },
   {
@@ -450,12 +450,12 @@ export const cards: Card[] = [
     title: 'One small step',
     category: 'quote',
     year: 1969,
-    cue: 'Zitat anhÃ¶ren/lesen, zeitlich einordnen.',
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
     answer: 'Neil Armstrong, Mondlandung, 20.07.1969.',
-    hint: 'Erster FuÃŸabdruck auf dem Mond.',
+    hint: 'Erster Fußabdruck auf dem Mond.',
     difficulty: 'leicht',
     sources: {
-      text: 'â€œThatâ€™s one small step for man, one giant leap for mankind.â€'
+      text: '“That’s one small step for man, one giant leap for mankind.”'
     }
   },
   {
@@ -463,12 +463,12 @@ export const cards: Card[] = [
     title: 'Fear itself',
     category: 'quote',
     year: 1933,
-    cue: 'Zitat anhÃ¶ren/lesen, zeitlich einordnen.',
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
     answer: 'Franklin D. Roosevelt, Antrittsrede, 04.03.1933.',
     hint: 'Beginn des New Deal.',
     difficulty: 'mittel',
     sources: {
-      text: 'â€œThe only thing we have to fear is fear itself.â€'
+      text: '“The only thing we have to fear is fear itself.”'
     }
   },
   {
@@ -476,12 +476,12 @@ export const cards: Card[] = [
     title: 'Stay hungry, stay foolish',
     category: 'quote',
     year: 2005,
-    cue: 'Zitat anhÃ¶ren/lesen, zeitlich einordnen.',
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
     answer: 'Steve Jobs, Stanford Commencement Speech, 12.06.2005.',
     hint: 'Abschlussrede an einer US-Eliteuni.',
     difficulty: 'leicht',
     sources: {
-      text: 'â€œStay hungry, stay foolish.â€'
+      text: '“Stay hungry, stay foolish.”'
     }
   },
   {
@@ -489,12 +489,12 @@ export const cards: Card[] = [
     title: 'Carpe Diem',
     category: 'quote',
     year: 1989,
-    cue: 'Zitat anhÃ¶ren/lesen, zeitlich einordnen.',
-    answer: 'Aus Dead Poets Society, 1989 â€“ Ermutigung, den Tag zu nutzen.',
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
+    answer: 'Aus Dead Poets Society, 1989 – Ermutigung, den Tag zu nutzen.',
     hint: 'Literaturlehrer inspiriert seine Klasse.',
     difficulty: 'mittel',
     sources: {
-      text: 'â€œCarpe diem. Seize the day, boys.â€'
+      text: '“Carpe diem. Seize the day, boys.”'
     }
   },
   {
@@ -502,8 +502,8 @@ export const cards: Card[] = [
     title: 'Flagge Deutschland',
     category: 'country',
     year: 1949,
-    cue: 'Zu welchem Land gehÃ¶rt diese Flagge und wann wurde es gegrÃ¼ndet?',
-    answer: 'Deutschland â€“ Schwarz-Rot-Gold, 1949 bestÃ¤tigt.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Deutschland – Schwarz-Rot-Gold, 1949 bestätigt.',
     hint: 'Mitteleuropa, Trikolore.',
     difficulty: 'leicht',
     sources: {
@@ -516,7 +516,7 @@ export const cards: Card[] = [
     category: 'country',
     year: 1794,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Frankreich â€“ Bleu-Blanc-Rouge, 1794 offiziell.',
+    answer: 'Frankreich – Bleu-Blanc-Rouge, 1794 offiziell.',
     hint: 'Tricolore mit Blau links.',
     difficulty: 'leicht',
     sources: {
@@ -529,8 +529,8 @@ export const cards: Card[] = [
     category: 'country',
     year: 1946,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Italien â€“ GrÃ¼n-WeiÃŸ-Rot, 1946 republikanisch.',
-    hint: 'Vertikale Tricolore, GrÃ¼n am Mast.',
+    answer: 'Italien – Grün-Weiß-Rot, 1946 republikanisch.',
+    hint: 'Vertikale Tricolore, Grün am Mast.',
     difficulty: 'leicht',
     sources: {
       image: '/assets/flags/it.png'
@@ -542,7 +542,7 @@ export const cards: Card[] = [
     category: 'country',
     year: 1981,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Spanien â€“ Rot-Gelb-Rot mit Wappen, 1981.',
+    answer: 'Spanien – Rot-Gelb-Rot mit Wappen, 1981.',
     hint: 'Mittelstreifen doppelt so breit.',
     difficulty: 'leicht',
     sources: {
@@ -555,7 +555,7 @@ export const cards: Card[] = [
     category: 'country',
     year: 1960,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Vereinigte Staaten â€“ Stars and Stripes mit 50 Sternen, seit 1960.',
+    answer: 'Vereinigte Staaten – Stars and Stripes mit 50 Sternen, seit 1960.',
     hint: 'Streifen und Sterne.',
     difficulty: 'leicht',
     sources: {
@@ -564,12 +564,12 @@ export const cards: Card[] = [
   },
   {
     id: 'flag-gb',
-    title: 'Flagge Vereinigtes KÃ¶nigreich',
+    title: 'Flagge Vereinigtes Königreich',
     category: 'country',
     year: 1801,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Vereinigtes KÃ¶nigreich â€“ Union Jack, seit 1801.',
-    hint: 'Ãœberlagerte Kreuze.',
+    answer: 'Vereinigtes Königreich – Union Jack, seit 1801.',
+    hint: 'Überlagerte Kreuze.',
     difficulty: 'leicht',
     sources: {
       image: '/assets/flags/gb.png'
@@ -581,7 +581,7 @@ export const cards: Card[] = [
     category: 'country',
     year: 1999,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Japan â€“ Roter Kreis auf WeiÃŸ, 1999 gesetzlich bestÃ¤tigt.',
+    answer: 'Japan – Roter Kreis auf Weiß, 1999 gesetzlich bestätigt.',
     hint: 'Hinomaru.',
     difficulty: 'leicht',
     sources: {
@@ -594,8 +594,8 @@ export const cards: Card[] = [
     category: 'country',
     year: 1949,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Volksrepublik China â€“ Rot mit fÃ¼nf Sternen, 1949.',
-    hint: 'Ein groÃŸer, vier kleine Sterne.',
+    answer: 'Volksrepublik China – Rot mit fünf Sternen, 1949.',
+    hint: 'Ein großer, vier kleine Sterne.',
     difficulty: 'leicht',
     sources: {
       image: '/assets/flags/cn.png'
@@ -607,7 +607,7 @@ export const cards: Card[] = [
     category: 'country',
     year: 1889,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Brasilien â€“ GrÃ¼n, Gelb-Raute und Sternenkugel, 1889.',
+    answer: 'Brasilien – Grün, Gelb-Raute und Sternenkugel, 1889.',
     hint: 'Ordem e Progresso.',
     difficulty: 'mittel',
     sources: {
@@ -620,7 +620,7 @@ export const cards: Card[] = [
     category: 'country',
     year: 1947,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Indien â€“ Safran, WeiÃŸ, GrÃ¼n mit Ashoka-Chakra, 1947.',
+    answer: 'Indien – Safran, Weiß, Grün mit Ashoka-Chakra, 1947.',
     hint: '24-Speichen-Rad.',
     difficulty: 'mittel',
     sources: {
@@ -633,7 +633,7 @@ export const cards: Card[] = [
     category: 'country',
     year: 1903,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Australien â€“ Union Jack, Commonwealth Star und SÃ¼dliches Kreuz, 1903.',
+    answer: 'Australien – Union Jack, Commonwealth Star und Südliches Kreuz, 1903.',
     hint: 'Blau mit Sternbildern.',
     difficulty: 'mittel',
     sources: {
@@ -646,7 +646,7 @@ export const cards: Card[] = [
     category: 'country',
     year: 1965,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Kanada â€“ Ahornblatt auf Rot-WeiÃŸ-Rot, 1965.',
+    answer: 'Kanada – Ahornblatt auf Rot-Weiß-Rot, 1965.',
     hint: 'Rotes Ahornblatt.',
     difficulty: 'leicht',
     sources: {
@@ -655,11 +655,11 @@ export const cards: Card[] = [
   },
   {
     id: 'flag-za',
-    title: 'Flagge SÃ¼dafrika',
+    title: 'Flagge Südafrika',
     category: 'country',
     year: 1994,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'SÃ¼dafrika â€“ Y-Form mit sechs Farben, 1994.',
+    answer: 'Südafrika – Y-Form mit sechs Farben, 1994.',
     hint: 'Post-Apartheid Symbol.',
     difficulty: 'mittel',
     sources: {
@@ -672,7 +672,7 @@ export const cards: Card[] = [
     category: 'country',
     year: 1906,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Schweden â€“ Blau mit gelbem Kreuz, 1906.',
+    answer: 'Schweden – Blau mit gelbem Kreuz, 1906.',
     hint: 'Nordisches Kreuz.',
     difficulty: 'mittel',
     sources: {
@@ -685,8 +685,8 @@ export const cards: Card[] = [
     category: 'country',
     year: 1821,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Norwegen â€“ Rot mit blauem Kreuz, 1821.',
-    hint: 'Nordisches Kreuz mit WeiÃŸ und Blau.',
+    answer: 'Norwegen – Rot mit blauem Kreuz, 1821.',
+    hint: 'Nordisches Kreuz mit Weiß und Blau.',
     difficulty: 'mittel',
     sources: {
       image: '/assets/flags/no.png'
@@ -698,8 +698,8 @@ export const cards: Card[] = [
     category: 'country',
     year: 1918,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Finnland â€“ WeiÃŸ mit blauem Kreuz, 1918.',
-    hint: 'Seen, Schnee, Blau-WeiÃŸ.',
+    answer: 'Finnland – Weiß mit blauem Kreuz, 1918.',
+    hint: 'Seen, Schnee, Blau-Weiß.',
     difficulty: 'mittel',
     sources: {
       image: '/assets/flags/fi.png'
@@ -711,7 +711,7 @@ export const cards: Card[] = [
     category: 'country',
     year: 1818,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Argentinien â€“ Hellblau-WeiÃŸ mit Sonne, 1818.',
+    answer: 'Argentinien – Hellblau-Weiß mit Sonne, 1818.',
     hint: 'Sonne der Mai-Revolution.',
     difficulty: 'mittel',
     sources: {
@@ -724,7 +724,7 @@ export const cards: Card[] = [
     category: 'country',
     year: 1968,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Mexiko â€“ GrÃ¼n, WeiÃŸ, Rot mit Adler und Schlange, 1968.',
+    answer: 'Mexiko – Grün, Weiß, Rot mit Adler und Schlange, 1968.',
     hint: 'Tricolore mit Wappen.',
     difficulty: 'mittel',
     sources: {
@@ -737,7 +737,7 @@ export const cards: Card[] = [
     category: 'country',
     year: 1889,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Schweiz â€“ Rotes Quadrat mit weiÃŸem Kreuz, 1889.',
+    answer: 'Schweiz – Rotes Quadrat mit weißem Kreuz, 1889.',
     hint: 'Quadratische Flagge.',
     difficulty: 'leicht',
     sources: {
@@ -750,7 +750,7 @@ export const cards: Card[] = [
     category: 'country',
     year: 1937,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Niederlande â€“ Rot, WeiÃŸ, Blau, 1937.',
+    answer: 'Niederlande – Rot, Weiß, Blau, 1937.',
     hint: 'Waagerechte Tricolore.',
     difficulty: 'leicht',
     sources: {

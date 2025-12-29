@@ -86,17 +86,8 @@ export default function RulesPage() {
           <li><strong>Video</strong>: Clip ohne Titel.</li>
           <li><strong>Quote</strong>: Nur das Zitat, ohne Jahr/Person.</li>
           <li><strong>Bild</strong>: Frage „Wo und wann war das?”</li>
-          <li><strong>Länder</strong>: Flagge oder Umriss; Frage: „Wie heißt das dazugehörige Land und wann wurde es gegründet?”</li>
+          <li><strong>Länder</strong>: Flagge oder Umriss; Frage: „Zu welchem Land gehört diese Flagge und wann wurde es gegründet?”</li>
           <li><strong>Schwierigkeit</strong>: Karten sind intern als leicht/mittel/schwer einsortiert und können unter Einstellungen angepasst werden.</li>
-        </ul>
-      </section>
-
-      <section className="card-surface rounded-2xl p-5 space-y-2">
-        <h2 className="text-lg font-semibold">Tipps</h2>
-        <ul className="space-y-1 text-sm text-ink/80">
-          <li>Am Handy spielen: /scan öffnet direkt den QR-Scanner.</li>
-          <li>Druck: /print erzeugt Vorder-/Rückseiten mit QR.</li>
-          <li>Erweitere Karten in der Einstellungenseite oder direkt in lib/cards.ts – so wird das Flex Quiz flexibel.</li>
         </ul>
       </section>
     </main>
