@@ -403,11 +403,13 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       );
     case 'image':
       return (
-        <img
-          src={choice.url}
-          alt="Bildinhalt"
-          className="w-full rounded-2xl card-surface object-cover"
-        />
+        <div className="w-full">
+          <img
+            src={choice.url}
+            alt="Bildinhalt"
+            className="w-full h-auto max-h-[70vh] rounded-2xl card-surface object-contain bg-ink/40"
+          />
+        </div>
       );
     case 'text':
       return (
