@@ -20,17 +20,33 @@ type MediaChoice =
   | { type: 'image'; url: string }
   | { type: 'text'; text: string };
 
-function resolveSource(card: Card, preference: MediaPreference): MediaChoice | null {
+function resolveSource(
+  card: Card,
+  preference: MediaPreference,
+  youtubeUnavailable: boolean
+): MediaChoice | null {
   const { sources } = card;
-  if (preference === 'youtube' && sources.youtube) return { type: 'youtube', url: sources.youtube };
-  if (preference === 'spotify' && sources.spotify) return { type: 'spotify', url: sources.spotify };
+  const safeYouTube = sources.youtube && !youtubeUnavailable;
 
-  if (sources.youtube) return { type: 'youtube', url: sources.youtube };
+  if (preference === 'youtube') {
+    if (safeYouTube) return { type: 'youtube', url: sources.youtube! };
+    if (sources.spotify) return { type: 'spotify', url: sources.spotify };
+  }
+
+  if (preference === 'spotify') {
+    if (sources.spotify) return { type: 'spotify', url: sources.spotify };
+    if (safeYouTube) return { type: 'youtube', url: sources.youtube! };
+  }
+
+  if (safeYouTube) return { type: 'youtube', url: sources.youtube! };
   if (sources.spotify) return { type: 'spotify', url: sources.spotify };
   if (sources.selfHostedVideo) return { type: 'selfHostedVideo', url: sources.selfHostedVideo };
   if (sources.selfHostedAudio) return { type: 'selfHostedAudio', url: sources.selfHostedAudio };
   if (sources.image) return { type: 'image', url: sources.image };
   if (sources.text) return { type: 'text', text: sources.text };
+
+  // Last resort: expose unavailable YouTube even wenn es gesperrt ist, damit ein manueller Klick möglich bleibt.
+  if (sources.youtube) return { type: 'youtube', url: sources.youtube };
 
   return null;
 }
@@ -42,7 +58,12 @@ type Props = {
 };
 
 export function MediaEmbed({ card, preference, concealMetadata = false }: Props) {
-  const choice = resolveSource(card, preference);
+  const [youtubeUnavailable, setYouTubeUnavailable] = useState(false);
+  const [youtubeChecked, setYouTubeChecked] = useState(false);
+  const choice = useMemo(
+    () => resolveSource(card, preference, youtubeUnavailable),
+    [card, preference, youtubeUnavailable]
+  );
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showSpotify, setShowSpotify] = useState(false);
@@ -77,6 +98,36 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
     setIsPlaying(false);
     setShowSpotify(false);
   }, [choice?.type, choice && 'url' in choice ? (choice as any).url : '']);
+
+  useEffect(() => {
+    let cancelled = false;
+    if (!card.sources.youtube) {
+      setYouTubeUnavailable(false);
+      setYouTubeChecked(false);
+      return undefined;
+    }
+
+    const checkAvailability = async () => {
+      setYouTubeChecked(false);
+      try {
+        const oembedUrl = `https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(card.sources.youtube!)}`;
+        const res = await fetch(oembedUrl, { method: 'GET', mode: 'cors' });
+        if (cancelled) return;
+        setYouTubeUnavailable(!res.ok);
+      } catch (_err) {
+        if (cancelled) return;
+        setYouTubeUnavailable(true);
+      } finally {
+        if (!cancelled) setYouTubeChecked(true);
+      }
+    };
+
+    checkAvailability();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [card.sources.youtube, card.id]);
 
   // Fetch Spotify token from server (httpOnly cookie proxied)
   useEffect(() => {
@@ -233,12 +284,23 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
     return <p className="text-sm text-ink/70">Keine Quelle hinterlegt.</p>;
   }
 
+  const fallbackNotice =
+    youtubeUnavailable &&
+    card.sources.youtube &&
+    choice.type !== 'youtube' &&
+    (youtubeChecked || youtubeUnavailable);
+
   switch (choice.type) {
     case 'youtube': {
       const baseUrl = toYouTubeEmbed(choice.url) ?? choice.url;
       const embedUrl = `${baseUrl}${baseUrl.includes('?') ? '&' : '?'}enablejsapi=1&controls=0&rel=0&modestbranding=1&playsinline=1${origin ? `&origin=${encodeURIComponent(origin)}` : ''}`;
       return (
         <div className="space-y-2 relative">
+          {youtubeUnavailable && (
+            <p className="text-xs text-amber-300">
+              YouTube-Video scheint nicht verfügbar. Falls die Wiedergabe blockiert ist, nutze den Link unten oder eine alternative Quelle.
+            </p>
+          )}
           <div className="aspect-video overflow-hidden rounded-2xl card-surface relative bg-ink">
             <iframe
               src={embedUrl}
@@ -269,6 +331,11 @@ export function MediaEmbed({ card, preference, concealMetadata = false }: Props)
       const embedUrl = toSpotifyEmbed(choice.url) ?? choice.url;
       return (
         <div className="space-y-2 relative">
+          {fallbackNotice && (
+            <p className="text-xs text-amber-300">
+              YouTube-Quelle nicht erreichbar, Spotify wird verwendet.
+            </p>
+          )}
           <div className="overflow-hidden rounded-2xl card-surface relative bg-ink">
             <iframe
               src={embedUrl}

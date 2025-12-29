@@ -236,6 +236,266 @@ export const cards: Card[] = [
     sources: {
       image: 'https://placehold.co/900x600/000000/ffce00?text=Deutschland'
     }
+  },
+  {
+    id: 'song-heroes',
+    title: 'Heroes',
+    category: 'music',
+    year: 1977,
+    cue: 'Song anspielen und zeitlich einordnen.',
+    answer: 'David Bowie — 1977, aus dem Album "Heroes".',
+    hint: 'Aufgenommen in Berlin.',
+    difficulty: 'mittel',
+    sources: {
+      spotify: 'https://open.spotify.com/track/0z7pVZyS0G0vXh18vvzJpZ'
+    }
+  },
+  {
+    id: 'song-imagine',
+    title: 'Imagine',
+    category: 'music',
+    year: 1971,
+    cue: 'Song anhören und einordnen.',
+    answer: 'John Lennon — 1971, Friedenshymne.',
+    hint: 'Ehemaliger Beatle.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/7pKfPomDEeI4TPT6EOYjn9'
+    }
+  },
+  {
+    id: 'song-hotel-california',
+    title: 'Hotel California',
+    category: 'music',
+    year: 1976,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Eagles — 1976, Klassiker der Westküste.',
+    hint: 'Kalifornische Rockband.',
+    difficulty: 'mittel',
+    sources: {
+      spotify: 'https://open.spotify.com/track/40riOy7x9W7GXjyGp4pjAv'
+    }
+  },
+  {
+    id: 'song-hey-ya',
+    title: 'Hey Ya!',
+    category: 'music',
+    year: 2003,
+    cue: 'Song anhören und einordnen.',
+    answer: 'OutKast — 2003, aus Speakerboxxx/The Love Below.',
+    hint: 'Shake it like a Polaroid picture.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/2PpruBYCo4H7WOBJ7Q2EwM'
+    }
+  },
+  {
+    id: 'song-lose-yourself',
+    title: 'Lose Yourself',
+    category: 'music',
+    year: 2002,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Eminem — 2002, Soundtrack zu 8 Mile.',
+    hint: 'Der Moment, eine Chance.',
+    difficulty: 'mittel',
+    sources: {
+      spotify: 'https://open.spotify.com/track/7lQqaqZu0jqQMYt5qLRO4i'
+    }
+  },
+  {
+    id: 'song-seven-nation-army',
+    title: 'Seven Nation Army',
+    category: 'music',
+    year: 2003,
+    cue: 'Song anhören und einordnen.',
+    answer: 'The White Stripes — 2003, markante Basslinie.',
+    hint: 'Zweier-Band aus Detroit.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/3d9DChrdc6BOeFsbrZ3Is0'
+    }
+  },
+  {
+    id: 'song-bad-guy',
+    title: 'bad guy',
+    category: 'music',
+    year: 2019,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Billie Eilish — 2019, Debütalbum When We All Fall Asleep.',
+    hint: 'Flüsterpop mit Bass.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/2Fxmhks0bxGSBdJ92vM42m'
+    }
+  },
+  {
+    id: 'song-get-lucky',
+    title: 'Get Lucky',
+    category: 'music',
+    year: 2013,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Daft Punk feat. Pharrell Williams — 2013.',
+    hint: 'Französisches Duo mit Helmen.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/69kOkLUCkxIZYexIgSG8rq'
+    }
+  },
+  {
+    id: 'song-viva-la-vida',
+    title: 'Viva La Vida',
+    category: 'music',
+    year: 2008,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Coldplay — 2008, Album Viva la Vida or Death and All His Friends.',
+    hint: 'Britische Band mit Streicher-Hook.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b'
+    }
+  },
+  {
+    id: 'song-hips-dont-lie',
+    title: "Hips Don't Lie",
+    category: 'music',
+    year: 2006,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Shakira feat. Wyclef Jean — 2006.',
+    hint: 'Kolumbianische Sängerin, weltweiter Tanzhit.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/0EmeFodog0BfCgMzAIvKQp'
+    }
+  },
+  {
+    id: 'song-dreams-fleetwood',
+    title: 'Dreams',
+    category: 'music',
+    year: 1977,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Fleetwood Mac — 1977, Album Rumours.',
+    hint: 'Soft-Rock-Klassiker.',
+    difficulty: 'mittel',
+    sources: {
+      spotify: 'https://open.spotify.com/track/0ofHAoxe9vBkTCp2UQIavz'
+    }
+  },
+  {
+    id: 'song-i-want-it-that-way',
+    title: 'I Want It That Way',
+    category: 'music',
+    year: 1999,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Backstreet Boys — 1999, Boyband-Evergreen.',
+    hint: 'Tell me why.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6'
+    }
+  },
+  {
+    id: 'quote-tear-down-this-wall',
+    title: 'Tear down this wall',
+    category: 'quote',
+    year: 1987,
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
+    answer: 'Ronald Reagan, Rede am Brandenburger Tor, 12.06.1987.',
+    hint: 'US-Präsident fordert Öffnung der Mauer.',
+    difficulty: 'mittel',
+    sources: {
+      text: '“Mr. Gorbachev, tear down this wall!”'
+    }
+  },
+  {
+    id: 'quote-yes-we-can',
+    title: 'Yes we can',
+    category: 'quote',
+    year: 2008,
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
+    answer: 'Barack Obama, Wahlkampfrede 2008.',
+    hint: 'Slogan einer US-Präsidentschaftskampagne.',
+    difficulty: 'leicht',
+    sources: {
+      text: '“Yes we can.”'
+    }
+  },
+  {
+    id: 'quote-ich-bin-ein-berliner',
+    title: 'Ich bin ein Berliner',
+    category: 'quote',
+    year: 1963,
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
+    answer: 'John F. Kennedy, Rede in Berlin, 26.06.1963.',
+    hint: 'Kaltes Kriegs-Statement.',
+    difficulty: 'mittel',
+    sources: {
+      text: '“Ich bin ein Berliner.”'
+    }
+  },
+  {
+    id: 'quote-houston-problem',
+    title: "Houston, we've had a problem",
+    category: 'quote',
+    year: 1970,
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
+    answer: 'Jack Swigert/Jim Lovell, Apollo-13-Mission, 13.04.1970.',
+    hint: 'Raumfahrt-Notfall.',
+    difficulty: 'schwer',
+    sources: {
+      text: "“Houston, we've had a problem.”"
+    }
+  },
+  {
+    id: 'quote-one-small-step',
+    title: 'One small step',
+    category: 'quote',
+    year: 1969,
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
+    answer: 'Neil Armstrong, Mondlandung, 20.07.1969.',
+    hint: 'Erster Fußabdruck auf dem Mond.',
+    difficulty: 'leicht',
+    sources: {
+      text: '“That’s one small step for man, one giant leap for mankind.”'
+    }
+  },
+  {
+    id: 'quote-fear-itself',
+    title: 'Fear itself',
+    category: 'quote',
+    year: 1933,
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
+    answer: 'Franklin D. Roosevelt, Antrittsrede, 04.03.1933.',
+    hint: 'Beginn des New Deal.',
+    difficulty: 'mittel',
+    sources: {
+      text: '“The only thing we have to fear is fear itself.”'
+    }
+  },
+  {
+    id: 'quote-stay-hungry',
+    title: 'Stay hungry, stay foolish',
+    category: 'quote',
+    year: 2005,
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
+    answer: 'Steve Jobs, Stanford Commencement Speech, 12.06.2005.',
+    hint: 'Abschlussrede an einer US-Eliteuni.',
+    difficulty: 'leicht',
+    sources: {
+      text: '“Stay hungry, stay foolish.”'
+    }
+  },
+  {
+    id: 'quote-carpe-diem',
+    title: 'Carpe Diem',
+    category: 'quote',
+    year: 1989,
+    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
+    answer: 'Aus Dead Poets Society, 1989 – Ermutigung, den Tag zu nutzen.',
+    hint: 'Literaturlehrer inspiriert seine Klasse.',
+    difficulty: 'mittel',
+    sources: {
+      text: '“Carpe diem. Seize the day, boys.”'
+    }
   }
 ];
 

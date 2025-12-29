@@ -1,104 +1,69 @@
 import Link from 'next/link';
-import { cards, getCategories } from '@/lib/cards';
 
 export default function HomePage() {
-  const categories = getCategories(cards);
-
   return (
-    <main className="mx-auto max-w-5xl px-6 py-12 space-y-12">
-      <section className="space-y-6">
-        <p className="text-sm uppercase tracking-[0.2em] text-ink/70">Flex Quiz</p>
+    <main className="min-h-screen bg-grid flex items-center justify-center px-6 py-16">
+      <div className="w-full max-w-4xl rounded-3xl bg-glass border border-white/20 shadow-2xl backdrop-blur-xl p-10 md:p-14 space-y-10 text-center">
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-display leading-tight">
-            Flexibel spielen, eigene Fragen, Flex Buttons.
-          </h1>
-          <p className="text-lg text-ink/80">
-            Flex Quiz funktioniert ohne QR-Scans: Fragen erscheinen direkt, Karten bleiben leer für
-            deine eigenen Prompts. Teams können nach jedem Zug einen Flex Button werfen – ist der
-            Flex richtig, gehört ihnen die letzte Karte, sonst ist der Button weg.
-          </p>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-3">
-          <MenuCard title="Spiel starten" desc="Fragen nacheinander anzeigen" href="/play" accent="bg-ink text-sand" />
-          <MenuCard title="Einstellungen" desc="Karten lokal ergänzen" href="/settings" />
-          <MenuCard title="Spielregeln" desc="Ablauf & Punkte" href="/rules" />
-        </div>
-
-        <div className="card-surface rounded-2xl p-6 space-y-4">
-          <h2 className="font-semibold text-lg">Setup</h2>
-          <ul className="space-y-2 text-sm text-ink/80">
-            <li>1) Drucke leere Karten (Front: Team-Lösung, Back: Musterlösung).</li>
-            <li>2) In der App „Spiel starten“: Frage erscheint direkt, Timer 3:00 läuft.</li>
-            <li>3) Teams schreiben Lösung auf die leere Karte, Rückseite für Musterlösung.</li>
-            <li>4) Flex Buttons: Nach jedem Zug dürfen andere Teams flexen, richtig = Karte stehlen, falsch = Button verlieren.</li>
-          </ul>
-          <div className="rounded-xl bg-mint/70 text-ink p-4 text-sm">
-            Medien werden direkt gestreamt; keine QR-Codes mehr erforderlich. Eigene Bilder/Zitate
-            kannst du unter <span className="font-semibold">public/assets/</span> hosten.
+          <div className="flex flex-col items-center gap-3">
+            <LogoMark />
+            <p className="text-sm uppercase tracking-[0.3em] text-white/70">Flex Quiz</p>
           </div>
-          <div className="flex flex-wrap gap-2 text-xs text-ink/70">
-            {categories.map((cat) => (
-              <span key={cat} className="rounded-full bg-ink/5 px-3 py-1 uppercase tracking-wide">
-                {cat}
-              </span>
-            ))}
+          <div className="space-y-3">
+            <h1 className="text-4xl md:text-5xl font-display font-semibold text-white leading-tight">
+              Dein Spiel. Deine Regeln.
+            </h1>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">
+              Schnell starten. Smart flexen. Das schnelle Quiz für Teams, die Regeln lieben und brechen.
+            </p>
+            <p className="text-sm text-white/60 tracking-wide uppercase">Slogan: „Start. Flex. Win.“</p>
           </div>
         </div>
-      </section>
 
-      <section id="karten" className="space-y-4">
-        <div className="flex items-center gap-3">
-          <h2 className="text-2xl font-display">Beispielkarten</h2>
-          <span className="text-sm text-ink/60">(erweiterbar über cards.ts)</span>
+        <div className="grid gap-4 md:grid-cols-3">
+          <PrimaryButton href="/play" label="Neues Spiel starten" />
+          <SecondaryButton href="/settings" label="Einstellungen" />
+          <SecondaryButton href="/rules" label="Spielregeln" />
         </div>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {cards.map((card) => (
-            <article key={card.id} className="card-surface rounded-2xl p-5 space-y-3">
-              <div className="flex items-center justify-between gap-2">
-                <div>
-                  <p className="text-xs uppercase tracking-wide text-ink/60">{card.category}</p>
-                  <h3 className="text-xl font-semibold">{card.title}</h3>
-                </div>
-                <span className="text-sm font-semibold bg-ink text-sand rounded-full px-3 py-1">
-                  {card.year}
-                </span>
-              </div>
-              <p className="text-sm text-ink/80">{card.cue}</p>
-              <div className="flex flex-wrap gap-2 text-sm">
-                <Link className="underline" href={`/card/${card.id}`}>
-                  Karte öffnen
-                </Link>
-                <Link className="underline" href={`/api/qr/${card.id}`}>
-                  QR als PNG
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
+      </div>
     </main>
   );
 }
 
-type MenuCardProps = {
-  title: string;
-  desc: string;
-  href: string;
-  accent?: string;
-};
-
-function MenuCard({ title, desc, href, accent }: MenuCardProps) {
+function PrimaryButton({ href, label }: { href: string; label: string }) {
   return (
     <Link
       href={href}
-      className={`card-surface rounded-2xl p-4 space-y-1 transition hover:-translate-y-0.5 ${accent ?? ''}`}
+      className="group inline-flex items-center justify-center rounded-xl bg-white text-ink font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20"
     >
-      <div className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold">{title}</h2>
-        <span aria-hidden>→</span>
-      </div>
-      <p className="text-sm text-ink/70">{desc}</p>
+      <span>{label}</span>
+      <span className="ml-2 text-ink/60 transition group-hover:translate-x-0.5">→</span>
     </Link>
+  );
+}
+
+function SecondaryButton({ href, label }: { href: string; label: string }) {
+  return (
+    <Link
+      href={href}
+      className="inline-flex items-center justify-center rounded-xl border border-white/30 text-white font-semibold px-5 py-4 bg-white/10 backdrop-blur transition hover:-translate-y-0.5 hover:border-white/60"
+    >
+      <span>{label}</span>
+    </Link>
+  );
+}
+
+function LogoMark() {
+  return (
+    <div className="h-14 w-14 rounded-2xl bg-white/10 border border-white/20 shadow-lg shadow-black/20 grid place-items-center backdrop-blur">
+      <div className="relative h-8 w-8">
+        <span className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-300 via-blue-400 to-violet-500 opacity-90" aria-hidden />
+        <span className="absolute inset-[6px] rounded-lg bg-white/80 mix-blend-screen" aria-hidden />
+        <span className="absolute inset-[3px] rounded-[10px] border border-white/40" aria-hidden />
+        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[10px] font-black tracking-[0.2em] text-ink">
+          FQ
+        </span>
+      </div>
+    </div>
   );
 }
