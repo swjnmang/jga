@@ -13,7 +13,7 @@ const difficultyOptions: { value: Difficulty; label: string }[] = [
 ];
 
 export default function SettingsPage() {
-  const availableCategories = useMemo(() => getCategories(cards), []);
+  const availableCategories = useMemo(() => getCategories(cards).filter((c) => c !== 'video'), []);
   const defaults = useMemo(() => getDefaultSettings(availableCategories), [availableCategories]);
   const [settings, setSettings] = useState<UserSettings>(defaults);
   const [loaded, setLoaded] = useState(false);
