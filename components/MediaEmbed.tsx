@@ -1,6 +1,7 @@
 'use client';
 
 import clsx from 'clsx';
+import Image from 'next/image';
 import { forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
 import { Card, MediaPreference } from '@/lib/types';
 
@@ -82,6 +83,20 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const [spotifyReady, setSpotifyReady] = useState(false);
   const [spotifyError, setSpotifyError] = useState<string | null>(null);
   const spotifyPlayerRef = useRef<Spotify.Player | null>(null);
+  const choiceSignature = useMemo(() => {
+    if (!choice) return '';
+    if (choice.type === 'text') return `text:${choice.text}`;
+    switch (choice.type) {
+      case 'youtube':
+      case 'spotify':
+      case 'selfHostedVideo':
+      case 'selfHostedAudio':
+      case 'image':
+        return `${choice.type}:${choice.url}`;
+      default:
+        return '';
+    }
+  }, [choice]);
 
   const sendYouTubeCommand = (command: 'playVideo' | 'pauseVideo') => {
     if (!iframeRef.current?.contentWindow) return;
@@ -106,7 +121,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     // Stop playback when source changes.
     setIsPlaying(false);
     setShowSpotify(false);
-  }, [choice?.type, choice && 'url' in choice ? (choice as any).url : '']);
+  }, [choiceSignature]);
 
   useEffect(() => {
     let cancelled = false;
@@ -404,11 +419,16 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     case 'image':
       return (
         <div className="w-full">
-          <img
-            src={choice.url}
-            alt="Bildinhalt"
-            className="w-full h-auto max-h-[70vh] rounded-2xl card-surface object-contain bg-ink/40"
-          />
+          <div className="relative w-full max-h-[70vh] min-h-[240px] rounded-2xl card-surface bg-ink/40 overflow-hidden">
+            <Image
+              src={choice.url}
+              alt="Bildinhalt"
+              fill
+              sizes="(max-width: 640px) 100vw, 80vw"
+              className="object-contain"
+              unoptimized
+            />
+          </div>
         </div>
       );
     case 'text':

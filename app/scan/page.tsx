@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
 import dynamic from 'next/dynamic';
 
@@ -9,7 +8,6 @@ const QrScanner = dynamic(() => import('@yudiel/react-qr-scanner').then((m) => m
 });
 
 export default function ScanPage() {
-  const router = useRouter();
   const [manual, setManual] = useState('');
   const [error, setError] = useState<string | null>(null);
 
@@ -25,7 +23,7 @@ export default function ScanPage() {
         setError('Konnte URL nicht öffnen.');
       }
     },
-    [router]
+    []
   );
 
   return (
