@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { cards, getCategories } from '@/lib/cards';
 import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
@@ -65,6 +66,7 @@ function buildWeightedDeck(allCards: Card[], settings: UserSettings) {
 }
 
 export default function PlayPage() {
+  const router = useRouter();
   const availableCategories = useMemo(() => getCategories(cards), []);
   const defaults = useMemo(() => getDefaultSettings(availableCategories), [availableCategories]);
   const [settings, setSettings] = useState<UserSettings>(defaults);
@@ -158,6 +160,13 @@ export default function PlayPage() {
     setShowSolution(false);
   };
 
+  const endGame = () => {
+    const confirmEnd = typeof window === 'undefined' ? true : window.confirm('Möchtest du das Spiel wirklich beenden?');
+    if (confirmEnd) {
+      router.push('/');
+    }
+  };
+
   if (!card) {
     return (
       <main className="mx-auto max-w-3xl px-5 py-12 space-y-6 text-center">
@@ -246,6 +255,13 @@ export default function PlayPage() {
           onClick={() => setShowSolution(true)}
         >
           Lösung
+        </button>
+        <button
+          type="button"
+          className="rounded-full border border-red-400 text-red-200 px-4 py-3 text-sm w-full sm:w-auto text-center"
+          onClick={endGame}
+        >
+          Spiel beenden
         </button>
       </div>
 

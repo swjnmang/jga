@@ -90,12 +90,6 @@ export default function SettingsPage() {
           lokal im Browser gespeichert und wirken sich sofort im Spielmodus aus.
         </p>
         <div className="flex flex-wrap gap-3 pt-2">
-          <Link
-            href="/play"
-            className="rounded-xl bg-ink text-sand px-4 py-2 text-sm font-semibold shadow"
-          >
-            Zurück zum Spiel
-          </Link>
           <button
             type="button"
             onClick={resetDefaults}
