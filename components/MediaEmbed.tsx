@@ -1,3 +1,5 @@
+'use client';
+
 import clsx from 'clsx';
 import { forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
 import { Card, MediaPreference } from '@/lib/types';
@@ -61,9 +63,10 @@ export type MediaEmbedHandle = {
   stop: () => void;
 };
 
-export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(
-  ({ card, preference, concealMetadata = false }, ref)
-) => {
+export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbed(
+  { card, preference, concealMetadata = false }: Props,
+  ref
+) {
   const [youtubeUnavailable, setYouTubeUnavailable] = useState(false);
   const [youtubeChecked, setYouTubeChecked] = useState(false);
   const choice = useMemo(
