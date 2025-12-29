@@ -67,11 +67,14 @@ function buildWeightedDeck(allCards: Card[], settings: UserSettings) {
 
 export default function PlayPage() {
   const router = useRouter();
-  const availableCategories = useMemo(() => getCategories(cards), []);
+  const availableCategories = useMemo(() => getCategories(cards).filter((c) => c !== 'video'), []);
   const defaults = useMemo(() => getDefaultSettings(availableCategories), [availableCategories]);
   const [settings, setSettings] = useState<UserSettings>(defaults);
   const [blockedCards, setBlockedCards] = useState<Set<string>>(new Set());
-  const playableCards = useMemo(() => cards.filter((c) => !blockedCards.has(c.id)), [blockedCards]);
+  const playableCards = useMemo(
+    () => cards.filter((c) => c.category !== 'video' && !blockedCards.has(c.id)),
+    [blockedCards]
+  );
   const filteredDeck = useMemo(() => buildWeightedDeck(playableCards, settings), [playableCards, settings]);
   const [index, setIndex] = useState(0);
   const [timer, setTimer] = useState<TimerState>({ secondsLeft: settings.timerSeconds, running: false });
@@ -82,7 +85,7 @@ export default function PlayPage() {
   const card = filteredDeck[index];
   const isLast = index === filteredDeck.length - 1;
 
-  const requiresPlayStart = useCallback((c?: Card) => c?.category === 'music' || c?.category === 'video', []);
+  const requiresPlayStart = useCallback((c?: Card) => c?.category === 'music', []);
 
   const setTimerForCard = useCallback(
     (seconds: number, cardToUse?: Card) => {

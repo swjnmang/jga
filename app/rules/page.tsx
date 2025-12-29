@@ -83,7 +83,6 @@ export default function RulesPage() {
         <h2 className="text-lg font-semibold">Kategorien</h2>
         <ul className="space-y-1 text-sm text-ink/80">
           <li><strong>Musik</strong>: Spotify/YouTube, Titel verdeckt.</li>
-          <li><strong>Video</strong>: Clip ohne Titel.</li>
           <li><strong>Quote</strong>: Nur das Zitat, ohne Jahr/Person.</li>
           <li><strong>Bild</strong>: Frage „Wo und wann war das?”</li>
           <li><strong>Länder</strong>: Flagge oder Umriss; Frage: „Zu welchem Land gehört diese Flagge und wann wurde es gegründet?”</li>
