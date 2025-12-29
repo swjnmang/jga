@@ -128,21 +128,6 @@ export default function PlayPage() {
     localStorage.setItem('blockedCards', JSON.stringify(Array.from(set)));
   }, []);
 
-  const markCardBlocked = useCallback(
-    (id: string) => {
-      setBlockedCards((prev) => {
-        const next = new Set(prev);
-        next.add(id);
-        rememberBlocked(next);
-        return next;
-      });
-      if (card?.id === id) {
-        nextCard();
-      }
-    },
-    [card?.id, nextCard, rememberBlocked]
-  );
-
   useEffect(() => {
     if (!timer.running) return;
     if (timer.secondsLeft <= 0) return;
@@ -183,6 +168,21 @@ export default function PlayPage() {
       setShowSolution(false);
     }
   }, [filteredDeck.length, index]);
+
+  const markCardBlocked = useCallback(
+    (id: string) => {
+      setBlockedCards((prev) => {
+        const next = new Set(prev);
+        next.add(id);
+        rememberBlocked(next);
+        return next;
+      });
+      if (card?.id === id) {
+        nextCard();
+      }
+    },
+    [card?.id, nextCard, rememberBlocked]
+  );
 
   const resetTimer = () => {
     const current = filteredDeck[index];
