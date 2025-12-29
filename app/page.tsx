@@ -16,7 +16,7 @@ export default function HomePage() {
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
               Schnell starten. Smart flexen. Das schnelle Quiz für Teams, die Regeln lieben und brechen.
             </p>
-            <p className="text-sm text-white/60 tracking-wide uppercase">Slogan: „Start. Flex. Win.“</p>
+            <p className="text-sm text-white/60 tracking-wide uppercase">„Start. Flex. Win.“</p>
           </div>
         </div>
 

@@ -85,7 +85,7 @@ export default function SettingsPage() {
     <main className="mx-auto max-w-4xl px-6 py-10 space-y-6">
       <div className="space-y-2">
         <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Einstellungen</p>
-        <h1 className="text-3xl font-display">Spiel anpassen</h1>
+        <h1 className="text-3xl font-display">Dein Quiz. Deine Regeln.</h1>
         <p className="text-sm text-ink/70">
           Wähle Schwierigkeitsgrade, Kategorien und die Zeit pro Frage. Diese Einstellungen werden
           lokal im Browser gespeichert und wirken sich sofort im Spielmodus aus.
