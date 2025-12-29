@@ -17,10 +17,12 @@ export default function SettingsPage() {
   const defaults = useMemo(() => getDefaultSettings(availableCategories), [availableCategories]);
   const [settings, setSettings] = useState<UserSettings>(defaults);
   const [loaded, setLoaded] = useState(false);
+  const [timerInput, setTimerInput] = useState('');
 
   useEffect(() => {
     const stored = loadSettings(defaults);
     setSettings(stored);
+    setTimerInput((stored.timerSeconds / 60).toString());
     setLoaded(true);
   }, [defaults]);
 
@@ -42,7 +44,9 @@ export default function SettingsPage() {
   };
 
   const handleTimerChange = (value: string) => {
-    const minutes = Number.parseFloat(value);
+    setTimerInput(value);
+    if (value.trim() === '') return;
+    const minutes = Number.parseFloat(value.replace(',', '.'));
     if (Number.isNaN(minutes)) return;
     const seconds = Math.max(30, Math.round(minutes * 60));
     updateSettings({ ...settings, timerSeconds: seconds });
@@ -74,7 +78,6 @@ export default function SettingsPage() {
     updateSettings({ ...settings, language: value });
   };
 
-  const timerMinutes = settings.timerSeconds / 60;
   const activeWeightSum = settings.categories.reduce(
     (sum, cat) => sum + (settings.categoryWeights[cat] ?? 0),
     0
@@ -180,7 +183,7 @@ export default function SettingsPage() {
             type="number"
             min={0.5}
             step={0.5}
-            value={loaded ? timerMinutes : ''}
+            value={loaded ? timerInput : ''}
             onChange={(e) => handleTimerChange(e.target.value)}
             className="w-28 rounded-xl border border-ink/20 px-3 py-2 text-sm"
           />

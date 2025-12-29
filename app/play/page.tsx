@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { cards, getCategories } from '@/lib/cards';
 import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
 import { getDefaultSettings, loadSettings, UserSettings } from '@/lib/userSettings';
@@ -72,26 +72,38 @@ export default function PlayPage() {
   const [settings, setSettings] = useState<UserSettings>(defaults);
   const filteredDeck = useMemo(() => buildWeightedDeck(cards, settings), [settings]);
   const [index, setIndex] = useState(0);
-  const [timer, setTimer] = useState<TimerState>({ secondsLeft: settings.timerSeconds, running: true });
+  const [timer, setTimer] = useState<TimerState>({ secondsLeft: settings.timerSeconds, running: false });
   const [blackedOut, setBlackedOut] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
   const [needsSpotifyAuth, setNeedsSpotifyAuth] = useState<boolean | null>(null);
   const requestedFullscreen = useRef(false);
   const mediaRef = useRef<MediaEmbedHandle | null>(null);
 
+  const requiresPlayStart = (c?: Card) => c?.category === 'music' || c?.category === 'video';
+
+  const setTimerForCard = useCallback((seconds: number, cardToUse?: Card) => {
+    setTimer({ secondsLeft: seconds, running: !requiresPlayStart(cardToUse) });
+  }, []);
+
   useEffect(() => {
     const stored = loadSettings(defaults);
     setSettings(stored);
-    setTimer({ secondsLeft: stored.timerSeconds, running: true });
+    setTimerForCard(stored.timerSeconds, filteredDeck[0]);
     setIndex(0);
-  }, [defaults]);
+  }, [defaults, filteredDeck, setTimerForCard]);
 
   useEffect(() => {
     setIndex(0);
     setBlackedOut(false);
     setShowSolution(false);
-    setTimer({ secondsLeft: settings.timerSeconds, running: true });
   }, [settings]);
+
+  useEffect(() => {
+    const current = filteredDeck[index];
+    setTimerForCard(settings.timerSeconds, current);
+    setBlackedOut(false);
+    setShowSolution(false);
+  }, [filteredDeck, index, settings.timerSeconds, setTimerForCard]);
 
   const card = filteredDeck[index];
   const isLast = index === filteredDeck.length - 1;
@@ -145,7 +157,6 @@ export default function PlayPage() {
     mediaRef.current?.stop();
     if (index < filteredDeck.length - 1) {
       setIndex((i) => i + 1);
-      resetTimer();
       setShowSolution(false);
     } else {
       setBlackedOut(false);
@@ -155,9 +166,16 @@ export default function PlayPage() {
   };
 
   const resetTimer = () => {
-    setTimer({ secondsLeft: settings.timerSeconds, running: true });
+    const current = filteredDeck[index];
+    setTimerForCard(settings.timerSeconds, current);
     setBlackedOut(false);
     setShowSolution(false);
+  };
+
+  const handleMediaPlay = () => {
+    const current = filteredDeck[index];
+    if (!requiresPlayStart(current)) return;
+    setTimer((prev) => (prev.running ? prev : { ...prev, running: true }));
   };
 
   const endGame = () => {
@@ -225,6 +243,7 @@ export default function PlayPage() {
           card={card}
           preference={card.category === 'music' && card.sources.spotify ? 'spotify' : 'auto'}
           concealMetadata
+          onPlay={handleMediaPlay}
         />
         {showSolution && (
           <div className="rounded-xl bg-ink/5 p-4 space-y-2 text-sm text-ink/80">

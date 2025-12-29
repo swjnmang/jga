@@ -58,6 +58,7 @@ type Props = {
   card: Card;
   preference: MediaPreference;
   concealMetadata?: boolean;
+  onPlay?: () => void;
 };
 
 export type MediaEmbedHandle = {
@@ -65,7 +66,7 @@ export type MediaEmbedHandle = {
 };
 
 export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbed(
-  { card, preference, concealMetadata = false }: Props,
+  { card, preference, concealMetadata = false, onPlay }: Props,
   ref
 ) {
   const [youtubeUnavailable, setYouTubeUnavailable] = useState(false);
@@ -77,6 +78,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showSpotify, setShowSpotify] = useState(false);
+  const [showYouTube, setShowYouTube] = useState(false);
   const origin = useMemo(() => (typeof window !== 'undefined' ? window.location.origin : ''), []);
   const [spotifyToken, setSpotifyToken] = useState<string | null>(null);
   const [spotifyDevice, setSpotifyDevice] = useState<string | null>(null);
@@ -113,6 +115,8 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       setIsPlaying(false);
     } else {
       sendYouTubeCommand('playVideo');
+      setShowYouTube(true);
+      onPlay?.();
       setIsPlaying(true);
     }
   };
@@ -121,6 +125,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     // Stop playback when source changes.
     setIsPlaying(false);
     setShowSpotify(false);
+    setShowYouTube(false);
   }, [choiceSignature]);
 
   useEffect(() => {
@@ -302,6 +307,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       }
       setIsPlaying(false);
       setShowSpotify(false);
+      setShowYouTube(false);
     }
   }));
 
@@ -313,7 +319,9 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     if (isPlaying) {
       pauseSpotify();
     } else {
+      setShowSpotify(true);
       playSpotifyTrack(choice?.type === 'spotify' ? choice.url : '');
+      onPlay?.();
     }
   };
 
@@ -341,7 +349,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
           <div className="aspect-video overflow-hidden rounded-2xl card-surface relative bg-ink">
             <iframe
               src={embedUrl}
-              className="h-full w-full opacity-0 absolute inset-0"
+              className={`h-full w-full absolute inset-0 transition-opacity ${showYouTube ? 'opacity-100' : 'opacity-0'}`}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               referrerPolicy="strict-origin-when-cross-origin"
               ref={iframeRef}
