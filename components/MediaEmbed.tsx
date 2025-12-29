@@ -84,6 +84,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const [spotifyDevice, setSpotifyDevice] = useState<string | null>(null);
   const [spotifyReady, setSpotifyReady] = useState(false);
   const [spotifyError, setSpotifyError] = useState<string | null>(null);
+  const [embedError, setEmbedError] = useState<string | null>(null);
   const spotifyPlayerRef = useRef<Spotify.Player | null>(null);
   const choiceSignature = useMemo(() => {
     if (!choice) return '';
@@ -126,6 +127,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     setIsPlaying(false);
     setShowSpotify(false);
     setShowYouTube(false);
+    setEmbedError(null);
   }, [choiceSignature]);
 
   useEffect(() => {
@@ -161,6 +163,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   // Fetch Spotify token from server (httpOnly cookie proxied)
   useEffect(() => {
     if (choice?.type !== 'spotify') return;
+    if (spotifyToken) return;
     const loadToken = async () => {
       try {
         const res = await fetch('/api/spotify/token');
@@ -170,12 +173,12 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         }
         const json = await res.json();
         setSpotifyToken(json.accessToken as string);
-      } catch (err) {
+      } catch (_err) {
         setSpotifyError('Spotify Token konnte nicht geladen werden');
       }
     };
     loadToken();
-  }, [choice?.type]);
+  }, [choice?.type, spotifyToken]);
 
   // Load Spotify Web Playback SDK and connect
   useEffect(() => {
@@ -325,8 +328,48 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     }
   };
 
+  const resetSpotify = () => {
+    if (spotifyPlayerRef.current) {
+      spotifyPlayerRef.current.disconnect();
+      spotifyPlayerRef.current = null;
+    }
+    setSpotifyReady(false);
+    setSpotifyDevice(null);
+    setSpotifyToken(null);
+    setSpotifyError(null);
+    setShowSpotify(false);
+    setIsPlaying(false);
+  };
+
   if (!choice) {
     return <p className="text-sm text-ink/70">Keine Quelle hinterlegt.</p>;
+  }
+
+  if (embedError) {
+    const href = choice.type === 'text' || choice.type === 'image' ? null : (choice as any).url;
+    return (
+      <div className="card-surface rounded-2xl p-4 text-sm text-ink/80 space-y-3">
+        <p className="font-semibold text-ink">Medien konnte nicht geladen werden.</p>
+        <p>{embedError}</p>
+        {href ? (
+          <a
+            className="inline-flex w-fit rounded-full bg-ink text-sand px-4 py-2 text-xs font-semibold"
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Quelle in neuem Tab öffnen
+          </a>
+        ) : null}
+        <button
+          type="button"
+          className="inline-flex w-fit rounded-full border border-ink/20 px-4 py-2 text-xs"
+          onClick={() => setEmbedError(null)}
+        >
+          Erneut versuchen
+        </button>
+      </div>
+    );
   }
 
   const fallbackNotice =
@@ -353,6 +396,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               referrerPolicy="strict-origin-when-cross-origin"
               ref={iframeRef}
+              onError={() => setEmbedError('YouTube-Einbettung ist fehlgeschlagen oder blockiert.')}
               allowFullScreen
               title="Medieninhalt"
             />
@@ -374,6 +418,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     }
     case 'spotify': {
       const embedUrl = toSpotifyEmbed(choice.url) ?? choice.url;
+      const showSpotifyFallback = Boolean(embedError || spotifyError || !spotifyReady);
       return (
         <div className="space-y-2 relative">
           {fallbackNotice && (
@@ -388,6 +433,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               height="200"
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               className={`w-full transition-opacity ${showSpotify ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+              onError={() => setEmbedError('Spotify-Einbettung ist fehlgeschlagen oder wurde blockiert.')}
               title="Medieninhalt"
             />
             {!showSpotify && (
@@ -403,12 +449,54 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
                   </button>
                   {spotifyError && <p className="text-xs text-red-200">{spotifyError}</p>}
                   {!spotifyReady && !spotifyError && spotifyToken && (
-                    <p className="text-xs text-sand/80">Initialisiere Spotify Player …</p>
+                    <div className="text-center space-y-2">
+                      <p className="text-xs text-sand/80">Spotify Player noch nicht bereit.</p>
+                      <div className="flex items-center justify-center gap-2 text-xs">
+                        <button
+                          type="button"
+                          className="rounded-full border border-sand/40 px-3 py-1"
+                          onClick={resetSpotify}
+                        >
+                          Neu verbinden
+                        </button>
+                        <a
+                          href={choice.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="rounded-full bg-sand text-ink px-3 py-1 font-semibold"
+                        >
+                          In Spotify öffnen
+                        </a>
+                      </div>
+                    </div>
                   )}
                 </div>
               </div>
             )}
           </div>
+          {showSpotifyFallback && (
+            <div className="rounded-xl bg-ink/10 p-3 text-xs text-ink/80 space-y-2">
+              <p className="font-semibold text-ink">Spotify-Embed meldet eine Störung.</p>
+              <p>Öffne den Song direkt in Spotify, wenn im Player z. B. „upstream request timeout" steht.</p>
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href={choice.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full bg-ink text-sand px-3 py-1 font-semibold"
+                >
+                  In Spotify öffnen
+                </a>
+                <button
+                  type="button"
+                  className="rounded-full border border-ink/20 px-3 py-1"
+                  onClick={resetSpotify}
+                >
+                  Neu versuchen
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       );
     }

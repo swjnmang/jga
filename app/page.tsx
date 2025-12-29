@@ -1,6 +1,11 @@
 import Link from 'next/link';
 
 export default function HomePage() {
+  const lastUpdated = new Intl.DateTimeFormat('de-DE', {
+    dateStyle: 'medium',
+    timeStyle: 'short'
+  }).format(new Date());
+
   return (
     <main className="min-h-screen bg-grid flex items-center justify-center px-6 py-16">
       <div className="w-full max-w-4xl rounded-3xl bg-glass border border-white/20 shadow-2xl backdrop-blur-xl p-10 md:p-14 space-y-10 text-center">
@@ -24,6 +29,10 @@ export default function HomePage() {
           <PrimaryButton href="/play" label="Neues Spiel starten" />
           <SecondaryButton href="/settings" label="Einstellungen" />
           <SecondaryButton href="/rules" label="Spielregeln" />
+        </div>
+
+        <div className="text-xs text-white/60">
+          Letzte Versionsänderung: {lastUpdated}
         </div>
       </div>
     </main>
