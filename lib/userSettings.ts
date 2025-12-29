@@ -1,10 +1,11 @@
-import { CardCategory, Difficulty } from './types';
+import { CardCategory, Difficulty, Language } from './types';
 
 export type UserSettings = {
   timerSeconds: number;
   categories: CardCategory[];
   difficulties: Difficulty[];
   categoryWeights: Record<CardCategory, number>;
+  language: Language;
 };
 
 const STORAGE_KEY = 'jga-user-settings';
@@ -21,7 +22,8 @@ export function getDefaultSettings(availableCategories: CardCategory[]): UserSet
     timerSeconds: 180,
     categories: availableCategories,
     difficulties: ['leicht', 'mittel', 'schwer'],
-    categoryWeights
+    categoryWeights,
+    language: 'de'
   };
 }
 
@@ -31,14 +33,25 @@ export function loadSettings(defaults: UserSettings): UserSettings {
   if (!raw) return defaults;
   try {
     const parsed = JSON.parse(raw) as Partial<UserSettings>;
+    const weights = fillCategoryWeights(defaults.categoryWeights, parsed.categoryWeights, defaults.categories);
+    const activeFromWeights = Object.entries(weights)
+      .filter(([, value]) => value > 0)
+      .map(([cat]) => cat as CardCategory);
+
     return {
       ...defaults,
       ...parsed,
-      categories: parsed.categories && parsed.categories.length > 0 ? parsed.categories : defaults.categories,
+      categories:
+        activeFromWeights.length > 0
+          ? activeFromWeights
+          : parsed.categories && parsed.categories.length > 0
+            ? parsed.categories
+            : defaults.categories,
       difficulties:
         parsed.difficulties && parsed.difficulties.length > 0 ? parsed.difficulties : defaults.difficulties,
       timerSeconds: parsed.timerSeconds && parsed.timerSeconds > 0 ? parsed.timerSeconds : defaults.timerSeconds,
-      categoryWeights: fillCategoryWeights(defaults.categoryWeights, parsed.categoryWeights, defaults.categories)
+      categoryWeights: weights,
+      language: isLanguage(parsed.language) ? parsed.language : defaults.language
     };
   } catch (_err) {
     return defaults;
@@ -57,6 +70,10 @@ function fillCategoryWeights(
     result[cat] = typeof value === 'number' && value >= 0 ? value : defaults[cat];
   }
   return result;
+}
+
+function isLanguage(value: any): value is Language {
+  return value === 'de' || value === 'en' || value === 'fr';
 }
 
 export function saveSettings(settings: UserSettings) {

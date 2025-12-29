@@ -22,12 +22,15 @@ type TimerState = {
 };
 
 function buildWeightedDeck(allCards: Card[], settings: UserSettings) {
+  const activeCategories = settings.categories.filter((cat) => (settings.categoryWeights[cat] ?? 0) > 0);
+  const categoriesToUse = activeCategories.length > 0 ? activeCategories : settings.categories;
+
   const allowed = allCards.filter(
-    (c) => settings.categories.includes(c.category) && settings.difficulties.includes(c.difficulty)
+    (c) => categoriesToUse.includes(c.category) && settings.difficulties.includes(c.difficulty)
   );
 
   const buckets = new Map<CardCategory, Card[]>(
-    settings.categories.map((cat) => [cat, shuffle(allowed.filter((c) => c.category === cat))])
+    categoriesToUse.map((cat) => [cat, shuffle(allowed.filter((c) => c.category === cat))])
   );
 
   const deck: Card[] = [];

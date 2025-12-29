@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import { cards, getCategories } from '@/lib/cards';
-import { CardCategory, Difficulty } from '@/lib/types';
+import { CardCategory, Difficulty, Language } from '@/lib/types';
 import { getDefaultSettings, loadSettings, saveSettings, UserSettings } from '@/lib/userSettings';
 
 const difficultyOptions: { value: Difficulty; label: string }[] = [
@@ -29,22 +29,6 @@ export default function SettingsPage() {
     saveSettings(next);
   };
 
-  const toggleCategory = (category: CardCategory) => {
-    setSettings((prev) => {
-      const nextCategories = prev.categories.includes(category)
-        ? prev.categories.filter((c) => c !== category)
-        : [...prev.categories, category];
-      if (nextCategories.length === 0) return prev;
-      const updatedWeights = { ...prev.categoryWeights };
-      if (!updatedWeights[category]) {
-        updatedWeights[category] = defaults.categoryWeights[category] ?? 10;
-      }
-      const next = { ...prev, categories: nextCategories, categoryWeights: updatedWeights };
-      saveSettings(next);
-      return next;
-    });
-  };
-
   const toggleDifficulty = (difficulty: Difficulty) => {
     setSettings((prev) => {
       const nextDifficulties = prev.difficulties.includes(difficulty)
@@ -68,10 +52,26 @@ export default function SettingsPage() {
 
   const updateCategoryWeight = (category: CardCategory, value: number) => {
     const weight = Math.min(100, Math.max(0, Math.round(value)));
+    const nextWeights = { ...settings.categoryWeights, [category]: weight } as Record<CardCategory, number>;
+    const active = Object.entries(nextWeights)
+      .filter(([_, w]) => (w as number) > 0)
+      .map(([cat]) => cat as CardCategory);
+
+    // Prevent empty selection: if all zero, keep last changed at 10%
+    if (active.length === 0) {
+      nextWeights[category] = 10;
+      active.push(category);
+    }
+
     updateSettings({
       ...settings,
-      categoryWeights: { ...settings.categoryWeights, [category]: weight }
+      categoryWeights: nextWeights,
+      categories: active
     });
+  };
+
+  const handleLanguageChange = (value: Language) => {
+    updateSettings({ ...settings, language: value });
   };
 
   const timerMinutes = Math.round(settings.timerSeconds / 60);
@@ -108,7 +108,7 @@ export default function SettingsPage() {
 
       <section className="card-surface rounded-2xl p-5 space-y-4">
         <div className="flex items-center justify-between gap-3">
-          <h2 className="text-lg font-semibold">Schwierigkeitsgrad</h2>
+          <h2 className="text-lg font-semibold">Fragen aus den Schwierigkeitsgraden</h2>
           <p className="text-xs text-ink/60">Mehrfachauswahl möglich</p>
         </div>
         <div className="grid sm:grid-cols-3 gap-3">
@@ -137,28 +137,7 @@ export default function SettingsPage() {
       <section className="card-surface rounded-2xl p-5 space-y-4">
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-lg font-semibold">Kategorien</h2>
-          <p className="text-xs text-ink/60">Mindestens eine aktiv, Gewichte steuerbar</p>
-        </div>
-        <div className="grid sm:grid-cols-3 gap-3">
-          {availableCategories.map((category) => {
-            const checked = settings.categories.includes(category);
-            return (
-              <label
-                key={category}
-                className={`flex items-center gap-2 rounded-xl border px-3 py-2 text-sm ${
-                  checked ? 'border-ink bg-ink text-sand' : 'border-ink/20'
-                }`}
-              >
-                <input
-                  type="checkbox"
-                  checked={checked}
-                  onChange={() => toggleCategory(category)}
-                  className="h-4 w-4"
-                />
-                <span className="capitalize">{category}</span>
-              </label>
-            );
-          })}
+          <p className="text-xs text-ink/60">0% schließt eine Kategorie aus</p>
         </div>
         <div className="space-y-3">
           <div className="flex items-center justify-between text-xs text-ink/60">
@@ -168,7 +147,6 @@ export default function SettingsPage() {
           <div className="space-y-2">
             {availableCategories.map((category) => {
               const value = settings.categoryWeights[category] ?? 0;
-              const disabled = !settings.categories.includes(category);
               return (
                 <label key={category} className="flex flex-col gap-1 text-sm">
                   <div className="flex items-center justify-between">
@@ -181,7 +159,6 @@ export default function SettingsPage() {
                     max={100}
                     value={value}
                     onChange={(e) => updateCategoryWeight(category, Number(e.target.value))}
-                    disabled={disabled}
                     className="accent-ink"
                   />
                 </label>
@@ -208,6 +185,38 @@ export default function SettingsPage() {
             className="w-28 rounded-xl border border-ink/20 px-3 py-2 text-sm"
           />
           <span className="text-sm text-ink/70">Minuten pro Frage</span>
+        </div>
+      </section>
+
+      <section className="card-surface rounded-2xl p-5 space-y-3">
+        <h2 className="text-lg font-semibold">Sprache</h2>
+        <p className="text-sm text-ink/70">Wähle die Sprache für Bedienoberfläche und Hinweise.</p>
+        <div className="grid sm:grid-cols-3 gap-3">
+          {(
+            [
+              { value: 'de', label: 'Deutsch', note: 'Standard, volle Abdeckung' },
+              { value: 'en', label: 'English', note: 'English UI labels' },
+              { value: 'fr', label: 'Français', note: 'Libellés en français' }
+            ] as { value: Language; label: string; note: string }[]
+          ).map((option) => {
+            const active = settings.language === option.value;
+            return (
+              <button
+                key={option.value}
+                type="button"
+                onClick={() => handleLanguageChange(option.value)}
+                className={`text-left rounded-xl border px-4 py-3 space-y-1 transition ${
+                  active ? 'border-ink bg-ink text-sand' : 'border-ink/20'
+                }`}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="font-semibold">{option.label}</span>
+                  {active && <span className="text-xs">✓</span>}
+                </div>
+                <p className="text-xs text-ink/70">{option.note}</p>
+              </button>
+            );
+          })}
         </div>
       </section>
 

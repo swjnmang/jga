@@ -2,6 +2,8 @@ export type CardCategory = 'music' | 'quote' | 'video' | 'image' | 'country';
 
 export type Difficulty = 'leicht' | 'mittel' | 'schwer';
 
+export type Language = 'de' | 'en' | 'fr';
+
 export type MediaSources = {
   youtube?: string;
   spotify?: string;
