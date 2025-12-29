@@ -3,23 +3,40 @@ export default function RulesPage() {
     <main className="mx-auto max-w-4xl px-6 py-10 space-y-6">
       <div className="space-y-2">
         <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Spielregeln</p>
-        <h1 className="text-3xl font-display">Flex Quiz: 10 Karten zeitlich ordnen</h1>
+        <h1 className="text-3xl font-display">Flex Quiz: Spielmodi</h1>
         <p className="text-sm text-ink/70">
-          Ziel: 10 Karten in der korrekten zeitlichen Reihenfolge auslegen. Entscheidend ist nur
-          die Jahreszahl – plus die Chance zu flexen, wenn du glaubst, die Lösung besser zu kennen.
+          Wähle zwischen zwei Varianten: Zeitstrahl (10 Karten zeitlich ordnen) oder Trivia-Quiz
+          inspiriert von Trivial Pursuit.
         </p>
       </div>
 
       <section className="card-surface rounded-2xl p-5 space-y-2">
-        <h2 className="text-lg font-semibold">Ablauf</h2>
+        <h2 className="text-lg font-semibold">Modus 1: Zeitstrahl (Standard)</h2>
+        <p className="text-sm text-ink/70">Ziel: 10 Karten in der korrekten zeitlichen Reihenfolge auslegen.</p>
         <ol className="list-decimal list-inside space-y-1 text-sm text-ink/80">
           <li>Jedes Team erhält leere Karten (Front für Lösung, Rückseite für Musterlösung).</li>
           <li>Reihum zeigt die App eine neue Frage/Medienkarte, Timer 3:00 startet.</li>
           <li>Ohne Titel/Interpret zu sehen wird der Inhalt abgespielt/angezeigt.</li>
           <li>Team schreibt seine Lösung auf die Karte und legt sie zeitlich ein.</li>
           <li>Aufdecken/Lösung eintragen: Jahr prüfen. Richtig = behalten, falsch = beiseite.</li>
-          <li>Nach Abschluss des Zugs: Flex-Fenster für andere Teams (siehe Flex Buttons).</li>
+          <li>Optional: Flex-Fenster für andere Teams (siehe Flex Buttons).</li>
           <li>Nächste Runde, bis jemand 10 korrekt liegende Karten hat.</li>
+        </ol>
+      </section>
+
+      <section className="card-surface rounded-2xl p-5 space-y-2">
+        <h2 className="text-lg font-semibold">Modus 2: Trivia-Quiz (Trivial Pursuit)</h2>
+        <p className="text-sm text-ink/70">
+          Ziel: Aus jeder Kategorie einen „Stein" sammeln. Teams halten auf Papier fest, welche Kategorien sie
+          bereits besitzen.
+        </p>
+        <ol className="list-decimal list-inside space-y-1 text-sm text-ink/80">
+          <li>Ein Team wählt oder „würfelt" eine Kategorie (z. B. zufällig ziehen).</li>
+          <li>Die App zeigt eine Frage aus dieser Kategorie; das Team beantwortet sie.</li>
+          <li>Richtig & Kategorie noch nicht gesammelt: Team notiert den Stein für diese Kategorie.</li>
+          <li>Richtig & Kategorie bereits vorhanden: Das Team darf sofort eine neue Kategorie „würfeln" und weitermachen.</li>
+          <li>Falsch: Zug endet, nächstes Team ist dran.</li>
+          <li>Spielende: Wer zuerst alle Kategorien (alle „Steine") eingesammelt hat, gewinnt.</li>
         </ol>
       </section>
 
