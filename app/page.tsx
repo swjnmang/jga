@@ -3,7 +3,8 @@ import Link from 'next/link';
 export default function HomePage() {
   const lastUpdated = new Intl.DateTimeFormat('de-DE', {
     dateStyle: 'medium',
-    timeStyle: 'short'
+    timeStyle: 'short',
+    timeZone: 'Europe/Berlin'
   }).format(new Date());
 
   return (
