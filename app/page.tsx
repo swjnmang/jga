@@ -34,7 +34,7 @@ function PrimaryButton({ href, label }: { href: string; label: string }) {
   return (
     <Link
       href={href}
-      className="group inline-flex items-center justify-center rounded-xl bg-white text-ink font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20"
+      className="group inline-flex items-center justify-center rounded-xl bg-white text-[#0b1021] font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20"
     >
       <span>{label}</span>
       <span className="ml-2 text-ink/60 transition group-hover:translate-x-0.5">→</span>

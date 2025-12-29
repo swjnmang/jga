@@ -9,10 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: '#0f172a',
-        sand: '#f6f1e9',
-        mint: '#d1f3e0',
-        coral: '#ff7a8a'
+        ink: '#e6edf5',
+        inkDark: '#0b1021',
+        sand: '#93c5ff',
+        mint: '#9ae6d3',
+        coral: '#ff9aa2'
       },
       fontFamily: {
         display: ['"Space Grotesk"', 'sans-serif'],
