@@ -14,7 +14,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/4zfQShUtVvysHKDDw08sMd"
-    }
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-bir-2023",
@@ -27,7 +31,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/7JRFLBP9RgMvBjoZDLHWVV"
-    }
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-brennerautobahn-2022",
@@ -40,7 +48,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/3dTTBt5Qtf6xzPOrBlG2tu"
-    }
+    },
+    "genres": [
+      "schlagerparty",
+      "poprock"
+    ]
   },
   {
     "id": "song-hawaii-toast-song-2009",
@@ -53,7 +65,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/4Ka43W7pxLv41B2c5R1UAy"
-    }
+    },
+    "genres": [
+      "schlagerparty",
+      "poprock"
+    ]
   },
   {
     "id": "song-familienfeier-2024",
@@ -66,7 +82,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/3XEnnhbQRI8DlhvpXo9E2X"
-    }
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-velocita-2024",
@@ -79,7 +99,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/0tDIFv7I1dqYewsaGlzLUx"
-    }
+    },
+    "genres": [
+      "schlagerparty",
+      "poprock"
+    ]
   },
   {
     "id": "song-bella-napoli-2022",
@@ -92,7 +116,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/1W14FFFgsM0m6DUt3Tf6NP"
-    }
+    },
+    "genres": [
+      "schlagerparty",
+      "poprock"
+    ]
   },
   {
     "id": "song-in-the-end-2000",
@@ -105,7 +133,12 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/60a0Rd6pjrkxjPbaKzXjfq"
-    }
+    },
+    "genres": [
+      "metal",
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-numb-2003",
@@ -118,7 +151,12 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/2nLtzopw4rPReszdYBJU6h"
-    }
+    },
+    "genres": [
+      "metal",
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-crawling-2000",
@@ -131,7 +169,12 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/57BrRMwf9LrcmuOsyGilwr"
-    }
+    },
+    "genres": [
+      "metal",
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-the-emptiness-machine-2024",
@@ -144,7 +187,12 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/1EDPVGbyPKJPeGqATwXZvN"
-    }
+    },
+    "genres": [
+      "metal",
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-livin-on-a-prayer-1986",
@@ -157,7 +205,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/0ee1DiZF94NSqqpG0XHUzH"
-    }
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ]
   },
   {
     "id": "song-always-1994",
@@ -170,7 +222,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/2RChe0r2cMoyOvuKobZy44"
-    }
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ]
   },
   {
     "id": "song-enter-sandman-remastered-2021-2021",
@@ -183,7 +239,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/3DwQ7AH3xGD9h65ezslm6q"
-    }
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ]
   },
   {
     "id": "song-master-of-puppets-1986",
@@ -196,7 +256,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/2MuWTIM3b0YEAskbeeFE1i"
-    }
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ]
   },
   {
     "id": "song-sad-but-true-remastered-2021-2021",
@@ -209,7 +273,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/5ltXoDLlI0rFZAmOXbAp5T"
-    }
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ]
   },
   {
     "id": "song-seek-destroy-remastered-1983",
@@ -222,7 +290,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/28WmNsclKsrVmdv3tDmoYU"
-    }
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ]
   },
   {
     "id": "song-last-resort-2000",
@@ -235,7 +307,12 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/5W8YXBz9MTIDyrpYaCg2Ky"
-    }
+    },
+    "genres": [
+      "metal",
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-teenage-dirtbag-1999",
@@ -248,7 +325,10 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/25FTMokYEbEWHEdss5JLZS"
-    }
+    },
+    "genres": [
+      "poprock"
+    ]
   },
   {
     "id": "song-paradise-city-1987",
@@ -261,7 +341,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/6eN1f9KNmiWEhpE2RhQqB5"
-    }
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ]
   },
   {
     "id": "song-dont-stop-believin-2022-remaster-1981",
@@ -274,7 +358,10 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/5RKQ5NdjSh2QzD4MaunT91"
-    }
+    },
+    "genres": [
+      "poprock"
+    ]
   },
   {
     "id": "song-take-a-look-around-2000",
@@ -287,7 +374,12 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/2avKuMN2QXkaG9vvHa2JLt"
-    }
+    },
+    "genres": [
+      "metal",
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-all-the-small-things-1999",
@@ -300,7 +392,10 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/2m1hi0nfMR9vdGC8UcrnwU"
-    }
+    },
+    "genres": [
+      "poprock"
+    ]
   },
   {
     "id": "song-butterfly-1999",
@@ -313,7 +408,12 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/6GQ3WTaNHMFlVmN4burGat"
-    }
+    },
+    "genres": [
+      "metal",
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-californication-1999",
@@ -326,7 +426,10 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/48UPSzbZjgc449aqz8bxox"
-    }
+    },
+    "genres": [
+      "poprock"
+    ]
   },
   {
     "id": "song-chop-suey-2001",
@@ -339,7 +442,12 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/2DlHlPMa4M17kufBvI2lEN"
-    }
+    },
+    "genres": [
+      "metal",
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-the-bad-touch-1999",
@@ -352,7 +460,10 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/5EYdTPdJD74r9EVZBztqGG"
-    }
+    },
+    "genres": [
+      "poprock"
+    ]
   },
   {
     "id": "song-bring-me-to-life-2003",
@@ -365,7 +476,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/0COqiPhxzoWICwFCS4eZcp"
-    }
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ]
   },
   {
     "id": "song-knockin-on-heavens-door-1991",
@@ -378,7 +493,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/4JiEyzf0Md7KEFFGWDDdCr"
-    }
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ]
   },
   {
     "id": "song-byob-2005",
@@ -391,7 +510,12 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/0EYOdF5FCkgOJJla8DI2Md"
-    }
+    },
+    "genres": [
+      "metal",
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-the-middle-2001",
@@ -404,7 +528,10 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/6GG73Jik4jUlQCkKg9JuGO"
-    }
+    },
+    "genres": [
+      "poprock"
+    ]
   },
   {
     "id": "song-the-next-episode-1999",
@@ -417,7 +544,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/4LwU4Vp6od3Sb08CsP99GC"
-    }
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-reimemonster-feat-ferris-mc-1999",
@@ -430,7 +561,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/0pgx8fWphTTM9Kv5KjWpXy"
-    }
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-weck-mich-auf-2001",
@@ -443,7 +578,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/47VRtROAdociHgtuVZNoBL"
-    }
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-bon-voyage-feat-nina-2000",
@@ -456,7 +595,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/0ys1g8PTTs6ADeDp2h1xpd"
-    }
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-turlich-turlich-sicher-dicker-2000",
@@ -469,7 +612,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/0zv3f19rNhmZhNmNA2xJsF"
-    }
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-oopsi-did-it-again-2000",
@@ -482,7 +629,10 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/6naxalmIoLFWR0siv8dnQQ"
-    }
+    },
+    "genres": [
+      "poprock"
+    ]
   },
   {
     "id": "song-thats-the-way-it-is-2019",
@@ -495,7 +645,10 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/5s4catxeZsaWFnOrvrXZHf"
-    }
+    },
+    "genres": [
+      "poprock"
+    ]
   },
   {
     "id": "song-believe-1998",
@@ -508,7 +661,10 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/2goLsvvODILDzeeiT4dAoR"
-    }
+    },
+    "genres": [
+      "poprock"
+    ]
   },
   {
     "id": "song-blau-bluht-der-enzian-2018",
@@ -521,7 +677,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/7LHEQq3Xy7brogiqnXsT4L"
-    }
+    },
+    "genres": [
+      "schlagerparty",
+      "poprock"
+    ]
   },
   {
     "id": "song-junge-2007",
@@ -534,7 +694,10 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/10waMsh44ojvTwXAIy213n"
-    }
+    },
+    "genres": [
+      "poprock"
+    ]
   },
   {
     "id": "song-deine-schuld-2003",
@@ -547,7 +710,10 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/0oEp3d8au0a3Qp78F2QxtB"
-    }
+    },
+    "genres": [
+      "poprock"
+    ]
   },
   {
     "id": "song-tilidin-2019",
@@ -560,7 +726,11 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/0Dlcu2fgHklOnajVu2dUNU"
-    }
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ]
   },
   {
     "id": "song-hypa-hypa-2021",
@@ -573,6 +743,10 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/2qOmcSjOQEDIJKosonn75a"
-    }
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ]
   }
 ];

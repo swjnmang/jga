@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import { cards, getCategories } from '@/lib/cards';
-import { CardCategory, Difficulty } from '@/lib/types';
-import { getDefaultSettings, loadSettings, saveSettings, UserSettings } from '@/lib/userSettings';
+import { CardCategory, Difficulty, GenreTag } from '@/lib/types';
+import { ALL_GENRES, getDefaultSettings, loadSettings, saveSettings, UserSettings } from '@/lib/userSettings';
 
 const difficultyOptions: { value: Difficulty; label: string }[] = [
   { value: 'leicht', label: 'Leicht' },
@@ -54,6 +54,18 @@ export default function SettingsPage() {
   const resetDefaults = () => {
     updateSettings(defaults);
     setTimerInput((defaults.timerSeconds / 60).toString());
+  };
+
+  const toggleGenre = (genre: GenreTag) => {
+    setSettings((prev) => {
+      const nextList = prev.genres.includes(genre)
+        ? prev.genres.filter((g) => g !== genre)
+        : [...prev.genres, genre];
+      const ensured = nextList.length > 0 ? nextList : ALL_GENRES;
+      const next = { ...prev, genres: ensured };
+      saveSettings(next);
+      return next;
+    });
   };
 
   const updateCategoryWeight = (category: CardCategory, value: number) => {
@@ -166,6 +178,32 @@ export default function SettingsPage() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="card-surface rounded-2xl p-5 space-y-3">
+        <div className="flex items-center justify-between gap-3">
+          <h2 className="text-lg font-semibold">Musik-Genres</h2>
+          <p className="text-xs text-ink/60">Wirkt nur auf Musik-Fragen</p>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-2 text-sm">
+          {[{ key: 'poprock', label: 'Pop & Rock' }, { key: 'metal', label: 'Metal' }, { key: 'hiphop', label: 'Hip-Hop' }, { key: 'schlagerparty', label: 'Schlager & Party' }].map((g) => {
+            const checked = settings.genres.includes(g.key as GenreTag);
+            return (
+              <label
+                key={g.key}
+                className={`flex items-center gap-2 rounded-xl border px-3 py-2 ${checked ? 'border-ink bg-ink text-sand' : 'border-ink/20'}`}
+              >
+                <input
+                  type="checkbox"
+                  checked={checked}
+                  onChange={() => toggleGenre(g.key as GenreTag)}
+                  className="h-4 w-4"
+                />
+                <span>{g.label}</span>
+              </label>
+            );
+          })}
         </div>
       </section>
 

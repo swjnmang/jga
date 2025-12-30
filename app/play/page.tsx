@@ -6,7 +6,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { cards, getCategories } from '@/lib/cards';
 import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
 import { getDefaultSettings, loadSettings, UserSettings } from '@/lib/userSettings';
-import { Card, CardCategory } from '@/lib/types';
+import { Card, CardCategory, GenreTag } from '@/lib/types';
 
 function shuffle<T>(arr: T[]): T[] {
   const copy = [...arr];
@@ -45,8 +45,14 @@ function buildWeightedDeck(allCards: Card[], settings: UserSettings) {
   const activeCategories = settings.categories.filter((cat) => (settings.categoryWeights[cat] ?? 0) > 0);
   const categoriesToUse = activeCategories.length > 0 ? activeCategories : settings.categories;
 
+  const genreMatches = (card: Card) => {
+    if (card.category !== 'music') return true;
+    if (!card.genres || card.genres.length === 0) return true;
+    return card.genres.some((g) => settings.genres.includes(g as GenreTag));
+  };
+
   const allowed = allCards.filter(
-    (c) => categoriesToUse.includes(c.category) && settings.difficulties.includes(c.difficulty)
+    (c) => categoriesToUse.includes(c.category) && settings.difficulties.includes(c.difficulty) && genreMatches(c)
   );
 
   const buckets = new Map<CardCategory, Card[]>(
@@ -92,10 +98,14 @@ export default function PlayPage() {
   const [deckKey, setDeckKey] = useState(0);
   const [blockedCards, setBlockedCards] = useState<Set<string>>(new Set());
   const [mode, setMode] = useState<GameMode | null>(null);
-  const playableCards = useMemo(
-    () => cards.filter((c) => c.category !== 'video' && !blockedCards.has(c.id)),
-    [blockedCards]
-  );
+  const playableCards = useMemo(() => {
+    const genreAllowed = (card: Card) => {
+      if (card.category !== 'music') return true;
+      if (!card.genres || card.genres.length === 0) return true;
+      return card.genres.some((g) => settings.genres.includes(g as GenreTag));
+    };
+    return cards.filter((c) => c.category !== 'video' && !blockedCards.has(c.id) && genreAllowed(c));
+  }, [blockedCards, settings.genres]);
   const filteredDeck = useMemo(
     () => buildWeightedDeck(playableCards, settings),
     [playableCards, settings, deckKey]

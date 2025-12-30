@@ -2,6 +2,8 @@ export type CardCategory = 'music' | 'quote' | 'video' | 'image' | 'country';
 
 export type Difficulty = 'leicht' | 'mittel' | 'schwer';
 
+export type GenreTag = 'poprock' | 'metal' | 'hiphop' | 'schlagerparty';
+
 export type MediaSources = {
   youtube?: string;
   spotify?: string;
@@ -21,6 +23,7 @@ export type Card = {
   hint?: string;
   difficulty: Difficulty;
   sources: MediaSources;
+  genres?: GenreTag[];
   background?: string;
   color?: string;
 };

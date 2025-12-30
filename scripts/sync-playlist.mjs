@@ -38,6 +38,22 @@ async function getToken() {
   return json.access_token;
 }
 
+const artistCache = new Map();
+
+async function getArtist(token, id) {
+  if (artistCache.has(id)) return artistCache.get(id);
+  const res = await fetch(`https://api.spotify.com/v1/artists/${id}`, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Artist fetch failed: ${res.status} ${res.statusText} – ${text}`);
+  }
+  const json = await res.json();
+  artistCache.set(id, json);
+  return json;
+}
+
 async function fetchAllTracks(token, id) {
   const items = [];
   let offset = 0;
@@ -81,7 +97,7 @@ function slugify(value) {
     .replace(/-+/g, '-');
 }
 
-function toCard(item) {
+function toCard(item, genres = []) {
   const track = item.track;
   if (!track || track.type !== 'track') return null;
   const artists = track.artists?.map((a) => a.name).filter(Boolean) ?? [];
@@ -101,14 +117,59 @@ function toCard(item) {
     sources: {
       spotify: track.external_urls?.spotify,
     },
+    genres,
   };
+}
+
+function mapGenres(rawGenres) {
+  const tags = new Set();
+  const lower = (rawGenres || []).map((g) => g.toLowerCase());
+
+  const has = (needle) => lower.some((g) => g.includes(needle));
+
+  if (has('metal') || has('hardcore') || has('deathcore') || has('thrash') || has('djent')) tags.add('metal');
+  if (has('rap') || has('hip hop') || has('hip-hop') || has('trap') || has('drill')) tags.add('hiphop');
+  if (has('schlager') || has('apres-ski') || has('ballermann') || has('mallorca') || has('party')) tags.add('schlagerparty');
+
+  if (tags.size === 0) tags.add('poprock');
+  // Pop/Rock is also a good secondary default alongside other matches
+  if (tags.has('hiphop') || tags.has('metal') || tags.has('schlagerparty')) tags.add('poprock');
+
+  return Array.from(tags);
 }
 
 async function main() {
   const token = await getToken();
   const rawItems = await fetchAllTracks(token, playlistId);
+  // Prefetch artist genres
+  const artistIds = Array.from(
+    new Set(
+      rawItems
+        .map((item) => item.track?.artists || [])
+        .flat()
+        .map((a) => a?.id)
+        .filter(Boolean)
+    )
+  );
+
+  const artistGenres = new Map();
+  for (const id of artistIds) {
+    try {
+      const artist = await getArtist(token, id);
+      artistGenres.set(id, artist.genres || []);
+    } catch (_err) {
+      artistGenres.set(id, []);
+    }
+  }
   const cards = rawItems
-    .map((item) => toCard(item))
+    .map((item) => {
+      const track = item.track;
+      const artistTags = (track?.artists || [])
+        .map((a) => mapGenres(artistGenres.get(a.id) || []))
+        .flat();
+      const dedupedGenres = Array.from(new Set(artistTags));
+      return toCard(item, dedupedGenres);
+    })
     .filter(Boolean)
     // dedupe by spotify url to avoid duplicates
     .reduce((acc, card) => {

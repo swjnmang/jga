@@ -1,13 +1,16 @@
-import { CardCategory, Difficulty } from './types';
+import { CardCategory, Difficulty, GenreTag } from './types';
 
 export type UserSettings = {
   timerSeconds: number;
   categories: CardCategory[];
   difficulties: Difficulty[];
   categoryWeights: Record<CardCategory, number>;
+  genres: GenreTag[];
 };
 
 const STORAGE_KEY = 'jga-user-settings';
+
+export const ALL_GENRES: GenreTag[] = ['poprock', 'metal', 'hiphop', 'schlagerparty'];
 
 export function getDefaultSettings(availableCategories: CardCategory[]): UserSettings {
   const even = Math.floor(100 / availableCategories.length);
@@ -21,7 +24,8 @@ export function getDefaultSettings(availableCategories: CardCategory[]): UserSet
     timerSeconds: 120,
     categories: availableCategories,
     difficulties: ['leicht', 'mittel', 'schwer'],
-    categoryWeights
+    categoryWeights,
+    genres: ALL_GENRES
   };
 }
 
@@ -39,6 +43,7 @@ export function loadSettings(defaults: UserSettings): UserSettings {
     return {
       ...defaults,
       ...parsed,
+      genres: Array.isArray(parsed.genres) && parsed.genres.length > 0 ? (parsed.genres as GenreTag[]) : defaults.genres,
       categories:
         activeFromWeights.length > 0
           ? activeFromWeights
