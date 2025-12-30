@@ -204,9 +204,64 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     if (choice?.type !== 'spotify') return;
     if (!spotifyToken) return;
 
+    const initializePlayer = () => {
+      if (spotifyPlayerRef.current) {
+        spotifyPlayerRef.current.disconnect();
+      }
+
+      if (!window.Spotify) {
+        setSpotifyError('Spotify SDK nicht verfügbar');
+        return;
+      }
+
+      const player = new window.Spotify.Player({
+        name: 'Flex Quiz Player',
+        getOAuthToken: (cb) => cb(spotifyToken),
+        volume: 0.8
+      });
+
+      spotifyPlayerRef.current = player;
+
+      player.addListener('ready', ({ device_id }) => {
+        setSpotifyDevice(device_id);
+        setSpotifyReady(true);
+        setSpotifyErrorDetail(null);
+      });
+
+      player.addListener('player_state_changed', (state) => {
+        setIsPlaying(Boolean(state && !state.paused));
+      });
+
+      player.addListener('initialization_error', ({ message }) => setSpotifyError(message));
+      player.addListener('authentication_error', ({ message }) => setSpotifyError(message));
+      player.addListener('account_error', ({ message }) => setSpotifyError(message));
+      player.addListener('playback_error', ({ message, error_type }) => {
+        setSpotifyError('Spotify meldet einen Wiedergabefehler');
+        setSpotifyErrorDetail(`${error_type}: ${message}`);
+        onPlaybackError?.(card.id, 'playback-error');
+        console.error('Spotify playback_error', error_type, message);
+      });
+      player.addListener('not_ready', ({ device_id }) => {
+        setSpotifyReady(false);
+        setSpotifyErrorDetail(`Device ${device_id} nicht bereit`);
+      });
+
+      player.connect();
+    };
+
+    // Define callback before script loads to avoid missing onSpotifyWebPlaybackSDKReady.
+    if (!window.onSpotifyWebPlaybackSDKReady) {
+      window.onSpotifyWebPlaybackSDKReady = initializePlayer;
+    }
+
     const ensureScript = () =>
       new Promise<void>((resolve) => {
         if (window.Spotify) return resolve();
+        const existing = document.getElementById('spotify-sdk');
+        if (existing) {
+          existing.addEventListener('load', () => resolve(), { once: true });
+          return;
+        }
         const script = document.createElement('script');
         script.id = 'spotify-sdk';
         script.src = 'https://sdk.scdn.co/spotify-player.js';
@@ -216,57 +271,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
     const setup = async () => {
       await ensureScript();
-
-      const initializePlayer = () => {
-        if (spotifyPlayerRef.current) {
-          spotifyPlayerRef.current.disconnect();
-        }
-
-        if (!window.Spotify) {
-          setSpotifyError('Spotify SDK nicht verfügbar');
-          return;
-        }
-
-        const player = new window.Spotify.Player({
-          name: 'Flex Quiz Player',
-          getOAuthToken: (cb) => cb(spotifyToken),
-          volume: 0.8
-        });
-
-        spotifyPlayerRef.current = player;
-
-        player.addListener('ready', ({ device_id }) => {
-          setSpotifyDevice(device_id);
-          setSpotifyReady(true);
-          setSpotifyErrorDetail(null);
-        });
-
-        player.addListener('player_state_changed', (state) => {
-          setIsPlaying(Boolean(state && !state.paused));
-        });
-
-        player.addListener('initialization_error', ({ message }) => setSpotifyError(message));
-        player.addListener('authentication_error', ({ message }) => setSpotifyError(message));
-        player.addListener('account_error', ({ message }) => setSpotifyError(message));
-        player.addListener('playback_error', ({ message, error_type }) => {
-          setSpotifyError('Spotify meldet einen Wiedergabefehler');
-          setSpotifyErrorDetail(`${error_type}: ${message}`);
-          onPlaybackError?.(card.id, 'playback-error');
-          console.error('Spotify playback_error', error_type, message);
-        });
-        player.addListener('not_ready', ({ device_id }) => {
-          setSpotifyReady(false);
-          setSpotifyErrorDetail(`Device ${device_id} nicht bereit`);
-        });
-
-        player.connect();
-      };
-
-      window.onSpotifyWebPlaybackSDKReady = initializePlayer;
-
-      if (window.Spotify) {
-        initializePlayer();
-      }
+      if (window.Spotify) initializePlayer();
     };
 
     setup();
@@ -327,10 +332,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       return;
     }
 
-    setSpotifyLoading(true);
-    try {
-      await activatePlayer();
-      await transferPlayback();
+    const attemptPlay = async (attempt: number) => {
       const res = await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${spotifyDevice}`, {
         method: 'PUT',
         headers: {
@@ -341,17 +343,32 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       });
       if (!res.ok) {
         const detail = await res.text().catch(() => null);
+        const is404 = res.status === 404;
         setSpotifyError('Wiedergabe konnte nicht gestartet werden');
         setSpotifyErrorDetail(detail || `HTTP ${res.status}`);
         setIsPlaying(false);
         onPlaybackError?.(card.id, 'play-failed');
         console.error('Spotify play failed', res.status, detail);
+
+        // Retry once if no active device / 404 to re-transfer and re-play.
+        if (is404 && attempt === 0) {
+          await transferPlayback();
+          return attemptPlay(1);
+        }
       } else {
         setSpotifyError(null);
         setSpotifyErrorDetail(null);
         setShowSpotify(true);
         setIsPlaying(true);
       }
+      return res;
+    };
+
+    setSpotifyLoading(true);
+    try {
+      await activatePlayer();
+      await transferPlayback();
+      await attemptPlay(0);
     } catch (_err) {
       setSpotifyError('Wiedergabe konnte nicht gestartet werden');
       setSpotifyErrorDetail(_err instanceof Error ? _err.message : 'Unbekannter Fehler');
