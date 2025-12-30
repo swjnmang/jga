@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import { cards, getCategories } from '@/lib/cards';
 import { CardCategory, DecadeTag, Difficulty, GenreTag } from '@/lib/types';
-import { ALL_DECADES, ALL_GENRES, getDefaultSettings, loadSettings, saveSettings, UserSettings } from '@/lib/userSettings';
+import { ALL_GENRES, getDefaultSettings, loadSettings, saveSettings, toDecadeTag, UserSettings } from '@/lib/userSettings';
 
 const difficultyOptions: { value: Difficulty; label: string }[] = [
   { value: 'leicht', label: 'Leicht' },
@@ -14,7 +14,18 @@ const difficultyOptions: { value: Difficulty; label: string }[] = [
 
 export default function SettingsPage() {
   const availableCategories = useMemo(() => getCategories(cards).filter((c) => c !== 'video'), []);
-  const defaults = useMemo(() => getDefaultSettings(availableCategories), [availableCategories]);
+  const availableDecades = useMemo(() => {
+    const order: DecadeTag[] = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];
+    const set = new Set<DecadeTag>();
+    cards
+      .filter((c) => c.category === 'music' && typeof c.year === 'number')
+      .forEach((c) => {
+        const d = toDecadeTag(c.year as number);
+        if (d) set.add(d);
+      });
+    return order.filter((d) => set.has(d));
+  }, []);
+  const defaults = useMemo(() => getDefaultSettings(availableCategories, availableDecades), [availableCategories, availableDecades]);
   const [settings, setSettings] = useState<UserSettings>(defaults);
   const [loaded, setLoaded] = useState(false);
   const [timerInput, setTimerInput] = useState('');
@@ -73,7 +84,7 @@ export default function SettingsPage() {
       const nextList = prev.decades.includes(decade)
         ? prev.decades.filter((d) => d !== decade)
         : [...prev.decades, decade];
-      const ensured = nextList.length > 0 ? nextList : ALL_DECADES;
+      const ensured = nextList.length > 0 ? nextList : availableDecades;
       const next = { ...prev, decades: ensured };
       saveSettings(next);
       return next;
@@ -225,7 +236,7 @@ export default function SettingsPage() {
           <p className="text-xs text-ink/60">Wirkt nur auf Musik-Fragen</p>
         </div>
         <div className="grid sm:grid-cols-2 gap-2 text-sm">
-          {ALL_DECADES.map((decade) => {
+          {availableDecades.map((decade) => {
             const checked = settings.decades.includes(decade);
             return (
               <label

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { cards, getCategories } from '@/lib/cards';
 import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
-import { getDefaultSettings, loadSettings, UserSettings } from '@/lib/userSettings';
+import { getDefaultSettings, loadSettings, toDecadeTag, UserSettings } from '@/lib/userSettings';
 import { Card, CardCategory, DecadeTag, GenreTag } from '@/lib/types';
 
 function shuffle<T>(arr: T[]): T[] {
@@ -55,21 +55,7 @@ function buildWeightedDeck(allCards: Card[], settings: UserSettings) {
     if (card.category !== 'music') return true;
     const year = card.year;
     if (typeof year !== 'number' || Number.isNaN(year)) return true;
-    const decade: DecadeTag | undefined = year >= 1960 && year < 1970
-      ? '1960s'
-      : year >= 1970 && year < 1980
-        ? '1970s'
-        : year >= 1980 && year < 1990
-          ? '1980s'
-          : year >= 1990 && year < 2000
-            ? '1990s'
-            : year >= 2000 && year < 2010
-              ? '2000s'
-              : year >= 2010 && year < 2020
-                ? '2010s'
-                : year >= 2020 && year < 2030
-                  ? '2020s'
-                  : undefined;
+    const decade = toDecadeTag(year as number);
     if (!decade) return true;
     return settings.decades.includes(decade);
   };
@@ -116,7 +102,18 @@ function buildWeightedDeck(allCards: Card[], settings: UserSettings) {
 export default function PlayPage() {
   const router = useRouter();
   const availableCategories = useMemo(() => getCategories(cards).filter((c) => c !== 'video'), []);
-  const defaults = useMemo(() => getDefaultSettings(availableCategories), [availableCategories]);
+  const availableDecades = useMemo(() => {
+    const order: DecadeTag[] = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];
+    const set = new Set<DecadeTag>();
+    cards
+      .filter((c) => c.category === 'music' && typeof c.year === 'number')
+      .forEach((c) => {
+        const d = toDecadeTag(c.year as number);
+        if (d) set.add(d);
+      });
+    return order.filter((d) => set.has(d));
+  }, []);
+  const defaults = useMemo(() => getDefaultSettings(availableCategories, availableDecades), [availableCategories, availableDecades]);
   const [settings, setSettings] = useState<UserSettings>(defaults);
   const [deckKey, setDeckKey] = useState(0);
   const [blockedCards, setBlockedCards] = useState<Set<string>>(new Set());
@@ -131,21 +128,7 @@ export default function PlayPage() {
       if (card.category !== 'music') return true;
       const year = card.year;
       if (typeof year !== 'number' || Number.isNaN(year)) return true;
-      const decade: DecadeTag | undefined = year >= 1960 && year < 1970
-        ? '1960s'
-        : year >= 1970 && year < 1980
-          ? '1970s'
-          : year >= 1980 && year < 1990
-            ? '1980s'
-            : year >= 1990 && year < 2000
-              ? '1990s'
-              : year >= 2000 && year < 2010
-                ? '2000s'
-                : year >= 2010 && year < 2020
-                  ? '2010s'
-                  : year >= 2020 && year < 2030
-                    ? '2020s'
-                    : undefined;
+      const decade = toDecadeTag(year as number);
       if (!decade) return true;
       return settings.decades.includes(decade);
     };
