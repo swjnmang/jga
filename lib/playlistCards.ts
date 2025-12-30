@@ -288,5 +288,291 @@ export const playlistCards: Card[] = [
     "sources": {
       "spotify": "https://open.spotify.com/track/2avKuMN2QXkaG9vvHa2JLt"
     }
+  },
+  {
+    "id": "song-all-the-small-things-1999",
+    "title": "All The Small Things",
+    "category": "music",
+    "year": 1999,
+    "cue": "Song anhören und einordnen.",
+    "answer": "blink-182 — 1999, All The Small Things.",
+    "hint": "blink-182",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2m1hi0nfMR9vdGC8UcrnwU"
+    }
+  },
+  {
+    "id": "song-butterfly-1999",
+    "title": "Butterfly",
+    "category": "music",
+    "year": 1999,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Crazy Town — 1999, Butterfly.",
+    "hint": "Crazy Town",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6GQ3WTaNHMFlVmN4burGat"
+    }
+  },
+  {
+    "id": "song-californication-1999",
+    "title": "Californication",
+    "category": "music",
+    "year": 1999,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Red Hot Chili Peppers — 1999, Californication.",
+    "hint": "Red Hot Chili Peppers",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/48UPSzbZjgc449aqz8bxox"
+    }
+  },
+  {
+    "id": "song-chop-suey-2001",
+    "title": "Chop Suey!",
+    "category": "music",
+    "year": 2001,
+    "cue": "Song anhören und einordnen.",
+    "answer": "System Of A Down — 2001, Chop Suey!.",
+    "hint": "System Of A Down",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2DlHlPMa4M17kufBvI2lEN"
+    }
+  },
+  {
+    "id": "song-the-bad-touch-1999",
+    "title": "The Bad Touch",
+    "category": "music",
+    "year": 1999,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bloodhound Gang — 1999, The Bad Touch.",
+    "hint": "Bloodhound Gang",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5EYdTPdJD74r9EVZBztqGG"
+    }
+  },
+  {
+    "id": "song-bring-me-to-life-2003",
+    "title": "Bring Me To Life",
+    "category": "music",
+    "year": 2003,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Evanescence — 2003, Bring Me To Life.",
+    "hint": "Evanescence",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0COqiPhxzoWICwFCS4eZcp"
+    }
+  },
+  {
+    "id": "song-knockin-on-heavens-door-1991",
+    "title": "Knockin' On Heaven's Door",
+    "category": "music",
+    "year": 1991,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Guns N' Roses — 1991, Knockin' On Heaven's Door.",
+    "hint": "Guns N' Roses",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4JiEyzf0Md7KEFFGWDDdCr"
+    }
+  },
+  {
+    "id": "song-byob-2005",
+    "title": "B.Y.O.B.",
+    "category": "music",
+    "year": 2005,
+    "cue": "Song anhören und einordnen.",
+    "answer": "System Of A Down — 2005, B.Y.O.B..",
+    "hint": "System Of A Down",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0EYOdF5FCkgOJJla8DI2Md"
+    }
+  },
+  {
+    "id": "song-the-middle-2001",
+    "title": "The Middle",
+    "category": "music",
+    "year": 2001,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Jimmy Eat World — 2001, The Middle.",
+    "hint": "Jimmy Eat World",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6GG73Jik4jUlQCkKg9JuGO"
+    }
+  },
+  {
+    "id": "song-the-next-episode-1999",
+    "title": "The Next Episode",
+    "category": "music",
+    "year": 1999,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+    "hint": "Dr. Dre, Snoop Dogg",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4LwU4Vp6od3Sb08CsP99GC"
+    }
+  },
+  {
+    "id": "song-reimemonster-feat-ferris-mc-1999",
+    "title": "Reimemonster (feat. Ferris MC)",
+    "category": "music",
+    "year": 1999,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Afrob, Ferris MC — 1999, Reimemonster (feat. Ferris MC).",
+    "hint": "Afrob, Ferris MC",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0pgx8fWphTTM9Kv5KjWpXy"
+    }
+  },
+  {
+    "id": "song-weck-mich-auf-2001",
+    "title": "Weck mich auf",
+    "category": "music",
+    "year": 2001,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Samy Deluxe — 2001, Weck mich auf.",
+    "hint": "Samy Deluxe",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/47VRtROAdociHgtuVZNoBL"
+    }
+  },
+  {
+    "id": "song-bon-voyage-feat-nina-2000",
+    "title": "Bon voyage (feat. Nina)",
+    "category": "music",
+    "year": 2000,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Deichkind, Nina Tenge — 2000, Bon voyage (feat. Nina).",
+    "hint": "Deichkind, Nina Tenge",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0ys1g8PTTs6ADeDp2h1xpd"
+    }
+  },
+  {
+    "id": "song-turlich-turlich-sicher-dicker-2000",
+    "title": "Türlich, Türlich (Sicher, Dicker)",
+    "category": "music",
+    "year": 2000,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Das Bo — 2000, Türlich, Türlich (Sicher, Dicker).",
+    "hint": "Das Bo",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0zv3f19rNhmZhNmNA2xJsF"
+    }
+  },
+  {
+    "id": "song-oopsi-did-it-again-2000",
+    "title": "Oops!...I Did It Again",
+    "category": "music",
+    "year": 2000,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Britney Spears — 2000, Oops!...I Did It Again.",
+    "hint": "Britney Spears",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6naxalmIoLFWR0siv8dnQQ"
+    }
+  },
+  {
+    "id": "song-thats-the-way-it-is-2019",
+    "title": "That's the Way It Is",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Céline Dion — 2019, That's the Way It Is.",
+    "hint": "Céline Dion",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5s4catxeZsaWFnOrvrXZHf"
+    }
+  },
+  {
+    "id": "song-believe-1998",
+    "title": "Believe",
+    "category": "music",
+    "year": 1998,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Cher — 1998, Believe.",
+    "hint": "Cher",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2goLsvvODILDzeeiT4dAoR"
+    }
+  },
+  {
+    "id": "song-blau-bluht-der-enzian-2018",
+    "title": "Blau blüht der Enzian",
+    "category": "music",
+    "year": 2018,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Heino — 2018, Blau blüht der Enzian.",
+    "hint": "Heino",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7LHEQq3Xy7brogiqnXsT4L"
+    }
+  },
+  {
+    "id": "song-junge-2007",
+    "title": "Junge",
+    "category": "music",
+    "year": 2007,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Die Ärzte — 2007, Junge.",
+    "hint": "Die Ärzte",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/10waMsh44ojvTwXAIy213n"
+    }
+  },
+  {
+    "id": "song-deine-schuld-2003",
+    "title": "Deine Schuld",
+    "category": "music",
+    "year": 2003,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Die Ärzte — 2003, Deine Schuld.",
+    "hint": "Die Ärzte",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0oEp3d8au0a3Qp78F2QxtB"
+    }
+  },
+  {
+    "id": "song-tilidin-2019",
+    "title": "Tilidin",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Capital Bra, Samra — 2019, Tilidin.",
+    "hint": "Capital Bra, Samra",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0Dlcu2fgHklOnajVu2dUNU"
+    }
+  },
+  {
+    "id": "song-hypa-hypa-2021",
+    "title": "Hypa Hypa",
+    "category": "music",
+    "year": 2021,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Electric Callboy — 2021, Hypa Hypa.",
+    "hint": "Electric Callboy",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2qOmcSjOQEDIJKosonn75a"
+    }
   }
 ];
