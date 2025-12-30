@@ -222,15 +222,21 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
       spotifyPlayerRef.current = player;
 
-      player.addListener('ready', ({ device_id }) => {
+      player.addListener('ready', async ({ device_id }) => {
+        // Erste Device-ID übernehmen.
         setSpotifyDevice(device_id);
         setSpotifyReady(true);
         setSpotifyErrorDetail(null);
 
-        // Versuche sofort auf den frisch erstellten Web-Player zu transferieren,
-        // damit spätere Play-Aufrufe nicht mit „Device not found" (404) scheitern.
+        // Erneut von Spotify abfragen, falls die erste ID noch nicht registriert ist.
+        const refreshed = await refreshDeviceId();
+        if (refreshed) {
+          setSpotifyDevice(refreshed);
+        }
+
+        // Sofort versuchen zu transferieren, damit Play nicht mit 404 endet.
         transferPlayback().catch(() => {
-          // still ok: wir versuchen es erneut beim ersten Play-Klick
+          // ok, zweiter Versuch beim Play-Klick
         });
       });
 
@@ -290,8 +296,19 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     };
   }, [card.id, choice?.type, onPlaybackError, spotifyToken]);
 
+  const ensureDevice = async (): Promise<string | null> => {
+    if (!spotifyToken) return null;
+    // Vorrang: gespeicherte ID, sonst frisch aus Spotify laden.
+    if (spotifyDevice) {
+      return spotifyDevice;
+    }
+    return refreshDeviceId();
+  };
+
   const transferPlayback = async () => {
-    if (!spotifyToken || !spotifyDevice) return false;
+    if (!spotifyToken) return false;
+    const target = await ensureDevice();
+    if (!target) return false;
 
     const doTransfer = async (targetDevice: string) =>
       fetch('https://api.spotify.com/v1/me/player', {
@@ -303,7 +320,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         body: JSON.stringify({ device_ids: [targetDevice], play: false })
       });
 
-    const res = await doTransfer(spotifyDevice);
+    const res = await doTransfer(target);
     if (res.ok) return true;
 
     // 404: Device not found – tritt auf, wenn die Device-ID veraltet ist oder Spotify
@@ -367,11 +384,14 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       setSpotifyErrorDetail(null);
       return;
     }
-    if (!spotifyDevice) {
-      setSpotifyError('Spotify Player noch nicht bereit');
-      setSpotifyErrorDetail(null);
+    const deviceId = (await ensureDevice()) ?? spotifyDevice;
+    if (!deviceId) {
+      setSpotifyError('Kein Spotify-Gerät aktiv');
+      setSpotifyErrorDetail('Öffne die Spotify-App kurz oder starte dort irgendeinen Song.');
+      setIsPlaying(false);
       return;
     }
+    setSpotifyDevice(deviceId);
 
     const match = url.match(/spotify\.com\/track\/([A-Za-z0-9]+)/);
     const trackId = match ? match[1] : null;
@@ -382,7 +402,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     }
 
     const attemptPlay = async (attempt: number) => {
-      const res = await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${spotifyDevice}`, {
+        const res = await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${spotifyToken}`,
@@ -404,6 +424,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
           await new Promise((r) => setTimeout(r, 200));
           const refreshed = await refreshDeviceId();
           if (refreshed) {
+            setSpotifyDevice(refreshed);
             await transferPlayback();
             return attemptPlay(1);
           }
