@@ -235,13 +235,13 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       player.addListener('initialization_error', ({ message }) => setSpotifyError(message));
       player.addListener('authentication_error', ({ message }) => setSpotifyError(message));
       player.addListener('account_error', ({ message }) => setSpotifyError(message));
-      player.addListener('playback_error', ({ message, error_type }) => {
+      (player as any).addListener('playback_error', ({ message, error_type }: any) => {
         setSpotifyError('Spotify meldet einen Wiedergabefehler');
         setSpotifyErrorDetail(`${error_type}: ${message}`);
         onPlaybackError?.(card.id, 'playback-error');
         console.error('Spotify playback_error', error_type, message);
       });
-      player.addListener('not_ready', ({ device_id }) => {
+      (player as any).addListener('not_ready', ({ device_id }: any) => {
         setSpotifyReady(false);
         setSpotifyErrorDetail(`Device ${device_id} nicht bereit`);
       });
@@ -282,7 +282,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         spotifyPlayerRef.current = null;
       }
     };
-  }, [choice?.type, spotifyToken]);
+  }, [card.id, choice?.type, onPlaybackError, spotifyToken]);
 
   const transferPlayback = async () => {
     if (!spotifyToken || !spotifyDevice) return;

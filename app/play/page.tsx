@@ -203,7 +203,10 @@ function PlayPageContent() {
     );
   }, [blockedCards, mode, settings.decades, settings.genres, settings.playlists]);
   const filteredDeck = useMemo(
-    () => buildWeightedDeck(playableCards, modeSettings, FALLBACK_PLAYLIST_ID, allowedCategoriesForMode),
+    () => {
+      void deckKey; // force recompute when deckKey changes (restart)
+      return buildWeightedDeck(playableCards, modeSettings, FALLBACK_PLAYLIST_ID, allowedCategoriesForMode);
+    },
     [allowedCategoriesForMode, modeSettings, playableCards, deckKey]
   );
   const [index, setIndex] = useState(0);
