@@ -57,17 +57,25 @@ export default function SettingsPage() {
   };
 
   const updateCategoryWeight = (category: CardCategory, value: number) => {
-    const weight = Math.min(100, Math.max(0, Math.round(value)));
-    const nextWeights = { ...settings.categoryWeights, [category]: weight } as Record<CardCategory, number>;
-    const active = Object.entries(nextWeights)
-      .filter(([_, w]) => (w as number) > 0)
-      .map(([cat]) => cat as CardCategory);
+    const clamped = Math.min(100, Math.max(0, Math.round(value)));
+    const n = availableCategories.length;
+    if (n === 0) return;
 
-    // Prevent empty selection: if all zero, keep last changed at 10%
-    if (active.length === 0) {
-      nextWeights[category] = 10;
-      active.push(category);
+    const nextWeights: Record<CardCategory, number> = { ...settings.categoryWeights } as Record<CardCategory, number>;
+    nextWeights[category] = clamped;
+
+    const remainingCats = availableCategories.filter((c) => c !== category);
+    const remainingTotal = Math.max(0, 100 - clamped);
+    const base = remainingCats.length > 0 ? Math.floor(remainingTotal / remainingCats.length) : 0;
+    let leftover = remainingCats.length > 0 ? remainingTotal % remainingCats.length : 0;
+
+    for (const cat of remainingCats) {
+      const add = leftover > 0 ? 1 : 0;
+      nextWeights[cat] = base + add;
+      if (leftover > 0) leftover -= 1;
     }
+
+    const active = availableCategories.filter((cat) => (nextWeights[cat] ?? 0) > 0);
 
     updateSettings({
       ...settings,
