@@ -226,6 +226,12 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         setSpotifyDevice(device_id);
         setSpotifyReady(true);
         setSpotifyErrorDetail(null);
+
+        // Versuche sofort auf den frisch erstellten Web-Player zu transferieren,
+        // damit spätere Play-Aufrufe nicht mit „Device not found" (404) scheitern.
+        transferPlayback().catch(() => {
+          // still ok: wir versuchen es erneut beim ersten Play-Klick
+        });
       });
 
       player.addListener('player_state_changed', (state) => {
@@ -285,21 +291,41 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   }, [card.id, choice?.type, onPlaybackError, spotifyToken]);
 
   const transferPlayback = async () => {
-    if (!spotifyToken || !spotifyDevice) return;
-    const res = await fetch('https://api.spotify.com/v1/me/player', {
-      method: 'PUT',
-      headers: {
-        Authorization: `Bearer ${spotifyToken}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ device_ids: [spotifyDevice], play: false })
-    });
-    if (!res.ok) {
-      const detail = await res.text().catch(() => null);
-      setSpotifyError('Spotify-Device konnte nicht übernommen werden');
-      setSpotifyErrorDetail(detail || `HTTP ${res.status}`);
-      console.error('Spotify transfer failed', res.status, detail);
+    if (!spotifyToken || !spotifyDevice) return false;
+
+    const doTransfer = async (targetDevice: string) =>
+      fetch('https://api.spotify.com/v1/me/player', {
+        method: 'PUT',
+        headers: {
+          Authorization: `Bearer ${spotifyToken}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ device_ids: [targetDevice], play: false })
+      });
+
+    const res = await doTransfer(spotifyDevice);
+    if (res.ok) return true;
+
+    // 404: Device not found – tritt auf, wenn die Device-ID veraltet ist oder Spotify
+    // den Web Playback Player noch nicht registriert hat. Versuche ein Refresh.
+    if (res.status === 404) {
+      const refreshed = await refreshDeviceId();
+      if (refreshed) {
+        const retry = await doTransfer(refreshed);
+        if (retry.ok) return true;
+        const detail = await retry.text().catch(() => null);
+        setSpotifyError('Spotify-Device konnte nicht übernommen werden');
+        setSpotifyErrorDetail(detail || `HTTP ${retry.status}`);
+        console.error('Spotify transfer retry failed', retry.status, detail);
+        return false;
+      }
     }
+
+    const detail = await res.text().catch(() => null);
+    setSpotifyError('Spotify-Device konnte nicht übernommen werden');
+    setSpotifyErrorDetail(detail || `HTTP ${res.status}`);
+    console.error('Spotify transfer failed', res.status, detail);
+    return false;
   };
 
   const refreshDeviceId = async (): Promise<string | null> => {
@@ -375,7 +401,6 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
         // Retry once if no active device / 404 to re-transfer and re-play.
         if (is404 && attempt === 0) {
-          // Refresh device id and re-transfer. If still missing, try current device after reconnect.
           await new Promise((r) => setTimeout(r, 200));
           const refreshed = await refreshDeviceId();
           if (refreshed) {
@@ -400,7 +425,13 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     setSpotifyLoading(true);
     try {
       await activatePlayer();
-      await transferPlayback();
+      const transferred = await transferPlayback();
+      if (!transferred) {
+        setSpotifyError('Spotify Player konnte nicht aktiviert werden');
+        setSpotifyErrorDetail('Device transfer nicht möglich (404). Bitte Spotify-App öffnen und erneut versuchen.');
+        setIsPlaying(false);
+        return;
+      }
       await attemptPlay(0);
     } catch (_err) {
       setSpotifyError('Wiedergabe konnte nicht gestartet werden');
