@@ -13,6 +13,7 @@ export type UserSettings = {
 const STORAGE_KEY = 'jga-user-settings';
 
 export const TRIVIA_ONLY_CATEGORIES: CardCategory[] = ['sportfreizeit', 'religionglaube', 'geogeschichte'];
+export const TIMELINE_CATEGORIES: CardCategory[] = ['quote', 'image', 'country', 'music'];
 
 export const ALL_GENRES: GenreTag[] = ['poprock', 'metal', 'hiphop', 'schlagerparty'];
 export const ALL_DECADES: DecadeTag[] = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];

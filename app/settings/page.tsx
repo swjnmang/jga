@@ -1,7 +1,8 @@
 "use client";
 
 import Link from 'next/link';
-import { useEffect, useMemo, useState } from 'react';
+import { Suspense, useEffect, useMemo, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { cards, getCategories } from '@/lib/cards';
 import { playlistInfo } from '@/lib/playlistCards';
 import { CardCategory, DecadeTag, Difficulty, GenreTag } from '@/lib/types';
@@ -12,6 +13,7 @@ import {
   saveSettings,
   toDecadeTag,
   TRIVIA_ONLY_CATEGORIES,
+  TIMELINE_CATEGORIES,
   UserSettings
 } from '@/lib/userSettings';
 
@@ -23,8 +25,17 @@ const difficultyOptions: { value: Difficulty; label: string }[] = [
   { value: 'schwer', label: 'Schwer' }
 ];
 
-export default function SettingsPage() {
-  const availableCategories = useMemo(() => getCategories(cards).filter((c) => c !== 'video'), []);
+function SettingsPageContent() {
+  const searchParams = useSearchParams();
+  const modeParam = searchParams.get('mode');
+  const returnParam = searchParams.get('return');
+  const mode: 'timeline' | 'trivia' | null = modeParam === 'timeline' || modeParam === 'trivia' ? modeParam : null;
+
+  const availableCategories = useMemo(() => {
+    const base = getCategories(cards).filter((c) => c !== 'video');
+    if (mode === 'timeline') return base.filter((c) => TIMELINE_CATEGORIES.includes(c));
+    return base;
+  }, [mode]);
   const availableDecades = useMemo(() => {
     const order: DecadeTag[] = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];
     const set = new Set<DecadeTag>();
@@ -163,12 +174,21 @@ export default function SettingsPage() {
           lokal im Browser gespeichert und wirken sich sofort im Spielmodus aus.
         </p>
         <div className="flex flex-wrap gap-3 pt-2">
-          <Link
-            href="/"
-            className="rounded-xl border border-ink/20 px-4 py-2 text-sm"
-          >
-            Speichern & zurück zum Hauptmenü
-          </Link>
+          {mode ? (
+            <Link
+              href={returnParam || `/play?mode=${mode}&start=1`}
+              className="rounded-xl bg-ink text-sand px-4 py-2 text-sm"
+            >
+              Spiel starten ({mode})
+            </Link>
+          ) : (
+            <Link
+              href="/"
+              className="rounded-xl border border-ink/20 px-4 py-2 text-sm"
+            >
+              Speichern & zurück zum Hauptmenü
+            </Link>
+          )}
           <button
             type="button"
             onClick={resetDefaults}
@@ -178,6 +198,17 @@ export default function SettingsPage() {
           </button>
         </div>
       </div>
+
+      {mode && (
+        <div className="card-surface rounded-2xl p-4 text-sm text-ink/80 space-y-1">
+          <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Modus gewählt</p>
+          <p className="text-base font-semibold">{mode === 'timeline' ? 'Timeline' : 'Trivia'} Einstellungen</p>
+          <p>
+            Kategorien und Optionen sind auf diesen Modus begrenzt. Um das Spiel zu starten, nutze den Button
+            oben „Spiel starten ({mode})“.
+          </p>
+        </div>
+      )}
 
       <section className="card-surface rounded-2xl p-5 space-y-4">
         <div className="flex items-center justify-between gap-3">
@@ -363,5 +394,13 @@ export default function SettingsPage() {
         <p className="text-sm text-ink/70">Eingabe-Formular folgt. Aktuell können nur die vorhandenen Karten gespielt werden.</p>
       </section>
     </main>
+  );
+}
+
+export default function SettingsPage() {
+  return (
+    <Suspense>
+      <SettingsPageContent />
+    </Suspense>
   );
 }

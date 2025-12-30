@@ -320,7 +320,8 @@ export const playlistCards: Card[] = [
       "poprock"
     ],
     "playlists": [
-      "4likPQLIX9PUqyNiJ3xsqT"
+      "4likPQLIX9PUqyNiJ3xsqT",
+      "5eKb0TEz5FUTd8VvQVSr0l"
     ]
   },
   {
@@ -420,7 +421,8 @@ export const playlistCards: Card[] = [
       "poprock"
     ],
     "playlists": [
-      "4likPQLIX9PUqyNiJ3xsqT"
+      "4likPQLIX9PUqyNiJ3xsqT",
+      "5eKb0TEz5FUTd8VvQVSr0l"
     ]
   },
   {
@@ -892,6 +894,1140 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "metal",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-the-kids-arent-alright-1998",
+    "title": "The Kids Aren't Alright",
+    "category": "music",
+    "year": 1998,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Offspring — 1998, The Kids Aren't Alright.",
+    "hint": "The Offspring",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4EchqUKQ3qAQuRNKmeIpnf"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-mr-brightside-2004",
+    "title": "Mr. Brightside",
+    "category": "music",
+    "year": 2004,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Killers — 2004, Mr. Brightside.",
+    "hint": "The Killers",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/003vvx7Niy0yvhvHt4a68B"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-song-2-2012-remaster-1997",
+    "title": "Song 2 - 2012 Remaster",
+    "category": "music",
+    "year": 1997,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Blur — 1997, Song 2 - 2012 Remaster.",
+    "hint": "Blur",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1FTSo4v6BOZH9QxKc3MbVM"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-fly-away-1998",
+    "title": "Fly Away",
+    "category": "music",
+    "year": 1998,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lenny Kravitz — 1998, Fly Away.",
+    "hint": "Lenny Kravitz",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1OxcIUqVmVYxT6427tbhDW"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT",
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-zombie-2025-remastered-1994",
+    "title": "Zombie - 2025 Remastered",
+    "category": "music",
+    "year": 1994,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Cranberries — 1994, Zombie - 2025 Remastered.",
+    "hint": "The Cranberries",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3gjHnylel3PTRpjS44ocqr"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-cruisen-2002",
+    "title": "Cruisen",
+    "category": "music",
+    "year": 2002,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Massive Töne — 2002, Cruisen.",
+    "hint": "Massive Töne",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6e5kuZssmkwWL3Yt4jwTRy"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-traumreise-2002",
+    "title": "Traumreise",
+    "category": "music",
+    "year": 2002,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Massive Töne — 2002, Traumreise.",
+    "hint": "Massive Töne",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1tVhmi6ltumhZtd1pM8Tya"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-oane-moan-i-pack-i-no-2015",
+    "title": "Oane moan i pack i no",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Oansno — 2015, Oane moan i pack i no.",
+    "hint": "Oansno",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1BYtg47qoPZ9DUrBTfJ5Bc"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-in-the-shadows-2003",
+    "title": "In the Shadows",
+    "category": "music",
+    "year": 2003,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Rasmus — 2003, In the Shadows.",
+    "hint": "The Rasmus",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1fr92Vupmcs2vgLMFVQ7rd"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-sk8er-boi-2002",
+    "title": "Sk8er Boi",
+    "category": "music",
+    "year": 2002,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Avril Lavigne — 2002, Sk8er Boi.",
+    "hint": "Avril Lavigne",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/00Mb3DuaIH1kjrwOku9CGU"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-numb-encore-2004",
+    "title": "Numb / Encore",
+    "category": "music",
+    "year": 2004,
+    "cue": "Song anhören und einordnen.",
+    "answer": "JAY-Z, Linkin Park — 2004, Numb / Encore.",
+    "hint": "JAY-Z, Linkin Park",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5sNESr6pQfIhL3krM8CtZn"
+    },
+    "genres": [
+      "hiphop",
+      "poprock",
+      "metal"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-break-stuff-1999",
+    "title": "Break Stuff",
+    "category": "music",
+    "year": 1999,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Limp Bizkit — 1999, Break Stuff.",
+    "hint": "Limp Bizkit",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5cZqsjVs6MevCnAkasbEOX"
+    },
+    "genres": [
+      "metal",
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-whats-my-age-again-1999",
+    "title": "What's My Age Again?",
+    "category": "music",
+    "year": 1999,
+    "cue": "Song anhören und einordnen.",
+    "answer": "blink-182 — 1999, What's My Age Again?.",
+    "hint": "blink-182",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4LJhJ6DQS7NwE7UKtvcM52"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-sonne-2001",
+    "title": "Sonne",
+    "category": "music",
+    "year": 2001,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Rammstein — 2001, Sonne.",
+    "hint": "Rammstein",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3gVhsZtseYtY1fMuyYq06F"
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-bodies-2001",
+    "title": "Bodies",
+    "category": "music",
+    "year": 2001,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Drowning Pool — 2001, Bodies.",
+    "hint": "Drowning Pool",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7CpbhqKUedOIrcvc94p60Y"
+    },
+    "genres": [
+      "metal",
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-in-the-air-tonight-2015-remastered-1981",
+    "title": "In The Air Tonight - 2015 Remastered",
+    "category": "music",
+    "year": 1981,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Phil Collins — 1981, In The Air Tonight - 2015 Remastered.",
+    "hint": "Phil Collins",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/18AXbzPzBS8Y3AkgSxzJPb"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT",
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-feel-good-inc-2005",
+    "title": "Feel Good Inc.",
+    "category": "music",
+    "year": 2005,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Gorillaz, De La Soul — 2005, Feel Good Inc..",
+    "hint": "Gorillaz, De La Soul",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0d28khcov6AiegSCpG5TuT"
+    },
+    "genres": [
+      "poprock",
+      "hiphop"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-hey-ya-2003",
+    "title": "Hey Ya!",
+    "category": "music",
+    "year": 2003,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Outkast — 2003, Hey Ya!.",
+    "hint": "Outkast",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2PpruBYCo4H7WOBJ7Q2EwM"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-still-waiting-2002",
+    "title": "Still Waiting",
+    "category": "music",
+    "year": 2002,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Sum 41 — 2002, Still Waiting.",
+    "hint": "Sum 41",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0jqK7sGTLsHPkQrrcrGuKD"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-like-a-prayer-1989",
+    "title": "Like a Prayer",
+    "category": "music",
+    "year": 1989,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Madonna — 1989, Like a Prayer.",
+    "hint": "Madonna",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2v7ywbUzCgcVohHaKUcacV"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT",
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-creep-1993",
+    "title": "Creep",
+    "category": "music",
+    "year": 1993,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Radiohead — 1993, Creep.",
+    "hint": "Radiohead",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/70LcF31zb1H0PyJoS1Sx1r"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-good-riddance-time-of-your-life-1997",
+    "title": "Good Riddance (Time of Your Life)",
+    "category": "music",
+    "year": 1997,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Green Day — 1997, Good Riddance (Time of Your Life).",
+    "hint": "Green Day",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6ORqU0bHbVCRjXm9AjyHyZ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-summer-of-69-1984",
+    "title": "Summer Of '69",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bryan Adams — 1984, Summer Of '69.",
+    "hint": "Bryan Adams",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0GONea6G2XdnHWjNZd6zt3"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT",
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-ms-jackson-2000",
+    "title": "Ms. Jackson",
+    "category": "music",
+    "year": 2000,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Outkast — 2000, Ms. Jackson.",
+    "hint": "Outkast",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0I3q5fE6wg7LIfHGngUTnV"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-this-love-2002",
+    "title": "This Love",
+    "category": "music",
+    "year": 2002,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Maroon 5 — 2002, This Love.",
+    "hint": "Maroon 5",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6ECp64rv50XVz93WvxXMGF"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-in-too-deep-2001",
+    "title": "In Too Deep",
+    "category": "music",
+    "year": 2001,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Sum 41 — 2001, In Too Deep.",
+    "hint": "Sum 41",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1HNE2PX70ztbEl6MLxrpNL"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-dancing-in-the-moonlight-2000",
+    "title": "Dancing in the Moonlight",
+    "category": "music",
+    "year": 2000,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Toploader — 2000, Dancing in the Moonlight.",
+    "hint": "Toploader",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3Fzlg5r1IjhLk2qRw667od"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-fat-lip-2001",
+    "title": "Fat Lip",
+    "category": "music",
+    "year": 2001,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Sum 41 — 2001, Fat Lip.",
+    "hint": "Sum 41",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4KacUpvbA3Mfo05gttTjhN"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-holiday-boulevard-of-broken-dreams-2004",
+    "title": "Holiday / Boulevard of Broken Dreams",
+    "category": "music",
+    "year": 2004,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Green Day — 2004, Holiday / Boulevard of Broken Dreams.",
+    "hint": "Green Day",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0MsrWnxQZxPAcov7c74sSo"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-supermassive-black-hole-2006",
+    "title": "Supermassive Black Hole",
+    "category": "music",
+    "year": 2006,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Muse — 2006, Supermassive Black Hole.",
+    "hint": "Muse",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3lPr8ghNDBLc2uZovNyLs9"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-pocketful-of-sunshine-2007",
+    "title": "Pocketful of Sunshine",
+    "category": "music",
+    "year": 2007,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Natasha Bedingfield — 2007, Pocketful of Sunshine.",
+    "hint": "Natasha Bedingfield",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1uigwk5hNV84zRd5YQQRTk"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-one-more-time-2001",
+    "title": "One More Time",
+    "category": "music",
+    "year": 2001,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Daft Punk — 2001, One More Time.",
+    "hint": "Daft Punk",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0DiWol3AO6WpXZgp0goxAV"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-blue-da-ba-dee-gabry-ponte-ice-pop-radio-2011",
+    "title": "Blue (Da Ba Dee) - Gabry Ponte Ice Pop Radio",
+    "category": "music",
+    "year": 2011,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Eiffel 65, Gabry Ponte — 2011, Blue (Da Ba Dee) - Gabry Ponte Ice Pop Radio.",
+    "hint": "Eiffel 65, Gabry Ponte",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4GewRLEiI4BDTQsoH8BRVV"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-lose-yourself-2004",
+    "title": "Lose Yourself",
+    "category": "music",
+    "year": 2004,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Eminem — 2004, Lose Yourself.",
+    "hint": "Eminem",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1v7L65Lzy0j0vdpRjJewt1"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-radioactive-2012",
+    "title": "Radioactive",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Imagine Dragons — 2012, Radioactive.",
+    "hint": "Imagine Dragons",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/62yJjFtgkhUrXktIoSjgP2"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-i-want-it-that-way-1999",
+    "title": "I Want It That Way",
+    "category": "music",
+    "year": 1999,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Backstreet Boys — 1999, I Want It That Way.",
+    "hint": "Backstreet Boys",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/47BBI51FKFwOMlIiX6m8ya"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-bad-romance-2009",
+    "title": "Bad Romance",
+    "category": "music",
+    "year": 2009,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lady Gaga — 2009, Bad Romance.",
+    "hint": "Lady Gaga",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0SiywuOBRcynK0uKGWdCnn"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-unwritten-2004",
+    "title": "Unwritten",
+    "category": "music",
+    "year": 2004,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Natasha Bedingfield — 2004, Unwritten.",
+    "hint": "Natasha Bedingfield",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3U5JVgI2x4rDyHGObzJfNf"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-yeah-feat-lil-jon-ludacris-2004",
+    "title": "Yeah! (feat. Lil Jon & Ludacris)",
+    "category": "music",
+    "year": 2004,
+    "cue": "Song anhören und einordnen.",
+    "answer": "USHER, Lil Jon, Ludacris — 2004, Yeah! (feat. Lil Jon & Ludacris).",
+    "hint": "USHER, Lil Jon, Ludacris",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5rb9QrpfcKFHM1EUbSIurX"
+    },
+    "genres": [
+      "poprock",
+      "hiphop"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-baby-one-more-time-1999",
+    "title": "...Baby One More Time",
+    "category": "music",
+    "year": 1999,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Britney Spears — 1999, ...Baby One More Time.",
+    "hint": "Britney Spears",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3MjUtNVVq3C8Fn0MP3zhXa"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-lose-yourself-2014",
+    "title": "Lose Yourself",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Eminem — 2014, Lose Yourself.",
+    "hint": "Eminem",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7MJQ9Nfxzh8LPZ9e9u68Fq"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-mockingbird-2004",
+    "title": "Mockingbird",
+    "category": "music",
+    "year": 2004,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Eminem — 2004, Mockingbird.",
+    "hint": "Eminem",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/561jH07mF1jHuk7KlaeF0s"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-stan-2000",
+    "title": "Stan",
+    "category": "music",
+    "year": 2000,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Eminem, Dido — 2000, Stan.",
+    "hint": "Eminem, Dido",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3UmaczJpikHgJFyBTAJVoz"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-im-like-a-bird-2000",
+    "title": "I'm Like A Bird",
+    "category": "music",
+    "year": 2000,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Nelly Furtado — 2000, I'm Like A Bird.",
+    "hint": "Nelly Furtado",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2aGw77pZqli064JiPuXYRi"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT",
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-forever-young-1984",
+    "title": "Forever Young",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Alphaville — 1984, Forever Young.",
+    "hint": "Alphaville",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4S1VYqwfkLit9mKVY3MXoo"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT",
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-toxic-2003",
+    "title": "Toxic",
+    "category": "music",
+    "year": 2003,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Britney Spears — 2003, Toxic.",
+    "hint": "Britney Spears",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6I9VzXrHxO9rA9A5euc8Ak"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-cry-me-a-river-2002",
+    "title": "Cry Me a River",
+    "category": "music",
+    "year": 2002,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Justin Timberlake — 2002, Cry Me a River.",
+    "hint": "Justin Timberlake",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7Lf7oSEVdzZqTA0kEDSlS5"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-in-da-club-2003",
+    "title": "In Da Club",
+    "category": "music",
+    "year": 2003,
+    "cue": "Song anhören und einordnen.",
+    "answer": "50 Cent — 2003, In Da Club.",
+    "hint": "50 Cent",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7iL6o9tox1zgHpKUfh9vuC"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-lemon-tree-1995",
+    "title": "Lemon Tree",
+    "category": "music",
+    "year": 1995,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Fools Garden — 1995, Lemon Tree.",
+    "hint": "Fools Garden",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2epbL7s3RFV81K5UhTgZje"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-killing-me-softly-with-his-song-1996",
+    "title": "Killing Me Softly With His Song",
+    "category": "music",
+    "year": 1996,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Fugees, Ms. Lauryn Hill — 1996, Killing Me Softly With His Song.",
+    "hint": "Fugees, Ms. Lauryn Hill",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0Q0IVlqMV64kNLlwjPj0Hl"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-nias-in-paris-2011",
+    "title": "Ni**as In Paris",
+    "category": "music",
+    "year": 2011,
+    "cue": "Song anhören und einordnen.",
+    "answer": "JAY-Z, Kanye West — 2011, Ni**as In Paris.",
+    "hint": "JAY-Z, Kanye West",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1auxYwYrFRqZP7t3s7w4um"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-99-problems-2003",
+    "title": "99 Problems",
+    "category": "music",
+    "year": 2003,
+    "cue": "Song anhören und einordnen.",
+    "answer": "JAY-Z — 2003, 99 Problems.",
+    "hint": "JAY-Z",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7sLpSWxQazJzDVG6YGzlVs"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-dirt-off-your-shoulder-2003",
+    "title": "Dirt Off Your Shoulder",
+    "category": "music",
+    "year": 2003,
+    "cue": "Song anhören und einordnen.",
+    "answer": "JAY-Z — 2003, Dirt Off Your Shoulder.",
+    "hint": "JAY-Z",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3IrkbGQCoEPAkzJ0Tkv8nm"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-yellow-2000",
+    "title": "Yellow",
+    "category": "music",
+    "year": 2000,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Coldplay — 2000, Yellow.",
+    "hint": "Coldplay",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3AJwUDP919kvQ9QcozQPxg"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-still-dre-1999",
+    "title": "Still D.R.E.",
+    "category": "music",
+    "year": 1999,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Dr. Dre, Snoop Dogg — 1999, Still D.R.E..",
+    "hint": "Dr. Dre, Snoop Dogg",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/503OTo2dSqe7qk76rgsbep"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-drop-it-like-its-hot-2004",
+    "title": "Drop It Like It's Hot",
+    "category": "music",
+    "year": 2004,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Snoop Dogg, Pharrell Williams — 2004, Drop It Like It's Hot.",
+    "hint": "Snoop Dogg, Pharrell Williams",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2NBQmPrOEEjA8VbeWOQGxO"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-california-love-original-version-1998",
+    "title": "California Love - Original Version",
+    "category": "music",
+    "year": 1998,
+    "cue": "Song anhören und einordnen.",
+    "answer": "2Pac, Roger, Dr. Dre — 1998, California Love - Original Version.",
+    "hint": "2Pac, Roger, Dr. Dre",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3ia3dJETSOllPsv3LJkE35"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-changes-1998",
+    "title": "Changes",
+    "category": "music",
+    "year": 1998,
+    "cue": "Song anhören und einordnen.",
+    "answer": "2Pac, Talent — 1998, Changes.",
+    "hint": "2Pac, Talent",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1ofhfV90EnYhEr7Un2fWiv"
+    },
+    "genres": [
+      "hiphop",
       "poprock"
     ],
     "playlists": [
@@ -1647,25 +2783,6 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-im-like-a-bird-2000",
-    "title": "I'm Like A Bird",
-    "category": "music",
-    "year": 2000,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Nelly Furtado — 2000, I'm Like A Bird.",
-    "hint": "Nelly Furtado",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2aGw77pZqli064JiPuXYRi"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "0fky4kHnko4b9HsvrYVyum"
-    ]
-  },
-  {
     "id": "song-the-sign-1993",
     "title": "The Sign",
     "category": "music",
@@ -1890,26 +3007,8 @@ export const playlistCards: Card[] = [
       "poprock"
     ],
     "playlists": [
-      "0fky4kHnko4b9HsvrYVyum"
-    ]
-  },
-  {
-    "id": "song-fly-away-1998",
-    "title": "Fly Away",
-    "category": "music",
-    "year": 1998,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Lenny Kravitz — 1998, Fly Away.",
-    "hint": "Lenny Kravitz",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1OxcIUqVmVYxT6427tbhDW"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "0fky4kHnko4b9HsvrYVyum"
+      "0fky4kHnko4b9HsvrYVyum",
+      "5eKb0TEz5FUTd8VvQVSr0l"
     ]
   },
   {
@@ -1967,7 +3066,8 @@ export const playlistCards: Card[] = [
       "poprock"
     ],
     "playlists": [
-      "0fky4kHnko4b9HsvrYVyum"
+      "0fky4kHnko4b9HsvrYVyum",
+      "5eKb0TEz5FUTd8VvQVSr0l"
     ]
   },
   {
@@ -2611,6 +3711,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7LifJa1Ymo6gbe9hSyPefs"
     },
     "genres": [
+      "metal",
       "poprock"
     ],
     "playlists": [
@@ -2704,6 +3805,2598 @@ export const playlistCards: Card[] = [
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/3QTTAj8piyRBfhoPEfJC6y"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-born-in-the-usa-1984",
+    "title": "Born in the U.S.A.",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bruce Springsteen — 1984, Born in the U.S.A..",
+    "hint": "Bruce Springsteen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0dOg1ySSI7NkpAe89Zo0b9"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-heaven-is-a-place-on-earth-promo-7-edit-1987",
+    "title": "Heaven Is a Place on Earth - Promo 7\" Edit",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Belinda Carlisle — 1987, Heaven Is a Place on Earth - Promo 7\" Edit.",
+    "hint": "Belinda Carlisle",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/05yiiw2F3XXoighyveZTDs"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-bette-davis-eyes-1981",
+    "title": "Bette Davis Eyes",
+    "category": "music",
+    "year": 1981,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Kim Carnes — 1981, Bette Davis Eyes.",
+    "hint": "Kim Carnes",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0odIT9B9BvOCnXfS0e4lB5"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-father-figure-remastered-1987",
+    "title": "Father Figure - Remastered",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "George Michael — 1987, Father Figure - Remastered.",
+    "hint": "George Michael",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0L0T4tMAaGqLgIVj1MOj9t"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-material-girl-2024-remaster-1985",
+    "title": "Material Girl - 2024 Remaster",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Madonna — 1985, Material Girl - 2024 Remaster.",
+    "hint": "Madonna",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4tcauy2xyIv1q0ckvQmc4H"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-if-i-could-turn-back-time-1989",
+    "title": "If I Could Turn Back Time",
+    "category": "music",
+    "year": 1989,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Cher — 1989, If I Could Turn Back Time.",
+    "hint": "Cher",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6mYrhCAGWzTdF8QnKuchXM"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-we-didnt-start-the-fire-1989",
+    "title": "We Didn't Start the Fire",
+    "category": "music",
+    "year": 1989,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Billy Joel — 1989, We Didn't Start the Fire.",
+    "hint": "Billy Joel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3Cx4yrFaX8CeHwBMReOWXI"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-im-coming-out-1980",
+    "title": "I'm Coming Out",
+    "category": "music",
+    "year": 1980,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Diana Ross — 1980, I'm Coming Out.",
+    "hint": "Diana Ross",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3SnGymj6ijE2iuUfWxLo1q"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-kokomo-2003",
+    "title": "Kokomo",
+    "category": "music",
+    "year": 2003,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Beach Boys — 2003, Kokomo.",
+    "hint": "The Beach Boys",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5qHYXcVvc9xsFB2uH7GpMN"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-the-winner-takes-it-all-1980",
+    "title": "The Winner Takes It All",
+    "category": "music",
+    "year": 1980,
+    "cue": "Song anhören und einordnen.",
+    "answer": "ABBA — 1980, The Winner Takes It All.",
+    "hint": "ABBA",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3oEkrIfXfSh9zGnE7eBzSV"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-faith-remastered-1987",
+    "title": "Faith - Remastered",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "George Michael — 1987, Faith - Remastered.",
+    "hint": "George Michael",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0nd1Vs5BIoIU4TJlzR8KVB"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-im-gonna-be-500-miles-2003",
+    "title": "I'm Gonna Be (500 Miles)",
+    "category": "music",
+    "year": 2003,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Proclaimers — 2003, I'm Gonna Be (500 Miles).",
+    "hint": "The Proclaimers",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/66S14BkJDxgkYxLl5DCqOz"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-man-in-the-mirror-2012-remaster-2012",
+    "title": "Man in the Mirror - 2012 Remaster",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Michael Jackson — 2012, Man in the Mirror - 2012 Remaster.",
+    "hint": "Michael Jackson",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1kiNatIrwDusOZfR29W0LJ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-got-my-mind-set-on-you-1987",
+    "title": "Got My Mind Set on You",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "George Harrison — 1987, Got My Mind Set on You.",
+    "hint": "George Harrison",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3OeUlriM0EZHdWleJtjoVr"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-under-pressure-remastered-2011-1982",
+    "title": "Under Pressure - Remastered 2011",
+    "category": "music",
+    "year": 1982,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Queen, David Bowie — 1982, Under Pressure - Remastered 2011.",
+    "hint": "Queen, David Bowie",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2fuCquhmrzHpu5xcA1ci9x"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-nothings-gonna-stop-us-now-1987",
+    "title": "Nothing's Gonna Stop Us Now",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Starship — 1987, Nothing's Gonna Stop Us Now.",
+    "hint": "Starship",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3X7uFMzJrEE0sxn62qd8Ch"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-purple-rain-1984",
+    "title": "Purple Rain",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Prince — 1984, Purple Rain.",
+    "hint": "Prince",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1uvyZBs4IZYRebHIB1747m"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-99-luftballons-1983",
+    "title": "99 Luftballons",
+    "category": "music",
+    "year": 1983,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Nena — 1983, 99 Luftballons.",
+    "hint": "Nena",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2IJftBfq7pJ43tfnOR0RB3"
+    },
+    "genres": [
+      "schlagerparty",
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-radio-ga-ga-remastered-2011-1984",
+    "title": "Radio Ga Ga - Remastered 2011",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Queen — 1984, Radio Ga Ga - Remastered 2011.",
+    "hint": "Queen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1nQRg9q9uwALGzouOX5OyQ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-super-trouper-1980",
+    "title": "Super Trouper",
+    "category": "music",
+    "year": 1980,
+    "cue": "Song anhören und einordnen.",
+    "answer": "ABBA — 1980, Super Trouper.",
+    "hint": "ABBA",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0J2p4KYdr6Mg4ET6JPlbe1"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-we-belong-1984",
+    "title": "We Belong",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Pat Benatar — 1984, We Belong.",
+    "hint": "Pat Benatar",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/665Jxlgi1HamPKbW1vwzx4"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-rosanna-1982",
+    "title": "Rosanna",
+    "category": "music",
+    "year": 1982,
+    "cue": "Song anhören und einordnen.",
+    "answer": "TOTO — 1982, Rosanna.",
+    "hint": "TOTO",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/37BTh5g05cxBIRYMbw8g2T"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-youre-the-voice-2008",
+    "title": "You're the Voice",
+    "category": "music",
+    "year": 2008,
+    "cue": "Song anhören und einordnen.",
+    "answer": "John Farnham — 2008, You're the Voice.",
+    "hint": "John Farnham",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5NwkWwfRJaT55hEPtCmJHx"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-i-want-to-break-free-remastered-2011-1984",
+    "title": "I Want To Break Free - Remastered 2011",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Queen — 1984, I Want To Break Free - Remastered 2011.",
+    "hint": "Queen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1MsBRSbt5dqJSw3RxXtvCM"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-free-fallin-1989",
+    "title": "Free Fallin'",
+    "category": "music",
+    "year": 1989,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Tom Petty — 1989, Free Fallin'.",
+    "hint": "Tom Petty",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5tVA6TkbaAH9QMITTQRrNv"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-dont-stop-believin-2001",
+    "title": "Don't Stop Believin'",
+    "category": "music",
+    "year": 2001,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Journey — 2001, Don't Stop Believin'.",
+    "hint": "Journey",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/77NNZQSqzLNqh2A9JhLRkg"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-hello-1983",
+    "title": "Hello",
+    "category": "music",
+    "year": 1983,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lionel Richie — 1983, Hello.",
+    "hint": "Lionel Richie",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6HMvJcdw6qLsyV1b5x29sa"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-st-elmos-fire-man-in-motion-1985",
+    "title": "St. Elmos Fire (Man in Motion)",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "John Parr — 1985, St. Elmos Fire (Man in Motion).",
+    "hint": "John Parr",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1A2PWRltFrX8iB8IP3CUgo"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-talkin-bout-a-revolution-1988",
+    "title": "Talkin' Bout a Revolution",
+    "category": "music",
+    "year": 1988,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Tracy Chapman — 1988, Talkin' Bout a Revolution.",
+    "hint": "Tracy Chapman",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0YMFcrMtBowDdD5bPz0cgy"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-karma-chameleon-1989",
+    "title": "Karma Chameleon",
+    "category": "music",
+    "year": 1989,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Culture Club — 1989, Karma Chameleon.",
+    "hint": "Culture Club",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4NH4xiPQ7TqNGqj6pZV4ki"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-manic-monday-1985",
+    "title": "Manic Monday",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Bangles — 1985, Manic Monday.",
+    "hint": "The Bangles",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7Di7t9yGoxdZRLAt5a4pi0"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-you-can-call-me-al-1986",
+    "title": "You Can Call Me Al",
+    "category": "music",
+    "year": 1986,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Paul Simon — 1986, You Can Call Me Al.",
+    "hint": "Paul Simon",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0qxYx4F3vm1AOnfux6dDxP"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-we-built-this-city-1985",
+    "title": "We Built This City",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Starship — 1985, We Built This City.",
+    "hint": "Starship",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6OnfBiiSc9RGKiBKKtZXgQ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-fast-car-1988",
+    "title": "Fast Car",
+    "category": "music",
+    "year": 1988,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Tracy Chapman — 1988, Fast Car.",
+    "hint": "Tracy Chapman",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2M9ro2krNb7nr7HSprkEgo"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-i-think-were-alone-now-1987",
+    "title": "I Think We're Alone Now",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Tiffany — 1987, I Think We're Alone Now.",
+    "hint": "Tiffany",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4uvjOKsp7mSjrDhWdkLPBY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-the-power-of-love-2006",
+    "title": "The Power Of Love",
+    "category": "music",
+    "year": 2006,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Huey Lewis & The News — 2006, The Power Of Love.",
+    "hint": "Huey Lewis & The News",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2olVm1lHicpveMAo4AUDRB"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-another-one-bites-the-dust-remastered-2011-1980",
+    "title": "Another One Bites The Dust - Remastered 2011",
+    "category": "music",
+    "year": 1980,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Queen — 1980, Another One Bites The Dust - Remastered 2011.",
+    "hint": "Queen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5vdp5UmvTsnMEMESIF2Ym7"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-wake-me-up-before-you-go-go-1984",
+    "title": "Wake Me Up Before You Go-Go",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Wham! — 1984, Wake Me Up Before You Go-Go.",
+    "hint": "Wham!",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0ikz6tENMONtK6qGkOrU3c"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-walk-like-an-egyptian-1985",
+    "title": "Walk Like an Egyptian",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Bangles — 1985, Walk Like an Egyptian.",
+    "hint": "The Bangles",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3BGbqEDio3ocx1v4egIYr6"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-time-after-time-2014",
+    "title": "Time After Time",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Cyndi Lauper — 2014, Time After Time.",
+    "hint": "Cyndi Lauper",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1Jj6MF0xDOMA3Ut2Z368Bx"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-a-kind-of-magic-remastered-2011-1986",
+    "title": "A Kind Of Magic - Remastered 2011",
+    "category": "music",
+    "year": 1986,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Queen — 1986, A Kind Of Magic - Remastered 2011.",
+    "hint": "Queen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5RYLa5P4qweEAKq5U1gdcK"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-never-gonna-give-you-up-1987",
+    "title": "Never Gonna Give You Up",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Rick Astley — 1987, Never Gonna Give You Up.",
+    "hint": "Rick Astley",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4PTG3Z6ehGkBFwjybzWkR8"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-eternal-flame-2004",
+    "title": "Eternal Flame",
+    "category": "music",
+    "year": 2004,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Bangles, Susanna Hoffs — 2004, Eternal Flame.",
+    "hint": "The Bangles, Susanna Hoffs",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5MoDQWMDMaAGDEiWsJfeCi"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-lay-all-your-love-on-me-1980",
+    "title": "Lay All Your Love On Me",
+    "category": "music",
+    "year": 1980,
+    "cue": "Song anhören und einordnen.",
+    "answer": "ABBA — 1980, Lay All Your Love On Me.",
+    "hint": "ABBA",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4euAGZTszWPrriggYK0HG9"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-danger-zone-from-top-gun-original-soundtrack-1997",
+    "title": "Danger Zone - From \"Top Gun\" Original Soundtrack",
+    "category": "music",
+    "year": 1997,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Kenny Loggins — 1997, Danger Zone - From \"Top Gun\" Original Soundtrack.",
+    "hint": "Kenny Loggins",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/34x6hEJgGAOQvmlMql5Ige"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-im-still-standing-1983",
+    "title": "I'm Still Standing",
+    "category": "music",
+    "year": 1983,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Elton John — 1983, I'm Still Standing.",
+    "hint": "Elton John",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1jDJFeK9x3OZboIAHsY9k2"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-walking-on-sunshine-1985",
+    "title": "Walking On Sunshine",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Katrina & The Waves — 1985, Walking On Sunshine.",
+    "hint": "Katrina & The Waves",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/05wIrZSwuaVWhcv5FfqeH0"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-9-to-5-1980",
+    "title": "9 to 5",
+    "category": "music",
+    "year": 1980,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Dolly Parton — 1980, 9 to 5.",
+    "hint": "Dolly Parton",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4w3tQBXhn5345eUXDGBWZG"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-dancing-in-the-dark-1984",
+    "title": "Dancing In the Dark",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bruce Springsteen — 1984, Dancing In the Dark.",
+    "hint": "Bruce Springsteen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7FwBtcecmlpc1sLySPXeGE"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-black-velvet-1989",
+    "title": "Black Velvet",
+    "category": "music",
+    "year": 1989,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Alannah Myles — 1989, Black Velvet.",
+    "hint": "Alannah Myles",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1KU5EHSz04JhGg3rReGJ0N"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-our-house-1982",
+    "title": "Our House",
+    "category": "music",
+    "year": 1982,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Madness — 1982, Our House.",
+    "hint": "Madness",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5HrtZ0YLAcKIRx4tdQoHWc"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-get-outta-my-dreams-get-into-my-car-2010",
+    "title": "Get Outta My Dreams, Get Into My Car",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Billy Ocean — 2010, Get Outta My Dreams, Get Into My Car.",
+    "hint": "Billy Ocean",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2D4D3hiOf5U0W6SvJoCQph"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-the-living-years-1988",
+    "title": "The Living Years",
+    "category": "music",
+    "year": 1988,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Mike + The Mechanics — 1988, The Living Years.",
+    "hint": "Mike + The Mechanics",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1eVMuGzCj1q8pHfUdbQ042"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-dont-worry-be-happy-1988",
+    "title": "Don't Worry Be Happy",
+    "category": "music",
+    "year": 1988,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bobby McFerrin — 1988, Don't Worry Be Happy.",
+    "hint": "Bobby McFerrin",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4hObp5bmIJ3PP3cKA9K9GY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-never-ending-story-2009",
+    "title": "Never Ending Story",
+    "category": "music",
+    "year": 2009,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Limahl — 2009, Never Ending Story.",
+    "hint": "Limahl",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1F43XlPBiwAUUIhrUGzylO"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-against-all-odds-take-a-look-at-me-now-2016-remaster-2016",
+    "title": "Against All Odds (Take a Look at Me Now) - 2016 Remaster",
+    "category": "music",
+    "year": 2016,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Phil Collins — 2016, Against All Odds (Take a Look at Me Now) - 2016 Remaster.",
+    "hint": "Phil Collins",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/63CHa6rmamv9OsehkRD8oz"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-only-you-1982",
+    "title": "Only You",
+    "category": "music",
+    "year": 1982,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Yazoo — 1982, Only You.",
+    "hint": "Yazoo",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4GNilkZKILsug3l5pdLoxo"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-straight-up-1988",
+    "title": "Straight Up",
+    "category": "music",
+    "year": 1988,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Paula Abdul — 1988, Straight Up.",
+    "hint": "Paula Abdul",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5xl5582IihbEZAnfj0xyso"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-holding-out-for-a-hero-from-footloose-soundtrack-1986",
+    "title": "Holding Out for a Hero - From \"Footloose\" Soundtrack",
+    "category": "music",
+    "year": 1986,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bonnie Tyler — 1986, Holding Out for a Hero - From \"Footloose\" Soundtrack.",
+    "hint": "Bonnie Tyler",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5Hyr47BBGpvOfcykSCcaw9"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-right-here-waiting-1989",
+    "title": "Right Here Waiting",
+    "category": "music",
+    "year": 1989,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Richard Marx — 1989, Right Here Waiting.",
+    "hint": "Richard Marx",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4LFwNJWoj74Yd71fIr1W8x"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-everywhere-2017-remaster-1987",
+    "title": "Everywhere - 2017 Remaster",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Fleetwood Mac — 1987, Everywhere - 2017 Remaster.",
+    "hint": "Fleetwood Mac",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/254bXAqt3zP6P50BdQvEsq"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-abracadabra-2019",
+    "title": "Abracadabra",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Steve Miller Band — 2019, Abracadabra.",
+    "hint": "Steve Miller Band",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0fnTADkpDxvjA3v0Ss5bpb"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-the-boys-of-summer-remastered-2024-2024",
+    "title": "The Boys Of Summer - Remastered 2024",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Don Henley — 2024, The Boys Of Summer - Remastered 2024.",
+    "hint": "Don Henley",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4Q3ERWBrb4lhDvAPyANjY5"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-with-or-without-you-1987",
+    "title": "With Or Without You",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "U2 — 1987, With Or Without You.",
+    "hint": "U2",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6ADSaE87h8Y3lccZlBJdXH"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-smooth-criminal-2012-remaster-2012",
+    "title": "Smooth Criminal - 2012 Remaster",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Michael Jackson — 2012, Smooth Criminal - 2012 Remaster.",
+    "hint": "Michael Jackson",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2bCQHF9gdG5BNDVuEIEnNk"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-islands-in-the-stream-2009",
+    "title": "Islands in the Stream",
+    "category": "music",
+    "year": 2009,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Dolly Parton, Kenny Rogers — 2009, Islands in the Stream.",
+    "hint": "Dolly Parton, Kenny Rogers",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4mnOVRRXsaqg9Nb041xR8u"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-listen-to-your-heart-1988",
+    "title": "Listen To Your Heart",
+    "category": "music",
+    "year": 1988,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Roxette — 1988, Listen To Your Heart.",
+    "hint": "Roxette",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2MaBAGBIttgv86bYytdx1f"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-up-where-we-belong-2003",
+    "title": "Up Where We Belong",
+    "category": "music",
+    "year": 2003,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Joe Cocker, Jennifer Warnes — 2003, Up Where We Belong.",
+    "hint": "Joe Cocker, Jennifer Warnes",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5NoUgO4Kr93QymQGQlBC7b"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-love-is-a-battlefield-2001",
+    "title": "Love Is A Battlefield",
+    "category": "music",
+    "year": 2001,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Pat Benatar — 2001, Love Is A Battlefield.",
+    "hint": "Pat Benatar",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4p1PizAGdglm2sVvPuFPWs"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-wouldnt-it-be-good-1984",
+    "title": "Wouldn't It Be Good",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Nik Kershaw — 1984, Wouldn't It Be Good.",
+    "hint": "Nik Kershaw",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/00FDHurakzVEiPutdUxXXq"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-bad-2012-remaster-2012",
+    "title": "Bad - 2012 Remaster",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Michael Jackson — 2012, Bad - 2012 Remaster.",
+    "hint": "Michael Jackson",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5lWFrW5T3JtxVCLDb7etPu"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-dance-hall-days-1984",
+    "title": "Dance Hall Days",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Wang Chung — 1984, Dance Hall Days.",
+    "hint": "Wang Chung",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2JvPJ8ydPuN2NhpH4oti6I"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-poison-1989",
+    "title": "Poison",
+    "category": "music",
+    "year": 1989,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Alice Cooper — 1989, Poison.",
+    "hint": "Alice Cooper",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5XcZRgJv3zMhTqCyESjQrF"
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-the-best-1989",
+    "title": "The Best",
+    "category": "music",
+    "year": 1989,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Tina Turner — 1989, The Best.",
+    "hint": "Tina Turner",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6pPWRBubXOBAHnjl5ZIujB"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-i-still-havent-found-what-im-looking-for-1987",
+    "title": "I Still Haven't Found What I'm Looking For",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "U2 — 1987, I Still Haven't Found What I'm Looking For.",
+    "hint": "U2",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6wpGqhRvJGNNXwWlPmkMyO"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-the-way-you-make-me-feel-2012-remaster-2012",
+    "title": "The Way You Make Me Feel - 2012 Remaster",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Michael Jackson — 2012, The Way You Make Me Feel - 2012 Remaster.",
+    "hint": "Michael Jackson",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0sKlV58cODrjxGFOyf9IXY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-you-give-love-a-bad-name-1986",
+    "title": "You Give Love A Bad Name",
+    "category": "music",
+    "year": 1986,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bon Jovi — 1986, You Give Love A Bad Name.",
+    "hint": "Bon Jovi",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0rmGAIH9LNJewFw7nKzZnc"
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-englishman-in-new-york-1987",
+    "title": "Englishman In New York",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Sting — 1987, Englishman In New York.",
+    "hint": "Sting",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4KFM3A5QF2IMcc6nHsu3Wp"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-should-i-stay-or-should-i-go-remastered-1982",
+    "title": "Should I Stay or Should I Go - Remastered",
+    "category": "music",
+    "year": 1982,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Clash — 1982, Should I Stay or Should I Go - Remastered.",
+    "hint": "The Clash",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/39shmbIHICJ2Wxnk1fPSdz"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-need-you-tonight-1987",
+    "title": "Need You Tonight",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "INXS — 1987, Need You Tonight.",
+    "hint": "INXS",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3h04eZTnmFLRMjZajbrp2R"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-wonderful-life-1987",
+    "title": "Wonderful Life",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Black — 1987, Wonderful Life.",
+    "hint": "Black",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0IWtEFQBwRHaMXZQtGEVcM"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-i-love-rock-n-roll-1981",
+    "title": "I Love Rock 'N Roll",
+    "category": "music",
+    "year": 1981,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Joan Jett & the Blackhearts — 1981, I Love Rock 'N Roll.",
+    "hint": "Joan Jett & the Blackhearts",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2Cdvbe2G4hZsnhNMKyGrie"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-hungry-eyes-from-dirty-dancing-soundtrack-1997",
+    "title": "Hungry Eyes - From \"Dirty Dancing\" Soundtrack",
+    "category": "music",
+    "year": 1997,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Eric Carmen — 1997, Hungry Eyes - From \"Dirty Dancing\" Soundtrack.",
+    "hint": "Eric Carmen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/31H6au3jhblhr6MMJiXnCq"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-cold-as-ice-2008-remaster-2008",
+    "title": "Cold as Ice - 2008 Remaster",
+    "category": "music",
+    "year": 2008,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Foreigner — 2008, Cold as Ice - 2008 Remaster.",
+    "hint": "Foreigner",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3iM9wFGlyR28IBZrXYZK9j"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-she-drives-me-crazy-1988",
+    "title": "She Drives Me Crazy",
+    "category": "music",
+    "year": 1988,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Fine Young Cannibals — 1988, She Drives Me Crazy.",
+    "hint": "Fine Young Cannibals",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4d6eqRtpDX7tydHJGDZUBQ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-missing-you-1984",
+    "title": "Missing You",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "John Waite — 1984, Missing You.",
+    "hint": "John Waite",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1Qrdlkgg9I4J7r3P4kZNwr"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-kids-in-america-1981",
+    "title": "Kids In America",
+    "category": "music",
+    "year": 1981,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Kim Wilde — 1981, Kids In America.",
+    "hint": "Kim Wilde",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3LaHsdzzmvhx6TJedpomVy"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-break-my-stride-1983",
+    "title": "Break My Stride",
+    "category": "music",
+    "year": 1983,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Matthew Wilder — 1983, Break My Stride.",
+    "hint": "Matthew Wilder",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1mCsF9Tw4AkIZOjvZbZZdT"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-sledgehammer-1986",
+    "title": "Sledgehammer",
+    "category": "music",
+    "year": 1986,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Peter Gabriel — 1986, Sledgehammer.",
+    "hint": "Peter Gabriel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/029NqmIySn1kOY305AAhxT"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-1999-1982",
+    "title": "1999",
+    "category": "music",
+    "year": 1982,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Prince — 1982, 1999.",
+    "hint": "Prince",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2H7PHVdQ3mXqEHXcvclTB0"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-money-for-nothing-remastered-1996-1985",
+    "title": "Money For Nothing - Remastered 1996",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Dire Straits — 1985, Money For Nothing - Remastered 1996.",
+    "hint": "Dire Straits",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4nFNJmjfgBF7jwv2oBC45b"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-eye-of-the-tiger-1985",
+    "title": "Eye of the Tiger",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Survivor — 1985, Eye of the Tiger.",
+    "hint": "Survivor",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2KH16WveTQWT6KOG9Rg6e2"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-livin-on-a-prayer-1986",
+    "title": "Livin' On A Prayer",
+    "category": "music",
+    "year": 1986,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bon Jovi — 1986, Livin' On A Prayer.",
+    "hint": "Bon Jovi",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/37ZJ0p5Jm13JPevGcx4SkF"
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-walk-this-way-feat-aerosmith-1986",
+    "title": "Walk This Way (feat. Aerosmith)",
+    "category": "music",
+    "year": 1986,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Run–D.M.C., Aerosmith — 1986, Walk This Way (feat. Aerosmith).",
+    "hint": "Run–D.M.C., Aerosmith",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6qUEOWqOzu1rLPUPQ1ECpx"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-the-final-countdown-1986",
+    "title": "The Final Countdown",
+    "category": "music",
+    "year": 1986,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Europe — 1986, The Final Countdown.",
+    "hint": "Europe",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3MrRksHupTVEQ7YbA0FsZK"
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-i-wont-back-down-1989",
+    "title": "I Won't Back Down",
+    "category": "music",
+    "year": 1989,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Tom Petty — 1989, I Won't Back Down.",
+    "hint": "Tom Petty",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7gSQv1OHpkIoAdUiRLdmI6"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-total-eclipse-of-the-heart-2009",
+    "title": "Total Eclipse of the Heart",
+    "category": "music",
+    "year": 2009,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bonnie Tyler — 2009, Total Eclipse of the Heart.",
+    "hint": "Bonnie Tyler",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7wuJGgpTNzbUyn26IOY6rj"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-keep-on-loving-you-1980",
+    "title": "Keep on Loving You",
+    "category": "music",
+    "year": 1980,
+    "cue": "Song anhören und einordnen.",
+    "answer": "REO Speedwagon — 1980, Keep on Loving You.",
+    "hint": "REO Speedwagon",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4rcHWl68ai6KvpXlc8vbnE"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-hip-to-be-square-1986",
+    "title": "Hip To Be Square",
+    "category": "music",
+    "year": 1986,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Huey Lewis & The News — 1986, Hip To Be Square.",
+    "hint": "Huey Lewis & The News",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/648BMGrt98kUbLo24A4vgj"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-its-a-sin-2018-remaster-1987",
+    "title": "It's a Sin - 2018 Remaster",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Pet Shop Boys — 1987, It's a Sin - 2018 Remaster.",
+    "hint": "Pet Shop Boys",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5fy4vfEtv6lzqLx2Mt7stF"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-you-shook-me-all-night-long-1986",
+    "title": "You Shook Me All Night Long",
+    "category": "music",
+    "year": 1986,
+    "cue": "Song anhören und einordnen.",
+    "answer": "AC/DC — 1986, You Shook Me All Night Long.",
+    "hint": "AC/DC",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6yl8Es1tCYD9WdSkeVLFw4"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-every-breath-you-take-1983",
+    "title": "Every Breath You Take",
+    "category": "music",
+    "year": 1983,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Police — 1983, Every Breath You Take.",
+    "hint": "The Police",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1JSTJqkT5qHq8MDJnJbRE1"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-raspberry-beret-1985",
+    "title": "Raspberry Beret",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Prince — 1985, Raspberry Beret.",
+    "hint": "Prince",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5jSz894ljfWE0IcHBSM39i"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-you-make-my-dreams-come-true-1980",
+    "title": "You Make My Dreams (Come True)",
+    "category": "music",
+    "year": 1980,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Daryl Hall & John Oates — 1980, You Make My Dreams (Come True).",
+    "hint": "Daryl Hall & John Oates",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4o6BgsqLIBViaGVbx5rbRk"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-the-safety-dance-2010",
+    "title": "The Safety Dance",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Men Without Hats — 2010, The Safety Dance.",
+    "hint": "Men Without Hats",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4UB3TaEGEY9WoOpxYNMgy4"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-runaway-1984",
+    "title": "Runaway",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bon Jovi — 1984, Runaway.",
+    "hint": "Bon Jovi",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0X1sqQ652p1sceKM2nJlIJ"
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-i-just-died-in-your-arms-1986",
+    "title": "(I Just) Died In Your Arms",
+    "category": "music",
+    "year": 1986,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Cutting Crew — 1986, (I Just) Died In Your Arms.",
+    "hint": "Cutting Crew",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4ByEFOBuLXpCqvO1kw8Wdm"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-you-cant-hurry-love-2016-remaster-1982",
+    "title": "You Can't Hurry Love - 2016 Remaster",
+    "category": "music",
+    "year": 1982,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Phil Collins — 1982, You Can't Hurry Love - 2016 Remaster.",
+    "hint": "Phil Collins",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4YwbSZaYeYja8Umyt222Qf"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-sweet-child-o-mine-1987",
+    "title": "Sweet Child O' Mine",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Guns N' Roses — 1987, Sweet Child O' Mine.",
+    "hint": "Guns N' Roses",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7snQQk1zcKl8gZ92AnueZW"
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-conga-1985",
+    "title": "Conga!",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Miami Sound Machine — 1985, Conga!.",
+    "hint": "Miami Sound Machine",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3FdHgoJbH3DXNtGLh56pFu"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-im-on-fire-1984",
+    "title": "I'm On Fire",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bruce Springsteen — 1984, I'm On Fire.",
+    "hint": "Bruce Springsteen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3PzsbWSQdLCKDLxn7YZfkM"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-alone-1987",
+    "title": "Alone",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Heart — 1987, Alone.",
+    "hint": "Heart",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/54b8qPFqYqIndfdxiLApea"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-you-spin-me-round-like-a-record-2003",
+    "title": "You Spin Me Round (Like a Record)",
+    "category": "music",
+    "year": 2003,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Dead Or Alive — 2003, You Spin Me Round (Like a Record).",
+    "hint": "Dead Or Alive",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1ChulFMnwxoD74Me8eX2TU"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-shout-1985",
+    "title": "Shout",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Tears For Fears — 1985, Shout.",
+    "hint": "Tears For Fears",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/11leihwcsTVOTo1gxpgYNG"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-i-want-to-know-what-love-is-1999-remaster-1984",
+    "title": "I Want to Know What Love Is - 1999 Remaster",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Foreigner — 1984, I Want to Know What Love Is - 1999 Remaster.",
+    "hint": "Foreigner",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1JLn8RhQzHz3qDqsChcmBl"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-how-will-i-know-1985",
+    "title": "How Will I Know",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Whitney Houston — 1985, How Will I Know.",
+    "hint": "Whitney Houston",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5tdKaKLnC4SgtDZ6RlWeal"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-gloria-1982",
+    "title": "Gloria",
+    "category": "music",
+    "year": 1982,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Laura Branigan — 1982, Gloria.",
+    "hint": "Laura Branigan",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1mskmld5ZKEhRaNvYVPoqZ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-physical-remastered-2021-2021",
+    "title": "Physical - Remastered 2021",
+    "category": "music",
+    "year": 2021,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Olivia Newton-John — 2021, Physical - Remastered 2021.",
+    "hint": "Olivia Newton-John",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4gitetlGHZ9LfuJhwUhEhF"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-cant-fight-this-feeling-1984",
+    "title": "Can't Fight This Feeling",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "REO Speedwagon — 1984, Can't Fight This Feeling.",
+    "hint": "REO Speedwagon",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5WwqdeavrQrbeAMDxGawse"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-ive-had-the-time-of-my-life-from-dirty-dancing-soundtrack-2009",
+    "title": "(I've Had) The Time of My Life - From \"Dirty Dancing\" Soundtrack",
+    "category": "music",
+    "year": 2009,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bill Medley, Jennifer Warnes — 2009, (I've Had) The Time of My Life - From \"Dirty Dancing\" Soundtrack.",
+    "hint": "Bill Medley, Jennifer Warnes",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1UvTPXlImVd4jcucK4qJwb"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-invisible-touch-2007-remaster-1986",
+    "title": "Invisible Touch - 2007 Remaster",
+    "category": "music",
+    "year": 1986,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Genesis — 1986, Invisible Touch - 2007 Remaster.",
+    "hint": "Genesis",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0xpBr84T3FTm9j4D1MdPtk"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-hungry-heart-1980",
+    "title": "Hungry Heart",
+    "category": "music",
+    "year": 1980,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bruce Springsteen — 1980, Hungry Heart.",
+    "hint": "Bruce Springsteen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1KsI8NEeAna8ZIdojI3FiT"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-footloose-from-footloose-soundtrack-1984",
+    "title": "Footloose - From \"Footloose\" Soundtrack",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Kenny Loggins — 1984, Footloose - From \"Footloose\" Soundtrack.",
+    "hint": "Kenny Loggins",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2vz1CsL5WBsbpBcwgboTAw"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-maneater-1982",
+    "title": "Maneater",
+    "category": "music",
+    "year": 1982,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Daryl Hall & John Oates — 1982, Maneater.",
+    "hint": "Daryl Hall & John Oates",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7j74lucZ59vqN67Ipe2ZcY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-easy-lover-1985",
+    "title": "Easy Lover",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Philip Bailey, Phil Collins — 1985, Easy Lover.",
+    "hint": "Philip Bailey, Phil Collins",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7INi4pMPG4IE0Smx5y4KVf"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-de-do-do-do-de-da-da-da-1980",
+    "title": "De Do Do Do, De Da Da Da",
+    "category": "music",
+    "year": 1980,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Police — 1980, De Do Do Do, De Da Da Da.",
+    "hint": "The Police",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0yJvWbn8xQKiDZ84VN5lQG"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-every-rose-has-its-thorn-2003-remaster-1988",
+    "title": "Every Rose Has Its Thorn - 2003 Remaster",
+    "category": "music",
+    "year": 1988,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Poison — 1988, Every Rose Has Its Thorn - 2003 Remaster.",
+    "hint": "Poison",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/43GS3mtezoIFiuIZCLLiDY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-together-forever-1987",
+    "title": "Together Forever",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Rick Astley — 1987, Together Forever.",
+    "hint": "Rick Astley",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/00isIFJWVpXIQ8HkGICSQp"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-when-doves-cry-1984",
+    "title": "When Doves Cry",
+    "category": "music",
+    "year": 1984,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Prince — 1984, When Doves Cry.",
+    "hint": "Prince",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6sby78fghipoXHQLeeZFFH"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-london-calling-remastered-1979",
+    "title": "London Calling - Remastered",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Clash — 1979, London Calling - Remastered.",
+    "hint": "The Clash",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5jzma6gCzYtKB1DbEwFZKH"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-every-little-thing-she-does-is-magic-1981",
+    "title": "Every Little Thing She Does Is Magic",
+    "category": "music",
+    "year": 1981,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Police — 1981, Every Little Thing She Does Is Magic.",
+    "hint": "The Police",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/44aTAUBF0g6sMkMNE8I5kd"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-dont-dream-its-over-1986",
+    "title": "Don't Dream It's Over",
+    "category": "music",
+    "year": 1986,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Crowded House — 1986, Don't Dream It's Over.",
+    "hint": "Crowded House",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/56GbZVwxMdf1DENCluYS8A"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-careless-whisper-remastered-2024",
+    "title": "Careless Whisper - Remastered",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "George Michael — 2024, Careless Whisper - Remastered.",
+    "hint": "George Michael",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5ac3D4hNLW7NFhYFCThXgh"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-we-are-the-world-1985",
+    "title": "We Are The World",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "U.S.A. For Africa — 1985, We Are The World.",
+    "hint": "U.S.A. For Africa",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3Z2tPWiNiIpg8UMMoowHIk"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-beat-it-2008",
+    "title": "Beat It",
+    "category": "music",
+    "year": 2008,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Michael Jackson — 2008, Beat It.",
+    "hint": "Michael Jackson",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1OOtq8tRnDM8kG2gqUPjAj"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-any-way-you-want-it-1980",
+    "title": "Any Way You Want It",
+    "category": "music",
+    "year": 1980,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Journey — 1980, Any Way You Want It.",
+    "hint": "Journey",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/71SvEDmsOwIWw1IozsZoMA"
     },
     "genres": [
       "poprock"

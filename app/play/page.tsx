@@ -1,8 +1,8 @@
 "use client";
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { cards, getCategories } from '@/lib/cards';
 import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
 import { getDefaultSettings, loadSettings, toDecadeTag, TRIVIA_ONLY_CATEGORIES, UserSettings } from '@/lib/userSettings';
@@ -123,8 +123,13 @@ function buildWeightedDeck(
   return deck;
 }
 
-export default function PlayPage() {
+function PlayPageContent() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const modeQuery = searchParams.get('mode');
+  const startQuery = searchParams.get('start');
+  const preselectedMode: GameMode | null = modeQuery === 'timeline' || modeQuery === 'trivia' ? modeQuery : null;
+  const startFlag = startQuery === '1';
   const availableCategories = useMemo(() => getCategories(cards).filter((c) => c !== 'video'), []);
   const availableDecades = useMemo(() => {
     const order: DecadeTag[] = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];
@@ -154,7 +159,7 @@ export default function PlayPage() {
   const [settings, setSettings] = useState<UserSettings>(defaults);
   const [deckKey, setDeckKey] = useState(0);
   const [blockedCards, setBlockedCards] = useState<Set<string>>(new Set());
-  const [mode, setMode] = useState<GameMode | null>(null);
+  const [mode, setMode] = useState<GameMode | null>(preselectedMode && startFlag ? preselectedMode : null);
   const allowedCategoriesForMode = useMemo(
     () => (mode === 'timeline' ? availableCategories.filter((cat) => !triviaOnlySet.has(cat)) : availableCategories),
     [mode, availableCategories]
@@ -235,6 +240,12 @@ export default function PlayPage() {
     setTimerForCard(stored.timerSeconds, deck[0]);
     setIndex(0);
   }, [availableCategories, defaults, setTimerForCard]);
+
+  useEffect(() => {
+    if (startFlag && preselectedMode) {
+      setMode(preselectedMode);
+    }
+  }, [preselectedMode, startFlag]);
 
   useEffect(() => {
     setIndex(0);
@@ -371,6 +382,29 @@ export default function PlayPage() {
   const seconds = (timer.secondsLeft % 60).toString().padStart(2, '0');
 
   if (!mode) {
+    const goToSettings = (targetMode: GameMode) => {
+      const returnTo = `/play?mode=${targetMode}&start=1`;
+      router.push(`/settings?mode=${targetMode}&return=${encodeURIComponent(returnTo)}`);
+    };
+
+    if (preselectedMode && !startFlag) {
+      return (
+        <main className="mx-auto max-w-3xl px-5 py-12 space-y-6 text-center">
+          <h1 className="text-3xl font-display">Einstellungen vor dem Start</h1>
+          <p className="text-ink/70">Bitte zuerst die {preselectedMode === 'timeline' ? 'Timeline' : 'Trivia'}-Einstellungen abschließen.</p>
+          <div className="flex justify-center">
+            <button
+              type="button"
+              className="rounded-full bg-ink text-sand px-5 py-3 text-sm font-semibold"
+              onClick={() => goToSettings(preselectedMode)}
+            >
+              Zu den Einstellungen
+            </button>
+          </div>
+        </main>
+      );
+    }
+
     return (
       <main className="mx-auto max-w-3xl px-5 py-12 space-y-6 text-center">
         <h1 className="text-3xl font-display">Modus wählen</h1>
@@ -379,26 +413,14 @@ export default function PlayPage() {
           <button
             type="button"
             className="rounded-full bg-ink text-sand px-5 py-3 text-sm font-semibold"
-            onClick={() => {
-              setMode('timeline');
-              setIndex(0);
-              setTimerForCard(settings.timerSeconds, filteredDeck[0]);
-              setBlackedOut(false);
-              setShowSolution(false);
-            }}
+            onClick={() => goToSettings('timeline')}
           >
             Timeline (Jahr & Kontext)
           </button>
           <button
             type="button"
             className="rounded-full border border-ink/20 px-5 py-3 text-sm"
-            onClick={() => {
-              setMode('trivia');
-              setIndex(0);
-              setTimerForCard(settings.timerSeconds, filteredDeck[0]);
-              setBlackedOut(false);
-              setShowSolution(false);
-            }}
+            onClick={() => goToSettings('trivia')}
           >
             Trivia (eine Frage)
           </button>
@@ -534,5 +556,13 @@ export default function PlayPage() {
         </div>
       )}
     </main>
+  );
+}
+
+export default function PlayPage() {
+  return (
+    <Suspense>
+      <PlayPageContent />
+    </Suspense>
   );
 }
