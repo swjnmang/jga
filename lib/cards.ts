@@ -30,33 +30,6 @@ const baseCards: Card[] = [
     }
   },
   {
-    id: 'video-bern-1954',
-    title: 'Tor im WM-Finale 1954',
-    category: 'video',
-    year: 1954,
-    cue: 'Wann war das? Benenne außerdem eine berühmte Persönlichkeit oder einen Ort, der mit diesem Ereignis in Verbindung gesetzt wird.',
-    answer: 'Helmut Rahn erzielt das 3:2 im WM-Finale am 04.07.1954.',
-    hint: 'Das Wunder von Bern.',
-    difficulty: 'mittel',
-    sources: {
-      youtube: 'https://www.youtube.com/watch?v=1d3cZsWzV3s'
-    }
-  },
-  {
-    id: 'quote-mlk-dream',
-    title: 'I have a dream',
-    category: 'quote',
-    year: 1963,
-    cue: 'Ein Ausschnitt aus einer berühmten Rede.',
-    answer: 'Martin Luther King Jr., 28.08.1963, Washington D.C.',
-    hint: 'Bürgerrechtsbewegung in den USA.',
-    difficulty: 'mittel',
-    sources: {
-      youtube: 'https://www.youtube.com/watch?v=vP4iY1TtS3s',
-      text: '“I have a dream.”'
-    }
-  },
-  {
     id: 'image-berliner-mauerfall',
     title: 'Fall der Berliner Mauer',
     category: 'image',
@@ -161,32 +134,6 @@ const baseCards: Card[] = [
     }
   },
   {
-    id: 'video-moon-landing-1969',
-    title: 'Mondlandung 1969',
-    category: 'video',
-    year: 1969,
-    cue: 'Wann war das? Benenne außerdem eine berühmte Persönlichkeit oder einen Ort, der mit diesem Ereignis in Verbindung gesetzt wird.',
-    answer: 'Apollo 11, 20.07.1969 — Neil Armstrong betritt den Mond.',
-    hint: 'NASA, Kalter Krieg.',
-    difficulty: 'schwer',
-    sources: {
-      youtube: 'https://www.youtube.com/watch?v=HCt1BwWE2gA'
-    }
-  },
-  {
-    id: 'video-berlin-wall-1989',
-    title: 'Mauerfall 1989',
-    category: 'video',
-    year: 1989,
-    cue: 'Wann war das? Benenne außerdem eine berühmte Persönlichkeit oder einen Ort, der mit diesem Ereignis in Verbindung gesetzt wird.',
-    answer: 'Öffnung der innerdeutschen Grenze am 09.11.1989.',
-    hint: 'DDR, Grenzöffnung.',
-    difficulty: 'leicht',
-    sources: {
-      youtube: 'https://www.youtube.com/watch?v=zmRPP2WXX0U'
-    }
-  },
-  {
     id: 'image-apollo11-flag',
     title: 'Apollo 11 Flagge',
     category: 'image',
@@ -197,20 +144,6 @@ const baseCards: Card[] = [
     difficulty: 'mittel',
     sources: {
       image: '/assets/images/apollo11.jpg'
-    }
-  },
-  {
-    id: 'quote-kennedy-moon',
-    title: 'We choose to go to the Moon',
-    category: 'quote',
-    year: 1962,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'John F. Kennedy, Rice University Speech, 12.09.1962.',
-    hint: 'US-Präsident, Raumfahrt-Rede.',
-    difficulty: 'schwer',
-    sources: {
-      youtube: 'https://www.youtube.com/watch?v=g25G1M4EXrQ',
-      text: '“We choose to go to the Moon.”'
     }
   },
   {

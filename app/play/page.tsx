@@ -211,6 +211,7 @@ function PlayPageContent() {
   const [blackedOut, setBlackedOut] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
   const [needsSpotifyAuth, setNeedsSpotifyAuth] = useState<boolean | null>(null);
+  const [playbackError, setPlaybackError] = useState<string | null>(null);
   const mediaRef = useRef<MediaEmbedHandle | null>(null);
   const card = filteredDeck[index];
   const isLast = index === filteredDeck.length - 1;
@@ -258,6 +259,7 @@ function PlayPageContent() {
     setTimerForCard(settings.timerSeconds, current);
     setBlackedOut(false);
     setShowSolution(false);
+    setPlaybackError(null);
   }, [filteredDeck, index, settings.timerSeconds, setTimerForCard]);
 
   const rememberBlocked = useCallback((set: Set<string>) => {
@@ -325,6 +327,15 @@ function PlayPageContent() {
       }
     },
     [card?.id, nextCard, rememberBlocked]
+  );
+
+  const handlePlaybackError = useCallback(
+    (_id: string, _reason?: string) => {
+      setPlaybackError('Abspielen fehlgeschlagen. Bitte erneut versuchen oder zur nächsten Frage springen.');
+      setTimer((prev) => ({ ...prev, running: false }));
+      setBlackedOut(false);
+    },
+    []
   );
 
   const handleMediaPlay = () => {
@@ -460,7 +471,7 @@ function PlayPageContent() {
           preference={card.category === 'music' && card.sources.spotify ? 'spotify' : 'auto'}
           concealMetadata
           onPlay={handleMediaPlay}
-          onPlaybackError={markCardBlocked}
+          onPlaybackError={handlePlaybackError}
         />
         {showSolution && (
           <div className="rounded-xl bg-ink/5 p-4 space-y-2 text-sm text-ink/80">
@@ -500,6 +511,12 @@ function PlayPageContent() {
           Spiel beenden
         </button>
       </div>
+
+      {playbackError && (
+        <div className="rounded-xl bg-red-50 text-red-800 p-3 text-sm border border-red-200">
+          {playbackError}
+        </div>
+      )}
 
       {blackedOut && (
         <div className="fixed inset-0 z-40 bg-black text-white flex flex-col items-center justify-center gap-4">
