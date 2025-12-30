@@ -302,6 +302,29 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     }
   };
 
+  const refreshDeviceId = async (): Promise<string | null> => {
+    if (!spotifyToken) return null;
+    try {
+      const res = await fetch('https://api.spotify.com/v1/me/player/devices', {
+        headers: { Authorization: `Bearer ${spotifyToken}` }
+      });
+      if (!res.ok) {
+        const txt = await res.text().catch(() => null);
+        console.error('Spotify devices failed', res.status, txt);
+        return null;
+      }
+      const json = await res.json();
+      const device = (json.devices as any[] | undefined)?.find((d) => d?.name === 'Flex Quiz Player');
+      if (device?.id) {
+        setSpotifyDevice(device.id as string);
+        return device.id as string;
+      }
+    } catch (err) {
+      console.error('Spotify devices exception', err);
+    }
+    return null;
+  };
+
   const activatePlayer = async () => {
     if (spotifyPlayerRef.current && 'activateElement' in spotifyPlayerRef.current) {
       try {
@@ -352,6 +375,16 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
         // Retry once if no active device / 404 to re-transfer and re-play.
         if (is404 && attempt === 0) {
+          // Refresh device id and re-transfer. If still missing, try current device after reconnect.
+          await new Promise((r) => setTimeout(r, 200));
+          const refreshed = await refreshDeviceId();
+          if (refreshed) {
+            await transferPlayback();
+            return attemptPlay(1);
+          }
+          if (spotifyPlayerRef.current) {
+            await spotifyPlayerRef.current.connect();
+          }
           await transferPlayback();
           return attemptPlay(1);
         }
