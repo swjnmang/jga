@@ -105,6 +105,19 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
   const reportedErrorRef = useRef(false);
 
+  function resetSpotify() {
+    if (spotifyPlayerRef.current) {
+      spotifyPlayerRef.current.disconnect();
+      spotifyPlayerRef.current = null;
+    }
+    setSpotifyReady(false);
+    setSpotifyDevice(null);
+    setSpotifyToken(null);
+    setSpotifyError(null);
+    setShowSpotify(false);
+    setIsPlaying(false);
+  }
+
   const sendYouTubeCommand = (command: 'playVideo' | 'pauseVideo') => {
     if (!iframeRef.current?.contentWindow) return;
     iframeRef.current.contentWindow.postMessage(
@@ -128,11 +141,9 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
   useEffect(() => {
     // Stop playback when source changes.
-    setIsPlaying(false);
-    setShowSpotify(false);
+    resetSpotify();
     setShowYouTube(false);
     setEmbedError(null);
-    setSpotifyError(null);
     reportedErrorRef.current = false;
   }, [choiceSignature]);
 
@@ -380,19 +391,6 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       onPlaybackError?.(card.id, 'spotify-error');
     }
   }, [card.id, spotifyError, spotifyToken, onPlaybackError]);
-
-  const resetSpotify = () => {
-    if (spotifyPlayerRef.current) {
-      spotifyPlayerRef.current.disconnect();
-      spotifyPlayerRef.current = null;
-    }
-    setSpotifyReady(false);
-    setSpotifyDevice(null);
-    setSpotifyToken(null);
-    setSpotifyError(null);
-    setShowSpotify(false);
-    setIsPlaying(false);
-  };
 
   if (!choice) {
     return <p className="text-sm text-ink/70">Keine Quelle hinterlegt.</p>;
