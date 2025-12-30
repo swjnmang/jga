@@ -79,7 +79,7 @@ function buildWeightedDeck(
     return ids.some((id) => settings.playlists.includes(id));
   };
 
-  const allowed = allCards.filter(
+  const filtered = allCards.filter(
     (c) =>
       categoriesToUse.includes(c.category) &&
       settings.difficulties.includes(c.difficulty) &&
@@ -89,7 +89,7 @@ function buildWeightedDeck(
   );
 
   const buckets = new Map<CardCategory, Card[]>(
-    categoriesToUse.map((cat) => [cat, shuffle(allowed.filter((c) => c.category === cat))])
+    categoriesToUse.map((cat) => [cat, shuffle(filtered.filter((c) => c.category === cat))])
   );
 
   const deck: Card[] = [];
@@ -107,8 +107,8 @@ function buildWeightedDeck(
     return availableCats[availableCats.length - 1];
   };
 
-  let safety = allowed.length * 2 + 10;
-  while (deck.length < allowed.length && safety > 0) {
+  let safety = filtered.length * 2 + 10;
+  while (deck.length < filtered.length && safety > 0) {
     safety -= 1;
     const availableCats = Array.from(buckets.entries())
       .filter(([, list]) => list.length > 0)
