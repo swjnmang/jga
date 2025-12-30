@@ -431,7 +431,7 @@ export default function PlayPage() {
           <p className="text-xs uppercase tracking-wide text-ink/60">{card.category}</p>
           <span className="text-xs rounded-full bg-ink text-sand px-3 py-1">versteckte Lösung</span>
         </div>
-        <p className="text-lg font-semibold">{mode === 'timeline' ? card.cue : triviaCue(card)}</p>
+        <p className="text-lg font-semibold">{mode === 'timeline' ? card.cue : card.cue || triviaCue(card)}</p>
         <MediaEmbed
           ref={mediaRef}
           card={card}
@@ -443,7 +443,7 @@ export default function PlayPage() {
         {showSolution && (
           <div className="rounded-xl bg-ink/5 p-4 space-y-2 text-sm text-ink/80">
             <p className="font-semibold text-ink">Lösung</p>
-            <p className="text-ink">{card.year} – {card.answer}</p>
+            <p className="text-ink">{mode === 'timeline' ? `${card.year} – ${card.answer}` : card.answer}</p>
           </div>
         )}
       </section>
