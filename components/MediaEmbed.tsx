@@ -598,6 +598,8 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     }
     case 'spotify': {
       const showSpotifyFallback = Boolean(embedError || spotifyError || !spotifyReady);
+      const primaryLabel = spotifyLoading ? 'Lädt…' : isPlaying ? 'Pause' : 'Play';
+      const primaryIcon = spotifyLoading ? '⏳' : isPlaying ? '⏸' : '▶';
       return (
         <div className="space-y-2 relative">
           {fallbackNotice && (
@@ -607,7 +609,6 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
           )}
           <div className="rounded-2xl card-surface relative bg-ink p-4 flex flex-col items-center gap-3 text-sand">
             <div className="text-center space-y-2">
-              <p className="text-sm font-semibold">Spotify Player</p>
               {spotifyError && <p className="text-xs text-red-200">{spotifyError}</p>}
               {spotifyErrorDetail && (
                 <p className="text-[11px] text-sand/60">Details: {spotifyErrorDetail}</p>
@@ -620,11 +621,12 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
             <div className="flex items-center gap-3">
               <button
                 type="button"
-                className="rounded-full bg-sand text-ink px-4 py-2 text-sm font-semibold shadow disabled:opacity-50"
+                className="rounded-full bg-sand text-ink px-4 py-3 text-sm font-semibold shadow disabled:opacity-50 flex flex-col items-center gap-1"
                 onClick={toggleSpotify}
                 disabled={!spotifyToken || spotifyLoading || !spotifyReady}
               >
-                {spotifyLoading ? 'Lädt…' : isPlaying ? 'Pause' : 'Play'}
+                <span className="text-lg leading-none">{primaryIcon}</span>
+                <span className="text-xs leading-none">{primaryLabel}</span>
               </button>
               <button
                 type="button"
