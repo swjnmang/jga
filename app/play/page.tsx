@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { cards, getCategories } from '@/lib/cards';
 import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
-import { getDefaultSettings, loadSettings, toDecadeTag, UserSettings } from '@/lib/userSettings';
+import { getDefaultSettings, loadSettings, toDecadeTag, TRIVIA_ONLY_CATEGORIES, UserSettings } from '@/lib/userSettings';
 import { Card, CardCategory, DecadeTag, GenreTag } from '@/lib/types';
 
 const FALLBACK_PLAYLIST_ID = 'imported-playlist';
@@ -26,6 +26,8 @@ type TimerState = {
 
 type GameMode = 'timeline' | 'trivia';
 
+const triviaOnlySet = new Set<CardCategory>(TRIVIA_ONLY_CATEGORIES);
+
 function triviaCue(card: Card): string {
   switch (card.category) {
     case 'music':
@@ -43,9 +45,17 @@ function triviaCue(card: Card): string {
   }
 }
 
-function buildWeightedDeck(allCards: Card[], settings: UserSettings, fallbackPlaylistId: string) {
-  const activeCategories = settings.categories.filter((cat) => (settings.categoryWeights[cat] ?? 0) > 0);
-  const categoriesToUse = activeCategories.length > 0 ? activeCategories : settings.categories;
+function buildWeightedDeck(
+  allCards: Card[],
+  settings: UserSettings,
+  fallbackPlaylistId: string,
+  allowedCategories?: CardCategory[]
+) {
+  const allowed = allowedCategories && allowedCategories.length > 0 ? allowedCategories : settings.categories;
+  const activeCategories = settings.categories
+    .filter((cat) => (settings.categoryWeights[cat] ?? 0) > 0)
+    .filter((cat) => allowed.includes(cat));
+  const categoriesToUse = activeCategories.length > 0 ? activeCategories : allowed;
 
   const genreMatches = (card: Card) => {
     if (card.category !== 'music') return true;
@@ -145,6 +155,18 @@ export default function PlayPage() {
   const [deckKey, setDeckKey] = useState(0);
   const [blockedCards, setBlockedCards] = useState<Set<string>>(new Set());
   const [mode, setMode] = useState<GameMode | null>(null);
+  const allowedCategoriesForMode = useMemo(
+    () => (mode === 'timeline' ? availableCategories.filter((cat) => !triviaOnlySet.has(cat)) : availableCategories),
+    [mode, availableCategories]
+  );
+  const modeSettings = useMemo(() => {
+    const weights = allowedCategoriesForMode.reduce<Record<CardCategory, number>>((acc, cat) => {
+      acc[cat] = settings.categoryWeights[cat] ?? 0;
+      return acc;
+    }, {} as Record<CardCategory, number>);
+    const active = allowedCategoriesForMode.filter((cat) => (weights[cat] ?? 0) > 0);
+    return { ...settings, categoryWeights: weights, categories: active.length > 0 ? active : allowedCategoriesForMode };
+  }, [settings, allowedCategoriesForMode]);
   const playableCards = useMemo(() => {
     const genreAllowed = (card: Card) => {
       if (card.category !== 'music') return true;
@@ -166,12 +188,18 @@ export default function PlayPage() {
       return ids.some((id) => settings.playlists.includes(id));
     };
     return cards.filter(
-      (c) => c.category !== 'video' && !blockedCards.has(c.id) && genreAllowed(c) && decadeAllowed(c) && playlistAllowed(c)
+      (c) =>
+        c.category !== 'video' &&
+        !blockedCards.has(c.id) &&
+        genreAllowed(c) &&
+        decadeAllowed(c) &&
+        playlistAllowed(c) &&
+        (mode !== 'timeline' || !triviaOnlySet.has(c.category))
     );
-  }, [blockedCards, settings.decades, settings.genres, settings.playlists]);
+  }, [blockedCards, mode, settings.decades, settings.genres, settings.playlists]);
   const filteredDeck = useMemo(
-    () => buildWeightedDeck(playableCards, settings, FALLBACK_PLAYLIST_ID),
-    [playableCards, settings, deckKey]
+    () => buildWeightedDeck(playableCards, modeSettings, FALLBACK_PLAYLIST_ID, allowedCategoriesForMode),
+    [allowedCategoriesForMode, modeSettings, playableCards, deckKey]
   );
   const [index, setIndex] = useState(0);
   const [timer, setTimer] = useState<TimerState>({ secondsLeft: settings.timerSeconds, running: false });
@@ -203,10 +231,10 @@ export default function PlayPage() {
         // ignore parse errors
       }
     }
-    const deck = buildWeightedDeck(cards, stored, FALLBACK_PLAYLIST_ID);
+    const deck = buildWeightedDeck(cards, stored, FALLBACK_PLAYLIST_ID, availableCategories);
     setTimerForCard(stored.timerSeconds, deck[0]);
     setIndex(0);
-  }, [defaults, setTimerForCard]);
+  }, [availableCategories, defaults, setTimerForCard]);
 
   useEffect(() => {
     setIndex(0);
@@ -386,6 +414,11 @@ export default function PlayPage() {
           <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Frage {index + 1} / {filteredDeck.length}</p>
           <h1 className="text-3xl font-display">Spielmodus</h1>
           <p className="text-sm text-ink/70">{mode === 'timeline' ? 'Timeline: Jahr + Titel/Ort/Person finden.' : 'Trivia: Eine Frage pro Karte.'}</p>
+          {mode === 'timeline' && (
+            <p className="text-xs text-ink/60 mt-1">
+              Trivia-only Kategorien (Sport & Freizeit, Religion & Glaube, Geographie & Geschichte) sind in diesem Modus deaktiviert.
+            </p>
+          )}
         </div>
         <div className="text-right space-y-1">
           <p className="text-xs text-ink/60">Timer</p>

@@ -1,5 +1,6 @@
 ﻿import { Card } from './types';
 import { playlistCards } from './playlistCards';
+import { triviaExtraCards } from './triviaExtraCards';
 
 const baseCards: Card[] = [
   {
@@ -760,7 +761,7 @@ const baseCards: Card[] = [
   }
 ];
 
-const baseNonMusicCards = baseCards.filter((c) => c.category !== 'music');
+const baseNonMusicCards = [...baseCards.filter((c) => c.category !== 'music'), ...triviaExtraCards];
 
 const playlistTaggedCards = playlistCards.map((card) => {
   if (card.category !== 'music') return card;

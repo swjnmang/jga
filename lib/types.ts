@@ -1,4 +1,12 @@
-export type CardCategory = 'music' | 'quote' | 'video' | 'image' | 'country';
+export type CardCategory =
+  | 'music'
+  | 'quote'
+  | 'video'
+  | 'image'
+  | 'country'
+  | 'sportfreizeit'
+  | 'religionglaube'
+  | 'geogeschichte';
 
 export type Difficulty = 'leicht' | 'mittel' | 'schwer';
 

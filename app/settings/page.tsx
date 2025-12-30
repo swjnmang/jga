@@ -5,7 +5,15 @@ import { useEffect, useMemo, useState } from 'react';
 import { cards, getCategories } from '@/lib/cards';
 import { playlistInfo } from '@/lib/playlistCards';
 import { CardCategory, DecadeTag, Difficulty, GenreTag } from '@/lib/types';
-import { ALL_GENRES, getDefaultSettings, loadSettings, saveSettings, toDecadeTag, UserSettings } from '@/lib/userSettings';
+import {
+  ALL_GENRES,
+  getDefaultSettings,
+  loadSettings,
+  saveSettings,
+  toDecadeTag,
+  TRIVIA_ONLY_CATEGORIES,
+  UserSettings
+} from '@/lib/userSettings';
 
 const FALLBACK_PLAYLIST_ID = 'imported-playlist';
 
@@ -202,7 +210,10 @@ export default function SettingsPage() {
       <section className="card-surface rounded-2xl p-5 space-y-4">
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-lg font-semibold">Kategorien</h2>
-          <p className="text-xs text-ink/60">0% schließt eine Kategorie aus</p>
+          <div className="flex flex-col items-end text-xs text-ink/60">
+            <p>0% schließt eine Kategorie aus</p>
+            <p>Trivia-only Kategorien gelten nur im Trivia-Modus.</p>
+          </div>
         </div>
         <div className="space-y-3">
           <div className="flex items-center justify-between text-xs text-ink/60">
@@ -212,10 +223,16 @@ export default function SettingsPage() {
           <div className="space-y-2">
             {availableCategories.map((category) => {
               const value = settings.categoryWeights[category] ?? 0;
+              const triviaOnly = TRIVIA_ONLY_CATEGORIES.includes(category);
               return (
                 <label key={category} className="flex flex-col gap-1 text-sm">
                   <div className="flex items-center justify-between">
-                    <span className="capitalize">{category}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="capitalize">{category}</span>
+                      {triviaOnly && (
+                        <span className="rounded-full bg-ink text-sand px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide">Trivia only</span>
+                      )}
+                    </div>
                     <span className="text-xs text-ink/60">{value}%</span>
                   </div>
                   <input
