@@ -70,12 +70,16 @@ export default function PlayPage() {
   const availableCategories = useMemo(() => getCategories(cards).filter((c) => c !== 'video'), []);
   const defaults = useMemo(() => getDefaultSettings(availableCategories), [availableCategories]);
   const [settings, setSettings] = useState<UserSettings>(defaults);
+  const [deckKey, setDeckKey] = useState(0);
   const [blockedCards, setBlockedCards] = useState<Set<string>>(new Set());
   const playableCards = useMemo(
     () => cards.filter((c) => c.category !== 'video' && !blockedCards.has(c.id)),
     [blockedCards]
   );
-  const filteredDeck = useMemo(() => buildWeightedDeck(playableCards, settings), [playableCards, settings]);
+  const filteredDeck = useMemo(
+    () => buildWeightedDeck(playableCards, settings),
+    [playableCards, settings, deckKey]
+  );
   const [index, setIndex] = useState(0);
   const [timer, setTimer] = useState<TimerState>({ secondsLeft: settings.timerSeconds, running: false });
   const [blackedOut, setBlackedOut] = useState(false);
@@ -204,6 +208,13 @@ export default function PlayPage() {
     }
   };
 
+  const restartGame = useCallback(() => {
+    setDeckKey((k) => k + 1);
+    setIndex(0);
+    setBlackedOut(false);
+    setShowSolution(false);
+  }, []);
+
   if (!card) {
     return (
       <main className="mx-auto max-w-3xl px-5 py-12 space-y-6 text-center">
@@ -294,6 +305,13 @@ export default function PlayPage() {
           onClick={() => setShowSolution(true)}
         >
           Lösung
+        </button>
+        <button
+          type="button"
+          className="rounded-full border border-ink/20 px-4 py-3 text-sm w-full sm:w-auto text-center"
+          onClick={restartGame}
+        >
+          Spiel neu starten
         </button>
         <button
           type="button"
