@@ -281,6 +281,7 @@ function PlayPageContent() {
   useEffect(() => {
     if (timer.secondsLeft === 0) {
       setBlackedOut(true);
+      setShowSolution(true);
       setTimer((prev) => ({ ...prev, running: false }));
     }
   }, [timer.secondsLeft]);
@@ -449,12 +450,6 @@ function PlayPageContent() {
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Frage {index + 1} / {filteredDeck.length}</p>
           <h1 className="text-3xl font-display">Spielmodus</h1>
-          <p className="text-sm text-ink/70">{mode === 'timeline' ? 'Timeline: Jahr + Titel/Ort/Person finden.' : 'Trivia: Eine Frage pro Karte.'}</p>
-          {mode === 'timeline' && (
-            <p className="text-xs text-ink/60 mt-1">
-              Trivia-only Kategorien (Sport & Freizeit, Religion & Glaube, Geographie & Geschichte) sind in diesem Modus deaktiviert.
-            </p>
-          )}
         </div>
         <div className="text-right space-y-1">
           <p className="text-xs text-ink/60">Timer</p>
@@ -465,7 +460,6 @@ function PlayPageContent() {
       <section className="card-surface rounded-2xl p-4 sm:p-5 space-y-3">
         <div className="flex items-center justify-between">
           <p className="text-xs uppercase tracking-wide text-ink/60">{card.category}</p>
-          <span className="text-xs rounded-full bg-ink text-sand px-3 py-1">versteckte Lösung</span>
         </div>
         <p className="text-lg font-semibold">{mode === 'timeline' ? card.cue : card.cue || triviaCue(card)}</p>
         <MediaEmbed
@@ -490,14 +484,7 @@ function PlayPageContent() {
           className="rounded-full bg-ink text-sand px-4 py-3 text-sm font-semibold w-full sm:w-auto text-center"
           onClick={nextCard}
         >
-          {isLast ? 'Fertig' : 'Zur nächsten Frage'}
-        </button>
-        <button
-          type="button"
-          className="rounded-full border border-ink/20 px-4 py-3 text-sm w-full sm:w-auto text-center"
-          onClick={() => setShowSolution(true)}
-        >
-          Lösung
+          {isLast ? 'Fertig' : 'Lösung anzeigen und zur nächsten Frage'}
         </button>
         <button
           type="button"
@@ -524,15 +511,6 @@ function PlayPageContent() {
       {blackedOut && (
         <div className="fixed inset-0 z-40 bg-black text-white flex flex-col items-center justify-center gap-4">
           <p className="text-lg font-semibold">Zeit abgelaufen</p>
-          {!showSolution && (
-            <button
-              type="button"
-              className="rounded-full border border-white/40 px-4 py-2 text-sm"
-              onClick={() => setShowSolution(true)}
-            >
-              Lösung
-            </button>
-          )}
           {showSolution && (
             <div className="rounded-lg bg-white/10 px-4 py-3 text-sm">
               <p className="font-semibold">Lösung</p>
@@ -544,7 +522,7 @@ function PlayPageContent() {
             className="rounded-full bg-white text-ink px-4 py-2 text-sm font-semibold"
             onClick={nextCard}
           >
-            {isLast ? 'Fertig' : 'Zur nächsten Frage'}
+            {isLast ? 'Fertig' : 'Lösung anzeigen und zur nächsten Frage'}
           </button>
         </div>
       )}
