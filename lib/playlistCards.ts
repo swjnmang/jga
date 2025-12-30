@@ -223,5 +223,70 @@ export const playlistCards: Card[] = [
     "sources": {
       "spotify": "https://open.spotify.com/track/28WmNsclKsrVmdv3tDmoYU"
     }
+  },
+  {
+    "id": "song-last-resort-2000",
+    "title": "Last Resort",
+    "category": "music",
+    "year": 2000,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Papa Roach — 2000, Last Resort.",
+    "hint": "Papa Roach",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5W8YXBz9MTIDyrpYaCg2Ky"
+    }
+  },
+  {
+    "id": "song-teenage-dirtbag-1999",
+    "title": "Teenage Dirtbag",
+    "category": "music",
+    "year": 1999,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Wheatus — 1999, Teenage Dirtbag.",
+    "hint": "Wheatus",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/25FTMokYEbEWHEdss5JLZS"
+    }
+  },
+  {
+    "id": "song-paradise-city-1987",
+    "title": "Paradise City",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Guns N' Roses — 1987, Paradise City.",
+    "hint": "Guns N' Roses",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6eN1f9KNmiWEhpE2RhQqB5"
+    }
+  },
+  {
+    "id": "song-dont-stop-believin-2022-remaster-1981",
+    "title": "Don't Stop Believin' (2022 Remaster)",
+    "category": "music",
+    "year": 1981,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Journey — 1981, Don't Stop Believin' (2022 Remaster).",
+    "hint": "Journey",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5RKQ5NdjSh2QzD4MaunT91"
+    }
+  },
+  {
+    "id": "song-take-a-look-around-2000",
+    "title": "Take A Look Around",
+    "category": "music",
+    "year": 2000,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Limp Bizkit — 2000, Take A Look Around.",
+    "hint": "Limp Bizkit",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2avKuMN2QXkaG9vvHa2JLt"
+    }
   }
 ];
