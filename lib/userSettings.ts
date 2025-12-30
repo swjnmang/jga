@@ -1,4 +1,4 @@
-import { CardCategory, Difficulty, GenreTag } from './types';
+import { CardCategory, DecadeTag, Difficulty, GenreTag } from './types';
 
 export type UserSettings = {
   timerSeconds: number;
@@ -6,11 +6,13 @@ export type UserSettings = {
   difficulties: Difficulty[];
   categoryWeights: Record<CardCategory, number>;
   genres: GenreTag[];
+  decades: DecadeTag[];
 };
 
 const STORAGE_KEY = 'jga-user-settings';
 
 export const ALL_GENRES: GenreTag[] = ['poprock', 'metal', 'hiphop', 'schlagerparty'];
+export const ALL_DECADES: DecadeTag[] = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];
 
 export function getDefaultSettings(availableCategories: CardCategory[]): UserSettings {
   const even = Math.floor(100 / availableCategories.length);
@@ -25,7 +27,8 @@ export function getDefaultSettings(availableCategories: CardCategory[]): UserSet
     categories: availableCategories,
     difficulties: ['leicht', 'mittel', 'schwer'],
     categoryWeights,
-    genres: ALL_GENRES
+    genres: ALL_GENRES,
+    decades: ALL_DECADES
   };
 }
 
@@ -43,7 +46,10 @@ export function loadSettings(defaults: UserSettings): UserSettings {
     return {
       ...defaults,
       ...parsed,
-      genres: Array.isArray(parsed.genres) && parsed.genres.length > 0 ? (parsed.genres as GenreTag[]) : defaults.genres,
+      genres:
+        Array.isArray(parsed.genres) && parsed.genres.length > 0 ? (parsed.genres as GenreTag[]) : defaults.genres,
+      decades:
+        Array.isArray(parsed.decades) && parsed.decades.length > 0 ? (parsed.decades as DecadeTag[]) : defaults.decades,
       categories:
         activeFromWeights.length > 0
           ? activeFromWeights

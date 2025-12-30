@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import { cards, getCategories } from '@/lib/cards';
-import { CardCategory, Difficulty, GenreTag } from '@/lib/types';
-import { ALL_GENRES, getDefaultSettings, loadSettings, saveSettings, UserSettings } from '@/lib/userSettings';
+import { CardCategory, DecadeTag, Difficulty, GenreTag } from '@/lib/types';
+import { ALL_DECADES, ALL_GENRES, getDefaultSettings, loadSettings, saveSettings, UserSettings } from '@/lib/userSettings';
 
 const difficultyOptions: { value: Difficulty; label: string }[] = [
   { value: 'leicht', label: 'Leicht' },
@@ -68,6 +68,18 @@ export default function SettingsPage() {
     });
   };
 
+  const toggleDecade = (decade: DecadeTag) => {
+    setSettings((prev) => {
+      const nextList = prev.decades.includes(decade)
+        ? prev.decades.filter((d) => d !== decade)
+        : [...prev.decades, decade];
+      const ensured = nextList.length > 0 ? nextList : ALL_DECADES;
+      const next = { ...prev, decades: ensured };
+      saveSettings(next);
+      return next;
+    });
+  };
+
   const updateCategoryWeight = (category: CardCategory, value: number) => {
     const weight = Math.min(100, Math.max(0, Math.round(value)));
     const nextWeights = { ...settings.categoryWeights, [category]: weight } as Record<CardCategory, number>;
@@ -121,7 +133,7 @@ export default function SettingsPage() {
 
       <section className="card-surface rounded-2xl p-5 space-y-4">
         <div className="flex items-center justify-between gap-3">
-          <h2 className="text-lg font-semibold">Fragen aus den Schwierigkeitsgraden</h2>
+          <h2 className="text-lg font-semibold">Fragen aus folgenden Schwierigkeitsstufen:</h2>
           <p className="text-xs text-ink/60">Mehrfachauswahl möglich</p>
         </div>
         <div className="grid sm:grid-cols-3 gap-3">
@@ -201,6 +213,32 @@ export default function SettingsPage() {
                   className="h-4 w-4"
                 />
                 <span>{g.label}</span>
+              </label>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="card-surface rounded-2xl p-5 space-y-3">
+        <div className="flex items-center justify-between gap-3">
+          <h2 className="text-lg font-semibold">Musik-Jahrzehnte</h2>
+          <p className="text-xs text-ink/60">Wirkt nur auf Musik-Fragen</p>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-2 text-sm">
+          {ALL_DECADES.map((decade) => {
+            const checked = settings.decades.includes(decade);
+            return (
+              <label
+                key={decade}
+                className={`flex items-center gap-2 rounded-xl border px-3 py-2 ${checked ? 'border-ink bg-ink text-sand' : 'border-ink/20'}`}
+              >
+                <input
+                  type="checkbox"
+                  checked={checked}
+                  onChange={() => toggleDecade(decade)}
+                  className="h-4 w-4"
+                />
+                <span>{decade.replace('0s', '0er')}</span>
               </label>
             );
           })}

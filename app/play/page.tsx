@@ -6,7 +6,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { cards, getCategories } from '@/lib/cards';
 import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
 import { getDefaultSettings, loadSettings, UserSettings } from '@/lib/userSettings';
-import { Card, CardCategory, GenreTag } from '@/lib/types';
+import { Card, CardCategory, DecadeTag, GenreTag } from '@/lib/types';
 
 function shuffle<T>(arr: T[]): T[] {
   const copy = [...arr];
@@ -51,8 +51,31 @@ function buildWeightedDeck(allCards: Card[], settings: UserSettings) {
     return card.genres.some((g) => settings.genres.includes(g as GenreTag));
   };
 
+  const decadeMatches = (card: Card) => {
+    if (card.category !== 'music') return true;
+    const year = card.year;
+    if (typeof year !== 'number' || Number.isNaN(year)) return true;
+    const decade: DecadeTag | undefined = year >= 1960 && year < 1970
+      ? '1960s'
+      : year >= 1970 && year < 1980
+        ? '1970s'
+        : year >= 1980 && year < 1990
+          ? '1980s'
+          : year >= 1990 && year < 2000
+            ? '1990s'
+            : year >= 2000 && year < 2010
+              ? '2000s'
+              : year >= 2010 && year < 2020
+                ? '2010s'
+                : year >= 2020 && year < 2030
+                  ? '2020s'
+                  : undefined;
+    if (!decade) return true;
+    return settings.decades.includes(decade);
+  };
+
   const allowed = allCards.filter(
-    (c) => categoriesToUse.includes(c.category) && settings.difficulties.includes(c.difficulty) && genreMatches(c)
+    (c) => categoriesToUse.includes(c.category) && settings.difficulties.includes(c.difficulty) && genreMatches(c) && decadeMatches(c)
   );
 
   const buckets = new Map<CardCategory, Card[]>(
@@ -104,8 +127,30 @@ export default function PlayPage() {
       if (!card.genres || card.genres.length === 0) return true;
       return card.genres.some((g) => settings.genres.includes(g as GenreTag));
     };
-    return cards.filter((c) => c.category !== 'video' && !blockedCards.has(c.id) && genreAllowed(c));
-  }, [blockedCards, settings.genres]);
+    const decadeAllowed = (card: Card) => {
+      if (card.category !== 'music') return true;
+      const year = card.year;
+      if (typeof year !== 'number' || Number.isNaN(year)) return true;
+      const decade: DecadeTag | undefined = year >= 1960 && year < 1970
+        ? '1960s'
+        : year >= 1970 && year < 1980
+          ? '1970s'
+          : year >= 1980 && year < 1990
+            ? '1980s'
+            : year >= 1990 && year < 2000
+              ? '1990s'
+              : year >= 2000 && year < 2010
+                ? '2000s'
+                : year >= 2010 && year < 2020
+                  ? '2010s'
+                  : year >= 2020 && year < 2030
+                    ? '2020s'
+                    : undefined;
+      if (!decade) return true;
+      return settings.decades.includes(decade);
+    };
+    return cards.filter((c) => c.category !== 'video' && !blockedCards.has(c.id) && genreAllowed(c) && decadeAllowed(c));
+  }, [blockedCards, settings.decades, settings.genres]);
   const filteredDeck = useMemo(
     () => buildWeightedDeck(playableCards, settings),
     [playableCards, settings, deckKey]
