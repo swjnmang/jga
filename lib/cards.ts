@@ -64,7 +64,7 @@ export const cards: Card[] = [
     hint: 'Europa, Kalter Krieg.',
     difficulty: 'leicht',
     sources: {
-      image: 'https://placehold.co/900x600/ff7a8a/0f172a?text=Berliner+Mauerfall'
+      image: '/assets/images/mauerfall.jpg'
     }
   },
   {
