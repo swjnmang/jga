@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import { cards, getCategories } from '@/lib/cards';
+import { playlistInfo } from '@/lib/playlistCards';
 import { CardCategory, DecadeTag, Difficulty, GenreTag } from '@/lib/types';
 import { ALL_GENRES, getDefaultSettings, loadSettings, saveSettings, toDecadeTag, UserSettings } from '@/lib/userSettings';
 
@@ -37,6 +38,7 @@ export default function SettingsPage() {
       });
     return Array.from(set);
   }, []);
+  const playlistNameMap = useMemo(() => new Map(playlistInfo.map((p) => [p.id, p.name])), []);
   const defaults = useMemo(
     () => getDefaultSettings(availableCategories, availableDecades, availablePlaylists),
     [availableCategories, availableDecades, availablePlaylists]
@@ -266,9 +268,10 @@ export default function SettingsPage() {
           <div className="grid sm:grid-cols-2 gap-2 text-sm">
             {availablePlaylists.map((playlistId) => {
               const checked = settings.playlists.includes(playlistId);
-              const label = playlistId === FALLBACK_PLAYLIST_ID
-                ? 'Importierte Playlist'
-                : `Playlist ${playlistId.slice(0, 8)}…${playlistId.slice(-4)}`;
+              const label = playlistNameMap.get(playlistId)
+                || (playlistId === FALLBACK_PLAYLIST_ID
+                  ? 'Importierte Playlist'
+                  : `Playlist ${playlistId.slice(0, 8)}…${playlistId.slice(-4)}`);
               return (
                 <label
                   key={playlistId}
@@ -280,7 +283,7 @@ export default function SettingsPage() {
                     onChange={() => togglePlaylist(playlistId)}
                     className="h-4 w-4"
                   />
-                  <span className="truncate">{label}</span>
+                  <span className="truncate" title={label}>{label}</span>
                 </label>
               );
             })}

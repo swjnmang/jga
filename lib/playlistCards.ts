@@ -2,6 +2,18 @@
 // Do not edit manually.
 import { Card } from './types';
 
+export type PlaylistInfo = { id: string; name: string };
+export const playlistInfo: PlaylistInfo[] = [
+  {
+    "id": "4likPQLIX9PUqyNiJ3xsqT",
+    "name": "Flex-Quiz"
+  },
+  {
+    "id": "0fky4kHnko4b9HsvrYVyum",
+    "name": "Flex-90ger"
+  }
+];
+
 export const playlistCards: Card[] = [
   {
     "id": "song-3-uhr-nachts-2022",
