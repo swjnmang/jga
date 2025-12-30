@@ -7,6 +7,7 @@ export type UserSettings = {
   categoryWeights: Record<CardCategory, number>;
   genres: GenreTag[];
   decades: DecadeTag[];
+  playlists: string[];
 };
 
 const STORAGE_KEY = 'jga-user-settings';
@@ -25,7 +26,11 @@ export function toDecadeTag(year: number): DecadeTag | undefined {
   return undefined;
 }
 
-export function getDefaultSettings(availableCategories: CardCategory[], availableDecades?: DecadeTag[]): UserSettings {
+export function getDefaultSettings(
+  availableCategories: CardCategory[],
+  availableDecades?: DecadeTag[],
+  availablePlaylists?: string[]
+): UserSettings {
   const even = Math.floor(100 / availableCategories.length);
   const remainder = 100 - even * availableCategories.length;
   const categoryWeights = availableCategories.reduce<Record<CardCategory, number>>((acc, cat, idx) => {
@@ -39,7 +44,8 @@ export function getDefaultSettings(availableCategories: CardCategory[], availabl
     difficulties: ['leicht', 'mittel', 'schwer'],
     categoryWeights,
     genres: ALL_GENRES,
-    decades: availableDecades && availableDecades.length > 0 ? availableDecades : ALL_DECADES
+    decades: availableDecades && availableDecades.length > 0 ? availableDecades : ALL_DECADES,
+    playlists: availablePlaylists && availablePlaylists.length > 0 ? availablePlaylists : []
   };
 }
 
@@ -59,6 +65,7 @@ export function loadSettings(defaults: UserSettings): UserSettings {
       ...parsed,
       genres: normalizeList(parsed.genres as GenreTag[] | undefined, defaults.genres, ALL_GENRES),
       decades: normalizeList(parsed.decades as DecadeTag[] | undefined, defaults.decades, defaults.decades),
+      playlists: normalizeList(parsed.playlists as string[] | undefined, defaults.playlists, defaults.playlists),
       categories:
         activeFromWeights.length > 0
           ? activeFromWeights

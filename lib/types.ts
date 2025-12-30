@@ -25,6 +25,7 @@ export type Card = {
   difficulty: Difficulty;
   sources: MediaSources;
   genres?: GenreTag[];
+  playlists?: string[];
   background?: string;
   color?: string;
 };

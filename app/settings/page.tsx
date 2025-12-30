@@ -6,6 +6,8 @@ import { cards, getCategories } from '@/lib/cards';
 import { CardCategory, DecadeTag, Difficulty, GenreTag } from '@/lib/types';
 import { ALL_GENRES, getDefaultSettings, loadSettings, saveSettings, toDecadeTag, UserSettings } from '@/lib/userSettings';
 
+const FALLBACK_PLAYLIST_ID = 'imported-playlist';
+
 const difficultyOptions: { value: Difficulty; label: string }[] = [
   { value: 'leicht', label: 'Leicht' },
   { value: 'mittel', label: 'Mittel' },
@@ -25,7 +27,20 @@ export default function SettingsPage() {
       });
     return order.filter((d) => set.has(d));
   }, []);
-  const defaults = useMemo(() => getDefaultSettings(availableCategories, availableDecades), [availableCategories, availableDecades]);
+  const availablePlaylists = useMemo(() => {
+    const set = new Set<string>();
+    cards
+      .filter((c) => c.category === 'music')
+      .forEach((c) => {
+        const ids = c.playlists && c.playlists.length > 0 ? c.playlists : [FALLBACK_PLAYLIST_ID];
+        ids.forEach((id) => set.add(id));
+      });
+    return Array.from(set);
+  }, []);
+  const defaults = useMemo(
+    () => getDefaultSettings(availableCategories, availableDecades, availablePlaylists),
+    [availableCategories, availableDecades, availablePlaylists]
+  );
   const [settings, setSettings] = useState<UserSettings>(defaults);
   const [loaded, setLoaded] = useState(false);
   const [timerInput, setTimerInput] = useState('');
@@ -86,6 +101,18 @@ export default function SettingsPage() {
         : [...prev.decades, decade];
       const ensured = nextList.length > 0 ? nextList : availableDecades;
       const next = { ...prev, decades: ensured };
+      saveSettings(next);
+      return next;
+    });
+  };
+
+  const togglePlaylist = (playlistId: string) => {
+    setSettings((prev) => {
+      const nextList = prev.playlists.includes(playlistId)
+        ? prev.playlists.filter((p) => p !== playlistId)
+        : [...prev.playlists, playlistId];
+      const ensured = nextList.length > 0 ? nextList : availablePlaylists;
+      const next = { ...prev, playlists: ensured };
       saveSettings(next);
       return next;
     });
@@ -229,6 +256,37 @@ export default function SettingsPage() {
           })}
         </div>
       </section>
+
+      {availablePlaylists.length > 0 && (
+        <section className="card-surface rounded-2xl p-5 space-y-3">
+          <div className="flex items-center justify-between gap-3">
+            <h2 className="text-lg font-semibold">Spotify-Playlists</h2>
+            <p className="text-xs text-ink/60">Aktiviere, welche Playlists gespielt werden</p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-2 text-sm">
+            {availablePlaylists.map((playlistId) => {
+              const checked = settings.playlists.includes(playlistId);
+              const label = playlistId === FALLBACK_PLAYLIST_ID
+                ? 'Importierte Playlist'
+                : `Playlist ${playlistId.slice(0, 8)}…${playlistId.slice(-4)}`;
+              return (
+                <label
+                  key={playlistId}
+                  className={`flex items-center gap-2 rounded-xl border px-3 py-2 ${checked ? 'border-ink bg-ink text-sand' : 'border-ink/20'}`}
+                >
+                  <input
+                    type="checkbox"
+                    checked={checked}
+                    onChange={() => togglePlaylist(playlistId)}
+                    className="h-4 w-4"
+                  />
+                  <span className="truncate">{label}</span>
+                </label>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       <section className="card-surface rounded-2xl p-5 space-y-3">
         <div className="flex items-center justify-between gap-3">

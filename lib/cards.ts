@@ -762,6 +762,12 @@ const baseCards: Card[] = [
 
 const baseNonMusicCards = baseCards.filter((c) => c.category !== 'music');
 
+const playlistTaggedCards = playlistCards.map((card) => {
+  if (card.category !== 'music') return card;
+  if (card.playlists && card.playlists.length > 0) return card;
+  return { ...card, playlists: ['imported-playlist'] } as Card;
+});
+
 export function getCardById(id: string) {
   return cards.find((card) => card.id === id);
 }
@@ -772,5 +778,5 @@ export function getCategories(list: Card[]) {
 }
 
 // Only use playlist songs for music; keep non-music from base set.
-export const cards: Card[] = [...baseNonMusicCards, ...playlistCards];
+export const cards: Card[] = [...baseNonMusicCards, ...playlistTaggedCards];
 

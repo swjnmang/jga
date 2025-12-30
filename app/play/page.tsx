@@ -8,6 +8,8 @@ import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
 import { getDefaultSettings, loadSettings, toDecadeTag, UserSettings } from '@/lib/userSettings';
 import { Card, CardCategory, DecadeTag, GenreTag } from '@/lib/types';
 
+const FALLBACK_PLAYLIST_ID = 'imported-playlist';
+
 function shuffle<T>(arr: T[]): T[] {
   const copy = [...arr];
   for (let i = copy.length - 1; i > 0; i -= 1) {
@@ -41,7 +43,7 @@ function triviaCue(card: Card): string {
   }
 }
 
-function buildWeightedDeck(allCards: Card[], settings: UserSettings) {
+function buildWeightedDeck(allCards: Card[], settings: UserSettings, fallbackPlaylistId: string) {
   const activeCategories = settings.categories.filter((cat) => (settings.categoryWeights[cat] ?? 0) > 0);
   const categoriesToUse = activeCategories.length > 0 ? activeCategories : settings.categories;
 
@@ -60,8 +62,20 @@ function buildWeightedDeck(allCards: Card[], settings: UserSettings) {
     return settings.decades.includes(decade);
   };
 
+  const playlistMatches = (card: Card) => {
+    if (card.category !== 'music') return true;
+    const ids = card.playlists && card.playlists.length > 0 ? card.playlists : [fallbackPlaylistId];
+    if (settings.playlists.length === 0) return true;
+    return ids.some((id) => settings.playlists.includes(id));
+  };
+
   const allowed = allCards.filter(
-    (c) => categoriesToUse.includes(c.category) && settings.difficulties.includes(c.difficulty) && genreMatches(c) && decadeMatches(c)
+    (c) =>
+      categoriesToUse.includes(c.category) &&
+      settings.difficulties.includes(c.difficulty) &&
+      genreMatches(c) &&
+      decadeMatches(c) &&
+      playlistMatches(c)
   );
 
   const buckets = new Map<CardCategory, Card[]>(
@@ -113,7 +127,20 @@ export default function PlayPage() {
       });
     return order.filter((d) => set.has(d));
   }, []);
-  const defaults = useMemo(() => getDefaultSettings(availableCategories, availableDecades), [availableCategories, availableDecades]);
+  const availablePlaylists = useMemo(() => {
+    const set = new Set<string>();
+    cards
+      .filter((c) => c.category === 'music')
+      .forEach((c) => {
+        const ids = c.playlists && c.playlists.length > 0 ? c.playlists : [FALLBACK_PLAYLIST_ID];
+        ids.forEach((id) => set.add(id));
+      });
+    return Array.from(set);
+  }, []);
+  const defaults = useMemo(
+    () => getDefaultSettings(availableCategories, availableDecades, availablePlaylists),
+    [availableCategories, availableDecades, availablePlaylists]
+  );
   const [settings, setSettings] = useState<UserSettings>(defaults);
   const [deckKey, setDeckKey] = useState(0);
   const [blockedCards, setBlockedCards] = useState<Set<string>>(new Set());
@@ -132,10 +159,18 @@ export default function PlayPage() {
       if (!decade) return true;
       return settings.decades.includes(decade);
     };
-    return cards.filter((c) => c.category !== 'video' && !blockedCards.has(c.id) && genreAllowed(c) && decadeAllowed(c));
-  }, [blockedCards, settings.decades, settings.genres]);
+    const playlistAllowed = (card: Card) => {
+      if (card.category !== 'music') return true;
+      const ids = card.playlists && card.playlists.length > 0 ? card.playlists : [FALLBACK_PLAYLIST_ID];
+      if (settings.playlists.length === 0) return true;
+      return ids.some((id) => settings.playlists.includes(id));
+    };
+    return cards.filter(
+      (c) => c.category !== 'video' && !blockedCards.has(c.id) && genreAllowed(c) && decadeAllowed(c) && playlistAllowed(c)
+    );
+  }, [blockedCards, settings.decades, settings.genres, settings.playlists]);
   const filteredDeck = useMemo(
-    () => buildWeightedDeck(playableCards, settings),
+    () => buildWeightedDeck(playableCards, settings, FALLBACK_PLAYLIST_ID),
     [playableCards, settings, deckKey]
   );
   const [index, setIndex] = useState(0);
@@ -168,7 +203,7 @@ export default function PlayPage() {
         // ignore parse errors
       }
     }
-    const deck = buildWeightedDeck(cards, stored);
+    const deck = buildWeightedDeck(cards, stored, FALLBACK_PLAYLIST_ID);
     setTimerForCard(stored.timerSeconds, deck[0]);
     setIndex(0);
   }, [defaults, setTimerForCard]);

@@ -18,6 +18,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -35,6 +38,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -52,6 +58,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "schlagerparty",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -69,6 +78,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "schlagerparty",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -86,6 +98,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -103,6 +118,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "schlagerparty",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -120,6 +138,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "schlagerparty",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -138,6 +159,9 @@ export const playlistCards: Card[] = [
       "metal",
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -156,6 +180,9 @@ export const playlistCards: Card[] = [
       "metal",
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -174,6 +201,9 @@ export const playlistCards: Card[] = [
       "metal",
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -192,6 +222,9 @@ export const playlistCards: Card[] = [
       "metal",
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -209,6 +242,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "metal",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -226,6 +262,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "metal",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -243,6 +282,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "metal",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -260,6 +302,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "metal",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -277,6 +322,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "metal",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -294,6 +342,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "metal",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -312,6 +363,9 @@ export const playlistCards: Card[] = [
       "metal",
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -328,6 +382,9 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -345,6 +402,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "metal",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -361,6 +421,9 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -379,6 +442,9 @@ export const playlistCards: Card[] = [
       "metal",
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -395,6 +461,9 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -413,6 +482,9 @@ export const playlistCards: Card[] = [
       "metal",
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -429,6 +501,9 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -447,6 +522,9 @@ export const playlistCards: Card[] = [
       "metal",
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -463,6 +541,10 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT",
+      "0fky4kHnko4b9HsvrYVyum"
     ]
   },
   {
@@ -480,6 +562,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "metal",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -497,6 +582,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "metal",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -515,6 +603,9 @@ export const playlistCards: Card[] = [
       "metal",
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -531,6 +622,9 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -548,6 +642,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -565,6 +662,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -582,6 +682,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -599,6 +702,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -616,6 +722,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -632,6 +741,9 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -648,6 +760,9 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -664,6 +779,9 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -681,6 +799,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "schlagerparty",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -697,6 +818,9 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -713,6 +837,9 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -730,6 +857,9 @@ export const playlistCards: Card[] = [
     "genres": [
       "hiphop",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
     ]
   },
   {
@@ -747,6 +877,1099 @@ export const playlistCards: Card[] = [
     "genres": [
       "metal",
       "poprock"
+    ],
+    "playlists": [
+      "4likPQLIX9PUqyNiJ3xsqT"
+    ]
+  },
+  {
+    "id": "song-baby-one-more-time-2014",
+    "title": "...Baby One More Time",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Britney Spears — 2014, ...Baby One More Time.",
+    "hint": "Britney Spears",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0kDYa8nqIIpsAZ8FctJyGQ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-everybody-backstreets-back-radio-edit-2014",
+    "title": "Everybody (Backstreet's Back) - Radio Edit",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Backstreet Boys — 2014, Everybody (Backstreet's Back) - Radio Edit.",
+    "hint": "Backstreet Boys",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4oc0XA7UehlFOuFz4HHjvn"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-its-not-right-but-its-okay-2014",
+    "title": "It's Not Right but It's Okay",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Whitney Houston — 2014, It's Not Right but It's Okay.",
+    "hint": "Whitney Houston",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0ORGCNRQHRhq5YE8un6rQh"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-genie-in-a-bottle-1999",
+    "title": "Genie In a Bottle",
+    "category": "music",
+    "year": 1999,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Christina Aguilera — 1999, Genie In a Bottle.",
+    "hint": "Christina Aguilera",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/11mwFrKvLXCbcVGNxffGyP"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-crazy-in-love-feat-jay-z-2003",
+    "title": "Crazy In Love (feat. JAY-Z)",
+    "category": "music",
+    "year": 2003,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Beyoncé, JAY-Z — 2003, Crazy In Love (feat. JAY-Z).",
+    "hint": "Beyoncé, JAY-Z",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0TwBtDAWpkpM3srywFVOV5"
+    },
+    "genres": [
+      "poprock",
+      "hiphop"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-just-dance-2008",
+    "title": "Just Dance",
+    "category": "music",
+    "year": 2008,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lady Gaga, Colby O'Donis — 2008, Just Dance.",
+    "hint": "Lady Gaga, Colby O'Donis",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1dzQoRqT5ucxXVaAhTcT0J"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-place-your-hands-2014",
+    "title": "Place Your Hands",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Reef — 2014, Place Your Hands.",
+    "hint": "Reef",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4Lqom8aqPAZVPHEqnfdAZT"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-hush-2014",
+    "title": "Hush",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Kula Shaker — 2014, Hush.",
+    "hint": "Kula Shaker",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4F1EgqGQmwlXReh9ykEH1A"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-hey-stoopid-2014",
+    "title": "Hey Stoopid",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Alice Cooper — 2014, Hey Stoopid.",
+    "hint": "Alice Cooper",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1x9SgLgVxZNoZpNJOsvDxe"
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-cherry-pie-2014",
+    "title": "Cherry Pie",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Warrant — 2014, Cherry Pie.",
+    "hint": "Warrant",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7ISA7aYBTfGYnTMD74SmW0"
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-breathe-radio-edit-2014",
+    "title": "Breathe - Radio Edit",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Midge Ure — 2014, Breathe - Radio Edit.",
+    "hint": "Midge Ure",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2qYy5eF5UOPnFTD0hZAU14"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-lovethy-will-be-done-2014",
+    "title": "Love...Thy Will Be Done",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Martika — 2014, Love...Thy Will Be Done.",
+    "hint": "Martika",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4bgnh8Xp8oX2XFzN76hVKo"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-im-doing-fine-now-2014",
+    "title": "I'm Doing Fine Now",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Pasadenas — 2014, I'm Doing Fine Now.",
+    "hint": "The Pasadenas",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3KmuBbt55iQrAAWxlJCbOL"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-nobody-knows-radio-edit-2014",
+    "title": "Nobody Knows - Radio Edit",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Tony Rich Project — 2014, Nobody Knows - Radio Edit.",
+    "hint": "The Tony Rich Project",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3kFbz0krBIE739vtf0Wagl"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-insomnia-radio-edit-2014",
+    "title": "Insomnia - Radio Edit",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Faithless — 2014, Insomnia - Radio Edit.",
+    "hint": "Faithless",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7gWc0QEt2hoIkMv3XxPY1T"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-im-outta-love-radio-edit-2014",
+    "title": "I'm Outta Love - Radio Edit",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Anastacia — 2014, I'm Outta Love - Radio Edit.",
+    "hint": "Anastacia",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/51eiFhLhkGqbe9gOmkPtiX"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-i-believe-i-can-fly-radio-edit-2014",
+    "title": "I Believe I Can Fly - Radio Edit",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "R. Kelly — 2014, I Believe I Can Fly - Radio Edit.",
+    "hint": "R. Kelly",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2HWY76uWkiZwoCe1QQ1UB4"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-its-my-life-radio-edit-2014",
+    "title": "It's My Life - Radio Edit",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Dr. Alban — 2014, It's My Life - Radio Edit.",
+    "hint": "Dr. Alban",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5jcKGKCpGvSjuChM8cywwI"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-everybody-get-up-radio-edit-2014",
+    "title": "Everybody Get Up - Radio Edit",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Five — 2014, Everybody Get Up - Radio Edit.",
+    "hint": "Five",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5HwRSfUsWzuyvlzkg6QO70"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-butterfly-2014",
+    "title": "Butterfly",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Crazy Town — 2014, Butterfly.",
+    "hint": "Crazy Town",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3FJ9hfm9SCDHMFIItwAfSY"
+    },
+    "genres": [
+      "metal",
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-youre-not-alone-radio-edit-2014",
+    "title": "You're Not Alone - Radio Edit",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Olive, Black Olive — 2014, You're Not Alone - Radio Edit.",
+    "hint": "Olive, Black Olive",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5HPchyFdQZT1cDbdOTdFji"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-i-want-you-back-radio-edit-2014",
+    "title": "I Want You Back - Radio Edit",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "*NSYNC — 2014, I Want You Back - Radio Edit.",
+    "hint": "*NSYNC",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7xS5Ifz4vyc5oGEOHZu05k"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-mmm-mmm-mmm-mmm-2014",
+    "title": "Mmm Mmm Mmm Mmm",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Crash Test Dummies — 2014, Mmm Mmm Mmm Mmm.",
+    "hint": "Crash Test Dummies",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/76rjB3tDZ8M4GpJvFKb84A"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-no-woman-no-cry-2014",
+    "title": "No Woman, No Cry",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Fugees — 2014, No Woman, No Cry.",
+    "hint": "Fugees",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7ywBmZOgWhPMj1wljWn6vL"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-torn-2014",
+    "title": "Torn",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Natalie Imbruglia — 2014, Torn.",
+    "hint": "Natalie Imbruglia",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3xP9zsXKIpPIYBo2MZKMMV"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-mambo-no-5-a-little-bit-of-2014",
+    "title": "Mambo No. 5 (A Little Bit of...)",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lou Bega — 2014, Mambo No. 5 (A Little Bit of...).",
+    "hint": "Lou Bega",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6sbok5dfFLkQunvKeQjrKF"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-at-the-river-2014",
+    "title": "At the River",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Groove Armada — 2014, At the River.",
+    "hint": "Groove Armada",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/07QOW5kcbhVY1l8wIhNvbT"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-runaway-train-2014",
+    "title": "Runaway Train",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Soul Asylum — 2014, Runaway Train.",
+    "hint": "Soul Asylum",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4RoFlWANgOs5P0f4oDOXUG"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-waterfalls-single-edit-2014",
+    "title": "Waterfalls - Single Edit",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "TLC — 2014, Waterfalls - Single Edit.",
+    "hint": "TLC",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5pTQYJu8tGm7bQMvww72dM"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-un-break-my-heart-2014",
+    "title": "Un-Break My Heart",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Toni Braxton — 2014, Un-Break My Heart.",
+    "hint": "Toni Braxton",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7nAjlUFOAyWjZzlWVHWtrZ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-you-make-me-wanna-2014",
+    "title": "You Make Me Wanna...",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "USHER — 2014, You Make Me Wanna....",
+    "hint": "USHER",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4QY1tatAzickt9KhxMaSm0"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-genie-in-a-bottle-2014",
+    "title": "Genie In a Bottle",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Christina Aguilera — 2014, Genie In a Bottle.",
+    "hint": "Christina Aguilera",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2k2VvyJSikIagNmwLUOZKh"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-my-heart-will-go-on-love-theme-from-titanic-2014",
+    "title": "My Heart Will Go On - Love Theme from \"Titanic\"",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Céline Dion — 2014, My Heart Will Go On - Love Theme from \"Titanic\".",
+    "hint": "Céline Dion",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4qCTTBZWiFTi4JFzlOXZTy"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-hallelujah-radio-edit-2014",
+    "title": "Hallelujah - Radio Edit",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Jeff Buckley — 2014, Hallelujah - Radio Edit.",
+    "hint": "Jeff Buckley",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6RdjbxpRtyxnmp61i0tyEd"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-tonight-2014",
+    "title": "Tonight",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "New Kids On The Block — 2014, Tonight.",
+    "hint": "New Kids On The Block",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/42NADmH0f8icPSrVXoqp6k"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-steal-my-sunshine-2014",
+    "title": "Steal My Sunshine",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "LEN — 2014, Steal My Sunshine.",
+    "hint": "LEN",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5VF63TxgXi22VHXTkHpMVU"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-scatman-ski-ba-bop-ba-dop-bop-basic-radio-2014",
+    "title": "Scatman (Ski-Ba-Bop-Ba-Dop-Bop) - Basic Radio",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Scatman John — 2014, Scatman (Ski-Ba-Bop-Ba-Dop-Bop) - Basic Radio.",
+    "hint": "Scatman John",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/52YZLJvBlDKTid2OKwblvf"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-cotton-eye-joe-2014",
+    "title": "Cotton Eye Joe",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Rednex — 2014, Cotton Eye Joe.",
+    "hint": "Rednex",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2Q0Y74LoaxFtiyhmdDTZx4"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-its-like-that-2014",
+    "title": "It's Like That",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Run–D.M.C., Jason Nevins — 2014, It's Like That.",
+    "hint": "Run–D.M.C., Jason Nevins",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5bYN7ttTmfpZYDgEqRF9sT"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-im-like-a-bird-2000",
+    "title": "I'm Like A Bird",
+    "category": "music",
+    "year": 2000,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Nelly Furtado — 2000, I'm Like A Bird.",
+    "hint": "Nelly Furtado",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2aGw77pZqli064JiPuXYRi"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-the-sign-1993",
+    "title": "The Sign",
+    "category": "music",
+    "year": 1993,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Ace of Base — 1993, The Sign.",
+    "hint": "Ace of Base",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0hrBpAOgrt8RXigk83LLNE"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-save-tonight-1998",
+    "title": "Save Tonight",
+    "category": "music",
+    "year": 1998,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Eagle-Eye Cherry — 1998, Save Tonight.",
+    "hint": "Eagle-Eye Cherry",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0smyCrJiibi2uwCiq5R1vj"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-kiss-from-a-rose-1994",
+    "title": "Kiss from a Rose",
+    "category": "music",
+    "year": 1994,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Seal — 1994, Kiss from a Rose.",
+    "hint": "Seal",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3YKptz29AsOlm7WAVnztBh"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-bitch-1997",
+    "title": "Bitch",
+    "category": "music",
+    "year": 1997,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Meredith Brooks — 1997, Bitch.",
+    "hint": "Meredith Brooks",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3i6qNxyVgIdUZTTi5m25EM"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-im-too-sexy-2007",
+    "title": "I'm Too Sexy",
+    "category": "music",
+    "year": 2007,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Right Said Fred — 2007, I'm Too Sexy.",
+    "hint": "Right Said Fred",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1MQrMQwfqjgOjXEUaN9AMd"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-mmmbop-1997",
+    "title": "MMMBop",
+    "category": "music",
+    "year": 1997,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Hanson — 1997, MMMBop.",
+    "hint": "Hanson",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0lnxrQAd9ZxbhBBe7d8FO8"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-dont-speak-1995",
+    "title": "Don't Speak",
+    "category": "music",
+    "year": 1995,
+    "cue": "Song anhören und einordnen.",
+    "answer": "No Doubt — 1995, Don't Speak.",
+    "hint": "No Doubt",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6urCAbunOQI4bLhmGpX7iS"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-gettin-jiggy-wit-it-1997",
+    "title": "Gettin' Jiggy Wit It",
+    "category": "music",
+    "year": 1997,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Will Smith — 1997, Gettin' Jiggy Wit It.",
+    "hint": "Will Smith",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0weAUscowxeqDtpCgtbpgp"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-waterfalls-1994",
+    "title": "Waterfalls",
+    "category": "music",
+    "year": 1994,
+    "cue": "Song anhören und einordnen.",
+    "answer": "TLC — 1994, Waterfalls.",
+    "hint": "TLC",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6qspW4YKycviDFjHBOaqUY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-its-my-life-2003",
+    "title": "It's My Life",
+    "category": "music",
+    "year": 2003,
+    "cue": "Song anhören und einordnen.",
+    "answer": "No Doubt — 2003, It's My Life.",
+    "hint": "No Doubt",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1OutzYv6YiN93lrT3pJsWR"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-ice-ice-baby-1990",
+    "title": "Ice Ice Baby",
+    "category": "music",
+    "year": 1990,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Vanilla Ice — 1990, Ice Ice Baby.",
+    "hint": "Vanilla Ice",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/11d9oUiwHuYt216EFA2tiz"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-the-look-1988",
+    "title": "The Look",
+    "category": "music",
+    "year": 1988,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Roxette — 1988, The Look.",
+    "hint": "Roxette",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1aYkkrAbPmMuorVz5HWIqE"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-fly-away-1998",
+    "title": "Fly Away",
+    "category": "music",
+    "year": 1998,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lenny Kravitz — 1998, Fly Away.",
+    "hint": "Lenny Kravitz",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1OxcIUqVmVYxT6427tbhDW"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-i-wanna-dance-with-somebody-who-loves-me-1987",
+    "title": "I Wanna Dance with Somebody (Who Loves Me)",
+    "category": "music",
+    "year": 1987,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Whitney Houston — 1987, I Wanna Dance with Somebody (Who Loves Me).",
+    "hint": "Whitney Houston",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2tUBqZG2AbRi7Q0BIrVrEj"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-one-of-us-1995",
+    "title": "One Of Us",
+    "category": "music",
+    "year": 1995,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Joan Osborne — 1995, One Of Us.",
+    "hint": "Joan Osborne",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1xNmF1Uep5OGutizZSbKvd"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-kiss-1986",
+    "title": "Kiss",
+    "category": "music",
+    "year": 1986,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Prince — 1986, Kiss.",
+    "hint": "Prince",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/62LJFaYihsdVrrkgUOJC05"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-wannabe-1996",
+    "title": "Wannabe",
+    "category": "music",
+    "year": 1996,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Spice Girls — 1996, Wannabe.",
+    "hint": "Spice Girls",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1Je1IMUlBXcx1Fz0WE7oPT"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "0fky4kHnko4b9HsvrYVyum"
     ]
   }
 ];
