@@ -182,6 +182,13 @@ export default function PlayPage() {
   }, []);
 
   const nextCard = useCallback(() => {
+    if (!showSolution) {
+      setShowSolution(true);
+      setTimer((prev) => ({ ...prev, running: false }));
+      setBlackedOut(false);
+      return;
+    }
+
     mediaRef.current?.stop();
     if (index < filteredDeck.length - 1) {
       setIndex((i) => i + 1);
@@ -191,7 +198,7 @@ export default function PlayPage() {
       setTimer({ secondsLeft: 0, running: false });
       setShowSolution(false);
     }
-  }, [filteredDeck.length, index]);
+  }, [filteredDeck.length, index, showSolution]);
 
   const markCardBlocked = useCallback(
     (id: string) => {
@@ -207,13 +214,6 @@ export default function PlayPage() {
     },
     [card?.id, nextCard, rememberBlocked]
   );
-
-  const resetTimer = () => {
-    const current = filteredDeck[index];
-    setTimerForCard(settings.timerSeconds, current);
-    setBlackedOut(false);
-    setShowSolution(false);
-  };
 
   const handleMediaPlay = () => {
     const current = filteredDeck[index];
@@ -349,13 +349,6 @@ export default function PlayPage() {
           onClick={nextCard}
         >
           {isLast ? 'Fertig' : 'Zur nächsten Frage'}
-        </button>
-        <button
-          type="button"
-          className="rounded-full border border-ink/20 px-4 py-3 text-sm w-full sm:w-auto text-center"
-          onClick={resetTimer}
-        >
-          Timer neu starten
         </button>
         <button
           type="button"
