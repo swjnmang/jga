@@ -1,6 +1,7 @@
 ﻿import { Card } from './types';
+import { playlistCards } from './playlistCards';
 
-export const cards: Card[] = [
+const baseCards: Card[] = [
   {
     id: 'song-smells-like-teen-spirit',
     title: 'Smells Like Teen Spirit',
@@ -767,4 +768,6 @@ export function getCategories(list: Card[]) {
   const unique = new Set(list.map((c) => c.category));
   return Array.from(unique);
 }
+
+export const cards: Card[] = [...baseCards, ...playlistCards];
 
