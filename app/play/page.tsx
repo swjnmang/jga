@@ -22,6 +22,25 @@ type TimerState = {
   running: boolean;
 };
 
+type GameMode = 'timeline' | 'trivia';
+
+function triviaCue(card: Card): string {
+  switch (card.category) {
+    case 'music':
+      return 'Wer ist der Artist oder wie heißt der Song?';
+    case 'quote':
+      return 'Von wem stammt dieses Zitat?';
+    case 'image':
+      return 'Was bzw. welches Ereignis ist auf dem Bild?';
+    case 'country':
+      return 'Zu welchem Land gehört das Gezeigte?';
+    case 'video':
+      return 'Was wird hier gezeigt?';
+    default:
+      return 'Frage beantworten.';
+  }
+}
+
 function buildWeightedDeck(allCards: Card[], settings: UserSettings) {
   const activeCategories = settings.categories.filter((cat) => (settings.categoryWeights[cat] ?? 0) > 0);
   const categoriesToUse = activeCategories.length > 0 ? activeCategories : settings.categories;
@@ -72,6 +91,7 @@ export default function PlayPage() {
   const [settings, setSettings] = useState<UserSettings>(defaults);
   const [deckKey, setDeckKey] = useState(0);
   const [blockedCards, setBlockedCards] = useState<Set<string>>(new Set());
+  const [mode, setMode] = useState<GameMode | null>(null);
   const playableCards = useMemo(
     () => cards.filter((c) => c.category !== 'video' && !blockedCards.has(c.id)),
     [blockedCards]
@@ -213,6 +233,7 @@ export default function PlayPage() {
     setIndex(0);
     setBlackedOut(false);
     setShowSolution(false);
+    setMode(null);
   }, []);
 
   if (!card) {
@@ -248,13 +269,50 @@ export default function PlayPage() {
     .padStart(2, '0');
   const seconds = (timer.secondsLeft % 60).toString().padStart(2, '0');
 
+  if (!mode) {
+    return (
+      <main className="mx-auto max-w-3xl px-5 py-12 space-y-6 text-center">
+        <h1 className="text-3xl font-display">Modus wählen</h1>
+        <p className="text-ink/70">Entscheide, ob du die Timeline (Jahr + Kontext) oder Trivia (eine Frage) spielen möchtest.</p>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <button
+            type="button"
+            className="rounded-full bg-ink text-sand px-5 py-3 text-sm font-semibold"
+            onClick={() => {
+              setMode('timeline');
+              setIndex(0);
+              setTimerForCard(settings.timerSeconds, filteredDeck[0]);
+              setBlackedOut(false);
+              setShowSolution(false);
+            }}
+          >
+            Timeline (Jahr & Kontext)
+          </button>
+          <button
+            type="button"
+            className="rounded-full border border-ink/20 px-5 py-3 text-sm"
+            onClick={() => {
+              setMode('trivia');
+              setIndex(0);
+              setTimerForCard(settings.timerSeconds, filteredDeck[0]);
+              setBlackedOut(false);
+              setShowSolution(false);
+            }}
+          >
+            Trivia (eine Frage)
+          </button>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
       <div className="flex items-center justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Frage {index + 1} / {filteredDeck.length}</p>
           <h1 className="text-3xl font-display">Spielmodus</h1>
-          <p className="text-sm text-ink/70">Fragen erscheinen direkt, Teams notieren auf leere Karten. Kein QR, nur Flex Quiz.</p>
+          <p className="text-sm text-ink/70">{mode === 'timeline' ? 'Timeline: Jahr + Titel/Ort/Person finden.' : 'Trivia: Eine Frage pro Karte.'}</p>
         </div>
         <div className="text-right space-y-1">
           <p className="text-xs text-ink/60">Timer</p>
@@ -267,7 +325,7 @@ export default function PlayPage() {
           <p className="text-xs uppercase tracking-wide text-ink/60">{card.category}</p>
           <span className="text-xs rounded-full bg-ink text-sand px-3 py-1">versteckte Lösung</span>
         </div>
-        <p className="text-lg font-semibold">{card.cue}</p>
+        <p className="text-lg font-semibold">{mode === 'timeline' ? card.cue : triviaCue(card)}</p>
         <MediaEmbed
           ref={mediaRef}
           card={card}
