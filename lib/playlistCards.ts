@@ -6,11 +6,15 @@ export type PlaylistInfo = { id: string; name: string };
 export const playlistInfo: PlaylistInfo[] = [
   {
     "id": "4likPQLIX9PUqyNiJ3xsqT",
-    "name": "Flex-Quiz"
+    "name": "Flex-Lukas-JGA"
   },
   {
     "id": "0fky4kHnko4b9HsvrYVyum",
     "name": "Flex-90ger"
+  },
+  {
+    "id": "5eKb0TEz5FUTd8VvQVSr0l",
+    "name": "Flex-80ger"
   }
 ];
 
@@ -1924,7 +1928,8 @@ export const playlistCards: Card[] = [
       "poprock"
     ],
     "playlists": [
-      "0fky4kHnko4b9HsvrYVyum"
+      "0fky4kHnko4b9HsvrYVyum",
+      "5eKb0TEz5FUTd8VvQVSr0l"
     ]
   },
   {
@@ -1982,6 +1987,729 @@ export const playlistCards: Card[] = [
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
+    ]
+  },
+  {
+    "id": "song-wake-me-up-before-you-go-go-2010",
+    "title": "Wake Me Up Before You Go-Go",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Wham! — 2010, Wake Me Up Before You Go-Go.",
+    "hint": "Wham!",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6ZEAXknmx2mrO3KgcDNpFI"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-girls-just-wanna-have-fun-2010",
+    "title": "Girls Just Wanna Have Fun",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Cyndi Lauper — 2010, Girls Just Wanna Have Fun.",
+    "hint": "Cyndi Lauper",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0xs0ewnEb6c2DlY7LjOD7t"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-never-gonna-give-you-up-7-mix-2010",
+    "title": "Never Gonna Give You Up - 7\" Mix",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Rick Astley — 2010, Never Gonna Give You Up - 7\" Mix.",
+    "hint": "Rick Astley",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4EZz8Byhbjk0tOKFJlCgPB"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-the-final-countdown-2010",
+    "title": "The Final Countdown",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Europe — 2010, The Final Countdown.",
+    "hint": "Europe",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7c5lMuvtz2gddhDyG5MjB6"
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-eye-of-the-tiger-2010",
+    "title": "Eye of the Tiger",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Survivor — 2010, Eye of the Tiger.",
+    "hint": "Survivor",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0jSRZBsn3RqAhBDzAefHAD"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-ghostbusters-2010",
+    "title": "Ghostbusters",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Ray Parker Jr. — 2010, Ghostbusters.",
+    "hint": "Ray Parker Jr.",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0sTHEo24E8LxasEkSnpUkx"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-party-all-the-time-2010",
+    "title": "Party All the Time",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Eddie Murphy — 2010, Party All the Time.",
+    "hint": "Eddie Murphy",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3JgOPg3wx1ABbQv0Ax4Rdw"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-walk-like-an-egyptian-2010",
+    "title": "Walk Like an Egyptian",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Bangles — 2010, Walk Like an Egyptian.",
+    "hint": "The Bangles",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1gb5sUe1CuRBuT8twq8uhw"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-dont-stop-believin-2010",
+    "title": "Don't Stop Believin'",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Journey — 2010, Don't Stop Believin'.",
+    "hint": "Journey",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3HRQtRUYnnuZY7fE900XtJ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-satellite-2010",
+    "title": "Satellite",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Hooters — 2010, Satellite.",
+    "hint": "The Hooters",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0mgFy2EDy4WyGazhI7FVJM"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-total-eclipse-of-the-heart-2010",
+    "title": "Total Eclipse of the Heart",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bonnie Tyler — 2010, Total Eclipse of the Heart.",
+    "hint": "Bonnie Tyler",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7q3MflmodGZlOgZ799EpAb"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-africa-2010",
+    "title": "Africa",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "TOTO — 2010, Africa.",
+    "hint": "TOTO",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/28o8m1o9RGtySbmQJtAvym"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-can-you-feel-it-2010",
+    "title": "Can You Feel It",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Jacksons — 2010, Can You Feel It.",
+    "hint": "The Jacksons",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5HIDIRwU38XVBozdoQwCml"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-take-on-me-1985",
+    "title": "Take on Me",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "a-ha — 1985, Take on Me.",
+    "hint": "a-ha",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2WfaOiMkCvy7F5fcp2zZ8L"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-mamma-mia-1975",
+    "title": "Mamma Mia",
+    "category": "music",
+    "year": 1975,
+    "cue": "Song anhören und einordnen.",
+    "answer": "ABBA — 1975, Mamma Mia.",
+    "hint": "ABBA",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2TxCwUlqaOH3TIyJqGgR91"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-dancing-queen-1976",
+    "title": "Dancing Queen",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "ABBA — 1976, Dancing Queen.",
+    "hint": "ABBA",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0GjEhVFGZW8afUYGChu3Rr"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-youre-the-one-that-i-want-from-grease-1978",
+    "title": "You're The One That I Want - From “Grease”",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "John Travolta, Olivia Newton-John — 1978, You're The One That I Want - From “Grease”.",
+    "hint": "John Travolta, Olivia Newton-John",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0B9x2BRHqj3Qer7biM3pU3"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-video-killed-the-radio-star-1980",
+    "title": "Video Killed The Radio Star",
+    "category": "music",
+    "year": 1980,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Buggles — 1980, Video Killed The Radio Star.",
+    "hint": "The Buggles",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7o7E1nrHWncYY7PY94gCiX"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-africa-1982",
+    "title": "Africa",
+    "category": "music",
+    "year": 1982,
+    "cue": "Song anhören und einordnen.",
+    "answer": "TOTO — 1982, Africa.",
+    "hint": "TOTO",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2374M0fQpWi3dLnB54qaLX"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-uptown-girl-1983",
+    "title": "Uptown Girl",
+    "category": "music",
+    "year": 1983,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Billy Joel — 1983, Uptown Girl.",
+    "hint": "Billy Joel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5zA8vzDGqPl2AzZkEYQGKh"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-eternal-flame-2011",
+    "title": "Eternal Flame",
+    "category": "music",
+    "year": 2011,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Bangles, Susanna Hoffs — 2011, Eternal Flame.",
+    "hint": "The Bangles, Susanna Hoffs",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1uMYW46hhn6xHD84gdLWe8"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-we-built-this-city-2011",
+    "title": "We Built This City",
+    "category": "music",
+    "year": 2011,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Starship — 2011, We Built This City.",
+    "hint": "Starship",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2ORpYzSw4ABvGYosZuews8"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-all-you-zombies-2011",
+    "title": "All You Zombies",
+    "category": "music",
+    "year": 2011,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Hooters — 2011, All You Zombies.",
+    "hint": "The Hooters",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0hayhLT09qy1QG85XmiPXf"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-holding-out-for-a-hero-2011",
+    "title": "Holding Out for a Hero",
+    "category": "music",
+    "year": 2011,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bonnie Tyler — 2011, Holding Out for a Hero.",
+    "hint": "Bonnie Tyler",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7AqBxvfK25nDQ0QyhsE7Jq"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-running-up-that-hill-a-deal-with-god-1985",
+    "title": "Running Up That Hill (A Deal With God)",
+    "category": "music",
+    "year": 1985,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Kate Bush — 1985, Running Up That Hill (A Deal With God).",
+    "hint": "Kate Bush",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1PtQJZVZIdWIYdARpZRDFO"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-shout-us-single-version-2015",
+    "title": "Shout - U.S. Single Version",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Tears For Fears — 2015, Shout - U.S. Single Version.",
+    "hint": "Tears For Fears",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3IE3xbKiTG6t6eXE5VHmc0"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-eyes-without-a-face-2015",
+    "title": "Eyes Without A Face",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Billy Idol — 2015, Eyes Without A Face.",
+    "hint": "Billy Idol",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5gkwFhlzdFvC533xx7Ri8M"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-the-winner-takes-it-all-2015",
+    "title": "The Winner Takes It All",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "ABBA — 2015, The Winner Takes It All.",
+    "hint": "ABBA",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6yTJK6Mcr1qUIPtc7NX4aw"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-up-where-we-belong-from-an-officer-and-a-gentleman-2015",
+    "title": "Up Where We Belong - From \"An Officer And A Gentleman\"",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Joe Cocker, Jennifer Warnes — 2015, Up Where We Belong - From \"An Officer And A Gentleman\".",
+    "hint": "Joe Cocker, Jennifer Warnes",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/11z9wktBsj8G2V0lbIpzSk"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-red-red-wine-2015",
+    "title": "Red Red Wine",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "UB40 — 2015, Red Red Wine.",
+    "hint": "UB40",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0urtox5iyGvcqharkbmC7Y"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-the-riddle-2015",
+    "title": "The Riddle",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Nik Kershaw — 2015, The Riddle.",
+    "hint": "Nik Kershaw",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6ip3bBdMPbC6hMzBIjonAG"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-girls-just-want-to-have-fun-2007",
+    "title": "Girls Just Want to Have Fun",
+    "category": "music",
+    "year": 2007,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Cyndi Lauper — 2007, Girls Just Want to Have Fun.",
+    "hint": "Cyndi Lauper",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7sMGwiS4vOMcz86ZY3vKYM"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-living-after-midnight-2007",
+    "title": "Living After Midnight",
+    "category": "music",
+    "year": 2007,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Judas Priest — 2007, Living After Midnight.",
+    "hint": "Judas Priest",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7LifJa1Ymo6gbe9hSyPefs"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-footloose-2007",
+    "title": "Footloose",
+    "category": "music",
+    "year": 2007,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Kenny Loggins — 2007, Footloose.",
+    "hint": "Kenny Loggins",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1Ppwc43WYFEBXw2n1ePhDY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-sweet-dreams-are-made-of-this-2007",
+    "title": "Sweet Dreams (Are Made of This)",
+    "category": "music",
+    "year": 2007,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Eurythmics, Annie Lennox, Dave Stewart — 2007, Sweet Dreams (Are Made of This).",
+    "hint": "Eurythmics, Annie Lennox, Dave Stewart",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2CVqF1sLhwut4NiZxzNUnC"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-bohemian-rhapsody-live-at-wembley-stadium-july-1986-1992",
+    "title": "Bohemian Rhapsody - Live At Wembley Stadium / July 1986",
+    "category": "music",
+    "year": 1992,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Queen — 1992, Bohemian Rhapsody - Live At Wembley Stadium / July 1986.",
+    "hint": "Queen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2XbcujvemK0hGh0Ob4HAXQ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-who-wants-to-live-forever-live-at-wembley-stadium-july-1986-1992",
+    "title": "Who Wants to Live Forever - Live At Wembley Stadium / July 1986",
+    "category": "music",
+    "year": 1992,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Queen — 1992, Who Wants to Live Forever - Live At Wembley Stadium / July 1986.",
+    "hint": "Queen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0hLnmbp7esuygjxzHF87yz"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-we-will-rock-you-live-at-wembley-stadium-july-1986-1992",
+    "title": "We Will Rock You - Live At Wembley Stadium / July 1986",
+    "category": "music",
+    "year": 1992,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Queen — 1992, We Will Rock You - Live At Wembley Stadium / July 1986.",
+    "hint": "Queen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3QTTAj8piyRBfhoPEfJC6y"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "5eKb0TEz5FUTd8VvQVSr0l"
     ]
   }
 ];
