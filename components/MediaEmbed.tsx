@@ -103,6 +103,8 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     }
   }, [choice]);
 
+  const reportedErrorRef = useRef(false);
+
   const sendYouTubeCommand = (command: 'playVideo' | 'pauseVideo') => {
     if (!iframeRef.current?.contentWindow) return;
     iframeRef.current.contentWindow.postMessage(
@@ -130,6 +132,8 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     setShowSpotify(false);
     setShowYouTube(false);
     setEmbedError(null);
+    setSpotifyError(null);
+    reportedErrorRef.current = false;
   }, [choiceSignature]);
 
   useEffect(() => {
@@ -360,6 +364,22 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       onPlay?.();
     }
   };
+
+  useEffect(() => {
+    // Report hard embed failures once to allow caller to block the card.
+    if (embedError && !reportedErrorRef.current) {
+      reportedErrorRef.current = true;
+      onPlaybackError?.(card.id, 'embed-error');
+    }
+  }, [card.id, embedError, onPlaybackError]);
+
+  useEffect(() => {
+    // Report Spotify errors only if a token exists (user logged in) to avoid blocking due to missing login.
+    if (spotifyError && spotifyToken && !reportedErrorRef.current) {
+      reportedErrorRef.current = true;
+      onPlaybackError?.(card.id, 'spotify-error');
+    }
+  }, [card.id, spotifyError, spotifyToken, onPlaybackError]);
 
   const resetSpotify = () => {
     if (spotifyPlayerRef.current) {
