@@ -85,6 +85,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const [spotifyDevice, setSpotifyDevice] = useState<string | null>(null);
   const [spotifyReady, setSpotifyReady] = useState(false);
   const [spotifyError, setSpotifyError] = useState<string | null>(null);
+  const [spotifyErrorDetail, setSpotifyErrorDetail] = useState<string | null>(null);
   const [spotifyLoading, setSpotifyLoading] = useState(false);
   const [embedError, setEmbedError] = useState<string | null>(null);
   const spotifyPlayerRef = useRef<Spotify.Player | null>(null);
@@ -114,6 +115,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     setSpotifyDevice(null);
     setSpotifyToken(null);
     setSpotifyError(null);
+    setSpotifyErrorDetail(null);
     setShowSpotify(false);
     setIsPlaying(false);
   }
@@ -236,6 +238,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         player.addListener('ready', ({ device_id }) => {
           setSpotifyDevice(device_id);
           setSpotifyReady(true);
+          setSpotifyErrorDetail(null);
         });
 
         player.addListener('player_state_changed', (state) => {
@@ -245,6 +248,16 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         player.addListener('initialization_error', ({ message }) => setSpotifyError(message));
         player.addListener('authentication_error', ({ message }) => setSpotifyError(message));
         player.addListener('account_error', ({ message }) => setSpotifyError(message));
+        player.addListener('playback_error', ({ message, error_type }) => {
+          setSpotifyError('Spotify meldet einen Wiedergabefehler');
+          setSpotifyErrorDetail(`${error_type}: ${message}`);
+          onPlaybackError?.(card.id, 'playback-error');
+          console.error('Spotify playback_error', error_type, message);
+        });
+        player.addListener('not_ready', ({ device_id }) => {
+          setSpotifyReady(false);
+          setSpotifyErrorDetail(`Device ${device_id} nicht bereit`);
+        });
 
         player.connect();
       };
@@ -268,7 +281,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
   const transferPlayback = async () => {
     if (!spotifyToken || !spotifyDevice) return;
-    await fetch('https://api.spotify.com/v1/me/player', {
+    const res = await fetch('https://api.spotify.com/v1/me/player', {
       method: 'PUT',
       headers: {
         Authorization: `Bearer ${spotifyToken}`,
@@ -276,6 +289,12 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       },
       body: JSON.stringify({ device_ids: [spotifyDevice], play: false })
     });
+    if (!res.ok) {
+      const detail = await res.text().catch(() => null);
+      setSpotifyError('Spotify-Device konnte nicht übernommen werden');
+      setSpotifyErrorDetail(detail || `HTTP ${res.status}`);
+      console.error('Spotify transfer failed', res.status, detail);
+    }
   };
 
   const activatePlayer = async () => {
@@ -291,10 +310,12 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const playSpotifyTrack = async (url: string) => {
     if (!spotifyToken) {
       setSpotifyError('Spotify Login erforderlich');
+      setSpotifyErrorDetail(null);
       return;
     }
     if (!spotifyDevice) {
       setSpotifyError('Spotify Player noch nicht bereit');
+      setSpotifyErrorDetail(null);
       return;
     }
 
@@ -319,18 +340,24 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         body: JSON.stringify({ uris: [`spotify:track:${trackId}`] })
       });
       if (!res.ok) {
+        const detail = await res.text().catch(() => null);
         setSpotifyError('Wiedergabe konnte nicht gestartet werden');
+        setSpotifyErrorDetail(detail || `HTTP ${res.status}`);
         setIsPlaying(false);
         onPlaybackError?.(card.id, 'play-failed');
+        console.error('Spotify play failed', res.status, detail);
       } else {
         setSpotifyError(null);
+        setSpotifyErrorDetail(null);
         setShowSpotify(true);
         setIsPlaying(true);
       }
     } catch (_err) {
       setSpotifyError('Wiedergabe konnte nicht gestartet werden');
+      setSpotifyErrorDetail(_err instanceof Error ? _err.message : 'Unbekannter Fehler');
       setIsPlaying(false);
       onPlaybackError?.(card.id, 'exception');
+      console.error('Spotify play exception', _err);
     } finally {
       setSpotifyLoading(false);
     }
@@ -480,6 +507,9 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
             <div className="text-center space-y-2">
               <p className="text-sm font-semibold">Spotify Player</p>
               {spotifyError && <p className="text-xs text-red-200">{spotifyError}</p>}
+              {spotifyErrorDetail && (
+                <p className="text-[11px] text-sand/60">Details: {spotifyErrorDetail}</p>
+              )}
               {!spotifyReady && !spotifyError && spotifyToken && (
                 <p className="text-xs text-sand/80">Spotify Player wird verbunden …</p>
               )}
