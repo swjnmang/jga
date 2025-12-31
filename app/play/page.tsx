@@ -471,6 +471,11 @@ function PlayPageContent() {
             {difficultyLabel(card.difficulty)}
           </span>
         </div>
+        {card.category === 'filmeserien' && (
+          <p className="text-sm text-ink/70">
+            Film/Serie: <span className="font-semibold text-ink">{card.title}</span>
+          </p>
+        )}
         <p className="text-lg font-semibold">{mode === 'timeline' ? card.cue : card.cue || triviaCue(card)}</p>
         <MediaEmbed
           ref={mediaRef}
