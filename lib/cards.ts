@@ -1,6 +1,7 @@
 ﻿import { Card } from './types';
 import { playlistCards } from './playlistCards';
 import { flagCards } from './flagCards';
+import { outlineCards } from './outlineCards';
 import { triviaExtraCards } from './triviaExtraCards';
 
 const baseCards: Card[] = [
@@ -696,7 +697,7 @@ const baseCards: Card[] = [
 ];
 
 const baseNonMusicCards = [
-  ...baseCards.filter((c) => c.category !== 'music' && !c.id.startsWith('flag-')),
+  ...baseCards.filter((c) => c.category !== 'music' && !c.id.startsWith('flag-') && !c.id.startsWith('outline-')),
   ...triviaExtraCards
 ];
 
@@ -716,5 +717,5 @@ export function getCategories(list: Card[]) {
 }
 
 // Only use playlist songs for music; keep non-music from base set.
-export const cards: Card[] = [...baseNonMusicCards, ...flagCards, ...playlistTaggedCards];
+export const cards: Card[] = [...baseNonMusicCards, ...flagCards, ...outlineCards, ...playlistTaggedCards];
 
