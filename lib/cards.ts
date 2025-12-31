@@ -440,7 +440,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2013,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Lothar Matthäus, 2013 – „Hätte, hätte, Fahrradkette.“',
+    answer: 'Lothar Matthäus, 2013 – „Hätte, hätte, Fahrradkette.“ in der Sky90-Runde als spöttischer Kommentar zur Spielanalyse.',
     hint: 'Fußballweltmeister, TV-Experte.',
     difficulty: 'leicht',
     sources: { text: 'Hätte, hätte, Fahrradkette.' }
@@ -451,7 +451,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1998,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Andreas Möller, 1998 – „Mailand oder Madrid – Hauptsache Italien.“',
+    answer: 'Andreas Möller, 1998 – „Mailand oder Madrid – Hauptsache Italien.“ in einem TV-Interview nach einer internationalen Auslosung.',
     hint: 'Dortmunder Offensivspieler.',
     difficulty: 'leicht',
     sources: { text: 'Mailand oder Madrid – Hauptsache Italien.' }
@@ -462,7 +462,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1987,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Ronald Reagan, 1987 – „Mr. Gorbachev, tear down this wall!“',
+    answer: 'Ronald Reagan, 1987 – „Mr. Gorbachev, tear down this wall!“ in seiner Rede am Brandenburger Tor in Berlin.',
     hint: 'US-Präsident, Brandenburger Tor.',
     difficulty: 'mittel',
     sources: { text: 'Mr. Gorbachev, tear down this wall!' }
@@ -473,7 +473,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1970,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Apollo-13-Besatzung, 1970 – „Houston, we have a problem.“',
+    answer: 'Apollo-13-Besatzung, 1970 – „Houston, we have a problem.“ als Funkmeldung nach der Explosion des Sauerstofftanks.',
     hint: 'NASA, Raumfahrt.',
     difficulty: 'mittel',
     sources: { text: 'Houston, we have a problem.' }
@@ -484,7 +484,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1969,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Neil Armstrong, 1969 – „That’s one small step for (a) man…“',
+    answer: 'Neil Armstrong, 1969 – „That’s one small step for (a) man…“ beim ersten Schritt auf die Mondoberfläche.',
     hint: 'Mondlandung.',
     difficulty: 'leicht',
     sources: { text: "That's one small step for man, one giant leap for mankind." }
@@ -495,7 +495,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2015,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Angela Merkel, 2015 – „Wir schaffen das.“',
+    answer: 'Angela Merkel, 2015 – „Wir schaffen das.“ in der Bundespressekonferenz zur Flüchtlingssituation.',
     hint: 'Bundeskanzlerin zur Flüchtlingskrise.',
     difficulty: 'leicht',
     sources: { text: 'Wir schaffen das.' }
@@ -506,7 +506,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2006,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Hape Kerkeling, 2006 – „Ich bin dann mal weg.“',
+    answer: 'Hape Kerkeling, 2006 – „Ich bin dann mal weg.“ als Titel seines Jakobsweg-Reiseberichts.',
     hint: 'Autor, Jakobsweg.',
     difficulty: 'leicht',
     sources: { text: 'Ich bin dann mal weg.' }
@@ -517,7 +517,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1989,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Chinesisches Sprichwort, populär 1989 – „Wenn der Wind des Wandels weht…“',
+    answer: 'Chinesisches Sprichwort, populär 1989 – „Wenn der Wind des Wandels weht…“ als Sinnbild politischer Umbrüche.',
     hint: 'Sprichwort, Wind des Wandels.',
     difficulty: 'mittel',
     sources: { text: 'Wenn der Wind des Wandels weht, bauen manche Mauern, andere Windmühlen.' }
@@ -528,7 +528,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1808,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Goethe, Faust I (ca. 1808) – „Zwei Seelen wohnen, ach! in meiner Brust.“',
+    answer: 'Goethe, Faust I (ca. 1808) – „Zwei Seelen wohnen, ach! in meiner Brust.“ im Monolog des Faust über innere Zerrissenheit.',
     hint: 'Deutscher Dichter, Faust.',
     difficulty: 'mittel',
     sources: { text: 'Zwei Seelen wohnen, ach! in meiner Brust.' }
@@ -539,7 +539,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1600,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'William Shakespeare, Hamlet (ca. 1600) – „To be, or not to be…“',
+    answer: 'William Shakespeare, Hamlet (ca. 1600) – „To be, or not to be…“ als Auftakt von Hamlets berühmtem Selbstgespräch.',
     hint: 'Englischer Dramatiker.',
     difficulty: 'mittel',
     sources: { text: 'To be, or not to be, that is the question.' }
@@ -550,7 +550,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1637,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'René Descartes, 1637 – „Cogito, ergo sum.“',
+    answer: 'René Descartes, 1637 – „Cogito, ergo sum.“ im „Discours de la méthode“ als Grundsatz des Rationalismus.',
     hint: 'Französischer Philosoph.',
     difficulty: 'mittel',
     sources: { text: 'Cogito, ergo sum.' }
@@ -561,7 +561,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1970,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Laozi zugeschrieben; populär 20. Jh. – „Der Weg ist das Ziel.“',
+    answer: 'Laozi zugeschrieben; populär 20. Jh. – „Der Weg ist das Ziel.“ als daoistisches Leitmotiv in Selbsthilfe und Coaching.',
     hint: 'Chinesische Philosophie.',
     difficulty: 'leicht',
     sources: { text: 'Der Weg ist das Ziel.' }
@@ -572,7 +572,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 500,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Laozi zugeschrieben – „Wer andere besiegt, ist stark; wer sich selbst besiegt, ist mächtig.“',
+    answer: 'Laozi zugeschrieben – „Wer andere besiegt, ist stark; wer sich selbst besiegt, ist mächtig.“ aus dem Dao De Jing (Kapitel 33).',
     hint: 'Daoismus.',
     difficulty: 'mittel',
     sources: { text: 'Wer andere besiegt, ist stark; wer sich selbst besiegt, ist mächtig.' }
@@ -583,7 +583,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1748,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Benjamin Franklin, 1748 – „Time is money.“',
+    answer: 'Benjamin Franklin, 1748 – „Time is money.“ in „Advice to a Young Tradesman“ als Ratschlag für Geschäftsleute.',
     hint: 'US-Staatsmann, Erfinder.',
     difficulty: 'leicht',
     sources: { text: 'Time is money.' }
@@ -594,7 +594,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: -400,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Sokrates zugeschrieben – „Ich weiß, dass ich nichts weiß.“',
+    answer: 'Sokrates zugeschrieben – „Ich weiß, dass ich nichts weiß.“ aus Platons „Apologie“ als Bekenntnis philosophischer Demut.',
     hint: 'Antike Philosophie.',
     difficulty: 'mittel',
     sources: { text: 'Ich weiß, dass ich nichts weiß.' }
@@ -605,7 +605,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2000,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Beruhigungsfloskel, 2000er – „Alles wird gut.“',
+    answer: 'Beruhigungsfloskel, 2000er – „Alles wird gut.“ als Trostformel in Krisen und Alltagsstress.',
     hint: 'Redensart, Trost.',
     difficulty: 'leicht',
     sources: { text: 'Alles wird gut.' }
@@ -616,7 +616,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2010,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Herbert Grönemeyer, 2014 – „Mach dein Ding.“',
+    answer: 'Herbert Grönemeyer, 2014 – „Mach dein Ding.“ als Refrain seines Songs und Lebensmotto auf Konzerten.',
     hint: 'Deutscher Musiker.',
     difficulty: 'leicht',
     sources: { text: 'Mach dein Ding.' }
@@ -627,7 +627,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2010,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Patrick Star (SpongeBob), 2010er – „Ich bin dumm, und das ist gut so.“',
+    answer: 'Patrick Star (SpongeBob), 2010er – „Ich bin dumm, und das ist gut so.“ in einer Cartoon-Szene als selbstironischer Moment.',
     hint: 'Zeichentrick-Seestern.',
     difficulty: 'leicht',
     sources: { text: 'Ich bin dumm, und das ist gut so.' }
@@ -638,7 +638,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2015,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Abwandlung, 2010er – „Das Ziel ist der Weg.“',
+    answer: 'Abwandlung, 2010er – „Das Ziel ist der Weg.“ als ironische Umkehr des bekannten Mottos in Blogs/Foren.',
     hint: 'Umkehr des bekannten Spruchs.',
     difficulty: 'leicht',
     sources: { text: 'Das Ziel ist der Weg.' }
@@ -649,7 +649,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1963,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Martin Luther King Jr., 1963 – „I have a dream.“',
+    answer: 'Martin Luther King Jr., 1963 – „I have a dream.“ in seiner Rede beim March on Washington für Bürgerrechte.',
     hint: 'US-Bürgerrechtler.',
     difficulty: 'leicht',
     sources: { text: 'I have a dream.' }
@@ -660,7 +660,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: -47,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Julius Caesar, 47 v. Chr. – „Veni, vidi, vici.“',
+    answer: 'Julius Caesar, 47 v. Chr. – „Veni, vidi, vici.“ im Bericht an den Senat nach dem Sieg bei Zela.',
     hint: 'Römischer Feldherr.',
     difficulty: 'mittel',
     sources: { text: 'Veni, vidi, vici.' }
@@ -671,7 +671,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1957,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'CDU-Wahlkampfslogan, 1957 – „Keine Experimente!“',
+    answer: 'CDU-Wahlkampfslogan, 1957 – „Keine Experimente!“ als zentraler Claim im Bundestagswahlkampf.',
     hint: 'Deutsche Nachkriegspolitik.',
     difficulty: 'mittel',
     sources: { text: 'Keine Experimente!' }
@@ -682,7 +682,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1989,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Ruf der Montagsdemos, 1989 – „Wir sind das Volk.“',
+    answer: 'Ruf der Montagsdemos, 1989 – „Wir sind das Volk.“ auf den Straßen von Leipzig und anderen DDR-Städten.',
     hint: 'DDR, Wendezeit.',
     difficulty: 'mittel',
     sources: { text: 'Wir sind das Volk.' }
@@ -693,7 +693,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1955,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Pete Seeger/Marlen Dietrich, 1950er – „Sag mir, wo die Blumen sind…“',
+    answer: 'Pete Seeger/Marlen Dietrich, 1950er – „Sag mir, wo die Blumen sind…“ als Antikriegslied in Konzerten.',
     hint: 'Antikriegslied.',
     difficulty: 'mittel',
     sources: { text: 'Sag mir, wo die Blumen sind.' }
@@ -704,7 +704,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2006,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Jürgen Klopp, 2006 – „Ich dachte, einmal im Leben muss ich das probieren.“',
+    answer: 'Jürgen Klopp, 2006 – „Ich dachte, einmal im Leben muss ich das probieren.“ im Interview über seinen Trainerjob.',
     hint: 'Trainer, Fußball.',
     difficulty: 'mittel',
     sources: { text: 'Einmal im Leben muss ich das probieren.' }
@@ -715,7 +715,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1980,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Karl Valentin zugeschrieben – „Die Lage ist hoffnungslos, aber nicht ernst.“ (oft vertauscht)',
+    answer: 'Karl Valentin zugeschrieben – „Die Lage ist hoffnungslos, aber nicht ernst.“ als kabarettistischer Wortdreher.',
     hint: 'Kabarett, Wortspiel.',
     difficulty: 'mittel',
     sources: { text: 'Die Lage ist hoffnungslos, aber nicht ernst.' }
@@ -726,7 +726,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1920,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Albert Einstein zugeschrieben – „Zwei Dinge sind unendlich: das Universum und die menschliche Dummheit…“',
+    answer: 'Albert Einstein zugeschrieben – „Zwei Dinge sind unendlich: das Universum und die menschliche Dummheit…“ als oft erzählte Anekdote.',
     hint: 'Physiker, Relativität.',
     difficulty: 'mittel',
     sources: { text: 'Zwei Dinge sind unendlich: das Universum und die menschliche Dummheit; aber beim Universum bin ich mir nicht ganz sicher.' }
@@ -737,7 +737,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1939,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Britisches Motiv, 1939 – „Keep calm and carry on.“',
+    answer: 'Britisches Motiv, 1939 – „Keep calm and carry on.“ als Propagandaposter zu Beginn des Zweiten Weltkriegs.',
     hint: 'Britische Propaganda WWII.',
     difficulty: 'leicht',
     sources: { text: 'Keep calm and carry on.' }
@@ -748,7 +748,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1999,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Yoda, 1999 – „Furcht ist der Pfad zur dunklen Seite.“',
+    answer: 'Yoda, 1999 – „Furcht ist der Pfad zur dunklen Seite.“ in Star Wars: Episode I als Warnung an Anakin.',
     hint: 'Star Wars Jedi-Meister.',
     difficulty: 'leicht',
     sources: { text: 'Fear is the path to the dark side.' }
@@ -759,7 +759,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2011,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Game of Thrones, 2011 – „Winter is coming.“',
+    answer: 'Game of Thrones, 2011 – „Winter is coming.“ als Motto des Hauses Stark in der Pilotfolge.',
     hint: 'Haus Stark.',
     difficulty: 'leicht',
     sources: { text: 'Winter is coming.' }
@@ -770,7 +770,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2012,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Game of Thrones, 2012 – „Valar Morghulis.“',
+    answer: 'Game of Thrones, 2012 – „Valar Morghulis.“ als Grußformel der Faceless Men in Braavos.',
     hint: 'Alte Sprache, jeder muss sterben.',
     difficulty: 'mittel',
     sources: { text: 'Valar Morghulis.' }
@@ -781,7 +781,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2001,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Kommentatorenphrase, 2001 – „So was haben wir noch nie gesehen.“',
+    answer: 'Kommentatorenphrase, 2001 – „So was haben wir noch nie gesehen.“ als Live-Reaktion im Sportkommentar.',
     hint: 'Sport-Kommentar.',
     difficulty: 'leicht',
     sources: { text: 'So was haben wir noch nie gesehen.' }
@@ -792,7 +792,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1975,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Trinkspruch, 1970er – „Zicke zacke zicke zacke hoi hoi hoi.“',
+    answer: 'Trinkspruch, 1970er – „Zicke zacke zicke zacke hoi hoi hoi.“ als Anfeuerungsruf in Festzelten und Stadien.',
     hint: 'Trinkspruch Stadion/Festzelt.',
     difficulty: 'leicht',
     sources: { text: 'Zicke zacke zicke zacke hoi hoi hoi.' }
@@ -803,7 +803,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1950,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Trinkspruch – „Prost!“',
+    answer: 'Trinkspruch – „Prost!“ beim Anstoßen in geselliger Runde.',
     hint: 'Anstoßen.',
     difficulty: 'leicht',
     sources: { text: 'Prost!' }
@@ -814,7 +814,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2018,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Twitter-Redewendung, 2018 – „Kein Plan von nix.“',
+    answer: 'Twitter-Redewendung, 2018 – „Kein Plan von nix.“ als schnippischer Kommentar in Timelines.',
     hint: 'Internet-Slang.',
     difficulty: 'leicht',
     sources: { text: 'Kein Plan von nix.' }
@@ -825,7 +825,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1998,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Heinz Schenk/Klaus Lage – „Alles nur geliehen.“',
+    answer: 'Heinz Schenk/Klaus Lage – „Alles nur geliehen.“ als Schlagerzeile und Fernseh-Scherz.',
     hint: 'Deutscher Schlager/Witz.',
     difficulty: 'leicht',
     sources: { text: 'Alles nur geliehen.' }
@@ -836,7 +836,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1998,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Giovanni Trapattoni, 1998 – „Ich habe fertig.“',
+    answer: 'Giovanni Trapattoni, 1998 – „Ich habe fertig.“ in der legendären Bayern-Pressekonferenz.',
     hint: 'Trainer-Pressekonferenz Bayern.',
     difficulty: 'leicht',
     sources: { text: 'Ich habe fertig.' }
@@ -847,7 +847,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1998,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Giovanni Trapattoni, 1998 – „Flasche leer!“',
+    answer: 'Giovanni Trapattoni, 1998 – „Flasche leer!“ in derselben Bayern-Pressekonferenz als Kritik am Team.',
     hint: 'Trainer-Pressekonferenz.',
     difficulty: 'leicht',
     sources: { text: 'Flasche leer!' }
@@ -858,7 +858,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2020,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Social Media, 2020 – „Wer hat sowas gewollt?“',
+    answer: 'Social Media, 2020 – „Wer hat sowas gewollt?“ als Meme-Frage in Kommentarspalten.',
     hint: 'Internet-Meme.',
     difficulty: 'leicht',
     sources: { text: 'Wer hat sowas gewollt?' }
@@ -869,7 +869,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2021,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Startup-/Projekt-Slogan, 2021 – „Wir machen das jetzt einfach.“',
+    answer: 'Startup-/Projekt-Slogan, 2021 – „Wir machen das jetzt einfach.“ als motivierender Satz im Kick-off-Meeting.',
     hint: 'Tatkraft, Pragmatismus.',
     difficulty: 'mittel',
     sources: { text: 'Wir machen das jetzt einfach.' }
@@ -880,7 +880,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2014,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Internet-Spruch, 2010er – „Einmal mit Profis arbeiten…“',
+    answer: 'Internet-Spruch, 2010er – „Einmal mit Profis arbeiten…“ als genervter Stoßseufzer in Werkstatt/IT.',
     hint: 'Running Gag IT/Handwerk.',
     difficulty: 'leicht',
     sources: { text: 'Einmal mit Profis arbeiten…' }
@@ -891,7 +891,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1987,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Roger Murtaugh (Lethal Weapon), 1987 – „I’m too old for this…“',
+    answer: 'Roger Murtaugh (Lethal Weapon), 1987 – „I’m too old for this…“ im Buddy-Cop-Film als resignierter Kommentar.',
     hint: 'Actionfilm Buddy-Cop.',
     difficulty: 'leicht',
     sources: { text: "I'm too old for this shit." }
@@ -902,7 +902,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1980,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Darth Vader, 1980 – „No, I am your father.“',
+    answer: 'Darth Vader, 1980 – „No, I am your father.“ im Duell auf Cloud City (Star Wars Episode V).',
     hint: 'Star Wars Episode V.',
     difficulty: 'leicht',
     sources: { text: 'No, I am your father.' }
@@ -913,7 +913,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2019,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Agile Teams, 2019 – „Was ist heute unser Tagesziel?“',
+    answer: 'Agile Teams, 2019 – „Was ist heute unser Tagesziel?“ als typische Frage im Daily Standup.',
     hint: 'Daily Standup.',
     difficulty: 'mittel',
     sources: { text: 'Was ist heute unser Tagesziel?' }
@@ -924,7 +924,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2005,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Lebensmotto, 2000er – „Hast du heute schon gelebt?“',
+    answer: 'Lebensmotto, 2000er – „Hast du heute schon gelebt?“ als Kalenderspruch für Achtsamkeit.',
     hint: 'Kalenderspruch.',
     difficulty: 'leicht',
     sources: { text: 'Hast du heute schon gelebt?' }
@@ -935,7 +935,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1990,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Warteschlangen-Spruch – „Bitte der Nächste.“',
+    answer: 'Warteschlangen-Spruch – „Bitte der Nächste.“ als Aufruf am Schalter oder in der Arztpraxis.',
     hint: 'Alltag, Behörde.',
     difficulty: 'leicht',
     sources: { text: 'Bitte der Nächste.' }
@@ -946,7 +946,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2014,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Jürgen Klopp, 2014 – „Wir müssen immer weiter machen.“',
+    answer: 'Jürgen Klopp, 2014 – „Wir müssen immer weiter machen.“ auf einer Pressekonferenz nach einem Spiel.',
     hint: 'Trainer, Bundesliga.',
     difficulty: 'leicht',
     sources: { text: 'Wir müssen immer weiter machen.' }
@@ -957,7 +957,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1990,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Präventionskampagne, 1990er – „Keine Macht den Drogen.“',
+    answer: 'Präventionskampagne, 1990er – „Keine Macht den Drogen.“ als Slogan der Jugendprävention.',
     hint: 'Jugendkampagne.',
     difficulty: 'mittel',
     sources: { text: 'Keine Macht den Drogen.' }
@@ -968,7 +968,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2018,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Spruch 2010er – „Machen ist wie wollen, nur krasser.“',
+    answer: 'Spruch 2010er – „Machen ist wie wollen, nur krasser.“ als Motivationsspruch in Social Media.',
     hint: 'Motivation, Social Media.',
     difficulty: 'leicht',
     sources: { text: 'Machen ist wie wollen, nur krasser.' }
@@ -979,7 +979,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1986,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Norbert Blüm, 1986 – „Die Rente ist sicher.“',
+    answer: 'Norbert Blüm, 1986 – „Die Rente ist sicher.“ in einer Pressekonferenz zur Rentenreform.',
     hint: 'Bundesarbeitsminister.',
     difficulty: 'mittel',
     sources: { text: 'Die Rente ist sicher.' }
@@ -990,7 +990,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1995,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Spruch 1990er – „No risk, no fun.“',
+    answer: 'Spruch 1990er – „No risk, no fun.“ als jugendlicher Wahlspruch in Freizeit/Extremsport.',
     hint: 'Jugend-Redensart.',
     difficulty: 'leicht',
     sources: { text: 'No risk, no fun.' }
@@ -1001,7 +1001,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2002,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Werbeslogan 2000er – „Alles ist möglich.“',
+    answer: 'Werbeslogan 2000er – „Alles ist möglich.“ aus TV-Spots als optimistische Markenbotschaft.',
     hint: 'Optimismus, Werbung.',
     difficulty: 'leicht',
     sources: { text: 'Alles ist möglich.' }
@@ -1012,7 +1012,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1985,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Redensart 1980er – „Das Leben ist kein Ponyhof.“',
+    answer: 'Redensart 1980er – „Das Leben ist kein Ponyhof.“ als mahnender Spruch im Alltag.',
     hint: 'Sprichwort Alltag.',
     difficulty: 'leicht',
     sources: { text: 'Das Leben ist kein Ponyhof.' }
@@ -1023,7 +1023,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2015,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Interviewphrase, 2010er – „Ich habe nichts zu verkaufen.“',
+    answer: 'Interviewphrase, 2010er – „Ich habe nichts zu verkaufen.“ als Abgrenzung in medialen Nachfragen.',
     hint: 'Politik/Startups.',
     difficulty: 'mittel',
     sources: { text: 'Ich habe nichts zu verkaufen.' }
@@ -1034,7 +1034,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2006,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Hape Kerkeling, 2006 – Buchtitel und geflügeltes Wort.',
+    answer: 'Hape Kerkeling, 2006 – Buchtitel und geflügeltes Wort über seine Pilgerreise auf dem Jakobsweg.',
     hint: 'Comedian, Jakobsweg.',
     difficulty: 'leicht',
     sources: { text: 'Ich bin dann mal weg.' }
