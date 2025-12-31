@@ -31,7 +31,10 @@ const categoryLabels: Partial<Record<CardCategory, string>> = {
   country: 'Länder erkennen',
   music: 'Musik',
   naturtechnik: 'Natur & Technik',
-  filmeserien: 'Film & Serien'
+  filmeserien: 'Film & Serien',
+  religionglaube: 'Religion & Glaube',
+  sportfreizeit: 'Sport & Freizeit',
+  geogeschichte: 'Geographie & Geschichte'
 };
 
 function SettingsPageContent() {
