@@ -543,8 +543,8 @@ function PlayPageContent() {
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-800 px-3 py-1 text-xs font-semibold">
               Premium benötigt
             </div>
-            <h2 className="text-2xl font-semibold text-ink">Mit Spotify Premium verbinden</h2>
-            <p className="text-sm text-ink">
+            <h2 className="text-2xl font-semibold text-black">Mit Spotify Premium verbinden</h2>
+            <p className="text-sm text-black">
               Vor dem Start bitte mit deinem Spotify Premium Account anmelden, damit die Songs ohne Werbung und in voller Länge abgespielt werden können.
             </p>
             <div className="flex justify-center gap-3 pt-1">
