@@ -6,7 +6,9 @@ export type CardCategory =
   | 'country'
   | 'sportfreizeit'
   | 'religionglaube'
-  | 'geogeschichte';
+  | 'geogeschichte'
+  | 'naturtechnik'
+  | 'filmeserien';
 
 export type Difficulty = 'leicht' | 'mittel' | 'schwer';
 

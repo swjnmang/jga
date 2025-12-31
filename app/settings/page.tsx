@@ -29,7 +29,9 @@ const categoryLabels: Partial<Record<CardCategory, string>> = {
   quote: 'Berühmte Zitate',
   image: 'Bilder erkennen',
   country: 'Länder erkennen',
-  music: 'Musik'
+  music: 'Musik',
+  naturtechnik: 'Natur & Technik',
+  filmeserien: 'Film & Serien'
 };
 
 function SettingsPageContent() {

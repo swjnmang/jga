@@ -12,7 +12,13 @@ export type UserSettings = {
 
 const STORAGE_KEY = 'jga-user-settings';
 
-export const TRIVIA_ONLY_CATEGORIES: CardCategory[] = ['sportfreizeit', 'religionglaube', 'geogeschichte'];
+export const TRIVIA_ONLY_CATEGORIES: CardCategory[] = [
+  'sportfreizeit',
+  'religionglaube',
+  'geogeschichte',
+  'naturtechnik',
+  'filmeserien'
+];
 export const TIMELINE_CATEGORIES: CardCategory[] = ['quote', 'image', 'country', 'music'];
 
 export const ALL_GENRES: GenreTag[] = ['poprock', 'metal', 'hiphop', 'schlagerparty'];

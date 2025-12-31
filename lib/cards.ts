@@ -3,6 +3,8 @@ import { playlistCards } from './playlistCards';
 import { flagCards } from './flagCards';
 import { outlineCards } from './outlineCards';
 import { triviaExtraCards } from './triviaExtraCards';
+import { naturTechnikCards } from './naturTechnikCards';
+import { filmSerienCards } from './filmSerienCards';
 
 const baseCards: Card[] = [
   {
@@ -1133,6 +1135,8 @@ const baseCards: Card[] = [
 
 const baseNonMusicCards = [
   ...baseCards.filter((c) => c.category !== 'music' && !c.id.startsWith('flag-') && !c.id.startsWith('outline-')),
+  ...naturTechnikCards,
+  ...filmSerienCards,
   ...triviaExtraCards
 ];
 
