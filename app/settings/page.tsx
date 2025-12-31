@@ -205,14 +205,14 @@ function SettingsPageContent() {
               <label
                 key={option.value}
                 className={`flex items-center gap-2 rounded-xl border px-3 py-2 text-sm ${
-                  checked ? 'border-ink bg-ink text-sand' : 'border-ink/20 text-ink'
+                  checked ? 'border-sky-700 bg-sky-50 text-sky-900' : 'border-ink/20 text-ink'
                 }`}
               >
                 <input
                   type="checkbox"
                   checked={checked}
                   onChange={() => toggleDifficulty(option.value)}
-                  className="h-4 w-4 accent-ink"
+                  className="h-4 w-4 accent-sky-700"
                 />
                 <span>{option.label}</span>
               </label>
@@ -277,13 +277,13 @@ function SettingsPageContent() {
             return (
               <label
                 key={g.key}
-                className={`flex items-center gap-2 rounded-xl border px-3 py-2 ${checked ? 'border-ink bg-ink text-sand' : 'border-ink/20 text-ink'}`}
+                className={`flex items-center gap-2 rounded-xl border px-3 py-2 ${checked ? 'border-sky-700 bg-sky-50 text-sky-900' : 'border-ink/20 text-ink'}`}
               >
                 <input
                   type="checkbox"
                   checked={checked}
                   onChange={() => toggleGenre(g.key as GenreTag)}
-                  className="h-4 w-4 accent-ink"
+                  className="h-4 w-4 accent-sky-700"
                 />
                 <span>{g.label}</span>
               </label>
@@ -308,13 +308,13 @@ function SettingsPageContent() {
               return (
                 <label
                   key={playlistId}
-                  className={`flex items-center gap-2 rounded-xl border px-3 py-2 ${checked ? 'border-ink bg-ink text-sand' : 'border-ink/20 text-ink'}`}
+                  className={`flex items-center gap-2 rounded-xl border px-3 py-2 ${checked ? 'border-sky-700 bg-sky-50 text-sky-900' : 'border-ink/20 text-ink'}`}
                 >
                   <input
                     type="checkbox"
                     checked={checked}
                     onChange={() => togglePlaylist(playlistId)}
-                    className="h-4 w-4 accent-ink"
+                    className="h-4 w-4 accent-sky-700"
                   />
                   <span className="truncate" title={label}>{label}</span>
                 </label>

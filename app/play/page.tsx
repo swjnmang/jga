@@ -213,7 +213,8 @@ function PlayPageContent() {
   const [timer, setTimer] = useState<TimerState>({ secondsLeft: settings.timerSeconds, running: false });
   const [blackedOut, setBlackedOut] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
-  const [needsSpotifyAuth, setNeedsSpotifyAuth] = useState<boolean | null>(null);
+  // Start with auth prompt open; will be hidden immediately if session is already valid.
+  const [needsSpotifyAuth, setNeedsSpotifyAuth] = useState<boolean>(true);
   const [playbackError, setPlaybackError] = useState<string | null>(null);
   const mediaRef = useRef<MediaEmbedHandle | null>(null);
   const card = filteredDeck[index];
@@ -528,23 +529,25 @@ function PlayPageContent() {
       )}
 
       {needsSpotifyAuth && (
-        <div className="fixed inset-0 z-50 bg-ink/80 backdrop-blur-sm flex items-center justify-center px-4">
-          <div className="max-w-md w-full rounded-2xl bg-sand p-6 space-y-3 shadow-xl text-center">
-            <h2 className="text-xl font-semibold text-ink">Mit Spotify Premium verbinden</h2>
+        <div className="fixed inset-0 z-50 bg-gradient-to-b from-ink/90 via-ink/80 to-ink/90 backdrop-blur-sm flex items-center justify-center px-4">
+          <div className="max-w-md w-full rounded-2xl bg-white border border-ink/10 p-6 space-y-4 shadow-2xl text-center">
+            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-800 px-3 py-1 text-xs font-semibold">
+              Premium benötigt
+            </div>
+            <h2 className="text-2xl font-semibold text-ink">Mit Spotify Premium verbinden</h2>
             <p className="text-sm text-ink/80">
-              Vor dem Start bitte mit deinem Spotify Premium Account anmelden, damit die Songs ohne
-              Werbung und in voller Länge abgespielt werden können.
+              Vor dem Start bitte mit deinem Spotify Premium Account anmelden, damit die Songs ohne Werbung und in voller Länge abgespielt werden können.
             </p>
-            <div className="flex justify-center gap-3 pt-2">
+            <div className="flex justify-center gap-3 pt-1">
               <a
                 href="/api/spotify/authorize"
-                className="rounded-full bg-ink text-sand px-4 py-2 text-sm font-semibold"
+                className="rounded-full bg-[#1DB954] hover:bg-[#17a74a] text-white px-5 py-2.5 text-sm font-semibold shadow-md transition-colors"
               >
                 Spotify Login starten
               </a>
               <button
                 type="button"
-                className="rounded-full border border-ink/20 px-4 py-2 text-sm"
+                className="rounded-full border border-ink/20 text-ink px-4 py-2.5 text-sm hover:bg-ink/5"
                 onClick={() => setNeedsSpotifyAuth(false)}
               >
                 Später
