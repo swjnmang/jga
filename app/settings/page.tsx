@@ -329,7 +329,7 @@ function SettingsPageContent() {
         </div>
       </section>
 
-      <div className="flex flex-wrap gap-3 justify-end pt-2">
+      <div className="flex flex-wrap gap-3 justify-center pt-2">
         <Link
           href={startHref}
           className="rounded-xl bg-ink text-sand px-4 py-2 text-sm"
