@@ -25,6 +25,13 @@ const difficultyOptions: { value: Difficulty; label: string }[] = [
   { value: 'schwer', label: 'Schwer' }
 ];
 
+const categoryLabels: Partial<Record<CardCategory, string>> = {
+  quote: 'Berühmte Zitate',
+  image: 'Bilder erkennen',
+  country: 'Länder erkennen',
+  music: 'Musik'
+};
+
 function SettingsPageContent() {
   const searchParams = useSearchParams();
   const modeParam = searchParams.get('mode');
@@ -65,6 +72,7 @@ function SettingsPageContent() {
   const [settings, setSettings] = useState<UserSettings>(defaults);
   const [loaded, setLoaded] = useState(false);
   const [timerInput, setTimerInput] = useState('');
+  const startHref = mode ? (returnParam || `/play?mode=${mode}&start=1`) : '/play?start=1';
 
   useEffect(() => {
     const stored = loadSettings(defaults);
@@ -156,30 +164,6 @@ function SettingsPageContent() {
           Wähle Schwierigkeitsgrade, Kategorien und die Zeit pro Frage. Diese Einstellungen werden
           lokal im Browser gespeichert und wirken sich sofort im Spielmodus aus.
         </p>
-        <div className="flex flex-wrap gap-3 pt-2">
-          {mode ? (
-            <Link
-              href={returnParam || `/play?mode=${mode}&start=1`}
-              className="rounded-xl bg-ink text-sand px-4 py-2 text-sm"
-            >
-              Spiel starten ({mode})
-            </Link>
-          ) : (
-            <Link
-              href="/"
-              className="rounded-xl border border-ink/20 px-4 py-2 text-sm"
-            >
-              Speichern & zurück zum Hauptmenü
-            </Link>
-          )}
-          <button
-            type="button"
-            onClick={resetDefaults}
-            className="rounded-xl border border-ink/20 px-4 py-2 text-sm"
-          >
-            Standard wiederherstellen
-          </button>
-        </div>
       </div>
 
       {mode && (
@@ -195,7 +179,7 @@ function SettingsPageContent() {
 
       <section className="card-surface rounded-2xl p-5 space-y-4">
         <div className="flex items-center justify-between gap-3">
-          <h2 className="text-lg font-semibold">Fragen aus folgenden Schwierigkeitsstufen:</h2>
+          <h2 className="text-lg font-semibold">Aus welchen Schwierigkeitsstufen möchtest du Fragen spielen?</h2>
           <p className="text-xs text-ink/60">Mehrfachauswahl möglich</p>
         </div>
         <div className="grid sm:grid-cols-3 gap-3">
@@ -239,7 +223,7 @@ function SettingsPageContent() {
                 <label key={category} className="flex flex-col gap-2 text-sm">
                   <div className="flex items-center gap-2 justify-between">
                     <div className="flex items-center gap-2">
-                      <span className="capitalize">{category}</span>
+                      <span className="capitalize">{categoryLabels[category] ?? category}</span>
                       {triviaOnly && (
                         <span className="rounded-full bg-ink text-sand px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide">Trivia only</span>
                       )}
@@ -295,7 +279,7 @@ function SettingsPageContent() {
       {availablePlaylists.length > 0 && (
         <section className="card-surface rounded-2xl p-5 space-y-3">
           <div className="flex items-center justify-between gap-3">
-            <h2 className="text-lg font-semibold">Spotify-Playlists</h2>
+            <h2 className="text-lg font-semibold">Playlists</h2>
             <p className="text-xs text-ink/60">Aktiviere, welche Playlists gespielt werden</p>
           </div>
           <div className="grid sm:grid-cols-2 gap-2 text-sm">
@@ -344,6 +328,28 @@ function SettingsPageContent() {
           </div>
         </div>
       </section>
+
+      <div className="flex flex-wrap gap-3 justify-end pt-2">
+        <Link
+          href={startHref}
+          className="rounded-xl bg-ink text-sand px-4 py-2 text-sm"
+        >
+          Speichern & Spiel starten
+        </Link>
+        <button
+          type="button"
+          onClick={resetDefaults}
+          className="rounded-xl border border-ink/20 px-4 py-2 text-sm"
+        >
+          Standard wiederherstellen
+        </button>
+        <Link
+          href="/"
+          className="rounded-xl border border-ink/20 px-4 py-2 text-sm"
+        >
+          Zurück ins Hauptmenü
+        </Link>
+      </div>
     </main>
   );
 }

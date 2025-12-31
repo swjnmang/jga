@@ -83,10 +83,11 @@ export default function RulesPage() {
         <h2 className="text-lg font-semibold">Kategorien</h2>
         <ul className="space-y-1 text-sm text-ink/80">
           <li><strong>Musik</strong>: Spotify/YouTube, Titel verdeckt.</li>
-          <li><strong>Quote</strong>: Nur das Zitat, ohne Jahr/Person.</li>
-          <li><strong>Bild</strong>: Frage „Wo und wann war das?”</li>
-          <li><strong>Länder</strong>: Flagge oder Umriss; Frage: „Zu welchem Land gehört diese Flagge und wann wurde es gegründet?”</li>
-          <li><strong>Schwierigkeit</strong>: Karten sind intern als leicht/mittel/schwer einsortiert und können unter Einstellungen angepasst werden.</li>
+          <li><strong>Berühmte Zitate</strong>: Nur das Zitat, ohne Jahr/Person.</li>
+          <li><strong>Bilder erkennen</strong>: Frage „Wo und wann war das?”</li>
+          <li><strong>Länder erkennen</strong>: Flagge oder Umriss; Frage: „Zu welchem Land gehört diese Flagge und wann wurde es gegründet?”</li>
+          <li><strong>Playlists</strong>: Unter Einstellungen kannst du aktive Playlists ein- oder ausschalten.</li>
+          <li><strong>Schwierigkeit</strong>: Karten sind als leicht/mittel/schwer einsortiert und können unter Einstellungen ausgewählt werden.</li>
         </ul>
       </section>
     </main>
