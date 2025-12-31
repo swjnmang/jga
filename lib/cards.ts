@@ -382,8 +382,8 @@ const baseCards: Card[] = [
     hint: 'Raumfahrt-Notfall.',
     difficulty: 'schwer',
     sources: {
-      text: "“Houston, we've had a problem.”",
-      textDe: 'Houston, wir hatten ein Problem.'
+      text: '“Houston, we have a problem!”',
+      textDe: 'Houston, wir haben ein Problem!'
     }
   },
   {
@@ -488,8 +488,8 @@ const baseCards: Card[] = [
     hint: 'NASA, Raumfahrt.',
     difficulty: 'mittel',
     sources: {
-      text: 'Houston, we have a problem.',
-      textDe: 'Houston, wir haben ein Problem.'
+      text: 'Houston, we have a problem!',
+      textDe: 'Houston, wir haben ein Problem!'
     }
   },
   {
