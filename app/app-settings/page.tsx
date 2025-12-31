@@ -2,32 +2,21 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { applyReduceMotion, applyTheme, loadReduceMotion, loadTheme, saveReduceMotion, saveTheme, themes, ThemeId } from '@/lib/theme';
+import { applyTheme, loadTheme, saveTheme, themes, ThemeId } from '@/lib/theme';
 
 export default function AppSettingsPage() {
   const [theme, setTheme] = useState<ThemeId>('aurora');
-  const [reduceMotion, setReduceMotion] = useState(false);
 
   useEffect(() => {
     const initialTheme = loadTheme('aurora');
     setTheme(initialTheme);
     applyTheme(initialTheme);
-
-    const initialReduce = loadReduceMotion();
-    setReduceMotion(initialReduce);
-    applyReduceMotion(initialReduce);
   }, []);
 
   const handleThemeChange = (value: ThemeId) => {
     setTheme(value);
     applyTheme(value);
     saveTheme(value);
-  };
-
-  const handleReduceMotion = (value: boolean) => {
-    setReduceMotion(value);
-    applyReduceMotion(value);
-    saveReduceMotion(value);
   };
 
   return (
@@ -94,29 +83,14 @@ export default function AppSettingsPage() {
         </div>
       </section>
 
-      <section className="card-surface rounded-2xl p-6 space-y-4">
-        <div className="flex flex-col gap-2">
-          <p className="text-xs uppercase tracking-wide text-ink/60">Weitere Optionen</p>
-          <h2 className="text-xl font-semibold">Komfort</h2>
-          <p className="text-sm text-ink/70">Optional: Animationen reduzieren für ruhigere Darstellung.</p>
-        </div>
-        <div className="flex items-center justify-between rounded-xl border border-ink/20 p-4">
-          <div>
-            <p className="font-semibold">Animationen reduzieren</p>
-            <p className="text-sm text-ink/70">Deaktiviert Übergänge und Animationen (für empfindliche Spieler).</p>
-          </div>
-          <label className="inline-flex items-center gap-2 text-sm">
-            <span className="text-ink/70">Aus</span>
-            <input
-              type="checkbox"
-              checked={reduceMotion}
-              onChange={(e) => handleReduceMotion(e.target.checked)}
-              className="h-5 w-5 rounded border-ink/30 accent-sand"
-            />
-            <span className="text-ink/70">An</span>
-          </label>
-        </div>
-      </section>
+      <div className="flex justify-center">
+        <Link
+          href="/"
+          className="rounded-full bg-ink text-sand px-6 py-3 text-sm font-semibold shadow-md hover:-translate-y-0.5 transition"
+        >
+          Speichern und zurück ins Hauptmenü
+        </Link>
+      </div>
     </main>
   );
 }
