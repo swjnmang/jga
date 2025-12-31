@@ -74,12 +74,6 @@ export default function AppSettingsPage() {
           >
             Spotify Login starten
           </a>
-          <Link
-            href="/play"
-            className="rounded-full border border-ink/20 px-4 py-2.5 text-sm hover:bg-ink/5"
-          >
-            Zurück zum Spiel
-          </Link>
         </div>
       </section>
 
