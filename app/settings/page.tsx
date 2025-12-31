@@ -31,7 +31,7 @@ const categoryLabels: Partial<Record<CardCategory, string>> = {
   country: 'Länder erkennen',
   music: 'Musik',
   naturtechnik: 'Natur & Technik',
-  filmeserien: 'Film & Serien',
+  filmeserien: 'Filme & Serien',
   religionglaube: 'Religion & Glaube',
   sportfreizeit: 'Sport & Freizeit',
   geogeschichte: 'Geographie & Geschichte'
@@ -216,7 +216,7 @@ function SettingsPageContent() {
           <div className="flex flex-col items-end text-xs text-ink/60">
             <p>Links = gar nicht, rechts = viel.</p>
             <p>Kategorien mit Wert 0 werden ausgeblendet.</p>
-            <p>Trivia-only Kategorien gelten nur im Trivia-Modus.</p>
+            <p>Trivia-only-Kategorien gelten nur im Trivia-Modus.</p>
           </div>
         </div>
         <div className="space-y-3">
@@ -258,7 +258,7 @@ function SettingsPageContent() {
       <section className="card-surface rounded-2xl p-5 space-y-3">
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-lg font-semibold">Musik-Genres</h2>
-          <p className="text-xs text-ink/60">Wirkt nur auf Musik-Fragen</p>
+          <p className="text-xs text-ink/60">Wirkt nur auf Musikfragen</p>
         </div>
         <div className="grid sm:grid-cols-2 gap-2 text-sm">
           {[{ key: 'poprock', label: 'Pop & Rock' }, { key: 'metal', label: 'Metal' }, { key: 'hiphop', label: 'Hip-Hop' }, { key: 'schlagerparty', label: 'Schlager & Party' }].map((g) => {
@@ -315,7 +315,7 @@ function SettingsPageContent() {
 
       <section className="card-surface rounded-2xl p-5 space-y-3">
         <h2 className="text-lg font-semibold">Zeit pro Frage</h2>
-        <p className="text-sm text-ink/70">Standard: 2 Minuten. Stell die Zeit mit dem Regler ein (min. 0:30).</p>
+        <p className="text-sm text-ink/70">Standard: 2 Minuten. Stelle die Zeit mit dem Regler ein (min. 0:30).</p>
         <div className="space-y-2">
           <input
             type="range"

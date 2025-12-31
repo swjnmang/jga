@@ -550,14 +550,14 @@ function PlayPageContent() {
             </div>
             <h2 className="text-2xl font-semibold text-black">Mit Spotify Premium verbinden</h2>
             <p className="text-sm text-black">
-              Vor dem Start bitte mit deinem Spotify Premium Account anmelden, damit die Songs ohne Werbung und in voller Länge abgespielt werden können.
+              Vor dem Start bitte mit deinem Spotify-Premium-Account anmelden, damit die Songs ohne Werbung und in voller Länge abgespielt werden können.
             </p>
             <div className="flex justify-center gap-3 pt-1">
               <a
                 href="/api/spotify/authorize"
                 className="rounded-full bg-[#1DB954] hover:bg-[#17a74a] text-white px-5 py-2.5 text-sm font-semibold shadow-md transition-colors"
               >
-                Spotify Login starten
+                Spotify-Login starten
               </a>
               <button
                 type="button"

@@ -66,15 +66,15 @@ export default function RulesPage() {
         <section className="card-surface rounded-2xl p-5 space-y-2">
           <h2 className="text-lg font-semibold">Modus: Trivia-Quiz (Trivial Pursuit)</h2>
           <p className="text-sm text-ink/70">
-            Ziel: Aus jeder Kategorie einen „Stein" sammeln. Teams halten auf Papier fest, welche Kategorien sie bereits besitzen.
+            Ziel: Aus jeder Kategorie einen „Stein“ sammeln. Teams halten auf Papier fest, welche Kategorien sie bereits besitzen.
           </p>
           <ol className="list-decimal list-inside space-y-1 text-sm text-ink/80">
-            <li>Ein Team wählt oder „würfelt" eine Kategorie (z. B. zufällig ziehen).</li>
+            <li>Ein Team wählt oder „würfelt“ eine Kategorie (z. B. zufällig ziehen).</li>
             <li>Die App zeigt eine Frage aus dieser Kategorie; das Team beantwortet sie.</li>
             <li>Richtig & Kategorie noch nicht gesammelt: Team notiert den Stein für diese Kategorie.</li>
-            <li>Richtig & Kategorie bereits vorhanden: Das Team darf sofort eine neue Kategorie „würfeln" und weitermachen.</li>
+            <li>Richtig & Kategorie bereits vorhanden: Das Team darf sofort eine neue Kategorie „würfeln“ und weitermachen.</li>
             <li>Falsch: Zug endet, nächstes Team ist dran.</li>
-            <li>Spielende: Wer zuerst alle Kategorien (alle „Steine") eingesammelt hat, gewinnt.</li>
+            <li>Spielende: Wer zuerst alle Kategorien (alle „Steine“) eingesammelt hat, gewinnt.</li>
           </ol>
         </section>
       )}

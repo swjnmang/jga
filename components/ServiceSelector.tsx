@@ -8,9 +8,9 @@ type Props = {
 };
 
 const options: { value: MediaPreference; label: string; helper: string }[] = [
-  { value: 'auto', label: 'Auto', helper: 'Wählt automatisch verfügbare Quelle' },
-  { value: 'youtube', label: 'YouTube', helper: 'Öffnet Embedded Player' },
-  { value: 'spotify', label: 'Spotify', helper: 'Für Spotify Premium empfohlen' }
+  { value: 'auto', label: 'Auto', helper: 'Wählt automatisch die verfügbare Quelle' },
+  { value: 'youtube', label: 'YouTube', helper: 'Öffnet den eingebetteten Player' },
+  { value: 'spotify', label: 'Spotify', helper: 'Für Spotify-Premium empfohlen' }
 ];
 
 export function ServiceSelector({ value, onChange }: Props) {

@@ -95,7 +95,7 @@ export function CardClient({ card }: Props) {
         {showAnswer ? (
           <p className="text-lg font-semibold leading-relaxed">{card.answer}</p>
         ) : (
-          <p className="text-sm text-ink/60">Tippe auf "Aufdecken", um die Lösung zu sehen.</p>
+          <p className="text-sm text-ink/60">Tippe auf „Aufdecken“, um die Lösung zu sehen.</p>
         )}
       </div>
 

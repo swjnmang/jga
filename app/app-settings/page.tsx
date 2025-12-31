@@ -25,8 +25,8 @@ export default function AppSettingsPage() {
         <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Einstellungen</p>
         <h1 className="text-3xl font-display leading-tight">App-Design & Dienste</h1>
         <p className="text-sm text-ink/70">
-          Diese Einstellungen gelten für das gesamte UI. Die Spiel-Einstellungen (Kategorien, Timer, Schwierigkeitsgrade)
-          findest du weiterhin im Bereich "Neues Spiel starten".
+          Diese Einstellungen gelten für die gesamte App-Oberfläche. Die Spiel-Einstellungen (Kategorien, Timer, Schwierigkeitsgrade)
+          findest du weiterhin im Bereich „Neues Spiel starten“.
         </p>
       </div>
 
@@ -63,7 +63,7 @@ export default function AppSettingsPage() {
           <p className="text-xs uppercase tracking-wide text-ink/60">Spotify</p>
           <h2 className="text-xl font-semibold">Spotify Premium verknüpfen</h2>
           <p className="text-sm text-ink/70">
-            Starte den Login, um Premium-Wiedergabe ohne Werbung zu ermöglichen. Falls bereits eingeloggt, kannst du hier erneut
+            Starte den Login, um Premium-Wiedergabe ohne Werbung zu ermöglichen. Falls du bereits eingeloggt bist, kannst du hier erneut
             verbinden, um die Session aufzufrischen.
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function AppSettingsPage() {
             href="/api/spotify/authorize?return=/app-settings"
             className="rounded-full bg-[#1DB954] hover:bg-[#17a74a] text-white px-5 py-2.5 text-sm font-semibold shadow-md transition-colors"
           >
-            Spotify Login starten
+            Spotify-Login starten
           </a>
         </div>
       </section>
