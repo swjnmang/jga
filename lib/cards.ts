@@ -158,7 +158,8 @@ const baseCards: Card[] = [
     hint: 'Südafrika, Versöhnung.',
     difficulty: 'mittel',
     sources: {
-      text: '“It always seems impossible until it’s done.”'
+      text: '“It always seems impossible until it’s done.”',
+      textDe: 'Es erscheint immer unmöglich, bis es getan ist.'
     }
   },
   {
@@ -340,7 +341,8 @@ const baseCards: Card[] = [
     hint: 'US-Präsident fordert Öffnung der Mauer.',
     difficulty: 'mittel',
     sources: {
-      text: '“Mr. Gorbachev, tear down this wall!”'
+      text: '“Mr. Gorbachev, tear down this wall!”',
+      textDe: 'Herr Gorbatschow, reißen Sie diese Mauer ein!'
     }
   },
   {
@@ -353,7 +355,8 @@ const baseCards: Card[] = [
     hint: 'Slogan einer US-Präsidentschaftskampagne.',
     difficulty: 'leicht',
     sources: {
-      text: '“Yes we can.”'
+      text: '“Yes we can.”',
+      textDe: 'Ja, wir können das.'
     }
   },
   {
@@ -379,7 +382,8 @@ const baseCards: Card[] = [
     hint: 'Raumfahrt-Notfall.',
     difficulty: 'schwer',
     sources: {
-      text: "“Houston, we've had a problem.”"
+      text: "“Houston, we've had a problem.”",
+      textDe: 'Houston, wir hatten ein Problem.'
     }
   },
   {
@@ -392,7 +396,8 @@ const baseCards: Card[] = [
     hint: 'Erster Fußabdruck auf dem Mond.',
     difficulty: 'leicht',
     sources: {
-      text: '“That’s one small step for man, one giant leap for mankind.”'
+      text: '“That’s one small step for man, one giant leap for mankind.”',
+      textDe: 'Das ist ein kleiner Schritt für einen Menschen, aber ein gewaltiger Sprung für die Menschheit.'
     }
   },
   {
@@ -405,7 +410,8 @@ const baseCards: Card[] = [
     hint: 'Beginn des New Deal.',
     difficulty: 'mittel',
     sources: {
-      text: '“The only thing we have to fear is fear itself.”'
+      text: '“The only thing we have to fear is fear itself.”',
+      textDe: 'Wir haben nichts zu fürchten außer der Furcht selbst.'
     }
   },
   {
@@ -418,7 +424,8 @@ const baseCards: Card[] = [
     hint: 'Abschlussrede an einer US-Eliteuni.',
     difficulty: 'leicht',
     sources: {
-      text: '“Stay hungry, stay foolish.”'
+      text: '“Stay hungry, stay foolish.”',
+      textDe: 'Bleibt hungrig, bleibt töricht.'
     }
   },
   {
@@ -431,7 +438,8 @@ const baseCards: Card[] = [
     hint: 'Literaturlehrer inspiriert seine Klasse.',
     difficulty: 'mittel',
     sources: {
-      text: '“Carpe diem. Seize the day, boys.”'
+      text: '“Carpe diem. Seize the day, boys.”',
+      textDe: 'Carpe diem – Nutzt den Tag, Jungs.'
     }
   },
   {
@@ -465,7 +473,10 @@ const baseCards: Card[] = [
     answer: 'Ronald Reagan, 1987 – „Mr. Gorbachev, tear down this wall!“ in seiner Rede am Brandenburger Tor in Berlin.',
     hint: 'US-Präsident, Brandenburger Tor.',
     difficulty: 'mittel',
-    sources: { text: 'Mr. Gorbachev, tear down this wall!' }
+    sources: {
+      text: 'Mr. Gorbachev, tear down this wall!',
+      textDe: 'Herr Gorbatschow, reißen Sie diese Mauer ein!'
+    }
   },
   {
     id: 'quote-houston-we-have-a-problem',
@@ -476,7 +487,10 @@ const baseCards: Card[] = [
     answer: 'Apollo-13-Besatzung, 1970 – „Houston, we have a problem.“ als Funkmeldung nach der Explosion des Sauerstofftanks.',
     hint: 'NASA, Raumfahrt.',
     difficulty: 'mittel',
-    sources: { text: 'Houston, we have a problem.' }
+    sources: {
+      text: 'Houston, we have a problem.',
+      textDe: 'Houston, wir haben ein Problem.'
+    }
   },
   {
     id: 'quote-ein-kleiner-schritt',
@@ -487,7 +501,10 @@ const baseCards: Card[] = [
     answer: 'Neil Armstrong, 1969 – „That’s one small step for (a) man…“ beim ersten Schritt auf die Mondoberfläche.',
     hint: 'Mondlandung.',
     difficulty: 'leicht',
-    sources: { text: "That's one small step for man, one giant leap for mankind." }
+    sources: {
+      text: "That's one small step for man, one giant leap for mankind.",
+      textDe: 'Das ist ein kleiner Schritt für einen Menschen, aber ein gewaltiger Sprung für die Menschheit.'
+    }
   },
   {
     id: 'quote-wir-schaffen-das',
@@ -531,7 +548,10 @@ const baseCards: Card[] = [
     answer: 'William Shakespeare, Hamlet (ca. 1600) – „To be, or not to be…“ als Auftakt von Hamlets berühmtem Selbstgespräch.',
     hint: 'Englischer Dramatiker.',
     difficulty: 'mittel',
-    sources: { text: 'To be, or not to be, that is the question.' }
+    sources: {
+      text: 'To be, or not to be, that is the question.',
+      textDe: 'Sein oder Nichtsein, das ist hier die Frage.'
+    }
   },
   {
     id: 'quote-ich-denke-also-bin-ich',
@@ -542,7 +562,10 @@ const baseCards: Card[] = [
     answer: 'René Descartes, 1637 – „Cogito, ergo sum.“ im „Discours de la méthode“ als Grundsatz des Rationalismus.',
     hint: 'Französischer Philosoph.',
     difficulty: 'mittel',
-    sources: { text: 'Cogito, ergo sum.' }
+    sources: {
+      text: 'Cogito, ergo sum.',
+      textDe: 'Ich denke, also bin ich.'
+    }
   },
   {
     id: 'quote-zeit-ist-geld',
@@ -553,7 +576,10 @@ const baseCards: Card[] = [
     answer: 'Benjamin Franklin, 1748 – „Time is money.“ in „Advice to a Young Tradesman“ als Ratschlag für Geschäftsleute.',
     hint: 'US-Staatsmann, Erfinder.',
     difficulty: 'leicht',
-    sources: { text: 'Time is money.' }
+    sources: {
+      text: 'Time is money.',
+      textDe: 'Zeit ist Geld.'
+    }
   },
   {
     id: 'quote-ich-weiß-dass-ich-nichts-weiß',
@@ -597,7 +623,10 @@ const baseCards: Card[] = [
     answer: 'Martin Luther King Jr., 1963 – „I have a dream.“ in seiner Rede beim March on Washington für Bürgerrechte.',
     hint: 'US-Bürgerrechtler.',
     difficulty: 'leicht',
-    sources: { text: 'I have a dream.' }
+    sources: {
+      text: 'I have a dream.',
+      textDe: 'Ich habe einen Traum.'
+    }
   },
   {
     id: 'quote-veni-vidi-vici',
@@ -608,7 +637,10 @@ const baseCards: Card[] = [
     answer: 'Julius Caesar, 47 v. Chr. – „Veni, vidi, vici.“ im Bericht an den Senat nach dem Sieg bei Zela.',
     hint: 'Römischer Feldherr.',
     difficulty: 'mittel',
-    sources: { text: 'Veni, vidi, vici.' }
+    sources: {
+      text: 'Veni, vidi, vici.',
+      textDe: 'Ich kam, sah und siegte.'
+    }
   },
   {
     id: 'quote-keine-experimente',
@@ -685,7 +717,10 @@ const baseCards: Card[] = [
     answer: 'Britisches Motiv, 1939 – „Keep calm and carry on.“ als Propagandaposter zu Beginn des Zweiten Weltkriegs.',
     hint: 'Britische Propaganda WWII.',
     difficulty: 'leicht',
-    sources: { text: 'Keep calm and carry on.' }
+    sources: {
+      text: 'Keep calm and carry on.',
+      textDe: 'Bleib ruhig und mach weiter.'
+    }
   },
   {
     id: 'quote-furcht-ist-der-weg-zur-dunklen-seite',
@@ -696,7 +731,10 @@ const baseCards: Card[] = [
     answer: 'Yoda, 1999 – „Furcht ist der Pfad zur dunklen Seite.“ in Star Wars: Episode I als Warnung an Anakin.',
     hint: 'Star Wars Jedi-Meister.',
     difficulty: 'leicht',
-    sources: { text: 'Fear is the path to the dark side.' }
+    sources: {
+      text: 'Fear is the path to the dark side.',
+      textDe: 'Furcht ist der Pfad zur dunklen Seite.'
+    }
   },
   {
     id: 'quote-winter-is-coming',
@@ -707,7 +745,10 @@ const baseCards: Card[] = [
     answer: 'Game of Thrones, 2011 – „Winter is coming.“ als Motto des Hauses Stark in der Pilotfolge.',
     hint: 'Haus Stark.',
     difficulty: 'leicht',
-    sources: { text: 'Winter is coming.' }
+    sources: {
+      text: 'Winter is coming.',
+      textDe: 'Der Winter naht.'
+    }
   },
   {
     id: 'quote-valar-morghulis',
@@ -718,7 +759,10 @@ const baseCards: Card[] = [
     answer: 'Game of Thrones, 2012 – „Valar Morghulis.“ als Grußformel der Faceless Men in Braavos.',
     hint: 'Alte Sprache, jeder muss sterben.',
     difficulty: 'mittel',
-    sources: { text: 'Valar Morghulis.' }
+    sources: {
+      text: 'Valar Morghulis.',
+      textDe: 'Alle Menschen müssen sterben.'
+    }
   },
   {
     id: 'quote-alles-nur-geliehen',
@@ -762,7 +806,10 @@ const baseCards: Card[] = [
     answer: 'Roger Murtaugh (Lethal Weapon), 1987 – „I’m too old for this…“ im Buddy-Cop-Film als resignierter Kommentar.',
     hint: 'Actionfilm Buddy-Cop.',
     difficulty: 'leicht',
-    sources: { text: "I'm too old for this shit." }
+    sources: {
+      text: "I'm too old for this shit.",
+      textDe: 'Ich bin zu alt für diesen Mist.'
+    }
   },
   {
     id: 'quote-ich-bin-dein-vater',
@@ -773,7 +820,10 @@ const baseCards: Card[] = [
     answer: 'Darth Vader, 1980 – „No, I am your father.“ im Duell auf Cloud City (Star Wars Episode V).',
     hint: 'Star Wars Episode V.',
     difficulty: 'leicht',
-    sources: { text: 'No, I am your father.' }
+    sources: {
+      text: 'No, I am your father.',
+      textDe: 'Nein, ich bin dein Vater.'
+    }
   },
   {
     id: 'quote-immer-weiter',

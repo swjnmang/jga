@@ -20,6 +20,7 @@ export type MediaSources = {
   selfHostedAudio?: string;
   image?: string;
   text?: string;
+  textDe?: string;
 };
 
 export type Card = {

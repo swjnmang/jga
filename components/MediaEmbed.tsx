@@ -21,7 +21,7 @@ type MediaChoice =
   | { type: 'selfHostedVideo'; url: string }
   | { type: 'selfHostedAudio'; url: string }
   | { type: 'image'; url: string }
-  | { type: 'text'; text: string };
+  | { type: 'text'; text: string; textDe?: string };
 
 function resolveSource(
   card: Card,
@@ -46,7 +46,7 @@ function resolveSource(
   if (sources.selfHostedVideo) return { type: 'selfHostedVideo', url: sources.selfHostedVideo };
   if (sources.selfHostedAudio) return { type: 'selfHostedAudio', url: sources.selfHostedAudio };
   if (sources.image) return { type: 'image', url: sources.image };
-  if (sources.text) return { type: 'text', text: sources.text };
+  if (sources.text) return { type: 'text', text: sources.text, textDe: sources.textDe };
 
   // Last resort: expose unavailable YouTube even wenn es gesperrt ist, damit ein manueller Klick möglich bleibt.
   if (sources.youtube) return { type: 'youtube', url: sources.youtube };
@@ -91,7 +91,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const spotifyPlayerRef = useRef<Spotify.Player | null>(null);
   const choiceSignature = useMemo(() => {
     if (!choice) return '';
-    if (choice.type === 'text') return `text:${choice.text}`;
+    if (choice.type === 'text') return `text:${choice.text}:${choice.textDe ?? ''}`;
     switch (choice.type) {
       case 'youtube':
       case 'spotify':
@@ -700,8 +700,11 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       );
     case 'text':
       return (
-        <div className="card-surface rounded-2xl p-4 text-lg font-semibold leading-relaxed">
-          {choice.text}
+        <div className="card-surface rounded-2xl p-4 space-y-3">
+          <p className="text-lg font-semibold leading-relaxed">{choice.text}</p>
+          {choice.textDe && (
+            <p className="text-base text-ink/80 leading-relaxed">Übersetzung: {choice.textDe}</p>
+          )}
         </div>
       );
     default:
