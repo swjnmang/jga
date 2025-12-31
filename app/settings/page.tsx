@@ -115,18 +115,6 @@ function SettingsPageContent() {
     });
   };
 
-  const toggleDecade = (decade: DecadeTag) => {
-    setSettings((prev) => {
-      const nextList = prev.decades.includes(decade)
-        ? prev.decades.filter((d) => d !== decade)
-        : [...prev.decades, decade];
-      const ensured = nextList.length > 0 ? nextList : availableDecades;
-      const next = { ...prev, decades: ensured };
-      saveSettings(next);
-      return next;
-    });
-  };
-
   const togglePlaylist = (playlistId: string) => {
     setSettings((prev) => {
       const nextList = prev.playlists.includes(playlistId)
@@ -158,11 +146,6 @@ function SettingsPageContent() {
       categories: active
     });
   };
-
-  const activeWeightSum = settings.categories.reduce(
-    (sum, cat) => sum + (settings.categoryWeights[cat] ?? 0),
-    0
-  );
 
   return (
     <main className="mx-auto max-w-4xl px-6 py-10 space-y-6">
@@ -222,14 +205,14 @@ function SettingsPageContent() {
               <label
                 key={option.value}
                 className={`flex items-center gap-2 rounded-xl border px-3 py-2 text-sm ${
-                  checked ? 'border-ink bg-ink text-sand' : 'border-ink/20'
+                  checked ? 'border-ink bg-ink text-sand' : 'border-ink/20 text-ink'
                 }`}
               >
                 <input
                   type="checkbox"
                   checked={checked}
                   onChange={() => toggleDifficulty(option.value)}
-                  className="h-4 w-4"
+                  className="h-4 w-4 accent-ink"
                 />
                 <span>{option.label}</span>
               </label>
@@ -242,29 +225,30 @@ function SettingsPageContent() {
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-lg font-semibold">Kategorien</h2>
           <div className="flex flex-col items-end text-xs text-ink/60">
-            <p>0% schließt eine Kategorie aus</p>
+            <p>Links = gar nicht, rechts = viel.</p>
+            <p>Kategorien mit Wert 0 werden ausgeblendet.</p>
             <p>Trivia-only Kategorien gelten nur im Trivia-Modus.</p>
           </div>
         </div>
         <div className="space-y-3">
-          <div className="flex items-center justify-between text-xs text-ink/60">
-            <span>Gewichtung der aktiven Kategorien</span>
-            <span>Summe aktiv: {activeWeightSum}% (wird automatisch normalisiert)</span>
-          </div>
           <div className="space-y-2">
             {availableCategories.map((category) => {
               const value = settings.categoryWeights[category] ?? 0;
               const triviaOnly = TRIVIA_ONLY_CATEGORIES.includes(category);
               return (
-                <label key={category} className="flex flex-col gap-1 text-sm">
-                  <div className="flex items-center justify-between">
+                <label key={category} className="flex flex-col gap-2 text-sm">
+                  <div className="flex items-center gap-2 justify-between">
                     <div className="flex items-center gap-2">
                       <span className="capitalize">{category}</span>
                       {triviaOnly && (
                         <span className="rounded-full bg-ink text-sand px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide">Trivia only</span>
                       )}
                     </div>
-                    <span className="text-xs text-ink/60">{value}%</span>
+                    <div className="flex items-center gap-3 text-[11px] text-ink/60">
+                      <span className="uppercase tracking-wide">Gar nicht</span>
+                      <div className="h-px w-8 bg-ink/20" aria-hidden />
+                      <span className="uppercase tracking-wide">Viel</span>
+                    </div>
                   </div>
                   <input
                     type="range"
@@ -273,6 +257,7 @@ function SettingsPageContent() {
                     value={value}
                     onChange={(e) => updateCategoryWeight(category, Number(e.target.value))}
                     className="accent-ink"
+                    aria-label={`Gewichtung für ${category}: ${value === 0 ? 'gar nicht' : 'viel'}`}
                   />
                 </label>
               );
@@ -292,13 +277,13 @@ function SettingsPageContent() {
             return (
               <label
                 key={g.key}
-                className={`flex items-center gap-2 rounded-xl border px-3 py-2 ${checked ? 'border-ink bg-ink text-sand' : 'border-ink/20'}`}
+                className={`flex items-center gap-2 rounded-xl border px-3 py-2 ${checked ? 'border-ink bg-ink text-sand' : 'border-ink/20 text-ink'}`}
               >
                 <input
                   type="checkbox"
                   checked={checked}
                   onChange={() => toggleGenre(g.key as GenreTag)}
-                  className="h-4 w-4"
+                  className="h-4 w-4 accent-ink"
                 />
                 <span>{g.label}</span>
               </label>
@@ -323,13 +308,13 @@ function SettingsPageContent() {
               return (
                 <label
                   key={playlistId}
-                  className={`flex items-center gap-2 rounded-xl border px-3 py-2 ${checked ? 'border-ink bg-ink text-sand' : 'border-ink/20'}`}
+                  className={`flex items-center gap-2 rounded-xl border px-3 py-2 ${checked ? 'border-ink bg-ink text-sand' : 'border-ink/20 text-ink'}`}
                 >
                   <input
                     type="checkbox"
                     checked={checked}
                     onChange={() => togglePlaylist(playlistId)}
-                    className="h-4 w-4"
+                    className="h-4 w-4 accent-ink"
                   />
                   <span className="truncate" title={label}>{label}</span>
                 </label>
@@ -338,32 +323,6 @@ function SettingsPageContent() {
           </div>
         </section>
       )}
-
-      <section className="card-surface rounded-2xl p-5 space-y-3">
-        <div className="flex items-center justify-between gap-3">
-          <h2 className="text-lg font-semibold">Musik-Jahrzehnte</h2>
-          <p className="text-xs text-ink/60">Wirkt nur auf Musik-Fragen</p>
-        </div>
-        <div className="grid sm:grid-cols-2 gap-2 text-sm">
-          {availableDecades.map((decade) => {
-            const checked = settings.decades.includes(decade);
-            return (
-              <label
-                key={decade}
-                className={`flex items-center gap-2 rounded-xl border px-3 py-2 ${checked ? 'border-ink bg-ink text-sand' : 'border-ink/20'}`}
-              >
-                <input
-                  type="checkbox"
-                  checked={checked}
-                  onChange={() => toggleDecade(decade)}
-                  className="h-4 w-4"
-                />
-                <span>{decade.replace('0s', '0er')}</span>
-              </label>
-            );
-          })}
-        </div>
-      </section>
 
       <section className="card-surface rounded-2xl p-5 space-y-3">
         <h2 className="text-lg font-semibold">Zeit pro Frage</h2>
@@ -384,14 +343,6 @@ function SettingsPageContent() {
             <span>5:00</span>
           </div>
         </div>
-      </section>
-
-      <section className="card-surface rounded-2xl p-5 space-y-3">
-        <div className="flex items-center gap-2">
-          <h2 className="text-lg font-semibold">Eigene Fragen ergänzen</h2>
-          <span className="rounded-full bg-ink text-sand px-3 py-1 text-xs font-semibold">Coming soon</span>
-        </div>
-        <p className="text-sm text-ink/70">Eingabe-Formular folgt. Aktuell können nur die vorhandenen Karten gespielt werden.</p>
       </section>
     </main>
   );
