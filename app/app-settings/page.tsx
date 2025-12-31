@@ -80,7 +80,7 @@ export default function AppSettingsPage() {
         </div>
         <div className="flex flex-wrap gap-3">
           <a
-            href="/api/spotify/authorize"
+            href="/api/spotify/authorize?return=/app-settings"
             className="rounded-full bg-[#1DB954] hover:bg-[#17a74a] text-white px-5 py-2.5 text-sm font-semibold shadow-md transition-colors"
           >
             Spotify Login starten

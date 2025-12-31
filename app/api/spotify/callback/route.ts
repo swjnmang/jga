@@ -10,9 +10,19 @@ export async function GET(request: Request) {
 
   const url = new URL(request.url);
   const code = url.searchParams.get('code');
+  const state = url.searchParams.get('state');
   const error = url.searchParams.get('error');
+  const stateCookie = cookies().get('spotify_state');
+  const [expectedState, encodedReturn] = stateCookie?.value?.split('|') ?? [];
+  const returnTo = encodedReturn ? decodeURIComponent(encodedReturn) : '/play';
+  const safeReturnTo = returnTo.startsWith('/') ? returnTo : '/play';
+
+  if (!state || !expectedState || state !== expectedState) {
+    return NextResponse.redirect(new URL(`${safeReturnTo}?authError=state`, url.origin));
+  }
+
   if (error) {
-    return NextResponse.redirect(new URL(`/play?authError=${encodeURIComponent(error)}`, url.origin));
+    return NextResponse.redirect(new URL(`${safeReturnTo}?authError=${encodeURIComponent(error)}`, url.origin));
   }
   if (!code) {
     return NextResponse.json({ error: 'Missing code' }, { status: 400 });
@@ -39,7 +49,7 @@ export async function GET(request: Request) {
   });
 
   if (!tokenRes.ok) {
-    return NextResponse.redirect(new URL('/play?authError=token', url.origin));
+    return NextResponse.redirect(new URL(`${safeReturnTo}?authError=token`, url.origin));
   }
 
   const data = (await tokenRes.json()) as {
@@ -50,7 +60,7 @@ export async function GET(request: Request) {
     scope: string;
   };
 
-  const response = NextResponse.redirect(new URL('/play', url.origin));
+  const response = NextResponse.redirect(new URL(safeReturnTo, url.origin));
   response.cookies.set('spotify_access_token', data.access_token, {
     httpOnly: true,
     secure: true,
@@ -70,5 +80,6 @@ export async function GET(request: Request) {
   }
 
   response.cookies.delete('spotify_cv');
+  response.cookies.delete('spotify_state');
   return response;
 }
