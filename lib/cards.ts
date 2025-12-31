@@ -512,17 +512,6 @@ const baseCards: Card[] = [
     sources: { text: 'Ich bin dann mal weg.' }
   },
   {
-    id: 'quote-wenn-der-wind-des-wandels',
-    title: 'Wind des Wandels',
-    category: 'quote',
-    year: 1989,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Chinesisches Sprichwort, populär 1989 – „Wenn der Wind des Wandels weht…“ als Sinnbild politischer Umbrüche.',
-    hint: 'Sprichwort, Wind des Wandels.',
-    difficulty: 'mittel',
-    sources: { text: 'Wenn der Wind des Wandels weht, bauen manche Mauern, andere Windmühlen.' }
-  },
-  {
     id: 'quote-zwei-seelen-wohnen',
     title: 'Zwei Seelen wohnen',
     category: 'quote',
@@ -556,28 +545,6 @@ const baseCards: Card[] = [
     sources: { text: 'Cogito, ergo sum.' }
   },
   {
-    id: 'quote-der-weg-ist-das-ziel',
-    title: 'Der Weg ist das Ziel',
-    category: 'quote',
-    year: 1970,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Laozi zugeschrieben; populär 20. Jh. – „Der Weg ist das Ziel.“ als daoistisches Leitmotiv in Selbsthilfe und Coaching.',
-    hint: 'Chinesische Philosophie.',
-    difficulty: 'leicht',
-    sources: { text: 'Der Weg ist das Ziel.' }
-  },
-  {
-    id: 'quote-wer-andere-besiegt-ist-stark',
-    title: 'Besiegt ist stark',
-    category: 'quote',
-    year: 500,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Laozi zugeschrieben – „Wer andere besiegt, ist stark; wer sich selbst besiegt, ist mächtig.“ aus dem Dao De Jing (Kapitel 33).',
-    hint: 'Daoismus.',
-    difficulty: 'mittel',
-    sources: { text: 'Wer andere besiegt, ist stark; wer sich selbst besiegt, ist mächtig.' }
-  },
-  {
     id: 'quote-zeit-ist-geld',
     title: 'Zeit ist Geld',
     category: 'quote',
@@ -600,17 +567,6 @@ const baseCards: Card[] = [
     sources: { text: 'Ich weiß, dass ich nichts weiß.' }
   },
   {
-    id: 'quote-alles-wird-gut',
-    title: 'Alles wird gut',
-    category: 'quote',
-    year: 2000,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Beruhigungsfloskel, 2000er – „Alles wird gut.“ als Trostformel in Krisen und Alltagsstress.',
-    hint: 'Redensart, Trost.',
-    difficulty: 'leicht',
-    sources: { text: 'Alles wird gut.' }
-  },
-  {
     id: 'quote-mach-dein-ding',
     title: 'Mach dein Ding',
     category: 'quote',
@@ -631,17 +587,6 @@ const baseCards: Card[] = [
     hint: 'Zeichentrick-Seestern.',
     difficulty: 'leicht',
     sources: { text: 'Ich bin dumm, und das ist gut so.' }
-  },
-  {
-    id: 'quote-ziel-ist-der-weg',
-    title: 'Ziel ist der Weg',
-    category: 'quote',
-    year: 2015,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Abwandlung, 2010er – „Das Ziel ist der Weg.“ als ironische Umkehr des bekannten Mottos in Blogs/Foren.',
-    hint: 'Umkehr des bekannten Spruchs.',
-    difficulty: 'leicht',
-    sources: { text: 'Das Ziel ist der Weg.' }
   },
   {
     id: 'quote-ich-habe-einen-traum',
@@ -776,50 +721,6 @@ const baseCards: Card[] = [
     sources: { text: 'Valar Morghulis.' }
   },
   {
-    id: 'quote-so-was-haben-wir-noch-nie-gesehen',
-    title: 'So was haben wir noch nie gesehen',
-    category: 'quote',
-    year: 2001,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Kommentatorenphrase, 2001 – „So was haben wir noch nie gesehen.“ als Live-Reaktion im Sportkommentar.',
-    hint: 'Sport-Kommentar.',
-    difficulty: 'leicht',
-    sources: { text: 'So was haben wir noch nie gesehen.' }
-  },
-  {
-    id: 'quote-zicke-zacke',
-    title: 'Zicke zacke',
-    category: 'quote',
-    year: 1975,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Trinkspruch, 1970er – „Zicke zacke zicke zacke hoi hoi hoi.“ als Anfeuerungsruf in Festzelten und Stadien.',
-    hint: 'Trinkspruch Stadion/Festzelt.',
-    difficulty: 'leicht',
-    sources: { text: 'Zicke zacke zicke zacke hoi hoi hoi.' }
-  },
-  {
-    id: 'quote-prost',
-    title: 'Prost',
-    category: 'quote',
-    year: 1950,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Trinkspruch – „Prost!“ beim Anstoßen in geselliger Runde.',
-    hint: 'Anstoßen.',
-    difficulty: 'leicht',
-    sources: { text: 'Prost!' }
-  },
-  {
-    id: 'quote-kein-plan-von-nix',
-    title: 'Kein Plan von nix',
-    category: 'quote',
-    year: 2018,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Twitter-Redewendung, 2018 – „Kein Plan von nix.“ als schnippischer Kommentar in Timelines.',
-    hint: 'Internet-Slang.',
-    difficulty: 'leicht',
-    sources: { text: 'Kein Plan von nix.' }
-  },
-  {
     id: 'quote-alles-nur-geliehen',
     title: 'Alles nur geliehen',
     category: 'quote',
@@ -853,39 +754,6 @@ const baseCards: Card[] = [
     sources: { text: 'Flasche leer!' }
   },
   {
-    id: 'quote-wer-hat-so-was-gewollt',
-    title: 'Wer hat sowas gewollt',
-    category: 'quote',
-    year: 2020,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Social Media, 2020 – „Wer hat sowas gewollt?“ als Meme-Frage in Kommentarspalten.',
-    hint: 'Internet-Meme.',
-    difficulty: 'leicht',
-    sources: { text: 'Wer hat sowas gewollt?' }
-  },
-  {
-    id: 'quote-wir-machen-das-jetzt-einfach',
-    title: 'Wir machen das jetzt einfach',
-    category: 'quote',
-    year: 2021,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Startup-/Projekt-Slogan, 2021 – „Wir machen das jetzt einfach.“ als motivierender Satz im Kick-off-Meeting.',
-    hint: 'Tatkraft, Pragmatismus.',
-    difficulty: 'mittel',
-    sources: { text: 'Wir machen das jetzt einfach.' }
-  },
-  {
-    id: 'quote-einmal-mit-profis',
-    title: 'Einmal mit Profis',
-    category: 'quote',
-    year: 2014,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Internet-Spruch, 2010er – „Einmal mit Profis arbeiten…“ als genervter Stoßseufzer in Werkstatt/IT.',
-    hint: 'Running Gag IT/Handwerk.',
-    difficulty: 'leicht',
-    sources: { text: 'Einmal mit Profis arbeiten…' }
-  },
-  {
     id: 'quote-ich-bin-zu-alt-fuer-diesen-mist',
     title: 'Zu alt für diesen Mist',
     category: 'quote',
@@ -906,39 +774,6 @@ const baseCards: Card[] = [
     hint: 'Star Wars Episode V.',
     difficulty: 'leicht',
     sources: { text: 'No, I am your father.' }
-  },
-  {
-    id: 'quote-unser-tagesziel',
-    title: 'Unser Tagesziel',
-    category: 'quote',
-    year: 2019,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Agile Teams, 2019 – „Was ist heute unser Tagesziel?“ als typische Frage im Daily Standup.',
-    hint: 'Daily Standup.',
-    difficulty: 'mittel',
-    sources: { text: 'Was ist heute unser Tagesziel?' }
-  },
-  {
-    id: 'quote-heute-schon-gelebt',
-    title: 'Heute schon gelebt',
-    category: 'quote',
-    year: 2005,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Lebensmotto, 2000er – „Hast du heute schon gelebt?“ als Kalenderspruch für Achtsamkeit.',
-    hint: 'Kalenderspruch.',
-    difficulty: 'leicht',
-    sources: { text: 'Hast du heute schon gelebt?' }
-  },
-  {
-    id: 'quote-bitte-der-nächste',
-    title: 'Bitte der Nächste',
-    category: 'quote',
-    year: 1990,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Warteschlangen-Spruch – „Bitte der Nächste.“ als Aufruf am Schalter oder in der Arztpraxis.',
-    hint: 'Alltag, Behörde.',
-    difficulty: 'leicht',
-    sources: { text: 'Bitte der Nächste.' }
   },
   {
     id: 'quote-immer-weiter',
@@ -963,17 +798,6 @@ const baseCards: Card[] = [
     sources: { text: 'Keine Macht den Drogen.' }
   },
   {
-    id: 'quote-machen-ist-wie-wollen-nur-krasser',
-    title: 'Machen ist wie wollen',
-    category: 'quote',
-    year: 2018,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Spruch 2010er – „Machen ist wie wollen, nur krasser.“ als Motivationsspruch in Social Media.',
-    hint: 'Motivation, Social Media.',
-    difficulty: 'leicht',
-    sources: { text: 'Machen ist wie wollen, nur krasser.' }
-  },
-  {
     id: 'quote-die-rente-ist-sicher',
     title: 'Die Rente ist sicher',
     category: 'quote',
@@ -983,50 +807,6 @@ const baseCards: Card[] = [
     hint: 'Bundesarbeitsminister.',
     difficulty: 'mittel',
     sources: { text: 'Die Rente ist sicher.' }
-  },
-  {
-    id: 'quote-no-risk-no-fun',
-    title: 'No risk no fun',
-    category: 'quote',
-    year: 1995,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Spruch 1990er – „No risk, no fun.“ als jugendlicher Wahlspruch in Freizeit/Extremsport.',
-    hint: 'Jugend-Redensart.',
-    difficulty: 'leicht',
-    sources: { text: 'No risk, no fun.' }
-  },
-  {
-    id: 'quote-alles-ist-möglich',
-    title: 'Alles ist möglich',
-    category: 'quote',
-    year: 2002,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Werbeslogan 2000er – „Alles ist möglich.“ aus TV-Spots als optimistische Markenbotschaft.',
-    hint: 'Optimismus, Werbung.',
-    difficulty: 'leicht',
-    sources: { text: 'Alles ist möglich.' }
-  },
-  {
-    id: 'quote-das-leben-ist-kein-ponyhof',
-    title: 'Kein Ponyhof',
-    category: 'quote',
-    year: 1985,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Redensart 1980er – „Das Leben ist kein Ponyhof.“ als mahnender Spruch im Alltag.',
-    hint: 'Sprichwort Alltag.',
-    difficulty: 'leicht',
-    sources: { text: 'Das Leben ist kein Ponyhof.' }
-  },
-  {
-    id: 'quote-ich-habe-nichts-zu-verkaufen',
-    title: 'Nichts zu verkaufen',
-    category: 'quote',
-    year: 2015,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Interviewphrase, 2010er – „Ich habe nichts zu verkaufen.“ als Abgrenzung in medialen Nachfragen.',
-    hint: 'Politik/Startups.',
-    difficulty: 'mittel',
-    sources: { text: 'Ich habe nichts zu verkaufen.' }
   },
   {
     id: 'quote-ich-bin-dann-mal-weg-zitat',
