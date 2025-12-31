@@ -26,9 +26,10 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
           <PrimaryButton href="/play" label="Neues Spiel starten" />
-          <SecondaryButton href="/settings" label="Einstellungen" />
+          <SecondaryButton href="/app-settings" label="Einstellungen" />
+          <SecondaryButton href="/settings" label="Spiel-Setup" />
           <SecondaryButton href="/rules" label="Spielregeln" />
         </div>
 

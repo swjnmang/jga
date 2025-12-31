@@ -6,14 +6,20 @@
   color: #0b1021;
   background-color: #040814;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+  --bg: radial-gradient(circle at 20% 20%, rgba(111, 213, 255, 0.18), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(255, 178, 120, 0.2), transparent 40%),
+    linear-gradient(135deg, #0b1021 0%, #0d1b2a 60%, #0b1021 100%);
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --glass-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
+  --ink: #f5f7fb;
+  --grid-dot: rgba(255, 255, 255, 0.08);
 }
 
 body {
   min-height: 100vh;
-  background: radial-gradient(circle at 20% 20%, rgba(111, 213, 255, 0.18), transparent 35%),
-    radial-gradient(circle at 80% 0%, rgba(255, 178, 120, 0.2), transparent 40%),
-    linear-gradient(135deg, #0b1021 0%, #0d1b2a 60%, #0b1021 100%);
-  color: #f5f7fb;
+  background: var(--bg);
+  color: var(--ink);
 }
 
 a {
@@ -27,20 +33,55 @@ button {
 }
 
 .bg-grid {
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 0);
+  background-image: radial-gradient(circle, var(--grid-dot) 1px, transparent 0);
   background-size: 24px 24px;
   background-position: center;
 }
 
 .bg-glass {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
+  background: var(--glass-bg);
 }
 
 .card-surface {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(14px);
+}
+
+body[data-theme='aurora'] {
+  --bg: radial-gradient(circle at 20% 20%, rgba(111, 213, 255, 0.18), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(255, 178, 120, 0.2), transparent 40%),
+    linear-gradient(135deg, #0b1021 0%, #0d1b2a 60%, #0b1021 100%);
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --glass-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
+  --grid-dot: rgba(255, 255, 255, 0.08);
+}
+
+body[data-theme='midnight'] {
+  --bg: radial-gradient(circle at 30% 10%, rgba(110, 99, 255, 0.18), transparent 35%),
+    radial-gradient(circle at 80% 20%, rgba(0, 180, 216, 0.16), transparent 40%),
+    linear-gradient(135deg, #05060c 0%, #0c0f1f 55%, #080a17 100%);
+  --card-bg: rgba(15, 18, 40, 0.65);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: linear-gradient(145deg, rgba(18, 22, 46, 0.6), rgba(12, 15, 31, 0.7));
+  --grid-dot: rgba(255, 255, 255, 0.06);
+}
+
+body[data-theme='sunrise'] {
+  --bg: radial-gradient(circle at 20% 0%, rgba(255, 206, 160, 0.28), transparent 38%),
+    radial-gradient(circle at 75% 20%, rgba(255, 105, 97, 0.22), transparent 45%),
+    linear-gradient(140deg, #140c0b 0%, #2c1a1a 45%, #442313 100%);
+  --card-bg: rgba(255, 255, 255, 0.08);
+  --card-border: rgba(255, 255, 255, 0.16);
+  --glass-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08));
+  --grid-dot: rgba(255, 255, 255, 0.1);
+}
+
+:root[data-reduce-motion='true'] * {
+  transition-duration: 0ms !important;
+  animation-duration: 0ms !important;
 }
 
 @media print {

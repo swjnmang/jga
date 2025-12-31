@@ -6,7 +6,7 @@ import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'rea
 import { cards, getCategories } from '@/lib/cards';
 import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
 import { getDefaultSettings, loadSettings, toDecadeTag, TRIVIA_ONLY_CATEGORIES, UserSettings } from '@/lib/userSettings';
-import { Card, CardCategory, DecadeTag, GenreTag } from '@/lib/types';
+import { Card, CardCategory, DecadeTag, Difficulty, GenreTag } from '@/lib/types';
 
 const FALLBACK_PLAYLIST_ID = 'imported-playlist';
 
@@ -27,6 +27,12 @@ type TimerState = {
 type GameMode = 'timeline' | 'trivia';
 
 const triviaOnlySet = new Set<CardCategory>(TRIVIA_ONLY_CATEGORIES);
+
+function difficultyLabel(value: Difficulty): string {
+  if (value === 'leicht') return 'Leicht';
+  if (value === 'mittel') return 'Mittel';
+  return 'Schwer';
+}
 
 function triviaCue(card: Card): string {
   switch (card.category) {
@@ -459,8 +465,11 @@ function PlayPageContent() {
       </div>
 
       <section className="card-surface rounded-2xl p-4 sm:p-5 space-y-3">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-3">
           <p className="text-xs uppercase tracking-wide text-ink/60">{card.category}</p>
+          <span className="rounded-full border border-ink/20 px-3 py-1 text-xs font-semibold text-ink/80">
+            {difficultyLabel(card.difficulty)}
+          </span>
         </div>
         <p className="text-lg font-semibold">{mode === 'timeline' ? card.cue : card.cue || triviaCue(card)}</p>
         <MediaEmbed

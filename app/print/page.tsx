@@ -1,5 +1,6 @@
 import { cards } from '@/lib/cards';
 import { PrintButton } from '@/components/PrintButton';
+import { Difficulty } from '@/lib/types';
 
 export default function PrintPage() {
   return (
@@ -25,6 +26,7 @@ export default function PrintPage() {
               answer={card.answer}
               year={card.year}
               hint={card.hint}
+              difficulty={card.difficulty}
             />
           </div>
         ))}
@@ -47,9 +49,9 @@ function CardFaceFront({ cardId }: FrontProps) {
   );
 }
 
-type BackProps = { cardId: string; title: string; answer: string; year: number; hint?: string };
+type BackProps = { cardId: string; title: string; answer: string; year: number; hint?: string; difficulty: Difficulty };
 
-function CardFaceBack({ cardId, title, answer, year, hint }: BackProps) {
+function CardFaceBack({ cardId, title, answer, year, hint, difficulty }: BackProps) {
   return (
     <div className="card-surface rounded-2xl p-4 flex flex-col gap-3 border border-ink/10 min-h-[260px]">
       <div className="flex items-center justify-between">
@@ -63,6 +65,7 @@ function CardFaceBack({ cardId, title, answer, year, hint }: BackProps) {
       <p className="text-xs text-ink/40">Titel (nur für Leitfaden): {title}</p>
       <p className="text-xs text-ink/40">Offizielle Lösung: {answer}</p>
       {hint && <p className="text-xs text-ink/40">Hinweis: {hint}</p>}
+      <p className="text-xs text-ink/40">Schwierigkeitsgrad: {difficulty}</p>
     </div>
   );
 }
