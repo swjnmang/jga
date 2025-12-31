@@ -15,6 +15,10 @@ export const playlistInfo: PlaylistInfo[] = [
   {
     "id": "5eKb0TEz5FUTd8VvQVSr0l",
     "name": "Flex-80ger"
+  },
+  {
+    "id": "6CyKsSLFFd2fX7Nu4yijSX",
+    "name": "Flex-70ger"
   }
 ];
 
@@ -3372,7 +3376,8 @@ export const playlistCards: Card[] = [
       "poprock"
     ],
     "playlists": [
-      "5eKb0TEz5FUTd8VvQVSr0l"
+      "5eKb0TEz5FUTd8VvQVSr0l",
+      "6CyKsSLFFd2fX7Nu4yijSX"
     ]
   },
   {
@@ -3410,7 +3415,8 @@ export const playlistCards: Card[] = [
       "poprock"
     ],
     "playlists": [
-      "5eKb0TEz5FUTd8VvQVSr0l"
+      "5eKb0TEz5FUTd8VvQVSr0l",
+      "6CyKsSLFFd2fX7Nu4yijSX"
     ]
   },
   {
@@ -3429,7 +3435,8 @@ export const playlistCards: Card[] = [
       "poprock"
     ],
     "playlists": [
-      "5eKb0TEz5FUTd8VvQVSr0l"
+      "5eKb0TEz5FUTd8VvQVSr0l",
+      "6CyKsSLFFd2fX7Nu4yijSX"
     ]
   },
   {
@@ -6228,6 +6235,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/43GS3mtezoIFiuIZCLLiDY"
     },
     "genres": [
+      "metal",
       "poprock"
     ],
     "playlists": [
@@ -6288,7 +6296,8 @@ export const playlistCards: Card[] = [
       "poprock"
     ],
     "playlists": [
-      "5eKb0TEz5FUTd8VvQVSr0l"
+      "5eKb0TEz5FUTd8VvQVSr0l",
+      "6CyKsSLFFd2fX7Nu4yijSX"
     ]
   },
   {
@@ -6403,6 +6412,3298 @@ export const playlistCards: Card[] = [
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
+    ]
+  },
+  {
+    "id": "song-we-are-family-2017",
+    "title": "We Are Family",
+    "category": "music",
+    "year": 2017,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Sister Sledge — 2017, We Are Family.",
+    "hint": "Sister Sledge",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1cWnCh4EmvIE9vNGNMLTa0"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-schools-out-2017",
+    "title": "School's Out",
+    "category": "music",
+    "year": 2017,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Alice Cooper — 2017, School's Out.",
+    "hint": "Alice Cooper",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5kRW0Nf4FixQm3H6G8xCsV"
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-love-hurts-2015",
+    "title": "Love Hurts",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Nazareth — 2015, Love Hurts.",
+    "hint": "Nazareth",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2mo7ImY2w6jiWjc8Nporfa"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-let-it-be-remastered-2009-1970",
+    "title": "Let It Be - Remastered 2009",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Beatles — 1970, Let It Be - Remastered 2009.",
+    "hint": "The Beatles",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7iN1s7xHE4ifF5povM6A48"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-piano-man-1973",
+    "title": "Piano Man",
+    "category": "music",
+    "year": 1973,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Billy Joel — 1973, Piano Man.",
+    "hint": "Billy Joel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/70C4NyhjD5OZUMzvWZ3njJ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-bicycle-race-remastered-2011-1978",
+    "title": "Bicycle Race - Remastered 2011",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Queen — 1978, Bicycle Race - Remastered 2011.",
+    "hint": "Queen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5CTAcf8aS0a0sIsDwQRF9C"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-chiquitita-1979",
+    "title": "Chiquitita",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "ABBA — 1979, Chiquitita.",
+    "hint": "ABBA",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/762B4bOcXF7I2Y8UlKTyTy"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-wild-world-1970",
+    "title": "Wild World",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Yusuf / Cat Stevens — 1970, Wild World.",
+    "hint": "Yusuf / Cat Stevens",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7mjSHL2Eb0kAwiKbvNNyD9"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-dream-on-1973",
+    "title": "Dream On",
+    "category": "music",
+    "year": 1973,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Aerosmith — 1973, Dream On.",
+    "hint": "Aerosmith",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1xsYj84j7hUDDnTTerGWlH"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-fernando-1976",
+    "title": "Fernando",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "ABBA — 1976, Fernando.",
+    "hint": "ABBA",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4BM8yJ0PzBi2ZewpMTOxtx"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-in-the-summertime-1971",
+    "title": "In the Summertime",
+    "category": "music",
+    "year": 1971,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Mungo Jerry — 1971, In the Summertime.",
+    "hint": "Mungo Jerry",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/36xVTZU8HMpcgEdlJ4I3Kv"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-go-your-own-way-2004-remaster-1977",
+    "title": "Go Your Own Way - 2004 Remaster",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Fleetwood Mac — 1977, Go Your Own Way - 2004 Remaster.",
+    "hint": "Fleetwood Mac",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/07GvNcU1WdyZJq3XxP0kZa"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-tiny-dancer-1971",
+    "title": "Tiny Dancer",
+    "category": "music",
+    "year": 1971,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Elton John — 1971, Tiny Dancer.",
+    "hint": "Elton John",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2TVxnKdb3tqe1nhQWwwZCO"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-el-condor-pasa-if-i-could-1970",
+    "title": "El Condor Pasa (If I Could)",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Simon & Garfunkel — 1970, El Condor Pasa (If I Could).",
+    "hint": "Simon & Garfunkel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1eN42Q7IWRzRBq8eW2Y2TE"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-sorry-seems-to-be-the-hardest-word-1976",
+    "title": "Sorry Seems To Be The Hardest Word",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Elton John — 1976, Sorry Seems To Be The Hardest Word.",
+    "hint": "Elton John",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6XfxmT5QNCXvpZA6PKfWVL"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-ymca-original-version-1978-1978",
+    "title": "YMCA - Original Version 1978",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Village People — 1978, YMCA - Original Version 1978.",
+    "hint": "Village People",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/54OR1VDpfkBuOY5zZjhZAY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-heart-of-gold-1972",
+    "title": "Heart of Gold",
+    "category": "music",
+    "year": 1972,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Neil Young — 1972, Heart of Gold.",
+    "hint": "Neil Young",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/26QKxvjlCo2fSd3T4c8Zpb"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-guten-morgen-sonnenschein-1977",
+    "title": "Guten Morgen Sonnenschein",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Nana Mouskouri — 1977, Guten Morgen Sonnenschein.",
+    "hint": "Nana Mouskouri",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5lpXFKgD6PeT6endUq5EX9"
+    },
+    "genres": [
+      "schlagerparty",
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-angie-remastered-2009-1973",
+    "title": "Angie - Remastered 2009",
+    "category": "music",
+    "year": 1973,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Rolling Stones — 1973, Angie - Remastered 2009.",
+    "hint": "The Rolling Stones",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1GcVa4jFySlun4jLSuMhiq"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-take-it-easy-2013-remaster-1972",
+    "title": "Take It Easy - 2013 Remaster",
+    "category": "music",
+    "year": 1972,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Eagles — 1972, Take It Easy - 2013 Remaster.",
+    "hint": "Eagles",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4yugZvBYaoREkJKtbG08Qr"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-love-really-hurts-without-you-1976",
+    "title": "Love Really Hurts Without You",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Billy Ocean — 1976, Love Really Hurts Without You.",
+    "hint": "Billy Ocean",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4GhtDORJiSRYxj6M1bv0vX"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-the-logical-song-remastered-2010-1979",
+    "title": "The Logical Song - Remastered 2010",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Supertramp — 1979, The Logical Song - Remastered 2010.",
+    "hint": "Supertramp",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6mHOcVtsHLMuesJkswc0GZ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-dreadlock-holiday-1978",
+    "title": "Dreadlock Holiday",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "10cc — 1978, Dreadlock Holiday.",
+    "hint": "10cc",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1LOZMYF5s8qhW7Rv4w2gun"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-dreams-2004-remaster-1977",
+    "title": "Dreams - 2004 Remaster",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Fleetwood Mac — 1977, Dreams - 2004 Remaster.",
+    "hint": "Fleetwood Mac",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0ofHAoxe9vBkTCp2UQIavz"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-sunny-1976",
+    "title": "Sunny",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Boney M. — 1976, Sunny.",
+    "hint": "Boney M.",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3pf96IFggfQuT6Gafqx2rt"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-save-your-kisses-for-me-2013",
+    "title": "Save Your Kisses for Me",
+    "category": "music",
+    "year": 2013,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Brotherhood of Man — 2013, Save Your Kisses for Me.",
+    "hint": "Brotherhood of Man",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2MBwNVRASJ7ksQbhCpMIV1"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-jolene-1974",
+    "title": "Jolene",
+    "category": "music",
+    "year": 1974,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Dolly Parton — 1974, Jolene.",
+    "hint": "Dolly Parton",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5fdhThPDe6jQQDqCyWrdAn"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-let-your-love-flow-1976",
+    "title": "Let Your Love Flow",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Bellamy Brothers — 1976, Let Your Love Flow.",
+    "hint": "The Bellamy Brothers",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/064SVQsmWl5EF0zahmzkQk"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-sailing-1975",
+    "title": "Sailing",
+    "category": "music",
+    "year": 1975,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Rod Stewart — 1975, Sailing.",
+    "hint": "Rod Stewart",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6OuRbvP4PgbuzBIapVzmFJ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-you-make-me-feel-like-dancing-1976",
+    "title": "You Make Me Feel Like Dancing",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Leo Sayer — 1976, You Make Me Feel Like Dancing.",
+    "hint": "Leo Sayer",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3DZ11M7LSpVQzYHnFx3i95"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-more-than-a-woman-2020",
+    "title": "More Than A Woman",
+    "category": "music",
+    "year": 2020,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bee Gees — 2020, More Than A Woman.",
+    "hint": "Bee Gees",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2cX2coZS1PYBfPs8wgbdWE"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-take-the-long-way-home-remastered-2010-1979",
+    "title": "Take The Long Way Home - Remastered 2010",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Supertramp — 1979, Take The Long Way Home - Remastered 2010.",
+    "hint": "Supertramp",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0v0XYK0pLgsPiq5u4FKHaw"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-get-down-1973",
+    "title": "Get Down",
+    "category": "music",
+    "year": 1973,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Gilbert O'Sullivan — 1973, Get Down.",
+    "hint": "Gilbert O'Sullivan",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7HLZEgQ5ShGYrcKS8Iv3u5"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-down-on-the-corner-1969",
+    "title": "Down On The Corner",
+    "category": "music",
+    "year": 1969,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Creedence Clearwater Revival — 1969, Down On The Corner.",
+    "hint": "Creedence Clearwater Revival",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2gE95JskwQ1pCACTpGe1Db"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-one-way-ticket-2011",
+    "title": "One Way Ticket",
+    "category": "music",
+    "year": 2011,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Eruption — 2011, One Way Ticket.",
+    "hint": "Eruption",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/68MSCSP7Y6PnzXcW1IlN7G"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-love-is-in-the-air-2006",
+    "title": "Love Is in the Air",
+    "category": "music",
+    "year": 2006,
+    "cue": "Song anhören und einordnen.",
+    "answer": "John Paul Young — 2006, Love Is in the Air.",
+    "hint": "John Paul Young",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4v2K1ZcRXUc87CLtEXI3Pf"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-big-yellow-taxi-1970",
+    "title": "Big Yellow Taxi",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Joni Mitchell — 1970, Big Yellow Taxi.",
+    "hint": "Joni Mitchell",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6UkMcAA19lTdjs22jtB7o2"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-wunder-gibt-es-immer-wieder-2025",
+    "title": "Wunder gibt es immer wieder",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Katja Ebstein — 2025, Wunder gibt es immer wieder.",
+    "hint": "Katja Ebstein",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3BKrmS7x99qM9zVPTf0Lu2"
+    },
+    "genres": [
+      "schlagerparty",
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-kiss-you-all-over-1993",
+    "title": "Kiss You All Over",
+    "category": "music",
+    "year": 1993,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Exile — 1993, Kiss You All Over.",
+    "hint": "Exile",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2JK1wOZCGUDbJOSaHAa8BM"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-wuthering-heights-1978",
+    "title": "Wuthering Heights",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Kate Bush — 1978, Wuthering Heights.",
+    "hint": "Kate Bush",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5YSI1311X8t31PBjkBG4CZ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-born-to-be-alive-the-original-1978",
+    "title": "Born to Be Alive - The Original",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Patrick Hernandez — 1978, Born to Be Alive - The Original.",
+    "hint": "Patrick Hernandez",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3XIEWK1V9n25PS9Vb6axj5"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-it-never-rains-in-southern-california-1972",
+    "title": "It Never Rains in Southern California",
+    "category": "music",
+    "year": 1972,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Albert Hammond — 1972, It Never Rains in Southern California.",
+    "hint": "Albert Hammond",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6tunhVGD8C05MZNjSVIsjw"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-du-kannst-nicht-immer-17-sein-2009",
+    "title": "Du kannst nicht immer 17 sein",
+    "category": "music",
+    "year": 2009,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Chris Roberts — 2009, Du kannst nicht immer 17 sein.",
+    "hint": "Chris Roberts",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0IbuM7HceQXATToyQSvegs"
+    },
+    "genres": [
+      "schlagerparty",
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-fox-on-the-run-alternate-version-2012",
+    "title": "Fox on the Run - Alternate Version",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Sweet — 2012, Fox on the Run - Alternate Version.",
+    "hint": "Sweet",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4FQf1wrg6xlcfxQC7ZTIpy"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-gimme-gimme-gimme-a-man-after-midnight-1979",
+    "title": "Gimme! Gimme! Gimme! (A Man After Midnight)",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "ABBA — 1979, Gimme! Gimme! Gimme! (A Man After Midnight).",
+    "hint": "ABBA",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3vkQ5DAB1qQMYO4Mr9zJN6"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-september-2014",
+    "title": "September",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Earth, Wind & Fire — 2014, September.",
+    "hint": "Earth, Wind & Fire",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3wpLkju0bJy89kjgdRys0j"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-born-to-run-1975",
+    "title": "Born to Run",
+    "category": "music",
+    "year": 1975,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bruce Springsteen — 1975, Born to Run.",
+    "hint": "Bruce Springsteen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6hTcuIQa0sxrrByu9wTD7s"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-voulez-vous-1979",
+    "title": "Voulez-Vous",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "ABBA — 1979, Voulez-Vous.",
+    "hint": "ABBA",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/17OqI90oTFZ3J8PVu6j07V"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-we-are-the-champions-remastered-2011-1977",
+    "title": "We Are The Champions - Remastered 2011",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Queen — 1977, We Are The Champions - Remastered 2011.",
+    "hint": "Queen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1lCRw5FEZ1gPDNPzy1K4zW"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-father-and-son-1970",
+    "title": "Father And Son",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Yusuf / Cat Stevens — 1970, Father And Son.",
+    "hint": "Yusuf / Cat Stevens",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/476V2d6iA2tWXgQboKmTtA"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-top-of-the-world-1972",
+    "title": "Top Of The World",
+    "category": "music",
+    "year": 1972,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Carpenters — 1972, Top Of The World.",
+    "hint": "Carpenters",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1Ehdm1PDlKrdfyBsjwEvd1"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-young-hearts-run-free-1976",
+    "title": "Young Hearts Run Free",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Candi Staton — 1976, Young Hearts Run Free.",
+    "hint": "Candi Staton",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3MFa9idQuY4iJLWsZl3tIQ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-my-life-1978",
+    "title": "My Life",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Billy Joel — 1978, My Life.",
+    "hint": "Billy Joel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4ZoBC5MhSEzuknIgAkBaoT"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-dont-stop-me-now-remastered-2011-1978",
+    "title": "Don't Stop Me Now - Remastered 2011",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Queen — 1978, Don't Stop Me Now - Remastered 2011.",
+    "hint": "Queen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5T8EDUDqKcs6OSOwEsfqG7"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-starman-2012-remaster-1972",
+    "title": "Starman - 2012 Remaster",
+    "category": "music",
+    "year": 1972,
+    "cue": "Song anhören und einordnen.",
+    "answer": "David Bowie — 1972, Starman - 2012 Remaster.",
+    "hint": "David Bowie",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0pQskrTITgmCMyr85tb9qq"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-perfect-day-1972",
+    "title": "Perfect Day",
+    "category": "music",
+    "year": 1972,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lou Reed — 1972, Perfect Day.",
+    "hint": "Lou Reed",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4TOMI010Sd4ZAX4aZ5TS85"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-american-pie-1971",
+    "title": "American Pie",
+    "category": "music",
+    "year": 1971,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Don McLean — 1971, American Pie.",
+    "hint": "Don McLean",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1fDsrQ23eTAVFElUMaf38X"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-imagine-remastered-2010-1971",
+    "title": "Imagine - Remastered 2010",
+    "category": "music",
+    "year": 1971,
+    "cue": "Song anhören und einordnen.",
+    "answer": "John Lennon — 1971, Imagine - Remastered 2010.",
+    "hint": "John Lennon",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7pKfPomDEeI4TPT6EOYjn9"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-somebody-to-love-remastered-2011-1976",
+    "title": "Somebody To Love - Remastered 2011",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Queen — 1976, Somebody To Love - Remastered 2011.",
+    "hint": "Queen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4rDbp1vnvEhieiccprPMdI"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-take-a-chance-on-me-1977",
+    "title": "Take A Chance On Me",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "ABBA — 1977, Take A Chance On Me.",
+    "hint": "ABBA",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5BckPAYcKEJuYs1eV1BHHe"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-make-your-own-kind-of-music-1973",
+    "title": "Make Your Own Kind Of Music",
+    "category": "music",
+    "year": 1973,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Cass Elliot — 1973, Make Your Own Kind Of Music.",
+    "hint": "Cass Elliot",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6H3Wa6hWR9DRMzMSd4pZkT"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-shes-always-a-woman-1977",
+    "title": "She's Always a Woman",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Billy Joel — 1977, She's Always a Woman.",
+    "hint": "Billy Joel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5RgFlk1fcClZd0Y4SGYhqH"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-the-air-that-i-breathe-2008-remaster-1974",
+    "title": "The Air That I Breathe - 2008 Remaster",
+    "category": "music",
+    "year": 1974,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Hollies — 1974, The Air That I Breathe - 2008 Remaster.",
+    "hint": "The Hollies",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3P3fymPrC9KgV2Kf5oMnx0"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-killer-queen-remastered-2011-1974",
+    "title": "Killer Queen - Remastered 2011",
+    "category": "music",
+    "year": 1974,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Queen — 1974, Killer Queen - Remastered 2011.",
+    "hint": "Queen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2AKOOhml62GZNFWDN7VqzT"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-the-rose-1979",
+    "title": "The Rose",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bette Midler — 1979, The Rose.",
+    "hint": "Bette Midler",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/562JrM9b7jiu8LgzV62x3o"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-mr-blue-sky-1977",
+    "title": "Mr. Blue Sky",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Electric Light Orchestra — 1977, Mr. Blue Sky.",
+    "hint": "Electric Light Orchestra",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2RlgNHKcydI9sayD2Df2xp"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-take-me-home-country-roads-original-version-1971",
+    "title": "Take Me Home, Country Roads - Original Version",
+    "category": "music",
+    "year": 1971,
+    "cue": "Song anhören und einordnen.",
+    "answer": "John Denver — 1971, Take Me Home, Country Roads - Original Version.",
+    "hint": "John Denver",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1YYhDizHx7PnDhAhko6cDS"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-tragedy-1979",
+    "title": "Tragedy",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bee Gees — 1979, Tragedy.",
+    "hint": "Bee Gees",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6UXXeFqMBGiqjkzQzkMT3E"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-we-will-rock-you-remastered-2011-1977",
+    "title": "We Will Rock You - Remastered 2011",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Queen — 1977, We Will Rock You - Remastered 2011.",
+    "hint": "Queen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4pbJqGIASGPr0ZpGpnWkDn"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-rocket-man-i-think-its-going-to-be-a-long-long-time-1972",
+    "title": "Rocket Man (I Think It's Going To Be A Long, Long Time)",
+    "category": "music",
+    "year": 1972,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Elton John — 1972, Rocket Man (I Think It's Going To Be A Long, Long Time).",
+    "hint": "Elton John",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3gdewACMIVMEWVbyb8O9sY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-50-ways-to-leave-your-lover-1975",
+    "title": "50 Ways to Leave Your Lover",
+    "category": "music",
+    "year": 1975,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Paul Simon — 1975, 50 Ways to Leave Your Lover.",
+    "hint": "Paul Simon",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6Qb7gtV6Q4MnUjSbkFcopl"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-lovely-day-1977",
+    "title": "Lovely Day",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bill Withers — 1977, Lovely Day.",
+    "hint": "Bill Withers",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0bRXwKfigvpKZUurwqAlEh"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-wish-you-were-here-2001",
+    "title": "Wish You Were Here",
+    "category": "music",
+    "year": 2001,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Pink Floyd — 2001, Wish You Were Here.",
+    "hint": "Pink Floyd",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6iMjntVYkchLBJcqsiSNYZ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-vincent-1971",
+    "title": "Vincent",
+    "category": "music",
+    "year": 1971,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Don McLean — 1971, Vincent.",
+    "hint": "Don McLean",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0VNzEY1G4GLqcNx5qaaTl6"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-cecilia-1970",
+    "title": "Cecilia",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Simon & Garfunkel — 1970, Cecilia.",
+    "hint": "Simon & Garfunkel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6QhXQOpyYvbpdbyjgAqKdY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-i-dont-like-mondays-1979",
+    "title": "I Don't Like Mondays",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Boomtown Rats — 1979, I Don't Like Mondays.",
+    "hint": "The Boomtown Rats",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7JFoeg0arawADjGcz9gBnq"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-dont-bring-me-down-1979",
+    "title": "Don't Bring Me Down",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Electric Light Orchestra — 1979, Don't Bring Me Down.",
+    "hint": "Electric Light Orchestra",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/72ahyckBJfTigJCFCviVN7"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-your-song-1970",
+    "title": "Your Song",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Elton John — 1970, Your Song.",
+    "hint": "Elton John",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/38zsOOcu31XbbYj9BIPUF1"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-bridge-over-troubled-water-1970",
+    "title": "Bridge Over Troubled Water",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Simon & Garfunkel — 1970, Bridge Over Troubled Water.",
+    "hint": "Simon & Garfunkel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6l8EbYRtQMgKOyc1gcDHF9"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-hooked-on-a-feeling-1974",
+    "title": "Hooked On A Feeling",
+    "category": "music",
+    "year": 1974,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Blue Swede, Björn Skifs — 1974, Hooked On A Feeling.",
+    "hint": "Blue Swede, Björn Skifs",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6Ac4NVYYl2U73QiTt11ZKd"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-just-the-way-you-are-1977",
+    "title": "Just the Way You Are",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Billy Joel — 1977, Just the Way You Are.",
+    "hint": "Billy Joel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/49MHCPzvMLXhRjDantBMVH"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-escape-the-pina-colada-song-1979",
+    "title": "Escape (The Pina Colada Song)",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Rupert Holmes — 1979, Escape (The Pina Colada Song).",
+    "hint": "Rupert Holmes",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5IMtdHjJ1OtkxbGe4zfUxQ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-seasons-in-the-sun-2006",
+    "title": "Seasons in the Sun",
+    "category": "music",
+    "year": 2006,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Terry Jacks — 2006, Seasons in the Sun.",
+    "hint": "Terry Jacks",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0X3d9gx7UDYgcwwkgTeNLR"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-morning-has-broken-remastered-2021-1971",
+    "title": "Morning Has Broken - Remastered 2021",
+    "category": "music",
+    "year": 1971,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Yusuf / Cat Stevens — 1971, Morning Has Broken - Remastered 2021.",
+    "hint": "Yusuf / Cat Stevens",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5y8d8RHvxb0KiTa9Nq0xWp"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-the-boxer-1970",
+    "title": "The Boxer",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Simon & Garfunkel — 1970, The Boxer.",
+    "hint": "Simon & Garfunkel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/76TZCvJ8GitQ2FA1q5dKu0"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-lean-on-me-1972",
+    "title": "Lean on Me",
+    "category": "music",
+    "year": 1972,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bill Withers — 1972, Lean on Me.",
+    "hint": "Bill Withers",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3M8FzayQWtkvOhqMn2V4T2"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-our-house-1970",
+    "title": "Our House",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Crosby, Stills, Nash & Young — 1970, Our House.",
+    "hint": "Crosby, Stills, Nash & Young",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2hitsKa8SthKhRJBXUHbIv"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-jealous-guy-remastered-2010-1971",
+    "title": "Jealous Guy - Remastered 2010",
+    "category": "music",
+    "year": 1971,
+    "cue": "Song anhören und einordnen.",
+    "answer": "John Lennon — 1971, Jealous Guy - Remastered 2010.",
+    "hint": "John Lennon",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3D9iV6cYkYJRAPFO6DRKIE"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-goodbye-yellow-brick-road-remastered-2014-1973",
+    "title": "Goodbye Yellow Brick Road - Remastered 2014",
+    "category": "music",
+    "year": 1973,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Elton John — 1973, Goodbye Yellow Brick Road - Remastered 2014.",
+    "hint": "Elton John",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4IRHwIZHzlHT1FQpRa5RdE"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-you-are-so-beautiful-1996-version-1996",
+    "title": "You Are So Beautiful - 1996 Version",
+    "category": "music",
+    "year": 1996,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Joe Cocker — 1996, You Are So Beautiful - 1996 Version.",
+    "hint": "Joe Cocker",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0Q4FBn52tglZ02DCrAY8j0"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-hotel-california-2013-remaster-1976",
+    "title": "Hotel California - 2013 Remaster",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Eagles — 1976, Hotel California - 2013 Remaster.",
+    "hint": "Eagles",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/40riOy7x9W7GXjyGp4pjAv"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-heroes-2017-remaster-1977",
+    "title": "\"Heroes\" - 2017 Remaster",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "David Bowie — 1977, \"Heroes\" - 2017 Remaster.",
+    "hint": "David Bowie",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7Jh1bpe76CNTCgdgAdBw4Z"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-wonderful-tonight-1977",
+    "title": "Wonderful Tonight",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Eric Clapton — 1977, Wonderful Tonight.",
+    "hint": "Eric Clapton",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6zC0mpGYwbNTpk9SKwh08f"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-more-than-a-feeling-1976",
+    "title": "More Than a Feeling",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Boston — 1976, More Than a Feeling.",
+    "hint": "Boston",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1QEEqeFIZktqIpPI4jSVSF"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-roxanne-1978",
+    "title": "Roxanne",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Police — 1978, Roxanne.",
+    "hint": "The Police",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3EYOJ48Et32uATr9ZmLnAo"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-cold-as-ice-1977",
+    "title": "Cold as Ice",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Foreigner — 1977, Cold as Ice.",
+    "hint": "Foreigner",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7vidktgNZFQylTgH1GEnMs"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-you-sexy-thing-1975",
+    "title": "You Sexy Thing",
+    "category": "music",
+    "year": 1975,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Hot Chocolate — 1975, You Sexy Thing.",
+    "hint": "Hot Chocolate",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/714hERk9U1W8FMYkoC83CO"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-another-brick-in-the-wall-pt-2-1979",
+    "title": "Another Brick in the Wall, Pt. 2",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Pink Floyd — 1979, Another Brick in the Wall, Pt. 2.",
+    "hint": "Pink Floyd",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4gMgiXfqyzZLMhsksGmbQV"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-stayin-alive-from-saturday-night-fever-soundtrack-1990",
+    "title": "Stayin' Alive - From \"Saturday Night Fever\" Soundtrack",
+    "category": "music",
+    "year": 1990,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bee Gees — 1990, Stayin' Alive - From \"Saturday Night Fever\" Soundtrack.",
+    "hint": "Bee Gees",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/79hJaqmVdohltPBNN6BULM"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-knockin-on-heavens-door-1973",
+    "title": "Knockin' On Heaven's Door",
+    "category": "music",
+    "year": 1973,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bob Dylan — 1973, Knockin' On Heaven's Door.",
+    "hint": "Bob Dylan",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6HSXNV0b4M4cLJ7ljgVVeh"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-landslide-1975",
+    "title": "Landslide",
+    "category": "music",
+    "year": 1975,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Fleetwood Mac — 1975, Landslide.",
+    "hint": "Fleetwood Mac",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5ihS6UUlyQAfmp48eSkxuQ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-come-and-get-your-love-single-version-1973",
+    "title": "Come and Get Your Love - Single Version",
+    "category": "music",
+    "year": 1973,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Redbone — 1973, Come and Get Your Love - Single Version.",
+    "hint": "Redbone",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7GVUmCP00eSsqc4tzj1sDD"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-every-1s-a-winner-single-version-1978",
+    "title": "Every 1's a Winner - Single Version",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Hot Chocolate — 1978, Every 1's a Winner - Single Version.",
+    "hint": "Hot Chocolate",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5MXXbGYNmRHR7ULMvZYo5R"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-how-deep-is-your-love-1979",
+    "title": "How Deep Is Your Love",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bee Gees — 1979, How Deep Is Your Love.",
+    "hint": "Bee Gees",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2JoZzpdeP2G6Csfdq5aLXP"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-i-was-made-for-lovin-you-1979",
+    "title": "I Was Made For Lovin' You",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "KISS — 1979, I Was Made For Lovin' You.",
+    "hint": "KISS",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6S9q9mEifNdnTNlli2xSuD"
+    },
+    "genres": [
+      "metal",
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-the-passenger-1977",
+    "title": "The Passenger",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Iggy Pop — 1977, The Passenger.",
+    "hint": "Iggy Pop",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/15BQ7vEDv2LJuh8TxWIhtd"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-solsbury-hill-1977",
+    "title": "Solsbury Hill",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Peter Gabriel — 1977, Solsbury Hill.",
+    "hint": "Peter Gabriel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6vZZtivPrtpggT5SSXsYTy"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-kung-fu-fighting-1974",
+    "title": "Kung Fu Fighting",
+    "category": "music",
+    "year": 1974,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Carl Douglas — 1974, Kung Fu Fighting.",
+    "hint": "Carl Douglas",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7K8QsHbmUpSX37oOCL4e2g"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-hold-the-line-2014",
+    "title": "Hold the Line",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "TOTO — 2014, Hold the Line.",
+    "hint": "TOTO",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/17arUdDWEinOOVrrVUkEM7"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-my-sweet-lord-2020-mix-1970",
+    "title": "My Sweet Lord - 2020 Mix",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "George Harrison — 1970, My Sweet Lord - 2020 Mix.",
+    "hint": "George Harrison",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0hMvI4iye2BtqOPL57qfya"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-my-sharona-1979",
+    "title": "My Sharona",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Knack — 1979, My Sharona.",
+    "hint": "The Knack",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1HOMkjp0nHMaTnfAkslCQj"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-the-chain-2004-remaster-1977",
+    "title": "The Chain - 2004 Remaster",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Fleetwood Mac — 1977, The Chain - 2004 Remaster.",
+    "hint": "Fleetwood Mac",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5e9TFTbltYBg2xThimr0rU"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-jive-talkin-1975",
+    "title": "Jive Talkin'",
+    "category": "music",
+    "year": 1975,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bee Gees — 1975, Jive Talkin'.",
+    "hint": "Bee Gees",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4t0Pj3iBnSCZv5pDEPNmzG"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-cats-in-the-cradle-1974",
+    "title": "Cat's in the Cradle",
+    "category": "music",
+    "year": 1974,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Harry Chapin — 1974, Cat's in the Cradle.",
+    "hint": "Harry Chapin",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6hLqEJg2GnnDG4W0Y64hyD"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-burning-love-1973",
+    "title": "Burning Love",
+    "category": "music",
+    "year": 1973,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Elvis Presley — 1973, Burning Love.",
+    "hint": "Elvis Presley",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7zMUCLm1TN9o9JlLISztxO"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-three-little-birds-1977",
+    "title": "Three Little Birds",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bob Marley & The Wailers — 1977, Three Little Birds.",
+    "hint": "Bob Marley & The Wailers",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7yFvSYKk3g5g8e7Ffl16ws"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-heart-of-glass-2006",
+    "title": "Heart Of Glass",
+    "category": "music",
+    "year": 2006,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Blondie — 2006, Heart Of Glass.",
+    "hint": "Blondie",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/41AE8ODX2JETBCa6muhSLY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-bright-eyes-1979",
+    "title": "Bright Eyes",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Art Garfunkel — 1979, Bright Eyes.",
+    "hint": "Art Garfunkel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2geMzjpfaN4U5YjrDtbYYk"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-free-bird-1973",
+    "title": "Free Bird",
+    "category": "music",
+    "year": 1973,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lynyrd Skynyrd — 1973, Free Bird.",
+    "hint": "Lynyrd Skynyrd",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4qsAYBCJnu2OkTKUVbbOF1"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-heart-of-gold-2009-remaster-1972",
+    "title": "Heart of Gold - 2009 Remaster",
+    "category": "music",
+    "year": 1972,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Neil Young — 1972, Heart of Gold - 2009 Remaster.",
+    "hint": "Neil Young",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1Q1b8eVkUPGlpSArl8JAVw"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-shes-a-lady-1971",
+    "title": "She's A Lady",
+    "category": "music",
+    "year": 1971,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Tom Jones — 1971, She's A Lady.",
+    "hint": "Tom Jones",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5JnHzjo25FY1fMQMQVOawB"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-stumblin-in-2017-remaster-1978",
+    "title": "Stumblin' In - 2017 Remaster",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Chris Norman, Suzi Quatro — 1978, Stumblin' In - 2017 Remaster.",
+    "hint": "Chris Norman, Suzi Quatro",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2Pzhx26KqgTTKnko0uC7F7"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-superstition-1972",
+    "title": "Superstition",
+    "category": "music",
+    "year": 1972,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Stevie Wonder — 1972, Superstition.",
+    "hint": "Stevie Wonder",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4N0TP4Rmj6QQezWV88ARNJ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-the-joker-1973",
+    "title": "The Joker",
+    "category": "music",
+    "year": 1973,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Steve Miller Band — 1973, The Joker.",
+    "hint": "Steve Miller Band",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1bp2IO61zbQrbWNmKKxg3f"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-highway-to-hell-1979",
+    "title": "Highway to Hell",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "AC/DC — 1979, Highway to Hell.",
+    "hint": "AC/DC",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2zYzyRzz6pRmhPzyfMEC8s"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-message-in-a-bottle-1979",
+    "title": "Message In A Bottle",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Police — 1979, Message In A Bottle.",
+    "hint": "The Police",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1oYYd2gnWZYrt89EBXdFiO"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-stuck-in-the-middle-with-you-1972",
+    "title": "Stuck In The Middle With You",
+    "category": "music",
+    "year": 1972,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Stealers Wheel — 1972, Stuck In The Middle With You.",
+    "hint": "Stealers Wheel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3Vby4nGmtbDo7HDJamOWkT"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-vienna-1977",
+    "title": "Vienna",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Billy Joel — 1977, Vienna.",
+    "hint": "Billy Joel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4U45aEWtQhrm8A5mxPaFZ7"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-dont-stop-2004-remaster-1977",
+    "title": "Don't Stop - 2004 Remaster",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Fleetwood Mac — 1977, Don't Stop - 2004 Remaster.",
+    "hint": "Fleetwood Mac",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4bEb3KE4mSKlTFjtWJQBqO"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-psycho-killer-1977",
+    "title": "Psycho Killer",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Talking Heads — 1977, Psycho Killer.",
+    "hint": "Talking Heads",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7dSCxR4LqkmxoBrq9MzVSD"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-tnt-1976",
+    "title": "T.N.T.",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "AC/DC — 1976, T.N.T..",
+    "hint": "AC/DC",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7LRMbd3LEoV5wZJvXT1Lwb"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-baker-street-1978",
+    "title": "Baker Street",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Gerry Rafferty — 1978, Baker Street.",
+    "hint": "Gerry Rafferty",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5gOd6zDC8vhlYjqbQdJVWP"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-sir-duke-1976",
+    "title": "Sir Duke",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Stevie Wonder — 1976, Sir Duke.",
+    "hint": "Stevie Wonder",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4pNiE4LCVV74vfIBaUHm1b"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-if-you-leave-me-now-1976",
+    "title": "If You Leave Me Now",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Chicago — 1976, If You Leave Me Now.",
+    "hint": "Chicago",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0KMGxYKeUzK9wc5DZCt3HT"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-stairway-to-heaven-remaster-1971",
+    "title": "Stairway to Heaven - Remaster",
+    "category": "music",
+    "year": 1971,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Led Zeppelin — 1971, Stairway to Heaven - Remaster.",
+    "hint": "Led Zeppelin",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5CQ30WqJwcep0pYcV4AMNc"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-easy-1995",
+    "title": "Easy",
+    "category": "music",
+    "year": 1995,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Commodores — 1995, Easy.",
+    "hint": "Commodores",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0wtHjEAzLYYyGuk2WtpGwS"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-have-you-ever-seen-the-rain-1970",
+    "title": "Have You Ever Seen The Rain",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Creedence Clearwater Revival — 1970, Have You Ever Seen The Rain.",
+    "hint": "Creedence Clearwater Revival",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2LawezPeJhN4AWuSB0GtAU"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-wild-horses-2009-mix-1971",
+    "title": "Wild Horses - 2009 Mix",
+    "category": "music",
+    "year": 1971,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Rolling Stones — 1971, Wild Horses - 2009 Mix.",
+    "hint": "The Rolling Stones",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/52dm9op3rbfAkc1LGXgipW"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-you-should-be-dancing-2009",
+    "title": "You Should Be Dancing",
+    "category": "music",
+    "year": 2009,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bee Gees — 2009, You Should Be Dancing.",
+    "hint": "Bee Gees",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4T5Y25pWs2pVZVcFIqFuf8"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-annies-song-1974",
+    "title": "Annie's Song",
+    "category": "music",
+    "year": 1974,
+    "cue": "Song anhören und einordnen.",
+    "answer": "John Denver — 1974, Annie's Song.",
+    "hint": "John Denver",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4J0DbyODwZJcmIAiTSJfMF"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-live-and-let-die-1978",
+    "title": "Live And Let Die",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Wings — 1978, Live And Let Die.",
+    "hint": "Wings",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6AbaUu4XtHu7pGkPE94Tat"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-they-long-to-be-close-to-you-1970",
+    "title": "(They Long To Be) Close To You",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Carpenters — 1970, (They Long To Be) Close To You.",
+    "hint": "Carpenters",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2kyVQg00pphEufGT59M2XH"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-old-time-rock-roll-1978",
+    "title": "Old Time Rock & Roll",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bob Seger — 1978, Old Time Rock & Roll.",
+    "hint": "Bob Seger",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5EOoMWIB9iK4ZpcSex9Ec7"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-breakfast-in-america-remastered-2010-1979",
+    "title": "Breakfast In America - Remastered 2010",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Supertramp — 1979, Breakfast In America - Remastered 2010.",
+    "hint": "Supertramp",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4a5pNRjwmzYQuEY1E7O6pj"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-play-that-funky-music-1976",
+    "title": "Play That Funky Music",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Wild Cherry — 1976, Play That Funky Music.",
+    "hint": "Wild Cherry",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5uuJruktM9fMdN9Va0DUMl"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-life-on-mars-2015-remaster-1971",
+    "title": "Life on Mars? - 2015 Remaster",
+    "category": "music",
+    "year": 1971,
+    "cue": "Song anhören und einordnen.",
+    "answer": "David Bowie — 1971, Life on Mars? - 2015 Remaster.",
+    "hint": "David Bowie",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3ZE3wv8V3w2T2f7nOCjV0N"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-daddy-cool-1994",
+    "title": "Daddy Cool",
+    "category": "music",
+    "year": 1994,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Boney M. — 1994, Daddy Cool.",
+    "hint": "Boney M.",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/702Xo5V8OhlY2cQEczCT2j"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-always-on-my-mind-1973",
+    "title": "Always On My Mind",
+    "category": "music",
+    "year": 1973,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Elvis Presley — 1973, Always On My Mind.",
+    "hint": "Elvis Presley",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1B5Tp2Ml9nLlmTSJx8xVfI"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-blame-it-on-the-boogie-1978",
+    "title": "Blame It on the Boogie",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Jacksons — 1978, Blame It on the Boogie.",
+    "hint": "The Jacksons",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3qI94hINNNeb4S7xQi18lS"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-take-me-home-country-roads-1997",
+    "title": "Take Me Home, Country Roads",
+    "category": "music",
+    "year": 1997,
+    "cue": "Song anhören und einordnen.",
+    "answer": "John Denver — 1997, Take Me Home, Country Roads.",
+    "hint": "John Denver",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1QbOvACeYanja5pbnJbAmk"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-cant-stand-losing-you-1978",
+    "title": "Can't Stand Losing You",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Police — 1978, Can't Stand Losing You.",
+    "hint": "The Police",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6DjKJgwe9c90Bd2iya0fre"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-get-it-on-1971",
+    "title": "Get It On",
+    "category": "music",
+    "year": 1971,
+    "cue": "Song anhören und einordnen.",
+    "answer": "T. Rex — 1971, Get It On.",
+    "hint": "T. Rex",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0LoQuiekvzqx7n8flgEKzF"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-without-you-1971",
+    "title": "Without You",
+    "category": "music",
+    "year": 1971,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Harry Nilsson — 1971, Without You.",
+    "hint": "Harry Nilsson",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6MrILERJLA3Jcq0E9poZsp"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-rich-girl-2005",
+    "title": "Rich Girl",
+    "category": "music",
+    "year": 2005,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Daryl Hall & John Oates — 2005, Rich Girl.",
+    "hint": "Daryl Hall & John Oates",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5E3P9e1hvjyIOlFyqNB5eD"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-hot-stuff-1979",
+    "title": "Hot Stuff",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Donna Summer — 1979, Hot Stuff.",
+    "hint": "Donna Summer",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2zMJN9JvDlvGP4jB03l1Bz"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-smoke-on-the-water-remastered-2012-1972",
+    "title": "Smoke On The Water - Remastered 2012",
+    "category": "music",
+    "year": 1972,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Deep Purple — 1972, Smoke On The Water - Remastered 2012.",
+    "hint": "Deep Purple",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5MMnwYs0hIxkENRsbkWJ2G"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-yes-sir-i-can-boogie-1998",
+    "title": "Yes Sir, I Can Boogie",
+    "category": "music",
+    "year": 1998,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Baccara — 1998, Yes Sir, I Can Boogie.",
+    "hint": "Baccara",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2LScqpywMqGcnum6nNaxXX"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-walk-this-way-1975",
+    "title": "Walk This Way",
+    "category": "music",
+    "year": 1975,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Aerosmith — 1975, Walk This Way.",
+    "hint": "Aerosmith",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4JfuiOWlWCkjP6OKurHjSn"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-i-ami-said-single-version-1971",
+    "title": "I Am...I Said - Single Version",
+    "category": "music",
+    "year": 1971,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Neil Diamond — 1971, I Am...I Said - Single Version.",
+    "hint": "Neil Diamond",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4wOKTOwGVrie2GIbCMEe7U"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-immigrant-song-remaster-1970",
+    "title": "Immigrant Song - Remaster",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Led Zeppelin — 1970, Immigrant Song - Remaster.",
+    "hint": "Led Zeppelin",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/78lgmZwycJ3nzsdgmPPGNx"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-one-way-or-another-remastered-2001-1978",
+    "title": "One Way Or Another - Remastered 2001",
+    "category": "music",
+    "year": 1978,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Blondie — 1978, One Way Or Another - Remastered 2001.",
+    "hint": "Blondie",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4cQJ27R11K634x5qCOwKW5"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-a-horse-with-no-name-1972",
+    "title": "A Horse with No Name",
+    "category": "music",
+    "year": 1972,
+    "cue": "Song anhören und einordnen.",
+    "answer": "America, George Martin — 1972, A Horse with No Name.",
+    "hint": "America, George Martin",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/54eZmuggBFJbV7k248bTTt"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-dust-in-the-wind-1977",
+    "title": "Dust in the Wind",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Kansas — 1977, Dust in the Wind.",
+    "hint": "Kansas",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6zeE5tKyr8Nu882DQhhSQI"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-dont-stop-til-you-get-enough-1979",
+    "title": "Don't Stop 'Til You Get Enough",
+    "category": "music",
+    "year": 1979,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Michael Jackson — 1979, Don't Stop 'Til You Get Enough.",
+    "hint": "Michael Jackson",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/46eu3SBuFCXWsPT39Yg3tJ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-alone-again-naturally-1972",
+    "title": "Alone Again (Naturally)",
+    "category": "music",
+    "year": 1972,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Gilbert O'Sullivan — 1972, Alone Again (Naturally).",
+    "hint": "Gilbert O'Sullivan",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/54pvEYFocTlvIAQOfXSjqV"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-paradise-by-the-dashboard-light-1977",
+    "title": "Paradise By the Dashboard Light",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Meat Loaf — 1977, Paradise By the Dashboard Light.",
+    "hint": "Meat Loaf",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2g7gviEeJr6pyxO7G35EWQ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-black-betty-1977",
+    "title": "Black Betty",
+    "category": "music",
+    "year": 1977,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Ram Jam — 1977, Black Betty.",
+    "hint": "Ram Jam",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6kooDsorCpWVMGc994XjWN"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-i-will-always-love-you-1974",
+    "title": "I Will Always Love You",
+    "category": "music",
+    "year": 1974,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Dolly Parton — 1974, I Will Always Love You.",
+    "hint": "Dolly Parton",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/77bNe6jYY8yHdP7orXrz5I"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-walk-on-the-wild-side-1972",
+    "title": "Walk On the Wild Side",
+    "category": "music",
+    "year": 1972,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lou Reed — 1972, Walk On the Wild Side.",
+    "hint": "Lou Reed",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5p3JunprHCxClJjOmcLV8G"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-what-is-life-remastered-2014-1970",
+    "title": "What Is Life - Remastered 2014",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "George Harrison — 1970, What Is Life - Remastered 2014.",
+    "hint": "George Harrison",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/76TpWFiK5YCgw1hy26DWZp"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-layla-1970",
+    "title": "Layla",
+    "category": "music",
+    "year": 1970,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Derek & The Dominos — 1970, Layla.",
+    "hint": "Derek & The Dominos",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2kkvB3RNRzwjFdGhaUA0tz"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-livin-thing-1976",
+    "title": "Livin' Thing",
+    "category": "music",
+    "year": 1976,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Electric Light Orchestra — 1976, Livin' Thing.",
+    "hint": "Electric Light Orchestra",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2hdNya0b6Cc2YJ8IyaQIWp"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
+    ]
+  },
+  {
+    "id": "song-jolene-1974",
+    "title": "Jolene",
+    "category": "music",
+    "year": 1974,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Dolly Parton — 1974, Jolene.",
+    "hint": "Dolly Parton",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2SpEHTbUuebeLkgs9QB7Ue"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "6CyKsSLFFd2fX7Nu4yijSX"
     ]
   }
 ];
