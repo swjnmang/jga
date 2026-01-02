@@ -8,7 +8,8 @@ export type CardCategory =
   | 'religionglaube'
   | 'geogeschichte'
   | 'naturtechnik'
-  | 'filmeserien';
+  | 'filmeserien'
+  | 'schaetzfragen';
 
 export type Difficulty = 'leicht' | 'mittel' | 'schwer';
 
