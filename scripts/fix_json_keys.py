@@ -15,12 +15,20 @@ def fix_file(file_path: Path) -> bool:
         
         original_content = content
         
-        # Fix broken JSON keys (missing leading quote)
+        # Fix all broken JSON keys where " was replaced with umlaut
+        # Pattern: find any umlaut at start of what should be a key
+        
+        # Direct replacements for known broken patterns
         fixes = {
+            # Broken keys
             'answer"': '"answer"',
             'öutline-': '"outline-',
             'üong-': '"song-',
             'üources"': '"sources"',
+            'üpotify"': '"spotify"',
+            'üchwer"': '"schwer"',
+            
+            # Broken values with missing opening quote
             'Ümriss': '"Umriss',
             'Ändorra': '"Andorra',
             'Österreich': '"Österreich',
@@ -31,6 +39,10 @@ def fix_file(file_path: Path) -> bool:
         
         for old, new in fixes.items():
             content = content.replace(old, new)
+        
+        # Additional regex-based fixes for any remaining pattern: ü/ö/ä followed by lowercase letters and "
+        # This catches patterns like: üomething": should be "something":
+        content = re.sub(r'([^\w"])[üöä]([a-z]+)":', r'\1"\2":', content)
         
         # Write back if changed
         if content != original_content:
