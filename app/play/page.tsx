@@ -591,12 +591,12 @@ function PlayPageContent() {
           </p>
         )}
         {card.category === 'country' && (
-          <div className="rounded-lg border border-blue-200 bg-blue-50 px-3 py-2 text-blue-900 text-xs">
+          <div className="rounded-lg border border-ink/20 bg-ink/5 px-3 py-2 text-ink/90 text-xs">
             <p className="font-semibold">Hinweis:</p>
             <p>Als Datum gilt das Inkrafttreten der aktuellen Verfassung oder der Zeitpunkt des letzten systemischen Bruchs (z. B. Ende einer Monarchie, Ende einer Besatzung oder Neugründung).</p>
           </div>
         )}
-        <p className="text-base sm:text-lg font-semibold">{mode === 'timeline' ? card.cue : card.cue || triviaCue(card)}</p>
+        <p className="text-base sm:text-lg font-semibold text-ink">{mode === 'timeline' ? card.cue : card.cue || triviaCue(card)}</p>
         <MediaEmbed
           ref={mediaRef}
           card={card}
