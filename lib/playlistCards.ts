@@ -5,6 +5,26 @@ import { Card } from './types';
 export type PlaylistInfo = { id: string; name: string };
 export const playlistInfo: PlaylistInfo[] = [
   {
+    "id": "4likPQLIX9PUqyNiJ3xsqT",
+    "name": "Flex-Lukas-JGA"
+  },
+  {
+    "id": "0fky4kHnko4b9HsvrYVyum",
+    "name": "Flex-90ger"
+  },
+  {
+    "id": "5eKb0TEz5FUTd8VvQVSr0l",
+    "name": "Flex-80ger"
+  },
+  {
+    "id": "6CyKsSLFFd2fX7Nu4yijSX",
+    "name": "Flex-70ger"
+  },
+  {
+    "id": "1K766ohE2LA7b7ghtTm7mP",
+    "name": "Felx-2000er"
+  },
+  {
     "id": "512n4C9VauhhFl9EhMoUlm",
     "name": "Flex-2010er"
   }
