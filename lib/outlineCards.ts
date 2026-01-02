@@ -4,3389 +4,3389 @@ import { Card } from './types';
 
 export const outlineCards: Card[] = [
   {
-    "id": öutline-ad",
-    "title": Ümriss Andorra",
+    "id": "outline-ad",
+    "title": "Umriss Andorra",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Ändorra – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": Ändorra",
+    "answer": "Andorra – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "hint": "Andorra",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ad.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ae",
-    "title": Ümriss Vereinigte Arabische Emirate",
+    "id": "outline-ae",
+    "title": "Umriss Vereinigte Arabische Emirate",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Vereinigte Arabische Emirate – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Vereinigte Arabische Emirate – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Vereinigte Arabische Emirate",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ae.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-af",
-    "title": Ümriss Afghanistan",
+    "id": "outline-af",
+    "title": "Umriss Afghanistan",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Äfghanistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Äfghanistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Äfghanistan",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/af.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ag",
-    "title": Ümriss Antigua und Barbuda",
+    "id": "outline-ag",
+    "title": "Umriss Antigua und Barbuda",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Äntigua und Barbuda – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Äntigua und Barbuda – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Äntigua und Barbuda",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ag.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ai",
-    "title": Ümriss Anguilla",
+    "id": "outline-ai",
+    "title": "Umriss Anguilla",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Änguilla – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Änguilla – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Änguilla",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ai.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-al",
-    "title": Ümriss Albanien",
+    "id": "outline-al",
+    "title": "Umriss Albanien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Älbanien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Älbanien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Älbanien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/al.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-am",
-    "title": Ümriss Armenien",
+    "id": "outline-am",
+    "title": "Umriss Armenien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Ärmenien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Ärmenien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Ärmenien",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/am.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ao",
-    "title": Ümriss Angola",
+    "id": "outline-ao",
+    "title": "Umriss Angola",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Ängola – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Ängola – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Ängola",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ao.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-aq",
-    "title": Ümriss Antarktis",
+    "id": "outline-aq",
+    "title": "Umriss Antarktis",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Äntarktis – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Äntarktis – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Äntarktis",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/aq.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ar",
-    "title": Ümriss Argentinien",
+    "id": "outline-ar",
+    "title": "Umriss Argentinien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Ärgentinien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Ärgentinien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Ärgentinien",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ar.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-as",
-    "title": Ümriss Amerikanisch-Samoa",
+    "id": "outline-as",
+    "title": "Umriss Amerikanisch-Samoa",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Ämerikanisch-Samoa – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Ämerikanisch-Samoa – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Ämerikanisch-Samoa",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/as.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-at",
-    "title": Ümriss Österreich",
+    "id": "outline-at",
+    "title": "Umriss "Österreich",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Österreich – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": "Österreich",
+    "answer": ""Österreich – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "hint": ""Österreich",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/at.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-au",
-    "title": Ümriss Australien",
+    "id": "outline-au",
+    "title": "Umriss Australien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Äustralien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Äustralien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Äustralien",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/au.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-aw",
-    "title": Ümriss Aruba",
+    "id": "outline-aw",
+    "title": "Umriss Aruba",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Äruba – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Äruba – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Äruba",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/aw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ax",
-    "title": Ümriss Ålandinseln",
+    "id": "outline-ax",
+    "title": "Umriss Ålandinseln",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Ålandinseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Ålandinseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Ålandinseln",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ax.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-az",
-    "title": Ümriss Aserbaidschan",
+    "id": "outline-az",
+    "title": "Umriss Aserbaidschan",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Äserbaidschan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Äserbaidschan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Äserbaidschan",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/az.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ba",
-    "title": Ümriss Bosnien und Herzegowina",
+    "id": "outline-ba",
+    "title": "Umriss Bosnien und Herzegowina",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Bosnien und Herzegowina – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Bosnien und Herzegowina – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Bosnien und Herzegowina",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ba.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bb",
-    "title": Ümriss Barbados",
+    "id": "outline-bb",
+    "title": "Umriss Barbados",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Barbados – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Barbados – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Barbados",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bb.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bd",
-    "title": Ümriss Bangladesch",
+    "id": "outline-bd",
+    "title": "Umriss Bangladesch",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Bangladesch – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Bangladesch – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Bangladesch",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bd.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-be",
-    "title": Ümriss Belgien",
+    "id": "outline-be",
+    "title": "Umriss Belgien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Belgien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Belgien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Belgien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/be.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bf",
-    "title": Ümriss Burkina Faso",
+    "id": "outline-bf",
+    "title": "Umriss Burkina Faso",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Burkina Faso – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Burkina Faso – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Burkina Faso",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bg",
-    "title": Ümriss Bulgarien",
+    "id": "outline-bg",
+    "title": "Umriss Bulgarien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Bulgarien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Bulgarien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Bulgarien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bh",
-    "title": Ümriss Bahrain",
+    "id": "outline-bh",
+    "title": "Umriss Bahrain",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Bahrain – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Bahrain – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Bahrain",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bh.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bi",
-    "title": Ümriss Burundi",
+    "id": "outline-bi",
+    "title": "Umriss Burundi",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Burundi – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Burundi – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Burundi",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bi.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bj",
-    "title": Ümriss Benin",
+    "id": "outline-bj",
+    "title": "Umriss Benin",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Benin – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Benin – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Benin",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bj.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bl",
-    "title": Ümriss St. Barthélemy",
+    "id": "outline-bl",
+    "title": "Umriss St. Barthélemy",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "St. Barthélemy – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "St. Barthélemy – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "St. Barthélemy",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bm",
-    "title": Ümriss Bermuda",
+    "id": "outline-bm",
+    "title": "Umriss Bermuda",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Bermuda – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Bermuda – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Bermuda",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bn",
-    "title": Ümriss Brunei Darussalam",
+    "id": "outline-bn",
+    "title": "Umriss Brunei Darussalam",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Brunei Darussalam – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Brunei Darussalam – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Brunei Darussalam",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bo",
-    "title": Ümriss Bolivien",
+    "id": "outline-bo",
+    "title": "Umriss Bolivien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Bolivien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Bolivien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Bolivien",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bo.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bq",
-    "title": Ümriss Karibische Niederlande",
+    "id": "outline-bq",
+    "title": "Umriss Karibische Niederlande",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Karibische Niederlande – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Karibische Niederlande – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Karibische Niederlande",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bq.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-br",
-    "title": Ümriss Brasilien",
+    "id": "outline-br",
+    "title": "Umriss Brasilien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Brasilien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Brasilien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Brasilien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/br.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bs",
-    "title": Ümriss Bahamas",
+    "id": "outline-bs",
+    "title": "Umriss Bahamas",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Bahamas – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Bahamas – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Bahamas",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bs.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bt",
-    "title": Ümriss Bhutan",
+    "id": "outline-bt",
+    "title": "Umriss Bhutan",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Bhutan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Bhutan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Bhutan",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bv",
-    "title": Ümriss Bouvetinsel",
+    "id": "outline-bv",
+    "title": "Umriss Bouvetinsel",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Bouvetinsel – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Bouvetinsel – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Bouvetinsel",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bv.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bw",
-    "title": Ümriss Botsuana",
+    "id": "outline-bw",
+    "title": "Umriss Botsuana",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Botsuana – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Botsuana – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Botsuana",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-by",
-    "title": Ümriss Belarus",
+    "id": "outline-by",
+    "title": "Umriss Belarus",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Belarus – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Belarus – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Belarus",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/by.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-bz",
-    "title": Ümriss Belize",
+    "id": "outline-bz",
+    "title": "Umriss Belize",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Belize – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Belize – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Belize",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/bz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ca",
-    "title": Ümriss Kanada",
+    "id": "outline-ca",
+    "title": "Umriss Kanada",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Kanada – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kanada – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kanada",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ca.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-cc",
-    "title": Ümriss Kokosinseln",
+    "id": "outline-cc",
+    "title": "Umriss Kokosinseln",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Kokosinseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kokosinseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kokosinseln",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/cc.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-cd",
-    "title": Ümriss Kongo-Kinshasa",
+    "id": "outline-cd",
+    "title": "Umriss Kongo-Kinshasa",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Kongo-Kinshasa – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kongo-Kinshasa – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kongo-Kinshasa",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/cd.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-cf",
-    "title": Ümriss Zentralafrikanische Republik",
+    "id": "outline-cf",
+    "title": "Umriss Zentralafrikanische Republik",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Zentralafrikanische Republik – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Zentralafrikanische Republik – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Zentralafrikanische Republik",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/cf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-cg",
-    "title": Ümriss Kongo-Brazzaville",
+    "id": "outline-cg",
+    "title": "Umriss Kongo-Brazzaville",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Kongo-Brazzaville – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kongo-Brazzaville – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kongo-Brazzaville",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/cg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ch",
-    "title": Ümriss Schweiz",
+    "id": "outline-ch",
+    "title": "Umriss Schweiz",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Schweiz – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Schweiz – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Schweiz",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ch.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ci",
-    "title": Ümriss Côte d’Ivoire",
+    "id": "outline-ci",
+    "title": "Umriss Côte d’Ivoire",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Côte d’Ivoire – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Côte d’Ivoire – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Côte d’Ivoire",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ci.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ck",
-    "title": Ümriss Cookinseln",
+    "id": "outline-ck",
+    "title": "Umriss Cookinseln",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Cookinseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Cookinseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Cookinseln",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ck.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-cl",
-    "title": Ümriss Chile",
+    "id": "outline-cl",
+    "title": "Umriss Chile",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Chile – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Chile – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Chile",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/cl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-cm",
-    "title": Ümriss Kamerun",
+    "id": "outline-cm",
+    "title": "Umriss Kamerun",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Kamerun – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kamerun – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kamerun",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/cm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-cn",
-    "title": Ümriss China",
+    "id": "outline-cn",
+    "title": "Umriss China",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "China – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "China – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "China",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/cn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-co",
-    "title": Ümriss Kolumbien",
+    "id": "outline-co",
+    "title": "Umriss Kolumbien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Kolumbien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kolumbien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kolumbien",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/co.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-cr",
-    "title": Ümriss Costa Rica",
+    "id": "outline-cr",
+    "title": "Umriss Costa Rica",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Costa Rica – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Costa Rica – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Costa Rica",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/cr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-cu",
-    "title": Ümriss Kuba",
+    "id": "outline-cu",
+    "title": "Umriss Kuba",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Kuba – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kuba – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kuba",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/cu.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-cv",
-    "title": Ümriss Cabo Verde",
+    "id": "outline-cv",
+    "title": "Umriss Cabo Verde",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Cabo Verde – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Cabo Verde – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Cabo Verde",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/cv.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-cw",
-    "title": Ümriss Curaçao",
+    "id": "outline-cw",
+    "title": "Umriss Curaçao",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Curaçao – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Curaçao – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Curaçao",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/cw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-cx",
-    "title": Ümriss Weihnachtsinsel",
+    "id": "outline-cx",
+    "title": "Umriss Weihnachtsinsel",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Weihnachtsinsel – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Weihnachtsinsel – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Weihnachtsinsel",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/cx.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-cy",
-    "title": Ümriss Zypern",
+    "id": "outline-cy",
+    "title": "Umriss Zypern",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Zypern – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Zypern – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Zypern",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/cy.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-cz",
-    "title": Ümriss Tschechien",
+    "id": "outline-cz",
+    "title": "Umriss Tschechien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Tschechien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Tschechien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Tschechien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/cz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-de",
-    "title": Ümriss Deutschland",
+    "id": "outline-de",
+    "title": "Umriss Deutschland",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Deutschland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Deutschland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Deutschland",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/de.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-dj",
-    "title": Ümriss Dschibuti",
+    "id": "outline-dj",
+    "title": "Umriss Dschibuti",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Dschibuti – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Dschibuti – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Dschibuti",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/dj.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-dk",
-    "title": Ümriss Dänemark",
+    "id": "outline-dk",
+    "title": "Umriss Dänemark",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Dänemark – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Dänemark – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Dänemark",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/dk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-dm",
-    "title": Ümriss Dominica",
+    "id": "outline-dm",
+    "title": "Umriss Dominica",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Dominica – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Dominica – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Dominica",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/dm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-do",
-    "title": Ümriss Dominikanische Republik",
+    "id": "outline-do",
+    "title": "Umriss Dominikanische Republik",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Dominikanische Republik – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Dominikanische Republik – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Dominikanische Republik",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/do.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-dz",
-    "title": Ümriss Algerien",
+    "id": "outline-dz",
+    "title": "Umriss Algerien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Älgerien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Älgerien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Älgerien",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/dz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ec",
-    "title": Ümriss Ecuador",
+    "id": "outline-ec",
+    "title": "Umriss Ecuador",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Ecuador – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Ecuador – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Ecuador",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ec.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ee",
-    "title": Ümriss Estland",
+    "id": "outline-ee",
+    "title": "Umriss Estland",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Estland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Estland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Estland",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ee.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-eg",
-    "title": Ümriss Ägypten",
+    "id": "outline-eg",
+    "title": "Umriss "Ägypten",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Ägypten – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": "Ägypten",
+    "answer": ""Ägypten – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "hint": ""Ägypten",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/eg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-eh",
-    "title": Ümriss Westsahara",
+    "id": "outline-eh",
+    "title": "Umriss Westsahara",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Westsahara – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Westsahara – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Westsahara",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/eh.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-er",
-    "title": Ümriss Eritrea",
+    "id": "outline-er",
+    "title": "Umriss Eritrea",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Eritrea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Eritrea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Eritrea",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/er.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-es",
-    "title": Ümriss Spanien",
+    "id": "outline-es",
+    "title": "Umriss Spanien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Spanien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Spanien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Spanien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/es.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-et",
-    "title": Ümriss Äthiopien",
+    "id": "outline-et",
+    "title": "Umriss "Äthiopien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Äthiopien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": "Äthiopien",
+    "answer": ""Äthiopien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "hint": ""Äthiopien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/et.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-fi",
-    "title": Ümriss Finnland",
+    "id": "outline-fi",
+    "title": "Umriss Finnland",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Finnland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Finnland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Finnland",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/fi.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-fj",
-    "title": Ümriss Fidschi",
+    "id": "outline-fj",
+    "title": "Umriss Fidschi",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Fidschi – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Fidschi – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Fidschi",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/fj.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-fk",
-    "title": Ümriss Falklandinseln",
+    "id": "outline-fk",
+    "title": "Umriss Falklandinseln",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Falklandinseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Falklandinseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Falklandinseln",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/fk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-fo",
-    "title": Ümriss Färöer",
+    "id": "outline-fo",
+    "title": "Umriss Färöer",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Färöer – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Färöer – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Färöer",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/fo.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-fr",
-    "title": Ümriss Frankreich",
+    "id": "outline-fr",
+    "title": "Umriss Frankreich",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Frankreich – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Frankreich – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Frankreich",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/fr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ga",
-    "title": Ümriss Gabun",
+    "id": "outline-ga",
+    "title": "Umriss Gabun",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Gabun – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Gabun – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Gabun",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ga.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gb",
-    "title": Ümriss Vereinigtes Königreich",
+    "id": "outline-gb",
+    "title": "Umriss Vereinigtes Königreich",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Vereinigtes Königreich – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Vereinigtes Königreich – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Vereinigtes Königreich",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gb.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gd",
-    "title": Ümriss Grenada",
+    "id": "outline-gd",
+    "title": "Umriss Grenada",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Grenada – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Grenada – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Grenada",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gd.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ge",
-    "title": Ümriss Georgien",
+    "id": "outline-ge",
+    "title": "Umriss Georgien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Georgien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Georgien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Georgien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ge.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gf",
-    "title": Ümriss Französisch-Guayana",
+    "id": "outline-gf",
+    "title": "Umriss Französisch-Guayana",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Französisch-Guayana – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Französisch-Guayana – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Französisch-Guayana",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gg",
-    "title": Ümriss Guernsey",
+    "id": "outline-gg",
+    "title": "Umriss Guernsey",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Guernsey – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Guernsey – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Guernsey",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gh",
-    "title": Ümriss Ghana",
+    "id": "outline-gh",
+    "title": "Umriss Ghana",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Ghana – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Ghana – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Ghana",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gh.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gi",
-    "title": Ümriss Gibraltar",
+    "id": "outline-gi",
+    "title": "Umriss Gibraltar",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Gibraltar – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Gibraltar – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Gibraltar",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gi.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gl",
-    "title": Ümriss Grönland",
+    "id": "outline-gl",
+    "title": "Umriss Grönland",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Grönland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Grönland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Grönland",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gm",
-    "title": Ümriss Gambia",
+    "id": "outline-gm",
+    "title": "Umriss Gambia",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Gambia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Gambia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Gambia",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gn",
-    "title": Ümriss Guinea",
+    "id": "outline-gn",
+    "title": "Umriss Guinea",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Guinea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Guinea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Guinea",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gp",
-    "title": Ümriss Guadeloupe",
+    "id": "outline-gp",
+    "title": "Umriss Guadeloupe",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Guadeloupe – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Guadeloupe – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Guadeloupe",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gp.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gq",
-    "title": Ümriss Äquatorialguinea",
+    "id": "outline-gq",
+    "title": "Umriss "Äquatorialguinea",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Äquatorialguinea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": "Äquatorialguinea",
+    "answer": ""Äquatorialguinea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "hint": ""Äquatorialguinea",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gq.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gr",
-    "title": Ümriss Griechenland",
+    "id": "outline-gr",
+    "title": "Umriss Griechenland",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Griechenland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Griechenland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Griechenland",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gs",
-    "title": Ümriss Südgeorgien und die Südlichen Sandwichinseln",
+    "id": "outline-gs",
+    "title": "Umriss Südgeorgien und die Südlichen Sandwichinseln",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Südgeorgien und die Südlichen Sandwichinseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Südgeorgien und die Südlichen Sandwichinseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Südgeorgien und die Südlichen Sandwichinseln",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gs.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gt",
-    "title": Ümriss Guatemala",
+    "id": "outline-gt",
+    "title": "Umriss Guatemala",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Guatemala – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Guatemala – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Guatemala",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gu",
-    "title": Ümriss Guam",
+    "id": "outline-gu",
+    "title": "Umriss Guam",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Guam – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Guam – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Guam",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gu.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gw",
-    "title": Ümriss Guinea-Bissau",
+    "id": "outline-gw",
+    "title": "Umriss Guinea-Bissau",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Guinea-Bissau – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Guinea-Bissau – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Guinea-Bissau",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-gy",
-    "title": Ümriss Guyana",
+    "id": "outline-gy",
+    "title": "Umriss Guyana",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Guyana – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Guyana – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Guyana",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/gy.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-hk",
-    "title": Ümriss Sonderverwaltungsregion Hongkong",
+    "id": "outline-hk",
+    "title": "Umriss Sonderverwaltungsregion Hongkong",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Sonderverwaltungsregion Hongkong – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Sonderverwaltungsregion Hongkong – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Sonderverwaltungsregion Hongkong",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/hk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-hm",
-    "title": Ümriss Heard und McDonaldinseln",
+    "id": "outline-hm",
+    "title": "Umriss Heard und McDonaldinseln",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Heard und McDonaldinseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Heard und McDonaldinseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Heard und McDonaldinseln",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/hm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-hn",
-    "title": Ümriss Honduras",
+    "id": "outline-hn",
+    "title": "Umriss Honduras",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Honduras – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Honduras – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Honduras",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/hn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-hr",
-    "title": Ümriss Kroatien",
+    "id": "outline-hr",
+    "title": "Umriss Kroatien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Kroatien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kroatien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kroatien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/hr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ht",
-    "title": Ümriss Haiti",
+    "id": "outline-ht",
+    "title": "Umriss Haiti",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Haiti – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Haiti – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Haiti",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ht.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-hu",
-    "title": Ümriss Ungarn",
+    "id": "outline-hu",
+    "title": "Umriss Ungarn",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Üngarn – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Üngarn – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Üngarn",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/hu.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-id",
-    "title": Ümriss Indonesien",
+    "id": "outline-id",
+    "title": "Umriss Indonesien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Indonesien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Indonesien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Indonesien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/id.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ie",
-    "title": Ümriss Irland",
+    "id": "outline-ie",
+    "title": "Umriss Irland",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Irland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Irland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Irland",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ie.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-il",
-    "title": Ümriss Israel",
+    "id": "outline-il",
+    "title": "Umriss Israel",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Israel – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Israel – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Israel",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/il.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-im",
-    "title": Ümriss Isle of Man",
+    "id": "outline-im",
+    "title": "Umriss Isle of Man",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Isle of Man – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Isle of Man – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Isle of Man",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/im.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-in",
-    "title": Ümriss Indien",
+    "id": "outline-in",
+    "title": "Umriss Indien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Indien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Indien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Indien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/in.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-io",
-    "title": Ümriss Britisches Territorium im Indischen Ozean",
+    "id": "outline-io",
+    "title": "Umriss Britisches Territorium im Indischen Ozean",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Britisches Territorium im Indischen Ozean – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Britisches Territorium im Indischen Ozean – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Britisches Territorium im Indischen Ozean",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/io.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-iq",
-    "title": Ümriss Irak",
+    "id": "outline-iq",
+    "title": "Umriss Irak",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Irak – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Irak – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Irak",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/iq.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ir",
-    "title": Ümriss Iran",
+    "id": "outline-ir",
+    "title": "Umriss Iran",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Iran – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Iran – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Iran",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ir.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-is",
-    "title": Ümriss Island",
+    "id": "outline-is",
+    "title": "Umriss Island",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Island – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Island – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Island",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/is.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-it",
-    "title": Ümriss Italien",
+    "id": "outline-it",
+    "title": "Umriss Italien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Italien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Italien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Italien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/it.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-jm",
-    "title": Ümriss Jamaika",
+    "id": "outline-jm",
+    "title": "Umriss Jamaika",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Jamaika – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Jamaika – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Jamaika",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/jm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-jo",
-    "title": Ümriss Jordanien",
+    "id": "outline-jo",
+    "title": "Umriss Jordanien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Jordanien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Jordanien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Jordanien",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/jo.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-jp",
-    "title": Ümriss Japan",
+    "id": "outline-jp",
+    "title": "Umriss Japan",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Japan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Japan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Japan",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/jp.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ke",
-    "title": Ümriss Kenia",
+    "id": "outline-ke",
+    "title": "Umriss Kenia",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Kenia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kenia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kenia",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ke.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-kg",
-    "title": Ümriss Kirgisistan",
+    "id": "outline-kg",
+    "title": "Umriss Kirgisistan",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Kirgisistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kirgisistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kirgisistan",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/kg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-kh",
-    "title": Ümriss Kambodscha",
+    "id": "outline-kh",
+    "title": "Umriss Kambodscha",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Kambodscha – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kambodscha – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kambodscha",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/kh.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ki",
-    "title": Ümriss Kiribati",
+    "id": "outline-ki",
+    "title": "Umriss Kiribati",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Kiribati – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kiribati – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kiribati",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ki.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-km",
-    "title": Ümriss Komoren",
+    "id": "outline-km",
+    "title": "Umriss Komoren",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Komoren – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Komoren – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Komoren",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/km.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-kn",
-    "title": Ümriss St. Kitts und Nevis",
+    "id": "outline-kn",
+    "title": "Umriss St. Kitts und Nevis",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "St. Kitts und Nevis – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "St. Kitts und Nevis – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "St. Kitts und Nevis",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/kn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-kp",
-    "title": Ümriss Nordkorea",
+    "id": "outline-kp",
+    "title": "Umriss Nordkorea",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Nordkorea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Nordkorea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Nordkorea",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/kp.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-kr",
-    "title": Ümriss Südkorea",
+    "id": "outline-kr",
+    "title": "Umriss Südkorea",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Südkorea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Südkorea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Südkorea",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/kr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-kw",
-    "title": Ümriss Kuwait",
+    "id": "outline-kw",
+    "title": "Umriss Kuwait",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Kuwait – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kuwait – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kuwait",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/kw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ky",
-    "title": Ümriss Kaimaninseln",
+    "id": "outline-ky",
+    "title": "Umriss Kaimaninseln",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Kaimaninseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kaimaninseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kaimaninseln",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ky.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-kz",
-    "title": Ümriss Kasachstan",
+    "id": "outline-kz",
+    "title": "Umriss Kasachstan",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Kasachstan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kasachstan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kasachstan",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/kz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-la",
-    "title": Ümriss Laos",
+    "id": "outline-la",
+    "title": "Umriss Laos",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Laos – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Laos – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Laos",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/la.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-lb",
-    "title": Ümriss Libanon",
+    "id": "outline-lb",
+    "title": "Umriss Libanon",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Libanon – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Libanon – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Libanon",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/lb.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-lc",
-    "title": Ümriss St. Lucia",
+    "id": "outline-lc",
+    "title": "Umriss St. Lucia",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "St. Lucia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "St. Lucia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "St. Lucia",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/lc.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-li",
-    "title": Ümriss Liechtenstein",
+    "id": "outline-li",
+    "title": "Umriss Liechtenstein",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Liechtenstein – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Liechtenstein – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Liechtenstein",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/li.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-lk",
-    "title": Ümriss Sri Lanka",
+    "id": "outline-lk",
+    "title": "Umriss Sri Lanka",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Sri Lanka – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Sri Lanka – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Sri Lanka",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/lk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-lr",
-    "title": Ümriss Liberia",
+    "id": "outline-lr",
+    "title": "Umriss Liberia",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Liberia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Liberia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Liberia",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/lr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ls",
-    "title": Ümriss Lesotho",
+    "id": "outline-ls",
+    "title": "Umriss Lesotho",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Lesotho – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Lesotho – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Lesotho",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ls.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-lt",
-    "title": Ümriss Litauen",
+    "id": "outline-lt",
+    "title": "Umriss Litauen",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Litauen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Litauen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Litauen",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/lt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-lu",
-    "title": Ümriss Luxemburg",
+    "id": "outline-lu",
+    "title": "Umriss Luxemburg",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Luxemburg – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Luxemburg – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Luxemburg",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/lu.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-lv",
-    "title": Ümriss Lettland",
+    "id": "outline-lv",
+    "title": "Umriss Lettland",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Lettland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Lettland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Lettland",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/lv.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ly",
-    "title": Ümriss Libyen",
+    "id": "outline-ly",
+    "title": "Umriss Libyen",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Libyen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Libyen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Libyen",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ly.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ma",
-    "title": Ümriss Marokko",
+    "id": "outline-ma",
+    "title": "Umriss Marokko",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Marokko – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Marokko – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Marokko",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ma.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-mc",
-    "title": Ümriss Monaco",
+    "id": "outline-mc",
+    "title": "Umriss Monaco",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Monaco – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Monaco – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Monaco",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/mc.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-md",
-    "title": Ümriss Republik Moldau",
+    "id": "outline-md",
+    "title": "Umriss Republik Moldau",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Republik Moldau – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Republik Moldau – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Republik Moldau",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/md.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-me",
-    "title": Ümriss Montenegro",
+    "id": "outline-me",
+    "title": "Umriss Montenegro",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Montenegro – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Montenegro – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Montenegro",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/me.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-mf",
-    "title": Ümriss St. Martin",
+    "id": "outline-mf",
+    "title": "Umriss St. Martin",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "St. Martin – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "St. Martin – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "St. Martin",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/mf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-mg",
-    "title": Ümriss Madagaskar",
+    "id": "outline-mg",
+    "title": "Umriss Madagaskar",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Madagaskar – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Madagaskar – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Madagaskar",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/mg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-mk",
-    "title": Ümriss Nordmazedonien",
+    "id": "outline-mk",
+    "title": "Umriss Nordmazedonien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Nordmazedonien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Nordmazedonien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Nordmazedonien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/mk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ml",
-    "title": Ümriss Mali",
+    "id": "outline-ml",
+    "title": "Umriss Mali",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Mali – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Mali – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Mali",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ml.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-mm",
-    "title": Ümriss Myanmar",
+    "id": "outline-mm",
+    "title": "Umriss Myanmar",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Myanmar – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Myanmar – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Myanmar",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/mm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-mn",
-    "title": Ümriss Mongolei",
+    "id": "outline-mn",
+    "title": "Umriss Mongolei",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Mongolei – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Mongolei – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Mongolei",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/mn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-mo",
-    "title": Ümriss Sonderverwaltungsregion Macau",
+    "id": "outline-mo",
+    "title": "Umriss Sonderverwaltungsregion Macau",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Sonderverwaltungsregion Macau – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Sonderverwaltungsregion Macau – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Sonderverwaltungsregion Macau",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/mo.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-mq",
-    "title": Ümriss Martinique",
+    "id": "outline-mq",
+    "title": "Umriss Martinique",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Martinique – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Martinique – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Martinique",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/mq.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-mr",
-    "title": Ümriss Mauretanien",
+    "id": "outline-mr",
+    "title": "Umriss Mauretanien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Mauretanien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Mauretanien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Mauretanien",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/mr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ms",
-    "title": Ümriss Montserrat",
+    "id": "outline-ms",
+    "title": "Umriss Montserrat",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Montserrat – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Montserrat – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Montserrat",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ms.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-mt",
-    "title": Ümriss Malta",
+    "id": "outline-mt",
+    "title": "Umriss Malta",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Malta – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Malta – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Malta",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/mt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-mu",
-    "title": Ümriss Mauritius",
+    "id": "outline-mu",
+    "title": "Umriss Mauritius",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Mauritius – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Mauritius – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Mauritius",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/mu.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-mv",
-    "title": Ümriss Malediven",
+    "id": "outline-mv",
+    "title": "Umriss Malediven",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Malediven – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Malediven – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Malediven",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/mv.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-mw",
-    "title": Ümriss Malawi",
+    "id": "outline-mw",
+    "title": "Umriss Malawi",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Malawi – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Malawi – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Malawi",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/mw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-mx",
-    "title": Ümriss Mexiko",
+    "id": "outline-mx",
+    "title": "Umriss Mexiko",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Mexiko – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Mexiko – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Mexiko",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/mx.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-my",
-    "title": Ümriss Malaysia",
+    "id": "outline-my",
+    "title": "Umriss Malaysia",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Malaysia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Malaysia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Malaysia",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/my.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-mz",
-    "title": Ümriss Mosambik",
+    "id": "outline-mz",
+    "title": "Umriss Mosambik",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Mosambik – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Mosambik – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Mosambik",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/mz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-na",
-    "title": Ümriss Namibia",
+    "id": "outline-na",
+    "title": "Umriss Namibia",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Namibia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Namibia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Namibia",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/na.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-nc",
-    "title": Ümriss Neukaledonien",
+    "id": "outline-nc",
+    "title": "Umriss Neukaledonien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Neukaledonien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Neukaledonien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Neukaledonien",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/nc.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ne",
-    "title": Ümriss Niger",
+    "id": "outline-ne",
+    "title": "Umriss Niger",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Niger – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Niger – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Niger",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ne.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-nf",
-    "title": Ümriss Norfolkinsel",
+    "id": "outline-nf",
+    "title": "Umriss Norfolkinsel",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Norfolkinsel – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Norfolkinsel – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Norfolkinsel",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/nf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ng",
-    "title": Ümriss Nigeria",
+    "id": "outline-ng",
+    "title": "Umriss Nigeria",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Nigeria – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Nigeria – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Nigeria",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ng.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ni",
-    "title": Ümriss Nicaragua",
+    "id": "outline-ni",
+    "title": "Umriss Nicaragua",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Nicaragua – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Nicaragua – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Nicaragua",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ni.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-nl",
-    "title": Ümriss Niederlande",
+    "id": "outline-nl",
+    "title": "Umriss Niederlande",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Niederlande – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Niederlande – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Niederlande",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/nl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-no",
-    "title": Ümriss Norwegen",
+    "id": "outline-no",
+    "title": "Umriss Norwegen",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Norwegen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Norwegen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Norwegen",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/no.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-np",
-    "title": Ümriss Nepal",
+    "id": "outline-np",
+    "title": "Umriss Nepal",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Nepal – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Nepal – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Nepal",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/np.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-nr",
-    "title": Ümriss Nauru",
+    "id": "outline-nr",
+    "title": "Umriss Nauru",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Nauru – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Nauru – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Nauru",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/nr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-nu",
-    "title": Ümriss Niue",
+    "id": "outline-nu",
+    "title": "Umriss Niue",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Niue – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Niue – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Niue",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/nu.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-nz",
-    "title": Ümriss Neuseeland",
+    "id": "outline-nz",
+    "title": "Umriss Neuseeland",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Neuseeland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Neuseeland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Neuseeland",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/nz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-om",
-    "title": Ümriss Oman",
+    "id": "outline-om",
+    "title": "Umriss Oman",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Öman – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Öman – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Öman",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/om.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-pa",
-    "title": Ümriss Panama",
+    "id": "outline-pa",
+    "title": "Umriss Panama",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Panama – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Panama – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Panama",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/pa.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-pe",
-    "title": Ümriss Peru",
+    "id": "outline-pe",
+    "title": "Umriss Peru",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Peru – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Peru – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Peru",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/pe.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-pf",
-    "title": Ümriss Französisch-Polynesien",
+    "id": "outline-pf",
+    "title": "Umriss Französisch-Polynesien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Französisch-Polynesien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Französisch-Polynesien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Französisch-Polynesien",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/pf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-pg",
-    "title": Ümriss Papua-Neuguinea",
+    "id": "outline-pg",
+    "title": "Umriss Papua-Neuguinea",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Papua-Neuguinea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Papua-Neuguinea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Papua-Neuguinea",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/pg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ph",
-    "title": Ümriss Philippinen",
+    "id": "outline-ph",
+    "title": "Umriss Philippinen",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Philippinen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Philippinen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Philippinen",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ph.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-pk",
-    "title": Ümriss Pakistan",
+    "id": "outline-pk",
+    "title": "Umriss Pakistan",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Pakistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Pakistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Pakistan",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/pk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-pl",
-    "title": Ümriss Polen",
+    "id": "outline-pl",
+    "title": "Umriss Polen",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Polen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Polen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Polen",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/pl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-pm",
-    "title": Ümriss St. Pierre und Miquelon",
+    "id": "outline-pm",
+    "title": "Umriss St. Pierre und Miquelon",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "St. Pierre und Miquelon – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "St. Pierre und Miquelon – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "St. Pierre und Miquelon",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/pm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-pn",
-    "title": Ümriss Pitcairninseln",
+    "id": "outline-pn",
+    "title": "Umriss Pitcairninseln",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Pitcairninseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Pitcairninseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Pitcairninseln",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/pn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-pr",
-    "title": Ümriss Puerto Rico",
+    "id": "outline-pr",
+    "title": "Umriss Puerto Rico",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Puerto Rico – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Puerto Rico – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Puerto Rico",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/pr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-pt",
-    "title": Ümriss Portugal",
+    "id": "outline-pt",
+    "title": "Umriss Portugal",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Portugal – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Portugal – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Portugal",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/pt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-pw",
-    "title": Ümriss Palau",
+    "id": "outline-pw",
+    "title": "Umriss Palau",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Palau – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Palau – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Palau",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/pw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-py",
-    "title": Ümriss Paraguay",
+    "id": "outline-py",
+    "title": "Umriss Paraguay",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Paraguay – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Paraguay – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Paraguay",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/py.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-qa",
-    "title": Ümriss Katar",
+    "id": "outline-qa",
+    "title": "Umriss Katar",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Katar – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Katar – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Katar",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/qa.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-re",
-    "title": Ümriss Réunion",
+    "id": "outline-re",
+    "title": "Umriss Réunion",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Réunion – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Réunion – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Réunion",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/re.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ro",
-    "title": Ümriss Rumänien",
+    "id": "outline-ro",
+    "title": "Umriss Rumänien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Rumänien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Rumänien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Rumänien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ro.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-rs",
-    "title": Ümriss Serbien",
+    "id": "outline-rs",
+    "title": "Umriss Serbien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Serbien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Serbien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Serbien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/rs.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ru",
-    "title": Ümriss Russland",
+    "id": "outline-ru",
+    "title": "Umriss Russland",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Russland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Russland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Russland",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ru.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-rw",
-    "title": Ümriss Ruanda",
+    "id": "outline-rw",
+    "title": "Umriss Ruanda",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Ruanda – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Ruanda – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Ruanda",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/rw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sa",
-    "title": Ümriss Saudi-Arabien",
+    "id": "outline-sa",
+    "title": "Umriss Saudi-Arabien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Saudi-Arabien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Saudi-Arabien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Saudi-Arabien",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sa.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sb",
-    "title": Ümriss Salomonen",
+    "id": "outline-sb",
+    "title": "Umriss Salomonen",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Salomonen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Salomonen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Salomonen",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sb.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sc",
-    "title": Ümriss Seychellen",
+    "id": "outline-sc",
+    "title": "Umriss Seychellen",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Seychellen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Seychellen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Seychellen",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sc.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sd",
-    "title": Ümriss Sudan",
+    "id": "outline-sd",
+    "title": "Umriss Sudan",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Sudan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Sudan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Sudan",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sd.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-se",
-    "title": Ümriss Schweden",
+    "id": "outline-se",
+    "title": "Umriss Schweden",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Schweden – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Schweden – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Schweden",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/se.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sg",
-    "title": Ümriss Singapur",
+    "id": "outline-sg",
+    "title": "Umriss Singapur",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Singapur – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Singapur – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Singapur",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sh",
-    "title": Ümriss St. Helena",
+    "id": "outline-sh",
+    "title": "Umriss St. Helena",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "St. Helena – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "St. Helena – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "St. Helena",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sh.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-si",
-    "title": Ümriss Slowenien",
+    "id": "outline-si",
+    "title": "Umriss Slowenien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Slowenien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Slowenien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Slowenien",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/si.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sj",
-    "title": Ümriss Spitzbergen und Jan Mayen",
+    "id": "outline-sj",
+    "title": "Umriss Spitzbergen und Jan Mayen",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Spitzbergen und Jan Mayen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Spitzbergen und Jan Mayen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Spitzbergen und Jan Mayen",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sj.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sk",
-    "title": Ümriss Slowakei",
+    "id": "outline-sk",
+    "title": "Umriss Slowakei",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Slowakei – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Slowakei – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Slowakei",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sl",
-    "title": Ümriss Sierra Leone",
+    "id": "outline-sl",
+    "title": "Umriss Sierra Leone",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Sierra Leone – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Sierra Leone – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Sierra Leone",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sm",
-    "title": Ümriss San Marino",
+    "id": "outline-sm",
+    "title": "Umriss San Marino",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "San Marino – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "San Marino – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "San Marino",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sn",
-    "title": Ümriss Senegal",
+    "id": "outline-sn",
+    "title": "Umriss Senegal",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Senegal – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Senegal – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Senegal",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-so",
-    "title": Ümriss Somalia",
+    "id": "outline-so",
+    "title": "Umriss Somalia",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Somalia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Somalia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Somalia",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/so.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sr",
-    "title": Ümriss Suriname",
+    "id": "outline-sr",
+    "title": "Umriss Suriname",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Suriname – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Suriname – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Suriname",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ss",
-    "title": Ümriss Südsudan",
+    "id": "outline-ss",
+    "title": "Umriss Südsudan",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Südsudan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Südsudan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Südsudan",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ss.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-st",
-    "title": Ümriss São Tomé und Príncipe",
+    "id": "outline-st",
+    "title": "Umriss São Tomé und Príncipe",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "São Tomé und Príncipe – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "São Tomé und Príncipe – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "São Tomé und Príncipe",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/st.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sv",
-    "title": Ümriss El Salvador",
+    "id": "outline-sv",
+    "title": "Umriss El Salvador",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "El Salvador – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "El Salvador – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "El Salvador",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sv.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sx",
-    "title": Ümriss Sint Maarten",
+    "id": "outline-sx",
+    "title": "Umriss Sint Maarten",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Sint Maarten – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Sint Maarten – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Sint Maarten",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sx.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sy",
-    "title": Ümriss Syrien",
+    "id": "outline-sy",
+    "title": "Umriss Syrien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Syrien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Syrien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Syrien",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sy.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-sz",
-    "title": Ümriss Eswatini",
+    "id": "outline-sz",
+    "title": "Umriss Eswatini",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Eswatini – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Eswatini – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Eswatini",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/sz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-tc",
-    "title": Ümriss Turks- und Caicosinseln",
+    "id": "outline-tc",
+    "title": "Umriss Turks- und Caicosinseln",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Turks- und Caicosinseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Turks- und Caicosinseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Turks- und Caicosinseln",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/tc.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-td",
-    "title": Ümriss Tschad",
+    "id": "outline-td",
+    "title": "Umriss Tschad",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Tschad – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Tschad – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Tschad",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/td.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-tf",
-    "title": Ümriss Französische Süd- und Antarktisgebiete",
+    "id": "outline-tf",
+    "title": "Umriss Französische Süd- und Antarktisgebiete",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Französische Süd- und Antarktisgebiete – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Französische Süd- und Antarktisgebiete – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Französische Süd- und Antarktisgebiete",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/tf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-tg",
-    "title": Ümriss Togo",
+    "id": "outline-tg",
+    "title": "Umriss Togo",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Togo – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Togo – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Togo",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/tg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-th",
-    "title": Ümriss Thailand",
+    "id": "outline-th",
+    "title": "Umriss Thailand",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Thailand – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Thailand – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Thailand",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/th.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-tj",
-    "title": Ümriss Tadschikistan",
+    "id": "outline-tj",
+    "title": "Umriss Tadschikistan",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Tadschikistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Tadschikistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Tadschikistan",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/tj.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-tk",
-    "title": Ümriss Tokelau",
+    "id": "outline-tk",
+    "title": "Umriss Tokelau",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Tokelau – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Tokelau – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Tokelau",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/tk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-tl",
-    "title": Ümriss Timor-Leste",
+    "id": "outline-tl",
+    "title": "Umriss Timor-Leste",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Timor-Leste – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Timor-Leste – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Timor-Leste",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/tl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-tm",
-    "title": Ümriss Turkmenistan",
+    "id": "outline-tm",
+    "title": "Umriss Turkmenistan",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Turkmenistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Turkmenistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Turkmenistan",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/tm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-tn",
-    "title": Ümriss Tunesien",
+    "id": "outline-tn",
+    "title": "Umriss Tunesien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Tunesien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Tunesien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Tunesien",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/tn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-to",
-    "title": Ümriss Tonga",
+    "id": "outline-to",
+    "title": "Umriss Tonga",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Tonga – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Tonga – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Tonga",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/to.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-tr",
-    "title": Ümriss Türkei",
+    "id": "outline-tr",
+    "title": "Umriss Türkei",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Türkei – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Türkei – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Türkei",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/tr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-tt",
-    "title": Ümriss Trinidad und Tobago",
+    "id": "outline-tt",
+    "title": "Umriss Trinidad und Tobago",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Trinidad und Tobago – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Trinidad und Tobago – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Trinidad und Tobago",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/tt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-tw",
-    "title": Ümriss Taiwan",
+    "id": "outline-tw",
+    "title": "Umriss Taiwan",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Taiwan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Taiwan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Taiwan",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/tw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-tz",
-    "title": Ümriss Tansania",
+    "id": "outline-tz",
+    "title": "Umriss Tansania",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Tansania – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Tansania – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Tansania",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/tz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ua",
-    "title": Ümriss Ukraine",
+    "id": "outline-ua",
+    "title": "Umriss Ukraine",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Ükraine – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Ükraine – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Ükraine",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ua.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ug",
-    "title": Ümriss Uganda",
+    "id": "outline-ug",
+    "title": "Umriss Uganda",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Üganda – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Üganda – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Üganda",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ug.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-us",
-    "title": Ümriss Vereinigte Staaten",
+    "id": "outline-us",
+    "title": "Umriss Vereinigte Staaten",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Vereinigte Staaten – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Vereinigte Staaten – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Vereinigte Staaten",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/us.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-uy",
-    "title": Ümriss Uruguay",
+    "id": "outline-uy",
+    "title": "Umriss Uruguay",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Üruguay – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Üruguay – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Üruguay",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/uy.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-uz",
-    "title": Ümriss Usbekistan",
+    "id": "outline-uz",
+    "title": "Umriss Usbekistan",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Üsbekistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Üsbekistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Üsbekistan",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/uz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-va",
-    "title": Ümriss Vatikanstadt",
+    "id": "outline-va",
+    "title": "Umriss Vatikanstadt",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Vatikanstadt – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Vatikanstadt – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Vatikanstadt",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/va.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-vc",
-    "title": Ümriss St. Vincent und die Grenadinen",
+    "id": "outline-vc",
+    "title": "Umriss St. Vincent und die Grenadinen",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "St. Vincent und die Grenadinen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "St. Vincent und die Grenadinen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "St. Vincent und die Grenadinen",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/vc.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ve",
-    "title": Ümriss Venezuela",
+    "id": "outline-ve",
+    "title": "Umriss Venezuela",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Venezuela – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Venezuela – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Venezuela",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ve.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-vg",
-    "title": Ümriss Britische Jungferninseln",
+    "id": "outline-vg",
+    "title": "Umriss Britische Jungferninseln",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Britische Jungferninseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Britische Jungferninseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Britische Jungferninseln",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/vg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-vi",
-    "title": Ümriss Amerikanische Jungferninseln",
+    "id": "outline-vi",
+    "title": "Umriss Amerikanische Jungferninseln",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": Ämerikanische Jungferninseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": Ämerikanische Jungferninseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": Ämerikanische Jungferninseln",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/vi.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-vn",
-    "title": Ümriss Vietnam",
+    "id": "outline-vn",
+    "title": "Umriss Vietnam",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Vietnam – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Vietnam – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Vietnam",
     "difficulty": "leicht",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/vn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-vu",
-    "title": Ümriss Vanuatu",
+    "id": "outline-vu",
+    "title": "Umriss Vanuatu",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Vanuatu – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Vanuatu – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Vanuatu",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/vu.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-wf",
-    "title": Ümriss Wallis und Futuna",
+    "id": "outline-wf",
+    "title": "Umriss Wallis und Futuna",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Wallis und Futuna – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Wallis und Futuna – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Wallis und Futuna",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/wf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ws",
-    "title": Ümriss Samoa",
+    "id": "outline-ws",
+    "title": "Umriss Samoa",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Samoa – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Samoa – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Samoa",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ws.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-ye",
-    "title": Ümriss Jemen",
+    "id": "outline-ye",
+    "title": "Umriss Jemen",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Jemen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Jemen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Jemen",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/ye.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-yt",
-    "title": Ümriss Mayotte",
+    "id": "outline-yt",
+    "title": "Umriss Mayotte",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Mayotte – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Mayotte – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Mayotte",
     "difficulty": üchwer",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/yt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-za",
-    "title": Ümriss Südafrika",
+    "id": "outline-za",
+    "title": "Umriss Südafrika",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Südafrika – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Südafrika – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Südafrika",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/za.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-zm",
-    "title": Ümriss Sambia",
+    "id": "outline-zm",
+    "title": "Umriss Sambia",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Sambia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Sambia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Sambia",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/zm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
   {
-    "id": öutline-zw",
-    "title": Ümriss Simbabwe",
+    "id": "outline-zw",
+    "title": "Umriss Simbabwe",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    answer": "Simbabwe – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Simbabwe – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Simbabwe",
     "difficulty": "mittel",
-    üources": {
+    "sources": {
       "image": "/assets/country-outlines/zw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }

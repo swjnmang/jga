@@ -54,7 +54,7 @@ const baseCards: Card[] = [
     year: -2560,
     cue: 'Bild ansehen und einordnen. Frage: Wo und wann war das?',
     answer: 'Gizeh, ca. 2560 v. Chr. „ Cheops-Pyramide.',
-    hint: 'Altes Ägypten.',
+    hint: 'Altes "Ägypten.',
     difficulty: 'schwer',
     sources: {
       image: '/assets/images/pyramide.png'
