@@ -30,8 +30,23 @@ const europeanCountries = new Set([
   'ad', 'al', 'at', 'ax', 'ba', 'be', 'bg', 'by', 'ch', 'cy', 'cz', 'de', 'dk', 'ee', 'es', 'fi', 'fo', 'fr', 'gb', 'ge', 'gg', 'gi', 'gr', 'hr', 'hu', 'ie', 'im', 'is', 'it', 'je', 'li', 'lt', 'lu', 'lv', 'mc', 'md', 'me', 'mk', 'mt', 'nl', 'no', 'pl', 'pt', 'ro', 'rs', 'ru', 'se', 'si', 'sj', 'sk', 'sm', 'ua', 'va', 'xk'
 ]);
 
+// Population-based difficulty (approximate population in millions)
+// einfach: >80M, mittel: 15-80M, schwer: <15M
+const largePopulation = new Set([
+  'cn', 'in', 'us', 'id', 'pk', 'br', 'ng', 'bd', 'mx', 'jp', 'et', 'ph', 'eg', 'vn', 'cd', 'tr', 'ir', 'th'
+]);
+const mediumPopulation = new Set([
+  'za', 'tz', 'ke', 'kr', 'co', 'ar', 'dz', 'sd', 'ug', 'ua', 'ca', 'ma', 'sa', 'uz', 'pe', 've', 'af', 'my', 'ao', 'gh', 'np', 'ye', 'mg', 'kp', 'cm', 'ci', 'au', 'ne', 'lk', 'bf', 'ml', 'mw', 'cl', 'zm', 'ro', 'kz', 'sy', 'ec', 'gt', 'sn', 'td', 'so', 'zw', 'gn', 'rw', 'bj', 'tn', 'bi', 'bo', 'ht', 'do', 'cz', 'be', 'cu', 'tn', 'jo', 'az', 'tj', 'hn', 'il', 'pg', 'ch', 'tg', 'hk', 'at', 'rs', 'hu', 'by'
+]);
+
 function getDifficulty(code) {
-  return europeanCountries.has(code.toLowerCase()) ? 'einfach' : 'mittel';
+  const lower = code.toLowerCase();
+  // European countries are always easy
+  if (europeanCountries.has(lower)) return 'einfach';
+  // Non-European: population-based
+  if (largePopulation.has(lower)) return 'einfach';
+  if (mediumPopulation.has(lower)) return 'mittel';
+  return 'schwer';
 }
 
 const cards = [];

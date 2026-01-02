@@ -24,7 +24,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Vereinigte Arabische Emirate – Staatsflagge (Jahr variabel).",
     "hint": "Vereinigte Arabische Emirate",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ae.png"
     }
@@ -50,7 +50,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Antigua und Barbuda – Staatsflagge (Jahr variabel).",
     "hint": "Antigua und Barbuda",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ag.png"
     }
@@ -63,7 +63,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Anguilla – Staatsflagge (Jahr variabel).",
     "hint": "Anguilla",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ai.png"
     }
@@ -89,7 +89,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Armenien – Staatsflagge (Jahr variabel).",
     "hint": "Armenien",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/am.png"
     }
@@ -115,7 +115,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Antarktis – Staatsflagge (Jahr variabel).",
     "hint": "Antarktis",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/aq.png"
     }
@@ -141,7 +141,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Amerikanisch-Samoa – Staatsflagge (Jahr variabel).",
     "hint": "Amerikanisch-Samoa",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/as.png"
     }
@@ -180,7 +180,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Aruba – Staatsflagge (Jahr variabel).",
     "hint": "Aruba",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/aw.png"
     }
@@ -232,7 +232,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Barbados – Staatsflagge (Jahr variabel).",
     "hint": "Barbados",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/bb.png"
     }
@@ -245,7 +245,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Bangladesch – Staatsflagge (Jahr variabel).",
     "hint": "Bangladesch",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/bd.png"
     }
@@ -297,7 +297,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Bahrain – Staatsflagge (Jahr variabel).",
     "hint": "Bahrain",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/bh.png"
     }
@@ -336,7 +336,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "St. Barthélemy – Staatsflagge (Jahr variabel).",
     "hint": "St. Barthélemy",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/bl.png"
     }
@@ -349,7 +349,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Bermuda – Staatsflagge (Jahr variabel).",
     "hint": "Bermuda",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/bm.png"
     }
@@ -362,7 +362,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Brunei Darussalam – Staatsflagge (Jahr variabel).",
     "hint": "Brunei Darussalam",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/bn.png"
     }
@@ -388,7 +388,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Karibische Niederlande – Staatsflagge (Jahr variabel).",
     "hint": "Karibische Niederlande",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/bq.png"
     }
@@ -401,7 +401,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Brasilien – Staatsflagge (Jahr variabel).",
     "hint": "Brasilien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/br.png"
     }
@@ -414,7 +414,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Bahamas – Staatsflagge (Jahr variabel).",
     "hint": "Bahamas",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/bs.png"
     }
@@ -427,7 +427,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Bhutan – Staatsflagge (Jahr variabel).",
     "hint": "Bhutan",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/bt.png"
     }
@@ -440,7 +440,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Bouvetinsel – Staatsflagge (Jahr variabel).",
     "hint": "Bouvetinsel",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/bv.png"
     }
@@ -453,7 +453,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Botsuana – Staatsflagge (Jahr variabel).",
     "hint": "Botsuana",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/bw.png"
     }
@@ -479,7 +479,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Belize – Staatsflagge (Jahr variabel).",
     "hint": "Belize",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/bz.png"
     }
@@ -505,7 +505,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kokosinseln – Staatsflagge (Jahr variabel).",
     "hint": "Kokosinseln",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/cc.png"
     }
@@ -518,7 +518,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kongo-Kinshasa – Staatsflagge (Jahr variabel).",
     "hint": "Kongo-Kinshasa",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/cd.png"
     }
@@ -531,7 +531,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Zentralafrikanische Republik – Staatsflagge (Jahr variabel).",
     "hint": "Zentralafrikanische Republik",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/cf.png"
     }
@@ -544,7 +544,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kongo-Brazzaville – Staatsflagge (Jahr variabel).",
     "hint": "Kongo-Brazzaville",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/cg.png"
     }
@@ -583,7 +583,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Cookinseln – Staatsflagge (Jahr variabel).",
     "hint": "Cookinseln",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ck.png"
     }
@@ -622,7 +622,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "China – Staatsflagge (Jahr variabel).",
     "hint": "China",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/cn.png"
     }
@@ -648,7 +648,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Costa Rica – Staatsflagge (Jahr variabel).",
     "hint": "Costa Rica",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/cr.png"
     }
@@ -674,7 +674,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Cabo Verde – Staatsflagge (Jahr variabel).",
     "hint": "Cabo Verde",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/cv.png"
     }
@@ -687,7 +687,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Curaçao – Staatsflagge (Jahr variabel).",
     "hint": "Curaçao",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/cw.png"
     }
@@ -700,7 +700,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Weihnachtsinsel – Staatsflagge (Jahr variabel).",
     "hint": "Weihnachtsinsel",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/cx.png"
     }
@@ -752,7 +752,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Dschibuti – Staatsflagge (Jahr variabel).",
     "hint": "Dschibuti",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/dj.png"
     }
@@ -778,7 +778,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Dominica – Staatsflagge (Jahr variabel).",
     "hint": "Dominica",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/dm.png"
     }
@@ -843,7 +843,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Ägypten – Staatsflagge (Jahr variabel).",
     "hint": "Ägypten",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/eg.png"
     }
@@ -856,7 +856,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Westsahara – Staatsflagge (Jahr variabel).",
     "hint": "Westsahara",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/eh.png"
     }
@@ -869,7 +869,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Eritrea – Staatsflagge (Jahr variabel).",
     "hint": "Eritrea",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/er.png"
     }
@@ -895,7 +895,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Äthiopien – Staatsflagge (Jahr variabel).",
     "hint": "Äthiopien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/et.png"
     }
@@ -921,7 +921,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Fidschi – Staatsflagge (Jahr variabel).",
     "hint": "Fidschi",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/fj.png"
     }
@@ -934,7 +934,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Falklandinseln – Staatsflagge (Jahr variabel).",
     "hint": "Falklandinseln",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/fk.png"
     }
@@ -947,7 +947,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Mikronesien – Staatsflagge (Jahr variabel).",
     "hint": "Mikronesien",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/fm.png"
     }
@@ -986,7 +986,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Gabun – Staatsflagge (Jahr variabel).",
     "hint": "Gabun",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ga.png"
     }
@@ -999,7 +999,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "GB-ENG – Staatsflagge (Jahr variabel).",
     "hint": "GB-ENG",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gb-eng.png"
     }
@@ -1012,7 +1012,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "GB-NIR – Staatsflagge (Jahr variabel).",
     "hint": "GB-NIR",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gb-nir.png"
     }
@@ -1025,7 +1025,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "GB-SCT – Staatsflagge (Jahr variabel).",
     "hint": "GB-SCT",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gb-sct.png"
     }
@@ -1038,7 +1038,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "GB-WLS – Staatsflagge (Jahr variabel).",
     "hint": "GB-WLS",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gb-wls.png"
     }
@@ -1064,7 +1064,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Grenada – Staatsflagge (Jahr variabel).",
     "hint": "Grenada",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gd.png"
     }
@@ -1090,7 +1090,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Französisch-Guayana – Staatsflagge (Jahr variabel).",
     "hint": "Französisch-Guayana",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gf.png"
     }
@@ -1142,7 +1142,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Grönland – Staatsflagge (Jahr variabel).",
     "hint": "Grönland",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gl.png"
     }
@@ -1155,7 +1155,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Gambia – Staatsflagge (Jahr variabel).",
     "hint": "Gambia",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gm.png"
     }
@@ -1181,7 +1181,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Guadeloupe – Staatsflagge (Jahr variabel).",
     "hint": "Guadeloupe",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gp.png"
     }
@@ -1194,7 +1194,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Äquatorialguinea – Staatsflagge (Jahr variabel).",
     "hint": "Äquatorialguinea",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gq.png"
     }
@@ -1220,7 +1220,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Südgeorgien und die Südlichen Sandwichinseln – Staatsflagge (Jahr variabel).",
     "hint": "Südgeorgien und die Südlichen Sandwichinseln",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gs.png"
     }
@@ -1246,7 +1246,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Guam – Staatsflagge (Jahr variabel).",
     "hint": "Guam",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gu.png"
     }
@@ -1259,7 +1259,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Guinea-Bissau – Staatsflagge (Jahr variabel).",
     "hint": "Guinea-Bissau",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gw.png"
     }
@@ -1272,7 +1272,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Guyana – Staatsflagge (Jahr variabel).",
     "hint": "Guyana",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gy.png"
     }
@@ -1298,7 +1298,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Heard und McDonaldinseln – Staatsflagge (Jahr variabel).",
     "hint": "Heard und McDonaldinseln",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/hm.png"
     }
@@ -1363,7 +1363,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Indonesien – Staatsflagge (Jahr variabel).",
     "hint": "Indonesien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/id.png"
     }
@@ -1415,7 +1415,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Indien – Staatsflagge (Jahr variabel).",
     "hint": "Indien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/in.png"
     }
@@ -1428,7 +1428,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Britisches Territorium im Indischen Ozean – Staatsflagge (Jahr variabel).",
     "hint": "Britisches Territorium im Indischen Ozean",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/io.png"
     }
@@ -1441,7 +1441,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Irak – Staatsflagge (Jahr variabel).",
     "hint": "Irak",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/iq.png"
     }
@@ -1454,7 +1454,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Iran – Staatsflagge (Jahr variabel).",
     "hint": "Iran",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/ir.png"
     }
@@ -1506,7 +1506,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Jamaika – Staatsflagge (Jahr variabel).",
     "hint": "Jamaika",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/jm.png"
     }
@@ -1532,7 +1532,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Japan – Staatsflagge (Jahr variabel).",
     "hint": "Japan",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/jp.png"
     }
@@ -1558,7 +1558,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kirgisistan – Staatsflagge (Jahr variabel).",
     "hint": "Kirgisistan",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/kg.png"
     }
@@ -1571,7 +1571,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kambodscha – Staatsflagge (Jahr variabel).",
     "hint": "Kambodscha",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/kh.png"
     }
@@ -1584,7 +1584,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kiribati – Staatsflagge (Jahr variabel).",
     "hint": "Kiribati",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ki.png"
     }
@@ -1597,7 +1597,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Komoren – Staatsflagge (Jahr variabel).",
     "hint": "Komoren",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/km.png"
     }
@@ -1610,7 +1610,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "St. Kitts und Nevis – Staatsflagge (Jahr variabel).",
     "hint": "St. Kitts und Nevis",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/kn.png"
     }
@@ -1649,7 +1649,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kuwait – Staatsflagge (Jahr variabel).",
     "hint": "Kuwait",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/kw.png"
     }
@@ -1662,7 +1662,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kaimaninseln – Staatsflagge (Jahr variabel).",
     "hint": "Kaimaninseln",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ky.png"
     }
@@ -1688,7 +1688,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Laos – Staatsflagge (Jahr variabel).",
     "hint": "Laos",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/la.png"
     }
@@ -1701,7 +1701,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Libanon – Staatsflagge (Jahr variabel).",
     "hint": "Libanon",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/lb.png"
     }
@@ -1714,7 +1714,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "St. Lucia – Staatsflagge (Jahr variabel).",
     "hint": "St. Lucia",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/lc.png"
     }
@@ -1753,7 +1753,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Liberia – Staatsflagge (Jahr variabel).",
     "hint": "Liberia",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/lr.png"
     }
@@ -1766,7 +1766,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Lesotho – Staatsflagge (Jahr variabel).",
     "hint": "Lesotho",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ls.png"
     }
@@ -1818,7 +1818,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Libyen – Staatsflagge (Jahr variabel).",
     "hint": "Libyen",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ly.png"
     }
@@ -1883,7 +1883,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "St. Martin – Staatsflagge (Jahr variabel).",
     "hint": "St. Martin",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/mf.png"
     }
@@ -1909,7 +1909,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Marshallinseln – Staatsflagge (Jahr variabel).",
     "hint": "Marshallinseln",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/mh.png"
     }
@@ -1948,7 +1948,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Myanmar – Staatsflagge (Jahr variabel).",
     "hint": "Myanmar",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/mm.png"
     }
@@ -1961,7 +1961,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Mongolei – Staatsflagge (Jahr variabel).",
     "hint": "Mongolei",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/mn.png"
     }
@@ -1974,7 +1974,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Sonderverwaltungsregion Macau – Staatsflagge (Jahr variabel).",
     "hint": "Sonderverwaltungsregion Macau",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/mo.png"
     }
@@ -1987,7 +1987,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Nördliche Marianen – Staatsflagge (Jahr variabel).",
     "hint": "Nördliche Marianen",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/mp.png"
     }
@@ -2000,7 +2000,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Martinique – Staatsflagge (Jahr variabel).",
     "hint": "Martinique",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/mq.png"
     }
@@ -2013,7 +2013,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Mauretanien – Staatsflagge (Jahr variabel).",
     "hint": "Mauretanien",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/mr.png"
     }
@@ -2026,7 +2026,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Montserrat – Staatsflagge (Jahr variabel).",
     "hint": "Montserrat",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ms.png"
     }
@@ -2052,7 +2052,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Mauritius – Staatsflagge (Jahr variabel).",
     "hint": "Mauritius",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/mu.png"
     }
@@ -2065,7 +2065,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Malediven – Staatsflagge (Jahr variabel).",
     "hint": "Malediven",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/mv.png"
     }
@@ -2091,7 +2091,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Mexiko – Staatsflagge (Jahr variabel).",
     "hint": "Mexiko",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/mx.png"
     }
@@ -2117,7 +2117,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Mosambik – Staatsflagge (Jahr variabel).",
     "hint": "Mosambik",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/mz.png"
     }
@@ -2130,7 +2130,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Namibia – Staatsflagge (Jahr variabel).",
     "hint": "Namibia",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/na.png"
     }
@@ -2143,7 +2143,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Neukaledonien – Staatsflagge (Jahr variabel).",
     "hint": "Neukaledonien",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/nc.png"
     }
@@ -2169,7 +2169,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Norfolkinsel – Staatsflagge (Jahr variabel).",
     "hint": "Norfolkinsel",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/nf.png"
     }
@@ -2182,7 +2182,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Nigeria – Staatsflagge (Jahr variabel).",
     "hint": "Nigeria",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/ng.png"
     }
@@ -2195,7 +2195,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Nicaragua – Staatsflagge (Jahr variabel).",
     "hint": "Nicaragua",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ni.png"
     }
@@ -2247,7 +2247,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Nauru – Staatsflagge (Jahr variabel).",
     "hint": "Nauru",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/nr.png"
     }
@@ -2260,7 +2260,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Niue – Staatsflagge (Jahr variabel).",
     "hint": "Niue",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/nu.png"
     }
@@ -2273,7 +2273,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Neuseeland – Staatsflagge (Jahr variabel).",
     "hint": "Neuseeland",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/nz.png"
     }
@@ -2286,7 +2286,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Oman – Staatsflagge (Jahr variabel).",
     "hint": "Oman",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/om.png"
     }
@@ -2299,7 +2299,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Panama – Staatsflagge (Jahr variabel).",
     "hint": "Panama",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/pa.png"
     }
@@ -2325,7 +2325,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Französisch-Polynesien – Staatsflagge (Jahr variabel).",
     "hint": "Französisch-Polynesien",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/pf.png"
     }
@@ -2351,7 +2351,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Philippinen – Staatsflagge (Jahr variabel).",
     "hint": "Philippinen",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/ph.png"
     }
@@ -2364,7 +2364,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Pakistan – Staatsflagge (Jahr variabel).",
     "hint": "Pakistan",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/pk.png"
     }
@@ -2390,7 +2390,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "St. Pierre und Miquelon – Staatsflagge (Jahr variabel).",
     "hint": "St. Pierre und Miquelon",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/pm.png"
     }
@@ -2403,7 +2403,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Pitcairninseln – Staatsflagge (Jahr variabel).",
     "hint": "Pitcairninseln",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/pn.png"
     }
@@ -2416,7 +2416,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Puerto Rico – Staatsflagge (Jahr variabel).",
     "hint": "Puerto Rico",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/pr.png"
     }
@@ -2429,7 +2429,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Palästinensische Autonomiegebiete – Staatsflagge (Jahr variabel).",
     "hint": "Palästinensische Autonomiegebiete",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ps.png"
     }
@@ -2455,7 +2455,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Palau – Staatsflagge (Jahr variabel).",
     "hint": "Palau",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/pw.png"
     }
@@ -2468,7 +2468,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Paraguay – Staatsflagge (Jahr variabel).",
     "hint": "Paraguay",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/py.png"
     }
@@ -2481,7 +2481,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Katar – Staatsflagge (Jahr variabel).",
     "hint": "Katar",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/qa.png"
     }
@@ -2494,7 +2494,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Réunion – Staatsflagge (Jahr variabel).",
     "hint": "Réunion",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/re.png"
     }
@@ -2572,7 +2572,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Salomonen – Staatsflagge (Jahr variabel).",
     "hint": "Salomonen",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/sb.png"
     }
@@ -2585,7 +2585,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Seychellen – Staatsflagge (Jahr variabel).",
     "hint": "Seychellen",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/sc.png"
     }
@@ -2624,7 +2624,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Singapur – Staatsflagge (Jahr variabel).",
     "hint": "Singapur",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/sg.png"
     }
@@ -2637,7 +2637,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "St. Helena – Staatsflagge (Jahr variabel).",
     "hint": "St. Helena",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/sh.png"
     }
@@ -2689,7 +2689,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Sierra Leone – Staatsflagge (Jahr variabel).",
     "hint": "Sierra Leone",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/sl.png"
     }
@@ -2741,7 +2741,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Suriname – Staatsflagge (Jahr variabel).",
     "hint": "Suriname",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/sr.png"
     }
@@ -2754,7 +2754,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Südsudan – Staatsflagge (Jahr variabel).",
     "hint": "Südsudan",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ss.png"
     }
@@ -2767,7 +2767,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "São Tomé und Príncipe – Staatsflagge (Jahr variabel).",
     "hint": "São Tomé und Príncipe",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/st.png"
     }
@@ -2780,7 +2780,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "El Salvador – Staatsflagge (Jahr variabel).",
     "hint": "El Salvador",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/sv.png"
     }
@@ -2793,7 +2793,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Sint Maarten – Staatsflagge (Jahr variabel).",
     "hint": "Sint Maarten",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/sx.png"
     }
@@ -2819,7 +2819,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Eswatini – Staatsflagge (Jahr variabel).",
     "hint": "Eswatini",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/sz.png"
     }
@@ -2832,7 +2832,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Turks- und Caicosinseln – Staatsflagge (Jahr variabel).",
     "hint": "Turks- und Caicosinseln",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/tc.png"
     }
@@ -2858,7 +2858,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Französische Süd- und Antarktisgebiete – Staatsflagge (Jahr variabel).",
     "hint": "Französische Süd- und Antarktisgebiete",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/tf.png"
     }
@@ -2884,7 +2884,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Thailand – Staatsflagge (Jahr variabel).",
     "hint": "Thailand",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/th.png"
     }
@@ -2910,7 +2910,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Tokelau – Staatsflagge (Jahr variabel).",
     "hint": "Tokelau",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/tk.png"
     }
@@ -2923,7 +2923,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Timor-Leste – Staatsflagge (Jahr variabel).",
     "hint": "Timor-Leste",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/tl.png"
     }
@@ -2936,7 +2936,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Turkmenistan – Staatsflagge (Jahr variabel).",
     "hint": "Turkmenistan",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/tm.png"
     }
@@ -2962,7 +2962,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Tonga – Staatsflagge (Jahr variabel).",
     "hint": "Tonga",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/to.png"
     }
@@ -2975,7 +2975,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Türkei – Staatsflagge (Jahr variabel).",
     "hint": "Türkei",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/tr.png"
     }
@@ -2988,7 +2988,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Trinidad und Tobago – Staatsflagge (Jahr variabel).",
     "hint": "Trinidad und Tobago",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/tt.png"
     }
@@ -3001,7 +3001,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Tuvalu – Staatsflagge (Jahr variabel).",
     "hint": "Tuvalu",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/tv.png"
     }
@@ -3014,7 +3014,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Taiwan – Staatsflagge (Jahr variabel).",
     "hint": "Taiwan",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/tw.png"
     }
@@ -3066,7 +3066,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Amerikanische Überseeinseln – Staatsflagge (Jahr variabel).",
     "hint": "Amerikanische Überseeinseln",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/um.png"
     }
@@ -3079,7 +3079,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Vereinigte Staaten – Staatsflagge (Jahr variabel).",
     "hint": "Vereinigte Staaten",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/us.png"
     }
@@ -3092,7 +3092,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Uruguay – Staatsflagge (Jahr variabel).",
     "hint": "Uruguay",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/uy.png"
     }
@@ -3131,7 +3131,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "St. Vincent und die Grenadinen – Staatsflagge (Jahr variabel).",
     "hint": "St. Vincent und die Grenadinen",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/vc.png"
     }
@@ -3157,7 +3157,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Britische Jungferninseln – Staatsflagge (Jahr variabel).",
     "hint": "Britische Jungferninseln",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/vg.png"
     }
@@ -3170,7 +3170,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Amerikanische Jungferninseln – Staatsflagge (Jahr variabel).",
     "hint": "Amerikanische Jungferninseln",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/vi.png"
     }
@@ -3183,7 +3183,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Vietnam – Staatsflagge (Jahr variabel).",
     "hint": "Vietnam",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/flags/vn.png"
     }
@@ -3196,7 +3196,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Vanuatu – Staatsflagge (Jahr variabel).",
     "hint": "Vanuatu",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/vu.png"
     }
@@ -3209,7 +3209,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Wallis und Futuna – Staatsflagge (Jahr variabel).",
     "hint": "Wallis und Futuna",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/wf.png"
     }
@@ -3222,7 +3222,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Samoa – Staatsflagge (Jahr variabel).",
     "hint": "Samoa",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ws.png"
     }
@@ -3261,7 +3261,7 @@ export const flagCards: Card[] = [
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Mayotte – Staatsflagge (Jahr variabel).",
     "hint": "Mayotte",
-    "difficulty": "mittel",
+    "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/yt.png"
     }
