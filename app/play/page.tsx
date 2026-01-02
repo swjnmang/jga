@@ -670,7 +670,7 @@ function PlayPageContent() {
               </a>
               <button
                 type="button"
-                className="rounded-full border border-ink/20 text-ink px-4 py-2.5 text-sm hover:bg-ink/5"
+                className="rounded-full border border-ink/20 text-inkDark px-4 py-2.5 text-sm hover:bg-ink/5"
                 onClick={() => setNeedsSpotifyAuth(false)}
               >
                 Später
