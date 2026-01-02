@@ -573,6 +573,12 @@ function PlayPageContent() {
             Film/Serie: <span className="font-semibold text-ink">{card.title}</span>
           </p>
         )}
+        {card.category === 'country' && (
+          <div className="rounded-lg border border-blue-200 bg-blue-50 px-3 py-2 text-blue-900 text-xs">
+            <p className="font-semibold">Hinweis:</p>
+            <p>Als Datum gilt das Inkrafttreten der aktuellen Verfassung oder der Zeitpunkt des letzten systemischen Bruchs (z. B. Ende einer Monarchie, Ende einer Besatzung oder Neugründung).</p>
+          </div>
+        )}
         <p className="text-lg font-semibold">{mode === 'timeline' ? card.cue : card.cue || triviaCue(card)}</p>
         <MediaEmbed
           ref={mediaRef}
