@@ -17,7 +17,8 @@ export const TRIVIA_ONLY_CATEGORIES: CardCategory[] = [
   'religionglaube',
   'geogeschichte',
   'naturtechnik',
-  'filmeserien'
+  'filmeserien',
+  'schaetzfragen'
 ];
 export const TIMELINE_CATEGORIES: CardCategory[] = ['quote', 'image', 'country', 'music'];
 
