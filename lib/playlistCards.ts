@@ -27,6 +27,10 @@ export const playlistInfo: PlaylistInfo[] = [
   {
     "id": "512n4C9VauhhFl9EhMoUlm",
     "name": "Flex-2010er"
+  },
+  {
+    "id": "4KjWmH3FN4nz2BRbkwVCQW",
+    "name": "Flex-2020er"
   }
 ];
 
@@ -6771,7 +6775,6 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5lpXFKgD6PeT6endUq5EX9"
     },
     "genres": [
-      "schlagerparty",
       "poprock"
     ],
     "playlists": [
@@ -10941,7 +10944,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4EfIj3ryeMpmZNJq4xbTQf"
     },
     "genres": [
-      "poprock"
+      "poprock",
+      "hiphop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12906,7 +12910,7 @@ export const playlistCards: Card[] = [
     "cue": "Song anhören und einordnen.",
     "answer": "Måneskin — 2017, Beggin'.",
     "hint": "Måneskin",
-    "difficulty": "mittel",
+    "difficulty": "leicht",
     "sources": {
       "spotify": "https://open.spotify.com/track/3Wrjm47oTz2sjIgck11l5e"
     },
@@ -12914,7 +12918,8 @@ export const playlistCards: Card[] = [
       "poprock"
     ],
     "playlists": [
-      "512n4C9VauhhFl9EhMoUlm"
+      "512n4C9VauhhFl9EhMoUlm",
+      "4KjWmH3FN4nz2BRbkwVCQW"
     ]
   },
   {
@@ -12944,7 +12949,7 @@ export const playlistCards: Card[] = [
     "cue": "Song anhören und einordnen.",
     "answer": "Harry Styles — 2017, Sign of the Times.",
     "hint": "Harry Styles",
-    "difficulty": "mittel",
+    "difficulty": "leicht",
     "sources": {
       "spotify": "https://open.spotify.com/track/5Ohxk2dO5COHF1krpoPigN"
     },
@@ -14070,7 +14075,7 @@ export const playlistCards: Card[] = [
     "cue": "Song anhören und einordnen.",
     "answer": "Lewis Capaldi — 2019, Someone You Loved.",
     "hint": "Lewis Capaldi",
-    "difficulty": "mittel",
+    "difficulty": "leicht",
     "sources": {
       "spotify": "https://open.spotify.com/track/7qEHsqek33rTcFNT9PFqLf"
     },
@@ -14261,7 +14266,7 @@ export const playlistCards: Card[] = [
     "cue": "Song anhören und einordnen.",
     "answer": "Harry Styles — 2019, Watermelon Sugar.",
     "hint": "Harry Styles",
-    "difficulty": "mittel",
+    "difficulty": "leicht",
     "sources": {
       "spotify": "https://open.spotify.com/track/6UelLqGlWMcVH1E5c4H7lY"
     },
@@ -14356,7 +14361,7 @@ export const playlistCards: Card[] = [
     "cue": "Song anhören und einordnen.",
     "answer": "Lewis Capaldi — 2019, Before You Go.",
     "hint": "Lewis Capaldi",
-    "difficulty": "mittel",
+    "difficulty": "leicht",
     "sources": {
       "spotify": "https://open.spotify.com/track/2gMXnyrvIjhVBUZwvLZDMP"
     },
@@ -15277,6 +15282,2849 @@ export const playlistCards: Card[] = [
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-vampire-2023",
+    "title": "vampire",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Olivia Rodrigo — 2023, vampire.",
+    "hint": "Olivia Rodrigo",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1kuGVB7EU95pJObxwvfwKS"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-blinding-lights-2020",
+    "title": "Blinding Lights",
+    "category": "music",
+    "year": 2020,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Weeknd — 2020, Blinding Lights.",
+    "hint": "The Weeknd",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6qYkmqFsXbj8CQjAdbYz07"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-love-me-not-2024",
+    "title": "Love Me Not",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Ravyn Lenae — 2024, Love Me Not.",
+    "hint": "Ravyn Lenae",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4WFgvKVfEhb3IUAFGrutTR"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-ordinary-2025",
+    "title": "Ordinary",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Alex Warren — 2025, Ordinary.",
+    "hint": "Alex Warren",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6qqrTXSdwiJaq8SO0X2lSe"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-the-fate-of-ophelia-2025",
+    "title": "The Fate of Ophelia",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Taylor Swift — 2025, The Fate of Ophelia.",
+    "hint": "Taylor Swift",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/53iuhJlwXhSER5J2IYYv1W"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-back-to-friends-2024",
+    "title": "back to friends",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "sombr — 2024, back to friends.",
+    "hint": "sombr",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0FTmksd2dxiE5e3rWyJXs6"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-my-universe-2021",
+    "title": "My Universe",
+    "category": "music",
+    "year": 2021,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Coldplay, BTS — 2021, My Universe.",
+    "hint": "Coldplay, BTS",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/46HNZY1i7O6jwTA7Slo2PI"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-blessings-2025",
+    "title": "Blessings",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Calvin Harris, Clementine Douglas — 2025, Blessings.",
+    "hint": "Calvin Harris, Clementine Douglas",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/78nx0HDJIFD5xDq2L5420Z"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-down-2020",
+    "title": "Down",
+    "category": "music",
+    "year": 2020,
+    "cue": "Song anhören und einordnen.",
+    "answer": "KALUMA, Albin Loán — 2020, Down.",
+    "hint": "KALUMA, Albin Loán",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0oMoHEZPRd2DnD3EErXYpG"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-circles-2019",
+    "title": "Circles",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Post Malone — 2019, Circles.",
+    "hint": "Post Malone",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/21jGcNKet2qwijlDFuPiPb"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-golden-2025",
+    "title": "Golden",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast — 2025, Golden.",
+    "hint": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1CPZ5BxNNd0n0nF4Orb9JS"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-save-your-tears-with-ariana-grande-remix-2021",
+    "title": "Save Your Tears (with Ariana Grande) (Remix)",
+    "category": "music",
+    "year": 2021,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Weeknd, Ariana Grande — 2021, Save Your Tears (with Ariana Grande) (Remix).",
+    "hint": "The Weeknd, Ariana Grande",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/37BZB0z9T8Xu7U3e65qxFy"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-the-motto-2021",
+    "title": "The Motto",
+    "category": "music",
+    "year": 2021,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Tiësto, Ava Max — 2021, The Motto.",
+    "hint": "Tiësto, Ava Max",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/18asYwWugKjjsihZ0YvRxO"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-no-broke-boys-2025",
+    "title": "No Broke Boys",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Disco Lines, Tinashe — 2025, No Broke Boys.",
+    "hint": "Disco Lines, Tinashe",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3cZajhyr8LmtPfHZ9296tj"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-mirrors-2023",
+    "title": "Mirrors",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "KALUMA, Chris van Dutch — 2023, Mirrors.",
+    "hint": "KALUMA, Chris van Dutch",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1O66hxri1Y6px5xZSs0OEv"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-better-feat-teddy-swims-2022",
+    "title": "Better (feat. Teddy Swims)",
+    "category": "music",
+    "year": 2022,
+    "cue": "Song anhören und einordnen.",
+    "answer": "MK, BURNS, Teddy Swims — 2022, Better (feat. Teddy Swims).",
+    "hint": "MK, BURNS, Teddy Swims",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5MnmuLgPmsAFkmG5n85cna"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-jump-2025",
+    "title": "JUMP",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "BLACKPINK — 2025, JUMP.",
+    "hint": "BLACKPINK",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5H1sKFMzDeMtXwND3V6hRY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-tau-mich-auf-2025",
+    "title": "tau mich auf",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Zartmann — 2025, tau mich auf.",
+    "hint": "Zartmann",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6j8OrKDQHxXakjA7KKbWzj"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-no-roots-2019",
+    "title": "No Roots",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Alice Merton — 2019, No Roots.",
+    "hint": "Alice Merton",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7DFSnCBYlus7i4U9KKlbdU"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-undressed-2025",
+    "title": "undressed",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "sombr — 2025, undressed.",
+    "hint": "sombr",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4AajxCEwGEsmHmT4H1TwjY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-lose-control-2023",
+    "title": "Lose Control",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Teddy Swims — 2023, Lose Control.",
+    "hint": "Teddy Swims",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/17phhZDn6oGtzMe56NuWvj"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-feel-something-2019",
+    "title": "feel something",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Bea Miller — 2019, feel something.",
+    "hint": "Bea Miller",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7JDWhC422Gtk1Bq0mL3OTC"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-man-i-need-2025",
+    "title": "Man I Need",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Olivia Dean — 2025, Man I Need.",
+    "hint": "Olivia Dean",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1qbmS6ep2hbBRaEZFpn7BX"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-birds-of-a-feather-2024",
+    "title": "BIRDS OF A FEATHER",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Billie Eilish — 2024, BIRDS OF A FEATHER.",
+    "hint": "Billie Eilish",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6dOtVTDdiauQNBQEDOtlAB"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-manchild-2025",
+    "title": "Manchild",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Sabrina Carpenter — 2025, Manchild.",
+    "hint": "Sabrina Carpenter",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/42UBPzRMh5yyz0EDPr6fr1"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-daisies-2025",
+    "title": "DAISIES",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Justin Bieber — 2025, DAISIES.",
+    "hint": "Justin Bieber",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5BZsQlgw21vDOAjoqkNgKb"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-just-keep-watching-from-f1-the-movie-2025",
+    "title": "Just Keep Watching (From F1® The Movie)",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Tate McRae, F1 The Album — 2025, Just Keep Watching (From F1® The Movie).",
+    "hint": "Tate McRae, F1 The Album",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2yWlGEgEfPot0lv3OAjuG3"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-sorry-im-here-for-someone-else-2025",
+    "title": "Sorry I'm Here For Someone Else",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Benson Boone — 2025, Sorry I'm Here For Someone Else.",
+    "hint": "Benson Boone",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3x3K1RP3Zfi2qeMR8kyrNO"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-sapphire-2025",
+    "title": "Sapphire",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Ed Sheeran — 2025, Sapphire.",
+    "hint": "Ed Sheeran",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4Q0qVhFQa7j6jRKzo3HDmP"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-die-with-a-smile-2024",
+    "title": "Die With A Smile",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lady Gaga, Bruno Mars — 2024, Die With A Smile.",
+    "hint": "Lady Gaga, Bruno Mars",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2plbrEY59IikOBgBGLjaoe"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-fucked-up-feat-makko-2025",
+    "title": "Fucked Up feat. makko",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Nina Chuba, makko — 2025, Fucked Up feat. makko.",
+    "hint": "Nina Chuba, makko",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4oASO8jyg0Qh7cUeve1bEA"
+    },
+    "genres": [
+      "poprock",
+      "hiphop"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-the-dead-dance-2025",
+    "title": "The Dead Dance",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lady Gaga — 2025, The Dead Dance.",
+    "hint": "Lady Gaga",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3NFs3XUduzBfvc5Bx1gmzh"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-opalite-2025",
+    "title": "Opalite",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Taylor Swift — 2025, Opalite.",
+    "hint": "Taylor Swift",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3yWuTOYDztXjZxdE2cIRUa"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-espresso-2024",
+    "title": "Espresso",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Sabrina Carpenter — 2024, Espresso.",
+    "hint": "Sabrina Carpenter",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2qSkIjg1o9h3YT9RAgYN75"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-beautiful-things-2024",
+    "title": "Beautiful Things",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Benson Boone — 2024, Beautiful Things.",
+    "hint": "Benson Boone",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6tNQ70jh4OwmPGpYy6R2o9"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-azizam-2025",
+    "title": "Azizam",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Ed Sheeran — 2025, Azizam.",
+    "hint": "Ed Sheeran",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0GRc3eGTg8HBdWLRGYgqIc"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-shake-it-to-the-max-fly-remix-2025",
+    "title": "Shake It To The Max (FLY) - Remix",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "MOLIY, Silent Addy, Skillibeng, Shenseea — 2025, Shake It To The Max (FLY) - Remix.",
+    "hint": "MOLIY, Silent Addy, Skillibeng, Shenseea",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0QCIpQV3twfqo9kh0t8Zza"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-sailor-song-2025",
+    "title": "Sailor Song",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Gigi Perez — 2025, Sailor Song.",
+    "hint": "Gigi Perez",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/21IYMdzTrzSe191Cy5eMap"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-location-2025",
+    "title": "Location",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Zerb, Ty Dolla $ign, Wiz Khalifa — 2025, Location.",
+    "hint": "Zerb, Ty Dolla $ign, Wiz Khalifa",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6Ilomcr9iLplsgAvZjHkJP"
+    },
+    "genres": [
+      "poprock",
+      "hiphop"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-feelslikeimfallinginlove-single-version-2024",
+    "title": "feelslikeimfallinginlove - Single Version",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Coldplay — 2024, feelslikeimfallinginlove - Single Version.",
+    "hint": "Coldplay",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1YsU8rW2u8z4F0pwOBQ4Ea"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-houdini-2023",
+    "title": "Houdini",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Dua Lipa — 2023, Houdini.",
+    "hint": "Dua Lipa",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5wtSei6pJpDEB1iKqPHhfU"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-end-of-the-world-2025",
+    "title": "End of the World",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Miley Cyrus — 2025, End of the World.",
+    "hint": "Miley Cyrus",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5SxahezRlC0saXbCALfB7c"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-stumblin-in-2023",
+    "title": "Stumblin' In",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "CYRIL — 2023, Stumblin' In.",
+    "hint": "CYRIL",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0h3Xy4V4apMraB5NuM8U7Z"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-abracadabra-2025",
+    "title": "Abracadabra",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lady Gaga — 2025, Abracadabra.",
+    "hint": "Lady Gaga",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2LHNTC9QZxsL3nWpt8iaSR"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-be-mine-2025",
+    "title": "Be Mine",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "KAMRAD — 2025, Be Mine.",
+    "hint": "KAMRAD",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5ejTcCJOozPqRPMs9gW3pN"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-wenn-das-liebe-ist-2025",
+    "title": "Wenn das Liebe ist",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Nina Chuba — 2025, Wenn das Liebe ist.",
+    "hint": "Nina Chuba",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1E7xmNFzqkkh1DMwBomBg3"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-walzer-2024",
+    "title": "Walzer",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Provinz — 2024, Walzer.",
+    "hint": "Provinz",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1We3jgIztlD2Tkb0yOoX4b"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-espresso-macchiato-2024",
+    "title": "Espresso Macchiato",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Tommy Cash — 2024, Espresso Macchiato.",
+    "hint": "Tommy Cash",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4zpNfuWJA3K4d9TS4qnOIB"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-luther-with-sza-2024",
+    "title": "luther (with sza)",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Kendrick Lamar, SZA — 2024, luther (with sza).",
+    "hint": "Kendrick Lamar, SZA",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/45J4avUb9Ni0bnETYaYFVJ"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-abracadabra-2025",
+    "title": "Abracadabra",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lady Gaga — 2025, Abracadabra.",
+    "hint": "Lady Gaga",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5ZLUm9eab8y3tqQ1OhQSHI"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-twilight-zone-2025",
+    "title": "twilight zone",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Ariana Grande — 2025, twilight zone.",
+    "hint": "Ariana Grande",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1SdJK81uqfXNIhlZI9vjlg"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-apt-2024",
+    "title": "APT.",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "ROSÉ, Bruno Mars — 2024, APT..",
+    "hint": "ROSÉ, Bruno Mars",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-messy-2024",
+    "title": "Messy",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lola Young — 2024, Messy.",
+    "hint": "Lola Young",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/35ISBknsCeZQtq66xABI9g"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-show-me-love-2025",
+    "title": "Show Me Love",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "WizTheMc, bees & honey — 2025, Show Me Love.",
+    "hint": "WizTheMc, bees & honey",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5ITV0zqzjOYfFWpW0xBmRa"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-the-first-time-2025",
+    "title": "The First Time",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Damiano David — 2025, The First Time.",
+    "hint": "Damiano David",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7ETIZFr7163zFcz3RxKk5O"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-youll-be-in-my-heart-2022",
+    "title": "You'll Be in My Heart",
+    "category": "music",
+    "year": 2022,
+    "cue": "Song anhören und einordnen.",
+    "answer": "NIKI — 2022, You'll Be in My Heart.",
+    "hint": "NIKI",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1UPB5rYJ0bzn6mNSoAHrZC"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-all-my-love-pnau-x-coldplay-2024",
+    "title": "ALL MY LOVE - PNAU x Coldplay",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Coldplay, PNAU — 2024, ALL MY LOVE - PNAU x Coldplay.",
+    "hint": "Coldplay, PNAU",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0TwKov50GELgwuAW4I3oeN"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-white-lies-2021",
+    "title": "White Lies",
+    "category": "music",
+    "year": 2021,
+    "cue": "Song anhören und einordnen.",
+    "answer": "VIZE, Tokio Hotel — 2021, White Lies.",
+    "hint": "VIZE, Tokio Hotel",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2QuQkdLLzgktXwruPAz6f4"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-greatest-day-feat-calum-scott-robin-schulz-rework-2023",
+    "title": "Greatest Day (feat. Calum Scott) - Robin Schulz Rework",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Take That, Robin Schulz, Calum Scott — 2023, Greatest Day (feat. Calum Scott) - Robin Schulz Rework.",
+    "hint": "Take That, Robin Schulz, Calum Scott",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1Oae67sHC45sBQMrYhMiWF"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-anxiety-2025",
+    "title": "Anxiety",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Doechii — 2025, Anxiety.",
+    "hint": "Doechii",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1musbempyJAw5gfSKZHXP9"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-hausparty-2025",
+    "title": "Hausparty",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "RIAN — 2025, Hausparty.",
+    "hint": "RIAN",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0L1e4NytVRR42Ip0KPVgdv"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-pink-pony-club-2023",
+    "title": "Pink Pony Club",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Chappell Roan — 2023, Pink Pony Club.",
+    "hint": "Chappell Roan",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6393yGahSJ9slVdOwSxOVR"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-taste-2024",
+    "title": "Taste",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Sabrina Carpenter — 2024, Taste.",
+    "hint": "Sabrina Carpenter",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5G2f63n7IPVPPjfNIGih7Q"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-we-pray-2024",
+    "title": "WE PRAY",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Coldplay, Little Simz, Burna Boy, Elyanna, TINI — 2024, WE PRAY.",
+    "hint": "Coldplay, Little Simz, Burna Boy, Elyanna, TINI",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7xrEnNo99wrmIs8ZK3RZMK"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-luther-with-sza-2024",
+    "title": "luther (with sza)",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Kendrick Lamar, SZA — 2024, luther (with sza).",
+    "hint": "Kendrick Lamar, SZA",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2CGNAOSuO1MEFCbBRgUzjd"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-nice-to-meet-you-2024",
+    "title": "Nice To Meet You",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Myles Smith — 2024, Nice To Meet You.",
+    "hint": "Myles Smith",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/726SEjbF3ToEbYbn43gnxl"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-touch-me-2024",
+    "title": "Touch Me",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "ÁSDÍS — 2024, Touch Me.",
+    "hint": "ÁSDÍS",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/74lOK0Z3WKvTpK8W8Srj1d"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-human-being-2024",
+    "title": "Human Being",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Nico Santos — 2024, Human Being.",
+    "hint": "Nico Santos",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3eQsDyIiFA52ZISozJQ1Lm"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-left-in-your-love-2024",
+    "title": "Left In Your Love",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Loi — 2024, Left In Your Love.",
+    "hint": "Loi",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5dIW2ogrgeDlOPIEM0dNcb"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-wave-2024",
+    "title": "Wave",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "FAST BOY, Raf — 2024, Wave.",
+    "hint": "FAST BOY, Raf",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5msO1c9VNP14k2t4EvXEsi"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-stargazing-2024",
+    "title": "Stargazing",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Myles Smith — 2024, Stargazing.",
+    "hint": "Myles Smith",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3Vr3zh0r7ALn8VLqCiRR10"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-happy-ending-feat-voice-impact-yazik-2022",
+    "title": "Happy Ending (feat. Voice Impact & Yazik)",
+    "category": "music",
+    "year": 2022,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Crystal Rock, Marc Kiss, Pule, Voice Impact, Yazik — 2022, Happy Ending (feat. Voice Impact & Yazik).",
+    "hint": "Crystal Rock, Marc Kiss, Pule, Voice Impact, Yazik",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2DufAlDkMT5qeTwTjVL0mo"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-rote-flaggen-2023",
+    "title": "Rote Flaggen",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Berq — 2023, Rote Flaggen.",
+    "hint": "Berq",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7bkUa9kDFGxgCC7d36dzFI"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-thats-so-true-2024",
+    "title": "That’s So True",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Gracie Abrams — 2024, That’s So True.",
+    "hint": "Gracie Abrams",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7ne4VBA60CxGM75vw0EYad"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-eternity-2025",
+    "title": "Eternity",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Alex Warren — 2025, Eternity.",
+    "hint": "Alex Warren",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6wHpLMmp98aHcV8L1JFrj8"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-kiss-me-more-feat-sza-2021",
+    "title": "Kiss Me More (feat. SZA)",
+    "category": "music",
+    "year": 2021,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Doja Cat, SZA — 2021, Kiss Me More (feat. SZA).",
+    "hint": "Doja Cat, SZA",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3DarAbFujv6eYNliUTyqtz"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-overpass-graffiti-2021",
+    "title": "Overpass Graffiti",
+    "category": "music",
+    "year": 2021,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Ed Sheeran — 2021, Overpass Graffiti.",
+    "hint": "Ed Sheeran",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4btFHqumCO31GksfuBLLv3"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-toms-diner-2019",
+    "title": "Tom's Diner",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "AnnenMayKantereit, Giant Rooks — 2019, Tom's Diner.",
+    "hint": "AnnenMayKantereit, Giant Rooks",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0oA9wBGDY4uyILLg4GymWP"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-nachts-wach-2022",
+    "title": "Nachts wach",
+    "category": "music",
+    "year": 2022,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Miksu / Macloud, makko — 2022, Nachts wach.",
+    "hint": "Miksu / Macloud, makko",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0g2leZuI3jD5pRsrRIDvYe"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-bad-dreams-2024",
+    "title": "Bad Dreams",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Teddy Swims — 2024, Bad Dreams.",
+    "hint": "Teddy Swims",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3nHuKdFJZm78CoeBnDcFKe"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-fata-morgana-2024",
+    "title": "Fata Morgana",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Nina Chuba — 2024, Fata Morgana.",
+    "hint": "Nina Chuba",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1v1cijv1qjMJ5o9OvMWACS"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-lost-2021",
+    "title": "Lost",
+    "category": "music",
+    "year": 2021,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Maroon 5 — 2021, Lost.",
+    "hint": "Maroon 5",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/18XlJEroUwFo0tLZxscgXE"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-adore-you-2019",
+    "title": "Adore You",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Harry Styles — 2019, Adore You.",
+    "hint": "Harry Styles",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3jjujdWJ72nww5eGnfs2E7"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-nein-2024",
+    "title": "Nein!",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "AYLIVA — 2024, Nein!.",
+    "hint": "AYLIVA",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2wvUmObLQbxClXFsuhw8Ns"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-the-one-2020",
+    "title": "The One",
+    "category": "music",
+    "year": 2020,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Rea Garvey, VIZE — 2020, The One.",
+    "hint": "Rea Garvey, VIZE",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6j0l7Hjt6qeDCQnYBZuJXY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-110-prolog-2020",
+    "title": "110 (Prolog)",
+    "category": "music",
+    "year": 2020,
+    "cue": "Song anhören und einordnen.",
+    "answer": "LEA — 2020, 110 (Prolog).",
+    "hint": "LEA",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7j5zuRDpIW9CdRDcsLNxBD"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-sleeping-with-the-lights-on-2025",
+    "title": "Sleeping With The Lights On",
+    "category": "music",
+    "year": 2025,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Daniel Seavey — 2025, Sleeping With The Lights On.",
+    "hint": "Daniel Seavey",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/79WmVVG6KbCecp45eyhbfX"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-someday-soon-2024",
+    "title": "Someday Soon",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "ClockClock — 2024, Someday Soon.",
+    "hint": "ClockClock",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/12OXyuPmhiyC2MYkREEAb6"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-go-solo-feat-tom-rosenthal-2019",
+    "title": "Go Solo (feat. Tom Rosenthal)",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Zwette, Tom Rosenthal — 2019, Go Solo (feat. Tom Rosenthal).",
+    "hint": "Zwette, Tom Rosenthal",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6vhOyWiOnO7EzxnXBllmkQ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-i-like-the-way-you-kiss-me-2024",
+    "title": "i like the way you kiss me",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Artemas — 2024, i like the way you kiss me.",
+    "hint": "Artemas",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2GxrNKugF82CnoRFbQfzPf"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-where-are-you-now-2021",
+    "title": "Where Are You Now",
+    "category": "music",
+    "year": 2021,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lost Frequencies, Calum Scott — 2021, Where Are You Now.",
+    "hint": "Lost Frequencies, Calum Scott",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3uUuGVFu1V7jTQL60S1r8z"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-a-bar-song-tipsy-2024",
+    "title": "A Bar Song (Tipsy)",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Shaboozey — 2024, A Bar Song (Tipsy).",
+    "hint": "Shaboozey",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5fZJQrFKWQLb7FpJXZ1g7K"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-dancing-in-the-flames-2024",
+    "title": "Dancing In The Flames",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Weeknd — 2024, Dancing In The Flames.",
+    "hint": "The Weeknd",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7z7kvUQGwlC6iOl7vMuAr9"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-love-again-2020",
+    "title": "Love Again",
+    "category": "music",
+    "year": 2020,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Dua Lipa — 2020, Love Again.",
+    "hint": "Dua Lipa",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/45BZcKdKl8OXpuGSlSvEun"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-bauch-beine-po-2024",
+    "title": "bauch beine po",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Shirin David — 2024, bauch beine po.",
+    "hint": "Shirin David",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/64f3yNXsi2Vk76odcHCOnw"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-without-you-with-miley-cyrus-2021",
+    "title": "WITHOUT YOU (with Miley Cyrus)",
+    "category": "music",
+    "year": 2021,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Kid LAROI, Miley Cyrus — 2021, WITHOUT YOU (with Miley Cyrus).",
+    "hint": "The Kid LAROI, Miley Cyrus",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1EHUQesfVKwbthtNcpBi9g"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-komet-2023",
+    "title": "Komet",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Udo Lindenberg, Apache 207 — 2023, Komet.",
+    "hint": "Udo Lindenberg, Apache 207",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7oQepKHmXDaPC3rgeLRvQu"
+    },
+    "genres": [
+      "schlagerparty",
+      "poprock",
+      "hiphop"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-belong-together-2024",
+    "title": "Belong Together",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Mark Ambor — 2024, Belong Together.",
+    "hint": "Mark Ambor",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4JGtRHnWyaNq7FIOZoBdPe"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-too-sweet-2024",
+    "title": "Too Sweet",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Hozier — 2024, Too Sweet.",
+    "hint": "Hozier",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5Z0UnEtpLDQyYlWwgi8m9C"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-mood-remix-feat-justin-bieber-j-balvin-iann-dior-2020",
+    "title": "Mood (Remix) feat. Justin Bieber, J Balvin & iann dior",
+    "category": "music",
+    "year": 2020,
+    "cue": "Song anhören und einordnen.",
+    "answer": "24kGoldn, Justin Bieber, J Balvin, iann dior — 2020, Mood (Remix) feat. Justin Bieber, J Balvin & iann dior.",
+    "hint": "24kGoldn, Justin Bieber, J Balvin, iann dior",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6FuGJB290AQMAHTfjOYVaK"
+    },
+    "genres": [
+      "poprock",
+      "hiphop"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-3-tage-am-meer-2022",
+    "title": "3 Tage am Meer",
+    "category": "music",
+    "year": 2022,
+    "cue": "Song anhören und einordnen.",
+    "answer": "AnnenMayKantereit — 2022, 3 Tage am Meer.",
+    "hint": "AnnenMayKantereit",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7vmxzqidBt7y4FxRtsJBVV"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-i-believe-2022",
+    "title": "I Believe",
+    "category": "music",
+    "year": 2022,
+    "cue": "Song anhören und einordnen.",
+    "answer": "KAMRAD — 2022, I Believe.",
+    "hint": "KAMRAD",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2CewvqbfMOcnvYE3yayAJV"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-greedy-2023",
+    "title": "greedy",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Tate McRae — 2023, greedy.",
+    "hint": "Tate McRae",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3rUGC1vUpkDG9CZFHMur1t"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-texas-hold-em-2024",
+    "title": "TEXAS HOLD 'EM",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Beyoncé — 2024, TEXAS HOLD 'EM.",
+    "hint": "Beyoncé",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7AYmToZ5y67fBjq4RLFbuq"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-a-bar-song-tipsy-2024",
+    "title": "A Bar Song (Tipsy)",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Shaboozey — 2024, A Bar Song (Tipsy).",
+    "hint": "Shaboozey",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2FQrifJ1N335Ljm3TjTVVf"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-cruel-summer-2023",
+    "title": "Cruel Summer",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Taylor Swift — 2023, Cruel Summer.",
+    "hint": "Taylor Swift",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1kHVme7OVyPqhtdiLj2SI4"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-prada-2023",
+    "title": "Prada",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "cassö, RAYE, D-Block Europe — 2023, Prada.",
+    "hint": "cassö, RAYE, D-Block Europe",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/59NraMJsLaMCVtwXTSia8i"
+    },
+    "genres": [
+      "poprock",
+      "hiphop"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-maybe-youre-the-problem-2022",
+    "title": "Maybe You’re The Problem",
+    "category": "music",
+    "year": 2022,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Ava Max — 2022, Maybe You’re The Problem.",
+    "hint": "Ava Max",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0sb8ClU3CLoNblxkpmOKzA"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-hot-air-balloon-2021",
+    "title": "Hot Air Balloon",
+    "category": "music",
+    "year": 2021,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Don Diablo, AR/CO — 2021, Hot Air Balloon.",
+    "hint": "Don Diablo, AR/CO",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/67p96tIoC4ESrod9kW331R"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-i-forgive-you-chromeo-remix-radio-edit-2024",
+    "title": "I Forgive You - (Chromeo Remix) [radio edit]",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Sia, Chromeo — 2024, I Forgive You - (Chromeo Remix) [radio edit].",
+    "hint": "Sia, Chromeo",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7Bdtb10c2V4oVqsz8Ebkk5"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-water-2023",
+    "title": "Water",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Tyla — 2023, Water.",
+    "hint": "Tyla",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5aIVCx5tnk0ntmdiinnYvw"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-austin-boots-stop-workin-2024",
+    "title": "Austin (Boots Stop Workin')",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Dasha — 2024, Austin (Boots Stop Workin').",
+    "hint": "Dasha",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2uqYupMHANxnwgeiXTZXzd"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-wunder-2024",
+    "title": "Wunder",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "AYLIVA, Apache 207 — 2024, Wunder.",
+    "hint": "AYLIVA, Apache 207",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/16f4ZN6XOfrIO8fJkm28HM"
+    },
+    "genres": [
+      "poprock",
+      "hiphop"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-mwaki-2023",
+    "title": "Mwaki",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Zerb, Sofiya Nzau — 2023, Mwaki.",
+    "hint": "Zerb, Sofiya Nzau",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4HDC7Mo6uLTujRvHymiXDf"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-cupids-bow-2024",
+    "title": "Cupid's Bow",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Olly Alexander (Years & Years) — 2024, Cupid's Bow.",
+    "hint": "Olly Alexander (Years & Years)",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2TGZSBugyuUOHFjsXYBKkD"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-ready-for-myself-2024",
+    "title": "Ready For Myself",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Nelly Furtado — 2024, Ready For Myself.",
+    "hint": "Nelly Furtado",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3o8piBTiYYIC9OQBY3xuNk"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-lay-your-head-on-me-2020",
+    "title": "Lay Your Head On Me",
+    "category": "music",
+    "year": 2020,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Major Lazer, Marcus Mumford, Diplo — 2020, Lay Your Head On Me.",
+    "hint": "Major Lazer, Marcus Mumford, Diplo",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5KDLhSpvNJX4buCQochelS"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-lamour-toujours-ill-fly-with-you-2024",
+    "title": "L'Amour Toujours (I'll Fly With You)",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "KALUMA, Chris van Dutch — 2024, L'Amour Toujours (I'll Fly With You).",
+    "hint": "KALUMA, Chris van Dutch",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/60zmUjNMSJzcMvy22azojx"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-stick-season-2022",
+    "title": "Stick Season",
+    "category": "music",
+    "year": 2022,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Noah Kahan — 2022, Stick Season.",
+    "hint": "Noah Kahan",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0mflMxspEfB0VbI1kyLiAv"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-selfish-2024",
+    "title": "Selfish",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Justin Timberlake — 2024, Selfish.",
+    "hint": "Justin Timberlake",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5GSYbwIInbmPvNRyl7nDpR"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-stay-with-justin-bieber-2021",
+    "title": "STAY (with Justin Bieber)",
+    "category": "music",
+    "year": 2021,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Kid LAROI, Justin Bieber — 2021, STAY (with Justin Bieber).",
+    "hint": "The Kid LAROI, Justin Bieber",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5HCyWlXZPP0y6Gqq8TgA20"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-the-lost-soul-down-2015",
+    "title": "The Lost Soul Down",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "NBSPLV — 2015, The Lost Soul Down.",
+    "hint": "NBSPLV",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5dPy1CCYQ04xaQHpajf5CY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-in-the-dark-2022",
+    "title": "In The Dark",
+    "category": "music",
+    "year": 2022,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Purple Disco Machine, Sophie and the Giants — 2022, In The Dark.",
+    "hint": "Purple Disco Machine, Sophie and the Giants",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6lHMg45o6S2ny3ZWAaNFZN"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-flowers-2023",
+    "title": "Flowers",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Crystal Rock, Marc Kiss, LØU — 2023, Flowers.",
+    "hint": "Crystal Rock, Marc Kiss, LØU",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4EncxuCewsAwSqc5S5jCmz"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-ich-glaub-ich-will-heut-nicht-mehr-gehen-2023",
+    "title": "Ich glaub ich will heut nicht mehr gehen",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Nina Chuba, Provinz — 2023, Ich glaub ich will heut nicht mehr gehen.",
+    "hint": "Nina Chuba, Provinz",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4zLCLlqLivpZXvYfQCqTWh"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-one-of-your-girls-2023",
+    "title": "One Of Your Girls",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Troye Sivan — 2023, One Of Your Girls.",
+    "hint": "Troye Sivan",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5Eh1nj7IjV9lwpcKAkidyY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-lil-boo-thang-2023",
+    "title": "Lil Boo Thang",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Paul Russell — 2023, Lil Boo Thang.",
+    "hint": "Paul Russell",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0cVyQfDyRnMJ0V3rjjdlU3"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-another-love-tiesto-remix-2022",
+    "title": "Another Love - Tiësto Remix",
+    "category": "music",
+    "year": 2022,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Tom Odell, Tiësto — 2022, Another Love - Tiësto Remix.",
+    "hint": "Tom Odell, Tiësto",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4Et6tUEO7biKxZEfJXpNj1"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-lost-in-the-fire-feat-the-weeknd-2019",
+    "title": "Lost in the Fire (feat. The Weeknd)",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Gesaffelstein, The Weeknd — 2019, Lost in the Fire (feat. The Weeknd).",
+    "hint": "Gesaffelstein, The Weeknd",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2vXKRlJBXyOcvZYTdNeckS"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-anders-2023",
+    "title": "Anders",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "01099, Paul, Ski Aggu — 2023, Anders.",
+    "hint": "01099, Paul, Ski Aggu",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5RKvst7SDOCTWGlLcF6kSE"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-good-luck-babe-2024",
+    "title": "Good Luck, Babe!",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Chappell Roan — 2024, Good Luck, Babe!.",
+    "hint": "Chappell Roan",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0WbMK4wrZ1wFSty9F7FCgu"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-blender-2022",
+    "title": "BLENDER",
+    "category": "music",
+    "year": 2022,
+    "cue": "Song anhören und einordnen.",
+    "answer": "5 Seconds of Summer — 2022, BLENDER.",
+    "hint": "5 Seconds of Summer",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2LBnpm1lEMkzD45ZGLmrQd"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-teenage-dirtbag-2021",
+    "title": "Teenage Dirtbag",
+    "category": "music",
+    "year": 2021,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Honey Gee, Crystal Rock, Moestwanted — 2021, Teenage Dirtbag.",
+    "hint": "Honey Gee, Crystal Rock, Moestwanted",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/62hxFc3yOEyauOuuqbKqxt"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-control-2020",
+    "title": "Control",
+    "category": "music",
+    "year": 2020,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Zoe Wees — 2020, Control.",
+    "hint": "Zoe Wees",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/50Td3qilgs8BLtv8mHyT1t"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-paradise-feat-dermot-kennedy-2020",
+    "title": "Paradise (feat. Dermot Kennedy)",
+    "category": "music",
+    "year": 2020,
+    "cue": "Song anhören und einordnen.",
+    "answer": "MEDUZA, Dermot Kennedy — 2020, Paradise (feat. Dermot Kennedy).",
+    "hint": "MEDUZA, Dermot Kennedy",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6ft4hAq6yde8jPZY2i5zLr"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-think-about-things-2020",
+    "title": "Think About Things",
+    "category": "music",
+    "year": 2020,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Daði Freyr — 2020, Think About Things.",
+    "hint": "Daði Freyr",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2iRniYXjMHKmwXqA2jYXP7"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-love-to-go-2020",
+    "title": "Love To Go",
+    "category": "music",
+    "year": 2020,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lost Frequencies, Zonderling, Kelvin Jones — 2020, Love To Go.",
+    "hint": "Lost Frequencies, Zonderling, Kelvin Jones",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/14d79QOV2pvJHH9vlUfZwJ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-move-2024",
+    "title": "Move",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Adam Port, Stryv, Keinemusik, Orso, Malachiii — 2024, Move.",
+    "hint": "Adam Port, Stryv, Keinemusik, Orso, Malachiii",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1BJJbSX6muJVF2AK7uH1x4"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-true-2024",
+    "title": "True",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "CYRIL, Kita Alexander — 2024, True.",
+    "hint": "CYRIL, Kita Alexander",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2pw12Ta8UfYKesE52ldUFm"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-belong-together-2024",
+    "title": "Belong Together",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Mark Ambor — 2024, Belong Together.",
+    "hint": "Mark Ambor",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5uQ7de4EWjb3rkcFxyEOpu"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-escapism-2023",
+    "title": "Escapism.",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "RAYE, 070 Shake — 2023, Escapism..",
+    "hint": "RAYE, 070 Shake",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5mHdCZtVyb4DcJw8799hZp"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-heat-waves-2020",
+    "title": "Heat Waves",
+    "category": "music",
+    "year": 2020,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Glass Animals — 2020, Heat Waves.",
+    "hint": "Glass Animals",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3USxtqRwSYz57Ewm6wWRMp"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-hasslich-2023",
+    "title": "Hässlich",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "AYLIVA — 2023, Hässlich.",
+    "hint": "AYLIVA",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3an1JVi8OsE0aG6dMS4Pes"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-the-night-we-met-2015",
+    "title": "The Night We Met",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lord Huron — 2015, The Night We Met.",
+    "hint": "Lord Huron",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3hRV0jL3vUpRrcy398teAU"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-i-wanna-be-yours-2013",
+    "title": "I Wanna Be Yours",
+    "category": "music",
+    "year": 2013,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Arctic Monkeys — 2013, I Wanna Be Yours.",
+    "hint": "Arctic Monkeys",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5XeFesFbtLpXzIVDNQP22n"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-love-is-gone-acoustic-2019",
+    "title": "Love Is Gone - Acoustic",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "SLANDER, Dylan Matthew — 2019, Love Is Gone - Acoustic.",
+    "hint": "SLANDER, Dylan Matthew",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7F1CiKqrY44kh5cDqwHOnx"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-i-had-some-help-feat-morgan-wallen-2024",
+    "title": "I Had Some Help (Feat. Morgan Wallen)",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Post Malone, Morgan Wallen — 2024, I Had Some Help (Feat. Morgan Wallen).",
+    "hint": "Post Malone, Morgan Wallen",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7221xIgOnuakPdLqT0F3nP"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-monster-shawn-mendes-justin-bieber-2020",
+    "title": "Monster (Shawn Mendes & Justin Bieber)",
+    "category": "music",
+    "year": 2020,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Shawn Mendes, Justin Bieber — 2020, Monster (Shawn Mendes & Justin Bieber).",
+    "hint": "Shawn Mendes, Justin Bieber",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1zFwFZ112by5yUtZOysUJb"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
+    ]
+  },
+  {
+    "id": "song-midnight-ride-2024",
+    "title": "Midnight Ride",
+    "category": "music",
+    "year": 2024,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Orville Peck, Kylie Minogue, Diplo — 2024, Midnight Ride.",
+    "hint": "Orville Peck, Kylie Minogue, Diplo",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6J26td5uctWg0UlzdzCj7Y"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "4KjWmH3FN4nz2BRbkwVCQW"
     ]
   }
 ];
