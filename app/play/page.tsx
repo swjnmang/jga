@@ -446,28 +446,32 @@ function PlayPageContent() {
     return (
       <main className="mx-auto max-w-3xl px-5 py-12 space-y-6 text-center">
         <h1 className="text-3xl font-display">Modus wählen</h1>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center mt-12">
           <button
             type="button"
-            className={`rounded-full border px-5 py-3 text-sm font-semibold transition ${
+            className={`rounded-2xl border-2 px-8 py-8 transition transform hover:scale-105 ${
               selectedMode === 'timeline'
-                ? 'bg-ink text-sand border-ink'
-                : 'border-ink/20'
+                ? 'bg-ink text-sand border-ink shadow-lg'
+                : 'border-ink/30 hover:border-ink/60 hover:bg-sand/5'
             }`}
             onClick={() => setSelectedMode('timeline')}
           >
-            Timeline
+            <div className="text-5xl mb-3">⏳</div>
+            <div className="text-xl font-semibold">Timeline</div>
+            <div className="text-xs opacity-60 mt-2">Ereignisse in zeitlicher Reihenfolge ordnen</div>
           </button>
           <button
             type="button"
-            className={`rounded-full border px-5 py-3 text-sm font-semibold transition ${
+            className={`rounded-2xl border-2 px-8 py-8 transition transform hover:scale-105 ${
               selectedMode === 'trivia'
-                ? 'bg-ink text-sand border-ink'
-                : 'border-ink/20'
+                ? 'bg-ink text-sand border-ink shadow-lg'
+                : 'border-ink/30 hover:border-ink/60 hover:bg-sand/5'
             }`}
             onClick={() => setSelectedMode('trivia')}
           >
-            Trivia
+            <div className="text-5xl mb-3">🧠</div>
+            <div className="text-xl font-semibold">Trivia</div>
+            <div className="text-xs opacity-60 mt-2">Fragen beantworten und Wissen testen</div>
           </button>
         </div>
 
