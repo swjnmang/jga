@@ -78,6 +78,9 @@ function SettingsPageContent() {
   const [loaded, setLoaded] = useState(false);
   const [timerInput, setTimerInput] = useState('');
   const startHref = mode ? (returnParam || `/play?mode=${mode}&start=1`) : '/play?start=1';
+  const settingsReturn = mode
+    ? `/settings?mode=${mode}${returnParam ? `&return=${encodeURIComponent(returnParam)}` : ''}`
+    : '/settings';
 
   useEffect(() => {
     const stored = loadSettings(defaults);
@@ -345,7 +348,7 @@ function SettingsPageContent() {
         </div>
         <div className="flex flex-wrap gap-3">
           <Link
-            href={`/api/spotify/authorize?return=${encodeURIComponent(startHref)}`}
+            href={`/api/spotify/authorize?return=${encodeURIComponent(settingsReturn)}`}
             className="rounded-full bg-[#1DB954] hover:bg-[#17a74a] text-white px-5 py-2.5 text-sm font-semibold shadow-md transition"
           >
             Spotify-Login starten
