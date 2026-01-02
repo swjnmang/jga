@@ -403,6 +403,7 @@ function PlayPageContent() {
     .toString()
     .padStart(2, '0');
   const seconds = (timer.secondsLeft % 60).toString().padStart(2, '0');
+  const playReturnTo = `/play?mode=${mode ?? preselectedMode ?? 'trivia'}&start=1`;
 
   if (!mode) {
     const goToSettings = (targetMode: GameMode) => {
@@ -618,7 +619,7 @@ function PlayPageContent() {
             </p>
             <div className="flex justify-center gap-3 pt-1">
               <a
-                href="/api/spotify/authorize"
+                href={`/api/spotify/authorize?return=${encodeURIComponent(playReturnTo)}`}
                 className="rounded-full bg-[#1DB954] hover:bg-[#17a74a] text-white px-5 py-2.5 text-sm font-semibold shadow-md transition-colors"
               >
                 Spotify-Login starten

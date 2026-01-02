@@ -336,6 +336,12 @@ function SettingsPageContent() {
 
       <div className="flex flex-wrap gap-3 justify-center pt-2">
         <Link
+          href={`/api/spotify/authorize?return=${encodeURIComponent(startHref)}`}
+          className="rounded-xl border border-ink/20 px-4 py-2 text-sm"
+        >
+          Spotify Premium Login
+        </Link>
+        <Link
           href={startHref}
           className="rounded-xl bg-ink text-sand px-4 py-2 text-sm"
         >
