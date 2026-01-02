@@ -35,8 +35,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 2021,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Äfghanistan – Staatsflagge (Jahr variabel).",
-    "hint": Äfghanistan",
+    "answer": "Äfghanistan – Staatsflagge (Jahr variabel).",
+    "hint": "Äfghanistan",
     "difficulty": "mittel",
     "sources": {
       "image": "/assets/flags/af.png"
@@ -48,8 +48,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Äntigua und Barbuda – Staatsflagge (Jahr variabel).",
-    "hint": Äntigua und Barbuda",
+    "answer": "Äntigua und Barbuda – Staatsflagge (Jahr variabel).",
+    "hint": "Äntigua und Barbuda",
     "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ag.png"
@@ -61,8 +61,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Änguilla – Staatsflagge (Jahr variabel).",
-    "hint": Änguilla",
+    "answer": "Änguilla – Staatsflagge (Jahr variabel).",
+    "hint": "Änguilla",
     "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/ai.png"
@@ -74,8 +74,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Älbanien – Staatsflagge (Jahr variabel).",
-    "hint": Älbanien",
+    "answer": "Älbanien – Staatsflagge (Jahr variabel).",
+    "hint": "Älbanien",
     "difficulty": "leicht",
     "sources": {
       "image": "/assets/flags/al.png"
@@ -87,8 +87,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Ärmenien – Staatsflagge (Jahr variabel).",
-    "hint": Ärmenien",
+    "answer": "Ärmenien – Staatsflagge (Jahr variabel).",
+    "hint": "Ärmenien",
     "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/am.png"
@@ -100,8 +100,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1975,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Ängola – Staatsflagge (Jahr variabel).",
-    "hint": Ängola",
+    "answer": "Ängola – Staatsflagge (Jahr variabel).",
+    "hint": "Ängola",
     "difficulty": "mittel",
     "sources": {
       "image": "/assets/flags/ao.png"
@@ -113,8 +113,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Äntarktis – Staatsflagge (Jahr variabel).",
-    "hint": Äntarktis",
+    "answer": "Äntarktis – Staatsflagge (Jahr variabel).",
+    "hint": "Äntarktis",
     "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/aq.png"
@@ -126,8 +126,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1853,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Ärgentinien – Staatsflagge (Jahr variabel).",
-    "hint": Ärgentinien",
+    "answer": "Ärgentinien – Staatsflagge (Jahr variabel).",
+    "hint": "Ärgentinien",
     "difficulty": "mittel",
     "sources": {
       "image": "/assets/flags/ar.png"
@@ -139,8 +139,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Ämerikanisch-Samoa – Staatsflagge (Jahr variabel).",
-    "hint": Ämerikanisch-Samoa",
+    "answer": "Ämerikanisch-Samoa – Staatsflagge (Jahr variabel).",
+    "hint": "Ämerikanisch-Samoa",
     "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/as.png"
@@ -165,8 +165,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1901,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Äustralien – Staatsflagge (Jahr variabel).",
-    "hint": Äustralien",
+    "answer": "Äustralien – Staatsflagge (Jahr variabel).",
+    "hint": "Äustralien",
     "difficulty": "mittel",
     "sources": {
       "image": "/assets/flags/au.png"
@@ -178,8 +178,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Äruba – Staatsflagge (Jahr variabel).",
-    "hint": Äruba",
+    "answer": "Äruba – Staatsflagge (Jahr variabel).",
+    "hint": "Äruba",
     "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/aw.png"
@@ -204,8 +204,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Äserbaidschan – Staatsflagge (Jahr variabel).",
-    "hint": Äserbaidschan",
+    "answer": "Äserbaidschan – Staatsflagge (Jahr variabel).",
+    "hint": "Äserbaidschan",
     "difficulty": "mittel",
     "sources": {
       "image": "/assets/flags/az.png"
@@ -802,8 +802,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1962,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Älgerien – Staatsflagge (Jahr variabel).",
-    "hint": Älgerien",
+    "answer": "Älgerien – Staatsflagge (Jahr variabel).",
+    "hint": "Älgerien",
     "difficulty": "mittel",
     "sources": {
       "image": "/assets/flags/dz.png"
@@ -1348,8 +1348,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Üngarn – Staatsflagge (Jahr variabel).",
-    "hint": Üngarn",
+    "answer": "Üngarn – Staatsflagge (Jahr variabel).",
+    "hint": "Üngarn",
     "difficulty": "leicht",
     "sources": {
       "image": "/assets/flags/hu.png"
@@ -2284,8 +2284,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1970,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Öman – Staatsflagge (Jahr variabel).",
-    "hint": Öman",
+    "answer": "Öman – Staatsflagge (Jahr variabel).",
+    "hint": "Öman",
     "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/om.png"
@@ -3038,8 +3038,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Ükraine – Staatsflagge (Jahr variabel).",
-    "hint": Ükraine",
+    "answer": "Ükraine – Staatsflagge (Jahr variabel).",
+    "hint": "Ükraine",
     "difficulty": "leicht",
     "sources": {
       "image": "/assets/flags/ua.png"
@@ -3051,8 +3051,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1962,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Üganda – Staatsflagge (Jahr variabel).",
-    "hint": Üganda",
+    "answer": "Üganda – Staatsflagge (Jahr variabel).",
+    "hint": "Üganda",
     "difficulty": "mittel",
     "sources": {
       "image": "/assets/flags/ug.png"
@@ -3064,8 +3064,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Ämerikanische Überseeinseln – Staatsflagge (Jahr variabel).",
-    "hint": Ämerikanische Überseeinseln",
+    "answer": "Ämerikanische Überseeinseln – Staatsflagge (Jahr variabel).",
+    "hint": "Ämerikanische Überseeinseln",
     "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/um.png"
@@ -3090,8 +3090,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Üruguay – Staatsflagge (Jahr variabel).",
-    "hint": Üruguay",
+    "answer": "Üruguay – Staatsflagge (Jahr variabel).",
+    "hint": "Üruguay",
     "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/uy.png"
@@ -3103,8 +3103,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Üsbekistan – Staatsflagge (Jahr variabel).",
-    "hint": Üsbekistan",
+    "answer": "Üsbekistan – Staatsflagge (Jahr variabel).",
+    "hint": "Üsbekistan",
     "difficulty": "mittel",
     "sources": {
       "image": "/assets/flags/uz.png"
@@ -3168,8 +3168,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": Ämerikanische Jungferninseln – Staatsflagge (Jahr variabel).",
-    "hint": Ämerikanische Jungferninseln",
+    "answer": "Ämerikanische Jungferninseln – Staatsflagge (Jahr variabel).",
+    "hint": "Ämerikanische Jungferninseln",
     "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/vi.png"
