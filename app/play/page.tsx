@@ -403,6 +403,8 @@ function PlayPageContent() {
     .padStart(2, '0');
   const seconds = (timer.secondsLeft % 60).toString().padStart(2, '0');
 
+  const [selectedMode, setSelectedMode] = useState<GameMode | null>(null);
+
   if (!mode) {
     const goToSettings = (targetMode: GameMode) => {
       const returnTo = `/play?mode=${targetMode}&start=1`;
@@ -435,18 +437,75 @@ function PlayPageContent() {
           <button
             type="button"
             className="rounded-full bg-ink text-sand px-5 py-3 text-sm font-semibold"
-            onClick={() => goToSettings('timeline')}
+            onClick={() => setSelectedMode('timeline')}
           >
-            Timeline (Jahr & Kontext)
+            Timeline
           </button>
           <button
             type="button"
             className="rounded-full border border-ink/20 px-5 py-3 text-sm"
-            onClick={() => goToSettings('trivia')}
+            onClick={() => setSelectedMode('trivia')}
           >
-            Trivia (eine Frage)
+            Trivia
           </button>
         </div>
+
+        {selectedMode && (
+          <div className="card-surface rounded-2xl p-6 mt-8 space-y-4 text-left">
+            {selectedMode === 'timeline' && (
+              <>
+                <h2 className="text-xl font-semibold text-center">Timeline Spielregeln</h2>
+                <p className="text-sm text-ink/70">Ziel: 10 Karten in der korrekten zeitlichen Reihenfolge auslegen.</p>
+                <ol className="list-decimal list-inside space-y-1 text-sm text-ink/80">
+                  <li>Jedes Team erhält leere Karten (Front für Lösung, Rückseite für Musterlösung).</li>
+                  <li>Reihum zeigt die App eine neue Frage/Medienkarte, Timer 3:00 startet.</li>
+                  <li>Ohne Titel/Interpret zu sehen wird der Inhalt abgespielt/angezeigt.</li>
+                  <li>Team schreibt seine Lösung auf die Karte und legt sie zeitlich ein.</li>
+                  <li>Aufdecken/Lösung eintragen: Jahr prüfen. Richtig = behalten, falsch = beiseite.</li>
+                  <li>Optional: Flex-Fenster für andere Teams (siehe Flex Buttons).</li>
+                  <li>Nächste Runde, bis jemand 10 korrekt liegende Karten hat.</li>
+                </ol>
+                
+                <div className="pt-2 space-y-2">
+                  <h3 className="text-md font-semibold">Flex Buttons</h3>
+                  <ul className="space-y-1 text-sm text-ink/80">
+                    <li>Einsatz: Nachdem das aktive Team seinen Zug beendet hat, darf ein anderes Team einen Flex Button werfen.</li>
+                    <li>Treffer: Flex stimmt (Jahr + Titel/Interpret/Zitatgeber/Objekt) = das flexende Team nimmt die zuletzt gespielte Karte.</li>
+                    <li>Fehlversuch: Flex stimmt nicht = Flex Button ist verloren.</li>
+                    <li>Gewinn: In deinem eigenen Zug bekommst du einen Flex Button, wenn du Jahr richtig einordnest und zusätzlich den Titel/Interpret bzw. Name/Zitatgeber korrekt nennst.</li>
+                  </ul>
+                </div>
+              </>
+            )}
+
+            {selectedMode === 'trivia' && (
+              <>
+                <h2 className="text-xl font-semibold text-center">Trivia Spielregeln</h2>
+                <p className="text-sm text-ink/70">
+                  Ziel: Aus jeder Kategorie einen „Stein" sammeln. Teams halten auf Papier fest, welche Kategorien sie bereits besitzen.
+                </p>
+                <ol className="list-decimal list-inside space-y-1 text-sm text-ink/80">
+                  <li>Ein Team wählt oder „würfelt" eine Kategorie (z. B. zufällig ziehen).</li>
+                  <li>Die App zeigt eine Frage aus dieser Kategorie; das Team beantwortet sie.</li>
+                  <li>Richtig & Kategorie noch nicht gesammelt: Team notiert den Stein für diese Kategorie.</li>
+                  <li>Richtig & Kategorie bereits vorhanden: Das Team darf sofort eine neue Kategorie „würfeln" und weitermachen.</li>
+                  <li>Falsch: Zug endet, nächstes Team ist dran.</li>
+                  <li>Spielende: Wer zuerst alle Kategorien (alle „Steine") eingesammelt hat, gewinnt.</li>
+                </ol>
+              </>
+            )}
+
+            <div className="flex justify-center pt-4">
+              <button
+                type="button"
+                className="rounded-full bg-ink text-sand px-6 py-3 text-sm font-semibold"
+                onClick={() => goToSettings(selectedMode)}
+              >
+                Spiel starten
+              </button>
+            </div>
+          </div>
+        )}
       </main>
     );
   }
