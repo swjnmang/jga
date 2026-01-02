@@ -431,14 +431,13 @@ function PlayPageContent() {
     return (
       <main className="mx-auto max-w-3xl px-5 py-12 space-y-6 text-center">
         <h1 className="text-3xl font-display">Modus wählen</h1>
-        <p className="text-ink/70">Entscheide, ob du die Timeline (Jahr + Kontext) oder Trivia (eine Frage) spielen möchtest.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <button
             type="button"
-            className={`rounded-full px-5 py-3 text-sm font-semibold transition ${
+            className={`rounded-full border px-5 py-3 text-sm font-semibold transition ${
               selectedMode === 'timeline'
-                ? 'bg-ink text-sand'
-                : 'border border-ink/20'
+                ? 'bg-ink text-sand border-ink'
+                : 'border-ink/20'
             }`}
             onClick={() => setSelectedMode('timeline')}
           >
@@ -446,10 +445,10 @@ function PlayPageContent() {
           </button>
           <button
             type="button"
-            className={`rounded-full px-5 py-3 text-sm font-semibold transition ${
+            className={`rounded-full border px-5 py-3 text-sm font-semibold transition ${
               selectedMode === 'trivia'
-                ? 'bg-ink text-sand'
-                : 'border border-ink/20'
+                ? 'bg-ink text-sand border-ink'
+                : 'border-ink/20'
             }`}
             onClick={() => setSelectedMode('trivia')}
           >
