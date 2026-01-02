@@ -5,640 +5,315 @@ import { Card } from './types';
 export type PlaylistInfo = { id: string; name: string };
 export const playlistInfo: PlaylistInfo[] = [
   {
-    "id": "1K766ohE2LA7b7ghtTm7mP",
-    "name": "Felx-2000er"
+    "id": "512n4C9VauhhFl9EhMoUlm",
+    "name": "Flex-2010er"
   }
 ];
 
 export const playlistCards: Card[] = [
   {
-    "id": "song-incomplete-2005",
-    "title": "Incomplete",
+    "id": "song-one-last-time-2014",
+    "title": "One Last Time",
     "category": "music",
-    "year": 2005,
+    "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Backstreet Boys — 2005, Incomplete.",
-    "hint": "Backstreet Boys",
+    "answer": "Ariana Grande — 2014, One Last Time.",
+    "hint": "Ariana Grande",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/0CnD7Hiw6pae6rLsZw5q5W"
+      "spotify": "https://open.spotify.com/track/7xoUc6faLbCqZO6fQEYprd"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-just-like-a-pill-2001",
-    "title": "Just Like a Pill",
+    "id": "song-jar-of-hearts-2011",
+    "title": "jar of hearts",
     "category": "music",
-    "year": 2001,
+    "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk — 2001, Just Like a Pill.",
-    "hint": "P!nk",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1BpV8IGf4XsRRJf4Xuui9q"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-teenage-dirtbag-1999",
-    "title": "Teenage Dirtbag",
-    "category": "music",
-    "year": 1999,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Wheatus — 1999, Teenage Dirtbag.",
-    "hint": "Wheatus",
+    "answer": "Christina Perri — 2011, jar of hearts.",
+    "hint": "Christina Perri",
     "difficulty": "schwer",
     "sources": {
-      "spotify": "https://open.spotify.com/track/25FTMokYEbEWHEdss5JLZS"
+      "spotify": "https://open.spotify.com/track/0HZhYMZOcUzZKSFwPOti6m"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-murder-on-the-dancefloor-2007",
-    "title": "Murder On The Dancefloor",
+    "id": "song-ocean-eyes-2017",
+    "title": "ocean eyes",
     "category": "music",
-    "year": 2007,
+    "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sophie Ellis-Bextor — 2007, Murder On The Dancefloor.",
-    "hint": "Sophie Ellis-Bextor",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3yjjFp94TOENrJJgvmxAoE"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-unwritten-2004",
-    "title": "Unwritten",
-    "category": "music",
-    "year": 2004,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Natasha Bedingfield — 2004, Unwritten.",
-    "hint": "Natasha Bedingfield",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3U5JVgI2x4rDyHGObzJfNf"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-bye-bye-bye-2000",
-    "title": "Bye Bye Bye",
-    "category": "music",
-    "year": 2000,
-    "cue": "Song anhören und einordnen.",
-    "answer": "*NSYNC — 2000, Bye Bye Bye.",
-    "hint": "*NSYNC",
+    "answer": "Billie Eilish — 2017, ocean eyes.",
+    "hint": "Billie Eilish",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/4r8lRYnoOGdEi6YyI5OC1o"
+      "spotify": "https://open.spotify.com/track/7hDVYcQq6MxkdJGweuCtl9"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-wake-me-up-when-september-ends-2004",
-    "title": "Wake Me up When September Ends",
+    "id": "song-one-dance-2016",
+    "title": "One Dance",
     "category": "music",
-    "year": 2004,
+    "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — 2004, Wake Me up When September Ends.",
-    "hint": "Green Day",
+    "answer": "Drake, Wizkid, Kyla — 2016, One Dance.",
+    "hint": "Drake, Wizkid, Kyla",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/3ZffCQKLFLUvYM59XKLbVm"
+      "spotify": "https://open.spotify.com/track/1zi7xx7UVEFkmKfv06H8x0"
     },
     "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-im-with-you-2002",
-    "title": "I'm with You",
-    "category": "music",
-    "year": 2002,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Avril Lavigne — 2002, I'm with You.",
-    "hint": "Avril Lavigne",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1jlG3KJ3gdYmhfuySFfpO1"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-bad-day-2005",
-    "title": "Bad Day",
-    "category": "music",
-    "year": 2005,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Daniel Powter — 2005, Bad Day.",
-    "hint": "Daniel Powter",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0mUyMawtxj1CJ76kn9gIZK"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-hero-2001",
-    "title": "Hero",
-    "category": "music",
-    "year": 2001,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Enrique Iglesias — 2001, Hero.",
-    "hint": "Enrique Iglesias",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1PAgmT6YqGhd6zT9kN9gIo"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-feel-2002",
-    "title": "Feel",
-    "category": "music",
-    "year": 2002,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Robbie Williams — 2002, Feel.",
-    "hint": "Robbie Williams",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2Ms33RTRCT6gArrpcrPxmo"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-chicago-remastered-2014-2006",
-    "title": "Chicago - Remastered 2014",
-    "category": "music",
-    "year": 2006,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Clueso — 2006, Chicago - Remastered 2014.",
-    "hint": "Clueso",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5oPSBJ5WQNwRL9ICtohYfo"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-goodbye-my-lover-2005",
-    "title": "Goodbye My Lover",
-    "category": "music",
-    "year": 2005,
-    "cue": "Song anhören und einordnen.",
-    "answer": "James Blunt — 2005, Goodbye My Lover.",
-    "hint": "James Blunt",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6gxycjJNMgmAyfzUXBN80P"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-sk8er-boi-2002",
-    "title": "Sk8er Boi",
-    "category": "music",
-    "year": 2002,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Avril Lavigne — 2002, Sk8er Boi.",
-    "hint": "Avril Lavigne",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/00Mb3DuaIH1kjrwOku9CGU"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-du-tragst-keine-liebe-in-dir-1999",
-    "title": "Du trägst keine Liebe in dir",
-    "category": "music",
-    "year": 1999,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Echt — 1999, Du trägst keine Liebe in dir.",
-    "hint": "Echt",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/21aT5lIYHjyBIFrXNbNY5U"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-big-yellow-taxi-2002",
-    "title": "Big Yellow Taxi",
-    "category": "music",
-    "year": 2002,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Counting Crows, Vanessa Carlton — 2002, Big Yellow Taxi.",
-    "hint": "Counting Crows, Vanessa Carlton",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5fztgDIt1Nq32VHJrAHq0Y"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-boulevard-of-broken-dreams-2004",
-    "title": "Boulevard of Broken Dreams",
-    "category": "music",
-    "year": 2004,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — 2004, Boulevard of Broken Dreams.",
-    "hint": "Green Day",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1hwJKpe0BPUsq6UUrwBWTw"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-drops-of-jupiter-tell-me-2001",
-    "title": "Drops of Jupiter (Tell Me)",
-    "category": "music",
-    "year": 2001,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Train — 2001, Drops of Jupiter (Tell Me).",
-    "hint": "Train",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2hKdd3qO7cWr2Jo0Bcs0MA"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-complicated-2002",
-    "title": "Complicated",
-    "category": "music",
-    "year": 2002,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Avril Lavigne — 2002, Complicated.",
-    "hint": "Avril Lavigne",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5xEM5hIgJ1jjgcEBfpkt2F"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-mr-brightside-2004",
-    "title": "Mr. Brightside",
-    "category": "music",
-    "year": 2004,
-    "cue": "Song anhören und einordnen.",
-    "answer": "The Killers — 2004, Mr. Brightside.",
-    "hint": "The Killers",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/003vvx7Niy0yvhvHt4a68B"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-chasing-cars-2006",
-    "title": "Chasing Cars",
-    "category": "music",
-    "year": 2006,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Snow Patrol — 2006, Chasing Cars.",
-    "hint": "Snow Patrol",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0rpIH5otu7ykvZPdcQuRPh"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-butterfly-1999",
-    "title": "Butterfly",
-    "category": "music",
-    "year": 1999,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Crazy Town — 1999, Butterfly.",
-    "hint": "Crazy Town",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6GQ3WTaNHMFlVmN4burGat"
-    },
-    "genres": [
-      "metal",
       "hiphop",
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-im-like-a-bird-2000",
-    "title": "I'm Like A Bird",
+    "id": "song-rolling-in-the-deep-2011",
+    "title": "Rolling in the Deep",
     "category": "music",
-    "year": 2000,
+    "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nelly Furtado — 2000, I'm Like A Bird.",
-    "hint": "Nelly Furtado",
+    "answer": "Adele — 2011, Rolling in the Deep.",
+    "hint": "Adele",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/2aGw77pZqli064JiPuXYRi"
+      "spotify": "https://open.spotify.com/track/4OSBTYWVwsQhGLF9NHvIbR"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-somewhere-only-we-know-2004",
-    "title": "Somewhere Only We Know",
+    "id": "song-7-rings-2019",
+    "title": "7 rings",
     "category": "music",
-    "year": 2004,
+    "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Keane — 2004, Somewhere Only We Know.",
-    "hint": "Keane",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1SKPmfSYaPsETbRHaiA18G"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-in-the-shadows-2003",
-    "title": "In the Shadows",
-    "category": "music",
-    "year": 2003,
-    "cue": "Song anhören und einordnen.",
-    "answer": "The Rasmus — 2003, In the Shadows.",
-    "hint": "The Rasmus",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1fr92Vupmcs2vgLMFVQ7rd"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-never-be-the-same-again-1999",
-    "title": "Never Be The Same Again",
-    "category": "music",
-    "year": 1999,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Melanie C, Lisa \"Left Eye\" Lopes — 1999, Never Be The Same Again.",
-    "hint": "Melanie C, Lisa \"Left Eye\" Lopes",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/79EAVfOpzgfHx3IE2BVFQv"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-weinst-du-1999",
-    "title": "Weinst du",
-    "category": "music",
-    "year": 1999,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Echt — 1999, Weinst du.",
-    "hint": "Echt",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2RjnnOuAvosOSAZhZQ50kO"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-somethin-stupid-2001",
-    "title": "Somethin' Stupid",
-    "category": "music",
-    "year": 2001,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Robbie Williams, Nicole Kidman — 2001, Somethin' Stupid.",
-    "hint": "Robbie Williams, Nicole Kidman",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4kSKacywUJHdhyst4PL6pl"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-cant-stop-2002",
-    "title": "Can't Stop",
-    "category": "music",
-    "year": 2002,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — 2002, Can't Stop.",
-    "hint": "Red Hot Chili Peppers",
+    "answer": "Ariana Grande — 2019, 7 rings.",
+    "hint": "Ariana Grande",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/3ZOEytgrvLwQaqXreDs2Jx"
+      "spotify": "https://open.spotify.com/track/6ocbgoVGwYJhOv1GgI9NsF"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-its-my-life-2000",
-    "title": "It's My Life",
+    "id": "song-price-tag-2011",
+    "title": "Price Tag",
     "category": "music",
-    "year": 2000,
+    "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bon Jovi — 2000, It's My Life.",
-    "hint": "Bon Jovi",
+    "answer": "Jessie J, B.o.B — 2011, Price Tag.",
+    "hint": "Jessie J, B.o.B",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/0v1XpBHnsbkCn7iJ9Ucr1l"
-    },
-    "genres": [
-      "metal",
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-are-you-gonna-be-my-girl-2003",
-    "title": "Are You Gonna Be My Girl",
-    "category": "music",
-    "year": 2003,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Jet — 2003, Are You Gonna Be My Girl.",
-    "hint": "Jet",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/72zZfHPYx43shcP3eKkYi5"
+      "spotify": "https://open.spotify.com/track/2fTsFCKRFQ5M0igJgabnLA"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-who-let-the-dogs-out-2000",
-    "title": "Who Let The Dogs Out",
+    "id": "song-let-me-down-slowly-2018",
+    "title": "Let Me Down Slowly",
     "category": "music",
-    "year": 2000,
+    "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Baha Men — 2000, Who Let The Dogs Out.",
-    "hint": "Baha Men",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1H5tvpoApNDxvxDexoaAUo"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-white-flag-2003",
-    "title": "White Flag",
-    "category": "music",
-    "year": 2003,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Dido — 2003, White Flag.",
-    "hint": "Dido",
+    "answer": "Alec Benjamin — 2018, Let Me Down Slowly.",
+    "hint": "Alec Benjamin",
     "difficulty": "schwer",
     "sources": {
-      "spotify": "https://open.spotify.com/track/6si71supnBUhddjR2FJc2L"
+      "spotify": "https://open.spotify.com/track/2qxmye6gAegTMjLKEBoR3d"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-airplanes-feat-hayley-williams-of-paramore-2010",
+    "title": "Airplanes (feat. Hayley Williams of Paramore)",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "B.o.B, Hayley Williams — 2010, Airplanes (feat. Hayley Williams of Paramore).",
+    "hint": "B.o.B, Hayley Williams",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6lV2MSQmRIkycDScNtrBXO"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-eastside-with-halsey-khalid-2018",
+    "title": "Eastside (with Halsey & Khalid)",
+    "category": "music",
+    "year": 2018,
+    "cue": "Song anhören und einordnen.",
+    "answer": "benny blanco, Halsey, Khalid — 2018, Eastside (with Halsey & Khalid).",
+    "hint": "benny blanco, Halsey, Khalid",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0d2iYfpKoM0QCKvcLCkBao"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-hold-my-hand-2015",
+    "title": "Hold My Hand",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Jess Glynne — 2015, Hold My Hand.",
+    "hint": "Jess Glynne",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1i1rNVtxbE7rdFfpHuNq2j"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-shut-up-and-dance-2014",
+    "title": "Shut Up and Dance",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "WALK THE MOON — 2014, Shut Up and Dance.",
+    "hint": "WALK THE MOON",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4kbj5MwxO1bq9wjT5g9HaA"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-wrecking-ball-2013",
+    "title": "Wrecking Ball",
+    "category": "music",
+    "year": 2013,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Miley Cyrus — 2013, Wrecking Ball.",
+    "hint": "Miley Cyrus",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2vwlzO0Qp8kfEtzTsCXfyE"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-run-away-with-me-2015",
+    "title": "Run Away With Me",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Carly Rae Jepsen — 2015, Run Away With Me.",
+    "hint": "Carly Rae Jepsen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1VKTdQTrcP0cMdySaCEj7F"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-boom-clap-2014",
+    "title": "Boom Clap",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Charli xcx — 2014, Boom Clap.",
+    "hint": "Charli xcx",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7982sGZuvo5OXsY6REzgIn"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-just-give-me-a-reason-feat-nate-ruess-2012",
+    "title": "Just Give Me a Reason (feat. Nate Ruess)",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "P!nk, Nate Ruess — 2012, Just Give Me a Reason (feat. Nate Ruess).",
+    "hint": "P!nk, Nate Ruess",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1mKXFLRA179hdOWQBwUk9e"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
@@ -657,2306 +332,2541 @@ export const playlistCards: Card[] = [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-behind-these-hazel-eyes-2004",
-    "title": "Behind These Hazel Eyes",
+    "id": "song-fight-song-2016",
+    "title": "Fight Song",
     "category": "music",
-    "year": 2004,
+    "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kelly Clarkson — 2004, Behind These Hazel Eyes.",
-    "hint": "Kelly Clarkson",
+    "answer": "Rachel Platten — 2016, Fight Song.",
+    "hint": "Rachel Platten",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/37f4ITSlgPX81ad2EvmVQr"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-shake-it-off-2014",
+    "title": "Shake It Off",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Taylor Swift — 2014, Shake It Off.",
+    "hint": "Taylor Swift",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/0AKAxdNkwq9ZxRdW1DN9zW"
+      "spotify": "https://open.spotify.com/track/0cqRj7pUJDkTCEsJkx8snD"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-whole-again-2003",
-    "title": "Whole Again",
+    "id": "song-demons-2012",
+    "title": "Demons",
     "category": "music",
-    "year": 2003,
+    "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Atomic Kitten — 2003, Whole Again.",
-    "hint": "Atomic Kitten",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4WGTwyHPMvB3HWiEO9R0wb"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-dreamer-2001",
-    "title": "Dreamer",
-    "category": "music",
-    "year": 2001,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Ozzy Osbourne — 2001, Dreamer.",
-    "hint": "Ozzy Osbourne",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/78PKCefXwDLbl4FVO1Pjzh"
-    },
-    "genres": [
-      "metal",
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-cant-fight-the-moonlight-2001",
-    "title": "Can't Fight The Moonlight",
-    "category": "music",
-    "year": 2001,
-    "cue": "Song anhören und einordnen.",
-    "answer": "LeAnn Rimes — 2001, Can't Fight The Moonlight.",
-    "hint": "LeAnn Rimes",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2AogRMqARWyUP7VQ3gmSoY"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-this-love-2002",
-    "title": "This Love",
-    "category": "music",
-    "year": 2002,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Maroon 5 — 2002, This Love.",
-    "hint": "Maroon 5",
+    "answer": "Imagine Dragons — 2012, Demons.",
+    "hint": "Imagine Dragons",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/6ECp64rv50XVz93WvxXMGF"
+      "spotify": "https://open.spotify.com/track/5qaEfEh1AtSdrdrByCP7qR"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-dragostea-din-tei-2004",
-    "title": "Dragostea din tei",
+    "id": "song-somebody-that-i-used-to-know-2011",
+    "title": "Somebody That I Used To Know",
     "category": "music",
-    "year": 2004,
+    "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "O-Zone — 2004, Dragostea din tei.",
-    "hint": "O-Zone",
+    "answer": "Gotye, Kimbra — 2011, Somebody That I Used To Know.",
+    "hint": "Gotye, Kimbra",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/52Zr0sinhWTCRrQhRRY4EP"
+      "spotify": "https://open.spotify.com/track/6md4w95cnKaW64JyEQ3A0L"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-a-thousand-miles-2002",
-    "title": "A Thousand Miles",
+    "id": "song-chandelier-2014",
+    "title": "Chandelier",
     "category": "music",
-    "year": 2002,
+    "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Vanessa Carlton — 2002, A Thousand Miles.",
-    "hint": "Vanessa Carlton",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4w1lzcaoZ1IC2K5TwjalRP"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-numb-2003",
-    "title": "Numb",
-    "category": "music",
-    "year": 2003,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — 2003, Numb.",
-    "hint": "Linkin Park",
+    "answer": "Sia — 2014, Chandelier.",
+    "hint": "Sia",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/2nLtzopw4rPReszdYBJU6h"
+      "spotify": "https://open.spotify.com/track/4VrWlk8IQxevMvERoX08iC"
     },
     "genres": [
-      "metal",
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-hello-2015",
+    "title": "Hello",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Adele — 2015, Hello.",
+    "hint": "Adele",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1Yk0cQdMLx5RzzFTYwmuld"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-love-the-way-you-lie-2010",
+    "title": "Love The Way You Lie",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Eminem, Rihanna — 2010, Love The Way You Lie.",
+    "hint": "Eminem, Rihanna",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/15JINEqzVMv3SvJTAXAKED"
+    },
+    "genres": [
       "hiphop",
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-der-weg-remastered-2016-2002",
-    "title": "Der Weg - Remastered 2016",
+    "id": "song-beggin-2017",
+    "title": "Beggin'",
     "category": "music",
-    "year": 2002,
+    "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Herbert Grönemeyer — 2002, Der Weg - Remastered 2016.",
-    "hint": "Herbert Grönemeyer",
+    "answer": "Måneskin — 2017, Beggin'.",
+    "hint": "Måneskin",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/7py0pONdy9D0DxNnT3elik"
-    },
-    "genres": [
-      "schlagerparty",
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-pure-shores-2000",
-    "title": "Pure Shores",
-    "category": "music",
-    "year": 2000,
-    "cue": "Song anhören und einordnen.",
-    "answer": "All Saints — 2000, Pure Shores.",
-    "hint": "All Saints",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ZLGthToczpvnL5Eoy6yrY"
+      "spotify": "https://open.spotify.com/track/3Wrjm47oTz2sjIgck11l5e"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-just-more-2002",
-    "title": "Just More",
+    "id": "song-call-me-maybe-2012",
+    "title": "Call Me Maybe",
     "category": "music",
-    "year": 2002,
+    "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wonderwall — 2002, Just More.",
-    "hint": "Wonderwall",
+    "answer": "Carly Rae Jepsen — 2012, Call Me Maybe.",
+    "hint": "Carly Rae Jepsen",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/1AR0pzjw2WvAHlcst59nwT"
+      "spotify": "https://open.spotify.com/track/20I6sIOMTCkB6w7ryavxtO"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-fix-you-2005",
-    "title": "Fix You",
+    "id": "song-sign-of-the-times-2017",
+    "title": "Sign of the Times",
     "category": "music",
-    "year": 2005,
+    "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2005, Fix You.",
-    "hint": "Coldplay",
+    "answer": "Harry Styles — 2017, Sign of the Times.",
+    "hint": "Harry Styles",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5Ohxk2dO5COHF1krpoPigN"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-uptown-funk-feat-bruno-mars-2015",
+    "title": "Uptown Funk (feat. Bruno Mars)",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Mark Ronson, Bruno Mars — 2015, Uptown Funk (feat. Bruno Mars).",
+    "hint": "Mark Ronson, Bruno Mars",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/7LVHVU3tWfcxj5aiPFEW4Q"
+      "spotify": "https://open.spotify.com/track/32OlwWuMpZ6b0aN2RZOeMS"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-underneath-your-clothes-2001",
-    "title": "Underneath Your Clothes",
+    "id": "song-let-her-go-2012",
+    "title": "Let Her Go",
     "category": "music",
-    "year": 2001,
+    "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shakira — 2001, Underneath Your Clothes.",
-    "hint": "Shakira",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/15f8Cv8RXUlOOCIf2oaceN"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-mundian-to-bach-ke-2003",
-    "title": "Mundian To Bach Ke",
-    "category": "music",
-    "year": 2003,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Panjabi MC — 2003, Mundian To Bach Ke.",
-    "hint": "Panjabi MC",
+    "answer": "Passenger — 2012, Let Her Go.",
+    "hint": "Passenger",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/2LxAeJ9KUj1GRS9oeHgQ3i"
+      "spotify": "https://open.spotify.com/track/4bzBPrGYD3fQfAadLgIiwT"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-by-the-way-2002",
-    "title": "By the Way",
+    "id": "song-we-are-young-feat-janelle-monae-2012",
+    "title": "We Are Young (feat. Janelle Monáe)",
     "category": "music",
-    "year": 2002,
+    "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — 2002, By the Way.",
-    "hint": "Red Hot Chili Peppers",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1f2V8U1BiWaC9aJWmpOARe"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-how-you-remind-me-2001",
-    "title": "How You Remind Me",
-    "category": "music",
-    "year": 2001,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Nickelback — 2001, How You Remind Me.",
-    "hint": "Nickelback",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0gmbgwZ8iqyMPmXefof8Yf"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-keinen-zentimeter-remastered-2014-2008",
-    "title": "Keinen Zentimeter - Remastered 2014",
-    "category": "music",
-    "year": 2008,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Clueso — 2008, Keinen Zentimeter - Remastered 2014.",
-    "hint": "Clueso",
+    "answer": "fun., Janelle Monáe — 2012, We Are Young (feat. Janelle Monáe).",
+    "hint": "fun., Janelle Monáe",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/5v64DycnnkiEtJXiuObYhO"
+      "spotify": "https://open.spotify.com/track/7a86XRg84qjasly9f6bPSD"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-how-to-save-a-life-2005",
-    "title": "How to Save a Life",
+    "id": "song-another-love-2013",
+    "title": "Another Love",
     "category": "music",
-    "year": 2005,
+    "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Fray — 2005, How to Save a Life.",
-    "hint": "The Fray",
+    "answer": "Tom Odell — 2013, Another Love.",
+    "hint": "Tom Odell",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3JvKfv6T31zO0ini8iNItO"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-best-day-of-my-life-2014",
+    "title": "Best Day Of My Life",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "American Authors — 2014, Best Day Of My Life.",
+    "hint": "American Authors",
     "difficulty": "schwer",
     "sources": {
-      "spotify": "https://open.spotify.com/track/5fVZC9GiM4e8vu99W0Xf6J"
+      "spotify": "https://open.spotify.com/track/0Dho96aJIZ5LJZXyPllbWA"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-in-the-end-2000",
-    "title": "In the End",
+    "id": "song-little-talks-2012",
+    "title": "Little Talks",
     "category": "music",
-    "year": 2000,
+    "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — 2000, In the End.",
-    "hint": "Linkin Park",
-    "difficulty": "leicht",
+    "answer": "Of Monsters and Men — 2012, Little Talks.",
+    "hint": "Of Monsters and Men",
+    "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/60a0Rd6pjrkxjPbaKzXjfq"
+      "spotify": "https://open.spotify.com/track/2ihCaVdNZmnHZWt0fvAM7B"
     },
     "genres": [
-      "metal",
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-say-something-2014",
+    "title": "Say Something",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "A Great Big World, Christina Aguilera — 2014, Say Something.",
+    "hint": "A Great Big World, Christina Aguilera",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6Vc5wAMmXdKIAM7WUoEb7N"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-memories-2021",
+    "title": "Memories",
+    "category": "music",
+    "year": 2021,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Maroon 5 — 2021, Memories.",
+    "hint": "Maroon 5",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4cktbXiXOapiLBMprHFErI"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-centuries-2015",
+    "title": "Centuries",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Fall Out Boy — 2015, Centuries.",
+    "hint": "Fall Out Boy",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/04aAxqtGp5pv12UXAg4pkq"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-see-you-again-feat-charlie-puth-2015",
+    "title": "See You Again (feat. Charlie Puth)",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Wiz Khalifa, Charlie Puth — 2015, See You Again (feat. Charlie Puth).",
+    "hint": "Wiz Khalifa, Charlie Puth",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2JzZzZUQj3Qff7wapcbKjc"
+    },
+    "genres": [
       "hiphop",
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-lied-1-stuck-vom-himmel-2007",
-    "title": "Lied 1 - Stück vom Himmel",
+    "id": "song-7-years-2015",
+    "title": "7 Years",
     "category": "music",
-    "year": 2007,
+    "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Herbert Grönemeyer — 2007, Lied 1 - Stück vom Himmel.",
-    "hint": "Herbert Grönemeyer",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5MDgIJMfN3VsxVBLjpDPIP"
-    },
-    "genres": [
-      "schlagerparty",
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-durch-den-monsun-radio-mix-2005",
-    "title": "Durch den Monsun - Radio Mix",
-    "category": "music",
-    "year": 2005,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Tokio Hotel — 2005, Durch den Monsun - Radio Mix.",
-    "hint": "Tokio Hotel",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5OiC3eltQO7gXvOZMbrTn3"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-galvanize-2005",
-    "title": "Galvanize",
-    "category": "music",
-    "year": 2005,
-    "cue": "Song anhören und einordnen.",
-    "answer": "The Chemical Brothers — 2005, Galvanize.",
-    "hint": "The Chemical Brothers",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4bz7uB4edifWKJXSDxwHcs"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-hey-there-delilah-2005",
-    "title": "Hey There Delilah",
-    "category": "music",
-    "year": 2005,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Plain White T's — 2005, Hey There Delilah.",
-    "hint": "Plain White T's",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4RCWB3V8V0dignt99LZ8vH"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-freunde-bleiben-2005",
-    "title": "Freunde bleiben",
-    "category": "music",
-    "year": 2005,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Revolverheld — 2005, Freunde bleiben.",
-    "hint": "Revolverheld",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4bzmkrtJDog1RpvWAibK2n"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-who-knew-edit-2006",
-    "title": "Who Knew - Edit",
-    "category": "music",
-    "year": 2006,
-    "cue": "Song anhören und einordnen.",
-    "answer": "P!nk — 2006, Who Knew - Edit.",
-    "hint": "P!nk",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2hns6Dv29Yrg68AVTJiAyA"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-beautiful-2002",
-    "title": "Beautiful",
-    "category": "music",
-    "year": 2002,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Christina Aguilera — 2002, Beautiful.",
-    "hint": "Christina Aguilera",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3TCauNPqFiniaYHBvEVoHG"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-nur-ein-wort-2005",
-    "title": "Nur ein Wort",
-    "category": "music",
-    "year": 2005,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Wir sind Helden — 2005, Nur ein Wort.",
-    "hint": "Wir sind Helden",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4hYinIaRxdaoEFSQni6K6I"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-everywhere-2001",
-    "title": "Everywhere",
-    "category": "music",
-    "year": 2001,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Michelle Branch — 2001, Everywhere.",
-    "hint": "Michelle Branch",
+    "answer": "Lukas Graham — 2015, 7 Years.",
+    "hint": "Lukas Graham",
     "difficulty": "schwer",
     "sources": {
-      "spotify": "https://open.spotify.com/track/1u0l8zWpQeMYStFkc2mLD7"
+      "spotify": "https://open.spotify.com/track/23ihGIrYOSzNNGJ6STAxI4"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-kids-2007",
-    "title": "Kids",
+    "id": "song-shallow-radio-edit-2018",
+    "title": "Shallow - Radio Edit",
     "category": "music",
-    "year": 2007,
+    "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "MGMT — 2007, Kids.",
-    "hint": "MGMT",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1jJci4qxiYcOHhQR247rEU"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-here-without-you-2002",
-    "title": "Here Without You",
-    "category": "music",
-    "year": 2002,
-    "cue": "Song anhören und einordnen.",
-    "answer": "3 Doors Down — 2002, Here Without You.",
-    "hint": "3 Doors Down",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3NLrRZoMF0Lx6zTlYqeIo4"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-all-the-things-she-said-2002",
-    "title": "All The Things She Said",
-    "category": "music",
-    "year": 2002,
-    "cue": "Song anhören und einordnen.",
-    "answer": "t.A.T.u. — 2002, All The Things She Said.",
-    "hint": "t.A.T.u.",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4bJygwUKrRgq1stlNXcgMg"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-aurelie-2003",
-    "title": "Aurélie",
-    "category": "music",
-    "year": 2003,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Wir sind Helden — 2003, Aurélie.",
-    "hint": "Wir sind Helden",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6vugYRjEYHJ3nsGP5kScpf"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-she-will-be-loved-radio-mix-2002",
-    "title": "She Will Be Loved - Radio Mix",
-    "category": "music",
-    "year": 2002,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Maroon 5 — 2002, She Will Be Loved - Radio Mix.",
-    "hint": "Maroon 5",
+    "answer": "Lady Gaga, Bradley Cooper — 2018, Shallow - Radio Edit.",
+    "hint": "Lady Gaga, Bradley Cooper",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/4llK75pXNWZz6KAho2Gp16"
+      "spotify": "https://open.spotify.com/track/6QfS2wq5sSC1xAJCQsTSlj"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-relax-take-it-easy-2007",
-    "title": "Relax, Take It Easy",
+    "id": "song-royals-2013",
+    "title": "Royals",
     "category": "music",
-    "year": 2007,
+    "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "MIKA — 2007, Relax, Take It Easy.",
-    "hint": "MIKA",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1kmhdq0RfZFdfSLaTsiTVi"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-the-scientist-2002",
-    "title": "The Scientist",
-    "category": "music",
-    "year": 2002,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2002, The Scientist.",
-    "hint": "Coldplay",
+    "answer": "Lorde — 2013, Royals.",
+    "hint": "Lorde",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/75JFxkI2RXiU7L9VXzMkle"
+      "spotify": "https://open.spotify.com/track/2dLLR6qlu5UJ5gk0dKz0h3"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-soulmate-2007",
-    "title": "Soulmate",
+    "id": "song-one-call-away-2015",
+    "title": "One Call Away",
     "category": "music",
-    "year": 2007,
+    "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Natasha Bedingfield — 2007, Soulmate.",
-    "hint": "Natasha Bedingfield",
+    "answer": "Charlie Puth — 2015, One Call Away.",
+    "hint": "Charlie Puth",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5MwIGPDKeDb7SpblcaQP6O"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-elastic-heart-2014",
+    "title": "Elastic Heart",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Sia — 2014, Elastic Heart.",
+    "hint": "Sia",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6kwAbEjseqBob48jCus7Sz"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-shotgun-2018",
+    "title": "Shotgun",
+    "category": "music",
+    "year": 2018,
+    "cue": "Song anhören und einordnen.",
+    "answer": "George Ezra — 2018, Shotgun.",
+    "hint": "George Ezra",
     "difficulty": "schwer",
     "sources": {
-      "spotify": "https://open.spotify.com/track/3DuHOCe1dbf3XKF8uoc5oM"
+      "spotify": "https://open.spotify.com/track/4ofwffwvvnbSkrMSCKQDaC"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-only-time-2000",
-    "title": "Only Time",
+    "id": "song-the-edge-of-glory-2011",
+    "title": "The Edge Of Glory",
     "category": "music",
-    "year": 2000,
+    "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Enya — 2000, Only Time.",
-    "hint": "Enya",
+    "answer": "Lady Gaga — 2011, The Edge Of Glory.",
+    "hint": "Lady Gaga",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/57F80059mWaWFvWG3tBTbO"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-story-of-my-life-2013",
+    "title": "Story of My Life",
+    "category": "music",
+    "year": 2013,
+    "cue": "Song anhören und einordnen.",
+    "answer": "One Direction — 2013, Story of My Life.",
+    "hint": "One Direction",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/6FLwmdmW77N1Pxb1aWsZmO"
+      "spotify": "https://open.spotify.com/track/4nVBt6MZDDP6tRVdQTgxJg"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-dancing-in-the-moonlight-2000",
-    "title": "Dancing in the Moonlight",
+    "id": "song-take-me-to-church-2014",
+    "title": "Take Me To Church",
     "category": "music",
-    "year": 2000,
+    "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Toploader — 2000, Dancing in the Moonlight.",
-    "hint": "Toploader",
+    "answer": "Hozier — 2014, Take Me To Church.",
+    "hint": "Hozier",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3dYD57lRAUcMHufyqn9GcI"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-let-it-go-2015",
+    "title": "Let It Go",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "James Bay — 2015, Let It Go.",
+    "hint": "James Bay",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/40EB7ABUO6MoWMUwPKptJ7"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-some-nights-2012",
+    "title": "Some Nights",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "fun. — 2012, Some Nights.",
+    "hint": "fun.",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/0w07a1vsKahQMM0RnPXHVT"
+      "spotify": "https://open.spotify.com/track/6t6oULCRS6hnI7rm0h5gwl"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-hot-n-cold-2008",
-    "title": "Hot N Cold",
+    "id": "song-born-this-way-2011",
+    "title": "Born This Way",
     "category": "music",
-    "year": 2008,
+    "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katy Perry — 2008, Hot N Cold.",
+    "answer": "Lady Gaga — 2011, Born This Way.",
+    "hint": "Lady Gaga",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/30XU4suKzCeoCK9YFzdufg"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-team-2013",
+    "title": "Team",
+    "category": "music",
+    "year": 2013,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lorde — 2013, Team.",
+    "hint": "Lorde",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3G6hD9B2ZHOsgf4WfNu7X1"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-bad-liar-2018",
+    "title": "Bad Liar",
+    "category": "music",
+    "year": 2018,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Imagine Dragons — 2018, Bad Liar.",
+    "hint": "Imagine Dragons",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2RSHsoi04658QL5xgQVov3"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-hold-back-the-river-2015",
+    "title": "Hold Back The River",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "James Bay — 2015, Hold Back The River.",
+    "hint": "James Bay",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/72FNf7DAlWLmuHiLTBcNHY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-hall-of-fame-feat-william-2012",
+    "title": "Hall of Fame (feat. will.i.am)",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Script, will.i.am — 2012, Hall of Fame (feat. will.i.am).",
+    "hint": "The Script, will.i.am",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7wMq5n8mYSKlQIGECKUgTX"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-always-remember-us-this-way-2018",
+    "title": "Always Remember Us This Way",
+    "category": "music",
+    "year": 2018,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lady Gaga — 2018, Always Remember Us This Way.",
+    "hint": "Lady Gaga",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/74iZuPGwyL33VlTr6jTnab"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-riptide-2014",
+    "title": "Riptide",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Vance Joy — 2014, Riptide.",
+    "hint": "Vance Joy",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7yq4Qj7cqayVTp3FF9CWbm"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-night-changes-2014",
+    "title": "Night Changes",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "One Direction — 2014, Night Changes.",
+    "hint": "One Direction",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5O2P9iiztwhomNh8xkR9lJ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-blank-space-2014",
+    "title": "Blank Space",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Taylor Swift — 2014, Blank Space.",
+    "hint": "Taylor Swift",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2ls70nUDfjzm1lSRDuKxmw"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-roar-2013",
+    "title": "Roar",
+    "category": "music",
+    "year": 2013,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Katy Perry — 2013, Roar.",
     "hint": "Katy Perry",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/0iGckQFyv6svOfAbAY9aWJ"
+      "spotify": "https://open.spotify.com/track/27tNWlhdAryQY04Gb2ZhUI"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-girl-4-a-day-2002",
-    "title": "Girl 4 A Day",
+    "id": "song-stay-with-me-2014",
+    "title": "Stay With Me",
     "category": "music",
-    "year": 2002,
+    "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "band ohne namen, Milka — 2002, Girl 4 A Day.",
-    "hint": "band ohne namen, Milka",
+    "answer": "Sam Smith — 2014, Stay With Me.",
+    "hint": "Sam Smith",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5Nm9ERjJZ5oyfXZTECKmRt"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-thrift-shop-feat-wanz-2012",
+    "title": "Thrift Shop (feat. Wanz)",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Macklemore & Ryan Lewis, Macklemore, Ryan Lewis, Wanz — 2012, Thrift Shop (feat. Wanz).",
+    "hint": "Macklemore & Ryan Lewis, Macklemore, Ryan Lewis, Wanz",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/4EfIj3ryeMpmZNJq4xbTQf"
+      "spotify": "https://open.spotify.com/track/6CjtS2JZH9RkDz5UVInsa9"
     },
     "genres": [
       "poprock",
       "hiphop"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-where-is-the-love-2003",
-    "title": "Where Is The Love?",
+    "id": "song-high-hopes-2018",
+    "title": "High Hopes",
     "category": "music",
-    "year": 2003,
+    "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Black Eyed Peas — 2003, Where Is The Love?.",
-    "hint": "Black Eyed Peas",
-    "difficulty": "leicht",
+    "answer": "Panic! At The Disco — 2018, High Hopes.",
+    "hint": "Panic! At The Disco",
+    "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/0xmjwnQ3FNE6HuWCt2nHdZ"
+      "spotify": "https://open.spotify.com/track/1rqqCSm0Qe4I9rUvWncaom"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-thank-you-1999",
-    "title": "Thank You",
+    "id": "song-a-thousand-years-2011",
+    "title": "a thousand years",
     "category": "music",
-    "year": 1999,
+    "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dido — 1999, Thank You.",
-    "hint": "Dido",
+    "answer": "Christina Perri — 2011, a thousand years.",
+    "hint": "Christina Perri",
     "difficulty": "schwer",
     "sources": {
-      "spotify": "https://open.spotify.com/track/3yUcJwYu7fXAfqMj9krY6l"
+      "spotify": "https://open.spotify.com/track/6lanRgr6wXibZr8KgzXxBl"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-leave-get-out-2004",
-    "title": "Leave (Get Out)",
+    "id": "song-firework-2010",
+    "title": "Firework",
     "category": "music",
-    "year": 2004,
+    "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "JoJo — 2004, Leave (Get Out).",
-    "hint": "JoJo",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1KvoW6HPuW7Mu9i55XaibE"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-since-u-been-gone-2004",
-    "title": "Since U Been Gone",
-    "category": "music",
-    "year": 2004,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Kelly Clarkson — 2004, Since U Been Gone.",
-    "hint": "Kelly Clarkson",
+    "answer": "Katy Perry — 2010, Firework.",
+    "hint": "Katy Perry",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/6JY1IdkZGeIcPegKxjSKeb"
+      "spotify": "https://open.spotify.com/track/3lXbHd0EoryoQh3vpevNEP"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-perfekte-welle-2004",
-    "title": "Perfekte Welle",
+    "id": "song-im-not-the-only-one-2014",
+    "title": "I'm Not The Only One",
     "category": "music",
-    "year": 2004,
+    "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Juli — 2004, Perfekte Welle.",
-    "hint": "Juli",
+    "answer": "Sam Smith — 2014, I'm Not The Only One.",
+    "hint": "Sam Smith",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7795WJLVKJoAyVoOtCWqXN"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-thinking-out-loud-2014",
+    "title": "Thinking out Loud",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Ed Sheeran — 2014, Thinking out Loud.",
+    "hint": "Ed Sheeran",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/34gCuhDGsG4bRPIf9bb02f"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-dear-future-husband-2015",
+    "title": "Dear Future Husband",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Meghan Trainor — 2015, Dear Future Husband.",
+    "hint": "Meghan Trainor",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3cU2wBxuV6nFiuf6PJZNlC"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-when-the-partys-over-2019",
+    "title": "when the party's over",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Billie Eilish — 2019, when the party's over.",
+    "hint": "Billie Eilish",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/43zdsphuZLzwA9k4DJhU0I"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-bad-romance-2009",
+    "title": "Bad Romance",
+    "category": "music",
+    "year": 2009,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lady Gaga — 2009, Bad Romance.",
+    "hint": "Lady Gaga",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0SiywuOBRcynK0uKGWdCnn"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-2002-2018",
+    "title": "2002",
+    "category": "music",
+    "year": 2018,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Anne-Marie — 2018, 2002.",
+    "hint": "Anne-Marie",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/2LV5joNDrsyuXEh4FBARVK"
+      "spotify": "https://open.spotify.com/track/2BgEsaKNfHUdlh97KmvFyo"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-valerie-feat-amy-winehouse-version-revisited-2007",
-    "title": "Valerie (feat. Amy Winehouse) - Version Revisited",
+    "id": "song-unstoppable-2016",
+    "title": "Unstoppable",
     "category": "music",
-    "year": 2007,
+    "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mark Ronson, Amy Winehouse — 2007, Valerie (feat. Amy Winehouse) - Version Revisited.",
-    "hint": "Mark Ronson, Amy Winehouse",
+    "answer": "Sia — 2016, Unstoppable.",
+    "hint": "Sia",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/059ACLUOyEcdruA2m9f2jd"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-payphone-2012",
+    "title": "Payphone",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Maroon 5, Wiz Khalifa — 2012, Payphone.",
+    "hint": "Maroon 5, Wiz Khalifa",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1XGmzt0PVuFgQYYnV2It7A"
+    },
+    "genres": [
+      "poprock",
+      "hiphop"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-she-looks-so-perfect-2014",
+    "title": "She Looks So Perfect",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "5 Seconds of Summer — 2014, She Looks So Perfect.",
+    "hint": "5 Seconds of Summer",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/6kopmMZiyLmw7h66uXcXR7"
+      "spotify": "https://open.spotify.com/track/1CQ2cMfrmFM1YdfmjENKVE"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-all-rise-2004",
-    "title": "All Rise",
+    "id": "song-what-makes-you-beautiful-2012",
+    "title": "What Makes You Beautiful",
     "category": "music",
-    "year": 2004,
+    "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Blue — 2004, All Rise.",
-    "hint": "Blue",
+    "answer": "One Direction — 2012, What Makes You Beautiful.",
+    "hint": "One Direction",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/0OJtYfqiz0Xn53o2TnySQC"
+      "spotify": "https://open.spotify.com/track/4cluDES4hQEUhmXj6TXkSo"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-the-tide-is-high-radio-mix-2003",
-    "title": "The Tide Is High - Radio Mix",
+    "id": "song-cake-by-the-ocean-2016",
+    "title": "Cake By The Ocean",
     "category": "music",
-    "year": 2003,
+    "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Atomic Kitten — 2003, The Tide Is High - Radio Mix.",
-    "hint": "Atomic Kitten",
+    "answer": "DNCE — 2016, Cake By The Ocean.",
+    "hint": "DNCE",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/5WuVWOngcRkMOx9RRLCvui"
+      "spotify": "https://open.spotify.com/track/76hfruVvmfQbw0eYn1nmeC"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-symphonie-2004",
-    "title": "Symphonie",
+    "id": "song-the-monster-2013",
+    "title": "The Monster",
     "category": "music",
-    "year": 2004,
+    "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Silbermond — 2004, Symphonie.",
-    "hint": "Silbermond",
+    "answer": "Eminem, Rihanna — 2013, The Monster.",
+    "hint": "Eminem, Rihanna",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/48RrDBpOSSl1aLVCalGl5C"
+    },
+    "genres": [
+      "hiphop",
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-pumped-up-kicks-2011",
+    "title": "Pumped Up Kicks",
+    "category": "music",
+    "year": 2011,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Foster The People — 2011, Pumped Up Kicks.",
+    "hint": "Foster The People",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/7mOD9NFyZhC8PtW4joWDWT"
+      "spotify": "https://open.spotify.com/track/7w87IxuO7BDcJ3YUqCyMTT"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-lasse-redn-2007",
-    "title": "Lasse redn",
+    "id": "song-bad-guy-2019",
+    "title": "bad guy",
     "category": "music",
-    "year": 2007,
+    "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Die Ärzte — 2007, Lasse redn.",
-    "hint": "Die Ärzte",
+    "answer": "Billie Eilish — 2019, bad guy.",
+    "hint": "Billie Eilish",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2Fxmhks0bxGSBdJ92vM42m"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-cant-stop-the-feeling-from-dreamworks-animations-trolls-2016",
+    "title": "CAN'T STOP THE FEELING! (from DreamWorks Animation's \"TROLLS\")",
+    "category": "music",
+    "year": 2016,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Justin Timberlake — 2016, CAN'T STOP THE FEELING! (from DreamWorks Animation's \"TROLLS\").",
+    "hint": "Justin Timberlake",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/6vJ4egoPoiPKUyohVOfVHC"
+      "spotify": "https://open.spotify.com/track/6JV2JOEocMgcZxYSZelKcc"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-get-the-party-started-2001",
-    "title": "Get the Party Started",
+    "id": "song-thunder-2017",
+    "title": "Thunder",
     "category": "music",
-    "year": 2001,
+    "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk — 2001, Get the Party Started.",
+    "answer": "Imagine Dragons — 2017, Thunder.",
+    "hint": "Imagine Dragons",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1zB4vmk8tFRmM9UULNzbLB"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-california-gurls-2012",
+    "title": "California Gurls",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Katy Perry, Snoop Dogg — 2012, California Gurls.",
+    "hint": "Katy Perry, Snoop Dogg",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6tS3XVuOyu10897O3ae7bi"
+    },
+    "genres": [
+      "poprock",
+      "hiphop"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-be-alright-2018",
+    "title": "Be Alright",
+    "category": "music",
+    "year": 2018,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Dean Lewis — 2018, Be Alright.",
+    "hint": "Dean Lewis",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3EPXxR3ImUwfayaurPi3cm"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-good-time-2012",
+    "title": "Good Time",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Owl City, Carly Rae Jepsen — 2012, Good Time.",
+    "hint": "Owl City, Carly Rae Jepsen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1kPpge9JDLpcj15qgrPbYX"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-i-really-like-you-2015",
+    "title": "I Really Like You",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Carly Rae Jepsen — 2015, I Really Like You.",
+    "hint": "Carly Rae Jepsen",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1mKXfxIOA7eQQJ844OFm7L"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-cant-hold-us-feat-ray-dalton-2012",
+    "title": "Can't Hold Us (feat. Ray Dalton)",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Macklemore, Ryan Lewis, Macklemore & Ryan Lewis, Ray Dalton — 2012, Can't Hold Us (feat. Ray Dalton).",
+    "hint": "Macklemore, Ryan Lewis, Macklemore & Ryan Lewis, Ray Dalton",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3bidbhpOYeV4knp8AIu8Xn"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-photograph-2014",
+    "title": "Photograph",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Ed Sheeran — 2014, Photograph.",
+    "hint": "Ed Sheeran",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-try-2012",
+    "title": "Try",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "P!nk — 2012, Try.",
     "hint": "P!nk",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/02jcEwywffn3Tsb48fXmlW"
+      "spotify": "https://open.spotify.com/track/1jF7IL57ayN4Ity3jQqGu0"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-she-hates-me-2001",
-    "title": "She Hates Me",
+    "id": "song-someone-you-loved-2019",
+    "title": "Someone You Loved",
     "category": "music",
-    "year": 2001,
+    "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Puddle Of Mudd — 2001, She Hates Me.",
-    "hint": "Puddle Of Mudd",
+    "answer": "Lewis Capaldi — 2019, Someone You Loved.",
+    "hint": "Lewis Capaldi",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/16DhvbuyvJob4Q9GHNYu2n"
+      "spotify": "https://open.spotify.com/track/7qEHsqek33rTcFNT9PFqLf"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-whenever-wherever-2001",
-    "title": "Whenever, Wherever",
+    "id": "song-i-knew-you-were-trouble-2012",
+    "title": "I Knew You Were Trouble.",
     "category": "music",
-    "year": 2001,
+    "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shakira — 2001, Whenever, Wherever.",
-    "hint": "Shakira",
+    "answer": "Taylor Swift — 2012, I Knew You Were Trouble..",
+    "hint": "Taylor Swift",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/2lnzGkdtDj5mtlcOW2yRtG"
+      "spotify": "https://open.spotify.com/track/6FB3v4YcR57y4tXFcdxI1E"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-im-outta-love-radio-edit-1999",
-    "title": "I'm Outta Love - Radio Edit",
+    "id": "song-blurred-lines-2013",
+    "title": "Blurred Lines",
     "category": "music",
-    "year": 1999,
+    "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Anastacia — 1999, I'm Outta Love - Radio Edit.",
-    "hint": "Anastacia",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/583xVl0Sbj93uU4ceixgU8"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-suddenly-i-see-2005",
-    "title": "Suddenly I See",
-    "category": "music",
-    "year": 2005,
-    "cue": "Song anhören und einordnen.",
-    "answer": "KT Tunstall — 2005, Suddenly I See.",
-    "hint": "KT Tunstall",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5p9XWUdvbUzmPCukOmwoU3"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-viva-la-vida-2008",
-    "title": "Viva La Vida",
-    "category": "music",
-    "year": 2008,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2008, Viva La Vida.",
-    "hint": "Coldplay",
+    "answer": "Robin Thicke, T.I., Pharrell Williams — 2013, Blurred Lines.",
+    "hint": "Robin Thicke, T.I., Pharrell Williams",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/5S6pYZD8WH3OQapDHTDM9M"
+      "spotify": "https://open.spotify.com/track/0n4bITAu0Y0nigrz3MFJMb"
     },
     "genres": [
-      "poprock"
+      "poprock",
+      "hiphop"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-mit-dir-chilln-2005",
-    "title": "Mit dir chilln",
+    "id": "song-stressed-out-2015",
+    "title": "Stressed Out",
     "category": "music",
-    "year": 2005,
+    "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Revolverheld — 2005, Mit dir chilln.",
-    "hint": "Revolverheld",
+    "answer": "Twenty One Pilots — 2015, Stressed Out.",
+    "hint": "Twenty One Pilots",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/7bjM0YAWS0goSo8pSokkvA"
+      "spotify": "https://open.spotify.com/track/3CRDbSIZ4r5MsZ0YwxuEkn"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-overload-2000",
-    "title": "Overload",
+    "id": "song-counting-stars-2013",
+    "title": "Counting Stars",
     "category": "music",
-    "year": 2000,
+    "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sugababes — 2000, Overload.",
-    "hint": "Sugababes",
+    "answer": "OneRepublic — 2013, Counting Stars.",
+    "hint": "OneRepublic",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2tpWsVSb9UEmDRxAl1zhX1"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-sucker-2019",
+    "title": "Sucker",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Jonas Brothers — 2019, Sucker.",
+    "hint": "Jonas Brothers",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/7orBBkQgdmanhPCD0FyHHZ"
+      "spotify": "https://open.spotify.com/track/22vgEDb5hykfaTwLuskFGD"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-absolutely-everybody-2004",
-    "title": "Absolutely Everybody",
+    "id": "song-believer-2017",
+    "title": "Believer",
     "category": "music",
-    "year": 2004,
+    "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Vanessa Amorosi — 2004, Absolutely Everybody.",
-    "hint": "Vanessa Amorosi",
+    "answer": "Imagine Dragons — 2017, Believer.",
+    "hint": "Imagine Dragons",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0pqnGHJpmpxLKifKRmU6WP"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-waka-waka-this-time-for-africa-the-official-2010-fifa-world-cup-tm-song-feat-freshlyground-2023",
+    "title": "Waka Waka (This Time for Africa) [The Official 2010 FIFA World Cup (TM) Song] (feat. Freshlyground)",
+    "category": "music",
+    "year": 2023,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Shakira, Freshlyground — 2023, Waka Waka (This Time for Africa) [The Official 2010 FIFA World Cup (TM) Song] (feat. Freshlyground).",
+    "hint": "Shakira, Freshlyground",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/283898Lgbl6LidapOraXiN"
+      "spotify": "https://open.spotify.com/track/6Hh80mBGVEObi3skGYf1PI"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-make-you-feel-my-love-2008",
-    "title": "Make You Feel My Love",
+    "id": "song-what-the-hell-2011",
+    "title": "What the Hell",
     "category": "music",
-    "year": 2008,
+    "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Adele — 2008, Make You Feel My Love.",
+    "answer": "Avril Lavigne — 2011, What the Hell.",
+    "hint": "Avril Lavigne",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2z4U9d5OAA4YLNXoCgioxo"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-budapest-2014",
+    "title": "Budapest",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "George Ezra — 2014, Budapest.",
+    "hint": "George Ezra",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2ixsaeFioXJmMgkkbd4uj1"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-watermelon-sugar-2019",
+    "title": "Watermelon Sugar",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Harry Styles — 2019, Watermelon Sugar.",
+    "hint": "Harry Styles",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6UelLqGlWMcVH1E5c4H7lY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-dancing-on-my-own-2018",
+    "title": "Dancing On My Own",
+    "category": "music",
+    "year": 2018,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Calum Scott — 2018, Dancing On My Own.",
+    "hint": "Calum Scott",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2BOqDYLOJBiMOXShCV1neZ"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-happy-from-despicable-me-2-2014",
+    "title": "Happy - From \"Despicable Me 2\"",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Pharrell Williams — 2014, Happy - From \"Despicable Me 2\".",
+    "hint": "Pharrell Williams",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/60nZcImufyMA1MKQY3dcCH"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-lovely-with-khalid-2018",
+    "title": "lovely (with Khalid)",
+    "category": "music",
+    "year": 2018,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Billie Eilish, Khalid — 2018, lovely (with Khalid).",
+    "hint": "Billie Eilish, Khalid",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0u2P5u6lvoDfwTYjAADbn4"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-raise-your-glass-2010",
+    "title": "Raise Your Glass",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "P!nk — 2010, Raise Your Glass.",
+    "hint": "P!nk",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1gv4xPanImH17bKZ9rOveR"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-before-you-go-2019",
+    "title": "Before You Go",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lewis Capaldi — 2019, Before You Go.",
+    "hint": "Lewis Capaldi",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2gMXnyrvIjhVBUZwvLZDMP"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-skyfall-2012",
+    "title": "Skyfall",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Adele — 2012, Skyfall.",
     "hint": "Adele",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/273QnyCvJB65rScHJ1nPZb"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-junge-2007",
-    "title": "Junge",
-    "category": "music",
-    "year": 2007,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Die Ärzte — 2007, Junge.",
-    "hint": "Die Ärzte",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/10waMsh44ojvTwXAIy213n"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-haus-am-see-2008",
-    "title": "Haus am See",
-    "category": "music",
-    "year": 2008,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Peter Fox — 2008, Haus am See.",
-    "hint": "Peter Fox",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7A4KdLy1DXOOC5fhIdDuHz"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-apologize-2007",
-    "title": "Apologize",
-    "category": "music",
-    "year": 2007,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Timbaland, OneRepublic — 2007, Apologize.",
-    "hint": "Timbaland, OneRepublic",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ucR4KfvsBFWCMVFDvyKKl"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-dont-stop-movin-2001",
-    "title": "Don't Stop Movin'",
-    "category": "music",
-    "year": 2001,
-    "cue": "Song anhören und einordnen.",
-    "answer": "S Club — 2001, Don't Stop Movin'.",
-    "hint": "S Club",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4dzreTCcGVgeF1vCcd22AC"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-regen-und-meer-2004",
-    "title": "Regen und Meer",
-    "category": "music",
-    "year": 2004,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Juli — 2004, Regen und Meer.",
-    "hint": "Juli",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6fIGXxeU3C230sAm07WJxY"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-clint-eastwood-2001",
-    "title": "Clint Eastwood",
-    "category": "music",
-    "year": 2001,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Gorillaz, Del The Funky Homosapien — 2001, Clint Eastwood.",
-    "hint": "Gorillaz, Del The Funky Homosapien",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1RKUoGiLEbcXN4GY4spQDx"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-in-the-end-2023",
-    "title": "In the End",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — 2023, In the End.",
-    "hint": "Linkin Park",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/6BXLec9ha9VDjCki0hUz2M"
+      "spotify": "https://open.spotify.com/track/6VObnIkLVruX4UVyxWhlqm"
     },
     "genres": [
-      "metal",
-      "hiphop",
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-temperature-2023",
-    "title": "Temperature",
+    "id": "song-unsteady-2015",
+    "title": "Unsteady",
     "category": "music",
-    "year": 2023,
+    "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sean Paul — 2023, Temperature.",
-    "hint": "Sean Paul",
-    "difficulty": "mittel",
+    "answer": "X Ambassadors — 2015, Unsteady.",
+    "hint": "X Ambassadors",
+    "difficulty": "schwer",
     "sources": {
-      "spotify": "https://open.spotify.com/track/3aaRRjtfKcEOZ0Prn80OhB"
+      "spotify": "https://open.spotify.com/track/7lGKEWMXVWWTt3X71Bv44I"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-lasciala-andare-2023",
-    "title": "Lasciala andare",
+    "id": "song-teenage-dream-2010",
+    "title": "Teenage Dream",
     "category": "music",
-    "year": 2023,
+    "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Irene Grandi — 2023, Lasciala andare.",
-    "hint": "Irene Grandi",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3spBSmnzy7eKOAvNIKStf4"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-black-and-yellow-2023",
-    "title": "Black and Yellow",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Wiz Khalifa — 2023, Black and Yellow.",
-    "hint": "Wiz Khalifa",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5xvmB1OoJHXz8LsZPMhZ3G"
-    },
-    "genres": [
-      "hiphop",
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-numb-2023",
-    "title": "Numb",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — 2023, Numb.",
-    "hint": "Linkin Park",
+    "answer": "Katy Perry — 2010, Teenage Dream.",
+    "hint": "Katy Perry",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/0Z5MCE3Sp2mRwlcBgWglqV"
-    },
-    "genres": [
-      "metal",
-      "hiphop",
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-american-idiot-2023",
-    "title": "American Idiot",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — 2023, American Idiot.",
-    "hint": "Green Day",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ELGTnvFyupaMLtxSYrrCG"
+      "spotify": "https://open.spotify.com/track/235LXPXfi0SmOaS9TaCh3c"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-remember-the-name-2023",
-    "title": "Remember the Name",
+    "id": "song-rewrite-the-stars-2017",
+    "title": "Rewrite The Stars",
     "category": "music",
-    "year": 2023,
+    "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fort Minor, Styles Of Beyond — 2023, Remember the Name.",
-    "hint": "Fort Minor, Styles Of Beyond",
+    "answer": "Zac Efron, Zendaya — 2017, Rewrite The Stars.",
+    "hint": "Zac Efron, Zendaya",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/22OsteZ4vFCDUY5KdtvVzR"
-    },
-    "genres": [
-      "hiphop",
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-jar-of-hearts-2023",
-    "title": "Jar of Hearts",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Christina Perri — 2023, Jar of Hearts.",
-    "hint": "Christina Perri",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1heLEv7PekeuSueH9r1LaD"
+      "spotify": "https://open.spotify.com/track/630sXRhIcfwr2e4RdNtjKN"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-bambolina-e-barracuda-2023",
-    "title": "Bambolina e barracuda",
+    "id": "song-stereo-hearts-feat-adam-levine-2011",
+    "title": "Stereo Hearts (feat. Adam Levine)",
     "category": "music",
-    "year": 2023,
+    "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ligabue — 2023, Bambolina e barracuda.",
-    "hint": "Ligabue",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6KMUWQdSdgWbUt8QGEaRIN"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-airplanes-2023",
-    "title": "Airplanes",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "B.o.B, Hayley Williams — 2023, Airplanes.",
-    "hint": "B.o.B, Hayley Williams",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/72fQWKhM1YBwWppS8Tmpw5"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-titanium-2023",
-    "title": "Titanium",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "David Guetta, Sia — 2023, Titanium.",
-    "hint": "David Guetta, Sia",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0fN73V9Bj7U8JtmB2ZgFRg"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-whistle-2023",
-    "title": "Whistle",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Flo Rida — 2023, Whistle.",
-    "hint": "Flo Rida",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5ocfddG4faAWhwV8Fo3vUS"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-grenade-2023",
-    "title": "Grenade",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Bruno Mars — 2023, Grenade.",
-    "hint": "Bruno Mars",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0ICvakG2UnHeDlykb4cosq"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-want-to-want-me-2023",
-    "title": "Want to Want Me",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Jason Derulo — 2023, Want to Want Me.",
-    "hint": "Jason Derulo",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2sCsXgl4Egmam4efHRCWwP"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-rather-be-2023",
-    "title": "Rather Be",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Clean Bandit, Jess Glynne — 2023, Rather Be.",
-    "hint": "Clean Bandit, Jess Glynne",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7LEXI7W7VUQBXjpxTnQ9re"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-bruci-la-citta-2023",
-    "title": "Bruci la città",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Irene Grandi — 2023, Bruci la città.",
-    "hint": "Irene Grandi",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2IYQFYlN7oY4a8loz0Iukq"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-i-cry-2023",
-    "title": "I Cry",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Flo Rida — 2023, I Cry.",
-    "hint": "Flo Rida",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1EExAIJOvmpFhpSVmO3n7p"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-whatcha-say-2023",
-    "title": "Whatcha Say",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Jason Derulo — 2023, Whatcha Say.",
-    "hint": "Jason Derulo",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2Q1eddqQet2NDCIvL5vzG1"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-memories-2023",
-    "title": "Memories",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "David Guetta, Kid Cudi — 2023, Memories.",
-    "hint": "David Guetta, Kid Cudi",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2AwnwslG1kz5mWMCC2XcUC"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-just-the-way-you-are-2023",
-    "title": "Just the Way You Are",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Bruno Mars — 2023, Just the Way You Are.",
-    "hint": "Bruno Mars",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6cAlfKuViKB9kYQU42usVi"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-im-yours-2023",
-    "title": "I’m Yours",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Jason Mraz — 2023, I’m Yours.",
-    "hint": "Jason Mraz",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5eRx8r6X5ATv4ZWjkJh0p1"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-wake-me-up-when-september-ends-2023",
-    "title": "Wake Me Up When September Ends",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — 2023, Wake Me Up When September Ends.",
-    "hint": "Green Day",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2oAEWwATeqMPv8OSSkAbVH"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-clint-eastwood-2023",
-    "title": "Clint Eastwood",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Gorillaz — 2023, Clint Eastwood.",
-    "hint": "Gorillaz",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1SISahQ9QSV1H8v4Kxng5I"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-get-busy-2023",
-    "title": "Get Busy",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Sean Paul — 2023, Get Busy.",
-    "hint": "Sean Paul",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2MgAKv8pRg5oQ2OjQRJRnC"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-it-girl-2023",
-    "title": "It Girl",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Jason Derulo — 2023, It Girl.",
-    "hint": "Jason Derulo",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3tXCD3OSug0TxmP6OxvXeN"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-sexy-bitch-extended-2023",
-    "title": "Sexy Bitch - Extended",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "David Guetta, Akon — 2023, Sexy Bitch - Extended.",
-    "hint": "David Guetta, Akon",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/44XqHeiTrgraUp5xN0qTaw"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-how-you-remind-me-2023",
-    "title": "How You Remind Me",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Nickelback — 2023, How You Remind Me.",
-    "hint": "Nickelback",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ISrksefcVK74b8EpZF840"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-laffy-taffy-2023",
-    "title": "Laffy Taffy",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "D4L — 2023, Laffy Taffy.",
-    "hint": "D4L",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3lb2RGpr5eaRcDx2qMVg4s"
-    },
-    "genres": [
-      "hiphop",
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-holiday-boulevard-of-broken-dreams-2023",
-    "title": "Holiday / Boulevard of Broken Dreams",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — 2023, Holiday / Boulevard of Broken Dreams.",
-    "hint": "Green Day",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6tv0G7ut8ZJaFr8TexNoMx"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-dani-california-2023",
-    "title": "Dani California",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — 2023, Dani California.",
-    "hint": "Red Hot Chili Peppers",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1gfIFAX1IY5EXyxK29Lyln"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-viva-la-vida-2023",
-    "title": "Viva La Vida",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2023, Viva La Vida.",
-    "hint": "Coldplay",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5EIuYTnDNdvEiBe2bd17jQ"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-sweet-but-psycho-2023",
-    "title": "Sweet but Psycho",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Ava Max — 2023, Sweet but Psycho.",
-    "hint": "Ava Max",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/53hniUNL15gVxnl7XV1qdV"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-good-feeling-2023",
-    "title": "Good Feeling",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Flo Rida — 2023, Good Feeling.",
-    "hint": "Flo Rida",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5yS49vhGk1hJEelQtYngEv"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-replay-2023",
-    "title": "Replay",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Iyaz — 2023, Replay.",
-    "hint": "Iyaz",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2Py4Oh8CRFuI0oUm6jafL9"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-all-summer-long-2023",
-    "title": "All Summer Long",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Kid Rock — 2023, All Summer Long.",
-    "hint": "Kid Rock",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6KJFPYolclwccbI4PlbJaF"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-opposite-of-adults-2023",
-    "title": "Opposite of Adults",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Chiddy Bang — 2023, Opposite of Adults.",
-    "hint": "Chiddy Bang",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3akO1paFpjYKercqfXeNZ2"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-stereo-hearts-2023",
-    "title": "Stereo Hearts",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Gym Class Heroes, Adam Levine — 2023, Stereo Hearts.",
+    "answer": "Gym Class Heroes, Adam Levine — 2011, Stereo Hearts (feat. Adam Levine).",
     "hint": "Gym Class Heroes, Adam Levine",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/6ALHX6JrjZ10PEO5cGtCmF"
+      "spotify": "https://open.spotify.com/track/0qOnSQQF0yzuPWsXrQ9paz"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-roll-up-2023",
-    "title": "Roll Up",
+    "id": "song-someone-like-you-2011",
+    "title": "Someone Like You",
     "category": "music",
-    "year": 2023,
+    "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wiz Khalifa — 2023, Roll Up.",
-    "hint": "Wiz Khalifa",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ehCzdwYGwUw8OE5TnUCah"
-    },
-    "genres": [
-      "hiphop",
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-locked-out-of-heaven-2023",
-    "title": "Locked Out of Heaven",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Bruno Mars — 2023, Locked Out of Heaven.",
-    "hint": "Bruno Mars",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1Kk56C9SHQzSdyZlLAwqLE"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-what-ive-done-2023",
-    "title": "What I've Done",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — 2023, What I've Done.",
-    "hint": "Linkin Park",
+    "answer": "Adele — 2011, Someone Like You.",
+    "hint": "Adele",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/59DdDEQ0dmuXsI00OJSk6x"
-    },
-    "genres": [
-      "metal",
-      "hiphop",
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-cant-stop-2023",
-    "title": "Can’t Stop",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — 2023, Can’t Stop.",
-    "hint": "Red Hot Chili Peppers",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6cAvyVIyljhbInVZRfspoJ"
+      "spotify": "https://open.spotify.com/track/3bNv3VuUOKgrf5hu3YcuRo"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-so-good-2023",
-    "title": "So Good",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "B.o.B — 2023, So Good.",
-    "hint": "B.o.B",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0RCKFXBZfOgp5CMDI4uJYG"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-a-sky-full-of-stars-2023",
+    "id": "song-a-sky-full-of-stars-2014",
     "title": "A Sky Full of Stars",
     "category": "music",
-    "year": 2023,
+    "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2023, A Sky Full of Stars.",
+    "answer": "Coldplay — 2014, A Sky Full of Stars.",
     "hint": "Coldplay",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/71W4AEIZa7uq4EP9Y2eopk"
+      "spotify": "https://open.spotify.com/track/0FDzzruyVECATHXKHFs9eJ"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-bent-2023",
-    "title": "Bent",
+    "id": "song-the-one-that-got-away-2010",
+    "title": "The One That Got Away",
     "category": "music",
-    "year": 2023,
+    "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Matchbox Twenty — 2023, Bent.",
-    "hint": "Matchbox Twenty",
+    "answer": "Katy Perry — 2010, The One That Got Away.",
+    "hint": "Katy Perry",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4uQY80TKE1u4ZQZQKHzVEi"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-renegades-2015",
+    "title": "Renegades",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "X Ambassadors — 2015, Renegades.",
+    "hint": "X Ambassadors",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0fYVliAYKHuPmECRs1pbRf"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-i-will-wait-2012",
+    "title": "I Will Wait",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Mumford & Sons — 2012, I Will Wait.",
+    "hint": "Mumford & Sons",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/6AOhDP6plSLmvVW3s6XkIi"
+      "spotify": "https://open.spotify.com/track/1PuLHwFZoh5qYK89I5YBdZ"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-i-wish-2023",
-    "title": "I Wish",
+    "id": "song-feel-it-still-2017",
+    "title": "Feel It Still",
     "category": "music",
-    "year": 2023,
+    "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Carl Thomas — 2023, I Wish.",
-    "hint": "Carl Thomas",
+    "answer": "Portugal. The Man — 2017, Feel It Still.",
+    "hint": "Portugal. The Man",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/6N6hEO1niVWRD7pqdkfAhx"
+      "spotify": "https://open.spotify.com/track/6QgjcU0zLnzq5OrUoSZ3OK"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-yellow-2023",
-    "title": "Yellow",
+    "id": "song-exs-ohs-2015",
+    "title": "Ex's & Oh's",
     "category": "music",
-    "year": 2023,
+    "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2023, Yellow.",
+    "answer": "Elle King — 2015, Ex's & Oh's.",
+    "hint": "Elle King",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/70eDxAyAraNTiD6lx2ZEnH"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-drive-by-2012",
+    "title": "Drive By",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Train — 2012, Drive By.",
+    "hint": "Train",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0KAiuUOrLTIkzkpfpn9jb9"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-lover-2019",
+    "title": "Lover",
+    "category": "music",
+    "year": 2019,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Taylor Swift — 2019, Lover.",
+    "hint": "Taylor Swift",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1dGr1c8CrMLDpV6mPbImSI"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-ride-2015",
+    "title": "Ride",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Twenty One Pilots — 2015, Ride.",
+    "hint": "Twenty One Pilots",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2Z8WuEywRWYTKe1NybPQEW"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-ho-hey-2012",
+    "title": "Ho Hey",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Lumineers — 2012, Ho Hey.",
+    "hint": "The Lumineers",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0DwClY2t9YAWHBROMIgrXb"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-tik-tok-2010",
+    "title": "TiK ToK",
+    "category": "music",
+    "year": 2010,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Kesha — 2010, TiK ToK.",
+    "hint": "Kesha",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0HPD5WQqrq7wPWR7P7Dw1i"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-supercut-2017",
+    "title": "Supercut",
+    "category": "music",
+    "year": 2017,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lorde — 2017, Supercut.",
+    "hint": "Lorde",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6K8VQ84MqhsoakN5MjrnVR"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-locked-away-feat-adam-levine-2015",
+    "title": "Locked Away (feat. Adam Levine)",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "R. City, Adam Levine — 2015, Locked Away (feat. Adam Levine).",
+    "hint": "R. City, Adam Levine",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7x5xYW5W42OGPAdHUyyguy"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-stronger-what-doesnt-kill-you-2011",
+    "title": "Stronger (What Doesn't Kill You)",
+    "category": "music",
+    "year": 2011,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Kelly Clarkson — 2011, Stronger (What Doesn't Kill You).",
+    "hint": "Kelly Clarkson",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1nInOsHbtotAmEOQhtvnzP"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-apocalypse-2017",
+    "title": "Apocalypse",
+    "category": "music",
+    "year": 2017,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Cigarettes After Sex — 2017, Apocalypse.",
+    "hint": "Cigarettes After Sex",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1oAwsWBovWRIp7qLMGPIet"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-sail-2011",
+    "title": "Sail",
+    "category": "music",
+    "year": 2011,
+    "cue": "Song anhören und einordnen.",
+    "answer": "AWOLNATION — 2011, Sail.",
+    "hint": "AWOLNATION",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7ueP5u2qkdZbIPN2YA6LR0"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-all-i-want-2013",
+    "title": "All I Want",
+    "category": "music",
+    "year": 2013,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Kodaline — 2013, All I Want.",
+    "hint": "Kodaline",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0NlGoUyOJSuSHmngoibVAs"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-set-fire-to-the-rain-2011",
+    "title": "Set Fire to the Rain",
+    "category": "music",
+    "year": 2011,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Adele — 2011, Set Fire to the Rain.",
+    "hint": "Adele",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3di5hcvxxciiqwMH1jarhY"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-girl-on-fire-2012",
+    "title": "Girl on Fire",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Alicia Keys — 2012, Girl on Fire.",
+    "hint": "Alicia Keys",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4esOae7i4rqTbAu9o5Pxco"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-video-games-2012",
+    "title": "Video Games",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lana Del Rey — 2012, Video Games.",
+    "hint": "Lana Del Rey",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3WD91HQDBIavSapet3ZpjG"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-these-days-feat-jess-glynne-macklemore-dan-caplen-2018",
+    "title": "These Days (feat. Jess Glynne, Macklemore & Dan Caplen)",
+    "category": "music",
+    "year": 2018,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Rudimental, Jess Glynne, Macklemore, Dan Caplen — 2018, These Days (feat. Jess Glynne, Macklemore & Dan Caplen).",
+    "hint": "Rudimental, Jess Glynne, Macklemore, Dan Caplen",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5CLGzJsGqhCEECcpnFQA8x"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-diamonds-2012",
+    "title": "Diamonds",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Rihanna — 2012, Diamonds.",
+    "hint": "Rihanna",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6O20JhBJPePEkBdrB5sqRx"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-hide-away-2016",
+    "title": "Hide Away",
+    "category": "music",
+    "year": 2016,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Daya — 2016, Hide Away.",
+    "hint": "Daya",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3WALaE7UdNXx8VJ4lpWCK8"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-la-la-la-2013",
+    "title": "La La La",
+    "category": "music",
+    "year": 2013,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Naughty Boy, Sam Smith — 2013, La La La.",
+    "hint": "Naughty Boy, Sam Smith",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/52gvlDnre9craz9dKGObp8"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-paradise-2011",
+    "title": "Paradise",
+    "category": "music",
+    "year": 2011,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Coldplay — 2011, Paradise.",
     "hint": "Coldplay",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/4KFqMbI0qY6yzSg6GNTsfe"
+      "spotify": "https://open.spotify.com/track/6nek1Nin9q48AVZcWs9e9D"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-never-let-you-go-2023",
-    "title": "Never Let You Go",
+    "id": "song-stolen-dance-2013",
+    "title": "Stolen Dance",
     "category": "music",
-    "year": 2023,
+    "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Third Eye Blind — 2023, Never Let You Go.",
-    "hint": "Third Eye Blind",
+    "answer": "Milky Chance — 2013, Stolen Dance.",
+    "hint": "Milky Chance",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/6ZuneWHtW7RnW3IH2S50uz"
+      "spotify": "https://open.spotify.com/track/34xGLuxM0rkxhCVyMSqwJO"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-dance-with-me-2023",
-    "title": "Dance with Me",
+    "id": "song-cool-kids-2013",
+    "title": "Cool Kids",
     "category": "music",
-    "year": 2023,
+    "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Debelah Morgan — 2023, Dance with Me.",
-    "hint": "Debelah Morgan",
+    "answer": "Echosmith — 2013, Cool Kids.",
+    "hint": "Echosmith",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/13P5rwmk2EsoFRIz9UCeh9"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-next-to-me-2012",
+    "title": "Next To Me",
+    "category": "music",
+    "year": 2012,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Emeli Sandé — 2012, Next To Me.",
+    "hint": "Emeli Sandé",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/4tZ5lS9MnmNmIwWUwXcjlQ"
+      "spotify": "https://open.spotify.com/track/4u3AKBJI6vpwbcKj6jIZiA"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-breathe-2023",
-    "title": "Breathe",
+    "id": "song-stay-2012",
+    "title": "Stay",
     "category": "music",
-    "year": 2023,
+    "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Faith Hill — 2023, Breathe.",
-    "hint": "Faith Hill",
-    "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1Hq0a9H77DgC7arX0wxDos"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
-    ]
-  },
-  {
-    "id": "song-otherside-2023",
-    "title": "Otherside",
-    "category": "music",
-    "year": 2023,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — 2023, Otherside.",
-    "hint": "Red Hot Chili Peppers",
+    "answer": "Rihanna, Mikky Ekko — 2012, Stay.",
+    "hint": "Rihanna, Mikky Ekko",
     "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/0c067hI4TS2rmTukcRVlFY"
+      "spotify": "https://open.spotify.com/track/0GNI8K3VATWBABQFAzBAYe"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-hot-boyz-2023",
-    "title": "Hot Boyz",
+    "id": "song-what-about-us-2017",
+    "title": "What About Us",
     "category": "music",
-    "year": 2023,
+    "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Missy Elliott — 2023, Hot Boyz.",
-    "hint": "Missy Elliott",
-    "difficulty": "mittel",
+    "answer": "P!nk — 2017, What About Us.",
+    "hint": "P!nk",
+    "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/5x5M9qua1FxfciF0pH9EnI"
+      "spotify": "https://open.spotify.com/track/0Qh38w01QRXK6KHIv0e3hb"
     },
     "genres": [
-      "hiphop",
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-the-way-you-love-me-2023",
-    "title": "The Way You Love Me",
+    "id": "song-dont-blame-me-2017",
+    "title": "Don’t Blame Me",
     "category": "music",
-    "year": 2023,
+    "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Faith Hill — 2023, The Way You Love Me.",
-    "hint": "Faith Hill",
-    "difficulty": "mittel",
+    "answer": "Taylor Swift — 2017, Don’t Blame Me.",
+    "hint": "Taylor Swift",
+    "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/4pcwQGF7bDlrXdjWpoUlYI"
+      "spotify": "https://open.spotify.com/track/1R0a2iXumgCiFb7HEZ7gUE"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-io-voglio-vivere-2023",
-    "title": "Io voglio vivere",
+    "id": "song-heathens-2016",
+    "title": "Heathens",
     "category": "music",
-    "year": 2023,
+    "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nomadi — 2023, Io voglio vivere.",
-    "hint": "Nomadi",
+    "answer": "Twenty One Pilots — 2016, Heathens.",
+    "hint": "Twenty One Pilots",
     "difficulty": "mittel",
     "sources": {
-      "spotify": "https://open.spotify.com/track/0BpK5LhfZy0bD4pJm1jo0M"
+      "spotify": "https://open.spotify.com/track/6i0V12jOa3mr6uu4WYhUBr"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   },
   {
-    "id": "song-breathless-2023",
-    "title": "Breathless",
+    "id": "song-all-of-me-2013",
+    "title": "All of Me",
     "category": "music",
-    "year": 2023,
+    "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Corrs — 2023, Breathless.",
-    "hint": "The Corrs",
-    "difficulty": "mittel",
+    "answer": "John Legend — 2013, All of Me.",
+    "hint": "John Legend",
+    "difficulty": "leicht",
     "sources": {
-      "spotify": "https://open.spotify.com/track/62zh7hMYM7m8xc6igXDW76"
+      "spotify": "https://open.spotify.com/track/3U4isOIWM3VvDubwSI3y7a"
     },
     "genres": [
       "poprock"
     ],
     "playlists": [
-      "1K766ohE2LA7b7ghtTm7mP"
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-domino-2011",
+    "title": "Domino",
+    "category": "music",
+    "year": 2011,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Jessie J — 2011, Domino.",
+    "hint": "Jessie J",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2fQxE0jVrjNMT9oJAXtSJR"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-green-light-2017",
+    "title": "Green Light",
+    "category": "music",
+    "year": 2017,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Lorde — 2017, Green Light.",
+    "hint": "Lorde",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6ie2Bw3xLj2JcGowOlcMhb"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-i-love-it-feat-charli-xcx-2013",
+    "title": "I Love It (feat. Charli XCX)",
+    "category": "music",
+    "year": 2013,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Icona Pop, Charli xcx — 2013, I Love It (feat. Charli XCX).",
+    "hint": "Icona Pop, Charli xcx",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/12zpU2S4lMdrK9dvsOoL1m"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-cheap-thrills-feat-sean-paul-2016",
+    "title": "Cheap Thrills (feat. Sean Paul)",
+    "category": "music",
+    "year": 2016,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Sia, Sean Paul — 2016, Cheap Thrills (feat. Sean Paul).",
+    "hint": "Sia, Sean Paul",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/378iszndTZAR4dH8kwsLC6"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-love-yourself-2015",
+    "title": "Love Yourself",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Justin Bieber — 2015, Love Yourself.",
+    "hint": "Justin Bieber",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/50kpGaPAhYJ3sGmk6vplg0"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-bang-bang-2014",
+    "title": "Bang Bang",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Jessie J, Ariana Grande, Nicki Minaj — 2014, Bang Bang.",
+    "hint": "Jessie J, Ariana Grande, Nicki Minaj",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/466s1BacUmiRdR3ISvNjyx"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-me-and-my-broken-heart-2014",
+    "title": "Me And My Broken Heart",
+    "category": "music",
+    "year": 2014,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Rixton — 2014, Me And My Broken Heart.",
+    "hint": "Rixton",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1oew3nFNY3vMacJAsvry0S"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-all-about-that-bass-2015",
+    "title": "All About That Bass",
+    "category": "music",
+    "year": 2015,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Meghan Trainor — 2015, All About That Bass.",
+    "hint": "Meghan Trainor",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5jE48hhRu8E6zBDPRSkEq7"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
+    ]
+  },
+  {
+    "id": "song-ophelia-2016",
+    "title": "Ophelia",
+    "category": "music",
+    "year": 2016,
+    "cue": "Song anhören und einordnen.",
+    "answer": "The Lumineers — 2016, Ophelia.",
+    "hint": "The Lumineers",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/14AyWf6y7KlWWLfAjdKMKI"
+    },
+    "genres": [
+      "poprock"
+    ],
+    "playlists": [
+      "512n4C9VauhhFl9EhMoUlm"
     ]
   }
 ];
