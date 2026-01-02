@@ -108,32 +108,6 @@ export const flagCards: Card[] = [
     }
   },
   {
-    "id": "flag-aq",
-    "title": "Flagge Antarktis",
-    "category": "country",
-    "year": 1900,
-    "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Äntarktis – Staatsflagge (Jahr variabel).",
-    "hint": "Äntarktis",
-    "difficulty": "schwer",
-    "sources": {
-      "image": "/assets/flags/aq.png"
-    }
-  },
-  {
-    "id": "flag-ar",
-    "title": "Flagge Argentinien",
-    "category": "country",
-    "year": 1853,
-    "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Ärgentinien – Staatsflagge (Jahr variabel).",
-    "hint": "Ärgentinien",
-    "difficulty": "mittel",
-    "sources": {
-      "image": "/assets/flags/ar.png"
-    }
-  },
-  {
     "id": "flag-as",
     "title": "Flagge Amerikanisch-Samoa",
     "category": "country",
@@ -1343,19 +1317,6 @@ export const flagCards: Card[] = [
     }
   },
   {
-    "id": "flag-hu",
-    "title": "Flagge Ungarn",
-    "category": "country",
-    "year": 1900,
-    "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Üngarn – Staatsflagge (Jahr variabel).",
-    "hint": "Üngarn",
-    "difficulty": "leicht",
-    "sources": {
-      "image": "/assets/flags/hu.png"
-    }
-  },
-  {
     "id": "flag-id",
     "title": "Flagge Indonesien",
     "category": "country",
@@ -2279,19 +2240,6 @@ export const flagCards: Card[] = [
     }
   },
   {
-    "id": "flag-om",
-    "title": "Flagge Oman",
-    "category": "country",
-    "year": 1970,
-    "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Öman – Staatsflagge (Jahr variabel).",
-    "hint": "Öman",
-    "difficulty": "schwer",
-    "sources": {
-      "image": "/assets/flags/om.png"
-    }
-  },
-  {
     "id": "flag-pa",
     "title": "Flagge Panama",
     "category": "country",
@@ -3033,45 +2981,6 @@ export const flagCards: Card[] = [
     }
   },
   {
-    "id": "flag-ua",
-    "title": "Flagge Ukraine",
-    "category": "country",
-    "year": 1991,
-    "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Ükraine – Staatsflagge (Jahr variabel).",
-    "hint": "Ükraine",
-    "difficulty": "leicht",
-    "sources": {
-      "image": "/assets/flags/ua.png"
-    }
-  },
-  {
-    "id": "flag-ug",
-    "title": "Flagge Uganda",
-    "category": "country",
-    "year": 1962,
-    "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Üganda – Staatsflagge (Jahr variabel).",
-    "hint": "Üganda",
-    "difficulty": "mittel",
-    "sources": {
-      "image": "/assets/flags/ug.png"
-    }
-  },
-  {
-    "id": "flag-um",
-    "title": "Flagge Amerikanische Überseeinseln",
-    "category": "country",
-    "year": 1900,
-    "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Ämerikanische Überseeinseln – Staatsflagge (Jahr variabel).",
-    "hint": "Ämerikanische Überseeinseln",
-    "difficulty": "schwer",
-    "sources": {
-      "image": "/assets/flags/um.png"
-    }
-  },
-  {
     "id": "flag-us",
     "title": "Flagge Vereinigte Staaten",
     "category": "country",
@@ -3082,32 +2991,6 @@ export const flagCards: Card[] = [
     "difficulty": "leicht",
     "sources": {
       "image": "/assets/flags/us.png"
-    }
-  },
-  {
-    "id": "flag-uy",
-    "title": "Flagge Uruguay",
-    "category": "country",
-    "year": 1900,
-    "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Üruguay – Staatsflagge (Jahr variabel).",
-    "hint": "Üruguay",
-    "difficulty": "schwer",
-    "sources": {
-      "image": "/assets/flags/uy.png"
-    }
-  },
-  {
-    "id": "flag-uz",
-    "title": "Flagge Usbekistan",
-    "category": "country",
-    "year": 1991,
-    "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Üsbekistan – Staatsflagge (Jahr variabel).",
-    "hint": "Üsbekistan",
-    "difficulty": "mittel",
-    "sources": {
-      "image": "/assets/flags/uz.png"
     }
   },
   {
@@ -3160,19 +3043,6 @@ export const flagCards: Card[] = [
     "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/vg.png"
-    }
-  },
-  {
-    "id": "flag-vi",
-    "title": "Flagge Amerikanische Jungferninseln",
-    "category": "country",
-    "year": 1900,
-    "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Ämerikanische Jungferninseln – Staatsflagge (Jahr variabel).",
-    "hint": "Ämerikanische Jungferninseln",
-    "difficulty": "schwer",
-    "sources": {
-      "image": "/assets/flags/vi.png"
     }
   },
   {

@@ -116,34 +116,6 @@ export const outlineCards: Card[] = [
     }
   },
   {
-    "id": "outline-aq",
-    "title": "Umriss Antarktis",
-    "category": "country",
-    "year": 1900,
-    "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Äntarktis – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": "Äntarktis",
-    "difficulty": "schwer",
-    "sources": {
-      "image": "/assets/country-outlines/aq.png",
-      "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
-  },
-  {
-    "id": "outline-ar",
-    "title": "Umriss Argentinien",
-    "category": "country",
-    "year": 1900,
-    "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Ärgentinien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": "Ärgentinien",
-    "difficulty": "mittel",
-    "sources": {
-      "image": "/assets/country-outlines/ar.png",
-      "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
-  },
-  {
     "id": "outline-as",
     "title": "Umriss Amerikanisch-Samoa",
     "category": "country",
@@ -1376,20 +1348,6 @@ export const outlineCards: Card[] = [
     }
   },
   {
-    "id": "outline-hu",
-    "title": "Umriss Ungarn",
-    "category": "country",
-    "year": 1900,
-    "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Üngarn – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": "Üngarn",
-    "difficulty": "leicht",
-    "sources": {
-      "image": "/assets/country-outlines/hu.png",
-      "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
-  },
-  {
     "id": "outline-id",
     "title": "Umriss Indonesien",
     "category": "country",
@@ -2342,20 +2300,6 @@ export const outlineCards: Card[] = [
     }
   },
   {
-    "id": "outline-om",
-    "title": "Umriss Oman",
-    "category": "country",
-    "year": 1900,
-    "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Öman – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": "Öman",
-    "difficulty": "schwer",
-    "sources": {
-      "image": "/assets/country-outlines/om.png",
-      "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
-  },
-  {
     "id": "outline-pa",
     "title": "Umriss Panama",
     "category": "country",
@@ -3126,34 +3070,6 @@ export const outlineCards: Card[] = [
     }
   },
   {
-    "id": "outline-ua",
-    "title": "Umriss Ukraine",
-    "category": "country",
-    "year": 1900,
-    "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Ükraine – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": "Ükraine",
-    "difficulty": "leicht",
-    "sources": {
-      "image": "/assets/country-outlines/ua.png",
-      "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
-  },
-  {
-    "id": "outline-ug",
-    "title": "Umriss Uganda",
-    "category": "country",
-    "year": 1900,
-    "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Üganda – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": "Üganda",
-    "difficulty": "mittel",
-    "sources": {
-      "image": "/assets/country-outlines/ug.png",
-      "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
-  },
-  {
     "id": "outline-us",
     "title": "Umriss Vereinigte Staaten",
     "category": "country",
@@ -3164,34 +3080,6 @@ export const outlineCards: Card[] = [
     "difficulty": "leicht",
     "sources": {
       "image": "/assets/country-outlines/us.png",
-      "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
-  },
-  {
-    "id": "outline-uy",
-    "title": "Umriss Uruguay",
-    "category": "country",
-    "year": 1900,
-    "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Üruguay – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": "Üruguay",
-    "difficulty": "schwer",
-    "sources": {
-      "image": "/assets/country-outlines/uy.png",
-      "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
-  },
-  {
-    "id": "outline-uz",
-    "title": "Umriss Usbekistan",
-    "category": "country",
-    "year": 1900,
-    "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Üsbekistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": "Üsbekistan",
-    "difficulty": "mittel",
-    "sources": {
-      "image": "/assets/country-outlines/uz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
@@ -3248,20 +3136,6 @@ export const outlineCards: Card[] = [
     "difficulty": "schwer",
     "sources": {
       "image": "/assets/country-outlines/vg.png",
-      "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
-  },
-  {
-    "id": "outline-vi",
-    "title": "Umriss Amerikanische Jungferninseln",
-    "category": "country",
-    "year": 1900,
-    "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Ämerikanische Jungferninseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": "Ämerikanische Jungferninseln",
-    "difficulty": "schwer",
-    "sources": {
-      "image": "/assets/country-outlines/vi.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
     }
   },
