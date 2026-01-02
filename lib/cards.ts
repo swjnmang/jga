@@ -14,7 +14,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 1991,
     cue: 'Starte den Song und ordne ihn zeitlich ein.',
-    answer: 'Nirvana " Release 1991 auf dem Album Nevermind.',
+    answer: 'Nirvana „ Release 1991 auf dem Album Nevermind.',
     hint: 'Grunge aus Seattle.',
     difficulty: 'mittel',
     sources: {
@@ -26,7 +26,7 @@ const baseCards: Card[] = [
     title: 'Wir schaffen das',
     category: 'quote',
     year: 2015,
-    cue: 'H"re das Zitat oder lese es laut vor.',
+    cue: 'Höre das Zitat oder lese es laut vor.',
     answer: 'Angela Merkel, Pressekonferenz zur Fl"chtlingspolitik am 31.08.2015.',
     hint: 'Bundeskanzlerin zur Migrationslage.',
     difficulty: 'leicht',
@@ -40,7 +40,7 @@ const baseCards: Card[] = [
     category: 'image',
     year: 1989,
     cue: 'Bild ansehen und chronologisch einordnen. Frage: Wo und wann war das?',
-    answer: 'Berlin, 09.11.1989 " Fall der Berliner Mauer.',
+    answer: 'Berlin, 09.11.1989 „ Fall der Berliner Mauer.',
     hint: 'Europa, Kalter Krieg.',
     difficulty: 'leicht',
     sources: {
@@ -53,8 +53,8 @@ const baseCards: Card[] = [
     category: 'image',
     year: -2560,
     cue: 'Bild ansehen und einordnen. Frage: Wo und wann war das?',
-    answer: 'Gizeh, ca. 2560 v. Chr. " Cheops-Pyramide.',
-    hint: 'Altes "gypten.',
+    answer: 'Gizeh, ca. 2560 v. Chr. „ Cheops-Pyramide.',
+    hint: 'Altes Ägypten.',
     difficulty: 'schwer',
     sources: {
       image: '/assets/images/pyramide.png'
@@ -67,7 +67,7 @@ const baseCards: Card[] = [
     year: 2010,
     cue: 'Song anhören und einordnen.',
     answer: 'Adele " 2010, Album 21.',
-    hint: 'Londoner S"ngerin, Durchbruch-Single.',
+    hint: 'Londoner Sängerin, Durchbruch-Single.',
     difficulty: 'leicht',
     sources: {
       spotify: 'https://open.spotify.com/track/6j6ZtpxjR0L9gLd7krr6m3'
@@ -144,7 +144,7 @@ const baseCards: Card[] = [
     category: 'image',
     year: 1969,
     cue: 'Bild ansehen: Wo und wann war das?',
-    answer: 'Mond, 20.07.1969 " Apollo 11 Flaggenaufstellung.',
+    answer: 'Mond, 20.07.1969 „ Apollo 11 Flaggenaufstellung.',
     hint: 'Erste bemannte Mondlandung.',
     difficulty: 'mittel',
     sources: {
@@ -161,7 +161,7 @@ const baseCards: Card[] = [
     hint: 'S"dafrika, Vers"hnung.',
     difficulty: 'mittel',
     sources: {
-      text: '"It always seems impossible until it"s done."',
+      text: '"It always seems impossible until itü done."',
       textDe: 'Es erscheint immer unm"glich, bis es getan ist.'
     }
   },
@@ -170,7 +170,7 @@ const baseCards: Card[] = [
     title: 'Flagge Deutschlands',
     category: 'country',
     year: 1949,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Bundesrepublik Deutschland " 23.05.1949 (Grundgesetz in Kraft).',
     hint: 'Europa, schwarz-rot-gold.',
     difficulty: 'leicht',
@@ -210,7 +210,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 1976,
     cue: 'Song anhören und einordnen.',
-    answer: 'Eagles " 1976, Klassiker der Westk"ste.',
+    answer: 'Eagles " 1976, Klassiker der Westküte.',
     hint: 'Kalifornische Rockband.',
     difficulty: 'mittel',
     sources: {
@@ -263,7 +263,7 @@ const baseCards: Card[] = [
     year: 2019,
     cue: 'Song anhören und einordnen.',
     answer: 'Billie Eilish " 2019, Deb"talbum When We All Fall Asleep.',
-    hint: 'Fl"sterpop mit Bass.',
+    hint: 'Flüterpop mit Bass.',
     difficulty: 'leicht',
     sources: {
       spotify: 'https://open.spotify.com/track/2Fxmhks0bxGSBdJ92vM42m'
@@ -276,7 +276,7 @@ const baseCards: Card[] = [
     year: 2013,
     cue: 'Song anhören und einordnen.',
     answer: 'Daft Punk feat. Pharrell Williams " 2013.',
-    hint: 'Franz"sisches Duo mit Helmen.',
+    hint: 'Franzüisches Duo mit Helmen.',
     difficulty: 'leicht',
     sources: {
       spotify: 'https://open.spotify.com/track/69kOkLUCkxIZYexIgSG8rq'
@@ -302,7 +302,7 @@ const baseCards: Card[] = [
     year: 2006,
     cue: 'Song anhören und einordnen.',
     answer: 'Shakira feat. Wyclef Jean " 2006.',
-    hint: 'Kolumbianische S"ngerin, weltweiter Tanzhit.',
+    hint: 'Kolumbianische Sängerin, weltweiter Tanzhit.',
     difficulty: 'leicht',
     sources: {
       spotify: 'https://open.spotify.com/track/0EmeFodog0BfCgMzAIvKQp'
@@ -344,8 +344,8 @@ const baseCards: Card[] = [
     hint: 'US-Präsident fordert Öffnung der Mauer.',
     difficulty: 'mittel',
     sources: {
-      text: '„Mr. Gorbachev, tear down this wall!"',
-      textDe: 'Herr Gorbatschow, reißen Sie diese Mauer ein!'
+      text: '"Mr. Gorbachev, tear down this wall!"',
+      textDe: 'Herr Gorbatschow, reiüen Sie diese Mauer ein!'
     }
   },
   {
@@ -355,11 +355,11 @@ const baseCards: Card[] = [
     year: 2008,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
     answer: 'Barack Obama, Wahlkampfrede 2008.',
-    hint: 'Slogan einer US-Pr"sidentschaftskampagne.',
+    hint: 'Slogan einer US-Prüidentschaftskampagne.',
     difficulty: 'leicht',
     sources: {
       text: '"Yes we can."',
-      textDe: 'Ja, wir k"nnen das.'
+      textDe: 'Ja, wir können das.'
     }
   },
   {
@@ -396,11 +396,11 @@ const baseCards: Card[] = [
     year: 1969,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
     answer: 'Neil Armstrong, Mondlandung, 20.07.1969.',
-    hint: 'Erster Fu"abdruck auf dem Mond.',
+    hint: 'Erster Fuäbdruck auf dem Mond.',
     difficulty: 'leicht',
     sources: {
-      text: '"That"s one small step for man, one giant leap for mankind."',
-      textDe: 'Das ist ein kleiner Schritt f"r einen Menschen, aber ein gewaltiger Sprung f"r die Menschheit.'
+      text: '"Thatü one small step for man, one giant leap for mankind."',
+      textDe: 'Das ist ein kleiner Schritt für einen Menschen, aber ein gewaltiger Sprung für die Menschheit.'
     }
   },
   {
@@ -414,7 +414,7 @@ const baseCards: Card[] = [
     difficulty: 'mittel',
     sources: {
       text: '"The only thing we have to fear is fear itself."',
-      textDe: 'Wir haben nichts zu f"rchten au"er der Furcht selbst.'
+      textDe: 'Wir haben nichts zu fürchten auüer der Furcht selbst.'
     }
   },
   {
@@ -437,12 +437,12 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1989,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Aus Dead Poets Society, 1989 " Ermutigung, den Tag zu nutzen.',
+    answer: 'Aus Dead Poets Society, 1989 „ Ermutigung, den Tag zu nutzen.',
     hint: 'Literaturlehrer inspiriert seine Klasse.',
     difficulty: 'mittel',
     sources: {
       text: '"Carpe diem. Seize the day, boys."',
-      textDe: 'Carpe diem " Nutzt den Tag, Jungs.'
+      textDe: 'Carpe diem „ Nutzt den Tag, Jungs.'
     }
   },
   {
@@ -451,7 +451,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2013,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Lothar Matth"us, 2013 " "H"tte, h"tte, Fahrradkette." in der Sky90-Runde als sp"ttischer Kommentar zur Spielanalyse.',
+    answer: 'Lothar Matthüs, 2013 "H"tte, h"tte, Fahrradkette." in der Sky90-Runde als spöttischer Kommentar zur Spielanalyse.',
     hint: 'Fu"ballweltmeister, TV-Experte.',
     difficulty: 'leicht',
     sources: { text: 'H"tte, h"tte, Fahrradkette.' }
@@ -462,10 +462,10 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1998,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Andreas M"ller, 1998 " "Mailand oder Madrid " Hauptsache Italien." in einem TV-Interview nach einer internationalen Auslosung.',
+    answer: 'Andreas M"ller, 1998 "Mailand oder Madrid „ Hauptsache Italien." in einem TV-Interview nach einer internationalen Auslosung.',
     hint: 'Dortmunder Offensivspieler.',
     difficulty: 'leicht',
-    sources: { text: 'Mailand oder Madrid " Hauptsache Italien.' }
+    sources: { text: 'Mailand oder Madrid „ Hauptsache Italien.' }
   },
   {
     id: 'quote-mr-gorbachev-tear-down-this-wall',
@@ -473,8 +473,8 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1987,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Ronald Reagan, 1987 " "Mr. Gorbachev, tear down this wall!" in seiner Rede am Brandenburger Tor in Berlin.',
-    hint: 'US-Pr"sident, Brandenburger Tor.',
+    answer: 'Ronald Reagan, 1987 "Mr. Gorbachev, tear down this wall!" in seiner Rede am Brandenburger Tor in Berlin.',
+    hint: 'US-Prüident, Brandenburger Tor.',
     difficulty: 'mittel',
     sources: {
       text: 'Mr. Gorbachev, tear down this wall!',
@@ -487,7 +487,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1970,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Apollo-13-Besatzung, 1970 " "Houston, we have a problem." als Funkmeldung nach der Explosion des Sauerstofftanks.',
+    answer: 'Apollo-13-Besatzung, 1970 "Houston, we have a problem." als Funkmeldung nach der Explosion des Sauerstofftanks.',
     hint: 'NASA, Raumfahrt.',
     difficulty: 'mittel',
     sources: {
@@ -501,12 +501,12 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1969,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Neil Armstrong, 1969 " "That"s one small step for (a) man"" beim ersten Schritt auf die Mondoberfl"che.',
+    answer: 'Neil Armstrong, 1969 "Thatü one small step for (a) man"" beim ersten Schritt auf die Mondoberfläche.',
     hint: 'Mondlandung.',
     difficulty: 'leicht',
     sources: {
       text: "That's one small step for man, one giant leap for mankind.",
-      textDe: 'Das ist ein kleiner Schritt f"r einen Menschen, aber ein gewaltiger Sprung f"r die Menschheit.'
+      textDe: 'Das ist ein kleiner Schritt für einen Menschen, aber ein gewaltiger Sprung für die Menschheit.'
     }
   },
   {
@@ -515,7 +515,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2015,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Angela Merkel, 2015 " "Wir schaffen das." in der Bundespressekonferenz zur Fl"chtlingssituation.',
+    answer: 'Angela Merkel, 2015 "Wir schaffen das." in der Bundespressekonferenz zur Fl"chtlingssituation.',
     hint: 'Bundeskanzlerin zur Fl"chtlingskrise.',
     difficulty: 'leicht',
     sources: { text: 'Wir schaffen das.' }
@@ -526,7 +526,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2006,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Hape Kerkeling, 2006 " "Ich bin dann mal weg." als Titel seines Jakobsweg-Reiseberichts.',
+    answer: 'Hape Kerkeling, 2006 "Ich bin dann mal weg." als Titel seines Jakobsweg-Reiseberichts.',
     hint: 'Autor, Jakobsweg.',
     difficulty: 'leicht',
     sources: { text: 'Ich bin dann mal weg.' }
@@ -537,7 +537,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1808,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Goethe, Faust I (ca. 1808) " "Zwei Seelen wohnen, ach! in meiner Brust." im Monolog des Faust "ber innere Zerrissenheit.',
+    answer: 'Goethe, Faust I (ca. 1808) "Zwei Seelen wohnen, ach! in meiner Brust." im Monolog des Faust "ber innere Zerrissenheit.',
     hint: 'Deutscher Dichter, Faust.',
     difficulty: 'mittel',
     sources: { text: 'Zwei Seelen wohnen, ach! in meiner Brust.' }
@@ -548,7 +548,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1600,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'William Shakespeare, Hamlet (ca. 1600) " "To be, or not to be"" als Auftakt von Hamlets ber"hmtem Selbstgespr"ch.',
+    answer: 'William Shakespeare, Hamlet (ca. 1600) "To be, or not to be"" als Auftakt von Hamlets ber"hmtem Selbstgespr"ch.',
     hint: 'Englischer Dramatiker.',
     difficulty: 'mittel',
     sources: {
@@ -562,8 +562,8 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1637,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Ren" Descartes, 1637 " "Cogito, ergo sum." im "Discours de la m"thode" als Grundsatz des Rationalismus.',
-    hint: 'Franz"sischer Philosoph.',
+    answer: 'Ren„ Descartes, 1637 "Cogito, ergo sum." im "Discours de la m"thode" als Grundsatz des Rationalismus.',
+    hint: 'Franzüischer Philosoph.',
     difficulty: 'mittel',
     sources: {
       text: 'Cogito, ergo sum.',
@@ -576,7 +576,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1748,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Benjamin Franklin, 1748 " "Time is money." in "Advice to a Young Tradesman" als Ratschlag f"r Gesch"ftsleute.',
+    answer: 'Benjamin Franklin, 1748 "Time is money." in Ädvice to a Young Tradesman" als Ratschlag für Geschäftsleute.',
     hint: 'US-Staatsmann, Erfinder.',
     difficulty: 'leicht',
     sources: {
@@ -590,7 +590,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: -400,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Sokrates zugeschrieben " "Ich wei", dass ich nichts wei"." aus Platons "Apologie" als Bekenntnis philosophischer Demut.',
+    answer: 'Sokrates zugeschrieben "Ich wei", dass ich nichts wei"." aus Platons Äpologie" als Bekenntnis philosophischer Demut.',
     hint: 'Antike Philosophie.',
     difficulty: 'mittel',
     sources: { text: 'Ich wei", dass ich nichts wei".' }
@@ -601,7 +601,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2010,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Herbert Gr"nemeyer, 2014 " "Mach dein Ding." als Refrain seines Songs und Lebensmotto auf Konzerten.',
+    answer: 'Herbert Gr"nemeyer, 2014 "Mach dein Ding." als Refrain seines Songs und Lebensmotto auf Konzerten.',
     hint: 'Deutscher Musiker.',
     difficulty: 'leicht',
     sources: { text: 'Mach dein Ding.' }
@@ -612,7 +612,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2010,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Patrick Star (SpongeBob), 2010er " "Ich bin dumm, und das ist gut so." in einer Cartoon-Szene als selbstironischer Moment.',
+    answer: 'Patrick Star (SpongeBob), 2010er "Ich bin dumm, und das ist gut so." in einer Cartoon-Szene als selbstironischer Moment.',
     hint: 'Zeichentrick-Seestern.',
     difficulty: 'leicht',
     sources: { text: 'Ich bin dumm, und das ist gut so.' }
@@ -623,7 +623,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1963,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Martin Luther King Jr., 1963 " "I have a dream." in seiner Rede beim March on Washington f"r B"rgerrechte.',
+    answer: 'Martin Luther King Jr., 1963 "I have a dream." in seiner Rede beim March on Washington für Bürgerrechte.',
     hint: 'US-B"rgerrechtler.',
     difficulty: 'leicht',
     sources: {
@@ -637,7 +637,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: -47,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Julius Caesar, 47 v. Chr. " "Veni, vidi, vici." im Bericht an den Senat nach dem Sieg bei Zela.',
+    answer: 'Julius Caesar, 47 v. Chr. "Veni, vidi, vici." im Bericht an den Senat nach dem Sieg bei Zela.',
     hint: 'R"mischer Feldherr.',
     difficulty: 'mittel',
     sources: {
@@ -651,7 +651,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1957,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'CDU-Wahlkampfslogan, 1957 " "Keine Experimente!" als zentraler Claim im Bundestagswahlkampf.',
+    answer: 'CDU-Wahlkampfslogan, 1957 "Keine Experimente!" als zentraler Claim im Bundestagswahlkampf.',
     hint: 'Deutsche Nachkriegspolitik.',
     difficulty: 'mittel',
     sources: { text: 'Keine Experimente!' }
@@ -662,7 +662,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1989,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Ruf der Montagsdemos, 1989 " "Wir sind das Volk." auf den Stra"en von Leipzig und anderen DDR-St"dten.',
+    answer: 'Ruf der Montagsdemos, 1989 "Wir sind das Volk." auf den Stra"en von Leipzig und anderen DDR-St"dten.',
     hint: 'DDR, Wendezeit.',
     difficulty: 'mittel',
     sources: { text: 'Wir sind das Volk.' }
@@ -673,7 +673,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1955,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Pete Seeger/Marlen Dietrich, 1950er " "Sag mir, wo die Blumen sind"" als Antikriegslied in Konzerten.',
+    answer: 'Pete Seeger/Marlen Dietrich, 1950er "Sag mir, wo die Blumen sind"" als Antikriegslied in Konzerten.',
     hint: 'Antikriegslied.',
     difficulty: 'mittel',
     sources: { text: 'Sag mir, wo die Blumen sind.' }
@@ -684,7 +684,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2006,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'J"rgen Klopp, 2006 " "Ich dachte, einmal im Leben muss ich das probieren." im Interview "ber seinen Trainerjob.',
+    answer: 'Jürgen Klopp, 2006 "Ich dachte, einmal im Leben muss ich das probieren." im Interview "ber seinen Trainerjob.',
     hint: 'Trainer, Fu"ball.',
     difficulty: 'mittel',
     sources: { text: 'Einmal im Leben muss ich das probieren.' }
@@ -695,7 +695,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1980,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Karl Valentin zugeschrieben " "Die Lage ist hoffnungslos, aber nicht ernst." als kabarettistischer Wortdreher.',
+    answer: 'Karl Valentin zugeschrieben "Die Lage ist hoffnungslos, aber nicht ernst." als kabarettistischer Wortdreher.',
     hint: 'Kabarett, Wortspiel.',
     difficulty: 'mittel',
     sources: { text: 'Die Lage ist hoffnungslos, aber nicht ernst.' }
@@ -706,7 +706,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1920,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Albert Einstein zugeschrieben " "Zwei Dinge sind unendlich: das Universum und die menschliche Dummheit"" als oft erz"hlte Anekdote.',
+    answer: 'Albert Einstein zugeschrieben "Zwei Dinge sind unendlich: das Universum und die menschliche Dummheit"" als oft erz"hlte Anekdote.',
     hint: 'Physiker, Relativit"t.',
     difficulty: 'mittel',
     sources: { text: 'Zwei Dinge sind unendlich: das Universum und die menschliche Dummheit; aber beim Universum bin ich mir nicht ganz sicher.' }
@@ -717,7 +717,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1939,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Britisches Motiv, 1939 " "Keep calm and carry on." als Propagandaposter zu Beginn des Zweiten Weltkriegs.',
+    answer: 'Britisches Motiv, 1939 "Keep calm and carry on." als Propagandaposter zu Beginn des Zweiten Weltkriegs.',
     hint: 'Britische Propaganda WWII.',
     difficulty: 'leicht',
     sources: {
@@ -731,7 +731,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1999,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Yoda, 1999 " "Furcht ist der Pfad zur dunklen Seite." in Star Wars: Episode I als Warnung an Anakin.',
+    answer: 'Yoda, 1999 "Furcht ist der Pfad zur dunklen Seite." in Star Wars: Episode I als Warnung an Anakin.',
     hint: 'Star Wars Jedi-Meister.',
     difficulty: 'leicht',
     sources: {
@@ -745,7 +745,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2011,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Game of Thrones, 2011 " "Winter is coming." als Motto des Hauses Stark in der Pilotfolge.',
+    answer: 'Game of Thrones, 2011 "Winter is coming." als Motto des Hauses Stark in der Pilotfolge.',
     hint: 'Haus Stark.',
     difficulty: 'leicht',
     sources: {
@@ -759,12 +759,12 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2012,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Game of Thrones, 2012 " "Valar Morghulis." als Gru"formel der Faceless Men in Braavos.',
+    answer: 'Game of Thrones, 2012 "Valar Morghulis." als Gru"formel der Faceless Men in Braavos.',
     hint: 'Alte Sprache, jeder muss sterben.',
     difficulty: 'mittel',
     sources: {
       text: 'Valar Morghulis.',
-      textDe: 'Alle Menschen m"ssen sterben.'
+      textDe: 'Alle Menschen müssen sterben.'
     }
   },
   {
@@ -773,7 +773,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1998,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Heinz Schenk/Klaus Lage " "Alles nur geliehen." als Schlagerzeile und Fernseh-Scherz.',
+    answer: 'Heinz Schenk/Klaus Lage „ Älles nur geliehen." als Schlagerzeile und Fernseh-Scherz.',
     hint: 'Deutscher Schlager/Witz.',
     difficulty: 'leicht',
     sources: { text: 'Alles nur geliehen.' }
@@ -784,7 +784,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1998,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Giovanni Trapattoni, 1998 " "Ich habe fertig." in der legend"ren Bayern-Pressekonferenz.',
+    answer: 'Giovanni Trapattoni, 1998 "Ich habe fertig." in der legend"ren Bayern-Pressekonferenz.',
     hint: 'Trainer-Pressekonferenz Bayern.',
     difficulty: 'leicht',
     sources: { text: 'Ich habe fertig.' }
@@ -795,23 +795,23 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1998,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Giovanni Trapattoni, 1998 " "Flasche leer!" in derselben Bayern-Pressekonferenz als Kritik am Team.',
+    answer: 'Giovanni Trapattoni, 1998 "Flasche leer!" in derselben Bayern-Pressekonferenz als Kritik am Team.',
     hint: 'Trainer-Pressekonferenz.',
     difficulty: 'leicht',
     sources: { text: 'Flasche leer!' }
   },
   {
     id: 'quote-ich-bin-zu-alt-fuer-diesen-mist',
-    title: 'Zu alt f"r diesen Mist',
+    title: 'Zu alt für diesen Mist',
     category: 'quote',
     year: 1987,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Roger Murtaugh (Lethal Weapon), 1987 " "I"m too old for this"" im Buddy-Cop-Film als resignierter Kommentar.',
+    answer: 'Roger Murtaugh (Lethal Weapon), 1987 "I"m too old for this"" im Buddy-Cop-Film als resignierter Kommentar.',
     hint: 'Actionfilm Buddy-Cop.',
     difficulty: 'leicht',
     sources: {
       text: "I'm too old for this shit.",
-      textDe: 'Ich bin zu alt f"r diesen Mist.'
+      textDe: 'Ich bin zu alt für diesen Mist.'
     }
   },
   {
@@ -820,7 +820,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1980,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Darth Vader, 1980 " "No, I am your father." im Duell auf Cloud City (Star Wars Episode V).',
+    answer: 'Darth Vader, 1980 "No, I am your father." im Duell auf Cloud City (Star Wars Episode V).',
     hint: 'Star Wars Episode V.',
     difficulty: 'leicht',
     sources: {
@@ -834,10 +834,10 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2014,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'J"rgen Klopp, 2014 " "Wir m"ssen immer weiter machen." auf einer Pressekonferenz nach einem Spiel.',
+    answer: 'Jürgen Klopp, 2014 "Wir müssen immer weiter machen." auf einer Pressekonferenz nach einem Spiel.',
     hint: 'Trainer, Bundesliga.',
     difficulty: 'leicht',
-    sources: { text: 'Wir m"ssen immer weiter machen.' }
+    sources: { text: 'Wir müssen immer weiter machen.' }
   },
   {
     id: 'quote-keine-macht-den-drogen',
@@ -845,7 +845,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1990,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Pr"ventionskampagne, 1990er " "Keine Macht den Drogen." als Slogan der Jugendpr"vention.',
+    answer: 'Präventionskampagne, 1990er "Keine Macht den Drogen." als Slogan der Jugendprävention.',
     hint: 'Jugendkampagne.',
     difficulty: 'mittel',
     sources: { text: 'Keine Macht den Drogen.' }
@@ -856,7 +856,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1986,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Norbert Bl"m, 1986 " "Die Rente ist sicher." in einer Pressekonferenz zur Rentenreform.',
+    answer: 'Norbert Bl"m, 1986 "Die Rente ist sicher." in einer Pressekonferenz zur Rentenreform.',
     hint: 'Bundesarbeitsminister.',
     difficulty: 'mittel',
     sources: { text: 'Die Rente ist sicher.' }
@@ -867,7 +867,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2006,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
-    answer: 'Hape Kerkeling, 2006 " Buchtitel und gefl"geltes Wort "ber seine Pilgerreise auf dem Jakobsweg.',
+    answer: 'Hape Kerkeling, 2006 „ Buchtitel und gefl"geltes Wort "ber seine Pilgerreise auf dem Jakobsweg.',
     hint: 'Comedian, Jakobsweg.',
     difficulty: 'leicht',
     sources: { text: 'Ich bin dann mal weg.' }
@@ -877,8 +877,8 @@ const baseCards: Card[] = [
     title: 'Flagge Deutschland',
     category: 'country',
     year: 1949,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Deutschland " Schwarz-Rot-Gold, 1949 best"tigt.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Deutschland „ Schwarz-Rot-Gold, 1949 best"tigt.',
     hint: 'Mitteleuropa, Trikolore.',
     difficulty: 'leicht',
     sources: {
@@ -890,8 +890,8 @@ const baseCards: Card[] = [
     title: 'Flagge Frankreich',
     category: 'country',
     year: 1794,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Frankreich " Bleu-Blanc-Rouge, 1794 offiziell.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Frankreich „ Bleu-Blanc-Rouge, 1794 offiziell.',
     hint: 'Tricolore mit Blau links.',
     difficulty: 'leicht',
     sources: {
@@ -903,8 +903,8 @@ const baseCards: Card[] = [
     title: 'Flagge Italien',
     category: 'country',
     year: 1946,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Italien " Gr"n-Wei"-Rot, 1946 republikanisch.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Italien „ Gr"n-Wei"-Rot, 1946 republikanisch.',
     hint: 'Vertikale Tricolore, Gr"n am Mast.',
     difficulty: 'leicht',
     sources: {
@@ -916,8 +916,8 @@ const baseCards: Card[] = [
     title: 'Flagge Spanien',
     category: 'country',
     year: 1981,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Spanien " Rot-Gelb-Rot mit Wappen, 1981.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Spanien „ Rot-Gelb-Rot mit Wappen, 1981.',
     hint: 'Mittelstreifen doppelt so breit.',
     difficulty: 'leicht',
     sources: {
@@ -929,8 +929,8 @@ const baseCards: Card[] = [
     title: 'Flagge USA',
     category: 'country',
     year: 1960,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Vereinigte Staaten " Stars and Stripes mit 50 Sternen, seit 1960.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Vereinigte Staaten „ Stars and Stripes mit 50 Sternen, seit 1960.',
     hint: 'Streifen und Sterne.',
     difficulty: 'leicht',
     sources: {
@@ -942,8 +942,8 @@ const baseCards: Card[] = [
     title: 'Flagge Vereinigtes K"nigreich',
     category: 'country',
     year: 1801,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Vereinigtes K"nigreich " Union Jack, seit 1801.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Vereinigtes K"nigreich „ Union Jack, seit 1801.',
     hint: '"berlagerte Kreuze.',
     difficulty: 'leicht',
     sources: {
@@ -955,8 +955,8 @@ const baseCards: Card[] = [
     title: 'Flagge Japan',
     category: 'country',
     year: 1999,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Japan " Roter Kreis auf Wei", 1999 gesetzlich best"tigt.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Japan „ Roter Kreis auf Wei", 1999 gesetzlich best"tigt.',
     hint: 'Hinomaru.',
     difficulty: 'leicht',
     sources: {
@@ -968,8 +968,8 @@ const baseCards: Card[] = [
     title: 'Flagge China',
     category: 'country',
     year: 1949,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Volksrepublik China " Rot mit f"nf Sternen, 1949.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Volksrepublik China „ Rot mit f"nf Sternen, 1949.',
     hint: 'Ein gro"er, vier kleine Sterne.',
     difficulty: 'leicht',
     sources: {
@@ -981,8 +981,8 @@ const baseCards: Card[] = [
     title: 'Flagge Brasilien',
     category: 'country',
     year: 1889,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Brasilien " Gr"n, Gelb-Raute und Sternenkugel, 1889.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Brasilien „ Gr"n, Gelb-Raute und Sternenkugel, 1889.',
     hint: 'Ordem e Progresso.',
     difficulty: 'mittel',
     sources: {
@@ -994,8 +994,8 @@ const baseCards: Card[] = [
     title: 'Flagge Indien',
     category: 'country',
     year: 1947,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Indien " Safran, Wei", Gr"n mit Ashoka-Chakra, 1947.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Indien „ Safran, Wei", Gr"n mit Ashoka-Chakra, 1947.',
     hint: '24-Speichen-Rad.',
     difficulty: 'mittel',
     sources: {
@@ -1007,8 +1007,8 @@ const baseCards: Card[] = [
     title: 'Flagge Australien',
     category: 'country',
     year: 1903,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Australien " Union Jack, Commonwealth Star und S"dliches Kreuz, 1903.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Australien „ Union Jack, Commonwealth Star und S"dliches Kreuz, 1903.',
     hint: 'Blau mit Sternbildern.',
     difficulty: 'mittel',
     sources: {
@@ -1020,8 +1020,8 @@ const baseCards: Card[] = [
     title: 'Flagge Kanada',
     category: 'country',
     year: 1965,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Kanada " Ahornblatt auf Rot-Wei"-Rot, 1965.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Kanada „ Ahornblatt auf Rot-Wei"-Rot, 1965.',
     hint: 'Rotes Ahornblatt.',
     difficulty: 'leicht',
     sources: {
@@ -1033,8 +1033,8 @@ const baseCards: Card[] = [
     title: 'Flagge S"dafrika',
     category: 'country',
     year: 1994,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'S"dafrika " Y-Form mit sechs Farben, 1994.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'S"dafrika „ Y-Form mit sechs Farben, 1994.',
     hint: 'Post-Apartheid Symbol.',
     difficulty: 'mittel',
     sources: {
@@ -1046,8 +1046,8 @@ const baseCards: Card[] = [
     title: 'Flagge Schweden',
     category: 'country',
     year: 1906,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Schweden " Blau mit gelbem Kreuz, 1906.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Schweden „ Blau mit gelbem Kreuz, 1906.',
     hint: 'Nordisches Kreuz.',
     difficulty: 'mittel',
     sources: {
@@ -1059,8 +1059,8 @@ const baseCards: Card[] = [
     title: 'Flagge Norwegen',
     category: 'country',
     year: 1821,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Norwegen " Rot mit blauem Kreuz, 1821.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Norwegen „ Rot mit blauem Kreuz, 1821.',
     hint: 'Nordisches Kreuz mit Wei" und Blau.',
     difficulty: 'mittel',
     sources: {
@@ -1072,8 +1072,8 @@ const baseCards: Card[] = [
     title: 'Flagge Finnland',
     category: 'country',
     year: 1918,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Finnland " Wei" mit blauem Kreuz, 1918.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Finnland „ Wei" mit blauem Kreuz, 1918.',
     hint: 'Seen, Schnee, Blau-Wei".',
     difficulty: 'mittel',
     sources: {
@@ -1085,8 +1085,8 @@ const baseCards: Card[] = [
     title: 'Flagge Argentinien',
     category: 'country',
     year: 1818,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Argentinien " Hellblau-Wei" mit Sonne, 1818.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Argentinien „ Hellblau-Wei" mit Sonne, 1818.',
     hint: 'Sonne der Mai-Revolution.',
     difficulty: 'mittel',
     sources: {
@@ -1098,8 +1098,8 @@ const baseCards: Card[] = [
     title: 'Flagge Mexiko',
     category: 'country',
     year: 1968,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Mexiko " Gr"n, Wei", Rot mit Adler und Schlange, 1968.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Mexiko „ Gr"n, Wei", Rot mit Adler und Schlange, 1968.',
     hint: 'Tricolore mit Wappen.',
     difficulty: 'mittel',
     sources: {
@@ -1111,8 +1111,8 @@ const baseCards: Card[] = [
     title: 'Flagge Schweiz',
     category: 'country',
     year: 1889,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Schweiz " Rotes Quadrat mit wei"em Kreuz, 1889.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Schweiz „ Rotes Quadrat mit wei"em Kreuz, 1889.',
     hint: 'Quadratische Flagge.',
     difficulty: 'leicht',
     sources: {
@@ -1124,8 +1124,8 @@ const baseCards: Card[] = [
     title: 'Flagge Niederlande',
     category: 'country',
     year: 1937,
-    cue: 'Zu welchem Land geh"rt diese Flagge und wann wurde es gegr"ndet?',
-    answer: 'Niederlande " Rot, Wei", Blau, 1937.',
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Niederlande „ Rot, Wei", Blau, 1937.',
     hint: 'Waagerechte Tricolore.',
     difficulty: 'leicht',
     sources: {
@@ -1186,7 +1186,7 @@ const baseCards: Card[] = [
     difficulty: 'leicht',
     sources: {
       text: '"Life is like a box of chocolates. You never know what you\'re gonna get."',
-      textDe: 'Das Leben ist wie eine Schachtel Pralinen, man weiß nie, was man kriegt.'
+      textDe: 'Das Leben ist wie eine Schachtel Pralinen, man weiü nie, was man kriegt.'
     }
   },
   {
@@ -1462,7 +1462,7 @@ const baseCards: Card[] = [
     year: 1969,
     cue: 'Zitat anhören/lesen, zeitlich einordnen.',
     answer: 'Midnight Cowboy, 1969 – Ratso Rizzo (Dustin Hoffman).',
-    hint: 'Drama über zwei Außenseiter in New York.',
+    hint: 'Drama über zwei Auüenseiter in New York.',
     difficulty: 'schwer',
     sources: {
       text: '"I\'m walking here!"',
@@ -1549,7 +1549,7 @@ const baseCards: Card[] = [
     hint: 'Abschluss der Harry Potter-Filmreihe.',
     difficulty: 'leicht',
     sources: {
-      text: '"Always."',
+      text: 'Älways."',
       textDe: 'Immer.'
     }
   },
@@ -1787,7 +1787,7 @@ const baseCards: Card[] = [
     hint: 'Epischer Rock-Song.',
     difficulty: 'mittel',
     sources: {
-      text: '"And she\'s buying a stairway to heaven."',
+      text: 'Änd she\'s buying a stairway to heaven."',
       textDe: 'Und sie kauft eine Treppe zum Himmel.'
     }
   },
@@ -1857,7 +1857,7 @@ const baseCards: Card[] = [
     hint: 'Power-Ballade aus The Bodyguard.',
     difficulty: 'leicht',
     sources: {
-      text: '"And I will always love you."',
+      text: 'Änd I will always love you."',
       textDe: 'Und ich werde dich immer lieben.'
     }
   },
@@ -1970,7 +1970,7 @@ const baseCards: Card[] = [
     difficulty: 'leicht',
     sources: {
       text: '"I\'m gonna take my horse to the old town road."',
-      textDe: 'Ich nehme mein Pferd zur alten Stadtstraße.'
+      textDe: 'Ich nehme mein Pferd zur alten Stadtstraüe.'
     }
   },
   {
@@ -2137,7 +2137,7 @@ const baseCards: Card[] = [
     hint: 'Pop-R&B-Hit.',
     difficulty: 'leicht',
     sources: {
-      text: '"Under my umbrella, ella, ella, eh, eh, eh."',
+      text: 'Ünder my umbrella, ella, ella, eh, eh, eh."',
       textDe: 'Unter meinem Regenschirm, ella, ella, eh, eh, eh.'
     }
   },
@@ -2193,7 +2193,7 @@ const baseCards: Card[] = [
     hint: 'Deutscher Schlager-Hit.',
     difficulty: 'leicht',
     sources: {
-      text: '"Atemlos durch die Nacht."',
+      text: 'Ätemlos durch die Nacht."',
       textDe: 'Atemlos durch die Nacht.'
     }
   },

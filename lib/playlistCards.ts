@@ -36,16 +36,16 @@ export const playlistInfo: PlaylistInfo[] = [
 
 export const playlistCards: Card[] = [
   {
-    "id": "song-3-uhr-nachts-2022",
+    "id": üong-3-uhr-nachts-2022",
     "title": "3 Uhr Nachts",
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
+    answer": "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
     "hint": "Mehnersmoos, DJ Arschlochficker",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4zfQShUtVvysHKDDw08sMd"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4zfQShUtVvysHKDDw08sMd"
     },
     "genres": [
       "hiphop",
@@ -56,16 +56,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bir-2023",
+    "id": üong-bir-2023",
     "title": "Bir",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mehnersmoos — 2023, Bir.",
+    answer": "Mehnersmoos — 2023, Bir.",
     "hint": "Mehnersmoos",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7JRFLBP9RgMvBjoZDLHWVV"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7JRFLBP9RgMvBjoZDLHWVV"
     },
     "genres": [
       "hiphop",
@@ -76,19 +76,19 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-brennerautobahn-2022",
+    "id": üong-brennerautobahn-2022",
     "title": "Brennerautobahn",
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn.",
+    answer": "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn.",
     "hint": "Roy Bianco & Die Abbrunzati Boys",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3dTTBt5Qtf6xzPOrBlG2tu"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3dTTBt5Qtf6xzPOrBlG2tu"
     },
     "genres": [
-      "schlagerparty",
+      üchlagerparty",
       "poprock"
     ],
     "playlists": [
@@ -96,19 +96,19 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hawaii-toast-song-2009",
+    "id": üong-hawaii-toast-song-2009",
     "title": "Hawaii Toast Song",
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Alexander Marcus — 2009, Hawaii Toast Song.",
-    "hint": "Alexander Marcus",
+    answer": Älexander Marcus — 2009, Hawaii Toast Song.",
+    "hint": Älexander Marcus",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4Ka43W7pxLv41B2c5R1UAy"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4Ka43W7pxLv41B2c5R1UAy"
     },
     "genres": [
-      "schlagerparty",
+      üchlagerparty",
       "poprock"
     ],
     "playlists": [
@@ -116,16 +116,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-familienfeier-2024",
+    "id": üong-familienfeier-2024",
     "title": "Familienfeier",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "K.I.Z — 2024, Familienfeier.",
+    answer": "K.I.Z — 2024, Familienfeier.",
     "hint": "K.I.Z",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3XEnnhbQRI8DlhvpXo9E2X"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3XEnnhbQRI8DlhvpXo9E2X"
     },
     "genres": [
       "hiphop",
@@ -136,19 +136,19 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-velocita-2024",
+    "id": üong-velocita-2024",
     "title": "Velocità",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Roy Bianco & Die Abbrunzati Boys — 2024, Velocità.",
+    answer": "Roy Bianco & Die Abbrunzati Boys — 2024, Velocità.",
     "hint": "Roy Bianco & Die Abbrunzati Boys",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0tDIFv7I1dqYewsaGlzLUx"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0tDIFv7I1dqYewsaGlzLUx"
     },
     "genres": [
-      "schlagerparty",
+      üchlagerparty",
       "poprock"
     ],
     "playlists": [
@@ -156,19 +156,19 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bella-napoli-2022",
+    "id": üong-bella-napoli-2022",
     "title": "Bella Napoli",
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Roy Bianco & Die Abbrunzati Boys — 2022, Bella Napoli.",
+    answer": "Roy Bianco & Die Abbrunzati Boys — 2022, Bella Napoli.",
     "hint": "Roy Bianco & Die Abbrunzati Boys",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1W14FFFgsM0m6DUt3Tf6NP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1W14FFFgsM0m6DUt3Tf6NP"
     },
     "genres": [
-      "schlagerparty",
+      üchlagerparty",
       "poprock"
     ],
     "playlists": [
@@ -176,16 +176,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-in-the-end-2000",
+    "id": üong-in-the-end-2000",
     "title": "In the End",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — 2000, In the End.",
+    answer": "Linkin Park — 2000, In the End.",
     "hint": "Linkin Park",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/60a0Rd6pjrkxjPbaKzXjfq"
+    üources": {
+      üpotify": "https://open.spotify.com/track/60a0Rd6pjrkxjPbaKzXjfq"
     },
     "genres": [
       "metal",
@@ -198,16 +198,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-numb-2003",
+    "id": üong-numb-2003",
     "title": "Numb",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — 2003, Numb.",
+    answer": "Linkin Park — 2003, Numb.",
     "hint": "Linkin Park",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2nLtzopw4rPReszdYBJU6h"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2nLtzopw4rPReszdYBJU6h"
     },
     "genres": [
       "metal",
@@ -220,16 +220,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-crawling-2000",
+    "id": üong-crawling-2000",
     "title": "Crawling",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — 2000, Crawling.",
+    answer": "Linkin Park — 2000, Crawling.",
     "hint": "Linkin Park",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/57BrRMwf9LrcmuOsyGilwr"
+    üources": {
+      üpotify": "https://open.spotify.com/track/57BrRMwf9LrcmuOsyGilwr"
     },
     "genres": [
       "metal",
@@ -241,16 +241,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-emptiness-machine-2024",
+    "id": üong-the-emptiness-machine-2024",
     "title": "The Emptiness Machine",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — 2024, The Emptiness Machine.",
+    answer": "Linkin Park — 2024, The Emptiness Machine.",
     "hint": "Linkin Park",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1EDPVGbyPKJPeGqATwXZvN"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1EDPVGbyPKJPeGqATwXZvN"
     },
     "genres": [
       "metal",
@@ -262,16 +262,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-livin-on-a-prayer-1986",
+    "id": üong-livin-on-a-prayer-1986",
     "title": "Livin' On A Prayer",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bon Jovi — 1986, Livin' On A Prayer.",
+    answer": "Bon Jovi — 1986, Livin' On A Prayer.",
     "hint": "Bon Jovi",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0ee1DiZF94NSqqpG0XHUzH"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0ee1DiZF94NSqqpG0XHUzH"
     },
     "genres": [
       "metal",
@@ -282,16 +282,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-always-1994",
-    "title": "Always",
+    "id": üong-always-1994",
+    "title": Älways",
     "category": "music",
     "year": 1994,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bon Jovi — 1994, Always.",
+    answer": "Bon Jovi — 1994, Always.",
     "hint": "Bon Jovi",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2RChe0r2cMoyOvuKobZy44"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2RChe0r2cMoyOvuKobZy44"
     },
     "genres": [
       "metal",
@@ -302,16 +302,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-enter-sandman-remastered-2021-2021",
+    "id": üong-enter-sandman-remastered-2021-2021",
     "title": "Enter Sandman - Remastered 2021",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Metallica — 2021, Enter Sandman - Remastered 2021.",
+    answer": "Metallica — 2021, Enter Sandman - Remastered 2021.",
     "hint": "Metallica",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3DwQ7AH3xGD9h65ezslm6q"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3DwQ7AH3xGD9h65ezslm6q"
     },
     "genres": [
       "metal",
@@ -322,16 +322,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-master-of-puppets-1986",
+    "id": üong-master-of-puppets-1986",
     "title": "Master Of Puppets",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Metallica — 1986, Master Of Puppets.",
+    answer": "Metallica — 1986, Master Of Puppets.",
     "hint": "Metallica",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2MuWTIM3b0YEAskbeeFE1i"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2MuWTIM3b0YEAskbeeFE1i"
     },
     "genres": [
       "metal",
@@ -343,16 +343,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sad-but-true-remastered-2021-2021",
+    "id": üong-sad-but-true-remastered-2021-2021",
     "title": "Sad But True - Remastered 2021",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Metallica — 2021, Sad But True - Remastered 2021.",
+    answer": "Metallica — 2021, Sad But True - Remastered 2021.",
     "hint": "Metallica",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5ltXoDLlI0rFZAmOXbAp5T"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5ltXoDLlI0rFZAmOXbAp5T"
     },
     "genres": [
       "metal",
@@ -363,16 +363,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-seek-destroy-remastered-1983",
+    "id": üong-seek-destroy-remastered-1983",
     "title": "Seek & Destroy - Remastered",
     "category": "music",
     "year": 1983,
     "cue": "Song anhören und einordnen.",
-    "answer": "Metallica — 1983, Seek & Destroy - Remastered.",
+    answer": "Metallica — 1983, Seek & Destroy - Remastered.",
     "hint": "Metallica",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/28WmNsclKsrVmdv3tDmoYU"
+    üources": {
+      üpotify": "https://open.spotify.com/track/28WmNsclKsrVmdv3tDmoYU"
     },
     "genres": [
       "metal",
@@ -383,16 +383,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-last-resort-2000",
+    "id": üong-last-resort-2000",
     "title": "Last Resort",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Papa Roach — 2000, Last Resort.",
+    answer": "Papa Roach — 2000, Last Resort.",
     "hint": "Papa Roach",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5W8YXBz9MTIDyrpYaCg2Ky"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5W8YXBz9MTIDyrpYaCg2Ky"
     },
     "genres": [
       "metal",
@@ -404,16 +404,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-teenage-dirtbag-1999",
+    "id": üong-teenage-dirtbag-1999",
     "title": "Teenage Dirtbag",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wheatus — 1999, Teenage Dirtbag.",
+    answer": "Wheatus — 1999, Teenage Dirtbag.",
     "hint": "Wheatus",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/25FTMokYEbEWHEdss5JLZS"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/25FTMokYEbEWHEdss5JLZS"
     },
     "genres": [
       "poprock"
@@ -424,16 +424,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-paradise-city-1987",
+    "id": üong-paradise-city-1987",
     "title": "Paradise City",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Guns N' Roses — 1987, Paradise City.",
+    answer": "Guns N' Roses — 1987, Paradise City.",
     "hint": "Guns N' Roses",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6eN1f9KNmiWEhpE2RhQqB5"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6eN1f9KNmiWEhpE2RhQqB5"
     },
     "genres": [
       "metal",
@@ -445,16 +445,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dont-stop-believin-2022-remaster-1981",
+    "id": üong-dont-stop-believin-2022-remaster-1981",
     "title": "Don't Stop Believin' (2022 Remaster)",
     "category": "music",
     "year": 1981,
     "cue": "Song anhören und einordnen.",
-    "answer": "Journey — 1981, Don't Stop Believin' (2022 Remaster).",
+    answer": "Journey — 1981, Don't Stop Believin' (2022 Remaster).",
     "hint": "Journey",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5RKQ5NdjSh2QzD4MaunT91"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5RKQ5NdjSh2QzD4MaunT91"
     },
     "genres": [
       "poprock"
@@ -464,16 +464,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-take-a-look-around-2000",
+    "id": üong-take-a-look-around-2000",
     "title": "Take A Look Around",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Limp Bizkit — 2000, Take A Look Around.",
+    answer": "Limp Bizkit — 2000, Take A Look Around.",
     "hint": "Limp Bizkit",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2avKuMN2QXkaG9vvHa2JLt"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2avKuMN2QXkaG9vvHa2JLt"
     },
     "genres": [
       "metal",
@@ -485,16 +485,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-all-the-small-things-1999",
-    "title": "All The Small Things",
+    "id": üong-all-the-small-things-1999",
+    "title": Äll The Small Things",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "blink-182 — 1999, All The Small Things.",
+    answer": "blink-182 — 1999, All The Small Things.",
     "hint": "blink-182",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2m1hi0nfMR9vdGC8UcrnwU"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2m1hi0nfMR9vdGC8UcrnwU"
     },
     "genres": [
       "poprock"
@@ -504,16 +504,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-butterfly-1999",
+    "id": üong-butterfly-1999",
     "title": "Butterfly",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Crazy Town — 1999, Butterfly.",
+    answer": "Crazy Town — 1999, Butterfly.",
     "hint": "Crazy Town",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6GQ3WTaNHMFlVmN4burGat"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6GQ3WTaNHMFlVmN4burGat"
     },
     "genres": [
       "metal",
@@ -526,16 +526,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-californication-1999",
+    "id": üong-californication-1999",
     "title": "Californication",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — 1999, Californication.",
+    answer": "Red Hot Chili Peppers — 1999, Californication.",
     "hint": "Red Hot Chili Peppers",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/48UPSzbZjgc449aqz8bxox"
+    üources": {
+      üpotify": "https://open.spotify.com/track/48UPSzbZjgc449aqz8bxox"
     },
     "genres": [
       "poprock"
@@ -545,16 +545,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-chop-suey-2001",
+    "id": üong-chop-suey-2001",
     "title": "Chop Suey!",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "System Of A Down — 2001, Chop Suey!.",
+    answer": "System Of A Down — 2001, Chop Suey!.",
     "hint": "System Of A Down",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2DlHlPMa4M17kufBvI2lEN"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2DlHlPMa4M17kufBvI2lEN"
     },
     "genres": [
       "metal",
@@ -566,16 +566,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-bad-touch-1999",
+    "id": üong-the-bad-touch-1999",
     "title": "The Bad Touch",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bloodhound Gang — 1999, The Bad Touch.",
+    answer": "Bloodhound Gang — 1999, The Bad Touch.",
     "hint": "Bloodhound Gang",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5EYdTPdJD74r9EVZBztqGG"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5EYdTPdJD74r9EVZBztqGG"
     },
     "genres": [
       "poprock"
@@ -586,16 +586,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bring-me-to-life-2003",
+    "id": üong-bring-me-to-life-2003",
     "title": "Bring Me To Life",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Evanescence — 2003, Bring Me To Life.",
+    answer": "Evanescence — 2003, Bring Me To Life.",
     "hint": "Evanescence",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0COqiPhxzoWICwFCS4eZcp"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0COqiPhxzoWICwFCS4eZcp"
     },
     "genres": [
       "metal",
@@ -606,16 +606,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-knockin-on-heavens-door-1991",
+    "id": üong-knockin-on-heavens-door-1991",
     "title": "Knockin' On Heaven's Door",
     "category": "music",
     "year": 1991,
     "cue": "Song anhören und einordnen.",
-    "answer": "Guns N' Roses — 1991, Knockin' On Heaven's Door.",
+    answer": "Guns N' Roses — 1991, Knockin' On Heaven's Door.",
     "hint": "Guns N' Roses",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4JiEyzf0Md7KEFFGWDDdCr"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4JiEyzf0Md7KEFFGWDDdCr"
     },
     "genres": [
       "metal",
@@ -626,16 +626,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-byob-2005",
+    "id": üong-byob-2005",
     "title": "B.Y.O.B.",
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "System Of A Down — 2005, B.Y.O.B..",
+    answer": "System Of A Down — 2005, B.Y.O.B..",
     "hint": "System Of A Down",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0EYOdF5FCkgOJJla8DI2Md"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0EYOdF5FCkgOJJla8DI2Md"
     },
     "genres": [
       "metal",
@@ -647,16 +647,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-middle-2001",
+    "id": üong-the-middle-2001",
     "title": "The Middle",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jimmy Eat World — 2001, The Middle.",
+    answer": "Jimmy Eat World — 2001, The Middle.",
     "hint": "Jimmy Eat World",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6GG73Jik4jUlQCkKg9JuGO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6GG73Jik4jUlQCkKg9JuGO"
     },
     "genres": [
       "poprock"
@@ -666,16 +666,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-next-episode-1999",
+    "id": üong-the-next-episode-1999",
     "title": "The Next Episode",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+    answer": "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
     "hint": "Dr. Dre, Snoop Dogg",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4LwU4Vp6od3Sb08CsP99GC"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4LwU4Vp6od3Sb08CsP99GC"
     },
     "genres": [
       "hiphop",
@@ -686,16 +686,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-reimemonster-feat-ferris-mc-1999",
+    "id": üong-reimemonster-feat-ferris-mc-1999",
     "title": "Reimemonster (feat. Ferris MC)",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Afrob, Ferris MC — 1999, Reimemonster (feat. Ferris MC).",
-    "hint": "Afrob, Ferris MC",
+    answer": Äfrob, Ferris MC — 1999, Reimemonster (feat. Ferris MC).",
+    "hint": Äfrob, Ferris MC",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0pgx8fWphTTM9Kv5KjWpXy"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0pgx8fWphTTM9Kv5KjWpXy"
     },
     "genres": [
       "hiphop",
@@ -706,16 +706,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-weck-mich-auf-2001",
+    "id": üong-weck-mich-auf-2001",
     "title": "Weck mich auf",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Samy Deluxe — 2001, Weck mich auf.",
+    answer": "Samy Deluxe — 2001, Weck mich auf.",
     "hint": "Samy Deluxe",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/47VRtROAdociHgtuVZNoBL"
+    üources": {
+      üpotify": "https://open.spotify.com/track/47VRtROAdociHgtuVZNoBL"
     },
     "genres": [
       "hiphop",
@@ -726,16 +726,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bon-voyage-feat-nina-2000",
+    "id": üong-bon-voyage-feat-nina-2000",
     "title": "Bon voyage (feat. Nina)",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Deichkind, Nina Tenge — 2000, Bon voyage (feat. Nina).",
+    answer": "Deichkind, Nina Tenge — 2000, Bon voyage (feat. Nina).",
     "hint": "Deichkind, Nina Tenge",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0ys1g8PTTs6ADeDp2h1xpd"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0ys1g8PTTs6ADeDp2h1xpd"
     },
     "genres": [
       "hiphop",
@@ -746,16 +746,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-turlich-turlich-sicher-dicker-2000",
+    "id": üong-turlich-turlich-sicher-dicker-2000",
     "title": "Türlich, Türlich (Sicher, Dicker)",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Das Bo — 2000, Türlich, Türlich (Sicher, Dicker).",
+    answer": "Das Bo — 2000, Türlich, Türlich (Sicher, Dicker).",
     "hint": "Das Bo",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0zv3f19rNhmZhNmNA2xJsF"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0zv3f19rNhmZhNmNA2xJsF"
     },
     "genres": [
       "hiphop",
@@ -766,16 +766,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-oopsi-did-it-again-2000",
-    "title": "Oops!...I Did It Again",
+    "id": üong-oopsi-did-it-again-2000",
+    "title": Öops!...I Did It Again",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Britney Spears — 2000, Oops!...I Did It Again.",
+    answer": "Britney Spears — 2000, Oops!...I Did It Again.",
     "hint": "Britney Spears",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6naxalmIoLFWR0siv8dnQQ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6naxalmIoLFWR0siv8dnQQ"
     },
     "genres": [
       "poprock"
@@ -785,16 +785,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-thats-the-way-it-is-2019",
+    "id": üong-thats-the-way-it-is-2019",
     "title": "That's the Way It Is",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Céline Dion — 2019, That's the Way It Is.",
+    answer": "Céline Dion — 2019, That's the Way It Is.",
     "hint": "Céline Dion",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5s4catxeZsaWFnOrvrXZHf"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5s4catxeZsaWFnOrvrXZHf"
     },
     "genres": [
       "poprock"
@@ -804,16 +804,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-believe-1998",
+    "id": üong-believe-1998",
     "title": "Believe",
     "category": "music",
     "year": 1998,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cher — 1998, Believe.",
+    answer": "Cher — 1998, Believe.",
     "hint": "Cher",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2goLsvvODILDzeeiT4dAoR"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2goLsvvODILDzeeiT4dAoR"
     },
     "genres": [
       "poprock"
@@ -823,19 +823,19 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-blau-bluht-der-enzian-2018",
+    "id": üong-blau-bluht-der-enzian-2018",
     "title": "Blau blüht der Enzian",
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Heino — 2018, Blau blüht der Enzian.",
+    answer": "Heino — 2018, Blau blüht der Enzian.",
     "hint": "Heino",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7LHEQq3Xy7brogiqnXsT4L"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7LHEQq3Xy7brogiqnXsT4L"
     },
     "genres": [
-      "schlagerparty",
+      üchlagerparty",
       "poprock"
     ],
     "playlists": [
@@ -843,16 +843,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-junge-2007",
+    "id": üong-junge-2007",
     "title": "Junge",
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Die Ärzte — 2007, Junge.",
+    answer": "Die Ärzte — 2007, Junge.",
     "hint": "Die Ärzte",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/10waMsh44ojvTwXAIy213n"
+    üources": {
+      üpotify": "https://open.spotify.com/track/10waMsh44ojvTwXAIy213n"
     },
     "genres": [
       "poprock"
@@ -863,16 +863,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-deine-schuld-2003",
+    "id": üong-deine-schuld-2003",
     "title": "Deine Schuld",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Die Ärzte — 2003, Deine Schuld.",
+    answer": "Die Ärzte — 2003, Deine Schuld.",
     "hint": "Die Ärzte",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0oEp3d8au0a3Qp78F2QxtB"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0oEp3d8au0a3Qp78F2QxtB"
     },
     "genres": [
       "poprock"
@@ -882,16 +882,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-tilidin-2019",
+    "id": üong-tilidin-2019",
     "title": "Tilidin",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Capital Bra, Samra — 2019, Tilidin.",
+    answer": "Capital Bra, Samra — 2019, Tilidin.",
     "hint": "Capital Bra, Samra",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0Dlcu2fgHklOnajVu2dUNU"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0Dlcu2fgHklOnajVu2dUNU"
     },
     "genres": [
       "hiphop",
@@ -902,16 +902,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hypa-hypa-2021",
+    "id": üong-hypa-hypa-2021",
     "title": "Hypa Hypa",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Electric Callboy — 2021, Hypa Hypa.",
+    answer": "Electric Callboy — 2021, Hypa Hypa.",
     "hint": "Electric Callboy",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2qOmcSjOQEDIJKosonn75a"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2qOmcSjOQEDIJKosonn75a"
     },
     "genres": [
       "metal",
@@ -922,16 +922,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-kids-arent-alright-1998",
+    "id": üong-the-kids-arent-alright-1998",
     "title": "The Kids Aren't Alright",
     "category": "music",
     "year": 1998,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Offspring — 1998, The Kids Aren't Alright.",
+    answer": "The Offspring — 1998, The Kids Aren't Alright.",
     "hint": "The Offspring",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4EchqUKQ3qAQuRNKmeIpnf"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4EchqUKQ3qAQuRNKmeIpnf"
     },
     "genres": [
       "poprock"
@@ -941,16 +941,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-mr-brightside-2004",
+    "id": üong-mr-brightside-2004",
     "title": "Mr. Brightside",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Killers — 2004, Mr. Brightside.",
+    answer": "The Killers — 2004, Mr. Brightside.",
     "hint": "The Killers",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/003vvx7Niy0yvhvHt4a68B"
+    üources": {
+      üpotify": "https://open.spotify.com/track/003vvx7Niy0yvhvHt4a68B"
     },
     "genres": [
       "poprock"
@@ -961,16 +961,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-song-2-2012-remaster-1997",
+    "id": üong-song-2-2012-remaster-1997",
     "title": "Song 2 - 2012 Remaster",
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "Blur — 1997, Song 2 - 2012 Remaster.",
+    answer": "Blur — 1997, Song 2 - 2012 Remaster.",
     "hint": "Blur",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1FTSo4v6BOZH9QxKc3MbVM"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1FTSo4v6BOZH9QxKc3MbVM"
     },
     "genres": [
       "poprock"
@@ -980,16 +980,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-fly-away-1998",
+    "id": üong-fly-away-1998",
     "title": "Fly Away",
     "category": "music",
     "year": 1998,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lenny Kravitz — 1998, Fly Away.",
+    answer": "Lenny Kravitz — 1998, Fly Away.",
     "hint": "Lenny Kravitz",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1OxcIUqVmVYxT6427tbhDW"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1OxcIUqVmVYxT6427tbhDW"
     },
     "genres": [
       "poprock"
@@ -1000,16 +1000,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-zombie-2025-remastered-1994",
+    "id": üong-zombie-2025-remastered-1994",
     "title": "Zombie - 2025 Remastered",
     "category": "music",
     "year": 1994,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Cranberries — 1994, Zombie - 2025 Remastered.",
+    answer": "The Cranberries — 1994, Zombie - 2025 Remastered.",
     "hint": "The Cranberries",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3gjHnylel3PTRpjS44ocqr"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3gjHnylel3PTRpjS44ocqr"
     },
     "genres": [
       "poprock"
@@ -1019,16 +1019,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cruisen-2002",
+    "id": üong-cruisen-2002",
     "title": "Cruisen",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Massive Töne — 2002, Cruisen.",
+    answer": "Massive Töne — 2002, Cruisen.",
     "hint": "Massive Töne",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6e5kuZssmkwWL3Yt4jwTRy"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6e5kuZssmkwWL3Yt4jwTRy"
     },
     "genres": [
       "hiphop",
@@ -1039,16 +1039,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-traumreise-2002",
+    "id": üong-traumreise-2002",
     "title": "Traumreise",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Massive Töne — 2002, Traumreise.",
+    answer": "Massive Töne — 2002, Traumreise.",
     "hint": "Massive Töne",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1tVhmi6ltumhZtd1pM8Tya"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1tVhmi6ltumhZtd1pM8Tya"
     },
     "genres": [
       "hiphop",
@@ -1059,16 +1059,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-oane-moan-i-pack-i-no-2015",
-    "title": "Oane moan i pack i no",
+    "id": üong-oane-moan-i-pack-i-no-2015",
+    "title": Öane moan i pack i no",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Oansno — 2015, Oane moan i pack i no.",
-    "hint": "Oansno",
+    answer": Öansno — 2015, Oane moan i pack i no.",
+    "hint": Öansno",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1BYtg47qoPZ9DUrBTfJ5Bc"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1BYtg47qoPZ9DUrBTfJ5Bc"
     },
     "genres": [
       "poprock"
@@ -1078,16 +1078,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-in-the-shadows-2003",
+    "id": üong-in-the-shadows-2003",
     "title": "In the Shadows",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Rasmus — 2003, In the Shadows.",
+    answer": "The Rasmus — 2003, In the Shadows.",
     "hint": "The Rasmus",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1fr92Vupmcs2vgLMFVQ7rd"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1fr92Vupmcs2vgLMFVQ7rd"
     },
     "genres": [
       "poprock"
@@ -1098,16 +1098,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sk8er-boi-2002",
+    "id": üong-sk8er-boi-2002",
     "title": "Sk8er Boi",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Avril Lavigne — 2002, Sk8er Boi.",
-    "hint": "Avril Lavigne",
+    answer": Ävril Lavigne — 2002, Sk8er Boi.",
+    "hint": Ävril Lavigne",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/00Mb3DuaIH1kjrwOku9CGU"
+    üources": {
+      üpotify": "https://open.spotify.com/track/00Mb3DuaIH1kjrwOku9CGU"
     },
     "genres": [
       "poprock"
@@ -1118,16 +1118,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-numb-encore-2004",
+    "id": üong-numb-encore-2004",
     "title": "Numb / Encore",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "JAY-Z, Linkin Park — 2004, Numb / Encore.",
+    answer": "JAY-Z, Linkin Park — 2004, Numb / Encore.",
     "hint": "JAY-Z, Linkin Park",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5sNESr6pQfIhL3krM8CtZn"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5sNESr6pQfIhL3krM8CtZn"
     },
     "genres": [
       "hiphop",
@@ -1139,16 +1139,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-break-stuff-1999",
+    "id": üong-break-stuff-1999",
     "title": "Break Stuff",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Limp Bizkit — 1999, Break Stuff.",
+    answer": "Limp Bizkit — 1999, Break Stuff.",
     "hint": "Limp Bizkit",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5cZqsjVs6MevCnAkasbEOX"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5cZqsjVs6MevCnAkasbEOX"
     },
     "genres": [
       "metal",
@@ -1160,16 +1160,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-whats-my-age-again-1999",
+    "id": üong-whats-my-age-again-1999",
     "title": "What's My Age Again?",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "blink-182 — 1999, What's My Age Again?.",
+    answer": "blink-182 — 1999, What's My Age Again?.",
     "hint": "blink-182",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4LJhJ6DQS7NwE7UKtvcM52"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4LJhJ6DQS7NwE7UKtvcM52"
     },
     "genres": [
       "poprock"
@@ -1179,16 +1179,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sonne-2001",
+    "id": üong-sonne-2001",
     "title": "Sonne",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rammstein — 2001, Sonne.",
+    answer": "Rammstein — 2001, Sonne.",
     "hint": "Rammstein",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3gVhsZtseYtY1fMuyYq06F"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3gVhsZtseYtY1fMuyYq06F"
     },
     "genres": [
       "metal",
@@ -1199,16 +1199,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bodies-2001",
+    "id": üong-bodies-2001",
     "title": "Bodies",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Drowning Pool — 2001, Bodies.",
+    answer": "Drowning Pool — 2001, Bodies.",
     "hint": "Drowning Pool",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7CpbhqKUedOIrcvc94p60Y"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7CpbhqKUedOIrcvc94p60Y"
     },
     "genres": [
       "metal",
@@ -1220,16 +1220,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-in-the-air-tonight-2015-remastered-1981",
+    "id": üong-in-the-air-tonight-2015-remastered-1981",
     "title": "In The Air Tonight - 2015 Remastered",
     "category": "music",
     "year": 1981,
     "cue": "Song anhören und einordnen.",
-    "answer": "Phil Collins — 1981, In The Air Tonight - 2015 Remastered.",
+    answer": "Phil Collins — 1981, In The Air Tonight - 2015 Remastered.",
     "hint": "Phil Collins",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/18AXbzPzBS8Y3AkgSxzJPb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/18AXbzPzBS8Y3AkgSxzJPb"
     },
     "genres": [
       "poprock"
@@ -1240,16 +1240,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-feel-good-inc-2005",
+    "id": üong-feel-good-inc-2005",
     "title": "Feel Good Inc.",
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gorillaz, De La Soul — 2005, Feel Good Inc..",
+    answer": "Gorillaz, De La Soul — 2005, Feel Good Inc..",
     "hint": "Gorillaz, De La Soul",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0d28khcov6AiegSCpG5TuT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0d28khcov6AiegSCpG5TuT"
     },
     "genres": [
       "poprock",
@@ -1260,16 +1260,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hey-ya-2003",
+    "id": üong-hey-ya-2003",
     "title": "Hey Ya!",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Outkast — 2003, Hey Ya!.",
-    "hint": "Outkast",
+    answer": Öutkast — 2003, Hey Ya!.",
+    "hint": Öutkast",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2PpruBYCo4H7WOBJ7Q2EwM"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2PpruBYCo4H7WOBJ7Q2EwM"
     },
     "genres": [
       "hiphop",
@@ -1280,16 +1280,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-still-waiting-2002",
+    "id": üong-still-waiting-2002",
     "title": "Still Waiting",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sum 41 — 2002, Still Waiting.",
+    answer": "Sum 41 — 2002, Still Waiting.",
     "hint": "Sum 41",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0jqK7sGTLsHPkQrrcrGuKD"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0jqK7sGTLsHPkQrrcrGuKD"
     },
     "genres": [
       "poprock"
@@ -1299,16 +1299,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-like-a-prayer-1989",
+    "id": üong-like-a-prayer-1989",
     "title": "Like a Prayer",
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Madonna — 1989, Like a Prayer.",
+    answer": "Madonna — 1989, Like a Prayer.",
     "hint": "Madonna",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2v7ywbUzCgcVohHaKUcacV"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2v7ywbUzCgcVohHaKUcacV"
     },
     "genres": [
       "poprock"
@@ -1319,16 +1319,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-creep-1993",
+    "id": üong-creep-1993",
     "title": "Creep",
     "category": "music",
     "year": 1993,
     "cue": "Song anhören und einordnen.",
-    "answer": "Radiohead — 1993, Creep.",
+    answer": "Radiohead — 1993, Creep.",
     "hint": "Radiohead",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/70LcF31zb1H0PyJoS1Sx1r"
+    üources": {
+      üpotify": "https://open.spotify.com/track/70LcF31zb1H0PyJoS1Sx1r"
     },
     "genres": [
       "poprock"
@@ -1338,16 +1338,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-good-riddance-time-of-your-life-1997",
+    "id": üong-good-riddance-time-of-your-life-1997",
     "title": "Good Riddance (Time of Your Life)",
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — 1997, Good Riddance (Time of Your Life).",
+    answer": "Green Day — 1997, Good Riddance (Time of Your Life).",
     "hint": "Green Day",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ORqU0bHbVCRjXm9AjyHyZ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6ORqU0bHbVCRjXm9AjyHyZ"
     },
     "genres": [
       "poprock"
@@ -1357,16 +1357,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-summer-of-69-1984",
+    "id": üong-summer-of-69-1984",
     "title": "Summer Of '69",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bryan Adams — 1984, Summer Of '69.",
+    answer": "Bryan Adams — 1984, Summer Of '69.",
     "hint": "Bryan Adams",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0GONea6G2XdnHWjNZd6zt3"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0GONea6G2XdnHWjNZd6zt3"
     },
     "genres": [
       "poprock"
@@ -1377,16 +1377,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-ms-jackson-2000",
+    "id": üong-ms-jackson-2000",
     "title": "Ms. Jackson",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Outkast — 2000, Ms. Jackson.",
-    "hint": "Outkast",
+    answer": Öutkast — 2000, Ms. Jackson.",
+    "hint": Öutkast",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0I3q5fE6wg7LIfHGngUTnV"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0I3q5fE6wg7LIfHGngUTnV"
     },
     "genres": [
       "hiphop",
@@ -1397,16 +1397,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-this-love-2002",
+    "id": üong-this-love-2002",
     "title": "This Love",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Maroon 5 — 2002, This Love.",
+    answer": "Maroon 5 — 2002, This Love.",
     "hint": "Maroon 5",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ECp64rv50XVz93WvxXMGF"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6ECp64rv50XVz93WvxXMGF"
     },
     "genres": [
       "poprock"
@@ -1417,16 +1417,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-in-too-deep-2001",
+    "id": üong-in-too-deep-2001",
     "title": "In Too Deep",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sum 41 — 2001, In Too Deep.",
+    answer": "Sum 41 — 2001, In Too Deep.",
     "hint": "Sum 41",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1HNE2PX70ztbEl6MLxrpNL"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1HNE2PX70ztbEl6MLxrpNL"
     },
     "genres": [
       "poprock"
@@ -1436,16 +1436,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dancing-in-the-moonlight-2000",
+    "id": üong-dancing-in-the-moonlight-2000",
     "title": "Dancing in the Moonlight",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Toploader — 2000, Dancing in the Moonlight.",
+    answer": "Toploader — 2000, Dancing in the Moonlight.",
     "hint": "Toploader",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3Fzlg5r1IjhLk2qRw667od"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3Fzlg5r1IjhLk2qRw667od"
     },
     "genres": [
       "poprock"
@@ -1455,16 +1455,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-fat-lip-2001",
+    "id": üong-fat-lip-2001",
     "title": "Fat Lip",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sum 41 — 2001, Fat Lip.",
+    answer": "Sum 41 — 2001, Fat Lip.",
     "hint": "Sum 41",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4KacUpvbA3Mfo05gttTjhN"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4KacUpvbA3Mfo05gttTjhN"
     },
     "genres": [
       "poprock"
@@ -1474,16 +1474,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-holiday-boulevard-of-broken-dreams-2004",
+    "id": üong-holiday-boulevard-of-broken-dreams-2004",
     "title": "Holiday / Boulevard of Broken Dreams",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — 2004, Holiday / Boulevard of Broken Dreams.",
+    answer": "Green Day — 2004, Holiday / Boulevard of Broken Dreams.",
     "hint": "Green Day",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0MsrWnxQZxPAcov7c74sSo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0MsrWnxQZxPAcov7c74sSo"
     },
     "genres": [
       "poprock"
@@ -1493,16 +1493,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-supermassive-black-hole-2006",
+    "id": üong-supermassive-black-hole-2006",
     "title": "Supermassive Black Hole",
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "Muse — 2006, Supermassive Black Hole.",
+    answer": "Muse — 2006, Supermassive Black Hole.",
     "hint": "Muse",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3lPr8ghNDBLc2uZovNyLs9"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3lPr8ghNDBLc2uZovNyLs9"
     },
     "genres": [
       "poprock"
@@ -1512,16 +1512,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-pocketful-of-sunshine-2007",
+    "id": üong-pocketful-of-sunshine-2007",
     "title": "Pocketful of Sunshine",
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Natasha Bedingfield — 2007, Pocketful of Sunshine.",
+    answer": "Natasha Bedingfield — 2007, Pocketful of Sunshine.",
     "hint": "Natasha Bedingfield",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1uigwk5hNV84zRd5YQQRTk"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/1uigwk5hNV84zRd5YQQRTk"
     },
     "genres": [
       "poprock"
@@ -1531,16 +1531,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-one-more-time-2001",
-    "title": "One More Time",
+    "id": üong-one-more-time-2001",
+    "title": Öne More Time",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daft Punk — 2001, One More Time.",
+    answer": "Daft Punk — 2001, One More Time.",
     "hint": "Daft Punk",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0DiWol3AO6WpXZgp0goxAV"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0DiWol3AO6WpXZgp0goxAV"
     },
     "genres": [
       "poprock"
@@ -1550,16 +1550,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-blue-da-ba-dee-gabry-ponte-ice-pop-radio-2011",
+    "id": üong-blue-da-ba-dee-gabry-ponte-ice-pop-radio-2011",
     "title": "Blue (Da Ba Dee) - Gabry Ponte Ice Pop Radio",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eiffel 65, Gabry Ponte — 2011, Blue (Da Ba Dee) - Gabry Ponte Ice Pop Radio.",
+    answer": "Eiffel 65, Gabry Ponte — 2011, Blue (Da Ba Dee) - Gabry Ponte Ice Pop Radio.",
     "hint": "Eiffel 65, Gabry Ponte",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4GewRLEiI4BDTQsoH8BRVV"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4GewRLEiI4BDTQsoH8BRVV"
     },
     "genres": [
       "poprock"
@@ -1569,16 +1569,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lose-yourself-2004",
+    "id": üong-lose-yourself-2004",
     "title": "Lose Yourself",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eminem — 2004, Lose Yourself.",
+    answer": "Eminem — 2004, Lose Yourself.",
     "hint": "Eminem",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1v7L65Lzy0j0vdpRjJewt1"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1v7L65Lzy0j0vdpRjJewt1"
     },
     "genres": [
       "hiphop",
@@ -1589,16 +1589,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-radioactive-2012",
+    "id": üong-radioactive-2012",
     "title": "Radioactive",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Imagine Dragons — 2012, Radioactive.",
+    answer": "Imagine Dragons — 2012, Radioactive.",
     "hint": "Imagine Dragons",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/62yJjFtgkhUrXktIoSjgP2"
+    üources": {
+      üpotify": "https://open.spotify.com/track/62yJjFtgkhUrXktIoSjgP2"
     },
     "genres": [
       "poprock"
@@ -1608,16 +1608,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-want-it-that-way-1999",
+    "id": üong-i-want-it-that-way-1999",
     "title": "I Want It That Way",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Backstreet Boys — 1999, I Want It That Way.",
+    answer": "Backstreet Boys — 1999, I Want It That Way.",
     "hint": "Backstreet Boys",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/47BBI51FKFwOMlIiX6m8ya"
+    üources": {
+      üpotify": "https://open.spotify.com/track/47BBI51FKFwOMlIiX6m8ya"
     },
     "genres": [
       "poprock"
@@ -1627,16 +1627,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bad-romance-2009",
+    "id": üong-bad-romance-2009",
     "title": "Bad Romance",
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — 2009, Bad Romance.",
+    answer": "Lady Gaga — 2009, Bad Romance.",
     "hint": "Lady Gaga",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0SiywuOBRcynK0uKGWdCnn"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0SiywuOBRcynK0uKGWdCnn"
     },
     "genres": [
       "poprock"
@@ -1647,16 +1647,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-unwritten-2004",
-    "title": "Unwritten",
+    "id": üong-unwritten-2004",
+    "title": Ünwritten",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Natasha Bedingfield — 2004, Unwritten.",
+    answer": "Natasha Bedingfield — 2004, Unwritten.",
     "hint": "Natasha Bedingfield",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3U5JVgI2x4rDyHGObzJfNf"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/3U5JVgI2x4rDyHGObzJfNf"
     },
     "genres": [
       "poprock"
@@ -1667,16 +1667,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-yeah-feat-lil-jon-ludacris-2004",
+    "id": üong-yeah-feat-lil-jon-ludacris-2004",
     "title": "Yeah! (feat. Lil Jon & Ludacris)",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "USHER, Lil Jon, Ludacris — 2004, Yeah! (feat. Lil Jon & Ludacris).",
-    "hint": "USHER, Lil Jon, Ludacris",
+    answer": ÜSHER, Lil Jon, Ludacris — 2004, Yeah! (feat. Lil Jon & Ludacris).",
+    "hint": ÜSHER, Lil Jon, Ludacris",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5rb9QrpfcKFHM1EUbSIurX"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5rb9QrpfcKFHM1EUbSIurX"
     },
     "genres": [
       "poprock",
@@ -1687,16 +1687,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-baby-one-more-time-1999",
+    "id": üong-baby-one-more-time-1999",
     "title": "...Baby One More Time",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Britney Spears — 1999, ...Baby One More Time.",
+    answer": "Britney Spears — 1999, ...Baby One More Time.",
     "hint": "Britney Spears",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3MjUtNVVq3C8Fn0MP3zhXa"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3MjUtNVVq3C8Fn0MP3zhXa"
     },
     "genres": [
       "poprock"
@@ -1706,16 +1706,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lose-yourself-2014",
+    "id": üong-lose-yourself-2014",
     "title": "Lose Yourself",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eminem — 2014, Lose Yourself.",
+    answer": "Eminem — 2014, Lose Yourself.",
     "hint": "Eminem",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7MJQ9Nfxzh8LPZ9e9u68Fq"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7MJQ9Nfxzh8LPZ9e9u68Fq"
     },
     "genres": [
       "hiphop",
@@ -1726,16 +1726,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-mockingbird-2004",
+    "id": üong-mockingbird-2004",
     "title": "Mockingbird",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eminem — 2004, Mockingbird.",
+    answer": "Eminem — 2004, Mockingbird.",
     "hint": "Eminem",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/561jH07mF1jHuk7KlaeF0s"
+    üources": {
+      üpotify": "https://open.spotify.com/track/561jH07mF1jHuk7KlaeF0s"
     },
     "genres": [
       "hiphop",
@@ -1746,16 +1746,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stan-2000",
+    "id": üong-stan-2000",
     "title": "Stan",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eminem, Dido — 2000, Stan.",
+    answer": "Eminem, Dido — 2000, Stan.",
     "hint": "Eminem, Dido",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3UmaczJpikHgJFyBTAJVoz"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3UmaczJpikHgJFyBTAJVoz"
     },
     "genres": [
       "hiphop",
@@ -1766,16 +1766,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-im-like-a-bird-2000",
+    "id": üong-im-like-a-bird-2000",
     "title": "I'm Like A Bird",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nelly Furtado — 2000, I'm Like A Bird.",
+    answer": "Nelly Furtado — 2000, I'm Like A Bird.",
     "hint": "Nelly Furtado",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2aGw77pZqli064JiPuXYRi"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2aGw77pZqli064JiPuXYRi"
     },
     "genres": [
       "poprock"
@@ -1787,16 +1787,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-forever-young-1984",
+    "id": üong-forever-young-1984",
     "title": "Forever Young",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Alphaville — 1984, Forever Young.",
-    "hint": "Alphaville",
+    answer": Älphaville — 1984, Forever Young.",
+    "hint": Älphaville",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4S1VYqwfkLit9mKVY3MXoo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4S1VYqwfkLit9mKVY3MXoo"
     },
     "genres": [
       "poprock"
@@ -1807,16 +1807,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-toxic-2003",
+    "id": üong-toxic-2003",
     "title": "Toxic",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Britney Spears — 2003, Toxic.",
+    answer": "Britney Spears — 2003, Toxic.",
     "hint": "Britney Spears",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6I9VzXrHxO9rA9A5euc8Ak"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6I9VzXrHxO9rA9A5euc8Ak"
     },
     "genres": [
       "poprock"
@@ -1826,16 +1826,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cry-me-a-river-2002",
+    "id": üong-cry-me-a-river-2002",
     "title": "Cry Me a River",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Justin Timberlake — 2002, Cry Me a River.",
+    answer": "Justin Timberlake — 2002, Cry Me a River.",
     "hint": "Justin Timberlake",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7Lf7oSEVdzZqTA0kEDSlS5"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7Lf7oSEVdzZqTA0kEDSlS5"
     },
     "genres": [
       "poprock"
@@ -1845,16 +1845,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-in-da-club-2003",
+    "id": üong-in-da-club-2003",
     "title": "In Da Club",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "50 Cent — 2003, In Da Club.",
+    answer": "50 Cent — 2003, In Da Club.",
     "hint": "50 Cent",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7iL6o9tox1zgHpKUfh9vuC"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7iL6o9tox1zgHpKUfh9vuC"
     },
     "genres": [
       "hiphop",
@@ -1865,16 +1865,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lemon-tree-1995",
+    "id": üong-lemon-tree-1995",
     "title": "Lemon Tree",
     "category": "music",
     "year": 1995,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fools Garden — 1995, Lemon Tree.",
+    answer": "Fools Garden — 1995, Lemon Tree.",
     "hint": "Fools Garden",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2epbL7s3RFV81K5UhTgZje"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2epbL7s3RFV81K5UhTgZje"
     },
     "genres": [
       "poprock"
@@ -1884,16 +1884,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-killing-me-softly-with-his-song-1996",
+    "id": üong-killing-me-softly-with-his-song-1996",
     "title": "Killing Me Softly With His Song",
     "category": "music",
     "year": 1996,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fugees, Ms. Lauryn Hill — 1996, Killing Me Softly With His Song.",
+    answer": "Fugees, Ms. Lauryn Hill — 1996, Killing Me Softly With His Song.",
     "hint": "Fugees, Ms. Lauryn Hill",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0Q0IVlqMV64kNLlwjPj0Hl"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0Q0IVlqMV64kNLlwjPj0Hl"
     },
     "genres": [
       "hiphop",
@@ -1904,16 +1904,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-nias-in-paris-2011",
+    "id": üong-nias-in-paris-2011",
     "title": "Ni**as In Paris",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "JAY-Z, Kanye West — 2011, Ni**as In Paris.",
+    answer": "JAY-Z, Kanye West — 2011, Ni**as In Paris.",
     "hint": "JAY-Z, Kanye West",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1auxYwYrFRqZP7t3s7w4um"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1auxYwYrFRqZP7t3s7w4um"
     },
     "genres": [
       "hiphop",
@@ -1924,16 +1924,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-99-problems-2003",
+    "id": üong-99-problems-2003",
     "title": "99 Problems",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "JAY-Z — 2003, 99 Problems.",
+    answer": "JAY-Z — 2003, 99 Problems.",
     "hint": "JAY-Z",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7sLpSWxQazJzDVG6YGzlVs"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7sLpSWxQazJzDVG6YGzlVs"
     },
     "genres": [
       "hiphop",
@@ -1944,16 +1944,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dirt-off-your-shoulder-2003",
+    "id": üong-dirt-off-your-shoulder-2003",
     "title": "Dirt Off Your Shoulder",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "JAY-Z — 2003, Dirt Off Your Shoulder.",
+    answer": "JAY-Z — 2003, Dirt Off Your Shoulder.",
     "hint": "JAY-Z",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3IrkbGQCoEPAkzJ0Tkv8nm"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3IrkbGQCoEPAkzJ0Tkv8nm"
     },
     "genres": [
       "hiphop",
@@ -1964,16 +1964,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-yellow-2000",
+    "id": üong-yellow-2000",
     "title": "Yellow",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2000, Yellow.",
+    answer": "Coldplay — 2000, Yellow.",
     "hint": "Coldplay",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3AJwUDP919kvQ9QcozQPxg"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3AJwUDP919kvQ9QcozQPxg"
     },
     "genres": [
       "poprock"
@@ -1983,16 +1983,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-still-dre-1999",
+    "id": üong-still-dre-1999",
     "title": "Still D.R.E.",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dr. Dre, Snoop Dogg — 1999, Still D.R.E..",
+    answer": "Dr. Dre, Snoop Dogg — 1999, Still D.R.E..",
     "hint": "Dr. Dre, Snoop Dogg",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/503OTo2dSqe7qk76rgsbep"
+    üources": {
+      üpotify": "https://open.spotify.com/track/503OTo2dSqe7qk76rgsbep"
     },
     "genres": [
       "hiphop",
@@ -2003,16 +2003,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-drop-it-like-its-hot-2004",
+    "id": üong-drop-it-like-its-hot-2004",
     "title": "Drop It Like It's Hot",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Snoop Dogg, Pharrell Williams — 2004, Drop It Like It's Hot.",
+    answer": "Snoop Dogg, Pharrell Williams — 2004, Drop It Like It's Hot.",
     "hint": "Snoop Dogg, Pharrell Williams",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2NBQmPrOEEjA8VbeWOQGxO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2NBQmPrOEEjA8VbeWOQGxO"
     },
     "genres": [
       "hiphop",
@@ -2023,16 +2023,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-california-love-original-version-1998",
+    "id": üong-california-love-original-version-1998",
     "title": "California Love - Original Version",
     "category": "music",
     "year": 1998,
     "cue": "Song anhören und einordnen.",
-    "answer": "2Pac, Roger, Dr. Dre — 1998, California Love - Original Version.",
+    answer": "2Pac, Roger, Dr. Dre — 1998, California Love - Original Version.",
     "hint": "2Pac, Roger, Dr. Dre",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3ia3dJETSOllPsv3LJkE35"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3ia3dJETSOllPsv3LJkE35"
     },
     "genres": [
       "hiphop",
@@ -2043,16 +2043,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-changes-1998",
+    "id": üong-changes-1998",
     "title": "Changes",
     "category": "music",
     "year": 1998,
     "cue": "Song anhören und einordnen.",
-    "answer": "2Pac, Talent — 1998, Changes.",
+    answer": "2Pac, Talent — 1998, Changes.",
     "hint": "2Pac, Talent",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1ofhfV90EnYhEr7Un2fWiv"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1ofhfV90EnYhEr7Un2fWiv"
     },
     "genres": [
       "hiphop",
@@ -2063,16 +2063,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-baby-one-more-time-2014",
+    "id": üong-baby-one-more-time-2014",
     "title": "...Baby One More Time",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Britney Spears — 2014, ...Baby One More Time.",
+    answer": "Britney Spears — 2014, ...Baby One More Time.",
     "hint": "Britney Spears",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0kDYa8nqIIpsAZ8FctJyGQ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0kDYa8nqIIpsAZ8FctJyGQ"
     },
     "genres": [
       "poprock"
@@ -2082,16 +2082,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-everybody-backstreets-back-radio-edit-2014",
+    "id": üong-everybody-backstreets-back-radio-edit-2014",
     "title": "Everybody (Backstreet's Back) - Radio Edit",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Backstreet Boys — 2014, Everybody (Backstreet's Back) - Radio Edit.",
+    answer": "Backstreet Boys — 2014, Everybody (Backstreet's Back) - Radio Edit.",
     "hint": "Backstreet Boys",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4oc0XA7UehlFOuFz4HHjvn"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4oc0XA7UehlFOuFz4HHjvn"
     },
     "genres": [
       "poprock"
@@ -2101,16 +2101,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-its-not-right-but-its-okay-2014",
+    "id": üong-its-not-right-but-its-okay-2014",
     "title": "It's Not Right but It's Okay",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Whitney Houston — 2014, It's Not Right but It's Okay.",
+    answer": "Whitney Houston — 2014, It's Not Right but It's Okay.",
     "hint": "Whitney Houston",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0ORGCNRQHRhq5YE8un6rQh"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0ORGCNRQHRhq5YE8un6rQh"
     },
     "genres": [
       "poprock"
@@ -2120,16 +2120,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-genie-in-a-bottle-1999",
+    "id": üong-genie-in-a-bottle-1999",
     "title": "Genie In a Bottle",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Christina Aguilera — 1999, Genie In a Bottle.",
+    answer": "Christina Aguilera — 1999, Genie In a Bottle.",
     "hint": "Christina Aguilera",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/11mwFrKvLXCbcVGNxffGyP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/11mwFrKvLXCbcVGNxffGyP"
     },
     "genres": [
       "poprock"
@@ -2139,16 +2139,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-crazy-in-love-feat-jay-z-2003",
+    "id": üong-crazy-in-love-feat-jay-z-2003",
     "title": "Crazy In Love (feat. JAY-Z)",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Beyoncé, JAY-Z — 2003, Crazy In Love (feat. JAY-Z).",
+    answer": "Beyoncé, JAY-Z — 2003, Crazy In Love (feat. JAY-Z).",
     "hint": "Beyoncé, JAY-Z",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0TwBtDAWpkpM3srywFVOV5"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0TwBtDAWpkpM3srywFVOV5"
     },
     "genres": [
       "poprock",
@@ -2159,16 +2159,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-just-dance-2008",
+    "id": üong-just-dance-2008",
     "title": "Just Dance",
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga, Colby O'Donis — 2008, Just Dance.",
+    answer": "Lady Gaga, Colby O'Donis — 2008, Just Dance.",
     "hint": "Lady Gaga, Colby O'Donis",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1dzQoRqT5ucxXVaAhTcT0J"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1dzQoRqT5ucxXVaAhTcT0J"
     },
     "genres": [
       "poprock"
@@ -2178,16 +2178,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-place-your-hands-2014",
+    "id": üong-place-your-hands-2014",
     "title": "Place Your Hands",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Reef — 2014, Place Your Hands.",
+    answer": "Reef — 2014, Place Your Hands.",
     "hint": "Reef",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4Lqom8aqPAZVPHEqnfdAZT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4Lqom8aqPAZVPHEqnfdAZT"
     },
     "genres": [
       "poprock"
@@ -2197,16 +2197,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hush-2014",
+    "id": üong-hush-2014",
     "title": "Hush",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kula Shaker — 2014, Hush.",
+    answer": "Kula Shaker — 2014, Hush.",
     "hint": "Kula Shaker",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4F1EgqGQmwlXReh9ykEH1A"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4F1EgqGQmwlXReh9ykEH1A"
     },
     "genres": [
       "poprock"
@@ -2216,16 +2216,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hey-stoopid-2014",
+    "id": üong-hey-stoopid-2014",
     "title": "Hey Stoopid",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Alice Cooper — 2014, Hey Stoopid.",
-    "hint": "Alice Cooper",
+    answer": Älice Cooper — 2014, Hey Stoopid.",
+    "hint": Älice Cooper",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1x9SgLgVxZNoZpNJOsvDxe"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1x9SgLgVxZNoZpNJOsvDxe"
     },
     "genres": [
       "metal",
@@ -2236,16 +2236,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cherry-pie-2014",
+    "id": üong-cherry-pie-2014",
     "title": "Cherry Pie",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Warrant — 2014, Cherry Pie.",
+    answer": "Warrant — 2014, Cherry Pie.",
     "hint": "Warrant",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7ISA7aYBTfGYnTMD74SmW0"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7ISA7aYBTfGYnTMD74SmW0"
     },
     "genres": [
       "metal",
@@ -2256,16 +2256,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-breathe-radio-edit-2014",
+    "id": üong-breathe-radio-edit-2014",
     "title": "Breathe - Radio Edit",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Midge Ure — 2014, Breathe - Radio Edit.",
+    answer": "Midge Ure — 2014, Breathe - Radio Edit.",
     "hint": "Midge Ure",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2qYy5eF5UOPnFTD0hZAU14"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2qYy5eF5UOPnFTD0hZAU14"
     },
     "genres": [
       "poprock"
@@ -2275,16 +2275,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lovethy-will-be-done-2014",
+    "id": üong-lovethy-will-be-done-2014",
     "title": "Love...Thy Will Be Done",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Martika — 2014, Love...Thy Will Be Done.",
+    answer": "Martika — 2014, Love...Thy Will Be Done.",
     "hint": "Martika",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4bgnh8Xp8oX2XFzN76hVKo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4bgnh8Xp8oX2XFzN76hVKo"
     },
     "genres": [
       "poprock"
@@ -2294,16 +2294,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-im-doing-fine-now-2014",
+    "id": üong-im-doing-fine-now-2014",
     "title": "I'm Doing Fine Now",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Pasadenas — 2014, I'm Doing Fine Now.",
+    answer": "The Pasadenas — 2014, I'm Doing Fine Now.",
     "hint": "The Pasadenas",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3KmuBbt55iQrAAWxlJCbOL"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3KmuBbt55iQrAAWxlJCbOL"
     },
     "genres": [
       "poprock"
@@ -2313,16 +2313,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-nobody-knows-radio-edit-2014",
+    "id": üong-nobody-knows-radio-edit-2014",
     "title": "Nobody Knows - Radio Edit",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Tony Rich Project — 2014, Nobody Knows - Radio Edit.",
+    answer": "The Tony Rich Project — 2014, Nobody Knows - Radio Edit.",
     "hint": "The Tony Rich Project",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3kFbz0krBIE739vtf0Wagl"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3kFbz0krBIE739vtf0Wagl"
     },
     "genres": [
       "poprock"
@@ -2332,16 +2332,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-insomnia-radio-edit-2014",
+    "id": üong-insomnia-radio-edit-2014",
     "title": "Insomnia - Radio Edit",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Faithless — 2014, Insomnia - Radio Edit.",
+    answer": "Faithless — 2014, Insomnia - Radio Edit.",
     "hint": "Faithless",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7gWc0QEt2hoIkMv3XxPY1T"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7gWc0QEt2hoIkMv3XxPY1T"
     },
     "genres": [
       "poprock"
@@ -2351,16 +2351,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-im-outta-love-radio-edit-2014",
+    "id": üong-im-outta-love-radio-edit-2014",
     "title": "I'm Outta Love - Radio Edit",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Anastacia — 2014, I'm Outta Love - Radio Edit.",
-    "hint": "Anastacia",
+    answer": Änastacia — 2014, I'm Outta Love - Radio Edit.",
+    "hint": Änastacia",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/51eiFhLhkGqbe9gOmkPtiX"
+    üources": {
+      üpotify": "https://open.spotify.com/track/51eiFhLhkGqbe9gOmkPtiX"
     },
     "genres": [
       "poprock"
@@ -2370,16 +2370,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-believe-i-can-fly-radio-edit-2014",
+    "id": üong-i-believe-i-can-fly-radio-edit-2014",
     "title": "I Believe I Can Fly - Radio Edit",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "R. Kelly — 2014, I Believe I Can Fly - Radio Edit.",
+    answer": "R. Kelly — 2014, I Believe I Can Fly - Radio Edit.",
     "hint": "R. Kelly",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2HWY76uWkiZwoCe1QQ1UB4"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2HWY76uWkiZwoCe1QQ1UB4"
     },
     "genres": [
       "poprock"
@@ -2389,16 +2389,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-its-my-life-radio-edit-2014",
+    "id": üong-its-my-life-radio-edit-2014",
     "title": "It's My Life - Radio Edit",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dr. Alban — 2014, It's My Life - Radio Edit.",
+    answer": "Dr. Alban — 2014, It's My Life - Radio Edit.",
     "hint": "Dr. Alban",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5jcKGKCpGvSjuChM8cywwI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5jcKGKCpGvSjuChM8cywwI"
     },
     "genres": [
       "poprock"
@@ -2408,16 +2408,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-everybody-get-up-radio-edit-2014",
+    "id": üong-everybody-get-up-radio-edit-2014",
     "title": "Everybody Get Up - Radio Edit",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Five — 2014, Everybody Get Up - Radio Edit.",
+    answer": "Five — 2014, Everybody Get Up - Radio Edit.",
     "hint": "Five",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5HwRSfUsWzuyvlzkg6QO70"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5HwRSfUsWzuyvlzkg6QO70"
     },
     "genres": [
       "poprock"
@@ -2427,16 +2427,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-butterfly-2014",
+    "id": üong-butterfly-2014",
     "title": "Butterfly",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Crazy Town — 2014, Butterfly.",
+    answer": "Crazy Town — 2014, Butterfly.",
     "hint": "Crazy Town",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3FJ9hfm9SCDHMFIItwAfSY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3FJ9hfm9SCDHMFIItwAfSY"
     },
     "genres": [
       "metal",
@@ -2448,16 +2448,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-youre-not-alone-radio-edit-2014",
+    "id": üong-youre-not-alone-radio-edit-2014",
     "title": "You're Not Alone - Radio Edit",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Olive, Black Olive — 2014, You're Not Alone - Radio Edit.",
-    "hint": "Olive, Black Olive",
+    answer": Ölive, Black Olive — 2014, You're Not Alone - Radio Edit.",
+    "hint": Ölive, Black Olive",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5HPchyFdQZT1cDbdOTdFji"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5HPchyFdQZT1cDbdOTdFji"
     },
     "genres": [
       "poprock"
@@ -2467,16 +2467,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-want-you-back-radio-edit-2014",
+    "id": üong-i-want-you-back-radio-edit-2014",
     "title": "I Want You Back - Radio Edit",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "*NSYNC — 2014, I Want You Back - Radio Edit.",
+    answer": "*NSYNC — 2014, I Want You Back - Radio Edit.",
     "hint": "*NSYNC",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7xS5Ifz4vyc5oGEOHZu05k"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7xS5Ifz4vyc5oGEOHZu05k"
     },
     "genres": [
       "poprock"
@@ -2486,16 +2486,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-mmm-mmm-mmm-mmm-2014",
+    "id": üong-mmm-mmm-mmm-mmm-2014",
     "title": "Mmm Mmm Mmm Mmm",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Crash Test Dummies — 2014, Mmm Mmm Mmm Mmm.",
+    answer": "Crash Test Dummies — 2014, Mmm Mmm Mmm Mmm.",
     "hint": "Crash Test Dummies",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/76rjB3tDZ8M4GpJvFKb84A"
+    üources": {
+      üpotify": "https://open.spotify.com/track/76rjB3tDZ8M4GpJvFKb84A"
     },
     "genres": [
       "poprock"
@@ -2505,16 +2505,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-no-woman-no-cry-2014",
+    "id": üong-no-woman-no-cry-2014",
     "title": "No Woman, No Cry",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fugees — 2014, No Woman, No Cry.",
+    answer": "Fugees — 2014, No Woman, No Cry.",
     "hint": "Fugees",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7ywBmZOgWhPMj1wljWn6vL"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7ywBmZOgWhPMj1wljWn6vL"
     },
     "genres": [
       "hiphop",
@@ -2525,16 +2525,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-torn-2014",
+    "id": üong-torn-2014",
     "title": "Torn",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Natalie Imbruglia — 2014, Torn.",
+    answer": "Natalie Imbruglia — 2014, Torn.",
     "hint": "Natalie Imbruglia",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3xP9zsXKIpPIYBo2MZKMMV"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3xP9zsXKIpPIYBo2MZKMMV"
     },
     "genres": [
       "poprock"
@@ -2544,16 +2544,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-mambo-no-5-a-little-bit-of-2014",
+    "id": üong-mambo-no-5-a-little-bit-of-2014",
     "title": "Mambo No. 5 (A Little Bit of...)",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lou Bega — 2014, Mambo No. 5 (A Little Bit of...).",
+    answer": "Lou Bega — 2014, Mambo No. 5 (A Little Bit of...).",
     "hint": "Lou Bega",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6sbok5dfFLkQunvKeQjrKF"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6sbok5dfFLkQunvKeQjrKF"
     },
     "genres": [
       "poprock"
@@ -2563,16 +2563,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-at-the-river-2014",
-    "title": "At the River",
+    "id": üong-at-the-river-2014",
+    "title": Ät the River",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Groove Armada — 2014, At the River.",
+    answer": "Groove Armada — 2014, At the River.",
     "hint": "Groove Armada",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/07QOW5kcbhVY1l8wIhNvbT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/07QOW5kcbhVY1l8wIhNvbT"
     },
     "genres": [
       "poprock"
@@ -2582,16 +2582,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-runaway-train-2014",
+    "id": üong-runaway-train-2014",
     "title": "Runaway Train",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Soul Asylum — 2014, Runaway Train.",
+    answer": "Soul Asylum — 2014, Runaway Train.",
     "hint": "Soul Asylum",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4RoFlWANgOs5P0f4oDOXUG"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4RoFlWANgOs5P0f4oDOXUG"
     },
     "genres": [
       "poprock"
@@ -2601,16 +2601,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-waterfalls-single-edit-2014",
+    "id": üong-waterfalls-single-edit-2014",
     "title": "Waterfalls - Single Edit",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "TLC — 2014, Waterfalls - Single Edit.",
+    answer": "TLC — 2014, Waterfalls - Single Edit.",
     "hint": "TLC",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5pTQYJu8tGm7bQMvww72dM"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5pTQYJu8tGm7bQMvww72dM"
     },
     "genres": [
       "poprock"
@@ -2620,16 +2620,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-un-break-my-heart-2014",
-    "title": "Un-Break My Heart",
+    "id": üong-un-break-my-heart-2014",
+    "title": Ün-Break My Heart",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Toni Braxton — 2014, Un-Break My Heart.",
+    answer": "Toni Braxton — 2014, Un-Break My Heart.",
     "hint": "Toni Braxton",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7nAjlUFOAyWjZzlWVHWtrZ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7nAjlUFOAyWjZzlWVHWtrZ"
     },
     "genres": [
       "poprock"
@@ -2639,16 +2639,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-you-make-me-wanna-2014",
+    "id": üong-you-make-me-wanna-2014",
     "title": "You Make Me Wanna...",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "USHER — 2014, You Make Me Wanna....",
-    "hint": "USHER",
+    answer": ÜSHER — 2014, You Make Me Wanna....",
+    "hint": ÜSHER",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4QY1tatAzickt9KhxMaSm0"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4QY1tatAzickt9KhxMaSm0"
     },
     "genres": [
       "poprock"
@@ -2658,16 +2658,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-genie-in-a-bottle-2014",
+    "id": üong-genie-in-a-bottle-2014",
     "title": "Genie In a Bottle",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Christina Aguilera — 2014, Genie In a Bottle.",
+    answer": "Christina Aguilera — 2014, Genie In a Bottle.",
     "hint": "Christina Aguilera",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2k2VvyJSikIagNmwLUOZKh"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2k2VvyJSikIagNmwLUOZKh"
     },
     "genres": [
       "poprock"
@@ -2677,16 +2677,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-my-heart-will-go-on-love-theme-from-titanic-2014",
+    "id": üong-my-heart-will-go-on-love-theme-from-titanic-2014",
     "title": "My Heart Will Go On - Love Theme from \"Titanic\"",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Céline Dion — 2014, My Heart Will Go On - Love Theme from \"Titanic\".",
+    answer": "Céline Dion — 2014, My Heart Will Go On - Love Theme from \"Titanic\".",
     "hint": "Céline Dion",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4qCTTBZWiFTi4JFzlOXZTy"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4qCTTBZWiFTi4JFzlOXZTy"
     },
     "genres": [
       "poprock"
@@ -2696,16 +2696,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hallelujah-radio-edit-2014",
+    "id": üong-hallelujah-radio-edit-2014",
     "title": "Hallelujah - Radio Edit",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jeff Buckley — 2014, Hallelujah - Radio Edit.",
+    answer": "Jeff Buckley — 2014, Hallelujah - Radio Edit.",
     "hint": "Jeff Buckley",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6RdjbxpRtyxnmp61i0tyEd"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6RdjbxpRtyxnmp61i0tyEd"
     },
     "genres": [
       "poprock"
@@ -2715,16 +2715,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-tonight-2014",
+    "id": üong-tonight-2014",
     "title": "Tonight",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "New Kids On The Block — 2014, Tonight.",
+    answer": "New Kids On The Block — 2014, Tonight.",
     "hint": "New Kids On The Block",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/42NADmH0f8icPSrVXoqp6k"
+    üources": {
+      üpotify": "https://open.spotify.com/track/42NADmH0f8icPSrVXoqp6k"
     },
     "genres": [
       "poprock"
@@ -2734,16 +2734,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-steal-my-sunshine-2014",
+    "id": üong-steal-my-sunshine-2014",
     "title": "Steal My Sunshine",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "LEN — 2014, Steal My Sunshine.",
+    answer": "LEN — 2014, Steal My Sunshine.",
     "hint": "LEN",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5VF63TxgXi22VHXTkHpMVU"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5VF63TxgXi22VHXTkHpMVU"
     },
     "genres": [
       "poprock"
@@ -2753,16 +2753,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-scatman-ski-ba-bop-ba-dop-bop-basic-radio-2014",
+    "id": üong-scatman-ski-ba-bop-ba-dop-bop-basic-radio-2014",
     "title": "Scatman (Ski-Ba-Bop-Ba-Dop-Bop) - Basic Radio",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Scatman John — 2014, Scatman (Ski-Ba-Bop-Ba-Dop-Bop) - Basic Radio.",
+    answer": "Scatman John — 2014, Scatman (Ski-Ba-Bop-Ba-Dop-Bop) - Basic Radio.",
     "hint": "Scatman John",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/52YZLJvBlDKTid2OKwblvf"
+    üources": {
+      üpotify": "https://open.spotify.com/track/52YZLJvBlDKTid2OKwblvf"
     },
     "genres": [
       "poprock"
@@ -2772,16 +2772,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cotton-eye-joe-2014",
+    "id": üong-cotton-eye-joe-2014",
     "title": "Cotton Eye Joe",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rednex — 2014, Cotton Eye Joe.",
+    answer": "Rednex — 2014, Cotton Eye Joe.",
     "hint": "Rednex",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2Q0Y74LoaxFtiyhmdDTZx4"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2Q0Y74LoaxFtiyhmdDTZx4"
     },
     "genres": [
       "poprock"
@@ -2791,16 +2791,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-its-like-that-2014",
+    "id": üong-its-like-that-2014",
     "title": "It's Like That",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Run–D.M.C., Jason Nevins — 2014, It's Like That.",
+    answer": "Run–D.M.C., Jason Nevins — 2014, It's Like That.",
     "hint": "Run–D.M.C., Jason Nevins",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5bYN7ttTmfpZYDgEqRF9sT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5bYN7ttTmfpZYDgEqRF9sT"
     },
     "genres": [
       "hiphop",
@@ -2811,16 +2811,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-sign-1993",
+    "id": üong-the-sign-1993",
     "title": "The Sign",
     "category": "music",
     "year": 1993,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ace of Base — 1993, The Sign.",
-    "hint": "Ace of Base",
+    answer": Äce of Base — 1993, The Sign.",
+    "hint": Äce of Base",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0hrBpAOgrt8RXigk83LLNE"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0hrBpAOgrt8RXigk83LLNE"
     },
     "genres": [
       "poprock"
@@ -2830,16 +2830,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-save-tonight-1998",
+    "id": üong-save-tonight-1998",
     "title": "Save Tonight",
     "category": "music",
     "year": 1998,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eagle-Eye Cherry — 1998, Save Tonight.",
+    answer": "Eagle-Eye Cherry — 1998, Save Tonight.",
     "hint": "Eagle-Eye Cherry",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0smyCrJiibi2uwCiq5R1vj"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0smyCrJiibi2uwCiq5R1vj"
     },
     "genres": [
       "poprock"
@@ -2849,16 +2849,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-kiss-from-a-rose-1994",
+    "id": üong-kiss-from-a-rose-1994",
     "title": "Kiss from a Rose",
     "category": "music",
     "year": 1994,
     "cue": "Song anhören und einordnen.",
-    "answer": "Seal — 1994, Kiss from a Rose.",
+    answer": "Seal — 1994, Kiss from a Rose.",
     "hint": "Seal",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3YKptz29AsOlm7WAVnztBh"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3YKptz29AsOlm7WAVnztBh"
     },
     "genres": [
       "poprock"
@@ -2868,16 +2868,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bitch-1997",
+    "id": üong-bitch-1997",
     "title": "Bitch",
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "Meredith Brooks — 1997, Bitch.",
+    answer": "Meredith Brooks — 1997, Bitch.",
     "hint": "Meredith Brooks",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3i6qNxyVgIdUZTTi5m25EM"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3i6qNxyVgIdUZTTi5m25EM"
     },
     "genres": [
       "poprock"
@@ -2887,16 +2887,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-im-too-sexy-2007",
+    "id": üong-im-too-sexy-2007",
     "title": "I'm Too Sexy",
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Right Said Fred — 2007, I'm Too Sexy.",
+    answer": "Right Said Fred — 2007, I'm Too Sexy.",
     "hint": "Right Said Fred",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1MQrMQwfqjgOjXEUaN9AMd"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1MQrMQwfqjgOjXEUaN9AMd"
     },
     "genres": [
       "poprock"
@@ -2906,16 +2906,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-mmmbop-1997",
+    "id": üong-mmmbop-1997",
     "title": "MMMBop",
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "Hanson — 1997, MMMBop.",
+    answer": "Hanson — 1997, MMMBop.",
     "hint": "Hanson",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0lnxrQAd9ZxbhBBe7d8FO8"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0lnxrQAd9ZxbhBBe7d8FO8"
     },
     "genres": [
       "poprock"
@@ -2925,16 +2925,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dont-speak-1995",
+    "id": üong-dont-speak-1995",
     "title": "Don't Speak",
     "category": "music",
     "year": 1995,
     "cue": "Song anhören und einordnen.",
-    "answer": "No Doubt — 1995, Don't Speak.",
+    answer": "No Doubt — 1995, Don't Speak.",
     "hint": "No Doubt",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6urCAbunOQI4bLhmGpX7iS"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6urCAbunOQI4bLhmGpX7iS"
     },
     "genres": [
       "poprock"
@@ -2944,16 +2944,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-gettin-jiggy-wit-it-1997",
+    "id": üong-gettin-jiggy-wit-it-1997",
     "title": "Gettin' Jiggy Wit It",
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "Will Smith — 1997, Gettin' Jiggy Wit It.",
+    answer": "Will Smith — 1997, Gettin' Jiggy Wit It.",
     "hint": "Will Smith",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0weAUscowxeqDtpCgtbpgp"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0weAUscowxeqDtpCgtbpgp"
     },
     "genres": [
       "poprock"
@@ -2963,16 +2963,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-waterfalls-1994",
+    "id": üong-waterfalls-1994",
     "title": "Waterfalls",
     "category": "music",
     "year": 1994,
     "cue": "Song anhören und einordnen.",
-    "answer": "TLC — 1994, Waterfalls.",
+    answer": "TLC — 1994, Waterfalls.",
     "hint": "TLC",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6qspW4YKycviDFjHBOaqUY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6qspW4YKycviDFjHBOaqUY"
     },
     "genres": [
       "poprock"
@@ -2982,16 +2982,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-its-my-life-2003",
+    "id": üong-its-my-life-2003",
     "title": "It's My Life",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "No Doubt — 2003, It's My Life.",
+    answer": "No Doubt — 2003, It's My Life.",
     "hint": "No Doubt",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1OutzYv6YiN93lrT3pJsWR"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1OutzYv6YiN93lrT3pJsWR"
     },
     "genres": [
       "poprock"
@@ -3001,16 +3001,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-ice-ice-baby-1990",
+    "id": üong-ice-ice-baby-1990",
     "title": "Ice Ice Baby",
     "category": "music",
     "year": 1990,
     "cue": "Song anhören und einordnen.",
-    "answer": "Vanilla Ice — 1990, Ice Ice Baby.",
+    answer": "Vanilla Ice — 1990, Ice Ice Baby.",
     "hint": "Vanilla Ice",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/11d9oUiwHuYt216EFA2tiz"
+    üources": {
+      üpotify": "https://open.spotify.com/track/11d9oUiwHuYt216EFA2tiz"
     },
     "genres": [
       "poprock"
@@ -3020,16 +3020,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-look-1988",
+    "id": üong-the-look-1988",
     "title": "The Look",
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Roxette — 1988, The Look.",
+    answer": "Roxette — 1988, The Look.",
     "hint": "Roxette",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1aYkkrAbPmMuorVz5HWIqE"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1aYkkrAbPmMuorVz5HWIqE"
     },
     "genres": [
       "poprock"
@@ -3040,16 +3040,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-wanna-dance-with-somebody-who-loves-me-1987",
+    "id": üong-i-wanna-dance-with-somebody-who-loves-me-1987",
     "title": "I Wanna Dance with Somebody (Who Loves Me)",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Whitney Houston — 1987, I Wanna Dance with Somebody (Who Loves Me).",
+    answer": "Whitney Houston — 1987, I Wanna Dance with Somebody (Who Loves Me).",
     "hint": "Whitney Houston",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2tUBqZG2AbRi7Q0BIrVrEj"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2tUBqZG2AbRi7Q0BIrVrEj"
     },
     "genres": [
       "poprock"
@@ -3060,16 +3060,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-one-of-us-1995",
-    "title": "One Of Us",
+    "id": üong-one-of-us-1995",
+    "title": Öne Of Us",
     "category": "music",
     "year": 1995,
     "cue": "Song anhören und einordnen.",
-    "answer": "Joan Osborne — 1995, One Of Us.",
+    answer": "Joan Osborne — 1995, One Of Us.",
     "hint": "Joan Osborne",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1xNmF1Uep5OGutizZSbKvd"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1xNmF1Uep5OGutizZSbKvd"
     },
     "genres": [
       "poprock"
@@ -3079,16 +3079,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-kiss-1986",
+    "id": üong-kiss-1986",
     "title": "Kiss",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Prince — 1986, Kiss.",
+    answer": "Prince — 1986, Kiss.",
     "hint": "Prince",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/62LJFaYihsdVrrkgUOJC05"
+    üources": {
+      üpotify": "https://open.spotify.com/track/62LJFaYihsdVrrkgUOJC05"
     },
     "genres": [
       "poprock"
@@ -3099,16 +3099,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wannabe-1996",
+    "id": üong-wannabe-1996",
     "title": "Wannabe",
     "category": "music",
     "year": 1996,
     "cue": "Song anhören und einordnen.",
-    "answer": "Spice Girls — 1996, Wannabe.",
+    answer": "Spice Girls — 1996, Wannabe.",
     "hint": "Spice Girls",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1Je1IMUlBXcx1Fz0WE7oPT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1Je1IMUlBXcx1Fz0WE7oPT"
     },
     "genres": [
       "poprock"
@@ -3118,16 +3118,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wake-me-up-before-you-go-go-2010",
+    "id": üong-wake-me-up-before-you-go-go-2010",
     "title": "Wake Me Up Before You Go-Go",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wham! — 2010, Wake Me Up Before You Go-Go.",
+    answer": "Wham! — 2010, Wake Me Up Before You Go-Go.",
     "hint": "Wham!",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ZEAXknmx2mrO3KgcDNpFI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6ZEAXknmx2mrO3KgcDNpFI"
     },
     "genres": [
       "poprock"
@@ -3137,16 +3137,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-girls-just-wanna-have-fun-2010",
+    "id": üong-girls-just-wanna-have-fun-2010",
     "title": "Girls Just Wanna Have Fun",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cyndi Lauper — 2010, Girls Just Wanna Have Fun.",
+    answer": "Cyndi Lauper — 2010, Girls Just Wanna Have Fun.",
     "hint": "Cyndi Lauper",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0xs0ewnEb6c2DlY7LjOD7t"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0xs0ewnEb6c2DlY7LjOD7t"
     },
     "genres": [
       "poprock"
@@ -3156,16 +3156,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-never-gonna-give-you-up-7-mix-2010",
-    "title": "Never Gonna Give You Up - 7\" Mix",
+    "id": üong-never-gonna-give-you-up-7-mix-2010",
+    "title": "Never Gonna Give You Up - 7\„ Mix",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rick Astley — 2010, Never Gonna Give You Up - 7\" Mix.",
+    answer": "Rick Astley — 2010, Never Gonna Give You Up - 7\„ Mix.",
     "hint": "Rick Astley",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4EZz8Byhbjk0tOKFJlCgPB"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4EZz8Byhbjk0tOKFJlCgPB"
     },
     "genres": [
       "poprock"
@@ -3175,16 +3175,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-final-countdown-2010",
+    "id": üong-the-final-countdown-2010",
     "title": "The Final Countdown",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Europe — 2010, The Final Countdown.",
+    answer": "Europe — 2010, The Final Countdown.",
     "hint": "Europe",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7c5lMuvtz2gddhDyG5MjB6"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7c5lMuvtz2gddhDyG5MjB6"
     },
     "genres": [
       "metal",
@@ -3195,16 +3195,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-eye-of-the-tiger-2010",
+    "id": üong-eye-of-the-tiger-2010",
     "title": "Eye of the Tiger",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Survivor — 2010, Eye of the Tiger.",
+    answer": "Survivor — 2010, Eye of the Tiger.",
     "hint": "Survivor",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0jSRZBsn3RqAhBDzAefHAD"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0jSRZBsn3RqAhBDzAefHAD"
     },
     "genres": [
       "poprock"
@@ -3214,16 +3214,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-ghostbusters-2010",
+    "id": üong-ghostbusters-2010",
     "title": "Ghostbusters",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ray Parker Jr. — 2010, Ghostbusters.",
+    answer": "Ray Parker Jr. — 2010, Ghostbusters.",
     "hint": "Ray Parker Jr.",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0sTHEo24E8LxasEkSnpUkx"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0sTHEo24E8LxasEkSnpUkx"
     },
     "genres": [
       "poprock"
@@ -3233,16 +3233,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-party-all-the-time-2010",
+    "id": üong-party-all-the-time-2010",
     "title": "Party All the Time",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eddie Murphy — 2010, Party All the Time.",
+    answer": "Eddie Murphy — 2010, Party All the Time.",
     "hint": "Eddie Murphy",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3JgOPg3wx1ABbQv0Ax4Rdw"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3JgOPg3wx1ABbQv0Ax4Rdw"
     },
     "genres": [
       "poprock"
@@ -3252,16 +3252,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-walk-like-an-egyptian-2010",
+    "id": üong-walk-like-an-egyptian-2010",
     "title": "Walk Like an Egyptian",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Bangles — 2010, Walk Like an Egyptian.",
+    answer": "The Bangles — 2010, Walk Like an Egyptian.",
     "hint": "The Bangles",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1gb5sUe1CuRBuT8twq8uhw"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1gb5sUe1CuRBuT8twq8uhw"
     },
     "genres": [
       "poprock"
@@ -3271,16 +3271,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dont-stop-believin-2010",
+    "id": üong-dont-stop-believin-2010",
     "title": "Don't Stop Believin'",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Journey — 2010, Don't Stop Believin'.",
+    answer": "Journey — 2010, Don't Stop Believin'.",
     "hint": "Journey",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3HRQtRUYnnuZY7fE900XtJ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3HRQtRUYnnuZY7fE900XtJ"
     },
     "genres": [
       "poprock"
@@ -3290,16 +3290,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-satellite-2010",
+    "id": üong-satellite-2010",
     "title": "Satellite",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Hooters — 2010, Satellite.",
+    answer": "The Hooters — 2010, Satellite.",
     "hint": "The Hooters",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0mgFy2EDy4WyGazhI7FVJM"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0mgFy2EDy4WyGazhI7FVJM"
     },
     "genres": [
       "poprock"
@@ -3309,16 +3309,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-total-eclipse-of-the-heart-2010",
+    "id": üong-total-eclipse-of-the-heart-2010",
     "title": "Total Eclipse of the Heart",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bonnie Tyler — 2010, Total Eclipse of the Heart.",
+    answer": "Bonnie Tyler — 2010, Total Eclipse of the Heart.",
     "hint": "Bonnie Tyler",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7q3MflmodGZlOgZ799EpAb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7q3MflmodGZlOgZ799EpAb"
     },
     "genres": [
       "poprock"
@@ -3328,16 +3328,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-africa-2010",
-    "title": "Africa",
+    "id": üong-africa-2010",
+    "title": Äfrica",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "TOTO — 2010, Africa.",
+    answer": "TOTO — 2010, Africa.",
     "hint": "TOTO",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/28o8m1o9RGtySbmQJtAvym"
+    üources": {
+      üpotify": "https://open.spotify.com/track/28o8m1o9RGtySbmQJtAvym"
     },
     "genres": [
       "poprock"
@@ -3347,16 +3347,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-can-you-feel-it-2010",
+    "id": üong-can-you-feel-it-2010",
     "title": "Can You Feel It",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Jacksons — 2010, Can You Feel It.",
+    answer": "The Jacksons — 2010, Can You Feel It.",
     "hint": "The Jacksons",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5HIDIRwU38XVBozdoQwCml"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5HIDIRwU38XVBozdoQwCml"
     },
     "genres": [
       "poprock"
@@ -3366,16 +3366,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-take-on-me-1985",
+    "id": üong-take-on-me-1985",
     "title": "Take on Me",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "a-ha — 1985, Take on Me.",
-    "hint": "a-ha",
+    answer": ä-ha — 1985, Take on Me.",
+    "hint": ä-ha",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2WfaOiMkCvy7F5fcp2zZ8L"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2WfaOiMkCvy7F5fcp2zZ8L"
     },
     "genres": [
       "poprock"
@@ -3385,16 +3385,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-mamma-mia-1975",
+    "id": üong-mamma-mia-1975",
     "title": "Mamma Mia",
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "ABBA — 1975, Mamma Mia.",
-    "hint": "ABBA",
+    answer": ÄBBA — 1975, Mamma Mia.",
+    "hint": ÄBBA",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2TxCwUlqaOH3TIyJqGgR91"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2TxCwUlqaOH3TIyJqGgR91"
     },
     "genres": [
       "poprock"
@@ -3405,16 +3405,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dancing-queen-1976",
+    "id": üong-dancing-queen-1976",
     "title": "Dancing Queen",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "ABBA — 1976, Dancing Queen.",
-    "hint": "ABBA",
+    answer": ÄBBA — 1976, Dancing Queen.",
+    "hint": ÄBBA",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0GjEhVFGZW8afUYGChu3Rr"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0GjEhVFGZW8afUYGChu3Rr"
     },
     "genres": [
       "poprock"
@@ -3424,16 +3424,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-youre-the-one-that-i-want-from-grease-1978",
+    "id": üong-youre-the-one-that-i-want-from-grease-1978",
     "title": "You're The One That I Want - From “Grease”",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Travolta, Olivia Newton-John — 1978, You're The One That I Want - From “Grease”.",
+    answer": "John Travolta, Olivia Newton-John — 1978, You're The One That I Want - From “Grease”.",
     "hint": "John Travolta, Olivia Newton-John",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0B9x2BRHqj3Qer7biM3pU3"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0B9x2BRHqj3Qer7biM3pU3"
     },
     "genres": [
       "poprock"
@@ -3444,16 +3444,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-video-killed-the-radio-star-1980",
+    "id": üong-video-killed-the-radio-star-1980",
     "title": "Video Killed The Radio Star",
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Buggles — 1980, Video Killed The Radio Star.",
+    answer": "The Buggles — 1980, Video Killed The Radio Star.",
     "hint": "The Buggles",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7o7E1nrHWncYY7PY94gCiX"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7o7E1nrHWncYY7PY94gCiX"
     },
     "genres": [
       "poprock"
@@ -3464,16 +3464,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-africa-1982",
-    "title": "Africa",
+    "id": üong-africa-1982",
+    "title": Äfrica",
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "TOTO — 1982, Africa.",
+    answer": "TOTO — 1982, Africa.",
     "hint": "TOTO",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2374M0fQpWi3dLnB54qaLX"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2374M0fQpWi3dLnB54qaLX"
     },
     "genres": [
       "poprock"
@@ -3483,16 +3483,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-uptown-girl-1983",
-    "title": "Uptown Girl",
+    "id": üong-uptown-girl-1983",
+    "title": Üptown Girl",
     "category": "music",
     "year": 1983,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Joel — 1983, Uptown Girl.",
+    answer": "Billy Joel — 1983, Uptown Girl.",
     "hint": "Billy Joel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5zA8vzDGqPl2AzZkEYQGKh"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5zA8vzDGqPl2AzZkEYQGKh"
     },
     "genres": [
       "poprock"
@@ -3502,16 +3502,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-eternal-flame-2011",
+    "id": üong-eternal-flame-2011",
     "title": "Eternal Flame",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Bangles, Susanna Hoffs — 2011, Eternal Flame.",
+    answer": "The Bangles, Susanna Hoffs — 2011, Eternal Flame.",
     "hint": "The Bangles, Susanna Hoffs",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1uMYW46hhn6xHD84gdLWe8"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1uMYW46hhn6xHD84gdLWe8"
     },
     "genres": [
       "poprock"
@@ -3521,16 +3521,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-we-built-this-city-2011",
+    "id": üong-we-built-this-city-2011",
     "title": "We Built This City",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Starship — 2011, We Built This City.",
+    answer": "Starship — 2011, We Built This City.",
     "hint": "Starship",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2ORpYzSw4ABvGYosZuews8"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2ORpYzSw4ABvGYosZuews8"
     },
     "genres": [
       "poprock"
@@ -3540,16 +3540,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-all-you-zombies-2011",
-    "title": "All You Zombies",
+    "id": üong-all-you-zombies-2011",
+    "title": Äll You Zombies",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Hooters — 2011, All You Zombies.",
+    answer": "The Hooters — 2011, All You Zombies.",
     "hint": "The Hooters",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0hayhLT09qy1QG85XmiPXf"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0hayhLT09qy1QG85XmiPXf"
     },
     "genres": [
       "poprock"
@@ -3559,16 +3559,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-holding-out-for-a-hero-2011",
+    "id": üong-holding-out-for-a-hero-2011",
     "title": "Holding Out for a Hero",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bonnie Tyler — 2011, Holding Out for a Hero.",
+    answer": "Bonnie Tyler — 2011, Holding Out for a Hero.",
     "hint": "Bonnie Tyler",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7AqBxvfK25nDQ0QyhsE7Jq"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7AqBxvfK25nDQ0QyhsE7Jq"
     },
     "genres": [
       "poprock"
@@ -3578,16 +3578,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-running-up-that-hill-a-deal-with-god-1985",
+    "id": üong-running-up-that-hill-a-deal-with-god-1985",
     "title": "Running Up That Hill (A Deal With God)",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kate Bush — 1985, Running Up That Hill (A Deal With God).",
+    answer": "Kate Bush — 1985, Running Up That Hill (A Deal With God).",
     "hint": "Kate Bush",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1PtQJZVZIdWIYdARpZRDFO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1PtQJZVZIdWIYdARpZRDFO"
     },
     "genres": [
       "poprock"
@@ -3597,16 +3597,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-shout-us-single-version-2015",
+    "id": üong-shout-us-single-version-2015",
     "title": "Shout - U.S. Single Version",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tears For Fears — 2015, Shout - U.S. Single Version.",
+    answer": "Tears For Fears — 2015, Shout - U.S. Single Version.",
     "hint": "Tears For Fears",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3IE3xbKiTG6t6eXE5VHmc0"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3IE3xbKiTG6t6eXE5VHmc0"
     },
     "genres": [
       "poprock"
@@ -3616,16 +3616,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-eyes-without-a-face-2015",
+    "id": üong-eyes-without-a-face-2015",
     "title": "Eyes Without A Face",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Idol — 2015, Eyes Without A Face.",
+    answer": "Billy Idol — 2015, Eyes Without A Face.",
     "hint": "Billy Idol",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5gkwFhlzdFvC533xx7Ri8M"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5gkwFhlzdFvC533xx7Ri8M"
     },
     "genres": [
       "poprock"
@@ -3635,16 +3635,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-winner-takes-it-all-2015",
+    "id": üong-the-winner-takes-it-all-2015",
     "title": "The Winner Takes It All",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "ABBA — 2015, The Winner Takes It All.",
-    "hint": "ABBA",
+    answer": ÄBBA — 2015, The Winner Takes It All.",
+    "hint": ÄBBA",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6yTJK6Mcr1qUIPtc7NX4aw"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6yTJK6Mcr1qUIPtc7NX4aw"
     },
     "genres": [
       "poprock"
@@ -3654,16 +3654,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-up-where-we-belong-from-an-officer-and-a-gentleman-2015",
-    "title": "Up Where We Belong - From \"An Officer And A Gentleman\"",
+    "id": üong-up-where-we-belong-from-an-officer-and-a-gentleman-2015",
+    "title": Üp Where We Belong - From \Än Officer And A Gentleman\"",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Joe Cocker, Jennifer Warnes — 2015, Up Where We Belong - From \"An Officer And A Gentleman\".",
+    answer": "Joe Cocker, Jennifer Warnes — 2015, Up Where We Belong - From \Än Officer And A Gentleman\".",
     "hint": "Joe Cocker, Jennifer Warnes",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/11z9wktBsj8G2V0lbIpzSk"
+    üources": {
+      üpotify": "https://open.spotify.com/track/11z9wktBsj8G2V0lbIpzSk"
     },
     "genres": [
       "poprock"
@@ -3673,16 +3673,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-red-red-wine-2015",
+    "id": üong-red-red-wine-2015",
     "title": "Red Red Wine",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "UB40 — 2015, Red Red Wine.",
-    "hint": "UB40",
+    answer": ÜB40 — 2015, Red Red Wine.",
+    "hint": ÜB40",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0urtox5iyGvcqharkbmC7Y"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0urtox5iyGvcqharkbmC7Y"
     },
     "genres": [
       "poprock"
@@ -3692,16 +3692,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-riddle-2015",
+    "id": üong-the-riddle-2015",
     "title": "The Riddle",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nik Kershaw — 2015, The Riddle.",
+    answer": "Nik Kershaw — 2015, The Riddle.",
     "hint": "Nik Kershaw",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ip3bBdMPbC6hMzBIjonAG"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6ip3bBdMPbC6hMzBIjonAG"
     },
     "genres": [
       "poprock"
@@ -3711,16 +3711,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-girls-just-want-to-have-fun-2007",
+    "id": üong-girls-just-want-to-have-fun-2007",
     "title": "Girls Just Want to Have Fun",
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cyndi Lauper — 2007, Girls Just Want to Have Fun.",
+    answer": "Cyndi Lauper — 2007, Girls Just Want to Have Fun.",
     "hint": "Cyndi Lauper",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7sMGwiS4vOMcz86ZY3vKYM"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7sMGwiS4vOMcz86ZY3vKYM"
     },
     "genres": [
       "poprock"
@@ -3730,16 +3730,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-living-after-midnight-2007",
+    "id": üong-living-after-midnight-2007",
     "title": "Living After Midnight",
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Judas Priest — 2007, Living After Midnight.",
+    answer": "Judas Priest — 2007, Living After Midnight.",
     "hint": "Judas Priest",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7LifJa1Ymo6gbe9hSyPefs"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7LifJa1Ymo6gbe9hSyPefs"
     },
     "genres": [
       "metal",
@@ -3750,16 +3750,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-footloose-2007",
+    "id": üong-footloose-2007",
     "title": "Footloose",
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kenny Loggins — 2007, Footloose.",
+    answer": "Kenny Loggins — 2007, Footloose.",
     "hint": "Kenny Loggins",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1Ppwc43WYFEBXw2n1ePhDY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1Ppwc43WYFEBXw2n1ePhDY"
     },
     "genres": [
       "poprock"
@@ -3769,16 +3769,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sweet-dreams-are-made-of-this-2007",
+    "id": üong-sweet-dreams-are-made-of-this-2007",
     "title": "Sweet Dreams (Are Made of This)",
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eurythmics, Annie Lennox, Dave Stewart — 2007, Sweet Dreams (Are Made of This).",
+    answer": "Eurythmics, Annie Lennox, Dave Stewart — 2007, Sweet Dreams (Are Made of This).",
     "hint": "Eurythmics, Annie Lennox, Dave Stewart",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2CVqF1sLhwut4NiZxzNUnC"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2CVqF1sLhwut4NiZxzNUnC"
     },
     "genres": [
       "poprock"
@@ -3788,16 +3788,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bohemian-rhapsody-live-at-wembley-stadium-july-1986-1992",
+    "id": üong-bohemian-rhapsody-live-at-wembley-stadium-july-1986-1992",
     "title": "Bohemian Rhapsody - Live At Wembley Stadium / July 1986",
     "category": "music",
     "year": 1992,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — 1992, Bohemian Rhapsody - Live At Wembley Stadium / July 1986.",
+    answer": "Queen — 1992, Bohemian Rhapsody - Live At Wembley Stadium / July 1986.",
     "hint": "Queen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2XbcujvemK0hGh0Ob4HAXQ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2XbcujvemK0hGh0Ob4HAXQ"
     },
     "genres": [
       "poprock"
@@ -3807,16 +3807,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-who-wants-to-live-forever-live-at-wembley-stadium-july-1986-1992",
+    "id": üong-who-wants-to-live-forever-live-at-wembley-stadium-july-1986-1992",
     "title": "Who Wants to Live Forever - Live At Wembley Stadium / July 1986",
     "category": "music",
     "year": 1992,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — 1992, Who Wants to Live Forever - Live At Wembley Stadium / July 1986.",
+    answer": "Queen — 1992, Who Wants to Live Forever - Live At Wembley Stadium / July 1986.",
     "hint": "Queen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0hLnmbp7esuygjxzHF87yz"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0hLnmbp7esuygjxzHF87yz"
     },
     "genres": [
       "poprock"
@@ -3826,16 +3826,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-we-will-rock-you-live-at-wembley-stadium-july-1986-1992",
+    "id": üong-we-will-rock-you-live-at-wembley-stadium-july-1986-1992",
     "title": "We Will Rock You - Live At Wembley Stadium / July 1986",
     "category": "music",
     "year": 1992,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — 1992, We Will Rock You - Live At Wembley Stadium / July 1986.",
+    answer": "Queen — 1992, We Will Rock You - Live At Wembley Stadium / July 1986.",
     "hint": "Queen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3QTTAj8piyRBfhoPEfJC6y"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3QTTAj8piyRBfhoPEfJC6y"
     },
     "genres": [
       "poprock"
@@ -3845,16 +3845,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-born-in-the-usa-1984",
+    "id": üong-born-in-the-usa-1984",
     "title": "Born in the U.S.A.",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruce Springsteen — 1984, Born in the U.S.A..",
+    answer": "Bruce Springsteen — 1984, Born in the U.S.A..",
     "hint": "Bruce Springsteen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0dOg1ySSI7NkpAe89Zo0b9"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0dOg1ySSI7NkpAe89Zo0b9"
     },
     "genres": [
       "poprock"
@@ -3864,16 +3864,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-heaven-is-a-place-on-earth-promo-7-edit-1987",
-    "title": "Heaven Is a Place on Earth - Promo 7\" Edit",
+    "id": üong-heaven-is-a-place-on-earth-promo-7-edit-1987",
+    "title": "Heaven Is a Place on Earth - Promo 7\„ Edit",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Belinda Carlisle — 1987, Heaven Is a Place on Earth - Promo 7\" Edit.",
+    answer": "Belinda Carlisle — 1987, Heaven Is a Place on Earth - Promo 7\„ Edit.",
     "hint": "Belinda Carlisle",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/05yiiw2F3XXoighyveZTDs"
+    üources": {
+      üpotify": "https://open.spotify.com/track/05yiiw2F3XXoighyveZTDs"
     },
     "genres": [
       "poprock"
@@ -3883,16 +3883,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bette-davis-eyes-1981",
+    "id": üong-bette-davis-eyes-1981",
     "title": "Bette Davis Eyes",
     "category": "music",
     "year": 1981,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kim Carnes — 1981, Bette Davis Eyes.",
+    answer": "Kim Carnes — 1981, Bette Davis Eyes.",
     "hint": "Kim Carnes",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0odIT9B9BvOCnXfS0e4lB5"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0odIT9B9BvOCnXfS0e4lB5"
     },
     "genres": [
       "poprock"
@@ -3902,16 +3902,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-father-figure-remastered-1987",
+    "id": üong-father-figure-remastered-1987",
     "title": "Father Figure - Remastered",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Michael — 1987, Father Figure - Remastered.",
+    answer": "George Michael — 1987, Father Figure - Remastered.",
     "hint": "George Michael",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0L0T4tMAaGqLgIVj1MOj9t"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0L0T4tMAaGqLgIVj1MOj9t"
     },
     "genres": [
       "poprock"
@@ -3921,16 +3921,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-material-girl-2024-remaster-1985",
+    "id": üong-material-girl-2024-remaster-1985",
     "title": "Material Girl - 2024 Remaster",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Madonna — 1985, Material Girl - 2024 Remaster.",
+    answer": "Madonna — 1985, Material Girl - 2024 Remaster.",
     "hint": "Madonna",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4tcauy2xyIv1q0ckvQmc4H"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4tcauy2xyIv1q0ckvQmc4H"
     },
     "genres": [
       "poprock"
@@ -3940,16 +3940,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-if-i-could-turn-back-time-1989",
+    "id": üong-if-i-could-turn-back-time-1989",
     "title": "If I Could Turn Back Time",
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cher — 1989, If I Could Turn Back Time.",
+    answer": "Cher — 1989, If I Could Turn Back Time.",
     "hint": "Cher",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6mYrhCAGWzTdF8QnKuchXM"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6mYrhCAGWzTdF8QnKuchXM"
     },
     "genres": [
       "poprock"
@@ -3959,16 +3959,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-we-didnt-start-the-fire-1989",
+    "id": üong-we-didnt-start-the-fire-1989",
     "title": "We Didn't Start the Fire",
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Joel — 1989, We Didn't Start the Fire.",
+    answer": "Billy Joel — 1989, We Didn't Start the Fire.",
     "hint": "Billy Joel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3Cx4yrFaX8CeHwBMReOWXI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3Cx4yrFaX8CeHwBMReOWXI"
     },
     "genres": [
       "poprock"
@@ -3978,16 +3978,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-im-coming-out-1980",
+    "id": üong-im-coming-out-1980",
     "title": "I'm Coming Out",
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "Diana Ross — 1980, I'm Coming Out.",
+    answer": "Diana Ross — 1980, I'm Coming Out.",
     "hint": "Diana Ross",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3SnGymj6ijE2iuUfWxLo1q"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3SnGymj6ijE2iuUfWxLo1q"
     },
     "genres": [
       "poprock"
@@ -3997,16 +3997,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-kokomo-2003",
+    "id": üong-kokomo-2003",
     "title": "Kokomo",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Beach Boys — 2003, Kokomo.",
+    answer": "The Beach Boys — 2003, Kokomo.",
     "hint": "The Beach Boys",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5qHYXcVvc9xsFB2uH7GpMN"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5qHYXcVvc9xsFB2uH7GpMN"
     },
     "genres": [
       "poprock"
@@ -4016,16 +4016,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-winner-takes-it-all-1980",
+    "id": üong-the-winner-takes-it-all-1980",
     "title": "The Winner Takes It All",
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "ABBA — 1980, The Winner Takes It All.",
-    "hint": "ABBA",
+    answer": ÄBBA — 1980, The Winner Takes It All.",
+    "hint": ÄBBA",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3oEkrIfXfSh9zGnE7eBzSV"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3oEkrIfXfSh9zGnE7eBzSV"
     },
     "genres": [
       "poprock"
@@ -4035,16 +4035,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-faith-remastered-1987",
+    "id": üong-faith-remastered-1987",
     "title": "Faith - Remastered",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Michael — 1987, Faith - Remastered.",
+    answer": "George Michael — 1987, Faith - Remastered.",
     "hint": "George Michael",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0nd1Vs5BIoIU4TJlzR8KVB"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0nd1Vs5BIoIU4TJlzR8KVB"
     },
     "genres": [
       "poprock"
@@ -4054,16 +4054,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-im-gonna-be-500-miles-2003",
+    "id": üong-im-gonna-be-500-miles-2003",
     "title": "I'm Gonna Be (500 Miles)",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Proclaimers — 2003, I'm Gonna Be (500 Miles).",
+    answer": "The Proclaimers — 2003, I'm Gonna Be (500 Miles).",
     "hint": "The Proclaimers",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/66S14BkJDxgkYxLl5DCqOz"
+    üources": {
+      üpotify": "https://open.spotify.com/track/66S14BkJDxgkYxLl5DCqOz"
     },
     "genres": [
       "poprock"
@@ -4073,16 +4073,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-man-in-the-mirror-2012-remaster-2012",
+    "id": üong-man-in-the-mirror-2012-remaster-2012",
     "title": "Man in the Mirror - 2012 Remaster",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Michael Jackson — 2012, Man in the Mirror - 2012 Remaster.",
+    answer": "Michael Jackson — 2012, Man in the Mirror - 2012 Remaster.",
     "hint": "Michael Jackson",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1kiNatIrwDusOZfR29W0LJ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1kiNatIrwDusOZfR29W0LJ"
     },
     "genres": [
       "poprock"
@@ -4092,16 +4092,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-got-my-mind-set-on-you-1987",
+    "id": üong-got-my-mind-set-on-you-1987",
     "title": "Got My Mind Set on You",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Harrison — 1987, Got My Mind Set on You.",
+    answer": "George Harrison — 1987, Got My Mind Set on You.",
     "hint": "George Harrison",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3OeUlriM0EZHdWleJtjoVr"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3OeUlriM0EZHdWleJtjoVr"
     },
     "genres": [
       "poprock"
@@ -4111,16 +4111,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-under-pressure-remastered-2011-1982",
-    "title": "Under Pressure - Remastered 2011",
+    "id": üong-under-pressure-remastered-2011-1982",
+    "title": Ünder Pressure - Remastered 2011",
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen, David Bowie — 1982, Under Pressure - Remastered 2011.",
+    answer": "Queen, David Bowie — 1982, Under Pressure - Remastered 2011.",
     "hint": "Queen, David Bowie",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2fuCquhmrzHpu5xcA1ci9x"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2fuCquhmrzHpu5xcA1ci9x"
     },
     "genres": [
       "poprock"
@@ -4130,16 +4130,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-nothings-gonna-stop-us-now-1987",
+    "id": üong-nothings-gonna-stop-us-now-1987",
     "title": "Nothing's Gonna Stop Us Now",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Starship — 1987, Nothing's Gonna Stop Us Now.",
+    answer": "Starship — 1987, Nothing's Gonna Stop Us Now.",
     "hint": "Starship",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3X7uFMzJrEE0sxn62qd8Ch"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3X7uFMzJrEE0sxn62qd8Ch"
     },
     "genres": [
       "poprock"
@@ -4149,16 +4149,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-purple-rain-1984",
+    "id": üong-purple-rain-1984",
     "title": "Purple Rain",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Prince — 1984, Purple Rain.",
+    answer": "Prince — 1984, Purple Rain.",
     "hint": "Prince",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1uvyZBs4IZYRebHIB1747m"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1uvyZBs4IZYRebHIB1747m"
     },
     "genres": [
       "poprock"
@@ -4168,19 +4168,19 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-99-luftballons-1983",
+    "id": üong-99-luftballons-1983",
     "title": "99 Luftballons",
     "category": "music",
     "year": 1983,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nena — 1983, 99 Luftballons.",
+    answer": "Nena — 1983, 99 Luftballons.",
     "hint": "Nena",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2IJftBfq7pJ43tfnOR0RB3"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2IJftBfq7pJ43tfnOR0RB3"
     },
     "genres": [
-      "schlagerparty",
+      üchlagerparty",
       "poprock"
     ],
     "playlists": [
@@ -4188,16 +4188,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-radio-ga-ga-remastered-2011-1984",
+    "id": üong-radio-ga-ga-remastered-2011-1984",
     "title": "Radio Ga Ga - Remastered 2011",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — 1984, Radio Ga Ga - Remastered 2011.",
+    answer": "Queen — 1984, Radio Ga Ga - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1nQRg9q9uwALGzouOX5OyQ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1nQRg9q9uwALGzouOX5OyQ"
     },
     "genres": [
       "poprock"
@@ -4207,16 +4207,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-super-trouper-1980",
+    "id": üong-super-trouper-1980",
     "title": "Super Trouper",
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "ABBA — 1980, Super Trouper.",
-    "hint": "ABBA",
+    answer": ÄBBA — 1980, Super Trouper.",
+    "hint": ÄBBA",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0J2p4KYdr6Mg4ET6JPlbe1"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0J2p4KYdr6Mg4ET6JPlbe1"
     },
     "genres": [
       "poprock"
@@ -4226,16 +4226,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-we-belong-1984",
+    "id": üong-we-belong-1984",
     "title": "We Belong",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Pat Benatar — 1984, We Belong.",
+    answer": "Pat Benatar — 1984, We Belong.",
     "hint": "Pat Benatar",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/665Jxlgi1HamPKbW1vwzx4"
+    üources": {
+      üpotify": "https://open.spotify.com/track/665Jxlgi1HamPKbW1vwzx4"
     },
     "genres": [
       "poprock"
@@ -4245,16 +4245,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-rosanna-1982",
+    "id": üong-rosanna-1982",
     "title": "Rosanna",
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "TOTO — 1982, Rosanna.",
+    answer": "TOTO — 1982, Rosanna.",
     "hint": "TOTO",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/37BTh5g05cxBIRYMbw8g2T"
+    üources": {
+      üpotify": "https://open.spotify.com/track/37BTh5g05cxBIRYMbw8g2T"
     },
     "genres": [
       "poprock"
@@ -4264,16 +4264,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-youre-the-voice-2008",
+    "id": üong-youre-the-voice-2008",
     "title": "You're the Voice",
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Farnham — 2008, You're the Voice.",
+    answer": "John Farnham — 2008, You're the Voice.",
     "hint": "John Farnham",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5NwkWwfRJaT55hEPtCmJHx"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5NwkWwfRJaT55hEPtCmJHx"
     },
     "genres": [
       "poprock"
@@ -4283,16 +4283,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-want-to-break-free-remastered-2011-1984",
+    "id": üong-i-want-to-break-free-remastered-2011-1984",
     "title": "I Want To Break Free - Remastered 2011",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — 1984, I Want To Break Free - Remastered 2011.",
+    answer": "Queen — 1984, I Want To Break Free - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1MsBRSbt5dqJSw3RxXtvCM"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1MsBRSbt5dqJSw3RxXtvCM"
     },
     "genres": [
       "poprock"
@@ -4302,16 +4302,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-free-fallin-1989",
+    "id": üong-free-fallin-1989",
     "title": "Free Fallin'",
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tom Petty — 1989, Free Fallin'.",
+    answer": "Tom Petty — 1989, Free Fallin'.",
     "hint": "Tom Petty",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5tVA6TkbaAH9QMITTQRrNv"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5tVA6TkbaAH9QMITTQRrNv"
     },
     "genres": [
       "poprock"
@@ -4321,16 +4321,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dont-stop-believin-2001",
+    "id": üong-dont-stop-believin-2001",
     "title": "Don't Stop Believin'",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Journey — 2001, Don't Stop Believin'.",
+    answer": "Journey — 2001, Don't Stop Believin'.",
     "hint": "Journey",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/77NNZQSqzLNqh2A9JhLRkg"
+    üources": {
+      üpotify": "https://open.spotify.com/track/77NNZQSqzLNqh2A9JhLRkg"
     },
     "genres": [
       "poprock"
@@ -4340,16 +4340,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hello-1983",
+    "id": üong-hello-1983",
     "title": "Hello",
     "category": "music",
     "year": 1983,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lionel Richie — 1983, Hello.",
+    answer": "Lionel Richie — 1983, Hello.",
     "hint": "Lionel Richie",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6HMvJcdw6qLsyV1b5x29sa"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6HMvJcdw6qLsyV1b5x29sa"
     },
     "genres": [
       "poprock"
@@ -4359,16 +4359,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-st-elmos-fire-man-in-motion-1985",
+    "id": üong-st-elmos-fire-man-in-motion-1985",
     "title": "St. Elmos Fire (Man in Motion)",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Parr — 1985, St. Elmos Fire (Man in Motion).",
+    answer": "John Parr — 1985, St. Elmos Fire (Man in Motion).",
     "hint": "John Parr",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1A2PWRltFrX8iB8IP3CUgo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1A2PWRltFrX8iB8IP3CUgo"
     },
     "genres": [
       "poprock"
@@ -4378,16 +4378,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-talkin-bout-a-revolution-1988",
+    "id": üong-talkin-bout-a-revolution-1988",
     "title": "Talkin' Bout a Revolution",
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tracy Chapman — 1988, Talkin' Bout a Revolution.",
+    answer": "Tracy Chapman — 1988, Talkin' Bout a Revolution.",
     "hint": "Tracy Chapman",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0YMFcrMtBowDdD5bPz0cgy"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0YMFcrMtBowDdD5bPz0cgy"
     },
     "genres": [
       "poprock"
@@ -4397,16 +4397,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-karma-chameleon-1989",
+    "id": üong-karma-chameleon-1989",
     "title": "Karma Chameleon",
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Culture Club — 1989, Karma Chameleon.",
+    answer": "Culture Club — 1989, Karma Chameleon.",
     "hint": "Culture Club",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4NH4xiPQ7TqNGqj6pZV4ki"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4NH4xiPQ7TqNGqj6pZV4ki"
     },
     "genres": [
       "poprock"
@@ -4416,16 +4416,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-manic-monday-1985",
+    "id": üong-manic-monday-1985",
     "title": "Manic Monday",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Bangles — 1985, Manic Monday.",
+    answer": "The Bangles — 1985, Manic Monday.",
     "hint": "The Bangles",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7Di7t9yGoxdZRLAt5a4pi0"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7Di7t9yGoxdZRLAt5a4pi0"
     },
     "genres": [
       "poprock"
@@ -4435,16 +4435,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-you-can-call-me-al-1986",
+    "id": üong-you-can-call-me-al-1986",
     "title": "You Can Call Me Al",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Paul Simon — 1986, You Can Call Me Al.",
+    answer": "Paul Simon — 1986, You Can Call Me Al.",
     "hint": "Paul Simon",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0qxYx4F3vm1AOnfux6dDxP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0qxYx4F3vm1AOnfux6dDxP"
     },
     "genres": [
       "poprock"
@@ -4454,16 +4454,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-we-built-this-city-1985",
+    "id": üong-we-built-this-city-1985",
     "title": "We Built This City",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Starship — 1985, We Built This City.",
+    answer": "Starship — 1985, We Built This City.",
     "hint": "Starship",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6OnfBiiSc9RGKiBKKtZXgQ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6OnfBiiSc9RGKiBKKtZXgQ"
     },
     "genres": [
       "poprock"
@@ -4473,16 +4473,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-fast-car-1988",
+    "id": üong-fast-car-1988",
     "title": "Fast Car",
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tracy Chapman — 1988, Fast Car.",
+    answer": "Tracy Chapman — 1988, Fast Car.",
     "hint": "Tracy Chapman",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2M9ro2krNb7nr7HSprkEgo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2M9ro2krNb7nr7HSprkEgo"
     },
     "genres": [
       "poprock"
@@ -4492,16 +4492,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-think-were-alone-now-1987",
+    "id": üong-i-think-were-alone-now-1987",
     "title": "I Think We're Alone Now",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tiffany — 1987, I Think We're Alone Now.",
+    answer": "Tiffany — 1987, I Think We're Alone Now.",
     "hint": "Tiffany",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4uvjOKsp7mSjrDhWdkLPBY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4uvjOKsp7mSjrDhWdkLPBY"
     },
     "genres": [
       "poprock"
@@ -4511,16 +4511,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-power-of-love-2006",
+    "id": üong-the-power-of-love-2006",
     "title": "The Power Of Love",
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "Huey Lewis & The News — 2006, The Power Of Love.",
+    answer": "Huey Lewis & The News — 2006, The Power Of Love.",
     "hint": "Huey Lewis & The News",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2olVm1lHicpveMAo4AUDRB"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2olVm1lHicpveMAo4AUDRB"
     },
     "genres": [
       "poprock"
@@ -4530,16 +4530,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-another-one-bites-the-dust-remastered-2011-1980",
-    "title": "Another One Bites The Dust - Remastered 2011",
+    "id": üong-another-one-bites-the-dust-remastered-2011-1980",
+    "title": Änother One Bites The Dust - Remastered 2011",
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — 1980, Another One Bites The Dust - Remastered 2011.",
+    answer": "Queen — 1980, Another One Bites The Dust - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5vdp5UmvTsnMEMESIF2Ym7"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5vdp5UmvTsnMEMESIF2Ym7"
     },
     "genres": [
       "poprock"
@@ -4549,16 +4549,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wake-me-up-before-you-go-go-1984",
+    "id": üong-wake-me-up-before-you-go-go-1984",
     "title": "Wake Me Up Before You Go-Go",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wham! — 1984, Wake Me Up Before You Go-Go.",
+    answer": "Wham! — 1984, Wake Me Up Before You Go-Go.",
     "hint": "Wham!",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0ikz6tENMONtK6qGkOrU3c"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0ikz6tENMONtK6qGkOrU3c"
     },
     "genres": [
       "poprock"
@@ -4568,16 +4568,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-walk-like-an-egyptian-1985",
+    "id": üong-walk-like-an-egyptian-1985",
     "title": "Walk Like an Egyptian",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Bangles — 1985, Walk Like an Egyptian.",
+    answer": "The Bangles — 1985, Walk Like an Egyptian.",
     "hint": "The Bangles",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3BGbqEDio3ocx1v4egIYr6"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3BGbqEDio3ocx1v4egIYr6"
     },
     "genres": [
       "poprock"
@@ -4587,16 +4587,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-time-after-time-2014",
+    "id": üong-time-after-time-2014",
     "title": "Time After Time",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cyndi Lauper — 2014, Time After Time.",
+    answer": "Cyndi Lauper — 2014, Time After Time.",
     "hint": "Cyndi Lauper",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1Jj6MF0xDOMA3Ut2Z368Bx"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1Jj6MF0xDOMA3Ut2Z368Bx"
     },
     "genres": [
       "poprock"
@@ -4606,16 +4606,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-a-kind-of-magic-remastered-2011-1986",
-    "title": "A Kind Of Magic - Remastered 2011",
+    "id": üong-a-kind-of-magic-remastered-2011-1986",
+    "title": Ä Kind Of Magic - Remastered 2011",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — 1986, A Kind Of Magic - Remastered 2011.",
+    answer": "Queen — 1986, A Kind Of Magic - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5RYLa5P4qweEAKq5U1gdcK"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5RYLa5P4qweEAKq5U1gdcK"
     },
     "genres": [
       "poprock"
@@ -4625,16 +4625,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-never-gonna-give-you-up-1987",
+    "id": üong-never-gonna-give-you-up-1987",
     "title": "Never Gonna Give You Up",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rick Astley — 1987, Never Gonna Give You Up.",
+    answer": "Rick Astley — 1987, Never Gonna Give You Up.",
     "hint": "Rick Astley",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4PTG3Z6ehGkBFwjybzWkR8"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4PTG3Z6ehGkBFwjybzWkR8"
     },
     "genres": [
       "poprock"
@@ -4644,16 +4644,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-eternal-flame-2004",
+    "id": üong-eternal-flame-2004",
     "title": "Eternal Flame",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Bangles, Susanna Hoffs — 2004, Eternal Flame.",
+    answer": "The Bangles, Susanna Hoffs — 2004, Eternal Flame.",
     "hint": "The Bangles, Susanna Hoffs",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5MoDQWMDMaAGDEiWsJfeCi"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5MoDQWMDMaAGDEiWsJfeCi"
     },
     "genres": [
       "poprock"
@@ -4663,16 +4663,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lay-all-your-love-on-me-1980",
+    "id": üong-lay-all-your-love-on-me-1980",
     "title": "Lay All Your Love On Me",
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "ABBA — 1980, Lay All Your Love On Me.",
-    "hint": "ABBA",
+    answer": ÄBBA — 1980, Lay All Your Love On Me.",
+    "hint": ÄBBA",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4euAGZTszWPrriggYK0HG9"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4euAGZTszWPrriggYK0HG9"
     },
     "genres": [
       "poprock"
@@ -4682,16 +4682,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-danger-zone-from-top-gun-original-soundtrack-1997",
-    "title": "Danger Zone - From \"Top Gun\" Original Soundtrack",
+    "id": üong-danger-zone-from-top-gun-original-soundtrack-1997",
+    "title": "Danger Zone - From \"Top Gun\„ Original Soundtrack",
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kenny Loggins — 1997, Danger Zone - From \"Top Gun\" Original Soundtrack.",
+    answer": "Kenny Loggins — 1997, Danger Zone - From \"Top Gun\„ Original Soundtrack.",
     "hint": "Kenny Loggins",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/34x6hEJgGAOQvmlMql5Ige"
+    üources": {
+      üpotify": "https://open.spotify.com/track/34x6hEJgGAOQvmlMql5Ige"
     },
     "genres": [
       "poprock"
@@ -4701,16 +4701,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-im-still-standing-1983",
+    "id": üong-im-still-standing-1983",
     "title": "I'm Still Standing",
     "category": "music",
     "year": 1983,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elton John — 1983, I'm Still Standing.",
+    answer": "Elton John — 1983, I'm Still Standing.",
     "hint": "Elton John",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1jDJFeK9x3OZboIAHsY9k2"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1jDJFeK9x3OZboIAHsY9k2"
     },
     "genres": [
       "poprock"
@@ -4720,16 +4720,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-walking-on-sunshine-1985",
+    "id": üong-walking-on-sunshine-1985",
     "title": "Walking On Sunshine",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katrina & The Waves — 1985, Walking On Sunshine.",
+    answer": "Katrina & The Waves — 1985, Walking On Sunshine.",
     "hint": "Katrina & The Waves",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/05wIrZSwuaVWhcv5FfqeH0"
+    üources": {
+      üpotify": "https://open.spotify.com/track/05wIrZSwuaVWhcv5FfqeH0"
     },
     "genres": [
       "poprock"
@@ -4739,16 +4739,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-9-to-5-1980",
+    "id": üong-9-to-5-1980",
     "title": "9 to 5",
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dolly Parton — 1980, 9 to 5.",
+    answer": "Dolly Parton — 1980, 9 to 5.",
     "hint": "Dolly Parton",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4w3tQBXhn5345eUXDGBWZG"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4w3tQBXhn5345eUXDGBWZG"
     },
     "genres": [
       "poprock"
@@ -4758,16 +4758,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dancing-in-the-dark-1984",
+    "id": üong-dancing-in-the-dark-1984",
     "title": "Dancing In the Dark",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruce Springsteen — 1984, Dancing In the Dark.",
+    answer": "Bruce Springsteen — 1984, Dancing In the Dark.",
     "hint": "Bruce Springsteen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7FwBtcecmlpc1sLySPXeGE"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7FwBtcecmlpc1sLySPXeGE"
     },
     "genres": [
       "poprock"
@@ -4777,16 +4777,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-black-velvet-1989",
+    "id": üong-black-velvet-1989",
     "title": "Black Velvet",
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Alannah Myles — 1989, Black Velvet.",
-    "hint": "Alannah Myles",
+    answer": Älannah Myles — 1989, Black Velvet.",
+    "hint": Älannah Myles",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1KU5EHSz04JhGg3rReGJ0N"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1KU5EHSz04JhGg3rReGJ0N"
     },
     "genres": [
       "poprock"
@@ -4796,16 +4796,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-our-house-1982",
-    "title": "Our House",
+    "id": üong-our-house-1982",
+    "title": Öur House",
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "Madness — 1982, Our House.",
+    answer": "Madness — 1982, Our House.",
     "hint": "Madness",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5HrtZ0YLAcKIRx4tdQoHWc"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5HrtZ0YLAcKIRx4tdQoHWc"
     },
     "genres": [
       "poprock"
@@ -4815,16 +4815,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-get-outta-my-dreams-get-into-my-car-2010",
+    "id": üong-get-outta-my-dreams-get-into-my-car-2010",
     "title": "Get Outta My Dreams, Get Into My Car",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Ocean — 2010, Get Outta My Dreams, Get Into My Car.",
+    answer": "Billy Ocean — 2010, Get Outta My Dreams, Get Into My Car.",
     "hint": "Billy Ocean",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2D4D3hiOf5U0W6SvJoCQph"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2D4D3hiOf5U0W6SvJoCQph"
     },
     "genres": [
       "poprock"
@@ -4834,16 +4834,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-living-years-1988",
+    "id": üong-the-living-years-1988",
     "title": "The Living Years",
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mike + The Mechanics — 1988, The Living Years.",
+    answer": "Mike + The Mechanics — 1988, The Living Years.",
     "hint": "Mike + The Mechanics",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1eVMuGzCj1q8pHfUdbQ042"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1eVMuGzCj1q8pHfUdbQ042"
     },
     "genres": [
       "poprock"
@@ -4853,16 +4853,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dont-worry-be-happy-1988",
+    "id": üong-dont-worry-be-happy-1988",
     "title": "Don't Worry Be Happy",
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bobby McFerrin — 1988, Don't Worry Be Happy.",
+    answer": "Bobby McFerrin — 1988, Don't Worry Be Happy.",
     "hint": "Bobby McFerrin",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4hObp5bmIJ3PP3cKA9K9GY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4hObp5bmIJ3PP3cKA9K9GY"
     },
     "genres": [
       "poprock"
@@ -4872,16 +4872,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-never-ending-story-2009",
+    "id": üong-never-ending-story-2009",
     "title": "Never Ending Story",
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Limahl — 2009, Never Ending Story.",
+    answer": "Limahl — 2009, Never Ending Story.",
     "hint": "Limahl",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1F43XlPBiwAUUIhrUGzylO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1F43XlPBiwAUUIhrUGzylO"
     },
     "genres": [
       "poprock"
@@ -4891,16 +4891,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-against-all-odds-take-a-look-at-me-now-2016-remaster-2016",
-    "title": "Against All Odds (Take a Look at Me Now) - 2016 Remaster",
+    "id": üong-against-all-odds-take-a-look-at-me-now-2016-remaster-2016",
+    "title": Ägainst All Odds (Take a Look at Me Now) - 2016 Remaster",
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Phil Collins — 2016, Against All Odds (Take a Look at Me Now) - 2016 Remaster.",
+    answer": "Phil Collins — 2016, Against All Odds (Take a Look at Me Now) - 2016 Remaster.",
     "hint": "Phil Collins",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/63CHa6rmamv9OsehkRD8oz"
+    üources": {
+      üpotify": "https://open.spotify.com/track/63CHa6rmamv9OsehkRD8oz"
     },
     "genres": [
       "poprock"
@@ -4910,16 +4910,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-only-you-1982",
-    "title": "Only You",
+    "id": üong-only-you-1982",
+    "title": Önly You",
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "Yazoo — 1982, Only You.",
+    answer": "Yazoo — 1982, Only You.",
     "hint": "Yazoo",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4GNilkZKILsug3l5pdLoxo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4GNilkZKILsug3l5pdLoxo"
     },
     "genres": [
       "poprock"
@@ -4929,16 +4929,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-straight-up-1988",
+    "id": üong-straight-up-1988",
     "title": "Straight Up",
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Paula Abdul — 1988, Straight Up.",
+    answer": "Paula Abdul — 1988, Straight Up.",
     "hint": "Paula Abdul",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5xl5582IihbEZAnfj0xyso"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5xl5582IihbEZAnfj0xyso"
     },
     "genres": [
       "poprock"
@@ -4948,16 +4948,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-holding-out-for-a-hero-from-footloose-soundtrack-1986",
-    "title": "Holding Out for a Hero - From \"Footloose\" Soundtrack",
+    "id": üong-holding-out-for-a-hero-from-footloose-soundtrack-1986",
+    "title": "Holding Out for a Hero - From \"Footloose\„ Soundtrack",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bonnie Tyler — 1986, Holding Out for a Hero - From \"Footloose\" Soundtrack.",
+    answer": "Bonnie Tyler — 1986, Holding Out for a Hero - From \"Footloose\„ Soundtrack.",
     "hint": "Bonnie Tyler",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5Hyr47BBGpvOfcykSCcaw9"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5Hyr47BBGpvOfcykSCcaw9"
     },
     "genres": [
       "poprock"
@@ -4967,16 +4967,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-right-here-waiting-1989",
+    "id": üong-right-here-waiting-1989",
     "title": "Right Here Waiting",
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Richard Marx — 1989, Right Here Waiting.",
+    answer": "Richard Marx — 1989, Right Here Waiting.",
     "hint": "Richard Marx",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4LFwNJWoj74Yd71fIr1W8x"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4LFwNJWoj74Yd71fIr1W8x"
     },
     "genres": [
       "poprock"
@@ -4986,16 +4986,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-everywhere-2017-remaster-1987",
+    "id": üong-everywhere-2017-remaster-1987",
     "title": "Everywhere - 2017 Remaster",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fleetwood Mac — 1987, Everywhere - 2017 Remaster.",
+    answer": "Fleetwood Mac — 1987, Everywhere - 2017 Remaster.",
     "hint": "Fleetwood Mac",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/254bXAqt3zP6P50BdQvEsq"
+    üources": {
+      üpotify": "https://open.spotify.com/track/254bXAqt3zP6P50BdQvEsq"
     },
     "genres": [
       "poprock"
@@ -5005,16 +5005,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-abracadabra-2019",
-    "title": "Abracadabra",
+    "id": üong-abracadabra-2019",
+    "title": Äbracadabra",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Steve Miller Band — 2019, Abracadabra.",
+    answer": "Steve Miller Band — 2019, Abracadabra.",
     "hint": "Steve Miller Band",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0fnTADkpDxvjA3v0Ss5bpb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0fnTADkpDxvjA3v0Ss5bpb"
     },
     "genres": [
       "poprock"
@@ -5024,16 +5024,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-boys-of-summer-remastered-2024-2024",
+    "id": üong-the-boys-of-summer-remastered-2024-2024",
     "title": "The Boys Of Summer - Remastered 2024",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Don Henley — 2024, The Boys Of Summer - Remastered 2024.",
+    answer": "Don Henley — 2024, The Boys Of Summer - Remastered 2024.",
     "hint": "Don Henley",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4Q3ERWBrb4lhDvAPyANjY5"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4Q3ERWBrb4lhDvAPyANjY5"
     },
     "genres": [
       "poprock"
@@ -5043,16 +5043,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-with-or-without-you-1987",
+    "id": üong-with-or-without-you-1987",
     "title": "With Or Without You",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "U2 — 1987, With Or Without You.",
-    "hint": "U2",
+    answer": Ü2 — 1987, With Or Without You.",
+    "hint": Ü2",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ADSaE87h8Y3lccZlBJdXH"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6ADSaE87h8Y3lccZlBJdXH"
     },
     "genres": [
       "poprock"
@@ -5062,16 +5062,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-smooth-criminal-2012-remaster-2012",
+    "id": üong-smooth-criminal-2012-remaster-2012",
     "title": "Smooth Criminal - 2012 Remaster",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Michael Jackson — 2012, Smooth Criminal - 2012 Remaster.",
+    answer": "Michael Jackson — 2012, Smooth Criminal - 2012 Remaster.",
     "hint": "Michael Jackson",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2bCQHF9gdG5BNDVuEIEnNk"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2bCQHF9gdG5BNDVuEIEnNk"
     },
     "genres": [
       "poprock"
@@ -5081,16 +5081,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-islands-in-the-stream-2009",
+    "id": üong-islands-in-the-stream-2009",
     "title": "Islands in the Stream",
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dolly Parton, Kenny Rogers — 2009, Islands in the Stream.",
+    answer": "Dolly Parton, Kenny Rogers — 2009, Islands in the Stream.",
     "hint": "Dolly Parton, Kenny Rogers",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4mnOVRRXsaqg9Nb041xR8u"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4mnOVRRXsaqg9Nb041xR8u"
     },
     "genres": [
       "poprock"
@@ -5100,16 +5100,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-listen-to-your-heart-1988",
+    "id": üong-listen-to-your-heart-1988",
     "title": "Listen To Your Heart",
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Roxette — 1988, Listen To Your Heart.",
+    answer": "Roxette — 1988, Listen To Your Heart.",
     "hint": "Roxette",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2MaBAGBIttgv86bYytdx1f"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2MaBAGBIttgv86bYytdx1f"
     },
     "genres": [
       "poprock"
@@ -5119,16 +5119,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-up-where-we-belong-2003",
-    "title": "Up Where We Belong",
+    "id": üong-up-where-we-belong-2003",
+    "title": Üp Where We Belong",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Joe Cocker, Jennifer Warnes — 2003, Up Where We Belong.",
+    answer": "Joe Cocker, Jennifer Warnes — 2003, Up Where We Belong.",
     "hint": "Joe Cocker, Jennifer Warnes",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5NoUgO4Kr93QymQGQlBC7b"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5NoUgO4Kr93QymQGQlBC7b"
     },
     "genres": [
       "poprock"
@@ -5138,16 +5138,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-love-is-a-battlefield-2001",
+    "id": üong-love-is-a-battlefield-2001",
     "title": "Love Is A Battlefield",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Pat Benatar — 2001, Love Is A Battlefield.",
+    answer": "Pat Benatar — 2001, Love Is A Battlefield.",
     "hint": "Pat Benatar",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4p1PizAGdglm2sVvPuFPWs"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4p1PizAGdglm2sVvPuFPWs"
     },
     "genres": [
       "poprock"
@@ -5157,16 +5157,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wouldnt-it-be-good-1984",
+    "id": üong-wouldnt-it-be-good-1984",
     "title": "Wouldn't It Be Good",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nik Kershaw — 1984, Wouldn't It Be Good.",
+    answer": "Nik Kershaw — 1984, Wouldn't It Be Good.",
     "hint": "Nik Kershaw",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/00FDHurakzVEiPutdUxXXq"
+    üources": {
+      üpotify": "https://open.spotify.com/track/00FDHurakzVEiPutdUxXXq"
     },
     "genres": [
       "poprock"
@@ -5176,16 +5176,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bad-2012-remaster-2012",
+    "id": üong-bad-2012-remaster-2012",
     "title": "Bad - 2012 Remaster",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Michael Jackson — 2012, Bad - 2012 Remaster.",
+    answer": "Michael Jackson — 2012, Bad - 2012 Remaster.",
     "hint": "Michael Jackson",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5lWFrW5T3JtxVCLDb7etPu"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5lWFrW5T3JtxVCLDb7etPu"
     },
     "genres": [
       "poprock"
@@ -5195,16 +5195,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dance-hall-days-1984",
+    "id": üong-dance-hall-days-1984",
     "title": "Dance Hall Days",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wang Chung — 1984, Dance Hall Days.",
+    answer": "Wang Chung — 1984, Dance Hall Days.",
     "hint": "Wang Chung",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2JvPJ8ydPuN2NhpH4oti6I"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2JvPJ8ydPuN2NhpH4oti6I"
     },
     "genres": [
       "poprock"
@@ -5214,16 +5214,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-poison-1989",
+    "id": üong-poison-1989",
     "title": "Poison",
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Alice Cooper — 1989, Poison.",
-    "hint": "Alice Cooper",
+    answer": Älice Cooper — 1989, Poison.",
+    "hint": Älice Cooper",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5XcZRgJv3zMhTqCyESjQrF"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5XcZRgJv3zMhTqCyESjQrF"
     },
     "genres": [
       "metal",
@@ -5234,16 +5234,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-best-1989",
+    "id": üong-the-best-1989",
     "title": "The Best",
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tina Turner — 1989, The Best.",
+    answer": "Tina Turner — 1989, The Best.",
     "hint": "Tina Turner",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6pPWRBubXOBAHnjl5ZIujB"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6pPWRBubXOBAHnjl5ZIujB"
     },
     "genres": [
       "poprock"
@@ -5253,16 +5253,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-still-havent-found-what-im-looking-for-1987",
+    "id": üong-i-still-havent-found-what-im-looking-for-1987",
     "title": "I Still Haven't Found What I'm Looking For",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "U2 — 1987, I Still Haven't Found What I'm Looking For.",
-    "hint": "U2",
+    answer": Ü2 — 1987, I Still Haven't Found What I'm Looking For.",
+    "hint": Ü2",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6wpGqhRvJGNNXwWlPmkMyO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6wpGqhRvJGNNXwWlPmkMyO"
     },
     "genres": [
       "poprock"
@@ -5272,16 +5272,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-way-you-make-me-feel-2012-remaster-2012",
+    "id": üong-the-way-you-make-me-feel-2012-remaster-2012",
     "title": "The Way You Make Me Feel - 2012 Remaster",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Michael Jackson — 2012, The Way You Make Me Feel - 2012 Remaster.",
+    answer": "Michael Jackson — 2012, The Way You Make Me Feel - 2012 Remaster.",
     "hint": "Michael Jackson",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0sKlV58cODrjxGFOyf9IXY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0sKlV58cODrjxGFOyf9IXY"
     },
     "genres": [
       "poprock"
@@ -5291,16 +5291,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-you-give-love-a-bad-name-1986",
+    "id": üong-you-give-love-a-bad-name-1986",
     "title": "You Give Love A Bad Name",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bon Jovi — 1986, You Give Love A Bad Name.",
+    answer": "Bon Jovi — 1986, You Give Love A Bad Name.",
     "hint": "Bon Jovi",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0rmGAIH9LNJewFw7nKzZnc"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0rmGAIH9LNJewFw7nKzZnc"
     },
     "genres": [
       "metal",
@@ -5311,16 +5311,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-englishman-in-new-york-1987",
+    "id": üong-englishman-in-new-york-1987",
     "title": "Englishman In New York",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sting — 1987, Englishman In New York.",
+    answer": "Sting — 1987, Englishman In New York.",
     "hint": "Sting",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4KFM3A5QF2IMcc6nHsu3Wp"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4KFM3A5QF2IMcc6nHsu3Wp"
     },
     "genres": [
       "poprock"
@@ -5330,16 +5330,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-should-i-stay-or-should-i-go-remastered-1982",
+    "id": üong-should-i-stay-or-should-i-go-remastered-1982",
     "title": "Should I Stay or Should I Go - Remastered",
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Clash — 1982, Should I Stay or Should I Go - Remastered.",
+    answer": "The Clash — 1982, Should I Stay or Should I Go - Remastered.",
     "hint": "The Clash",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/39shmbIHICJ2Wxnk1fPSdz"
+    üources": {
+      üpotify": "https://open.spotify.com/track/39shmbIHICJ2Wxnk1fPSdz"
     },
     "genres": [
       "poprock"
@@ -5349,16 +5349,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-need-you-tonight-1987",
+    "id": üong-need-you-tonight-1987",
     "title": "Need You Tonight",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "INXS — 1987, Need You Tonight.",
+    answer": "INXS — 1987, Need You Tonight.",
     "hint": "INXS",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3h04eZTnmFLRMjZajbrp2R"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3h04eZTnmFLRMjZajbrp2R"
     },
     "genres": [
       "poprock"
@@ -5368,16 +5368,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wonderful-life-1987",
+    "id": üong-wonderful-life-1987",
     "title": "Wonderful Life",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Black — 1987, Wonderful Life.",
+    answer": "Black — 1987, Wonderful Life.",
     "hint": "Black",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0IWtEFQBwRHaMXZQtGEVcM"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0IWtEFQBwRHaMXZQtGEVcM"
     },
     "genres": [
       "poprock"
@@ -5387,16 +5387,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-love-rock-n-roll-1981",
+    "id": üong-i-love-rock-n-roll-1981",
     "title": "I Love Rock 'N Roll",
     "category": "music",
     "year": 1981,
     "cue": "Song anhören und einordnen.",
-    "answer": "Joan Jett & the Blackhearts — 1981, I Love Rock 'N Roll.",
+    answer": "Joan Jett & the Blackhearts — 1981, I Love Rock 'N Roll.",
     "hint": "Joan Jett & the Blackhearts",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2Cdvbe2G4hZsnhNMKyGrie"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2Cdvbe2G4hZsnhNMKyGrie"
     },
     "genres": [
       "poprock"
@@ -5406,16 +5406,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hungry-eyes-from-dirty-dancing-soundtrack-1997",
-    "title": "Hungry Eyes - From \"Dirty Dancing\" Soundtrack",
+    "id": üong-hungry-eyes-from-dirty-dancing-soundtrack-1997",
+    "title": "Hungry Eyes - From \"Dirty Dancing\„ Soundtrack",
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eric Carmen — 1997, Hungry Eyes - From \"Dirty Dancing\" Soundtrack.",
+    answer": "Eric Carmen — 1997, Hungry Eyes - From \"Dirty Dancing\„ Soundtrack.",
     "hint": "Eric Carmen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/31H6au3jhblhr6MMJiXnCq"
+    üources": {
+      üpotify": "https://open.spotify.com/track/31H6au3jhblhr6MMJiXnCq"
     },
     "genres": [
       "poprock"
@@ -5425,16 +5425,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cold-as-ice-2008-remaster-2008",
+    "id": üong-cold-as-ice-2008-remaster-2008",
     "title": "Cold as Ice - 2008 Remaster",
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Foreigner — 2008, Cold as Ice - 2008 Remaster.",
+    answer": "Foreigner — 2008, Cold as Ice - 2008 Remaster.",
     "hint": "Foreigner",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3iM9wFGlyR28IBZrXYZK9j"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3iM9wFGlyR28IBZrXYZK9j"
     },
     "genres": [
       "poprock"
@@ -5444,16 +5444,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-she-drives-me-crazy-1988",
+    "id": üong-she-drives-me-crazy-1988",
     "title": "She Drives Me Crazy",
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fine Young Cannibals — 1988, She Drives Me Crazy.",
+    answer": "Fine Young Cannibals — 1988, She Drives Me Crazy.",
     "hint": "Fine Young Cannibals",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4d6eqRtpDX7tydHJGDZUBQ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4d6eqRtpDX7tydHJGDZUBQ"
     },
     "genres": [
       "poprock"
@@ -5463,16 +5463,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-missing-you-1984",
+    "id": üong-missing-you-1984",
     "title": "Missing You",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Waite — 1984, Missing You.",
+    answer": "John Waite — 1984, Missing You.",
     "hint": "John Waite",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1Qrdlkgg9I4J7r3P4kZNwr"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1Qrdlkgg9I4J7r3P4kZNwr"
     },
     "genres": [
       "poprock"
@@ -5482,16 +5482,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-kids-in-america-1981",
+    "id": üong-kids-in-america-1981",
     "title": "Kids In America",
     "category": "music",
     "year": 1981,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kim Wilde — 1981, Kids In America.",
+    answer": "Kim Wilde — 1981, Kids In America.",
     "hint": "Kim Wilde",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3LaHsdzzmvhx6TJedpomVy"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3LaHsdzzmvhx6TJedpomVy"
     },
     "genres": [
       "poprock"
@@ -5501,16 +5501,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-break-my-stride-1983",
+    "id": üong-break-my-stride-1983",
     "title": "Break My Stride",
     "category": "music",
     "year": 1983,
     "cue": "Song anhören und einordnen.",
-    "answer": "Matthew Wilder — 1983, Break My Stride.",
+    answer": "Matthew Wilder — 1983, Break My Stride.",
     "hint": "Matthew Wilder",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1mCsF9Tw4AkIZOjvZbZZdT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1mCsF9Tw4AkIZOjvZbZZdT"
     },
     "genres": [
       "poprock"
@@ -5520,16 +5520,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sledgehammer-1986",
+    "id": üong-sledgehammer-1986",
     "title": "Sledgehammer",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Peter Gabriel — 1986, Sledgehammer.",
+    answer": "Peter Gabriel — 1986, Sledgehammer.",
     "hint": "Peter Gabriel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/029NqmIySn1kOY305AAhxT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/029NqmIySn1kOY305AAhxT"
     },
     "genres": [
       "poprock"
@@ -5539,16 +5539,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-1999-1982",
+    "id": üong-1999-1982",
     "title": "1999",
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "Prince — 1982, 1999.",
+    answer": "Prince — 1982, 1999.",
     "hint": "Prince",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2H7PHVdQ3mXqEHXcvclTB0"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2H7PHVdQ3mXqEHXcvclTB0"
     },
     "genres": [
       "poprock"
@@ -5558,16 +5558,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-money-for-nothing-remastered-1996-1985",
+    "id": üong-money-for-nothing-remastered-1996-1985",
     "title": "Money For Nothing - Remastered 1996",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dire Straits — 1985, Money For Nothing - Remastered 1996.",
+    answer": "Dire Straits — 1985, Money For Nothing - Remastered 1996.",
     "hint": "Dire Straits",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4nFNJmjfgBF7jwv2oBC45b"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4nFNJmjfgBF7jwv2oBC45b"
     },
     "genres": [
       "poprock"
@@ -5577,16 +5577,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-eye-of-the-tiger-1985",
+    "id": üong-eye-of-the-tiger-1985",
     "title": "Eye of the Tiger",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Survivor — 1985, Eye of the Tiger.",
+    answer": "Survivor — 1985, Eye of the Tiger.",
     "hint": "Survivor",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2KH16WveTQWT6KOG9Rg6e2"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2KH16WveTQWT6KOG9Rg6e2"
     },
     "genres": [
       "poprock"
@@ -5596,16 +5596,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-livin-on-a-prayer-1986",
+    "id": üong-livin-on-a-prayer-1986",
     "title": "Livin' On A Prayer",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bon Jovi — 1986, Livin' On A Prayer.",
+    answer": "Bon Jovi — 1986, Livin' On A Prayer.",
     "hint": "Bon Jovi",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/37ZJ0p5Jm13JPevGcx4SkF"
+    üources": {
+      üpotify": "https://open.spotify.com/track/37ZJ0p5Jm13JPevGcx4SkF"
     },
     "genres": [
       "metal",
@@ -5616,16 +5616,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-walk-this-way-feat-aerosmith-1986",
+    "id": üong-walk-this-way-feat-aerosmith-1986",
     "title": "Walk This Way (feat. Aerosmith)",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Run–D.M.C., Aerosmith — 1986, Walk This Way (feat. Aerosmith).",
+    answer": "Run–D.M.C., Aerosmith — 1986, Walk This Way (feat. Aerosmith).",
     "hint": "Run–D.M.C., Aerosmith",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6qUEOWqOzu1rLPUPQ1ECpx"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6qUEOWqOzu1rLPUPQ1ECpx"
     },
     "genres": [
       "hiphop",
@@ -5636,16 +5636,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-final-countdown-1986",
+    "id": üong-the-final-countdown-1986",
     "title": "The Final Countdown",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Europe — 1986, The Final Countdown.",
+    answer": "Europe — 1986, The Final Countdown.",
     "hint": "Europe",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3MrRksHupTVEQ7YbA0FsZK"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3MrRksHupTVEQ7YbA0FsZK"
     },
     "genres": [
       "metal",
@@ -5656,16 +5656,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-wont-back-down-1989",
+    "id": üong-i-wont-back-down-1989",
     "title": "I Won't Back Down",
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tom Petty — 1989, I Won't Back Down.",
+    answer": "Tom Petty — 1989, I Won't Back Down.",
     "hint": "Tom Petty",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7gSQv1OHpkIoAdUiRLdmI6"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7gSQv1OHpkIoAdUiRLdmI6"
     },
     "genres": [
       "poprock"
@@ -5675,16 +5675,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-total-eclipse-of-the-heart-2009",
+    "id": üong-total-eclipse-of-the-heart-2009",
     "title": "Total Eclipse of the Heart",
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bonnie Tyler — 2009, Total Eclipse of the Heart.",
+    answer": "Bonnie Tyler — 2009, Total Eclipse of the Heart.",
     "hint": "Bonnie Tyler",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7wuJGgpTNzbUyn26IOY6rj"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7wuJGgpTNzbUyn26IOY6rj"
     },
     "genres": [
       "poprock"
@@ -5694,16 +5694,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-keep-on-loving-you-1980",
+    "id": üong-keep-on-loving-you-1980",
     "title": "Keep on Loving You",
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "REO Speedwagon — 1980, Keep on Loving You.",
+    answer": "REO Speedwagon — 1980, Keep on Loving You.",
     "hint": "REO Speedwagon",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4rcHWl68ai6KvpXlc8vbnE"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4rcHWl68ai6KvpXlc8vbnE"
     },
     "genres": [
       "poprock"
@@ -5713,16 +5713,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hip-to-be-square-1986",
+    "id": üong-hip-to-be-square-1986",
     "title": "Hip To Be Square",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Huey Lewis & The News — 1986, Hip To Be Square.",
+    answer": "Huey Lewis & The News — 1986, Hip To Be Square.",
     "hint": "Huey Lewis & The News",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/648BMGrt98kUbLo24A4vgj"
+    üources": {
+      üpotify": "https://open.spotify.com/track/648BMGrt98kUbLo24A4vgj"
     },
     "genres": [
       "poprock"
@@ -5732,16 +5732,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-its-a-sin-2018-remaster-1987",
+    "id": üong-its-a-sin-2018-remaster-1987",
     "title": "It's a Sin - 2018 Remaster",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Pet Shop Boys — 1987, It's a Sin - 2018 Remaster.",
+    answer": "Pet Shop Boys — 1987, It's a Sin - 2018 Remaster.",
     "hint": "Pet Shop Boys",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5fy4vfEtv6lzqLx2Mt7stF"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5fy4vfEtv6lzqLx2Mt7stF"
     },
     "genres": [
       "poprock"
@@ -5751,16 +5751,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-you-shook-me-all-night-long-1986",
+    "id": üong-you-shook-me-all-night-long-1986",
     "title": "You Shook Me All Night Long",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "AC/DC — 1986, You Shook Me All Night Long.",
-    "hint": "AC/DC",
+    answer": ÄC/DC — 1986, You Shook Me All Night Long.",
+    "hint": ÄC/DC",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6yl8Es1tCYD9WdSkeVLFw4"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6yl8Es1tCYD9WdSkeVLFw4"
     },
     "genres": [
       "poprock"
@@ -5770,16 +5770,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-every-breath-you-take-1983",
+    "id": üong-every-breath-you-take-1983",
     "title": "Every Breath You Take",
     "category": "music",
     "year": 1983,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Police — 1983, Every Breath You Take.",
+    answer": "The Police — 1983, Every Breath You Take.",
     "hint": "The Police",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1JSTJqkT5qHq8MDJnJbRE1"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1JSTJqkT5qHq8MDJnJbRE1"
     },
     "genres": [
       "poprock"
@@ -5789,16 +5789,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-raspberry-beret-1985",
+    "id": üong-raspberry-beret-1985",
     "title": "Raspberry Beret",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Prince — 1985, Raspberry Beret.",
+    answer": "Prince — 1985, Raspberry Beret.",
     "hint": "Prince",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5jSz894ljfWE0IcHBSM39i"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5jSz894ljfWE0IcHBSM39i"
     },
     "genres": [
       "poprock"
@@ -5808,16 +5808,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-you-make-my-dreams-come-true-1980",
+    "id": üong-you-make-my-dreams-come-true-1980",
     "title": "You Make My Dreams (Come True)",
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daryl Hall & John Oates — 1980, You Make My Dreams (Come True).",
+    answer": "Daryl Hall & John Oates — 1980, You Make My Dreams (Come True).",
     "hint": "Daryl Hall & John Oates",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4o6BgsqLIBViaGVbx5rbRk"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4o6BgsqLIBViaGVbx5rbRk"
     },
     "genres": [
       "poprock"
@@ -5827,16 +5827,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-safety-dance-2010",
+    "id": üong-the-safety-dance-2010",
     "title": "The Safety Dance",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Men Without Hats — 2010, The Safety Dance.",
+    answer": "Men Without Hats — 2010, The Safety Dance.",
     "hint": "Men Without Hats",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4UB3TaEGEY9WoOpxYNMgy4"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4UB3TaEGEY9WoOpxYNMgy4"
     },
     "genres": [
       "poprock"
@@ -5846,16 +5846,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-runaway-1984",
+    "id": üong-runaway-1984",
     "title": "Runaway",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bon Jovi — 1984, Runaway.",
+    answer": "Bon Jovi — 1984, Runaway.",
     "hint": "Bon Jovi",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0X1sqQ652p1sceKM2nJlIJ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0X1sqQ652p1sceKM2nJlIJ"
     },
     "genres": [
       "metal",
@@ -5866,16 +5866,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-just-died-in-your-arms-1986",
+    "id": üong-i-just-died-in-your-arms-1986",
     "title": "(I Just) Died In Your Arms",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cutting Crew — 1986, (I Just) Died In Your Arms.",
+    answer": "Cutting Crew — 1986, (I Just) Died In Your Arms.",
     "hint": "Cutting Crew",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4ByEFOBuLXpCqvO1kw8Wdm"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4ByEFOBuLXpCqvO1kw8Wdm"
     },
     "genres": [
       "poprock"
@@ -5885,16 +5885,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-you-cant-hurry-love-2016-remaster-1982",
+    "id": üong-you-cant-hurry-love-2016-remaster-1982",
     "title": "You Can't Hurry Love - 2016 Remaster",
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "Phil Collins — 1982, You Can't Hurry Love - 2016 Remaster.",
+    answer": "Phil Collins — 1982, You Can't Hurry Love - 2016 Remaster.",
     "hint": "Phil Collins",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4YwbSZaYeYja8Umyt222Qf"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4YwbSZaYeYja8Umyt222Qf"
     },
     "genres": [
       "poprock"
@@ -5904,16 +5904,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sweet-child-o-mine-1987",
+    "id": üong-sweet-child-o-mine-1987",
     "title": "Sweet Child O' Mine",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Guns N' Roses — 1987, Sweet Child O' Mine.",
+    answer": "Guns N' Roses — 1987, Sweet Child O' Mine.",
     "hint": "Guns N' Roses",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7snQQk1zcKl8gZ92AnueZW"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7snQQk1zcKl8gZ92AnueZW"
     },
     "genres": [
       "metal",
@@ -5924,16 +5924,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-conga-1985",
+    "id": üong-conga-1985",
     "title": "Conga!",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Miami Sound Machine — 1985, Conga!.",
+    answer": "Miami Sound Machine — 1985, Conga!.",
     "hint": "Miami Sound Machine",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3FdHgoJbH3DXNtGLh56pFu"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3FdHgoJbH3DXNtGLh56pFu"
     },
     "genres": [
       "poprock"
@@ -5943,16 +5943,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-im-on-fire-1984",
+    "id": üong-im-on-fire-1984",
     "title": "I'm On Fire",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruce Springsteen — 1984, I'm On Fire.",
+    answer": "Bruce Springsteen — 1984, I'm On Fire.",
     "hint": "Bruce Springsteen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3PzsbWSQdLCKDLxn7YZfkM"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3PzsbWSQdLCKDLxn7YZfkM"
     },
     "genres": [
       "poprock"
@@ -5962,16 +5962,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-alone-1987",
-    "title": "Alone",
+    "id": üong-alone-1987",
+    "title": Älone",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Heart — 1987, Alone.",
+    answer": "Heart — 1987, Alone.",
     "hint": "Heart",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/54b8qPFqYqIndfdxiLApea"
+    üources": {
+      üpotify": "https://open.spotify.com/track/54b8qPFqYqIndfdxiLApea"
     },
     "genres": [
       "poprock"
@@ -5981,16 +5981,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-you-spin-me-round-like-a-record-2003",
+    "id": üong-you-spin-me-round-like-a-record-2003",
     "title": "You Spin Me Round (Like a Record)",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dead Or Alive — 2003, You Spin Me Round (Like a Record).",
+    answer": "Dead Or Alive — 2003, You Spin Me Round (Like a Record).",
     "hint": "Dead Or Alive",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1ChulFMnwxoD74Me8eX2TU"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1ChulFMnwxoD74Me8eX2TU"
     },
     "genres": [
       "poprock"
@@ -6000,16 +6000,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-shout-1985",
+    "id": üong-shout-1985",
     "title": "Shout",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tears For Fears — 1985, Shout.",
+    answer": "Tears For Fears — 1985, Shout.",
     "hint": "Tears For Fears",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/11leihwcsTVOTo1gxpgYNG"
+    üources": {
+      üpotify": "https://open.spotify.com/track/11leihwcsTVOTo1gxpgYNG"
     },
     "genres": [
       "poprock"
@@ -6019,16 +6019,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-want-to-know-what-love-is-1999-remaster-1984",
+    "id": üong-i-want-to-know-what-love-is-1999-remaster-1984",
     "title": "I Want to Know What Love Is - 1999 Remaster",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Foreigner — 1984, I Want to Know What Love Is - 1999 Remaster.",
+    answer": "Foreigner — 1984, I Want to Know What Love Is - 1999 Remaster.",
     "hint": "Foreigner",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1JLn8RhQzHz3qDqsChcmBl"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1JLn8RhQzHz3qDqsChcmBl"
     },
     "genres": [
       "poprock"
@@ -6038,16 +6038,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-how-will-i-know-1985",
+    "id": üong-how-will-i-know-1985",
     "title": "How Will I Know",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Whitney Houston — 1985, How Will I Know.",
+    answer": "Whitney Houston — 1985, How Will I Know.",
     "hint": "Whitney Houston",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5tdKaKLnC4SgtDZ6RlWeal"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5tdKaKLnC4SgtDZ6RlWeal"
     },
     "genres": [
       "poprock"
@@ -6057,16 +6057,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-gloria-1982",
+    "id": üong-gloria-1982",
     "title": "Gloria",
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "Laura Branigan — 1982, Gloria.",
+    answer": "Laura Branigan — 1982, Gloria.",
     "hint": "Laura Branigan",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1mskmld5ZKEhRaNvYVPoqZ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1mskmld5ZKEhRaNvYVPoqZ"
     },
     "genres": [
       "poprock"
@@ -6076,16 +6076,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-physical-remastered-2021-2021",
+    "id": üong-physical-remastered-2021-2021",
     "title": "Physical - Remastered 2021",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Olivia Newton-John — 2021, Physical - Remastered 2021.",
-    "hint": "Olivia Newton-John",
+    answer": Ölivia Newton-John — 2021, Physical - Remastered 2021.",
+    "hint": Ölivia Newton-John",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4gitetlGHZ9LfuJhwUhEhF"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4gitetlGHZ9LfuJhwUhEhF"
     },
     "genres": [
       "poprock"
@@ -6095,16 +6095,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cant-fight-this-feeling-1984",
+    "id": üong-cant-fight-this-feeling-1984",
     "title": "Can't Fight This Feeling",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "REO Speedwagon — 1984, Can't Fight This Feeling.",
+    answer": "REO Speedwagon — 1984, Can't Fight This Feeling.",
     "hint": "REO Speedwagon",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5WwqdeavrQrbeAMDxGawse"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5WwqdeavrQrbeAMDxGawse"
     },
     "genres": [
       "poprock"
@@ -6114,16 +6114,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-ive-had-the-time-of-my-life-from-dirty-dancing-soundtrack-2009",
-    "title": "(I've Had) The Time of My Life - From \"Dirty Dancing\" Soundtrack",
+    "id": üong-ive-had-the-time-of-my-life-from-dirty-dancing-soundtrack-2009",
+    "title": "(I've Had) The Time of My Life - From \"Dirty Dancing\„ Soundtrack",
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bill Medley, Jennifer Warnes — 2009, (I've Had) The Time of My Life - From \"Dirty Dancing\" Soundtrack.",
+    answer": "Bill Medley, Jennifer Warnes — 2009, (I've Had) The Time of My Life - From \"Dirty Dancing\„ Soundtrack.",
     "hint": "Bill Medley, Jennifer Warnes",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1UvTPXlImVd4jcucK4qJwb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1UvTPXlImVd4jcucK4qJwb"
     },
     "genres": [
       "poprock"
@@ -6133,16 +6133,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-invisible-touch-2007-remaster-1986",
+    "id": üong-invisible-touch-2007-remaster-1986",
     "title": "Invisible Touch - 2007 Remaster",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Genesis — 1986, Invisible Touch - 2007 Remaster.",
+    answer": "Genesis — 1986, Invisible Touch - 2007 Remaster.",
     "hint": "Genesis",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0xpBr84T3FTm9j4D1MdPtk"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0xpBr84T3FTm9j4D1MdPtk"
     },
     "genres": [
       "poprock"
@@ -6152,16 +6152,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hungry-heart-1980",
+    "id": üong-hungry-heart-1980",
     "title": "Hungry Heart",
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruce Springsteen — 1980, Hungry Heart.",
+    answer": "Bruce Springsteen — 1980, Hungry Heart.",
     "hint": "Bruce Springsteen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1KsI8NEeAna8ZIdojI3FiT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1KsI8NEeAna8ZIdojI3FiT"
     },
     "genres": [
       "poprock"
@@ -6171,16 +6171,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-footloose-from-footloose-soundtrack-1984",
-    "title": "Footloose - From \"Footloose\" Soundtrack",
+    "id": üong-footloose-from-footloose-soundtrack-1984",
+    "title": "Footloose - From \"Footloose\„ Soundtrack",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kenny Loggins — 1984, Footloose - From \"Footloose\" Soundtrack.",
+    answer": "Kenny Loggins — 1984, Footloose - From \"Footloose\„ Soundtrack.",
     "hint": "Kenny Loggins",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2vz1CsL5WBsbpBcwgboTAw"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2vz1CsL5WBsbpBcwgboTAw"
     },
     "genres": [
       "poprock"
@@ -6190,16 +6190,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-maneater-1982",
+    "id": üong-maneater-1982",
     "title": "Maneater",
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daryl Hall & John Oates — 1982, Maneater.",
+    answer": "Daryl Hall & John Oates — 1982, Maneater.",
     "hint": "Daryl Hall & John Oates",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7j74lucZ59vqN67Ipe2ZcY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7j74lucZ59vqN67Ipe2ZcY"
     },
     "genres": [
       "poprock"
@@ -6209,16 +6209,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-easy-lover-1985",
+    "id": üong-easy-lover-1985",
     "title": "Easy Lover",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Philip Bailey, Phil Collins — 1985, Easy Lover.",
+    answer": "Philip Bailey, Phil Collins — 1985, Easy Lover.",
     "hint": "Philip Bailey, Phil Collins",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7INi4pMPG4IE0Smx5y4KVf"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7INi4pMPG4IE0Smx5y4KVf"
     },
     "genres": [
       "poprock"
@@ -6228,16 +6228,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-de-do-do-do-de-da-da-da-1980",
+    "id": üong-de-do-do-do-de-da-da-da-1980",
     "title": "De Do Do Do, De Da Da Da",
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Police — 1980, De Do Do Do, De Da Da Da.",
+    answer": "The Police — 1980, De Do Do Do, De Da Da Da.",
     "hint": "The Police",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0yJvWbn8xQKiDZ84VN5lQG"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0yJvWbn8xQKiDZ84VN5lQG"
     },
     "genres": [
       "poprock"
@@ -6247,16 +6247,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-every-rose-has-its-thorn-2003-remaster-1988",
+    "id": üong-every-rose-has-its-thorn-2003-remaster-1988",
     "title": "Every Rose Has Its Thorn - 2003 Remaster",
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Poison — 1988, Every Rose Has Its Thorn - 2003 Remaster.",
+    answer": "Poison — 1988, Every Rose Has Its Thorn - 2003 Remaster.",
     "hint": "Poison",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/43GS3mtezoIFiuIZCLLiDY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/43GS3mtezoIFiuIZCLLiDY"
     },
     "genres": [
       "metal",
@@ -6267,16 +6267,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-together-forever-1987",
+    "id": üong-together-forever-1987",
     "title": "Together Forever",
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rick Astley — 1987, Together Forever.",
+    answer": "Rick Astley — 1987, Together Forever.",
     "hint": "Rick Astley",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/00isIFJWVpXIQ8HkGICSQp"
+    üources": {
+      üpotify": "https://open.spotify.com/track/00isIFJWVpXIQ8HkGICSQp"
     },
     "genres": [
       "poprock"
@@ -6286,16 +6286,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-when-doves-cry-1984",
+    "id": üong-when-doves-cry-1984",
     "title": "When Doves Cry",
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Prince — 1984, When Doves Cry.",
+    answer": "Prince — 1984, When Doves Cry.",
     "hint": "Prince",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6sby78fghipoXHQLeeZFFH"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6sby78fghipoXHQLeeZFFH"
     },
     "genres": [
       "poprock"
@@ -6305,16 +6305,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-london-calling-remastered-1979",
+    "id": üong-london-calling-remastered-1979",
     "title": "London Calling - Remastered",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Clash — 1979, London Calling - Remastered.",
+    answer": "The Clash — 1979, London Calling - Remastered.",
     "hint": "The Clash",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5jzma6gCzYtKB1DbEwFZKH"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5jzma6gCzYtKB1DbEwFZKH"
     },
     "genres": [
       "poprock"
@@ -6325,16 +6325,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-every-little-thing-she-does-is-magic-1981",
+    "id": üong-every-little-thing-she-does-is-magic-1981",
     "title": "Every Little Thing She Does Is Magic",
     "category": "music",
     "year": 1981,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Police — 1981, Every Little Thing She Does Is Magic.",
+    answer": "The Police — 1981, Every Little Thing She Does Is Magic.",
     "hint": "The Police",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/44aTAUBF0g6sMkMNE8I5kd"
+    üources": {
+      üpotify": "https://open.spotify.com/track/44aTAUBF0g6sMkMNE8I5kd"
     },
     "genres": [
       "poprock"
@@ -6344,16 +6344,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dont-dream-its-over-1986",
+    "id": üong-dont-dream-its-over-1986",
     "title": "Don't Dream It's Over",
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Crowded House — 1986, Don't Dream It's Over.",
+    answer": "Crowded House — 1986, Don't Dream It's Over.",
     "hint": "Crowded House",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/56GbZVwxMdf1DENCluYS8A"
+    üources": {
+      üpotify": "https://open.spotify.com/track/56GbZVwxMdf1DENCluYS8A"
     },
     "genres": [
       "poprock"
@@ -6363,16 +6363,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-careless-whisper-remastered-2024",
+    "id": üong-careless-whisper-remastered-2024",
     "title": "Careless Whisper - Remastered",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Michael — 2024, Careless Whisper - Remastered.",
+    answer": "George Michael — 2024, Careless Whisper - Remastered.",
     "hint": "George Michael",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5ac3D4hNLW7NFhYFCThXgh"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5ac3D4hNLW7NFhYFCThXgh"
     },
     "genres": [
       "poprock"
@@ -6382,16 +6382,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-we-are-the-world-1985",
+    "id": üong-we-are-the-world-1985",
     "title": "We Are The World",
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "U.S.A. For Africa — 1985, We Are The World.",
-    "hint": "U.S.A. For Africa",
+    answer": Ü.S.A. For Africa — 1985, We Are The World.",
+    "hint": Ü.S.A. For Africa",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3Z2tPWiNiIpg8UMMoowHIk"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3Z2tPWiNiIpg8UMMoowHIk"
     },
     "genres": [
       "poprock"
@@ -6401,16 +6401,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-beat-it-2008",
+    "id": üong-beat-it-2008",
     "title": "Beat It",
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Michael Jackson — 2008, Beat It.",
+    answer": "Michael Jackson — 2008, Beat It.",
     "hint": "Michael Jackson",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1OOtq8tRnDM8kG2gqUPjAj"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1OOtq8tRnDM8kG2gqUPjAj"
     },
     "genres": [
       "poprock"
@@ -6420,16 +6420,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-any-way-you-want-it-1980",
-    "title": "Any Way You Want It",
+    "id": üong-any-way-you-want-it-1980",
+    "title": Äny Way You Want It",
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "Journey — 1980, Any Way You Want It.",
+    answer": "Journey — 1980, Any Way You Want It.",
     "hint": "Journey",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/71SvEDmsOwIWw1IozsZoMA"
+    üources": {
+      üpotify": "https://open.spotify.com/track/71SvEDmsOwIWw1IozsZoMA"
     },
     "genres": [
       "poprock"
@@ -6439,16 +6439,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-we-are-family-2017",
+    "id": üong-we-are-family-2017",
     "title": "We Are Family",
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sister Sledge — 2017, We Are Family.",
+    answer": "Sister Sledge — 2017, We Are Family.",
     "hint": "Sister Sledge",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1cWnCh4EmvIE9vNGNMLTa0"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1cWnCh4EmvIE9vNGNMLTa0"
     },
     "genres": [
       "poprock"
@@ -6458,16 +6458,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-schools-out-2017",
+    "id": üong-schools-out-2017",
     "title": "School's Out",
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Alice Cooper — 2017, School's Out.",
-    "hint": "Alice Cooper",
+    answer": Älice Cooper — 2017, School's Out.",
+    "hint": Älice Cooper",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5kRW0Nf4FixQm3H6G8xCsV"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5kRW0Nf4FixQm3H6G8xCsV"
     },
     "genres": [
       "metal",
@@ -6478,16 +6478,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-love-hurts-2015",
+    "id": üong-love-hurts-2015",
     "title": "Love Hurts",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nazareth — 2015, Love Hurts.",
+    answer": "Nazareth — 2015, Love Hurts.",
     "hint": "Nazareth",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2mo7ImY2w6jiWjc8Nporfa"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2mo7ImY2w6jiWjc8Nporfa"
     },
     "genres": [
       "poprock"
@@ -6497,16 +6497,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-let-it-be-remastered-2009-1970",
+    "id": üong-let-it-be-remastered-2009-1970",
     "title": "Let It Be - Remastered 2009",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Beatles — 1970, Let It Be - Remastered 2009.",
+    answer": "The Beatles — 1970, Let It Be - Remastered 2009.",
     "hint": "The Beatles",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7iN1s7xHE4ifF5povM6A48"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7iN1s7xHE4ifF5povM6A48"
     },
     "genres": [
       "poprock"
@@ -6516,16 +6516,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-piano-man-1973",
+    "id": üong-piano-man-1973",
     "title": "Piano Man",
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Joel — 1973, Piano Man.",
+    answer": "Billy Joel — 1973, Piano Man.",
     "hint": "Billy Joel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/70C4NyhjD5OZUMzvWZ3njJ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/70C4NyhjD5OZUMzvWZ3njJ"
     },
     "genres": [
       "poprock"
@@ -6535,16 +6535,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bicycle-race-remastered-2011-1978",
+    "id": üong-bicycle-race-remastered-2011-1978",
     "title": "Bicycle Race - Remastered 2011",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — 1978, Bicycle Race - Remastered 2011.",
+    answer": "Queen — 1978, Bicycle Race - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5CTAcf8aS0a0sIsDwQRF9C"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5CTAcf8aS0a0sIsDwQRF9C"
     },
     "genres": [
       "poprock"
@@ -6554,16 +6554,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-chiquitita-1979",
+    "id": üong-chiquitita-1979",
     "title": "Chiquitita",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "ABBA — 1979, Chiquitita.",
-    "hint": "ABBA",
+    answer": ÄBBA — 1979, Chiquitita.",
+    "hint": ÄBBA",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/762B4bOcXF7I2Y8UlKTyTy"
+    üources": {
+      üpotify": "https://open.spotify.com/track/762B4bOcXF7I2Y8UlKTyTy"
     },
     "genres": [
       "poprock"
@@ -6573,16 +6573,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wild-world-1970",
+    "id": üong-wild-world-1970",
     "title": "Wild World",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Yusuf / Cat Stevens — 1970, Wild World.",
+    answer": "Yusuf / Cat Stevens — 1970, Wild World.",
     "hint": "Yusuf / Cat Stevens",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7mjSHL2Eb0kAwiKbvNNyD9"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7mjSHL2Eb0kAwiKbvNNyD9"
     },
     "genres": [
       "poprock"
@@ -6592,16 +6592,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dream-on-1973",
+    "id": üong-dream-on-1973",
     "title": "Dream On",
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Aerosmith — 1973, Dream On.",
-    "hint": "Aerosmith",
+    answer": Äerosmith — 1973, Dream On.",
+    "hint": Äerosmith",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1xsYj84j7hUDDnTTerGWlH"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1xsYj84j7hUDDnTTerGWlH"
     },
     "genres": [
       "poprock"
@@ -6611,16 +6611,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-fernando-1976",
+    "id": üong-fernando-1976",
     "title": "Fernando",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "ABBA — 1976, Fernando.",
-    "hint": "ABBA",
+    answer": ÄBBA — 1976, Fernando.",
+    "hint": ÄBBA",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4BM8yJ0PzBi2ZewpMTOxtx"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4BM8yJ0PzBi2ZewpMTOxtx"
     },
     "genres": [
       "poprock"
@@ -6630,16 +6630,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-in-the-summertime-1971",
+    "id": üong-in-the-summertime-1971",
     "title": "In the Summertime",
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mungo Jerry — 1971, In the Summertime.",
+    answer": "Mungo Jerry — 1971, In the Summertime.",
     "hint": "Mungo Jerry",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/36xVTZU8HMpcgEdlJ4I3Kv"
+    üources": {
+      üpotify": "https://open.spotify.com/track/36xVTZU8HMpcgEdlJ4I3Kv"
     },
     "genres": [
       "poprock"
@@ -6649,16 +6649,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-go-your-own-way-2004-remaster-1977",
+    "id": üong-go-your-own-way-2004-remaster-1977",
     "title": "Go Your Own Way - 2004 Remaster",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fleetwood Mac — 1977, Go Your Own Way - 2004 Remaster.",
+    answer": "Fleetwood Mac — 1977, Go Your Own Way - 2004 Remaster.",
     "hint": "Fleetwood Mac",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/07GvNcU1WdyZJq3XxP0kZa"
+    üources": {
+      üpotify": "https://open.spotify.com/track/07GvNcU1WdyZJq3XxP0kZa"
     },
     "genres": [
       "poprock"
@@ -6668,16 +6668,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-tiny-dancer-1971",
+    "id": üong-tiny-dancer-1971",
     "title": "Tiny Dancer",
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elton John — 1971, Tiny Dancer.",
+    answer": "Elton John — 1971, Tiny Dancer.",
     "hint": "Elton John",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2TVxnKdb3tqe1nhQWwwZCO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2TVxnKdb3tqe1nhQWwwZCO"
     },
     "genres": [
       "poprock"
@@ -6687,16 +6687,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-el-condor-pasa-if-i-could-1970",
+    "id": üong-el-condor-pasa-if-i-could-1970",
     "title": "El Condor Pasa (If I Could)",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Simon & Garfunkel — 1970, El Condor Pasa (If I Could).",
+    answer": "Simon & Garfunkel — 1970, El Condor Pasa (If I Could).",
     "hint": "Simon & Garfunkel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1eN42Q7IWRzRBq8eW2Y2TE"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1eN42Q7IWRzRBq8eW2Y2TE"
     },
     "genres": [
       "poprock"
@@ -6706,16 +6706,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sorry-seems-to-be-the-hardest-word-1976",
+    "id": üong-sorry-seems-to-be-the-hardest-word-1976",
     "title": "Sorry Seems To Be The Hardest Word",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elton John — 1976, Sorry Seems To Be The Hardest Word.",
+    answer": "Elton John — 1976, Sorry Seems To Be The Hardest Word.",
     "hint": "Elton John",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6XfxmT5QNCXvpZA6PKfWVL"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6XfxmT5QNCXvpZA6PKfWVL"
     },
     "genres": [
       "poprock"
@@ -6725,16 +6725,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-ymca-original-version-1978-1978",
+    "id": üong-ymca-original-version-1978-1978",
     "title": "YMCA - Original Version 1978",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Village People — 1978, YMCA - Original Version 1978.",
+    answer": "Village People — 1978, YMCA - Original Version 1978.",
     "hint": "Village People",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/54OR1VDpfkBuOY5zZjhZAY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/54OR1VDpfkBuOY5zZjhZAY"
     },
     "genres": [
       "poprock"
@@ -6744,16 +6744,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-heart-of-gold-1972",
+    "id": üong-heart-of-gold-1972",
     "title": "Heart of Gold",
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Neil Young — 1972, Heart of Gold.",
+    answer": "Neil Young — 1972, Heart of Gold.",
     "hint": "Neil Young",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/26QKxvjlCo2fSd3T4c8Zpb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/26QKxvjlCo2fSd3T4c8Zpb"
     },
     "genres": [
       "poprock"
@@ -6763,16 +6763,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-guten-morgen-sonnenschein-1977",
+    "id": üong-guten-morgen-sonnenschein-1977",
     "title": "Guten Morgen Sonnenschein",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nana Mouskouri — 1977, Guten Morgen Sonnenschein.",
+    answer": "Nana Mouskouri — 1977, Guten Morgen Sonnenschein.",
     "hint": "Nana Mouskouri",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5lpXFKgD6PeT6endUq5EX9"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5lpXFKgD6PeT6endUq5EX9"
     },
     "genres": [
       "poprock"
@@ -6782,16 +6782,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-angie-remastered-2009-1973",
-    "title": "Angie - Remastered 2009",
+    "id": üong-angie-remastered-2009-1973",
+    "title": Ängie - Remastered 2009",
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Rolling Stones — 1973, Angie - Remastered 2009.",
+    answer": "The Rolling Stones — 1973, Angie - Remastered 2009.",
     "hint": "The Rolling Stones",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1GcVa4jFySlun4jLSuMhiq"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1GcVa4jFySlun4jLSuMhiq"
     },
     "genres": [
       "poprock"
@@ -6801,16 +6801,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-take-it-easy-2013-remaster-1972",
+    "id": üong-take-it-easy-2013-remaster-1972",
     "title": "Take It Easy - 2013 Remaster",
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eagles — 1972, Take It Easy - 2013 Remaster.",
+    answer": "Eagles — 1972, Take It Easy - 2013 Remaster.",
     "hint": "Eagles",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4yugZvBYaoREkJKtbG08Qr"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4yugZvBYaoREkJKtbG08Qr"
     },
     "genres": [
       "poprock"
@@ -6820,16 +6820,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-love-really-hurts-without-you-1976",
+    "id": üong-love-really-hurts-without-you-1976",
     "title": "Love Really Hurts Without You",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Ocean — 1976, Love Really Hurts Without You.",
+    answer": "Billy Ocean — 1976, Love Really Hurts Without You.",
     "hint": "Billy Ocean",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4GhtDORJiSRYxj6M1bv0vX"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4GhtDORJiSRYxj6M1bv0vX"
     },
     "genres": [
       "poprock"
@@ -6839,16 +6839,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-logical-song-remastered-2010-1979",
+    "id": üong-the-logical-song-remastered-2010-1979",
     "title": "The Logical Song - Remastered 2010",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Supertramp — 1979, The Logical Song - Remastered 2010.",
+    answer": "Supertramp — 1979, The Logical Song - Remastered 2010.",
     "hint": "Supertramp",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6mHOcVtsHLMuesJkswc0GZ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6mHOcVtsHLMuesJkswc0GZ"
     },
     "genres": [
       "poprock"
@@ -6858,16 +6858,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dreadlock-holiday-1978",
+    "id": üong-dreadlock-holiday-1978",
     "title": "Dreadlock Holiday",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "10cc — 1978, Dreadlock Holiday.",
+    answer": "10cc — 1978, Dreadlock Holiday.",
     "hint": "10cc",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1LOZMYF5s8qhW7Rv4w2gun"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1LOZMYF5s8qhW7Rv4w2gun"
     },
     "genres": [
       "poprock"
@@ -6877,16 +6877,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dreams-2004-remaster-1977",
+    "id": üong-dreams-2004-remaster-1977",
     "title": "Dreams - 2004 Remaster",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fleetwood Mac — 1977, Dreams - 2004 Remaster.",
+    answer": "Fleetwood Mac — 1977, Dreams - 2004 Remaster.",
     "hint": "Fleetwood Mac",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0ofHAoxe9vBkTCp2UQIavz"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0ofHAoxe9vBkTCp2UQIavz"
     },
     "genres": [
       "poprock"
@@ -6896,16 +6896,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sunny-1976",
+    "id": üong-sunny-1976",
     "title": "Sunny",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Boney M. — 1976, Sunny.",
+    answer": "Boney M. — 1976, Sunny.",
     "hint": "Boney M.",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3pf96IFggfQuT6Gafqx2rt"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3pf96IFggfQuT6Gafqx2rt"
     },
     "genres": [
       "poprock"
@@ -6915,16 +6915,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-save-your-kisses-for-me-2013",
+    "id": üong-save-your-kisses-for-me-2013",
     "title": "Save Your Kisses for Me",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Brotherhood of Man — 2013, Save Your Kisses for Me.",
+    answer": "Brotherhood of Man — 2013, Save Your Kisses for Me.",
     "hint": "Brotherhood of Man",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2MBwNVRASJ7ksQbhCpMIV1"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2MBwNVRASJ7ksQbhCpMIV1"
     },
     "genres": [
       "poprock"
@@ -6934,16 +6934,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-jolene-1974",
+    "id": üong-jolene-1974",
     "title": "Jolene",
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dolly Parton — 1974, Jolene.",
+    answer": "Dolly Parton — 1974, Jolene.",
     "hint": "Dolly Parton",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5fdhThPDe6jQQDqCyWrdAn"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5fdhThPDe6jQQDqCyWrdAn"
     },
     "genres": [
       "poprock"
@@ -6953,16 +6953,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-let-your-love-flow-1976",
+    "id": üong-let-your-love-flow-1976",
     "title": "Let Your Love Flow",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Bellamy Brothers — 1976, Let Your Love Flow.",
+    answer": "The Bellamy Brothers — 1976, Let Your Love Flow.",
     "hint": "The Bellamy Brothers",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/064SVQsmWl5EF0zahmzkQk"
+    üources": {
+      üpotify": "https://open.spotify.com/track/064SVQsmWl5EF0zahmzkQk"
     },
     "genres": [
       "poprock"
@@ -6972,16 +6972,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sailing-1975",
+    "id": üong-sailing-1975",
     "title": "Sailing",
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rod Stewart — 1975, Sailing.",
+    answer": "Rod Stewart — 1975, Sailing.",
     "hint": "Rod Stewart",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6OuRbvP4PgbuzBIapVzmFJ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6OuRbvP4PgbuzBIapVzmFJ"
     },
     "genres": [
       "poprock"
@@ -6991,16 +6991,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-you-make-me-feel-like-dancing-1976",
+    "id": üong-you-make-me-feel-like-dancing-1976",
     "title": "You Make Me Feel Like Dancing",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Leo Sayer — 1976, You Make Me Feel Like Dancing.",
+    answer": "Leo Sayer — 1976, You Make Me Feel Like Dancing.",
     "hint": "Leo Sayer",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3DZ11M7LSpVQzYHnFx3i95"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3DZ11M7LSpVQzYHnFx3i95"
     },
     "genres": [
       "poprock"
@@ -7010,16 +7010,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-more-than-a-woman-2020",
+    "id": üong-more-than-a-woman-2020",
     "title": "More Than A Woman",
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bee Gees — 2020, More Than A Woman.",
+    answer": "Bee Gees — 2020, More Than A Woman.",
     "hint": "Bee Gees",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2cX2coZS1PYBfPs8wgbdWE"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2cX2coZS1PYBfPs8wgbdWE"
     },
     "genres": [
       "poprock"
@@ -7029,16 +7029,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-take-the-long-way-home-remastered-2010-1979",
+    "id": üong-take-the-long-way-home-remastered-2010-1979",
     "title": "Take The Long Way Home - Remastered 2010",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Supertramp — 1979, Take The Long Way Home - Remastered 2010.",
+    answer": "Supertramp — 1979, Take The Long Way Home - Remastered 2010.",
     "hint": "Supertramp",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0v0XYK0pLgsPiq5u4FKHaw"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0v0XYK0pLgsPiq5u4FKHaw"
     },
     "genres": [
       "poprock"
@@ -7048,16 +7048,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-get-down-1973",
+    "id": üong-get-down-1973",
     "title": "Get Down",
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gilbert O'Sullivan — 1973, Get Down.",
+    answer": "Gilbert O'Sullivan — 1973, Get Down.",
     "hint": "Gilbert O'Sullivan",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7HLZEgQ5ShGYrcKS8Iv3u5"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7HLZEgQ5ShGYrcKS8Iv3u5"
     },
     "genres": [
       "poprock"
@@ -7067,16 +7067,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-down-on-the-corner-1969",
+    "id": üong-down-on-the-corner-1969",
     "title": "Down On The Corner",
     "category": "music",
     "year": 1969,
     "cue": "Song anhören und einordnen.",
-    "answer": "Creedence Clearwater Revival — 1969, Down On The Corner.",
+    answer": "Creedence Clearwater Revival — 1969, Down On The Corner.",
     "hint": "Creedence Clearwater Revival",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2gE95JskwQ1pCACTpGe1Db"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2gE95JskwQ1pCACTpGe1Db"
     },
     "genres": [
       "poprock"
@@ -7086,16 +7086,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-one-way-ticket-2011",
-    "title": "One Way Ticket",
+    "id": üong-one-way-ticket-2011",
+    "title": Öne Way Ticket",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eruption — 2011, One Way Ticket.",
+    answer": "Eruption — 2011, One Way Ticket.",
     "hint": "Eruption",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/68MSCSP7Y6PnzXcW1IlN7G"
+    üources": {
+      üpotify": "https://open.spotify.com/track/68MSCSP7Y6PnzXcW1IlN7G"
     },
     "genres": [
       "poprock"
@@ -7105,16 +7105,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-love-is-in-the-air-2006",
+    "id": üong-love-is-in-the-air-2006",
     "title": "Love Is in the Air",
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Paul Young — 2006, Love Is in the Air.",
+    answer": "John Paul Young — 2006, Love Is in the Air.",
     "hint": "John Paul Young",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4v2K1ZcRXUc87CLtEXI3Pf"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4v2K1ZcRXUc87CLtEXI3Pf"
     },
     "genres": [
       "poprock"
@@ -7124,16 +7124,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-big-yellow-taxi-1970",
+    "id": üong-big-yellow-taxi-1970",
     "title": "Big Yellow Taxi",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Joni Mitchell — 1970, Big Yellow Taxi.",
+    answer": "Joni Mitchell — 1970, Big Yellow Taxi.",
     "hint": "Joni Mitchell",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6UkMcAA19lTdjs22jtB7o2"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6UkMcAA19lTdjs22jtB7o2"
     },
     "genres": [
       "poprock"
@@ -7143,19 +7143,19 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wunder-gibt-es-immer-wieder-2025",
+    "id": üong-wunder-gibt-es-immer-wieder-2025",
     "title": "Wunder gibt es immer wieder",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katja Ebstein — 2025, Wunder gibt es immer wieder.",
+    answer": "Katja Ebstein — 2025, Wunder gibt es immer wieder.",
     "hint": "Katja Ebstein",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3BKrmS7x99qM9zVPTf0Lu2"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3BKrmS7x99qM9zVPTf0Lu2"
     },
     "genres": [
-      "schlagerparty",
+      üchlagerparty",
       "poprock"
     ],
     "playlists": [
@@ -7163,16 +7163,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-kiss-you-all-over-1993",
+    "id": üong-kiss-you-all-over-1993",
     "title": "Kiss You All Over",
     "category": "music",
     "year": 1993,
     "cue": "Song anhören und einordnen.",
-    "answer": "Exile — 1993, Kiss You All Over.",
+    answer": "Exile — 1993, Kiss You All Over.",
     "hint": "Exile",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2JK1wOZCGUDbJOSaHAa8BM"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2JK1wOZCGUDbJOSaHAa8BM"
     },
     "genres": [
       "poprock"
@@ -7182,16 +7182,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wuthering-heights-1978",
+    "id": üong-wuthering-heights-1978",
     "title": "Wuthering Heights",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kate Bush — 1978, Wuthering Heights.",
+    answer": "Kate Bush — 1978, Wuthering Heights.",
     "hint": "Kate Bush",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5YSI1311X8t31PBjkBG4CZ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5YSI1311X8t31PBjkBG4CZ"
     },
     "genres": [
       "poprock"
@@ -7201,16 +7201,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-born-to-be-alive-the-original-1978",
+    "id": üong-born-to-be-alive-the-original-1978",
     "title": "Born to Be Alive - The Original",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Patrick Hernandez — 1978, Born to Be Alive - The Original.",
+    answer": "Patrick Hernandez — 1978, Born to Be Alive - The Original.",
     "hint": "Patrick Hernandez",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3XIEWK1V9n25PS9Vb6axj5"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3XIEWK1V9n25PS9Vb6axj5"
     },
     "genres": [
       "poprock"
@@ -7220,16 +7220,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-it-never-rains-in-southern-california-1972",
+    "id": üong-it-never-rains-in-southern-california-1972",
     "title": "It Never Rains in Southern California",
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Albert Hammond — 1972, It Never Rains in Southern California.",
-    "hint": "Albert Hammond",
+    answer": Älbert Hammond — 1972, It Never Rains in Southern California.",
+    "hint": Älbert Hammond",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6tunhVGD8C05MZNjSVIsjw"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6tunhVGD8C05MZNjSVIsjw"
     },
     "genres": [
       "poprock"
@@ -7239,19 +7239,19 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-du-kannst-nicht-immer-17-sein-2009",
+    "id": üong-du-kannst-nicht-immer-17-sein-2009",
     "title": "Du kannst nicht immer 17 sein",
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Chris Roberts — 2009, Du kannst nicht immer 17 sein.",
+    answer": "Chris Roberts — 2009, Du kannst nicht immer 17 sein.",
     "hint": "Chris Roberts",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0IbuM7HceQXATToyQSvegs"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0IbuM7HceQXATToyQSvegs"
     },
     "genres": [
-      "schlagerparty",
+      üchlagerparty",
       "poprock"
     ],
     "playlists": [
@@ -7259,16 +7259,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-fox-on-the-run-alternate-version-2012",
+    "id": üong-fox-on-the-run-alternate-version-2012",
     "title": "Fox on the Run - Alternate Version",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sweet — 2012, Fox on the Run - Alternate Version.",
+    answer": "Sweet — 2012, Fox on the Run - Alternate Version.",
     "hint": "Sweet",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4FQf1wrg6xlcfxQC7ZTIpy"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4FQf1wrg6xlcfxQC7ZTIpy"
     },
     "genres": [
       "poprock"
@@ -7278,16 +7278,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-gimme-gimme-gimme-a-man-after-midnight-1979",
+    "id": üong-gimme-gimme-gimme-a-man-after-midnight-1979",
     "title": "Gimme! Gimme! Gimme! (A Man After Midnight)",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "ABBA — 1979, Gimme! Gimme! Gimme! (A Man After Midnight).",
-    "hint": "ABBA",
+    answer": ÄBBA — 1979, Gimme! Gimme! Gimme! (A Man After Midnight).",
+    "hint": ÄBBA",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3vkQ5DAB1qQMYO4Mr9zJN6"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3vkQ5DAB1qQMYO4Mr9zJN6"
     },
     "genres": [
       "poprock"
@@ -7297,16 +7297,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-september-2014",
+    "id": üong-september-2014",
     "title": "September",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Earth, Wind & Fire — 2014, September.",
+    answer": "Earth, Wind & Fire — 2014, September.",
     "hint": "Earth, Wind & Fire",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3wpLkju0bJy89kjgdRys0j"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3wpLkju0bJy89kjgdRys0j"
     },
     "genres": [
       "poprock"
@@ -7316,16 +7316,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-born-to-run-1975",
+    "id": üong-born-to-run-1975",
     "title": "Born to Run",
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruce Springsteen — 1975, Born to Run.",
+    answer": "Bruce Springsteen — 1975, Born to Run.",
     "hint": "Bruce Springsteen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6hTcuIQa0sxrrByu9wTD7s"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6hTcuIQa0sxrrByu9wTD7s"
     },
     "genres": [
       "poprock"
@@ -7335,16 +7335,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-voulez-vous-1979",
+    "id": üong-voulez-vous-1979",
     "title": "Voulez-Vous",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "ABBA — 1979, Voulez-Vous.",
-    "hint": "ABBA",
+    answer": ÄBBA — 1979, Voulez-Vous.",
+    "hint": ÄBBA",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/17OqI90oTFZ3J8PVu6j07V"
+    üources": {
+      üpotify": "https://open.spotify.com/track/17OqI90oTFZ3J8PVu6j07V"
     },
     "genres": [
       "poprock"
@@ -7354,16 +7354,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-we-are-the-champions-remastered-2011-1977",
+    "id": üong-we-are-the-champions-remastered-2011-1977",
     "title": "We Are The Champions - Remastered 2011",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — 1977, We Are The Champions - Remastered 2011.",
+    answer": "Queen — 1977, We Are The Champions - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1lCRw5FEZ1gPDNPzy1K4zW"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1lCRw5FEZ1gPDNPzy1K4zW"
     },
     "genres": [
       "poprock"
@@ -7373,16 +7373,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-father-and-son-1970",
+    "id": üong-father-and-son-1970",
     "title": "Father And Son",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Yusuf / Cat Stevens — 1970, Father And Son.",
+    answer": "Yusuf / Cat Stevens — 1970, Father And Son.",
     "hint": "Yusuf / Cat Stevens",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/476V2d6iA2tWXgQboKmTtA"
+    üources": {
+      üpotify": "https://open.spotify.com/track/476V2d6iA2tWXgQboKmTtA"
     },
     "genres": [
       "poprock"
@@ -7392,16 +7392,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-top-of-the-world-1972",
+    "id": üong-top-of-the-world-1972",
     "title": "Top Of The World",
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Carpenters — 1972, Top Of The World.",
+    answer": "Carpenters — 1972, Top Of The World.",
     "hint": "Carpenters",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1Ehdm1PDlKrdfyBsjwEvd1"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1Ehdm1PDlKrdfyBsjwEvd1"
     },
     "genres": [
       "poprock"
@@ -7411,16 +7411,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-young-hearts-run-free-1976",
+    "id": üong-young-hearts-run-free-1976",
     "title": "Young Hearts Run Free",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Candi Staton — 1976, Young Hearts Run Free.",
+    answer": "Candi Staton — 1976, Young Hearts Run Free.",
     "hint": "Candi Staton",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3MFa9idQuY4iJLWsZl3tIQ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3MFa9idQuY4iJLWsZl3tIQ"
     },
     "genres": [
       "poprock"
@@ -7430,16 +7430,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-my-life-1978",
+    "id": üong-my-life-1978",
     "title": "My Life",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Joel — 1978, My Life.",
+    answer": "Billy Joel — 1978, My Life.",
     "hint": "Billy Joel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4ZoBC5MhSEzuknIgAkBaoT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4ZoBC5MhSEzuknIgAkBaoT"
     },
     "genres": [
       "poprock"
@@ -7449,16 +7449,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dont-stop-me-now-remastered-2011-1978",
+    "id": üong-dont-stop-me-now-remastered-2011-1978",
     "title": "Don't Stop Me Now - Remastered 2011",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — 1978, Don't Stop Me Now - Remastered 2011.",
+    answer": "Queen — 1978, Don't Stop Me Now - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5T8EDUDqKcs6OSOwEsfqG7"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5T8EDUDqKcs6OSOwEsfqG7"
     },
     "genres": [
       "poprock"
@@ -7468,16 +7468,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-starman-2012-remaster-1972",
+    "id": üong-starman-2012-remaster-1972",
     "title": "Starman - 2012 Remaster",
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "David Bowie — 1972, Starman - 2012 Remaster.",
+    answer": "David Bowie — 1972, Starman - 2012 Remaster.",
     "hint": "David Bowie",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0pQskrTITgmCMyr85tb9qq"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0pQskrTITgmCMyr85tb9qq"
     },
     "genres": [
       "poprock"
@@ -7487,16 +7487,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-perfect-day-1972",
+    "id": üong-perfect-day-1972",
     "title": "Perfect Day",
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lou Reed — 1972, Perfect Day.",
+    answer": "Lou Reed — 1972, Perfect Day.",
     "hint": "Lou Reed",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4TOMI010Sd4ZAX4aZ5TS85"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4TOMI010Sd4ZAX4aZ5TS85"
     },
     "genres": [
       "poprock"
@@ -7506,16 +7506,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-american-pie-1971",
-    "title": "American Pie",
+    "id": üong-american-pie-1971",
+    "title": Ämerican Pie",
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Don McLean — 1971, American Pie.",
+    answer": "Don McLean — 1971, American Pie.",
     "hint": "Don McLean",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1fDsrQ23eTAVFElUMaf38X"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1fDsrQ23eTAVFElUMaf38X"
     },
     "genres": [
       "poprock"
@@ -7525,16 +7525,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-imagine-remastered-2010-1971",
+    "id": üong-imagine-remastered-2010-1971",
     "title": "Imagine - Remastered 2010",
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Lennon — 1971, Imagine - Remastered 2010.",
+    answer": "John Lennon — 1971, Imagine - Remastered 2010.",
     "hint": "John Lennon",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7pKfPomDEeI4TPT6EOYjn9"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7pKfPomDEeI4TPT6EOYjn9"
     },
     "genres": [
       "poprock"
@@ -7544,16 +7544,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-somebody-to-love-remastered-2011-1976",
+    "id": üong-somebody-to-love-remastered-2011-1976",
     "title": "Somebody To Love - Remastered 2011",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — 1976, Somebody To Love - Remastered 2011.",
+    answer": "Queen — 1976, Somebody To Love - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4rDbp1vnvEhieiccprPMdI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4rDbp1vnvEhieiccprPMdI"
     },
     "genres": [
       "poprock"
@@ -7563,16 +7563,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-take-a-chance-on-me-1977",
+    "id": üong-take-a-chance-on-me-1977",
     "title": "Take A Chance On Me",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "ABBA — 1977, Take A Chance On Me.",
-    "hint": "ABBA",
+    answer": ÄBBA — 1977, Take A Chance On Me.",
+    "hint": ÄBBA",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5BckPAYcKEJuYs1eV1BHHe"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5BckPAYcKEJuYs1eV1BHHe"
     },
     "genres": [
       "poprock"
@@ -7582,16 +7582,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-make-your-own-kind-of-music-1973",
+    "id": üong-make-your-own-kind-of-music-1973",
     "title": "Make Your Own Kind Of Music",
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cass Elliot — 1973, Make Your Own Kind Of Music.",
+    answer": "Cass Elliot — 1973, Make Your Own Kind Of Music.",
     "hint": "Cass Elliot",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6H3Wa6hWR9DRMzMSd4pZkT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6H3Wa6hWR9DRMzMSd4pZkT"
     },
     "genres": [
       "poprock"
@@ -7601,16 +7601,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-shes-always-a-woman-1977",
+    "id": üong-shes-always-a-woman-1977",
     "title": "She's Always a Woman",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Joel — 1977, She's Always a Woman.",
+    answer": "Billy Joel — 1977, She's Always a Woman.",
     "hint": "Billy Joel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5RgFlk1fcClZd0Y4SGYhqH"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5RgFlk1fcClZd0Y4SGYhqH"
     },
     "genres": [
       "poprock"
@@ -7620,16 +7620,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-air-that-i-breathe-2008-remaster-1974",
+    "id": üong-the-air-that-i-breathe-2008-remaster-1974",
     "title": "The Air That I Breathe - 2008 Remaster",
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Hollies — 1974, The Air That I Breathe - 2008 Remaster.",
+    answer": "The Hollies — 1974, The Air That I Breathe - 2008 Remaster.",
     "hint": "The Hollies",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3P3fymPrC9KgV2Kf5oMnx0"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3P3fymPrC9KgV2Kf5oMnx0"
     },
     "genres": [
       "poprock"
@@ -7639,16 +7639,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-killer-queen-remastered-2011-1974",
+    "id": üong-killer-queen-remastered-2011-1974",
     "title": "Killer Queen - Remastered 2011",
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — 1974, Killer Queen - Remastered 2011.",
+    answer": "Queen — 1974, Killer Queen - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2AKOOhml62GZNFWDN7VqzT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2AKOOhml62GZNFWDN7VqzT"
     },
     "genres": [
       "poprock"
@@ -7658,16 +7658,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-rose-1979",
+    "id": üong-the-rose-1979",
     "title": "The Rose",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bette Midler — 1979, The Rose.",
+    answer": "Bette Midler — 1979, The Rose.",
     "hint": "Bette Midler",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/562JrM9b7jiu8LgzV62x3o"
+    üources": {
+      üpotify": "https://open.spotify.com/track/562JrM9b7jiu8LgzV62x3o"
     },
     "genres": [
       "poprock"
@@ -7677,16 +7677,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-mr-blue-sky-1977",
+    "id": üong-mr-blue-sky-1977",
     "title": "Mr. Blue Sky",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Electric Light Orchestra — 1977, Mr. Blue Sky.",
+    answer": "Electric Light Orchestra — 1977, Mr. Blue Sky.",
     "hint": "Electric Light Orchestra",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2RlgNHKcydI9sayD2Df2xp"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2RlgNHKcydI9sayD2Df2xp"
     },
     "genres": [
       "poprock"
@@ -7696,16 +7696,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-take-me-home-country-roads-original-version-1971",
+    "id": üong-take-me-home-country-roads-original-version-1971",
     "title": "Take Me Home, Country Roads - Original Version",
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Denver — 1971, Take Me Home, Country Roads - Original Version.",
+    answer": "John Denver — 1971, Take Me Home, Country Roads - Original Version.",
     "hint": "John Denver",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1YYhDizHx7PnDhAhko6cDS"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1YYhDizHx7PnDhAhko6cDS"
     },
     "genres": [
       "poprock"
@@ -7715,16 +7715,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-tragedy-1979",
+    "id": üong-tragedy-1979",
     "title": "Tragedy",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bee Gees — 1979, Tragedy.",
+    answer": "Bee Gees — 1979, Tragedy.",
     "hint": "Bee Gees",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6UXXeFqMBGiqjkzQzkMT3E"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6UXXeFqMBGiqjkzQzkMT3E"
     },
     "genres": [
       "poprock"
@@ -7734,16 +7734,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-we-will-rock-you-remastered-2011-1977",
+    "id": üong-we-will-rock-you-remastered-2011-1977",
     "title": "We Will Rock You - Remastered 2011",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — 1977, We Will Rock You - Remastered 2011.",
+    answer": "Queen — 1977, We Will Rock You - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4pbJqGIASGPr0ZpGpnWkDn"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4pbJqGIASGPr0ZpGpnWkDn"
     },
     "genres": [
       "poprock"
@@ -7753,16 +7753,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-rocket-man-i-think-its-going-to-be-a-long-long-time-1972",
+    "id": üong-rocket-man-i-think-its-going-to-be-a-long-long-time-1972",
     "title": "Rocket Man (I Think It's Going To Be A Long, Long Time)",
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elton John — 1972, Rocket Man (I Think It's Going To Be A Long, Long Time).",
+    answer": "Elton John — 1972, Rocket Man (I Think It's Going To Be A Long, Long Time).",
     "hint": "Elton John",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3gdewACMIVMEWVbyb8O9sY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3gdewACMIVMEWVbyb8O9sY"
     },
     "genres": [
       "poprock"
@@ -7772,16 +7772,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-50-ways-to-leave-your-lover-1975",
+    "id": üong-50-ways-to-leave-your-lover-1975",
     "title": "50 Ways to Leave Your Lover",
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "Paul Simon — 1975, 50 Ways to Leave Your Lover.",
+    answer": "Paul Simon — 1975, 50 Ways to Leave Your Lover.",
     "hint": "Paul Simon",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6Qb7gtV6Q4MnUjSbkFcopl"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6Qb7gtV6Q4MnUjSbkFcopl"
     },
     "genres": [
       "poprock"
@@ -7791,16 +7791,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lovely-day-1977",
+    "id": üong-lovely-day-1977",
     "title": "Lovely Day",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bill Withers — 1977, Lovely Day.",
+    answer": "Bill Withers — 1977, Lovely Day.",
     "hint": "Bill Withers",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0bRXwKfigvpKZUurwqAlEh"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0bRXwKfigvpKZUurwqAlEh"
     },
     "genres": [
       "poprock"
@@ -7810,16 +7810,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wish-you-were-here-2001",
+    "id": üong-wish-you-were-here-2001",
     "title": "Wish You Were Here",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Pink Floyd — 2001, Wish You Were Here.",
+    answer": "Pink Floyd — 2001, Wish You Were Here.",
     "hint": "Pink Floyd",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6iMjntVYkchLBJcqsiSNYZ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6iMjntVYkchLBJcqsiSNYZ"
     },
     "genres": [
       "poprock"
@@ -7829,16 +7829,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-vincent-1971",
+    "id": üong-vincent-1971",
     "title": "Vincent",
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Don McLean — 1971, Vincent.",
+    answer": "Don McLean — 1971, Vincent.",
     "hint": "Don McLean",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0VNzEY1G4GLqcNx5qaaTl6"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0VNzEY1G4GLqcNx5qaaTl6"
     },
     "genres": [
       "poprock"
@@ -7848,16 +7848,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cecilia-1970",
+    "id": üong-cecilia-1970",
     "title": "Cecilia",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Simon & Garfunkel — 1970, Cecilia.",
+    answer": "Simon & Garfunkel — 1970, Cecilia.",
     "hint": "Simon & Garfunkel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6QhXQOpyYvbpdbyjgAqKdY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6QhXQOpyYvbpdbyjgAqKdY"
     },
     "genres": [
       "poprock"
@@ -7867,16 +7867,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-dont-like-mondays-1979",
+    "id": üong-i-dont-like-mondays-1979",
     "title": "I Don't Like Mondays",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Boomtown Rats — 1979, I Don't Like Mondays.",
+    answer": "The Boomtown Rats — 1979, I Don't Like Mondays.",
     "hint": "The Boomtown Rats",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7JFoeg0arawADjGcz9gBnq"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7JFoeg0arawADjGcz9gBnq"
     },
     "genres": [
       "poprock"
@@ -7886,16 +7886,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dont-bring-me-down-1979",
+    "id": üong-dont-bring-me-down-1979",
     "title": "Don't Bring Me Down",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Electric Light Orchestra — 1979, Don't Bring Me Down.",
+    answer": "Electric Light Orchestra — 1979, Don't Bring Me Down.",
     "hint": "Electric Light Orchestra",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/72ahyckBJfTigJCFCviVN7"
+    üources": {
+      üpotify": "https://open.spotify.com/track/72ahyckBJfTigJCFCviVN7"
     },
     "genres": [
       "poprock"
@@ -7905,16 +7905,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-your-song-1970",
+    "id": üong-your-song-1970",
     "title": "Your Song",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elton John — 1970, Your Song.",
+    answer": "Elton John — 1970, Your Song.",
     "hint": "Elton John",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/38zsOOcu31XbbYj9BIPUF1"
+    üources": {
+      üpotify": "https://open.spotify.com/track/38zsOOcu31XbbYj9BIPUF1"
     },
     "genres": [
       "poprock"
@@ -7924,16 +7924,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bridge-over-troubled-water-1970",
+    "id": üong-bridge-over-troubled-water-1970",
     "title": "Bridge Over Troubled Water",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Simon & Garfunkel — 1970, Bridge Over Troubled Water.",
+    answer": "Simon & Garfunkel — 1970, Bridge Over Troubled Water.",
     "hint": "Simon & Garfunkel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6l8EbYRtQMgKOyc1gcDHF9"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6l8EbYRtQMgKOyc1gcDHF9"
     },
     "genres": [
       "poprock"
@@ -7943,16 +7943,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hooked-on-a-feeling-1974",
+    "id": üong-hooked-on-a-feeling-1974",
     "title": "Hooked On A Feeling",
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "Blue Swede, Björn Skifs — 1974, Hooked On A Feeling.",
+    answer": "Blue Swede, Björn Skifs — 1974, Hooked On A Feeling.",
     "hint": "Blue Swede, Björn Skifs",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6Ac4NVYYl2U73QiTt11ZKd"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6Ac4NVYYl2U73QiTt11ZKd"
     },
     "genres": [
       "poprock"
@@ -7962,16 +7962,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-just-the-way-you-are-1977",
+    "id": üong-just-the-way-you-are-1977",
     "title": "Just the Way You Are",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Joel — 1977, Just the Way You Are.",
+    answer": "Billy Joel — 1977, Just the Way You Are.",
     "hint": "Billy Joel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/49MHCPzvMLXhRjDantBMVH"
+    üources": {
+      üpotify": "https://open.spotify.com/track/49MHCPzvMLXhRjDantBMVH"
     },
     "genres": [
       "poprock"
@@ -7981,16 +7981,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-escape-the-pina-colada-song-1979",
+    "id": üong-escape-the-pina-colada-song-1979",
     "title": "Escape (The Pina Colada Song)",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rupert Holmes — 1979, Escape (The Pina Colada Song).",
+    answer": "Rupert Holmes — 1979, Escape (The Pina Colada Song).",
     "hint": "Rupert Holmes",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5IMtdHjJ1OtkxbGe4zfUxQ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5IMtdHjJ1OtkxbGe4zfUxQ"
     },
     "genres": [
       "poprock"
@@ -8000,16 +8000,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-seasons-in-the-sun-2006",
+    "id": üong-seasons-in-the-sun-2006",
     "title": "Seasons in the Sun",
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "Terry Jacks — 2006, Seasons in the Sun.",
+    answer": "Terry Jacks — 2006, Seasons in the Sun.",
     "hint": "Terry Jacks",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0X3d9gx7UDYgcwwkgTeNLR"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0X3d9gx7UDYgcwwkgTeNLR"
     },
     "genres": [
       "poprock"
@@ -8019,16 +8019,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-morning-has-broken-remastered-2021-1971",
+    "id": üong-morning-has-broken-remastered-2021-1971",
     "title": "Morning Has Broken - Remastered 2021",
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Yusuf / Cat Stevens — 1971, Morning Has Broken - Remastered 2021.",
+    answer": "Yusuf / Cat Stevens — 1971, Morning Has Broken - Remastered 2021.",
     "hint": "Yusuf / Cat Stevens",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5y8d8RHvxb0KiTa9Nq0xWp"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5y8d8RHvxb0KiTa9Nq0xWp"
     },
     "genres": [
       "poprock"
@@ -8038,16 +8038,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-boxer-1970",
+    "id": üong-the-boxer-1970",
     "title": "The Boxer",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Simon & Garfunkel — 1970, The Boxer.",
+    answer": "Simon & Garfunkel — 1970, The Boxer.",
     "hint": "Simon & Garfunkel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/76TZCvJ8GitQ2FA1q5dKu0"
+    üources": {
+      üpotify": "https://open.spotify.com/track/76TZCvJ8GitQ2FA1q5dKu0"
     },
     "genres": [
       "poprock"
@@ -8057,16 +8057,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lean-on-me-1972",
+    "id": üong-lean-on-me-1972",
     "title": "Lean on Me",
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bill Withers — 1972, Lean on Me.",
+    answer": "Bill Withers — 1972, Lean on Me.",
     "hint": "Bill Withers",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3M8FzayQWtkvOhqMn2V4T2"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3M8FzayQWtkvOhqMn2V4T2"
     },
     "genres": [
       "poprock"
@@ -8076,16 +8076,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-our-house-1970",
-    "title": "Our House",
+    "id": üong-our-house-1970",
+    "title": Öur House",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Crosby, Stills, Nash & Young — 1970, Our House.",
+    answer": "Crosby, Stills, Nash & Young — 1970, Our House.",
     "hint": "Crosby, Stills, Nash & Young",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2hitsKa8SthKhRJBXUHbIv"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2hitsKa8SthKhRJBXUHbIv"
     },
     "genres": [
       "poprock"
@@ -8095,16 +8095,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-jealous-guy-remastered-2010-1971",
+    "id": üong-jealous-guy-remastered-2010-1971",
     "title": "Jealous Guy - Remastered 2010",
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Lennon — 1971, Jealous Guy - Remastered 2010.",
+    answer": "John Lennon — 1971, Jealous Guy - Remastered 2010.",
     "hint": "John Lennon",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3D9iV6cYkYJRAPFO6DRKIE"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3D9iV6cYkYJRAPFO6DRKIE"
     },
     "genres": [
       "poprock"
@@ -8114,16 +8114,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-goodbye-yellow-brick-road-remastered-2014-1973",
+    "id": üong-goodbye-yellow-brick-road-remastered-2014-1973",
     "title": "Goodbye Yellow Brick Road - Remastered 2014",
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elton John — 1973, Goodbye Yellow Brick Road - Remastered 2014.",
+    answer": "Elton John — 1973, Goodbye Yellow Brick Road - Remastered 2014.",
     "hint": "Elton John",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4IRHwIZHzlHT1FQpRa5RdE"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4IRHwIZHzlHT1FQpRa5RdE"
     },
     "genres": [
       "poprock"
@@ -8133,16 +8133,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-you-are-so-beautiful-1996-version-1996",
+    "id": üong-you-are-so-beautiful-1996-version-1996",
     "title": "You Are So Beautiful - 1996 Version",
     "category": "music",
     "year": 1996,
     "cue": "Song anhören und einordnen.",
-    "answer": "Joe Cocker — 1996, You Are So Beautiful - 1996 Version.",
+    answer": "Joe Cocker — 1996, You Are So Beautiful - 1996 Version.",
     "hint": "Joe Cocker",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0Q4FBn52tglZ02DCrAY8j0"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0Q4FBn52tglZ02DCrAY8j0"
     },
     "genres": [
       "poprock"
@@ -8152,16 +8152,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hotel-california-2013-remaster-1976",
+    "id": üong-hotel-california-2013-remaster-1976",
     "title": "Hotel California - 2013 Remaster",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eagles — 1976, Hotel California - 2013 Remaster.",
+    answer": "Eagles — 1976, Hotel California - 2013 Remaster.",
     "hint": "Eagles",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/40riOy7x9W7GXjyGp4pjAv"
+    üources": {
+      üpotify": "https://open.spotify.com/track/40riOy7x9W7GXjyGp4pjAv"
     },
     "genres": [
       "poprock"
@@ -8171,16 +8171,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-heroes-2017-remaster-1977",
+    "id": üong-heroes-2017-remaster-1977",
     "title": "\"Heroes\" - 2017 Remaster",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "David Bowie — 1977, \"Heroes\" - 2017 Remaster.",
+    answer": "David Bowie — 1977, \"Heroes\" - 2017 Remaster.",
     "hint": "David Bowie",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7Jh1bpe76CNTCgdgAdBw4Z"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7Jh1bpe76CNTCgdgAdBw4Z"
     },
     "genres": [
       "poprock"
@@ -8190,16 +8190,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wonderful-tonight-1977",
+    "id": üong-wonderful-tonight-1977",
     "title": "Wonderful Tonight",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eric Clapton — 1977, Wonderful Tonight.",
+    answer": "Eric Clapton — 1977, Wonderful Tonight.",
     "hint": "Eric Clapton",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6zC0mpGYwbNTpk9SKwh08f"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6zC0mpGYwbNTpk9SKwh08f"
     },
     "genres": [
       "poprock"
@@ -8209,16 +8209,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-more-than-a-feeling-1976",
+    "id": üong-more-than-a-feeling-1976",
     "title": "More Than a Feeling",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Boston — 1976, More Than a Feeling.",
+    answer": "Boston — 1976, More Than a Feeling.",
     "hint": "Boston",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1QEEqeFIZktqIpPI4jSVSF"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1QEEqeFIZktqIpPI4jSVSF"
     },
     "genres": [
       "poprock"
@@ -8228,16 +8228,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-roxanne-1978",
+    "id": üong-roxanne-1978",
     "title": "Roxanne",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Police — 1978, Roxanne.",
+    answer": "The Police — 1978, Roxanne.",
     "hint": "The Police",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3EYOJ48Et32uATr9ZmLnAo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3EYOJ48Et32uATr9ZmLnAo"
     },
     "genres": [
       "poprock"
@@ -8247,16 +8247,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cold-as-ice-1977",
+    "id": üong-cold-as-ice-1977",
     "title": "Cold as Ice",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Foreigner — 1977, Cold as Ice.",
+    answer": "Foreigner — 1977, Cold as Ice.",
     "hint": "Foreigner",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7vidktgNZFQylTgH1GEnMs"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7vidktgNZFQylTgH1GEnMs"
     },
     "genres": [
       "poprock"
@@ -8266,16 +8266,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-you-sexy-thing-1975",
+    "id": üong-you-sexy-thing-1975",
     "title": "You Sexy Thing",
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "Hot Chocolate — 1975, You Sexy Thing.",
+    answer": "Hot Chocolate — 1975, You Sexy Thing.",
     "hint": "Hot Chocolate",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/714hERk9U1W8FMYkoC83CO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/714hERk9U1W8FMYkoC83CO"
     },
     "genres": [
       "poprock"
@@ -8285,16 +8285,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-another-brick-in-the-wall-pt-2-1979",
-    "title": "Another Brick in the Wall, Pt. 2",
+    "id": üong-another-brick-in-the-wall-pt-2-1979",
+    "title": Änother Brick in the Wall, Pt. 2",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Pink Floyd — 1979, Another Brick in the Wall, Pt. 2.",
+    answer": "Pink Floyd — 1979, Another Brick in the Wall, Pt. 2.",
     "hint": "Pink Floyd",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4gMgiXfqyzZLMhsksGmbQV"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4gMgiXfqyzZLMhsksGmbQV"
     },
     "genres": [
       "poprock"
@@ -8304,16 +8304,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stayin-alive-from-saturday-night-fever-soundtrack-1990",
-    "title": "Stayin' Alive - From \"Saturday Night Fever\" Soundtrack",
+    "id": üong-stayin-alive-from-saturday-night-fever-soundtrack-1990",
+    "title": "Stayin' Alive - From \"Saturday Night Fever\„ Soundtrack",
     "category": "music",
     "year": 1990,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bee Gees — 1990, Stayin' Alive - From \"Saturday Night Fever\" Soundtrack.",
+    answer": "Bee Gees — 1990, Stayin' Alive - From \"Saturday Night Fever\„ Soundtrack.",
     "hint": "Bee Gees",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/79hJaqmVdohltPBNN6BULM"
+    üources": {
+      üpotify": "https://open.spotify.com/track/79hJaqmVdohltPBNN6BULM"
     },
     "genres": [
       "poprock"
@@ -8323,16 +8323,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-knockin-on-heavens-door-1973",
+    "id": üong-knockin-on-heavens-door-1973",
     "title": "Knockin' On Heaven's Door",
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bob Dylan — 1973, Knockin' On Heaven's Door.",
+    answer": "Bob Dylan — 1973, Knockin' On Heaven's Door.",
     "hint": "Bob Dylan",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6HSXNV0b4M4cLJ7ljgVVeh"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6HSXNV0b4M4cLJ7ljgVVeh"
     },
     "genres": [
       "poprock"
@@ -8342,16 +8342,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-landslide-1975",
+    "id": üong-landslide-1975",
     "title": "Landslide",
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fleetwood Mac — 1975, Landslide.",
+    answer": "Fleetwood Mac — 1975, Landslide.",
     "hint": "Fleetwood Mac",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5ihS6UUlyQAfmp48eSkxuQ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5ihS6UUlyQAfmp48eSkxuQ"
     },
     "genres": [
       "poprock"
@@ -8361,16 +8361,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-come-and-get-your-love-single-version-1973",
+    "id": üong-come-and-get-your-love-single-version-1973",
     "title": "Come and Get Your Love - Single Version",
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Redbone — 1973, Come and Get Your Love - Single Version.",
+    answer": "Redbone — 1973, Come and Get Your Love - Single Version.",
     "hint": "Redbone",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7GVUmCP00eSsqc4tzj1sDD"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7GVUmCP00eSsqc4tzj1sDD"
     },
     "genres": [
       "poprock"
@@ -8380,16 +8380,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-every-1s-a-winner-single-version-1978",
+    "id": üong-every-1s-a-winner-single-version-1978",
     "title": "Every 1's a Winner - Single Version",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Hot Chocolate — 1978, Every 1's a Winner - Single Version.",
+    answer": "Hot Chocolate — 1978, Every 1's a Winner - Single Version.",
     "hint": "Hot Chocolate",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5MXXbGYNmRHR7ULMvZYo5R"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5MXXbGYNmRHR7ULMvZYo5R"
     },
     "genres": [
       "poprock"
@@ -8399,16 +8399,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-how-deep-is-your-love-1979",
+    "id": üong-how-deep-is-your-love-1979",
     "title": "How Deep Is Your Love",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bee Gees — 1979, How Deep Is Your Love.",
+    answer": "Bee Gees — 1979, How Deep Is Your Love.",
     "hint": "Bee Gees",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2JoZzpdeP2G6Csfdq5aLXP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2JoZzpdeP2G6Csfdq5aLXP"
     },
     "genres": [
       "poprock"
@@ -8418,16 +8418,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-was-made-for-lovin-you-1979",
+    "id": üong-i-was-made-for-lovin-you-1979",
     "title": "I Was Made For Lovin' You",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "KISS — 1979, I Was Made For Lovin' You.",
+    answer": "KISS — 1979, I Was Made For Lovin' You.",
     "hint": "KISS",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6S9q9mEifNdnTNlli2xSuD"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6S9q9mEifNdnTNlli2xSuD"
     },
     "genres": [
       "metal",
@@ -8438,16 +8438,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-passenger-1977",
+    "id": üong-the-passenger-1977",
     "title": "The Passenger",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Iggy Pop — 1977, The Passenger.",
+    answer": "Iggy Pop — 1977, The Passenger.",
     "hint": "Iggy Pop",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/15BQ7vEDv2LJuh8TxWIhtd"
+    üources": {
+      üpotify": "https://open.spotify.com/track/15BQ7vEDv2LJuh8TxWIhtd"
     },
     "genres": [
       "poprock"
@@ -8457,16 +8457,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-solsbury-hill-1977",
+    "id": üong-solsbury-hill-1977",
     "title": "Solsbury Hill",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Peter Gabriel — 1977, Solsbury Hill.",
+    answer": "Peter Gabriel — 1977, Solsbury Hill.",
     "hint": "Peter Gabriel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6vZZtivPrtpggT5SSXsYTy"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6vZZtivPrtpggT5SSXsYTy"
     },
     "genres": [
       "poprock"
@@ -8476,16 +8476,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-kung-fu-fighting-1974",
+    "id": üong-kung-fu-fighting-1974",
     "title": "Kung Fu Fighting",
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "Carl Douglas — 1974, Kung Fu Fighting.",
+    answer": "Carl Douglas — 1974, Kung Fu Fighting.",
     "hint": "Carl Douglas",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7K8QsHbmUpSX37oOCL4e2g"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7K8QsHbmUpSX37oOCL4e2g"
     },
     "genres": [
       "poprock"
@@ -8495,16 +8495,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hold-the-line-2014",
+    "id": üong-hold-the-line-2014",
     "title": "Hold the Line",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "TOTO — 2014, Hold the Line.",
+    answer": "TOTO — 2014, Hold the Line.",
     "hint": "TOTO",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/17arUdDWEinOOVrrVUkEM7"
+    üources": {
+      üpotify": "https://open.spotify.com/track/17arUdDWEinOOVrrVUkEM7"
     },
     "genres": [
       "poprock"
@@ -8514,16 +8514,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-my-sweet-lord-2020-mix-1970",
+    "id": üong-my-sweet-lord-2020-mix-1970",
     "title": "My Sweet Lord - 2020 Mix",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Harrison — 1970, My Sweet Lord - 2020 Mix.",
+    answer": "George Harrison — 1970, My Sweet Lord - 2020 Mix.",
     "hint": "George Harrison",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0hMvI4iye2BtqOPL57qfya"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0hMvI4iye2BtqOPL57qfya"
     },
     "genres": [
       "poprock"
@@ -8533,16 +8533,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-my-sharona-1979",
+    "id": üong-my-sharona-1979",
     "title": "My Sharona",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Knack — 1979, My Sharona.",
+    answer": "The Knack — 1979, My Sharona.",
     "hint": "The Knack",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1HOMkjp0nHMaTnfAkslCQj"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1HOMkjp0nHMaTnfAkslCQj"
     },
     "genres": [
       "poprock"
@@ -8552,16 +8552,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-chain-2004-remaster-1977",
+    "id": üong-the-chain-2004-remaster-1977",
     "title": "The Chain - 2004 Remaster",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fleetwood Mac — 1977, The Chain - 2004 Remaster.",
+    answer": "Fleetwood Mac — 1977, The Chain - 2004 Remaster.",
     "hint": "Fleetwood Mac",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5e9TFTbltYBg2xThimr0rU"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5e9TFTbltYBg2xThimr0rU"
     },
     "genres": [
       "poprock"
@@ -8571,16 +8571,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-jive-talkin-1975",
+    "id": üong-jive-talkin-1975",
     "title": "Jive Talkin'",
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bee Gees — 1975, Jive Talkin'.",
+    answer": "Bee Gees — 1975, Jive Talkin'.",
     "hint": "Bee Gees",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4t0Pj3iBnSCZv5pDEPNmzG"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4t0Pj3iBnSCZv5pDEPNmzG"
     },
     "genres": [
       "poprock"
@@ -8590,16 +8590,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cats-in-the-cradle-1974",
+    "id": üong-cats-in-the-cradle-1974",
     "title": "Cat's in the Cradle",
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "Harry Chapin — 1974, Cat's in the Cradle.",
+    answer": "Harry Chapin — 1974, Cat's in the Cradle.",
     "hint": "Harry Chapin",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6hLqEJg2GnnDG4W0Y64hyD"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6hLqEJg2GnnDG4W0Y64hyD"
     },
     "genres": [
       "poprock"
@@ -8609,16 +8609,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-burning-love-1973",
+    "id": üong-burning-love-1973",
     "title": "Burning Love",
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elvis Presley — 1973, Burning Love.",
+    answer": "Elvis Presley — 1973, Burning Love.",
     "hint": "Elvis Presley",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7zMUCLm1TN9o9JlLISztxO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7zMUCLm1TN9o9JlLISztxO"
     },
     "genres": [
       "poprock"
@@ -8628,16 +8628,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-three-little-birds-1977",
+    "id": üong-three-little-birds-1977",
     "title": "Three Little Birds",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bob Marley & The Wailers — 1977, Three Little Birds.",
+    answer": "Bob Marley & The Wailers — 1977, Three Little Birds.",
     "hint": "Bob Marley & The Wailers",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7yFvSYKk3g5g8e7Ffl16ws"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7yFvSYKk3g5g8e7Ffl16ws"
     },
     "genres": [
       "poprock"
@@ -8647,16 +8647,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-heart-of-glass-2006",
+    "id": üong-heart-of-glass-2006",
     "title": "Heart Of Glass",
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "Blondie — 2006, Heart Of Glass.",
+    answer": "Blondie — 2006, Heart Of Glass.",
     "hint": "Blondie",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/41AE8ODX2JETBCa6muhSLY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/41AE8ODX2JETBCa6muhSLY"
     },
     "genres": [
       "poprock"
@@ -8666,16 +8666,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bright-eyes-1979",
+    "id": üong-bright-eyes-1979",
     "title": "Bright Eyes",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Art Garfunkel — 1979, Bright Eyes.",
-    "hint": "Art Garfunkel",
+    answer": Ärt Garfunkel — 1979, Bright Eyes.",
+    "hint": Ärt Garfunkel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2geMzjpfaN4U5YjrDtbYYk"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2geMzjpfaN4U5YjrDtbYYk"
     },
     "genres": [
       "poprock"
@@ -8685,16 +8685,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-free-bird-1973",
+    "id": üong-free-bird-1973",
     "title": "Free Bird",
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lynyrd Skynyrd — 1973, Free Bird.",
+    answer": "Lynyrd Skynyrd — 1973, Free Bird.",
     "hint": "Lynyrd Skynyrd",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4qsAYBCJnu2OkTKUVbbOF1"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4qsAYBCJnu2OkTKUVbbOF1"
     },
     "genres": [
       "poprock"
@@ -8704,16 +8704,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-heart-of-gold-2009-remaster-1972",
+    "id": üong-heart-of-gold-2009-remaster-1972",
     "title": "Heart of Gold - 2009 Remaster",
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Neil Young — 1972, Heart of Gold - 2009 Remaster.",
+    answer": "Neil Young — 1972, Heart of Gold - 2009 Remaster.",
     "hint": "Neil Young",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1Q1b8eVkUPGlpSArl8JAVw"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1Q1b8eVkUPGlpSArl8JAVw"
     },
     "genres": [
       "poprock"
@@ -8723,16 +8723,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-shes-a-lady-1971",
+    "id": üong-shes-a-lady-1971",
     "title": "She's A Lady",
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tom Jones — 1971, She's A Lady.",
+    answer": "Tom Jones — 1971, She's A Lady.",
     "hint": "Tom Jones",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5JnHzjo25FY1fMQMQVOawB"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5JnHzjo25FY1fMQMQVOawB"
     },
     "genres": [
       "poprock"
@@ -8742,16 +8742,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stumblin-in-2017-remaster-1978",
+    "id": üong-stumblin-in-2017-remaster-1978",
     "title": "Stumblin' In - 2017 Remaster",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Chris Norman, Suzi Quatro — 1978, Stumblin' In - 2017 Remaster.",
+    answer": "Chris Norman, Suzi Quatro — 1978, Stumblin' In - 2017 Remaster.",
     "hint": "Chris Norman, Suzi Quatro",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2Pzhx26KqgTTKnko0uC7F7"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2Pzhx26KqgTTKnko0uC7F7"
     },
     "genres": [
       "poprock"
@@ -8761,16 +8761,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-superstition-1972",
+    "id": üong-superstition-1972",
     "title": "Superstition",
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Stevie Wonder — 1972, Superstition.",
+    answer": "Stevie Wonder — 1972, Superstition.",
     "hint": "Stevie Wonder",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4N0TP4Rmj6QQezWV88ARNJ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4N0TP4Rmj6QQezWV88ARNJ"
     },
     "genres": [
       "poprock"
@@ -8780,16 +8780,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-joker-1973",
+    "id": üong-the-joker-1973",
     "title": "The Joker",
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Steve Miller Band — 1973, The Joker.",
+    answer": "Steve Miller Band — 1973, The Joker.",
     "hint": "Steve Miller Band",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1bp2IO61zbQrbWNmKKxg3f"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1bp2IO61zbQrbWNmKKxg3f"
     },
     "genres": [
       "poprock"
@@ -8799,16 +8799,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-highway-to-hell-1979",
+    "id": üong-highway-to-hell-1979",
     "title": "Highway to Hell",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "AC/DC — 1979, Highway to Hell.",
-    "hint": "AC/DC",
+    answer": ÄC/DC — 1979, Highway to Hell.",
+    "hint": ÄC/DC",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2zYzyRzz6pRmhPzyfMEC8s"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2zYzyRzz6pRmhPzyfMEC8s"
     },
     "genres": [
       "poprock"
@@ -8818,16 +8818,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-message-in-a-bottle-1979",
+    "id": üong-message-in-a-bottle-1979",
     "title": "Message In A Bottle",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Police — 1979, Message In A Bottle.",
+    answer": "The Police — 1979, Message In A Bottle.",
     "hint": "The Police",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1oYYd2gnWZYrt89EBXdFiO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1oYYd2gnWZYrt89EBXdFiO"
     },
     "genres": [
       "poprock"
@@ -8837,16 +8837,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stuck-in-the-middle-with-you-1972",
+    "id": üong-stuck-in-the-middle-with-you-1972",
     "title": "Stuck In The Middle With You",
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Stealers Wheel — 1972, Stuck In The Middle With You.",
+    answer": "Stealers Wheel — 1972, Stuck In The Middle With You.",
     "hint": "Stealers Wheel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3Vby4nGmtbDo7HDJamOWkT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3Vby4nGmtbDo7HDJamOWkT"
     },
     "genres": [
       "poprock"
@@ -8856,16 +8856,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-vienna-1977",
+    "id": üong-vienna-1977",
     "title": "Vienna",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Joel — 1977, Vienna.",
+    answer": "Billy Joel — 1977, Vienna.",
     "hint": "Billy Joel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4U45aEWtQhrm8A5mxPaFZ7"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4U45aEWtQhrm8A5mxPaFZ7"
     },
     "genres": [
       "poprock"
@@ -8875,16 +8875,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dont-stop-2004-remaster-1977",
+    "id": üong-dont-stop-2004-remaster-1977",
     "title": "Don't Stop - 2004 Remaster",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fleetwood Mac — 1977, Don't Stop - 2004 Remaster.",
+    answer": "Fleetwood Mac — 1977, Don't Stop - 2004 Remaster.",
     "hint": "Fleetwood Mac",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4bEb3KE4mSKlTFjtWJQBqO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4bEb3KE4mSKlTFjtWJQBqO"
     },
     "genres": [
       "poprock"
@@ -8894,16 +8894,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-psycho-killer-1977",
+    "id": üong-psycho-killer-1977",
     "title": "Psycho Killer",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Talking Heads — 1977, Psycho Killer.",
+    answer": "Talking Heads — 1977, Psycho Killer.",
     "hint": "Talking Heads",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7dSCxR4LqkmxoBrq9MzVSD"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7dSCxR4LqkmxoBrq9MzVSD"
     },
     "genres": [
       "poprock"
@@ -8913,16 +8913,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-tnt-1976",
+    "id": üong-tnt-1976",
     "title": "T.N.T.",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "AC/DC — 1976, T.N.T..",
-    "hint": "AC/DC",
+    answer": ÄC/DC — 1976, T.N.T..",
+    "hint": ÄC/DC",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7LRMbd3LEoV5wZJvXT1Lwb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7LRMbd3LEoV5wZJvXT1Lwb"
     },
     "genres": [
       "poprock"
@@ -8932,16 +8932,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-baker-street-1978",
+    "id": üong-baker-street-1978",
     "title": "Baker Street",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gerry Rafferty — 1978, Baker Street.",
+    answer": "Gerry Rafferty — 1978, Baker Street.",
     "hint": "Gerry Rafferty",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5gOd6zDC8vhlYjqbQdJVWP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5gOd6zDC8vhlYjqbQdJVWP"
     },
     "genres": [
       "poprock"
@@ -8951,16 +8951,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sir-duke-1976",
+    "id": üong-sir-duke-1976",
     "title": "Sir Duke",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Stevie Wonder — 1976, Sir Duke.",
+    answer": "Stevie Wonder — 1976, Sir Duke.",
     "hint": "Stevie Wonder",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4pNiE4LCVV74vfIBaUHm1b"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4pNiE4LCVV74vfIBaUHm1b"
     },
     "genres": [
       "poprock"
@@ -8970,16 +8970,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-if-you-leave-me-now-1976",
+    "id": üong-if-you-leave-me-now-1976",
     "title": "If You Leave Me Now",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Chicago — 1976, If You Leave Me Now.",
+    answer": "Chicago — 1976, If You Leave Me Now.",
     "hint": "Chicago",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0KMGxYKeUzK9wc5DZCt3HT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0KMGxYKeUzK9wc5DZCt3HT"
     },
     "genres": [
       "poprock"
@@ -8989,16 +8989,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stairway-to-heaven-remaster-1971",
+    "id": üong-stairway-to-heaven-remaster-1971",
     "title": "Stairway to Heaven - Remaster",
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Led Zeppelin — 1971, Stairway to Heaven - Remaster.",
+    answer": "Led Zeppelin — 1971, Stairway to Heaven - Remaster.",
     "hint": "Led Zeppelin",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5CQ30WqJwcep0pYcV4AMNc"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5CQ30WqJwcep0pYcV4AMNc"
     },
     "genres": [
       "poprock"
@@ -9008,16 +9008,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-easy-1995",
+    "id": üong-easy-1995",
     "title": "Easy",
     "category": "music",
     "year": 1995,
     "cue": "Song anhören und einordnen.",
-    "answer": "Commodores — 1995, Easy.",
+    answer": "Commodores — 1995, Easy.",
     "hint": "Commodores",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0wtHjEAzLYYyGuk2WtpGwS"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0wtHjEAzLYYyGuk2WtpGwS"
     },
     "genres": [
       "poprock"
@@ -9027,16 +9027,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-have-you-ever-seen-the-rain-1970",
+    "id": üong-have-you-ever-seen-the-rain-1970",
     "title": "Have You Ever Seen The Rain",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Creedence Clearwater Revival — 1970, Have You Ever Seen The Rain.",
+    answer": "Creedence Clearwater Revival — 1970, Have You Ever Seen The Rain.",
     "hint": "Creedence Clearwater Revival",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2LawezPeJhN4AWuSB0GtAU"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2LawezPeJhN4AWuSB0GtAU"
     },
     "genres": [
       "poprock"
@@ -9046,16 +9046,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wild-horses-2009-mix-1971",
+    "id": üong-wild-horses-2009-mix-1971",
     "title": "Wild Horses - 2009 Mix",
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Rolling Stones — 1971, Wild Horses - 2009 Mix.",
+    answer": "The Rolling Stones — 1971, Wild Horses - 2009 Mix.",
     "hint": "The Rolling Stones",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/52dm9op3rbfAkc1LGXgipW"
+    üources": {
+      üpotify": "https://open.spotify.com/track/52dm9op3rbfAkc1LGXgipW"
     },
     "genres": [
       "poprock"
@@ -9065,16 +9065,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-you-should-be-dancing-2009",
+    "id": üong-you-should-be-dancing-2009",
     "title": "You Should Be Dancing",
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bee Gees — 2009, You Should Be Dancing.",
+    answer": "Bee Gees — 2009, You Should Be Dancing.",
     "hint": "Bee Gees",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4T5Y25pWs2pVZVcFIqFuf8"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4T5Y25pWs2pVZVcFIqFuf8"
     },
     "genres": [
       "poprock"
@@ -9084,16 +9084,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-annies-song-1974",
-    "title": "Annie's Song",
+    "id": üong-annies-song-1974",
+    "title": Ännie's Song",
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Denver — 1974, Annie's Song.",
+    answer": "John Denver — 1974, Annie's Song.",
     "hint": "John Denver",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4J0DbyODwZJcmIAiTSJfMF"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4J0DbyODwZJcmIAiTSJfMF"
     },
     "genres": [
       "poprock"
@@ -9103,16 +9103,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-live-and-let-die-1978",
+    "id": üong-live-and-let-die-1978",
     "title": "Live And Let Die",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wings — 1978, Live And Let Die.",
+    answer": "Wings — 1978, Live And Let Die.",
     "hint": "Wings",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6AbaUu4XtHu7pGkPE94Tat"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6AbaUu4XtHu7pGkPE94Tat"
     },
     "genres": [
       "poprock"
@@ -9122,16 +9122,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-they-long-to-be-close-to-you-1970",
+    "id": üong-they-long-to-be-close-to-you-1970",
     "title": "(They Long To Be) Close To You",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Carpenters — 1970, (They Long To Be) Close To You.",
+    answer": "Carpenters — 1970, (They Long To Be) Close To You.",
     "hint": "Carpenters",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2kyVQg00pphEufGT59M2XH"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2kyVQg00pphEufGT59M2XH"
     },
     "genres": [
       "poprock"
@@ -9141,16 +9141,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-old-time-rock-roll-1978",
-    "title": "Old Time Rock & Roll",
+    "id": üong-old-time-rock-roll-1978",
+    "title": Öld Time Rock & Roll",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bob Seger — 1978, Old Time Rock & Roll.",
+    answer": "Bob Seger — 1978, Old Time Rock & Roll.",
     "hint": "Bob Seger",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5EOoMWIB9iK4ZpcSex9Ec7"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5EOoMWIB9iK4ZpcSex9Ec7"
     },
     "genres": [
       "poprock"
@@ -9160,16 +9160,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-breakfast-in-america-remastered-2010-1979",
+    "id": üong-breakfast-in-america-remastered-2010-1979",
     "title": "Breakfast In America - Remastered 2010",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Supertramp — 1979, Breakfast In America - Remastered 2010.",
+    answer": "Supertramp — 1979, Breakfast In America - Remastered 2010.",
     "hint": "Supertramp",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4a5pNRjwmzYQuEY1E7O6pj"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4a5pNRjwmzYQuEY1E7O6pj"
     },
     "genres": [
       "poprock"
@@ -9179,16 +9179,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-play-that-funky-music-1976",
+    "id": üong-play-that-funky-music-1976",
     "title": "Play That Funky Music",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wild Cherry — 1976, Play That Funky Music.",
+    answer": "Wild Cherry — 1976, Play That Funky Music.",
     "hint": "Wild Cherry",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5uuJruktM9fMdN9Va0DUMl"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5uuJruktM9fMdN9Va0DUMl"
     },
     "genres": [
       "poprock"
@@ -9198,16 +9198,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-life-on-mars-2015-remaster-1971",
+    "id": üong-life-on-mars-2015-remaster-1971",
     "title": "Life on Mars? - 2015 Remaster",
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "David Bowie — 1971, Life on Mars? - 2015 Remaster.",
+    answer": "David Bowie — 1971, Life on Mars? - 2015 Remaster.",
     "hint": "David Bowie",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3ZE3wv8V3w2T2f7nOCjV0N"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3ZE3wv8V3w2T2f7nOCjV0N"
     },
     "genres": [
       "poprock"
@@ -9217,16 +9217,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-daddy-cool-1994",
+    "id": üong-daddy-cool-1994",
     "title": "Daddy Cool",
     "category": "music",
     "year": 1994,
     "cue": "Song anhören und einordnen.",
-    "answer": "Boney M. — 1994, Daddy Cool.",
+    answer": "Boney M. — 1994, Daddy Cool.",
     "hint": "Boney M.",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/702Xo5V8OhlY2cQEczCT2j"
+    üources": {
+      üpotify": "https://open.spotify.com/track/702Xo5V8OhlY2cQEczCT2j"
     },
     "genres": [
       "poprock"
@@ -9236,16 +9236,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-always-on-my-mind-1973",
-    "title": "Always On My Mind",
+    "id": üong-always-on-my-mind-1973",
+    "title": Älways On My Mind",
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elvis Presley — 1973, Always On My Mind.",
+    answer": "Elvis Presley — 1973, Always On My Mind.",
     "hint": "Elvis Presley",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1B5Tp2Ml9nLlmTSJx8xVfI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1B5Tp2Ml9nLlmTSJx8xVfI"
     },
     "genres": [
       "poprock"
@@ -9255,16 +9255,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-blame-it-on-the-boogie-1978",
+    "id": üong-blame-it-on-the-boogie-1978",
     "title": "Blame It on the Boogie",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Jacksons — 1978, Blame It on the Boogie.",
+    answer": "The Jacksons — 1978, Blame It on the Boogie.",
     "hint": "The Jacksons",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3qI94hINNNeb4S7xQi18lS"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3qI94hINNNeb4S7xQi18lS"
     },
     "genres": [
       "poprock"
@@ -9274,16 +9274,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-take-me-home-country-roads-1997",
+    "id": üong-take-me-home-country-roads-1997",
     "title": "Take Me Home, Country Roads",
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Denver — 1997, Take Me Home, Country Roads.",
+    answer": "John Denver — 1997, Take Me Home, Country Roads.",
     "hint": "John Denver",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1QbOvACeYanja5pbnJbAmk"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1QbOvACeYanja5pbnJbAmk"
     },
     "genres": [
       "poprock"
@@ -9293,16 +9293,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cant-stand-losing-you-1978",
+    "id": üong-cant-stand-losing-you-1978",
     "title": "Can't Stand Losing You",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Police — 1978, Can't Stand Losing You.",
+    answer": "The Police — 1978, Can't Stand Losing You.",
     "hint": "The Police",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6DjKJgwe9c90Bd2iya0fre"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6DjKJgwe9c90Bd2iya0fre"
     },
     "genres": [
       "poprock"
@@ -9312,16 +9312,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-get-it-on-1971",
+    "id": üong-get-it-on-1971",
     "title": "Get It On",
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "T. Rex — 1971, Get It On.",
+    answer": "T. Rex — 1971, Get It On.",
     "hint": "T. Rex",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0LoQuiekvzqx7n8flgEKzF"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0LoQuiekvzqx7n8flgEKzF"
     },
     "genres": [
       "poprock"
@@ -9331,16 +9331,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-without-you-1971",
+    "id": üong-without-you-1971",
     "title": "Without You",
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Harry Nilsson — 1971, Without You.",
+    answer": "Harry Nilsson — 1971, Without You.",
     "hint": "Harry Nilsson",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6MrILERJLA3Jcq0E9poZsp"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6MrILERJLA3Jcq0E9poZsp"
     },
     "genres": [
       "poprock"
@@ -9350,16 +9350,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-rich-girl-2005",
+    "id": üong-rich-girl-2005",
     "title": "Rich Girl",
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daryl Hall & John Oates — 2005, Rich Girl.",
+    answer": "Daryl Hall & John Oates — 2005, Rich Girl.",
     "hint": "Daryl Hall & John Oates",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5E3P9e1hvjyIOlFyqNB5eD"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5E3P9e1hvjyIOlFyqNB5eD"
     },
     "genres": [
       "poprock"
@@ -9369,16 +9369,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hot-stuff-1979",
+    "id": üong-hot-stuff-1979",
     "title": "Hot Stuff",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Donna Summer — 1979, Hot Stuff.",
+    answer": "Donna Summer — 1979, Hot Stuff.",
     "hint": "Donna Summer",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2zMJN9JvDlvGP4jB03l1Bz"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2zMJN9JvDlvGP4jB03l1Bz"
     },
     "genres": [
       "poprock"
@@ -9388,16 +9388,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-smoke-on-the-water-remastered-2012-1972",
+    "id": üong-smoke-on-the-water-remastered-2012-1972",
     "title": "Smoke On The Water - Remastered 2012",
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Deep Purple — 1972, Smoke On The Water - Remastered 2012.",
+    answer": "Deep Purple — 1972, Smoke On The Water - Remastered 2012.",
     "hint": "Deep Purple",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5MMnwYs0hIxkENRsbkWJ2G"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5MMnwYs0hIxkENRsbkWJ2G"
     },
     "genres": [
       "poprock"
@@ -9407,16 +9407,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-yes-sir-i-can-boogie-1998",
+    "id": üong-yes-sir-i-can-boogie-1998",
     "title": "Yes Sir, I Can Boogie",
     "category": "music",
     "year": 1998,
     "cue": "Song anhören und einordnen.",
-    "answer": "Baccara — 1998, Yes Sir, I Can Boogie.",
+    answer": "Baccara — 1998, Yes Sir, I Can Boogie.",
     "hint": "Baccara",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2LScqpywMqGcnum6nNaxXX"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2LScqpywMqGcnum6nNaxXX"
     },
     "genres": [
       "poprock"
@@ -9426,16 +9426,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-walk-this-way-1975",
+    "id": üong-walk-this-way-1975",
     "title": "Walk This Way",
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "Aerosmith — 1975, Walk This Way.",
-    "hint": "Aerosmith",
+    answer": Äerosmith — 1975, Walk This Way.",
+    "hint": Äerosmith",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4JfuiOWlWCkjP6OKurHjSn"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4JfuiOWlWCkjP6OKurHjSn"
     },
     "genres": [
       "poprock"
@@ -9445,16 +9445,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-ami-said-single-version-1971",
+    "id": üong-i-ami-said-single-version-1971",
     "title": "I Am...I Said - Single Version",
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Neil Diamond — 1971, I Am...I Said - Single Version.",
+    answer": "Neil Diamond — 1971, I Am...I Said - Single Version.",
     "hint": "Neil Diamond",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4wOKTOwGVrie2GIbCMEe7U"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4wOKTOwGVrie2GIbCMEe7U"
     },
     "genres": [
       "poprock"
@@ -9464,16 +9464,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-immigrant-song-remaster-1970",
+    "id": üong-immigrant-song-remaster-1970",
     "title": "Immigrant Song - Remaster",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Led Zeppelin — 1970, Immigrant Song - Remaster.",
+    answer": "Led Zeppelin — 1970, Immigrant Song - Remaster.",
     "hint": "Led Zeppelin",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/78lgmZwycJ3nzsdgmPPGNx"
+    üources": {
+      üpotify": "https://open.spotify.com/track/78lgmZwycJ3nzsdgmPPGNx"
     },
     "genres": [
       "poprock"
@@ -9483,16 +9483,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-one-way-or-another-remastered-2001-1978",
-    "title": "One Way Or Another - Remastered 2001",
+    "id": üong-one-way-or-another-remastered-2001-1978",
+    "title": Öne Way Or Another - Remastered 2001",
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Blondie — 1978, One Way Or Another - Remastered 2001.",
+    answer": "Blondie — 1978, One Way Or Another - Remastered 2001.",
     "hint": "Blondie",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4cQJ27R11K634x5qCOwKW5"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4cQJ27R11K634x5qCOwKW5"
     },
     "genres": [
       "poprock"
@@ -9502,16 +9502,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-a-horse-with-no-name-1972",
-    "title": "A Horse with No Name",
+    "id": üong-a-horse-with-no-name-1972",
+    "title": Ä Horse with No Name",
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "America, George Martin — 1972, A Horse with No Name.",
-    "hint": "America, George Martin",
+    answer": Ämerica, George Martin — 1972, A Horse with No Name.",
+    "hint": Ämerica, George Martin",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/54eZmuggBFJbV7k248bTTt"
+    üources": {
+      üpotify": "https://open.spotify.com/track/54eZmuggBFJbV7k248bTTt"
     },
     "genres": [
       "poprock"
@@ -9521,16 +9521,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dust-in-the-wind-1977",
+    "id": üong-dust-in-the-wind-1977",
     "title": "Dust in the Wind",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kansas — 1977, Dust in the Wind.",
+    answer": "Kansas — 1977, Dust in the Wind.",
     "hint": "Kansas",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6zeE5tKyr8Nu882DQhhSQI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6zeE5tKyr8Nu882DQhhSQI"
     },
     "genres": [
       "poprock"
@@ -9540,16 +9540,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dont-stop-til-you-get-enough-1979",
+    "id": üong-dont-stop-til-you-get-enough-1979",
     "title": "Don't Stop 'Til You Get Enough",
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Michael Jackson — 1979, Don't Stop 'Til You Get Enough.",
+    answer": "Michael Jackson — 1979, Don't Stop 'Til You Get Enough.",
     "hint": "Michael Jackson",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/46eu3SBuFCXWsPT39Yg3tJ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/46eu3SBuFCXWsPT39Yg3tJ"
     },
     "genres": [
       "poprock"
@@ -9559,16 +9559,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-alone-again-naturally-1972",
-    "title": "Alone Again (Naturally)",
+    "id": üong-alone-again-naturally-1972",
+    "title": Älone Again (Naturally)",
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gilbert O'Sullivan — 1972, Alone Again (Naturally).",
+    answer": "Gilbert O'Sullivan — 1972, Alone Again (Naturally).",
     "hint": "Gilbert O'Sullivan",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/54pvEYFocTlvIAQOfXSjqV"
+    üources": {
+      üpotify": "https://open.spotify.com/track/54pvEYFocTlvIAQOfXSjqV"
     },
     "genres": [
       "poprock"
@@ -9578,16 +9578,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-paradise-by-the-dashboard-light-1977",
+    "id": üong-paradise-by-the-dashboard-light-1977",
     "title": "Paradise By the Dashboard Light",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Meat Loaf — 1977, Paradise By the Dashboard Light.",
+    answer": "Meat Loaf — 1977, Paradise By the Dashboard Light.",
     "hint": "Meat Loaf",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2g7gviEeJr6pyxO7G35EWQ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2g7gviEeJr6pyxO7G35EWQ"
     },
     "genres": [
       "poprock"
@@ -9597,16 +9597,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-black-betty-1977",
+    "id": üong-black-betty-1977",
     "title": "Black Betty",
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ram Jam — 1977, Black Betty.",
+    answer": "Ram Jam — 1977, Black Betty.",
     "hint": "Ram Jam",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6kooDsorCpWVMGc994XjWN"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6kooDsorCpWVMGc994XjWN"
     },
     "genres": [
       "poprock"
@@ -9616,16 +9616,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-will-always-love-you-1974",
+    "id": üong-i-will-always-love-you-1974",
     "title": "I Will Always Love You",
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dolly Parton — 1974, I Will Always Love You.",
+    answer": "Dolly Parton — 1974, I Will Always Love You.",
     "hint": "Dolly Parton",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/77bNe6jYY8yHdP7orXrz5I"
+    üources": {
+      üpotify": "https://open.spotify.com/track/77bNe6jYY8yHdP7orXrz5I"
     },
     "genres": [
       "poprock"
@@ -9635,16 +9635,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-walk-on-the-wild-side-1972",
+    "id": üong-walk-on-the-wild-side-1972",
     "title": "Walk On the Wild Side",
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lou Reed — 1972, Walk On the Wild Side.",
+    answer": "Lou Reed — 1972, Walk On the Wild Side.",
     "hint": "Lou Reed",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5p3JunprHCxClJjOmcLV8G"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5p3JunprHCxClJjOmcLV8G"
     },
     "genres": [
       "poprock"
@@ -9654,16 +9654,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-what-is-life-remastered-2014-1970",
+    "id": üong-what-is-life-remastered-2014-1970",
     "title": "What Is Life - Remastered 2014",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Harrison — 1970, What Is Life - Remastered 2014.",
+    answer": "George Harrison — 1970, What Is Life - Remastered 2014.",
     "hint": "George Harrison",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/76TpWFiK5YCgw1hy26DWZp"
+    üources": {
+      üpotify": "https://open.spotify.com/track/76TpWFiK5YCgw1hy26DWZp"
     },
     "genres": [
       "poprock"
@@ -9673,16 +9673,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-layla-1970",
+    "id": üong-layla-1970",
     "title": "Layla",
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Derek & The Dominos — 1970, Layla.",
+    answer": "Derek & The Dominos — 1970, Layla.",
     "hint": "Derek & The Dominos",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2kkvB3RNRzwjFdGhaUA0tz"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2kkvB3RNRzwjFdGhaUA0tz"
     },
     "genres": [
       "poprock"
@@ -9692,16 +9692,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-livin-thing-1976",
+    "id": üong-livin-thing-1976",
     "title": "Livin' Thing",
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Electric Light Orchestra — 1976, Livin' Thing.",
+    answer": "Electric Light Orchestra — 1976, Livin' Thing.",
     "hint": "Electric Light Orchestra",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2hdNya0b6Cc2YJ8IyaQIWp"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2hdNya0b6Cc2YJ8IyaQIWp"
     },
     "genres": [
       "poprock"
@@ -9711,16 +9711,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-jolene-1974",
+    "id": üong-jolene-1974",
     "title": "Jolene",
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dolly Parton — 1974, Jolene.",
+    answer": "Dolly Parton — 1974, Jolene.",
     "hint": "Dolly Parton",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2SpEHTbUuebeLkgs9QB7Ue"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2SpEHTbUuebeLkgs9QB7Ue"
     },
     "genres": [
       "poprock"
@@ -9730,16 +9730,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-incomplete-2005",
+    "id": üong-incomplete-2005",
     "title": "Incomplete",
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Backstreet Boys — 2005, Incomplete.",
+    answer": "Backstreet Boys — 2005, Incomplete.",
     "hint": "Backstreet Boys",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0CnD7Hiw6pae6rLsZw5q5W"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0CnD7Hiw6pae6rLsZw5q5W"
     },
     "genres": [
       "poprock"
@@ -9749,16 +9749,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-just-like-a-pill-2001",
+    "id": üong-just-like-a-pill-2001",
     "title": "Just Like a Pill",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk — 2001, Just Like a Pill.",
+    answer": "P!nk — 2001, Just Like a Pill.",
     "hint": "P!nk",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1BpV8IGf4XsRRJf4Xuui9q"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1BpV8IGf4XsRRJf4Xuui9q"
     },
     "genres": [
       "poprock"
@@ -9768,16 +9768,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-murder-on-the-dancefloor-2007",
+    "id": üong-murder-on-the-dancefloor-2007",
     "title": "Murder On The Dancefloor",
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sophie Ellis-Bextor — 2007, Murder On The Dancefloor.",
+    answer": "Sophie Ellis-Bextor — 2007, Murder On The Dancefloor.",
     "hint": "Sophie Ellis-Bextor",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3yjjFp94TOENrJJgvmxAoE"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/3yjjFp94TOENrJJgvmxAoE"
     },
     "genres": [
       "poprock"
@@ -9787,16 +9787,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bye-bye-bye-2000",
+    "id": üong-bye-bye-bye-2000",
     "title": "Bye Bye Bye",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "*NSYNC — 2000, Bye Bye Bye.",
+    answer": "*NSYNC — 2000, Bye Bye Bye.",
     "hint": "*NSYNC",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4r8lRYnoOGdEi6YyI5OC1o"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4r8lRYnoOGdEi6YyI5OC1o"
     },
     "genres": [
       "poprock"
@@ -9806,16 +9806,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wake-me-up-when-september-ends-2004",
+    "id": üong-wake-me-up-when-september-ends-2004",
     "title": "Wake Me up When September Ends",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — 2004, Wake Me up When September Ends.",
+    answer": "Green Day — 2004, Wake Me up When September Ends.",
     "hint": "Green Day",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3ZffCQKLFLUvYM59XKLbVm"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3ZffCQKLFLUvYM59XKLbVm"
     },
     "genres": [
       "poprock"
@@ -9825,16 +9825,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-im-with-you-2002",
+    "id": üong-im-with-you-2002",
     "title": "I'm with You",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Avril Lavigne — 2002, I'm with You.",
-    "hint": "Avril Lavigne",
+    answer": Ävril Lavigne — 2002, I'm with You.",
+    "hint": Ävril Lavigne",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1jlG3KJ3gdYmhfuySFfpO1"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1jlG3KJ3gdYmhfuySFfpO1"
     },
     "genres": [
       "poprock"
@@ -9844,16 +9844,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bad-day-2005",
+    "id": üong-bad-day-2005",
     "title": "Bad Day",
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daniel Powter — 2005, Bad Day.",
+    answer": "Daniel Powter — 2005, Bad Day.",
     "hint": "Daniel Powter",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0mUyMawtxj1CJ76kn9gIZK"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/0mUyMawtxj1CJ76kn9gIZK"
     },
     "genres": [
       "poprock"
@@ -9863,16 +9863,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hero-2001",
+    "id": üong-hero-2001",
     "title": "Hero",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Enrique Iglesias — 2001, Hero.",
+    answer": "Enrique Iglesias — 2001, Hero.",
     "hint": "Enrique Iglesias",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1PAgmT6YqGhd6zT9kN9gIo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1PAgmT6YqGhd6zT9kN9gIo"
     },
     "genres": [
       "poprock"
@@ -9882,16 +9882,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-feel-2002",
+    "id": üong-feel-2002",
     "title": "Feel",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Robbie Williams — 2002, Feel.",
+    answer": "Robbie Williams — 2002, Feel.",
     "hint": "Robbie Williams",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2Ms33RTRCT6gArrpcrPxmo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2Ms33RTRCT6gArrpcrPxmo"
     },
     "genres": [
       "poprock"
@@ -9901,16 +9901,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-chicago-remastered-2014-2006",
+    "id": üong-chicago-remastered-2014-2006",
     "title": "Chicago - Remastered 2014",
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "Clueso — 2006, Chicago - Remastered 2014.",
+    answer": "Clueso — 2006, Chicago - Remastered 2014.",
     "hint": "Clueso",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5oPSBJ5WQNwRL9ICtohYfo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5oPSBJ5WQNwRL9ICtohYfo"
     },
     "genres": [
       "poprock"
@@ -9920,16 +9920,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-goodbye-my-lover-2005",
+    "id": üong-goodbye-my-lover-2005",
     "title": "Goodbye My Lover",
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "James Blunt — 2005, Goodbye My Lover.",
+    answer": "James Blunt — 2005, Goodbye My Lover.",
     "hint": "James Blunt",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6gxycjJNMgmAyfzUXBN80P"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/6gxycjJNMgmAyfzUXBN80P"
     },
     "genres": [
       "poprock"
@@ -9939,16 +9939,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-du-tragst-keine-liebe-in-dir-1999",
+    "id": üong-du-tragst-keine-liebe-in-dir-1999",
     "title": "Du trägst keine Liebe in dir",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Echt — 1999, Du trägst keine Liebe in dir.",
+    answer": "Echt — 1999, Du trägst keine Liebe in dir.",
     "hint": "Echt",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/21aT5lIYHjyBIFrXNbNY5U"
+    üources": {
+      üpotify": "https://open.spotify.com/track/21aT5lIYHjyBIFrXNbNY5U"
     },
     "genres": [
       "poprock"
@@ -9958,16 +9958,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-big-yellow-taxi-2002",
+    "id": üong-big-yellow-taxi-2002",
     "title": "Big Yellow Taxi",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Counting Crows, Vanessa Carlton — 2002, Big Yellow Taxi.",
+    answer": "Counting Crows, Vanessa Carlton — 2002, Big Yellow Taxi.",
     "hint": "Counting Crows, Vanessa Carlton",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5fztgDIt1Nq32VHJrAHq0Y"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5fztgDIt1Nq32VHJrAHq0Y"
     },
     "genres": [
       "poprock"
@@ -9977,16 +9977,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-boulevard-of-broken-dreams-2004",
+    "id": üong-boulevard-of-broken-dreams-2004",
     "title": "Boulevard of Broken Dreams",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — 2004, Boulevard of Broken Dreams.",
+    answer": "Green Day — 2004, Boulevard of Broken Dreams.",
     "hint": "Green Day",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1hwJKpe0BPUsq6UUrwBWTw"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1hwJKpe0BPUsq6UUrwBWTw"
     },
     "genres": [
       "poprock"
@@ -9996,16 +9996,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-drops-of-jupiter-tell-me-2001",
+    "id": üong-drops-of-jupiter-tell-me-2001",
     "title": "Drops of Jupiter (Tell Me)",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Train — 2001, Drops of Jupiter (Tell Me).",
+    answer": "Train — 2001, Drops of Jupiter (Tell Me).",
     "hint": "Train",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2hKdd3qO7cWr2Jo0Bcs0MA"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2hKdd3qO7cWr2Jo0Bcs0MA"
     },
     "genres": [
       "poprock"
@@ -10015,16 +10015,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-complicated-2002",
+    "id": üong-complicated-2002",
     "title": "Complicated",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Avril Lavigne — 2002, Complicated.",
-    "hint": "Avril Lavigne",
+    answer": Ävril Lavigne — 2002, Complicated.",
+    "hint": Ävril Lavigne",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5xEM5hIgJ1jjgcEBfpkt2F"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5xEM5hIgJ1jjgcEBfpkt2F"
     },
     "genres": [
       "poprock"
@@ -10034,16 +10034,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-chasing-cars-2006",
+    "id": üong-chasing-cars-2006",
     "title": "Chasing Cars",
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "Snow Patrol — 2006, Chasing Cars.",
+    answer": "Snow Patrol — 2006, Chasing Cars.",
     "hint": "Snow Patrol",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0rpIH5otu7ykvZPdcQuRPh"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0rpIH5otu7ykvZPdcQuRPh"
     },
     "genres": [
       "poprock"
@@ -10053,16 +10053,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-somewhere-only-we-know-2004",
+    "id": üong-somewhere-only-we-know-2004",
     "title": "Somewhere Only We Know",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Keane — 2004, Somewhere Only We Know.",
+    answer": "Keane — 2004, Somewhere Only We Know.",
     "hint": "Keane",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1SKPmfSYaPsETbRHaiA18G"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1SKPmfSYaPsETbRHaiA18G"
     },
     "genres": [
       "poprock"
@@ -10072,16 +10072,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-never-be-the-same-again-1999",
+    "id": üong-never-be-the-same-again-1999",
     "title": "Never Be The Same Again",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Melanie C, Lisa \"Left Eye\" Lopes — 1999, Never Be The Same Again.",
-    "hint": "Melanie C, Lisa \"Left Eye\" Lopes",
+    answer": "Melanie C, Lisa \"Left Eye\„ Lopes — 1999, Never Be The Same Again.",
+    "hint": "Melanie C, Lisa \"Left Eye\„ Lopes",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/79EAVfOpzgfHx3IE2BVFQv"
+    üources": {
+      üpotify": "https://open.spotify.com/track/79EAVfOpzgfHx3IE2BVFQv"
     },
     "genres": [
       "poprock"
@@ -10091,16 +10091,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-weinst-du-1999",
+    "id": üong-weinst-du-1999",
     "title": "Weinst du",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Echt — 1999, Weinst du.",
+    answer": "Echt — 1999, Weinst du.",
     "hint": "Echt",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2RjnnOuAvosOSAZhZQ50kO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2RjnnOuAvosOSAZhZQ50kO"
     },
     "genres": [
       "poprock"
@@ -10110,16 +10110,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-somethin-stupid-2001",
+    "id": üong-somethin-stupid-2001",
     "title": "Somethin' Stupid",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Robbie Williams, Nicole Kidman — 2001, Somethin' Stupid.",
+    answer": "Robbie Williams, Nicole Kidman — 2001, Somethin' Stupid.",
     "hint": "Robbie Williams, Nicole Kidman",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4kSKacywUJHdhyst4PL6pl"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4kSKacywUJHdhyst4PL6pl"
     },
     "genres": [
       "poprock"
@@ -10129,16 +10129,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cant-stop-2002",
+    "id": üong-cant-stop-2002",
     "title": "Can't Stop",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — 2002, Can't Stop.",
+    answer": "Red Hot Chili Peppers — 2002, Can't Stop.",
     "hint": "Red Hot Chili Peppers",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3ZOEytgrvLwQaqXreDs2Jx"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3ZOEytgrvLwQaqXreDs2Jx"
     },
     "genres": [
       "poprock"
@@ -10148,16 +10148,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-its-my-life-2000",
+    "id": üong-its-my-life-2000",
     "title": "It's My Life",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bon Jovi — 2000, It's My Life.",
+    answer": "Bon Jovi — 2000, It's My Life.",
     "hint": "Bon Jovi",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0v1XpBHnsbkCn7iJ9Ucr1l"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0v1XpBHnsbkCn7iJ9Ucr1l"
     },
     "genres": [
       "metal",
@@ -10168,16 +10168,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-are-you-gonna-be-my-girl-2003",
-    "title": "Are You Gonna Be My Girl",
+    "id": üong-are-you-gonna-be-my-girl-2003",
+    "title": Äre You Gonna Be My Girl",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jet — 2003, Are You Gonna Be My Girl.",
+    answer": "Jet — 2003, Are You Gonna Be My Girl.",
     "hint": "Jet",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/72zZfHPYx43shcP3eKkYi5"
+    üources": {
+      üpotify": "https://open.spotify.com/track/72zZfHPYx43shcP3eKkYi5"
     },
     "genres": [
       "poprock"
@@ -10187,16 +10187,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-who-let-the-dogs-out-2000",
+    "id": üong-who-let-the-dogs-out-2000",
     "title": "Who Let The Dogs Out",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Baha Men — 2000, Who Let The Dogs Out.",
+    answer": "Baha Men — 2000, Who Let The Dogs Out.",
     "hint": "Baha Men",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1H5tvpoApNDxvxDexoaAUo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1H5tvpoApNDxvxDexoaAUo"
     },
     "genres": [
       "poprock"
@@ -10206,16 +10206,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-white-flag-2003",
+    "id": üong-white-flag-2003",
     "title": "White Flag",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dido — 2003, White Flag.",
+    answer": "Dido — 2003, White Flag.",
     "hint": "Dido",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6si71supnBUhddjR2FJc2L"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/6si71supnBUhddjR2FJc2L"
     },
     "genres": [
       "poprock"
@@ -10225,16 +10225,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-fireflies-2009",
+    "id": üong-fireflies-2009",
     "title": "Fireflies",
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Owl City — 2009, Fireflies.",
-    "hint": "Owl City",
+    answer": Öwl City — 2009, Fireflies.",
+    "hint": Öwl City",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3DamFFqW32WihKkTVlwTYQ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3DamFFqW32WihKkTVlwTYQ"
     },
     "genres": [
       "poprock"
@@ -10245,16 +10245,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-behind-these-hazel-eyes-2004",
+    "id": üong-behind-these-hazel-eyes-2004",
     "title": "Behind These Hazel Eyes",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kelly Clarkson — 2004, Behind These Hazel Eyes.",
+    answer": "Kelly Clarkson — 2004, Behind These Hazel Eyes.",
     "hint": "Kelly Clarkson",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0AKAxdNkwq9ZxRdW1DN9zW"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0AKAxdNkwq9ZxRdW1DN9zW"
     },
     "genres": [
       "poprock"
@@ -10264,16 +10264,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-whole-again-2003",
+    "id": üong-whole-again-2003",
     "title": "Whole Again",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Atomic Kitten — 2003, Whole Again.",
-    "hint": "Atomic Kitten",
+    answer": Ätomic Kitten — 2003, Whole Again.",
+    "hint": Ätomic Kitten",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4WGTwyHPMvB3HWiEO9R0wb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4WGTwyHPMvB3HWiEO9R0wb"
     },
     "genres": [
       "poprock"
@@ -10283,16 +10283,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dreamer-2001",
+    "id": üong-dreamer-2001",
     "title": "Dreamer",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ozzy Osbourne — 2001, Dreamer.",
-    "hint": "Ozzy Osbourne",
+    answer": Özzy Osbourne — 2001, Dreamer.",
+    "hint": Özzy Osbourne",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/78PKCefXwDLbl4FVO1Pjzh"
+    üources": {
+      üpotify": "https://open.spotify.com/track/78PKCefXwDLbl4FVO1Pjzh"
     },
     "genres": [
       "metal",
@@ -10303,16 +10303,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cant-fight-the-moonlight-2001",
+    "id": üong-cant-fight-the-moonlight-2001",
     "title": "Can't Fight The Moonlight",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "LeAnn Rimes — 2001, Can't Fight The Moonlight.",
+    answer": "LeAnn Rimes — 2001, Can't Fight The Moonlight.",
     "hint": "LeAnn Rimes",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2AogRMqARWyUP7VQ3gmSoY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2AogRMqARWyUP7VQ3gmSoY"
     },
     "genres": [
       "poprock"
@@ -10322,16 +10322,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dragostea-din-tei-2004",
+    "id": üong-dragostea-din-tei-2004",
     "title": "Dragostea din tei",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "O-Zone — 2004, Dragostea din tei.",
-    "hint": "O-Zone",
+    answer": Ö-Zone — 2004, Dragostea din tei.",
+    "hint": Ö-Zone",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/52Zr0sinhWTCRrQhRRY4EP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/52Zr0sinhWTCRrQhRRY4EP"
     },
     "genres": [
       "poprock"
@@ -10341,16 +10341,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-a-thousand-miles-2002",
-    "title": "A Thousand Miles",
+    "id": üong-a-thousand-miles-2002",
+    "title": Ä Thousand Miles",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Vanessa Carlton — 2002, A Thousand Miles.",
+    answer": "Vanessa Carlton — 2002, A Thousand Miles.",
     "hint": "Vanessa Carlton",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4w1lzcaoZ1IC2K5TwjalRP"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/4w1lzcaoZ1IC2K5TwjalRP"
     },
     "genres": [
       "poprock"
@@ -10360,19 +10360,19 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-der-weg-remastered-2016-2002",
+    "id": üong-der-weg-remastered-2016-2002",
     "title": "Der Weg - Remastered 2016",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Herbert Grönemeyer — 2002, Der Weg - Remastered 2016.",
+    answer": "Herbert Grönemeyer — 2002, Der Weg - Remastered 2016.",
     "hint": "Herbert Grönemeyer",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7py0pONdy9D0DxNnT3elik"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7py0pONdy9D0DxNnT3elik"
     },
     "genres": [
-      "schlagerparty",
+      üchlagerparty",
       "poprock"
     ],
     "playlists": [
@@ -10380,16 +10380,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-pure-shores-2000",
+    "id": üong-pure-shores-2000",
     "title": "Pure Shores",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "All Saints — 2000, Pure Shores.",
-    "hint": "All Saints",
+    answer": Äll Saints — 2000, Pure Shores.",
+    "hint": Äll Saints",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ZLGthToczpvnL5Eoy6yrY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6ZLGthToczpvnL5Eoy6yrY"
     },
     "genres": [
       "poprock"
@@ -10399,16 +10399,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-just-more-2002",
+    "id": üong-just-more-2002",
     "title": "Just More",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wonderwall — 2002, Just More.",
+    answer": "Wonderwall — 2002, Just More.",
     "hint": "Wonderwall",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1AR0pzjw2WvAHlcst59nwT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1AR0pzjw2WvAHlcst59nwT"
     },
     "genres": [
       "poprock"
@@ -10418,16 +10418,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-fix-you-2005",
+    "id": üong-fix-you-2005",
     "title": "Fix You",
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2005, Fix You.",
+    answer": "Coldplay — 2005, Fix You.",
     "hint": "Coldplay",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7LVHVU3tWfcxj5aiPFEW4Q"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7LVHVU3tWfcxj5aiPFEW4Q"
     },
     "genres": [
       "poprock"
@@ -10437,16 +10437,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-underneath-your-clothes-2001",
-    "title": "Underneath Your Clothes",
+    "id": üong-underneath-your-clothes-2001",
+    "title": Ünderneath Your Clothes",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shakira — 2001, Underneath Your Clothes.",
+    answer": "Shakira — 2001, Underneath Your Clothes.",
     "hint": "Shakira",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/15f8Cv8RXUlOOCIf2oaceN"
+    üources": {
+      üpotify": "https://open.spotify.com/track/15f8Cv8RXUlOOCIf2oaceN"
     },
     "genres": [
       "poprock"
@@ -10456,16 +10456,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-mundian-to-bach-ke-2003",
+    "id": üong-mundian-to-bach-ke-2003",
     "title": "Mundian To Bach Ke",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Panjabi MC — 2003, Mundian To Bach Ke.",
+    answer": "Panjabi MC — 2003, Mundian To Bach Ke.",
     "hint": "Panjabi MC",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2LxAeJ9KUj1GRS9oeHgQ3i"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2LxAeJ9KUj1GRS9oeHgQ3i"
     },
     "genres": [
       "poprock"
@@ -10475,16 +10475,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-by-the-way-2002",
+    "id": üong-by-the-way-2002",
     "title": "By the Way",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — 2002, By the Way.",
+    answer": "Red Hot Chili Peppers — 2002, By the Way.",
     "hint": "Red Hot Chili Peppers",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1f2V8U1BiWaC9aJWmpOARe"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1f2V8U1BiWaC9aJWmpOARe"
     },
     "genres": [
       "poprock"
@@ -10494,16 +10494,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-how-you-remind-me-2001",
+    "id": üong-how-you-remind-me-2001",
     "title": "How You Remind Me",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nickelback — 2001, How You Remind Me.",
+    answer": "Nickelback — 2001, How You Remind Me.",
     "hint": "Nickelback",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0gmbgwZ8iqyMPmXefof8Yf"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0gmbgwZ8iqyMPmXefof8Yf"
     },
     "genres": [
       "poprock"
@@ -10513,16 +10513,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-keinen-zentimeter-remastered-2014-2008",
+    "id": üong-keinen-zentimeter-remastered-2014-2008",
     "title": "Keinen Zentimeter - Remastered 2014",
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Clueso — 2008, Keinen Zentimeter - Remastered 2014.",
+    answer": "Clueso — 2008, Keinen Zentimeter - Remastered 2014.",
     "hint": "Clueso",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5v64DycnnkiEtJXiuObYhO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5v64DycnnkiEtJXiuObYhO"
     },
     "genres": [
       "poprock"
@@ -10532,16 +10532,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-how-to-save-a-life-2005",
+    "id": üong-how-to-save-a-life-2005",
     "title": "How to Save a Life",
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Fray — 2005, How to Save a Life.",
+    answer": "The Fray — 2005, How to Save a Life.",
     "hint": "The Fray",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5fVZC9GiM4e8vu99W0Xf6J"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/5fVZC9GiM4e8vu99W0Xf6J"
     },
     "genres": [
       "poprock"
@@ -10551,19 +10551,19 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lied-1-stuck-vom-himmel-2007",
+    "id": üong-lied-1-stuck-vom-himmel-2007",
     "title": "Lied 1 - Stück vom Himmel",
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Herbert Grönemeyer — 2007, Lied 1 - Stück vom Himmel.",
+    answer": "Herbert Grönemeyer — 2007, Lied 1 - Stück vom Himmel.",
     "hint": "Herbert Grönemeyer",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5MDgIJMfN3VsxVBLjpDPIP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5MDgIJMfN3VsxVBLjpDPIP"
     },
     "genres": [
-      "schlagerparty",
+      üchlagerparty",
       "poprock"
     ],
     "playlists": [
@@ -10571,16 +10571,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-durch-den-monsun-radio-mix-2005",
+    "id": üong-durch-den-monsun-radio-mix-2005",
     "title": "Durch den Monsun - Radio Mix",
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tokio Hotel — 2005, Durch den Monsun - Radio Mix.",
+    answer": "Tokio Hotel — 2005, Durch den Monsun - Radio Mix.",
     "hint": "Tokio Hotel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5OiC3eltQO7gXvOZMbrTn3"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5OiC3eltQO7gXvOZMbrTn3"
     },
     "genres": [
       "poprock"
@@ -10590,16 +10590,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-galvanize-2005",
+    "id": üong-galvanize-2005",
     "title": "Galvanize",
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Chemical Brothers — 2005, Galvanize.",
+    answer": "The Chemical Brothers — 2005, Galvanize.",
     "hint": "The Chemical Brothers",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4bz7uB4edifWKJXSDxwHcs"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4bz7uB4edifWKJXSDxwHcs"
     },
     "genres": [
       "poprock"
@@ -10609,16 +10609,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hey-there-delilah-2005",
+    "id": üong-hey-there-delilah-2005",
     "title": "Hey There Delilah",
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Plain White T's — 2005, Hey There Delilah.",
+    answer": "Plain White T's — 2005, Hey There Delilah.",
     "hint": "Plain White T's",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4RCWB3V8V0dignt99LZ8vH"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4RCWB3V8V0dignt99LZ8vH"
     },
     "genres": [
       "poprock"
@@ -10628,16 +10628,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-freunde-bleiben-2005",
+    "id": üong-freunde-bleiben-2005",
     "title": "Freunde bleiben",
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Revolverheld — 2005, Freunde bleiben.",
+    answer": "Revolverheld — 2005, Freunde bleiben.",
     "hint": "Revolverheld",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4bzmkrtJDog1RpvWAibK2n"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4bzmkrtJDog1RpvWAibK2n"
     },
     "genres": [
       "poprock"
@@ -10647,16 +10647,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-who-knew-edit-2006",
+    "id": üong-who-knew-edit-2006",
     "title": "Who Knew - Edit",
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk — 2006, Who Knew - Edit.",
+    answer": "P!nk — 2006, Who Knew - Edit.",
     "hint": "P!nk",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2hns6Dv29Yrg68AVTJiAyA"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2hns6Dv29Yrg68AVTJiAyA"
     },
     "genres": [
       "poprock"
@@ -10666,16 +10666,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-beautiful-2002",
+    "id": üong-beautiful-2002",
     "title": "Beautiful",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Christina Aguilera — 2002, Beautiful.",
+    answer": "Christina Aguilera — 2002, Beautiful.",
     "hint": "Christina Aguilera",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3TCauNPqFiniaYHBvEVoHG"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3TCauNPqFiniaYHBvEVoHG"
     },
     "genres": [
       "poprock"
@@ -10685,16 +10685,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-nur-ein-wort-2005",
+    "id": üong-nur-ein-wort-2005",
     "title": "Nur ein Wort",
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wir sind Helden — 2005, Nur ein Wort.",
+    answer": "Wir sind Helden — 2005, Nur ein Wort.",
     "hint": "Wir sind Helden",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4hYinIaRxdaoEFSQni6K6I"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4hYinIaRxdaoEFSQni6K6I"
     },
     "genres": [
       "poprock"
@@ -10704,16 +10704,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-everywhere-2001",
+    "id": üong-everywhere-2001",
     "title": "Everywhere",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Michelle Branch — 2001, Everywhere.",
+    answer": "Michelle Branch — 2001, Everywhere.",
     "hint": "Michelle Branch",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1u0l8zWpQeMYStFkc2mLD7"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/1u0l8zWpQeMYStFkc2mLD7"
     },
     "genres": [
       "poprock"
@@ -10723,16 +10723,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-kids-2007",
+    "id": üong-kids-2007",
     "title": "Kids",
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "MGMT — 2007, Kids.",
+    answer": "MGMT — 2007, Kids.",
     "hint": "MGMT",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1jJci4qxiYcOHhQR247rEU"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1jJci4qxiYcOHhQR247rEU"
     },
     "genres": [
       "poprock"
@@ -10742,16 +10742,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-here-without-you-2002",
+    "id": üong-here-without-you-2002",
     "title": "Here Without You",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "3 Doors Down — 2002, Here Without You.",
+    answer": "3 Doors Down — 2002, Here Without You.",
     "hint": "3 Doors Down",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3NLrRZoMF0Lx6zTlYqeIo4"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3NLrRZoMF0Lx6zTlYqeIo4"
     },
     "genres": [
       "poprock"
@@ -10761,16 +10761,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-all-the-things-she-said-2002",
-    "title": "All The Things She Said",
+    "id": üong-all-the-things-she-said-2002",
+    "title": Äll The Things She Said",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "t.A.T.u. — 2002, All The Things She Said.",
+    answer": "t.A.T.u. — 2002, All The Things She Said.",
     "hint": "t.A.T.u.",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4bJygwUKrRgq1stlNXcgMg"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4bJygwUKrRgq1stlNXcgMg"
     },
     "genres": [
       "poprock"
@@ -10780,16 +10780,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-aurelie-2003",
-    "title": "Aurélie",
+    "id": üong-aurelie-2003",
+    "title": Äurélie",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wir sind Helden — 2003, Aurélie.",
+    answer": "Wir sind Helden — 2003, Aurélie.",
     "hint": "Wir sind Helden",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6vugYRjEYHJ3nsGP5kScpf"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6vugYRjEYHJ3nsGP5kScpf"
     },
     "genres": [
       "poprock"
@@ -10799,16 +10799,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-she-will-be-loved-radio-mix-2002",
+    "id": üong-she-will-be-loved-radio-mix-2002",
     "title": "She Will Be Loved - Radio Mix",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Maroon 5 — 2002, She Will Be Loved - Radio Mix.",
+    answer": "Maroon 5 — 2002, She Will Be Loved - Radio Mix.",
     "hint": "Maroon 5",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4llK75pXNWZz6KAho2Gp16"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4llK75pXNWZz6KAho2Gp16"
     },
     "genres": [
       "poprock"
@@ -10818,16 +10818,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-relax-take-it-easy-2007",
+    "id": üong-relax-take-it-easy-2007",
     "title": "Relax, Take It Easy",
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "MIKA — 2007, Relax, Take It Easy.",
+    answer": "MIKA — 2007, Relax, Take It Easy.",
     "hint": "MIKA",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1kmhdq0RfZFdfSLaTsiTVi"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1kmhdq0RfZFdfSLaTsiTVi"
     },
     "genres": [
       "poprock"
@@ -10837,16 +10837,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-scientist-2002",
+    "id": üong-the-scientist-2002",
     "title": "The Scientist",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2002, The Scientist.",
+    answer": "Coldplay — 2002, The Scientist.",
     "hint": "Coldplay",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/75JFxkI2RXiU7L9VXzMkle"
+    üources": {
+      üpotify": "https://open.spotify.com/track/75JFxkI2RXiU7L9VXzMkle"
     },
     "genres": [
       "poprock"
@@ -10856,16 +10856,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-soulmate-2007",
+    "id": üong-soulmate-2007",
     "title": "Soulmate",
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Natasha Bedingfield — 2007, Soulmate.",
+    answer": "Natasha Bedingfield — 2007, Soulmate.",
     "hint": "Natasha Bedingfield",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3DuHOCe1dbf3XKF8uoc5oM"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/3DuHOCe1dbf3XKF8uoc5oM"
     },
     "genres": [
       "poprock"
@@ -10875,16 +10875,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-only-time-2000",
-    "title": "Only Time",
+    "id": üong-only-time-2000",
+    "title": Önly Time",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Enya — 2000, Only Time.",
+    answer": "Enya — 2000, Only Time.",
     "hint": "Enya",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6FLwmdmW77N1Pxb1aWsZmO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6FLwmdmW77N1Pxb1aWsZmO"
     },
     "genres": [
       "poprock"
@@ -10894,16 +10894,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dancing-in-the-moonlight-2000",
+    "id": üong-dancing-in-the-moonlight-2000",
     "title": "Dancing in the Moonlight",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Toploader — 2000, Dancing in the Moonlight.",
+    answer": "Toploader — 2000, Dancing in the Moonlight.",
     "hint": "Toploader",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0w07a1vsKahQMM0RnPXHVT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0w07a1vsKahQMM0RnPXHVT"
     },
     "genres": [
       "poprock"
@@ -10913,16 +10913,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hot-n-cold-2008",
+    "id": üong-hot-n-cold-2008",
     "title": "Hot N Cold",
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katy Perry — 2008, Hot N Cold.",
+    answer": "Katy Perry — 2008, Hot N Cold.",
     "hint": "Katy Perry",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0iGckQFyv6svOfAbAY9aWJ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0iGckQFyv6svOfAbAY9aWJ"
     },
     "genres": [
       "poprock"
@@ -10932,16 +10932,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-girl-4-a-day-2002",
+    "id": üong-girl-4-a-day-2002",
     "title": "Girl 4 A Day",
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "band ohne namen, Milka — 2002, Girl 4 A Day.",
+    answer": "band ohne namen, Milka — 2002, Girl 4 A Day.",
     "hint": "band ohne namen, Milka",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4EfIj3ryeMpmZNJq4xbTQf"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4EfIj3ryeMpmZNJq4xbTQf"
     },
     "genres": [
       "poprock",
@@ -10952,16 +10952,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-where-is-the-love-2003",
+    "id": üong-where-is-the-love-2003",
     "title": "Where Is The Love?",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Black Eyed Peas — 2003, Where Is The Love?.",
+    answer": "Black Eyed Peas — 2003, Where Is The Love?.",
     "hint": "Black Eyed Peas",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0xmjwnQ3FNE6HuWCt2nHdZ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0xmjwnQ3FNE6HuWCt2nHdZ"
     },
     "genres": [
       "poprock"
@@ -10971,16 +10971,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-thank-you-1999",
+    "id": üong-thank-you-1999",
     "title": "Thank You",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dido — 1999, Thank You.",
+    answer": "Dido — 1999, Thank You.",
     "hint": "Dido",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3yUcJwYu7fXAfqMj9krY6l"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/3yUcJwYu7fXAfqMj9krY6l"
     },
     "genres": [
       "poprock"
@@ -10990,16 +10990,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-leave-get-out-2004",
+    "id": üong-leave-get-out-2004",
     "title": "Leave (Get Out)",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "JoJo — 2004, Leave (Get Out).",
+    answer": "JoJo — 2004, Leave (Get Out).",
     "hint": "JoJo",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1KvoW6HPuW7Mu9i55XaibE"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/1KvoW6HPuW7Mu9i55XaibE"
     },
     "genres": [
       "poprock"
@@ -11009,16 +11009,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-since-u-been-gone-2004",
+    "id": üong-since-u-been-gone-2004",
     "title": "Since U Been Gone",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kelly Clarkson — 2004, Since U Been Gone.",
+    answer": "Kelly Clarkson — 2004, Since U Been Gone.",
     "hint": "Kelly Clarkson",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6JY1IdkZGeIcPegKxjSKeb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6JY1IdkZGeIcPegKxjSKeb"
     },
     "genres": [
       "poprock"
@@ -11028,16 +11028,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-perfekte-welle-2004",
+    "id": üong-perfekte-welle-2004",
     "title": "Perfekte Welle",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Juli — 2004, Perfekte Welle.",
+    answer": "Juli — 2004, Perfekte Welle.",
     "hint": "Juli",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2LV5joNDrsyuXEh4FBARVK"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2LV5joNDrsyuXEh4FBARVK"
     },
     "genres": [
       "poprock"
@@ -11047,16 +11047,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-valerie-feat-amy-winehouse-version-revisited-2007",
+    "id": üong-valerie-feat-amy-winehouse-version-revisited-2007",
     "title": "Valerie (feat. Amy Winehouse) - Version Revisited",
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mark Ronson, Amy Winehouse — 2007, Valerie (feat. Amy Winehouse) - Version Revisited.",
+    answer": "Mark Ronson, Amy Winehouse — 2007, Valerie (feat. Amy Winehouse) - Version Revisited.",
     "hint": "Mark Ronson, Amy Winehouse",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6kopmMZiyLmw7h66uXcXR7"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6kopmMZiyLmw7h66uXcXR7"
     },
     "genres": [
       "poprock"
@@ -11066,16 +11066,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-all-rise-2004",
-    "title": "All Rise",
+    "id": üong-all-rise-2004",
+    "title": Äll Rise",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Blue — 2004, All Rise.",
+    answer": "Blue — 2004, All Rise.",
     "hint": "Blue",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0OJtYfqiz0Xn53o2TnySQC"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0OJtYfqiz0Xn53o2TnySQC"
     },
     "genres": [
       "poprock"
@@ -11085,16 +11085,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-tide-is-high-radio-mix-2003",
+    "id": üong-the-tide-is-high-radio-mix-2003",
     "title": "The Tide Is High - Radio Mix",
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Atomic Kitten — 2003, The Tide Is High - Radio Mix.",
-    "hint": "Atomic Kitten",
+    answer": Ätomic Kitten — 2003, The Tide Is High - Radio Mix.",
+    "hint": Ätomic Kitten",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5WuVWOngcRkMOx9RRLCvui"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5WuVWOngcRkMOx9RRLCvui"
     },
     "genres": [
       "poprock"
@@ -11104,16 +11104,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-symphonie-2004",
+    "id": üong-symphonie-2004",
     "title": "Symphonie",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Silbermond — 2004, Symphonie.",
+    answer": "Silbermond — 2004, Symphonie.",
     "hint": "Silbermond",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7mOD9NFyZhC8PtW4joWDWT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7mOD9NFyZhC8PtW4joWDWT"
     },
     "genres": [
       "poprock"
@@ -11123,16 +11123,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lasse-redn-2007",
+    "id": üong-lasse-redn-2007",
     "title": "Lasse redn",
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Die Ärzte — 2007, Lasse redn.",
+    answer": "Die Ärzte — 2007, Lasse redn.",
     "hint": "Die Ärzte",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6vJ4egoPoiPKUyohVOfVHC"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6vJ4egoPoiPKUyohVOfVHC"
     },
     "genres": [
       "poprock"
@@ -11142,16 +11142,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-get-the-party-started-2001",
+    "id": üong-get-the-party-started-2001",
     "title": "Get the Party Started",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk — 2001, Get the Party Started.",
+    answer": "P!nk — 2001, Get the Party Started.",
     "hint": "P!nk",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/02jcEwywffn3Tsb48fXmlW"
+    üources": {
+      üpotify": "https://open.spotify.com/track/02jcEwywffn3Tsb48fXmlW"
     },
     "genres": [
       "poprock"
@@ -11161,16 +11161,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-she-hates-me-2001",
+    "id": üong-she-hates-me-2001",
     "title": "She Hates Me",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Puddle Of Mudd — 2001, She Hates Me.",
+    answer": "Puddle Of Mudd — 2001, She Hates Me.",
     "hint": "Puddle Of Mudd",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/16DhvbuyvJob4Q9GHNYu2n"
+    üources": {
+      üpotify": "https://open.spotify.com/track/16DhvbuyvJob4Q9GHNYu2n"
     },
     "genres": [
       "poprock"
@@ -11180,16 +11180,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-whenever-wherever-2001",
+    "id": üong-whenever-wherever-2001",
     "title": "Whenever, Wherever",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shakira — 2001, Whenever, Wherever.",
+    answer": "Shakira — 2001, Whenever, Wherever.",
     "hint": "Shakira",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2lnzGkdtDj5mtlcOW2yRtG"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2lnzGkdtDj5mtlcOW2yRtG"
     },
     "genres": [
       "poprock"
@@ -11199,16 +11199,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-im-outta-love-radio-edit-1999",
+    "id": üong-im-outta-love-radio-edit-1999",
     "title": "I'm Outta Love - Radio Edit",
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Anastacia — 1999, I'm Outta Love - Radio Edit.",
-    "hint": "Anastacia",
+    answer": Änastacia — 1999, I'm Outta Love - Radio Edit.",
+    "hint": Änastacia",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/583xVl0Sbj93uU4ceixgU8"
+    üources": {
+      üpotify": "https://open.spotify.com/track/583xVl0Sbj93uU4ceixgU8"
     },
     "genres": [
       "poprock"
@@ -11218,16 +11218,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-suddenly-i-see-2005",
+    "id": üong-suddenly-i-see-2005",
     "title": "Suddenly I See",
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "KT Tunstall — 2005, Suddenly I See.",
+    answer": "KT Tunstall — 2005, Suddenly I See.",
     "hint": "KT Tunstall",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5p9XWUdvbUzmPCukOmwoU3"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5p9XWUdvbUzmPCukOmwoU3"
     },
     "genres": [
       "poprock"
@@ -11237,16 +11237,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-viva-la-vida-2008",
+    "id": üong-viva-la-vida-2008",
     "title": "Viva La Vida",
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2008, Viva La Vida.",
+    answer": "Coldplay — 2008, Viva La Vida.",
     "hint": "Coldplay",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5S6pYZD8WH3OQapDHTDM9M"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5S6pYZD8WH3OQapDHTDM9M"
     },
     "genres": [
       "poprock"
@@ -11256,16 +11256,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-mit-dir-chilln-2005",
+    "id": üong-mit-dir-chilln-2005",
     "title": "Mit dir chilln",
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Revolverheld — 2005, Mit dir chilln.",
+    answer": "Revolverheld — 2005, Mit dir chilln.",
     "hint": "Revolverheld",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7bjM0YAWS0goSo8pSokkvA"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7bjM0YAWS0goSo8pSokkvA"
     },
     "genres": [
       "poprock"
@@ -11275,16 +11275,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-overload-2000",
-    "title": "Overload",
+    "id": üong-overload-2000",
+    "title": Överload",
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sugababes — 2000, Overload.",
+    answer": "Sugababes — 2000, Overload.",
     "hint": "Sugababes",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7orBBkQgdmanhPCD0FyHHZ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7orBBkQgdmanhPCD0FyHHZ"
     },
     "genres": [
       "poprock"
@@ -11294,16 +11294,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-absolutely-everybody-2004",
-    "title": "Absolutely Everybody",
+    "id": üong-absolutely-everybody-2004",
+    "title": Äbsolutely Everybody",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Vanessa Amorosi — 2004, Absolutely Everybody.",
+    answer": "Vanessa Amorosi — 2004, Absolutely Everybody.",
     "hint": "Vanessa Amorosi",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/283898Lgbl6LidapOraXiN"
+    üources": {
+      üpotify": "https://open.spotify.com/track/283898Lgbl6LidapOraXiN"
     },
     "genres": [
       "poprock"
@@ -11313,16 +11313,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-make-you-feel-my-love-2008",
+    "id": üong-make-you-feel-my-love-2008",
     "title": "Make You Feel My Love",
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Adele — 2008, Make You Feel My Love.",
-    "hint": "Adele",
+    answer": Ädele — 2008, Make You Feel My Love.",
+    "hint": Ädele",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/273QnyCvJB65rScHJ1nPZb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/273QnyCvJB65rScHJ1nPZb"
     },
     "genres": [
       "poprock"
@@ -11332,16 +11332,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-haus-am-see-2008",
+    "id": üong-haus-am-see-2008",
     "title": "Haus am See",
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Peter Fox — 2008, Haus am See.",
+    answer": "Peter Fox — 2008, Haus am See.",
     "hint": "Peter Fox",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7A4KdLy1DXOOC5fhIdDuHz"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7A4KdLy1DXOOC5fhIdDuHz"
     },
     "genres": [
       "poprock"
@@ -11351,16 +11351,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-apologize-2007",
-    "title": "Apologize",
+    "id": üong-apologize-2007",
+    "title": Äpologize",
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Timbaland, OneRepublic — 2007, Apologize.",
+    answer": "Timbaland, OneRepublic — 2007, Apologize.",
     "hint": "Timbaland, OneRepublic",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ucR4KfvsBFWCMVFDvyKKl"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6ucR4KfvsBFWCMVFDvyKKl"
     },
     "genres": [
       "poprock"
@@ -11370,16 +11370,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dont-stop-movin-2001",
+    "id": üong-dont-stop-movin-2001",
     "title": "Don't Stop Movin'",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "S Club — 2001, Don't Stop Movin'.",
+    answer": "S Club — 2001, Don't Stop Movin'.",
     "hint": "S Club",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4dzreTCcGVgeF1vCcd22AC"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4dzreTCcGVgeF1vCcd22AC"
     },
     "genres": [
       "poprock"
@@ -11389,16 +11389,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-regen-und-meer-2004",
+    "id": üong-regen-und-meer-2004",
     "title": "Regen und Meer",
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Juli — 2004, Regen und Meer.",
+    answer": "Juli — 2004, Regen und Meer.",
     "hint": "Juli",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6fIGXxeU3C230sAm07WJxY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6fIGXxeU3C230sAm07WJxY"
     },
     "genres": [
       "poprock"
@@ -11408,16 +11408,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-clint-eastwood-2001",
+    "id": üong-clint-eastwood-2001",
     "title": "Clint Eastwood",
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gorillaz, Del The Funky Homosapien — 2001, Clint Eastwood.",
+    answer": "Gorillaz, Del The Funky Homosapien — 2001, Clint Eastwood.",
     "hint": "Gorillaz, Del The Funky Homosapien",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1RKUoGiLEbcXN4GY4spQDx"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1RKUoGiLEbcXN4GY4spQDx"
     },
     "genres": [
       "poprock"
@@ -11427,16 +11427,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-in-the-end-2023",
+    "id": üong-in-the-end-2023",
     "title": "In the End",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — 2023, In the End.",
+    answer": "Linkin Park — 2023, In the End.",
     "hint": "Linkin Park",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6BXLec9ha9VDjCki0hUz2M"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6BXLec9ha9VDjCki0hUz2M"
     },
     "genres": [
       "metal",
@@ -11448,16 +11448,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-temperature-2023",
+    "id": üong-temperature-2023",
     "title": "Temperature",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sean Paul — 2023, Temperature.",
+    answer": "Sean Paul — 2023, Temperature.",
     "hint": "Sean Paul",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3aaRRjtfKcEOZ0Prn80OhB"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3aaRRjtfKcEOZ0Prn80OhB"
     },
     "genres": [
       "poprock"
@@ -11467,16 +11467,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lasciala-andare-2023",
+    "id": üong-lasciala-andare-2023",
     "title": "Lasciala andare",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Irene Grandi — 2023, Lasciala andare.",
+    answer": "Irene Grandi — 2023, Lasciala andare.",
     "hint": "Irene Grandi",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3spBSmnzy7eKOAvNIKStf4"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3spBSmnzy7eKOAvNIKStf4"
     },
     "genres": [
       "poprock"
@@ -11486,16 +11486,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-black-and-yellow-2023",
+    "id": üong-black-and-yellow-2023",
     "title": "Black and Yellow",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wiz Khalifa — 2023, Black and Yellow.",
+    answer": "Wiz Khalifa — 2023, Black and Yellow.",
     "hint": "Wiz Khalifa",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5xvmB1OoJHXz8LsZPMhZ3G"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5xvmB1OoJHXz8LsZPMhZ3G"
     },
     "genres": [
       "hiphop",
@@ -11506,16 +11506,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-numb-2023",
+    "id": üong-numb-2023",
     "title": "Numb",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — 2023, Numb.",
+    answer": "Linkin Park — 2023, Numb.",
     "hint": "Linkin Park",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0Z5MCE3Sp2mRwlcBgWglqV"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0Z5MCE3Sp2mRwlcBgWglqV"
     },
     "genres": [
       "metal",
@@ -11527,16 +11527,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-american-idiot-2023",
-    "title": "American Idiot",
+    "id": üong-american-idiot-2023",
+    "title": Ämerican Idiot",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — 2023, American Idiot.",
+    answer": "Green Day — 2023, American Idiot.",
     "hint": "Green Day",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ELGTnvFyupaMLtxSYrrCG"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6ELGTnvFyupaMLtxSYrrCG"
     },
     "genres": [
       "poprock"
@@ -11546,16 +11546,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-remember-the-name-2023",
+    "id": üong-remember-the-name-2023",
     "title": "Remember the Name",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fort Minor, Styles Of Beyond — 2023, Remember the Name.",
+    answer": "Fort Minor, Styles Of Beyond — 2023, Remember the Name.",
     "hint": "Fort Minor, Styles Of Beyond",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/22OsteZ4vFCDUY5KdtvVzR"
+    üources": {
+      üpotify": "https://open.spotify.com/track/22OsteZ4vFCDUY5KdtvVzR"
     },
     "genres": [
       "hiphop",
@@ -11566,16 +11566,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-jar-of-hearts-2023",
+    "id": üong-jar-of-hearts-2023",
     "title": "Jar of Hearts",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Christina Perri — 2023, Jar of Hearts.",
+    answer": "Christina Perri — 2023, Jar of Hearts.",
     "hint": "Christina Perri",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1heLEv7PekeuSueH9r1LaD"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/1heLEv7PekeuSueH9r1LaD"
     },
     "genres": [
       "poprock"
@@ -11585,16 +11585,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bambolina-e-barracuda-2023",
+    "id": üong-bambolina-e-barracuda-2023",
     "title": "Bambolina e barracuda",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ligabue — 2023, Bambolina e barracuda.",
+    answer": "Ligabue — 2023, Bambolina e barracuda.",
     "hint": "Ligabue",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6KMUWQdSdgWbUt8QGEaRIN"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6KMUWQdSdgWbUt8QGEaRIN"
     },
     "genres": [
       "poprock"
@@ -11604,16 +11604,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-airplanes-2023",
-    "title": "Airplanes",
+    "id": üong-airplanes-2023",
+    "title": Äirplanes",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "B.o.B, Hayley Williams — 2023, Airplanes.",
+    answer": "B.o.B, Hayley Williams — 2023, Airplanes.",
     "hint": "B.o.B, Hayley Williams",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/72fQWKhM1YBwWppS8Tmpw5"
+    üources": {
+      üpotify": "https://open.spotify.com/track/72fQWKhM1YBwWppS8Tmpw5"
     },
     "genres": [
       "poprock"
@@ -11623,16 +11623,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-titanium-2023",
+    "id": üong-titanium-2023",
     "title": "Titanium",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "David Guetta, Sia — 2023, Titanium.",
+    answer": "David Guetta, Sia — 2023, Titanium.",
     "hint": "David Guetta, Sia",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0fN73V9Bj7U8JtmB2ZgFRg"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0fN73V9Bj7U8JtmB2ZgFRg"
     },
     "genres": [
       "poprock"
@@ -11642,16 +11642,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-whistle-2023",
+    "id": üong-whistle-2023",
     "title": "Whistle",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Flo Rida — 2023, Whistle.",
+    answer": "Flo Rida — 2023, Whistle.",
     "hint": "Flo Rida",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5ocfddG4faAWhwV8Fo3vUS"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5ocfddG4faAWhwV8Fo3vUS"
     },
     "genres": [
       "poprock"
@@ -11661,16 +11661,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-grenade-2023",
+    "id": üong-grenade-2023",
     "title": "Grenade",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruno Mars — 2023, Grenade.",
+    answer": "Bruno Mars — 2023, Grenade.",
     "hint": "Bruno Mars",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0ICvakG2UnHeDlykb4cosq"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0ICvakG2UnHeDlykb4cosq"
     },
     "genres": [
       "poprock"
@@ -11680,16 +11680,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-want-to-want-me-2023",
+    "id": üong-want-to-want-me-2023",
     "title": "Want to Want Me",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jason Derulo — 2023, Want to Want Me.",
+    answer": "Jason Derulo — 2023, Want to Want Me.",
     "hint": "Jason Derulo",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2sCsXgl4Egmam4efHRCWwP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2sCsXgl4Egmam4efHRCWwP"
     },
     "genres": [
       "poprock"
@@ -11699,16 +11699,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-rather-be-2023",
+    "id": üong-rather-be-2023",
     "title": "Rather Be",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Clean Bandit, Jess Glynne — 2023, Rather Be.",
+    answer": "Clean Bandit, Jess Glynne — 2023, Rather Be.",
     "hint": "Clean Bandit, Jess Glynne",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7LEXI7W7VUQBXjpxTnQ9re"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/7LEXI7W7VUQBXjpxTnQ9re"
     },
     "genres": [
       "poprock"
@@ -11718,16 +11718,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bruci-la-citta-2023",
+    "id": üong-bruci-la-citta-2023",
     "title": "Bruci la città",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Irene Grandi — 2023, Bruci la città.",
+    answer": "Irene Grandi — 2023, Bruci la città.",
     "hint": "Irene Grandi",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2IYQFYlN7oY4a8loz0Iukq"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2IYQFYlN7oY4a8loz0Iukq"
     },
     "genres": [
       "poprock"
@@ -11737,16 +11737,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-cry-2023",
+    "id": üong-i-cry-2023",
     "title": "I Cry",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Flo Rida — 2023, I Cry.",
+    answer": "Flo Rida — 2023, I Cry.",
     "hint": "Flo Rida",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1EExAIJOvmpFhpSVmO3n7p"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1EExAIJOvmpFhpSVmO3n7p"
     },
     "genres": [
       "poprock"
@@ -11756,16 +11756,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-whatcha-say-2023",
+    "id": üong-whatcha-say-2023",
     "title": "Whatcha Say",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jason Derulo — 2023, Whatcha Say.",
+    answer": "Jason Derulo — 2023, Whatcha Say.",
     "hint": "Jason Derulo",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2Q1eddqQet2NDCIvL5vzG1"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2Q1eddqQet2NDCIvL5vzG1"
     },
     "genres": [
       "poprock"
@@ -11775,16 +11775,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-memories-2023",
+    "id": üong-memories-2023",
     "title": "Memories",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "David Guetta, Kid Cudi — 2023, Memories.",
+    answer": "David Guetta, Kid Cudi — 2023, Memories.",
     "hint": "David Guetta, Kid Cudi",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2AwnwslG1kz5mWMCC2XcUC"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2AwnwslG1kz5mWMCC2XcUC"
     },
     "genres": [
       "poprock"
@@ -11794,16 +11794,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-just-the-way-you-are-2023",
+    "id": üong-just-the-way-you-are-2023",
     "title": "Just the Way You Are",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruno Mars — 2023, Just the Way You Are.",
+    answer": "Bruno Mars — 2023, Just the Way You Are.",
     "hint": "Bruno Mars",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6cAlfKuViKB9kYQU42usVi"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6cAlfKuViKB9kYQU42usVi"
     },
     "genres": [
       "poprock"
@@ -11813,16 +11813,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-im-yours-2023",
+    "id": üong-im-yours-2023",
     "title": "I’m Yours",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jason Mraz — 2023, I’m Yours.",
+    answer": "Jason Mraz — 2023, I’m Yours.",
     "hint": "Jason Mraz",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5eRx8r6X5ATv4ZWjkJh0p1"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5eRx8r6X5ATv4ZWjkJh0p1"
     },
     "genres": [
       "poprock"
@@ -11832,16 +11832,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wake-me-up-when-september-ends-2023",
+    "id": üong-wake-me-up-when-september-ends-2023",
     "title": "Wake Me Up When September Ends",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — 2023, Wake Me Up When September Ends.",
+    answer": "Green Day — 2023, Wake Me Up When September Ends.",
     "hint": "Green Day",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2oAEWwATeqMPv8OSSkAbVH"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2oAEWwATeqMPv8OSSkAbVH"
     },
     "genres": [
       "poprock"
@@ -11851,16 +11851,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-clint-eastwood-2023",
+    "id": üong-clint-eastwood-2023",
     "title": "Clint Eastwood",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gorillaz — 2023, Clint Eastwood.",
+    answer": "Gorillaz — 2023, Clint Eastwood.",
     "hint": "Gorillaz",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1SISahQ9QSV1H8v4Kxng5I"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1SISahQ9QSV1H8v4Kxng5I"
     },
     "genres": [
       "poprock"
@@ -11870,16 +11870,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-get-busy-2023",
+    "id": üong-get-busy-2023",
     "title": "Get Busy",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sean Paul — 2023, Get Busy.",
+    answer": "Sean Paul — 2023, Get Busy.",
     "hint": "Sean Paul",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2MgAKv8pRg5oQ2OjQRJRnC"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2MgAKv8pRg5oQ2OjQRJRnC"
     },
     "genres": [
       "poprock"
@@ -11889,16 +11889,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-it-girl-2023",
+    "id": üong-it-girl-2023",
     "title": "It Girl",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jason Derulo — 2023, It Girl.",
+    answer": "Jason Derulo — 2023, It Girl.",
     "hint": "Jason Derulo",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3tXCD3OSug0TxmP6OxvXeN"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3tXCD3OSug0TxmP6OxvXeN"
     },
     "genres": [
       "poprock"
@@ -11908,16 +11908,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sexy-bitch-extended-2023",
+    "id": üong-sexy-bitch-extended-2023",
     "title": "Sexy Bitch - Extended",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "David Guetta, Akon — 2023, Sexy Bitch - Extended.",
+    answer": "David Guetta, Akon — 2023, Sexy Bitch - Extended.",
     "hint": "David Guetta, Akon",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/44XqHeiTrgraUp5xN0qTaw"
+    üources": {
+      üpotify": "https://open.spotify.com/track/44XqHeiTrgraUp5xN0qTaw"
     },
     "genres": [
       "poprock"
@@ -11927,16 +11927,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-how-you-remind-me-2023",
+    "id": üong-how-you-remind-me-2023",
     "title": "How You Remind Me",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nickelback — 2023, How You Remind Me.",
+    answer": "Nickelback — 2023, How You Remind Me.",
     "hint": "Nickelback",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ISrksefcVK74b8EpZF840"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6ISrksefcVK74b8EpZF840"
     },
     "genres": [
       "poprock"
@@ -11946,16 +11946,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-laffy-taffy-2023",
+    "id": üong-laffy-taffy-2023",
     "title": "Laffy Taffy",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "D4L — 2023, Laffy Taffy.",
+    answer": "D4L — 2023, Laffy Taffy.",
     "hint": "D4L",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3lb2RGpr5eaRcDx2qMVg4s"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3lb2RGpr5eaRcDx2qMVg4s"
     },
     "genres": [
       "hiphop",
@@ -11966,16 +11966,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-holiday-boulevard-of-broken-dreams-2023",
+    "id": üong-holiday-boulevard-of-broken-dreams-2023",
     "title": "Holiday / Boulevard of Broken Dreams",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — 2023, Holiday / Boulevard of Broken Dreams.",
+    answer": "Green Day — 2023, Holiday / Boulevard of Broken Dreams.",
     "hint": "Green Day",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6tv0G7ut8ZJaFr8TexNoMx"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6tv0G7ut8ZJaFr8TexNoMx"
     },
     "genres": [
       "poprock"
@@ -11985,16 +11985,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dani-california-2023",
+    "id": üong-dani-california-2023",
     "title": "Dani California",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — 2023, Dani California.",
+    answer": "Red Hot Chili Peppers — 2023, Dani California.",
     "hint": "Red Hot Chili Peppers",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1gfIFAX1IY5EXyxK29Lyln"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1gfIFAX1IY5EXyxK29Lyln"
     },
     "genres": [
       "poprock"
@@ -12004,16 +12004,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-viva-la-vida-2023",
+    "id": üong-viva-la-vida-2023",
     "title": "Viva La Vida",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2023, Viva La Vida.",
+    answer": "Coldplay — 2023, Viva La Vida.",
     "hint": "Coldplay",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5EIuYTnDNdvEiBe2bd17jQ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5EIuYTnDNdvEiBe2bd17jQ"
     },
     "genres": [
       "poprock"
@@ -12023,16 +12023,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sweet-but-psycho-2023",
+    "id": üong-sweet-but-psycho-2023",
     "title": "Sweet but Psycho",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ava Max — 2023, Sweet but Psycho.",
-    "hint": "Ava Max",
+    answer": Äva Max — 2023, Sweet but Psycho.",
+    "hint": Äva Max",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/53hniUNL15gVxnl7XV1qdV"
+    üources": {
+      üpotify": "https://open.spotify.com/track/53hniUNL15gVxnl7XV1qdV"
     },
     "genres": [
       "poprock"
@@ -12042,16 +12042,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-good-feeling-2023",
+    "id": üong-good-feeling-2023",
     "title": "Good Feeling",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Flo Rida — 2023, Good Feeling.",
+    answer": "Flo Rida — 2023, Good Feeling.",
     "hint": "Flo Rida",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5yS49vhGk1hJEelQtYngEv"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5yS49vhGk1hJEelQtYngEv"
     },
     "genres": [
       "poprock"
@@ -12061,16 +12061,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-replay-2023",
+    "id": üong-replay-2023",
     "title": "Replay",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Iyaz — 2023, Replay.",
+    answer": "Iyaz — 2023, Replay.",
     "hint": "Iyaz",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2Py4Oh8CRFuI0oUm6jafL9"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2Py4Oh8CRFuI0oUm6jafL9"
     },
     "genres": [
       "poprock"
@@ -12080,16 +12080,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-all-summer-long-2023",
-    "title": "All Summer Long",
+    "id": üong-all-summer-long-2023",
+    "title": Äll Summer Long",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kid Rock — 2023, All Summer Long.",
+    answer": "Kid Rock — 2023, All Summer Long.",
     "hint": "Kid Rock",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6KJFPYolclwccbI4PlbJaF"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6KJFPYolclwccbI4PlbJaF"
     },
     "genres": [
       "poprock"
@@ -12099,16 +12099,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-opposite-of-adults-2023",
-    "title": "Opposite of Adults",
+    "id": üong-opposite-of-adults-2023",
+    "title": Öpposite of Adults",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Chiddy Bang — 2023, Opposite of Adults.",
+    answer": "Chiddy Bang — 2023, Opposite of Adults.",
     "hint": "Chiddy Bang",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3akO1paFpjYKercqfXeNZ2"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3akO1paFpjYKercqfXeNZ2"
     },
     "genres": [
       "poprock"
@@ -12118,16 +12118,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stereo-hearts-2023",
+    "id": üong-stereo-hearts-2023",
     "title": "Stereo Hearts",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gym Class Heroes, Adam Levine — 2023, Stereo Hearts.",
+    answer": "Gym Class Heroes, Adam Levine — 2023, Stereo Hearts.",
     "hint": "Gym Class Heroes, Adam Levine",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ALHX6JrjZ10PEO5cGtCmF"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6ALHX6JrjZ10PEO5cGtCmF"
     },
     "genres": [
       "poprock"
@@ -12137,16 +12137,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-roll-up-2023",
+    "id": üong-roll-up-2023",
     "title": "Roll Up",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wiz Khalifa — 2023, Roll Up.",
+    answer": "Wiz Khalifa — 2023, Roll Up.",
     "hint": "Wiz Khalifa",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ehCzdwYGwUw8OE5TnUCah"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6ehCzdwYGwUw8OE5TnUCah"
     },
     "genres": [
       "hiphop",
@@ -12157,16 +12157,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-locked-out-of-heaven-2023",
+    "id": üong-locked-out-of-heaven-2023",
     "title": "Locked Out of Heaven",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruno Mars — 2023, Locked Out of Heaven.",
+    answer": "Bruno Mars — 2023, Locked Out of Heaven.",
     "hint": "Bruno Mars",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1Kk56C9SHQzSdyZlLAwqLE"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1Kk56C9SHQzSdyZlLAwqLE"
     },
     "genres": [
       "poprock"
@@ -12176,16 +12176,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-what-ive-done-2023",
+    "id": üong-what-ive-done-2023",
     "title": "What I've Done",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — 2023, What I've Done.",
+    answer": "Linkin Park — 2023, What I've Done.",
     "hint": "Linkin Park",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/59DdDEQ0dmuXsI00OJSk6x"
+    üources": {
+      üpotify": "https://open.spotify.com/track/59DdDEQ0dmuXsI00OJSk6x"
     },
     "genres": [
       "metal",
@@ -12197,16 +12197,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cant-stop-2023",
+    "id": üong-cant-stop-2023",
     "title": "Can’t Stop",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — 2023, Can’t Stop.",
+    answer": "Red Hot Chili Peppers — 2023, Can’t Stop.",
     "hint": "Red Hot Chili Peppers",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6cAvyVIyljhbInVZRfspoJ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6cAvyVIyljhbInVZRfspoJ"
     },
     "genres": [
       "poprock"
@@ -12216,16 +12216,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-so-good-2023",
+    "id": üong-so-good-2023",
     "title": "So Good",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "B.o.B — 2023, So Good.",
+    answer": "B.o.B — 2023, So Good.",
     "hint": "B.o.B",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0RCKFXBZfOgp5CMDI4uJYG"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0RCKFXBZfOgp5CMDI4uJYG"
     },
     "genres": [
       "poprock"
@@ -12235,16 +12235,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-a-sky-full-of-stars-2023",
-    "title": "A Sky Full of Stars",
+    "id": üong-a-sky-full-of-stars-2023",
+    "title": Ä Sky Full of Stars",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2023, A Sky Full of Stars.",
+    answer": "Coldplay — 2023, A Sky Full of Stars.",
     "hint": "Coldplay",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/71W4AEIZa7uq4EP9Y2eopk"
+    üources": {
+      üpotify": "https://open.spotify.com/track/71W4AEIZa7uq4EP9Y2eopk"
     },
     "genres": [
       "poprock"
@@ -12254,16 +12254,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bent-2023",
+    "id": üong-bent-2023",
     "title": "Bent",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Matchbox Twenty — 2023, Bent.",
+    answer": "Matchbox Twenty — 2023, Bent.",
     "hint": "Matchbox Twenty",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6AOhDP6plSLmvVW3s6XkIi"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6AOhDP6plSLmvVW3s6XkIi"
     },
     "genres": [
       "poprock"
@@ -12273,16 +12273,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-wish-2023",
+    "id": üong-i-wish-2023",
     "title": "I Wish",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Carl Thomas — 2023, I Wish.",
+    answer": "Carl Thomas — 2023, I Wish.",
     "hint": "Carl Thomas",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6N6hEO1niVWRD7pqdkfAhx"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6N6hEO1niVWRD7pqdkfAhx"
     },
     "genres": [
       "poprock"
@@ -12292,16 +12292,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-yellow-2023",
+    "id": üong-yellow-2023",
     "title": "Yellow",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2023, Yellow.",
+    answer": "Coldplay — 2023, Yellow.",
     "hint": "Coldplay",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4KFqMbI0qY6yzSg6GNTsfe"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4KFqMbI0qY6yzSg6GNTsfe"
     },
     "genres": [
       "poprock"
@@ -12311,16 +12311,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-never-let-you-go-2023",
+    "id": üong-never-let-you-go-2023",
     "title": "Never Let You Go",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Third Eye Blind — 2023, Never Let You Go.",
+    answer": "Third Eye Blind — 2023, Never Let You Go.",
     "hint": "Third Eye Blind",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ZuneWHtW7RnW3IH2S50uz"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6ZuneWHtW7RnW3IH2S50uz"
     },
     "genres": [
       "poprock"
@@ -12330,16 +12330,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dance-with-me-2023",
+    "id": üong-dance-with-me-2023",
     "title": "Dance with Me",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Debelah Morgan — 2023, Dance with Me.",
+    answer": "Debelah Morgan — 2023, Dance with Me.",
     "hint": "Debelah Morgan",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4tZ5lS9MnmNmIwWUwXcjlQ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4tZ5lS9MnmNmIwWUwXcjlQ"
     },
     "genres": [
       "poprock"
@@ -12349,16 +12349,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-breathe-2023",
+    "id": üong-breathe-2023",
     "title": "Breathe",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Faith Hill — 2023, Breathe.",
+    answer": "Faith Hill — 2023, Breathe.",
     "hint": "Faith Hill",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1Hq0a9H77DgC7arX0wxDos"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1Hq0a9H77DgC7arX0wxDos"
     },
     "genres": [
       "poprock"
@@ -12368,16 +12368,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-otherside-2023",
-    "title": "Otherside",
+    "id": üong-otherside-2023",
+    "title": Ötherside",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — 2023, Otherside.",
+    answer": "Red Hot Chili Peppers — 2023, Otherside.",
     "hint": "Red Hot Chili Peppers",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0c067hI4TS2rmTukcRVlFY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0c067hI4TS2rmTukcRVlFY"
     },
     "genres": [
       "poprock"
@@ -12387,16 +12387,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hot-boyz-2023",
+    "id": üong-hot-boyz-2023",
     "title": "Hot Boyz",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Missy Elliott — 2023, Hot Boyz.",
+    answer": "Missy Elliott — 2023, Hot Boyz.",
     "hint": "Missy Elliott",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5x5M9qua1FxfciF0pH9EnI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5x5M9qua1FxfciF0pH9EnI"
     },
     "genres": [
       "hiphop",
@@ -12407,16 +12407,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-way-you-love-me-2023",
+    "id": üong-the-way-you-love-me-2023",
     "title": "The Way You Love Me",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Faith Hill — 2023, The Way You Love Me.",
+    answer": "Faith Hill — 2023, The Way You Love Me.",
     "hint": "Faith Hill",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4pcwQGF7bDlrXdjWpoUlYI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4pcwQGF7bDlrXdjWpoUlYI"
     },
     "genres": [
       "poprock"
@@ -12426,16 +12426,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-io-voglio-vivere-2023",
+    "id": üong-io-voglio-vivere-2023",
     "title": "Io voglio vivere",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nomadi — 2023, Io voglio vivere.",
+    answer": "Nomadi — 2023, Io voglio vivere.",
     "hint": "Nomadi",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0BpK5LhfZy0bD4pJm1jo0M"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0BpK5LhfZy0bD4pJm1jo0M"
     },
     "genres": [
       "poprock"
@@ -12445,16 +12445,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-breathless-2023",
+    "id": üong-breathless-2023",
     "title": "Breathless",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Corrs — 2023, Breathless.",
+    answer": "The Corrs — 2023, Breathless.",
     "hint": "The Corrs",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/62zh7hMYM7m8xc6igXDW76"
+    üources": {
+      üpotify": "https://open.spotify.com/track/62zh7hMYM7m8xc6igXDW76"
     },
     "genres": [
       "poprock"
@@ -12464,16 +12464,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-one-last-time-2014",
-    "title": "One Last Time",
+    "id": üong-one-last-time-2014",
+    "title": Öne Last Time",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ariana Grande — 2014, One Last Time.",
-    "hint": "Ariana Grande",
+    answer": Äriana Grande — 2014, One Last Time.",
+    "hint": Äriana Grande",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7xoUc6faLbCqZO6fQEYprd"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7xoUc6faLbCqZO6fQEYprd"
     },
     "genres": [
       "poprock"
@@ -12483,16 +12483,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-jar-of-hearts-2011",
+    "id": üong-jar-of-hearts-2011",
     "title": "jar of hearts",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Christina Perri — 2011, jar of hearts.",
+    answer": "Christina Perri — 2011, jar of hearts.",
     "hint": "Christina Perri",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0HZhYMZOcUzZKSFwPOti6m"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/0HZhYMZOcUzZKSFwPOti6m"
     },
     "genres": [
       "poprock"
@@ -12502,16 +12502,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-ocean-eyes-2017",
-    "title": "ocean eyes",
+    "id": üong-ocean-eyes-2017",
+    "title": öcean eyes",
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billie Eilish — 2017, ocean eyes.",
+    answer": "Billie Eilish — 2017, ocean eyes.",
     "hint": "Billie Eilish",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7hDVYcQq6MxkdJGweuCtl9"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7hDVYcQq6MxkdJGweuCtl9"
     },
     "genres": [
       "poprock"
@@ -12521,16 +12521,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-one-dance-2016",
-    "title": "One Dance",
+    "id": üong-one-dance-2016",
+    "title": Öne Dance",
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Drake, Wizkid, Kyla — 2016, One Dance.",
+    answer": "Drake, Wizkid, Kyla — 2016, One Dance.",
     "hint": "Drake, Wizkid, Kyla",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1zi7xx7UVEFkmKfv06H8x0"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1zi7xx7UVEFkmKfv06H8x0"
     },
     "genres": [
       "hiphop",
@@ -12541,16 +12541,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-rolling-in-the-deep-2011",
+    "id": üong-rolling-in-the-deep-2011",
     "title": "Rolling in the Deep",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Adele — 2011, Rolling in the Deep.",
-    "hint": "Adele",
+    answer": Ädele — 2011, Rolling in the Deep.",
+    "hint": Ädele",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4OSBTYWVwsQhGLF9NHvIbR"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4OSBTYWVwsQhGLF9NHvIbR"
     },
     "genres": [
       "poprock"
@@ -12560,16 +12560,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-7-rings-2019",
+    "id": üong-7-rings-2019",
     "title": "7 rings",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ariana Grande — 2019, 7 rings.",
-    "hint": "Ariana Grande",
+    answer": Äriana Grande — 2019, 7 rings.",
+    "hint": Äriana Grande",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ocbgoVGwYJhOv1GgI9NsF"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6ocbgoVGwYJhOv1GgI9NsF"
     },
     "genres": [
       "poprock"
@@ -12579,16 +12579,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-price-tag-2011",
+    "id": üong-price-tag-2011",
     "title": "Price Tag",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jessie J, B.o.B — 2011, Price Tag.",
+    answer": "Jessie J, B.o.B — 2011, Price Tag.",
     "hint": "Jessie J, B.o.B",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2fTsFCKRFQ5M0igJgabnLA"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2fTsFCKRFQ5M0igJgabnLA"
     },
     "genres": [
       "poprock"
@@ -12598,16 +12598,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-let-me-down-slowly-2018",
+    "id": üong-let-me-down-slowly-2018",
     "title": "Let Me Down Slowly",
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Alec Benjamin — 2018, Let Me Down Slowly.",
-    "hint": "Alec Benjamin",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2qxmye6gAegTMjLKEBoR3d"
+    answer": Älec Benjamin — 2018, Let Me Down Slowly.",
+    "hint": Älec Benjamin",
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/2qxmye6gAegTMjLKEBoR3d"
     },
     "genres": [
       "poprock"
@@ -12617,16 +12617,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-airplanes-feat-hayley-williams-of-paramore-2010",
-    "title": "Airplanes (feat. Hayley Williams of Paramore)",
+    "id": üong-airplanes-feat-hayley-williams-of-paramore-2010",
+    "title": Äirplanes (feat. Hayley Williams of Paramore)",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "B.o.B, Hayley Williams — 2010, Airplanes (feat. Hayley Williams of Paramore).",
+    answer": "B.o.B, Hayley Williams — 2010, Airplanes (feat. Hayley Williams of Paramore).",
     "hint": "B.o.B, Hayley Williams",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6lV2MSQmRIkycDScNtrBXO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6lV2MSQmRIkycDScNtrBXO"
     },
     "genres": [
       "poprock"
@@ -12636,16 +12636,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-eastside-with-halsey-khalid-2018",
+    "id": üong-eastside-with-halsey-khalid-2018",
     "title": "Eastside (with Halsey & Khalid)",
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "benny blanco, Halsey, Khalid — 2018, Eastside (with Halsey & Khalid).",
+    answer": "benny blanco, Halsey, Khalid — 2018, Eastside (with Halsey & Khalid).",
     "hint": "benny blanco, Halsey, Khalid",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0d2iYfpKoM0QCKvcLCkBao"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0d2iYfpKoM0QCKvcLCkBao"
     },
     "genres": [
       "poprock"
@@ -12655,16 +12655,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hold-my-hand-2015",
+    "id": üong-hold-my-hand-2015",
     "title": "Hold My Hand",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jess Glynne — 2015, Hold My Hand.",
+    answer": "Jess Glynne — 2015, Hold My Hand.",
     "hint": "Jess Glynne",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1i1rNVtxbE7rdFfpHuNq2j"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/1i1rNVtxbE7rdFfpHuNq2j"
     },
     "genres": [
       "poprock"
@@ -12674,16 +12674,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-shut-up-and-dance-2014",
+    "id": üong-shut-up-and-dance-2014",
     "title": "Shut Up and Dance",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "WALK THE MOON — 2014, Shut Up and Dance.",
+    answer": "WALK THE MOON — 2014, Shut Up and Dance.",
     "hint": "WALK THE MOON",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4kbj5MwxO1bq9wjT5g9HaA"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/4kbj5MwxO1bq9wjT5g9HaA"
     },
     "genres": [
       "poprock"
@@ -12693,16 +12693,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wrecking-ball-2013",
+    "id": üong-wrecking-ball-2013",
     "title": "Wrecking Ball",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Miley Cyrus — 2013, Wrecking Ball.",
+    answer": "Miley Cyrus — 2013, Wrecking Ball.",
     "hint": "Miley Cyrus",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2vwlzO0Qp8kfEtzTsCXfyE"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2vwlzO0Qp8kfEtzTsCXfyE"
     },
     "genres": [
       "poprock"
@@ -12712,16 +12712,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-run-away-with-me-2015",
+    "id": üong-run-away-with-me-2015",
     "title": "Run Away With Me",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Carly Rae Jepsen — 2015, Run Away With Me.",
+    answer": "Carly Rae Jepsen — 2015, Run Away With Me.",
     "hint": "Carly Rae Jepsen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1VKTdQTrcP0cMdySaCEj7F"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1VKTdQTrcP0cMdySaCEj7F"
     },
     "genres": [
       "poprock"
@@ -12731,16 +12731,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-boom-clap-2014",
+    "id": üong-boom-clap-2014",
     "title": "Boom Clap",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Charli xcx — 2014, Boom Clap.",
+    answer": "Charli xcx — 2014, Boom Clap.",
     "hint": "Charli xcx",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7982sGZuvo5OXsY6REzgIn"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7982sGZuvo5OXsY6REzgIn"
     },
     "genres": [
       "poprock"
@@ -12750,16 +12750,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-just-give-me-a-reason-feat-nate-ruess-2012",
+    "id": üong-just-give-me-a-reason-feat-nate-ruess-2012",
     "title": "Just Give Me a Reason (feat. Nate Ruess)",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk, Nate Ruess — 2012, Just Give Me a Reason (feat. Nate Ruess).",
+    answer": "P!nk, Nate Ruess — 2012, Just Give Me a Reason (feat. Nate Ruess).",
     "hint": "P!nk, Nate Ruess",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1mKXFLRA179hdOWQBwUk9e"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1mKXFLRA179hdOWQBwUk9e"
     },
     "genres": [
       "poprock"
@@ -12769,16 +12769,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-fight-song-2016",
+    "id": üong-fight-song-2016",
     "title": "Fight Song",
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rachel Platten — 2016, Fight Song.",
+    answer": "Rachel Platten — 2016, Fight Song.",
     "hint": "Rachel Platten",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/37f4ITSlgPX81ad2EvmVQr"
+    üources": {
+      üpotify": "https://open.spotify.com/track/37f4ITSlgPX81ad2EvmVQr"
     },
     "genres": [
       "poprock"
@@ -12788,16 +12788,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-shake-it-off-2014",
+    "id": üong-shake-it-off-2014",
     "title": "Shake It Off",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — 2014, Shake It Off.",
+    answer": "Taylor Swift — 2014, Shake It Off.",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0cqRj7pUJDkTCEsJkx8snD"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0cqRj7pUJDkTCEsJkx8snD"
     },
     "genres": [
       "poprock"
@@ -12807,16 +12807,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-demons-2012",
+    "id": üong-demons-2012",
     "title": "Demons",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Imagine Dragons — 2012, Demons.",
+    answer": "Imagine Dragons — 2012, Demons.",
     "hint": "Imagine Dragons",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5qaEfEh1AtSdrdrByCP7qR"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5qaEfEh1AtSdrdrByCP7qR"
     },
     "genres": [
       "poprock"
@@ -12826,16 +12826,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-somebody-that-i-used-to-know-2011",
+    "id": üong-somebody-that-i-used-to-know-2011",
     "title": "Somebody That I Used To Know",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gotye, Kimbra — 2011, Somebody That I Used To Know.",
+    answer": "Gotye, Kimbra — 2011, Somebody That I Used To Know.",
     "hint": "Gotye, Kimbra",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6md4w95cnKaW64JyEQ3A0L"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6md4w95cnKaW64JyEQ3A0L"
     },
     "genres": [
       "poprock"
@@ -12845,16 +12845,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-chandelier-2014",
+    "id": üong-chandelier-2014",
     "title": "Chandelier",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sia — 2014, Chandelier.",
+    answer": "Sia — 2014, Chandelier.",
     "hint": "Sia",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4VrWlk8IQxevMvERoX08iC"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4VrWlk8IQxevMvERoX08iC"
     },
     "genres": [
       "poprock"
@@ -12864,16 +12864,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hello-2015",
+    "id": üong-hello-2015",
     "title": "Hello",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Adele — 2015, Hello.",
-    "hint": "Adele",
+    answer": Ädele — 2015, Hello.",
+    "hint": Ädele",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1Yk0cQdMLx5RzzFTYwmuld"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1Yk0cQdMLx5RzzFTYwmuld"
     },
     "genres": [
       "poprock"
@@ -12883,16 +12883,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-love-the-way-you-lie-2010",
+    "id": üong-love-the-way-you-lie-2010",
     "title": "Love The Way You Lie",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eminem, Rihanna — 2010, Love The Way You Lie.",
+    answer": "Eminem, Rihanna — 2010, Love The Way You Lie.",
     "hint": "Eminem, Rihanna",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/15JINEqzVMv3SvJTAXAKED"
+    üources": {
+      üpotify": "https://open.spotify.com/track/15JINEqzVMv3SvJTAXAKED"
     },
     "genres": [
       "hiphop",
@@ -12903,16 +12903,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-beggin-2017",
+    "id": üong-beggin-2017",
     "title": "Beggin'",
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Måneskin — 2017, Beggin'.",
+    answer": "Måneskin — 2017, Beggin'.",
     "hint": "Måneskin",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3Wrjm47oTz2sjIgck11l5e"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3Wrjm47oTz2sjIgck11l5e"
     },
     "genres": [
       "poprock"
@@ -12923,16 +12923,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-call-me-maybe-2012",
+    "id": üong-call-me-maybe-2012",
     "title": "Call Me Maybe",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Carly Rae Jepsen — 2012, Call Me Maybe.",
+    answer": "Carly Rae Jepsen — 2012, Call Me Maybe.",
     "hint": "Carly Rae Jepsen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/20I6sIOMTCkB6w7ryavxtO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/20I6sIOMTCkB6w7ryavxtO"
     },
     "genres": [
       "poprock"
@@ -12942,16 +12942,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sign-of-the-times-2017",
+    "id": üong-sign-of-the-times-2017",
     "title": "Sign of the Times",
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Harry Styles — 2017, Sign of the Times.",
+    answer": "Harry Styles — 2017, Sign of the Times.",
     "hint": "Harry Styles",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5Ohxk2dO5COHF1krpoPigN"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5Ohxk2dO5COHF1krpoPigN"
     },
     "genres": [
       "poprock"
@@ -12961,16 +12961,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-uptown-funk-feat-bruno-mars-2015",
-    "title": "Uptown Funk (feat. Bruno Mars)",
+    "id": üong-uptown-funk-feat-bruno-mars-2015",
+    "title": Üptown Funk (feat. Bruno Mars)",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mark Ronson, Bruno Mars — 2015, Uptown Funk (feat. Bruno Mars).",
+    answer": "Mark Ronson, Bruno Mars — 2015, Uptown Funk (feat. Bruno Mars).",
     "hint": "Mark Ronson, Bruno Mars",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/32OlwWuMpZ6b0aN2RZOeMS"
+    üources": {
+      üpotify": "https://open.spotify.com/track/32OlwWuMpZ6b0aN2RZOeMS"
     },
     "genres": [
       "poprock"
@@ -12980,16 +12980,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-let-her-go-2012",
+    "id": üong-let-her-go-2012",
     "title": "Let Her Go",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Passenger — 2012, Let Her Go.",
+    answer": "Passenger — 2012, Let Her Go.",
     "hint": "Passenger",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4bzBPrGYD3fQfAadLgIiwT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4bzBPrGYD3fQfAadLgIiwT"
     },
     "genres": [
       "poprock"
@@ -12999,16 +12999,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-we-are-young-feat-janelle-monae-2012",
+    "id": üong-we-are-young-feat-janelle-monae-2012",
     "title": "We Are Young (feat. Janelle Monáe)",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "fun., Janelle Monáe — 2012, We Are Young (feat. Janelle Monáe).",
+    answer": "fun., Janelle Monáe — 2012, We Are Young (feat. Janelle Monáe).",
     "hint": "fun., Janelle Monáe",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7a86XRg84qjasly9f6bPSD"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7a86XRg84qjasly9f6bPSD"
     },
     "genres": [
       "poprock"
@@ -13018,16 +13018,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-another-love-2013",
-    "title": "Another Love",
+    "id": üong-another-love-2013",
+    "title": Änother Love",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tom Odell — 2013, Another Love.",
+    answer": "Tom Odell — 2013, Another Love.",
     "hint": "Tom Odell",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3JvKfv6T31zO0ini8iNItO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3JvKfv6T31zO0ini8iNItO"
     },
     "genres": [
       "poprock"
@@ -13037,16 +13037,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-best-day-of-my-life-2014",
+    "id": üong-best-day-of-my-life-2014",
     "title": "Best Day Of My Life",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "American Authors — 2014, Best Day Of My Life.",
-    "hint": "American Authors",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0Dho96aJIZ5LJZXyPllbWA"
+    answer": Ämerican Authors — 2014, Best Day Of My Life.",
+    "hint": Ämerican Authors",
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/0Dho96aJIZ5LJZXyPllbWA"
     },
     "genres": [
       "poprock"
@@ -13056,16 +13056,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-little-talks-2012",
+    "id": üong-little-talks-2012",
     "title": "Little Talks",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Of Monsters and Men — 2012, Little Talks.",
-    "hint": "Of Monsters and Men",
+    answer": Öf Monsters and Men — 2012, Little Talks.",
+    "hint": Öf Monsters and Men",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2ihCaVdNZmnHZWt0fvAM7B"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2ihCaVdNZmnHZWt0fvAM7B"
     },
     "genres": [
       "poprock"
@@ -13075,16 +13075,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-say-something-2014",
+    "id": üong-say-something-2014",
     "title": "Say Something",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "A Great Big World, Christina Aguilera — 2014, Say Something.",
-    "hint": "A Great Big World, Christina Aguilera",
+    answer": Ä Great Big World, Christina Aguilera — 2014, Say Something.",
+    "hint": Ä Great Big World, Christina Aguilera",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6Vc5wAMmXdKIAM7WUoEb7N"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6Vc5wAMmXdKIAM7WUoEb7N"
     },
     "genres": [
       "poprock"
@@ -13094,16 +13094,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-memories-2021",
+    "id": üong-memories-2021",
     "title": "Memories",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Maroon 5 — 2021, Memories.",
+    answer": "Maroon 5 — 2021, Memories.",
     "hint": "Maroon 5",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4cktbXiXOapiLBMprHFErI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4cktbXiXOapiLBMprHFErI"
     },
     "genres": [
       "poprock"
@@ -13113,16 +13113,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-centuries-2015",
+    "id": üong-centuries-2015",
     "title": "Centuries",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fall Out Boy — 2015, Centuries.",
+    answer": "Fall Out Boy — 2015, Centuries.",
     "hint": "Fall Out Boy",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/04aAxqtGp5pv12UXAg4pkq"
+    üources": {
+      üpotify": "https://open.spotify.com/track/04aAxqtGp5pv12UXAg4pkq"
     },
     "genres": [
       "poprock"
@@ -13132,16 +13132,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-see-you-again-feat-charlie-puth-2015",
+    "id": üong-see-you-again-feat-charlie-puth-2015",
     "title": "See You Again (feat. Charlie Puth)",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wiz Khalifa, Charlie Puth — 2015, See You Again (feat. Charlie Puth).",
+    answer": "Wiz Khalifa, Charlie Puth — 2015, See You Again (feat. Charlie Puth).",
     "hint": "Wiz Khalifa, Charlie Puth",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2JzZzZUQj3Qff7wapcbKjc"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2JzZzZUQj3Qff7wapcbKjc"
     },
     "genres": [
       "hiphop",
@@ -13152,16 +13152,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-7-years-2015",
+    "id": üong-7-years-2015",
     "title": "7 Years",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lukas Graham — 2015, 7 Years.",
+    answer": "Lukas Graham — 2015, 7 Years.",
     "hint": "Lukas Graham",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/23ihGIrYOSzNNGJ6STAxI4"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/23ihGIrYOSzNNGJ6STAxI4"
     },
     "genres": [
       "poprock"
@@ -13171,16 +13171,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-shallow-radio-edit-2018",
+    "id": üong-shallow-radio-edit-2018",
     "title": "Shallow - Radio Edit",
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga, Bradley Cooper — 2018, Shallow - Radio Edit.",
+    answer": "Lady Gaga, Bradley Cooper — 2018, Shallow - Radio Edit.",
     "hint": "Lady Gaga, Bradley Cooper",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6QfS2wq5sSC1xAJCQsTSlj"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6QfS2wq5sSC1xAJCQsTSlj"
     },
     "genres": [
       "poprock"
@@ -13190,16 +13190,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-royals-2013",
+    "id": üong-royals-2013",
     "title": "Royals",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lorde — 2013, Royals.",
+    answer": "Lorde — 2013, Royals.",
     "hint": "Lorde",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2dLLR6qlu5UJ5gk0dKz0h3"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2dLLR6qlu5UJ5gk0dKz0h3"
     },
     "genres": [
       "poprock"
@@ -13209,16 +13209,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-one-call-away-2015",
-    "title": "One Call Away",
+    "id": üong-one-call-away-2015",
+    "title": Öne Call Away",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Charlie Puth — 2015, One Call Away.",
+    answer": "Charlie Puth — 2015, One Call Away.",
     "hint": "Charlie Puth",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5MwIGPDKeDb7SpblcaQP6O"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5MwIGPDKeDb7SpblcaQP6O"
     },
     "genres": [
       "poprock"
@@ -13228,16 +13228,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-elastic-heart-2014",
+    "id": üong-elastic-heart-2014",
     "title": "Elastic Heart",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sia — 2014, Elastic Heart.",
+    answer": "Sia — 2014, Elastic Heart.",
     "hint": "Sia",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6kwAbEjseqBob48jCus7Sz"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6kwAbEjseqBob48jCus7Sz"
     },
     "genres": [
       "poprock"
@@ -13247,16 +13247,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-shotgun-2018",
+    "id": üong-shotgun-2018",
     "title": "Shotgun",
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Ezra — 2018, Shotgun.",
+    answer": "George Ezra — 2018, Shotgun.",
     "hint": "George Ezra",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4ofwffwvvnbSkrMSCKQDaC"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/4ofwffwvvnbSkrMSCKQDaC"
     },
     "genres": [
       "poprock"
@@ -13266,16 +13266,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-edge-of-glory-2011",
+    "id": üong-the-edge-of-glory-2011",
     "title": "The Edge Of Glory",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — 2011, The Edge Of Glory.",
+    answer": "Lady Gaga — 2011, The Edge Of Glory.",
     "hint": "Lady Gaga",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/57F80059mWaWFvWG3tBTbO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/57F80059mWaWFvWG3tBTbO"
     },
     "genres": [
       "poprock"
@@ -13285,16 +13285,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-story-of-my-life-2013",
+    "id": üong-story-of-my-life-2013",
     "title": "Story of My Life",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "One Direction — 2013, Story of My Life.",
-    "hint": "One Direction",
+    answer": Öne Direction — 2013, Story of My Life.",
+    "hint": Öne Direction",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4nVBt6MZDDP6tRVdQTgxJg"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4nVBt6MZDDP6tRVdQTgxJg"
     },
     "genres": [
       "poprock"
@@ -13304,16 +13304,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-take-me-to-church-2014",
+    "id": üong-take-me-to-church-2014",
     "title": "Take Me To Church",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Hozier — 2014, Take Me To Church.",
+    answer": "Hozier — 2014, Take Me To Church.",
     "hint": "Hozier",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3dYD57lRAUcMHufyqn9GcI"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/3dYD57lRAUcMHufyqn9GcI"
     },
     "genres": [
       "poprock"
@@ -13323,16 +13323,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-let-it-go-2015",
+    "id": üong-let-it-go-2015",
     "title": "Let It Go",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "James Bay — 2015, Let It Go.",
+    answer": "James Bay — 2015, Let It Go.",
     "hint": "James Bay",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/40EB7ABUO6MoWMUwPKptJ7"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/40EB7ABUO6MoWMUwPKptJ7"
     },
     "genres": [
       "poprock"
@@ -13342,16 +13342,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-some-nights-2012",
+    "id": üong-some-nights-2012",
     "title": "Some Nights",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "fun. — 2012, Some Nights.",
+    answer": "fun. — 2012, Some Nights.",
     "hint": "fun.",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6t6oULCRS6hnI7rm0h5gwl"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6t6oULCRS6hnI7rm0h5gwl"
     },
     "genres": [
       "poprock"
@@ -13361,16 +13361,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-born-this-way-2011",
+    "id": üong-born-this-way-2011",
     "title": "Born This Way",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — 2011, Born This Way.",
+    answer": "Lady Gaga — 2011, Born This Way.",
     "hint": "Lady Gaga",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/30XU4suKzCeoCK9YFzdufg"
+    üources": {
+      üpotify": "https://open.spotify.com/track/30XU4suKzCeoCK9YFzdufg"
     },
     "genres": [
       "poprock"
@@ -13380,16 +13380,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-team-2013",
+    "id": üong-team-2013",
     "title": "Team",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lorde — 2013, Team.",
+    answer": "Lorde — 2013, Team.",
     "hint": "Lorde",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3G6hD9B2ZHOsgf4WfNu7X1"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3G6hD9B2ZHOsgf4WfNu7X1"
     },
     "genres": [
       "poprock"
@@ -13399,16 +13399,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bad-liar-2018",
+    "id": üong-bad-liar-2018",
     "title": "Bad Liar",
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Imagine Dragons — 2018, Bad Liar.",
+    answer": "Imagine Dragons — 2018, Bad Liar.",
     "hint": "Imagine Dragons",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2RSHsoi04658QL5xgQVov3"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2RSHsoi04658QL5xgQVov3"
     },
     "genres": [
       "poprock"
@@ -13418,16 +13418,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hold-back-the-river-2015",
+    "id": üong-hold-back-the-river-2015",
     "title": "Hold Back The River",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "James Bay — 2015, Hold Back The River.",
+    answer": "James Bay — 2015, Hold Back The River.",
     "hint": "James Bay",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/72FNf7DAlWLmuHiLTBcNHY"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/72FNf7DAlWLmuHiLTBcNHY"
     },
     "genres": [
       "poprock"
@@ -13437,16 +13437,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hall-of-fame-feat-william-2012",
+    "id": üong-hall-of-fame-feat-william-2012",
     "title": "Hall of Fame (feat. will.i.am)",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Script, will.i.am — 2012, Hall of Fame (feat. will.i.am).",
+    answer": "The Script, will.i.am — 2012, Hall of Fame (feat. will.i.am).",
     "hint": "The Script, will.i.am",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7wMq5n8mYSKlQIGECKUgTX"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7wMq5n8mYSKlQIGECKUgTX"
     },
     "genres": [
       "poprock"
@@ -13456,16 +13456,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-always-remember-us-this-way-2018",
-    "title": "Always Remember Us This Way",
+    "id": üong-always-remember-us-this-way-2018",
+    "title": Älways Remember Us This Way",
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — 2018, Always Remember Us This Way.",
+    answer": "Lady Gaga — 2018, Always Remember Us This Way.",
     "hint": "Lady Gaga",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/74iZuPGwyL33VlTr6jTnab"
+    üources": {
+      üpotify": "https://open.spotify.com/track/74iZuPGwyL33VlTr6jTnab"
     },
     "genres": [
       "poprock"
@@ -13475,16 +13475,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-riptide-2014",
+    "id": üong-riptide-2014",
     "title": "Riptide",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Vance Joy — 2014, Riptide.",
+    answer": "Vance Joy — 2014, Riptide.",
     "hint": "Vance Joy",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7yq4Qj7cqayVTp3FF9CWbm"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/7yq4Qj7cqayVTp3FF9CWbm"
     },
     "genres": [
       "poprock"
@@ -13494,16 +13494,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-night-changes-2014",
+    "id": üong-night-changes-2014",
     "title": "Night Changes",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "One Direction — 2014, Night Changes.",
-    "hint": "One Direction",
+    answer": Öne Direction — 2014, Night Changes.",
+    "hint": Öne Direction",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5O2P9iiztwhomNh8xkR9lJ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5O2P9iiztwhomNh8xkR9lJ"
     },
     "genres": [
       "poprock"
@@ -13513,16 +13513,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-blank-space-2014",
+    "id": üong-blank-space-2014",
     "title": "Blank Space",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — 2014, Blank Space.",
+    answer": "Taylor Swift — 2014, Blank Space.",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2ls70nUDfjzm1lSRDuKxmw"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2ls70nUDfjzm1lSRDuKxmw"
     },
     "genres": [
       "poprock"
@@ -13532,16 +13532,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-roar-2013",
+    "id": üong-roar-2013",
     "title": "Roar",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katy Perry — 2013, Roar.",
+    answer": "Katy Perry — 2013, Roar.",
     "hint": "Katy Perry",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/27tNWlhdAryQY04Gb2ZhUI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/27tNWlhdAryQY04Gb2ZhUI"
     },
     "genres": [
       "poprock"
@@ -13551,16 +13551,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stay-with-me-2014",
+    "id": üong-stay-with-me-2014",
     "title": "Stay With Me",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sam Smith — 2014, Stay With Me.",
+    answer": "Sam Smith — 2014, Stay With Me.",
     "hint": "Sam Smith",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5Nm9ERjJZ5oyfXZTECKmRt"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5Nm9ERjJZ5oyfXZTECKmRt"
     },
     "genres": [
       "poprock"
@@ -13570,16 +13570,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-thrift-shop-feat-wanz-2012",
+    "id": üong-thrift-shop-feat-wanz-2012",
     "title": "Thrift Shop (feat. Wanz)",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Macklemore & Ryan Lewis, Macklemore, Ryan Lewis, Wanz — 2012, Thrift Shop (feat. Wanz).",
+    answer": "Macklemore & Ryan Lewis, Macklemore, Ryan Lewis, Wanz — 2012, Thrift Shop (feat. Wanz).",
     "hint": "Macklemore & Ryan Lewis, Macklemore, Ryan Lewis, Wanz",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6CjtS2JZH9RkDz5UVInsa9"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6CjtS2JZH9RkDz5UVInsa9"
     },
     "genres": [
       "poprock",
@@ -13590,16 +13590,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-high-hopes-2018",
+    "id": üong-high-hopes-2018",
     "title": "High Hopes",
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Panic! At The Disco — 2018, High Hopes.",
+    answer": "Panic! At The Disco — 2018, High Hopes.",
     "hint": "Panic! At The Disco",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1rqqCSm0Qe4I9rUvWncaom"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1rqqCSm0Qe4I9rUvWncaom"
     },
     "genres": [
       "poprock"
@@ -13609,16 +13609,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-a-thousand-years-2011",
-    "title": "a thousand years",
+    "id": üong-a-thousand-years-2011",
+    "title": ä thousand years",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Christina Perri — 2011, a thousand years.",
+    answer": "Christina Perri — 2011, a thousand years.",
     "hint": "Christina Perri",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6lanRgr6wXibZr8KgzXxBl"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/6lanRgr6wXibZr8KgzXxBl"
     },
     "genres": [
       "poprock"
@@ -13628,16 +13628,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-firework-2010",
+    "id": üong-firework-2010",
     "title": "Firework",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katy Perry — 2010, Firework.",
+    answer": "Katy Perry — 2010, Firework.",
     "hint": "Katy Perry",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3lXbHd0EoryoQh3vpevNEP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3lXbHd0EoryoQh3vpevNEP"
     },
     "genres": [
       "poprock"
@@ -13647,16 +13647,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-im-not-the-only-one-2014",
+    "id": üong-im-not-the-only-one-2014",
     "title": "I'm Not The Only One",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sam Smith — 2014, I'm Not The Only One.",
+    answer": "Sam Smith — 2014, I'm Not The Only One.",
     "hint": "Sam Smith",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7795WJLVKJoAyVoOtCWqXN"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7795WJLVKJoAyVoOtCWqXN"
     },
     "genres": [
       "poprock"
@@ -13666,16 +13666,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-thinking-out-loud-2014",
+    "id": üong-thinking-out-loud-2014",
     "title": "Thinking out Loud",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ed Sheeran — 2014, Thinking out Loud.",
+    answer": "Ed Sheeran — 2014, Thinking out Loud.",
     "hint": "Ed Sheeran",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/34gCuhDGsG4bRPIf9bb02f"
+    üources": {
+      üpotify": "https://open.spotify.com/track/34gCuhDGsG4bRPIf9bb02f"
     },
     "genres": [
       "poprock"
@@ -13685,16 +13685,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dear-future-husband-2015",
+    "id": üong-dear-future-husband-2015",
     "title": "Dear Future Husband",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Meghan Trainor — 2015, Dear Future Husband.",
+    answer": "Meghan Trainor — 2015, Dear Future Husband.",
     "hint": "Meghan Trainor",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3cU2wBxuV6nFiuf6PJZNlC"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3cU2wBxuV6nFiuf6PJZNlC"
     },
     "genres": [
       "poprock"
@@ -13704,16 +13704,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-when-the-partys-over-2019",
+    "id": üong-when-the-partys-over-2019",
     "title": "when the party's over",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billie Eilish — 2019, when the party's over.",
+    answer": "Billie Eilish — 2019, when the party's over.",
     "hint": "Billie Eilish",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/43zdsphuZLzwA9k4DJhU0I"
+    üources": {
+      üpotify": "https://open.spotify.com/track/43zdsphuZLzwA9k4DJhU0I"
     },
     "genres": [
       "poprock"
@@ -13723,16 +13723,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-2002-2018",
+    "id": üong-2002-2018",
     "title": "2002",
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Anne-Marie — 2018, 2002.",
-    "hint": "Anne-Marie",
+    answer": Änne-Marie — 2018, 2002.",
+    "hint": Änne-Marie",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2BgEsaKNfHUdlh97KmvFyo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2BgEsaKNfHUdlh97KmvFyo"
     },
     "genres": [
       "poprock"
@@ -13742,16 +13742,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-unstoppable-2016",
-    "title": "Unstoppable",
+    "id": üong-unstoppable-2016",
+    "title": Ünstoppable",
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sia — 2016, Unstoppable.",
+    answer": "Sia — 2016, Unstoppable.",
     "hint": "Sia",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/059ACLUOyEcdruA2m9f2jd"
+    üources": {
+      üpotify": "https://open.spotify.com/track/059ACLUOyEcdruA2m9f2jd"
     },
     "genres": [
       "poprock"
@@ -13761,16 +13761,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-payphone-2012",
+    "id": üong-payphone-2012",
     "title": "Payphone",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Maroon 5, Wiz Khalifa — 2012, Payphone.",
+    answer": "Maroon 5, Wiz Khalifa — 2012, Payphone.",
     "hint": "Maroon 5, Wiz Khalifa",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1XGmzt0PVuFgQYYnV2It7A"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1XGmzt0PVuFgQYYnV2It7A"
     },
     "genres": [
       "poprock",
@@ -13781,16 +13781,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-she-looks-so-perfect-2014",
+    "id": üong-she-looks-so-perfect-2014",
     "title": "She Looks So Perfect",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "5 Seconds of Summer — 2014, She Looks So Perfect.",
+    answer": "5 Seconds of Summer — 2014, She Looks So Perfect.",
     "hint": "5 Seconds of Summer",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1CQ2cMfrmFM1YdfmjENKVE"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1CQ2cMfrmFM1YdfmjENKVE"
     },
     "genres": [
       "poprock"
@@ -13800,16 +13800,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-what-makes-you-beautiful-2012",
+    "id": üong-what-makes-you-beautiful-2012",
     "title": "What Makes You Beautiful",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "One Direction — 2012, What Makes You Beautiful.",
-    "hint": "One Direction",
+    answer": Öne Direction — 2012, What Makes You Beautiful.",
+    "hint": Öne Direction",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4cluDES4hQEUhmXj6TXkSo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4cluDES4hQEUhmXj6TXkSo"
     },
     "genres": [
       "poprock"
@@ -13819,16 +13819,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cake-by-the-ocean-2016",
+    "id": üong-cake-by-the-ocean-2016",
     "title": "Cake By The Ocean",
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "DNCE — 2016, Cake By The Ocean.",
+    answer": "DNCE — 2016, Cake By The Ocean.",
     "hint": "DNCE",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/76hfruVvmfQbw0eYn1nmeC"
+    üources": {
+      üpotify": "https://open.spotify.com/track/76hfruVvmfQbw0eYn1nmeC"
     },
     "genres": [
       "poprock"
@@ -13838,16 +13838,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-monster-2013",
+    "id": üong-the-monster-2013",
     "title": "The Monster",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eminem, Rihanna — 2013, The Monster.",
+    answer": "Eminem, Rihanna — 2013, The Monster.",
     "hint": "Eminem, Rihanna",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/48RrDBpOSSl1aLVCalGl5C"
+    üources": {
+      üpotify": "https://open.spotify.com/track/48RrDBpOSSl1aLVCalGl5C"
     },
     "genres": [
       "hiphop",
@@ -13858,16 +13858,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-pumped-up-kicks-2011",
+    "id": üong-pumped-up-kicks-2011",
     "title": "Pumped Up Kicks",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Foster The People — 2011, Pumped Up Kicks.",
+    answer": "Foster The People — 2011, Pumped Up Kicks.",
     "hint": "Foster The People",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7w87IxuO7BDcJ3YUqCyMTT"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7w87IxuO7BDcJ3YUqCyMTT"
     },
     "genres": [
       "poprock"
@@ -13877,16 +13877,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bad-guy-2019",
+    "id": üong-bad-guy-2019",
     "title": "bad guy",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billie Eilish — 2019, bad guy.",
+    answer": "Billie Eilish — 2019, bad guy.",
     "hint": "Billie Eilish",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2Fxmhks0bxGSBdJ92vM42m"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2Fxmhks0bxGSBdJ92vM42m"
     },
     "genres": [
       "poprock"
@@ -13896,16 +13896,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cant-stop-the-feeling-from-dreamworks-animations-trolls-2016",
+    "id": üong-cant-stop-the-feeling-from-dreamworks-animations-trolls-2016",
     "title": "CAN'T STOP THE FEELING! (from DreamWorks Animation's \"TROLLS\")",
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Justin Timberlake — 2016, CAN'T STOP THE FEELING! (from DreamWorks Animation's \"TROLLS\").",
+    answer": "Justin Timberlake — 2016, CAN'T STOP THE FEELING! (from DreamWorks Animation's \"TROLLS\").",
     "hint": "Justin Timberlake",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6JV2JOEocMgcZxYSZelKcc"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6JV2JOEocMgcZxYSZelKcc"
     },
     "genres": [
       "poprock"
@@ -13915,16 +13915,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-thunder-2017",
+    "id": üong-thunder-2017",
     "title": "Thunder",
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Imagine Dragons — 2017, Thunder.",
+    answer": "Imagine Dragons — 2017, Thunder.",
     "hint": "Imagine Dragons",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1zB4vmk8tFRmM9UULNzbLB"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1zB4vmk8tFRmM9UULNzbLB"
     },
     "genres": [
       "poprock"
@@ -13934,16 +13934,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-california-gurls-2012",
+    "id": üong-california-gurls-2012",
     "title": "California Gurls",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katy Perry, Snoop Dogg — 2012, California Gurls.",
+    answer": "Katy Perry, Snoop Dogg — 2012, California Gurls.",
     "hint": "Katy Perry, Snoop Dogg",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6tS3XVuOyu10897O3ae7bi"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6tS3XVuOyu10897O3ae7bi"
     },
     "genres": [
       "poprock",
@@ -13954,16 +13954,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-be-alright-2018",
+    "id": üong-be-alright-2018",
     "title": "Be Alright",
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dean Lewis — 2018, Be Alright.",
+    answer": "Dean Lewis — 2018, Be Alright.",
     "hint": "Dean Lewis",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3EPXxR3ImUwfayaurPi3cm"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3EPXxR3ImUwfayaurPi3cm"
     },
     "genres": [
       "poprock"
@@ -13973,16 +13973,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-good-time-2012",
+    "id": üong-good-time-2012",
     "title": "Good Time",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Owl City, Carly Rae Jepsen — 2012, Good Time.",
-    "hint": "Owl City, Carly Rae Jepsen",
+    answer": Öwl City, Carly Rae Jepsen — 2012, Good Time.",
+    "hint": Öwl City, Carly Rae Jepsen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1kPpge9JDLpcj15qgrPbYX"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1kPpge9JDLpcj15qgrPbYX"
     },
     "genres": [
       "poprock"
@@ -13992,16 +13992,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-really-like-you-2015",
+    "id": üong-i-really-like-you-2015",
     "title": "I Really Like You",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Carly Rae Jepsen — 2015, I Really Like You.",
+    answer": "Carly Rae Jepsen — 2015, I Really Like You.",
     "hint": "Carly Rae Jepsen",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1mKXfxIOA7eQQJ844OFm7L"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1mKXfxIOA7eQQJ844OFm7L"
     },
     "genres": [
       "poprock"
@@ -14011,16 +14011,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cant-hold-us-feat-ray-dalton-2012",
+    "id": üong-cant-hold-us-feat-ray-dalton-2012",
     "title": "Can't Hold Us (feat. Ray Dalton)",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Macklemore, Ryan Lewis, Macklemore & Ryan Lewis, Ray Dalton — 2012, Can't Hold Us (feat. Ray Dalton).",
+    answer": "Macklemore, Ryan Lewis, Macklemore & Ryan Lewis, Ray Dalton — 2012, Can't Hold Us (feat. Ray Dalton).",
     "hint": "Macklemore, Ryan Lewis, Macklemore & Ryan Lewis, Ray Dalton",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3bidbhpOYeV4knp8AIu8Xn"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3bidbhpOYeV4knp8AIu8Xn"
     },
     "genres": [
       "poprock"
@@ -14030,16 +14030,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-photograph-2014",
+    "id": üong-photograph-2014",
     "title": "Photograph",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ed Sheeran — 2014, Photograph.",
+    answer": "Ed Sheeran — 2014, Photograph.",
     "hint": "Ed Sheeran",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL"
     },
     "genres": [
       "poprock"
@@ -14049,16 +14049,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-try-2012",
+    "id": üong-try-2012",
     "title": "Try",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk — 2012, Try.",
+    answer": "P!nk — 2012, Try.",
     "hint": "P!nk",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1jF7IL57ayN4Ity3jQqGu0"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1jF7IL57ayN4Ity3jQqGu0"
     },
     "genres": [
       "poprock"
@@ -14068,16 +14068,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-someone-you-loved-2019",
+    "id": üong-someone-you-loved-2019",
     "title": "Someone You Loved",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lewis Capaldi — 2019, Someone You Loved.",
+    answer": "Lewis Capaldi — 2019, Someone You Loved.",
     "hint": "Lewis Capaldi",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7qEHsqek33rTcFNT9PFqLf"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7qEHsqek33rTcFNT9PFqLf"
     },
     "genres": [
       "poprock"
@@ -14087,16 +14087,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-knew-you-were-trouble-2012",
+    "id": üong-i-knew-you-were-trouble-2012",
     "title": "I Knew You Were Trouble.",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — 2012, I Knew You Were Trouble..",
+    answer": "Taylor Swift — 2012, I Knew You Were Trouble..",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6FB3v4YcR57y4tXFcdxI1E"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6FB3v4YcR57y4tXFcdxI1E"
     },
     "genres": [
       "poprock"
@@ -14106,16 +14106,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-blurred-lines-2013",
+    "id": üong-blurred-lines-2013",
     "title": "Blurred Lines",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Robin Thicke, T.I., Pharrell Williams — 2013, Blurred Lines.",
+    answer": "Robin Thicke, T.I., Pharrell Williams — 2013, Blurred Lines.",
     "hint": "Robin Thicke, T.I., Pharrell Williams",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0n4bITAu0Y0nigrz3MFJMb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0n4bITAu0Y0nigrz3MFJMb"
     },
     "genres": [
       "poprock",
@@ -14126,16 +14126,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stressed-out-2015",
+    "id": üong-stressed-out-2015",
     "title": "Stressed Out",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Twenty One Pilots — 2015, Stressed Out.",
+    answer": "Twenty One Pilots — 2015, Stressed Out.",
     "hint": "Twenty One Pilots",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3CRDbSIZ4r5MsZ0YwxuEkn"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3CRDbSIZ4r5MsZ0YwxuEkn"
     },
     "genres": [
       "poprock"
@@ -14145,16 +14145,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-counting-stars-2013",
+    "id": üong-counting-stars-2013",
     "title": "Counting Stars",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "OneRepublic — 2013, Counting Stars.",
-    "hint": "OneRepublic",
+    answer": ÖneRepublic — 2013, Counting Stars.",
+    "hint": ÖneRepublic",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2tpWsVSb9UEmDRxAl1zhX1"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2tpWsVSb9UEmDRxAl1zhX1"
     },
     "genres": [
       "poprock"
@@ -14164,16 +14164,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sucker-2019",
+    "id": üong-sucker-2019",
     "title": "Sucker",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jonas Brothers — 2019, Sucker.",
+    answer": "Jonas Brothers — 2019, Sucker.",
     "hint": "Jonas Brothers",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/22vgEDb5hykfaTwLuskFGD"
+    üources": {
+      üpotify": "https://open.spotify.com/track/22vgEDb5hykfaTwLuskFGD"
     },
     "genres": [
       "poprock"
@@ -14183,16 +14183,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-believer-2017",
+    "id": üong-believer-2017",
     "title": "Believer",
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Imagine Dragons — 2017, Believer.",
+    answer": "Imagine Dragons — 2017, Believer.",
     "hint": "Imagine Dragons",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0pqnGHJpmpxLKifKRmU6WP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0pqnGHJpmpxLKifKRmU6WP"
     },
     "genres": [
       "poprock"
@@ -14202,16 +14202,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-waka-waka-this-time-for-africa-the-official-2010-fifa-world-cup-tm-song-feat-freshlyground-2023",
+    "id": üong-waka-waka-this-time-for-africa-the-official-2010-fifa-world-cup-tm-song-feat-freshlyground-2023",
     "title": "Waka Waka (This Time for Africa) [The Official 2010 FIFA World Cup (TM) Song] (feat. Freshlyground)",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shakira, Freshlyground — 2023, Waka Waka (This Time for Africa) [The Official 2010 FIFA World Cup (TM) Song] (feat. Freshlyground).",
+    answer": "Shakira, Freshlyground — 2023, Waka Waka (This Time for Africa) [The Official 2010 FIFA World Cup (TM) Song] (feat. Freshlyground).",
     "hint": "Shakira, Freshlyground",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6Hh80mBGVEObi3skGYf1PI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6Hh80mBGVEObi3skGYf1PI"
     },
     "genres": [
       "poprock"
@@ -14221,16 +14221,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-what-the-hell-2011",
+    "id": üong-what-the-hell-2011",
     "title": "What the Hell",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Avril Lavigne — 2011, What the Hell.",
-    "hint": "Avril Lavigne",
+    answer": Ävril Lavigne — 2011, What the Hell.",
+    "hint": Ävril Lavigne",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2z4U9d5OAA4YLNXoCgioxo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2z4U9d5OAA4YLNXoCgioxo"
     },
     "genres": [
       "poprock"
@@ -14240,16 +14240,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-budapest-2014",
+    "id": üong-budapest-2014",
     "title": "Budapest",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Ezra — 2014, Budapest.",
+    answer": "George Ezra — 2014, Budapest.",
     "hint": "George Ezra",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2ixsaeFioXJmMgkkbd4uj1"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/2ixsaeFioXJmMgkkbd4uj1"
     },
     "genres": [
       "poprock"
@@ -14259,16 +14259,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-watermelon-sugar-2019",
+    "id": üong-watermelon-sugar-2019",
     "title": "Watermelon Sugar",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Harry Styles — 2019, Watermelon Sugar.",
+    answer": "Harry Styles — 2019, Watermelon Sugar.",
     "hint": "Harry Styles",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6UelLqGlWMcVH1E5c4H7lY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6UelLqGlWMcVH1E5c4H7lY"
     },
     "genres": [
       "poprock"
@@ -14278,16 +14278,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dancing-on-my-own-2018",
+    "id": üong-dancing-on-my-own-2018",
     "title": "Dancing On My Own",
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Calum Scott — 2018, Dancing On My Own.",
+    answer": "Calum Scott — 2018, Dancing On My Own.",
     "hint": "Calum Scott",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2BOqDYLOJBiMOXShCV1neZ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2BOqDYLOJBiMOXShCV1neZ"
     },
     "genres": [
       "poprock"
@@ -14297,16 +14297,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-happy-from-despicable-me-2-2014",
+    "id": üong-happy-from-despicable-me-2-2014",
     "title": "Happy - From \"Despicable Me 2\"",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Pharrell Williams — 2014, Happy - From \"Despicable Me 2\".",
+    answer": "Pharrell Williams — 2014, Happy - From \"Despicable Me 2\".",
     "hint": "Pharrell Williams",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/60nZcImufyMA1MKQY3dcCH"
+    üources": {
+      üpotify": "https://open.spotify.com/track/60nZcImufyMA1MKQY3dcCH"
     },
     "genres": [
       "poprock"
@@ -14316,16 +14316,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lovely-with-khalid-2018",
+    "id": üong-lovely-with-khalid-2018",
     "title": "lovely (with Khalid)",
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billie Eilish, Khalid — 2018, lovely (with Khalid).",
+    answer": "Billie Eilish, Khalid — 2018, lovely (with Khalid).",
     "hint": "Billie Eilish, Khalid",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0u2P5u6lvoDfwTYjAADbn4"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0u2P5u6lvoDfwTYjAADbn4"
     },
     "genres": [
       "poprock"
@@ -14335,16 +14335,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-raise-your-glass-2010",
+    "id": üong-raise-your-glass-2010",
     "title": "Raise Your Glass",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk — 2010, Raise Your Glass.",
+    answer": "P!nk — 2010, Raise Your Glass.",
     "hint": "P!nk",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1gv4xPanImH17bKZ9rOveR"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1gv4xPanImH17bKZ9rOveR"
     },
     "genres": [
       "poprock"
@@ -14354,16 +14354,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-before-you-go-2019",
+    "id": üong-before-you-go-2019",
     "title": "Before You Go",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lewis Capaldi — 2019, Before You Go.",
+    answer": "Lewis Capaldi — 2019, Before You Go.",
     "hint": "Lewis Capaldi",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2gMXnyrvIjhVBUZwvLZDMP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2gMXnyrvIjhVBUZwvLZDMP"
     },
     "genres": [
       "poprock"
@@ -14373,16 +14373,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-skyfall-2012",
+    "id": üong-skyfall-2012",
     "title": "Skyfall",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Adele — 2012, Skyfall.",
-    "hint": "Adele",
+    answer": Ädele — 2012, Skyfall.",
+    "hint": Ädele",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6VObnIkLVruX4UVyxWhlqm"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6VObnIkLVruX4UVyxWhlqm"
     },
     "genres": [
       "poprock"
@@ -14392,16 +14392,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-unsteady-2015",
-    "title": "Unsteady",
+    "id": üong-unsteady-2015",
+    "title": Ünsteady",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "X Ambassadors — 2015, Unsteady.",
+    answer": "X Ambassadors — 2015, Unsteady.",
     "hint": "X Ambassadors",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7lGKEWMXVWWTt3X71Bv44I"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/7lGKEWMXVWWTt3X71Bv44I"
     },
     "genres": [
       "poprock"
@@ -14411,16 +14411,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-teenage-dream-2010",
+    "id": üong-teenage-dream-2010",
     "title": "Teenage Dream",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katy Perry — 2010, Teenage Dream.",
+    answer": "Katy Perry — 2010, Teenage Dream.",
     "hint": "Katy Perry",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/235LXPXfi0SmOaS9TaCh3c"
+    üources": {
+      üpotify": "https://open.spotify.com/track/235LXPXfi0SmOaS9TaCh3c"
     },
     "genres": [
       "poprock"
@@ -14430,16 +14430,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-rewrite-the-stars-2017",
+    "id": üong-rewrite-the-stars-2017",
     "title": "Rewrite The Stars",
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Zac Efron, Zendaya — 2017, Rewrite The Stars.",
+    answer": "Zac Efron, Zendaya — 2017, Rewrite The Stars.",
     "hint": "Zac Efron, Zendaya",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/630sXRhIcfwr2e4RdNtjKN"
+    üources": {
+      üpotify": "https://open.spotify.com/track/630sXRhIcfwr2e4RdNtjKN"
     },
     "genres": [
       "poprock"
@@ -14449,16 +14449,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stereo-hearts-feat-adam-levine-2011",
+    "id": üong-stereo-hearts-feat-adam-levine-2011",
     "title": "Stereo Hearts (feat. Adam Levine)",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gym Class Heroes, Adam Levine — 2011, Stereo Hearts (feat. Adam Levine).",
+    answer": "Gym Class Heroes, Adam Levine — 2011, Stereo Hearts (feat. Adam Levine).",
     "hint": "Gym Class Heroes, Adam Levine",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0qOnSQQF0yzuPWsXrQ9paz"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0qOnSQQF0yzuPWsXrQ9paz"
     },
     "genres": [
       "poprock"
@@ -14468,16 +14468,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-someone-like-you-2011",
+    "id": üong-someone-like-you-2011",
     "title": "Someone Like You",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Adele — 2011, Someone Like You.",
-    "hint": "Adele",
+    answer": Ädele — 2011, Someone Like You.",
+    "hint": Ädele",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3bNv3VuUOKgrf5hu3YcuRo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3bNv3VuUOKgrf5hu3YcuRo"
     },
     "genres": [
       "poprock"
@@ -14487,16 +14487,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-a-sky-full-of-stars-2014",
-    "title": "A Sky Full of Stars",
+    "id": üong-a-sky-full-of-stars-2014",
+    "title": Ä Sky Full of Stars",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2014, A Sky Full of Stars.",
+    answer": "Coldplay — 2014, A Sky Full of Stars.",
     "hint": "Coldplay",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0FDzzruyVECATHXKHFs9eJ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0FDzzruyVECATHXKHFs9eJ"
     },
     "genres": [
       "poprock"
@@ -14506,16 +14506,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-one-that-got-away-2010",
+    "id": üong-the-one-that-got-away-2010",
     "title": "The One That Got Away",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katy Perry — 2010, The One That Got Away.",
+    answer": "Katy Perry — 2010, The One That Got Away.",
     "hint": "Katy Perry",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4uQY80TKE1u4ZQZQKHzVEi"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4uQY80TKE1u4ZQZQKHzVEi"
     },
     "genres": [
       "poprock"
@@ -14525,16 +14525,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-renegades-2015",
+    "id": üong-renegades-2015",
     "title": "Renegades",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "X Ambassadors — 2015, Renegades.",
+    answer": "X Ambassadors — 2015, Renegades.",
     "hint": "X Ambassadors",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0fYVliAYKHuPmECRs1pbRf"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/0fYVliAYKHuPmECRs1pbRf"
     },
     "genres": [
       "poprock"
@@ -14544,16 +14544,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-will-wait-2012",
+    "id": üong-i-will-wait-2012",
     "title": "I Will Wait",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mumford & Sons — 2012, I Will Wait.",
+    answer": "Mumford & Sons — 2012, I Will Wait.",
     "hint": "Mumford & Sons",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1PuLHwFZoh5qYK89I5YBdZ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1PuLHwFZoh5qYK89I5YBdZ"
     },
     "genres": [
       "poprock"
@@ -14563,16 +14563,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-feel-it-still-2017",
+    "id": üong-feel-it-still-2017",
     "title": "Feel It Still",
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Portugal. The Man — 2017, Feel It Still.",
+    answer": "Portugal. The Man — 2017, Feel It Still.",
     "hint": "Portugal. The Man",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6QgjcU0zLnzq5OrUoSZ3OK"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6QgjcU0zLnzq5OrUoSZ3OK"
     },
     "genres": [
       "poprock"
@@ -14582,16 +14582,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-exs-ohs-2015",
+    "id": üong-exs-ohs-2015",
     "title": "Ex's & Oh's",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elle King — 2015, Ex's & Oh's.",
+    answer": "Elle King — 2015, Ex's & Oh's.",
     "hint": "Elle King",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/70eDxAyAraNTiD6lx2ZEnH"
+    üources": {
+      üpotify": "https://open.spotify.com/track/70eDxAyAraNTiD6lx2ZEnH"
     },
     "genres": [
       "poprock"
@@ -14601,16 +14601,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-drive-by-2012",
+    "id": üong-drive-by-2012",
     "title": "Drive By",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Train — 2012, Drive By.",
+    answer": "Train — 2012, Drive By.",
     "hint": "Train",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0KAiuUOrLTIkzkpfpn9jb9"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0KAiuUOrLTIkzkpfpn9jb9"
     },
     "genres": [
       "poprock"
@@ -14620,16 +14620,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lover-2019",
+    "id": üong-lover-2019",
     "title": "Lover",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — 2019, Lover.",
+    answer": "Taylor Swift — 2019, Lover.",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1dGr1c8CrMLDpV6mPbImSI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1dGr1c8CrMLDpV6mPbImSI"
     },
     "genres": [
       "poprock"
@@ -14639,16 +14639,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-ride-2015",
+    "id": üong-ride-2015",
     "title": "Ride",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Twenty One Pilots — 2015, Ride.",
+    answer": "Twenty One Pilots — 2015, Ride.",
     "hint": "Twenty One Pilots",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2Z8WuEywRWYTKe1NybPQEW"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2Z8WuEywRWYTKe1NybPQEW"
     },
     "genres": [
       "poprock"
@@ -14658,16 +14658,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-ho-hey-2012",
+    "id": üong-ho-hey-2012",
     "title": "Ho Hey",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Lumineers — 2012, Ho Hey.",
+    answer": "The Lumineers — 2012, Ho Hey.",
     "hint": "The Lumineers",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0DwClY2t9YAWHBROMIgrXb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0DwClY2t9YAWHBROMIgrXb"
     },
     "genres": [
       "poprock"
@@ -14677,16 +14677,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-tik-tok-2010",
+    "id": üong-tik-tok-2010",
     "title": "TiK ToK",
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kesha — 2010, TiK ToK.",
+    answer": "Kesha — 2010, TiK ToK.",
     "hint": "Kesha",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0HPD5WQqrq7wPWR7P7Dw1i"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0HPD5WQqrq7wPWR7P7Dw1i"
     },
     "genres": [
       "poprock"
@@ -14696,16 +14696,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-supercut-2017",
+    "id": üong-supercut-2017",
     "title": "Supercut",
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lorde — 2017, Supercut.",
+    answer": "Lorde — 2017, Supercut.",
     "hint": "Lorde",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6K8VQ84MqhsoakN5MjrnVR"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6K8VQ84MqhsoakN5MjrnVR"
     },
     "genres": [
       "poprock"
@@ -14715,16 +14715,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-locked-away-feat-adam-levine-2015",
+    "id": üong-locked-away-feat-adam-levine-2015",
     "title": "Locked Away (feat. Adam Levine)",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "R. City, Adam Levine — 2015, Locked Away (feat. Adam Levine).",
+    answer": "R. City, Adam Levine — 2015, Locked Away (feat. Adam Levine).",
     "hint": "R. City, Adam Levine",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7x5xYW5W42OGPAdHUyyguy"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7x5xYW5W42OGPAdHUyyguy"
     },
     "genres": [
       "poprock"
@@ -14734,16 +14734,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stronger-what-doesnt-kill-you-2011",
+    "id": üong-stronger-what-doesnt-kill-you-2011",
     "title": "Stronger (What Doesn't Kill You)",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kelly Clarkson — 2011, Stronger (What Doesn't Kill You).",
+    answer": "Kelly Clarkson — 2011, Stronger (What Doesn't Kill You).",
     "hint": "Kelly Clarkson",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1nInOsHbtotAmEOQhtvnzP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1nInOsHbtotAmEOQhtvnzP"
     },
     "genres": [
       "poprock"
@@ -14753,16 +14753,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-apocalypse-2017",
-    "title": "Apocalypse",
+    "id": üong-apocalypse-2017",
+    "title": Äpocalypse",
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cigarettes After Sex — 2017, Apocalypse.",
+    answer": "Cigarettes After Sex — 2017, Apocalypse.",
     "hint": "Cigarettes After Sex",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1oAwsWBovWRIp7qLMGPIet"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1oAwsWBovWRIp7qLMGPIet"
     },
     "genres": [
       "poprock"
@@ -14772,16 +14772,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sail-2011",
+    "id": üong-sail-2011",
     "title": "Sail",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "AWOLNATION — 2011, Sail.",
-    "hint": "AWOLNATION",
+    answer": ÄWOLNATION — 2011, Sail.",
+    "hint": ÄWOLNATION",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7ueP5u2qkdZbIPN2YA6LR0"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7ueP5u2qkdZbIPN2YA6LR0"
     },
     "genres": [
       "poprock"
@@ -14791,16 +14791,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-all-i-want-2013",
-    "title": "All I Want",
+    "id": üong-all-i-want-2013",
+    "title": Äll I Want",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kodaline — 2013, All I Want.",
+    answer": "Kodaline — 2013, All I Want.",
     "hint": "Kodaline",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0NlGoUyOJSuSHmngoibVAs"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/0NlGoUyOJSuSHmngoibVAs"
     },
     "genres": [
       "poprock"
@@ -14810,16 +14810,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-set-fire-to-the-rain-2011",
+    "id": üong-set-fire-to-the-rain-2011",
     "title": "Set Fire to the Rain",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Adele — 2011, Set Fire to the Rain.",
-    "hint": "Adele",
+    answer": Ädele — 2011, Set Fire to the Rain.",
+    "hint": Ädele",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3di5hcvxxciiqwMH1jarhY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3di5hcvxxciiqwMH1jarhY"
     },
     "genres": [
       "poprock"
@@ -14829,16 +14829,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-girl-on-fire-2012",
+    "id": üong-girl-on-fire-2012",
     "title": "Girl on Fire",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Alicia Keys — 2012, Girl on Fire.",
-    "hint": "Alicia Keys",
+    answer": Älicia Keys — 2012, Girl on Fire.",
+    "hint": Älicia Keys",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4esOae7i4rqTbAu9o5Pxco"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4esOae7i4rqTbAu9o5Pxco"
     },
     "genres": [
       "poprock"
@@ -14848,16 +14848,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-video-games-2012",
+    "id": üong-video-games-2012",
     "title": "Video Games",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lana Del Rey — 2012, Video Games.",
+    answer": "Lana Del Rey — 2012, Video Games.",
     "hint": "Lana Del Rey",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3WD91HQDBIavSapet3ZpjG"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3WD91HQDBIavSapet3ZpjG"
     },
     "genres": [
       "poprock"
@@ -14867,16 +14867,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-these-days-feat-jess-glynne-macklemore-dan-caplen-2018",
+    "id": üong-these-days-feat-jess-glynne-macklemore-dan-caplen-2018",
     "title": "These Days (feat. Jess Glynne, Macklemore & Dan Caplen)",
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rudimental, Jess Glynne, Macklemore, Dan Caplen — 2018, These Days (feat. Jess Glynne, Macklemore & Dan Caplen).",
+    answer": "Rudimental, Jess Glynne, Macklemore, Dan Caplen — 2018, These Days (feat. Jess Glynne, Macklemore & Dan Caplen).",
     "hint": "Rudimental, Jess Glynne, Macklemore, Dan Caplen",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5CLGzJsGqhCEECcpnFQA8x"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/5CLGzJsGqhCEECcpnFQA8x"
     },
     "genres": [
       "poprock"
@@ -14886,16 +14886,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-diamonds-2012",
+    "id": üong-diamonds-2012",
     "title": "Diamonds",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rihanna — 2012, Diamonds.",
+    answer": "Rihanna — 2012, Diamonds.",
     "hint": "Rihanna",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6O20JhBJPePEkBdrB5sqRx"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6O20JhBJPePEkBdrB5sqRx"
     },
     "genres": [
       "poprock"
@@ -14905,16 +14905,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hide-away-2016",
+    "id": üong-hide-away-2016",
     "title": "Hide Away",
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daya — 2016, Hide Away.",
+    answer": "Daya — 2016, Hide Away.",
     "hint": "Daya",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3WALaE7UdNXx8VJ4lpWCK8"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3WALaE7UdNXx8VJ4lpWCK8"
     },
     "genres": [
       "poprock"
@@ -14924,16 +14924,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-la-la-la-2013",
+    "id": üong-la-la-la-2013",
     "title": "La La La",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Naughty Boy, Sam Smith — 2013, La La La.",
+    answer": "Naughty Boy, Sam Smith — 2013, La La La.",
     "hint": "Naughty Boy, Sam Smith",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/52gvlDnre9craz9dKGObp8"
+    üources": {
+      üpotify": "https://open.spotify.com/track/52gvlDnre9craz9dKGObp8"
     },
     "genres": [
       "poprock"
@@ -14943,16 +14943,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-paradise-2011",
+    "id": üong-paradise-2011",
     "title": "Paradise",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2011, Paradise.",
+    answer": "Coldplay — 2011, Paradise.",
     "hint": "Coldplay",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6nek1Nin9q48AVZcWs9e9D"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6nek1Nin9q48AVZcWs9e9D"
     },
     "genres": [
       "poprock"
@@ -14962,16 +14962,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stolen-dance-2013",
+    "id": üong-stolen-dance-2013",
     "title": "Stolen Dance",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Milky Chance — 2013, Stolen Dance.",
+    answer": "Milky Chance — 2013, Stolen Dance.",
     "hint": "Milky Chance",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/34xGLuxM0rkxhCVyMSqwJO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/34xGLuxM0rkxhCVyMSqwJO"
     },
     "genres": [
       "poprock"
@@ -14981,16 +14981,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cool-kids-2013",
+    "id": üong-cool-kids-2013",
     "title": "Cool Kids",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Echosmith — 2013, Cool Kids.",
+    answer": "Echosmith — 2013, Cool Kids.",
     "hint": "Echosmith",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/13P5rwmk2EsoFRIz9UCeh9"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/13P5rwmk2EsoFRIz9UCeh9"
     },
     "genres": [
       "poprock"
@@ -15000,16 +15000,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-next-to-me-2012",
+    "id": üong-next-to-me-2012",
     "title": "Next To Me",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Emeli Sandé — 2012, Next To Me.",
+    answer": "Emeli Sandé — 2012, Next To Me.",
     "hint": "Emeli Sandé",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4u3AKBJI6vpwbcKj6jIZiA"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4u3AKBJI6vpwbcKj6jIZiA"
     },
     "genres": [
       "poprock"
@@ -15019,16 +15019,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stay-2012",
+    "id": üong-stay-2012",
     "title": "Stay",
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rihanna, Mikky Ekko — 2012, Stay.",
+    answer": "Rihanna, Mikky Ekko — 2012, Stay.",
     "hint": "Rihanna, Mikky Ekko",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0GNI8K3VATWBABQFAzBAYe"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0GNI8K3VATWBABQFAzBAYe"
     },
     "genres": [
       "poprock"
@@ -15038,16 +15038,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-what-about-us-2017",
+    "id": üong-what-about-us-2017",
     "title": "What About Us",
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk — 2017, What About Us.",
+    answer": "P!nk — 2017, What About Us.",
     "hint": "P!nk",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0Qh38w01QRXK6KHIv0e3hb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0Qh38w01QRXK6KHIv0e3hb"
     },
     "genres": [
       "poprock"
@@ -15057,16 +15057,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dont-blame-me-2017",
+    "id": üong-dont-blame-me-2017",
     "title": "Don’t Blame Me",
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — 2017, Don’t Blame Me.",
+    answer": "Taylor Swift — 2017, Don’t Blame Me.",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1R0a2iXumgCiFb7HEZ7gUE"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1R0a2iXumgCiFb7HEZ7gUE"
     },
     "genres": [
       "poprock"
@@ -15076,16 +15076,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-heathens-2016",
+    "id": üong-heathens-2016",
     "title": "Heathens",
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Twenty One Pilots — 2016, Heathens.",
+    answer": "Twenty One Pilots — 2016, Heathens.",
     "hint": "Twenty One Pilots",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6i0V12jOa3mr6uu4WYhUBr"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6i0V12jOa3mr6uu4WYhUBr"
     },
     "genres": [
       "poprock"
@@ -15095,16 +15095,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-all-of-me-2013",
-    "title": "All of Me",
+    "id": üong-all-of-me-2013",
+    "title": Äll of Me",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Legend — 2013, All of Me.",
+    answer": "John Legend — 2013, All of Me.",
     "hint": "John Legend",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3U4isOIWM3VvDubwSI3y7a"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3U4isOIWM3VvDubwSI3y7a"
     },
     "genres": [
       "poprock"
@@ -15114,16 +15114,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-domino-2011",
+    "id": üong-domino-2011",
     "title": "Domino",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jessie J — 2011, Domino.",
+    answer": "Jessie J — 2011, Domino.",
     "hint": "Jessie J",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2fQxE0jVrjNMT9oJAXtSJR"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2fQxE0jVrjNMT9oJAXtSJR"
     },
     "genres": [
       "poprock"
@@ -15133,16 +15133,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-green-light-2017",
+    "id": üong-green-light-2017",
     "title": "Green Light",
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lorde — 2017, Green Light.",
+    answer": "Lorde — 2017, Green Light.",
     "hint": "Lorde",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ie2Bw3xLj2JcGowOlcMhb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6ie2Bw3xLj2JcGowOlcMhb"
     },
     "genres": [
       "poprock"
@@ -15152,16 +15152,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-love-it-feat-charli-xcx-2013",
+    "id": üong-i-love-it-feat-charli-xcx-2013",
     "title": "I Love It (feat. Charli XCX)",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Icona Pop, Charli xcx — 2013, I Love It (feat. Charli XCX).",
+    answer": "Icona Pop, Charli xcx — 2013, I Love It (feat. Charli XCX).",
     "hint": "Icona Pop, Charli xcx",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/12zpU2S4lMdrK9dvsOoL1m"
+    üources": {
+      üpotify": "https://open.spotify.com/track/12zpU2S4lMdrK9dvsOoL1m"
     },
     "genres": [
       "poprock"
@@ -15171,16 +15171,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cheap-thrills-feat-sean-paul-2016",
+    "id": üong-cheap-thrills-feat-sean-paul-2016",
     "title": "Cheap Thrills (feat. Sean Paul)",
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sia, Sean Paul — 2016, Cheap Thrills (feat. Sean Paul).",
+    answer": "Sia, Sean Paul — 2016, Cheap Thrills (feat. Sean Paul).",
     "hint": "Sia, Sean Paul",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/378iszndTZAR4dH8kwsLC6"
+    üources": {
+      üpotify": "https://open.spotify.com/track/378iszndTZAR4dH8kwsLC6"
     },
     "genres": [
       "poprock"
@@ -15190,16 +15190,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-love-yourself-2015",
+    "id": üong-love-yourself-2015",
     "title": "Love Yourself",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Justin Bieber — 2015, Love Yourself.",
+    answer": "Justin Bieber — 2015, Love Yourself.",
     "hint": "Justin Bieber",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/50kpGaPAhYJ3sGmk6vplg0"
+    üources": {
+      üpotify": "https://open.spotify.com/track/50kpGaPAhYJ3sGmk6vplg0"
     },
     "genres": [
       "poprock"
@@ -15209,16 +15209,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bang-bang-2014",
+    "id": üong-bang-bang-2014",
     "title": "Bang Bang",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jessie J, Ariana Grande, Nicki Minaj — 2014, Bang Bang.",
+    answer": "Jessie J, Ariana Grande, Nicki Minaj — 2014, Bang Bang.",
     "hint": "Jessie J, Ariana Grande, Nicki Minaj",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/466s1BacUmiRdR3ISvNjyx"
+    üources": {
+      üpotify": "https://open.spotify.com/track/466s1BacUmiRdR3ISvNjyx"
     },
     "genres": [
       "poprock"
@@ -15228,16 +15228,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-me-and-my-broken-heart-2014",
+    "id": üong-me-and-my-broken-heart-2014",
     "title": "Me And My Broken Heart",
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rixton — 2014, Me And My Broken Heart.",
+    answer": "Rixton — 2014, Me And My Broken Heart.",
     "hint": "Rixton",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1oew3nFNY3vMacJAsvry0S"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1oew3nFNY3vMacJAsvry0S"
     },
     "genres": [
       "poprock"
@@ -15247,16 +15247,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-all-about-that-bass-2015",
-    "title": "All About That Bass",
+    "id": üong-all-about-that-bass-2015",
+    "title": Äll About That Bass",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Meghan Trainor — 2015, All About That Bass.",
+    answer": "Meghan Trainor — 2015, All About That Bass.",
     "hint": "Meghan Trainor",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5jE48hhRu8E6zBDPRSkEq7"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5jE48hhRu8E6zBDPRSkEq7"
     },
     "genres": [
       "poprock"
@@ -15266,16 +15266,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-ophelia-2016",
-    "title": "Ophelia",
+    "id": üong-ophelia-2016",
+    "title": Öphelia",
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Lumineers — 2016, Ophelia.",
+    answer": "The Lumineers — 2016, Ophelia.",
     "hint": "The Lumineers",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/14AyWf6y7KlWWLfAjdKMKI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/14AyWf6y7KlWWLfAjdKMKI"
     },
     "genres": [
       "poprock"
@@ -15285,16 +15285,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-vampire-2023",
+    "id": üong-vampire-2023",
     "title": "vampire",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Olivia Rodrigo — 2023, vampire.",
-    "hint": "Olivia Rodrigo",
+    answer": Ölivia Rodrigo — 2023, vampire.",
+    "hint": Ölivia Rodrigo",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1kuGVB7EU95pJObxwvfwKS"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1kuGVB7EU95pJObxwvfwKS"
     },
     "genres": [
       "poprock"
@@ -15304,16 +15304,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-blinding-lights-2020",
+    "id": üong-blinding-lights-2020",
     "title": "Blinding Lights",
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Weeknd — 2020, Blinding Lights.",
+    answer": "The Weeknd — 2020, Blinding Lights.",
     "hint": "The Weeknd",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6qYkmqFsXbj8CQjAdbYz07"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6qYkmqFsXbj8CQjAdbYz07"
     },
     "genres": [
       "poprock"
@@ -15323,16 +15323,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-love-me-not-2024",
+    "id": üong-love-me-not-2024",
     "title": "Love Me Not",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ravyn Lenae — 2024, Love Me Not.",
+    answer": "Ravyn Lenae — 2024, Love Me Not.",
     "hint": "Ravyn Lenae",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4WFgvKVfEhb3IUAFGrutTR"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4WFgvKVfEhb3IUAFGrutTR"
     },
     "genres": [
       "poprock"
@@ -15342,16 +15342,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-ordinary-2025",
-    "title": "Ordinary",
+    "id": üong-ordinary-2025",
+    "title": Ördinary",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Alex Warren — 2025, Ordinary.",
-    "hint": "Alex Warren",
+    answer": Älex Warren — 2025, Ordinary.",
+    "hint": Älex Warren",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6qqrTXSdwiJaq8SO0X2lSe"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6qqrTXSdwiJaq8SO0X2lSe"
     },
     "genres": [
       "poprock"
@@ -15361,16 +15361,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-fate-of-ophelia-2025",
+    "id": üong-the-fate-of-ophelia-2025",
     "title": "The Fate of Ophelia",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — 2025, The Fate of Ophelia.",
+    answer": "Taylor Swift — 2025, The Fate of Ophelia.",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/53iuhJlwXhSER5J2IYYv1W"
+    üources": {
+      üpotify": "https://open.spotify.com/track/53iuhJlwXhSER5J2IYYv1W"
     },
     "genres": [
       "poprock"
@@ -15380,16 +15380,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-back-to-friends-2024",
+    "id": üong-back-to-friends-2024",
     "title": "back to friends",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "sombr — 2024, back to friends.",
-    "hint": "sombr",
+    answer": üombr — 2024, back to friends.",
+    "hint": üombr",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0FTmksd2dxiE5e3rWyJXs6"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0FTmksd2dxiE5e3rWyJXs6"
     },
     "genres": [
       "poprock"
@@ -15399,16 +15399,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-my-universe-2021",
+    "id": üong-my-universe-2021",
     "title": "My Universe",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay, BTS — 2021, My Universe.",
+    answer": "Coldplay, BTS — 2021, My Universe.",
     "hint": "Coldplay, BTS",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/46HNZY1i7O6jwTA7Slo2PI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/46HNZY1i7O6jwTA7Slo2PI"
     },
     "genres": [
       "poprock"
@@ -15418,16 +15418,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-blessings-2025",
+    "id": üong-blessings-2025",
     "title": "Blessings",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Calvin Harris, Clementine Douglas — 2025, Blessings.",
+    answer": "Calvin Harris, Clementine Douglas — 2025, Blessings.",
     "hint": "Calvin Harris, Clementine Douglas",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/78nx0HDJIFD5xDq2L5420Z"
+    üources": {
+      üpotify": "https://open.spotify.com/track/78nx0HDJIFD5xDq2L5420Z"
     },
     "genres": [
       "poprock"
@@ -15437,16 +15437,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-down-2020",
+    "id": üong-down-2020",
     "title": "Down",
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "KALUMA, Albin Loán — 2020, Down.",
+    answer": "KALUMA, Albin Loán — 2020, Down.",
     "hint": "KALUMA, Albin Loán",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0oMoHEZPRd2DnD3EErXYpG"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0oMoHEZPRd2DnD3EErXYpG"
     },
     "genres": [
       "poprock"
@@ -15456,16 +15456,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-circles-2019",
+    "id": üong-circles-2019",
     "title": "Circles",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Post Malone — 2019, Circles.",
+    answer": "Post Malone — 2019, Circles.",
     "hint": "Post Malone",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/21jGcNKet2qwijlDFuPiPb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/21jGcNKet2qwijlDFuPiPb"
     },
     "genres": [
       "poprock"
@@ -15475,16 +15475,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-golden-2025",
+    "id": üong-golden-2025",
     "title": "Golden",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast — 2025, Golden.",
+    answer": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast — 2025, Golden.",
     "hint": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1CPZ5BxNNd0n0nF4Orb9JS"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1CPZ5BxNNd0n0nF4Orb9JS"
     },
     "genres": [
       "poprock"
@@ -15494,16 +15494,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-save-your-tears-with-ariana-grande-remix-2021",
+    "id": üong-save-your-tears-with-ariana-grande-remix-2021",
     "title": "Save Your Tears (with Ariana Grande) (Remix)",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Weeknd, Ariana Grande — 2021, Save Your Tears (with Ariana Grande) (Remix).",
+    answer": "The Weeknd, Ariana Grande — 2021, Save Your Tears (with Ariana Grande) (Remix).",
     "hint": "The Weeknd, Ariana Grande",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/37BZB0z9T8Xu7U3e65qxFy"
+    üources": {
+      üpotify": "https://open.spotify.com/track/37BZB0z9T8Xu7U3e65qxFy"
     },
     "genres": [
       "poprock"
@@ -15513,16 +15513,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-motto-2021",
+    "id": üong-the-motto-2021",
     "title": "The Motto",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tiësto, Ava Max — 2021, The Motto.",
+    answer": "Tiësto, Ava Max — 2021, The Motto.",
     "hint": "Tiësto, Ava Max",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/18asYwWugKjjsihZ0YvRxO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/18asYwWugKjjsihZ0YvRxO"
     },
     "genres": [
       "poprock"
@@ -15532,16 +15532,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-no-broke-boys-2025",
+    "id": üong-no-broke-boys-2025",
     "title": "No Broke Boys",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Disco Lines, Tinashe — 2025, No Broke Boys.",
+    answer": "Disco Lines, Tinashe — 2025, No Broke Boys.",
     "hint": "Disco Lines, Tinashe",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3cZajhyr8LmtPfHZ9296tj"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3cZajhyr8LmtPfHZ9296tj"
     },
     "genres": [
       "poprock"
@@ -15551,16 +15551,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-mirrors-2023",
+    "id": üong-mirrors-2023",
     "title": "Mirrors",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "KALUMA, Chris van Dutch — 2023, Mirrors.",
+    answer": "KALUMA, Chris van Dutch — 2023, Mirrors.",
     "hint": "KALUMA, Chris van Dutch",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1O66hxri1Y6px5xZSs0OEv"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1O66hxri1Y6px5xZSs0OEv"
     },
     "genres": [
       "poprock"
@@ -15570,16 +15570,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-better-feat-teddy-swims-2022",
+    "id": üong-better-feat-teddy-swims-2022",
     "title": "Better (feat. Teddy Swims)",
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "MK, BURNS, Teddy Swims — 2022, Better (feat. Teddy Swims).",
+    answer": "MK, BURNS, Teddy Swims — 2022, Better (feat. Teddy Swims).",
     "hint": "MK, BURNS, Teddy Swims",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5MnmuLgPmsAFkmG5n85cna"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5MnmuLgPmsAFkmG5n85cna"
     },
     "genres": [
       "poprock"
@@ -15589,16 +15589,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-jump-2025",
+    "id": üong-jump-2025",
     "title": "JUMP",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "BLACKPINK — 2025, JUMP.",
+    answer": "BLACKPINK — 2025, JUMP.",
     "hint": "BLACKPINK",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5H1sKFMzDeMtXwND3V6hRY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5H1sKFMzDeMtXwND3V6hRY"
     },
     "genres": [
       "poprock"
@@ -15608,16 +15608,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-tau-mich-auf-2025",
+    "id": üong-tau-mich-auf-2025",
     "title": "tau mich auf",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Zartmann — 2025, tau mich auf.",
+    answer": "Zartmann — 2025, tau mich auf.",
     "hint": "Zartmann",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6j8OrKDQHxXakjA7KKbWzj"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6j8OrKDQHxXakjA7KKbWzj"
     },
     "genres": [
       "poprock"
@@ -15627,16 +15627,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-no-roots-2019",
+    "id": üong-no-roots-2019",
     "title": "No Roots",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Alice Merton — 2019, No Roots.",
-    "hint": "Alice Merton",
+    answer": Älice Merton — 2019, No Roots.",
+    "hint": Älice Merton",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7DFSnCBYlus7i4U9KKlbdU"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7DFSnCBYlus7i4U9KKlbdU"
     },
     "genres": [
       "poprock"
@@ -15646,16 +15646,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-undressed-2025",
-    "title": "undressed",
+    "id": üong-undressed-2025",
+    "title": ündressed",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "sombr — 2025, undressed.",
-    "hint": "sombr",
+    answer": üombr — 2025, undressed.",
+    "hint": üombr",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4AajxCEwGEsmHmT4H1TwjY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4AajxCEwGEsmHmT4H1TwjY"
     },
     "genres": [
       "poprock"
@@ -15665,16 +15665,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lose-control-2023",
+    "id": üong-lose-control-2023",
     "title": "Lose Control",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Teddy Swims — 2023, Lose Control.",
+    answer": "Teddy Swims — 2023, Lose Control.",
     "hint": "Teddy Swims",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/17phhZDn6oGtzMe56NuWvj"
+    üources": {
+      üpotify": "https://open.spotify.com/track/17phhZDn6oGtzMe56NuWvj"
     },
     "genres": [
       "poprock"
@@ -15684,16 +15684,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-feel-something-2019",
+    "id": üong-feel-something-2019",
     "title": "feel something",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bea Miller — 2019, feel something.",
+    answer": "Bea Miller — 2019, feel something.",
     "hint": "Bea Miller",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7JDWhC422Gtk1Bq0mL3OTC"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7JDWhC422Gtk1Bq0mL3OTC"
     },
     "genres": [
       "poprock"
@@ -15703,16 +15703,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-man-i-need-2025",
+    "id": üong-man-i-need-2025",
     "title": "Man I Need",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Olivia Dean — 2025, Man I Need.",
-    "hint": "Olivia Dean",
+    answer": Ölivia Dean — 2025, Man I Need.",
+    "hint": Ölivia Dean",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1qbmS6ep2hbBRaEZFpn7BX"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1qbmS6ep2hbBRaEZFpn7BX"
     },
     "genres": [
       "poprock"
@@ -15722,16 +15722,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-birds-of-a-feather-2024",
+    "id": üong-birds-of-a-feather-2024",
     "title": "BIRDS OF A FEATHER",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billie Eilish — 2024, BIRDS OF A FEATHER.",
+    answer": "Billie Eilish — 2024, BIRDS OF A FEATHER.",
     "hint": "Billie Eilish",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6dOtVTDdiauQNBQEDOtlAB"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6dOtVTDdiauQNBQEDOtlAB"
     },
     "genres": [
       "poprock"
@@ -15741,16 +15741,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-manchild-2025",
+    "id": üong-manchild-2025",
     "title": "Manchild",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sabrina Carpenter — 2025, Manchild.",
+    answer": "Sabrina Carpenter — 2025, Manchild.",
     "hint": "Sabrina Carpenter",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/42UBPzRMh5yyz0EDPr6fr1"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/42UBPzRMh5yyz0EDPr6fr1"
     },
     "genres": [
       "poprock"
@@ -15760,16 +15760,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-daisies-2025",
+    "id": üong-daisies-2025",
     "title": "DAISIES",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Justin Bieber — 2025, DAISIES.",
+    answer": "Justin Bieber — 2025, DAISIES.",
     "hint": "Justin Bieber",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5BZsQlgw21vDOAjoqkNgKb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5BZsQlgw21vDOAjoqkNgKb"
     },
     "genres": [
       "poprock"
@@ -15779,16 +15779,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-just-keep-watching-from-f1-the-movie-2025",
+    "id": üong-just-keep-watching-from-f1-the-movie-2025",
     "title": "Just Keep Watching (From F1® The Movie)",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tate McRae, F1 The Album — 2025, Just Keep Watching (From F1® The Movie).",
+    answer": "Tate McRae, F1 The Album — 2025, Just Keep Watching (From F1® The Movie).",
     "hint": "Tate McRae, F1 The Album",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2yWlGEgEfPot0lv3OAjuG3"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2yWlGEgEfPot0lv3OAjuG3"
     },
     "genres": [
       "poprock"
@@ -15798,16 +15798,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sorry-im-here-for-someone-else-2025",
+    "id": üong-sorry-im-here-for-someone-else-2025",
     "title": "Sorry I'm Here For Someone Else",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Benson Boone — 2025, Sorry I'm Here For Someone Else.",
+    answer": "Benson Boone — 2025, Sorry I'm Here For Someone Else.",
     "hint": "Benson Boone",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3x3K1RP3Zfi2qeMR8kyrNO"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3x3K1RP3Zfi2qeMR8kyrNO"
     },
     "genres": [
       "poprock"
@@ -15817,16 +15817,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sapphire-2025",
+    "id": üong-sapphire-2025",
     "title": "Sapphire",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ed Sheeran — 2025, Sapphire.",
+    answer": "Ed Sheeran — 2025, Sapphire.",
     "hint": "Ed Sheeran",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4Q0qVhFQa7j6jRKzo3HDmP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4Q0qVhFQa7j6jRKzo3HDmP"
     },
     "genres": [
       "poprock"
@@ -15836,16 +15836,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-die-with-a-smile-2024",
+    "id": üong-die-with-a-smile-2024",
     "title": "Die With A Smile",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga, Bruno Mars — 2024, Die With A Smile.",
+    answer": "Lady Gaga, Bruno Mars — 2024, Die With A Smile.",
     "hint": "Lady Gaga, Bruno Mars",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2plbrEY59IikOBgBGLjaoe"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2plbrEY59IikOBgBGLjaoe"
     },
     "genres": [
       "poprock"
@@ -15855,16 +15855,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-fucked-up-feat-makko-2025",
+    "id": üong-fucked-up-feat-makko-2025",
     "title": "Fucked Up feat. makko",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nina Chuba, makko — 2025, Fucked Up feat. makko.",
+    answer": "Nina Chuba, makko — 2025, Fucked Up feat. makko.",
     "hint": "Nina Chuba, makko",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4oASO8jyg0Qh7cUeve1bEA"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4oASO8jyg0Qh7cUeve1bEA"
     },
     "genres": [
       "poprock",
@@ -15875,16 +15875,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-dead-dance-2025",
+    "id": üong-the-dead-dance-2025",
     "title": "The Dead Dance",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — 2025, The Dead Dance.",
+    answer": "Lady Gaga — 2025, The Dead Dance.",
     "hint": "Lady Gaga",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3NFs3XUduzBfvc5Bx1gmzh"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3NFs3XUduzBfvc5Bx1gmzh"
     },
     "genres": [
       "poprock"
@@ -15894,16 +15894,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-opalite-2025",
-    "title": "Opalite",
+    "id": üong-opalite-2025",
+    "title": Öpalite",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — 2025, Opalite.",
+    answer": "Taylor Swift — 2025, Opalite.",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3yWuTOYDztXjZxdE2cIRUa"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3yWuTOYDztXjZxdE2cIRUa"
     },
     "genres": [
       "poprock"
@@ -15913,16 +15913,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-espresso-2024",
+    "id": üong-espresso-2024",
     "title": "Espresso",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sabrina Carpenter — 2024, Espresso.",
+    answer": "Sabrina Carpenter — 2024, Espresso.",
     "hint": "Sabrina Carpenter",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2qSkIjg1o9h3YT9RAgYN75"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/2qSkIjg1o9h3YT9RAgYN75"
     },
     "genres": [
       "poprock"
@@ -15932,16 +15932,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-beautiful-things-2024",
+    "id": üong-beautiful-things-2024",
     "title": "Beautiful Things",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Benson Boone — 2024, Beautiful Things.",
+    answer": "Benson Boone — 2024, Beautiful Things.",
     "hint": "Benson Boone",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6tNQ70jh4OwmPGpYy6R2o9"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6tNQ70jh4OwmPGpYy6R2o9"
     },
     "genres": [
       "poprock"
@@ -15951,16 +15951,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-azizam-2025",
-    "title": "Azizam",
+    "id": üong-azizam-2025",
+    "title": Äzizam",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ed Sheeran — 2025, Azizam.",
+    answer": "Ed Sheeran — 2025, Azizam.",
     "hint": "Ed Sheeran",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0GRc3eGTg8HBdWLRGYgqIc"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0GRc3eGTg8HBdWLRGYgqIc"
     },
     "genres": [
       "poprock"
@@ -15970,16 +15970,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-shake-it-to-the-max-fly-remix-2025",
+    "id": üong-shake-it-to-the-max-fly-remix-2025",
     "title": "Shake It To The Max (FLY) - Remix",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "MOLIY, Silent Addy, Skillibeng, Shenseea — 2025, Shake It To The Max (FLY) - Remix.",
+    answer": "MOLIY, Silent Addy, Skillibeng, Shenseea — 2025, Shake It To The Max (FLY) - Remix.",
     "hint": "MOLIY, Silent Addy, Skillibeng, Shenseea",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0QCIpQV3twfqo9kh0t8Zza"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0QCIpQV3twfqo9kh0t8Zza"
     },
     "genres": [
       "poprock"
@@ -15989,16 +15989,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sailor-song-2025",
+    "id": üong-sailor-song-2025",
     "title": "Sailor Song",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gigi Perez — 2025, Sailor Song.",
+    answer": "Gigi Perez — 2025, Sailor Song.",
     "hint": "Gigi Perez",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/21IYMdzTrzSe191Cy5eMap"
+    üources": {
+      üpotify": "https://open.spotify.com/track/21IYMdzTrzSe191Cy5eMap"
     },
     "genres": [
       "poprock"
@@ -16008,16 +16008,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-location-2025",
+    "id": üong-location-2025",
     "title": "Location",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Zerb, Ty Dolla $ign, Wiz Khalifa — 2025, Location.",
+    answer": "Zerb, Ty Dolla $ign, Wiz Khalifa — 2025, Location.",
     "hint": "Zerb, Ty Dolla $ign, Wiz Khalifa",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6Ilomcr9iLplsgAvZjHkJP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6Ilomcr9iLplsgAvZjHkJP"
     },
     "genres": [
       "poprock",
@@ -16028,16 +16028,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-feelslikeimfallinginlove-single-version-2024",
+    "id": üong-feelslikeimfallinginlove-single-version-2024",
     "title": "feelslikeimfallinginlove - Single Version",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — 2024, feelslikeimfallinginlove - Single Version.",
+    answer": "Coldplay — 2024, feelslikeimfallinginlove - Single Version.",
     "hint": "Coldplay",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1YsU8rW2u8z4F0pwOBQ4Ea"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1YsU8rW2u8z4F0pwOBQ4Ea"
     },
     "genres": [
       "poprock"
@@ -16047,16 +16047,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-houdini-2023",
+    "id": üong-houdini-2023",
     "title": "Houdini",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dua Lipa — 2023, Houdini.",
+    answer": "Dua Lipa — 2023, Houdini.",
     "hint": "Dua Lipa",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5wtSei6pJpDEB1iKqPHhfU"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5wtSei6pJpDEB1iKqPHhfU"
     },
     "genres": [
       "poprock"
@@ -16066,16 +16066,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-end-of-the-world-2025",
+    "id": üong-end-of-the-world-2025",
     "title": "End of the World",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Miley Cyrus — 2025, End of the World.",
+    answer": "Miley Cyrus — 2025, End of the World.",
     "hint": "Miley Cyrus",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5SxahezRlC0saXbCALfB7c"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5SxahezRlC0saXbCALfB7c"
     },
     "genres": [
       "poprock"
@@ -16085,16 +16085,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stumblin-in-2023",
+    "id": üong-stumblin-in-2023",
     "title": "Stumblin' In",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "CYRIL — 2023, Stumblin' In.",
+    answer": "CYRIL — 2023, Stumblin' In.",
     "hint": "CYRIL",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0h3Xy4V4apMraB5NuM8U7Z"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0h3Xy4V4apMraB5NuM8U7Z"
     },
     "genres": [
       "poprock"
@@ -16104,16 +16104,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-abracadabra-2025",
-    "title": "Abracadabra",
+    "id": üong-abracadabra-2025",
+    "title": Äbracadabra",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — 2025, Abracadabra.",
+    answer": "Lady Gaga — 2025, Abracadabra.",
     "hint": "Lady Gaga",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2LHNTC9QZxsL3nWpt8iaSR"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2LHNTC9QZxsL3nWpt8iaSR"
     },
     "genres": [
       "poprock"
@@ -16123,16 +16123,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-be-mine-2025",
+    "id": üong-be-mine-2025",
     "title": "Be Mine",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "KAMRAD — 2025, Be Mine.",
+    answer": "KAMRAD — 2025, Be Mine.",
     "hint": "KAMRAD",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5ejTcCJOozPqRPMs9gW3pN"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5ejTcCJOozPqRPMs9gW3pN"
     },
     "genres": [
       "poprock"
@@ -16142,16 +16142,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wenn-das-liebe-ist-2025",
+    "id": üong-wenn-das-liebe-ist-2025",
     "title": "Wenn das Liebe ist",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nina Chuba — 2025, Wenn das Liebe ist.",
+    answer": "Nina Chuba — 2025, Wenn das Liebe ist.",
     "hint": "Nina Chuba",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1E7xmNFzqkkh1DMwBomBg3"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1E7xmNFzqkkh1DMwBomBg3"
     },
     "genres": [
       "poprock"
@@ -16161,16 +16161,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-walzer-2024",
+    "id": üong-walzer-2024",
     "title": "Walzer",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Provinz — 2024, Walzer.",
+    answer": "Provinz — 2024, Walzer.",
     "hint": "Provinz",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1We3jgIztlD2Tkb0yOoX4b"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1We3jgIztlD2Tkb0yOoX4b"
     },
     "genres": [
       "poprock"
@@ -16180,16 +16180,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-espresso-macchiato-2024",
+    "id": üong-espresso-macchiato-2024",
     "title": "Espresso Macchiato",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tommy Cash — 2024, Espresso Macchiato.",
+    answer": "Tommy Cash — 2024, Espresso Macchiato.",
     "hint": "Tommy Cash",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4zpNfuWJA3K4d9TS4qnOIB"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4zpNfuWJA3K4d9TS4qnOIB"
     },
     "genres": [
       "poprock"
@@ -16199,16 +16199,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-luther-with-sza-2024",
+    "id": üong-luther-with-sza-2024",
     "title": "luther (with sza)",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kendrick Lamar, SZA — 2024, luther (with sza).",
+    answer": "Kendrick Lamar, SZA — 2024, luther (with sza).",
     "hint": "Kendrick Lamar, SZA",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/45J4avUb9Ni0bnETYaYFVJ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/45J4avUb9Ni0bnETYaYFVJ"
     },
     "genres": [
       "hiphop",
@@ -16219,16 +16219,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-abracadabra-2025",
-    "title": "Abracadabra",
+    "id": üong-abracadabra-2025",
+    "title": Äbracadabra",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — 2025, Abracadabra.",
+    answer": "Lady Gaga — 2025, Abracadabra.",
     "hint": "Lady Gaga",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5ZLUm9eab8y3tqQ1OhQSHI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5ZLUm9eab8y3tqQ1OhQSHI"
     },
     "genres": [
       "poprock"
@@ -16238,16 +16238,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-twilight-zone-2025",
+    "id": üong-twilight-zone-2025",
     "title": "twilight zone",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ariana Grande — 2025, twilight zone.",
-    "hint": "Ariana Grande",
+    answer": Äriana Grande — 2025, twilight zone.",
+    "hint": Äriana Grande",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1SdJK81uqfXNIhlZI9vjlg"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1SdJK81uqfXNIhlZI9vjlg"
     },
     "genres": [
       "poprock"
@@ -16257,16 +16257,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-apt-2024",
-    "title": "APT.",
+    "id": üong-apt-2024",
+    "title": ÄPT.",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "ROSÉ, Bruno Mars — 2024, APT..",
+    answer": "ROSÉ, Bruno Mars — 2024, APT..",
     "hint": "ROSÉ, Bruno Mars",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY"
     },
     "genres": [
       "poprock"
@@ -16276,16 +16276,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-messy-2024",
+    "id": üong-messy-2024",
     "title": "Messy",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lola Young — 2024, Messy.",
+    answer": "Lola Young — 2024, Messy.",
     "hint": "Lola Young",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/35ISBknsCeZQtq66xABI9g"
+    üources": {
+      üpotify": "https://open.spotify.com/track/35ISBknsCeZQtq66xABI9g"
     },
     "genres": [
       "poprock"
@@ -16295,16 +16295,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-show-me-love-2025",
+    "id": üong-show-me-love-2025",
     "title": "Show Me Love",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "WizTheMc, bees & honey — 2025, Show Me Love.",
+    answer": "WizTheMc, bees & honey — 2025, Show Me Love.",
     "hint": "WizTheMc, bees & honey",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5ITV0zqzjOYfFWpW0xBmRa"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5ITV0zqzjOYfFWpW0xBmRa"
     },
     "genres": [
       "poprock"
@@ -16314,16 +16314,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-first-time-2025",
+    "id": üong-the-first-time-2025",
     "title": "The First Time",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Damiano David — 2025, The First Time.",
+    answer": "Damiano David — 2025, The First Time.",
     "hint": "Damiano David",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7ETIZFr7163zFcz3RxKk5O"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7ETIZFr7163zFcz3RxKk5O"
     },
     "genres": [
       "poprock"
@@ -16333,16 +16333,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-youll-be-in-my-heart-2022",
+    "id": üong-youll-be-in-my-heart-2022",
     "title": "You'll Be in My Heart",
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "NIKI — 2022, You'll Be in My Heart.",
+    answer": "NIKI — 2022, You'll Be in My Heart.",
     "hint": "NIKI",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1UPB5rYJ0bzn6mNSoAHrZC"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1UPB5rYJ0bzn6mNSoAHrZC"
     },
     "genres": [
       "poprock"
@@ -16352,16 +16352,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-all-my-love-pnau-x-coldplay-2024",
-    "title": "ALL MY LOVE - PNAU x Coldplay",
+    "id": üong-all-my-love-pnau-x-coldplay-2024",
+    "title": ÄLL MY LOVE - PNAU x Coldplay",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay, PNAU — 2024, ALL MY LOVE - PNAU x Coldplay.",
+    answer": "Coldplay, PNAU — 2024, ALL MY LOVE - PNAU x Coldplay.",
     "hint": "Coldplay, PNAU",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0TwKov50GELgwuAW4I3oeN"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0TwKov50GELgwuAW4I3oeN"
     },
     "genres": [
       "poprock"
@@ -16371,16 +16371,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-white-lies-2021",
+    "id": üong-white-lies-2021",
     "title": "White Lies",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "VIZE, Tokio Hotel — 2021, White Lies.",
+    answer": "VIZE, Tokio Hotel — 2021, White Lies.",
     "hint": "VIZE, Tokio Hotel",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2QuQkdLLzgktXwruPAz6f4"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2QuQkdLLzgktXwruPAz6f4"
     },
     "genres": [
       "poprock"
@@ -16390,16 +16390,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-greatest-day-feat-calum-scott-robin-schulz-rework-2023",
+    "id": üong-greatest-day-feat-calum-scott-robin-schulz-rework-2023",
     "title": "Greatest Day (feat. Calum Scott) - Robin Schulz Rework",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Take That, Robin Schulz, Calum Scott — 2023, Greatest Day (feat. Calum Scott) - Robin Schulz Rework.",
+    answer": "Take That, Robin Schulz, Calum Scott — 2023, Greatest Day (feat. Calum Scott) - Robin Schulz Rework.",
     "hint": "Take That, Robin Schulz, Calum Scott",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1Oae67sHC45sBQMrYhMiWF"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1Oae67sHC45sBQMrYhMiWF"
     },
     "genres": [
       "poprock"
@@ -16409,16 +16409,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-anxiety-2025",
-    "title": "Anxiety",
+    "id": üong-anxiety-2025",
+    "title": Änxiety",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Doechii — 2025, Anxiety.",
+    answer": "Doechii — 2025, Anxiety.",
     "hint": "Doechii",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1musbempyJAw5gfSKZHXP9"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1musbempyJAw5gfSKZHXP9"
     },
     "genres": [
       "poprock"
@@ -16428,16 +16428,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hausparty-2025",
+    "id": üong-hausparty-2025",
     "title": "Hausparty",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "RIAN — 2025, Hausparty.",
+    answer": "RIAN — 2025, Hausparty.",
     "hint": "RIAN",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0L1e4NytVRR42Ip0KPVgdv"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0L1e4NytVRR42Ip0KPVgdv"
     },
     "genres": [
       "poprock"
@@ -16447,16 +16447,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-pink-pony-club-2023",
+    "id": üong-pink-pony-club-2023",
     "title": "Pink Pony Club",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Chappell Roan — 2023, Pink Pony Club.",
+    answer": "Chappell Roan — 2023, Pink Pony Club.",
     "hint": "Chappell Roan",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6393yGahSJ9slVdOwSxOVR"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6393yGahSJ9slVdOwSxOVR"
     },
     "genres": [
       "poprock"
@@ -16466,16 +16466,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-taste-2024",
+    "id": üong-taste-2024",
     "title": "Taste",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sabrina Carpenter — 2024, Taste.",
+    answer": "Sabrina Carpenter — 2024, Taste.",
     "hint": "Sabrina Carpenter",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5G2f63n7IPVPPjfNIGih7Q"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/5G2f63n7IPVPPjfNIGih7Q"
     },
     "genres": [
       "poprock"
@@ -16485,16 +16485,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-we-pray-2024",
+    "id": üong-we-pray-2024",
     "title": "WE PRAY",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay, Little Simz, Burna Boy, Elyanna, TINI — 2024, WE PRAY.",
+    answer": "Coldplay, Little Simz, Burna Boy, Elyanna, TINI — 2024, WE PRAY.",
     "hint": "Coldplay, Little Simz, Burna Boy, Elyanna, TINI",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7xrEnNo99wrmIs8ZK3RZMK"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7xrEnNo99wrmIs8ZK3RZMK"
     },
     "genres": [
       "poprock"
@@ -16504,16 +16504,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-luther-with-sza-2024",
+    "id": üong-luther-with-sza-2024",
     "title": "luther (with sza)",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kendrick Lamar, SZA — 2024, luther (with sza).",
+    answer": "Kendrick Lamar, SZA — 2024, luther (with sza).",
     "hint": "Kendrick Lamar, SZA",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2CGNAOSuO1MEFCbBRgUzjd"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2CGNAOSuO1MEFCbBRgUzjd"
     },
     "genres": [
       "hiphop",
@@ -16524,16 +16524,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-nice-to-meet-you-2024",
+    "id": üong-nice-to-meet-you-2024",
     "title": "Nice To Meet You",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Myles Smith — 2024, Nice To Meet You.",
+    answer": "Myles Smith — 2024, Nice To Meet You.",
     "hint": "Myles Smith",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/726SEjbF3ToEbYbn43gnxl"
+    üources": {
+      üpotify": "https://open.spotify.com/track/726SEjbF3ToEbYbn43gnxl"
     },
     "genres": [
       "poprock"
@@ -16543,16 +16543,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-touch-me-2024",
+    "id": üong-touch-me-2024",
     "title": "Touch Me",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÁSDÍS — 2024, Touch Me.",
+    answer": "ÁSDÍS — 2024, Touch Me.",
     "hint": "ÁSDÍS",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/74lOK0Z3WKvTpK8W8Srj1d"
+    üources": {
+      üpotify": "https://open.spotify.com/track/74lOK0Z3WKvTpK8W8Srj1d"
     },
     "genres": [
       "poprock"
@@ -16562,16 +16562,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-human-being-2024",
+    "id": üong-human-being-2024",
     "title": "Human Being",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nico Santos — 2024, Human Being.",
+    answer": "Nico Santos — 2024, Human Being.",
     "hint": "Nico Santos",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3eQsDyIiFA52ZISozJQ1Lm"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3eQsDyIiFA52ZISozJQ1Lm"
     },
     "genres": [
       "poprock"
@@ -16581,16 +16581,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-left-in-your-love-2024",
+    "id": üong-left-in-your-love-2024",
     "title": "Left In Your Love",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Loi — 2024, Left In Your Love.",
+    answer": "Loi — 2024, Left In Your Love.",
     "hint": "Loi",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5dIW2ogrgeDlOPIEM0dNcb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5dIW2ogrgeDlOPIEM0dNcb"
     },
     "genres": [
       "poprock"
@@ -16600,16 +16600,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wave-2024",
+    "id": üong-wave-2024",
     "title": "Wave",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "FAST BOY, Raf — 2024, Wave.",
+    answer": "FAST BOY, Raf — 2024, Wave.",
     "hint": "FAST BOY, Raf",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5msO1c9VNP14k2t4EvXEsi"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5msO1c9VNP14k2t4EvXEsi"
     },
     "genres": [
       "poprock"
@@ -16619,16 +16619,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stargazing-2024",
+    "id": üong-stargazing-2024",
     "title": "Stargazing",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Myles Smith — 2024, Stargazing.",
+    answer": "Myles Smith — 2024, Stargazing.",
     "hint": "Myles Smith",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3Vr3zh0r7ALn8VLqCiRR10"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3Vr3zh0r7ALn8VLqCiRR10"
     },
     "genres": [
       "poprock"
@@ -16638,16 +16638,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-happy-ending-feat-voice-impact-yazik-2022",
+    "id": üong-happy-ending-feat-voice-impact-yazik-2022",
     "title": "Happy Ending (feat. Voice Impact & Yazik)",
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Crystal Rock, Marc Kiss, Pule, Voice Impact, Yazik — 2022, Happy Ending (feat. Voice Impact & Yazik).",
+    answer": "Crystal Rock, Marc Kiss, Pule, Voice Impact, Yazik — 2022, Happy Ending (feat. Voice Impact & Yazik).",
     "hint": "Crystal Rock, Marc Kiss, Pule, Voice Impact, Yazik",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2DufAlDkMT5qeTwTjVL0mo"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2DufAlDkMT5qeTwTjVL0mo"
     },
     "genres": [
       "poprock"
@@ -16657,16 +16657,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-rote-flaggen-2023",
+    "id": üong-rote-flaggen-2023",
     "title": "Rote Flaggen",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Berq — 2023, Rote Flaggen.",
+    answer": "Berq — 2023, Rote Flaggen.",
     "hint": "Berq",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7bkUa9kDFGxgCC7d36dzFI"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7bkUa9kDFGxgCC7d36dzFI"
     },
     "genres": [
       "poprock"
@@ -16676,16 +16676,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-thats-so-true-2024",
+    "id": üong-thats-so-true-2024",
     "title": "That’s So True",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gracie Abrams — 2024, That’s So True.",
+    answer": "Gracie Abrams — 2024, That’s So True.",
     "hint": "Gracie Abrams",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7ne4VBA60CxGM75vw0EYad"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/7ne4VBA60CxGM75vw0EYad"
     },
     "genres": [
       "poprock"
@@ -16695,16 +16695,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-eternity-2025",
+    "id": üong-eternity-2025",
     "title": "Eternity",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Alex Warren — 2025, Eternity.",
-    "hint": "Alex Warren",
+    answer": Älex Warren — 2025, Eternity.",
+    "hint": Älex Warren",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6wHpLMmp98aHcV8L1JFrj8"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6wHpLMmp98aHcV8L1JFrj8"
     },
     "genres": [
       "poprock"
@@ -16714,16 +16714,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-kiss-me-more-feat-sza-2021",
+    "id": üong-kiss-me-more-feat-sza-2021",
     "title": "Kiss Me More (feat. SZA)",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Doja Cat, SZA — 2021, Kiss Me More (feat. SZA).",
+    answer": "Doja Cat, SZA — 2021, Kiss Me More (feat. SZA).",
     "hint": "Doja Cat, SZA",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3DarAbFujv6eYNliUTyqtz"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3DarAbFujv6eYNliUTyqtz"
     },
     "genres": [
       "poprock"
@@ -16733,16 +16733,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-overpass-graffiti-2021",
-    "title": "Overpass Graffiti",
+    "id": üong-overpass-graffiti-2021",
+    "title": Överpass Graffiti",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ed Sheeran — 2021, Overpass Graffiti.",
+    answer": "Ed Sheeran — 2021, Overpass Graffiti.",
     "hint": "Ed Sheeran",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4btFHqumCO31GksfuBLLv3"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4btFHqumCO31GksfuBLLv3"
     },
     "genres": [
       "poprock"
@@ -16752,16 +16752,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-toms-diner-2019",
+    "id": üong-toms-diner-2019",
     "title": "Tom's Diner",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "AnnenMayKantereit, Giant Rooks — 2019, Tom's Diner.",
-    "hint": "AnnenMayKantereit, Giant Rooks",
+    answer": ÄnnenMayKantereit, Giant Rooks — 2019, Tom's Diner.",
+    "hint": ÄnnenMayKantereit, Giant Rooks",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0oA9wBGDY4uyILLg4GymWP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0oA9wBGDY4uyILLg4GymWP"
     },
     "genres": [
       "poprock"
@@ -16771,16 +16771,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-nachts-wach-2022",
+    "id": üong-nachts-wach-2022",
     "title": "Nachts wach",
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Miksu / Macloud, makko — 2022, Nachts wach.",
+    answer": "Miksu / Macloud, makko — 2022, Nachts wach.",
     "hint": "Miksu / Macloud, makko",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0g2leZuI3jD5pRsrRIDvYe"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0g2leZuI3jD5pRsrRIDvYe"
     },
     "genres": [
       "hiphop",
@@ -16791,16 +16791,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bad-dreams-2024",
+    "id": üong-bad-dreams-2024",
     "title": "Bad Dreams",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Teddy Swims — 2024, Bad Dreams.",
+    answer": "Teddy Swims — 2024, Bad Dreams.",
     "hint": "Teddy Swims",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3nHuKdFJZm78CoeBnDcFKe"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3nHuKdFJZm78CoeBnDcFKe"
     },
     "genres": [
       "poprock"
@@ -16810,16 +16810,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-fata-morgana-2024",
+    "id": üong-fata-morgana-2024",
     "title": "Fata Morgana",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nina Chuba — 2024, Fata Morgana.",
+    answer": "Nina Chuba — 2024, Fata Morgana.",
     "hint": "Nina Chuba",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1v1cijv1qjMJ5o9OvMWACS"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1v1cijv1qjMJ5o9OvMWACS"
     },
     "genres": [
       "poprock"
@@ -16829,16 +16829,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lost-2021",
+    "id": üong-lost-2021",
     "title": "Lost",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Maroon 5 — 2021, Lost.",
+    answer": "Maroon 5 — 2021, Lost.",
     "hint": "Maroon 5",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/18XlJEroUwFo0tLZxscgXE"
+    üources": {
+      üpotify": "https://open.spotify.com/track/18XlJEroUwFo0tLZxscgXE"
     },
     "genres": [
       "poprock"
@@ -16848,16 +16848,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-adore-you-2019",
-    "title": "Adore You",
+    "id": üong-adore-you-2019",
+    "title": Ädore You",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Harry Styles — 2019, Adore You.",
+    answer": "Harry Styles — 2019, Adore You.",
     "hint": "Harry Styles",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3jjujdWJ72nww5eGnfs2E7"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3jjujdWJ72nww5eGnfs2E7"
     },
     "genres": [
       "poprock"
@@ -16867,16 +16867,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-nein-2024",
+    "id": üong-nein-2024",
     "title": "Nein!",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "AYLIVA — 2024, Nein!.",
-    "hint": "AYLIVA",
+    answer": ÄYLIVA — 2024, Nein!.",
+    "hint": ÄYLIVA",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2wvUmObLQbxClXFsuhw8Ns"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2wvUmObLQbxClXFsuhw8Ns"
     },
     "genres": [
       "poprock"
@@ -16886,16 +16886,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-one-2020",
+    "id": üong-the-one-2020",
     "title": "The One",
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rea Garvey, VIZE — 2020, The One.",
+    answer": "Rea Garvey, VIZE — 2020, The One.",
     "hint": "Rea Garvey, VIZE",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6j0l7Hjt6qeDCQnYBZuJXY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6j0l7Hjt6qeDCQnYBZuJXY"
     },
     "genres": [
       "poprock"
@@ -16905,16 +16905,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-110-prolog-2020",
+    "id": üong-110-prolog-2020",
     "title": "110 (Prolog)",
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "LEA — 2020, 110 (Prolog).",
+    answer": "LEA — 2020, 110 (Prolog).",
     "hint": "LEA",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7j5zuRDpIW9CdRDcsLNxBD"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7j5zuRDpIW9CdRDcsLNxBD"
     },
     "genres": [
       "poprock"
@@ -16924,16 +16924,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-sleeping-with-the-lights-on-2025",
+    "id": üong-sleeping-with-the-lights-on-2025",
     "title": "Sleeping With The Lights On",
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daniel Seavey — 2025, Sleeping With The Lights On.",
+    answer": "Daniel Seavey — 2025, Sleeping With The Lights On.",
     "hint": "Daniel Seavey",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/79WmVVG6KbCecp45eyhbfX"
+    üources": {
+      üpotify": "https://open.spotify.com/track/79WmVVG6KbCecp45eyhbfX"
     },
     "genres": [
       "poprock"
@@ -16943,16 +16943,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-someday-soon-2024",
+    "id": üong-someday-soon-2024",
     "title": "Someday Soon",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "ClockClock — 2024, Someday Soon.",
+    answer": "ClockClock — 2024, Someday Soon.",
     "hint": "ClockClock",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/12OXyuPmhiyC2MYkREEAb6"
+    üources": {
+      üpotify": "https://open.spotify.com/track/12OXyuPmhiyC2MYkREEAb6"
     },
     "genres": [
       "poprock"
@@ -16962,16 +16962,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-go-solo-feat-tom-rosenthal-2019",
+    "id": üong-go-solo-feat-tom-rosenthal-2019",
     "title": "Go Solo (feat. Tom Rosenthal)",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Zwette, Tom Rosenthal — 2019, Go Solo (feat. Tom Rosenthal).",
+    answer": "Zwette, Tom Rosenthal — 2019, Go Solo (feat. Tom Rosenthal).",
     "hint": "Zwette, Tom Rosenthal",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6vhOyWiOnO7EzxnXBllmkQ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6vhOyWiOnO7EzxnXBllmkQ"
     },
     "genres": [
       "poprock"
@@ -16981,16 +16981,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-like-the-way-you-kiss-me-2024",
+    "id": üong-i-like-the-way-you-kiss-me-2024",
     "title": "i like the way you kiss me",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Artemas — 2024, i like the way you kiss me.",
-    "hint": "Artemas",
+    answer": Ärtemas — 2024, i like the way you kiss me.",
+    "hint": Ärtemas",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2GxrNKugF82CnoRFbQfzPf"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2GxrNKugF82CnoRFbQfzPf"
     },
     "genres": [
       "poprock"
@@ -17000,16 +17000,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-where-are-you-now-2021",
+    "id": üong-where-are-you-now-2021",
     "title": "Where Are You Now",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lost Frequencies, Calum Scott — 2021, Where Are You Now.",
+    answer": "Lost Frequencies, Calum Scott — 2021, Where Are You Now.",
     "hint": "Lost Frequencies, Calum Scott",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3uUuGVFu1V7jTQL60S1r8z"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3uUuGVFu1V7jTQL60S1r8z"
     },
     "genres": [
       "poprock"
@@ -17019,16 +17019,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-a-bar-song-tipsy-2024",
-    "title": "A Bar Song (Tipsy)",
+    "id": üong-a-bar-song-tipsy-2024",
+    "title": Ä Bar Song (Tipsy)",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shaboozey — 2024, A Bar Song (Tipsy).",
+    answer": "Shaboozey — 2024, A Bar Song (Tipsy).",
     "hint": "Shaboozey",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5fZJQrFKWQLb7FpJXZ1g7K"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5fZJQrFKWQLb7FpJXZ1g7K"
     },
     "genres": [
       "poprock"
@@ -17038,16 +17038,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dancing-in-the-flames-2024",
+    "id": üong-dancing-in-the-flames-2024",
     "title": "Dancing In The Flames",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Weeknd — 2024, Dancing In The Flames.",
+    answer": "The Weeknd — 2024, Dancing In The Flames.",
     "hint": "The Weeknd",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7z7kvUQGwlC6iOl7vMuAr9"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7z7kvUQGwlC6iOl7vMuAr9"
     },
     "genres": [
       "poprock"
@@ -17057,16 +17057,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-love-again-2020",
+    "id": üong-love-again-2020",
     "title": "Love Again",
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dua Lipa — 2020, Love Again.",
+    answer": "Dua Lipa — 2020, Love Again.",
     "hint": "Dua Lipa",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/45BZcKdKl8OXpuGSlSvEun"
+    üources": {
+      üpotify": "https://open.spotify.com/track/45BZcKdKl8OXpuGSlSvEun"
     },
     "genres": [
       "poprock"
@@ -17076,16 +17076,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bauch-beine-po-2024",
+    "id": üong-bauch-beine-po-2024",
     "title": "bauch beine po",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shirin David — 2024, bauch beine po.",
+    answer": "Shirin David — 2024, bauch beine po.",
     "hint": "Shirin David",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/64f3yNXsi2Vk76odcHCOnw"
+    üources": {
+      üpotify": "https://open.spotify.com/track/64f3yNXsi2Vk76odcHCOnw"
     },
     "genres": [
       "hiphop",
@@ -17096,16 +17096,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-without-you-with-miley-cyrus-2021",
+    "id": üong-without-you-with-miley-cyrus-2021",
     "title": "WITHOUT YOU (with Miley Cyrus)",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Kid LAROI, Miley Cyrus — 2021, WITHOUT YOU (with Miley Cyrus).",
+    answer": "The Kid LAROI, Miley Cyrus — 2021, WITHOUT YOU (with Miley Cyrus).",
     "hint": "The Kid LAROI, Miley Cyrus",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1EHUQesfVKwbthtNcpBi9g"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1EHUQesfVKwbthtNcpBi9g"
     },
     "genres": [
       "poprock"
@@ -17115,19 +17115,19 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-komet-2023",
+    "id": üong-komet-2023",
     "title": "Komet",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Udo Lindenberg, Apache 207 — 2023, Komet.",
-    "hint": "Udo Lindenberg, Apache 207",
+    answer": Üdo Lindenberg, Apache 207 — 2023, Komet.",
+    "hint": Üdo Lindenberg, Apache 207",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7oQepKHmXDaPC3rgeLRvQu"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7oQepKHmXDaPC3rgeLRvQu"
     },
     "genres": [
-      "schlagerparty",
+      üchlagerparty",
       "poprock",
       "hiphop"
     ],
@@ -17136,16 +17136,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-belong-together-2024",
+    "id": üong-belong-together-2024",
     "title": "Belong Together",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mark Ambor — 2024, Belong Together.",
+    answer": "Mark Ambor — 2024, Belong Together.",
     "hint": "Mark Ambor",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4JGtRHnWyaNq7FIOZoBdPe"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4JGtRHnWyaNq7FIOZoBdPe"
     },
     "genres": [
       "poprock"
@@ -17155,16 +17155,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-too-sweet-2024",
+    "id": üong-too-sweet-2024",
     "title": "Too Sweet",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Hozier — 2024, Too Sweet.",
+    answer": "Hozier — 2024, Too Sweet.",
     "hint": "Hozier",
-    "difficulty": "schwer",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5Z0UnEtpLDQyYlWwgi8m9C"
+    "difficulty": üchwer",
+    üources": {
+      üpotify": "https://open.spotify.com/track/5Z0UnEtpLDQyYlWwgi8m9C"
     },
     "genres": [
       "poprock"
@@ -17174,16 +17174,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-mood-remix-feat-justin-bieber-j-balvin-iann-dior-2020",
+    "id": üong-mood-remix-feat-justin-bieber-j-balvin-iann-dior-2020",
     "title": "Mood (Remix) feat. Justin Bieber, J Balvin & iann dior",
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "24kGoldn, Justin Bieber, J Balvin, iann dior — 2020, Mood (Remix) feat. Justin Bieber, J Balvin & iann dior.",
+    answer": "24kGoldn, Justin Bieber, J Balvin, iann dior — 2020, Mood (Remix) feat. Justin Bieber, J Balvin & iann dior.",
     "hint": "24kGoldn, Justin Bieber, J Balvin, iann dior",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6FuGJB290AQMAHTfjOYVaK"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6FuGJB290AQMAHTfjOYVaK"
     },
     "genres": [
       "poprock",
@@ -17194,16 +17194,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-3-tage-am-meer-2022",
+    "id": üong-3-tage-am-meer-2022",
     "title": "3 Tage am Meer",
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "AnnenMayKantereit — 2022, 3 Tage am Meer.",
-    "hint": "AnnenMayKantereit",
+    answer": ÄnnenMayKantereit — 2022, 3 Tage am Meer.",
+    "hint": ÄnnenMayKantereit",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7vmxzqidBt7y4FxRtsJBVV"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7vmxzqidBt7y4FxRtsJBVV"
     },
     "genres": [
       "poprock"
@@ -17213,16 +17213,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-believe-2022",
+    "id": üong-i-believe-2022",
     "title": "I Believe",
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "KAMRAD — 2022, I Believe.",
+    answer": "KAMRAD — 2022, I Believe.",
     "hint": "KAMRAD",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2CewvqbfMOcnvYE3yayAJV"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2CewvqbfMOcnvYE3yayAJV"
     },
     "genres": [
       "poprock"
@@ -17232,16 +17232,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-greedy-2023",
+    "id": üong-greedy-2023",
     "title": "greedy",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tate McRae — 2023, greedy.",
+    answer": "Tate McRae — 2023, greedy.",
     "hint": "Tate McRae",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3rUGC1vUpkDG9CZFHMur1t"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3rUGC1vUpkDG9CZFHMur1t"
     },
     "genres": [
       "poprock"
@@ -17251,16 +17251,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-texas-hold-em-2024",
+    "id": üong-texas-hold-em-2024",
     "title": "TEXAS HOLD 'EM",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Beyoncé — 2024, TEXAS HOLD 'EM.",
+    answer": "Beyoncé — 2024, TEXAS HOLD 'EM.",
     "hint": "Beyoncé",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7AYmToZ5y67fBjq4RLFbuq"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7AYmToZ5y67fBjq4RLFbuq"
     },
     "genres": [
       "poprock"
@@ -17270,16 +17270,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-a-bar-song-tipsy-2024",
-    "title": "A Bar Song (Tipsy)",
+    "id": üong-a-bar-song-tipsy-2024",
+    "title": Ä Bar Song (Tipsy)",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shaboozey — 2024, A Bar Song (Tipsy).",
+    answer": "Shaboozey — 2024, A Bar Song (Tipsy).",
     "hint": "Shaboozey",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2FQrifJ1N335Ljm3TjTVVf"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2FQrifJ1N335Ljm3TjTVVf"
     },
     "genres": [
       "poprock"
@@ -17289,16 +17289,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cruel-summer-2023",
+    "id": üong-cruel-summer-2023",
     "title": "Cruel Summer",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — 2023, Cruel Summer.",
+    answer": "Taylor Swift — 2023, Cruel Summer.",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1kHVme7OVyPqhtdiLj2SI4"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1kHVme7OVyPqhtdiLj2SI4"
     },
     "genres": [
       "poprock"
@@ -17308,16 +17308,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-prada-2023",
+    "id": üong-prada-2023",
     "title": "Prada",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "cassö, RAYE, D-Block Europe — 2023, Prada.",
+    answer": "cassö, RAYE, D-Block Europe — 2023, Prada.",
     "hint": "cassö, RAYE, D-Block Europe",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/59NraMJsLaMCVtwXTSia8i"
+    üources": {
+      üpotify": "https://open.spotify.com/track/59NraMJsLaMCVtwXTSia8i"
     },
     "genres": [
       "poprock",
@@ -17328,16 +17328,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-maybe-youre-the-problem-2022",
+    "id": üong-maybe-youre-the-problem-2022",
     "title": "Maybe You’re The Problem",
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ava Max — 2022, Maybe You’re The Problem.",
-    "hint": "Ava Max",
+    answer": Äva Max — 2022, Maybe You’re The Problem.",
+    "hint": Äva Max",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0sb8ClU3CLoNblxkpmOKzA"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0sb8ClU3CLoNblxkpmOKzA"
     },
     "genres": [
       "poprock"
@@ -17347,16 +17347,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hot-air-balloon-2021",
+    "id": üong-hot-air-balloon-2021",
     "title": "Hot Air Balloon",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Don Diablo, AR/CO — 2021, Hot Air Balloon.",
+    answer": "Don Diablo, AR/CO — 2021, Hot Air Balloon.",
     "hint": "Don Diablo, AR/CO",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/67p96tIoC4ESrod9kW331R"
+    üources": {
+      üpotify": "https://open.spotify.com/track/67p96tIoC4ESrod9kW331R"
     },
     "genres": [
       "poprock"
@@ -17366,16 +17366,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-forgive-you-chromeo-remix-radio-edit-2024",
+    "id": üong-i-forgive-you-chromeo-remix-radio-edit-2024",
     "title": "I Forgive You - (Chromeo Remix) [radio edit]",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sia, Chromeo — 2024, I Forgive You - (Chromeo Remix) [radio edit].",
+    answer": "Sia, Chromeo — 2024, I Forgive You - (Chromeo Remix) [radio edit].",
     "hint": "Sia, Chromeo",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7Bdtb10c2V4oVqsz8Ebkk5"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7Bdtb10c2V4oVqsz8Ebkk5"
     },
     "genres": [
       "poprock"
@@ -17385,16 +17385,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-water-2023",
+    "id": üong-water-2023",
     "title": "Water",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tyla — 2023, Water.",
+    answer": "Tyla — 2023, Water.",
     "hint": "Tyla",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5aIVCx5tnk0ntmdiinnYvw"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5aIVCx5tnk0ntmdiinnYvw"
     },
     "genres": [
       "poprock"
@@ -17404,16 +17404,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-austin-boots-stop-workin-2024",
-    "title": "Austin (Boots Stop Workin')",
+    "id": üong-austin-boots-stop-workin-2024",
+    "title": Äustin (Boots Stop Workin')",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dasha — 2024, Austin (Boots Stop Workin').",
+    answer": "Dasha — 2024, Austin (Boots Stop Workin').",
     "hint": "Dasha",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2uqYupMHANxnwgeiXTZXzd"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2uqYupMHANxnwgeiXTZXzd"
     },
     "genres": [
       "poprock"
@@ -17423,16 +17423,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wunder-2024",
+    "id": üong-wunder-2024",
     "title": "Wunder",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "AYLIVA, Apache 207 — 2024, Wunder.",
-    "hint": "AYLIVA, Apache 207",
+    answer": ÄYLIVA, Apache 207 — 2024, Wunder.",
+    "hint": ÄYLIVA, Apache 207",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/16f4ZN6XOfrIO8fJkm28HM"
+    üources": {
+      üpotify": "https://open.spotify.com/track/16f4ZN6XOfrIO8fJkm28HM"
     },
     "genres": [
       "poprock",
@@ -17443,16 +17443,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-mwaki-2023",
+    "id": üong-mwaki-2023",
     "title": "Mwaki",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Zerb, Sofiya Nzau — 2023, Mwaki.",
+    answer": "Zerb, Sofiya Nzau — 2023, Mwaki.",
     "hint": "Zerb, Sofiya Nzau",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4HDC7Mo6uLTujRvHymiXDf"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4HDC7Mo6uLTujRvHymiXDf"
     },
     "genres": [
       "poprock"
@@ -17462,16 +17462,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-cupids-bow-2024",
+    "id": üong-cupids-bow-2024",
     "title": "Cupid's Bow",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Olly Alexander (Years & Years) — 2024, Cupid's Bow.",
-    "hint": "Olly Alexander (Years & Years)",
+    answer": Ölly Alexander (Years & Years) — 2024, Cupid's Bow.",
+    "hint": Ölly Alexander (Years & Years)",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2TGZSBugyuUOHFjsXYBKkD"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2TGZSBugyuUOHFjsXYBKkD"
     },
     "genres": [
       "poprock"
@@ -17481,16 +17481,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-ready-for-myself-2024",
+    "id": üong-ready-for-myself-2024",
     "title": "Ready For Myself",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nelly Furtado — 2024, Ready For Myself.",
+    answer": "Nelly Furtado — 2024, Ready For Myself.",
     "hint": "Nelly Furtado",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3o8piBTiYYIC9OQBY3xuNk"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3o8piBTiYYIC9OQBY3xuNk"
     },
     "genres": [
       "poprock"
@@ -17500,16 +17500,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lay-your-head-on-me-2020",
+    "id": üong-lay-your-head-on-me-2020",
     "title": "Lay Your Head On Me",
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Major Lazer, Marcus Mumford, Diplo — 2020, Lay Your Head On Me.",
+    answer": "Major Lazer, Marcus Mumford, Diplo — 2020, Lay Your Head On Me.",
     "hint": "Major Lazer, Marcus Mumford, Diplo",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5KDLhSpvNJX4buCQochelS"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5KDLhSpvNJX4buCQochelS"
     },
     "genres": [
       "poprock"
@@ -17519,16 +17519,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lamour-toujours-ill-fly-with-you-2024",
+    "id": üong-lamour-toujours-ill-fly-with-you-2024",
     "title": "L'Amour Toujours (I'll Fly With You)",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "KALUMA, Chris van Dutch — 2024, L'Amour Toujours (I'll Fly With You).",
+    answer": "KALUMA, Chris van Dutch — 2024, L'Amour Toujours (I'll Fly With You).",
     "hint": "KALUMA, Chris van Dutch",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/60zmUjNMSJzcMvy22azojx"
+    üources": {
+      üpotify": "https://open.spotify.com/track/60zmUjNMSJzcMvy22azojx"
     },
     "genres": [
       "poprock"
@@ -17538,16 +17538,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stick-season-2022",
+    "id": üong-stick-season-2022",
     "title": "Stick Season",
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Noah Kahan — 2022, Stick Season.",
+    answer": "Noah Kahan — 2022, Stick Season.",
     "hint": "Noah Kahan",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0mflMxspEfB0VbI1kyLiAv"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0mflMxspEfB0VbI1kyLiAv"
     },
     "genres": [
       "poprock"
@@ -17557,16 +17557,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-selfish-2024",
+    "id": üong-selfish-2024",
     "title": "Selfish",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Justin Timberlake — 2024, Selfish.",
+    answer": "Justin Timberlake — 2024, Selfish.",
     "hint": "Justin Timberlake",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5GSYbwIInbmPvNRyl7nDpR"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5GSYbwIInbmPvNRyl7nDpR"
     },
     "genres": [
       "poprock"
@@ -17576,16 +17576,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-stay-with-justin-bieber-2021",
+    "id": üong-stay-with-justin-bieber-2021",
     "title": "STAY (with Justin Bieber)",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Kid LAROI, Justin Bieber — 2021, STAY (with Justin Bieber).",
+    answer": "The Kid LAROI, Justin Bieber — 2021, STAY (with Justin Bieber).",
     "hint": "The Kid LAROI, Justin Bieber",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5HCyWlXZPP0y6Gqq8TgA20"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5HCyWlXZPP0y6Gqq8TgA20"
     },
     "genres": [
       "poprock"
@@ -17595,16 +17595,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-lost-soul-down-2015",
+    "id": üong-the-lost-soul-down-2015",
     "title": "The Lost Soul Down",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "NBSPLV — 2015, The Lost Soul Down.",
+    answer": "NBSPLV — 2015, The Lost Soul Down.",
     "hint": "NBSPLV",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5dPy1CCYQ04xaQHpajf5CY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5dPy1CCYQ04xaQHpajf5CY"
     },
     "genres": [
       "poprock"
@@ -17614,16 +17614,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-in-the-dark-2022",
+    "id": üong-in-the-dark-2022",
     "title": "In The Dark",
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Purple Disco Machine, Sophie and the Giants — 2022, In The Dark.",
+    answer": "Purple Disco Machine, Sophie and the Giants — 2022, In The Dark.",
     "hint": "Purple Disco Machine, Sophie and the Giants",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6lHMg45o6S2ny3ZWAaNFZN"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6lHMg45o6S2ny3ZWAaNFZN"
     },
     "genres": [
       "poprock"
@@ -17633,16 +17633,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-flowers-2023",
+    "id": üong-flowers-2023",
     "title": "Flowers",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Crystal Rock, Marc Kiss, LØU — 2023, Flowers.",
+    answer": "Crystal Rock, Marc Kiss, LØU — 2023, Flowers.",
     "hint": "Crystal Rock, Marc Kiss, LØU",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4EncxuCewsAwSqc5S5jCmz"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4EncxuCewsAwSqc5S5jCmz"
     },
     "genres": [
       "poprock"
@@ -17652,16 +17652,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-ich-glaub-ich-will-heut-nicht-mehr-gehen-2023",
+    "id": üong-ich-glaub-ich-will-heut-nicht-mehr-gehen-2023",
     "title": "Ich glaub ich will heut nicht mehr gehen",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nina Chuba, Provinz — 2023, Ich glaub ich will heut nicht mehr gehen.",
+    answer": "Nina Chuba, Provinz — 2023, Ich glaub ich will heut nicht mehr gehen.",
     "hint": "Nina Chuba, Provinz",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4zLCLlqLivpZXvYfQCqTWh"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4zLCLlqLivpZXvYfQCqTWh"
     },
     "genres": [
       "poprock"
@@ -17671,16 +17671,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-one-of-your-girls-2023",
-    "title": "One Of Your Girls",
+    "id": üong-one-of-your-girls-2023",
+    "title": Öne Of Your Girls",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Troye Sivan — 2023, One Of Your Girls.",
+    answer": "Troye Sivan — 2023, One Of Your Girls.",
     "hint": "Troye Sivan",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5Eh1nj7IjV9lwpcKAkidyY"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5Eh1nj7IjV9lwpcKAkidyY"
     },
     "genres": [
       "poprock"
@@ -17690,16 +17690,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lil-boo-thang-2023",
+    "id": üong-lil-boo-thang-2023",
     "title": "Lil Boo Thang",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Paul Russell — 2023, Lil Boo Thang.",
+    answer": "Paul Russell — 2023, Lil Boo Thang.",
     "hint": "Paul Russell",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0cVyQfDyRnMJ0V3rjjdlU3"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0cVyQfDyRnMJ0V3rjjdlU3"
     },
     "genres": [
       "poprock"
@@ -17709,16 +17709,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-another-love-tiesto-remix-2022",
-    "title": "Another Love - Tiësto Remix",
+    "id": üong-another-love-tiesto-remix-2022",
+    "title": Änother Love - Tiësto Remix",
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tom Odell, Tiësto — 2022, Another Love - Tiësto Remix.",
+    answer": "Tom Odell, Tiësto — 2022, Another Love - Tiësto Remix.",
     "hint": "Tom Odell, Tiësto",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/4Et6tUEO7biKxZEfJXpNj1"
+    üources": {
+      üpotify": "https://open.spotify.com/track/4Et6tUEO7biKxZEfJXpNj1"
     },
     "genres": [
       "poprock"
@@ -17728,16 +17728,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lost-in-the-fire-feat-the-weeknd-2019",
+    "id": üong-lost-in-the-fire-feat-the-weeknd-2019",
     "title": "Lost in the Fire (feat. The Weeknd)",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gesaffelstein, The Weeknd — 2019, Lost in the Fire (feat. The Weeknd).",
+    answer": "Gesaffelstein, The Weeknd — 2019, Lost in the Fire (feat. The Weeknd).",
     "hint": "Gesaffelstein, The Weeknd",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2vXKRlJBXyOcvZYTdNeckS"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2vXKRlJBXyOcvZYTdNeckS"
     },
     "genres": [
       "poprock"
@@ -17747,16 +17747,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-anders-2023",
-    "title": "Anders",
+    "id": üong-anders-2023",
+    "title": Änders",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "01099, Paul, Ski Aggu — 2023, Anders.",
+    answer": "01099, Paul, Ski Aggu — 2023, Anders.",
     "hint": "01099, Paul, Ski Aggu",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5RKvst7SDOCTWGlLcF6kSE"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5RKvst7SDOCTWGlLcF6kSE"
     },
     "genres": [
       "hiphop",
@@ -17767,16 +17767,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-good-luck-babe-2024",
+    "id": üong-good-luck-babe-2024",
     "title": "Good Luck, Babe!",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Chappell Roan — 2024, Good Luck, Babe!.",
+    answer": "Chappell Roan — 2024, Good Luck, Babe!.",
     "hint": "Chappell Roan",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/0WbMK4wrZ1wFSty9F7FCgu"
+    üources": {
+      üpotify": "https://open.spotify.com/track/0WbMK4wrZ1wFSty9F7FCgu"
     },
     "genres": [
       "poprock"
@@ -17786,16 +17786,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-blender-2022",
+    "id": üong-blender-2022",
     "title": "BLENDER",
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "5 Seconds of Summer — 2022, BLENDER.",
+    answer": "5 Seconds of Summer — 2022, BLENDER.",
     "hint": "5 Seconds of Summer",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2LBnpm1lEMkzD45ZGLmrQd"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2LBnpm1lEMkzD45ZGLmrQd"
     },
     "genres": [
       "poprock"
@@ -17805,16 +17805,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-teenage-dirtbag-2021",
+    "id": üong-teenage-dirtbag-2021",
     "title": "Teenage Dirtbag",
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Honey Gee, Crystal Rock, Moestwanted — 2021, Teenage Dirtbag.",
+    answer": "Honey Gee, Crystal Rock, Moestwanted — 2021, Teenage Dirtbag.",
     "hint": "Honey Gee, Crystal Rock, Moestwanted",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/62hxFc3yOEyauOuuqbKqxt"
+    üources": {
+      üpotify": "https://open.spotify.com/track/62hxFc3yOEyauOuuqbKqxt"
     },
     "genres": [
       "poprock"
@@ -17824,16 +17824,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-control-2020",
+    "id": üong-control-2020",
     "title": "Control",
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Zoe Wees — 2020, Control.",
+    answer": "Zoe Wees — 2020, Control.",
     "hint": "Zoe Wees",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/50Td3qilgs8BLtv8mHyT1t"
+    üources": {
+      üpotify": "https://open.spotify.com/track/50Td3qilgs8BLtv8mHyT1t"
     },
     "genres": [
       "poprock"
@@ -17843,16 +17843,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-paradise-feat-dermot-kennedy-2020",
+    "id": üong-paradise-feat-dermot-kennedy-2020",
     "title": "Paradise (feat. Dermot Kennedy)",
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "MEDUZA, Dermot Kennedy — 2020, Paradise (feat. Dermot Kennedy).",
+    answer": "MEDUZA, Dermot Kennedy — 2020, Paradise (feat. Dermot Kennedy).",
     "hint": "MEDUZA, Dermot Kennedy",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6ft4hAq6yde8jPZY2i5zLr"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6ft4hAq6yde8jPZY2i5zLr"
     },
     "genres": [
       "poprock"
@@ -17862,16 +17862,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-think-about-things-2020",
+    "id": üong-think-about-things-2020",
     "title": "Think About Things",
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daði Freyr — 2020, Think About Things.",
+    answer": "Daði Freyr — 2020, Think About Things.",
     "hint": "Daði Freyr",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2iRniYXjMHKmwXqA2jYXP7"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2iRniYXjMHKmwXqA2jYXP7"
     },
     "genres": [
       "poprock"
@@ -17881,16 +17881,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-love-to-go-2020",
+    "id": üong-love-to-go-2020",
     "title": "Love To Go",
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lost Frequencies, Zonderling, Kelvin Jones — 2020, Love To Go.",
+    answer": "Lost Frequencies, Zonderling, Kelvin Jones — 2020, Love To Go.",
     "hint": "Lost Frequencies, Zonderling, Kelvin Jones",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/14d79QOV2pvJHH9vlUfZwJ"
+    üources": {
+      üpotify": "https://open.spotify.com/track/14d79QOV2pvJHH9vlUfZwJ"
     },
     "genres": [
       "poprock"
@@ -17900,16 +17900,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-move-2024",
+    "id": üong-move-2024",
     "title": "Move",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Adam Port, Stryv, Keinemusik, Orso, Malachiii — 2024, Move.",
-    "hint": "Adam Port, Stryv, Keinemusik, Orso, Malachiii",
+    answer": Ädam Port, Stryv, Keinemusik, Orso, Malachiii — 2024, Move.",
+    "hint": Ädam Port, Stryv, Keinemusik, Orso, Malachiii",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1BJJbSX6muJVF2AK7uH1x4"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1BJJbSX6muJVF2AK7uH1x4"
     },
     "genres": [
       "poprock"
@@ -17919,16 +17919,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-true-2024",
+    "id": üong-true-2024",
     "title": "True",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "CYRIL, Kita Alexander — 2024, True.",
+    answer": "CYRIL, Kita Alexander — 2024, True.",
     "hint": "CYRIL, Kita Alexander",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2pw12Ta8UfYKesE52ldUFm"
+    üources": {
+      üpotify": "https://open.spotify.com/track/2pw12Ta8UfYKesE52ldUFm"
     },
     "genres": [
       "poprock"
@@ -17938,16 +17938,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-belong-together-2024",
+    "id": üong-belong-together-2024",
     "title": "Belong Together",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mark Ambor — 2024, Belong Together.",
+    answer": "Mark Ambor — 2024, Belong Together.",
     "hint": "Mark Ambor",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5uQ7de4EWjb3rkcFxyEOpu"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5uQ7de4EWjb3rkcFxyEOpu"
     },
     "genres": [
       "poprock"
@@ -17957,16 +17957,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-escapism-2023",
+    "id": üong-escapism-2023",
     "title": "Escapism.",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "RAYE, 070 Shake — 2023, Escapism..",
+    answer": "RAYE, 070 Shake — 2023, Escapism..",
     "hint": "RAYE, 070 Shake",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5mHdCZtVyb4DcJw8799hZp"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5mHdCZtVyb4DcJw8799hZp"
     },
     "genres": [
       "poprock"
@@ -17976,16 +17976,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-heat-waves-2020",
+    "id": üong-heat-waves-2020",
     "title": "Heat Waves",
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Glass Animals — 2020, Heat Waves.",
+    answer": "Glass Animals — 2020, Heat Waves.",
     "hint": "Glass Animals",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3USxtqRwSYz57Ewm6wWRMp"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3USxtqRwSYz57Ewm6wWRMp"
     },
     "genres": [
       "poprock"
@@ -17995,16 +17995,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-hasslich-2023",
+    "id": üong-hasslich-2023",
     "title": "Hässlich",
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "AYLIVA — 2023, Hässlich.",
-    "hint": "AYLIVA",
+    answer": ÄYLIVA — 2023, Hässlich.",
+    "hint": ÄYLIVA",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3an1JVi8OsE0aG6dMS4Pes"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3an1JVi8OsE0aG6dMS4Pes"
     },
     "genres": [
       "poprock"
@@ -18014,16 +18014,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-night-we-met-2015",
+    "id": üong-the-night-we-met-2015",
     "title": "The Night We Met",
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lord Huron — 2015, The Night We Met.",
+    answer": "Lord Huron — 2015, The Night We Met.",
     "hint": "Lord Huron",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/3hRV0jL3vUpRrcy398teAU"
+    üources": {
+      üpotify": "https://open.spotify.com/track/3hRV0jL3vUpRrcy398teAU"
     },
     "genres": [
       "poprock"
@@ -18033,16 +18033,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-wanna-be-yours-2013",
+    "id": üong-i-wanna-be-yours-2013",
     "title": "I Wanna Be Yours",
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Arctic Monkeys — 2013, I Wanna Be Yours.",
-    "hint": "Arctic Monkeys",
+    answer": Ärctic Monkeys — 2013, I Wanna Be Yours.",
+    "hint": Ärctic Monkeys",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5XeFesFbtLpXzIVDNQP22n"
+    üources": {
+      üpotify": "https://open.spotify.com/track/5XeFesFbtLpXzIVDNQP22n"
     },
     "genres": [
       "poprock"
@@ -18052,16 +18052,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-love-is-gone-acoustic-2019",
+    "id": üong-love-is-gone-acoustic-2019",
     "title": "Love Is Gone - Acoustic",
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "SLANDER, Dylan Matthew — 2019, Love Is Gone - Acoustic.",
+    answer": "SLANDER, Dylan Matthew — 2019, Love Is Gone - Acoustic.",
     "hint": "SLANDER, Dylan Matthew",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7F1CiKqrY44kh5cDqwHOnx"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7F1CiKqrY44kh5cDqwHOnx"
     },
     "genres": [
       "poprock"
@@ -18071,16 +18071,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-i-had-some-help-feat-morgan-wallen-2024",
+    "id": üong-i-had-some-help-feat-morgan-wallen-2024",
     "title": "I Had Some Help (Feat. Morgan Wallen)",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Post Malone, Morgan Wallen — 2024, I Had Some Help (Feat. Morgan Wallen).",
+    answer": "Post Malone, Morgan Wallen — 2024, I Had Some Help (Feat. Morgan Wallen).",
     "hint": "Post Malone, Morgan Wallen",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/7221xIgOnuakPdLqT0F3nP"
+    üources": {
+      üpotify": "https://open.spotify.com/track/7221xIgOnuakPdLqT0F3nP"
     },
     "genres": [
       "poprock"
@@ -18090,16 +18090,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-monster-shawn-mendes-justin-bieber-2020",
+    "id": üong-monster-shawn-mendes-justin-bieber-2020",
     "title": "Monster (Shawn Mendes & Justin Bieber)",
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shawn Mendes, Justin Bieber — 2020, Monster (Shawn Mendes & Justin Bieber).",
+    answer": "Shawn Mendes, Justin Bieber — 2020, Monster (Shawn Mendes & Justin Bieber).",
     "hint": "Shawn Mendes, Justin Bieber",
     "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/1zFwFZ112by5yUtZOysUJb"
+    üources": {
+      üpotify": "https://open.spotify.com/track/1zFwFZ112by5yUtZOysUJb"
     },
     "genres": [
       "poprock"
@@ -18109,16 +18109,16 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-midnight-ride-2024",
+    "id": üong-midnight-ride-2024",
     "title": "Midnight Ride",
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Orville Peck, Kylie Minogue, Diplo — 2024, Midnight Ride.",
-    "hint": "Orville Peck, Kylie Minogue, Diplo",
+    answer": Örville Peck, Kylie Minogue, Diplo — 2024, Midnight Ride.",
+    "hint": Örville Peck, Kylie Minogue, Diplo",
     "difficulty": "mittel",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/6J26td5uctWg0UlzdzCj7Y"
+    üources": {
+      üpotify": "https://open.spotify.com/track/6J26td5uctWg0UlzdzCj7Y"
     },
     "genres": [
       "poprock"
