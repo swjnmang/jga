@@ -19,6 +19,10 @@ export const playlistInfo: PlaylistInfo[] = [
   {
     "id": "6CyKsSLFFd2fX7Nu4yijSX",
     "name": "Flex-70ger"
+  },
+  {
+    "id": "1K766ohE2LA7b7ghtTm7mP",
+    "name": "Felx-2000er"
   }
 ];
 
@@ -9705,6 +9709,95 @@ export const playlistCards: Card[] = [
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
     ]
+  },
+  {
+    "id": "song-incomplete-2000",
+    "title": "Incomplete",
+    "category": "music",
+    "year": 2005,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Backstreet Boys — 2005, Incomplete.",
+    "hint": "Backstreet Boys",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0CnD7Hiw6pae6rLsZw5q5W"
+    },
+    "genres": ["poprock"],
+    "playlists": ["1K766ohE2LA7b7ghtTm7mP"]
+  },
+  {
+    "id": "song-just-like-a-pill-2002",
+    "title": "Just Like a Pill",
+    "category": "music",
+    "year": 2002,
+    "cue": "Song anhören und einordnen.",
+    "answer": "P!nk — 2002, Just Like a Pill.",
+    "hint": "P!nk",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1BpV8IGf4XsRRJf4Xuui9q"
+    },
+    "genres": ["poprock"],
+    "playlists": ["1K766ohE2LA7b7ghtTm7mP"]
+  },
+  {
+    "id": "song-teenage-dirtbag-2000",
+    "title": "Teenage Dirtbag",
+    "category": "music",
+    "year": 2000,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Wheatus — 2000, Teenage Dirtbag.",
+    "hint": "Wheatus",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/25FTMokYEbEWHEdss5JLZS"
+    },
+    "genres": ["poprock"],
+    "playlists": ["1K766ohE2LA7b7ghtTm7mP"]
+  },
+  {
+    "id": "song-murder-on-the-dancefloor-2001",
+    "title": "Murder On The Dancefloor",
+    "category": "music",
+    "year": 2001,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Sophie Ellis-Bextor — 2001, Murder On The Dancefloor.",
+    "hint": "Sophie Ellis-Bextor",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3yjjFp94TOENrJJgvmxAoE"
+    },
+    "genres": ["poprock"],
+    "playlists": ["1K766ohE2LA7b7ghtTm7mP"]
+  },
+  {
+    "id": "song-unwritten-2004",
+    "title": "Unwritten",
+    "category": "music",
+    "year": 2004,
+    "cue": "Song anhören und einordnen.",
+    "answer": "Natasha Bedingfield — 2004, Unwritten.",
+    "hint": "Natasha Bedingfield",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3U5JVgI2x4rDyHGObzJfNf"
+    },
+    "genres": ["poprock"],
+    "playlists": ["1K766ohE2LA7b7ghtTm7mP"]
+  },
+  {
+    "id": "song-bye-bye-bye-2000",
+    "title": "Bye Bye Bye",
+    "category": "music",
+    "year": 2000,
+    "cue": "Song anhören und einordnen.",
+    "answer": "*NSYNC — 2000, Bye Bye Bye.",
+    "hint": "*NSYNC",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/47BBI51FKFwOMlIiX6m8ya"
+    },
+    "genres": ["poprock"],
+    "playlists": ["1K766ohE2LA7b7ghtTm7mP"]
   }
 ];
-
