@@ -174,9 +174,6 @@ function SettingsPageContent() {
         </p>
       </div>
 
-      {mode && (
-
-
       <section className="card-surface rounded-2xl p-5 space-y-4">
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-lg font-semibold">Aus welchen Schwierigkeitsstufen möchtest du Fragen spielen?</h2>
