@@ -9,7 +9,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Andorra – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Andorra – 1993, Erste Verfassung (Souveränität)",
     "hint": "Andorra",
     "difficulty": "leicht",
     "sources": {
@@ -163,7 +163,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Österreich – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Österreich – 1945, Zweite Republik",
     "hint": "Österreich",
     "difficulty": "leicht",
     "sources": {
@@ -247,7 +247,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Barbados – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Barbados – 2021, Übergang zur Republik",
     "hint": "Barbados",
     "difficulty": "schwer",
     "sources": {
@@ -261,7 +261,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Bangladesch – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Bangladesch – 1971, Unabhängigkeit",
     "hint": "Bangladesch",
     "difficulty": "leicht",
     "sources": {
@@ -275,7 +275,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Belgien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Belgien – 1831, Unabhängigkeit und Verfassung nach der Revolution",
     "hint": "Belgien",
     "difficulty": "leicht",
     "sources": {
@@ -289,7 +289,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Burkina Faso – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Burkina Faso – 1960, Unabhängigkeit",
     "hint": "Burkina Faso",
     "difficulty": "mittel",
     "sources": {
@@ -317,7 +317,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Bahrain – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Bahrain – 1971, Unabhängigkeit",
     "hint": "Bahrain",
     "difficulty": "schwer",
     "sources": {
@@ -331,7 +331,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Burundi – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Burundi – 1962, Unabhängigkeit",
     "hint": "Burundi",
     "difficulty": "mittel",
     "sources": {
@@ -345,7 +345,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Benin – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Benin – 1960, Unabhängigkeit",
     "hint": "Benin",
     "difficulty": "mittel",
     "sources": {
@@ -429,7 +429,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Brasilien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Brasilien – 1988, Aktuelle Verfassung",
     "hint": "Brasilien",
     "difficulty": "leicht",
     "sources": {
@@ -443,7 +443,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Bahamas – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Bahamas – 1973, Unabhängigkeit",
     "hint": "Bahamas",
     "difficulty": "schwer",
     "sources": {
@@ -499,7 +499,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Belarus – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Belarus – 1991, Unabhängigkeit von der UdSSR",
     "hint": "Belarus",
     "difficulty": "leicht",
     "sources": {
@@ -513,7 +513,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Belize – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Belize – 1981, Unabhängigkeit",
     "hint": "Belize",
     "difficulty": "schwer",
     "sources": {
@@ -527,7 +527,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Kanada – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kanada – 1867, British North America Act (Beginn der Eigenstaatlichkeit)",
     "hint": "Kanada",
     "difficulty": "mittel",
     "sources": {
@@ -597,7 +597,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Schweiz – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Schweiz – 1848, Gründung des modernen Bundesstaates",
     "hint": "Schweiz",
     "difficulty": "leicht",
     "sources": {
@@ -653,7 +653,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Kamerun – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kamerun – 1960, Unabhängigkeit",
     "hint": "Kamerun",
     "difficulty": "mittel",
     "sources": {
@@ -709,7 +709,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Kuba – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kuba – 2019, Neue Verfassung",
     "hint": "Kuba",
     "difficulty": "mittel",
     "sources": {
@@ -765,7 +765,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Zypern – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Zypern – 1960, Unabhängigkeit",
     "hint": "Zypern",
     "difficulty": "leicht",
     "sources": {
@@ -779,7 +779,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Tschechien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Tschechien – 1993, Teilung der Tschechoslowakei",
     "hint": "Tschechien",
     "difficulty": "leicht",
     "sources": {
@@ -793,7 +793,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Deutschland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Deutschland – 1949, Grundgesetz (BRD)",
     "hint": "Deutschland",
     "difficulty": "leicht",
     "sources": {
@@ -807,7 +807,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Dschibuti – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Dschibuti – 1977, Unabhängigkeit",
     "hint": "Dschibuti",
     "difficulty": "schwer",
     "sources": {
@@ -835,7 +835,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Dominica – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Dominica – 1978, Unabhängigkeit",
     "hint": "Dominica",
     "difficulty": "schwer",
     "sources": {
@@ -891,7 +891,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Estland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Estland – 1991, Wiederherstellung der Unabhängigkeit",
     "hint": "Estland",
     "difficulty": "leicht",
     "sources": {
@@ -905,7 +905,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Ägypten – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Ägypten – 1953, Ausrufung der Republik",
     "hint": "Ägypten",
     "difficulty": "leicht",
     "sources": {
@@ -933,7 +933,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Eritrea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Eritrea – 1993, Unabhängigkeit von Äthiopien",
     "hint": "Eritrea",
     "difficulty": "schwer",
     "sources": {
@@ -947,7 +947,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Spanien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Spanien – 1978, Demokratische Verfassung",
     "hint": "Spanien",
     "difficulty": "leicht",
     "sources": {
@@ -989,7 +989,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Fidschi – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Fidschi – 1970, Unabhängigkeit",
     "hint": "Fidschi",
     "difficulty": "schwer",
     "sources": {
@@ -1031,7 +1031,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Frankreich – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Frankreich – 1958, Fünfte Republik",
     "hint": "Frankreich",
     "difficulty": "leicht",
     "sources": {
@@ -1045,7 +1045,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Gabun – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Gabun – 1960, Unabhängigkeit",
     "hint": "Gabun",
     "difficulty": "schwer",
     "sources": {
@@ -1073,7 +1073,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Grenada – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Grenada – 1974, Unabhängigkeit",
     "hint": "Grenada",
     "difficulty": "schwer",
     "sources": {
@@ -1087,7 +1087,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Georgien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Georgien – 1991, Unabhängigkeit von der UdSSR",
     "hint": "Georgien",
     "difficulty": "leicht",
     "sources": {
@@ -1129,7 +1129,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Ghana – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Ghana – 1957, Unabhängigkeit",
     "hint": "Ghana",
     "difficulty": "mittel",
     "sources": {
@@ -1171,7 +1171,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Gambia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Gambia – 1965, Unabhängigkeit",
     "hint": "Gambia",
     "difficulty": "schwer",
     "sources": {
@@ -1185,7 +1185,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Guinea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Guinea – 1958, Unabhängigkeit",
     "hint": "Guinea",
     "difficulty": "mittel",
     "sources": {
@@ -1213,7 +1213,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Äquatorialguinea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Äquatorialguinea – 1968, Unabhängigkeit",
     "hint": "Äquatorialguinea",
     "difficulty": "schwer",
     "sources": {
@@ -1283,7 +1283,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Guinea-Bissau – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Guinea-Bissau – 1974, Unabhängigkeit",
     "hint": "Guinea-Bissau",
     "difficulty": "schwer",
     "sources": {
@@ -1297,7 +1297,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Guyana – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Guyana – 1966, Unabhängigkeit",
     "hint": "Guyana",
     "difficulty": "schwer",
     "sources": {
@@ -1353,7 +1353,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Kroatien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kroatien – 1991, Unabhängigkeit von Jugoslawien",
     "hint": "Kroatien",
     "difficulty": "leicht",
     "sources": {
@@ -1395,7 +1395,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Indonesien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Indonesien – 1945, Unabhängigkeit",
     "hint": "Indonesien",
     "difficulty": "leicht",
     "sources": {
@@ -1409,7 +1409,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Irland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Irland – 1921, Unabhängigkeit (Freistaat)",
     "hint": "Irland",
     "difficulty": "leicht",
     "sources": {
@@ -1423,7 +1423,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Israel – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Israel – 1948, Staatsgründung",
     "hint": "Israel",
     "difficulty": "mittel",
     "sources": {
@@ -1451,7 +1451,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Indien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Indien – 1947, Unabhängigkeit",
     "hint": "Indien",
     "difficulty": "leicht",
     "sources": {
@@ -1479,7 +1479,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Irak – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Irak – 2005, Post-Saddam Verfassung",
     "hint": "Irak",
     "difficulty": "schwer",
     "sources": {
@@ -1493,7 +1493,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Iran – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Iran – 1979, Islamische Republik",
     "hint": "Iran",
     "difficulty": "leicht",
     "sources": {
@@ -1507,7 +1507,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Island – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Island – 1944, Republikgründung",
     "hint": "Island",
     "difficulty": "leicht",
     "sources": {
@@ -1521,7 +1521,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Italien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Italien – 1948, Republikanische Verfassung",
     "hint": "Italien",
     "difficulty": "leicht",
     "sources": {
@@ -1535,7 +1535,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Jamaika – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Jamaika – 1962, Unabhängigkeit",
     "hint": "Jamaika",
     "difficulty": "schwer",
     "sources": {
@@ -1549,7 +1549,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Jordanien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Jordanien – 1946, Unabhängigkeit",
     "hint": "Jordanien",
     "difficulty": "mittel",
     "sources": {
@@ -1563,7 +1563,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Japan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Japan – 1946, Nachkriegsverfassung",
     "hint": "Japan",
     "difficulty": "leicht",
     "sources": {
@@ -1577,7 +1577,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Kenia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kenia – 1963, Unabhängigkeit",
     "hint": "Kenia",
     "difficulty": "mittel",
     "sources": {
@@ -1591,7 +1591,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Kirgisistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kirgisistan – 1991, Unabhängigkeit von der UdSSR",
     "hint": "Kirgisistan",
     "difficulty": "schwer",
     "sources": {
@@ -1605,7 +1605,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Kambodscha – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kambodscha – 1953, Unabhängigkeit",
     "hint": "Kambodscha",
     "difficulty": "schwer",
     "sources": {
@@ -1619,7 +1619,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Kiribati – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kiribati – 1979, Unabhängigkeit",
     "hint": "Kiribati",
     "difficulty": "schwer",
     "sources": {
@@ -1633,7 +1633,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Komoren – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Komoren – 1975, Unabhängigkeit",
     "hint": "Komoren",
     "difficulty": "schwer",
     "sources": {
@@ -1661,7 +1661,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Nordkorea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Nordkorea – 1948, Gründung der DVRK",
     "hint": "Nordkorea",
     "difficulty": "mittel",
     "sources": {
@@ -1675,7 +1675,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Südkorea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Südkorea – 1948, Gründung der Republik",
     "hint": "Südkorea",
     "difficulty": "mittel",
     "sources": {
@@ -1689,7 +1689,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Kuwait – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kuwait – 1961, Unabhängigkeit",
     "hint": "Kuwait",
     "difficulty": "schwer",
     "sources": {
@@ -1717,7 +1717,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Kasachstan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Kasachstan – 1991, Unabhängigkeit von der UdSSR",
     "hint": "Kasachstan",
     "difficulty": "mittel",
     "sources": {
@@ -1731,7 +1731,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Laos – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Laos – 1949, Unabhängigkeit von Frankreich",
     "hint": "Laos",
     "difficulty": "schwer",
     "sources": {
@@ -1745,7 +1745,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Libanon – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Libanon – 1943, Unabhängigkeit von Frankreich",
     "hint": "Libanon",
     "difficulty": "schwer",
     "sources": {
@@ -1759,7 +1759,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "St. Lucia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "St. Lucia – 1979, Unabhängigkeit",
     "hint": "St. Lucia",
     "difficulty": "schwer",
     "sources": {
@@ -1787,7 +1787,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Sri Lanka – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Sri Lanka – 1948, Unabhängigkeit",
     "hint": "Sri Lanka",
     "difficulty": "mittel",
     "sources": {
@@ -1815,7 +1815,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Lesotho – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Lesotho – 1966, Unabhängigkeit",
     "hint": "Lesotho",
     "difficulty": "schwer",
     "sources": {
@@ -1829,7 +1829,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Litauen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Litauen – 1991, Wiederherstellung der Unabhängigkeit",
     "hint": "Litauen",
     "difficulty": "leicht",
     "sources": {
@@ -1843,7 +1843,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Luxemburg – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Luxemburg – 1868, Aktuelle Verfassung",
     "hint": "Luxemburg",
     "difficulty": "leicht",
     "sources": {
@@ -1857,7 +1857,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Lettland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Lettland – 1991, Wiederherstellung der Unabhängigkeit",
     "hint": "Lettland",
     "difficulty": "leicht",
     "sources": {
@@ -1871,7 +1871,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Libyen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Libyen – 1951, Unabhängigkeit (Systemwechsel 2011)",
     "hint": "Libyen",
     "difficulty": "schwer",
     "sources": {
@@ -1885,7 +1885,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Marokko – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Marokko – 1956, Ende der Protektorate",
     "hint": "Marokko",
     "difficulty": "mittel",
     "sources": {
@@ -1927,7 +1927,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Montenegro – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Montenegro – 2006, Unabhängigkeit von Serbien",
     "hint": "Montenegro",
     "difficulty": "leicht",
     "sources": {
@@ -1955,7 +1955,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Madagaskar – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Madagaskar – 1960, Unabhängigkeit",
     "hint": "Madagaskar",
     "difficulty": "mittel",
     "sources": {
@@ -1969,7 +1969,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Nordmazedonien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Nordmazedonien – 1992, Unabhängigkeit von Jugoslawien",
     "hint": "Nordmazedonien",
     "difficulty": "leicht",
     "sources": {
@@ -1983,7 +1983,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Mali – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Mali – 1960, Unabhängigkeit",
     "hint": "Mali",
     "difficulty": "mittel",
     "sources": {
@@ -1997,7 +1997,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Myanmar – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Myanmar – 1948, Unabhängigkeit",
     "hint": "Myanmar",
     "difficulty": "schwer",
     "sources": {
@@ -2053,7 +2053,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Mauretanien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Mauretanien – 1960, Unabhängigkeit",
     "hint": "Mauretanien",
     "difficulty": "schwer",
     "sources": {
@@ -2081,7 +2081,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Malta – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Malta – 1964, Unabhängigkeit",
     "hint": "Malta",
     "difficulty": "leicht",
     "sources": {
@@ -2095,7 +2095,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Mauritius – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Mauritius – 1968, Unabhängigkeit",
     "hint": "Mauritius",
     "difficulty": "schwer",
     "sources": {
@@ -2109,7 +2109,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Malediven – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Malediven – 1965, Unabhängigkeit",
     "hint": "Malediven",
     "difficulty": "schwer",
     "sources": {
@@ -2123,7 +2123,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Malawi – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Malawi – 1964, Unabhängigkeit",
     "hint": "Malawi",
     "difficulty": "mittel",
     "sources": {
@@ -2151,7 +2151,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Malaysia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Malaysia – 1957, Unabhängigkeit",
     "hint": "Malaysia",
     "difficulty": "mittel",
     "sources": {
@@ -2165,7 +2165,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Mosambik – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Mosambik – 1975, Unabhängigkeit",
     "hint": "Mosambik",
     "difficulty": "schwer",
     "sources": {
@@ -2179,7 +2179,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Namibia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Namibia – 1990, Unabhängigkeit",
     "hint": "Namibia",
     "difficulty": "schwer",
     "sources": {
@@ -2207,7 +2207,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Niger – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Niger – 1960, Unabhängigkeit",
     "hint": "Niger",
     "difficulty": "mittel",
     "sources": {
@@ -2235,7 +2235,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Nigeria – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Nigeria – 1960, Unabhängigkeit",
     "hint": "Nigeria",
     "difficulty": "leicht",
     "sources": {
@@ -2277,7 +2277,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Norwegen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Norwegen – 1814, Verfassung von Eidsvoll (Konstitutionelle Monarchie)",
     "hint": "Norwegen",
     "difficulty": "leicht",
     "sources": {
@@ -2291,7 +2291,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Nepal – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Nepal – 2008, Ausrufung der Republik",
     "hint": "Nepal",
     "difficulty": "mittel",
     "sources": {
@@ -2333,7 +2333,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Neuseeland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Neuseeland – 1890, Erlangung des Selbstverwaltungsstatus (Dominion-Status 1907)",
     "hint": "Neuseeland",
     "difficulty": "schwer",
     "sources": {
@@ -2403,7 +2403,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Papua-Neuguinea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Papua-Neuguinea – 1975, Unabhängigkeit",
     "hint": "Papua-Neuguinea",
     "difficulty": "mittel",
     "sources": {
@@ -2417,7 +2417,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Philippinen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Philippinen – 1987, Aktuelle Verfassung",
     "hint": "Philippinen",
     "difficulty": "leicht",
     "sources": {
@@ -2431,7 +2431,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Pakistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Pakistan – 1947, Unabhängigkeit",
     "hint": "Pakistan",
     "difficulty": "leicht",
     "sources": {
@@ -2445,7 +2445,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Polen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Polen – 1997, Aktuelle Verfassung",
     "hint": "Polen",
     "difficulty": "leicht",
     "sources": {
@@ -2515,7 +2515,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Palau – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Palau – 1981, Verfassung (Souveränität 1994)",
     "hint": "Palau",
     "difficulty": "schwer",
     "sources": {
@@ -2543,7 +2543,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Katar – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Katar – 1971, Unabhängigkeit",
     "hint": "Katar",
     "difficulty": "schwer",
     "sources": {
@@ -2585,7 +2585,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Serbien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Serbien – 2006, Auflösung der Union mit Montenegro",
     "hint": "Serbien",
     "difficulty": "leicht",
     "sources": {
@@ -2599,7 +2599,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Russland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Russland – 1991, Russische Föderation (Post-Sowjet)",
     "hint": "Russland",
     "difficulty": "leicht",
     "sources": {
@@ -2613,7 +2613,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Ruanda – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Ruanda – 1962, Unabhängigkeit",
     "hint": "Ruanda",
     "difficulty": "mittel",
     "sources": {
@@ -2627,7 +2627,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Saudi-Arabien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Saudi-Arabien – 1932, Vereinigung der Königreiche",
     "hint": "Saudi-Arabien",
     "difficulty": "mittel",
     "sources": {
@@ -2641,7 +2641,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Salomonen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Salomonen – 1978, Unabhängigkeit",
     "hint": "Salomonen",
     "difficulty": "schwer",
     "sources": {
@@ -2669,7 +2669,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Sudan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Sudan – 1956, Unabhängigkeit",
     "hint": "Sudan",
     "difficulty": "mittel",
     "sources": {
@@ -2697,7 +2697,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Singapur – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Singapur – 1965, Trennung von Malaysia",
     "hint": "Singapur",
     "difficulty": "schwer",
     "sources": {
@@ -2725,7 +2725,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Slowenien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Slowenien – 1991, Unabhängigkeit von Jugoslawien",
     "hint": "Slowenien",
     "difficulty": "leicht",
     "sources": {
@@ -2753,7 +2753,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Slowakei – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Slowakei – 1993, Teilung der Tschechoslowakei",
     "hint": "Slowakei",
     "difficulty": "leicht",
     "sources": {
@@ -2767,7 +2767,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Sierra Leone – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Sierra Leone – 1961, Unabhängigkeit",
     "hint": "Sierra Leone",
     "difficulty": "schwer",
     "sources": {
@@ -2781,7 +2781,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "San Marino – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "San Marino – 1600, Verabschiedung der Statuten (älteste Republik)",
     "hint": "San Marino",
     "difficulty": "leicht",
     "sources": {
@@ -2795,7 +2795,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Senegal – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Senegal – 1960, Unabhängigkeit",
     "hint": "Senegal",
     "difficulty": "mittel",
     "sources": {
@@ -2809,7 +2809,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Somalia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Somalia – 1960, Unabhängigkeit",
     "hint": "Somalia",
     "difficulty": "mittel",
     "sources": {
@@ -2823,7 +2823,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Suriname – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Suriname – 1975, Unabhängigkeit",
     "hint": "Suriname",
     "difficulty": "schwer",
     "sources": {
@@ -2837,7 +2837,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Südsudan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Südsudan – 2011, Unabhängigkeit vom Sudan",
     "hint": "Südsudan",
     "difficulty": "schwer",
     "sources": {
@@ -2893,7 +2893,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Syrien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Syrien – 1946, Unabhängigkeit von Frankreich",
     "hint": "Syrien",
     "difficulty": "mittel",
     "sources": {
@@ -2907,7 +2907,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Eswatini – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Eswatini – 1968, Unabhängigkeit",
     "hint": "Eswatini",
     "difficulty": "schwer",
     "sources": {
@@ -2935,7 +2935,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Tschad – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Tschad – 2022, Neue Verfassung/Übergangsrat",
     "hint": "Tschad",
     "difficulty": "mittel",
     "sources": {
@@ -2963,7 +2963,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Togo – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Togo – 1960, Unabhängigkeit",
     "hint": "Togo",
     "difficulty": "mittel",
     "sources": {
@@ -2977,7 +2977,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Thailand – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Thailand – 1932, Ende der absoluten Monarchie",
     "hint": "Thailand",
     "difficulty": "leicht",
     "sources": {
@@ -2991,7 +2991,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Tadschikistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Tadschikistan – 1991, Unabhängigkeit von der UdSSR",
     "hint": "Tadschikistan",
     "difficulty": "mittel",
     "sources": {
@@ -3033,7 +3033,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Turkmenistan – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Turkmenistan – 1991, Unabhängigkeit von der UdSSR",
     "hint": "Turkmenistan",
     "difficulty": "schwer",
     "sources": {
@@ -3047,7 +3047,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Tunesien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Tunesien – 2014, Neue Verfassung (Arabischer Frühling)",
     "hint": "Tunesien",
     "difficulty": "mittel",
     "sources": {
@@ -3075,7 +3075,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Türkei – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Türkei – 1923, Ausrufung der Republik",
     "hint": "Türkei",
     "difficulty": "leicht",
     "sources": {
@@ -3117,7 +3117,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Tansania – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Tansania – 1961, Unabhängigkeit (als Tanganjika)",
     "hint": "Tansania",
     "difficulty": "mittel",
     "sources": {
@@ -3201,7 +3201,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Vatikanstadt – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Vatikanstadt – 1929, Lateranverträge",
     "hint": "Vatikanstadt",
     "difficulty": "leicht",
     "sources": {
@@ -3271,7 +3271,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Vietnam – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Vietnam – 1975, Wiedervereinigung",
     "hint": "Vietnam",
     "difficulty": "leicht",
     "sources": {
@@ -3285,7 +3285,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Vanuatu – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Vanuatu – 1980, Unabhängigkeit",
     "hint": "Vanuatu",
     "difficulty": "schwer",
     "sources": {
@@ -3327,7 +3327,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Jemen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Jemen – 1990, Wiedervereinigung",
     "hint": "Jemen",
     "difficulty": "mittel",
     "sources": {
@@ -3355,7 +3355,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Südafrika – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Südafrika – 1994, Erste freie Wahlen (Ende Apartheid)",
     "hint": "Südafrika",
     "difficulty": "mittel",
     "sources": {
@@ -3369,7 +3369,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Sambia – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Sambia – 1964, Unabhängigkeit",
     "hint": "Sambia",
     "difficulty": "mittel",
     "sources": {
@@ -3383,7 +3383,7 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Simbabwe – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "answer": "Simbabwe – 1980, Unabhängigkeit",
     "hint": "Simbabwe",
     "difficulty": "mittel",
     "sources": {
