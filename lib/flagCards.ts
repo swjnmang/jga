@@ -3064,8 +3064,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Amerikanische Überseeinseln – Staatsflagge (Jahr variabel).",
-    "hint": "Amerikanische Überseeinseln",
+    "answer": "Amerikanische Überseeinseln oder Vereinigte Staaten – Staatsflagge (Jahr variabel).",
+    "hint": "Amerikanische Überseeinseln / USA",
     "difficulty": "mittel",
     "sources": {
       "image": "/assets/flags/um.png"
