@@ -22,7 +22,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1971,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Vereinigte Arabische Emirate – Staatsflagge (Jahr variabel).",
+    "answer": "Vereinigte Arabische Emirate – 1971, Gründung der Föderation und Unabhängigkeit.",
     "hint": "Vereinigte Arabische Emirate",
     "difficulty": "schwer",
     "sources": {
@@ -35,7 +35,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 2021,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Äfghanistan – Staatsflagge (Jahr variabel).",
+    "answer": "Äfghanistan – 2021, Machtübernahme der Taliban (Ende der Republik).",
     "hint": "Äfghanistan",
     "difficulty": "mittel",
     "sources": {
@@ -48,7 +48,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Äntigua und Barbuda – Staatsflagge (Jahr variabel).",
+    "answer": "Äntigua und Barbuda – 1981, Unabhängigkeit vom Vereinigten Königreich.",
     "hint": "Äntigua und Barbuda",
     "difficulty": "schwer",
     "sources": {
@@ -61,7 +61,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Änguilla – Staatsflagge (Jahr variabel).",
+    "answer": "Änguilla – 1982, Inkrafttreten der aktuellen Verfassungsordnung.",
     "hint": "Änguilla",
     "difficulty": "schwer",
     "sources": {
@@ -74,7 +74,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Älbanien – Staatsflagge (Jahr variabel).",
+    "answer": "Älbanien – 1998, Inkrafttreten der aktuellen Verfassung.",
     "hint": "Älbanien",
     "difficulty": "leicht",
     "sources": {
@@ -87,7 +87,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Ärmenien – Staatsflagge (Jahr variabel).",
+    "answer": "Ärmenie – 2015, Wechsel zum parlamentarischen Regierungssystem.",
     "hint": "Ärmenien",
     "difficulty": "schwer",
     "sources": {
@@ -100,7 +100,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1975,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Ängola – Staatsflagge (Jahr variabel).",
+    "answer": "Ängola – 2010, Inkrafttreten der aktuellen Verfassung.",
     "hint": "Ängola",
     "difficulty": "mittel",
     "sources": {
@@ -139,7 +139,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Ämerikanisch-Samoa – Staatsflagge (Jahr variabel).",
+    "answer": "Samoa – 1962, Unabhängigkeit von Neuseeland.",
     "hint": "Ämerikanisch-Samoa",
     "difficulty": "schwer",
     "sources": {
@@ -165,7 +165,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1901,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Äustralien – Staatsflagge (Jahr variabel).",
+    "answer": "Äustralien – 1986, Australia Act (völlige Souveränität).",
     "hint": "Äustralien",
     "difficulty": "mittel",
     "sources": {
@@ -178,7 +178,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Äruba – Staatsflagge (Jahr variabel).",
+    "answer": "Niederlande – 1983, Totalrevision der Verfassung.",
     "hint": "Äruba",
     "difficulty": "schwer",
     "sources": {
@@ -191,7 +191,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Ålandinseln – Staatsflagge (Jahr variabel).",
+    "answer": "Finnland – 2000, Neue Verfassung (Stärkung des Parlaments).",
     "hint": "Ålandinseln",
     "difficulty": "leicht",
     "sources": {
@@ -204,7 +204,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Äserbaidschan – Staatsflagge (Jahr variabel).",
+    "answer": "Äserbaidschan – 1995, Erste Verfassung nach der Unabhängigkeit.",
     "hint": "Äserbaidschan",
     "difficulty": "mittel",
     "sources": {
@@ -217,7 +217,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Bosnien und Herzegowina – Staatsflagge (Jahr variabel).",
+    "answer": "Bosnien und Herzegowina – 1995, Dayton-Abkommen (Verfassung als Teil des Vertrags).",
     "hint": "Bosnien und Herzegowina",
     "difficulty": "leicht",
     "sources": {
@@ -282,7 +282,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Bulgarien – Staatsflagge (Jahr variabel).",
+    "answer": "Bulgarien – 1991, Neue Verfassung nach Ende des Sozialismus.",
     "hint": "Bulgarien",
     "difficulty": "leicht",
     "sources": {
@@ -334,7 +334,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "St. Barthélemy – Staatsflagge (Jahr variabel).",
+    "answer": "Guadeloupe – 1946, Umwandlung in ein Überseedépartement.",
     "hint": "St. Barthélemy",
     "difficulty": "schwer",
     "sources": {
@@ -347,7 +347,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Bermuda – Staatsflagge (Jahr variabel).",
+    "answer": "Bermuda – 1968, Inkrafttreten der aktuellen Verfassungsordnung.",
     "hint": "Bermuda",
     "difficulty": "schwer",
     "sources": {
@@ -360,7 +360,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Brunei Darussalam – Staatsflagge (Jahr variabel).",
+    "answer": "Brunei – 1984, Vollständige Unabhängigkeit vom UK.",
     "hint": "Brunei Darussalam",
     "difficulty": "schwer",
     "sources": {
@@ -373,7 +373,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Bolivien – Staatsflagge (Jahr variabel).",
+    "answer": "Bolivien – 2009, Neugründung als Plurinationaler Staat.",
     "hint": "Bolivien",
     "difficulty": "mittel",
     "sources": {
@@ -386,7 +386,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Karibische Niederlande – Staatsflagge (Jahr variabel).",
+    "answer": "Niederlande – 1983, Totalrevision der Verfassung.",
     "hint": "Karibische Niederlande",
     "difficulty": "schwer",
     "sources": {
@@ -425,7 +425,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Bhutan – Staatsflagge (Jahr variabel).",
+    "answer": "Bhutan – 2008, Übergang zur konstitutionellen Monarchie.",
     "hint": "Bhutan",
     "difficulty": "schwer",
     "sources": {
@@ -438,7 +438,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Bouvetinsel – Staatsflagge (Jahr variabel).",
+    "answer": "Bouvetinsel – 1930, Unterstellung unter norwegische Souveränität.",
     "hint": "Bouvetinsel",
     "difficulty": "schwer",
     "sources": {
@@ -451,7 +451,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Botsuana – Staatsflagge (Jahr variabel).",
+    "answer": "Botsuana – 1966, Unabhängigkeit vom Vereinigten Königreich.",
     "hint": "Botsuana",
     "difficulty": "schwer",
     "sources": {
@@ -503,7 +503,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Kokosinseln – Staatsflagge (Jahr variabel).",
+    "answer": "Kokosinseln – 1984, Referendum zur Integration in Australien.",
     "hint": "Kokosinseln",
     "difficulty": "schwer",
     "sources": {
@@ -516,7 +516,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Kongo-Kinshasa – Staatsflagge (Jahr variabel).",
+    "answer": "Kongo-Kinshasa – 2006, Verfassung der Dritten Republik.",
     "hint": "Kongo-Kinshasa",
     "difficulty": "leicht",
     "sources": {
@@ -529,7 +529,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Zentralafrikanische Republik – Staatsflagge (Jahr variabel).",
+    "answer": "Zentralafrikanische Republik – 2023, Inkrafttreten der neuen Verfassung.",
     "hint": "Zentralafrikanische Republik",
     "difficulty": "schwer",
     "sources": {
@@ -542,7 +542,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Kongo-Brazzaville – Staatsflagge (Jahr variabel).",
+    "answer": "Kongo-Brazzaville – 2015, Neue Verfassung nach Referendum.",
     "hint": "Kongo-Brazzaville",
     "difficulty": "schwer",
     "sources": {
@@ -568,7 +568,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Côte d’Ivoire – Staatsflagge (Jahr variabel).",
+    "answer": "Côte d’Ivoire – 2016, Verfassung der Dritten Republik.",
     "hint": "Côte d’Ivoire",
     "difficulty": "mittel",
     "sources": {
@@ -581,7 +581,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Cookinseln – Staatsflagge (Jahr variabel).",
+    "answer": "Cookinseln – 1965, Erlangung der Selbstverwaltung.",
     "hint": "Cookinseln",
     "difficulty": "schwer",
     "sources": {
@@ -594,7 +594,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Chile – Staatsflagge (Jahr variabel).",
+    "answer": "Chile – 2005, Große Verfassungsreform (Bruch mit Pinochet-Resten).",
     "hint": "Chile",
     "difficulty": "mittel",
     "sources": {
@@ -620,7 +620,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "China – Staatsflagge (Jahr variabel).",
+    "answer": "China – 1982, Aktuelle Verfassung der Volksrepublik.",
     "hint": "China",
     "difficulty": "leicht",
     "sources": {
@@ -633,7 +633,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Kolumbien – Staatsflagge (Jahr variabel).",
+    "answer": "Kolumbien – 1991, Inkrafttreten der modernen Verfassung.",
     "hint": "Kolumbien",
     "difficulty": "mittel",
     "sources": {
@@ -646,7 +646,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Costa Rica – Staatsflagge (Jahr variabel).",
+    "answer": "Costa Rica – 1949, Neue Verfassung nach dem Bürgerkrieg.",
     "hint": "Costa Rica",
     "difficulty": "schwer",
     "sources": {
@@ -672,7 +672,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Cabo Verde – Staatsflagge (Jahr variabel).",
+    "answer": "Cabo Verde – 1992, Demokratisierung und neue Verfassung.",
     "hint": "Cabo Verde",
     "difficulty": "schwer",
     "sources": {
@@ -685,7 +685,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Curaçao – Staatsflagge (Jahr variabel).",
+    "answer": "Curaçao – 2010, Eigenständiges Land im Königreich.",
     "hint": "Curaçao",
     "difficulty": "schwer",
     "sources": {
@@ -698,7 +698,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Weihnachtsinsel – Staatsflagge (Jahr variabel).",
+    "answer": "Weihnachtsinsel – 1958, Übertragung der Hoheitsgewalt an Australien.",
     "hint": "Weihnachtsinsel",
     "difficulty": "schwer",
     "sources": {
@@ -763,7 +763,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Dänemark – Staatsflagge (Jahr variabel).",
+    "answer": "Dänemark – 1953, Letzte große Grundgesetzänderung.",
     "hint": "Dänemark",
     "difficulty": "leicht",
     "sources": {
@@ -789,7 +789,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Dominikanische Republik – Staatsflagge (Jahr variabel).",
+    "answer": "Dominikanische Republik – 2015, Letzte große Verfassungsreform.",
     "hint": "Dominikanische Republik",
     "difficulty": "mittel",
     "sources": {
@@ -802,7 +802,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1962,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Älgerien – Staatsflagge (Jahr variabel).",
+    "answer": "Älgerien – 2020, Neue Verfassung nach den Hirak-Protesten.",
     "hint": "Älgerien",
     "difficulty": "mittel",
     "sources": {
@@ -815,7 +815,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Ecuador – Staatsflagge (Jahr variabel).",
+    "answer": "Ecuador – 2008, Inkrafttreten der aktuellen Verfassung.",
     "hint": "Ecuador",
     "difficulty": "mittel",
     "sources": {
@@ -854,7 +854,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Westsahara – Staatsflagge (Jahr variabel).",
+    "answer": "Westsahara – 1976, Proklamation der D.A.R.S. (Bruch mit Besatzung).",
     "hint": "Westsahara",
     "difficulty": "schwer",
     "sources": {
@@ -867,7 +867,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1993,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Eritrea – 1993, Unabhängigkeit von Äthiopien",
+    "answer": "Äthiopien – 1995, Inkrafttreten der föderalen Verfassung.",
     "hint": "Eritrea",
     "difficulty": "schwer",
     "sources": {
@@ -893,7 +893,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Äthiopien – Staatsflagge (Jahr variabel).",
+    "answer": "Äthiopien – 1995, Inkrafttreten der föderalen Verfassung.",
     "hint": "Äthiopien",
     "difficulty": "leicht",
     "sources": {
@@ -906,7 +906,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Finnland – Staatsflagge (Jahr variabel).",
+    "answer": "Finnland – 2000, Neue Verfassung (Stärkung des Parlaments).",
     "hint": "Finnland",
     "difficulty": "leicht",
     "sources": {
@@ -932,7 +932,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Falklandinseln – Staatsflagge (Jahr variabel).",
+    "answer": "Falklandinseln – 2009, Aktuelle Verfassungsordnung.",
     "hint": "Falklandinseln",
     "difficulty": "schwer",
     "sources": {
@@ -958,7 +958,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Färöer – Staatsflagge (Jahr variabel).",
+    "answer": "Färöer – 1948, Autonomiegesetz (Heimastýrislóg).",
     "hint": "Färöer",
     "difficulty": "leicht",
     "sources": {
@@ -997,7 +997,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "GB-ENG – Staatsflagge (Jahr variabel).",
+    "answer": "GB-ENG – 1707, Acts of Union (Systembruch/Zusammenschluss).",
     "hint": "GB-ENG",
     "difficulty": "schwer",
     "sources": {
@@ -1010,7 +1010,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "GB-NIR – Staatsflagge (Jahr variabel).",
+    "answer": "GB-NIR – 1998, Karfreitagsabkommen (neuer systemischer Rahmen).",
     "hint": "GB-NIR",
     "difficulty": "schwer",
     "sources": {
@@ -1023,7 +1023,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "GB-SCT – Staatsflagge (Jahr variabel).",
+    "answer": "GB-SCT – 1999, Wiedereinführung des schottischen Parlaments.",
     "hint": "GB-SCT",
     "difficulty": "schwer",
     "sources": {
@@ -1049,7 +1049,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Vereinigtes Königreich – Staatsflagge (Jahr variabel).",
+    "answer": "Vereinigtes Königreich – 1922, Heutige Zusammensetzung (Austritt Irlands).",
     "hint": "Vereinigtes Königreich",
     "difficulty": "leicht",
     "sources": {
@@ -1088,7 +1088,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Französisch-Guayana – Staatsflagge (Jahr variabel).",
+    "answer": "Französisch-Guayana – 1946, Umwandlung in ein Überseedépartement.",
     "hint": "Französisch-Guayana",
     "difficulty": "schwer",
     "sources": {
@@ -1101,7 +1101,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Guernsey – Staatsflagge (Jahr variabel).",
+    "answer": "Guernsey – 2005, Umfassende Reform der Regierungsstruktur.",
     "hint": "Guernsey",
     "difficulty": "leicht",
     "sources": {
@@ -1127,7 +1127,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Gibraltar – Staatsflagge (Jahr variabel).",
+    "answer": "Gibraltar – 2006, Neue Verfassungsordnung.",
     "hint": "Gibraltar",
     "difficulty": "leicht",
     "sources": {
@@ -1140,7 +1140,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Grönland – Staatsflagge (Jahr variabel).",
+    "answer": "Grönland – 2009, Erweiterte Selbstverwaltung (Self-Government).",
     "hint": "Grönland",
     "difficulty": "schwer",
     "sources": {
@@ -1179,7 +1179,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Guadeloupe – Staatsflagge (Jahr variabel).",
+    "answer": "Guadeloupe – 1946, Umwandlung in ein Überseedépartement.",
     "hint": "Guadeloupe",
     "difficulty": "schwer",
     "sources": {
@@ -1205,7 +1205,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Griechenland – Staatsflagge (Jahr variabel).",
+    "answer": "Griechenland – 1975, Verfassung nach Ende der Militärdiktatur.",
     "hint": "Griechenland",
     "difficulty": "leicht",
     "sources": {
@@ -1218,7 +1218,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Südgeorgien und die Südlichen Sandwichinseln – Staatsflagge (Jahr variabel).",
+    "answer": "Falklandinseln – 2009, Aktuelle Verfassungsordnung.",
     "hint": "Südgeorgien und die Südlichen Sandwichinseln",
     "difficulty": "schwer",
     "sources": {
@@ -1231,7 +1231,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Guatemala – Staatsflagge (Jahr variabel).",
+    "answer": "Guatemala – 1985, Aktuelle demokratische Verfassung.",
     "hint": "Guatemala",
     "difficulty": "mittel",
     "sources": {
@@ -1244,7 +1244,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Guam – Staatsflagge (Jahr variabel).",
+    "answer": "Guam – 1950, Guam Organic Act (zivile US-Verwaltung).",
     "hint": "Guam",
     "difficulty": "schwer",
     "sources": {
@@ -1283,7 +1283,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Sonderverwaltungsregion Hongkong – Staatsflagge (Jahr variabel).",
+    "answer": "China – 1982, Aktuelle Verfassung der Volksrepublik.",
     "hint": "Sonderverwaltungsregion Hongkong",
     "difficulty": "mittel",
     "sources": {
@@ -1296,7 +1296,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Heard und McDonaldinseln – Staatsflagge (Jahr variabel).",
+    "answer": "Heard und McDonaldinseln – 1947, Übertragung der Verwaltung an Australien.",
     "hint": "Heard und McDonaldinseln",
     "difficulty": "schwer",
     "sources": {
@@ -1309,7 +1309,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Honduras – Staatsflagge (Jahr variabel).",
+    "answer": "Honduras – 1982, Rückkehr zur Demokratie und neue Verfassung.",
     "hint": "Honduras",
     "difficulty": "mittel",
     "sources": {
@@ -1335,7 +1335,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Haiti – Staatsflagge (Jahr variabel).",
+    "answer": "Haiti – 1987, Verfassung nach Ende der Duvalier-Diktatur.",
     "hint": "Haiti",
     "difficulty": "mittel",
     "sources": {
@@ -1400,7 +1400,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Isle of Man – Staatsflagge (Jahr variabel).",
+    "answer": "Isle of Man – 1979, Festigung des Autonomiestatus (Tynwald).",
     "hint": "Isle of Man",
     "difficulty": "leicht",
     "sources": {
@@ -1426,7 +1426,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Britisches Territorium im Indischen Ozean – Staatsflagge (Jahr variabel).",
+    "answer": "Britisches Territorium im Indischen Ozean – 1965, Einrichtung als eigenständiges Territorium.",
     "hint": "Britisches Territorium im Indischen Ozean",
     "difficulty": "schwer",
     "sources": {
@@ -1491,7 +1491,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Jersey – Staatsflagge (Jahr variabel).",
+    "answer": "Jersey – 2005, Reform der Regierungsstruktur.",
     "hint": "Jersey",
     "difficulty": "leicht",
     "sources": {
@@ -1608,7 +1608,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "St. Kitts und Nevis – Staatsflagge (Jahr variabel).",
+    "answer": "St. Kitts und Nevis – 1983, Unabhängigkeit vom Vereinigten Königreich.",
     "hint": "St. Kitts und Nevis",
     "difficulty": "schwer",
     "sources": {
@@ -1660,7 +1660,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Kaimaninseln – Staatsflagge (Jahr variabel).",
+    "answer": "Kaimaninseln – 2009, Aktuelle Verfassungsordnung.",
     "hint": "Kaimaninseln",
     "difficulty": "schwer",
     "sources": {
@@ -1725,7 +1725,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Liechtenstein – Staatsflagge (Jahr variabel).",
+    "answer": "Liechtenstein – 2003, Umfassende Verfassungsreform.",
     "hint": "Liechtenstein",
     "difficulty": "leicht",
     "sources": {
@@ -1751,7 +1751,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Liberia – Staatsflagge (Jahr variabel).",
+    "answer": "Liberia – 1986, Aktuelle Verfassung nach Bürgerkrieg.",
     "hint": "Liberia",
     "difficulty": "schwer",
     "sources": {
@@ -1842,7 +1842,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Monaco – Staatsflagge (Jahr variabel).",
+    "answer": "Monaco – 1962, Große Verfassungsreform.",
     "hint": "Monaco",
     "difficulty": "leicht",
     "sources": {
@@ -1855,7 +1855,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Republik Moldau – Staatsflagge (Jahr variabel).",
+    "answer": "Republik Moldau – 1994, Inkrafttreten der Verfassung.",
     "hint": "Republik Moldau",
     "difficulty": "leicht",
     "sources": {
@@ -1881,7 +1881,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "St. Martin – Staatsflagge (Jahr variabel).",
+    "answer": "Guadeloupe – 1946, Umwandlung in ein Überseedépartement.",
     "hint": "St. Martin",
     "difficulty": "schwer",
     "sources": {
@@ -1959,7 +1959,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Mongolei – Staatsflagge (Jahr variabel).",
+    "answer": "Mongolei – 1992, Verfassung nach Ende des Einparteiensystems.",
     "hint": "Mongolei",
     "difficulty": "schwer",
     "sources": {
@@ -1972,7 +1972,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Sonderverwaltungsregion Macau – Staatsflagge (Jahr variabel).",
+    "answer": "China – 1982, Aktuelle Verfassung der Volksrepublik.",
     "hint": "Sonderverwaltungsregion Macau",
     "difficulty": "schwer",
     "sources": {
@@ -1985,7 +1985,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Nördliche Marianen – Staatsflagge (Jahr variabel).",
+    "answer": "Nördliche Marianen – 1978, Inkrafttreten der eigenen Verfassung.",
     "hint": "Nördliche Marianen",
     "difficulty": "schwer",
     "sources": {
@@ -1998,7 +1998,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Martinique – Staatsflagge (Jahr variabel).",
+    "answer": "Martinique – 1946, Umwandlung in ein Überseedépartement.",
     "hint": "Martinique",
     "difficulty": "schwer",
     "sources": {
@@ -2024,7 +2024,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Montserrat – Staatsflagge (Jahr variabel).",
+    "answer": "Montserrat – 2010, Aktuelle Verfassungsordnung.",
     "hint": "Montserrat",
     "difficulty": "schwer",
     "sources": {
@@ -2089,7 +2089,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Mexiko – Staatsflagge (Jahr variabel).",
+    "answer": "Mexiko – 1917, Verfassung nach der Revolution.",
     "hint": "Mexiko",
     "difficulty": "leicht",
     "sources": {
@@ -2141,7 +2141,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Neukaledonien – Staatsflagge (Jahr variabel).",
+    "answer": "Neukaledonien – 1998, Abkommen von Nouméa (Sonderstatus).",
     "hint": "Neukaledonien",
     "difficulty": "schwer",
     "sources": {
@@ -2167,7 +2167,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Norfolkinsel – Staatsflagge (Jahr variabel).",
+    "answer": "Norfolkinsel – 2016, Aufhebung der Selbstverwaltung (Bruch).",
     "hint": "Norfolkinsel",
     "difficulty": "schwer",
     "sources": {
@@ -2193,7 +2193,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Nicaragua – Staatsflagge (Jahr variabel).",
+    "answer": "Nicaragua – 1987, Inkrafttreten der aktuellen Verfassung.",
     "hint": "Nicaragua",
     "difficulty": "schwer",
     "sources": {
@@ -2206,7 +2206,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Niederlande – Staatsflagge (Jahr variabel).",
+    "answer": "Niederlande – 1983, Totalrevision der Verfassung.",
     "hint": "Niederlande",
     "difficulty": "leicht",
     "sources": {
@@ -2245,7 +2245,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Nauru – Staatsflagge (Jahr variabel).",
+    "answer": "Nauru – 1968, Unabhängigkeit und Verfassungsgebung.",
     "hint": "Nauru",
     "difficulty": "schwer",
     "sources": {
@@ -2258,7 +2258,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Niue – Staatsflagge (Jahr variabel).",
+    "answer": "Niue – 1974, Erlangung der Selbstverwaltung (Assoziierung).",
     "hint": "Niue",
     "difficulty": "schwer",
     "sources": {
@@ -2297,7 +2297,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Panama – Staatsflagge (Jahr variabel).",
+    "answer": "Panama – 1972, Aktuelle Verfassung (reformiert).",
     "hint": "Panama",
     "difficulty": "schwer",
     "sources": {
@@ -2310,7 +2310,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Peru – Staatsflagge (Jahr variabel).",
+    "answer": "Peru – 1993, Aktuelle Verfassung.",
     "hint": "Peru",
     "difficulty": "mittel",
     "sources": {
@@ -2323,7 +2323,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Französisch-Polynesien – Staatsflagge (Jahr variabel).",
+    "answer": "Französisch-Polynesien – 2004, Status als Überseeland (POM).",
     "hint": "Französisch-Polynesien",
     "difficulty": "schwer",
     "sources": {
@@ -2388,7 +2388,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "St. Pierre und Miquelon – Staatsflagge (Jahr variabel).",
+    "answer": "St. Pierre und Miquelon – 2003, Status als Überseekollektiv.",
     "hint": "St. Pierre und Miquelon",
     "difficulty": "schwer",
     "sources": {
@@ -2401,7 +2401,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Pitcairninseln – Staatsflagge (Jahr variabel).",
+    "answer": "Pitcairninseln – 2010, Erste moderne Verfassungsordnung.",
     "hint": "Pitcairninseln",
     "difficulty": "schwer",
     "sources": {
@@ -2414,7 +2414,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Puerto Rico – Staatsflagge (Jahr variabel).",
+    "answer": "Puerto Rico – 1952, Inkrafttreten der eigenen Verfassung.",
     "hint": "Puerto Rico",
     "difficulty": "schwer",
     "sources": {
@@ -2427,7 +2427,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Palästinensische Autonomiegebiete – Staatsflagge (Jahr variabel).",
+    "answer": "Palästinensische Autonomiegebiete – 2003, Revidiertes Grundgesetz.",
     "hint": "Palästinensische Autonomiegebiete",
     "difficulty": "schwer",
     "sources": {
@@ -2440,7 +2440,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Portugal – Staatsflagge (Jahr variabel).",
+    "answer": "Portugal – 1976, Verfassung nach der Nelkenrevolution.",
     "hint": "Portugal",
     "difficulty": "leicht",
     "sources": {
@@ -2466,7 +2466,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Paraguay – Staatsflagge (Jahr variabel).",
+    "answer": "Paraguay – 1992, Verfassung nach Ende der Diktatur.",
     "hint": "Paraguay",
     "difficulty": "schwer",
     "sources": {
@@ -2492,7 +2492,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Réunion – Staatsflagge (Jahr variabel).",
+    "answer": "Réunion – 1946, Umwandlung in ein Überseedépartement.",
     "hint": "Réunion",
     "difficulty": "schwer",
     "sources": {
@@ -2505,7 +2505,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Rumänien – Staatsflagge (Jahr variabel).",
+    "answer": "Rumänien – 1991, Verfassung nach Ende des Kommunismus.",
     "hint": "Rumänien",
     "difficulty": "leicht",
     "sources": {
@@ -2583,7 +2583,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Seychellen – Staatsflagge (Jahr variabel).",
+    "answer": "Seychellen – 1993, Rückkehr zur Mehrparteiendemokratie.",
     "hint": "Seychellen",
     "difficulty": "schwer",
     "sources": {
@@ -2609,7 +2609,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Schweden – Staatsflagge (Jahr variabel).",
+    "answer": "Schweden – 1974, Aktuelle Regierungsform (Regeringsformen).",
     "hint": "Schweden",
     "difficulty": "leicht",
     "sources": {
@@ -2635,7 +2635,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "St. Helena – Staatsflagge (Jahr variabel).",
+    "answer": "St. Helena – 2009, Aktuelle Verfassungsordnung.",
     "hint": "St. Helena",
     "difficulty": "schwer",
     "sources": {
@@ -2661,7 +2661,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Spitzbergen und Jan Mayen – Staatsflagge (Jahr variabel).",
+    "answer": "Spitzbergen und Jan Mayen – 1925, Inkrafttreten des Spitzbergen-Vertrags.",
     "hint": "Spitzbergen und Jan Mayen",
     "difficulty": "leicht",
     "sources": {
@@ -2765,7 +2765,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "São Tomé und Príncipe – Staatsflagge (Jahr variabel).",
+    "answer": "São Tomé und Príncipe – 1990, Einführung des Mehrparteiensystems.",
     "hint": "São Tomé und Príncipe",
     "difficulty": "schwer",
     "sources": {
@@ -2778,7 +2778,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "El Salvador – Staatsflagge (Jahr variabel).",
+    "answer": "El Salvador – 1983, Inkrafttreten der aktuellen Verfassung.",
     "hint": "El Salvador",
     "difficulty": "schwer",
     "sources": {
@@ -2791,7 +2791,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Sint Maarten – Staatsflagge (Jahr variabel).",
+    "answer": "Sint Maarten – 2010, Auflösung der NL-Antillen (Eigenständigkeit).",
     "hint": "Sint Maarten",
     "difficulty": "schwer",
     "sources": {
@@ -2830,7 +2830,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Turks- und Caicosinseln – Staatsflagge (Jahr variabel).",
+    "answer": "Turks- und Caicosinseln – 2011, Neue Verfassung nach politischer Krise.",
     "hint": "Turks- und Caicosinseln",
     "difficulty": "schwer",
     "sources": {
@@ -2856,7 +2856,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Französische Süd- und Antarktisgebiete – Staatsflagge (Jahr variabel).",
+    "answer": "Antarktis – 1961, Inkrafttreten des Antarktis-Vertrags.",
     "hint": "Französische Süd- und Antarktisgebiete",
     "difficulty": "schwer",
     "sources": {
@@ -2908,7 +2908,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Tokelau – Staatsflagge (Jahr variabel).",
+    "answer": "Tokelau – 2006, Tokelau Constitution Act.",
     "hint": "Tokelau",
     "difficulty": "schwer",
     "sources": {
@@ -2921,7 +2921,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 2002,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Timor-Leste – Staatsflagge (Jahr variabel).",
+    "answer": "Timor-Leste – 2002, Unabhängigkeit und Verfassung.",
     "hint": "Timor-Leste",
     "difficulty": "schwer",
     "sources": {
@@ -2960,7 +2960,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Tonga – Staatsflagge (Jahr variabel).",
+    "answer": "Tonga – 2010, Parlamentarisierung der Monarchie.",
     "hint": "Tonga",
     "difficulty": "schwer",
     "sources": {
@@ -2986,7 +2986,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Trinidad und Tobago – Staatsflagge (Jahr variabel).",
+    "answer": "Trinidad und Tobago – 1976, Umwandlung in eine Republik.",
     "hint": "Trinidad und Tobago",
     "difficulty": "schwer",
     "sources": {
@@ -3012,7 +3012,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Taiwan – Staatsflagge (Jahr variabel).",
+    "answer": "Taiwan – 1991, Beginn der Demokratisierung (Zusatzartikel).",
     "hint": "Taiwan",
     "difficulty": "schwer",
     "sources": {
@@ -3077,7 +3077,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1789,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Vereinigte Staaten – Staatsflagge (Jahr variabel).",
+    "answer": "Vereinigte Staaten – 1789, Inkrafttreten der US-Verfassung.",
     "hint": "Vereinigte Staaten",
     "difficulty": "leicht",
     "sources": {
@@ -3129,7 +3129,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "St. Vincent und die Grenadinen – Staatsflagge (Jahr variabel).",
+    "answer": "St. Vincent und die Grenadinen – 1985, Neuer systemischer Bruch (Politik/Flagge).",
     "hint": "St. Vincent und die Grenadinen",
     "difficulty": "schwer",
     "sources": {
@@ -3142,7 +3142,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Venezuela – Staatsflagge (Jahr variabel).",
+    "answer": "Venezuela – 1999, Inkrafttreten der Bolivarischen Verfassung.",
     "hint": "Venezuela",
     "difficulty": "mittel",
     "sources": {
@@ -3155,7 +3155,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Britische Jungferninseln – Staatsflagge (Jahr variabel).",
+    "answer": "Britische Jungferninseln – 2007, Neue Verfassungsordnung.",
     "hint": "Britische Jungferninseln",
     "difficulty": "schwer",
     "sources": {
@@ -3207,7 +3207,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Wallis und Futuna – Staatsflagge (Jahr variabel).",
+    "answer": "Wallis und Futuna – 1961, Status als Überseegebiet.",
     "hint": "Wallis und Futuna",
     "difficulty": "schwer",
     "sources": {
@@ -3220,7 +3220,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Samoa – Staatsflagge (Jahr variabel).",
+    "answer": "Samoa – 1962, Unabhängigkeit von Neuseeland.",
     "hint": "Samoa",
     "difficulty": "schwer",
     "sources": {
@@ -3259,7 +3259,7 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Mayotte – Staatsflagge (Jahr variabel).",
+    "answer": "Mayotte – 2011, Status als französisches Département.",
     "hint": "Mayotte",
     "difficulty": "schwer",
     "sources": {
