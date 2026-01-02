@@ -36,23 +36,22 @@ export default function AppSettingsPage() {
             <p className="text-xs uppercase tracking-wide text-ink/60">Design</p>
             <h2 className="text-xl font-semibold">Aussehen der App</h2>
           </div>
-          <span className="text-xs rounded-full bg-ink/10 px-3 py-1 text-ink/80">3 Themes</span>
+          <span className="text-xs rounded-full bg-ink/10 px-3 py-1 text-ink/80">4 Themes</span>
         </div>
-        <div className="grid gap-3 sm:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {themes.map((option) => (
             <button
               key={option.id}
               type="button"
               onClick={() => handleThemeChange(option.id)}
-              className={`rounded-2xl border px-4 py-3 text-left transition card-surface ${
-                theme === option.id ? 'border-sand bg-white/10' : 'border-ink/20 hover:border-ink/40'
+              className={`rounded-2xl border px-4 py-4 text-center transition card-surface ${
+                theme === option.id ? 'border-sand bg-white/10 shadow-lg' : 'border-ink/20 hover:border-ink/40'
               }`}
             >
-              <div className="flex items-center justify-between mb-2">
-                <span className="font-semibold">{option.name}</span>
+              <div className="flex flex-col items-center gap-2">
+                <span className="font-semibold text-lg">{option.name}</span>
                 {theme === option.id && <span className="text-xs bg-ink text-inkDark rounded-full px-2 py-1">Aktiv</span>}
               </div>
-              <p className="text-sm text-ink/70 leading-snug">{option.description}</p>
             </button>
           ))}
         </div>

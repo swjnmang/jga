@@ -556,7 +556,11 @@ function PlayPageContent() {
         </div>
       </div>
 
-      <section key={`card-${card.id}`} className="card-surface rounded-2xl p-4 sm:p-5 space-y-3 animate-slide-up">
+      <section key={`card-${card.id}`} className={`card-surface rounded-2xl p-4 sm:p-5 space-y-3 animate-slide-up ${
+        card.category === 'country' && card.sources.image && card.sources.image.includes('outline') 
+          ? 'bg-white/95 text-gray-900 [&_*]:text-gray-900 [&_.text-ink]:!text-gray-900 [&_.text-ink\\/60]:!text-gray-600 [&_.text-ink\\/70]:!text-gray-700 [&_.text-ink\\/80]:!text-gray-800' 
+          : ''
+      }`}>
         {card.category === 'schaetzfragen' && (
           <div className="flex items-center gap-3 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-amber-900 animate-pulse">
             <span className="text-xl">🎯</span>

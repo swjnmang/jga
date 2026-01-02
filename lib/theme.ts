@@ -1,12 +1,13 @@
-﻿export type ThemeId = 'aurora' | 'midnight' | 'sunrise';
+﻿export type ThemeId = 'aurora' | 'midnight' | 'sunrise' | 'dark';
 
 const THEME_KEY = 'app-theme';
 const MOTION_KEY = 'app-reduce-motion';
 
-export const themes: { id: ThemeId; name: string; description: string }[] = [
-  { id: 'aurora', name: 'Aurora', description: 'Blaue Neonflächen mit Glas-Effekt (Standard).' },
-  { id: 'midnight', name: 'Midnight', description: 'Dunkles Violett-Türkis für fokussiertes Spielen.' },
-  { id: 'sunrise', name: 'Sunrise', description: 'Warme Sunrise-Töne mit leichtem Glow.' }
+export const themes: { id: ThemeId; name: string }[] = [
+  { id: 'aurora', name: 'Aurora' },
+  { id: 'midnight', name: 'Midnight' },
+  { id: 'sunrise', name: 'Sunrise' },
+  { id: 'dark', name: 'Dark Mode' }
 ];
 
 export function applyTheme(theme: ThemeId) {
