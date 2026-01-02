@@ -339,7 +339,7 @@ const baseCards: Card[] = [
     title: 'Tear down this wall',
     category: 'quote',
     year: 1987,
-    cue: 'Zitat anhören/lesen, zeitlich einordnen.',
+    cue: 'Wann und woher stammt das folgende Zitat?',
     answer: 'Ronald Reagan, Rede am Brandenburger Tor, 12.06.1987.',
     hint: 'US-Präsident fordert Öffnung der Mauer.',
     difficulty: 'mittel',
