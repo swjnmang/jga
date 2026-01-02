@@ -435,14 +435,22 @@ function PlayPageContent() {
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <button
             type="button"
-            className="rounded-full bg-ink text-sand px-5 py-3 text-sm font-semibold"
+            className={`rounded-full px-5 py-3 text-sm font-semibold transition ${
+              selectedMode === 'timeline'
+                ? 'bg-ink text-sand'
+                : 'border border-ink/20'
+            }`}
             onClick={() => setSelectedMode('timeline')}
           >
             Timeline
           </button>
           <button
             type="button"
-            className="rounded-full border border-ink/20 px-5 py-3 text-sm"
+            className={`rounded-full px-5 py-3 text-sm font-semibold transition ${
+              selectedMode === 'trivia'
+                ? 'bg-ink text-sand'
+                : 'border border-ink/20'
+            }`}
             onClick={() => setSelectedMode('trivia')}
           >
             Trivia
@@ -458,7 +466,6 @@ function PlayPageContent() {
                 <ol className="list-decimal list-inside space-y-1 text-sm text-ink/80">
                   <li>Jedes Team erhält leere Karten (Front für Lösung, Rückseite für Musterlösung).</li>
                   <li>Reihum zeigt die App eine neue Frage/Medienkarte, Timer 3:00 startet.</li>
-                  <li>Ohne Titel/Interpret zu sehen wird der Inhalt abgespielt/angezeigt.</li>
                   <li>Team schreibt seine Lösung auf die Karte und legt sie zeitlich ein.</li>
                   <li>Aufdecken/Lösung eintragen: Jahr prüfen. Richtig = behalten, falsch = beiseite.</li>
                   <li>Optional: Flex-Fenster für andere Teams (siehe Flex Buttons).</li>
