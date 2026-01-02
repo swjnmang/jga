@@ -19,7 +19,7 @@ export default function RulesPage() {
             type="button"
             onClick={() => setMode('zeitstrahl')}
             className={`rounded-full px-4 py-2 text-sm font-semibold border transition ${
-              mode === 'zeitstrahl' ? 'border-ink bg-ink text-sand' : 'border-ink/20'
+              mode === 'zeitstrahl' ? 'border-ink bg-ink text-inkDark' : 'border-ink/20'
             }`}
           >
             Zeitstrahl
@@ -28,7 +28,7 @@ export default function RulesPage() {
             type="button"
             onClick={() => setMode('trivia')}
             className={`rounded-full px-4 py-2 text-sm font-semibold border transition ${
-              mode === 'trivia' ? 'border-ink bg-ink text-sand' : 'border-ink/20'
+              mode === 'trivia' ? 'border-ink bg-ink text-inkDark' : 'border-ink/20'
             }`}
           >
             Trivia-Quiz
@@ -37,26 +37,61 @@ export default function RulesPage() {
       </div>
 
       {mode === 'zeitstrahl' && (
-        <section className="card-surface rounded-2xl p-5 space-y-2">
-          <h2 className="text-lg font-semibold">Modus: Zeitstrahl (Standard)</h2>
-          <p className="text-sm text-ink/70">Ziel: 10 Karten in der korrekten zeitlichen Reihenfolge auslegen.</p>
-          <ol className="list-decimal list-inside space-y-1 text-sm text-ink/80">
-            <li>Jedes Team erhält leere Karten (Front für Lösung, Rückseite für Musterlösung).</li>
-            <li>Reihum zeigt die App eine neue Frage/Medienkarte, Timer 3:00 startet.</li>
-            <li>Ohne Titel/Interpret zu sehen wird der Inhalt abgespielt/angezeigt.</li>
-            <li>Team schreibt seine Lösung auf die Karte und legt sie zeitlich ein.</li>
-            <li>Aufdecken/Lösung eintragen: Jahr prüfen. Richtig = behalten, falsch = beiseite.</li>
-            <li>Optional: Flex-Fenster für andere Teams (siehe Flex Buttons).</li>
-            <li>Nächste Runde, bis jemand 10 korrekt liegende Karten hat.</li>
+        <section className="card-surface rounded-2xl p-5 space-y-4">
+          <div>
+            <h2 className="text-lg font-semibold mb-2">Timeline Spielregeln</h2>
+            <p className="text-sm text-ink/70 mb-3"><strong>Ziel:</strong> 10 Karten in der korrekten zeitlichen Reihenfolge auslegen.</p>
+            <p className="text-sm text-ink/70 mb-4">Das Spiel kann <strong>allein oder im Team</strong> gespielt werden.</p>
+          </div>
+
+          <ol className="space-y-3 text-sm text-ink/80">
+            <li>
+              <strong>1. Vorbereitung:</strong> Du benötigst <strong>leeres Papier und Stifte</strong>. Schneide dir das Papier in gleichgroße Karten, ungefähr auf die Größe eines Bierdeckels zu.
+            </li>
+            <li>
+              <strong>2. App starten:</strong> Klicke auf <strong>„Spiel starten & Einstellungen vornehmen"</strong> und konfiguriere dir <strong>DEIN Flexquiz</strong>. Ohne Spotify-Premium können die Musikfragen leider nicht gespielt werden.
+            </li>
+            <li>
+              <strong>3. Spiel starten:</strong> Speichere die Einstellungen und starte das Spiel.
+            </li>
+            <li>
+              <strong>4. Referenzkarte:</strong> Jeder Spieler oder jedes Team beschriftet eine Karte mit <strong>„1950"</strong> und legt sie vor sich.
+            </li>
+            <li>
+              <strong>5. Fragen beantworten und Karten einordnen:</strong> Dir werden nun Fragen aus deinen gewählten Kategorien in zufälliger Reihenfolge angezeigt. Die <strong>jüngste Person oder das jüngste Team</strong> beginnt und schreibt den <strong>Lösungsvorschlag</strong> (also <strong>Jahreszahl und Lösung</strong>) auf eine leere Karte. Lege diese Karte nun <strong>vor oder nach der Referenzkarte (1950)</strong>. Sobald du oder dein Team fertig seid, sagt ihr <strong>„ich/wir loggen ein"</strong>.
+            </li>
+            <li>
+              <strong>6. Optional:</strong> Flex-Fenster für andere Teams (siehe Flex Buttons).
+            </li>
+            <li>
+              <strong>7. Aufdecken/Lösung:</strong> Wenn die Karte <strong>chronologisch korrekt</strong> eingeordnet wurde, darfst du oder dein Team die Karte behalten. <strong>Die Jahreszahl muss nicht exakt genannt worden sein!</strong> Wenn das Jahr falsch eingeordnet wurde, kommt die Karte weg (Ausnahme: Gegner hat den Flex-Button eingesetzt).
+            </li>
+            <li>
+              <strong>8. Flex-Button verdienen:</strong> Wenn du das Jahr <strong>korrekt eingeordnet</strong> hast und die <strong>Frage korrekt beantwortet</strong> konntest, erhältst du einen <strong>Flex-Button</strong>. (zum Beispiel: Du hattest das Lied „My heart will go on" von Celine Dion nach 1950 gelegt und Titel + Interpret korrekt benannt).
+            </li>
+            <li>
+              <strong>9. Siegbedingung:</strong> Nächste Runde, bis <strong>jemand 10 korrekt liegende Karten</strong> hat.
+            </li>
           </ol>
 
-          <div className="pt-4 space-y-2">
+          <div className="pt-4 space-y-3">
             <h3 className="text-md font-semibold">Flex Buttons</h3>
-            <ul className="space-y-1 text-sm text-ink/80">
-              <li>Einsatz: Nachdem das aktive Team seinen Zug beendet hat, darf ein anderes Team einen Flex Button werfen.</li>
-              <li>Treffer: Flex stimmt (Jahr + Titel/Interpret/Zitatgeber/Objekt) = das flexende Team nimmt die zuletzt gespielte Karte.</li>
-              <li>Fehlversuch: Flex stimmt nicht = Flex Button ist verloren.</li>
-              <li>Gewinn: In deinem eigenen Zug bekommst du einen Flex Button, wenn du Jahr richtig einordnest und zusätzlich den Titel/Interpret bzw. Name/Zitatgeber korrekt nennst.</li>
+            <ul className="space-y-2 text-sm text-ink/80">
+              <li>
+                <strong>Einsatz:</strong> Nachdem das aktive Team seinen Zug beendet hat, darf ein anderes Team einen <strong>Flex Button werfen</strong>.
+              </li>
+              <li>
+                <strong>Treffer:</strong> Flex stimmt (<strong>Jahr + Titel/Interpret/Zitatgeber/Objekt</strong>) = das flexende Team <strong>nimmt die zuletzt gespielte Karte</strong>.
+              </li>
+              <li>
+                <strong>Fehlversuch:</strong> Flex stimmt nicht = <strong>Flex Button ist verloren</strong>.
+              </li>
+              <li>
+                <strong>Gewinn:</strong> In deinem eigenen Zug bekommst du einen <strong>Flex Button</strong>, wenn du <strong>Jahr richtig einordnest</strong> und <strong>zusätzlich den Titel/Interpret</strong> bzw. <strong>Name/Zitatgeber korrekt</strong> nennst.
+              </li>
+              <li>
+                <strong>Als spielendes Team:</strong> Du kannst <strong>Flex-Buttons einsetzten</strong>, um dir eine <strong>neue Frage stellen zu lassen</strong>.
+              </li>
             </ul>
           </div>
         </section>
