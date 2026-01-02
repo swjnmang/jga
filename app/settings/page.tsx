@@ -334,13 +334,26 @@ function SettingsPageContent() {
         </div>
       </section>
 
+      <section className="card-surface rounded-2xl p-5 space-y-3">
+        <div className="space-y-1">
+          <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Spotify</p>
+          <h2 className="text-lg font-semibold">Spotify Premium verknüpfen</h2>
+          <p className="text-sm text-ink/70">
+            Verbinde dich mit Spotify Premium, damit Musikfragen ohne Werbung und mit voller Länge abgespielt werden können. Wenn du schon
+            eingeloggt warst, kannst du hier die Session auffrischen.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-3">
+          <Link
+            href={`/api/spotify/authorize?return=${encodeURIComponent(startHref)}`}
+            className="rounded-full bg-[#1DB954] hover:bg-[#17a74a] text-white px-5 py-2.5 text-sm font-semibold shadow-md transition"
+          >
+            Spotify-Login starten
+          </Link>
+        </div>
+      </section>
+
       <div className="flex flex-wrap gap-3 justify-center pt-2">
-        <Link
-          href={`/api/spotify/authorize?return=${encodeURIComponent(startHref)}`}
-          className="rounded-xl border border-ink/20 px-4 py-2 text-sm"
-        >
-          Spotify Premium Login
-        </Link>
         <Link
           href={startHref}
           className="rounded-xl bg-ink text-sand px-4 py-2 text-sm"
