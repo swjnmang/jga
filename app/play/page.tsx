@@ -591,7 +591,7 @@ function PlayPageContent() {
           </p>
         )}
         {card.category === 'country' && (
-          <div className="rounded-lg border border-ink/20 bg-ink/5 px-3 py-2 text-ink/90 text-xs">
+          <div className="rounded-lg border border-blue-300 bg-blue-100 px-3 py-2 text-blue-900 text-xs">
             <p className="font-semibold">Hinweis:</p>
             <p>Als Datum gilt das Inkrafttreten der aktuellen Verfassung oder der Zeitpunkt des letzten systemischen Bruchs (z. B. Ende einer Monarchie, Ende einer Besatzung oder Neugründung).</p>
           </div>
