@@ -5,6 +5,38 @@ import path from 'node:path';
 const root = process.cwd();
 const flagsDir = path.join(root, 'public', 'assets', 'flags');
 const outFile = path.join(root, 'lib', 'flagCards.ts');
+const csvFile = path.join(root, 'public', 'assets', 'liste laender.csv');
+
+// Load country years from CSV
+const countryYears = {};
+const countryMapping = {
+  'Vereinigte Arabische Emirate': 'Ver. Arab. Emirate',
+  'Vereinigte Staaten': 'USA',
+  'Südkorea': 'Südkorea',
+  'Nordkorea': 'Nordkorea',
+  'Republik Kongo': 'Kongo (Rep.)',
+  'Demokratische Republik Kongo': 'Kongo (Dem. Rep.)',
+  'Côte d\'Ivoire': 'Elfenbeinküste',
+  'Timor-Leste': 'Osttimor',
+  'Vereinigtes Königreich': 'UK', // fallback
+  'Britische Jungferninseln': 'UK',
+  'Kaimaninseln': 'UK',
+  'Falklandinseln': 'UK',
+  'Gibraltar': 'UK',
+  'Britische Abhängigkeiten': 'UK',
+};
+
+if (fs.existsSync(csvFile)) {
+  const csvContent = fs.readFileSync(csvFile, 'utf-8');
+  const lines = csvContent.split('\n').slice(1); // Skip header
+  for (const line of lines) {
+    if (!line.trim()) continue;
+    const [year, land] = line.split(',').map(s => s.trim());
+    if (year && land) {
+      countryYears[land] = parseInt(year, 10);
+    }
+  }
+}
 
 function toDisplayName(code) {
   try {
@@ -17,6 +49,18 @@ function toDisplayName(code) {
   return code.toUpperCase();
 }
 
+function getYear(name) {
+  // Direct match
+  if (countryYears[name]) return countryYears[name];
+  
+  // Try mapping
+  const mapped = countryMapping[name];
+  if (mapped && countryYears[mapped]) return countryYears[mapped];
+  
+  // Fallback
+  return 1900;
+}
+
 const files = fs.readdirSync(flagsDir).filter((f) => f.toLowerCase().endsWith('.png')).sort();
 const seen = new Set();
 const cards = [];
@@ -25,11 +69,13 @@ for (const file of files) {
   if (seen.has(code)) continue;
   seen.add(code);
   const name = toDisplayName(code);
+  const year = getYear(name);
+  
   cards.push({
     id: `flag-${code.toLowerCase()}`,
     title: `Flagge ${name}`,
     category: 'country',
-    year: 1900,
+    year: year,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: `${name} – Staatsflagge (Jahr variabel).`,
     hint: name,
