@@ -342,8 +342,7 @@ function SettingsPageContent() {
           <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Spotify</p>
           <h2 className="text-lg font-semibold">Spotify Premium verknüpfen</h2>
           <p className="text-sm text-ink/70">
-            Verbinde dich mit Spotify Premium, damit Musikfragen ohne Werbung und mit voller Länge abgespielt werden können. Wenn du schon
-            eingeloggt warst, kannst du hier die Session auffrischen.
+            Verbinde dich mit Spotify Premium, damit Musikfragen ohne Werbung und mit voller Länge abgespielt werden können.
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
