@@ -901,7 +901,7 @@ export const outlineCards: Card[] = [
   },
   {
     "id": "outline-eg",
-    "title": "Umriss ""Ägypten",
+    "title": "Umriss "Ägypten",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
@@ -957,7 +957,7 @@ export const outlineCards: Card[] = [
   },
   {
     "id": "outline-et",
-    "title": "Umriss ""Äthiopien",
+    "title": "Umriss "Äthiopien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
@@ -1209,7 +1209,7 @@ export const outlineCards: Card[] = [
   },
   {
     "id": "outline-gq",
-    "title": "Umriss ""Äquatorialguinea",
+    "title": "Umriss "Äquatorialguinea",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",

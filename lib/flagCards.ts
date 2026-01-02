@@ -837,7 +837,7 @@ export const flagCards: Card[] = [
   },
   {
     "id": "flag-eg",
-    "title": "Flagge ""Ägypten",
+    "title": "Flagge "Ägypten",
     "category": "country",
     "year": 1953,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
@@ -889,7 +889,7 @@ export const flagCards: Card[] = [
   },
   {
     "id": "flag-et",
-    "title": "Flagge ""Äthiopien",
+    "title": "Flagge "Äthiopien",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
@@ -1188,7 +1188,7 @@ export const flagCards: Card[] = [
   },
   {
     "id": "flag-gq",
-    "title": "Flagge ""Äquatorialguinea",
+    "title": "Flagge "Äquatorialguinea",
     "category": "country",
     "year": 1968,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
