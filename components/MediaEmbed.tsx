@@ -680,7 +680,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       return (
         <div className="w-full">
           <div className={`relative w-full max-h-[70vh] min-h-[240px] rounded-2xl card-surface overflow-hidden ${
-            choice.url.includes('outline') ? 'bg-white' : 'bg-ink/40'
+            choice.url.includes('outline') ? '!bg-white' : 'bg-ink/40'
           }`}>
             <Image
               src={choice.url}
