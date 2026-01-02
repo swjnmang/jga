@@ -50,7 +50,7 @@ export default function AppSettingsPage() {
             >
               <div className="flex items-center justify-between mb-2">
                 <span className="font-semibold">{option.name}</span>
-                {theme === option.id && <span className="text-xs bg-ink text-sand rounded-full px-2 py-1">Aktiv</span>}
+                {theme === option.id && <span className="text-xs bg-ink text-inkDark rounded-full px-2 py-1">Aktiv</span>}
               </div>
               <p className="text-sm text-ink/70 leading-snug">{option.description}</p>
             </button>
@@ -80,7 +80,7 @@ export default function AppSettingsPage() {
       <div className="flex justify-center">
         <Link
           href="/"
-          className="rounded-full bg-ink text-sand px-6 py-3 text-sm font-semibold shadow-md hover:-translate-y-0.5 transition"
+          className="rounded-full bg-ink text-inkDark px-6 py-3 text-sm font-semibold shadow-md hover:-translate-y-0.5 transition"
         >
           Speichern und zurück ins Hauptmenü
         </Link>

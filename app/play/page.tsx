@@ -522,10 +522,10 @@ function PlayPageContent() {
             <div className="flex justify-center pt-4">
               <button
                 type="button"
-                className="rounded-full bg-ink text-sand px-6 py-3 text-sm font-semibold"
+                className="rounded-full bg-ink text-inkDark px-6 py-3 text-sm font-semibold"
                 onClick={() => goToSettings(selectedMode)}
               >
-                Spiel starten
+                Einstellungen vornehmen & Spiel starten
               </button>
             </div>
           </div>

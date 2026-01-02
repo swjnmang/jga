@@ -233,7 +233,7 @@ function SettingsPageContent() {
                     <div className="flex items-center gap-2">
                       <span className="capitalize">{categoryLabels[category] ?? category}</span>
                       {triviaOnly && (
-                        <span className="rounded-full bg-ink text-sand px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide">Trivia only</span>
+                        <span className="rounded-full bg-ink text-inkDark px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide">Trivia only</span>
                       )}
                     </div>
                     <div className="flex items-center gap-3 text-[11px] text-ink/60">

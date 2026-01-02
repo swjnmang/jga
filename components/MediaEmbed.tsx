@@ -534,7 +534,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         <p>{embedError}</p>
         {href ? (
           <a
-            className="inline-flex w-fit rounded-full bg-ink text-sand px-4 py-2 text-xs font-semibold"
+            className="inline-flex w-fit rounded-full bg-ink text-inkDark px-4 py-2 text-xs font-semibold"
             href={href}
             target="_blank"
             rel="noreferrer"
@@ -655,7 +655,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
                   href={choice.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full bg-ink text-sand px-3 py-1 font-semibold"
+                  className="rounded-full bg-ink text-inkDark px-3 py-1 font-semibold"
                 >
                   In Spotify öffnen
                 </a>

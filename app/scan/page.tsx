@@ -61,7 +61,7 @@ export default function ScanPage() {
           />
           <button
             type="button"
-            className="rounded-xl bg-ink text-sand px-4 py-2"
+            className="rounded-xl bg-ink text-inkDark px-4 py-2"
             onClick={() => handleResult(manual)}
           >
             Öffnen
