@@ -558,7 +558,7 @@ function PlayPageContent() {
 
       <section key={`card-${card.id}`} className={`card-surface rounded-2xl p-4 sm:p-5 space-y-3 animate-slide-up ${
         card.category === 'country' && card.sources.image && card.sources.image.includes('outline') 
-          ? 'bg-white text-gray-900 [&_*]:text-gray-900 [&_.text-ink]:!text-gray-900 [&_.text-ink\/60]:!text-gray-600 [&_.text-ink\/70]:!text-gray-700 [&_.text-ink\/80]:!text-gray-800' 
+          ? '!bg-white !text-gray-900 [&_*]:!text-gray-900 [&_p]:!text-gray-900 [&_.text-ink]:!text-gray-900 [&_.text-ink\/60]:!text-gray-700 [&_.text-ink\/70]:!text-gray-800 [&_.text-ink\/80]:!text-gray-900' 
           : ''
       }`}>
         {card.category === 'schaetzfragen' && (
