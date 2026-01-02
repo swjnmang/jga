@@ -34,6 +34,20 @@ function difficultyLabel(value: Difficulty): string {
   return 'Schwer';
 }
 
+const CATEGORY_META: Record<CardCategory, { label: string; icon: string }> = {
+  music: { label: 'Musik', icon: '🎵' },
+  quote: { label: 'Zitate', icon: '💬' },
+  image: { label: 'Bilder erkennen', icon: '🖼️' },
+  country: { label: 'Länder/Flaggen', icon: '🏳️' },
+  video: { label: 'Video', icon: '🎬' },
+  sportfreizeit: { label: 'Sport & Freizeit', icon: '🏆' },
+  religionglaube: { label: 'Religion & Glaube', icon: '✝️' },
+  geogeschichte: { label: 'Geographie & Geschichte', icon: '🌍' },
+  naturtechnik: { label: 'Natur & Technik', icon: '🔬' },
+  filmeserien: { label: 'Filme & Serien', icon: '🎞️' },
+  schaetzfragen: { label: 'Schätzfragen', icon: '🎯' }
+};
+
 function triviaCue(card: Card): string {
   switch (card.category) {
     case 'music':
@@ -530,8 +544,26 @@ function PlayPageContent() {
       </div>
 
       <section className="card-surface rounded-2xl p-4 sm:p-5 space-y-3">
+        {card.category === 'schaetzfragen' && (
+          <div className="flex items-center gap-3 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-amber-900 animate-pulse">
+            <span className="text-xl">🎯</span>
+            <div className="leading-tight">
+              <p className="text-xs font-semibold uppercase tracking-wide">Schätzfrage</p>
+              <p className="text-sm font-semibold">ALLE TEAMS SPIELEN MIT!</p>
+            </div>
+          </div>
+        )}
+
         <div className="flex items-center justify-between gap-3">
-          <p className="text-xs uppercase tracking-wide text-ink/60">{card.category}</p>
+          <div className="flex items-center gap-2">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-ink/5 text-base">
+              {(CATEGORY_META[card.category]?.icon) ?? '❓'}
+            </span>
+            <div className="text-left leading-tight">
+              <p className="text-xs uppercase tracking-wide text-ink/60">Kategorie</p>
+              <p className="text-sm font-semibold text-ink">{CATEGORY_META[card.category]?.label ?? card.category}</p>
+            </div>
+          </div>
           <span className="rounded-full border border-ink/20 px-3 py-1 text-xs font-semibold text-ink/80">
             {difficultyLabel(card.difficulty)}
           </span>

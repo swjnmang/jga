@@ -522,6 +522,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   }, [card.id, spotifyError, spotifyToken, onPlaybackError]);
 
   if (!choice) {
+    if (card.category === 'schaetzfragen') return null;
     return <p className="text-sm text-ink/70">Keine Quelle hinterlegt.</p>;
   }
 
