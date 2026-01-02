@@ -451,7 +451,7 @@ function PlayPageContent() {
             type="button"
             className={`rounded-2xl border-2 px-8 py-8 transition transform hover:scale-105 ${
               selectedMode === 'timeline'
-                ? 'bg-ink text-sand border-ink shadow-lg'
+                ? 'bg-ink text-inkDark border-ink shadow-lg'
                 : 'border-ink/30 hover:border-ink/60 hover:bg-sand/5'
             }`}
             onClick={() => setSelectedMode('timeline')}
@@ -464,7 +464,7 @@ function PlayPageContent() {
             type="button"
             className={`rounded-2xl border-2 px-8 py-8 transition transform hover:scale-105 ${
               selectedMode === 'trivia'
-                ? 'bg-ink text-sand border-ink shadow-lg'
+                ? 'bg-ink text-inkDark border-ink shadow-lg'
                 : 'border-ink/30 hover:border-ink/60 hover:bg-sand/5'
             }`}
             onClick={() => setSelectedMode('trivia')}

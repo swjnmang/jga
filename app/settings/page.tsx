@@ -175,15 +175,7 @@ function SettingsPageContent() {
       </div>
 
       {mode && (
-        <div className="card-surface rounded-2xl p-4 text-sm text-ink/80 space-y-1">
-          <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Modus gewählt</p>
-          <p className="text-base font-semibold">{mode === 'timeline' ? 'Timeline' : 'Trivia'} Einstellungen</p>
-          <p>
-            Kategorien und Optionen sind auf diesen Modus begrenzt. Um das Spiel zu starten, nutze den Button
-            oben „Spiel starten ({mode})“.
-          </p>
-        </div>
-      )}
+
 
       <section className="card-surface rounded-2xl p-5 space-y-4">
         <div className="flex items-center justify-between gap-3">
