@@ -56,7 +56,7 @@ function CardFaceBack({ cardId, title, answer, year, hint, difficulty }: BackPro
     <div className="card-surface rounded-2xl p-4 flex flex-col gap-3 border border-ink/10 min-h-[260px]">
       <div className="flex items-center justify-between">
         <p className="text-xs uppercase tracking-wide text-ink/60">Musterlösung</p>
-        <span className="text-xs bg-ink text-sand rounded-full px-3 py-1">Jahr + Interpret/Ort</span>
+        <span className="text-xs bg-ink text-inkDark rounded-full px-3 py-1">Jahr + Interpret/Ort</span>
       </div>
       <div className="flex-1 rounded-xl border border-dashed border-ink/20 p-3 text-sm text-ink/50">
         Platz für korrekte Lösung

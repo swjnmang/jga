@@ -53,7 +53,7 @@ export function CardClient({ card }: Props) {
           <SourcePills card={card} />
         </div>
         <div className="flex flex-col items-end gap-2">
-          <span className="rounded-full bg-ink text-sand px-4 py-2 text-sm font-semibold">
+          <span className="rounded-full bg-ink text-inkDark px-4 py-2 text-sm font-semibold">
             {showAnswer ? card.year : '???'}
           </span>
           <span className="rounded-full border border-ink/20 px-3 py-1 text-xs font-semibold text-ink/80">
@@ -87,7 +87,7 @@ export function CardClient({ card }: Props) {
           <button
             type="button"
             onClick={() => setShowAnswer((v) => !v)}
-            className="rounded-full bg-ink text-sand px-3 py-1 text-sm font-semibold"
+            className="rounded-full bg-ink text-inkDark px-3 py-1 text-sm font-semibold"
           >
             {showAnswer ? 'Verbergen' : 'Aufdecken'}
           </button>

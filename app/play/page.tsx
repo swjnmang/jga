@@ -378,6 +378,8 @@ function PlayPageContent() {
   };
 
   const restartGame = useCallback(() => {
+    const confirmed = window.confirm('Möchtest du das Spiel wirklich neu starten? Dein aktueller Fortschritt geht verloren.');
+    if (!confirmed) return;
     setDeckKey((k) => k + 1);
     setIndex(0);
     setBlackedOut(false);
@@ -393,7 +395,7 @@ function PlayPageContent() {
         <div className="flex items-center justify-center gap-3 flex-wrap">
           <Link
             href="/settings"
-            className="rounded-full bg-ink text-sand px-4 py-2 text-sm font-semibold"
+            className="rounded-full bg-ink text-inkDark px-4 py-2 text-sm font-semibold"
           >
             Zu den Einstellungen
           </Link>
@@ -433,7 +435,7 @@ function PlayPageContent() {
           <div className="flex justify-center">
             <button
               type="button"
-              className="rounded-full bg-ink text-sand px-5 py-3 text-sm font-semibold"
+              className="rounded-full bg-ink text-inkDark px-5 py-3 text-sm font-semibold"
               onClick={() => goToSettings(preselectedMode)}
             >
               Zu den Einstellungen
@@ -603,7 +605,7 @@ function PlayPageContent() {
       <div className="flex flex-wrap gap-3 pb-4 sm:pb-0">
         <button
           type="button"
-          className="rounded-full bg-ink text-sand px-4 py-3 text-sm font-semibold w-full sm:w-auto text-center"
+          className="rounded-full bg-ink text-inkDark px-4 py-3 text-sm font-semibold w-full sm:w-auto text-center"
           onClick={nextCard}
         >
           {isLast ? 'Fertig' : 'Lösung anzeigen und zur nächsten Frage'}

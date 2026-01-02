@@ -584,7 +584,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
             <div className="absolute inset-0 flex items-center justify-center text-sand">
               <button
                 type="button"
-                className="rounded-full bg-sand text-ink px-4 py-2 text-sm font-semibold shadow"
+                className="rounded-full bg-sand text-inkDark px-6 py-4 text-lg font-semibold shadow"
                 onClick={togglePlay}
               >
                 {isPlaying ? 'Pause' : 'Play'}
@@ -619,31 +619,23 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               )}
               {!spotifyToken && <p className="text-xs text-red-200">Spotify Login erforderlich</p>}
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col items-center gap-3">
               <button
                 type="button"
-                className="rounded-full bg-sand text-ink px-4 py-3 text-sm font-semibold shadow disabled:opacity-50 flex flex-col items-center gap-1"
+                className="rounded-full bg-sand text-inkDark px-8 py-5 text-xl font-semibold shadow disabled:opacity-50 flex flex-col items-center gap-2"
                 onClick={toggleSpotify}
                 disabled={!spotifyToken || spotifyLoading || !spotifyReady}
               >
-                <span className="text-lg leading-none">{primaryIcon}</span>
-                <span className="text-xs leading-none">{primaryLabel}</span>
+                <span className="text-3xl leading-none">{primaryIcon}</span>
+                <span className="text-sm leading-none">{primaryLabel}</span>
               </button>
               <button
                 type="button"
-                className="rounded-full border border-sand/40 px-3 py-2 text-xs"
+                className="rounded-full border border-sand/40 px-4 py-2 text-xs"
                 onClick={resetSpotify}
               >
                 Neu verbinden
               </button>
-              <a
-                href={choice.url}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-sand/40 px-3 py-2 text-xs"
-              >
-                In Spotify öffnen
-              </a>
             </div>
           </div>
           {showSpotifyFallback && (
