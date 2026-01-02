@@ -159,12 +159,12 @@ export const outlineCards: Card[] = [
   },
   {
     "id": "outline-at",
-    "title": "Umriss ""Österreich",
+    "title": "Umriss Österreich",
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": """Österreich – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": """Österreich",
+    "answer": "Österreich – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "hint": "Österreich",
     "difficulty": "leicht",
     "sources": {
       "image": "/assets/country-outlines/at.png",
@@ -905,8 +905,8 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": """Ägypten – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": """Ägypten",
+    "answer": "Ägypten – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "hint": "Ägypten",
     "difficulty": "leicht",
     "sources": {
       "image": "/assets/country-outlines/eg.png",
@@ -961,8 +961,8 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": """Äthiopien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": """Äthiopien",
+    "answer": "Äthiopien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "hint": "Äthiopien",
     "difficulty": "leicht",
     "sources": {
       "image": "/assets/country-outlines/et.png",
@@ -1213,8 +1213,8 @@ export const outlineCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": """Äquatorialguinea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
-    "hint": """Äquatorialguinea",
+    "answer": "Äquatorialguinea – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
+    "hint": "Äquatorialguinea",
     "difficulty": "schwer",
     "sources": {
       "image": "/assets/country-outlines/gq.png",

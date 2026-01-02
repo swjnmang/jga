@@ -148,12 +148,12 @@ export const flagCards: Card[] = [
   },
   {
     "id": "flag-at",
-    "title": "Flagge ""Österreich",
+    "title": "Flagge Österreich",
     "category": "country",
     "year": 1945,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": """Österreich – Staatsflagge (Jahr variabel).",
-    "hint": """Österreich",
+    "answer": "Österreich – Staatsflagge (Jahr variabel).",
+    "hint": "Österreich",
     "difficulty": "leicht",
     "sources": {
       "image": "/assets/flags/at.png"
@@ -841,8 +841,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1953,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": """Ägypten – Staatsflagge (Jahr variabel).",
-    "hint": """Ägypten",
+    "answer": "Ägypten – Staatsflagge (Jahr variabel).",
+    "hint": "Ägypten",
     "difficulty": "leicht",
     "sources": {
       "image": "/assets/flags/eg.png"
@@ -893,8 +893,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1900,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": """Äthiopien – Staatsflagge (Jahr variabel).",
-    "hint": """Äthiopien",
+    "answer": "Äthiopien – Staatsflagge (Jahr variabel).",
+    "hint": "Äthiopien",
     "difficulty": "leicht",
     "sources": {
       "image": "/assets/flags/et.png"
@@ -1192,8 +1192,8 @@ export const flagCards: Card[] = [
     "category": "country",
     "year": 1968,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": """Äquatorialguinea – Staatsflagge (Jahr variabel).",
-    "hint": """Äquatorialguinea",
+    "answer": "Äquatorialguinea – Staatsflagge (Jahr variabel).",
+    "hint": "Äquatorialguinea",
     "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gq.png"
