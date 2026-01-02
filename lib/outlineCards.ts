@@ -11,7 +11,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Andorra – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Andorra",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/ad.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -81,7 +81,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Albanien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Albanien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/al.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -165,7 +165,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Österreich – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Österreich",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/at.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -207,7 +207,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Ålandinseln – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Ålandinseln",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/ax.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -235,7 +235,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Bosnien und Herzegowina – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Bosnien und Herzegowina",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/ba.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -277,7 +277,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Belgien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Belgien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/be.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -305,7 +305,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Bulgarien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Bulgarien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/bg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -501,7 +501,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Belarus – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Belarus",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/by.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -599,7 +599,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Schweiz – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Schweiz",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/ch.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -767,7 +767,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Zypern – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Zypern",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/cy.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -781,7 +781,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Tschechien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Tschechien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/cz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -795,7 +795,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Deutschland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Deutschland",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/de.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -823,7 +823,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Dänemark – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Dänemark",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/dk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -893,7 +893,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Estland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Estland",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/ee.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -949,7 +949,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Spanien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Spanien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/es.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -977,7 +977,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Finnland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Finnland",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/fi.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1019,7 +1019,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Färöer – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Färöer",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/fo.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1033,7 +1033,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Frankreich – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Frankreich",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/fr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1061,7 +1061,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Vereinigtes Königreich – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Vereinigtes Königreich",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/gb.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1089,7 +1089,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Georgien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Georgien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/ge.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1117,7 +1117,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Guernsey – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Guernsey",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/gg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1145,7 +1145,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Gibraltar – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Gibraltar",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/gi.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1229,7 +1229,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Griechenland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Griechenland",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/gr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1355,7 +1355,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kroatien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Kroatien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/hr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1383,7 +1383,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Ungarn – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Ungarn",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/hu.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1411,7 +1411,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Irland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Irland",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/ie.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1439,7 +1439,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Isle of Man – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Isle of Man",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/im.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1509,7 +1509,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Island – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Island",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/is.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1523,7 +1523,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Italien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Italien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/it.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1775,7 +1775,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Liechtenstein – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Liechtenstein",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/li.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1831,7 +1831,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Litauen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Litauen",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/lt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1845,7 +1845,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Luxemburg – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Luxemburg",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/lu.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1859,7 +1859,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Lettland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Lettland",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/lv.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1901,7 +1901,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Monaco – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Monaco",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/mc.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1915,7 +1915,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Republik Moldau – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Republik Moldau",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/md.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1929,7 +1929,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Montenegro – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Montenegro",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/me.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -1971,7 +1971,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Nordmazedonien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Nordmazedonien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/mk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -2083,7 +2083,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Malta – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Malta",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/mt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -2265,7 +2265,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Niederlande – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Niederlande",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/nl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -2279,7 +2279,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Norwegen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Norwegen",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/no.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -2447,7 +2447,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Polen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Polen",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/pl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -2503,7 +2503,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Portugal – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Portugal",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/pt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -2573,7 +2573,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Rumänien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Rumänien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/ro.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -2587,7 +2587,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Serbien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Serbien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/rs.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -2601,7 +2601,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Russland – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Russland",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/ru.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -2685,7 +2685,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Schweden – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Schweden",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/se.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -2727,7 +2727,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Slowenien – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Slowenien",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/si.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -2741,7 +2741,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Spitzbergen und Jan Mayen – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Spitzbergen und Jan Mayen",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/sj.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -2755,7 +2755,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Slowakei – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Slowakei",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/sk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -2783,7 +2783,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "San Marino – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "San Marino",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/sm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -3133,7 +3133,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Ukraine – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Ukraine",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/ua.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
@@ -3203,7 +3203,7 @@ export const outlineCards: Card[] = [
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Vatikanstadt – Staatsumriss. Quelle: mapsicon (CC BY 4.0).",
     "hint": "Vatikanstadt",
-    "difficulty": "mittel",
+    "difficulty": "einfach",
     "sources": {
       "image": "/assets/country-outlines/va.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"

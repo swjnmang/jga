@@ -25,6 +25,15 @@ function toName(code) {
   return code.toUpperCase();
 }
 
+// European country codes (ISO 3166-1 alpha-2)
+const europeanCountries = new Set([
+  'ad', 'al', 'at', 'ax', 'ba', 'be', 'bg', 'by', 'ch', 'cy', 'cz', 'de', 'dk', 'ee', 'es', 'fi', 'fo', 'fr', 'gb', 'ge', 'gg', 'gi', 'gr', 'hr', 'hu', 'ie', 'im', 'is', 'it', 'je', 'li', 'lt', 'lu', 'lv', 'mc', 'md', 'me', 'mk', 'mt', 'nl', 'no', 'pl', 'pt', 'ro', 'rs', 'ru', 'se', 'si', 'sj', 'sk', 'sm', 'ua', 'va', 'xk'
+]);
+
+function getDifficulty(code) {
+  return europeanCountries.has(code.toLowerCase()) ? 'einfach' : 'mittel';
+}
+
 const cards = [];
 const entries = fs.readdirSync(sourceRoot, { withFileTypes: true });
 for (const entry of entries) {
@@ -37,6 +46,7 @@ for (const entry of entries) {
   fs.copyFileSync(srcPng, destPng);
 
   const displayName = toName(code);
+  const difficulty = getDifficulty(code);
   cards.push({
     id: `outline-${code}`,
     title: `Umriss ${displayName}`,
@@ -45,7 +55,7 @@ for (const entry of entries) {
     cue: 'Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?',
     answer: `${displayName} – Staatsumriss. Quelle: mapsicon (CC BY 4.0).`,
     hint: displayName,
-    difficulty: 'mittel',
+    difficulty: difficulty,
     sources: {
       image: `/assets/country-outlines/${code}.png`,
       text: 'mapsicon by djaiss (CC BY 4.0)'

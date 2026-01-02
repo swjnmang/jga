@@ -61,6 +61,15 @@ function getYear(name) {
   return 1900;
 }
 
+// European country codes (ISO 3166-1 alpha-2)
+const europeanCountries = new Set([
+  'ad', 'al', 'at', 'ax', 'ba', 'be', 'bg', 'by', 'ch', 'cy', 'cz', 'de', 'dk', 'ee', 'es', 'fi', 'fo', 'fr', 'gb', 'ge', 'gg', 'gi', 'gr', 'hr', 'hu', 'ie', 'im', 'is', 'it', 'je', 'li', 'lt', 'lu', 'lv', 'mc', 'md', 'me', 'mk', 'mt', 'nl', 'no', 'pl', 'pt', 'ro', 'rs', 'ru', 'se', 'si', 'sj', 'sk', 'sm', 'ua', 'va', 'xk'
+]);
+
+function getDifficulty(code) {
+  return europeanCountries.has(code.toLowerCase()) ? 'einfach' : 'mittel';
+}
+
 const files = fs.readdirSync(flagsDir).filter((f) => f.toLowerCase().endsWith('.png')).sort();
 const seen = new Set();
 const cards = [];
@@ -70,6 +79,7 @@ for (const file of files) {
   seen.add(code);
   const name = toDisplayName(code);
   const year = getYear(name);
+  const difficulty = getDifficulty(code);
   
   cards.push({
     id: `flag-${code.toLowerCase()}`,
@@ -79,7 +89,7 @@ for (const file of files) {
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: `${name} – Staatsflagge (Jahr variabel).`,
     hint: name,
-    difficulty: 'mittel',
+    difficulty: difficulty,
     sources: {
       image: `/assets/flags/${file}`
     }
