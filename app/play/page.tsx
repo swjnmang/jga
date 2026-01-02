@@ -166,6 +166,7 @@ function PlayPageContent() {
   const [deckKey, setDeckKey] = useState(0);
   const [blockedCards, setBlockedCards] = useState<Set<string>>(new Set());
   const [mode, setMode] = useState<GameMode | null>(preselectedMode && startFlag ? preselectedMode : null);
+  const [selectedMode, setSelectedMode] = useState<GameMode | null>(null);
   const allowedCategoriesForMode = useMemo(
     () => (mode === 'timeline' ? availableCategories.filter((cat) => !triviaOnlySet.has(cat)) : availableCategories),
     [mode, availableCategories]
@@ -402,8 +403,6 @@ function PlayPageContent() {
     .toString()
     .padStart(2, '0');
   const seconds = (timer.secondsLeft % 60).toString().padStart(2, '0');
-
-  const [selectedMode, setSelectedMode] = useState<GameMode | null>(null);
 
   if (!mode) {
     const goToSettings = (targetMode: GameMode) => {
