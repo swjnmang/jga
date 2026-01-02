@@ -1032,12 +1032,12 @@ export const flagCards: Card[] = [
   },
   {
     "id": "flag-gb-wls",
-    "title": "Flagge GB-WLS",
+    "title": "Flagge Wales",
     "category": "country",
-    "year": 1900,
+    "year": 1922,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "GB-WLS – Staatsflagge (Jahr variabel).",
-    "hint": "GB-WLS",
+    "answer": "Wales – 1922, Anerkennung als Landesgebiet Großbritanniens.",
+    "hint": "Wales",
     "difficulty": "schwer",
     "sources": {
       "image": "/assets/flags/gb-wls.png"
