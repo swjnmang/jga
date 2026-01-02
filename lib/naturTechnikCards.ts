@@ -1,4 +1,4 @@
-import { Card } from './types';
+﻿import { Card } from './types';
 
 // 250 alltagsnahe Natur & Technik Fragen ohne Jahreszahlen, Fokus auf Verstaendnisfragen.
 export const naturTechnikCards: Card[] = [

@@ -1,4 +1,4 @@
-export type ThemeId = 'aurora' | 'midnight' | 'sunrise';
+﻿export type ThemeId = 'aurora' | 'midnight' | 'sunrise';
 
 const THEME_KEY = 'app-theme';
 const MOTION_KEY = 'app-reduce-motion';
@@ -42,3 +42,4 @@ export function applyReduceMotion(value: boolean) {
   if (typeof document === 'undefined') return;
   document.documentElement.dataset.reduceMotion = value ? 'true' : 'false';
 }
+

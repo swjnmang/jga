@@ -1,4 +1,4 @@
-export function getAppBaseUrl() {
+﻿export function getAppBaseUrl() {
   if (process.env.NEXT_PUBLIC_APP_URL) {
     return process.env.NEXT_PUBLIC_APP_URL.replace(/\/$/, '');
   }
@@ -9,3 +9,4 @@ export function getAppBaseUrl() {
 
   return 'http://localhost:3000';
 }
+

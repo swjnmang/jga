@@ -1,4 +1,4 @@
-import { Card } from './types';
+﻿import { Card } from './types';
 
 // Schätzfragen - Trivia mit Zahlen und Fakten
 export const schaetzfragenCards: Card[] = [
@@ -252,3 +252,4 @@ export const schaetzfragenCards: Card[] = [
   { id: 'schaetzfragen-spermien-milliliter', title: 'Spermien pro Milliliter', category: 'schaetzfragen', year: 0, cue: 'Wie viele Millionen Spermien befinden sich in einem Milliliter menschlichem Ejakulat?', answer: 'ca. 15 bis 200 Millionen', difficulty: 'mittel', sources: {}, genres: [] },
   { id: 'schaetzfragen-erdmittelpunkt', title: 'Entfernung Erdmittelpunkt', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer weit ist die Reise zum Mittelpunkt der Erde?', answer: '6.371 Kilometer', difficulty: 'mittel', sources: {}, genres: [] },
 ];
+

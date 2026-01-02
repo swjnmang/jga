@@ -1,4 +1,4 @@
-import { Card } from './types';
+﻿import { Card } from './types';
 
 export const filmSerienCards: Card[] = [
   { id: 'filmeserien-001-der-pate', title: 'Der Pate', category: 'filmeserien', year: 1972, cue: 'Wer spielt Michael Corleone?', answer: 'Al Pacino.', hint: 'Sohn des Don.', difficulty: 'leicht', sources: {} },
@@ -202,3 +202,4 @@ export const filmSerienCards: Card[] = [
   { id: 'filmeserien-199-babylon5', title: 'Babylon 5', category: 'filmeserien', year: 1994, cue: 'Was ist Babylon 5?', answer: 'Eine Raumstation als diplomatischer Treffpunkt.', hint: 'Fünfte Station.', difficulty: 'schwer', sources: {} },
   { id: 'filmeserien-200-firefly', title: 'Firefly', category: 'filmeserien', year: 2002, cue: 'Wie heißt das Schiff der Crew?', answer: 'Serenity.', hint: 'Space-Western.', difficulty: 'leicht', sources: {} }
 ];
+

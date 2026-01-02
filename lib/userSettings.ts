@@ -1,4 +1,4 @@
-import { CardCategory, DecadeTag, Difficulty, GenreTag } from './types';
+﻿import { CardCategory, DecadeTag, Difficulty, GenreTag } from './types';
 
 export type UserSettings = {
   timerSeconds: number;
@@ -120,3 +120,4 @@ function normalizeList<T extends string>(parsed: T[] | undefined, defaults: T[],
 export function getSettingsStorageKey() {
   return STORAGE_KEY;
 }
+

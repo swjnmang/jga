@@ -1,4 +1,4 @@
-export type CardCategory =
+﻿export type CardCategory =
   | 'music'
   | 'quote'
   | 'video'
@@ -43,3 +43,4 @@ export type Card = {
 };
 
 export type MediaPreference = 'auto' | 'youtube' | 'spotify';
+
