@@ -421,6 +421,13 @@ function PlayPageContent() {
   const seconds = (timer.secondsLeft % 60).toString().padStart(2, '0');
   const playReturnTo = `/play?mode=${mode ?? preselectedMode ?? 'trivia'}&start=1`;
 
+  // Timer color classes based on time left
+  const getTimerColorClass = () => {
+    if (timer.secondsLeft <= 10) return 'timer-danger';
+    if (timer.secondsLeft <= 30) return 'timer-warning';
+    return 'timer-normal';
+  };
+
   if (!mode) {
     const goToSettings = (targetMode: GameMode) => {
       const returnTo = `/play?mode=${targetMode}&start=1`;
@@ -447,33 +454,33 @@ function PlayPageContent() {
 
     return (
       <main className="mx-auto max-w-3xl px-5 py-12 space-y-6 text-center">
-        <h1 className="text-3xl font-display">Modus wählen</h1>
-        <div className="flex flex-col sm:flex-row gap-6 justify-center mt-12">
+        <h1 className="text-2xl sm:text-3xl font-display">Modus wählen</h1>
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mt-8 sm:mt-12">
           <button
             type="button"
-            className={`rounded-2xl border-2 px-8 py-8 transition transform hover:scale-105 ${
+            className={`rounded-2xl border-2 px-6 sm:px-8 py-6 sm:py-8 transition-all transform active:scale-95 sm:hover:scale-105 ${
               selectedMode === 'timeline'
                 ? 'bg-ink text-inkDark border-ink shadow-lg'
                 : 'border-ink/30 hover:border-ink/60 hover:bg-sand/5'
             }`}
             onClick={() => setSelectedMode('timeline')}
           >
-            <div className="text-5xl mb-3">⏳</div>
-            <div className="text-xl font-semibold">Timeline</div>
-            <div className="text-xs opacity-60 mt-2">Ereignisse in zeitlicher Reihenfolge ordnen</div>
+            <div className="text-4xl sm:text-5xl mb-2 sm:mb-3">⏳</div>
+            <div className="text-lg sm:text-xl font-semibold">Timeline</div>
+            <div className="text-xs opacity-60 mt-1 sm:mt-2">Ereignisse zeitlich ordnen</div>
           </button>
           <button
             type="button"
-            className={`rounded-2xl border-2 px-8 py-8 transition transform hover:scale-105 ${
+            className={`rounded-2xl border-2 px-6 sm:px-8 py-6 sm:py-8 transition-all transform active:scale-95 sm:hover:scale-105 ${
               selectedMode === 'trivia'
                 ? 'bg-ink text-inkDark border-ink shadow-lg'
                 : 'border-ink/30 hover:border-ink/60 hover:bg-sand/5'
             }`}
             onClick={() => setSelectedMode('trivia')}
           >
-            <div className="text-5xl mb-3">🧠</div>
-            <div className="text-xl font-semibold">Trivia</div>
-            <div className="text-xs opacity-60 mt-2">Fragen beantworten und Wissen testen</div>
+            <div className="text-4xl sm:text-5xl mb-2 sm:mb-3">🧠</div>
+            <div className="text-lg sm:text-xl font-semibold">Trivia</div>
+            <div className="text-xs opacity-60 mt-1 sm:mt-2">Wissen testen</div>
           </button>
         </div>
 
@@ -538,18 +545,18 @@ function PlayPageContent() {
 
   return (
     <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Frage {index + 1} / {filteredDeck.length}</p>
-          <h1 className="text-3xl font-display">Spielmodus</h1>
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex-1 min-w-0">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] text-ink/60 truncate">Frage {index + 1} / {filteredDeck.length}</p>
+          <h1 className="text-2xl sm:text-3xl font-display truncate">{mode === 'timeline' ? 'Timeline' : 'Trivia'}</h1>
         </div>
-        <div className="text-right space-y-1">
+        <div className="text-right space-y-1 flex-shrink-0">
           <p className="text-xs text-ink/60">Timer</p>
-          <div className="text-3xl font-display tabular-nums">{minutes}:{seconds}</div>
+          <div className={`text-3xl sm:text-4xl font-display tabular-nums ${getTimerColorClass()}`}>{minutes}:{seconds}</div>
         </div>
       </div>
 
-      <section className="card-surface rounded-2xl p-4 sm:p-5 space-y-3">
+      <section key={`card-${card.id}`} className="card-surface rounded-2xl p-4 sm:p-5 space-y-3 animate-slide-up">
         {card.category === 'schaetzfragen' && (
           <div className="flex items-center gap-3 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-amber-900 animate-pulse">
             <span className="text-xl">🎯</span>
@@ -585,7 +592,7 @@ function PlayPageContent() {
             <p>Als Datum gilt das Inkrafttreten der aktuellen Verfassung oder der Zeitpunkt des letzten systemischen Bruchs (z. B. Ende einer Monarchie, Ende einer Besatzung oder Neugründung).</p>
           </div>
         )}
-        <p className="text-lg font-semibold">{mode === 'timeline' ? card.cue : card.cue || triviaCue(card)}</p>
+        <p className="text-base sm:text-lg font-semibold">{mode === 'timeline' ? card.cue : card.cue || triviaCue(card)}</p>
         <MediaEmbed
           ref={mediaRef}
           card={card}
@@ -595,34 +602,34 @@ function PlayPageContent() {
           onPlaybackError={handlePlaybackError}
         />
         {showSolution && (
-          <div className="rounded-xl bg-ink/5 p-4 space-y-2 text-sm text-ink/80">
+          <div className="rounded-xl bg-ink/5 p-3 sm:p-4 space-y-2 text-sm text-ink/80 animate-flip-in">
             <p className="font-semibold text-ink">Lösung</p>
             <p className="text-ink">{mode === 'timeline' ? `${card.year} – ${card.answer}` : card.answer}</p>
           </div>
         )}
       </section>
 
-      <div className="flex flex-wrap gap-3 pb-4 sm:pb-0">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-3 pb-4 sm:pb-0">
         <button
           type="button"
-          className="rounded-full bg-ink text-inkDark px-4 py-3 text-sm font-semibold w-full sm:w-auto text-center"
+          className="rounded-full bg-ink text-inkDark px-4 py-3 text-sm font-semibold w-full sm:flex-1 text-center smooth-transition hover:scale-[1.02] active:scale-[0.98]"
           onClick={nextCard}
         >
-          {isLast ? 'Fertig' : 'Lösung anzeigen und zur nächsten Frage'}
+          {isLast ? 'Fertig' : showSolution ? 'Zur nächsten Frage →' : 'Lösung anzeigen'}
         </button>
         <button
           type="button"
-          className="rounded-full border border-ink/20 px-4 py-3 text-sm w-full sm:w-auto text-center"
+          className="rounded-full border border-ink/20 px-4 py-3 text-sm w-full sm:w-auto text-center smooth-transition hover:bg-ink/5"
           onClick={restartGame}
         >
-          Spiel neu starten
+          ↻ Neu starten
         </button>
         <button
           type="button"
-          className="rounded-full border border-red-400 text-red-200 px-4 py-3 text-sm w-full sm:w-auto text-center"
+          className="rounded-full border border-red-400 text-red-200 px-4 py-3 text-sm w-full sm:w-auto text-center smooth-transition hover:bg-red-400/10"
           onClick={endGame}
         >
-          Spiel beenden
+          ✕ Beenden
         </button>
       </div>
 
@@ -633,20 +640,20 @@ function PlayPageContent() {
       )}
 
       {blackedOut && (
-        <div className="fixed inset-0 z-40 bg-black text-white flex flex-col items-center justify-center gap-4">
-          <p className="text-lg font-semibold">Zeit abgelaufen</p>
+        <div className="fixed inset-0 z-40 bg-black text-white flex flex-col items-center justify-center gap-4 px-4 animate-slide-up">
+          <p className="text-xl sm:text-2xl font-semibold">⏰ Zeit abgelaufen</p>
           {showSolution && (
-            <div className="rounded-lg bg-white/10 px-4 py-3 text-sm">
+            <div className="rounded-lg bg-white/10 px-4 py-3 text-sm max-w-md w-full animate-flip-in">
               <p className="font-semibold">Lösung</p>
               <p>{card.year} – {card.answer}</p>
             </div>
           )}
           <button
             type="button"
-            className="rounded-full bg-white text-ink px-4 py-2 text-sm font-semibold"
+            className="rounded-full bg-white text-ink px-6 py-3 text-sm font-semibold smooth-transition hover:scale-105 active:scale-95"
             onClick={nextCard}
           >
-            {isLast ? 'Fertig' : 'Lösung anzeigen und zur nächsten Frage'}
+            {isLast ? 'Fertig' : showSolution ? 'Zur nächsten Frage →' : 'Lösung anzeigen'}
           </button>
         </div>
       )}

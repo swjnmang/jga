@@ -84,6 +84,43 @@ body[data-theme='sunrise'] {
   animation-duration: 0ms !important;
 }
 
+/* Card flip animation */
+.card-flip-enter {
+  animation: flip-in 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+/* Smooth transitions */
+.smooth-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Timer color transitions */
+.timer-normal {
+  transition: color 0.5s ease;
+}
+
+.timer-warning {
+  color: #fbbf24;
+  animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.timer-danger {
+  color: #ef4444;
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .card-surface {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
 @media print {
   body {
     background: white;
