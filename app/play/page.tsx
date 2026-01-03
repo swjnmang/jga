@@ -7,6 +7,7 @@ import { cards, getCategories } from '@/lib/cards';
 import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
 import { getDefaultSettings, loadSettings, toDecadeTag, TRIVIA_ONLY_CATEGORIES, UserSettings } from '@/lib/userSettings';
 import { Card, CardCategory, DecadeTag, Difficulty, GenreTag } from '@/lib/types';
+import { getMultipleChoiceOptions } from '@/lib/multipleChoice';
 
 const FALLBACK_PLAYLIST_ID = 'imported-playlist';
 
@@ -234,6 +235,9 @@ function PlayPageContent() {
   const [timer, setTimer] = useState<TimerState>({ secondsLeft: settings.timerSeconds, running: false });
   const [blackedOut, setBlackedOut] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
+  // Multiple choice state
+  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
+  const [mcOptions, setMcOptions] = useState<{ options: string[]; correctIndex: number } | null>(null);
   // Start with auth prompt open; will be hidden immediately if session is already valid.
   const [needsSpotifyAuth, setNeedsSpotifyAuth] = useState<boolean>(true);
   const [playbackError, setPlaybackError] = useState<string | null>(null);
@@ -285,7 +289,14 @@ function PlayPageContent() {
     setBlackedOut(false);
     setShowSolution(false);
     setPlaybackError(null);
-  }, [filteredDeck, index, settings.timerSeconds, setTimerForCard]);
+    setSelectedAnswer(null);
+    // Generate multiple choice options if enabled
+    if (settings.multipleChoice && current) {
+      setMcOptions(getMultipleChoiceOptions(current));
+    } else {
+      setMcOptions(null);
+    }
+  }, [filteredDeck, index, settings.timerSeconds, settings.multipleChoice, setTimerForCard]);
 
   const rememberBlocked = useCallback((set: Set<string>) => {
     localStorage.setItem('blockedCards', JSON.stringify(Array.from(set)));
@@ -339,6 +350,12 @@ function PlayPageContent() {
       setShowSolution(false);
     }
   }, [filteredDeck.length, index, showSolution]);
+
+  const handleMultipleChoiceAnswer = useCallback((answerIndex: number) => {
+    setSelectedAnswer(answerIndex);
+    setShowSolution(true);
+    setTimer((prev) => ({ ...prev, running: false }));
+  }, []);
 
   const markCardBlocked = useCallback(
     (id: string) => {
@@ -601,6 +618,47 @@ function PlayPageContent() {
           onPlay={handleMediaPlay}
           onPlaybackError={handlePlaybackError}
         />
+        
+        {settings.multipleChoice && mcOptions && !showSolution && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+            {mcOptions.options.map((option, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => handleMultipleChoiceAnswer(idx)}
+                className="rounded-xl border-2 border-ink/20 px-4 py-3 text-sm text-left hover:border-ink/40 hover:bg-ink/5 transition-all"
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {settings.multipleChoice && mcOptions && showSolution && selectedAnswer !== null && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+            {mcOptions.options.map((option, idx) => {
+              const isCorrect = idx === mcOptions.correctIndex;
+              const isSelected = idx === selectedAnswer;
+              const bgColor = isCorrect 
+                ? 'bg-green-100 border-green-500 text-green-900' 
+                : isSelected 
+                  ? 'bg-red-100 border-red-500 text-red-900'
+                  : 'bg-gray-50 border-gray-300 text-gray-500';
+              
+              return (
+                <div
+                  key={idx}
+                  className={`rounded-xl border-2 px-4 py-3 text-sm ${bgColor} transition-all animate-flip-in`}
+                >
+                  {isCorrect && '✓ '}
+                  {isSelected && !isCorrect && '✗ '}
+                  {option}
+                </div>
+              );
+            })}
+          </div>
+        )}
+
         {showSolution && (
           <div className="rounded-xl bg-ink/5 p-3 sm:p-4 space-y-2 text-sm text-ink/80 animate-flip-in">
             <p className="font-semibold text-ink">Lösung</p>
@@ -610,13 +668,15 @@ function PlayPageContent() {
       </section>
 
       <div className="flex flex-col sm:flex-row flex-wrap gap-3 pb-4 sm:pb-0">
-        <button
-          type="button"
-          className="rounded-full bg-ink text-inkDark px-4 py-3 text-sm font-semibold w-full sm:flex-1 text-center smooth-transition hover:scale-[1.02] active:scale-[0.98]"
-          onClick={nextCard}
-        >
-          {isLast ? 'Fertig' : showSolution ? 'Zur nächsten Frage →' : 'Lösung anzeigen'}
-        </button>
+        {(!settings.multipleChoice || showSolution) && (
+          <button
+            type="button"
+            className="rounded-full bg-ink text-inkDark px-4 py-3 text-sm font-semibold w-full sm:flex-1 text-center smooth-transition hover:scale-[1.02] active:scale-[0.98]"
+            onClick={nextCard}
+          >
+            {isLast ? 'Fertig' : showSolution ? 'Zur nächsten Frage →' : 'Lösung anzeigen'}
+          </button>
+        )}
         <button
           type="button"
           className="rounded-full border border-ink/20 px-4 py-3 text-sm w-full sm:w-auto text-center smooth-transition hover:bg-ink/5"

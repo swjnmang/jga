@@ -327,6 +327,20 @@ function SettingsPageContent() {
       </section>
 
       <section className="card-surface rounded-2xl p-5 space-y-3">
+        <h2 className="text-lg font-semibold">Spielmodus</h2>
+        <p className="text-sm text-ink/70">Wähle, ob du mit oder ohne Antwortmöglichkeiten spielen möchtest.</p>
+        <label className="flex items-center gap-3 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={settings.multipleChoice}
+            onChange={(e) => updateSettings({ ...settings, multipleChoice: e.target.checked })}
+            className="h-5 w-5 accent-sky-700"
+          />
+          <span className="text-sm">Multiple-Choice Antworten anzeigen (4 Optionen)</span>
+        </label>
+      </section>
+
+      <section className="card-surface rounded-2xl p-5 space-y-3">
         <div className="space-y-1">
           <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Spotify</p>
           <h2 className="text-lg font-semibold">Spotify Premium verknüpfen</h2>
