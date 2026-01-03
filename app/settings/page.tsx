@@ -293,7 +293,7 @@ function SettingsPageContent() {
                     <div className="ml-8 space-y-2">
                       <label className="flex items-center justify-between text-sm text-ink/70">
                         <div className="flex items-center gap-2">
-                          <span className="uppercase tracking-wide text-[11px]">Gar nicht</span>
+                          <span className="uppercase tracking-wide text-[11px]">Wenig</span>
                           <div className="h-px w-8 bg-ink/20" aria-hidden />
                           <span className="uppercase tracking-wide text-[11px]">Viel</span>
                         </div>
