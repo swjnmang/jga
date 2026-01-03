@@ -33,7 +33,7 @@ const baseCards: Card[] = [
     sources: {
       text: '"Wir schaffen das."'
     },
-    distractors: ['Praeventionskampagne, 1990er, Slogan der Jugendpraevention', 'Rihanna ft. Jay-Z', 'Justin Timberlake']
+    distractors: ['Helmut Kohl, Wiedervereinigung 1990', 'Gerhard Schroeder, Agenda 2010', 'Willy Brandt, Kniefall von Warschau']
   },
   {
     id: 'image-berliner-mauerfall',
@@ -165,7 +165,7 @@ const baseCards: Card[] = [
       text: '"It always seems impossible until itue done."',
       textDe: 'Es erscheint immer unmueglich, bis es getan ist.'
     },
-    distractors: ['Lothar Matthues, der Sky90-Runde als spoettischer Kommentar zur Spielanalyse', 'Michael Jackson', 'Michael Jackson']
+    distractors: ['Martin Luther King Jr., I Have a Dream', 'Mahatma Gandhi, Salzmarsch 1930', 'Desmond Tutu, Wahrheitskommission']
   },
   {
     id: 'country-germany-flag',
@@ -349,7 +349,7 @@ const baseCards: Card[] = [
       text: '"Mr. Gorbachev, tear down this wall!"',
       textDe: 'Herr Gorbatschow, reiueen Sie diese Mauer ein!'
     },
-    distractors: ['Queen', 'Whitney Houston', 'Nirvana']
+    distractors: ['John F. Kennedy, Ich bin ein Berliner', 'Winston Churchill, Iron Curtain Speech', 'Helmut Kohl, Bluehende Landschaften']
   },
   {
     id: 'quote-yes-we-can',
@@ -364,7 +364,7 @@ const baseCards: Card[] = [
       text: '"Yes we can."',
       textDe: 'Ja, wir koennen das.'
     },
-    distractors: ['Juergen Klopp, Interview "ber seinen Trainerjob', 'Bon Jovi', 'Ruf der Montagsdemos "Wir sind das Volk." auf den Straueen von Leipzig und anderen DDR-Stuedten']
+    distractors: ['Bill Clinton, I feel your pain', 'John F. Kennedy, Ask not what your country', 'Franklin D. Roosevelt, The only thing we have to fear']
   },
   {
     id: 'quote-ich-bin-ein-berliner',
@@ -378,7 +378,7 @@ const baseCards: Card[] = [
     sources: {
       text: '"Ich bin ein Berliner."'
     },
-    distractors: ['Roger Murtaugh (Lethal Weapon), Buddy-Cop-Film als resignierter Kommentar', 'Neil Armstrong "Thatue one small step for man"" beim ersten Schritt auf die Mondoberflaeche', 'Queen']
+    distractors: ['Ronald Reagan, Tear down this wall', 'Willy Brandt, Mehr Demokratie wagen', 'Helmut Schmidt, Bundeskanzler 1974']
   },
   {
     id: 'quote-houston-problem',
@@ -393,7 +393,7 @@ const baseCards: Card[] = [
       text: '"Houston, we have a problem!"',
       textDe: 'Houston, wir haben ein Problem!'
     },
-    distractors: ['Bobby McFerrin', 'Michael Jackson', 'Peter Schilling']
+    distractors: ['Neil Armstrong, One small step', 'Buzz Aldrin, Magnificent desolation', 'John Glenn, Godspeed']
   },
   {
     id: 'quote-one-small-step',
@@ -408,7 +408,7 @@ const baseCards: Card[] = [
       text: '"Thatue one small step for man, one giant leap for mankind."',
       textDe: 'Das ist ein kleiner Schritt fuer einen Menschen, aber ein gewaltiger Sprung fuer die Menschheit.'
     },
-    distractors: ['Roger Murtaugh (Lethal Weapon), Buddy-Cop-Film als resignierter Kommentar', 'Neil Armstrong "Thatue one small step for man"" beim ersten Schritt auf die Mondoberflaeche', 'Ronald Reagan, seiner Rede am Brandenburger Tor in Berlin']
+    distractors: ['Juri Gagarin, Die Erde ist blau', 'Buzz Aldrin, Houston the Eagle has landed', 'Alan Shepard, Freedom 7 Mission']
   },
   {
     id: 'quote-fear-itself',
@@ -423,7 +423,7 @@ const baseCards: Card[] = [
       text: '"The only thing we have to fear is fear itself."',
       textDe: 'Wir haben nichts zu fuerchten auueer der Furcht selbst.'
     },
-    distractors: ['Albert Einstein zugeschrieben, oft erzuehlte Anekdote', 'CDU-Wahlkampfslogan, zentraler Claim im Bundestagswahlkampf', 'Britisches Motiv, Propagandaposter zu Beginn des Zweiten Weltkriegs']
+    distractors: ['Winston Churchill, We shall never surrender', 'John F. Kennedy, Ask not', 'Abraham Lincoln, Of the people']
   },
   {
     id: 'quote-stay-hungry',
@@ -438,7 +438,7 @@ const baseCards: Card[] = [
       text: '"Stay hungry, stay foolish."',
       textDe: 'Bleibt hungrig, bleibt tuericht.'
     },
-    distractors: ['Bobby McFerrin', 'Eminem', 'Mark Ronson ft. Bruno Mars']
+    distractors: ['Mark Zuckerberg, Move fast and break things', 'Bill Gates, Most people overestimate', 'Elon Musk, When something is important']
   },
   {
     id: 'quote-carpe-diem',
@@ -453,7 +453,7 @@ const baseCards: Card[] = [
       text: '"Carpe diem. Seize the day, boys."',
       textDe: 'Carpe diem „ Nutzt den Tag, Jungs.'
     },
-    distractors: ['Roger Murtaugh (Lethal Weapon), Buddy-Cop-Film als resignierter Kommentar', 'Jack Swigert/Jim Lovell, Apollo-13-Mission,', 'Queen']
+    distractors: ['Dead Poets Society, O Captain My Captain', 'Good Will Hunting, Its not your fault', 'The Shawshank Redemption, Get busy living']
   },
   {
     id: 'quote-hatte-hatte-fahrradkette',
@@ -465,7 +465,7 @@ const baseCards: Card[] = [
     hint: 'Fuueballweltmeister, TV-Experte.',
     difficulty: 'leicht',
     sources: { text: 'Hoette, huette, Fahrradkette.' },
-    distractors: ['Rihanna ft. Jay-Z', 'Billie Eilish', 'Steve Jobs, Stanford Commencement Speech,']
+    distractors: ['Franz Beckenbauer, Schaun mer mal', 'Andi Moeller, Mailand oder Madrid', 'Juergen Klopp, Normale Eins']
   },
   {
     id: 'quote-mailand-oder-madrid',
@@ -477,7 +477,7 @@ const baseCards: Card[] = [
     hint: 'Dortmunder Offensivspieler.',
     difficulty: 'leicht',
     sources: { text: 'Mailand oder Madrid „ Hauptsache Italien.' },
-    distractors: ['Hape Kerkeling — Buchtitel und gefluegeltes Wort "ber seine Pilgerreise auf dem Jakobsweg', 'Patrick Star (SpongeBob), 2010er, einer Cartoon-Szene als selbstironischer Moment', 'Bobby McFerrin']
+    distractors: ['Lothar Matthaeus, Huette Fahrradkette', 'Giovanni Trapattoni, Ich habe fertig', 'Franz Beckenbauer, Der Kaiser']
   },
   {
     id: 'quote-mr-gorbachev-tear-down-this-wall',
@@ -492,7 +492,7 @@ const baseCards: Card[] = [
       text: 'Mr. Gorbachev, tear down this wall!',
       textDe: 'Herr Gorbatschow, reiueen Sie diese Mauer ein!'
     },
-    distractors: ['Barack Obama, Wahlkampfrede', 'Led Zeppelin', 'Steve Jobs, Stanford Commencement Speech,']
+    distractors: ['John F. Kennedy, Ich bin ein Berliner', 'Winston Churchill, Iron Curtain', 'George H. W. Bush, Berlin Wall 1989']
   },
   {
     id: 'quote-houston-we-have-a-problem',
@@ -507,7 +507,7 @@ const baseCards: Card[] = [
       text: 'Houston, we have a problem!',
       textDe: 'Houston, wir haben ein Problem!'
     },
-    distractors: ['Queen', 'Martin Luther King Jr., seiner Rede beim March on Washington fuer Buergerrechte', 'The Police']
+    distractors: ['Neil Armstrong, One small step', 'Gene Kranz, Failure is not an option', 'Apollo 11, Eagle has landed']
   },
   {
     id: 'quote-ein-kleiner-schritt',
@@ -522,20 +522,9 @@ const baseCards: Card[] = [
       text: "That's one small step for man, one giant leap for mankind.",
       textDe: 'Das ist ein kleiner Schritt fuer einen Menschen, aber ein gewaltiger Sprung fuer die Menschheit.'
     },
-    distractors: ['Guns N\' Roses', 'Neil Armstrong, Mondlandung,', 'Ruf der Montagsdemos "Wir sind das Volk." auf den Straueen von Leipzig und anderen DDR-Stuedten']
+    distractors: ['Juri Gagarin, Poekhali (Los gehts)', 'Buzz Aldrin, Magnificent desolation', 'John Glenn, Zero-G']
   },
-  {
-    id: 'quote-wir-schaffen-das',
-    title: 'Wir schaffen das',
-    category: 'quote',
-    year: 2015,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Angela Merkel "Wir schaffen das." in der Bundespressekonferenz zur Fluechtlingssituation.',
-    hint: 'Bundeskanzlerin zur Fluechtlingskrise.',
-    difficulty: 'leicht',
-    sources: { text: 'Wir schaffen das.' }
-  },
-  {
+{
     id: 'quote-ich-bin-dann-mal-weg',
     title: 'Ich bin dann mal weg',
     category: 'quote',
@@ -544,7 +533,8 @@ const baseCards: Card[] = [
     answer: 'Hape Kerkeling "Ich bin dann mal weg." als Titel seines Jakobsweg-Reiseberichts.',
     hint: 'Autor, Jakobsweg.',
     difficulty: 'leicht',
-    sources: { text: 'Ich bin dann mal weg.' }
+    sources: { text: 'Ich bin dann mal weg.' },
+    distractors: ['Hape Kerkeling, Jakobsweg Buch 2006', 'Thomas Gottschalk, Wetten dass', 'Harald Schmidt, Late Night Show']
   },
   {
     id: 'quote-zwei-seelen-wohnen',
@@ -555,7 +545,8 @@ const baseCards: Card[] = [
     answer: 'Goethe, Faust I (ca. ) "Zwei Seelen wohnen, ach! in meiner Brust." im Monolog des Faust "ber innere Zerrissenheit.',
     hint: 'Deutscher Dichter, Faust.',
     difficulty: 'mittel',
-    sources: { text: 'Zwei Seelen wohnen, ach! in meiner Brust.' }
+    sources: { text: 'Zwei Seelen wohnen, ach! in meiner Brust.' },
+    distractors: ['Goethe, Verweile doch du bist so schoen', 'Schiller, Die Raeuber', 'Goethe, Goetz von Berlichingen']
   },
   {
     id: 'quote-sein-oder-nichtsein',
@@ -569,7 +560,8 @@ const baseCards: Card[] = [
     sources: {
       text: 'To be, or not to be, that is the question.',
       textDe: 'Sein oder Nichtsein, das ist hier die Frage.'
-    }
+    },
+    distractors: ['Shakespeare, Romeo und Julia', 'Shakespeare, Macbeth Tomorrow speech', 'Goethe, Faust Gretchenfrage']
   },
   {
     id: 'quote-ich-denke-also-bin-ich',
@@ -583,7 +575,8 @@ const baseCards: Card[] = [
     sources: {
       text: 'Cogito, ergo sum.',
       textDe: 'Ich denke, also bin ich.'
-    }
+    },
+    distractors: ['Sokrates, Ich weiss dass ich nichts weiss', 'Kant, Kategorischer Imperativ', 'Nietzsche, Gott ist tot']
   },
   {
     id: 'quote-zeit-ist-geld',
@@ -597,7 +590,8 @@ const baseCards: Card[] = [
     sources: {
       text: 'Time is money.',
       textDe: 'Zeit ist Geld.'
-    }
+    },
+    distractors: ['Benjamin Franklin, Early to bed early to rise', 'Adam Smith, Unsichtbare Hand', 'Karl Marx, Opium des Volkes']
   },
   {
     id: 'quote-ich-wei"-dass-ich-nichts-wei"',
@@ -620,7 +614,7 @@ const baseCards: Card[] = [
     hint: 'Deutscher Musiker.',
     difficulty: 'leicht',
     sources: { text: 'Mach dein Ding.' },
-    distractors: ['Luis Fonsi ft. Daddy Yankee', 'Nelson Mandela', 'Eminem']
+    distractors: ['Herbert Groenemeyer, Mensch 2002', 'Herbert Groenemeyer, Bochum 1984', 'Udo Lindenberg, Hinterm Horizont']
   },
   {
     id: 'quote-ich-bin-dumm-und-das-ist-gut-so',
@@ -632,7 +626,7 @@ const baseCards: Card[] = [
     hint: 'Zeichentrick-Seestern.',
     difficulty: 'leicht',
     sources: { text: 'Ich bin dumm, und das ist gut so.' },
-    distractors: ['Billie Eilish', 'Gotye', 'Angela Merkel, der Bundespressekonferenz zur Fluechtlingssituation']
+    distractors: ['SpongeBob, Im ready', 'Homer Simpson, Doh', 'Peter Griffin, Family Guy']
   },
   {
     id: 'quote-ich-habe-einen-traum',
@@ -647,7 +641,7 @@ const baseCards: Card[] = [
       text: 'I have a dream.',
       textDe: 'Ich habe einen Traum.'
     },
-    distractors: ['Ronald Reagan, seiner Rede am Brandenburger Tor in Berlin', 'Eagles', 'Peter Schilling']
+    distractors: ['Malcolm X, By any means necessary', 'Nelson Mandela, Education is the weapon', 'Rosa Parks, Montgomery Bus Boycott']
   },
   {
     id: 'quote-veni-vidi-vici',
@@ -661,7 +655,8 @@ const baseCards: Card[] = [
     sources: {
       text: 'Veni, vidi, vici.',
       textDe: 'Ich kam, sah und siegte.'
-    }
+    },
+    distractors: ['Julius Caesar, Alea iacta est', 'Marcus Aurelius, Memento mori', 'Cicero, O tempora o mores']
   },
   {
     id: 'quote-keine-experimente',
@@ -673,7 +668,7 @@ const baseCards: Card[] = [
     hint: 'Deutsche Nachkriegspolitik.',
     difficulty: 'mittel',
     sources: { text: 'Keine Experimente!' },
-    distractors: ['Neil Armstrong, Mondlandung,', 'Franklin D. Roosevelt, Antrittsrede,', 'Neil Armstrong "Thatue one small step for man"" beim ersten Schritt auf die Mondoberflaeche']
+    distractors: ['Willy Brandt, Mehr Demokratie wagen', 'Helmut Kohl, Geistig-moralische Wende', 'Gerhard Schroeder, Neue Mitte']
   },
   {
     id: 'quote-wir-sind-das-volk',
@@ -685,7 +680,7 @@ const baseCards: Card[] = [
     hint: 'DDR, Wendezeit.',
     difficulty: 'mittel',
     sources: { text: 'Wir sind das Volk.' },
-    distractors: ['John McClane', 'Heinz Schenk/Klaus Lage „ Aelles nur geliehen." als Schlagerzeile und Fernseh-Scherz', 'a-ha']
+    distractors: ['Helmut Kohl, Bluehende Landschaften', 'Willy Brandt, Zusammenwaechst', 'Richard von Weizsaecker, 8. Mai 1985']
   },
   {
     id: 'quote-sag-mir-wo-die-blumen-sind',
@@ -697,7 +692,7 @@ const baseCards: Card[] = [
     hint: 'Antikriegslied.',
     difficulty: 'mittel',
     sources: { text: 'Sag mir, wo die Blumen sind.' },
-    distractors: ['Apollo-13-Besatzung, Funkmeldung nach der Explosion des Sauerstofftanks', 'Neil Armstrong "Thatue one small step for man"" beim ersten Schritt auf die Mondoberflaeche', 'CDU-Wahlkampfslogan, zentraler Claim im Bundestagswahlkampf']
+    distractors: ['Marlene Dietrich, Lili Marleen', 'Joan Baez, We Shall Overcome', 'Bob Dylan, Blowin in the Wind']
   },
   {
     id: 'quote-einmal-im-leben',
@@ -709,7 +704,7 @@ const baseCards: Card[] = [
     hint: 'Trainer, Fuueball.',
     difficulty: 'mittel',
     sources: { text: 'Einmal im Leben muss ich das probieren.' },
-    distractors: ['Aus Dead Poets Society — Ermutigung, den Tag zu nutzen', 'Ed Sheeran', 'Michael Jackson']
+    distractors: ['Juergen Klopp, Vollgasfussball', 'Juergen Klopp, Normal one', 'Pep Guardiola, Tiki-Taka']
   },
   {
     id: 'quote-die-lage-ist-ernst-aber-nicht-hoffnungslos',
@@ -721,7 +716,7 @@ const baseCards: Card[] = [
     hint: 'Kabarett, Wortspiel.',
     difficulty: 'mittel',
     sources: { text: 'Die Lage ist hoffnungslos, aber nicht ernst.' },
-    distractors: ['Hape Kerkeling — Buchtitel und gefluegeltes Wort "ber seine Pilgerreise auf dem Jakobsweg', 'Jack Swigert/Jim Lovell, Apollo-13-Mission,', 'Bon Jovi']
+    distractors: ['Karl Valentin, Muenchen Kabarett', 'Loriot, Das Ei ist hart', 'Heinz Erhardt, Gedichte']
   },
   {
     id: 'quote-zwei-dinge-unendlich',
@@ -732,7 +727,8 @@ const baseCards: Card[] = [
     answer: 'Albert Einstein zugeschrieben "Zwei Dinge sind unendlich: das Universum und die menschliche Dummheit"" als oft erzuehlte Anekdote.',
     hint: 'Physiker, Relativituet.',
     difficulty: 'mittel',
-    sources: { text: 'Zwei Dinge sind unendlich: das Universum und die menschliche Dummheit; aber beim Universum bin ich mir nicht ganz sicher.' }
+    sources: { text: 'Zwei Dinge sind unendlich: das Universum und die menschliche Dummheit; aber beim Universum bin ich mir nicht ganz sicher.' },
+    distractors: ['Albert Einstein, E=mc2', 'Stephen Hawking, Schwarze Loecher', 'Richard Feynman, Quantenphysik']
   },
   {
     id: 'quote-keep-calm',
@@ -747,7 +743,7 @@ const baseCards: Card[] = [
       text: 'Keep calm and carry on.',
       textDe: 'Bleib ruhig und mach weiter.'
     },
-    distractors: ['Albert Einstein zugeschrieben, oft erzuehlte Anekdote', 'CDU-Wahlkampfslogan, zentraler Claim im Bundestagswahlkampf', 'Franklin D. Roosevelt, Antrittsrede,']
+    distractors: ['Winston Churchill, Never surrender', 'FDR, Day of infamy', 'Charles de Gaulle, La France libre']
   },
   {
     id: 'quote-furcht-ist-der-weg-zur-dunklen-seite',
@@ -762,7 +758,7 @@ const baseCards: Card[] = [
       text: 'Fear is the path to the dark side.',
       textDe: 'Furcht ist der Pfad zur dunklen Seite.'
     },
-    distractors: ['Hape Kerkeling — Buchtitel und gefluegeltes Wort "ber seine Pilgerreise auf dem Jakobsweg', 'Nelson Mandela', 'Ronald Reagan, Rede am Brandenburger Tor,']
+    distractors: ['Obi-Wan Kenobi, The Force will be with you', 'Yoda, Do or do not', 'Darth Vader, I am your father']
   },
   {
     id: 'quote-winter-is-coming',
@@ -777,7 +773,7 @@ const baseCards: Card[] = [
       text: 'Winter is coming.',
       textDe: 'Der Winter naht.'
     },
-    distractors: ['Praeventionskampagne, 1990er, Slogan der Jugendpraevention', 'Angela Merkel, der Bundespressekonferenz zur Fluechtlingssituation', 'Herbert Gruenemeyer, 2014, Refrain seines Songs und Lebensmotto auf Konzerten']
+    distractors: ['Game of Thrones, A Lannister always pays', 'Game of Thrones, The North remembers', 'Game of Thrones, Dracarys']
   },
   {
     id: 'quote-valar-morghulis',
@@ -792,7 +788,7 @@ const baseCards: Card[] = [
       text: 'Valar Morghulis.',
       textDe: 'Alle Menschen muessen sterben.'
     },
-    distractors: ['Helene Fischer', 'Angela Merkel, der Bundespressekonferenz zur Fluechtlingssituation', 'Pharrell Williams']
+    distractors: ['Game of Thrones, Valar Dohaeris', 'Game of Thrones, Hold the door', 'Game of Thrones, You know nothing']
   },
   {
     id: 'quote-alles-nur-geliehen',
@@ -804,7 +800,7 @@ const baseCards: Card[] = [
     hint: 'Deutscher Schlager/Witz.',
     difficulty: 'leicht',
     sources: { text: 'Alles nur geliehen.' },
-    distractors: ['Ruf der Montagsdemos "Wir sind das Volk." auf den Straueen von Leipzig und anderen DDR-Stuedten', 'Nirvana', 'Juergen Klopp "Wir muessen immer weiter machen." auf einer Pressekonferenz nach einem Spiel']
+    distractors: ['Heinz Schenk, Blaue Bock', 'Wim Thoelke, Der grosse Preis', 'Frank Elstner, Wetten dass']
   },
   {
     id: 'quote-ich-habe-fertig',
@@ -816,7 +812,7 @@ const baseCards: Card[] = [
     hint: 'Trainer-Pressekonferenz Bayern.',
     difficulty: 'leicht',
     sources: { text: 'Ich habe fertig.' },
-    distractors: ['Madonna', 'Ed Sheeran', 'Lothar Matthues, der Sky90-Runde als spoettischer Kommentar zur Spielanalyse']
+    distractors: ['Lothar Matthaeus, Huette Fahrradkette', 'Andi Moeller, Mailand oder Madrid', 'Franz Beckenbauer, Schaun mer mal']
   },
   {
     id: 'quote-flasche-leer',
@@ -828,7 +824,7 @@ const baseCards: Card[] = [
     hint: 'Trainer-Pressekonferenz.',
     difficulty: 'leicht',
     sources: { text: 'Flasche leer!' },
-    distractors: ['Mark Ronson ft. Bruno Mars', 'Barack Obama, Wahlkampfrede', 'Shawn Mendes & Camila Cabello']
+    distractors: ['Trapattoni, Schwach wie Flasche', 'Trapattoni, Spielen wie Flasche', 'Trapattoni, Was erlauben Strunz']
   },
   {
     id: 'quote-ich-bin-zu-alt-fuer-diesen-mist',
@@ -843,7 +839,7 @@ const baseCards: Card[] = [
       text: "I'm too old for this shit.",
       textDe: 'Ich bin zu alt fuer diesen Mist.'
     },
-    distractors: ['Whitney Houston', 'Madonna', 'Queen']
+    distractors: ['Die Hard, Yippee ki yay', 'Beverly Hills Cop, Axel Foley', 'Lethal Weapon 2, Diplomatic immunity']
   },
   {
     id: 'quote-ich-bin-dein-vater',
@@ -858,7 +854,7 @@ const baseCards: Card[] = [
       text: 'No, I am your father.',
       textDe: 'Nein, ich bin dein Vater.'
     },
-    distractors: ['Journey', 'Steve Jobs, Stanford Commencement Speech,', 'Giovanni Trapattoni, der legendueren Bayern-Pressekonferenz']
+    distractors: ['Star Wars, May the Force be with you', 'Star Wars, I have a bad feeling', 'Star Wars, Do or do not']
   },
   {
     id: 'quote-immer-weiter',
@@ -870,7 +866,7 @@ const baseCards: Card[] = [
     hint: 'Trainer, Bundesliga.',
     difficulty: 'leicht',
     sources: { text: 'Wir muessen immer weiter machen.' },
-    distractors: ['OneRepublic', 'Whitney Houston', 'Lothar Matthues, der Sky90-Runde als spoettischer Kommentar zur Spielanalyse']
+    distractors: ['Juergen Klopp, Vollgas', 'Juergen Klopp, Mentalitaet', 'Juergen Klopp, Heavy Metal Football']
   },
   {
     id: 'quote-keine-macht-den-drogen',
@@ -882,7 +878,7 @@ const baseCards: Card[] = [
     hint: 'Jugendkampagne.',
     difficulty: 'mittel',
     sources: { text: 'Keine Macht den Drogen.' },
-    distractors: ['Journey', 'Shawn Mendes & Camila Cabello', 'Karl Valentin zugeschrieben, kabarettistischer Wortdreher']
+    distractors: ['Aids-Kampagne, Gib Aids keine Chance', 'Rauchfrei-Kampagne', 'Dont drink and drive']
   },
   {
     id: 'quote-die-rente-ist-sicher',
@@ -894,7 +890,7 @@ const baseCards: Card[] = [
     hint: 'Bundesarbeitsminister.',
     difficulty: 'mittel',
     sources: { text: 'Die Rente ist sicher.' },
-    distractors: ['Praeventionskampagne, 1990er, Slogan der Jugendpraevention', 'Britney Spears', 'Peter Schilling']
+    distractors: ['Helmut Kohl, Bluehende Landschaften', 'Gerhard Schroeder, Agenda 2010', 'Angela Merkel, Wir schaffen das']
   },
   {
     id: 'quote-ich-bin-dann-mal-weg-zitat',
@@ -906,7 +902,7 @@ const baseCards: Card[] = [
     hint: 'Comedian, Jakobsweg.',
     difficulty: 'leicht',
     sources: { text: 'Ich bin dann mal weg.' },
-    distractors: ['Luis Fonsi ft. Daddy Yankee', 'Juergen Klopp "Wir muessen immer weiter machen." auf einer Pressekonferenz nach einem Spiel', 'Aus Dead Poets Society — Ermutigung, den Tag zu nutzen']
+    distractors: ['Hape Kerkeling, Jakobsweg', 'Harald Schmidt, Late Night', 'Stefan Raab, TV Total']
   },
   {
     id: 'flag-de',
@@ -1181,7 +1177,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"May the Force be with you."',
       textDe: 'Moege die Macht mit dir sein.'
-    }
+    },
+    distractors: ['Star Wars, I am your father', 'Star Wars, Do or do not', 'Star Wars, The Force will be with you']
   },
   {
     id: 'quote-im-gonna-make-him',
@@ -1195,7 +1192,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"I\'m gonna make him an offer he can\'t refuse."',
       textDe: 'Ich werde ihm ein Angebot machen, das er nicht ablehnen kann.'
-    }
+    },
+    distractors: ['Der Pate, Leave the gun take cannoli', 'Der Pate, Keep your friends close', 'Scarface, Say hello to my friend']
   },
   {
     id: 'quote-heres-looking-at-you',
@@ -1209,7 +1207,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"Here\'s looking at you, kid."',
       textDe: 'Ich seh dir in die Augen, Kleines.'
-    }
+    },
+    distractors: ['Casablanca, Well always have Paris', 'Casablanca, Play it Sam', 'Casablanca, Round up usual suspects']
   },
   {
     id: 'quote-life-is-like-a-box',
@@ -1223,7 +1222,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"Life is like a box of chocolates. You never know what you\'re gonna get."',
       textDe: 'Das Leben ist wie eine Schachtel Pralinen, man weiue nie, was man kriegt.'
-    }
+    },
+    distractors: ['Forrest Gump, Run Forrest run', 'Forrest Gump, Stupid is as stupid does', 'Forrest Gump, My mama always said']
   },
   {
     id: 'quote-ill-be-back',
@@ -1237,7 +1237,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"I\'ll be back."',
       textDe: 'Ich komme wieder.'
-    }
+    },
+    distractors: ['Terminator, Hasta la vista baby', 'Die Hard, Yippee ki yay', 'Predator, Get to the chopper']
   },
   {
     id: 'quote-you-talking-to-me',
@@ -1251,7 +1252,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"You talking to me?"',
       textDe: 'Redest du mit mir?'
-    }
+    },
+    distractors: ['Goodfellas, Funny how', 'Raging Bull, You never got me down', 'Casino, Robert De Niro']
   },
   {
     id: 'quote-i-see-dead-people',
@@ -1265,7 +1267,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"I see dead people."',
       textDe: 'Ich sehe tote Menschen.'
-    }
+    },
+    distractors: ['The Sixth Sense, Bruce Willis', 'The Others, Nicole Kidman', 'Ghost, Demi Moore Patrick Swayze']
   },
   {
     id: 'quote-frankly-my-dear',
@@ -1279,23 +1282,10 @@ const baseCards: Card[] = [
     sources: {
       text: '"Frankly, my dear, I don\'t give a damn."',
       textDe: 'Ehrlich gesagt, meine Liebe, ist mir das verdammt egal.'
-    }
+    },
+    distractors: ['Vom Winde verweht, Tomorrow is another day', 'Casablanca, Heres looking at you', 'Gone with the Wind, Scarlett']
   },
-  {
-    id: 'quote-houston-we-have-a-problem',
-    title: 'Houston, we have a problem',
-    category: 'quote',
-    year: 1995,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    'answer': 'Apollo 13 (Film) – Jim Lovell (Tom Hanks).',
-    hint: 'Raumfahrtdrama basierend auf wahren Ereignissen.',
-    difficulty: 'mittel',
-    sources: {
-      text: '"Houston, we have a problem."',
-      textDe: 'Houston, wir haben ein Problem.'
-    }
-  },
-  {
+{
     id: 'quote-you-cant-handle-the-truth',
     title: 'You can\'t handle the truth!',
     category: 'quote',
@@ -1307,7 +1297,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"You can\'t handle the truth!"',
       textDe: 'Sie vertragen die Wahrheit doch gar nicht!'
-    }
+    },
+    distractors: ['A Few Good Men, You want me on that wall', 'The Shining, Heres Johnny', 'Full Metal Jacket, Sir yes sir']
   },
   {
     id: 'quote-nobody-puts-baby',
@@ -1321,23 +1312,10 @@ const baseCards: Card[] = [
     sources: {
       text: '"Nobody puts Baby in a corner."',
       textDe: 'Niemand steckt Baby in eine Ecke.'
-    }
+    },
+    distractors: ['Dirty Dancing, Time of my life', 'Footloose, Lets dance', 'Flashdance, What a feeling']
   },
-  {
-    id: 'quote-winter-is-coming',
-    title: 'Winter is coming',
-    category: 'quote',
-    year: 2011,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    'answer': 'Game of Thrones – Motto der Stark-Familie.',
-    hint: 'Fantasy-Serie basierend auf Buechern von George R. R. Martin.',
-    difficulty: 'leicht',
-    sources: {
-      text: '"Winter is coming."',
-      textDe: 'Der Winter naht.'
-    }
-  },
-  {
+{
     id: 'quote-i-am-the-one-who-knocks',
     title: 'I am the one who knocks',
     category: 'quote',
@@ -1349,7 +1327,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"I am not in danger, Skyler. I am the danger. I am the one who knocks!"',
       textDe: 'Ich bin nicht in Gefahr, Skyler. Ich bin die Gefahr. Ich bin der, der anklopft!'
-    }
+    },
+    distractors: ['Breaking Bad, Say my name', 'Breaking Bad, Yeah science', 'Breaking Bad, I am the danger']
   },
   {
     id: 'quote-thats-what-she-said',
@@ -1363,7 +1342,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"That\'s what she said!"',
       textDe: 'Das hat sie gesagt!'
-    }
+    },
+    distractors: ['The Office, Michael Scott', 'Friends, How you doin', 'Seinfeld, No soup for you']
   },
   {
     id: 'quote-how-you-doin',
@@ -1377,7 +1357,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"How you doin\'?"',
       textDe: 'Wie geht\'s dir?'
-    }
+    },
+    distractors: ['Friends, We were on a break', 'Friends, Pivot', 'Friends, Smelly cat']
   },
   {
     id: 'quote-im-the-king-of-the-world',
@@ -1391,7 +1372,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"I\'m the king of the world!"',
       textDe: 'Ich bin der Koenig der Welt!'
-    }
+    },
+    distractors: ['Titanic, Ill never let go', 'Titanic, Draw me like one of your', 'Titanic, Near far wherever']
   },
   {
     id: 'quote-i-am-your-father',
@@ -1405,7 +1387,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"No, I am your father."',
       textDe: 'Nein, ich bin dein Vater.'
-    }
+    },
+    distractors: ['Star Wars, The Force is strong', 'Star Wars, Strike me down', 'Star Wars, Search your feelings']
   },
   {
     id: 'quote-why-so-serious',
@@ -1419,7 +1402,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"Why so serious?"',
       textDe: 'Warum so ernst?'
-    }
+    },
+    distractors: ['The Dark Knight, Agent of chaos', 'The Dark Knight, Hero we deserve', 'Batman Begins, Im Batman']
   },
   {
     id: 'quote-keep-your-friends-close',
@@ -1433,7 +1417,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"Keep your friends close, but your enemies closer."',
       textDe: 'Halte deine Freunde nah, aber deine Feinde noch naeher.'
-    }
+    },
+    distractors: ['Der Pate II, Fredo youre nothing', 'Der Pate, Make him an offer', 'Goodfellas, Funny how']
   },
   {
     id: 'quote-say-hello-to-my-little-friend',
@@ -1447,7 +1432,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"Say hello to my little friend!"',
       textDe: 'Sag hallo zu meinem kleinen Freund!'
-    }
+    },
+    distractors: ['Scarface, The world is yours', 'Scarface, First you get money', 'Carlitos Way, Al Pacino']
   },
   {
     id: 'quote-i-feel-the-need',
@@ -1461,7 +1447,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"I feel the need... the need for speed!"',
       textDe: 'Ich brauche... ich brauche Geschwindigkeit!'
-    }
+    },
+    distractors: ['Top Gun, Need for speed', 'Top Gun, You can be my wingman', 'Top Gun, Danger Zone']
   },
   {
     id: 'quote-you-had-me-at-hello',
@@ -1475,7 +1462,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"You had me at hello."',
       textDe: 'Du hattest mich bei Hallo.'
-    }
+    },
+    distractors: ['Jerry Maguire, Show me the money', 'Jerry Maguire, You complete me', 'Jerry Maguire, Help me help you']
   },
   {
     id: 'quote-there-is-no-spoon',
@@ -1489,7 +1477,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"There is no spoon."',
       textDe: 'Es gibt keinen Loeffel.'
-    }
+    },
+    distractors: ['The Matrix, What is the Matrix', 'The Matrix, Red pill or blue pill', 'The Matrix, I know kung fu']
   },
   {
     id: 'quote-im-walking-here',
@@ -1503,7 +1492,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"I\'m walking here!"',
       textDe: 'Ich gehe hier!'
-    }
+    },
+    distractors: ['Midnight Cowboy, Dustin Hoffman', 'Taxi Driver, You talking to me', 'Mean Streets, Robert De Niro']
   },
   {
     id: 'quote-show-me-the-money',
@@ -1517,7 +1507,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"Show me the money!"',
       textDe: 'Zeig mir das Geld!'
-    }
+    },
+    distractors: ['Jerry Maguire, You had me at hello', 'Jerry Maguire, You complete me', 'Wall Street, Greed is good']
   },
   {
     id: 'quote-yippee-ki-yay',
@@ -1532,7 +1523,7 @@ const baseCards: Card[] = [
       text: '"Yippee-ki-yay, motherfucker!"',
       textDe: 'Yippee-ki-yay, Schweinebacke!'
     },
-    distractors: ['Neil Armstrong "Thatue one small step for man"" beim ersten Schritt auf die Mondoberflaeche', 'Hape Kerkeling — Buchtitel und gefluegeltes Wort "ber seine Pilgerreise auf dem Jakobsweg', 'Heinz Schenk/Klaus Lage „ Aelles nur geliehen." als Schlagerzeile und Fernseh-Scherz']
+    distractors: ['Die Hard, Welcome to the party', 'Die Hard, Now I have machine gun', 'Lethal Weapon, Too old for this']
   },
   {
     id: 'quote-you-shall-not-pass',
@@ -1546,7 +1537,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"You shall not pass!"',
       textDe: 'Du kommst hier nicht vorbei!'
-    }
+    },
+    distractors: ['LOTR, My precious', 'LOTR, One ring to rule them all', 'LOTR, You have my sword']
   },
   {
     id: 'quote-my-precious',
@@ -1560,7 +1552,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"My precious!"',
       textDe: 'Mein Schatz!'
-    }
+    },
+    distractors: ['LOTR, Filthy hobbitses', 'LOTR, We wants it', 'LOTR, Tricksy hobbitses']
   },
   {
     id: 'quote-i-volunteer-as-tribute',
@@ -1574,7 +1567,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"I volunteer as tribute!"',
       textDe: 'Ich melde mich freiwillig als Tribut!'
-    }
+    },
+    distractors: ['Hunger Games, May the odds be ever', 'Hunger Games, Fire is catching', 'Hunger Games, Real or not real']
   },
   {
     id: 'quote-always',
@@ -1588,7 +1582,8 @@ const baseCards: Card[] = [
     sources: {
       text: 'Aelways."',
       textDe: 'Immer.'
-    }
+    },
+    distractors: ['Harry Potter, After all this time', 'Harry Potter, Turn to page 394', 'Harry Potter, Expecto patronum']
   },
   {
     id: 'quote-just-keep-swimming',
@@ -1602,7 +1597,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"Just keep swimming, just keep swimming."',
       textDe: 'Einfach schwimmen, einfach schwimmen.'
-    }
+    },
+    distractors: ['Findet Nemo, Fish are friends not food', 'Findet Nemo, P Sherman 42 Wallaby', 'Findet Nemo, Mine mine mine']
   },
   {
     id: 'quote-to-infinity-and-beyond',
@@ -1616,7 +1612,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"To infinity and beyond!"',
       textDe: 'Bis zur Unendlichkeit und noch viel weiter!'
-    }
+    },
+    distractors: ['Toy Story, Youve got a friend in me', 'Toy Story, Theres a snake in my boot', 'Toy Story, Woody Buzz']
   },
   {
     id: 'quote-run-forrest-run',
@@ -1630,7 +1627,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"Run, Forrest, run!"',
       textDe: 'Lauf, Forrest, lauf!'
-    }
+    },
+    distractors: ['Forrest Gump, Mama always said', 'Forrest Gump, Stupid is as stupid does', 'Forrest Gump, Box of chocolates']
   },
   {
     id: 'quote-im-gonna-live-forever',
@@ -1644,7 +1642,8 @@ const baseCards: Card[] = [
     sources: {
       text: '"I\'m gonna live forever, I\'m gonna learn how to fly."',
       textDe: 'Ich werde ewig leben, ich werde lernen zu fliegen.'
-    }
+    },
+    distractors: ['Fame, Remember my name', 'Flashdance, What a feeling', 'Footloose, Kenny Loggins']
   },
   {
     id: 'quote-what-is-love',
@@ -1659,7 +1658,7 @@ const baseCards: Card[] = [
       text: '"What is love? Baby don\'t hurt me, don\'t hurt me, no more."',
       textDe: 'Was ist Liebe? Baby, tu mir nicht weh, tu mir nicht weh, nicht mehr.'
     },
-    distractors: ['Nelson Mandela', 'Roger Murtaugh (Lethal Weapon), Buddy-Cop-Film als resignierter Kommentar', 'Darth Vader, Duell auf Cloud City (Star Wars Episode V)']
+    distractors: ['Haddaway, 1993', 'Snap, Rhythm is a dancer', 'Culture Beat, Mr Vain']
   },
   {
     id: 'quote-sweet-child-o-mine',
@@ -1674,7 +1673,7 @@ const baseCards: Card[] = [
       text: '"Where do we go now?"',
       textDe: 'Wo gehen wir jetzt hin?'
     },
-    distractors: ['The Killers', 'Led Zeppelin', 'The Beatles']
+    distractors: ['Guns N Roses, November Rain', 'Guns N Roses, Paradise City', 'Guns N Roses, Welcome to Jungle']
   },
   {
     id: 'quote-i-want-to-break-free',
@@ -1689,7 +1688,7 @@ const baseCards: Card[] = [
       text: '"I want to break free."',
       textDe: 'Ich will frei sein.'
     },
-    distractors: ['Neil Armstrong, Mondlandung,', 'Britney Spears', 'Yoda, Star Wars: Episode I als Warnung an Anakin']
+    distractors: ['Queen, We Will Rock You', 'Queen, Bohemian Rhapsody', 'Queen, We Are Champions']
   },
   {
     id: 'quote-dont-stop-believin',
@@ -1704,7 +1703,7 @@ const baseCards: Card[] = [
       text: '"Don\'t stop believin\', hold on to that feelin\'."',
       textDe: 'Hoer nicht auf zu glauben, halt an diesem Gefuehl fest.'
     },
-    distractors: ['Neil Armstrong, Mondlandung,', 'Spice Girls', 'Giovanni Trapattoni, der legendueren Bayern-Pressekonferenz']
+    distractors: ['Journey, Separate Ways', 'Journey, Open Arms', 'Journey, Wheel in the Sky']
   },
   {
     id: 'quote-imagine-all-the-people',
@@ -1719,7 +1718,7 @@ const baseCards: Card[] = [
       text: '"Imagine all the people, living life in peace."',
       textDe: 'Stell dir vor, alle Menschen leben in Frieden.'
     },
-    distractors: ['Queen', 'Led Zeppelin', 'Eagles']
+    distractors: ['John Lennon, Imagine', 'The Beatles, Let it be', 'The Beatles, Hey Jude']
   },
   {
     id: 'quote-we-are-the-champions',
@@ -1734,7 +1733,7 @@ const baseCards: Card[] = [
       text: '"We are the champions, my friends."',
       textDe: 'Wir sind die Meister, meine Freunde.'
     },
-    distractors: ['The Police', 'Pete Seeger/Marlen Dietrich, 1950er, Antikriegslied in Konzerten', 'Whitney Houston']
+    distractors: ['Queen, We Will Rock You', 'Queen, Dont Stop Me Now', 'Queen, Somebody to Love']
   },
   {
     id: 'quote-every-breath-you-take',
@@ -1749,7 +1748,7 @@ const baseCards: Card[] = [
       text: '"Every breath you take, every move you make, I\'ll be watching you."',
       textDe: 'Jeden Atemzug, den du nimmst, jede Bewegung, die du machst, ich werde dich beobachten.'
     },
-    distractors: ['Martin Luther King Jr., seiner Rede beim March on Washington fuer Buergerrechte', 'The Killers', 'Nirvana']
+    distractors: ['The Police, Roxanne', 'The Police, Message in Bottle', 'The Police, Dont Stand So Close']
   },
   {
     id: 'quote-smells-like-teen-spirit-lyric',
@@ -1764,7 +1763,7 @@ const baseCards: Card[] = [
       text: '"Here we are now, entertain us."',
       textDe: 'Hier sind wir jetzt, unterhalte uns.'
     },
-    distractors: ['Lil Nas X', 'Whitney Houston', 'The Weeknd']
+    distractors: ['Nirvana, Come As You Are', 'Nirvana, Heart-Shaped Box', 'Nirvana, Lithium']
   },
   {
     id: 'quote-livin-on-a-prayer',
@@ -1779,7 +1778,7 @@ const baseCards: Card[] = [
       text: '"Whoa, we\'re halfway there, whoa-oh, livin\' on a prayer."',
       textDe: 'Whoa, wir sind auf halbem Weg, whoa-oh, leben auf einem Gebet.'
     },
-    distractors: ['Britney Spears', 'Britney Spears', 'Norbert Bluem, einer Pressekonferenz zur Rentenreform']
+    distractors: ['Bon Jovi, You Give Love Bad Name', 'Bon Jovi, Wanted Dead or Alive', 'Bon Jovi, Its My Life']
   },
   {
     id: 'quote-lose-yourself',
@@ -1794,7 +1793,7 @@ const baseCards: Card[] = [
       text: '"You only get one shot, do not miss your chance to blow."',
       textDe: 'Du hast nur eine Chance, verpasse sie nicht.'
     },
-    distractors: ['Game of Thrones, Motto des Hauses Stark in der Pilotfolge', 'Angela Merkel, der Bundespressekonferenz zur Fluechtlingssituation', 'Ed Sheeran']
+    distractors: ['Eminem, The Real Slim Shady', 'Eminem, Stan', 'Eminem, Without Me']
   },
   {
     id: 'quote-hey-jude',
@@ -1809,7 +1808,7 @@ const baseCards: Card[] = [
       text: '"Hey Jude, don\'t make it bad, take a sad song and make it better."',
       textDe: 'Hey Jude, mach es nicht schlecht, nimm ein trauriges Lied und mach es besser.'
     },
-    distractors: ['Queen', 'Madonna', 'Roger Murtaugh (Lethal Weapon), Buddy-Cop-Film als resignierter Kommentar']
+    distractors: ['The Beatles, Let It Be', 'The Beatles, Yesterday', 'The Beatles, Help']
   },
   {
     id: 'quote-hotel-california',
@@ -1824,7 +1823,7 @@ const baseCards: Card[] = [
       text: '"You can check out any time you like, but you can never leave."',
       textDe: 'Du kannst auschecken, wann du willst, aber du kannst niemals gehen.'
     },
-    distractors: ['Apollo-13-Besatzung, Funkmeldung nach der Explosion des Sauerstofftanks', 'Bobby McFerrin', 'Heinz Schenk/Klaus Lage „ Aelles nur geliehen." als Schlagerzeile und Fernseh-Scherz']
+    distractors: ['Eagles, Take It Easy', 'Eagles, Desperado', 'Fleetwood Mac, Dreams']
   },
   {
     id: 'quote-stairway-to-heaven',
@@ -1839,7 +1838,7 @@ const baseCards: Card[] = [
       text: 'Aend she\'s buying a stairway to heaven."',
       textDe: 'Und sie kauft eine Treppe zum Himmel.'
     },
-    distractors: ['Guns N\' Roses', 'Queen', 'Ruf der Montagsdemos "Wir sind das Volk." auf den Straueen von Leipzig und anderen DDR-Stuedten']
+    distractors: ['Led Zeppelin, Whole Lotta Love', 'Led Zeppelin, Kashmir', 'Deep Purple, Smoke on Water']
   },
   {
     id: 'quote-somebody-to-love',
@@ -1854,7 +1853,7 @@ const baseCards: Card[] = [
       text: '"Can anybody find me somebody to love?"',
       textDe: 'Kann mir jemand jemanden finden, den ich lieben kann?'
     },
-    distractors: ['The Police', 'Guns N\' Roses', 'Whitney Houston']
+    distractors: ['Queen, Bohemian Rhapsody', 'Queen, We Are Champions', 'Queen, Dont Stop Me Now']
   },
   {
     id: 'quote-billie-jean-lyric',
@@ -1869,7 +1868,7 @@ const baseCards: Card[] = [
       text: '"Billie Jean is not my lover, she\'s just a girl who claims that I am the one."',
       textDe: 'Billie Jean ist nicht meine Geliebte, sie ist nur ein Maedchen, das behauptet, ich sei der Eine.'
     },
-    distractors: ['Madonna', 'Nena', 'Martin Luther King Jr., seiner Rede beim March on Washington fuer Buergerrechte']
+    distractors: ['Michael Jackson, Thriller', 'Michael Jackson, Beat It', 'Michael Jackson, Smooth Criminal']
   },
   {
     id: 'quote-thriller',
@@ -1884,7 +1883,7 @@ const baseCards: Card[] = [
       text: '"\'Cause this is thriller, thriller night."',
       textDe: 'Denn das ist Thriller, Thriller-Nacht.'
     },
-    distractors: ['Karl Valentin zugeschrieben, kabarettistischer Wortdreher', 'Madonna', 'Jack Swigert/Jim Lovell, Apollo-13-Mission,']
+    distractors: ['Michael Jackson, Billie Jean', 'Michael Jackson, Bad', 'Michael Jackson, Black or White']
   },
   {
     id: 'quote-like-a-virgin',
@@ -1899,7 +1898,7 @@ const baseCards: Card[] = [
       text: '"Like a virgin, touched for the very first time."',
       textDe: 'Wie eine Jungfrau, zum allerersten Mal beruehrt.'
     },
-    distractors: ['Angela Merkel, der Bundespressekonferenz zur Fluechtlingssituation', 'Smash Mouth', 'Ronald Reagan, Rede am Brandenburger Tor,']
+    distractors: ['Madonna, Material Girl', 'Madonna, Like a Prayer', 'Madonna, Vogue']
   },
   {
     id: 'quote-i-will-always-love-you',
@@ -1914,7 +1913,7 @@ const baseCards: Card[] = [
       text: 'Aend I will always love you."',
       textDe: 'Und ich werde dich immer lieben.'
     },
-    distractors: ['Praeventionskampagne, 1990er, Slogan der Jugendpraevention', 'Journey', 'Coldplay']
+    distractors: ['Whitney Houston, I Wanna Dance', 'Mariah Carey, Hero', 'Celine Dion, My Heart Will Go On']
   },
   {
     id: 'quote-rolling-in-the-deep-lyric',
@@ -1929,7 +1928,7 @@ const baseCards: Card[] = [
       text: '"We could have had it all, rolling in the deep."',
       textDe: 'Wir haetten alles haben koennen, rolling in the deep.'
     },
-    distractors: ['Imagine Dragons', 'Angela Merkel, Pressekonferenz zur Fluechtlingspolitik am', 'Billie Eilish']
+    distractors: ['Adele, Someone Like You', 'Adele, Set Fire to Rain', 'Adele, Hello']
   },
   {
     id: 'quote-somebody-that-i-used-to-know',
@@ -1944,7 +1943,7 @@ const baseCards: Card[] = [
       text: '"Now you\'re just somebody that I used to know."',
       textDe: 'Jetzt bist du nur noch jemand, den ich kannte.'
     },
-    distractors: ['Game of Thrones, Motto des Hauses Stark in der Pilotfolge', 'Britney Spears', 'Shawn Mendes & Camila Cabello']
+    distractors: ['Gotye, 2011', 'Fun, We Are Young', 'Passenger, Let Her Go']
   },
   {
     id: 'quote-happy',
@@ -1959,7 +1958,7 @@ const baseCards: Card[] = [
       text: '"Because I\'m happy, clap along if you feel like a room without a roof."',
       textDe: 'Weil ich gluecklich bin, klatsch mit, wenn du dich fuehlst wie ein Raum ohne Dach.'
     },
-    distractors: ['Imagine Dragons', 'Giovanni Trapattoni, der legendueren Bayern-Pressekonferenz', 'Nirvana']
+    distractors: ['Pharrell Williams, 2013', 'Mark Ronson, Uptown Funk', 'Justin Timberlake, Cant Stop Feeling']
   },
   {
     id: 'quote-uptown-funk',
@@ -1974,7 +1973,7 @@ const baseCards: Card[] = [
       text: '"Don\'t believe me, just watch."',
       textDe: 'Glaub mir nicht, schau einfach zu.'
     },
-    distractors: ['Hape Kerkeling — Buchtitel und gefluegeltes Wort "ber seine Pilgerreise auf dem Jakobsweg', 'Shawn Mendes & Camila Cabello', 'Lothar Matthues, der Sky90-Runde als spoettischer Kommentar zur Spielanalyse']
+    distractors: ['Mark Ronson ft Bruno Mars', 'Bruno Mars, Just the Way You Are', 'Bruno Mars, Locked Out of Heaven']
   },
   {
     id: 'quote-shape-of-you',
@@ -1989,7 +1988,7 @@ const baseCards: Card[] = [
       text: '"I\'m in love with the shape of you."',
       textDe: 'Ich bin verliebt in deine Form.'
     },
-    distractors: ['Luis Fonsi ft. Daddy Yankee', 'Angela Merkel, der Bundespressekonferenz zur Fluechtlingssituation', 'Adele']
+    distractors: ['Ed Sheeran, Thinking Out Loud', 'Ed Sheeran, Perfect', 'Ed Sheeran, Photograph']
   },
   {
     id: 'quote-thinking-out-loud',
@@ -2004,7 +2003,7 @@ const baseCards: Card[] = [
       text: '"When your legs don\'t work like they used to before."',
       textDe: 'Wenn deine Beine nicht mehr so funktionieren wie frueher.'
     },
-    distractors: ['Patrick Star (SpongeBob), 2010er, einer Cartoon-Szene als selbstironischer Moment', 'Game of Thrones, Gruueformel der Faceless Men in Braavos', 'Gotye']
+    distractors: ['Ed Sheeran, Shape of You', 'Ed Sheeran, Photograph', 'John Legend, All of Me']
   },
   {
     id: 'quote-despacito',
@@ -2019,7 +2018,7 @@ const baseCards: Card[] = [
       text: '"Despacito, quiero respirar tu cuello despacito."',
       textDe: 'Langsam, ich will langsam deinen Hals atmen.'
     },
-    distractors: ['Smash Mouth', 'Britney Spears', 'Spice Girls']
+    distractors: ['Luis Fonsi, 2017', 'Daddy Yankee, Gasolina', 'Shakira, Waka Waka']
   },
   {
     id: 'quote-old-town-road',
@@ -2034,7 +2033,7 @@ const baseCards: Card[] = [
       text: '"I\'m gonna take my horse to the old town road."',
       textDe: 'Ich nehme mein Pferd zur alten Stadtstrauee.'
     },
-    distractors: ['Angela Merkel, Pressekonferenz zur Fluechtlingspolitik am', 'Game of Thrones, Motto des Hauses Stark in der Pilotfolge', 'Justin Timberlake']
+    distractors: ['Lil Nas X, 2019', 'Post Malone, Rockstar', 'Travis Scott, SICKO MODE']
   },
   {
     id: 'quote-blinding-lights',
@@ -2049,7 +2048,7 @@ const baseCards: Card[] = [
       text: '"I said, ooh, I\'m blinded by the lights."',
       textDe: 'Ich sagte, ooh, ich bin geblendet von den Lichtern.'
     },
-    distractors: ['Idina Menzel', 'Ed Sheeran', 'Lothar Matthues, der Sky90-Runde als spoettischer Kommentar zur Spielanalyse']
+    distractors: ['The Weeknd, Starboy', 'The Weeknd, Cant Feel My Face', 'The Weeknd, Save Your Tears']
   },
   {
     id: 'quote-bad-guy',
@@ -2064,7 +2063,7 @@ const baseCards: Card[] = [
       text: '"I\'m the bad guy, duh."',
       textDe: 'Ich bin der Boesewicht, duh.'
     },
-    distractors: ['Giovanni Trapattoni, derselben Bayern-Pressekonferenz als Kritik am Team', 'Heinz Schenk/Klaus Lage „ Aelles nur geliehen." als Schlagerzeile und Fernseh-Scherz', 'Steve Jobs, Stanford Commencement Speech,']
+    distractors: ['Billie Eilish, when party is over', 'Billie Eilish, everything i wanted', 'Billie Eilish, ocean eyes']
   },
   {
     id: 'quote-senorita',
@@ -2079,7 +2078,7 @@ const baseCards: Card[] = [
       text: '"I love it when you call me señorita."',
       textDe: 'Ich liebe es, wenn du mich Señorita nennst.'
     },
-    distractors: ['Eminem', 'Giovanni Trapattoni, der legendueren Bayern-Pressekonferenz', 'Heinz Schenk/Klaus Lage „ Aelles nur geliehen." als Schlagerzeile und Fernseh-Scherz']
+    distractors: ['Shawn Mendes Camila Cabello', 'Shawn Mendes, Stitches', 'Camila Cabello, Havana']
   },
   {
     id: 'quote-believer',
@@ -2094,7 +2093,7 @@ const baseCards: Card[] = [
       text: '"Pain! You made me a, you made me a believer, believer."',
       textDe: 'Schmerz! Du hast mich zu einem, du hast mich zu einem Glaeubigen gemacht.'
     },
-    distractors: ['Spice Girls', 'Herbert Gruenemeyer, 2014, Refrain seines Songs und Lebensmotto auf Konzerten', 'Barack Obama, Wahlkampfrede']
+    distractors: ['Imagine Dragons, Radioactive', 'Imagine Dragons, Thunder', 'Imagine Dragons, Demons']
   },
   {
     id: 'quote-radioactive',
@@ -2109,7 +2108,7 @@ const baseCards: Card[] = [
       text: '"I\'m radioactive, radioactive."',
       textDe: 'Ich bin radioaktiv, radioaktiv.'
     },
-    distractors: ['Giovanni Trapattoni, derselben Bayern-Pressekonferenz als Kritik am Team', 'Shawn Mendes & Camila Cabello', 'Game of Thrones, Gruueformel der Faceless Men in Braavos']
+    distractors: ['Imagine Dragons, Believer', 'Imagine Dragons, Its Time', 'Imagine Dragons, Demons']
   },
   {
     id: 'quote-cant-stop-the-feeling',
@@ -2124,7 +2123,7 @@ const baseCards: Card[] = [
       text: '"I got that sunshine in my pocket."',
       textDe: 'Ich habe den Sonnenschein in meiner Tasche.'
     },
-    distractors: ['Imagine Dragons', 'Ed Sheeran', 'Juergen Klopp, Interview "ber seinen Trainerjob']
+    distractors: ['Justin Timberlake, Mirrors', 'Justin Timberlake, SexyBack', 'Justin Timberlake, Suit and Tie']
   },
   {
     id: 'quote-counting-stars',
@@ -2139,7 +2138,7 @@ const baseCards: Card[] = [
       text: '"Lately I\'ve been, I\'ve been losing sleep, dreaming about the things that we could be."',
       textDe: 'In letzter Zeit habe ich Schlaf verloren, traeumend von den Dingen, die wir sein koennten.'
     },
-    distractors: ['Giovanni Trapattoni, derselben Bayern-Pressekonferenz als Kritik am Team', 'Barack Obama, Wahlkampfrede', 'Imagine Dragons']
+    distractors: ['OneRepublic, Apologize', 'OneRepublic, Good Life', 'OneRepublic, Secrets']
   },
   {
     id: 'quote-let-it-go',
@@ -2154,7 +2153,7 @@ const baseCards: Card[] = [
       text: '"Let it go, let it go, can\'t hold it back anymore."',
       textDe: 'Lass es los, lass es los, kann es nicht mehr zurueckhalten.'
     },
-    distractors: ['Nelson Mandela', 'Barack Obama, Wahlkampfrede', 'Juergen Klopp "Wir muessen immer weiter machen." auf einer Pressekonferenz nach einem Spiel']
+    distractors: ['Frozen, Do You Want Build Snowman', 'Frozen, For First Time in Forever', 'Moana, How Far Ill Go']
   },
   {
     id: 'quote-wannabe',
@@ -2169,7 +2168,7 @@ const baseCards: Card[] = [
       text: '"If you wanna be my lover, you gotta get with my friends."',
       textDe: 'Wenn du mein Liebhaber sein willst, musst du dich mit meinen Freunden verstehen.'
     },
-    distractors: ['Queen', 'Aus Dead Poets Society — Ermutigung, den Tag zu nutzen', 'Juergen Klopp "Wir muessen immer weiter machen." auf einer Pressekonferenz nach einem Spiel']
+    distractors: ['Spice Girls, Spice Up Your Life', 'Spice Girls, 2 Become 1', 'Backstreet Boys, I Want It That Way']
   },
   {
     id: 'quote-baby-one-more-time',
@@ -2184,7 +2183,7 @@ const baseCards: Card[] = [
       text: '"Hit me baby one more time."',
       textDe: 'Triff mich, Baby, noch ein Mal.'
     },
-    distractors: ['Roger Murtaugh (Lethal Weapon), Buddy-Cop-Film als resignierter Kommentar', 'Game of Thrones, Gruueformel der Faceless Men in Braavos', 'Michael Jackson']
+    distractors: ['Britney Spears, Oops I Did It Again', 'Britney Spears, Toxic', 'Christina Aguilera, Genie in Bottle']
   },
   {
     id: 'quote-toxic',
@@ -2199,7 +2198,7 @@ const baseCards: Card[] = [
       text: '"With a taste of your lips, I\'m on a ride."',
       textDe: 'Mit einem Geschmack deiner Lippen bin ich auf einer Fahrt.'
     },
-    distractors: ['The Police', 'Juergen Klopp "Wir muessen immer weiter machen." auf einer Pressekonferenz nach einem Spiel', 'Bobby McFerrin']
+    distractors: ['Britney Spears, Baby One More Time', 'Britney Spears, Oops I Did It Again', 'Britney Spears, Womanizer']
   },
   {
     id: 'quote-umbrella',
@@ -2214,7 +2213,7 @@ const baseCards: Card[] = [
       text: 'Uender my umbrella, ella, ella, eh, eh, eh."',
       textDe: 'Unter meinem Regenschirm, ella, ella, eh, eh, eh.'
     },
-    distractors: ['Heinz Schenk/Klaus Lage „ Aelles nur geliehen." als Schlagerzeile und Fernseh-Scherz', 'Ruf der Montagsdemos "Wir sind das Volk." auf den Straueen von Leipzig und anderen DDR-Stuedten', 'Aus Dead Poets Society — Ermutigung, den Tag zu nutzen']
+    distractors: ['Rihanna, Diamonds', 'Rihanna, We Found Love', 'Rihanna, Only Girl']
   },
   {
     id: 'quote-viva-la-vida',
@@ -2229,7 +2228,7 @@ const baseCards: Card[] = [
       text: '"I used to rule the world."',
       textDe: 'Ich herrschte einst ueber die Welt.'
     },
-    distractors: ['The Weeknd', 'Idina Menzel', 'Imagine Dragons']
+    distractors: ['Coldplay, Yellow', 'Coldplay, The Scientist', 'Coldplay, Fix You']
   },
   {
     id: 'quote-99-luftballons',
@@ -2244,7 +2243,7 @@ const baseCards: Card[] = [
       text: '"99 Luftballons auf ihrem Weg zum Horizont."',
       textDe: '99 Luftballons auf ihrem Weg zum Horizont.'
     },
-    distractors: ['Apollo-13-Besatzung, Funkmeldung nach der Explosion des Sauerstofftanks', 'John Lennon', 'Ronald Reagan, Rede am Brandenburger Tor,']
+    distractors: ['Nena, Irgendwie irgendwo', 'Nena, Nur getraeumt', 'Nena, Leuchtturm']
   },
   {
     id: 'quote-major-tom',
@@ -2259,7 +2258,7 @@ const baseCards: Card[] = [
       text: '"Voellig losgeloest von der Erde."',
       textDe: 'Voellig losgeloest von der Erde.'
     },
-    distractors: ['Madonna', 'Eagles', 'The Police']
+    distractors: ['Peter Schilling, Terra Titanic', 'David Bowie, Space Oddity', 'Nena, 99 Luftballons']
   },
   {
     id: 'quote-atemlos',
@@ -2274,7 +2273,7 @@ const baseCards: Card[] = [
       text: 'Aetemlos durch die Nacht."',
       textDe: 'Atemlos durch die Nacht.'
     },
-    distractors: ['Eminem', 'OneRepublic', 'Herbert Gruenemeyer, 2014, Refrain seines Songs und Lebensmotto auf Konzerten']
+    distractors: ['Helene Fischer, 2013', 'Andrea Berg, Du hast mich belogen', 'Matthias Reim, Verdammt ich lieb dich']
   },
   {
     id: 'quote-dont-worry-be-happy',
@@ -2289,7 +2288,7 @@ const baseCards: Card[] = [
       text: '"Don\'t worry, be happy."',
       textDe: 'Mach dir keine Sorgen, sei gluecklich.'
     },
-    distractors: ['The Police', 'Ronald Reagan, seiner Rede am Brandenburger Tor in Berlin', 'Giovanni Trapattoni, derselben Bayern-Pressekonferenz als Kritik am Team']
+    distractors: ['Bobby McFerrin, 1988', 'Louis Armstrong, What Wonderful World', 'Bill Withers, Lean on Me']
   },
   {
     id: 'quote-all-star',
@@ -2304,7 +2303,7 @@ const baseCards: Card[] = [
       text: '"Somebody once told me the world is gonna roll me."',
       textDe: 'Jemand hat mir mal gesagt, die Welt wird mich ueberrollen.'
     },
-    distractors: ['a-ha', 'Giovanni Trapattoni, derselben Bayern-Pressekonferenz als Kritik am Team', 'Luis Fonsi ft. Daddy Yankee']
+    distractors: ['Smash Mouth, Im a Believer', 'Smash Mouth, Walkin on the Sun', 'Sugar Ray, Fly']
   },
   {
     id: 'quote-mr-brightside',
@@ -2319,7 +2318,7 @@ const baseCards: Card[] = [
       text: '"It was only a kiss, how did it end up like this?"',
       textDe: 'Es war nur ein Kuss, wie endete es so?'
     },
-    distractors: ['Whitney Houston', 'Hape Kerkeling — Buchtitel und gefluegeltes Wort "ber seine Pilgerreise auf dem Jakobsweg', 'Guns N\' Roses']
+    distractors: ['The Killers, Somebody Told Me', 'The Killers, Human', 'The Killers, When You Were Young']
   },
   {
     id: 'quote-take-on-me',
@@ -2334,7 +2333,7 @@ const baseCards: Card[] = [
       text: '"Take on me, take me on."',
       textDe: 'Nimm mich an, nimm mich mit.'
     },
-    distractors: ['Queen', 'Ronald Reagan, Rede am Brandenburger Tor,', 'Bon Jovi']
+    distractors: ['a-ha, The Sun Always Shines', 'a-ha, Hunting High and Low', 'Tears for Fears, Shout']
   }
 ];
 
