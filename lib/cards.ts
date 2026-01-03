@@ -26,8 +26,8 @@ const baseCards: Card[] = [
     title: 'Wir schaffen das',
     category: 'quote',
     year: 2015,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Angela Merkel, Pressekonferenz zur Fl"chtlingspolitik am 31.08.2015.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Angela Merkel, Pressekonferenz zur Fluechtlingspolitik am 31.08..',
     hint: 'Bundeskanzlerin zur Migrationslage.',
     difficulty: 'leicht',
     sources: {
@@ -156,13 +156,13 @@ const baseCards: Card[] = [
     title: 'It always seems impossible',
     category: 'quote',
     year: 2001,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Nelson Mandela.',
-    hint: 'S"dafrika, Vers"hnung.',
+    hint: 'Soedafrika, Versuehnung.',
     difficulty: 'mittel',
     sources: {
-      text: '"It always seems impossible until itü done."',
-      textDe: 'Es erscheint immer unm"glich, bis es getan ist.'
+      text: '"It always seems impossible until itue done."',
+      textDe: 'Es erscheint immer unmueglich, bis es getan ist.'
     }
   },
   {
@@ -339,13 +339,13 @@ const baseCards: Card[] = [
     title: 'Tear down this wall',
     category: 'quote',
     year: 1987,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Ronald Reagan, Rede am Brandenburger Tor, 12.06.1987.',
-    hint: 'US-Präsident fordert Öffnung der Mauer.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Ronald Reagan, Rede am Brandenburger Tor, 12.06..',
+    hint: 'US-Praesident fordert Oeffnung der Mauer.',
     difficulty: 'mittel',
     sources: {
       text: '"Mr. Gorbachev, tear down this wall!"',
-      textDe: 'Herr Gorbatschow, reiüen Sie diese Mauer ein!'
+      textDe: 'Herr Gorbatschow, reiueen Sie diese Mauer ein!'
     }
   },
   {
@@ -353,13 +353,13 @@ const baseCards: Card[] = [
     title: 'Yes we can',
     category: 'quote',
     year: 2008,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Barack Obama, Wahlkampfrede 2008.',
-    hint: 'Slogan einer US-Prüidentschaftskampagne.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Barack Obama, Wahlkampfrede.',
+    hint: 'Slogan einer US-Praesidentschaftskampagne.',
     difficulty: 'leicht',
     sources: {
       text: '"Yes we can."',
-      textDe: 'Ja, wir können das.'
+      textDe: 'Ja, wir koennen das.'
     }
   },
   {
@@ -367,8 +367,8 @@ const baseCards: Card[] = [
     title: 'Ich bin ein Berliner',
     category: 'quote',
     year: 1963,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'John F. Kennedy, Rede in Berlin, 26.06.1963.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'John F. Kennedy, Rede in Berlin, 26.06..',
     hint: 'Kaltes Kriegs-Statement.',
     difficulty: 'mittel',
     sources: {
@@ -380,8 +380,8 @@ const baseCards: Card[] = [
     title: "Houston, we've had a problem",
     category: 'quote',
     year: 1970,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Jack Swigert/Jim Lovell, Apollo-13-Mission, 13.04.1970.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Jack Swigert/Jim Lovell, Apollo-13-Mission, 13.04..',
     hint: 'Raumfahrt-Notfall.',
     difficulty: 'schwer',
     sources: {
@@ -394,13 +394,13 @@ const baseCards: Card[] = [
     title: 'One small step',
     category: 'quote',
     year: 1969,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Neil Armstrong, Mondlandung, 20.07.1969.',
-    hint: 'Erster Fuäbdruck auf dem Mond.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Neil Armstrong, Mondlandung, 20.07..',
+    hint: 'Erster Fuaebdruck auf dem Mond.',
     difficulty: 'leicht',
     sources: {
-      text: '"Thatü one small step for man, one giant leap for mankind."',
-      textDe: 'Das ist ein kleiner Schritt für einen Menschen, aber ein gewaltiger Sprung für die Menschheit.'
+      text: '"Thatue one small step for man, one giant leap for mankind."',
+      textDe: 'Das ist ein kleiner Schritt fuer einen Menschen, aber ein gewaltiger Sprung fuer die Menschheit.'
     }
   },
   {
@@ -408,13 +408,13 @@ const baseCards: Card[] = [
     title: 'Fear itself',
     category: 'quote',
     year: 1933,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Franklin D. Roosevelt, Antrittsrede, 04.03.1933.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Franklin D. Roosevelt, Antrittsrede, 04.03..',
     hint: 'Beginn des New Deal.',
     difficulty: 'mittel',
     sources: {
       text: '"The only thing we have to fear is fear itself."',
-      textDe: 'Wir haben nichts zu fürchten auüer der Furcht selbst.'
+      textDe: 'Wir haben nichts zu fuerchten auueer der Furcht selbst.'
     }
   },
   {
@@ -422,13 +422,13 @@ const baseCards: Card[] = [
     title: 'Stay hungry, stay foolish',
     category: 'quote',
     year: 2005,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Steve Jobs, Stanford Commencement Speech, 12.06.2005.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Steve Jobs, Stanford Commencement Speech, 12.06..',
     hint: 'Abschlussrede an einer US-Eliteuni.',
     difficulty: 'leicht',
     sources: {
       text: '"Stay hungry, stay foolish."',
-      textDe: 'Bleibt hungrig, bleibt t"richt.'
+      textDe: 'Bleibt hungrig, bleibt tuericht.'
     }
   },
   {
@@ -436,7 +436,7 @@ const baseCards: Card[] = [
     title: 'Carpe Diem',
     category: 'quote',
     year: 1989,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Aus Dead Poets Society — Ermutigung, den Tag zu nutzen.',
     hint: 'Literaturlehrer inspiriert seine Klasse.',
     difficulty: 'mittel',
@@ -450,19 +450,19 @@ const baseCards: Card[] = [
     title: 'H"tte, h"tte, Fahrradkette',
     category: 'quote',
     year: 2013,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Lothar Matthüs, 2013 "H"tte, h"tte, Fahrradkette." in der Sky90-Runde als spöttischer Kommentar zur Spielanalyse.',
-    hint: 'Fu"ballweltmeister, TV-Experte.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Lothar Matthues "Hoette, huette, Fahrradkette." in der Sky90-Runde als spoettischer Kommentar zur Spielanalyse.',
+    hint: 'Fuueballweltmeister, TV-Experte.',
     difficulty: 'leicht',
-    sources: { text: 'H"tte, h"tte, Fahrradkette.' }
+    sources: { text: 'Hoette, huette, Fahrradkette.' }
   },
   {
     id: 'quote-mailand-oder-madrid',
     title: 'Mailand oder Madrid',
     category: 'quote',
     year: 1998,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Andreas M"ller, 1998 "Mailand oder Madrid „ Hauptsache Italien." in einem TV-Interview nach einer internationalen Auslosung.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Andreas Moeller "Mailand oder Madrid „ Hauptsache Italien." in einem TV-Interview nach einer internationalen Auslosung.',
     hint: 'Dortmunder Offensivspieler.',
     difficulty: 'leicht',
     sources: { text: 'Mailand oder Madrid „ Hauptsache Italien.' }
@@ -472,13 +472,13 @@ const baseCards: Card[] = [
     title: 'Tear down this wall',
     category: 'quote',
     year: 1987,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Ronald Reagan, 1987 "Mr. Gorbachev, tear down this wall!" in seiner Rede am Brandenburger Tor in Berlin.',
-    hint: 'US-Prüident, Brandenburger Tor.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Ronald Reagan "Mr. Gorbachev, tear down this wall!" in seiner Rede am Brandenburger Tor in Berlin.',
+    hint: 'US-Prueident, Brandenburger Tor.',
     difficulty: 'mittel',
     sources: {
       text: 'Mr. Gorbachev, tear down this wall!',
-      textDe: 'Herr Gorbatschow, rei"en Sie diese Mauer ein!'
+      textDe: 'Herr Gorbatschow, reiueen Sie diese Mauer ein!'
     }
   },
   {
@@ -486,8 +486,8 @@ const baseCards: Card[] = [
     title: 'Houston, we have a problem',
     category: 'quote',
     year: 1970,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Apollo-13-Besatzung, 1970 "Houston, we have a problem." als Funkmeldung nach der Explosion des Sauerstofftanks.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Apollo-13-Besatzung "Houston, we have a problem." als Funkmeldung nach der Explosion des Sauerstofftanks.',
     hint: 'NASA, Raumfahrt.',
     difficulty: 'mittel',
     sources: {
@@ -500,13 +500,13 @@ const baseCards: Card[] = [
     title: 'One small step',
     category: 'quote',
     year: 1969,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Neil Armstrong, 1969 "Thatü one small step for (a) man"" beim ersten Schritt auf die Mondoberfläche.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Neil Armstrong "Thatue one small step for (a) man"" beim ersten Schritt auf die Mondoberflaeche.',
     hint: 'Mondlandung.',
     difficulty: 'leicht',
     sources: {
       text: "That's one small step for man, one giant leap for mankind.",
-      textDe: 'Das ist ein kleiner Schritt für einen Menschen, aber ein gewaltiger Sprung für die Menschheit.'
+      textDe: 'Das ist ein kleiner Schritt fuer einen Menschen, aber ein gewaltiger Sprung fuer die Menschheit.'
     }
   },
   {
@@ -514,9 +514,9 @@ const baseCards: Card[] = [
     title: 'Wir schaffen das',
     category: 'quote',
     year: 2015,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Angela Merkel, 2015 "Wir schaffen das." in der Bundespressekonferenz zur Fl"chtlingssituation.',
-    hint: 'Bundeskanzlerin zur Fl"chtlingskrise.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Angela Merkel "Wir schaffen das." in der Bundespressekonferenz zur Fluechtlingssituation.',
+    hint: 'Bundeskanzlerin zur Fluechtlingskrise.',
     difficulty: 'leicht',
     sources: { text: 'Wir schaffen das.' }
   },
@@ -525,8 +525,8 @@ const baseCards: Card[] = [
     title: 'Ich bin dann mal weg',
     category: 'quote',
     year: 2006,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Hape Kerkeling, 2006 "Ich bin dann mal weg." als Titel seines Jakobsweg-Reiseberichts.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Hape Kerkeling "Ich bin dann mal weg." als Titel seines Jakobsweg-Reiseberichts.',
     hint: 'Autor, Jakobsweg.',
     difficulty: 'leicht',
     sources: { text: 'Ich bin dann mal weg.' }
@@ -536,8 +536,8 @@ const baseCards: Card[] = [
     title: 'Zwei Seelen wohnen',
     category: 'quote',
     year: 1808,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Goethe, Faust I (ca. 1808) "Zwei Seelen wohnen, ach! in meiner Brust." im Monolog des Faust "ber innere Zerrissenheit.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Goethe, Faust I (ca. ) "Zwei Seelen wohnen, ach! in meiner Brust." im Monolog des Faust "ber innere Zerrissenheit.',
     hint: 'Deutscher Dichter, Faust.',
     difficulty: 'mittel',
     sources: { text: 'Zwei Seelen wohnen, ach! in meiner Brust.' }
@@ -547,8 +547,8 @@ const baseCards: Card[] = [
     title: 'Sein oder Nichtsein',
     category: 'quote',
     year: 1600,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'William Shakespeare, Hamlet (ca. 1600) "To be, or not to be"" als Auftakt von Hamlets ber"hmtem Selbstgespr"ch.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'William Shakespeare, Hamlet (ca. ) "To be, or not to be"" als Auftakt von Hamlets beruehmtem Selbstgespruech.',
     hint: 'Englischer Dramatiker.',
     difficulty: 'mittel',
     sources: {
@@ -561,9 +561,9 @@ const baseCards: Card[] = [
     title: 'Cogito ergo sum',
     category: 'quote',
     year: 1637,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Ren„ Descartes, 1637 "Cogito, ergo sum." im "Discours de la m"thode" als Grundsatz des Rationalismus.',
-    hint: 'Franzüischer Philosoph.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Ren„ Descartes "Cogito, ergo sum." im "Discours de la muethode" als Grundsatz des Rationalismus.',
+    hint: 'Franzueischer Philosoph.',
     difficulty: 'mittel',
     sources: {
       text: 'Cogito, ergo sum.',
@@ -575,8 +575,8 @@ const baseCards: Card[] = [
     title: 'Zeit ist Geld',
     category: 'quote',
     year: 1748,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Benjamin Franklin, 1748 "Time is money." in Ädvice to a Young Tradesman" als Ratschlag für Geschäftsleute.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Benjamin Franklin "Time is money." in Aedvice to a Young Tradesman" als Ratschlag fuer Geschaeftsleute.',
     hint: 'US-Staatsmann, Erfinder.',
     difficulty: 'leicht',
     sources: {
@@ -589,8 +589,8 @@ const baseCards: Card[] = [
     title: 'Sokrates Nichtwissen',
     category: 'quote',
     year: -400,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Sokrates zugeschrieben "Ich wei", dass ich nichts wei"." aus Platons Äpologie" als Bekenntnis philosophischer Demut.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Sokrates zugeschrieben "Ich wei", dass ich nichts wei"." aus Platons Aepologie" als Bekenntnis philosophischer Demut.',
     hint: 'Antike Philosophie.',
     difficulty: 'mittel',
     sources: { text: 'Ich wei", dass ich nichts wei".' }
@@ -600,8 +600,8 @@ const baseCards: Card[] = [
     title: 'Mach dein Ding',
     category: 'quote',
     year: 2010,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Herbert Gr"nemeyer, 2014 "Mach dein Ding." als Refrain seines Songs und Lebensmotto auf Konzerten.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Herbert Gruenemeyer, 2014 "Mach dein Ding." als Refrain seines Songs und Lebensmotto auf Konzerten.',
     hint: 'Deutscher Musiker.',
     difficulty: 'leicht',
     sources: { text: 'Mach dein Ding.' }
@@ -611,7 +611,7 @@ const baseCards: Card[] = [
     title: 'Ich bin dumm',
     category: 'quote',
     year: 2010,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Patrick Star (SpongeBob), 2010er "Ich bin dumm, und das ist gut so." in einer Cartoon-Szene als selbstironischer Moment.',
     hint: 'Zeichentrick-Seestern.',
     difficulty: 'leicht',
@@ -622,9 +622,9 @@ const baseCards: Card[] = [
     title: 'I have a dream',
     category: 'quote',
     year: 1963,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Martin Luther King Jr., 1963 "I have a dream." in seiner Rede beim March on Washington für Bürgerrechte.',
-    hint: 'US-B"rgerrechtler.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Martin Luther King Jr. "I have a dream." in seiner Rede beim March on Washington fuer Buergerrechte.',
+    hint: 'US-Boergerrechtler.',
     difficulty: 'leicht',
     sources: {
       text: 'I have a dream.',
@@ -636,9 +636,9 @@ const baseCards: Card[] = [
     title: 'Veni vidi vici',
     category: 'quote',
     year: -47,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Julius Caesar, 47 v. Chr. "Veni, vidi, vici." im Bericht an den Senat nach dem Sieg bei Zela.',
-    hint: 'R"mischer Feldherr.',
+    hint: 'Roemischer Feldherr.',
     difficulty: 'mittel',
     sources: {
       text: 'Veni, vidi, vici.',
@@ -650,8 +650,8 @@ const baseCards: Card[] = [
     title: 'Keine Experimente',
     category: 'quote',
     year: 1957,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'CDU-Wahlkampfslogan, 1957 "Keine Experimente!" als zentraler Claim im Bundestagswahlkampf.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'CDU-Wahlkampfslogan "Keine Experimente!" als zentraler Claim im Bundestagswahlkampf.',
     hint: 'Deutsche Nachkriegspolitik.',
     difficulty: 'mittel',
     sources: { text: 'Keine Experimente!' }
@@ -661,8 +661,8 @@ const baseCards: Card[] = [
     title: 'Wir sind das Volk',
     category: 'quote',
     year: 1989,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Ruf der Montagsdemos, 1989 "Wir sind das Volk." auf den Stra"en von Leipzig und anderen DDR-St"dten.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Ruf der Montagsdemos "Wir sind das Volk." auf den Straueen von Leipzig und anderen DDR-Stuedten.',
     hint: 'DDR, Wendezeit.',
     difficulty: 'mittel',
     sources: { text: 'Wir sind das Volk.' }
@@ -672,7 +672,7 @@ const baseCards: Card[] = [
     title: 'Wo sind die Blumen',
     category: 'quote',
     year: 1955,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Pete Seeger/Marlen Dietrich, 1950er "Sag mir, wo die Blumen sind"" als Antikriegslied in Konzerten.',
     hint: 'Antikriegslied.',
     difficulty: 'mittel',
@@ -683,9 +683,9 @@ const baseCards: Card[] = [
     title: 'Einmal im Leben',
     category: 'quote',
     year: 2006,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Jürgen Klopp, 2006 "Ich dachte, einmal im Leben muss ich das probieren." im Interview "ber seinen Trainerjob.',
-    hint: 'Trainer, Fu"ball.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Juergen Klopp "Ich dachte, einmal im Leben muss ich das probieren." im Interview "ber seinen Trainerjob.',
+    hint: 'Trainer, Fuueball.',
     difficulty: 'mittel',
     sources: { text: 'Einmal im Leben muss ich das probieren.' }
   },
@@ -694,7 +694,7 @@ const baseCards: Card[] = [
     title: 'Ernst aber nicht hoffnungslos',
     category: 'quote',
     year: 1980,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Karl Valentin zugeschrieben "Die Lage ist hoffnungslos, aber nicht ernst." als kabarettistischer Wortdreher.',
     hint: 'Kabarett, Wortspiel.',
     difficulty: 'mittel',
@@ -705,9 +705,9 @@ const baseCards: Card[] = [
     title: 'Zwei Dinge sind unendlich',
     category: 'quote',
     year: 1920,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Albert Einstein zugeschrieben "Zwei Dinge sind unendlich: das Universum und die menschliche Dummheit"" als oft erz"hlte Anekdote.',
-    hint: 'Physiker, Relativit"t.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Albert Einstein zugeschrieben "Zwei Dinge sind unendlich: das Universum und die menschliche Dummheit"" als oft erzuehlte Anekdote.',
+    hint: 'Physiker, Relativituet.',
     difficulty: 'mittel',
     sources: { text: 'Zwei Dinge sind unendlich: das Universum und die menschliche Dummheit; aber beim Universum bin ich mir nicht ganz sicher.' }
   },
@@ -716,8 +716,8 @@ const baseCards: Card[] = [
     title: 'Keep calm',
     category: 'quote',
     year: 1939,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Britisches Motiv, 1939 "Keep calm and carry on." als Propagandaposter zu Beginn des Zweiten Weltkriegs.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Britisches Motiv "Keep calm and carry on." als Propagandaposter zu Beginn des Zweiten Weltkriegs.',
     hint: 'Britische Propaganda WWII.',
     difficulty: 'leicht',
     sources: {
@@ -730,8 +730,8 @@ const baseCards: Card[] = [
     title: 'Furcht zur dunklen Seite',
     category: 'quote',
     year: 1999,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Yoda, 1999 "Furcht ist der Pfad zur dunklen Seite." in Star Wars: Episode I als Warnung an Anakin.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Yoda "Furcht ist der Pfad zur dunklen Seite." in Star Wars: Episode I als Warnung an Anakin.',
     hint: 'Star Wars Jedi-Meister.',
     difficulty: 'leicht',
     sources: {
@@ -744,8 +744,8 @@ const baseCards: Card[] = [
     title: 'Winter is coming',
     category: 'quote',
     year: 2011,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Game of Thrones, 2011 "Winter is coming." als Motto des Hauses Stark in der Pilotfolge.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Game of Thrones "Winter is coming." als Motto des Hauses Stark in der Pilotfolge.',
     hint: 'Haus Stark.',
     difficulty: 'leicht',
     sources: {
@@ -758,13 +758,13 @@ const baseCards: Card[] = [
     title: 'Valar Morghulis',
     category: 'quote',
     year: 2012,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Game of Thrones, 2012 "Valar Morghulis." als Gru"formel der Faceless Men in Braavos.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Game of Thrones "Valar Morghulis." als Gruueformel der Faceless Men in Braavos.',
     hint: 'Alte Sprache, jeder muss sterben.',
     difficulty: 'mittel',
     sources: {
       text: 'Valar Morghulis.',
-      textDe: 'Alle Menschen müssen sterben.'
+      textDe: 'Alle Menschen muessen sterben.'
     }
   },
   {
@@ -772,8 +772,8 @@ const baseCards: Card[] = [
     title: 'Alles nur geliehen',
     category: 'quote',
     year: 1998,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Heinz Schenk/Klaus Lage „ Älles nur geliehen." als Schlagerzeile und Fernseh-Scherz.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Heinz Schenk/Klaus Lage „ Aelles nur geliehen." als Schlagerzeile und Fernseh-Scherz.',
     hint: 'Deutscher Schlager/Witz.',
     difficulty: 'leicht',
     sources: { text: 'Alles nur geliehen.' }
@@ -783,8 +783,8 @@ const baseCards: Card[] = [
     title: 'Ich habe fertig',
     category: 'quote',
     year: 1998,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Giovanni Trapattoni, 1998 "Ich habe fertig." in der legend"ren Bayern-Pressekonferenz.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Giovanni Trapattoni "Ich habe fertig." in der legendueren Bayern-Pressekonferenz.',
     hint: 'Trainer-Pressekonferenz Bayern.',
     difficulty: 'leicht',
     sources: { text: 'Ich habe fertig.' }
@@ -794,8 +794,8 @@ const baseCards: Card[] = [
     title: 'Flasche leer',
     category: 'quote',
     year: 1998,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Giovanni Trapattoni, 1998 "Flasche leer!" in derselben Bayern-Pressekonferenz als Kritik am Team.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Giovanni Trapattoni "Flasche leer!" in derselben Bayern-Pressekonferenz als Kritik am Team.',
     hint: 'Trainer-Pressekonferenz.',
     difficulty: 'leicht',
     sources: { text: 'Flasche leer!' }
@@ -805,13 +805,13 @@ const baseCards: Card[] = [
     title: 'Zu alt für diesen Mist',
     category: 'quote',
     year: 1987,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Roger Murtaugh (Lethal Weapon), 1987 "I"m too old for this"" im Buddy-Cop-Film als resignierter Kommentar.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Roger Murtaugh (Lethal Weapon) "Ioem too old for this"" im Buddy-Cop-Film als resignierter Kommentar.',
     hint: 'Actionfilm Buddy-Cop.',
     difficulty: 'leicht',
     sources: {
       text: "I'm too old for this shit.",
-      textDe: 'Ich bin zu alt für diesen Mist.'
+      textDe: 'Ich bin zu alt fuer diesen Mist.'
     }
   },
   {
@@ -819,8 +819,8 @@ const baseCards: Card[] = [
     title: 'Ich bin dein Vater',
     category: 'quote',
     year: 1980,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Darth Vader, 1980 "No, I am your father." im Duell auf Cloud City (Star Wars Episode V).',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Darth Vader "No, I am your father." im Duell auf Cloud City (Star Wars Episode V).',
     hint: 'Star Wars Episode V.',
     difficulty: 'leicht',
     sources: {
@@ -833,19 +833,19 @@ const baseCards: Card[] = [
     title: 'Immer weiter',
     category: 'quote',
     year: 2014,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Jürgen Klopp, 2014 "Wir müssen immer weiter machen." auf einer Pressekonferenz nach einem Spiel.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Juergen Klopp "Wir muessen immer weiter machen." auf einer Pressekonferenz nach einem Spiel.',
     hint: 'Trainer, Bundesliga.',
     difficulty: 'leicht',
-    sources: { text: 'Wir müssen immer weiter machen.' }
+    sources: { text: 'Wir muessen immer weiter machen.' }
   },
   {
     id: 'quote-keine-macht-den-drogen',
     title: 'Keine Macht den Drogen',
     category: 'quote',
     year: 1990,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Präventionskampagne, 1990er "Keine Macht den Drogen." als Slogan der Jugendprävention.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Praeventionskampagne, 1990er "Keine Macht den Drogen." als Slogan der Jugendpraevention.',
     hint: 'Jugendkampagne.',
     difficulty: 'mittel',
     sources: { text: 'Keine Macht den Drogen.' }
@@ -855,8 +855,8 @@ const baseCards: Card[] = [
     title: 'Die Rente ist sicher',
     category: 'quote',
     year: 1986,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Norbert Bl"m "Die Rente ist sicher." in einer Pressekonferenz zur Rentenreform.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Norbert Bluem "Die Rente ist sicher." in einer Pressekonferenz zur Rentenreform.',
     hint: 'Bundesarbeitsminister.',
     difficulty: 'mittel',
     sources: { text: 'Die Rente ist sicher.' }
@@ -866,8 +866,8 @@ const baseCards: Card[] = [
     title: 'Ich bin dann mal weg (Zitat)',
     category: 'quote',
     year: 2006,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Hape Kerkeling — Buchtitel und gefl"geltes Wort "ber seine Pilgerreise auf dem Jakobsweg.',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Hape Kerkeling — Buchtitel und gefluegeltes Wort "ber seine Pilgerreise auf dem Jakobsweg.',
     hint: 'Comedian, Jakobsweg.',
     difficulty: 'leicht',
     sources: { text: 'Ich bin dann mal weg.' }
@@ -1138,13 +1138,13 @@ const baseCards: Card[] = [
     title: 'May the Force be with you',
     category: 'quote',
     year: 1977,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Star Wars: Episode IV – Ikonischer Satz der Saga.',
     hint: 'Science-Fiction-Klassiker.',
     difficulty: 'leicht',
     sources: {
       text: '"May the Force be with you."',
-      textDe: 'Möge die Macht mit dir sein.'
+      textDe: 'Moege die Macht mit dir sein.'
     }
   },
   {
@@ -1152,7 +1152,7 @@ const baseCards: Card[] = [
     title: 'I\'m gonna make him an offer',
     category: 'quote',
     year: 1972,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Der Pate (The Godfather) – Don Vito Corleone.',
     hint: 'Mafia-Klassiker von Francis Ford Coppola.',
     difficulty: 'mittel',
@@ -1166,7 +1166,7 @@ const baseCards: Card[] = [
     title: 'Here\'s looking at you, kid',
     category: 'quote',
     year: 1942,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Casablanca – Rick Blaine (Humphrey Bogart).',
     hint: 'Romantischer Kriegsfilm.',
     difficulty: 'schwer',
@@ -1180,13 +1180,13 @@ const baseCards: Card[] = [
     title: 'Life is like a box of chocolates',
     category: 'quote',
     year: 1994,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Forrest Gump – Forrest Gump (Tom Hanks).',
-    hint: 'Oscar-prämiertes Drama.',
+    hint: 'Oscar-praemiertes Drama.',
     difficulty: 'leicht',
     sources: {
       text: '"Life is like a box of chocolates. You never know what you\'re gonna get."',
-      textDe: 'Das Leben ist wie eine Schachtel Pralinen, man weiü nie, was man kriegt.'
+      textDe: 'Das Leben ist wie eine Schachtel Pralinen, man weiue nie, was man kriegt.'
     }
   },
   {
@@ -1194,7 +1194,7 @@ const baseCards: Card[] = [
     title: 'I\'ll be back',
     category: 'quote',
     year: 1984,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Terminator – T-800 (Arnold Schwarzenegger).',
     hint: 'Science-Fiction-Action mit Zeitreisen.',
     difficulty: 'leicht',
@@ -1208,7 +1208,7 @@ const baseCards: Card[] = [
     title: 'You talking to me?',
     category: 'quote',
     year: 1976,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Taxi Driver – Travis Bickle (Robert De Niro).',
     hint: 'Psychologisches Drama von Martin Scorsese.',
     difficulty: 'mittel',
@@ -1222,9 +1222,9 @@ const baseCards: Card[] = [
     title: 'I see dead people',
     category: 'quote',
     year: 1999,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'The Sixth Sense – Cole Sear (Haley Joel Osment).',
-    hint: 'Übernatürlicher Thriller mit Twist.',
+    hint: 'Uebernatuerlicher Thriller mit Twist.',
     difficulty: 'leicht',
     sources: {
       text: '"I see dead people."',
@@ -1236,9 +1236,9 @@ const baseCards: Card[] = [
     title: 'Frankly, my dear',
     category: 'quote',
     year: 1939,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Vom Winde verweht – Rhett Butler (Clark Gable).',
-    hint: 'Historisches Epos um den amerikanischen Bürgerkrieg.',
+    hint: 'Historisches Epos um den amerikanischen Buergerkrieg.',
     difficulty: 'schwer',
     sources: {
       text: '"Frankly, my dear, I don\'t give a damn."',
@@ -1250,7 +1250,7 @@ const baseCards: Card[] = [
     title: 'Houston, we have a problem',
     category: 'quote',
     year: 1995,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Apollo 13 (Film) – Jim Lovell (Tom Hanks).',
     hint: 'Raumfahrtdrama basierend auf wahren Ereignissen.',
     difficulty: 'mittel',
@@ -1264,9 +1264,9 @@ const baseCards: Card[] = [
     title: 'You can\'t handle the truth!',
     category: 'quote',
     year: 1992,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'A Few Good Men – Colonel Jessup (Jack Nicholson).',
-    hint: 'Gerichtsdrama im Militärkontext.',
+    hint: 'Gerichtsdrama im Militaerkontext.',
     difficulty: 'mittel',
     sources: {
       text: '"You can\'t handle the truth!"',
@@ -1278,7 +1278,7 @@ const baseCards: Card[] = [
     title: 'Nobody puts Baby in a corner',
     category: 'quote',
     year: 1987,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Dirty Dancing – Johnny Castle (Patrick Swayze).',
     hint: 'Tanz- und Liebesfilm der 80er.',
     difficulty: 'leicht',
@@ -1292,9 +1292,9 @@ const baseCards: Card[] = [
     title: 'Winter is coming',
     category: 'quote',
     year: 2011,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Game of Thrones – Motto der Stark-Familie.',
-    hint: 'Fantasy-Serie basierend auf Büchern von George R. R. Martin.',
+    hint: 'Fantasy-Serie basierend auf Buechern von George R. R. Martin.',
     difficulty: 'leicht',
     sources: {
       text: '"Winter is coming."',
@@ -1306,9 +1306,9 @@ const baseCards: Card[] = [
     title: 'I am the one who knocks',
     category: 'quote',
     year: 2012,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Breaking Bad – Walter White (Bryan Cranston).',
-    hint: 'Drogendrama über einen Chemielehrer.',
+    hint: 'Drogendrama ueber einen Chemielehrer.',
     difficulty: 'mittel',
     sources: {
       text: '"I am not in danger, Skyler. I am the danger. I am the one who knocks!"',
@@ -1320,9 +1320,9 @@ const baseCards: Card[] = [
     title: 'That\'s what she said',
     category: 'quote',
     year: 2005,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'The Office (US) – Michael Scott (Steve Carell).',
-    hint: 'Mockumentary-Comedy im Büro.',
+    hint: 'Mockumentary-Comedy im Buero.',
     difficulty: 'leicht',
     sources: {
       text: '"That\'s what she said!"',
@@ -1334,9 +1334,9 @@ const baseCards: Card[] = [
     title: 'How you doin\'?',
     category: 'quote',
     year: 1994,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Friends – Joey Tribbiani (Matt LeBlanc).',
-    hint: 'Sitcom über sechs Freunde in New York.',
+    hint: 'Sitcom ueber sechs Freunde in New York.',
     difficulty: 'leicht',
     sources: {
       text: '"How you doin\'?"',
@@ -1348,13 +1348,13 @@ const baseCards: Card[] = [
     title: 'I\'m the king of the world!',
     category: 'quote',
     year: 1997,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Titanic – Jack Dawson (Leonardo DiCaprio).',
     hint: 'Romantisches Drama auf der Titanic.',
     difficulty: 'leicht',
     sources: {
       text: '"I\'m the king of the world!"',
-      textDe: 'Ich bin der König der Welt!'
+      textDe: 'Ich bin der Koenig der Welt!'
     }
   },
   {
@@ -1362,9 +1362,9 @@ const baseCards: Card[] = [
     title: 'I am your father',
     category: 'quote',
     year: 1980,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Star Wars: Episode V – Darth Vader.',
-    hint: 'Berühmter Plot Twist in Star Wars.',
+    hint: 'Beruehmter Plot Twist in Star Wars.',
     difficulty: 'leicht',
     sources: {
       text: '"No, I am your father."',
@@ -1376,7 +1376,7 @@ const baseCards: Card[] = [
     title: 'Why so serious?',
     category: 'quote',
     year: 2008,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'The Dark Knight – Joker (Heath Ledger).',
     hint: 'Batman-Film mit unvergesslicher Schurken-Performance.',
     difficulty: 'leicht',
@@ -1390,13 +1390,13 @@ const baseCards: Card[] = [
     title: 'Keep your friends close',
     category: 'quote',
     year: 1974,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Der Pate II – Michael Corleone.',
     hint: 'Fortsetzung des Mafia-Epos.',
     difficulty: 'mittel',
     sources: {
       text: '"Keep your friends close, but your enemies closer."',
-      textDe: 'Halte deine Freunde nah, aber deine Feinde noch näher.'
+      textDe: 'Halte deine Freunde nah, aber deine Feinde noch naeher.'
     }
   },
   {
@@ -1404,9 +1404,9 @@ const baseCards: Card[] = [
     title: 'Say hello to my little friend',
     category: 'quote',
     year: 1983,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Scarface – Tony Montana (Al Pacino).',
-    hint: 'Gangsterfilm über den Aufstieg und Fall eines Drogenbosses.',
+    hint: 'Gangsterfilm ueber den Aufstieg und Fall eines Drogenbosses.',
     difficulty: 'mittel',
     sources: {
       text: '"Say hello to my little friend!"',
@@ -1418,9 +1418,9 @@ const baseCards: Card[] = [
     title: 'I feel the need for speed',
     category: 'quote',
     year: 1986,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Top Gun – Maverick und Goose.',
-    hint: 'Action-Film über Kampfpiloten.',
+    hint: 'Action-Film ueber Kampfpiloten.',
     difficulty: 'mittel',
     sources: {
       text: '"I feel the need... the need for speed!"',
@@ -1432,9 +1432,9 @@ const baseCards: Card[] = [
     title: 'You had me at hello',
     category: 'quote',
     year: 1996,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Jerry Maguire – Dorothy Boyd (Renée Zellweger).',
-    hint: 'Romantisches Drama über einen Sportagenten.',
+    hint: 'Romantisches Drama ueber einen Sportagenten.',
     difficulty: 'mittel',
     sources: {
       text: '"You had me at hello."',
@@ -1446,13 +1446,13 @@ const baseCards: Card[] = [
     title: 'There is no spoon',
     category: 'quote',
     year: 1999,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'The Matrix – Spoon Boy.',
-    hint: 'Science-Fiction über simulierte Realität.',
+    hint: 'Science-Fiction ueber simulierte Realitaet.',
     difficulty: 'leicht',
     sources: {
       text: '"There is no spoon."',
-      textDe: 'Es gibt keinen Löffel.'
+      textDe: 'Es gibt keinen Loeffel.'
     }
   },
   {
@@ -1460,9 +1460,9 @@ const baseCards: Card[] = [
     title: 'I\'m walking here!',
     category: 'quote',
     year: 1969,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Midnight Cowboy – Ratso Rizzo (Dustin Hoffman).',
-    hint: 'Drama über zwei Auüenseiter in New York.',
+    hint: 'Drama ueber zwei Auueenseiter in New York.',
     difficulty: 'schwer',
     sources: {
       text: '"I\'m walking here!"',
@@ -1474,7 +1474,7 @@ const baseCards: Card[] = [
     title: 'Show me the money',
     category: 'quote',
     year: 1996,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Jerry Maguire – Rod Tidwell (Cuba Gooding Jr.).',
     hint: 'Sportagenten-Drama.',
     difficulty: 'mittel',
@@ -1488,7 +1488,7 @@ const baseCards: Card[] = [
     title: 'Yippee-ki-yay',
     category: 'quote',
     year: 1988,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Stirb langsam – John McClane (Bruce Willis).',
     hint: 'Action-Thriller in einem Hochhaus.',
     difficulty: 'leicht',
@@ -1502,7 +1502,7 @@ const baseCards: Card[] = [
     title: 'You shall not pass',
     category: 'quote',
     year: 2001,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Der Herr der Ringe: Die Gefährten – Gandalf.',
     hint: 'Fantasy-Epos von Peter Jackson.',
     difficulty: 'leicht',
@@ -1516,7 +1516,7 @@ const baseCards: Card[] = [
     title: 'My precious',
     category: 'quote',
     year: 2002,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Der Herr der Ringe: Die zwei Türme – Gollum.',
     hint: 'Fantasy-Fortsetzung mit besessener Kreatur.',
     difficulty: 'leicht',
@@ -1530,7 +1530,7 @@ const baseCards: Card[] = [
     title: 'I volunteer as tribute',
     category: 'quote',
     year: 2012,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Die Tribute von Panem – Katniss Everdeen.',
     hint: 'Dystopischer Jugendfilm.',
     difficulty: 'leicht',
@@ -1544,12 +1544,12 @@ const baseCards: Card[] = [
     title: 'Always (Snape)',
     category: 'quote',
     year: 2011,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Harry Potter und die Heiligtümer des Todes – Teil 2 – Severus Snape.',
     hint: 'Abschluss der Harry Potter-Filmreihe.',
     difficulty: 'leicht',
     sources: {
-      text: 'Älways."',
+      text: 'Aelways."',
       textDe: 'Immer.'
     }
   },
@@ -1558,9 +1558,9 @@ const baseCards: Card[] = [
     title: 'Just keep swimming',
     category: 'quote',
     year: 2003,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Findet Nemo – Dory.',
-    hint: 'Pixar-Animationsfilm über einen Clownfisch.',
+    hint: 'Pixar-Animationsfilm ueber einen Clownfisch.',
     difficulty: 'leicht',
     sources: {
       text: '"Just keep swimming, just keep swimming."',
@@ -1572,9 +1572,9 @@ const baseCards: Card[] = [
     title: 'To infinity and beyond',
     category: 'quote',
     year: 1995,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Toy Story – Buzz Lightyear.',
-    hint: 'Erster vollständig computeranimierter Spielfilm.',
+    hint: 'Erster vollstaendig computeranimierter Spielfilm.',
     difficulty: 'leicht',
     sources: {
       text: '"To infinity and beyond!"',
@@ -1586,7 +1586,7 @@ const baseCards: Card[] = [
     title: 'Run, Forrest, run!',
     category: 'quote',
     year: 1994,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Forrest Gump – Jenny Curran.',
     hint: 'Drama mit Tom Hanks.',
     difficulty: 'leicht',
@@ -1600,7 +1600,7 @@ const baseCards: Card[] = [
     title: 'I\'m gonna live forever',
     category: 'quote',
     year: 1980,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     'answer': 'Fame (Song) – Irene Cara.',
     hint: 'Titelsong des gleichnamigen Films.',
     difficulty: 'mittel',
@@ -1614,7 +1614,7 @@ const baseCards: Card[] = [
     title: 'What is love?',
     category: 'quote',
     year: 1993,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'What Is Love – Haddaway.',
     hint: 'Eurodance-Hit.',
     difficulty: 'leicht',
@@ -1628,7 +1628,7 @@ const baseCards: Card[] = [
     title: 'Sweet Child O\' Mine',
     category: 'quote',
     year: 1987,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Sweet Child O\' Mine – Guns N\' Roses.',
     hint: 'Hard-Rock-Klassiker.',
     difficulty: 'mittel',
@@ -1642,9 +1642,9 @@ const baseCards: Card[] = [
     title: 'I Want to Break Free',
     category: 'quote',
     year: 1984,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'I Want to Break Free – Queen.',
-    hint: 'Rock-Hymne über Befreiung.',
+    hint: 'Rock-Hymne ueber Befreiung.',
     difficulty: 'mittel',
     sources: {
       text: '"I want to break free."',
@@ -1656,13 +1656,13 @@ const baseCards: Card[] = [
     title: 'Don\'t Stop Believin\'',
     category: 'quote',
     year: 1981,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Don\'t Stop Believin\' – Journey.',
     hint: 'Arena-Rock-Hymne.',
     difficulty: 'leicht',
     sources: {
       text: '"Don\'t stop believin\', hold on to that feelin\'."',
-      textDe: 'Hör nicht auf zu glauben, halt an diesem Gefühl fest.'
+      textDe: 'Hoer nicht auf zu glauben, halt an diesem Gefuehl fest.'
     }
   },
   {
@@ -1670,7 +1670,7 @@ const baseCards: Card[] = [
     title: 'Imagine',
     category: 'quote',
     year: 1971,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Imagine – John Lennon.',
     hint: 'Friedenshymne eines Beatles.',
     difficulty: 'leicht',
@@ -1684,7 +1684,7 @@ const baseCards: Card[] = [
     title: 'We Are the Champions',
     category: 'quote',
     year: 1977,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'We Are the Champions – Queen.',
     hint: 'Siegeshymne im Sport.',
     difficulty: 'leicht',
@@ -1698,9 +1698,9 @@ const baseCards: Card[] = [
     title: 'Every Breath You Take',
     category: 'quote',
     year: 1983,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Every Breath You Take – The Police.',
-    hint: 'Song über Besessenheit.',
+    hint: 'Song ueber Besessenheit.',
     difficulty: 'mittel',
     sources: {
       text: '"Every breath you take, every move you make, I\'ll be watching you."',
@@ -1712,7 +1712,7 @@ const baseCards: Card[] = [
     title: 'Smells Like Teen Spirit (Lyric)',
     category: 'quote',
     year: 1991,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Smells Like Teen Spirit – Nirvana.',
     hint: 'Grunge-Hymne der 90er.',
     difficulty: 'mittel',
@@ -1726,7 +1726,7 @@ const baseCards: Card[] = [
     title: 'Livin\' on a Prayer',
     category: 'quote',
     year: 1986,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Livin\' on a Prayer – Bon Jovi.',
     hint: 'Rock-Anthem der 80er.',
     difficulty: 'leicht',
@@ -1740,7 +1740,7 @@ const baseCards: Card[] = [
     title: 'Lose Yourself',
     category: 'quote',
     year: 2002,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Lose Yourself – Eminem.',
     hint: 'Rap-Song aus dem Film 8 Mile.',
     difficulty: 'leicht',
@@ -1754,9 +1754,9 @@ const baseCards: Card[] = [
     title: 'Hey Jude',
     category: 'quote',
     year: 1968,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Hey Jude – The Beatles.',
-    hint: 'Längster Beatles-Hit.',
+    hint: 'Laengster Beatles-Hit.',
     difficulty: 'leicht',
     sources: {
       text: '"Hey Jude, don\'t make it bad, take a sad song and make it better."',
@@ -1768,9 +1768,9 @@ const baseCards: Card[] = [
     title: 'Hotel California',
     category: 'quote',
     year: 1976,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Hotel California – Eagles.',
-    hint: 'Klassischer Rock über den American Dream.',
+    hint: 'Klassischer Rock ueber den American Dream.',
     difficulty: 'mittel',
     sources: {
       text: '"You can check out any time you like, but you can never leave."',
@@ -1782,12 +1782,12 @@ const baseCards: Card[] = [
     title: 'Stairway to Heaven',
     category: 'quote',
     year: 1971,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Stairway to Heaven – Led Zeppelin.',
     hint: 'Epischer Rock-Song.',
     difficulty: 'mittel',
     sources: {
-      text: 'Änd she\'s buying a stairway to heaven."',
+      text: 'Aend she\'s buying a stairway to heaven."',
       textDe: 'Und sie kauft eine Treppe zum Himmel.'
     }
   },
@@ -1796,7 +1796,7 @@ const baseCards: Card[] = [
     title: 'Somebody to Love',
     category: 'quote',
     year: 1976,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Somebody to Love – Queen.',
     hint: 'Gospel-beeinflusster Rock.',
     difficulty: 'mittel',
@@ -1810,13 +1810,13 @@ const baseCards: Card[] = [
     title: 'Billie Jean (Lyric)',
     category: 'quote',
     year: 1982,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Billie Jean – Michael Jackson.',
     hint: 'King of Pop.',
     difficulty: 'leicht',
     sources: {
       text: '"Billie Jean is not my lover, she\'s just a girl who claims that I am the one."',
-      textDe: 'Billie Jean ist nicht meine Geliebte, sie ist nur ein Mädchen, das behauptet, ich sei der Eine.'
+      textDe: 'Billie Jean ist nicht meine Geliebte, sie ist nur ein Maedchen, das behauptet, ich sei der Eine.'
     }
   },
   {
@@ -1824,7 +1824,7 @@ const baseCards: Card[] = [
     title: 'Thriller',
     category: 'quote',
     year: 1982,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Thriller – Michael Jackson.',
     hint: 'Meistverkauftes Album aller Zeiten.',
     difficulty: 'leicht',
@@ -1838,13 +1838,13 @@ const baseCards: Card[] = [
     title: 'Like a Virgin',
     category: 'quote',
     year: 1984,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Like a Virgin – Madonna.',
     hint: 'Pop-Ikone der 80er.',
     difficulty: 'leicht',
     sources: {
       text: '"Like a virgin, touched for the very first time."',
-      textDe: 'Wie eine Jungfrau, zum allerersten Mal berührt.'
+      textDe: 'Wie eine Jungfrau, zum allerersten Mal beruehrt.'
     }
   },
   {
@@ -1852,12 +1852,12 @@ const baseCards: Card[] = [
     title: 'I Will Always Love You',
     category: 'quote',
     year: 1992,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'I Will Always Love You – Whitney Houston.',
     hint: 'Power-Ballade aus The Bodyguard.',
     difficulty: 'leicht',
     sources: {
-      text: 'Änd I will always love you."',
+      text: 'Aend I will always love you."',
       textDe: 'Und ich werde dich immer lieben.'
     }
   },
@@ -1866,13 +1866,13 @@ const baseCards: Card[] = [
     title: 'Rolling in the Deep (Lyric)',
     category: 'quote',
     year: 2010,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Rolling in the Deep – Adele.',
     hint: 'Soul-Pop-Hit.',
     difficulty: 'leicht',
     sources: {
       text: '"We could have had it all, rolling in the deep."',
-      textDe: 'Wir hätten alles haben können, rolling in the deep.'
+      textDe: 'Wir haetten alles haben koennen, rolling in the deep.'
     }
   },
   {
@@ -1880,7 +1880,7 @@ const baseCards: Card[] = [
     title: 'Somebody That I Used to Know',
     category: 'quote',
     year: 2011,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Somebody That I Used to Know – Gotye.',
     hint: 'Indie-Pop-Hit.',
     difficulty: 'leicht',
@@ -1894,13 +1894,13 @@ const baseCards: Card[] = [
     title: 'Happy',
     category: 'quote',
     year: 2013,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Happy – Pharrell Williams.',
     hint: 'Feelgood-Song aus Despicable Me 2.',
     difficulty: 'leicht',
     sources: {
       text: '"Because I\'m happy, clap along if you feel like a room without a roof."',
-      textDe: 'Weil ich glücklich bin, klatsch mit, wenn du dich fühlst wie ein Raum ohne Dach.'
+      textDe: 'Weil ich gluecklich bin, klatsch mit, wenn du dich fuehlst wie ein Raum ohne Dach.'
     }
   },
   {
@@ -1908,7 +1908,7 @@ const baseCards: Card[] = [
     title: 'Uptown Funk',
     category: 'quote',
     year: 2014,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Uptown Funk – Mark Ronson ft. Bruno Mars.',
     hint: 'Funk-Pop-Hit.',
     difficulty: 'leicht',
@@ -1922,7 +1922,7 @@ const baseCards: Card[] = [
     title: 'Shape of You',
     category: 'quote',
     year: 2017,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Shape of You – Ed Sheeran.',
     hint: 'Meistgestreamter Song auf Spotify.',
     difficulty: 'leicht',
@@ -1936,13 +1936,13 @@ const baseCards: Card[] = [
     title: 'Thinking Out Loud',
     category: 'quote',
     year: 2014,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Thinking Out Loud – Ed Sheeran.',
     hint: 'Romantische Ballade.',
     difficulty: 'leicht',
     sources: {
       text: '"When your legs don\'t work like they used to before."',
-      textDe: 'Wenn deine Beine nicht mehr so funktionieren wie früher.'
+      textDe: 'Wenn deine Beine nicht mehr so funktionieren wie frueher.'
     }
   },
   {
@@ -1950,7 +1950,7 @@ const baseCards: Card[] = [
     title: 'Despacito',
     category: 'quote',
     year: 2017,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Despacito – Luis Fonsi ft. Daddy Yankee.',
     hint: 'Lateinamerikanischer Welthit.',
     difficulty: 'leicht',
@@ -1964,13 +1964,13 @@ const baseCards: Card[] = [
     title: 'Old Town Road',
     category: 'quote',
     year: 2019,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Old Town Road – Lil Nas X.',
     hint: 'Country-Rap-Crossover.',
     difficulty: 'leicht',
     sources: {
       text: '"I\'m gonna take my horse to the old town road."',
-      textDe: 'Ich nehme mein Pferd zur alten Stadtstraüe.'
+      textDe: 'Ich nehme mein Pferd zur alten Stadtstrauee.'
     }
   },
   {
@@ -1978,7 +1978,7 @@ const baseCards: Card[] = [
     title: 'Blinding Lights',
     category: 'quote',
     year: 2019,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Blinding Lights – The Weeknd.',
     hint: 'Synthwave-Pop-Hit.',
     difficulty: 'leicht',
@@ -1992,13 +1992,13 @@ const baseCards: Card[] = [
     title: 'bad guy',
     category: 'quote',
     year: 2019,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'bad guy – Billie Eilish.',
     hint: 'Alternative Pop von Billie Eilish.',
     difficulty: 'leicht',
     sources: {
       text: '"I\'m the bad guy, duh."',
-      textDe: 'Ich bin der Bösewicht, duh.'
+      textDe: 'Ich bin der Boesewicht, duh.'
     }
   },
   {
@@ -2006,7 +2006,7 @@ const baseCards: Card[] = [
     title: 'Señorita',
     category: 'quote',
     year: 2019,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Señorita – Shawn Mendes & Camila Cabello.',
     hint: 'Duett zweier Pop-Stars.',
     difficulty: 'leicht',
@@ -2020,13 +2020,13 @@ const baseCards: Card[] = [
     title: 'Believer',
     category: 'quote',
     year: 2017,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Believer – Imagine Dragons.',
     hint: 'Alternative Rock-Hymne.',
     difficulty: 'leicht',
     sources: {
       text: '"Pain! You made me a, you made me a believer, believer."',
-      textDe: 'Schmerz! Du hast mich zu einem, du hast mich zu einem Gläubigen gemacht.'
+      textDe: 'Schmerz! Du hast mich zu einem, du hast mich zu einem Glaeubigen gemacht.'
     }
   },
   {
@@ -2034,9 +2034,9 @@ const baseCards: Card[] = [
     title: 'Radioactive',
     category: 'quote',
     year: 2012,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Radioactive – Imagine Dragons.',
-    hint: 'Alternative Rock über Neuanfang.',
+    hint: 'Alternative Rock ueber Neuanfang.',
     difficulty: 'leicht',
     sources: {
       text: '"I\'m radioactive, radioactive."',
@@ -2048,7 +2048,7 @@ const baseCards: Card[] = [
     title: 'Can\'t Stop the Feeling!',
     category: 'quote',
     year: 2016,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Can\'t Stop the Feeling! – Justin Timberlake.',
     hint: 'Pop-Song aus Trolls.',
     difficulty: 'leicht',
@@ -2062,13 +2062,13 @@ const baseCards: Card[] = [
     title: 'Counting Stars',
     category: 'quote',
     year: 2013,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Counting Stars – OneRepublic.',
-    hint: 'Pop-Rock über Träume.',
+    hint: 'Pop-Rock ueber Traeume.',
     difficulty: 'leicht',
     sources: {
       text: '"Lately I\'ve been, I\'ve been losing sleep, dreaming about the things that we could be."',
-      textDe: 'In letzter Zeit habe ich Schlaf verloren, träumend von den Dingen, die wir sein könnten.'
+      textDe: 'In letzter Zeit habe ich Schlaf verloren, traeumend von den Dingen, die wir sein koennten.'
     }
   },
   {
@@ -2076,13 +2076,13 @@ const baseCards: Card[] = [
     title: 'Let It Go',
     category: 'quote',
     year: 2013,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Let It Go – Idina Menzel (Die Eiskönigin).',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Let It Go – Idina Menzel (Die Eiskoenigin).',
     hint: 'Disney-Song aus Frozen.',
     difficulty: 'leicht',
     sources: {
       text: '"Let it go, let it go, can\'t hold it back anymore."',
-      textDe: 'Lass es los, lass es los, kann es nicht mehr zurückhalten.'
+      textDe: 'Lass es los, lass es los, kann es nicht mehr zurueckhalten.'
     }
   },
   {
@@ -2090,7 +2090,7 @@ const baseCards: Card[] = [
     title: 'Wannabe',
     category: 'quote',
     year: 1996,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Wannabe – Spice Girls.',
     hint: 'Debut-Hit der Spice Girls.',
     difficulty: 'leicht',
@@ -2104,7 +2104,7 @@ const baseCards: Card[] = [
     title: '...Baby One More Time',
     category: 'quote',
     year: 1998,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: '...Baby One More Time – Britney Spears.',
     hint: 'Britney Spears\' Durchbruch.',
     difficulty: 'leicht',
@@ -2118,7 +2118,7 @@ const baseCards: Card[] = [
     title: 'Toxic',
     category: 'quote',
     year: 2003,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Toxic – Britney Spears.',
     hint: 'Pop-Hit mit Streichern.',
     difficulty: 'leicht',
@@ -2132,12 +2132,12 @@ const baseCards: Card[] = [
     title: 'Umbrella',
     category: 'quote',
     year: 2007,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Umbrella – Rihanna ft. Jay-Z.',
     hint: 'Pop-R&B-Hit.',
     difficulty: 'leicht',
     sources: {
-      text: 'Ünder my umbrella, ella, ella, eh, eh, eh."',
+      text: 'Uender my umbrella, ella, ella, eh, eh, eh."',
       textDe: 'Unter meinem Regenschirm, ella, ella, eh, eh, eh.'
     }
   },
@@ -2146,13 +2146,13 @@ const baseCards: Card[] = [
     title: 'Viva la Vida',
     category: 'quote',
     year: 2008,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Viva la Vida – Coldplay.',
     hint: 'Alternative Rock inspiriert von Revolution.',
     difficulty: 'leicht',
     sources: {
       text: '"I used to rule the world."',
-      textDe: 'Ich herrschte einst über die Welt.'
+      textDe: 'Ich herrschte einst ueber die Welt.'
     }
   },
   {
@@ -2160,7 +2160,7 @@ const baseCards: Card[] = [
     title: '99 Luftballons',
     category: 'quote',
     year: 1983,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: '99 Luftballons – Nena.',
     hint: 'Deutscher New-Wave-Hit.',
     difficulty: 'leicht',
@@ -2174,13 +2174,13 @@ const baseCards: Card[] = [
     title: 'Major Tom',
     category: 'quote',
     year: 1983,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Major Tom – Peter Schilling.',
-    hint: 'Deutscher New-Wave-Song über Raumfahrer.',
+    hint: 'Deutscher New-Wave-Song ueber Raumfahrer.',
     difficulty: 'mittel',
     sources: {
-      text: '"Völlig losgelöst von der Erde."',
-      textDe: 'Völlig losgelöst von der Erde.'
+      text: '"Voellig losgeloest von der Erde."',
+      textDe: 'Voellig losgeloest von der Erde.'
     }
   },
   {
@@ -2188,12 +2188,12 @@ const baseCards: Card[] = [
     title: 'Atemlos durch die Nacht',
     category: 'quote',
     year: 2013,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Atemlos durch die Nacht – Helene Fischer.',
     hint: 'Deutscher Schlager-Hit.',
     difficulty: 'leicht',
     sources: {
-      text: 'Ätemlos durch die Nacht."',
+      text: 'Aetemlos durch die Nacht."',
       textDe: 'Atemlos durch die Nacht.'
     }
   },
@@ -2202,13 +2202,13 @@ const baseCards: Card[] = [
     title: 'Don\'t Worry, Be Happy',
     category: 'quote',
     year: 1988,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Don\'t Worry, Be Happy – Bobby McFerrin.',
     hint: 'A-cappella-Hit.',
     difficulty: 'leicht',
     sources: {
       text: '"Don\'t worry, be happy."',
-      textDe: 'Mach dir keine Sorgen, sei glücklich.'
+      textDe: 'Mach dir keine Sorgen, sei gluecklich.'
     }
   },
   {
@@ -2216,13 +2216,13 @@ const baseCards: Card[] = [
     title: 'All Star',
     category: 'quote',
     year: 1999,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'All Star – Smash Mouth.',
     hint: 'Rock-Song aus Shrek.',
     difficulty: 'leicht',
     sources: {
       text: '"Somebody once told me the world is gonna roll me."',
-      textDe: 'Jemand hat mir mal gesagt, die Welt wird mich überrollen.'
+      textDe: 'Jemand hat mir mal gesagt, die Welt wird mich ueberrollen.'
     }
   },
   {
@@ -2230,9 +2230,9 @@ const baseCards: Card[] = [
     title: 'Mr. Brightside',
     category: 'quote',
     year: 2003,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Mr. Brightside – The Killers.',
-    hint: 'Alternative Rock über Eifersucht.',
+    hint: 'Alternative Rock ueber Eifersucht.',
     difficulty: 'leicht',
     sources: {
       text: '"It was only a kiss, how did it end up like this?"',
@@ -2244,7 +2244,7 @@ const baseCards: Card[] = [
     title: 'Take On Me',
     category: 'quote',
     year: 1985,
-    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Take On Me – a-ha.',
     hint: 'Synthpop mit ikonischem Video.',
     difficulty: 'leicht',
