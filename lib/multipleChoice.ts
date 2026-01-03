@@ -60,6 +60,47 @@ function extractNumericValue(answer: string): number | null {
 }
 
 /**
+ * Extract ONLY the unit from an estimation answer
+ * Examples:
+ * - "ca. 100.000 Kilometer" → "Kilometer"
+ * - "ca. 10 bis 14 Kilogramm (inkl. Unterhautfettgewebe)" → "Kilogramm"
+ * - "ca. 18 Stunden und 45 Minuten" → "Stunden und 45 Minuten" (keep as-is)
+ * - "88 Tasten" → "Tasten"
+ */
+function extractUnit(answer: string): string {
+  // List of known units to search for
+  const units = [
+    'Kilometer', 'km',
+    'Meter', 'm',
+    'Liter', 'l', 'L',
+    'Tonnen', 't',
+    'Kilogramm', 'kg', 'Kilo',
+    'Gramm', 'g',
+    'Tasten',
+    'Jahre',
+    'Stunden',
+    'Minuten',
+    'Sekunden',
+    'Eier',
+    'Millionen',
+    'Milliarden',
+    'Billiarden'
+  ];
+  
+  // Search for the first unit occurrence (case-insensitive)
+  for (const unit of units) {
+    const regex = new RegExp(`\\b${unit}\\b`, 'i');
+    const match = answer.match(regex);
+    if (match) {
+      return match[0]; // Return the exact unit as it appears
+    }
+  }
+  
+  // If no known unit found, return empty string
+  return '';
+}
+
+/**
  * Generate numeric distractor alternatives for estimation questions
  * KEEP THIS UNCHANGED - IT WORKS WELL!
  */
@@ -74,8 +115,7 @@ function generateNumericDistractors(correctValue: number, answer: string): strin
   }
   
   const shuffled = variants.sort(() => Math.random() - 0.5);
-  const unitMatch = answer.match(/[\d.,]+\s*(.+)$/);
-  const unit = unitMatch ? unitMatch[1] : '';
+  const unit = extractUnit(answer);
   
   for (let i = 0; i < Math.min(3, shuffled.length); i++) {
     const val = shuffled[i];
