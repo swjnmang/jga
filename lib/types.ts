@@ -40,6 +40,7 @@ export type Card = {
   playlists?: string[];
   background?: string;
   color?: string;
+  distractors?: string[];
 };
 
 export type MediaPreference = 'auto' | 'youtube' | 'spotify';

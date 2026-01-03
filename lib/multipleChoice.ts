@@ -138,10 +138,11 @@ function generateNumericDistractors(correctValue: number, answer: string): strin
 
 /**
  * Generate 3 distractor answers using SIMPLIFIED approach:
+ * - If card has manual distractors: use those
  * - Estimation questions: Use numeric generation (WORKING WELL ✓)
  * - All other questions: Use category-based DB matching
  *   with smart filtering (region for countries, decade for music, difficulty for others)
- * 
+ *
  * This ensures distractors are always REAL ANSWERS from the database,
  * preventing formatting mismatch issues.
  */
@@ -149,7 +150,10 @@ export function generateDistractors(currentCard: Card): string[] {
   const distractors: string[] = [];
   const currentAnswer = currentCard.answer;
   
-  // ===== ESTIMATION QUESTIONS: Use numeric generation (KEEP AS-IS) =====
+  // ===== MANUAL DISTRACTORS: Use if provided =====
+  if (currentCard.distractors && currentCard.distractors.length >= 3) {
+    return currentCard.distractors.slice(0, 3);
+  }
   if (currentCard.category === 'schaetzfragen') {
     const numericValue = extractNumericValue(currentCard.answer);
     if (numericValue !== null && numericValue > 0) {
