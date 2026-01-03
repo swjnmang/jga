@@ -163,6 +163,39 @@ function SettingsPageContent() {
     });
   };
 
+  const toggleCategory = (category: CardCategory) => {
+    setSettings((prev) => {
+      const isCurrentlyActive = prev.categoryWeights[category] > 0;
+      const nextWeights = { ...prev.categoryWeights };
+      
+      if (isCurrentlyActive) {
+        // Deactivate: set to 0
+        nextWeights[category] = 0;
+      } else {
+        // Activate: set to 10
+        nextWeights[category] = 10;
+      }
+
+      const active = Object.entries(nextWeights)
+        .filter(([_, w]) => (w as number) > 0)
+        .map(([cat]) => cat as CardCategory);
+
+      // Prevent empty selection: if all zero, set this one to 10
+      if (active.length === 0) {
+        nextWeights[category] = 10;
+        active.push(category);
+      }
+
+      const next = {
+        ...prev,
+        categoryWeights: nextWeights,
+        categories: active
+      };
+      saveSettings(next);
+      return next;
+    });
+  };
+
   return (
     <main className="mx-auto max-w-4xl px-6 py-10 space-y-6">
       <div className="space-y-2">
@@ -205,75 +238,85 @@ function SettingsPageContent() {
       <section className="card-surface rounded-2xl p-5 space-y-4">
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-lg font-semibold">Kategorien</h2>
-          <div className="flex flex-col items-end text-xs text-ink/60">
-            <p>Links = gar nicht, rechts = viel.</p>
-            <p>Kategorien mit Wert 0 werden ausgeblendet.</p>
-            <p>Trivia-only-Kategorien gelten nur im Trivia-Modus.</p>
-          </div>
+          <p className="text-xs text-ink/60">Wähle Kategorien aus, die du spielen möchtest</p>
         </div>
         <div className="space-y-3">
           <div className="space-y-2">
             {availableCategories.map((category) => {
+              const isActive = settings.categoryWeights[category] > 0;
               const value = settings.categoryWeights[category] ?? 0;
               const triviaOnly = TRIVIA_ONLY_CATEGORIES.includes(category);
               return (
-                <label key={category} className="flex flex-col gap-2 text-sm">
-                  <div className="flex items-center gap-2 justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="capitalize">{categoryLabels[category] ?? category}</span>
-                      {triviaOnly && (
-                        <span className="rounded-full bg-ink text-inkDark px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide">Trivia only</span>
-                      )}
+                <div key={category} className="space-y-2">
+                  <label className="flex items-center gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={isActive}
+                      onChange={() => toggleCategory(category)}
+                      className="h-5 w-5 accent-sky-700"
+                    />
+                    <span className="text-sm font-medium capitalize">{categoryLabels[category] ?? category}</span>
+                    {triviaOnly && (
+                      <span className="rounded-full bg-ink text-inkDark px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide">Trivia only</span>
+                    )}
+                  </label>
+                  {isActive && (
+                    <div className="ml-8 space-y-2">
+                      <label className="flex items-center justify-between text-sm text-ink/70">
+                        <div className="flex items-center gap-2">
+                          <span className="uppercase tracking-wide text-[11px]">Gar nicht</span>
+                          <div className="h-px w-8 bg-ink/20" aria-hidden />
+                          <span className="uppercase tracking-wide text-[11px]">Viel</span>
+                        </div>
+                        <span className="font-semibold text-ink">{value}%</span>
+                      </label>
+                      <input
+                        type="range"
+                        min={1}
+                        max={100}
+                        value={value || 10}
+                        onChange={(e) => updateCategoryWeight(category, Number(e.target.value))}
+                        className="w-full accent-ink"
+                        aria-label={`Gewichtung für ${category}: ${value}%`}
+                      />
                     </div>
-                    <div className="flex items-center gap-3 text-[11px] text-ink/60">
-                      <span className="uppercase tracking-wide">Gar nicht</span>
-                      <div className="h-px w-8 bg-ink/20" aria-hidden />
-                      <span className="uppercase tracking-wide">Viel</span>
-                    </div>
-                  </div>
-                  <input
-                    type="range"
-                    min={0}
-                    max={100}
-                    value={value}
-                    onChange={(e) => updateCategoryWeight(category, Number(e.target.value))}
-                    className="accent-ink"
-                    aria-label={`Gewichtung für ${category}: ${value === 0 ? 'gar nicht' : 'viel'}`}
-                  />
-                </label>
+                  )}
+                </div>
               );
             })}
           </div>
         </div>
       </section>
 
-      <section className="card-surface rounded-2xl p-5 space-y-3">
-        <div className="flex items-center justify-between gap-3">
-          <h2 className="text-lg font-semibold">Musik-Genres</h2>
-          <p className="text-xs text-ink/60">Wirkt nur auf Musikfragen</p>
-        </div>
-        <div className="grid sm:grid-cols-2 gap-2 text-sm">
-          {[{ key: 'poprock', label: 'Pop & Rock' }, { key: 'metal', label: 'Metal' }, { key: 'hiphop', label: 'Hip-Hop' }, { key: 'schlagerparty', label: 'Schlager & Party' }].map((g) => {
-            const checked = settings.genres.includes(g.key as GenreTag);
-            return (
-              <label
-                key={g.key}
-                className={`flex items-center gap-2 rounded-xl border px-3 py-2 ${checked ? 'border-sky-700 bg-sky-50 text-sky-900' : 'border-ink/20 text-ink'}`}
-              >
-                <input
-                  type="checkbox"
-                  checked={checked}
-                  onChange={() => toggleGenre(g.key as GenreTag)}
-                  className="h-4 w-4 accent-sky-700"
-                />
-                <span>{g.label}</span>
-              </label>
-            );
-          })}
-        </div>
-      </section>
+      {settings.categoryWeights.music > 0 && (
+        <section className="card-surface rounded-2xl p-5 space-y-3">
+          <div className="flex items-center justify-between gap-3">
+            <h2 className="text-lg font-semibold">Musik-Genres</h2>
+            <p className="text-xs text-ink/60">Wirkt nur auf Musikfragen</p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-2 text-sm">
+            {[{ key: 'poprock', label: 'Pop & Rock' }, { key: 'metal', label: 'Metal' }, { key: 'hiphop', label: 'Hip-Hop' }, { key: 'schlagerparty', label: 'Schlager & Party' }].map((g) => {
+              const checked = settings.genres.includes(g.key as GenreTag);
+              return (
+                <label
+                  key={g.key}
+                  className={`flex items-center gap-2 rounded-xl border px-3 py-2 ${checked ? 'border-sky-700 bg-sky-50 text-sky-900' : 'border-ink/20 text-ink'}`}
+                >
+                  <input
+                    type="checkbox"
+                    checked={checked}
+                    onChange={() => toggleGenre(g.key as GenreTag)}
+                    className="h-4 w-4 accent-sky-700"
+                  />
+                  <span>{g.label}</span>
+                </label>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
-      {availablePlaylists.length > 0 && (
+      {settings.categoryWeights.music > 0 && availablePlaylists.length > 0 && (
         <section className="card-surface rounded-2xl p-5 space-y-3">
           <div className="flex items-center justify-between gap-3">
             <h2 className="text-lg font-semibold">Playlists</h2>
