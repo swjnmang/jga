@@ -46,7 +46,8 @@ const baseCards: Card[] = [
     difficulty: 'leicht',
     sources: {
       image: '/assets/images/mauerfall.jpg'
-    }
+    },
+    distractors: ['Prag, 17.11.1989 – Samtene Revolution.', 'Budapest, 23.10.1989 – Ausrufung der Republik.', 'Warschau, 04.06.1989 – Solidarność siegt.']
   },
   {
     id: 'image-cheops-pyramide',
@@ -59,7 +60,8 @@ const baseCards: Card[] = [
     difficulty: 'schwer',
     sources: {
       image: '/assets/images/pyramide.png'
-    }
+    },
+    distractors: ['Babylon, ca. 600 v. Chr. – Hängende Gärten.', 'Athen, ca. 447 v. Chr. – Parthenon.', 'Teotihuacán, ca. 200 n. Chr. – Sonnenpyramide.']
   },
   {
     id: 'song-rolling-in-the-deep',
@@ -150,7 +152,8 @@ const baseCards: Card[] = [
     difficulty: 'mittel',
     sources: {
       image: '/assets/images/apollo11.jpg'
-    }
+    },
+    distractors: ['Mars, 20.07.1976 – Viking 1 Landung.', 'Weltraum, 12.04.1961 – Gagarin erster Mensch im All.', 'ISS, 20.11.1998 – Erste ISS-Module verbunden.']
   },
   {
     id: 'quote-mandela',
