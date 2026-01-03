@@ -19,6 +19,58 @@ const allCards = [
   ...schaetzfragenCards
 ];
 
+/**
+ * Extract artist/creator from answer string
+ * Handles formats like:
+ * - "Artist — Title" or "Artist - Title"
+ * - "Title – Artist" or "Title - Artist"
+ */
+function extractCreator(answer: string): string | null {
+  // Match pattern: something — something or something - something
+  const patterns = [
+    /^(.+?)\s*(?:—|–|-)\s*(.+)$/,  // "Creator — Title" or "Creator - Title"
+  ];
+  
+  for (const pattern of patterns) {
+    const match = answer.match(pattern);
+    if (match) {
+      const firstPart = match[1].trim();
+      const secondPart = match[2].trim();
+      // Return the part that looks like a creator (shorter, no punctuation)
+      if (firstPart.length < secondPart.length) {
+        return firstPart;
+      }
+      return secondPart;
+    }
+  }
+  return null;
+}
+
+/**
+ * Extract title from answer string
+ * Handles formats like:
+ * - "Artist — Title" or "Title – Artist"
+ */
+function extractTitle(answer: string): string | null {
+  const patterns = [
+    /^(.+?)\s*(?:—|–|-)\s*(.+)$/,
+  ];
+  
+  for (const pattern of patterns) {
+    const match = answer.match(pattern);
+    if (match) {
+      const firstPart = match[1].trim();
+      const secondPart = match[2].trim();
+      // Return the part that looks like a title (longer)
+      if (firstPart.length >= secondPart.length) {
+        return firstPart;
+      }
+      return secondPart;
+    }
+  }
+  return null;
+}
+
 // Extract the region/continent from country card IDs (e.g., "flag-de" -> "europe")
 function getRegion(cardId: string): string | null {
   // Region patterns based on mapsicon folder structure
@@ -49,12 +101,62 @@ function getDecadeRange(year: number): [number, number] {
 
 /**
  * Generate 3 distractor (wrong) answers for a given card
- * Uses intelligent filtering per category to ensure realistic distractors
+ * PHASE 1: Quote/Film - uses creator-based matching
+ * FALLBACK: Category + difficulty matching for others
  */
 export function generateDistractors(currentCard: Card): string[] {
   const distractors: string[] = [];
   const currentAnswer = currentCard.answer;
   
+  // PHASE 1: QUOTE CARDS - Find other quotes by same creator
+  if (currentCard.category === 'quote') {
+    const creator = extractCreator(currentCard.answer);
+    if (creator) {
+      const creatorCandidates = allCards.filter(c =>
+        c.id !== currentCard.id &&
+        c.category === 'quote' &&
+        c.answer !== currentAnswer &&
+        c.answer.toLowerCase().includes(creator.toLowerCase())
+      );
+      
+      if (creatorCandidates.length >= 3) {
+        const shuffled = [...creatorCandidates].sort(() => Math.random() - 0.5);
+        for (const candidate of shuffled) {
+          if (distractors.length >= 3) break;
+          if (!distractors.includes(candidate.answer)) {
+            distractors.push(candidate.answer);
+          }
+        }
+        return distractors;
+      }
+    }
+  }
+  
+  // PHASE 1: FILM/SERIES CARDS - Find other films by same creator
+  if (currentCard.category === 'filmeserien') {
+    const creator = extractCreator(currentCard.answer);
+    if (creator) {
+      const creatorCandidates = allCards.filter(c =>
+        c.id !== currentCard.id &&
+        c.category === 'filmeserien' &&
+        c.answer !== currentAnswer &&
+        c.answer.toLowerCase().includes(creator.toLowerCase())
+      );
+      
+      if (creatorCandidates.length >= 3) {
+        const shuffled = [...creatorCandidates].sort(() => Math.random() - 0.5);
+        for (const candidate of shuffled) {
+          if (distractors.length >= 3) break;
+          if (!distractors.includes(candidate.answer)) {
+            distractors.push(candidate.answer);
+          }
+        }
+        return distractors;
+      }
+    }
+  }
+  
+  // FALLBACK: Category matching
   let candidates = allCards.filter(c => 
     c.id !== currentCard.id && 
     c.answer !== currentAnswer &&
@@ -83,64 +185,17 @@ export function generateDistractors(currentCard: Card): string[] {
     }
   }
   
-  // QUOTE CARDS: Filter by time period (±15 years)
-  else if (currentCard.category === 'quote' && typeof currentCard.year === 'number') {
-    const minYear = currentCard.year - 15;
-    const maxYear = currentCard.year + 15;
-    const timePeriodCandidates = candidates.filter(c => 
-      typeof c.year === 'number' && c.year >= minYear && c.year <= maxYear && c.year !== currentCard.year
-    );
-    if (timePeriodCandidates.length >= 3) {
-      candidates = timePeriodCandidates;
-    }
-  }
-  
-  // FILM/SERIES CARDS: Filter by decade (±10 years)
-  else if (currentCard.category === 'filmeserien' && typeof currentCard.year === 'number') {
-    const minYear = currentCard.year - 10;
-    const maxYear = currentCard.year + 10;
-    const decadeCandidates = candidates.filter(c => 
-      typeof c.year === 'number' && c.year >= minYear && c.year <= maxYear && c.year !== currentCard.year
-    );
-    if (decadeCandidates.length >= 3) {
-      candidates = decadeCandidates;
-    }
-  }
-  
-  // ESTIM-QUESTION CARDS: Filter by similar magnitude (±50%)
-  else if (currentCard.category === 'schaetzfragen' && typeof currentCard.year === 'number') {
-    const tolerance = Math.max(Math.floor(currentCard.year * 0.5), 10);
-    const minVal = Math.max(currentCard.year - tolerance, 0);
-    const maxVal = currentCard.year + tolerance;
-    const magnitudeCandidates = candidates.filter(c => 
-      typeof c.year === 'number' && c.year >= minVal && c.year <= maxVal && c.year !== currentCard.year
-    );
-    if (magnitudeCandidates.length >= 3) {
-      candidates = magnitudeCandidates;
-    }
-  }
-  
-  // NATURE/TECH, RELIGION/FAITH, GEO/HISTORY, SPORT/LEISURE: 
-  // Filter by difficulty level (prefer same or adjacent difficulty)
-  else if (['naturtechnik', 'religionglaube', 'geogeschichte', 'sportfreizeit', 'image', 'video'].includes(currentCard.category)) {
-    const currentDifficulty = currentCard.difficulty;
+  // OTHER CATEGORIES: Filter by difficulty
+  else if (['naturtechnik', 'religionglaube', 'geogeschichte', 'sportfreizeit', 'image', 'video', 'schaetzfragen'].includes(currentCard.category)) {
     const difficultyOrder = { leicht: 0, mittel: 1, schwer: 2 };
-    const currentLevel = difficultyOrder[currentDifficulty] ?? 1;
-    
-    // First try: Same difficulty
-    const sameDifficultyCandidates = candidates.filter(c => c.difficulty === currentDifficulty);
-    if (sameDifficultyCandidates.length >= 3) {
-      candidates = sameDifficultyCandidates;
-    } else {
-      // Fallback: Include adjacent difficulty levels
-      const difficultyLevels = Object.keys(difficultyOrder) as Array<keyof typeof difficultyOrder>;
-      const adjacentDifficulties = difficultyLevels.filter(
-        d => Math.abs(difficultyOrder[d] - currentLevel) <= 1
-      );
-      const broadCandidates = candidates.filter(c => adjacentDifficulties.includes(c.difficulty));
-      if (broadCandidates.length >= 3) {
-        candidates = broadCandidates;
-      }
+    const currentLevel = difficultyOrder[currentCard.difficulty] ?? 1;
+    const difficultyLevels = Object.keys(difficultyOrder) as Array<keyof typeof difficultyOrder>;
+    const adjacentDifficulties = difficultyLevels.filter(
+      d => Math.abs(difficultyOrder[d] - currentLevel) <= 1
+    );
+    const broadCandidates = candidates.filter(c => adjacentDifficulties.includes(c.difficulty));
+    if (broadCandidates.length >= 3) {
+      candidates = broadCandidates;
     }
   }
 
