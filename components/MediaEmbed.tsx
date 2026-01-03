@@ -478,6 +478,19 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     }
   };
 
+  const resumeSpotify = async () => {
+    if (!spotifyToken || !spotifyDevice) return;
+    try {
+      await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${spotifyDevice}`, {
+        method: 'PUT',
+        headers: { Authorization: `Bearer ${spotifyToken}` }
+      });
+      setIsPlaying(true);
+    } catch (_err) {
+      // ignore
+    }
+  };
+
   useImperativeHandle(ref, () => ({
     stop: () => {
       if (choice?.type === 'youtube') {
@@ -500,8 +513,14 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     if (isPlaying) {
       pauseSpotify();
     } else {
-      playSpotifyTrack(choice?.type === 'spotify' ? choice.url : '');
-      onPlay?.();
+      // If Spotify player is already shown, resume playback instead of restarting
+      if (showSpotify) {
+        resumeSpotify();
+        onPlay?.();
+      } else {
+        playSpotifyTrack(choice?.type === 'spotify' ? choice.url : '');
+        onPlay?.();
+      }
     }
   };
 
