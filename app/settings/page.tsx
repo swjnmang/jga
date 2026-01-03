@@ -204,14 +204,6 @@ function SettingsPageContent() {
       nextWeights[cat] = allActive ? 0 : 10;
     });
 
-    // Prevent all zero if we're turning off - turn on instead
-    const hasActive = Object.values(nextWeights).some(w => w > 0);
-    if (!hasActive) {
-      availableCategories.forEach(cat => {
-        nextWeights[cat] = 10;
-      });
-    }
-
     const active = Object.entries(nextWeights)
       .filter(([_, w]) => (w as number) > 0)
       .map(([cat]) => cat as CardCategory);
