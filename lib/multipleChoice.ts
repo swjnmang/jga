@@ -77,6 +77,7 @@ function extractUnit(answer: string): string {
     'Kilogramm', 'kg', 'Kilo',
     'Gramm', 'g',
     'Tasten',
+    'Strophen',
     'Jahre',
     'Stunden',
     'Minuten',
