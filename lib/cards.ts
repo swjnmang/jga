@@ -54,7 +54,7 @@ const baseCards: Card[] = [
     year: -2560,
     cue: 'Bild ansehen und einordnen. Frage: Wo und wann war das?',
     answer: 'Gizeh, ca. 2560 v. Chr. „ Cheops-Pyramide.',
-    hint: 'Altes "Ägypten.',
+    hint: 'Altes "Agypten.',
     difficulty: 'schwer',
     sources: {
       image: '/assets/images/pyramide.png'
@@ -276,7 +276,7 @@ const baseCards: Card[] = [
     year: 2013,
     cue: 'Song anhören und einordnen.',
     answer: 'Daft Punk feat. Pharrell Williams.',
-    hint: 'Franzüisches Duo mit Helmen.',
+    hint: 'Franzuisches Duo mit Helmen.',
     difficulty: 'leicht',
     sources: {
       spotify: 'https://open.spotify.com/track/69kOkLUCkxIZYexIgSG8rq'
@@ -1503,7 +1503,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2001,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    'answer': 'Der Herr der Ringe: Die Gefährten – Gandalf.',
+    'answer': 'Der Herr der Ringe: Die Gefahrten – Gandalf.',
     hint: 'Fantasy-Epos von Peter Jackson.',
     difficulty: 'leicht',
     sources: {
