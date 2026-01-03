@@ -49,20 +49,19 @@ function getDecadeRange(year: number): [number, number] {
 
 /**
  * Generate 3 distractor (wrong) answers for a given card
- * Returns an array of 3 unique wrong answers based on category/region/decade
+ * Uses intelligent filtering per category to ensure realistic distractors
  */
 export function generateDistractors(currentCard: Card): string[] {
   const distractors: string[] = [];
   const currentAnswer = currentCard.answer;
   
-  // Filter candidates based on category
   let candidates = allCards.filter(c => 
     c.id !== currentCard.id && 
     c.answer !== currentAnswer &&
     c.category === currentCard.category
   );
 
-  // Special logic for country cards (flags/outlines) - filter by region
+  // COUNTRY CARDS: Filter by region (same continent)
   if (currentCard.category === 'country') {
     const region = getRegion(currentCard.id);
     if (region) {
@@ -72,15 +71,76 @@ export function generateDistractors(currentCard: Card): string[] {
       }
     }
   }
-
-  // Special logic for music cards - filter by decade (±5 years)
-  if (currentCard.category === 'music' && typeof currentCard.year === 'number') {
+  
+  // MUSIC CARDS: Filter by decade (±5 years)
+  else if (currentCard.category === 'music' && typeof currentCard.year === 'number') {
     const [minYear, maxYear] = getDecadeRange(currentCard.year);
     const decadeCandidates = candidates.filter(c => 
       typeof c.year === 'number' && c.year >= minYear && c.year <= maxYear
     );
     if (decadeCandidates.length >= 3) {
       candidates = decadeCandidates;
+    }
+  }
+  
+  // QUOTE CARDS: Filter by time period (±15 years)
+  else if (currentCard.category === 'quote' && typeof currentCard.year === 'number') {
+    const minYear = currentCard.year - 15;
+    const maxYear = currentCard.year + 15;
+    const timePeriodCandidates = candidates.filter(c => 
+      typeof c.year === 'number' && c.year >= minYear && c.year <= maxYear && c.year !== currentCard.year
+    );
+    if (timePeriodCandidates.length >= 3) {
+      candidates = timePeriodCandidates;
+    }
+  }
+  
+  // FILM/SERIES CARDS: Filter by decade (±10 years)
+  else if (currentCard.category === 'filmeserien' && typeof currentCard.year === 'number') {
+    const minYear = currentCard.year - 10;
+    const maxYear = currentCard.year + 10;
+    const decadeCandidates = candidates.filter(c => 
+      typeof c.year === 'number' && c.year >= minYear && c.year <= maxYear && c.year !== currentCard.year
+    );
+    if (decadeCandidates.length >= 3) {
+      candidates = decadeCandidates;
+    }
+  }
+  
+  // ESTIM-QUESTION CARDS: Filter by similar magnitude (±50%)
+  else if (currentCard.category === 'schaetzfragen' && typeof currentCard.year === 'number') {
+    const tolerance = Math.max(Math.floor(currentCard.year * 0.5), 10);
+    const minVal = Math.max(currentCard.year - tolerance, 0);
+    const maxVal = currentCard.year + tolerance;
+    const magnitudeCandidates = candidates.filter(c => 
+      typeof c.year === 'number' && c.year >= minVal && c.year <= maxVal && c.year !== currentCard.year
+    );
+    if (magnitudeCandidates.length >= 3) {
+      candidates = magnitudeCandidates;
+    }
+  }
+  
+  // NATURE/TECH, RELIGION/FAITH, GEO/HISTORY, SPORT/LEISURE: 
+  // Filter by difficulty level (prefer same or adjacent difficulty)
+  else if (['naturtechnik', 'religionglaube', 'geogeschichte', 'sportfreizeit', 'image', 'video'].includes(currentCard.category)) {
+    const currentDifficulty = currentCard.difficulty;
+    const difficultyOrder = { leicht: 0, mittel: 1, schwer: 2 };
+    const currentLevel = difficultyOrder[currentDifficulty] ?? 1;
+    
+    // First try: Same difficulty
+    const sameDifficultyCandidates = candidates.filter(c => c.difficulty === currentDifficulty);
+    if (sameDifficultyCandidates.length >= 3) {
+      candidates = sameDifficultyCandidates;
+    } else {
+      // Fallback: Include adjacent difficulty levels
+      const difficultyLevels = Object.keys(difficultyOrder) as Array<keyof typeof difficultyOrder>;
+      const adjacentDifficulties = difficultyLevels.filter(
+        d => Math.abs(difficultyOrder[d] - currentLevel) <= 1
+      );
+      const broadCandidates = candidates.filter(c => adjacentDifficulties.includes(c.difficulty));
+      if (broadCandidates.length >= 3) {
+        candidates = broadCandidates;
+      }
     }
   }
 
@@ -94,9 +154,9 @@ export function generateDistractors(currentCard: Card): string[] {
     }
   }
 
-  // Fallback: if we don't have enough distractors, add generic ones
+  // Fallback: if we don't have enough distractors, add generic placeholder
   while (distractors.length < 3) {
-    distractors.push(`Option ${distractors.length + 1}`);
+    distractors.push(`Alternative ${distractors.length + 1}`);
   }
 
   return distractors;
