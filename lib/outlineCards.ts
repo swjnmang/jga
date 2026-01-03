@@ -15,7 +15,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ad.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Spanien – Demokratische Verfassung",
+      "Frankreich – Fünfte Republik",
+      "Portugal – Post-Nelkenrevolution."
+    ]
   },
   {
     "id": "outline-ae",
@@ -29,7 +34,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ae.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Saudi-Arabien – Vereinigung der Königreiche",
+      "Katar – Unabhängigkeit",
+      "Kuwait – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-af",
@@ -43,7 +53,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/af.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Iran – Islamische Republik",
+      "Pakistan – Unabhängigkeit",
+      "China – Aktuelle Verfassung."
+    ]
   },
   {
     "id": "outline-ag",
@@ -57,7 +72,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ag.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Dominica – Unabhängigkeit",
+      "St. Kitts und Nevis – Unabhängigkeit.",
+      "Barbados – Übergang zur Republik"
+    ]
   },
   {
     "id": "outline-ai",
@@ -71,7 +91,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ai.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kokosinseln – Integration in Australien.",
+      "Tunesien – Neue Verfassung (Arabischer Frühling)",
+      "Costa Rica – Post-Bürgerkriegsverfassung."
+    ]
   },
   {
     "id": "outline-al",
@@ -85,7 +110,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/al.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Griechenland – Post-Diktatur-Verfassung.",
+      "Nordmazedonien – Unabhängigkeit von Jugoslawien",
+      "Montenegro – Unabhängigkeit von Serbien"
+    ]
   },
   {
     "id": "outline-am",
@@ -99,7 +129,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/am.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Georgien – Unabhängigkeit von der UdSSR",
+      "Äserbaidschan – Unabhängigkeitsverfassung.",
+      "Türkei – Ausrufung der Republik"
+    ]
   },
   {
     "id": "outline-ao",
@@ -113,7 +148,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ao.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kongo-Kinshasa – III. Republik.",
+      "Kongo-Brazzaville – Neue Verfassung.",
+      "Sambia – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-as",
@@ -127,7 +167,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/as.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Indonesien – Unabhängigkeit",
+      "Syrien – Unabhängigkeit von Frankreich",
+      "Jemen – Wiedervereinigung"
+    ]
   },
   {
     "id": "outline-at",
@@ -141,7 +186,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/at.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Deutschland – Grundgesetz (BRD)",
+      "Schweiz – Gründung des modernen Bundesstaates",
+      "Italien – Republikanische Verfassung"
+    ]
   },
   {
     "id": "outline-au",
@@ -155,7 +205,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/au.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Neuseeland – Erlangung des Selbstverwaltungsstatus (Dominion-Status 1907)",
+      "Indonesien – Unabhängigkeit",
+      "Papua-Neuguinea – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-aw",
@@ -169,7 +224,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/aw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Dänemark – Verfassungsänderung.",
+      "Puerto Rico – Verfassung.",
+      "Paraguay – Post-Diktatur-Verfassung."
+    ]
   },
   {
     "id": "outline-ax",
@@ -183,7 +243,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ax.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Tadschikistan – Unabhängigkeit von der UdSSR",
+      "Änguilla – Aktuelle Verfassungsordnung.",
+      "Namibia – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-az",
@@ -197,7 +262,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/az.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Russland – Russische Föderation (Post-Sowjet)",
+      "Georgien – Unabhängigkeit von der UdSSR",
+      "Ärmenie – Wechsel zum Parlamentarismus."
+    ]
   },
   {
     "id": "outline-ba",
@@ -211,7 +281,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ba.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kroatien – Unabhängigkeit von Jugoslawien",
+      "Serbien – Auflösung der Union mit Montenegro",
+      "Montenegro – Unabhängigkeit von Serbien"
+    ]
   },
   {
     "id": "outline-bb",
@@ -225,7 +300,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bb.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Trinidad und Tobago – Republikgründung.",
+      "St. Lucia – Unabhängigkeit",
+      "St. Vincent und die Grenadinen – Systembruch."
+    ]
   },
   {
     "id": "outline-bd",
@@ -239,7 +319,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bd.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Indien – Unabhängigkeit",
+      "Myanmar – Unabhängigkeit",
+      "Nepal – Ausrufung der Republik"
+    ]
   },
   {
     "id": "outline-be",
@@ -253,7 +338,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/be.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Frankreich – Fünfte Republik",
+      "Deutschland – Grundgesetz (BRD)",
+      "Niederlande – Totalrevision."
+    ]
   },
   {
     "id": "outline-bf",
@@ -267,7 +357,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Mali – Unabhängigkeit",
+      "Niger – Unabhängigkeit",
+      "Benin – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-bg",
@@ -281,7 +376,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Rumänien – Post-Kommunismus.",
+      "Serbien – Auflösung der Union mit Montenegro",
+      "Nordmazedonien – Unabhängigkeit von Jugoslawien"
+    ]
   },
   {
     "id": "outline-bh",
@@ -295,7 +395,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bh.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Saudi-Arabien – Vereinigung der Königreiche",
+      "Katar – Unabhängigkeit",
+      "Kuwait – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-bi",
@@ -309,7 +414,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bi.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Ruanda – Unabhängigkeit",
+      "Tansania – Unabhängigkeit (als Tanganjika)",
+      "Kongo-Kinshasa – III. Republik."
+    ]
   },
   {
     "id": "outline-bj",
@@ -323,7 +433,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bj.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Togo – Unabhängigkeit",
+      "Burkina Faso – Unabhängigkeit",
+      "Niger – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-bl",
@@ -337,7 +452,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Mali – Unabhängigkeit",
+      "Kirgisistan – Unabhängigkeit von der UdSSR",
+      "Réunion – Überseedépartement."
+    ]
   },
   {
     "id": "outline-bm",
@@ -351,7 +471,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Panama – Verfassung.",
+      "Dschibuti – Unabhängigkeit",
+      "Norwegen – Verfassung von Eidsvoll (Konstitutionelle Monarchie)"
+    ]
   },
   {
     "id": "outline-bn",
@@ -365,7 +490,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Malaysia – Unabhängigkeit",
+      "Indonesien – Unabhängigkeit",
+      "Singapur – Trennung von Malaysia"
+    ]
   },
   {
     "id": "outline-bo",
@@ -379,7 +509,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bo.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Peru – Verfassung.",
+      "Brasilien – Aktuelle Verfassung",
+      "Paraguay – Post-Diktatur-Verfassung."
+    ]
   },
   {
     "id": "outline-bq",
@@ -393,7 +528,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bq.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Deutschland – Grundgesetz (BRD)",
+      "Bouvetinsel – Norwegische Souveränität.",
+      "Litauen – Wiederherstellung der Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-br",
@@ -407,7 +547,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/br.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Paraguay – Post-Diktatur-Verfassung.",
+      "Bolivien – Plurinationaler Staat.",
+      "Peru – Verfassung."
+    ]
   },
   {
     "id": "outline-bs",
@@ -421,7 +566,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bs.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Vereinigte Staaten – Verfassungsinkrafttreten.",
+      "Kuba – Neue Verfassung",
+      "Jamaika – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-bt",
@@ -435,7 +585,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "China – Aktuelle Verfassung.",
+      "Indien – Unabhängigkeit",
+      "Nepal – Ausrufung der Republik"
+    ]
   },
   {
     "id": "outline-bv",
@@ -449,7 +604,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bv.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Dominica – Unabhängigkeit",
+      "Kenia – Unabhängigkeit",
+      "Martinique – Überseedépartement."
+    ]
   },
   {
     "id": "outline-bw",
@@ -463,7 +623,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Namibia – Unabhängigkeit",
+      "Südafrika – Erste freie Wahlen (Ende Apartheid)",
+      "Simbabwe – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-by",
@@ -477,7 +642,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/by.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Litauen – Wiederherstellung der Unabhängigkeit",
+      "Lettland – Wiederherstellung der Unabhängigkeit",
+      "Russland – Russische Föderation (Post-Sowjet)"
+    ]
   },
   {
     "id": "outline-bz",
@@ -491,7 +661,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/bz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Mexiko – Post-Revolution-Verfassung.",
+      "Guatemala – Demokratische Verfassung.",
+      "Honduras – Demokratisierung."
+    ]
   },
   {
     "id": "outline-ca",
@@ -505,7 +680,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ca.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Vereinigte Staaten – Verfassungsinkrafttreten.",
+      "Grönland – Self-Government.",
+      "Island – Republikgründung"
+    ]
   },
   {
     "id": "outline-cc",
@@ -519,7 +699,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/cc.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Malaysia – Unabhängigkeit",
+      "St. Kitts und Nevis – Unabhängigkeit.",
+      "Côte d’Ivoire – 7. August 1960, Unabhaengigkeitserklaerung."
+    ]
   },
   {
     "id": "outline-cd",
@@ -533,7 +718,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/cd.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Zentralafrikanische Republik – Neue Verfassung.",
+      "Südsudan – Unabhängigkeit vom Sudan",
+      "Ruanda – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-cf",
@@ -547,7 +737,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/cf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Tschad – Neue Verfassung/Übergangsrat",
+      "Sudan – Unabhängigkeit",
+      "Südsudan – Unabhängigkeit vom Sudan"
+    ]
   },
   {
     "id": "outline-cg",
@@ -561,7 +756,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/cg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kongo-Kinshasa – III. Republik.",
+      "Zentralafrikanische Republik – Neue Verfassung.",
+      "Kamerun – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-ch",
@@ -575,7 +775,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ch.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Deutschland – Grundgesetz (BRD)",
+      "Frankreich – Fünfte Republik",
+      "Italien – Republikanische Verfassung"
+    ]
   },
   {
     "id": "outline-ci",
@@ -589,7 +794,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ci.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Liberia – Post-Bürgerkrieg-Verfassung.",
+      "Guinea – Unabhängigkeit",
+      "Mali – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-ck",
@@ -603,7 +813,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ck.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Singapur – Trennung von Malaysia",
+      "Montenegro – Unabhängigkeit von Serbien",
+      "Deutschland – Grundgesetz (BRD)"
+    ]
   },
   {
     "id": "outline-cl",
@@ -617,7 +832,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/cl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Peru – Verfassung.",
+      "Bolivien – Plurinationaler Staat.",
+      "Brasilien – Aktuelle Verfassung"
+    ]
   },
   {
     "id": "outline-cm",
@@ -631,7 +851,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/cm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Nigeria – Unabhängigkeit",
+      "Tschad – Neue Verfassung/Übergangsrat",
+      "Zentralafrikanische Republik – Neue Verfassung."
+    ]
   },
   {
     "id": "outline-cn",
@@ -645,7 +870,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/cn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Mongolei – Post-Einparteiensystem.",
+      "Russland – Russische Föderation (Post-Sowjet)",
+      "Nordkorea – Gründung der DVRK"
+    ]
   },
   {
     "id": "outline-co",
@@ -659,7 +889,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/co.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Panama – Verfassung.",
+      "Venezuela – Bolivarische Verfassung.",
+      "Brasilien – Aktuelle Verfassung"
+    ]
   },
   {
     "id": "outline-cr",
@@ -673,7 +908,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/cr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Nicaragua – Verfassung.",
+      "Panama – Verfassung.",
+      "El Salvador – Verfassung."
+    ]
   },
   {
     "id": "outline-cu",
@@ -687,7 +927,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/cu.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Mexiko – Post-Revolution-Verfassung.",
+      "Jamaika – Unabhängigkeit",
+      "Haiti – Post-Duvalier-Verfassung."
+    ]
   },
   {
     "id": "outline-cv",
@@ -701,7 +946,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/cv.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Bahamas – Unabhängigkeit",
+      "Belarus – Unabhängigkeit von der UdSSR",
+      "Südsudan – Unabhängigkeit vom Sudan"
+    ]
   },
   {
     "id": "outline-cw",
@@ -715,7 +965,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/cw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "St. Helena – Verfassungsordnung.",
+      "Gambia – Unabhängigkeit",
+      "Irak – Post-Saddam Verfassung"
+    ]
   },
   {
     "id": "outline-cx",
@@ -729,7 +984,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/cx.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Portugal – Post-Nelkenrevolution.",
+      "Marokko – Ende der Protektorate",
+      "Belize – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-cy",
@@ -743,7 +1003,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/cy.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Griechenland – Post-Diktatur-Verfassung.",
+      "Türkei – Ausrufung der Republik",
+      "Malta – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-cz",
@@ -757,7 +1022,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/cz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Deutschland – Grundgesetz (BRD)",
+      "Polen – Aktuelle Verfassung",
+      "Österreich – Zweite Republik"
+    ]
   },
   {
     "id": "outline-de",
@@ -771,7 +1041,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/de.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Frankreich – Fünfte Republik",
+      "Polen – Aktuelle Verfassung",
+      "Niederlande – Totalrevision."
+    ]
   },
   {
     "id": "outline-dj",
@@ -785,7 +1060,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/dj.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Äthiopien – Föderale Verfassung.",
+      "Äthiopien – Föderale Verfassung.",
+      "Somalia – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-dk",
@@ -799,7 +1079,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/dk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Deutschland – Grundgesetz (BRD)",
+      "Schweden – Regierungsform.",
+      "Norwegen – Verfassung von Eidsvoll (Konstitutionelle Monarchie)"
+    ]
   },
   {
     "id": "outline-dm",
@@ -813,7 +1098,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/dm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "St. Lucia – Unabhängigkeit",
+      "Guadeloupe – Überseedépartement.",
+      "Martinique – Überseedépartement."
+    ]
   },
   {
     "id": "outline-do",
@@ -827,7 +1117,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/do.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Haiti – Post-Duvalier-Verfassung.",
+      "Kuba – Neue Verfassung",
+      "Puerto Rico – Verfassung."
+    ]
   },
   {
     "id": "outline-dz",
@@ -841,7 +1136,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/dz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Tunesien – Neue Verfassung (Arabischer Frühling)",
+      "Libyen – Unabhängigkeit (Systemwechsel 2011)",
+      "Niger – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-ec",
@@ -855,7 +1155,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ec.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kolumbien – Moderne Verfassung.",
+      "Peru – Verfassung.",
+      "Panama – Verfassung."
+    ]
   },
   {
     "id": "outline-ee",
@@ -869,7 +1174,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ee.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Finnland – Neue Verfassung.",
+      "Lettland – Wiederherstellung der Unabhängigkeit",
+      "Russland – Russische Föderation (Post-Sowjet)"
+    ]
   },
   {
     "id": "outline-eg",
@@ -883,7 +1193,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/eg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Libyen – Unabhängigkeit (Systemwechsel 2011)",
+      "Sudan – Unabhängigkeit",
+      "Israel – Staatsgründung"
+    ]
   },
   {
     "id": "outline-eh",
@@ -897,7 +1212,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/eh.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Libyen – Unabhängigkeit (Systemwechsel 2011)",
+      "Schweiz – Gründung des modernen Bundesstaates",
+      "Suriname – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-er",
@@ -911,7 +1231,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/er.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Sudan – Unabhängigkeit",
+      "Äthiopien – Föderale Verfassung.",
+      "Dschibuti – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-es",
@@ -925,7 +1250,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/es.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Frankreich – Fünfte Republik",
+      "Portugal – Post-Nelkenrevolution.",
+      "Andorra – Erste Verfassung (Souveränität)"
+    ]
   },
   {
     "id": "outline-et",
@@ -939,7 +1269,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/et.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Äthiopien – Föderale Verfassung.",
+      "Dschibuti – Unabhängigkeit",
+      "Somalia – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-fi",
@@ -953,7 +1288,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/fi.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Schweden – Regierungsform.",
+      "Norwegen – Verfassung von Eidsvoll (Konstitutionelle Monarchie)",
+      "Russland – Russische Föderation (Post-Sowjet)"
+    ]
   },
   {
     "id": "outline-fj",
@@ -967,7 +1307,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/fj.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Neuseeland – Erlangung des Selbstverwaltungsstatus (Dominion-Status 1907)",
+      "Tonga – Demokratisierung.",
+      "Vanuatu – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-fk",
@@ -981,7 +1326,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/fk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Bahamas – Unabhängigkeit",
+      "Belgien – Unabhängigkeit und Verfassung nach der Revolution",
+      "Guernsey – Regierungsreform."
+    ]
   },
   {
     "id": "outline-fo",
@@ -995,7 +1345,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/fo.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Suriname – Unabhängigkeit",
+      "Nepal – Ausrufung der Republik",
+      "Macau – Übergabe an China."
+    ]
   },
   {
     "id": "outline-fr",
@@ -1009,7 +1364,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/fr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Deutschland – Grundgesetz (BRD)",
+      "Spanien – Demokratische Verfassung",
+      "Italien – Republikanische Verfassung"
+    ]
   },
   {
     "id": "outline-ga",
@@ -1023,7 +1383,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ga.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kamerun – Unabhängigkeit",
+      "Kongo-Brazzaville – Neue Verfassung.",
+      "Äquatorialguinea – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-gb",
@@ -1037,7 +1402,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gb.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Irland – Unabhängigkeit (Freistaat)",
+      "Frankreich – Fünfte Republik",
+      "Niederlande – Totalrevision."
+    ]
   },
   {
     "id": "outline-gd",
@@ -1051,7 +1421,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gd.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "St. Vincent und die Grenadinen – Systembruch.",
+      "Trinidad und Tobago – Republikgründung.",
+      "Barbados – Übergang zur Republik"
+    ]
   },
   {
     "id": "outline-ge",
@@ -1065,7 +1440,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ge.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Russland – Russische Föderation (Post-Sowjet)",
+      "Äserbaidschan – Unabhängigkeitsverfassung.",
+      "Ärmenie – Wechsel zum Parlamentarismus."
+    ]
   },
   {
     "id": "outline-gf",
@@ -1079,7 +1459,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Suriname – Unabhängigkeit",
+      "Brasilien – Aktuelle Verfassung",
+      "Guyana – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-gg",
@@ -1093,7 +1478,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Bahrain – Unabhängigkeit",
+      "Dominikanische Republik – Verfassungsreform.",
+      "Seychellen – Mehrparteiendemokratie."
+    ]
   },
   {
     "id": "outline-gh",
@@ -1107,7 +1497,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gh.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Côte d’Ivoire – 7. August 1960, Unabhaengigkeitserklaerung.",
+      "Burkina Faso – Unabhängigkeit",
+      "Togo – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-gi",
@@ -1121,7 +1516,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gi.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Belarus – Unabhängigkeit von der UdSSR",
+      "Nordkorea – Gründung der DVRK",
+      "Curaçao – Eigenständiges Land."
+    ]
   },
   {
     "id": "outline-gl",
@@ -1135,7 +1535,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kanada – British North America Act (Beginn der Eigenstaatlichkeit)",
+      "Island – Republikgründung",
+      "Belize – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-gm",
@@ -1149,7 +1554,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Senegal – Unabhängigkeit",
+      "Guinea-Bissau – Unabhängigkeit",
+      "Mauretanien – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-gn",
@@ -1163,7 +1573,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Guinea-Bissau – Unabhängigkeit",
+      "Senegal – Unabhängigkeit",
+      "Mali – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-gp",
@@ -1177,7 +1592,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gp.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Papua-Neuguinea – Unabhängigkeit",
+      "Ecuador – Aktuelle Verfassung.",
+      "Ålandinseln – Neue Autonomie-Akte."
+    ]
   },
   {
     "id": "outline-gq",
@@ -1191,7 +1611,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gq.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kamerun – Unabhängigkeit",
+      "Gabun – Unabhängigkeit",
+      "Kongo-Brazzaville – Neue Verfassung."
+    ]
   },
   {
     "id": "outline-gr",
@@ -1205,7 +1630,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Älbanien – Aktuelle Verfassung.",
+      "Nordmazedonien – Unabhängigkeit von Jugoslawien",
+      "Bulgarien – Post-sozialistische Verfassung."
+    ]
   },
   {
     "id": "outline-gs",
@@ -1219,7 +1649,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gs.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Slowenien – Unabhängigkeit von Jugoslawien",
+      "Serbien – Auflösung der Union mit Montenegro",
+      "Turks- und Caicosinseln – Post-Krisen-Verfassung."
+    ]
   },
   {
     "id": "outline-gt",
@@ -1233,7 +1668,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Mexiko – Post-Revolution-Verfassung.",
+      "Belize – Unabhängigkeit",
+      "Honduras – Demokratisierung."
+    ]
   },
   {
     "id": "outline-gu",
@@ -1247,7 +1687,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gu.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kanada – British North America Act (Beginn der Eigenstaatlichkeit)",
+      "Gibraltar – Verfassungsordnung.",
+      "Paraguay – Post-Diktatur-Verfassung."
+    ]
   },
   {
     "id": "outline-gw",
@@ -1261,7 +1706,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Senegal – Unabhängigkeit",
+      "Guinea – Unabhängigkeit",
+      "Gambia – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-gy",
@@ -1275,7 +1725,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/gy.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Venezuela – Bolivarische Verfassung.",
+      "Brasilien – Aktuelle Verfassung",
+      "Suriname – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-hk",
@@ -1289,7 +1744,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/hk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "St. Vincent und die Grenadinen – Systembruch.",
+      "Jordanien – Unabhängigkeit",
+      "Ghana – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-hm",
@@ -1303,7 +1763,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/hm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "China – Aktuelle Verfassung.",
+      "Cookinseln – Selbstverwaltung.",
+      "Philippinen – Aktuelle Verfassung"
+    ]
   },
   {
     "id": "outline-hn",
@@ -1317,7 +1782,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/hn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Guatemala – Demokratische Verfassung.",
+      "El Salvador – Verfassung.",
+      "Nicaragua – Verfassung."
+    ]
   },
   {
     "id": "outline-hr",
@@ -1331,7 +1801,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/hr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Slowenien – Unabhängigkeit von Jugoslawien",
+      "Serbien – Auflösung der Union mit Montenegro",
+      "Bosnien und Herzegowina – Dayton-Abkommen."
+    ]
   },
   {
     "id": "outline-ht",
@@ -1345,7 +1820,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ht.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Dominikanische Republik – Verfassungsreform.",
+      "Kuba – Neue Verfassung",
+      "Jamaika – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-id",
@@ -1359,7 +1839,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/id.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Malaysia – Unabhängigkeit",
+      "Papua-Neuguinea – Unabhängigkeit",
+      "Timor-Leste – Unabhängigkeit."
+    ]
   },
   {
     "id": "outline-ie",
@@ -1373,7 +1858,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ie.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Vereinigtes Königreich – Heutiger Staatsrahmen.",
+      "Island – Republikgründung",
+      "Frankreich – Fünfte Republik"
+    ]
   },
   {
     "id": "outline-il",
@@ -1387,7 +1877,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/il.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Libanon – Unabhängigkeit von Frankreich",
+      "Syrien – Unabhängigkeit von Frankreich",
+      "Jordanien – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-im",
@@ -1401,7 +1896,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/im.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Änguilla – Aktuelle Verfassungsordnung.",
+      "St. Kitts und Nevis – Unabhängigkeit.",
+      "Britisches Territorium im Indischen Ozean – Eigenes Territorium."
+    ]
   },
   {
     "id": "outline-in",
@@ -1415,7 +1915,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/in.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Pakistan – Unabhängigkeit",
+      "China – Aktuelle Verfassung.",
+      "Nepal – Ausrufung der Republik"
+    ]
   },
   {
     "id": "outline-io",
@@ -1429,7 +1934,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/io.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Guam – Organic Act.",
+      "Botsuana – Unabhängigkeit.",
+      "Kenia – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-iq",
@@ -1443,7 +1953,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/iq.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Türkei – Ausrufung der Republik",
+      "Iran – Islamische Republik",
+      "Kuwait – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-ir",
@@ -1457,7 +1972,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ir.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Türkei – Ausrufung der Republik",
+      "Irak – Post-Saddam Verfassung",
+      "Äfghanistan – Machtübernahme der Taliban."
+    ]
   },
   {
     "id": "outline-is",
@@ -1471,7 +1991,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/is.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Norwegen – Verfassung von Eidsvoll (Konstitutionelle Monarchie)",
+      "Irland – Unabhängigkeit (Freistaat)",
+      "Vereinigtes Königreich – Heutiger Staatsrahmen."
+    ]
   },
   {
     "id": "outline-it",
@@ -1485,7 +2010,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/it.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Frankreich – Fünfte Republik",
+      "Österreich – Zweite Republik",
+      "Schweiz – Gründung des modernen Bundesstaates"
+    ]
   },
   {
     "id": "outline-jm",
@@ -1499,7 +2029,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/jm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kuba – Neue Verfassung",
+      "Haiti – Post-Duvalier-Verfassung.",
+      "Bahamas – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-jo",
@@ -1513,7 +2048,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/jo.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Saudi-Arabien – Vereinigung der Königreiche",
+      "Irak – Post-Saddam Verfassung",
+      "Syrien – Unabhängigkeit von Frankreich"
+    ]
   },
   {
     "id": "outline-jp",
@@ -1527,7 +2067,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/jp.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Südkorea – Gründung der Republik",
+      "China – Aktuelle Verfassung.",
+      "Philippinen – Aktuelle Verfassung"
+    ]
   },
   {
     "id": "outline-ke",
@@ -1541,7 +2086,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ke.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Äthiopien – Föderale Verfassung.",
+      "Somalia – Unabhängigkeit",
+      "Südsudan – Unabhängigkeit vom Sudan"
+    ]
   },
   {
     "id": "outline-kg",
@@ -1555,7 +2105,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/kg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kasachstan – Unabhängigkeit von der UdSSR",
+      "China – Aktuelle Verfassung.",
+      "Tadschikistan – Unabhängigkeit von der UdSSR"
+    ]
   },
   {
     "id": "outline-kh",
@@ -1569,7 +2124,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/kh.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Thailand – Ende der absoluten Monarchie",
+      "Laos – Unabhängigkeit von Frankreich",
+      "Vietnam – Wiedervereinigung"
+    ]
   },
   {
     "id": "outline-ki",
@@ -1583,7 +2143,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ki.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Samoa – Unabhängigkeit.",
+      "Neuseeland – Erlangung des Selbstverwaltungsstatus (Dominion-Status 1907)",
+      "Fidschi – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-km",
@@ -1597,7 +2162,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/km.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Madagaskar – Unabhängigkeit",
+      "Tansania – Unabhängigkeit (als Tanganjika)",
+      "Mosambik – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-kn",
@@ -1611,7 +2181,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/kn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Äntigua und Barbuda – Unabhängigkeit vom UK.",
+      "Dominica – Unabhängigkeit",
+      "Montserrat – Verfassungsordnung."
+    ]
   },
   {
     "id": "outline-kp",
@@ -1625,7 +2200,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/kp.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "China – Aktuelle Verfassung.",
+      "Russland – Russische Föderation (Post-Sowjet)",
+      "Südkorea – Gründung der Republik"
+    ]
   },
   {
     "id": "outline-kr",
@@ -1639,7 +2219,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/kr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Nordkorea – Gründung der DVRK",
+      "Japan – Nachkriegsverfassung",
+      "China – Aktuelle Verfassung."
+    ]
   },
   {
     "id": "outline-kw",
@@ -1653,7 +2238,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/kw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Irak – Post-Saddam Verfassung",
+      "Saudi-Arabien – Vereinigung der Königreiche",
+      "Vereinigte Arabische Emirate – Gründung der Föderation."
+    ]
   },
   {
     "id": "outline-ky",
@@ -1667,7 +2257,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ky.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Äthiopien – Föderale Verfassung.",
+      "Schweden – Regierungsform.",
+      "Dominikanische Republik – Verfassungsreform."
+    ]
   },
   {
     "id": "outline-kz",
@@ -1681,7 +2276,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/kz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Russland – Russische Föderation (Post-Sowjet)",
+      "China – Aktuelle Verfassung.",
+      "Kirgisistan – Unabhängigkeit von der UdSSR"
+    ]
   },
   {
     "id": "outline-la",
@@ -1695,7 +2295,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/la.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "China – Aktuelle Verfassung.",
+      "Myanmar – Unabhängigkeit",
+      "Thailand – Ende der absoluten Monarchie"
+    ]
   },
   {
     "id": "outline-lb",
@@ -1709,7 +2314,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/lb.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Syrien – Unabhängigkeit von Frankreich",
+      "Israel – Staatsgründung",
+      "Jordanien – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-lc",
@@ -1723,7 +2333,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/lc.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "St. Vincent und die Grenadinen – Systembruch.",
+      "Barbados – Übergang zur Republik",
+      "Dominica – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-li",
@@ -1737,7 +2352,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/li.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Schweiz – Gründung des modernen Bundesstaates",
+      "Österreich – Zweite Republik",
+      "Deutschland – Grundgesetz (BRD)"
+    ]
   },
   {
     "id": "outline-lk",
@@ -1751,7 +2371,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/lk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Indien – Unabhängigkeit",
+      "Malediven – Unabhängigkeit",
+      "Bangladesch – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-lr",
@@ -1765,7 +2390,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/lr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Sierra Leone – Unabhängigkeit",
+      "Guinea – Unabhängigkeit",
+      "Côte d’Ivoire – 7. August 1960, Unabhaengigkeitserklaerung."
+    ]
   },
   {
     "id": "outline-ls",
@@ -1779,7 +2409,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ls.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Südafrika – Erste freie Wahlen (Ende Apartheid)",
+      "Eswatini – Unabhängigkeit",
+      "Botsuana – Unabhängigkeit."
+    ]
   },
   {
     "id": "outline-lt",
@@ -1793,7 +2428,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/lt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Lettland – Wiederherstellung der Unabhängigkeit",
+      "Belarus – Unabhängigkeit von der UdSSR",
+      "Polen – Aktuelle Verfassung"
+    ]
   },
   {
     "id": "outline-lu",
@@ -1807,7 +2447,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/lu.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Belgien – Unabhängigkeit und Verfassung nach der Revolution",
+      "Deutschland – Grundgesetz (BRD)",
+      "Frankreich – Fünfte Republik"
+    ]
   },
   {
     "id": "outline-lv",
@@ -1821,7 +2466,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/lv.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Estland – Wiederherstellung der Unabhängigkeit",
+      "Litauen – Wiederherstellung der Unabhängigkeit",
+      "Russland – Russische Föderation (Post-Sowjet)"
+    ]
   },
   {
     "id": "outline-ly",
@@ -1835,7 +2485,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ly.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Ägypten – Ausrufung der Republik",
+      "Sudan – Unabhängigkeit",
+      "Tschad – Neue Verfassung/Übergangsrat"
+    ]
   },
   {
     "id": "outline-ma",
@@ -1849,7 +2504,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ma.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Älgerien – Post-Hirak-Verfassung.",
+      "Tunesien – Neue Verfassung (Arabischer Frühling)",
+      "Mauretanien – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-mc",
@@ -1863,7 +2523,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/mc.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Frankreich – Fünfte Republik",
+      "Italien – Republikanische Verfassung",
+      "Schweiz – Gründung des modernen Bundesstaates"
+    ]
   },
   {
     "id": "outline-md",
@@ -1877,7 +2542,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/md.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Rumänien – Post-Kommunismus.",
+      "Belarus – Unabhängigkeit von der UdSSR",
+      "Bulgarien – Post-sozialistische Verfassung."
+    ]
   },
   {
     "id": "outline-me",
@@ -1891,7 +2561,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/me.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Älbanien – Aktuelle Verfassung.",
+      "Bosnien und Herzegowina – Dayton-Abkommen.",
+      "Serbien – Auflösung der Union mit Montenegro"
+    ]
   },
   {
     "id": "outline-mf",
@@ -1905,7 +2580,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/mf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Curaçao – Eigenständiges Land.",
+      "Tunesien – Neue Verfassung (Arabischer Frühling)",
+      "Myanmar – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-mg",
@@ -1919,7 +2599,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/mg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Mosambik – Unabhängigkeit",
+      "Tansania – Unabhängigkeit (als Tanganjika)",
+      "Komoren – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-mk",
@@ -1933,7 +2618,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/mk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Älbanien – Aktuelle Verfassung.",
+      "Griechenland – Post-Diktatur-Verfassung.",
+      "Bulgarien – Post-sozialistische Verfassung."
+    ]
   },
   {
     "id": "outline-ml",
@@ -1947,7 +2637,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ml.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Älgerien – Post-Hirak-Verfassung.",
+      "Niger – Unabhängigkeit",
+      "Burkina Faso – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-mm",
@@ -1961,7 +2656,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/mm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Bangladesch – Unabhängigkeit",
+      "Indien – Unabhängigkeit",
+      "China – Aktuelle Verfassung."
+    ]
   },
   {
     "id": "outline-mn",
@@ -1975,7 +2675,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/mn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "China – Aktuelle Verfassung.",
+      "Russland – Russische Föderation (Post-Sowjet)",
+      "Kasachstan – Unabhängigkeit von der UdSSR"
+    ]
   },
   {
     "id": "outline-mo",
@@ -1989,7 +2694,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/mo.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "St. Vincent und die Grenadinen – Systembruch.",
+      "Senegal – Unabhängigkeit",
+      "Kamerun – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-mq",
@@ -2003,7 +2713,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/mq.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kirgisistan – Unabhängigkeit von der UdSSR",
+      "Änguilla – Aktuelle Verfassungsordnung.",
+      "Burundi – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-mr",
@@ -2017,7 +2732,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/mr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Marokko – Ende der Protektorate",
+      "Älgerien – Post-Hirak-Verfassung.",
+      "Mali – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-ms",
@@ -2031,7 +2751,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ms.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Sint Maarten – Eigenständigkeit.",
+      "Turks- und Caicosinseln – Post-Krisen-Verfassung.",
+      "Fidschi – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-mt",
@@ -2045,7 +2770,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/mt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Italien – Republikanische Verfassung",
+      "Griechenland – Post-Diktatur-Verfassung.",
+      "Zypern – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-mu",
@@ -2059,7 +2789,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/mu.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Madagaskar – Unabhängigkeit",
+      "Réunion – Überseedépartement.",
+      "Seychellen – Mehrparteiendemokratie."
+    ]
   },
   {
     "id": "outline-mv",
@@ -2073,7 +2808,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/mv.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Sri Lanka – Unabhängigkeit",
+      "Indien – Unabhängigkeit",
+      "Seychellen – Mehrparteiendemokratie."
+    ]
   },
   {
     "id": "outline-mw",
@@ -2087,7 +2827,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/mw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Tansania – Unabhängigkeit (als Tanganjika)",
+      "Mosambik – Unabhängigkeit",
+      "Sambia – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-mx",
@@ -2101,7 +2846,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/mx.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Vereinigte Staaten – Verfassungsinkrafttreten.",
+      "Guatemala – Demokratische Verfassung.",
+      "Belize – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-my",
@@ -2115,7 +2865,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/my.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Thailand – Ende der absoluten Monarchie",
+      "Indonesien – Unabhängigkeit",
+      "Singapur – Trennung von Malaysia"
+    ]
   },
   {
     "id": "outline-mz",
@@ -2129,7 +2884,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/mz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Tansania – Unabhängigkeit (als Tanganjika)",
+      "Malawi – Unabhängigkeit",
+      "Sambia – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-na",
@@ -2143,7 +2903,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/na.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Ängola – Aktuelle Verfassung.",
+      "Südafrika – Erste freie Wahlen (Ende Apartheid)",
+      "Botsuana – Unabhängigkeit."
+    ]
   },
   {
     "id": "outline-nc",
@@ -2157,7 +2922,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/nc.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Äustralien – Australia Act.",
+      "Vanuatu – Unabhängigkeit",
+      "Fidschi – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-ne",
@@ -2171,7 +2941,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ne.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Libyen – Unabhängigkeit (Systemwechsel 2011)",
+      "Tschad – Neue Verfassung/Übergangsrat",
+      "Nigeria – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-nf",
@@ -2185,7 +2960,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/nf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Sudan – Unabhängigkeit",
+      "Heard und McDonaldinseln – Australische Verwaltung.",
+      "Portugal – Post-Nelkenrevolution."
+    ]
   },
   {
     "id": "outline-ng",
@@ -2199,7 +2979,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ng.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Niger – Unabhängigkeit",
+      "Tschad – Neue Verfassung/Übergangsrat",
+      "Kamerun – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-ni",
@@ -2213,7 +2998,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ni.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Honduras – Demokratisierung.",
+      "Costa Rica – Post-Bürgerkriegsverfassung.",
+      "El Salvador – Verfassung."
+    ]
   },
   {
     "id": "outline-nl",
@@ -2227,7 +3017,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/nl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Deutschland – Grundgesetz (BRD)",
+      "Belgien – Unabhängigkeit und Verfassung nach der Revolution",
+      "Vereinigtes Königreich – Heutiger Staatsrahmen."
+    ]
   },
   {
     "id": "outline-no",
@@ -2241,7 +3036,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/no.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Schweden – Regierungsform.",
+      "Finnland – Neue Verfassung.",
+      "Russland – Russische Föderation (Post-Sowjet)"
+    ]
   },
   {
     "id": "outline-np",
@@ -2255,7 +3055,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/np.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "China – Aktuelle Verfassung.",
+      "Indien – Unabhängigkeit",
+      "Bhutan – Konstitutionelle Monarchie."
+    ]
   },
   {
     "id": "outline-nr",
@@ -2269,7 +3074,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/nr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Malaysia – Unabhängigkeit",
+      "Côte d’Ivoire – 7. August 1960, Unabhaengigkeitserklaerung.",
+      "Jordanien – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-nu",
@@ -2283,7 +3093,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/nu.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Dominikanische Republik – Verfassungsreform.",
+      "Südsudan – Unabhängigkeit vom Sudan",
+      "Deutschland – Grundgesetz (BRD)"
+    ]
   },
   {
     "id": "outline-nz",
@@ -2297,7 +3112,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/nz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Äustralien – Australia Act.",
+      "Fidschi – Unabhängigkeit",
+      "Tonga – Demokratisierung."
+    ]
   },
   {
     "id": "outline-pa",
@@ -2311,7 +3131,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/pa.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Costa Rica – Post-Bürgerkriegsverfassung.",
+      "Kolumbien – Moderne Verfassung.",
+      "Nicaragua – Verfassung."
+    ]
   },
   {
     "id": "outline-pe",
@@ -2325,7 +3150,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/pe.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Ecuador – Aktuelle Verfassung.",
+      "Kolumbien – Moderne Verfassung.",
+      "Brasilien – Aktuelle Verfassung"
+    ]
   },
   {
     "id": "outline-pf",
@@ -2339,7 +3169,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/pf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Palau – Verfassung (Souveränität 1994)",
+      "Ecuador – Aktuelle Verfassung.",
+      "Vatikanstadt – Lateranverträge"
+    ]
   },
   {
     "id": "outline-pg",
@@ -2353,7 +3188,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/pg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Indonesien – Unabhängigkeit",
+      "Äustralien – Australia Act.",
+      "Salomonen – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-ph",
@@ -2367,7 +3207,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ph.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Indonesien – Unabhängigkeit",
+      "Malaysia – Unabhängigkeit",
+      "China – Aktuelle Verfassung."
+    ]
   },
   {
     "id": "outline-pk",
@@ -2381,7 +3226,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/pk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Indien – Unabhängigkeit",
+      "China – Aktuelle Verfassung.",
+      "Äfghanistan – Machtübernahme der Taliban."
+    ]
   },
   {
     "id": "outline-pl",
@@ -2395,7 +3245,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/pl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Deutschland – Grundgesetz (BRD)",
+      "Tschechien – Teilung der Tschechoslowakei",
+      "Slowakei – Teilung der Tschechoslowakei"
+    ]
   },
   {
     "id": "outline-pm",
@@ -2409,7 +3264,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/pm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Bermuda – Verfassungsordnung.",
+      "Kuwait – Unabhängigkeit",
+      "Suriname – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-pn",
@@ -2423,7 +3283,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/pn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Dominica – Unabhängigkeit",
+      "Mosambik – Unabhängigkeit",
+      "Norfolkinsel – Ende der Selbstverwaltung."
+    ]
   },
   {
     "id": "outline-pr",
@@ -2437,7 +3302,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/pr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Dominikanische Republik – Verfassungsreform.",
+      "Kuba – Neue Verfassung",
+      "Belize – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-pt",
@@ -2451,7 +3321,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/pt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Spanien – Demokratische Verfassung",
+      "Frankreich – Fünfte Republik",
+      "Italien – Republikanische Verfassung"
+    ]
   },
   {
     "id": "outline-pw",
@@ -2465,7 +3340,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/pw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Indonesien – Unabhängigkeit",
+      "Philippinen – Aktuelle Verfassung",
+      "Neuseeland – Erlangung des Selbstverwaltungsstatus (Dominion-Status 1907)"
+    ]
   },
   {
     "id": "outline-py",
@@ -2479,7 +3359,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/py.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Bolivien – Plurinationaler Staat.",
+      "Brasilien – Aktuelle Verfassung",
+      "Peru – Verfassung."
+    ]
   },
   {
     "id": "outline-qa",
@@ -2493,7 +3378,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/qa.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Saudi-Arabien – Vereinigung der Königreiche",
+      "Vereinigte Arabische Emirate – Gründung der Föderation.",
+      "Bahrain – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-re",
@@ -2507,7 +3397,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/re.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Mauritius – Unabhängigkeit",
+      "Madagaskar – Unabhängigkeit",
+      "Komoren – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-ro",
@@ -2521,7 +3416,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ro.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Serbien – Auflösung der Union mit Montenegro",
+      "Bulgarien – Post-sozialistische Verfassung.",
+      "Republik Moldau – Verfassung."
+    ]
   },
   {
     "id": "outline-rs",
@@ -2535,7 +3435,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/rs.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Rumänien – Post-Kommunismus.",
+      "Bulgarien – Post-sozialistische Verfassung.",
+      "Nordmazedonien – Unabhängigkeit von Jugoslawien"
+    ]
   },
   {
     "id": "outline-ru",
@@ -2549,7 +3454,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ru.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Norwegen – Verfassung von Eidsvoll (Konstitutionelle Monarchie)",
+      "Finnland – Neue Verfassung.",
+      "Estland – Wiederherstellung der Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-rw",
@@ -2563,7 +3473,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/rw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Tansania – Unabhängigkeit (als Tanganjika)",
+      "Burundi – Unabhängigkeit",
+      "Kongo-Kinshasa – III. Republik."
+    ]
   },
   {
     "id": "outline-sa",
@@ -2577,7 +3492,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sa.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Jordanien – Unabhängigkeit",
+      "Irak – Post-Saddam Verfassung",
+      "Kuwait – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-sb",
@@ -2591,7 +3511,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sb.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Papua-Neuguinea – Unabhängigkeit",
+      "Vanuatu – Unabhängigkeit",
+      "Fidschi – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-sc",
@@ -2605,7 +3530,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sc.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Mauritius – Unabhängigkeit",
+      "Réunion – Überseedépartement.",
+      "Malediven – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-sd",
@@ -2619,7 +3549,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sd.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Ägypten – Ausrufung der Republik",
+      "Libyen – Unabhängigkeit (Systemwechsel 2011)",
+      "Tschad – Neue Verfassung/Übergangsrat"
+    ]
   },
   {
     "id": "outline-se",
@@ -2633,7 +3568,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/se.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Norwegen – Verfassung von Eidsvoll (Konstitutionelle Monarchie)",
+      "Finnland – Neue Verfassung.",
+      "Dänemark – Verfassungsänderung."
+    ]
   },
   {
     "id": "outline-sg",
@@ -2647,7 +3587,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Malaysia – Unabhängigkeit",
+      "Indonesien – Unabhängigkeit",
+      "Brunei Darussalam – Unabhängigkeit."
+    ]
   },
   {
     "id": "outline-sh",
@@ -2661,7 +3606,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sh.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Simbabwe – Unabhängigkeit",
+      "Bouvetinsel – Norwegische Souveränität.",
+      "Chile – Verfassungsreform."
+    ]
   },
   {
     "id": "outline-si",
@@ -2675,7 +3625,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/si.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Österreich – Zweite Republik",
+      "Italien – Republikanische Verfassung",
+      "Kroatien – Unabhängigkeit von Jugoslawien"
+    ]
   },
   {
     "id": "outline-sj",
@@ -2689,7 +3644,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sj.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Malediven – Unabhängigkeit",
+      "Frankreich – Fünfte Republik",
+      "Älbanien – Aktuelle Verfassung."
+    ]
   },
   {
     "id": "outline-sk",
@@ -2703,7 +3663,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Tschechien – Teilung der Tschechoslowakei",
+      "Polen – Aktuelle Verfassung",
+      "Österreich – Zweite Republik"
+    ]
   },
   {
     "id": "outline-sl",
@@ -2717,7 +3682,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Guinea – Unabhängigkeit",
+      "Liberia – Post-Bürgerkrieg-Verfassung.",
+      "Côte d’Ivoire – 7. August 1960, Unabhaengigkeitserklaerung."
+    ]
   },
   {
     "id": "outline-sm",
@@ -2731,7 +3701,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Italien – Republikanische Verfassung",
+      "Schweiz – Gründung des modernen Bundesstaates",
+      "Andorra – Erste Verfassung (Souveränität)"
+    ]
   },
   {
     "id": "outline-sn",
@@ -2745,7 +3720,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Mauretanien – Unabhängigkeit",
+      "Mali – Unabhängigkeit",
+      "Guinea – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-so",
@@ -2759,7 +3739,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/so.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Äthiopien – Föderale Verfassung.",
+      "Kenia – Unabhängigkeit",
+      "Dschibuti – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-sr",
@@ -2773,7 +3758,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Guyana – Unabhängigkeit",
+      "Brasilien – Aktuelle Verfassung",
+      "Französisch-Guayana – Überseedépartement."
+    ]
   },
   {
     "id": "outline-ss",
@@ -2787,7 +3777,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ss.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Sudan – Unabhängigkeit",
+      "Äthiopien – Föderale Verfassung.",
+      "Kenia – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-st",
@@ -2801,7 +3796,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/st.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Gabun – Unabhängigkeit",
+      "Äquatorialguinea – Unabhängigkeit",
+      "Kongo-Brazzaville – Neue Verfassung."
+    ]
   },
   {
     "id": "outline-sv",
@@ -2815,7 +3815,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sv.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Guatemala – Demokratische Verfassung.",
+      "Honduras – Demokratisierung.",
+      "Nicaragua – Verfassung."
+    ]
   },
   {
     "id": "outline-sx",
@@ -2829,7 +3834,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sx.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Malediven – Unabhängigkeit",
+      "Norfolkinsel – Ende der Selbstverwaltung.",
+      "Marokko – Ende der Protektorate"
+    ]
   },
   {
     "id": "outline-sy",
@@ -2843,7 +3853,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sy.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Türkei – Ausrufung der Republik",
+      "Irak – Post-Saddam Verfassung",
+      "Jordanien – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-sz",
@@ -2857,7 +3872,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/sz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Südafrika – Erste freie Wahlen (Ende Apartheid)",
+      "Mosambik – Unabhängigkeit",
+      "Lesotho – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-tc",
@@ -2871,7 +3891,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/tc.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Timor-Leste – Unabhängigkeit.",
+      "Sierra Leone – Unabhängigkeit",
+      "Monaco – Verfassungsreform."
+    ]
   },
   {
     "id": "outline-td",
@@ -2885,7 +3910,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/td.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Libyen – Unabhängigkeit (Systemwechsel 2011)",
+      "Sudan – Unabhängigkeit",
+      "Zentralafrikanische Republik – Neue Verfassung."
+    ]
   },
   {
     "id": "outline-tf",
@@ -2899,7 +3929,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/tf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Komoren – Unabhängigkeit",
+      "Ägypten – Ausrufung der Republik",
+      "Belarus – Unabhängigkeit von der UdSSR"
+    ]
   },
   {
     "id": "outline-tg",
@@ -2913,7 +3948,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/tg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Ghana – Unabhängigkeit",
+      "Burkina Faso – Unabhängigkeit",
+      "Benin – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-th",
@@ -2927,7 +3967,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/th.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Myanmar – Unabhängigkeit",
+      "Laos – Unabhängigkeit von Frankreich",
+      "Kambodscha – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-tj",
@@ -2941,7 +3986,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/tj.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Äfghanistan – Machtübernahme der Taliban.",
+      "China – Aktuelle Verfassung.",
+      "Kirgisistan – Unabhängigkeit von der UdSSR"
+    ]
   },
   {
     "id": "outline-tk",
@@ -2955,7 +4005,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/tk.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Isle of Man – Tynwald-Jubiläum.",
+      "Kroatien – Unabhängigkeit von Jugoslawien",
+      "Mosambik – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-tl",
@@ -2969,7 +4024,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/tl.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Indonesien – Unabhängigkeit",
+      "Philippinen – Aktuelle Verfassung",
+      "Papua-Neuguinea – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-tm",
@@ -2983,7 +4043,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/tm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kasachstan – Unabhängigkeit von der UdSSR",
+      "Äfghanistan – Machtübernahme der Taliban.",
+      "Iran – Islamische Republik"
+    ]
   },
   {
     "id": "outline-tn",
@@ -2997,7 +4062,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/tn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Älgerien – Post-Hirak-Verfassung.",
+      "Libyen – Unabhängigkeit (Systemwechsel 2011)",
+      "Marokko – Ende der Protektorate"
+    ]
   },
   {
     "id": "outline-to",
@@ -3011,7 +4081,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/to.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Fidschi – Unabhängigkeit",
+      "Neuseeland – Erlangung des Selbstverwaltungsstatus (Dominion-Status 1907)",
+      "Samoa – Unabhängigkeit."
+    ]
   },
   {
     "id": "outline-tr",
@@ -3025,7 +4100,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/tr.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Griechenland – Post-Diktatur-Verfassung.",
+      "Bulgarien – Post-sozialistische Verfassung.",
+      "Georgien – Unabhängigkeit von der UdSSR"
+    ]
   },
   {
     "id": "outline-tt",
@@ -3039,7 +4119,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/tt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Venezuela – Bolivarische Verfassung.",
+      "Grenada – Unabhängigkeit",
+      "Barbados – Übergang zur Republik"
+    ]
   },
   {
     "id": "outline-tw",
@@ -3053,7 +4138,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/tw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Côte d’Ivoire – 7. August 1960, Unabhaengigkeitserklaerung.",
+      "Grönland – Self-Government.",
+      "Mayotte – Departement-Status."
+    ]
   },
   {
     "id": "outline-tz",
@@ -3067,7 +4157,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/tz.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kenia – Unabhängigkeit",
+      "Ruanda – Unabhängigkeit",
+      "Burundi – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-us",
@@ -3081,7 +4176,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/us.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kanada – British North America Act (Beginn der Eigenstaatlichkeit)",
+      "Mexiko – Post-Revolution-Verfassung.",
+      "Kuba – Neue Verfassung"
+    ]
   },
   {
     "id": "outline-va",
@@ -3095,7 +4195,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/va.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Italien – Republikanische Verfassung",
+      "San Marino – Verabschiedung der Statuten (älteste Republik)",
+      "Monaco – Verfassungsreform."
+    ]
   },
   {
     "id": "outline-vc",
@@ -3109,7 +4214,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/vc.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "St. Lucia – Unabhängigkeit",
+      "Barbados – Übergang zur Republik",
+      "Grenada – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-ve",
@@ -3123,7 +4233,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ve.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kolumbien – Moderne Verfassung.",
+      "Brasilien – Aktuelle Verfassung",
+      "Guyana – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-vg",
@@ -3137,7 +4252,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/vg.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Pitcairninseln – Verfassungsordnung.",
+      "Montserrat – Verfassungsordnung.",
+      "Slowakei – Teilung der Tschechoslowakei"
+    ]
   },
   {
     "id": "outline-vn",
@@ -3151,7 +4271,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/vn.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "China – Aktuelle Verfassung.",
+      "Laos – Unabhängigkeit von Frankreich",
+      "Kambodscha – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-vu",
@@ -3165,7 +4290,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/vu.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Fidschi – Unabhängigkeit",
+      "Neukaledonien – Nouméa-Abkommen.",
+      "Salomonen – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-wf",
@@ -3179,7 +4309,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/wf.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Guatemala – Demokratische Verfassung.",
+      "Cabo Verde – Demokratisierung.",
+      "Saudi-Arabien – Vereinigung der Königreiche"
+    ]
   },
   {
     "id": "outline-ws",
@@ -3193,7 +4328,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ws.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Tonga – Demokratisierung.",
+      "Fidschi – Unabhängigkeit",
+      "Kiribati – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-ye",
@@ -3207,7 +4347,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/ye.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Saudi-Arabien – Vereinigung der Königreiche",
+      "Vereinigte Arabische Emirate – Gründung der Föderation.",
+      "Äthiopien – Föderale Verfassung."
+    ]
   },
   {
     "id": "outline-yt",
@@ -3221,7 +4366,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/yt.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Libanon – Unabhängigkeit von Frankreich",
+      "Gabun – Unabhängigkeit",
+      "Sri Lanka – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-za",
@@ -3235,7 +4385,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/za.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Namibia – Unabhängigkeit",
+      "Botsuana – Unabhängigkeit.",
+      "Simbabwe – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-zm",
@@ -3249,7 +4404,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/zm.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Kongo-Kinshasa – III. Republik.",
+      "Tansania – Unabhängigkeit (als Tanganjika)",
+      "Malawi – Unabhängigkeit"
+    ]
   },
   {
     "id": "outline-zw",
@@ -3263,7 +4423,12 @@ export const outlineCards: Card[] = [
     "sources": {
       "image": "/assets/country-outlines/zw.png",
       "text": "mapsicon by djaiss (CC BY 4.0)"
-    }
+    },
+    "distractors": [
+      "Sambia – Unabhängigkeit",
+      "Botsuana – Unabhängigkeit.",
+      "Südafrika – Erste freie Wahlen (Ende Apartheid)"
+    ]
   }
 ];
 
