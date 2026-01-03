@@ -243,14 +243,24 @@ export function generateDistractors(currentCard: Card): string[] {
  */
 export function getMultipleChoiceOptions(card: Card): { options: string[]; correctIndex: number } {
   const distractors = generateDistractors(card);
-  const allOptions = [card.answer, ...distractors];
+  
+  // For Schätzfragen: ensure all options start with "ca."
+  let correctAnswer = card.answer;
+  if (card.category === 'schaetzfragen') {
+    // Remove existing "ca." prefix if present
+    correctAnswer = correctAnswer.replace(/^ca\.\s*/, '');
+    // Add "ca." prefix
+    correctAnswer = `ca. ${correctAnswer}`;
+  }
+  
+  const allOptions = [correctAnswer, ...distractors];
   
   const shuffled = allOptions
     .map((option, index) => ({ option, index, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(item => item.option);
   
-  const correctIndex = shuffled.indexOf(card.answer);
+  const correctIndex = shuffled.indexOf(correctAnswer);
   
   return { options: shuffled, correctIndex };
 }
