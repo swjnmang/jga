@@ -40,7 +40,8 @@ export function toDecadeTag(year: number): DecadeTag | undefined {
 export function getDefaultSettings(
   availableCategories: CardCategory[],
   availableDecades?: DecadeTag[],
-  availablePlaylists?: string[]
+  availablePlaylists?: string[],
+  mode?: 'timeline' | 'trivia' | 'solo' | null
 ): UserSettings {
   const even = Math.floor(100 / availableCategories.length);
   const remainder = 100 - even * availableCategories.length;
@@ -57,7 +58,7 @@ export function getDefaultSettings(
     genres: ALL_GENRES,
     decades: availableDecades && availableDecades.length > 0 ? availableDecades : ALL_DECADES,
     playlists: availablePlaylists && availablePlaylists.length > 0 ? availablePlaylists : [],
-    multipleChoice: false
+    multipleChoice: mode === 'solo'
   };
 }
 

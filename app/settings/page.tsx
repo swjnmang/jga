@@ -71,8 +71,8 @@ function SettingsPageContent() {
   }, []);
   const playlistNameMap = useMemo(() => new Map(playlistInfo.map((p) => [p.id, p.name])), []);
   const defaults = useMemo(
-    () => getDefaultSettings(availableCategories, availableDecades, availablePlaylists),
-    [availableCategories, availableDecades, availablePlaylists]
+    () => getDefaultSettings(availableCategories, availableDecades, availablePlaylists, mode),
+    [availableCategories, availableDecades, availablePlaylists, mode]
   );
   const [settings, setSettings] = useState<UserSettings>(defaults);
   const [loaded, setLoaded] = useState(false);
