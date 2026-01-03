@@ -713,7 +713,7 @@ function PlayPageContent() {
         {(!settings.multipleChoice || showSolution) && (
           <button
             type="button"
-            className="rounded-full bg-ink text-inkDark px-4 py-3 text-sm font-semibold w-full sm:flex-1 text-center smooth-transition hover:scale-[1.02] active:scale-[0.98]"
+            className="rounded-full bg-ink text-black px-4 py-3 text-sm font-semibold w-full sm:flex-1 text-center smooth-transition hover:scale-[1.02] active:scale-[0.98]"
             onClick={nextCard}
           >
             {isLast ? 'Fertig' : showSolution ? 'Zur nächsten Frage →' : 'Lösung anzeigen'}
