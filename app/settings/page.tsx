@@ -196,6 +196,34 @@ function SettingsPageContent() {
     });
   };
 
+  const toggleAllCategories = () => {
+    const allActive = availableCategories.every(cat => settings.categoryWeights[cat] > 0);
+    const nextWeights = { ...settings.categoryWeights };
+    
+    availableCategories.forEach(cat => {
+      nextWeights[cat] = allActive ? 0 : 10;
+    });
+
+    // Prevent all zero if we're turning off - turn on instead
+    const hasActive = Object.values(nextWeights).some(w => w > 0);
+    if (!hasActive) {
+      availableCategories.forEach(cat => {
+        nextWeights[cat] = 10;
+      });
+    }
+
+    const active = Object.entries(nextWeights)
+      .filter(([_, w]) => (w as number) > 0)
+      .map(([cat]) => cat as CardCategory);
+
+    const next = {
+      ...settings,
+      categoryWeights: nextWeights,
+      categories: active
+    };
+    updateSettings(next);
+  };
+
   return (
     <main className="mx-auto max-w-4xl px-6 py-10 space-y-6">
       <div className="space-y-2">
@@ -241,6 +269,15 @@ function SettingsPageContent() {
           <p className="text-xs text-ink/60">Wähle Kategorien aus, die du spielen möchtest</p>
         </div>
         <div className="space-y-3">
+          <label className="flex items-center gap-3 cursor-pointer p-3 rounded-xl bg-ink/5 border border-ink/20">
+            <input
+              type="checkbox"
+              checked={availableCategories.every(cat => settings.categoryWeights[cat] > 0)}
+              onChange={toggleAllCategories}
+              className="h-5 w-5 accent-sky-700"
+            />
+            <span className="text-sm font-semibold">Alle Kategorien an/aus</span>
+          </label>
           <div className="space-y-2">
             {availableCategories.map((category) => {
               const isActive = settings.categoryWeights[category] > 0;
