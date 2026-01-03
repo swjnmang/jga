@@ -581,9 +581,9 @@ export const outlineCards: Card[] = [
     "id": "outline-ci",
     "title": "Umriss Côte d’Ivoire",
     "category": "country",
-    "year": 2016,
+    "year": 1960,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Côte d’Ivoire – III. Republik.",
+    "answer": "Côte d’Ivoire – 7. August 1960, Unabhaengigkeitserklaerung.",
     "hint": "Côte d’Ivoire",
     "difficulty": "mittel",
     "sources": {

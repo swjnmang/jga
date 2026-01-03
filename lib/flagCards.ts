@@ -540,9 +540,9 @@ export const flagCards: Card[] = [
     "id": "flag-ci",
     "title": "Flagge Côte d’Ivoire",
     "category": "country",
-    "year": 2016,
+    "year": 1960,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Côte d’Ivoire – Verfassung der Dritten Republik.",
+    "answer": "Côte d’Ivoire – 7. August 1960, Unabhaengigkeitserklaerung.",
     "hint": "Côte d’Ivoire",
     "difficulty": "mittel",
     "sources": {
