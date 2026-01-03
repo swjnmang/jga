@@ -72,20 +72,17 @@ function extractUnit(answer: string): string {
   const units = [
     'Kilometer', 'km',
     'Meter', 'm',
-    'Liter', 'l', 'L',
+    'Liter', 'l', 'L', 'Milliliter', 'ml',
     'Tonnen', 't',
     'Kilogramm', 'kg', 'Kilo',
-    'Gramm', 'g',
-    'Tasten',
+    'Gramm', 'g', 'Milligramm', 'mg',
+    'Tasten', 'Klappen',
     'Strophen',
-    'Jahre',
-    'Stunden',
-    'Minuten',
-    'Sekunden',
-    'Eier',
-    'Millionen',
-    'Milliarden',
-    'Billiarden'
+    'Jahre', 'Tage',
+    'Stunden', 'Minuten', 'Sekunden',
+    'Eier', 'Haare', 'Zahne', 'Blätter', 'Federn', 'Saiten', 'Schlage', 'Inseln', 'Stockwerke', 'Atemzuege',
+    'Millionen', 'Milliarden', 'Billiarden',
+    'kcal', 'Grad Celsius', 'km/h'
   ];
   
   // Search for the first unit occurrence (case-insensitive)
