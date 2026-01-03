@@ -41,7 +41,7 @@ function SettingsPageContent() {
   const searchParams = useSearchParams();
   const modeParam = searchParams.get('mode');
   const returnParam = searchParams.get('return');
-  const mode: 'timeline' | 'trivia' | null = modeParam === 'timeline' || modeParam === 'trivia' ? modeParam : null;
+  const mode: 'timeline' | 'trivia' | 'solo' | null = modeParam === 'timeline' || modeParam === 'trivia' || modeParam === 'solo' ? modeParam : null;
 
   const availableCategories = useMemo(() => {
     const base = getCategories(cards).filter((c) => c !== 'video');
