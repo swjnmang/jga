@@ -41,7 +41,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mehnersmoos, DJ Arschlochficker — 3 Uhr Nachts."",
+    "answer": "Mehnersmoos, DJ Arschlochficker — 3 Uhr Nachts.",
     "hint": "Mehnersmoos, DJ Arschlochficker",
     "difficulty": "mittel",
     "sources": {
@@ -61,7 +61,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mehnersmoos — Bir."",
+    "answer": "Mehnersmoos — Bir.",
     "hint": "Mehnersmoos",
     "difficulty": "mittel",
     "sources": {
@@ -81,7 +81,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Roy Bianco & Die Abbrunzati Boys — Brennerautobahn."",
+    "answer": "Roy Bianco & Die Abbrunzati Boys — Brennerautobahn.",
     "hint": "Roy Bianco & Die Abbrunzati Boys",
     "difficulty": "mittel",
     "sources": {
@@ -100,7 +100,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Älexander Marcus — Hawaii Toast Song."",
+    "answer": "Älexander Marcus — Hawaii Toast Song.",
     "hint": "Älexander Marcus",
     "difficulty": "mittel",
     "sources": {
@@ -119,7 +119,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "K.I.Z — Familienfeier."",
+    "answer": "K.I.Z — Familienfeier.",
     "hint": "K.I.Z",
     "difficulty": "mittel",
     "sources": {
@@ -139,7 +139,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Roy Bianco & Die Abbrunzati Boys — Velocità."",
+    "answer": "Roy Bianco & Die Abbrunzati Boys — Velocità.",
     "hint": "Roy Bianco & Die Abbrunzati Boys",
     "difficulty": "mittel",
     "sources": {
@@ -158,7 +158,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Roy Bianco & Die Abbrunzati Boys — Bella Napoli."",
+    "answer": "Roy Bianco & Die Abbrunzati Boys — Bella Napoli.",
     "hint": "Roy Bianco & Die Abbrunzati Boys",
     "difficulty": "mittel",
     "sources": {
@@ -177,7 +177,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — In the End."",
+    "answer": "Linkin Park — In the End.",
     "hint": "Linkin Park",
     "difficulty": "leicht",
     "sources": {
@@ -199,7 +199,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — Numb."",
+    "answer": "Linkin Park — Numb.",
     "hint": "Linkin Park",
     "difficulty": "leicht",
     "sources": {
@@ -221,7 +221,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — Crawling."",
+    "answer": "Linkin Park — Crawling.",
     "hint": "Linkin Park",
     "difficulty": "leicht",
     "sources": {
@@ -242,7 +242,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — The Emptiness Machine."",
+    "answer": "Linkin Park — The Emptiness Machine.",
     "hint": "Linkin Park",
     "difficulty": "leicht",
     "sources": {
@@ -263,7 +263,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bon Jovi — Livin' On A Prayer."",
+    "answer": "Bon Jovi — Livin' On A Prayer.",
     "hint": "Bon Jovi",
     "difficulty": "mittel",
     "sources": {
@@ -283,7 +283,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1994,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bon Jovi — Always."",
+    "answer": "Bon Jovi — Always.",
     "hint": "Bon Jovi",
     "difficulty": "mittel",
     "sources": {
@@ -303,7 +303,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Metallica — Enter Sandman - Remastered 2021."",
+    "answer": "Metallica — Enter Sandman - Remastered 2021.",
     "hint": "Metallica",
     "difficulty": "mittel",
     "sources": {
@@ -323,7 +323,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Metallica — Master Of Puppets."",
+    "answer": "Metallica — Master Of Puppets.",
     "hint": "Metallica",
     "difficulty": "mittel",
     "sources": {
@@ -344,7 +344,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Metallica — Sad But True - Remastered 2021."",
+    "answer": "Metallica — Sad But True - Remastered 2021.",
     "hint": "Metallica",
     "difficulty": "mittel",
     "sources": {
@@ -364,7 +364,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1983,
     "cue": "Song anhören und einordnen.",
-    "answer": "Metallica — Seek & Destroy - Remastered."",
+    "answer": "Metallica — Seek & Destroy - Remastered.",
     "hint": "Metallica",
     "difficulty": "mittel",
     "sources": {
@@ -384,7 +384,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Papa Roach — Last Resort."",
+    "answer": "Papa Roach — Last Resort.",
     "hint": "Papa Roach",
     "difficulty": "mittel",
     "sources": {
@@ -405,7 +405,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wheatus — Teenage Dirtbag."",
+    "answer": "Wheatus — Teenage Dirtbag.",
     "hint": "Wheatus",
     "difficulty": "schwer",
     "sources": {
@@ -425,7 +425,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Guns N' Roses — Paradise City."",
+    "answer": "Guns N' Roses — Paradise City.",
     "hint": "Guns N' Roses",
     "difficulty": "mittel",
     "sources": {
@@ -446,7 +446,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1981,
     "cue": "Song anhören und einordnen.",
-    "answer": "Journey — Don't Stop Believin' (2022 Remaster)."",
+    "answer": "Journey — Don't Stop Believin' (2022 Remaster).",
     "hint": "Journey",
     "difficulty": "mittel",
     "sources": {
@@ -465,7 +465,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Limp Bizkit — Take A Look Around."",
+    "answer": "Limp Bizkit — Take A Look Around.",
     "hint": "Limp Bizkit",
     "difficulty": "mittel",
     "sources": {
@@ -486,7 +486,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "blink-182 — All The Small Things."",
+    "answer": "blink-182 — All The Small Things.",
     "hint": "blink-182",
     "difficulty": "mittel",
     "sources": {
@@ -505,7 +505,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Crazy Town — Butterfly."",
+    "answer": "Crazy Town — Butterfly.",
     "hint": "Crazy Town",
     "difficulty": "mittel",
     "sources": {
@@ -527,7 +527,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — Californication."",
+    "answer": "Red Hot Chili Peppers — Californication.",
     "hint": "Red Hot Chili Peppers",
     "difficulty": "leicht",
     "sources": {
@@ -546,7 +546,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "System Of A Down — Chop Suey!."",
+    "answer": "System Of A Down — Chop Suey!.",
     "hint": "System Of A Down",
     "difficulty": "mittel",
     "sources": {
@@ -567,7 +567,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bloodhound Gang — The Bad Touch."",
+    "answer": "Bloodhound Gang — The Bad Touch.",
     "hint": "Bloodhound Gang",
     "difficulty": "mittel",
     "sources": {
@@ -587,7 +587,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Evanescence — Bring Me To Life."",
+    "answer": "Evanescence — Bring Me To Life.",
     "hint": "Evanescence",
     "difficulty": "leicht",
     "sources": {
@@ -607,7 +607,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1991,
     "cue": "Song anhören und einordnen.",
-    "answer": "Guns N' Roses — Knockin' On Heaven's Door."",
+    "answer": "Guns N' Roses — Knockin' On Heaven's Door.",
     "hint": "Guns N' Roses",
     "difficulty": "mittel",
     "sources": {
@@ -627,7 +627,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "System Of A Down — B.Y.O.B.."",
+    "answer": "System Of A Down — B.Y.O.B..",
     "hint": "System Of A Down",
     "difficulty": "mittel",
     "sources": {
@@ -648,7 +648,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jimmy Eat World — The Middle."",
+    "answer": "Jimmy Eat World — The Middle.",
     "hint": "Jimmy Eat World",
     "difficulty": "mittel",
     "sources": {
@@ -667,7 +667,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dr. Dre, Snoop Dogg — The Next Episode."",
+    "answer": "Dr. Dre, Snoop Dogg — The Next Episode.",
     "hint": "Dr. Dre, Snoop Dogg",
     "difficulty": "mittel",
     "sources": {
@@ -687,7 +687,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Äfrob, Ferris MC — Reimemonster (feat. Ferris MC)."",
+    "answer": "Äfrob, Ferris MC — Reimemonster (feat. Ferris MC).",
     "hint": "Äfrob, Ferris MC",
     "difficulty": "mittel",
     "sources": {
@@ -707,7 +707,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Samy Deluxe — Weck mich auf."",
+    "answer": "Samy Deluxe — Weck mich auf.",
     "hint": "Samy Deluxe",
     "difficulty": "mittel",
     "sources": {
@@ -727,7 +727,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Deichkind, Nina Tenge — Bon voyage (feat. Nina)."",
+    "answer": "Deichkind, Nina Tenge — Bon voyage (feat. Nina).",
     "hint": "Deichkind, Nina Tenge",
     "difficulty": "mittel",
     "sources": {
@@ -747,7 +747,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Das Bo — Türlich, Türlich (Sicher, Dicker)."",
+    "answer": "Das Bo — Türlich, Türlich (Sicher, Dicker).",
     "hint": "Das Bo",
     "difficulty": "mittel",
     "sources": {
@@ -767,7 +767,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Britney Spears — Oops!...I Did It Again."",
+    "answer": "Britney Spears — Oops!...I Did It Again.",
     "hint": "Britney Spears",
     "difficulty": "leicht",
     "sources": {
@@ -786,7 +786,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Céline Dion — That's the Way It Is."",
+    "answer": "Céline Dion — That's the Way It Is.",
     "hint": "Céline Dion",
     "difficulty": "mittel",
     "sources": {
@@ -805,7 +805,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1998,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cher — Believe."",
+    "answer": "Cher — Believe.",
     "hint": "Cher",
     "difficulty": "mittel",
     "sources": {
@@ -824,7 +824,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Heino — Blau blüht der Enzian."",
+    "answer": "Heino — Blau blüht der Enzian.",
     "hint": "Heino",
     "difficulty": "mittel",
     "sources": {
@@ -843,7 +843,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Die Ärzte — Junge."",
+    "answer": "Die Ärzte — Junge.",
     "hint": "Die Ärzte",
     "difficulty": "mittel",
     "sources": {
@@ -863,7 +863,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Die Ärzte — Deine Schuld."",
+    "answer": "Die Ärzte — Deine Schuld.",
     "hint": "Die Ärzte",
     "difficulty": "mittel",
     "sources": {
@@ -882,7 +882,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Capital Bra, Samra — Tilidin."",
+    "answer": "Capital Bra, Samra — Tilidin.",
     "hint": "Capital Bra, Samra",
     "difficulty": "mittel",
     "sources": {
@@ -902,7 +902,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Electric Callboy — Hypa Hypa."",
+    "answer": "Electric Callboy — Hypa Hypa.",
     "hint": "Electric Callboy",
     "difficulty": "mittel",
     "sources": {
@@ -922,7 +922,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1998,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Offspring — The Kids Aren't Alright."",
+    "answer": "The Offspring — The Kids Aren't Alright.",
     "hint": "The Offspring",
     "difficulty": "mittel",
     "sources": {
@@ -941,7 +941,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Killers — Mr. Brightside."",
+    "answer": "The Killers — Mr. Brightside.",
     "hint": "The Killers",
     "difficulty": "leicht",
     "sources": {
@@ -961,7 +961,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "Blur — Song 2 - 2012 Remaster."",
+    "answer": "Blur — Song 2 - 2012 Remaster.",
     "hint": "Blur",
     "difficulty": "mittel",
     "sources": {
@@ -980,7 +980,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1998,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lenny Kravitz — Fly Away."",
+    "answer": "Lenny Kravitz — Fly Away.",
     "hint": "Lenny Kravitz",
     "difficulty": "mittel",
     "sources": {
@@ -1000,7 +1000,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1994,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Cranberries — Zombie - 2025 Remastered."",
+    "answer": "The Cranberries — Zombie - 2025 Remastered.",
     "hint": "The Cranberries",
     "difficulty": "mittel",
     "sources": {
@@ -1019,7 +1019,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Massive Töne — Cruisen."",
+    "answer": "Massive Töne — Cruisen.",
     "hint": "Massive Töne",
     "difficulty": "mittel",
     "sources": {
@@ -1039,7 +1039,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Massive Töne — Traumreise."",
+    "answer": "Massive Töne — Traumreise.",
     "hint": "Massive Töne",
     "difficulty": "mittel",
     "sources": {
@@ -1059,7 +1059,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Öansno — Oane moan i pack i no."",
+    "answer": "Öansno — Oane moan i pack i no.",
     "hint": "Öansno",
     "difficulty": "mittel",
     "sources": {
@@ -1078,7 +1078,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Rasmus — In the Shadows."",
+    "answer": "The Rasmus — In the Shadows.",
     "hint": "The Rasmus",
     "difficulty": "mittel",
     "sources": {
@@ -1098,7 +1098,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ävril Lavigne — Sk8er Boi."",
+    "answer": "Ävril Lavigne — Sk8er Boi.",
     "hint": "Ävril Lavigne",
     "difficulty": "leicht",
     "sources": {
@@ -1118,7 +1118,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "JAY-Z, Linkin Park — Numb / Encore."",
+    "answer": "JAY-Z, Linkin Park — Numb / Encore.",
     "hint": "JAY-Z, Linkin Park",
     "difficulty": "mittel",
     "sources": {
@@ -1139,7 +1139,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Limp Bizkit — Break Stuff."",
+    "answer": "Limp Bizkit — Break Stuff.",
     "hint": "Limp Bizkit",
     "difficulty": "mittel",
     "sources": {
@@ -1160,7 +1160,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "blink-182 — What's My Age Again?."",
+    "answer": "blink-182 — What's My Age Again?.",
     "hint": "blink-182",
     "difficulty": "mittel",
     "sources": {
@@ -1179,7 +1179,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rammstein — Sonne."",
+    "answer": "Rammstein — Sonne.",
     "hint": "Rammstein",
     "difficulty": "mittel",
     "sources": {
@@ -1199,7 +1199,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Drowning Pool — Bodies."",
+    "answer": "Drowning Pool — Bodies.",
     "hint": "Drowning Pool",
     "difficulty": "mittel",
     "sources": {
@@ -1220,7 +1220,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1981,
     "cue": "Song anhören und einordnen.",
-    "answer": "Phil Collins — In The Air Tonight - 2015 Remastered."",
+    "answer": "Phil Collins — In The Air Tonight - 2015 Remastered.",
     "hint": "Phil Collins",
     "difficulty": "mittel",
     "sources": {
@@ -1240,7 +1240,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gorillaz, De La Soul — Feel Good Inc.."",
+    "answer": "Gorillaz, De La Soul — Feel Good Inc..",
     "hint": "Gorillaz, De La Soul",
     "difficulty": "mittel",
     "sources": {
@@ -1260,7 +1260,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Öutkast — Hey Ya!."",
+    "answer": "Öutkast — Hey Ya!.",
     "hint": "Öutkast",
     "difficulty": "mittel",
     "sources": {
@@ -1280,7 +1280,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sum 41 — Still Waiting."",
+    "answer": "Sum 41 — Still Waiting.",
     "hint": "Sum 41",
     "difficulty": "mittel",
     "sources": {
@@ -1299,7 +1299,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Madonna — Like a Prayer."",
+    "answer": "Madonna — Like a Prayer.",
     "hint": "Madonna",
     "difficulty": "mittel",
     "sources": {
@@ -1319,7 +1319,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1993,
     "cue": "Song anhören und einordnen.",
-    "answer": "Radiohead — Creep."",
+    "answer": "Radiohead — Creep.",
     "hint": "Radiohead",
     "difficulty": "mittel",
     "sources": {
@@ -1338,7 +1338,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — Good Riddance (Time of Your Life)."",
+    "answer": "Green Day — Good Riddance (Time of Your Life).",
     "hint": "Green Day",
     "difficulty": "leicht",
     "sources": {
@@ -1357,7 +1357,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bryan Adams — Summer Of '69."",
+    "answer": "Bryan Adams — Summer Of '69.",
     "hint": "Bryan Adams",
     "difficulty": "mittel",
     "sources": {
@@ -1377,7 +1377,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Öutkast — Ms. Jackson."",
+    "answer": "Öutkast — Ms. Jackson.",
     "hint": "Öutkast",
     "difficulty": "mittel",
     "sources": {
@@ -1397,7 +1397,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Maroon 5 — This Love."",
+    "answer": "Maroon 5 — This Love.",
     "hint": "Maroon 5",
     "difficulty": "leicht",
     "sources": {
@@ -1417,7 +1417,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sum 41 — In Too Deep."",
+    "answer": "Sum 41 — In Too Deep.",
     "hint": "Sum 41",
     "difficulty": "mittel",
     "sources": {
@@ -1436,7 +1436,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Toploader — Dancing in the Moonlight."",
+    "answer": "Toploader — Dancing in the Moonlight.",
     "hint": "Toploader",
     "difficulty": "mittel",
     "sources": {
@@ -1455,7 +1455,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sum 41 — Fat Lip."",
+    "answer": "Sum 41 — Fat Lip.",
     "hint": "Sum 41",
     "difficulty": "mittel",
     "sources": {
@@ -1474,7 +1474,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — Holiday / Boulevard of Broken Dreams."",
+    "answer": "Green Day — Holiday / Boulevard of Broken Dreams.",
     "hint": "Green Day",
     "difficulty": "leicht",
     "sources": {
@@ -1493,7 +1493,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "Muse — Supermassive Black Hole."",
+    "answer": "Muse — Supermassive Black Hole.",
     "hint": "Muse",
     "difficulty": "mittel",
     "sources": {
@@ -1512,7 +1512,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Natasha Bedingfield — Pocketful of Sunshine."",
+    "answer": "Natasha Bedingfield — Pocketful of Sunshine.",
     "hint": "Natasha Bedingfield",
     "difficulty": "schwer",
     "sources": {
@@ -1531,7 +1531,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daft Punk — One More Time."",
+    "answer": "Daft Punk — One More Time.",
     "hint": "Daft Punk",
     "difficulty": "mittel",
     "sources": {
@@ -1550,7 +1550,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eiffel 65, Gabry Ponte — Blue (Da Ba Dee) - Gabry Ponte Ice Pop Radio."",
+    "answer": "Eiffel 65, Gabry Ponte — Blue (Da Ba Dee) - Gabry Ponte Ice Pop Radio.",
     "hint": "Eiffel 65, Gabry Ponte",
     "difficulty": "mittel",
     "sources": {
@@ -1569,7 +1569,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eminem — Lose Yourself."",
+    "answer": "Eminem — Lose Yourself.",
     "hint": "Eminem",
     "difficulty": "leicht",
     "sources": {
@@ -1589,7 +1589,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Imagine Dragons — Radioactive."",
+    "answer": "Imagine Dragons — Radioactive.",
     "hint": "Imagine Dragons",
     "difficulty": "leicht",
     "sources": {
@@ -1608,7 +1608,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Backstreet Boys — I Want It That Way."",
+    "answer": "Backstreet Boys — I Want It That Way.",
     "hint": "Backstreet Boys",
     "difficulty": "leicht",
     "sources": {
@@ -1627,7 +1627,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — Bad Romance."",
+    "answer": "Lady Gaga — Bad Romance.",
     "hint": "Lady Gaga",
     "difficulty": "leicht",
     "sources": {
@@ -1647,7 +1647,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Natasha Bedingfield — Unwritten."",
+    "answer": "Natasha Bedingfield — Unwritten.",
     "hint": "Natasha Bedingfield",
     "difficulty": "schwer",
     "sources": {
@@ -1667,7 +1667,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÜSHER, Lil Jon, Ludacris — Yeah! (feat. Lil Jon & Ludacris)."",
+    "answer": "ÜSHER, Lil Jon, Ludacris — Yeah! (feat. Lil Jon & Ludacris).",
     "hint": "ÜSHER, Lil Jon, Ludacris",
     "difficulty": "mittel",
     "sources": {
@@ -1687,7 +1687,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Britney Spears — ...Baby One More Time."",
+    "answer": "Britney Spears — ...Baby One More Time.",
     "hint": "Britney Spears",
     "difficulty": "leicht",
     "sources": {
@@ -1706,7 +1706,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eminem — Lose Yourself."",
+    "answer": "Eminem — Lose Yourself.",
     "hint": "Eminem",
     "difficulty": "leicht",
     "sources": {
@@ -1726,7 +1726,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eminem — Mockingbird."",
+    "answer": "Eminem — Mockingbird.",
     "hint": "Eminem",
     "difficulty": "leicht",
     "sources": {
@@ -1746,7 +1746,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eminem, Dido — Stan."",
+    "answer": "Eminem, Dido — Stan.",
     "hint": "Eminem, Dido",
     "difficulty": "leicht",
     "sources": {
@@ -1766,7 +1766,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nelly Furtado — I'm Like A Bird."",
+    "answer": "Nelly Furtado — I'm Like A Bird.",
     "hint": "Nelly Furtado",
     "difficulty": "leicht",
     "sources": {
@@ -1787,7 +1787,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Älphaville — Forever Young."",
+    "answer": "Älphaville — Forever Young.",
     "hint": "Älphaville",
     "difficulty": "mittel",
     "sources": {
@@ -1807,7 +1807,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Britney Spears — Toxic."",
+    "answer": "Britney Spears — Toxic.",
     "hint": "Britney Spears",
     "difficulty": "leicht",
     "sources": {
@@ -1826,7 +1826,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Justin Timberlake — Cry Me a River."",
+    "answer": "Justin Timberlake — Cry Me a River.",
     "hint": "Justin Timberlake",
     "difficulty": "leicht",
     "sources": {
@@ -1845,7 +1845,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "50 Cent — In Da Club."",
+    "answer": "50 Cent — In Da Club.",
     "hint": "50 Cent",
     "difficulty": "leicht",
     "sources": {
@@ -1865,7 +1865,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1995,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fools Garden — Lemon Tree."",
+    "answer": "Fools Garden — Lemon Tree.",
     "hint": "Fools Garden",
     "difficulty": "mittel",
     "sources": {
@@ -1884,7 +1884,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1996,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fugees, Ms. Lauryn Hill — Killing Me Softly With His Song."",
+    "answer": "Fugees, Ms. Lauryn Hill — Killing Me Softly With His Song.",
     "hint": "Fugees, Ms. Lauryn Hill",
     "difficulty": "mittel",
     "sources": {
@@ -1904,7 +1904,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "JAY-Z, Kanye West — Ni**as In Paris."",
+    "answer": "JAY-Z, Kanye West — Ni**as In Paris.",
     "hint": "JAY-Z, Kanye West",
     "difficulty": "mittel",
     "sources": {
@@ -1924,7 +1924,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "JAY-Z — 99 Problems."",
+    "answer": "JAY-Z — 99 Problems.",
     "hint": "JAY-Z",
     "difficulty": "mittel",
     "sources": {
@@ -1944,7 +1944,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "JAY-Z — Dirt Off Your Shoulder."",
+    "answer": "JAY-Z — Dirt Off Your Shoulder.",
     "hint": "JAY-Z",
     "difficulty": "mittel",
     "sources": {
@@ -1964,7 +1964,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — Yellow."",
+    "answer": "Coldplay — Yellow.",
     "hint": "Coldplay",
     "difficulty": "leicht",
     "sources": {
@@ -1983,7 +1983,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dr. Dre, Snoop Dogg — Still D.R.E.."",
+    "answer": "Dr. Dre, Snoop Dogg — Still D.R.E..",
     "hint": "Dr. Dre, Snoop Dogg",
     "difficulty": "mittel",
     "sources": {
@@ -2003,7 +2003,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Snoop Dogg, Pharrell Williams — Drop It Like It's Hot."",
+    "answer": "Snoop Dogg, Pharrell Williams — Drop It Like It's Hot.",
     "hint": "Snoop Dogg, Pharrell Williams",
     "difficulty": "leicht",
     "sources": {
@@ -2023,7 +2023,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1998,
     "cue": "Song anhören und einordnen.",
-    "answer": "2Pac, Roger, Dr. Dre — California Love - Original Version."",
+    "answer": "2Pac, Roger, Dr. Dre — California Love - Original Version.",
     "hint": "2Pac, Roger, Dr. Dre",
     "difficulty": "mittel",
     "sources": {
@@ -2043,7 +2043,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1998,
     "cue": "Song anhören und einordnen.",
-    "answer": "2Pac, Talent — Changes."",
+    "answer": "2Pac, Talent — Changes.",
     "hint": "2Pac, Talent",
     "difficulty": "mittel",
     "sources": {
@@ -2063,7 +2063,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Britney Spears — ...Baby One More Time."",
+    "answer": "Britney Spears — ...Baby One More Time.",
     "hint": "Britney Spears",
     "difficulty": "leicht",
     "sources": {
@@ -2082,7 +2082,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Backstreet Boys — Everybody (Backstreet's Back) - Radio Edit."",
+    "answer": "Backstreet Boys — Everybody (Backstreet's Back) - Radio Edit.",
     "hint": "Backstreet Boys",
     "difficulty": "leicht",
     "sources": {
@@ -2101,7 +2101,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Whitney Houston — It's Not Right but It's Okay."",
+    "answer": "Whitney Houston — It's Not Right but It's Okay.",
     "hint": "Whitney Houston",
     "difficulty": "mittel",
     "sources": {
@@ -2120,7 +2120,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Christina Aguilera — Genie In a Bottle."",
+    "answer": "Christina Aguilera — Genie In a Bottle.",
     "hint": "Christina Aguilera",
     "difficulty": "leicht",
     "sources": {
@@ -2139,7 +2139,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Beyoncé, JAY-Z — Crazy In Love (feat. JAY-Z)."",
+    "answer": "Beyoncé, JAY-Z — Crazy In Love (feat. JAY-Z).",
     "hint": "Beyoncé, JAY-Z",
     "difficulty": "leicht",
     "sources": {
@@ -2159,7 +2159,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga, Colby O'Donis — Just Dance."",
+    "answer": "Lady Gaga, Colby O'Donis — Just Dance.",
     "hint": "Lady Gaga, Colby O'Donis",
     "difficulty": "leicht",
     "sources": {
@@ -2178,7 +2178,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Reef — Place Your Hands."",
+    "answer": "Reef — Place Your Hands.",
     "hint": "Reef",
     "difficulty": "mittel",
     "sources": {
@@ -2197,7 +2197,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kula Shaker — Hush."",
+    "answer": "Kula Shaker — Hush.",
     "hint": "Kula Shaker",
     "difficulty": "mittel",
     "sources": {
@@ -2216,7 +2216,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Älice Cooper — Hey Stoopid."",
+    "answer": "Älice Cooper — Hey Stoopid.",
     "hint": "Älice Cooper",
     "difficulty": "mittel",
     "sources": {
@@ -2236,7 +2236,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Warrant — Cherry Pie."",
+    "answer": "Warrant — Cherry Pie.",
     "hint": "Warrant",
     "difficulty": "mittel",
     "sources": {
@@ -2256,7 +2256,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Midge Ure — Breathe - Radio Edit."",
+    "answer": "Midge Ure — Breathe - Radio Edit.",
     "hint": "Midge Ure",
     "difficulty": "mittel",
     "sources": {
@@ -2275,7 +2275,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Martika — Love...Thy Will Be Done."",
+    "answer": "Martika — Love...Thy Will Be Done.",
     "hint": "Martika",
     "difficulty": "mittel",
     "sources": {
@@ -2294,7 +2294,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Pasadenas — I'm Doing Fine Now."",
+    "answer": "The Pasadenas — I'm Doing Fine Now.",
     "hint": "The Pasadenas",
     "difficulty": "mittel",
     "sources": {
@@ -2313,7 +2313,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Tony Rich Project — Nobody Knows - Radio Edit."",
+    "answer": "The Tony Rich Project — Nobody Knows - Radio Edit.",
     "hint": "The Tony Rich Project",
     "difficulty": "mittel",
     "sources": {
@@ -2332,7 +2332,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Faithless — Insomnia - Radio Edit."",
+    "answer": "Faithless — Insomnia - Radio Edit.",
     "hint": "Faithless",
     "difficulty": "mittel",
     "sources": {
@@ -2351,7 +2351,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Änastacia — I'm Outta Love - Radio Edit."",
+    "answer": "Änastacia — I'm Outta Love - Radio Edit.",
     "hint": "Änastacia",
     "difficulty": "mittel",
     "sources": {
@@ -2370,7 +2370,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "R. Kelly — I Believe I Can Fly - Radio Edit."",
+    "answer": "R. Kelly — I Believe I Can Fly - Radio Edit.",
     "hint": "R. Kelly",
     "difficulty": "mittel",
     "sources": {
@@ -2389,7 +2389,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dr. Alban — It's My Life - Radio Edit."",
+    "answer": "Dr. Alban — It's My Life - Radio Edit.",
     "hint": "Dr. Alban",
     "difficulty": "mittel",
     "sources": {
@@ -2408,7 +2408,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Five — Everybody Get Up - Radio Edit."",
+    "answer": "Five — Everybody Get Up - Radio Edit.",
     "hint": "Five",
     "difficulty": "mittel",
     "sources": {
@@ -2427,7 +2427,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Crazy Town — Butterfly."",
+    "answer": "Crazy Town — Butterfly.",
     "hint": "Crazy Town",
     "difficulty": "mittel",
     "sources": {
@@ -2448,7 +2448,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ölive, Black Olive — You're Not Alone - Radio Edit."",
+    "answer": "Ölive, Black Olive — You're Not Alone - Radio Edit.",
     "hint": "Ölive, Black Olive",
     "difficulty": "mittel",
     "sources": {
@@ -2467,7 +2467,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "*NSYNC — I Want You Back - Radio Edit."",
+    "answer": "*NSYNC — I Want You Back - Radio Edit.",
     "hint": "*NSYNC",
     "difficulty": "leicht",
     "sources": {
@@ -2486,7 +2486,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Crash Test Dummies — Mmm Mmm Mmm Mmm."",
+    "answer": "Crash Test Dummies — Mmm Mmm Mmm Mmm.",
     "hint": "Crash Test Dummies",
     "difficulty": "mittel",
     "sources": {
@@ -2505,7 +2505,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fugees — No Woman, No Cry."",
+    "answer": "Fugees — No Woman, No Cry.",
     "hint": "Fugees",
     "difficulty": "mittel",
     "sources": {
@@ -2525,7 +2525,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Natalie Imbruglia — Torn."",
+    "answer": "Natalie Imbruglia — Torn.",
     "hint": "Natalie Imbruglia",
     "difficulty": "mittel",
     "sources": {
@@ -2544,7 +2544,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lou Bega — Mambo No. 5 (A Little Bit of...)."",
+    "answer": "Lou Bega — Mambo No. 5 (A Little Bit of...).",
     "hint": "Lou Bega",
     "difficulty": "mittel",
     "sources": {
@@ -2563,7 +2563,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Groove Armada — At the River."",
+    "answer": "Groove Armada — At the River.",
     "hint": "Groove Armada",
     "difficulty": "mittel",
     "sources": {
@@ -2582,7 +2582,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Soul Asylum — Runaway Train."",
+    "answer": "Soul Asylum — Runaway Train.",
     "hint": "Soul Asylum",
     "difficulty": "mittel",
     "sources": {
@@ -2601,7 +2601,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "TLC — Waterfalls - Single Edit."",
+    "answer": "TLC — Waterfalls - Single Edit.",
     "hint": "TLC",
     "difficulty": "mittel",
     "sources": {
@@ -2620,7 +2620,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Toni Braxton — Un-Break My Heart."",
+    "answer": "Toni Braxton — Un-Break My Heart.",
     "hint": "Toni Braxton",
     "difficulty": "mittel",
     "sources": {
@@ -2639,7 +2639,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÜSHER — You Make Me Wanna...."",
+    "answer": "ÜSHER — You Make Me Wanna....",
     "hint": "ÜSHER",
     "difficulty": "mittel",
     "sources": {
@@ -2658,7 +2658,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Christina Aguilera — Genie In a Bottle."",
+    "answer": "Christina Aguilera — Genie In a Bottle.",
     "hint": "Christina Aguilera",
     "difficulty": "leicht",
     "sources": {
@@ -2677,7 +2677,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Céline Dion — My Heart Will Go On - Love Theme from \"Titanic\"."",
+    "answer": "Céline Dion — My Heart Will Go On - Love Theme from \"Titanic\".",
     "hint": "Céline Dion",
     "difficulty": "mittel",
     "sources": {
@@ -2696,7 +2696,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jeff Buckley — Hallelujah - Radio Edit."",
+    "answer": "Jeff Buckley — Hallelujah - Radio Edit.",
     "hint": "Jeff Buckley",
     "difficulty": "mittel",
     "sources": {
@@ -2715,7 +2715,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "New Kids On The Block — Tonight."",
+    "answer": "New Kids On The Block — Tonight.",
     "hint": "New Kids On The Block",
     "difficulty": "mittel",
     "sources": {
@@ -2734,7 +2734,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "LEN — Steal My Sunshine."",
+    "answer": "LEN — Steal My Sunshine.",
     "hint": "LEN",
     "difficulty": "mittel",
     "sources": {
@@ -2753,7 +2753,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Scatman John — Scatman (Ski-Ba-Bop-Ba-Dop-Bop) - Basic Radio."",
+    "answer": "Scatman John — Scatman (Ski-Ba-Bop-Ba-Dop-Bop) - Basic Radio.",
     "hint": "Scatman John",
     "difficulty": "mittel",
     "sources": {
@@ -2772,7 +2772,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rednex — Cotton Eye Joe."",
+    "answer": "Rednex — Cotton Eye Joe.",
     "hint": "Rednex",
     "difficulty": "mittel",
     "sources": {
@@ -2791,7 +2791,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Run–D.M.C., Jason Nevins — It's Like That."",
+    "answer": "Run–D.M.C., Jason Nevins — It's Like That.",
     "hint": "Run–D.M.C., Jason Nevins",
     "difficulty": "mittel",
     "sources": {
@@ -2811,7 +2811,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1993,
     "cue": "Song anhören und einordnen.",
-    "answer": "Äce of Base — The Sign."",
+    "answer": "Äce of Base — The Sign.",
     "hint": "Äce of Base",
     "difficulty": "mittel",
     "sources": {
@@ -2830,7 +2830,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1998,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eagle-Eye Cherry — Save Tonight."",
+    "answer": "Eagle-Eye Cherry — Save Tonight.",
     "hint": "Eagle-Eye Cherry",
     "difficulty": "mittel",
     "sources": {
@@ -2849,7 +2849,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1994,
     "cue": "Song anhören und einordnen.",
-    "answer": "Seal — Kiss from a Rose."",
+    "answer": "Seal — Kiss from a Rose.",
     "hint": "Seal",
     "difficulty": "mittel",
     "sources": {
@@ -2868,7 +2868,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "Meredith Brooks — Bitch."",
+    "answer": "Meredith Brooks — Bitch.",
     "hint": "Meredith Brooks",
     "difficulty": "mittel",
     "sources": {
@@ -2887,7 +2887,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Right Said Fred — I'm Too Sexy."",
+    "answer": "Right Said Fred — I'm Too Sexy.",
     "hint": "Right Said Fred",
     "difficulty": "mittel",
     "sources": {
@@ -2906,7 +2906,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "Hanson — MMMBop."",
+    "answer": "Hanson — MMMBop.",
     "hint": "Hanson",
     "difficulty": "mittel",
     "sources": {
@@ -2925,7 +2925,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1995,
     "cue": "Song anhören und einordnen.",
-    "answer": "No Doubt — Don't Speak."",
+    "answer": "No Doubt — Don't Speak.",
     "hint": "No Doubt",
     "difficulty": "mittel",
     "sources": {
@@ -2944,7 +2944,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "Will Smith — Gettin' Jiggy Wit It."",
+    "answer": "Will Smith — Gettin' Jiggy Wit It.",
     "hint": "Will Smith",
     "difficulty": "mittel",
     "sources": {
@@ -2963,7 +2963,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1994,
     "cue": "Song anhören und einordnen.",
-    "answer": "TLC — Waterfalls."",
+    "answer": "TLC — Waterfalls.",
     "hint": "TLC",
     "difficulty": "mittel",
     "sources": {
@@ -2982,7 +2982,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "No Doubt — It's My Life."",
+    "answer": "No Doubt — It's My Life.",
     "hint": "No Doubt",
     "difficulty": "mittel",
     "sources": {
@@ -3001,7 +3001,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1990,
     "cue": "Song anhören und einordnen.",
-    "answer": "Vanilla Ice — Ice Ice Baby."",
+    "answer": "Vanilla Ice — Ice Ice Baby.",
     "hint": "Vanilla Ice",
     "difficulty": "mittel",
     "sources": {
@@ -3020,7 +3020,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Roxette — The Look."",
+    "answer": "Roxette — The Look.",
     "hint": "Roxette",
     "difficulty": "mittel",
     "sources": {
@@ -3040,7 +3040,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Whitney Houston — I Wanna Dance with Somebody (Who Loves Me)."",
+    "answer": "Whitney Houston — I Wanna Dance with Somebody (Who Loves Me).",
     "hint": "Whitney Houston",
     "difficulty": "mittel",
     "sources": {
@@ -3060,7 +3060,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1995,
     "cue": "Song anhören und einordnen.",
-    "answer": "Joan Osborne — One Of Us."",
+    "answer": "Joan Osborne — One Of Us.",
     "hint": "Joan Osborne",
     "difficulty": "mittel",
     "sources": {
@@ -3079,7 +3079,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Prince — Kiss."",
+    "answer": "Prince — Kiss.",
     "hint": "Prince",
     "difficulty": "mittel",
     "sources": {
@@ -3099,7 +3099,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1996,
     "cue": "Song anhören und einordnen.",
-    "answer": "Spice Girls — Wannabe."",
+    "answer": "Spice Girls — Wannabe.",
     "hint": "Spice Girls",
     "difficulty": "mittel",
     "sources": {
@@ -3118,7 +3118,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wham! — Wake Me Up Before You Go-Go."",
+    "answer": "Wham! — Wake Me Up Before You Go-Go.",
     "hint": "Wham!",
     "difficulty": "mittel",
     "sources": {
@@ -3137,7 +3137,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cyndi Lauper — Girls Just Wanna Have Fun."",
+    "answer": "Cyndi Lauper — Girls Just Wanna Have Fun.",
     "hint": "Cyndi Lauper",
     "difficulty": "mittel",
     "sources": {
@@ -3156,7 +3156,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rick Astley — Never Gonna Give You Up - 7\„ Mix."",
+    "answer": "Rick Astley — Never Gonna Give You Up - 7\„ Mix.",
     "hint": "Rick Astley",
     "difficulty": "mittel",
     "sources": {
@@ -3175,7 +3175,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Europe — The Final Countdown."",
+    "answer": "Europe — The Final Countdown.",
     "hint": "Europe",
     "difficulty": "mittel",
     "sources": {
@@ -3195,7 +3195,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Survivor — Eye of the Tiger."",
+    "answer": "Survivor — Eye of the Tiger.",
     "hint": "Survivor",
     "difficulty": "mittel",
     "sources": {
@@ -3214,7 +3214,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ray Parker Jr. — Ghostbusters."",
+    "answer": "Ray Parker Jr. — Ghostbusters.",
     "hint": "Ray Parker Jr.",
     "difficulty": "mittel",
     "sources": {
@@ -3233,7 +3233,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eddie Murphy — Party All the Time."",
+    "answer": "Eddie Murphy — Party All the Time.",
     "hint": "Eddie Murphy",
     "difficulty": "mittel",
     "sources": {
@@ -3252,7 +3252,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Bangles — Walk Like an Egyptian."",
+    "answer": "The Bangles — Walk Like an Egyptian.",
     "hint": "The Bangles",
     "difficulty": "mittel",
     "sources": {
@@ -3271,7 +3271,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Journey — Don't Stop Believin'."",
+    "answer": "Journey — Don't Stop Believin'.",
     "hint": "Journey",
     "difficulty": "mittel",
     "sources": {
@@ -3290,7 +3290,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Hooters — Satellite."",
+    "answer": "The Hooters — Satellite.",
     "hint": "The Hooters",
     "difficulty": "mittel",
     "sources": {
@@ -3309,7 +3309,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bonnie Tyler — Total Eclipse of the Heart."",
+    "answer": "Bonnie Tyler — Total Eclipse of the Heart.",
     "hint": "Bonnie Tyler",
     "difficulty": "mittel",
     "sources": {
@@ -3328,7 +3328,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "TOTO — Africa."",
+    "answer": "TOTO — Africa.",
     "hint": "TOTO",
     "difficulty": "mittel",
     "sources": {
@@ -3347,7 +3347,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Jacksons — Can You Feel It."",
+    "answer": "The Jacksons — Can You Feel It.",
     "hint": "The Jacksons",
     "difficulty": "mittel",
     "sources": {
@@ -3366,7 +3366,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "ä-ha — Take on Me."",
+    "answer": "ä-ha — Take on Me.",
     "hint": "ä-ha",
     "difficulty": "mittel",
     "sources": {
@@ -3385,7 +3385,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄBBA — Mamma Mia."",
+    "answer": "ÄBBA — Mamma Mia.",
     "hint": "ÄBBA",
     "difficulty": "mittel",
     "sources": {
@@ -3405,7 +3405,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄBBA — Dancing Queen."",
+    "answer": "ÄBBA — Dancing Queen.",
     "hint": "ÄBBA",
     "difficulty": "mittel",
     "sources": {
@@ -3424,7 +3424,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Travolta, Olivia Newton-John — You're The One That I Want - From “Grease”."",
+    "answer": "John Travolta, Olivia Newton-John — You're The One That I Want - From “Grease”.",
     "hint": "John Travolta, Olivia Newton-John",
     "difficulty": "mittel",
     "sources": {
@@ -3444,7 +3444,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Buggles — Video Killed The Radio Star."",
+    "answer": "The Buggles — Video Killed The Radio Star.",
     "hint": "The Buggles",
     "difficulty": "mittel",
     "sources": {
@@ -3464,7 +3464,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "TOTO — Africa."",
+    "answer": "TOTO — Africa.",
     "hint": "TOTO",
     "difficulty": "mittel",
     "sources": {
@@ -3483,7 +3483,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1983,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Joel — Uptown Girl."",
+    "answer": "Billy Joel — Uptown Girl.",
     "hint": "Billy Joel",
     "difficulty": "mittel",
     "sources": {
@@ -3502,7 +3502,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Bangles, Susanna Hoffs — Eternal Flame."",
+    "answer": "The Bangles, Susanna Hoffs — Eternal Flame.",
     "hint": "The Bangles, Susanna Hoffs",
     "difficulty": "mittel",
     "sources": {
@@ -3521,7 +3521,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Starship — We Built This City."",
+    "answer": "Starship — We Built This City.",
     "hint": "Starship",
     "difficulty": "mittel",
     "sources": {
@@ -3540,7 +3540,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Hooters — All You Zombies."",
+    "answer": "The Hooters — All You Zombies.",
     "hint": "The Hooters",
     "difficulty": "mittel",
     "sources": {
@@ -3559,7 +3559,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bonnie Tyler — Holding Out for a Hero."",
+    "answer": "Bonnie Tyler — Holding Out for a Hero.",
     "hint": "Bonnie Tyler",
     "difficulty": "mittel",
     "sources": {
@@ -3578,7 +3578,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kate Bush — Running Up That Hill (A Deal With God)."",
+    "answer": "Kate Bush — Running Up That Hill (A Deal With God).",
     "hint": "Kate Bush",
     "difficulty": "mittel",
     "sources": {
@@ -3597,7 +3597,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tears For Fears — Shout - U.S. Single Version."",
+    "answer": "Tears For Fears — Shout - U.S. Single Version.",
     "hint": "Tears For Fears",
     "difficulty": "mittel",
     "sources": {
@@ -3616,7 +3616,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Idol — Eyes Without A Face."",
+    "answer": "Billy Idol — Eyes Without A Face.",
     "hint": "Billy Idol",
     "difficulty": "mittel",
     "sources": {
@@ -3635,7 +3635,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄBBA — The Winner Takes It All."",
+    "answer": "ÄBBA — The Winner Takes It All.",
     "hint": "ÄBBA",
     "difficulty": "mittel",
     "sources": {
@@ -3654,7 +3654,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Joe Cocker, Jennifer Warnes — Up Where We Belong - From \Än Officer And A Gentleman\"."",
+    "answer": "Joe Cocker, Jennifer Warnes — Up Where We Belong - From \Än Officer And A Gentleman\".",
     "hint": "Joe Cocker, Jennifer Warnes",
     "difficulty": "mittel",
     "sources": {
@@ -3673,7 +3673,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÜB40 — Red Red Wine."",
+    "answer": "ÜB40 — Red Red Wine.",
     "hint": "ÜB40",
     "difficulty": "mittel",
     "sources": {
@@ -3692,7 +3692,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nik Kershaw — The Riddle."",
+    "answer": "Nik Kershaw — The Riddle.",
     "hint": "Nik Kershaw",
     "difficulty": "mittel",
     "sources": {
@@ -3711,7 +3711,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cyndi Lauper — Girls Just Want to Have Fun."",
+    "answer": "Cyndi Lauper — Girls Just Want to Have Fun.",
     "hint": "Cyndi Lauper",
     "difficulty": "mittel",
     "sources": {
@@ -3730,7 +3730,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Judas Priest — Living After Midnight."",
+    "answer": "Judas Priest — Living After Midnight.",
     "hint": "Judas Priest",
     "difficulty": "mittel",
     "sources": {
@@ -3750,7 +3750,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kenny Loggins — Footloose."",
+    "answer": "Kenny Loggins — Footloose.",
     "hint": "Kenny Loggins",
     "difficulty": "mittel",
     "sources": {
@@ -3769,7 +3769,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eurythmics, Annie Lennox, Dave Stewart — Sweet Dreams (Are Made of This)."",
+    "answer": "Eurythmics, Annie Lennox, Dave Stewart — Sweet Dreams (Are Made of This).",
     "hint": "Eurythmics, Annie Lennox, Dave Stewart",
     "difficulty": "mittel",
     "sources": {
@@ -3788,7 +3788,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1992,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — Bohemian Rhapsody - Live At Wembley Stadium / July 1986."",
+    "answer": "Queen — Bohemian Rhapsody - Live At Wembley Stadium / July 1986.",
     "hint": "Queen",
     "difficulty": "mittel",
     "sources": {
@@ -3807,7 +3807,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1992,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — Who Wants to Live Forever - Live At Wembley Stadium / July 1986."",
+    "answer": "Queen — Who Wants to Live Forever - Live At Wembley Stadium / July 1986.",
     "hint": "Queen",
     "difficulty": "mittel",
     "sources": {
@@ -3826,7 +3826,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1992,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — We Will Rock You - Live At Wembley Stadium / July 1986."",
+    "answer": "Queen — We Will Rock You - Live At Wembley Stadium / July 1986.",
     "hint": "Queen",
     "difficulty": "mittel",
     "sources": {
@@ -3845,7 +3845,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruce Springsteen — Born in the U.S.A.."",
+    "answer": "Bruce Springsteen — Born in the U.S.A..",
     "hint": "Bruce Springsteen",
     "difficulty": "mittel",
     "sources": {
@@ -3864,7 +3864,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Belinda Carlisle — Heaven Is a Place on Earth - Promo 7\„ Edit."",
+    "answer": "Belinda Carlisle — Heaven Is a Place on Earth - Promo 7\„ Edit.",
     "hint": "Belinda Carlisle",
     "difficulty": "mittel",
     "sources": {
@@ -3883,7 +3883,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1981,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kim Carnes — Bette Davis Eyes."",
+    "answer": "Kim Carnes — Bette Davis Eyes.",
     "hint": "Kim Carnes",
     "difficulty": "mittel",
     "sources": {
@@ -3902,7 +3902,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Michael — Father Figure - Remastered."",
+    "answer": "George Michael — Father Figure - Remastered.",
     "hint": "George Michael",
     "difficulty": "mittel",
     "sources": {
@@ -3921,7 +3921,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Madonna — Material Girl - 2024 Remaster."",
+    "answer": "Madonna — Material Girl - 2024 Remaster.",
     "hint": "Madonna",
     "difficulty": "mittel",
     "sources": {
@@ -3940,7 +3940,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cher — If I Could Turn Back Time."",
+    "answer": "Cher — If I Could Turn Back Time.",
     "hint": "Cher",
     "difficulty": "mittel",
     "sources": {
@@ -3959,7 +3959,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Joel — We Didn't Start the Fire."",
+    "answer": "Billy Joel — We Didn't Start the Fire.",
     "hint": "Billy Joel",
     "difficulty": "mittel",
     "sources": {
@@ -3978,7 +3978,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "Diana Ross — I'm Coming Out."",
+    "answer": "Diana Ross — I'm Coming Out.",
     "hint": "Diana Ross",
     "difficulty": "mittel",
     "sources": {
@@ -3997,7 +3997,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Beach Boys — Kokomo."",
+    "answer": "The Beach Boys — Kokomo.",
     "hint": "The Beach Boys",
     "difficulty": "mittel",
     "sources": {
@@ -4016,7 +4016,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄBBA — The Winner Takes It All."",
+    "answer": "ÄBBA — The Winner Takes It All.",
     "hint": "ÄBBA",
     "difficulty": "mittel",
     "sources": {
@@ -4035,7 +4035,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Michael — Faith - Remastered."",
+    "answer": "George Michael — Faith - Remastered.",
     "hint": "George Michael",
     "difficulty": "mittel",
     "sources": {
@@ -4054,7 +4054,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Proclaimers — I'm Gonna Be (500 Miles)."",
+    "answer": "The Proclaimers — I'm Gonna Be (500 Miles).",
     "hint": "The Proclaimers",
     "difficulty": "mittel",
     "sources": {
@@ -4073,7 +4073,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Michael Jackson — Man in the Mirror - 2012 Remaster."",
+    "answer": "Michael Jackson — Man in the Mirror - 2012 Remaster.",
     "hint": "Michael Jackson",
     "difficulty": "mittel",
     "sources": {
@@ -4092,7 +4092,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Harrison — Got My Mind Set on You."",
+    "answer": "George Harrison — Got My Mind Set on You.",
     "hint": "George Harrison",
     "difficulty": "mittel",
     "sources": {
@@ -4111,7 +4111,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen, David Bowie — Under Pressure - Remastered 2011."",
+    "answer": "Queen, David Bowie — Under Pressure - Remastered 2011.",
     "hint": "Queen, David Bowie",
     "difficulty": "mittel",
     "sources": {
@@ -4130,7 +4130,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Starship — Nothing's Gonna Stop Us Now."",
+    "answer": "Starship — Nothing's Gonna Stop Us Now.",
     "hint": "Starship",
     "difficulty": "mittel",
     "sources": {
@@ -4149,7 +4149,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Prince — Purple Rain."",
+    "answer": "Prince — Purple Rain.",
     "hint": "Prince",
     "difficulty": "mittel",
     "sources": {
@@ -4168,7 +4168,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1983,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nena — 99 Luftballons."",
+    "answer": "Nena — 99 Luftballons.",
     "hint": "Nena",
     "difficulty": "mittel",
     "sources": {
@@ -4187,7 +4187,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — Radio Ga Ga - Remastered 2011."",
+    "answer": "Queen — Radio Ga Ga - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
     "sources": {
@@ -4206,7 +4206,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄBBA — Super Trouper."",
+    "answer": "ÄBBA — Super Trouper.",
     "hint": "ÄBBA",
     "difficulty": "mittel",
     "sources": {
@@ -4225,7 +4225,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Pat Benatar — We Belong."",
+    "answer": "Pat Benatar — We Belong.",
     "hint": "Pat Benatar",
     "difficulty": "mittel",
     "sources": {
@@ -4244,7 +4244,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "TOTO — Rosanna."",
+    "answer": "TOTO — Rosanna.",
     "hint": "TOTO",
     "difficulty": "mittel",
     "sources": {
@@ -4263,7 +4263,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Farnham — You're the Voice."",
+    "answer": "John Farnham — You're the Voice.",
     "hint": "John Farnham",
     "difficulty": "mittel",
     "sources": {
@@ -4282,7 +4282,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — I Want To Break Free - Remastered 2011."",
+    "answer": "Queen — I Want To Break Free - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
     "sources": {
@@ -4301,7 +4301,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tom Petty — Free Fallin'."",
+    "answer": "Tom Petty — Free Fallin'.",
     "hint": "Tom Petty",
     "difficulty": "mittel",
     "sources": {
@@ -4320,7 +4320,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Journey — Don't Stop Believin'."",
+    "answer": "Journey — Don't Stop Believin'.",
     "hint": "Journey",
     "difficulty": "mittel",
     "sources": {
@@ -4339,7 +4339,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1983,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lionel Richie — Hello."",
+    "answer": "Lionel Richie — Hello.",
     "hint": "Lionel Richie",
     "difficulty": "mittel",
     "sources": {
@@ -4358,7 +4358,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Parr — St. Elmos Fire (Man in Motion)."",
+    "answer": "John Parr — St. Elmos Fire (Man in Motion).",
     "hint": "John Parr",
     "difficulty": "mittel",
     "sources": {
@@ -4377,7 +4377,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tracy Chapman — Talkin' Bout a Revolution."",
+    "answer": "Tracy Chapman — Talkin' Bout a Revolution.",
     "hint": "Tracy Chapman",
     "difficulty": "mittel",
     "sources": {
@@ -4396,7 +4396,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Culture Club — Karma Chameleon."",
+    "answer": "Culture Club — Karma Chameleon.",
     "hint": "Culture Club",
     "difficulty": "mittel",
     "sources": {
@@ -4415,7 +4415,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Bangles — Manic Monday."",
+    "answer": "The Bangles — Manic Monday.",
     "hint": "The Bangles",
     "difficulty": "mittel",
     "sources": {
@@ -4434,7 +4434,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Paul Simon — You Can Call Me Al."",
+    "answer": "Paul Simon — You Can Call Me Al.",
     "hint": "Paul Simon",
     "difficulty": "mittel",
     "sources": {
@@ -4453,7 +4453,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Starship — We Built This City."",
+    "answer": "Starship — We Built This City.",
     "hint": "Starship",
     "difficulty": "mittel",
     "sources": {
@@ -4472,7 +4472,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tracy Chapman — Fast Car."",
+    "answer": "Tracy Chapman — Fast Car.",
     "hint": "Tracy Chapman",
     "difficulty": "mittel",
     "sources": {
@@ -4491,7 +4491,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tiffany — I Think We're Alone Now."",
+    "answer": "Tiffany — I Think We're Alone Now.",
     "hint": "Tiffany",
     "difficulty": "mittel",
     "sources": {
@@ -4510,7 +4510,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "Huey Lewis & The News — The Power Of Love."",
+    "answer": "Huey Lewis & The News — The Power Of Love.",
     "hint": "Huey Lewis & The News",
     "difficulty": "mittel",
     "sources": {
@@ -4529,7 +4529,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — Another One Bites The Dust - Remastered 2011."",
+    "answer": "Queen — Another One Bites The Dust - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
     "sources": {
@@ -4548,7 +4548,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wham! — Wake Me Up Before You Go-Go."",
+    "answer": "Wham! — Wake Me Up Before You Go-Go.",
     "hint": "Wham!",
     "difficulty": "mittel",
     "sources": {
@@ -4567,7 +4567,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Bangles — Walk Like an Egyptian."",
+    "answer": "The Bangles — Walk Like an Egyptian.",
     "hint": "The Bangles",
     "difficulty": "mittel",
     "sources": {
@@ -4586,7 +4586,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cyndi Lauper — Time After Time."",
+    "answer": "Cyndi Lauper — Time After Time.",
     "hint": "Cyndi Lauper",
     "difficulty": "mittel",
     "sources": {
@@ -4605,7 +4605,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — A Kind Of Magic - Remastered 2011."",
+    "answer": "Queen — A Kind Of Magic - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
     "sources": {
@@ -4624,7 +4624,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rick Astley — Never Gonna Give You Up."",
+    "answer": "Rick Astley — Never Gonna Give You Up.",
     "hint": "Rick Astley",
     "difficulty": "mittel",
     "sources": {
@@ -4643,7 +4643,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Bangles, Susanna Hoffs — Eternal Flame."",
+    "answer": "The Bangles, Susanna Hoffs — Eternal Flame.",
     "hint": "The Bangles, Susanna Hoffs",
     "difficulty": "mittel",
     "sources": {
@@ -4662,7 +4662,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄBBA — Lay All Your Love On Me."",
+    "answer": "ÄBBA — Lay All Your Love On Me.",
     "hint": "ÄBBA",
     "difficulty": "mittel",
     "sources": {
@@ -4681,7 +4681,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kenny Loggins — Danger Zone - From \"Top Gun\„ Original Soundtrack."",
+    "answer": "Kenny Loggins — Danger Zone - From \"Top Gun\„ Original Soundtrack.",
     "hint": "Kenny Loggins",
     "difficulty": "mittel",
     "sources": {
@@ -4700,7 +4700,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1983,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elton John — I'm Still Standing."",
+    "answer": "Elton John — I'm Still Standing.",
     "hint": "Elton John",
     "difficulty": "mittel",
     "sources": {
@@ -4719,7 +4719,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katrina & The Waves — Walking On Sunshine."",
+    "answer": "Katrina & The Waves — Walking On Sunshine.",
     "hint": "Katrina & The Waves",
     "difficulty": "mittel",
     "sources": {
@@ -4738,7 +4738,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dolly Parton — 9 to 5."",
+    "answer": "Dolly Parton — 9 to 5.",
     "hint": "Dolly Parton",
     "difficulty": "mittel",
     "sources": {
@@ -4757,7 +4757,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruce Springsteen — Dancing In the Dark."",
+    "answer": "Bruce Springsteen — Dancing In the Dark.",
     "hint": "Bruce Springsteen",
     "difficulty": "mittel",
     "sources": {
@@ -4776,7 +4776,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Älannah Myles — Black Velvet."",
+    "answer": "Älannah Myles — Black Velvet.",
     "hint": "Älannah Myles",
     "difficulty": "mittel",
     "sources": {
@@ -4795,7 +4795,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "Madness — Our House."",
+    "answer": "Madness — Our House.",
     "hint": "Madness",
     "difficulty": "mittel",
     "sources": {
@@ -4814,7 +4814,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Ocean — Get Outta My Dreams, Get Into My Car."",
+    "answer": "Billy Ocean — Get Outta My Dreams, Get Into My Car.",
     "hint": "Billy Ocean",
     "difficulty": "mittel",
     "sources": {
@@ -4833,7 +4833,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mike + The Mechanics — The Living Years."",
+    "answer": "Mike + The Mechanics — The Living Years.",
     "hint": "Mike + The Mechanics",
     "difficulty": "mittel",
     "sources": {
@@ -4852,7 +4852,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bobby McFerrin — Don't Worry Be Happy."",
+    "answer": "Bobby McFerrin — Don't Worry Be Happy.",
     "hint": "Bobby McFerrin",
     "difficulty": "mittel",
     "sources": {
@@ -4871,7 +4871,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Limahl — Never Ending Story."",
+    "answer": "Limahl — Never Ending Story.",
     "hint": "Limahl",
     "difficulty": "mittel",
     "sources": {
@@ -4890,7 +4890,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Phil Collins — Against All Odds (Take a Look at Me Now) - 2016 Remaster."",
+    "answer": "Phil Collins — Against All Odds (Take a Look at Me Now) - 2016 Remaster.",
     "hint": "Phil Collins",
     "difficulty": "mittel",
     "sources": {
@@ -4909,7 +4909,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "Yazoo — Only You."",
+    "answer": "Yazoo — Only You.",
     "hint": "Yazoo",
     "difficulty": "mittel",
     "sources": {
@@ -4928,7 +4928,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Paula Abdul — Straight Up."",
+    "answer": "Paula Abdul — Straight Up.",
     "hint": "Paula Abdul",
     "difficulty": "mittel",
     "sources": {
@@ -4947,7 +4947,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bonnie Tyler — Holding Out for a Hero - From \"Footloose\„ Soundtrack."",
+    "answer": "Bonnie Tyler — Holding Out for a Hero - From \"Footloose\„ Soundtrack.",
     "hint": "Bonnie Tyler",
     "difficulty": "mittel",
     "sources": {
@@ -4966,7 +4966,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Richard Marx — Right Here Waiting."",
+    "answer": "Richard Marx — Right Here Waiting.",
     "hint": "Richard Marx",
     "difficulty": "mittel",
     "sources": {
@@ -4985,7 +4985,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fleetwood Mac — Everywhere - 2017 Remaster."",
+    "answer": "Fleetwood Mac — Everywhere - 2017 Remaster.",
     "hint": "Fleetwood Mac",
     "difficulty": "mittel",
     "sources": {
@@ -5004,7 +5004,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Steve Miller Band — Abracadabra."",
+    "answer": "Steve Miller Band — Abracadabra.",
     "hint": "Steve Miller Band",
     "difficulty": "mittel",
     "sources": {
@@ -5023,7 +5023,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Don Henley — The Boys Of Summer - Remastered 2024."",
+    "answer": "Don Henley — The Boys Of Summer - Remastered 2024.",
     "hint": "Don Henley",
     "difficulty": "mittel",
     "sources": {
@@ -5042,7 +5042,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ü2 — With Or Without You."",
+    "answer": "Ü2 — With Or Without You.",
     "hint": "Ü2",
     "difficulty": "leicht",
     "sources": {
@@ -5061,7 +5061,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Michael Jackson — Smooth Criminal - 2012 Remaster."",
+    "answer": "Michael Jackson — Smooth Criminal - 2012 Remaster.",
     "hint": "Michael Jackson",
     "difficulty": "mittel",
     "sources": {
@@ -5080,7 +5080,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dolly Parton, Kenny Rogers — Islands in the Stream."",
+    "answer": "Dolly Parton, Kenny Rogers — Islands in the Stream.",
     "hint": "Dolly Parton, Kenny Rogers",
     "difficulty": "mittel",
     "sources": {
@@ -5099,7 +5099,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Roxette — Listen To Your Heart."",
+    "answer": "Roxette — Listen To Your Heart.",
     "hint": "Roxette",
     "difficulty": "mittel",
     "sources": {
@@ -5118,7 +5118,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Joe Cocker, Jennifer Warnes — Up Where We Belong."",
+    "answer": "Joe Cocker, Jennifer Warnes — Up Where We Belong.",
     "hint": "Joe Cocker, Jennifer Warnes",
     "difficulty": "mittel",
     "sources": {
@@ -5137,7 +5137,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Pat Benatar — Love Is A Battlefield."",
+    "answer": "Pat Benatar — Love Is A Battlefield.",
     "hint": "Pat Benatar",
     "difficulty": "mittel",
     "sources": {
@@ -5156,7 +5156,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nik Kershaw — Wouldn't It Be Good."",
+    "answer": "Nik Kershaw — Wouldn't It Be Good.",
     "hint": "Nik Kershaw",
     "difficulty": "mittel",
     "sources": {
@@ -5175,7 +5175,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Michael Jackson — Bad - 2012 Remaster."",
+    "answer": "Michael Jackson — Bad - 2012 Remaster.",
     "hint": "Michael Jackson",
     "difficulty": "mittel",
     "sources": {
@@ -5194,7 +5194,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wang Chung — Dance Hall Days."",
+    "answer": "Wang Chung — Dance Hall Days.",
     "hint": "Wang Chung",
     "difficulty": "mittel",
     "sources": {
@@ -5213,7 +5213,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Älice Cooper — Poison."",
+    "answer": "Älice Cooper — Poison.",
     "hint": "Älice Cooper",
     "difficulty": "mittel",
     "sources": {
@@ -5233,7 +5233,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tina Turner — The Best."",
+    "answer": "Tina Turner — The Best.",
     "hint": "Tina Turner",
     "difficulty": "mittel",
     "sources": {
@@ -5252,7 +5252,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ü2 — I Still Haven't Found What I'm Looking For."",
+    "answer": "Ü2 — I Still Haven't Found What I'm Looking For.",
     "hint": "Ü2",
     "difficulty": "leicht",
     "sources": {
@@ -5271,7 +5271,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Michael Jackson — The Way You Make Me Feel - 2012 Remaster."",
+    "answer": "Michael Jackson — The Way You Make Me Feel - 2012 Remaster.",
     "hint": "Michael Jackson",
     "difficulty": "mittel",
     "sources": {
@@ -5290,7 +5290,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bon Jovi — You Give Love A Bad Name."",
+    "answer": "Bon Jovi — You Give Love A Bad Name.",
     "hint": "Bon Jovi",
     "difficulty": "mittel",
     "sources": {
@@ -5310,7 +5310,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sting — Englishman In New York."",
+    "answer": "Sting — Englishman In New York.",
     "hint": "Sting",
     "difficulty": "mittel",
     "sources": {
@@ -5329,7 +5329,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Clash — Should I Stay or Should I Go - Remastered."",
+    "answer": "The Clash — Should I Stay or Should I Go - Remastered.",
     "hint": "The Clash",
     "difficulty": "mittel",
     "sources": {
@@ -5348,7 +5348,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "INXS — Need You Tonight."",
+    "answer": "INXS — Need You Tonight.",
     "hint": "INXS",
     "difficulty": "mittel",
     "sources": {
@@ -5367,7 +5367,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Black — Wonderful Life."",
+    "answer": "Black — Wonderful Life.",
     "hint": "Black",
     "difficulty": "mittel",
     "sources": {
@@ -5386,7 +5386,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1981,
     "cue": "Song anhören und einordnen.",
-    "answer": "Joan Jett & the Blackhearts — I Love Rock 'N Roll."",
+    "answer": "Joan Jett & the Blackhearts — I Love Rock 'N Roll.",
     "hint": "Joan Jett & the Blackhearts",
     "difficulty": "mittel",
     "sources": {
@@ -5405,7 +5405,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eric Carmen — Hungry Eyes - From \"Dirty Dancing\„ Soundtrack."",
+    "answer": "Eric Carmen — Hungry Eyes - From \"Dirty Dancing\„ Soundtrack.",
     "hint": "Eric Carmen",
     "difficulty": "mittel",
     "sources": {
@@ -5424,7 +5424,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Foreigner — Cold as Ice - 2008 Remaster."",
+    "answer": "Foreigner — Cold as Ice - 2008 Remaster.",
     "hint": "Foreigner",
     "difficulty": "mittel",
     "sources": {
@@ -5443,7 +5443,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fine Young Cannibals — She Drives Me Crazy."",
+    "answer": "Fine Young Cannibals — She Drives Me Crazy.",
     "hint": "Fine Young Cannibals",
     "difficulty": "mittel",
     "sources": {
@@ -5462,7 +5462,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Waite — Missing You."",
+    "answer": "John Waite — Missing You.",
     "hint": "John Waite",
     "difficulty": "mittel",
     "sources": {
@@ -5481,7 +5481,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1981,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kim Wilde — Kids In America."",
+    "answer": "Kim Wilde — Kids In America.",
     "hint": "Kim Wilde",
     "difficulty": "mittel",
     "sources": {
@@ -5500,7 +5500,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1983,
     "cue": "Song anhören und einordnen.",
-    "answer": "Matthew Wilder — Break My Stride."",
+    "answer": "Matthew Wilder — Break My Stride.",
     "hint": "Matthew Wilder",
     "difficulty": "mittel",
     "sources": {
@@ -5519,7 +5519,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Peter Gabriel — Sledgehammer."",
+    "answer": "Peter Gabriel — Sledgehammer.",
     "hint": "Peter Gabriel",
     "difficulty": "mittel",
     "sources": {
@@ -5538,7 +5538,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "Prince — 1999."",
+    "answer": "Prince — 1999.",
     "hint": "Prince",
     "difficulty": "mittel",
     "sources": {
@@ -5557,7 +5557,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dire Straits — Money For Nothing - Remastered 1996."",
+    "answer": "Dire Straits — Money For Nothing - Remastered 1996.",
     "hint": "Dire Straits",
     "difficulty": "mittel",
     "sources": {
@@ -5576,7 +5576,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Survivor — Eye of the Tiger."",
+    "answer": "Survivor — Eye of the Tiger.",
     "hint": "Survivor",
     "difficulty": "mittel",
     "sources": {
@@ -5595,7 +5595,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bon Jovi — Livin' On A Prayer."",
+    "answer": "Bon Jovi — Livin' On A Prayer.",
     "hint": "Bon Jovi",
     "difficulty": "mittel",
     "sources": {
@@ -5615,7 +5615,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Run–D.M.C., Aerosmith — Walk This Way (feat. Aerosmith)."",
+    "answer": "Run–D.M.C., Aerosmith — Walk This Way (feat. Aerosmith).",
     "hint": "Run–D.M.C., Aerosmith",
     "difficulty": "mittel",
     "sources": {
@@ -5635,7 +5635,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Europe — The Final Countdown."",
+    "answer": "Europe — The Final Countdown.",
     "hint": "Europe",
     "difficulty": "mittel",
     "sources": {
@@ -5655,7 +5655,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1989,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tom Petty — I Won't Back Down."",
+    "answer": "Tom Petty — I Won't Back Down.",
     "hint": "Tom Petty",
     "difficulty": "mittel",
     "sources": {
@@ -5674,7 +5674,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bonnie Tyler — Total Eclipse of the Heart."",
+    "answer": "Bonnie Tyler — Total Eclipse of the Heart.",
     "hint": "Bonnie Tyler",
     "difficulty": "mittel",
     "sources": {
@@ -5693,7 +5693,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "REO Speedwagon — Keep on Loving You."",
+    "answer": "REO Speedwagon — Keep on Loving You.",
     "hint": "REO Speedwagon",
     "difficulty": "mittel",
     "sources": {
@@ -5712,7 +5712,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Huey Lewis & The News — Hip To Be Square."",
+    "answer": "Huey Lewis & The News — Hip To Be Square.",
     "hint": "Huey Lewis & The News",
     "difficulty": "mittel",
     "sources": {
@@ -5731,7 +5731,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Pet Shop Boys — It's a Sin - 2018 Remaster."",
+    "answer": "Pet Shop Boys — It's a Sin - 2018 Remaster.",
     "hint": "Pet Shop Boys",
     "difficulty": "mittel",
     "sources": {
@@ -5750,7 +5750,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄC/DC — You Shook Me All Night Long."",
+    "answer": "ÄC/DC — You Shook Me All Night Long.",
     "hint": "ÄC/DC",
     "difficulty": "mittel",
     "sources": {
@@ -5769,7 +5769,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1983,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Police — Every Breath You Take."",
+    "answer": "The Police — Every Breath You Take.",
     "hint": "The Police",
     "difficulty": "mittel",
     "sources": {
@@ -5788,7 +5788,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Prince — Raspberry Beret."",
+    "answer": "Prince — Raspberry Beret.",
     "hint": "Prince",
     "difficulty": "mittel",
     "sources": {
@@ -5807,7 +5807,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daryl Hall & John Oates — You Make My Dreams (Come True)."",
+    "answer": "Daryl Hall & John Oates — You Make My Dreams (Come True).",
     "hint": "Daryl Hall & John Oates",
     "difficulty": "mittel",
     "sources": {
@@ -5826,7 +5826,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Men Without Hats — The Safety Dance."",
+    "answer": "Men Without Hats — The Safety Dance.",
     "hint": "Men Without Hats",
     "difficulty": "mittel",
     "sources": {
@@ -5845,7 +5845,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bon Jovi — Runaway."",
+    "answer": "Bon Jovi — Runaway.",
     "hint": "Bon Jovi",
     "difficulty": "mittel",
     "sources": {
@@ -5865,7 +5865,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cutting Crew — (I Just) Died In Your Arms."",
+    "answer": "Cutting Crew — (I Just) Died In Your Arms.",
     "hint": "Cutting Crew",
     "difficulty": "mittel",
     "sources": {
@@ -5884,7 +5884,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "Phil Collins — You Can't Hurry Love - 2016 Remaster."",
+    "answer": "Phil Collins — You Can't Hurry Love - 2016 Remaster.",
     "hint": "Phil Collins",
     "difficulty": "mittel",
     "sources": {
@@ -5903,7 +5903,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Guns N' Roses — Sweet Child O' Mine."",
+    "answer": "Guns N' Roses — Sweet Child O' Mine.",
     "hint": "Guns N' Roses",
     "difficulty": "mittel",
     "sources": {
@@ -5923,7 +5923,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Miami Sound Machine — Conga!."",
+    "answer": "Miami Sound Machine — Conga!.",
     "hint": "Miami Sound Machine",
     "difficulty": "mittel",
     "sources": {
@@ -5942,7 +5942,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruce Springsteen — I'm On Fire."",
+    "answer": "Bruce Springsteen — I'm On Fire.",
     "hint": "Bruce Springsteen",
     "difficulty": "mittel",
     "sources": {
@@ -5961,7 +5961,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Heart — Alone."",
+    "answer": "Heart — Alone.",
     "hint": "Heart",
     "difficulty": "mittel",
     "sources": {
@@ -5980,7 +5980,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dead Or Alive — You Spin Me Round (Like a Record)."",
+    "answer": "Dead Or Alive — You Spin Me Round (Like a Record).",
     "hint": "Dead Or Alive",
     "difficulty": "mittel",
     "sources": {
@@ -5999,7 +5999,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tears For Fears — Shout."",
+    "answer": "Tears For Fears — Shout.",
     "hint": "Tears For Fears",
     "difficulty": "mittel",
     "sources": {
@@ -6018,7 +6018,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Foreigner — I Want to Know What Love Is - 1999 Remaster."",
+    "answer": "Foreigner — I Want to Know What Love Is - 1999 Remaster.",
     "hint": "Foreigner",
     "difficulty": "mittel",
     "sources": {
@@ -6037,7 +6037,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Whitney Houston — How Will I Know."",
+    "answer": "Whitney Houston — How Will I Know.",
     "hint": "Whitney Houston",
     "difficulty": "mittel",
     "sources": {
@@ -6056,7 +6056,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "Laura Branigan — Gloria."",
+    "answer": "Laura Branigan — Gloria.",
     "hint": "Laura Branigan",
     "difficulty": "mittel",
     "sources": {
@@ -6075,7 +6075,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ölivia Newton-John — Physical - Remastered 2021."",
+    "answer": "Ölivia Newton-John — Physical - Remastered 2021.",
     "hint": "Ölivia Newton-John",
     "difficulty": "mittel",
     "sources": {
@@ -6094,7 +6094,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "REO Speedwagon — Can't Fight This Feeling."",
+    "answer": "REO Speedwagon — Can't Fight This Feeling.",
     "hint": "REO Speedwagon",
     "difficulty": "mittel",
     "sources": {
@@ -6113,7 +6113,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bill Medley, Jennifer Warnes — (I've Had) The Time of My Life - From \"Dirty Dancing\„ Soundtrack."",
+    "answer": "Bill Medley, Jennifer Warnes — (I've Had) The Time of My Life - From \"Dirty Dancing\„ Soundtrack.",
     "hint": "Bill Medley, Jennifer Warnes",
     "difficulty": "mittel",
     "sources": {
@@ -6132,7 +6132,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Genesis — Invisible Touch - 2007 Remaster."",
+    "answer": "Genesis — Invisible Touch - 2007 Remaster.",
     "hint": "Genesis",
     "difficulty": "mittel",
     "sources": {
@@ -6151,7 +6151,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruce Springsteen — Hungry Heart."",
+    "answer": "Bruce Springsteen — Hungry Heart.",
     "hint": "Bruce Springsteen",
     "difficulty": "mittel",
     "sources": {
@@ -6170,7 +6170,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kenny Loggins — Footloose - From \"Footloose\„ Soundtrack."",
+    "answer": "Kenny Loggins — Footloose - From \"Footloose\„ Soundtrack.",
     "hint": "Kenny Loggins",
     "difficulty": "mittel",
     "sources": {
@@ -6189,7 +6189,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1982,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daryl Hall & John Oates — Maneater."",
+    "answer": "Daryl Hall & John Oates — Maneater.",
     "hint": "Daryl Hall & John Oates",
     "difficulty": "mittel",
     "sources": {
@@ -6208,7 +6208,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Philip Bailey, Phil Collins — Easy Lover."",
+    "answer": "Philip Bailey, Phil Collins — Easy Lover.",
     "hint": "Philip Bailey, Phil Collins",
     "difficulty": "mittel",
     "sources": {
@@ -6227,7 +6227,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Police — De Do Do Do, De Da Da Da."",
+    "answer": "The Police — De Do Do Do, De Da Da Da.",
     "hint": "The Police",
     "difficulty": "mittel",
     "sources": {
@@ -6246,7 +6246,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1988,
     "cue": "Song anhören und einordnen.",
-    "answer": "Poison — Every Rose Has Its Thorn - 2003 Remaster."",
+    "answer": "Poison — Every Rose Has Its Thorn - 2003 Remaster.",
     "hint": "Poison",
     "difficulty": "mittel",
     "sources": {
@@ -6266,7 +6266,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1987,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rick Astley — Together Forever."",
+    "answer": "Rick Astley — Together Forever.",
     "hint": "Rick Astley",
     "difficulty": "mittel",
     "sources": {
@@ -6285,7 +6285,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1984,
     "cue": "Song anhören und einordnen.",
-    "answer": "Prince — When Doves Cry."",
+    "answer": "Prince — When Doves Cry.",
     "hint": "Prince",
     "difficulty": "mittel",
     "sources": {
@@ -6304,7 +6304,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Clash — London Calling - Remastered."",
+    "answer": "The Clash — London Calling - Remastered.",
     "hint": "The Clash",
     "difficulty": "mittel",
     "sources": {
@@ -6324,7 +6324,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1981,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Police — Every Little Thing She Does Is Magic."",
+    "answer": "The Police — Every Little Thing She Does Is Magic.",
     "hint": "The Police",
     "difficulty": "mittel",
     "sources": {
@@ -6343,7 +6343,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1986,
     "cue": "Song anhören und einordnen.",
-    "answer": "Crowded House — Don't Dream It's Over."",
+    "answer": "Crowded House — Don't Dream It's Over.",
     "hint": "Crowded House",
     "difficulty": "mittel",
     "sources": {
@@ -6362,7 +6362,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Michael — Careless Whisper - Remastered."",
+    "answer": "George Michael — Careless Whisper - Remastered.",
     "hint": "George Michael",
     "difficulty": "mittel",
     "sources": {
@@ -6381,7 +6381,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1985,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ü.S.A. For Africa — We Are The World."",
+    "answer": "Ü.S.A. For Africa — We Are The World.",
     "hint": "Ü.S.A. For Africa",
     "difficulty": "mittel",
     "sources": {
@@ -6400,7 +6400,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Michael Jackson — Beat It."",
+    "answer": "Michael Jackson — Beat It.",
     "hint": "Michael Jackson",
     "difficulty": "mittel",
     "sources": {
@@ -6419,7 +6419,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1980,
     "cue": "Song anhören und einordnen.",
-    "answer": "Journey — Any Way You Want It."",
+    "answer": "Journey — Any Way You Want It.",
     "hint": "Journey",
     "difficulty": "mittel",
     "sources": {
@@ -6438,7 +6438,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sister Sledge — We Are Family."",
+    "answer": "Sister Sledge — We Are Family.",
     "hint": "Sister Sledge",
     "difficulty": "mittel",
     "sources": {
@@ -6457,7 +6457,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Älice Cooper — School's Out."",
+    "answer": "Älice Cooper — School's Out.",
     "hint": "Älice Cooper",
     "difficulty": "mittel",
     "sources": {
@@ -6477,7 +6477,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nazareth — Love Hurts."",
+    "answer": "Nazareth — Love Hurts.",
     "hint": "Nazareth",
     "difficulty": "mittel",
     "sources": {
@@ -6496,7 +6496,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Beatles — Let It Be - Remastered 2009."",
+    "answer": "The Beatles — Let It Be - Remastered 2009.",
     "hint": "The Beatles",
     "difficulty": "mittel",
     "sources": {
@@ -6515,7 +6515,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Joel — Piano Man."",
+    "answer": "Billy Joel — Piano Man.",
     "hint": "Billy Joel",
     "difficulty": "mittel",
     "sources": {
@@ -6534,7 +6534,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — Bicycle Race - Remastered 2011."",
+    "answer": "Queen — Bicycle Race - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
     "sources": {
@@ -6553,7 +6553,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄBBA — Chiquitita."",
+    "answer": "ÄBBA — Chiquitita.",
     "hint": "ÄBBA",
     "difficulty": "mittel",
     "sources": {
@@ -6572,7 +6572,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Yusuf / Cat Stevens — Wild World."",
+    "answer": "Yusuf / Cat Stevens — Wild World.",
     "hint": "Yusuf / Cat Stevens",
     "difficulty": "mittel",
     "sources": {
@@ -6591,7 +6591,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Äerosmith — Dream On."",
+    "answer": "Äerosmith — Dream On.",
     "hint": "Äerosmith",
     "difficulty": "mittel",
     "sources": {
@@ -6610,7 +6610,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄBBA — Fernando."",
+    "answer": "ÄBBA — Fernando.",
     "hint": "ÄBBA",
     "difficulty": "mittel",
     "sources": {
@@ -6629,7 +6629,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mungo Jerry — In the Summertime."",
+    "answer": "Mungo Jerry — In the Summertime.",
     "hint": "Mungo Jerry",
     "difficulty": "mittel",
     "sources": {
@@ -6648,7 +6648,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fleetwood Mac — Go Your Own Way - 2004 Remaster."",
+    "answer": "Fleetwood Mac — Go Your Own Way - 2004 Remaster.",
     "hint": "Fleetwood Mac",
     "difficulty": "mittel",
     "sources": {
@@ -6667,7 +6667,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elton John — Tiny Dancer."",
+    "answer": "Elton John — Tiny Dancer.",
     "hint": "Elton John",
     "difficulty": "mittel",
     "sources": {
@@ -6686,7 +6686,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Simon & Garfunkel — El Condor Pasa (If I Could)."",
+    "answer": "Simon & Garfunkel — El Condor Pasa (If I Could).",
     "hint": "Simon & Garfunkel",
     "difficulty": "mittel",
     "sources": {
@@ -6705,7 +6705,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elton John — Sorry Seems To Be The Hardest Word."",
+    "answer": "Elton John — Sorry Seems To Be The Hardest Word.",
     "hint": "Elton John",
     "difficulty": "mittel",
     "sources": {
@@ -6724,7 +6724,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Village People — YMCA - Original Version 1978."",
+    "answer": "Village People — YMCA - Original Version 1978.",
     "hint": "Village People",
     "difficulty": "mittel",
     "sources": {
@@ -6743,7 +6743,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Neil Young — Heart of Gold."",
+    "answer": "Neil Young — Heart of Gold.",
     "hint": "Neil Young",
     "difficulty": "mittel",
     "sources": {
@@ -6762,7 +6762,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nana Mouskouri — Guten Morgen Sonnenschein."",
+    "answer": "Nana Mouskouri — Guten Morgen Sonnenschein.",
     "hint": "Nana Mouskouri",
     "difficulty": "mittel",
     "sources": {
@@ -6781,7 +6781,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Rolling Stones — Angie - Remastered 2009."",
+    "answer": "The Rolling Stones — Angie - Remastered 2009.",
     "hint": "The Rolling Stones",
     "difficulty": "mittel",
     "sources": {
@@ -6800,7 +6800,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eagles — Take It Easy - 2013 Remaster."",
+    "answer": "Eagles — Take It Easy - 2013 Remaster.",
     "hint": "Eagles",
     "difficulty": "mittel",
     "sources": {
@@ -6819,7 +6819,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Ocean — Love Really Hurts Without You."",
+    "answer": "Billy Ocean — Love Really Hurts Without You.",
     "hint": "Billy Ocean",
     "difficulty": "mittel",
     "sources": {
@@ -6838,7 +6838,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Supertramp — The Logical Song - Remastered 2010."",
+    "answer": "Supertramp — The Logical Song - Remastered 2010.",
     "hint": "Supertramp",
     "difficulty": "mittel",
     "sources": {
@@ -6857,7 +6857,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "10cc — Dreadlock Holiday."",
+    "answer": "10cc — Dreadlock Holiday.",
     "hint": "10cc",
     "difficulty": "mittel",
     "sources": {
@@ -6876,7 +6876,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fleetwood Mac — Dreams - 2004 Remaster."",
+    "answer": "Fleetwood Mac — Dreams - 2004 Remaster.",
     "hint": "Fleetwood Mac",
     "difficulty": "mittel",
     "sources": {
@@ -6895,7 +6895,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Boney M. — Sunny."",
+    "answer": "Boney M. — Sunny.",
     "hint": "Boney M.",
     "difficulty": "mittel",
     "sources": {
@@ -6914,7 +6914,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Brotherhood of Man — Save Your Kisses for Me."",
+    "answer": "Brotherhood of Man — Save Your Kisses for Me.",
     "hint": "Brotherhood of Man",
     "difficulty": "mittel",
     "sources": {
@@ -6933,7 +6933,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dolly Parton — Jolene."",
+    "answer": "Dolly Parton — Jolene.",
     "hint": "Dolly Parton",
     "difficulty": "mittel",
     "sources": {
@@ -6952,7 +6952,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Bellamy Brothers — Let Your Love Flow."",
+    "answer": "The Bellamy Brothers — Let Your Love Flow.",
     "hint": "The Bellamy Brothers",
     "difficulty": "mittel",
     "sources": {
@@ -6971,7 +6971,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rod Stewart — Sailing."",
+    "answer": "Rod Stewart — Sailing.",
     "hint": "Rod Stewart",
     "difficulty": "mittel",
     "sources": {
@@ -6990,7 +6990,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Leo Sayer — You Make Me Feel Like Dancing."",
+    "answer": "Leo Sayer — You Make Me Feel Like Dancing.",
     "hint": "Leo Sayer",
     "difficulty": "mittel",
     "sources": {
@@ -7009,7 +7009,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bee Gees — More Than A Woman."",
+    "answer": "Bee Gees — More Than A Woman.",
     "hint": "Bee Gees",
     "difficulty": "mittel",
     "sources": {
@@ -7028,7 +7028,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Supertramp — Take The Long Way Home - Remastered 2010."",
+    "answer": "Supertramp — Take The Long Way Home - Remastered 2010.",
     "hint": "Supertramp",
     "difficulty": "mittel",
     "sources": {
@@ -7047,7 +7047,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gilbert O'Sullivan — Get Down."",
+    "answer": "Gilbert O'Sullivan — Get Down.",
     "hint": "Gilbert O'Sullivan",
     "difficulty": "mittel",
     "sources": {
@@ -7066,7 +7066,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1969,
     "cue": "Song anhören und einordnen.",
-    "answer": "Creedence Clearwater Revival — Down On The Corner."",
+    "answer": "Creedence Clearwater Revival — Down On The Corner.",
     "hint": "Creedence Clearwater Revival",
     "difficulty": "mittel",
     "sources": {
@@ -7085,7 +7085,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eruption — One Way Ticket."",
+    "answer": "Eruption — One Way Ticket.",
     "hint": "Eruption",
     "difficulty": "mittel",
     "sources": {
@@ -7104,7 +7104,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Paul Young — Love Is in the Air."",
+    "answer": "John Paul Young — Love Is in the Air.",
     "hint": "John Paul Young",
     "difficulty": "mittel",
     "sources": {
@@ -7123,7 +7123,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Joni Mitchell — Big Yellow Taxi."",
+    "answer": "Joni Mitchell — Big Yellow Taxi.",
     "hint": "Joni Mitchell",
     "difficulty": "mittel",
     "sources": {
@@ -7142,7 +7142,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katja Ebstein — Wunder gibt es immer wieder."",
+    "answer": "Katja Ebstein — Wunder gibt es immer wieder.",
     "hint": "Katja Ebstein",
     "difficulty": "mittel",
     "sources": {
@@ -7161,7 +7161,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1993,
     "cue": "Song anhören und einordnen.",
-    "answer": "Exile — Kiss You All Over."",
+    "answer": "Exile — Kiss You All Over.",
     "hint": "Exile",
     "difficulty": "mittel",
     "sources": {
@@ -7180,7 +7180,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kate Bush — Wuthering Heights."",
+    "answer": "Kate Bush — Wuthering Heights.",
     "hint": "Kate Bush",
     "difficulty": "mittel",
     "sources": {
@@ -7199,7 +7199,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Patrick Hernandez — Born to Be Alive - The Original."",
+    "answer": "Patrick Hernandez — Born to Be Alive - The Original.",
     "hint": "Patrick Hernandez",
     "difficulty": "mittel",
     "sources": {
@@ -7218,7 +7218,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Älbert Hammond — It Never Rains in Southern California."",
+    "answer": "Älbert Hammond — It Never Rains in Southern California.",
     "hint": "Älbert Hammond",
     "difficulty": "mittel",
     "sources": {
@@ -7237,7 +7237,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Chris Roberts — Du kannst nicht immer 17 sein."",
+    "answer": "Chris Roberts — Du kannst nicht immer 17 sein.",
     "hint": "Chris Roberts",
     "difficulty": "mittel",
     "sources": {
@@ -7256,7 +7256,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sweet — Fox on the Run - Alternate Version."",
+    "answer": "Sweet — Fox on the Run - Alternate Version.",
     "hint": "Sweet",
     "difficulty": "mittel",
     "sources": {
@@ -7275,7 +7275,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄBBA — Gimme! Gimme! Gimme! (A Man After Midnight)."",
+    "answer": "ÄBBA — Gimme! Gimme! Gimme! (A Man After Midnight).",
     "hint": "ÄBBA",
     "difficulty": "mittel",
     "sources": {
@@ -7294,7 +7294,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Earth, Wind & Fire — September."",
+    "answer": "Earth, Wind & Fire — September.",
     "hint": "Earth, Wind & Fire",
     "difficulty": "mittel",
     "sources": {
@@ -7313,7 +7313,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruce Springsteen — Born to Run."",
+    "answer": "Bruce Springsteen — Born to Run.",
     "hint": "Bruce Springsteen",
     "difficulty": "mittel",
     "sources": {
@@ -7332,7 +7332,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄBBA — Voulez-Vous."",
+    "answer": "ÄBBA — Voulez-Vous.",
     "hint": "ÄBBA",
     "difficulty": "mittel",
     "sources": {
@@ -7351,7 +7351,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — We Are The Champions - Remastered 2011."",
+    "answer": "Queen — We Are The Champions - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
     "sources": {
@@ -7370,7 +7370,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Yusuf / Cat Stevens — Father And Son."",
+    "answer": "Yusuf / Cat Stevens — Father And Son.",
     "hint": "Yusuf / Cat Stevens",
     "difficulty": "mittel",
     "sources": {
@@ -7389,7 +7389,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Carpenters — Top Of The World."",
+    "answer": "Carpenters — Top Of The World.",
     "hint": "Carpenters",
     "difficulty": "mittel",
     "sources": {
@@ -7408,7 +7408,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Candi Staton — Young Hearts Run Free."",
+    "answer": "Candi Staton — Young Hearts Run Free.",
     "hint": "Candi Staton",
     "difficulty": "mittel",
     "sources": {
@@ -7427,7 +7427,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Joel — My Life."",
+    "answer": "Billy Joel — My Life.",
     "hint": "Billy Joel",
     "difficulty": "mittel",
     "sources": {
@@ -7446,7 +7446,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — Don't Stop Me Now - Remastered 2011."",
+    "answer": "Queen — Don't Stop Me Now - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
     "sources": {
@@ -7465,7 +7465,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "David Bowie — Starman - 2012 Remaster."",
+    "answer": "David Bowie — Starman - 2012 Remaster.",
     "hint": "David Bowie",
     "difficulty": "mittel",
     "sources": {
@@ -7484,7 +7484,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lou Reed — Perfect Day."",
+    "answer": "Lou Reed — Perfect Day.",
     "hint": "Lou Reed",
     "difficulty": "mittel",
     "sources": {
@@ -7503,7 +7503,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Don McLean — American Pie."",
+    "answer": "Don McLean — American Pie.",
     "hint": "Don McLean",
     "difficulty": "mittel",
     "sources": {
@@ -7522,7 +7522,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Lennon — Imagine - Remastered 2010."",
+    "answer": "John Lennon — Imagine - Remastered 2010.",
     "hint": "John Lennon",
     "difficulty": "mittel",
     "sources": {
@@ -7541,7 +7541,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — Somebody To Love - Remastered 2011."",
+    "answer": "Queen — Somebody To Love - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
     "sources": {
@@ -7560,7 +7560,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄBBA — Take A Chance On Me."",
+    "answer": "ÄBBA — Take A Chance On Me.",
     "hint": "ÄBBA",
     "difficulty": "mittel",
     "sources": {
@@ -7579,7 +7579,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cass Elliot — Make Your Own Kind Of Music."",
+    "answer": "Cass Elliot — Make Your Own Kind Of Music.",
     "hint": "Cass Elliot",
     "difficulty": "mittel",
     "sources": {
@@ -7598,7 +7598,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Joel — She's Always a Woman."",
+    "answer": "Billy Joel — She's Always a Woman.",
     "hint": "Billy Joel",
     "difficulty": "mittel",
     "sources": {
@@ -7617,7 +7617,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Hollies — The Air That I Breathe - 2008 Remaster."",
+    "answer": "The Hollies — The Air That I Breathe - 2008 Remaster.",
     "hint": "The Hollies",
     "difficulty": "mittel",
     "sources": {
@@ -7636,7 +7636,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — Killer Queen - Remastered 2011."",
+    "answer": "Queen — Killer Queen - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
     "sources": {
@@ -7655,7 +7655,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bette Midler — The Rose."",
+    "answer": "Bette Midler — The Rose.",
     "hint": "Bette Midler",
     "difficulty": "mittel",
     "sources": {
@@ -7674,7 +7674,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Electric Light Orchestra — Mr. Blue Sky."",
+    "answer": "Electric Light Orchestra — Mr. Blue Sky.",
     "hint": "Electric Light Orchestra",
     "difficulty": "mittel",
     "sources": {
@@ -7693,7 +7693,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Denver — Take Me Home, Country Roads - Original Version."",
+    "answer": "John Denver — Take Me Home, Country Roads - Original Version.",
     "hint": "John Denver",
     "difficulty": "mittel",
     "sources": {
@@ -7712,7 +7712,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bee Gees — Tragedy."",
+    "answer": "Bee Gees — Tragedy.",
     "hint": "Bee Gees",
     "difficulty": "mittel",
     "sources": {
@@ -7731,7 +7731,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Queen — We Will Rock You - Remastered 2011."",
+    "answer": "Queen — We Will Rock You - Remastered 2011.",
     "hint": "Queen",
     "difficulty": "mittel",
     "sources": {
@@ -7750,7 +7750,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elton John — Rocket Man (I Think It's Going To Be A Long, Long Time)."",
+    "answer": "Elton John — Rocket Man (I Think It's Going To Be A Long, Long Time).",
     "hint": "Elton John",
     "difficulty": "mittel",
     "sources": {
@@ -7769,7 +7769,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "Paul Simon — 50 Ways to Leave Your Lover."",
+    "answer": "Paul Simon — 50 Ways to Leave Your Lover.",
     "hint": "Paul Simon",
     "difficulty": "mittel",
     "sources": {
@@ -7788,7 +7788,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bill Withers — Lovely Day."",
+    "answer": "Bill Withers — Lovely Day.",
     "hint": "Bill Withers",
     "difficulty": "mittel",
     "sources": {
@@ -7807,7 +7807,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Pink Floyd — Wish You Were Here."",
+    "answer": "Pink Floyd — Wish You Were Here.",
     "hint": "Pink Floyd",
     "difficulty": "mittel",
     "sources": {
@@ -7826,7 +7826,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Don McLean — Vincent."",
+    "answer": "Don McLean — Vincent.",
     "hint": "Don McLean",
     "difficulty": "mittel",
     "sources": {
@@ -7845,7 +7845,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Simon & Garfunkel — Cecilia."",
+    "answer": "Simon & Garfunkel — Cecilia.",
     "hint": "Simon & Garfunkel",
     "difficulty": "mittel",
     "sources": {
@@ -7864,7 +7864,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Boomtown Rats — I Don't Like Mondays."",
+    "answer": "The Boomtown Rats — I Don't Like Mondays.",
     "hint": "The Boomtown Rats",
     "difficulty": "mittel",
     "sources": {
@@ -7883,7 +7883,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Electric Light Orchestra — Don't Bring Me Down."",
+    "answer": "Electric Light Orchestra — Don't Bring Me Down.",
     "hint": "Electric Light Orchestra",
     "difficulty": "mittel",
     "sources": {
@@ -7902,7 +7902,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elton John — Your Song."",
+    "answer": "Elton John — Your Song.",
     "hint": "Elton John",
     "difficulty": "mittel",
     "sources": {
@@ -7921,7 +7921,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Simon & Garfunkel — Bridge Over Troubled Water."",
+    "answer": "Simon & Garfunkel — Bridge Over Troubled Water.",
     "hint": "Simon & Garfunkel",
     "difficulty": "mittel",
     "sources": {
@@ -7940,7 +7940,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "Blue Swede, Björn Skifs — Hooked On A Feeling."",
+    "answer": "Blue Swede, Björn Skifs — Hooked On A Feeling.",
     "hint": "Blue Swede, Björn Skifs",
     "difficulty": "mittel",
     "sources": {
@@ -7959,7 +7959,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Joel — Just the Way You Are."",
+    "answer": "Billy Joel — Just the Way You Are.",
     "hint": "Billy Joel",
     "difficulty": "mittel",
     "sources": {
@@ -7978,7 +7978,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rupert Holmes — Escape (The Pina Colada Song)."",
+    "answer": "Rupert Holmes — Escape (The Pina Colada Song).",
     "hint": "Rupert Holmes",
     "difficulty": "mittel",
     "sources": {
@@ -7997,7 +7997,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "Terry Jacks — Seasons in the Sun."",
+    "answer": "Terry Jacks — Seasons in the Sun.",
     "hint": "Terry Jacks",
     "difficulty": "mittel",
     "sources": {
@@ -8016,7 +8016,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Yusuf / Cat Stevens — Morning Has Broken - Remastered 2021."",
+    "answer": "Yusuf / Cat Stevens — Morning Has Broken - Remastered 2021.",
     "hint": "Yusuf / Cat Stevens",
     "difficulty": "mittel",
     "sources": {
@@ -8035,7 +8035,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Simon & Garfunkel — The Boxer."",
+    "answer": "Simon & Garfunkel — The Boxer.",
     "hint": "Simon & Garfunkel",
     "difficulty": "mittel",
     "sources": {
@@ -8054,7 +8054,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bill Withers — Lean on Me."",
+    "answer": "Bill Withers — Lean on Me.",
     "hint": "Bill Withers",
     "difficulty": "mittel",
     "sources": {
@@ -8073,7 +8073,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Crosby, Stills, Nash & Young — Our House."",
+    "answer": "Crosby, Stills, Nash & Young — Our House.",
     "hint": "Crosby, Stills, Nash & Young",
     "difficulty": "mittel",
     "sources": {
@@ -8092,7 +8092,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Lennon — Jealous Guy - Remastered 2010."",
+    "answer": "John Lennon — Jealous Guy - Remastered 2010.",
     "hint": "John Lennon",
     "difficulty": "mittel",
     "sources": {
@@ -8111,7 +8111,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elton John — Goodbye Yellow Brick Road - Remastered 2014."",
+    "answer": "Elton John — Goodbye Yellow Brick Road - Remastered 2014.",
     "hint": "Elton John",
     "difficulty": "mittel",
     "sources": {
@@ -8130,7 +8130,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1996,
     "cue": "Song anhören und einordnen.",
-    "answer": "Joe Cocker — You Are So Beautiful - 1996 Version."",
+    "answer": "Joe Cocker — You Are So Beautiful - 1996 Version.",
     "hint": "Joe Cocker",
     "difficulty": "mittel",
     "sources": {
@@ -8149,7 +8149,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eagles — Hotel California - 2013 Remaster."",
+    "answer": "Eagles — Hotel California - 2013 Remaster.",
     "hint": "Eagles",
     "difficulty": "mittel",
     "sources": {
@@ -8168,7 +8168,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "David Bowie — \"Heroes\" - 2017 Remaster."",
+    "answer": "David Bowie — \"Heroes\" - 2017 Remaster.",
     "hint": "David Bowie",
     "difficulty": "mittel",
     "sources": {
@@ -8187,7 +8187,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eric Clapton — Wonderful Tonight."",
+    "answer": "Eric Clapton — Wonderful Tonight.",
     "hint": "Eric Clapton",
     "difficulty": "mittel",
     "sources": {
@@ -8206,7 +8206,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Boston — More Than a Feeling."",
+    "answer": "Boston — More Than a Feeling.",
     "hint": "Boston",
     "difficulty": "mittel",
     "sources": {
@@ -8225,7 +8225,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Police — Roxanne."",
+    "answer": "The Police — Roxanne.",
     "hint": "The Police",
     "difficulty": "mittel",
     "sources": {
@@ -8244,7 +8244,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Foreigner — Cold as Ice."",
+    "answer": "Foreigner — Cold as Ice.",
     "hint": "Foreigner",
     "difficulty": "mittel",
     "sources": {
@@ -8263,7 +8263,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "Hot Chocolate — You Sexy Thing."",
+    "answer": "Hot Chocolate — You Sexy Thing.",
     "hint": "Hot Chocolate",
     "difficulty": "mittel",
     "sources": {
@@ -8282,7 +8282,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Pink Floyd — Another Brick in the Wall, Pt. 2."",
+    "answer": "Pink Floyd — Another Brick in the Wall, Pt. 2.",
     "hint": "Pink Floyd",
     "difficulty": "mittel",
     "sources": {
@@ -8301,7 +8301,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1990,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bee Gees — Stayin' Alive - From \"Saturday Night Fever\„ Soundtrack."",
+    "answer": "Bee Gees — Stayin' Alive - From \"Saturday Night Fever\„ Soundtrack.",
     "hint": "Bee Gees",
     "difficulty": "mittel",
     "sources": {
@@ -8320,7 +8320,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bob Dylan — Knockin' On Heaven's Door."",
+    "answer": "Bob Dylan — Knockin' On Heaven's Door.",
     "hint": "Bob Dylan",
     "difficulty": "mittel",
     "sources": {
@@ -8339,7 +8339,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fleetwood Mac — Landslide."",
+    "answer": "Fleetwood Mac — Landslide.",
     "hint": "Fleetwood Mac",
     "difficulty": "mittel",
     "sources": {
@@ -8358,7 +8358,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Redbone — Come and Get Your Love - Single Version."",
+    "answer": "Redbone — Come and Get Your Love - Single Version.",
     "hint": "Redbone",
     "difficulty": "mittel",
     "sources": {
@@ -8377,7 +8377,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Hot Chocolate — Every 1's a Winner - Single Version."",
+    "answer": "Hot Chocolate — Every 1's a Winner - Single Version.",
     "hint": "Hot Chocolate",
     "difficulty": "mittel",
     "sources": {
@@ -8396,7 +8396,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bee Gees — How Deep Is Your Love."",
+    "answer": "Bee Gees — How Deep Is Your Love.",
     "hint": "Bee Gees",
     "difficulty": "mittel",
     "sources": {
@@ -8415,7 +8415,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "KISS — I Was Made For Lovin' You."",
+    "answer": "KISS — I Was Made For Lovin' You.",
     "hint": "KISS",
     "difficulty": "mittel",
     "sources": {
@@ -8435,7 +8435,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Iggy Pop — The Passenger."",
+    "answer": "Iggy Pop — The Passenger.",
     "hint": "Iggy Pop",
     "difficulty": "mittel",
     "sources": {
@@ -8454,7 +8454,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Peter Gabriel — Solsbury Hill."",
+    "answer": "Peter Gabriel — Solsbury Hill.",
     "hint": "Peter Gabriel",
     "difficulty": "mittel",
     "sources": {
@@ -8473,7 +8473,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "Carl Douglas — Kung Fu Fighting."",
+    "answer": "Carl Douglas — Kung Fu Fighting.",
     "hint": "Carl Douglas",
     "difficulty": "mittel",
     "sources": {
@@ -8492,7 +8492,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "TOTO — Hold the Line."",
+    "answer": "TOTO — Hold the Line.",
     "hint": "TOTO",
     "difficulty": "mittel",
     "sources": {
@@ -8511,7 +8511,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Harrison — My Sweet Lord - 2020 Mix."",
+    "answer": "George Harrison — My Sweet Lord - 2020 Mix.",
     "hint": "George Harrison",
     "difficulty": "mittel",
     "sources": {
@@ -8530,7 +8530,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Knack — My Sharona."",
+    "answer": "The Knack — My Sharona.",
     "hint": "The Knack",
     "difficulty": "mittel",
     "sources": {
@@ -8549,7 +8549,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fleetwood Mac — The Chain - 2004 Remaster."",
+    "answer": "Fleetwood Mac — The Chain - 2004 Remaster.",
     "hint": "Fleetwood Mac",
     "difficulty": "mittel",
     "sources": {
@@ -8568,7 +8568,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bee Gees — Jive Talkin'."",
+    "answer": "Bee Gees — Jive Talkin'.",
     "hint": "Bee Gees",
     "difficulty": "mittel",
     "sources": {
@@ -8587,7 +8587,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "Harry Chapin — Cat's in the Cradle."",
+    "answer": "Harry Chapin — Cat's in the Cradle.",
     "hint": "Harry Chapin",
     "difficulty": "mittel",
     "sources": {
@@ -8606,7 +8606,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elvis Presley — Burning Love."",
+    "answer": "Elvis Presley — Burning Love.",
     "hint": "Elvis Presley",
     "difficulty": "mittel",
     "sources": {
@@ -8625,7 +8625,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bob Marley & The Wailers — Three Little Birds."",
+    "answer": "Bob Marley & The Wailers — Three Little Birds.",
     "hint": "Bob Marley & The Wailers",
     "difficulty": "mittel",
     "sources": {
@@ -8644,7 +8644,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "Blondie — Heart Of Glass."",
+    "answer": "Blondie — Heart Of Glass.",
     "hint": "Blondie",
     "difficulty": "mittel",
     "sources": {
@@ -8663,7 +8663,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ärt Garfunkel — Bright Eyes."",
+    "answer": "Ärt Garfunkel — Bright Eyes.",
     "hint": "Ärt Garfunkel",
     "difficulty": "mittel",
     "sources": {
@@ -8682,7 +8682,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lynyrd Skynyrd — Free Bird."",
+    "answer": "Lynyrd Skynyrd — Free Bird.",
     "hint": "Lynyrd Skynyrd",
     "difficulty": "mittel",
     "sources": {
@@ -8701,7 +8701,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Neil Young — Heart of Gold - 2009 Remaster."",
+    "answer": "Neil Young — Heart of Gold - 2009 Remaster.",
     "hint": "Neil Young",
     "difficulty": "mittel",
     "sources": {
@@ -8720,7 +8720,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tom Jones — She's A Lady."",
+    "answer": "Tom Jones — She's A Lady.",
     "hint": "Tom Jones",
     "difficulty": "mittel",
     "sources": {
@@ -8739,7 +8739,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Chris Norman, Suzi Quatro — Stumblin' In - 2017 Remaster."",
+    "answer": "Chris Norman, Suzi Quatro — Stumblin' In - 2017 Remaster.",
     "hint": "Chris Norman, Suzi Quatro",
     "difficulty": "mittel",
     "sources": {
@@ -8758,7 +8758,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Stevie Wonder — Superstition."",
+    "answer": "Stevie Wonder — Superstition.",
     "hint": "Stevie Wonder",
     "difficulty": "mittel",
     "sources": {
@@ -8777,7 +8777,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Steve Miller Band — The Joker."",
+    "answer": "Steve Miller Band — The Joker.",
     "hint": "Steve Miller Band",
     "difficulty": "mittel",
     "sources": {
@@ -8796,7 +8796,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄC/DC — Highway to Hell."",
+    "answer": "ÄC/DC — Highway to Hell.",
     "hint": "ÄC/DC",
     "difficulty": "mittel",
     "sources": {
@@ -8815,7 +8815,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Police — Message In A Bottle."",
+    "answer": "The Police — Message In A Bottle.",
     "hint": "The Police",
     "difficulty": "mittel",
     "sources": {
@@ -8834,7 +8834,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Stealers Wheel — Stuck In The Middle With You."",
+    "answer": "Stealers Wheel — Stuck In The Middle With You.",
     "hint": "Stealers Wheel",
     "difficulty": "mittel",
     "sources": {
@@ -8853,7 +8853,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billy Joel — Vienna."",
+    "answer": "Billy Joel — Vienna.",
     "hint": "Billy Joel",
     "difficulty": "mittel",
     "sources": {
@@ -8872,7 +8872,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fleetwood Mac — Don't Stop - 2004 Remaster."",
+    "answer": "Fleetwood Mac — Don't Stop - 2004 Remaster.",
     "hint": "Fleetwood Mac",
     "difficulty": "mittel",
     "sources": {
@@ -8891,7 +8891,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Talking Heads — Psycho Killer."",
+    "answer": "Talking Heads — Psycho Killer.",
     "hint": "Talking Heads",
     "difficulty": "mittel",
     "sources": {
@@ -8910,7 +8910,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄC/DC — T.N.T.."",
+    "answer": "ÄC/DC — T.N.T..",
     "hint": "ÄC/DC",
     "difficulty": "mittel",
     "sources": {
@@ -8929,7 +8929,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gerry Rafferty — Baker Street."",
+    "answer": "Gerry Rafferty — Baker Street.",
     "hint": "Gerry Rafferty",
     "difficulty": "mittel",
     "sources": {
@@ -8948,7 +8948,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Stevie Wonder — Sir Duke."",
+    "answer": "Stevie Wonder — Sir Duke.",
     "hint": "Stevie Wonder",
     "difficulty": "mittel",
     "sources": {
@@ -8967,7 +8967,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Chicago — If You Leave Me Now."",
+    "answer": "Chicago — If You Leave Me Now.",
     "hint": "Chicago",
     "difficulty": "mittel",
     "sources": {
@@ -8986,7 +8986,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Led Zeppelin — Stairway to Heaven - Remaster."",
+    "answer": "Led Zeppelin — Stairway to Heaven - Remaster.",
     "hint": "Led Zeppelin",
     "difficulty": "mittel",
     "sources": {
@@ -9005,7 +9005,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1995,
     "cue": "Song anhören und einordnen.",
-    "answer": "Commodores — Easy."",
+    "answer": "Commodores — Easy.",
     "hint": "Commodores",
     "difficulty": "mittel",
     "sources": {
@@ -9024,7 +9024,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Creedence Clearwater Revival — Have You Ever Seen The Rain."",
+    "answer": "Creedence Clearwater Revival — Have You Ever Seen The Rain.",
     "hint": "Creedence Clearwater Revival",
     "difficulty": "mittel",
     "sources": {
@@ -9043,7 +9043,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Rolling Stones — Wild Horses - 2009 Mix."",
+    "answer": "The Rolling Stones — Wild Horses - 2009 Mix.",
     "hint": "The Rolling Stones",
     "difficulty": "mittel",
     "sources": {
@@ -9062,7 +9062,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bee Gees — You Should Be Dancing."",
+    "answer": "Bee Gees — You Should Be Dancing.",
     "hint": "Bee Gees",
     "difficulty": "mittel",
     "sources": {
@@ -9081,7 +9081,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Denver — Annie's Song."",
+    "answer": "John Denver — Annie's Song.",
     "hint": "John Denver",
     "difficulty": "mittel",
     "sources": {
@@ -9100,7 +9100,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wings — Live And Let Die."",
+    "answer": "Wings — Live And Let Die.",
     "hint": "Wings",
     "difficulty": "mittel",
     "sources": {
@@ -9119,7 +9119,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Carpenters — (They Long To Be) Close To You."",
+    "answer": "Carpenters — (They Long To Be) Close To You.",
     "hint": "Carpenters",
     "difficulty": "mittel",
     "sources": {
@@ -9138,7 +9138,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bob Seger — Old Time Rock & Roll."",
+    "answer": "Bob Seger — Old Time Rock & Roll.",
     "hint": "Bob Seger",
     "difficulty": "mittel",
     "sources": {
@@ -9157,7 +9157,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Supertramp — Breakfast In America - Remastered 2010."",
+    "answer": "Supertramp — Breakfast In America - Remastered 2010.",
     "hint": "Supertramp",
     "difficulty": "mittel",
     "sources": {
@@ -9176,7 +9176,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wild Cherry — Play That Funky Music."",
+    "answer": "Wild Cherry — Play That Funky Music.",
     "hint": "Wild Cherry",
     "difficulty": "mittel",
     "sources": {
@@ -9195,7 +9195,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "David Bowie — Life on Mars? - 2015 Remaster."",
+    "answer": "David Bowie — Life on Mars? - 2015 Remaster.",
     "hint": "David Bowie",
     "difficulty": "mittel",
     "sources": {
@@ -9214,7 +9214,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1994,
     "cue": "Song anhören und einordnen.",
-    "answer": "Boney M. — Daddy Cool."",
+    "answer": "Boney M. — Daddy Cool.",
     "hint": "Boney M.",
     "difficulty": "mittel",
     "sources": {
@@ -9233,7 +9233,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1973,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elvis Presley — Always On My Mind."",
+    "answer": "Elvis Presley — Always On My Mind.",
     "hint": "Elvis Presley",
     "difficulty": "mittel",
     "sources": {
@@ -9252,7 +9252,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Jacksons — Blame It on the Boogie."",
+    "answer": "The Jacksons — Blame It on the Boogie.",
     "hint": "The Jacksons",
     "difficulty": "mittel",
     "sources": {
@@ -9271,7 +9271,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1997,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Denver — Take Me Home, Country Roads."",
+    "answer": "John Denver — Take Me Home, Country Roads.",
     "hint": "John Denver",
     "difficulty": "mittel",
     "sources": {
@@ -9290,7 +9290,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Police — Can't Stand Losing You."",
+    "answer": "The Police — Can't Stand Losing You.",
     "hint": "The Police",
     "difficulty": "mittel",
     "sources": {
@@ -9309,7 +9309,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "T. Rex — Get It On."",
+    "answer": "T. Rex — Get It On.",
     "hint": "T. Rex",
     "difficulty": "mittel",
     "sources": {
@@ -9328,7 +9328,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Harry Nilsson — Without You."",
+    "answer": "Harry Nilsson — Without You.",
     "hint": "Harry Nilsson",
     "difficulty": "mittel",
     "sources": {
@@ -9347,7 +9347,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daryl Hall & John Oates — Rich Girl."",
+    "answer": "Daryl Hall & John Oates — Rich Girl.",
     "hint": "Daryl Hall & John Oates",
     "difficulty": "mittel",
     "sources": {
@@ -9366,7 +9366,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Donna Summer — Hot Stuff."",
+    "answer": "Donna Summer — Hot Stuff.",
     "hint": "Donna Summer",
     "difficulty": "mittel",
     "sources": {
@@ -9385,7 +9385,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Deep Purple — Smoke On The Water - Remastered 2012."",
+    "answer": "Deep Purple — Smoke On The Water - Remastered 2012.",
     "hint": "Deep Purple",
     "difficulty": "mittel",
     "sources": {
@@ -9404,7 +9404,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1998,
     "cue": "Song anhören und einordnen.",
-    "answer": "Baccara — Yes Sir, I Can Boogie."",
+    "answer": "Baccara — Yes Sir, I Can Boogie.",
     "hint": "Baccara",
     "difficulty": "mittel",
     "sources": {
@@ -9423,7 +9423,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1975,
     "cue": "Song anhören und einordnen.",
-    "answer": "Äerosmith — Walk This Way."",
+    "answer": "Äerosmith — Walk This Way.",
     "hint": "Äerosmith",
     "difficulty": "mittel",
     "sources": {
@@ -9442,7 +9442,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1971,
     "cue": "Song anhören und einordnen.",
-    "answer": "Neil Diamond — I Am...I Said - Single Version."",
+    "answer": "Neil Diamond — I Am...I Said - Single Version.",
     "hint": "Neil Diamond",
     "difficulty": "mittel",
     "sources": {
@@ -9461,7 +9461,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Led Zeppelin — Immigrant Song - Remaster."",
+    "answer": "Led Zeppelin — Immigrant Song - Remaster.",
     "hint": "Led Zeppelin",
     "difficulty": "mittel",
     "sources": {
@@ -9480,7 +9480,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1978,
     "cue": "Song anhören und einordnen.",
-    "answer": "Blondie — One Way Or Another - Remastered 2001."",
+    "answer": "Blondie — One Way Or Another - Remastered 2001.",
     "hint": "Blondie",
     "difficulty": "mittel",
     "sources": {
@@ -9499,7 +9499,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ämerica, George Martin — A Horse with No Name."",
+    "answer": "Ämerica, George Martin — A Horse with No Name.",
     "hint": "Ämerica, George Martin",
     "difficulty": "mittel",
     "sources": {
@@ -9518,7 +9518,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kansas — Dust in the Wind."",
+    "answer": "Kansas — Dust in the Wind.",
     "hint": "Kansas",
     "difficulty": "mittel",
     "sources": {
@@ -9537,7 +9537,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1979,
     "cue": "Song anhören und einordnen.",
-    "answer": "Michael Jackson — Don't Stop 'Til You Get Enough."",
+    "answer": "Michael Jackson — Don't Stop 'Til You Get Enough.",
     "hint": "Michael Jackson",
     "difficulty": "mittel",
     "sources": {
@@ -9556,7 +9556,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gilbert O'Sullivan — Alone Again (Naturally)."",
+    "answer": "Gilbert O'Sullivan — Alone Again (Naturally).",
     "hint": "Gilbert O'Sullivan",
     "difficulty": "mittel",
     "sources": {
@@ -9575,7 +9575,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Meat Loaf — Paradise By the Dashboard Light."",
+    "answer": "Meat Loaf — Paradise By the Dashboard Light.",
     "hint": "Meat Loaf",
     "difficulty": "mittel",
     "sources": {
@@ -9594,7 +9594,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1977,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ram Jam — Black Betty."",
+    "answer": "Ram Jam — Black Betty.",
     "hint": "Ram Jam",
     "difficulty": "mittel",
     "sources": {
@@ -9613,7 +9613,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dolly Parton — I Will Always Love You."",
+    "answer": "Dolly Parton — I Will Always Love You.",
     "hint": "Dolly Parton",
     "difficulty": "mittel",
     "sources": {
@@ -9632,7 +9632,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1972,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lou Reed — Walk On the Wild Side."",
+    "answer": "Lou Reed — Walk On the Wild Side.",
     "hint": "Lou Reed",
     "difficulty": "mittel",
     "sources": {
@@ -9651,7 +9651,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Harrison — What Is Life - Remastered 2014."",
+    "answer": "George Harrison — What Is Life - Remastered 2014.",
     "hint": "George Harrison",
     "difficulty": "mittel",
     "sources": {
@@ -9670,7 +9670,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1970,
     "cue": "Song anhören und einordnen.",
-    "answer": "Derek & The Dominos — Layla."",
+    "answer": "Derek & The Dominos — Layla.",
     "hint": "Derek & The Dominos",
     "difficulty": "mittel",
     "sources": {
@@ -9689,7 +9689,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1976,
     "cue": "Song anhören und einordnen.",
-    "answer": "Electric Light Orchestra — Livin' Thing."",
+    "answer": "Electric Light Orchestra — Livin' Thing.",
     "hint": "Electric Light Orchestra",
     "difficulty": "mittel",
     "sources": {
@@ -9708,7 +9708,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1974,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dolly Parton — Jolene."",
+    "answer": "Dolly Parton — Jolene.",
     "hint": "Dolly Parton",
     "difficulty": "mittel",
     "sources": {
@@ -9727,7 +9727,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Backstreet Boys — Incomplete."",
+    "answer": "Backstreet Boys — Incomplete.",
     "hint": "Backstreet Boys",
     "difficulty": "leicht",
     "sources": {
@@ -9746,7 +9746,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk — Just Like a Pill."",
+    "answer": "P!nk — Just Like a Pill.",
     "hint": "P!nk",
     "difficulty": "leicht",
     "sources": {
@@ -9765,7 +9765,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sophie Ellis-Bextor — Murder On The Dancefloor."",
+    "answer": "Sophie Ellis-Bextor — Murder On The Dancefloor.",
     "hint": "Sophie Ellis-Bextor",
     "difficulty": "schwer",
     "sources": {
@@ -9784,7 +9784,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "*NSYNC — Bye Bye Bye."",
+    "answer": "*NSYNC — Bye Bye Bye.",
     "hint": "*NSYNC",
     "difficulty": "leicht",
     "sources": {
@@ -9803,7 +9803,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — Wake Me up When September Ends."",
+    "answer": "Green Day — Wake Me up When September Ends.",
     "hint": "Green Day",
     "difficulty": "leicht",
     "sources": {
@@ -9822,7 +9822,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ävril Lavigne — I'm with You."",
+    "answer": "Ävril Lavigne — I'm with You.",
     "hint": "Ävril Lavigne",
     "difficulty": "leicht",
     "sources": {
@@ -9841,7 +9841,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daniel Powter — Bad Day."",
+    "answer": "Daniel Powter — Bad Day.",
     "hint": "Daniel Powter",
     "difficulty": "schwer",
     "sources": {
@@ -9860,7 +9860,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Enrique Iglesias — Hero."",
+    "answer": "Enrique Iglesias — Hero.",
     "hint": "Enrique Iglesias",
     "difficulty": "leicht",
     "sources": {
@@ -9879,7 +9879,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Robbie Williams — Feel."",
+    "answer": "Robbie Williams — Feel.",
     "hint": "Robbie Williams",
     "difficulty": "mittel",
     "sources": {
@@ -9898,7 +9898,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "Clueso — Chicago - Remastered 2014."",
+    "answer": "Clueso — Chicago - Remastered 2014.",
     "hint": "Clueso",
     "difficulty": "mittel",
     "sources": {
@@ -9917,7 +9917,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "James Blunt — Goodbye My Lover."",
+    "answer": "James Blunt — Goodbye My Lover.",
     "hint": "James Blunt",
     "difficulty": "schwer",
     "sources": {
@@ -9936,7 +9936,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Echt — Du trägst keine Liebe in dir."",
+    "answer": "Echt — Du trägst keine Liebe in dir.",
     "hint": "Echt",
     "difficulty": "mittel",
     "sources": {
@@ -9955,7 +9955,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Counting Crows, Vanessa Carlton — Big Yellow Taxi."",
+    "answer": "Counting Crows, Vanessa Carlton — Big Yellow Taxi.",
     "hint": "Counting Crows, Vanessa Carlton",
     "difficulty": "mittel",
     "sources": {
@@ -9974,7 +9974,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — Boulevard of Broken Dreams."",
+    "answer": "Green Day — Boulevard of Broken Dreams.",
     "hint": "Green Day",
     "difficulty": "leicht",
     "sources": {
@@ -9993,7 +9993,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Train — Drops of Jupiter (Tell Me)."",
+    "answer": "Train — Drops of Jupiter (Tell Me).",
     "hint": "Train",
     "difficulty": "mittel",
     "sources": {
@@ -10012,7 +10012,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ävril Lavigne — Complicated."",
+    "answer": "Ävril Lavigne — Complicated.",
     "hint": "Ävril Lavigne",
     "difficulty": "leicht",
     "sources": {
@@ -10031,7 +10031,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "Snow Patrol — Chasing Cars."",
+    "answer": "Snow Patrol — Chasing Cars.",
     "hint": "Snow Patrol",
     "difficulty": "mittel",
     "sources": {
@@ -10050,7 +10050,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Keane — Somewhere Only We Know."",
+    "answer": "Keane — Somewhere Only We Know.",
     "hint": "Keane",
     "difficulty": "mittel",
     "sources": {
@@ -10069,7 +10069,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Melanie C, Lisa \"Left Eye\„ Lopes — Never Be The Same Again."",
+    "answer": "Melanie C, Lisa \"Left Eye\„ Lopes — Never Be The Same Again.",
     "hint": "Melanie C, Lisa \"Left Eye\„ Lopes",
     "difficulty": "mittel",
     "sources": {
@@ -10088,7 +10088,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Echt — Weinst du."",
+    "answer": "Echt — Weinst du.",
     "hint": "Echt",
     "difficulty": "mittel",
     "sources": {
@@ -10107,7 +10107,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Robbie Williams, Nicole Kidman — Somethin' Stupid."",
+    "answer": "Robbie Williams, Nicole Kidman — Somethin' Stupid.",
     "hint": "Robbie Williams, Nicole Kidman",
     "difficulty": "mittel",
     "sources": {
@@ -10126,7 +10126,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — Can't Stop."",
+    "answer": "Red Hot Chili Peppers — Can't Stop.",
     "hint": "Red Hot Chili Peppers",
     "difficulty": "leicht",
     "sources": {
@@ -10145,7 +10145,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bon Jovi — It's My Life."",
+    "answer": "Bon Jovi — It's My Life.",
     "hint": "Bon Jovi",
     "difficulty": "mittel",
     "sources": {
@@ -10165,7 +10165,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jet — Are You Gonna Be My Girl."",
+    "answer": "Jet — Are You Gonna Be My Girl.",
     "hint": "Jet",
     "difficulty": "mittel",
     "sources": {
@@ -10184,7 +10184,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Baha Men — Who Let The Dogs Out."",
+    "answer": "Baha Men — Who Let The Dogs Out.",
     "hint": "Baha Men",
     "difficulty": "mittel",
     "sources": {
@@ -10203,7 +10203,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dido — White Flag."",
+    "answer": "Dido — White Flag.",
     "hint": "Dido",
     "difficulty": "schwer",
     "sources": {
@@ -10222,7 +10222,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2009,
     "cue": "Song anhören und einordnen.",
-    "answer": "Öwl City — Fireflies."",
+    "answer": "Öwl City — Fireflies.",
     "hint": "Öwl City",
     "difficulty": "mittel",
     "sources": {
@@ -10242,7 +10242,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kelly Clarkson — Behind These Hazel Eyes."",
+    "answer": "Kelly Clarkson — Behind These Hazel Eyes.",
     "hint": "Kelly Clarkson",
     "difficulty": "leicht",
     "sources": {
@@ -10261,7 +10261,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ätomic Kitten — Whole Again."",
+    "answer": "Ätomic Kitten — Whole Again.",
     "hint": "Ätomic Kitten",
     "difficulty": "mittel",
     "sources": {
@@ -10280,7 +10280,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Özzy Osbourne — Dreamer."",
+    "answer": "Özzy Osbourne — Dreamer.",
     "hint": "Özzy Osbourne",
     "difficulty": "mittel",
     "sources": {
@@ -10300,7 +10300,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "LeAnn Rimes — Can't Fight The Moonlight."",
+    "answer": "LeAnn Rimes — Can't Fight The Moonlight.",
     "hint": "LeAnn Rimes",
     "difficulty": "mittel",
     "sources": {
@@ -10319,7 +10319,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ö-Zone — Dragostea din tei."",
+    "answer": "Ö-Zone — Dragostea din tei.",
     "hint": "Ö-Zone",
     "difficulty": "mittel",
     "sources": {
@@ -10338,7 +10338,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Vanessa Carlton — A Thousand Miles."",
+    "answer": "Vanessa Carlton — A Thousand Miles.",
     "hint": "Vanessa Carlton",
     "difficulty": "schwer",
     "sources": {
@@ -10357,7 +10357,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Herbert Grönemeyer — Der Weg - Remastered 2016."",
+    "answer": "Herbert Grönemeyer — Der Weg - Remastered 2016.",
     "hint": "Herbert Grönemeyer",
     "difficulty": "mittel",
     "sources": {
@@ -10376,7 +10376,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Äll Saints — Pure Shores."",
+    "answer": "Äll Saints — Pure Shores.",
     "hint": "Äll Saints",
     "difficulty": "mittel",
     "sources": {
@@ -10395,7 +10395,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wonderwall — Just More."",
+    "answer": "Wonderwall — Just More.",
     "hint": "Wonderwall",
     "difficulty": "mittel",
     "sources": {
@@ -10414,7 +10414,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — Fix You."",
+    "answer": "Coldplay — Fix You.",
     "hint": "Coldplay",
     "difficulty": "leicht",
     "sources": {
@@ -10433,7 +10433,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shakira — Underneath Your Clothes."",
+    "answer": "Shakira — Underneath Your Clothes.",
     "hint": "Shakira",
     "difficulty": "leicht",
     "sources": {
@@ -10452,7 +10452,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Panjabi MC — Mundian To Bach Ke."",
+    "answer": "Panjabi MC — Mundian To Bach Ke.",
     "hint": "Panjabi MC",
     "difficulty": "mittel",
     "sources": {
@@ -10471,7 +10471,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — By the Way."",
+    "answer": "Red Hot Chili Peppers — By the Way.",
     "hint": "Red Hot Chili Peppers",
     "difficulty": "leicht",
     "sources": {
@@ -10490,7 +10490,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nickelback — How You Remind Me."",
+    "answer": "Nickelback — How You Remind Me.",
     "hint": "Nickelback",
     "difficulty": "leicht",
     "sources": {
@@ -10509,7 +10509,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Clueso — Keinen Zentimeter - Remastered 2014."",
+    "answer": "Clueso — Keinen Zentimeter - Remastered 2014.",
     "hint": "Clueso",
     "difficulty": "mittel",
     "sources": {
@@ -10528,7 +10528,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Fray — How to Save a Life."",
+    "answer": "The Fray — How to Save a Life.",
     "hint": "The Fray",
     "difficulty": "schwer",
     "sources": {
@@ -10547,7 +10547,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Herbert Grönemeyer — Lied 1 - Stück vom Himmel."",
+    "answer": "Herbert Grönemeyer — Lied 1 - Stück vom Himmel.",
     "hint": "Herbert Grönemeyer",
     "difficulty": "mittel",
     "sources": {
@@ -10566,7 +10566,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tokio Hotel — Durch den Monsun - Radio Mix."",
+    "answer": "Tokio Hotel — Durch den Monsun - Radio Mix.",
     "hint": "Tokio Hotel",
     "difficulty": "mittel",
     "sources": {
@@ -10585,7 +10585,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Chemical Brothers — Galvanize."",
+    "answer": "The Chemical Brothers — Galvanize.",
     "hint": "The Chemical Brothers",
     "difficulty": "mittel",
     "sources": {
@@ -10604,7 +10604,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Plain White T's — Hey There Delilah."",
+    "answer": "Plain White T's — Hey There Delilah.",
     "hint": "Plain White T's",
     "difficulty": "mittel",
     "sources": {
@@ -10623,7 +10623,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Revolverheld — Freunde bleiben."",
+    "answer": "Revolverheld — Freunde bleiben.",
     "hint": "Revolverheld",
     "difficulty": "mittel",
     "sources": {
@@ -10642,7 +10642,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2006,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk — Who Knew - Edit."",
+    "answer": "P!nk — Who Knew - Edit.",
     "hint": "P!nk",
     "difficulty": "leicht",
     "sources": {
@@ -10661,7 +10661,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Christina Aguilera — Beautiful."",
+    "answer": "Christina Aguilera — Beautiful.",
     "hint": "Christina Aguilera",
     "difficulty": "leicht",
     "sources": {
@@ -10680,7 +10680,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wir sind Helden — Nur ein Wort."",
+    "answer": "Wir sind Helden — Nur ein Wort.",
     "hint": "Wir sind Helden",
     "difficulty": "mittel",
     "sources": {
@@ -10699,7 +10699,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Michelle Branch — Everywhere."",
+    "answer": "Michelle Branch — Everywhere.",
     "hint": "Michelle Branch",
     "difficulty": "schwer",
     "sources": {
@@ -10718,7 +10718,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "MGMT — Kids."",
+    "answer": "MGMT — Kids.",
     "hint": "MGMT",
     "difficulty": "mittel",
     "sources": {
@@ -10737,7 +10737,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "3 Doors Down — Here Without You."",
+    "answer": "3 Doors Down — Here Without You.",
     "hint": "3 Doors Down",
     "difficulty": "mittel",
     "sources": {
@@ -10756,7 +10756,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "t.A.T.u. — All The Things She Said."",
+    "answer": "t.A.T.u. — All The Things She Said.",
     "hint": "t.A.T.u.",
     "difficulty": "mittel",
     "sources": {
@@ -10775,7 +10775,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wir sind Helden — Aurélie."",
+    "answer": "Wir sind Helden — Aurélie.",
     "hint": "Wir sind Helden",
     "difficulty": "mittel",
     "sources": {
@@ -10794,7 +10794,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Maroon 5 — She Will Be Loved - Radio Mix."",
+    "answer": "Maroon 5 — She Will Be Loved - Radio Mix.",
     "hint": "Maroon 5",
     "difficulty": "leicht",
     "sources": {
@@ -10813,7 +10813,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "MIKA — Relax, Take It Easy."",
+    "answer": "MIKA — Relax, Take It Easy.",
     "hint": "MIKA",
     "difficulty": "mittel",
     "sources": {
@@ -10832,7 +10832,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — The Scientist."",
+    "answer": "Coldplay — The Scientist.",
     "hint": "Coldplay",
     "difficulty": "leicht",
     "sources": {
@@ -10851,7 +10851,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Natasha Bedingfield — Soulmate."",
+    "answer": "Natasha Bedingfield — Soulmate.",
     "hint": "Natasha Bedingfield",
     "difficulty": "schwer",
     "sources": {
@@ -10870,7 +10870,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Enya — Only Time."",
+    "answer": "Enya — Only Time.",
     "hint": "Enya",
     "difficulty": "mittel",
     "sources": {
@@ -10889,7 +10889,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Toploader — Dancing in the Moonlight."",
+    "answer": "Toploader — Dancing in the Moonlight.",
     "hint": "Toploader",
     "difficulty": "mittel",
     "sources": {
@@ -10908,7 +10908,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katy Perry — Hot N Cold."",
+    "answer": "Katy Perry — Hot N Cold.",
     "hint": "Katy Perry",
     "difficulty": "leicht",
     "sources": {
@@ -10927,7 +10927,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Song anhören und einordnen.",
-    "answer": "band ohne namen, Milka — Girl 4 A Day."",
+    "answer": "band ohne namen, Milka — Girl 4 A Day.",
     "hint": "band ohne namen, Milka",
     "difficulty": "mittel",
     "sources": {
@@ -10947,7 +10947,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Black Eyed Peas — Where Is The Love?."",
+    "answer": "Black Eyed Peas — Where Is The Love?.",
     "hint": "Black Eyed Peas",
     "difficulty": "leicht",
     "sources": {
@@ -10966,7 +10966,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dido — Thank You."",
+    "answer": "Dido — Thank You.",
     "hint": "Dido",
     "difficulty": "schwer",
     "sources": {
@@ -10985,7 +10985,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "JoJo — Leave (Get Out)."",
+    "answer": "JoJo — Leave (Get Out).",
     "hint": "JoJo",
     "difficulty": "schwer",
     "sources": {
@@ -11004,7 +11004,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kelly Clarkson — Since U Been Gone."",
+    "answer": "Kelly Clarkson — Since U Been Gone.",
     "hint": "Kelly Clarkson",
     "difficulty": "leicht",
     "sources": {
@@ -11023,7 +11023,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Juli — Perfekte Welle."",
+    "answer": "Juli — Perfekte Welle.",
     "hint": "Juli",
     "difficulty": "mittel",
     "sources": {
@@ -11042,7 +11042,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mark Ronson, Amy Winehouse — Valerie (feat. Amy Winehouse) - Version Revisited."",
+    "answer": "Mark Ronson, Amy Winehouse — Valerie (feat. Amy Winehouse) - Version Revisited.",
     "hint": "Mark Ronson, Amy Winehouse",
     "difficulty": "mittel",
     "sources": {
@@ -11061,7 +11061,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Blue — All Rise."",
+    "answer": "Blue — All Rise.",
     "hint": "Blue",
     "difficulty": "mittel",
     "sources": {
@@ -11080,7 +11080,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2003,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ätomic Kitten — The Tide Is High - Radio Mix."",
+    "answer": "Ätomic Kitten — The Tide Is High - Radio Mix.",
     "hint": "Ätomic Kitten",
     "difficulty": "mittel",
     "sources": {
@@ -11099,7 +11099,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Silbermond — Symphonie."",
+    "answer": "Silbermond — Symphonie.",
     "hint": "Silbermond",
     "difficulty": "mittel",
     "sources": {
@@ -11118,7 +11118,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Die Ärzte — Lasse redn."",
+    "answer": "Die Ärzte — Lasse redn.",
     "hint": "Die Ärzte",
     "difficulty": "mittel",
     "sources": {
@@ -11137,7 +11137,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk — Get the Party Started."",
+    "answer": "P!nk — Get the Party Started.",
     "hint": "P!nk",
     "difficulty": "leicht",
     "sources": {
@@ -11156,7 +11156,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Puddle Of Mudd — She Hates Me."",
+    "answer": "Puddle Of Mudd — She Hates Me.",
     "hint": "Puddle Of Mudd",
     "difficulty": "mittel",
     "sources": {
@@ -11175,7 +11175,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shakira — Whenever, Wherever."",
+    "answer": "Shakira — Whenever, Wherever.",
     "hint": "Shakira",
     "difficulty": "leicht",
     "sources": {
@@ -11194,7 +11194,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1999,
     "cue": "Song anhören und einordnen.",
-    "answer": "Änastacia — I'm Outta Love - Radio Edit."",
+    "answer": "Änastacia — I'm Outta Love - Radio Edit.",
     "hint": "Änastacia",
     "difficulty": "mittel",
     "sources": {
@@ -11213,7 +11213,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "KT Tunstall — Suddenly I See."",
+    "answer": "KT Tunstall — Suddenly I See.",
     "hint": "KT Tunstall",
     "difficulty": "mittel",
     "sources": {
@@ -11232,7 +11232,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — Viva La Vida."",
+    "answer": "Coldplay — Viva La Vida.",
     "hint": "Coldplay",
     "difficulty": "leicht",
     "sources": {
@@ -11251,7 +11251,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2005,
     "cue": "Song anhören und einordnen.",
-    "answer": "Revolverheld — Mit dir chilln."",
+    "answer": "Revolverheld — Mit dir chilln.",
     "hint": "Revolverheld",
     "difficulty": "mittel",
     "sources": {
@@ -11270,7 +11270,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2000,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sugababes — Overload."",
+    "answer": "Sugababes — Overload.",
     "hint": "Sugababes",
     "difficulty": "mittel",
     "sources": {
@@ -11289,7 +11289,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Vanessa Amorosi — Absolutely Everybody."",
+    "answer": "Vanessa Amorosi — Absolutely Everybody.",
     "hint": "Vanessa Amorosi",
     "difficulty": "mittel",
     "sources": {
@@ -11308,7 +11308,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ädele — Make You Feel My Love."",
+    "answer": "Ädele — Make You Feel My Love.",
     "hint": "Ädele",
     "difficulty": "leicht",
     "sources": {
@@ -11327,7 +11327,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2008,
     "cue": "Song anhören und einordnen.",
-    "answer": "Peter Fox — Haus am See."",
+    "answer": "Peter Fox — Haus am See.",
     "hint": "Peter Fox",
     "difficulty": "mittel",
     "sources": {
@@ -11346,7 +11346,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Song anhören und einordnen.",
-    "answer": "Timbaland, OneRepublic — Apologize."",
+    "answer": "Timbaland, OneRepublic — Apologize.",
     "hint": "Timbaland, OneRepublic",
     "difficulty": "leicht",
     "sources": {
@@ -11365,7 +11365,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "S Club — Don't Stop Movin'."",
+    "answer": "S Club — Don't Stop Movin'.",
     "hint": "S Club",
     "difficulty": "mittel",
     "sources": {
@@ -11384,7 +11384,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2004,
     "cue": "Song anhören und einordnen.",
-    "answer": "Juli — Regen und Meer."",
+    "answer": "Juli — Regen und Meer.",
     "hint": "Juli",
     "difficulty": "mittel",
     "sources": {
@@ -11403,7 +11403,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2001,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gorillaz, Del The Funky Homosapien — Clint Eastwood."",
+    "answer": "Gorillaz, Del The Funky Homosapien — Clint Eastwood.",
     "hint": "Gorillaz, Del The Funky Homosapien",
     "difficulty": "mittel",
     "sources": {
@@ -11422,7 +11422,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — In the End."",
+    "answer": "Linkin Park — In the End.",
     "hint": "Linkin Park",
     "difficulty": "leicht",
     "sources": {
@@ -11443,7 +11443,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sean Paul — Temperature."",
+    "answer": "Sean Paul — Temperature.",
     "hint": "Sean Paul",
     "difficulty": "mittel",
     "sources": {
@@ -11462,7 +11462,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Irene Grandi — Lasciala andare."",
+    "answer": "Irene Grandi — Lasciala andare.",
     "hint": "Irene Grandi",
     "difficulty": "mittel",
     "sources": {
@@ -11481,7 +11481,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wiz Khalifa — Black and Yellow."",
+    "answer": "Wiz Khalifa — Black and Yellow.",
     "hint": "Wiz Khalifa",
     "difficulty": "mittel",
     "sources": {
@@ -11501,7 +11501,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — Numb."",
+    "answer": "Linkin Park — Numb.",
     "hint": "Linkin Park",
     "difficulty": "leicht",
     "sources": {
@@ -11522,7 +11522,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — American Idiot."",
+    "answer": "Green Day — American Idiot.",
     "hint": "Green Day",
     "difficulty": "leicht",
     "sources": {
@@ -11541,7 +11541,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fort Minor, Styles Of Beyond — Remember the Name."",
+    "answer": "Fort Minor, Styles Of Beyond — Remember the Name.",
     "hint": "Fort Minor, Styles Of Beyond",
     "difficulty": "mittel",
     "sources": {
@@ -11561,7 +11561,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Christina Perri — Jar of Hearts."",
+    "answer": "Christina Perri — Jar of Hearts.",
     "hint": "Christina Perri",
     "difficulty": "schwer",
     "sources": {
@@ -11580,7 +11580,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ligabue — Bambolina e barracuda."",
+    "answer": "Ligabue — Bambolina e barracuda.",
     "hint": "Ligabue",
     "difficulty": "mittel",
     "sources": {
@@ -11599,7 +11599,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "B.o.B, Hayley Williams — Airplanes."",
+    "answer": "B.o.B, Hayley Williams — Airplanes.",
     "hint": "B.o.B, Hayley Williams",
     "difficulty": "mittel",
     "sources": {
@@ -11618,7 +11618,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "David Guetta, Sia — Titanium."",
+    "answer": "David Guetta, Sia — Titanium.",
     "hint": "David Guetta, Sia",
     "difficulty": "leicht",
     "sources": {
@@ -11637,7 +11637,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Flo Rida — Whistle."",
+    "answer": "Flo Rida — Whistle.",
     "hint": "Flo Rida",
     "difficulty": "mittel",
     "sources": {
@@ -11656,7 +11656,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruno Mars — Grenade."",
+    "answer": "Bruno Mars — Grenade.",
     "hint": "Bruno Mars",
     "difficulty": "leicht",
     "sources": {
@@ -11675,7 +11675,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jason Derulo — Want to Want Me."",
+    "answer": "Jason Derulo — Want to Want Me.",
     "hint": "Jason Derulo",
     "difficulty": "mittel",
     "sources": {
@@ -11694,7 +11694,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Clean Bandit, Jess Glynne — Rather Be."",
+    "answer": "Clean Bandit, Jess Glynne — Rather Be.",
     "hint": "Clean Bandit, Jess Glynne",
     "difficulty": "schwer",
     "sources": {
@@ -11713,7 +11713,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Irene Grandi — Bruci la città."",
+    "answer": "Irene Grandi — Bruci la città.",
     "hint": "Irene Grandi",
     "difficulty": "mittel",
     "sources": {
@@ -11732,7 +11732,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Flo Rida — I Cry."",
+    "answer": "Flo Rida — I Cry.",
     "hint": "Flo Rida",
     "difficulty": "mittel",
     "sources": {
@@ -11751,7 +11751,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jason Derulo — Whatcha Say."",
+    "answer": "Jason Derulo — Whatcha Say.",
     "hint": "Jason Derulo",
     "difficulty": "mittel",
     "sources": {
@@ -11770,7 +11770,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "David Guetta, Kid Cudi — Memories."",
+    "answer": "David Guetta, Kid Cudi — Memories.",
     "hint": "David Guetta, Kid Cudi",
     "difficulty": "leicht",
     "sources": {
@@ -11789,7 +11789,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruno Mars — Just the Way You Are."",
+    "answer": "Bruno Mars — Just the Way You Are.",
     "hint": "Bruno Mars",
     "difficulty": "leicht",
     "sources": {
@@ -11808,7 +11808,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jason Mraz — I’m Yours."",
+    "answer": "Jason Mraz — I’m Yours.",
     "hint": "Jason Mraz",
     "difficulty": "mittel",
     "sources": {
@@ -11827,7 +11827,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — Wake Me Up When September Ends."",
+    "answer": "Green Day — Wake Me Up When September Ends.",
     "hint": "Green Day",
     "difficulty": "leicht",
     "sources": {
@@ -11846,7 +11846,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gorillaz — Clint Eastwood."",
+    "answer": "Gorillaz — Clint Eastwood.",
     "hint": "Gorillaz",
     "difficulty": "leicht",
     "sources": {
@@ -11865,7 +11865,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sean Paul — Get Busy."",
+    "answer": "Sean Paul — Get Busy.",
     "hint": "Sean Paul",
     "difficulty": "mittel",
     "sources": {
@@ -11884,7 +11884,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jason Derulo — It Girl."",
+    "answer": "Jason Derulo — It Girl.",
     "hint": "Jason Derulo",
     "difficulty": "mittel",
     "sources": {
@@ -11903,7 +11903,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "David Guetta, Akon — Sexy Bitch - Extended."",
+    "answer": "David Guetta, Akon — Sexy Bitch - Extended.",
     "hint": "David Guetta, Akon",
     "difficulty": "leicht",
     "sources": {
@@ -11922,7 +11922,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nickelback — How You Remind Me."",
+    "answer": "Nickelback — How You Remind Me.",
     "hint": "Nickelback",
     "difficulty": "leicht",
     "sources": {
@@ -11941,7 +11941,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "D4L — Laffy Taffy."",
+    "answer": "D4L — Laffy Taffy.",
     "hint": "D4L",
     "difficulty": "mittel",
     "sources": {
@@ -11961,7 +11961,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Green Day — Holiday / Boulevard of Broken Dreams."",
+    "answer": "Green Day — Holiday / Boulevard of Broken Dreams.",
     "hint": "Green Day",
     "difficulty": "leicht",
     "sources": {
@@ -11980,7 +11980,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — Dani California."",
+    "answer": "Red Hot Chili Peppers — Dani California.",
     "hint": "Red Hot Chili Peppers",
     "difficulty": "leicht",
     "sources": {
@@ -11999,7 +11999,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — Viva La Vida."",
+    "answer": "Coldplay — Viva La Vida.",
     "hint": "Coldplay",
     "difficulty": "leicht",
     "sources": {
@@ -12018,7 +12018,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Äva Max — Sweet but Psycho."",
+    "answer": "Äva Max — Sweet but Psycho.",
     "hint": "Äva Max",
     "difficulty": "mittel",
     "sources": {
@@ -12037,7 +12037,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Flo Rida — Good Feeling."",
+    "answer": "Flo Rida — Good Feeling.",
     "hint": "Flo Rida",
     "difficulty": "mittel",
     "sources": {
@@ -12056,7 +12056,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Iyaz — Replay."",
+    "answer": "Iyaz — Replay.",
     "hint": "Iyaz",
     "difficulty": "mittel",
     "sources": {
@@ -12075,7 +12075,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kid Rock — All Summer Long."",
+    "answer": "Kid Rock — All Summer Long.",
     "hint": "Kid Rock",
     "difficulty": "mittel",
     "sources": {
@@ -12094,7 +12094,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Chiddy Bang — Opposite of Adults."",
+    "answer": "Chiddy Bang — Opposite of Adults.",
     "hint": "Chiddy Bang",
     "difficulty": "mittel",
     "sources": {
@@ -12113,7 +12113,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gym Class Heroes, Adam Levine — Stereo Hearts."",
+    "answer": "Gym Class Heroes, Adam Levine — Stereo Hearts.",
     "hint": "Gym Class Heroes, Adam Levine",
     "difficulty": "mittel",
     "sources": {
@@ -12132,7 +12132,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wiz Khalifa — Roll Up."",
+    "answer": "Wiz Khalifa — Roll Up.",
     "hint": "Wiz Khalifa",
     "difficulty": "mittel",
     "sources": {
@@ -12152,7 +12152,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bruno Mars — Locked Out of Heaven."",
+    "answer": "Bruno Mars — Locked Out of Heaven.",
     "hint": "Bruno Mars",
     "difficulty": "leicht",
     "sources": {
@@ -12171,7 +12171,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Linkin Park — What I've Done."",
+    "answer": "Linkin Park — What I've Done.",
     "hint": "Linkin Park",
     "difficulty": "leicht",
     "sources": {
@@ -12192,7 +12192,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — Can’t Stop."",
+    "answer": "Red Hot Chili Peppers — Can’t Stop.",
     "hint": "Red Hot Chili Peppers",
     "difficulty": "leicht",
     "sources": {
@@ -12211,7 +12211,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "B.o.B — So Good."",
+    "answer": "B.o.B — So Good.",
     "hint": "B.o.B",
     "difficulty": "mittel",
     "sources": {
@@ -12230,7 +12230,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — A Sky Full of Stars."",
+    "answer": "Coldplay — A Sky Full of Stars.",
     "hint": "Coldplay",
     "difficulty": "leicht",
     "sources": {
@@ -12249,7 +12249,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Matchbox Twenty — Bent."",
+    "answer": "Matchbox Twenty — Bent.",
     "hint": "Matchbox Twenty",
     "difficulty": "mittel",
     "sources": {
@@ -12268,7 +12268,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Carl Thomas — I Wish."",
+    "answer": "Carl Thomas — I Wish.",
     "hint": "Carl Thomas",
     "difficulty": "mittel",
     "sources": {
@@ -12287,7 +12287,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — Yellow."",
+    "answer": "Coldplay — Yellow.",
     "hint": "Coldplay",
     "difficulty": "leicht",
     "sources": {
@@ -12306,7 +12306,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Third Eye Blind — Never Let You Go."",
+    "answer": "Third Eye Blind — Never Let You Go.",
     "hint": "Third Eye Blind",
     "difficulty": "mittel",
     "sources": {
@@ -12325,7 +12325,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Debelah Morgan — Dance with Me."",
+    "answer": "Debelah Morgan — Dance with Me.",
     "hint": "Debelah Morgan",
     "difficulty": "mittel",
     "sources": {
@@ -12344,7 +12344,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Faith Hill — Breathe."",
+    "answer": "Faith Hill — Breathe.",
     "hint": "Faith Hill",
     "difficulty": "mittel",
     "sources": {
@@ -12363,7 +12363,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Red Hot Chili Peppers — Otherside."",
+    "answer": "Red Hot Chili Peppers — Otherside.",
     "hint": "Red Hot Chili Peppers",
     "difficulty": "leicht",
     "sources": {
@@ -12382,7 +12382,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Missy Elliott — Hot Boyz."",
+    "answer": "Missy Elliott — Hot Boyz.",
     "hint": "Missy Elliott",
     "difficulty": "mittel",
     "sources": {
@@ -12402,7 +12402,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Faith Hill — The Way You Love Me."",
+    "answer": "Faith Hill — The Way You Love Me.",
     "hint": "Faith Hill",
     "difficulty": "mittel",
     "sources": {
@@ -12421,7 +12421,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nomadi — Io voglio vivere."",
+    "answer": "Nomadi — Io voglio vivere.",
     "hint": "Nomadi",
     "difficulty": "mittel",
     "sources": {
@@ -12440,7 +12440,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Corrs — Breathless."",
+    "answer": "The Corrs — Breathless.",
     "hint": "The Corrs",
     "difficulty": "mittel",
     "sources": {
@@ -12459,7 +12459,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Äriana Grande — One Last Time."",
+    "answer": "Äriana Grande — One Last Time.",
     "hint": "Äriana Grande",
     "difficulty": "leicht",
     "sources": {
@@ -12478,7 +12478,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Christina Perri — jar of hearts."",
+    "answer": "Christina Perri — jar of hearts.",
     "hint": "Christina Perri",
     "difficulty": "schwer",
     "sources": {
@@ -12497,7 +12497,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billie Eilish — ocean eyes."",
+    "answer": "Billie Eilish — ocean eyes.",
     "hint": "Billie Eilish",
     "difficulty": "leicht",
     "sources": {
@@ -12516,7 +12516,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Drake, Wizkid, Kyla — One Dance."",
+    "answer": "Drake, Wizkid, Kyla — One Dance.",
     "hint": "Drake, Wizkid, Kyla",
     "difficulty": "leicht",
     "sources": {
@@ -12536,7 +12536,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ädele — Rolling in the Deep."",
+    "answer": "Ädele — Rolling in the Deep.",
     "hint": "Ädele",
     "difficulty": "leicht",
     "sources": {
@@ -12555,7 +12555,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Äriana Grande — 7 rings."",
+    "answer": "Äriana Grande — 7 rings.",
     "hint": "Äriana Grande",
     "difficulty": "leicht",
     "sources": {
@@ -12574,7 +12574,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jessie J, B.o.B — Price Tag."",
+    "answer": "Jessie J, B.o.B — Price Tag.",
     "hint": "Jessie J, B.o.B",
     "difficulty": "mittel",
     "sources": {
@@ -12593,7 +12593,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Älec Benjamin — Let Me Down Slowly."",
+    "answer": "Älec Benjamin — Let Me Down Slowly.",
     "hint": "Älec Benjamin",
     "difficulty": "schwer",
     "sources": {
@@ -12612,7 +12612,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "B.o.B, Hayley Williams — Airplanes (feat. Hayley Williams of Paramore)."",
+    "answer": "B.o.B, Hayley Williams — Airplanes (feat. Hayley Williams of Paramore).",
     "hint": "B.o.B, Hayley Williams",
     "difficulty": "mittel",
     "sources": {
@@ -12631,7 +12631,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "benny blanco, Halsey, Khalid — Eastside (with Halsey & Khalid)."",
+    "answer": "benny blanco, Halsey, Khalid — Eastside (with Halsey & Khalid).",
     "hint": "benny blanco, Halsey, Khalid",
     "difficulty": "leicht",
     "sources": {
@@ -12650,7 +12650,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jess Glynne — Hold My Hand."",
+    "answer": "Jess Glynne — Hold My Hand.",
     "hint": "Jess Glynne",
     "difficulty": "schwer",
     "sources": {
@@ -12669,7 +12669,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "WALK THE MOON — Shut Up and Dance."",
+    "answer": "WALK THE MOON — Shut Up and Dance.",
     "hint": "WALK THE MOON",
     "difficulty": "schwer",
     "sources": {
@@ -12688,7 +12688,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Miley Cyrus — Wrecking Ball."",
+    "answer": "Miley Cyrus — Wrecking Ball.",
     "hint": "Miley Cyrus",
     "difficulty": "leicht",
     "sources": {
@@ -12707,7 +12707,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Carly Rae Jepsen — Run Away With Me."",
+    "answer": "Carly Rae Jepsen — Run Away With Me.",
     "hint": "Carly Rae Jepsen",
     "difficulty": "mittel",
     "sources": {
@@ -12726,7 +12726,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Charli xcx — Boom Clap."",
+    "answer": "Charli xcx — Boom Clap.",
     "hint": "Charli xcx",
     "difficulty": "mittel",
     "sources": {
@@ -12745,7 +12745,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk, Nate Ruess — Just Give Me a Reason (feat. Nate Ruess)."",
+    "answer": "P!nk, Nate Ruess — Just Give Me a Reason (feat. Nate Ruess).",
     "hint": "P!nk, Nate Ruess",
     "difficulty": "leicht",
     "sources": {
@@ -12764,7 +12764,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rachel Platten — Fight Song."",
+    "answer": "Rachel Platten — Fight Song.",
     "hint": "Rachel Platten",
     "difficulty": "mittel",
     "sources": {
@@ -12783,7 +12783,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — Shake It Off."",
+    "answer": "Taylor Swift — Shake It Off.",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
     "sources": {
@@ -12802,7 +12802,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Imagine Dragons — Demons."",
+    "answer": "Imagine Dragons — Demons.",
     "hint": "Imagine Dragons",
     "difficulty": "leicht",
     "sources": {
@@ -12821,7 +12821,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gotye, Kimbra — Somebody That I Used To Know."",
+    "answer": "Gotye, Kimbra — Somebody That I Used To Know.",
     "hint": "Gotye, Kimbra",
     "difficulty": "mittel",
     "sources": {
@@ -12840,7 +12840,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sia — Chandelier."",
+    "answer": "Sia — Chandelier.",
     "hint": "Sia",
     "difficulty": "leicht",
     "sources": {
@@ -12859,7 +12859,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ädele — Hello."",
+    "answer": "Ädele — Hello.",
     "hint": "Ädele",
     "difficulty": "leicht",
     "sources": {
@@ -12878,7 +12878,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eminem, Rihanna — Love The Way You Lie."",
+    "answer": "Eminem, Rihanna — Love The Way You Lie.",
     "hint": "Eminem, Rihanna",
     "difficulty": "leicht",
     "sources": {
@@ -12898,7 +12898,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Måneskin — Beggin'."",
+    "answer": "Måneskin — Beggin'.",
     "hint": "Måneskin",
     "difficulty": "leicht",
     "sources": {
@@ -12918,7 +12918,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Carly Rae Jepsen — Call Me Maybe."",
+    "answer": "Carly Rae Jepsen — Call Me Maybe.",
     "hint": "Carly Rae Jepsen",
     "difficulty": "mittel",
     "sources": {
@@ -12937,7 +12937,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Harry Styles — Sign of the Times."",
+    "answer": "Harry Styles — Sign of the Times.",
     "hint": "Harry Styles",
     "difficulty": "leicht",
     "sources": {
@@ -12956,7 +12956,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mark Ronson, Bruno Mars — Uptown Funk (feat. Bruno Mars)."",
+    "answer": "Mark Ronson, Bruno Mars — Uptown Funk (feat. Bruno Mars).",
     "hint": "Mark Ronson, Bruno Mars",
     "difficulty": "leicht",
     "sources": {
@@ -12975,7 +12975,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Passenger — Let Her Go."",
+    "answer": "Passenger — Let Her Go.",
     "hint": "Passenger",
     "difficulty": "mittel",
     "sources": {
@@ -12994,7 +12994,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "fun., Janelle Monáe — We Are Young (feat. Janelle Monáe)."",
+    "answer": "fun., Janelle Monáe — We Are Young (feat. Janelle Monáe).",
     "hint": "fun., Janelle Monáe",
     "difficulty": "mittel",
     "sources": {
@@ -13013,7 +13013,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tom Odell — Another Love."",
+    "answer": "Tom Odell — Another Love.",
     "hint": "Tom Odell",
     "difficulty": "mittel",
     "sources": {
@@ -13032,7 +13032,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ämerican Authors — Best Day Of My Life."",
+    "answer": "Ämerican Authors — Best Day Of My Life.",
     "hint": "Ämerican Authors",
     "difficulty": "schwer",
     "sources": {
@@ -13051,7 +13051,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Öf Monsters and Men — Little Talks."",
+    "answer": "Öf Monsters and Men — Little Talks.",
     "hint": "Öf Monsters and Men",
     "difficulty": "mittel",
     "sources": {
@@ -13070,7 +13070,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ä Great Big World, Christina Aguilera — Say Something."",
+    "answer": "Ä Great Big World, Christina Aguilera — Say Something.",
     "hint": "Ä Great Big World, Christina Aguilera",
     "difficulty": "mittel",
     "sources": {
@@ -13089,7 +13089,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Maroon 5 — Memories."",
+    "answer": "Maroon 5 — Memories.",
     "hint": "Maroon 5",
     "difficulty": "leicht",
     "sources": {
@@ -13108,7 +13108,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Fall Out Boy — Centuries."",
+    "answer": "Fall Out Boy — Centuries.",
     "hint": "Fall Out Boy",
     "difficulty": "leicht",
     "sources": {
@@ -13127,7 +13127,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Wiz Khalifa, Charlie Puth — See You Again (feat. Charlie Puth)."",
+    "answer": "Wiz Khalifa, Charlie Puth — See You Again (feat. Charlie Puth).",
     "hint": "Wiz Khalifa, Charlie Puth",
     "difficulty": "leicht",
     "sources": {
@@ -13147,7 +13147,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lukas Graham — 7 Years."",
+    "answer": "Lukas Graham — 7 Years.",
     "hint": "Lukas Graham",
     "difficulty": "schwer",
     "sources": {
@@ -13166,7 +13166,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga, Bradley Cooper — Shallow - Radio Edit."",
+    "answer": "Lady Gaga, Bradley Cooper — Shallow - Radio Edit.",
     "hint": "Lady Gaga, Bradley Cooper",
     "difficulty": "leicht",
     "sources": {
@@ -13185,7 +13185,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lorde — Royals."",
+    "answer": "Lorde — Royals.",
     "hint": "Lorde",
     "difficulty": "leicht",
     "sources": {
@@ -13204,7 +13204,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Charlie Puth — One Call Away."",
+    "answer": "Charlie Puth — One Call Away.",
     "hint": "Charlie Puth",
     "difficulty": "leicht",
     "sources": {
@@ -13223,7 +13223,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sia — Elastic Heart."",
+    "answer": "Sia — Elastic Heart.",
     "hint": "Sia",
     "difficulty": "leicht",
     "sources": {
@@ -13242,7 +13242,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Ezra — Shotgun."",
+    "answer": "George Ezra — Shotgun.",
     "hint": "George Ezra",
     "difficulty": "schwer",
     "sources": {
@@ -13261,7 +13261,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — The Edge Of Glory."",
+    "answer": "Lady Gaga — The Edge Of Glory.",
     "hint": "Lady Gaga",
     "difficulty": "leicht",
     "sources": {
@@ -13280,7 +13280,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Öne Direction — Story of My Life."",
+    "answer": "Öne Direction — Story of My Life.",
     "hint": "Öne Direction",
     "difficulty": "mittel",
     "sources": {
@@ -13299,7 +13299,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Hozier — Take Me To Church."",
+    "answer": "Hozier — Take Me To Church.",
     "hint": "Hozier",
     "difficulty": "schwer",
     "sources": {
@@ -13318,7 +13318,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "James Bay — Let It Go."",
+    "answer": "James Bay — Let It Go.",
     "hint": "James Bay",
     "difficulty": "schwer",
     "sources": {
@@ -13337,7 +13337,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "fun. — Some Nights."",
+    "answer": "fun. — Some Nights.",
     "hint": "fun.",
     "difficulty": "mittel",
     "sources": {
@@ -13356,7 +13356,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — Born This Way."",
+    "answer": "Lady Gaga — Born This Way.",
     "hint": "Lady Gaga",
     "difficulty": "leicht",
     "sources": {
@@ -13375,7 +13375,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lorde — Team."",
+    "answer": "Lorde — Team.",
     "hint": "Lorde",
     "difficulty": "leicht",
     "sources": {
@@ -13394,7 +13394,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Imagine Dragons — Bad Liar."",
+    "answer": "Imagine Dragons — Bad Liar.",
     "hint": "Imagine Dragons",
     "difficulty": "leicht",
     "sources": {
@@ -13413,7 +13413,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "James Bay — Hold Back The River."",
+    "answer": "James Bay — Hold Back The River.",
     "hint": "James Bay",
     "difficulty": "schwer",
     "sources": {
@@ -13432,7 +13432,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Script, will.i.am — Hall of Fame (feat. will.i.am)."",
+    "answer": "The Script, will.i.am — Hall of Fame (feat. will.i.am).",
     "hint": "The Script, will.i.am",
     "difficulty": "mittel",
     "sources": {
@@ -13451,7 +13451,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — Always Remember Us This Way."",
+    "answer": "Lady Gaga — Always Remember Us This Way.",
     "hint": "Lady Gaga",
     "difficulty": "leicht",
     "sources": {
@@ -13470,7 +13470,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Vance Joy — Riptide."",
+    "answer": "Vance Joy — Riptide.",
     "hint": "Vance Joy",
     "difficulty": "schwer",
     "sources": {
@@ -13489,7 +13489,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Öne Direction — Night Changes."",
+    "answer": "Öne Direction — Night Changes.",
     "hint": "Öne Direction",
     "difficulty": "mittel",
     "sources": {
@@ -13508,7 +13508,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — Blank Space."",
+    "answer": "Taylor Swift — Blank Space.",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
     "sources": {
@@ -13527,7 +13527,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katy Perry — Roar."",
+    "answer": "Katy Perry — Roar.",
     "hint": "Katy Perry",
     "difficulty": "leicht",
     "sources": {
@@ -13546,7 +13546,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sam Smith — Stay With Me."",
+    "answer": "Sam Smith — Stay With Me.",
     "hint": "Sam Smith",
     "difficulty": "leicht",
     "sources": {
@@ -13565,7 +13565,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Macklemore & Ryan Lewis, Macklemore, Ryan Lewis, Wanz — Thrift Shop (feat. Wanz)."",
+    "answer": "Macklemore & Ryan Lewis, Macklemore, Ryan Lewis, Wanz — Thrift Shop (feat. Wanz).",
     "hint": "Macklemore & Ryan Lewis, Macklemore, Ryan Lewis, Wanz",
     "difficulty": "mittel",
     "sources": {
@@ -13585,7 +13585,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Panic! At The Disco — High Hopes."",
+    "answer": "Panic! At The Disco — High Hopes.",
     "hint": "Panic! At The Disco",
     "difficulty": "mittel",
     "sources": {
@@ -13604,7 +13604,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Christina Perri — a thousand years."",
+    "answer": "Christina Perri — a thousand years.",
     "hint": "Christina Perri",
     "difficulty": "schwer",
     "sources": {
@@ -13623,7 +13623,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katy Perry — Firework."",
+    "answer": "Katy Perry — Firework.",
     "hint": "Katy Perry",
     "difficulty": "leicht",
     "sources": {
@@ -13642,7 +13642,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sam Smith — I'm Not The Only One."",
+    "answer": "Sam Smith — I'm Not The Only One.",
     "hint": "Sam Smith",
     "difficulty": "leicht",
     "sources": {
@@ -13661,7 +13661,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ed Sheeran — Thinking out Loud."",
+    "answer": "Ed Sheeran — Thinking out Loud.",
     "hint": "Ed Sheeran",
     "difficulty": "leicht",
     "sources": {
@@ -13680,7 +13680,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Meghan Trainor — Dear Future Husband."",
+    "answer": "Meghan Trainor — Dear Future Husband.",
     "hint": "Meghan Trainor",
     "difficulty": "leicht",
     "sources": {
@@ -13699,7 +13699,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billie Eilish — when the party's over."",
+    "answer": "Billie Eilish — when the party's over.",
     "hint": "Billie Eilish",
     "difficulty": "leicht",
     "sources": {
@@ -13718,7 +13718,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Änne-Marie — 2002."",
+    "answer": "Änne-Marie — 2002.",
     "hint": "Änne-Marie",
     "difficulty": "mittel",
     "sources": {
@@ -13737,7 +13737,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sia — Unstoppable."",
+    "answer": "Sia — Unstoppable.",
     "hint": "Sia",
     "difficulty": "leicht",
     "sources": {
@@ -13756,7 +13756,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Maroon 5, Wiz Khalifa — Payphone."",
+    "answer": "Maroon 5, Wiz Khalifa — Payphone.",
     "hint": "Maroon 5, Wiz Khalifa",
     "difficulty": "leicht",
     "sources": {
@@ -13776,7 +13776,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "5 Seconds of Summer — She Looks So Perfect."",
+    "answer": "5 Seconds of Summer — She Looks So Perfect.",
     "hint": "5 Seconds of Summer",
     "difficulty": "mittel",
     "sources": {
@@ -13795,7 +13795,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Öne Direction — What Makes You Beautiful."",
+    "answer": "Öne Direction — What Makes You Beautiful.",
     "hint": "Öne Direction",
     "difficulty": "mittel",
     "sources": {
@@ -13814,7 +13814,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "DNCE — Cake By The Ocean."",
+    "answer": "DNCE — Cake By The Ocean.",
     "hint": "DNCE",
     "difficulty": "mittel",
     "sources": {
@@ -13833,7 +13833,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Eminem, Rihanna — The Monster."",
+    "answer": "Eminem, Rihanna — The Monster.",
     "hint": "Eminem, Rihanna",
     "difficulty": "leicht",
     "sources": {
@@ -13853,7 +13853,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Foster The People — Pumped Up Kicks."",
+    "answer": "Foster The People — Pumped Up Kicks.",
     "hint": "Foster The People",
     "difficulty": "mittel",
     "sources": {
@@ -13872,7 +13872,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billie Eilish — bad guy."",
+    "answer": "Billie Eilish — bad guy.",
     "hint": "Billie Eilish",
     "difficulty": "leicht",
     "sources": {
@@ -13891,7 +13891,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Justin Timberlake — CAN'T STOP THE FEELING! (from DreamWorks Animation's \"TROLLS\")."",
+    "answer": "Justin Timberlake — CAN'T STOP THE FEELING! (from DreamWorks Animation's \"TROLLS\").",
     "hint": "Justin Timberlake",
     "difficulty": "mittel",
     "sources": {
@@ -13910,7 +13910,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Imagine Dragons — Thunder."",
+    "answer": "Imagine Dragons — Thunder.",
     "hint": "Imagine Dragons",
     "difficulty": "leicht",
     "sources": {
@@ -13929,7 +13929,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katy Perry, Snoop Dogg — California Gurls."",
+    "answer": "Katy Perry, Snoop Dogg — California Gurls.",
     "hint": "Katy Perry, Snoop Dogg",
     "difficulty": "leicht",
     "sources": {
@@ -13949,7 +13949,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dean Lewis — Be Alright."",
+    "answer": "Dean Lewis — Be Alright.",
     "hint": "Dean Lewis",
     "difficulty": "mittel",
     "sources": {
@@ -13968,7 +13968,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Öwl City, Carly Rae Jepsen — Good Time."",
+    "answer": "Öwl City, Carly Rae Jepsen — Good Time.",
     "hint": "Öwl City, Carly Rae Jepsen",
     "difficulty": "mittel",
     "sources": {
@@ -13987,7 +13987,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Carly Rae Jepsen — I Really Like You."",
+    "answer": "Carly Rae Jepsen — I Really Like You.",
     "hint": "Carly Rae Jepsen",
     "difficulty": "mittel",
     "sources": {
@@ -14006,7 +14006,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Macklemore, Ryan Lewis, Macklemore & Ryan Lewis, Ray Dalton — Can't Hold Us (feat. Ray Dalton)."",
+    "answer": "Macklemore, Ryan Lewis, Macklemore & Ryan Lewis, Ray Dalton — Can't Hold Us (feat. Ray Dalton).",
     "hint": "Macklemore, Ryan Lewis, Macklemore & Ryan Lewis, Ray Dalton",
     "difficulty": "mittel",
     "sources": {
@@ -14025,7 +14025,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ed Sheeran — Photograph."",
+    "answer": "Ed Sheeran — Photograph.",
     "hint": "Ed Sheeran",
     "difficulty": "leicht",
     "sources": {
@@ -14044,7 +14044,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk — Try."",
+    "answer": "P!nk — Try.",
     "hint": "P!nk",
     "difficulty": "leicht",
     "sources": {
@@ -14063,7 +14063,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lewis Capaldi — Someone You Loved."",
+    "answer": "Lewis Capaldi — Someone You Loved.",
     "hint": "Lewis Capaldi",
     "difficulty": "leicht",
     "sources": {
@@ -14082,7 +14082,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — I Knew You Were Trouble.."",
+    "answer": "Taylor Swift — I Knew You Were Trouble..",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
     "sources": {
@@ -14101,7 +14101,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Robin Thicke, T.I., Pharrell Williams — Blurred Lines."",
+    "answer": "Robin Thicke, T.I., Pharrell Williams — Blurred Lines.",
     "hint": "Robin Thicke, T.I., Pharrell Williams",
     "difficulty": "leicht",
     "sources": {
@@ -14121,7 +14121,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Twenty One Pilots — Stressed Out."",
+    "answer": "Twenty One Pilots — Stressed Out.",
     "hint": "Twenty One Pilots",
     "difficulty": "mittel",
     "sources": {
@@ -14140,7 +14140,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÖneRepublic — Counting Stars."",
+    "answer": "ÖneRepublic — Counting Stars.",
     "hint": "ÖneRepublic",
     "difficulty": "leicht",
     "sources": {
@@ -14159,7 +14159,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jonas Brothers — Sucker."",
+    "answer": "Jonas Brothers — Sucker.",
     "hint": "Jonas Brothers",
     "difficulty": "mittel",
     "sources": {
@@ -14178,7 +14178,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Imagine Dragons — Believer."",
+    "answer": "Imagine Dragons — Believer.",
     "hint": "Imagine Dragons",
     "difficulty": "leicht",
     "sources": {
@@ -14197,7 +14197,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shakira, Freshlyground — Waka Waka (This Time for Africa) [The Official 2010 FIFA World Cup (TM) Song] (feat. Freshlyground)."",
+    "answer": "Shakira, Freshlyground — Waka Waka (This Time for Africa) [The Official 2010 FIFA World Cup (TM) Song] (feat. Freshlyground).",
     "hint": "Shakira, Freshlyground",
     "difficulty": "mittel",
     "sources": {
@@ -14216,7 +14216,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ävril Lavigne — What the Hell."",
+    "answer": "Ävril Lavigne — What the Hell.",
     "hint": "Ävril Lavigne",
     "difficulty": "leicht",
     "sources": {
@@ -14235,7 +14235,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "George Ezra — Budapest."",
+    "answer": "George Ezra — Budapest.",
     "hint": "George Ezra",
     "difficulty": "schwer",
     "sources": {
@@ -14254,7 +14254,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Harry Styles — Watermelon Sugar."",
+    "answer": "Harry Styles — Watermelon Sugar.",
     "hint": "Harry Styles",
     "difficulty": "leicht",
     "sources": {
@@ -14273,7 +14273,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Calum Scott — Dancing On My Own."",
+    "answer": "Calum Scott — Dancing On My Own.",
     "hint": "Calum Scott",
     "difficulty": "mittel",
     "sources": {
@@ -14292,7 +14292,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Pharrell Williams — Happy - From \"Despicable Me 2\"."",
+    "answer": "Pharrell Williams — Happy - From \"Despicable Me 2\".",
     "hint": "Pharrell Williams",
     "difficulty": "mittel",
     "sources": {
@@ -14311,7 +14311,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billie Eilish, Khalid — lovely (with Khalid)."",
+    "answer": "Billie Eilish, Khalid — lovely (with Khalid).",
     "hint": "Billie Eilish, Khalid",
     "difficulty": "leicht",
     "sources": {
@@ -14330,7 +14330,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk — Raise Your Glass."",
+    "answer": "P!nk — Raise Your Glass.",
     "hint": "P!nk",
     "difficulty": "leicht",
     "sources": {
@@ -14349,7 +14349,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lewis Capaldi — Before You Go."",
+    "answer": "Lewis Capaldi — Before You Go.",
     "hint": "Lewis Capaldi",
     "difficulty": "leicht",
     "sources": {
@@ -14368,7 +14368,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ädele — Skyfall."",
+    "answer": "Ädele — Skyfall.",
     "hint": "Ädele",
     "difficulty": "leicht",
     "sources": {
@@ -14387,7 +14387,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "X Ambassadors — Unsteady."",
+    "answer": "X Ambassadors — Unsteady.",
     "hint": "X Ambassadors",
     "difficulty": "schwer",
     "sources": {
@@ -14406,7 +14406,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katy Perry — Teenage Dream."",
+    "answer": "Katy Perry — Teenage Dream.",
     "hint": "Katy Perry",
     "difficulty": "leicht",
     "sources": {
@@ -14425,7 +14425,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Zac Efron, Zendaya — Rewrite The Stars."",
+    "answer": "Zac Efron, Zendaya — Rewrite The Stars.",
     "hint": "Zac Efron, Zendaya",
     "difficulty": "mittel",
     "sources": {
@@ -14444,7 +14444,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gym Class Heroes, Adam Levine — Stereo Hearts (feat. Adam Levine)."",
+    "answer": "Gym Class Heroes, Adam Levine — Stereo Hearts (feat. Adam Levine).",
     "hint": "Gym Class Heroes, Adam Levine",
     "difficulty": "mittel",
     "sources": {
@@ -14463,7 +14463,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ädele — Someone Like You."",
+    "answer": "Ädele — Someone Like You.",
     "hint": "Ädele",
     "difficulty": "leicht",
     "sources": {
@@ -14482,7 +14482,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — A Sky Full of Stars."",
+    "answer": "Coldplay — A Sky Full of Stars.",
     "hint": "Coldplay",
     "difficulty": "leicht",
     "sources": {
@@ -14501,7 +14501,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Katy Perry — The One That Got Away."",
+    "answer": "Katy Perry — The One That Got Away.",
     "hint": "Katy Perry",
     "difficulty": "leicht",
     "sources": {
@@ -14520,7 +14520,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "X Ambassadors — Renegades."",
+    "answer": "X Ambassadors — Renegades.",
     "hint": "X Ambassadors",
     "difficulty": "schwer",
     "sources": {
@@ -14539,7 +14539,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mumford & Sons — I Will Wait."",
+    "answer": "Mumford & Sons — I Will Wait.",
     "hint": "Mumford & Sons",
     "difficulty": "mittel",
     "sources": {
@@ -14558,7 +14558,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Portugal. The Man — Feel It Still."",
+    "answer": "Portugal. The Man — Feel It Still.",
     "hint": "Portugal. The Man",
     "difficulty": "mittel",
     "sources": {
@@ -14577,7 +14577,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Elle King — Ex's & Oh's."",
+    "answer": "Elle King — Ex's & Oh's.",
     "hint": "Elle King",
     "difficulty": "mittel",
     "sources": {
@@ -14596,7 +14596,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Train — Drive By."",
+    "answer": "Train — Drive By.",
     "hint": "Train",
     "difficulty": "mittel",
     "sources": {
@@ -14615,7 +14615,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — Lover."",
+    "answer": "Taylor Swift — Lover.",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
     "sources": {
@@ -14634,7 +14634,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Twenty One Pilots — Ride."",
+    "answer": "Twenty One Pilots — Ride.",
     "hint": "Twenty One Pilots",
     "difficulty": "mittel",
     "sources": {
@@ -14653,7 +14653,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Lumineers — Ho Hey."",
+    "answer": "The Lumineers — Ho Hey.",
     "hint": "The Lumineers",
     "difficulty": "mittel",
     "sources": {
@@ -14672,7 +14672,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2010,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kesha — TiK ToK."",
+    "answer": "Kesha — TiK ToK.",
     "hint": "Kesha",
     "difficulty": "mittel",
     "sources": {
@@ -14691,7 +14691,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lorde — Supercut."",
+    "answer": "Lorde — Supercut.",
     "hint": "Lorde",
     "difficulty": "leicht",
     "sources": {
@@ -14710,7 +14710,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "R. City, Adam Levine — Locked Away (feat. Adam Levine)."",
+    "answer": "R. City, Adam Levine — Locked Away (feat. Adam Levine).",
     "hint": "R. City, Adam Levine",
     "difficulty": "mittel",
     "sources": {
@@ -14729,7 +14729,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kelly Clarkson — Stronger (What Doesn't Kill You)."",
+    "answer": "Kelly Clarkson — Stronger (What Doesn't Kill You).",
     "hint": "Kelly Clarkson",
     "difficulty": "leicht",
     "sources": {
@@ -14748,7 +14748,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Cigarettes After Sex — Apocalypse."",
+    "answer": "Cigarettes After Sex — Apocalypse.",
     "hint": "Cigarettes After Sex",
     "difficulty": "mittel",
     "sources": {
@@ -14767,7 +14767,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄWOLNATION — Sail."",
+    "answer": "ÄWOLNATION — Sail.",
     "hint": "ÄWOLNATION",
     "difficulty": "mittel",
     "sources": {
@@ -14786,7 +14786,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kodaline — All I Want."",
+    "answer": "Kodaline — All I Want.",
     "hint": "Kodaline",
     "difficulty": "schwer",
     "sources": {
@@ -14805,7 +14805,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ädele — Set Fire to the Rain."",
+    "answer": "Ädele — Set Fire to the Rain.",
     "hint": "Ädele",
     "difficulty": "leicht",
     "sources": {
@@ -14824,7 +14824,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Älicia Keys — Girl on Fire."",
+    "answer": "Älicia Keys — Girl on Fire.",
     "hint": "Älicia Keys",
     "difficulty": "leicht",
     "sources": {
@@ -14843,7 +14843,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lana Del Rey — Video Games."",
+    "answer": "Lana Del Rey — Video Games.",
     "hint": "Lana Del Rey",
     "difficulty": "mittel",
     "sources": {
@@ -14862,7 +14862,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2018,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rudimental, Jess Glynne, Macklemore, Dan Caplen — These Days (feat. Jess Glynne, Macklemore & Dan Caplen)."",
+    "answer": "Rudimental, Jess Glynne, Macklemore, Dan Caplen — These Days (feat. Jess Glynne, Macklemore & Dan Caplen).",
     "hint": "Rudimental, Jess Glynne, Macklemore, Dan Caplen",
     "difficulty": "schwer",
     "sources": {
@@ -14881,7 +14881,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rihanna — Diamonds."",
+    "answer": "Rihanna — Diamonds.",
     "hint": "Rihanna",
     "difficulty": "leicht",
     "sources": {
@@ -14900,7 +14900,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daya — Hide Away."",
+    "answer": "Daya — Hide Away.",
     "hint": "Daya",
     "difficulty": "mittel",
     "sources": {
@@ -14919,7 +14919,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Naughty Boy, Sam Smith — La La La."",
+    "answer": "Naughty Boy, Sam Smith — La La La.",
     "hint": "Naughty Boy, Sam Smith",
     "difficulty": "leicht",
     "sources": {
@@ -14938,7 +14938,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — Paradise."",
+    "answer": "Coldplay — Paradise.",
     "hint": "Coldplay",
     "difficulty": "leicht",
     "sources": {
@@ -14957,7 +14957,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Milky Chance — Stolen Dance."",
+    "answer": "Milky Chance — Stolen Dance.",
     "hint": "Milky Chance",
     "difficulty": "mittel",
     "sources": {
@@ -14976,7 +14976,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Echosmith — Cool Kids."",
+    "answer": "Echosmith — Cool Kids.",
     "hint": "Echosmith",
     "difficulty": "schwer",
     "sources": {
@@ -14995,7 +14995,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Emeli Sandé — Next To Me."",
+    "answer": "Emeli Sandé — Next To Me.",
     "hint": "Emeli Sandé",
     "difficulty": "mittel",
     "sources": {
@@ -15014,7 +15014,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2012,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rihanna, Mikky Ekko — Stay."",
+    "answer": "Rihanna, Mikky Ekko — Stay.",
     "hint": "Rihanna, Mikky Ekko",
     "difficulty": "leicht",
     "sources": {
@@ -15033,7 +15033,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "P!nk — What About Us."",
+    "answer": "P!nk — What About Us.",
     "hint": "P!nk",
     "difficulty": "leicht",
     "sources": {
@@ -15052,7 +15052,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — Don’t Blame Me."",
+    "answer": "Taylor Swift — Don’t Blame Me.",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
     "sources": {
@@ -15071,7 +15071,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Twenty One Pilots — Heathens."",
+    "answer": "Twenty One Pilots — Heathens.",
     "hint": "Twenty One Pilots",
     "difficulty": "mittel",
     "sources": {
@@ -15090,7 +15090,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "John Legend — All of Me."",
+    "answer": "John Legend — All of Me.",
     "hint": "John Legend",
     "difficulty": "leicht",
     "sources": {
@@ -15109,7 +15109,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jessie J — Domino."",
+    "answer": "Jessie J — Domino.",
     "hint": "Jessie J",
     "difficulty": "mittel",
     "sources": {
@@ -15128,7 +15128,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2017,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lorde — Green Light."",
+    "answer": "Lorde — Green Light.",
     "hint": "Lorde",
     "difficulty": "leicht",
     "sources": {
@@ -15147,7 +15147,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Icona Pop, Charli xcx — I Love It (feat. Charli XCX)."",
+    "answer": "Icona Pop, Charli xcx — I Love It (feat. Charli XCX).",
     "hint": "Icona Pop, Charli xcx",
     "difficulty": "mittel",
     "sources": {
@@ -15166,7 +15166,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sia, Sean Paul — Cheap Thrills (feat. Sean Paul)."",
+    "answer": "Sia, Sean Paul — Cheap Thrills (feat. Sean Paul).",
     "hint": "Sia, Sean Paul",
     "difficulty": "leicht",
     "sources": {
@@ -15185,7 +15185,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Justin Bieber — Love Yourself."",
+    "answer": "Justin Bieber — Love Yourself.",
     "hint": "Justin Bieber",
     "difficulty": "leicht",
     "sources": {
@@ -15204,7 +15204,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Jessie J, Ariana Grande, Nicki Minaj — Bang Bang."",
+    "answer": "Jessie J, Ariana Grande, Nicki Minaj — Bang Bang.",
     "hint": "Jessie J, Ariana Grande, Nicki Minaj",
     "difficulty": "leicht",
     "sources": {
@@ -15223,7 +15223,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2014,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rixton — Me And My Broken Heart."",
+    "answer": "Rixton — Me And My Broken Heart.",
     "hint": "Rixton",
     "difficulty": "mittel",
     "sources": {
@@ -15242,7 +15242,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Meghan Trainor — All About That Bass."",
+    "answer": "Meghan Trainor — All About That Bass.",
     "hint": "Meghan Trainor",
     "difficulty": "leicht",
     "sources": {
@@ -15261,7 +15261,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2016,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Lumineers — Ophelia."",
+    "answer": "The Lumineers — Ophelia.",
     "hint": "The Lumineers",
     "difficulty": "mittel",
     "sources": {
@@ -15280,7 +15280,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ölivia Rodrigo — vampire."",
+    "answer": "Ölivia Rodrigo — vampire.",
     "hint": "Ölivia Rodrigo",
     "difficulty": "leicht",
     "sources": {
@@ -15299,7 +15299,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Weeknd — Blinding Lights."",
+    "answer": "The Weeknd — Blinding Lights.",
     "hint": "The Weeknd",
     "difficulty": "leicht",
     "sources": {
@@ -15318,7 +15318,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ravyn Lenae — Love Me Not."",
+    "answer": "Ravyn Lenae — Love Me Not.",
     "hint": "Ravyn Lenae",
     "difficulty": "mittel",
     "sources": {
@@ -15337,7 +15337,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Älex Warren — Ordinary."",
+    "answer": "Älex Warren — Ordinary.",
     "hint": "Älex Warren",
     "difficulty": "mittel",
     "sources": {
@@ -15356,7 +15356,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — The Fate of Ophelia."",
+    "answer": "Taylor Swift — The Fate of Ophelia.",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
     "sources": {
@@ -15375,7 +15375,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "üombr — back to friends."",
+    "answer": "üombr — back to friends.",
     "hint": "üombr",
     "difficulty": "mittel",
     "sources": {
@@ -15394,7 +15394,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay, BTS — My Universe."",
+    "answer": "Coldplay, BTS — My Universe.",
     "hint": "Coldplay, BTS",
     "difficulty": "leicht",
     "sources": {
@@ -15413,7 +15413,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Calvin Harris, Clementine Douglas — Blessings."",
+    "answer": "Calvin Harris, Clementine Douglas — Blessings.",
     "hint": "Calvin Harris, Clementine Douglas",
     "difficulty": "leicht",
     "sources": {
@@ -15432,7 +15432,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "KALUMA, Albin Loán — Down."",
+    "answer": "KALUMA, Albin Loán — Down.",
     "hint": "KALUMA, Albin Loán",
     "difficulty": "mittel",
     "sources": {
@@ -15451,7 +15451,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Post Malone — Circles."",
+    "answer": "Post Malone — Circles.",
     "hint": "Post Malone",
     "difficulty": "leicht",
     "sources": {
@@ -15470,7 +15470,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast — Golden."",
+    "answer": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast — Golden.",
     "hint": "HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast",
     "difficulty": "mittel",
     "sources": {
@@ -15489,7 +15489,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Weeknd, Ariana Grande — Save Your Tears (with Ariana Grande) (Remix)."",
+    "answer": "The Weeknd, Ariana Grande — Save Your Tears (with Ariana Grande) (Remix).",
     "hint": "The Weeknd, Ariana Grande",
     "difficulty": "leicht",
     "sources": {
@@ -15508,7 +15508,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tiësto, Ava Max — The Motto."",
+    "answer": "Tiësto, Ava Max — The Motto.",
     "hint": "Tiësto, Ava Max",
     "difficulty": "mittel",
     "sources": {
@@ -15527,7 +15527,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Disco Lines, Tinashe — No Broke Boys."",
+    "answer": "Disco Lines, Tinashe — No Broke Boys.",
     "hint": "Disco Lines, Tinashe",
     "difficulty": "mittel",
     "sources": {
@@ -15546,7 +15546,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "KALUMA, Chris van Dutch — Mirrors."",
+    "answer": "KALUMA, Chris van Dutch — Mirrors.",
     "hint": "KALUMA, Chris van Dutch",
     "difficulty": "mittel",
     "sources": {
@@ -15565,7 +15565,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "MK, BURNS, Teddy Swims — Better (feat. Teddy Swims)."",
+    "answer": "MK, BURNS, Teddy Swims — Better (feat. Teddy Swims).",
     "hint": "MK, BURNS, Teddy Swims",
     "difficulty": "mittel",
     "sources": {
@@ -15584,7 +15584,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "BLACKPINK — JUMP."",
+    "answer": "BLACKPINK — JUMP.",
     "hint": "BLACKPINK",
     "difficulty": "leicht",
     "sources": {
@@ -15603,7 +15603,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Zartmann — tau mich auf."",
+    "answer": "Zartmann — tau mich auf.",
     "hint": "Zartmann",
     "difficulty": "mittel",
     "sources": {
@@ -15622,7 +15622,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Älice Merton — No Roots."",
+    "answer": "Älice Merton — No Roots.",
     "hint": "Älice Merton",
     "difficulty": "mittel",
     "sources": {
@@ -15641,7 +15641,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "üombr — undressed."",
+    "answer": "üombr — undressed.",
     "hint": "üombr",
     "difficulty": "mittel",
     "sources": {
@@ -15660,7 +15660,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Teddy Swims — Lose Control."",
+    "answer": "Teddy Swims — Lose Control.",
     "hint": "Teddy Swims",
     "difficulty": "mittel",
     "sources": {
@@ -15679,7 +15679,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Bea Miller — feel something."",
+    "answer": "Bea Miller — feel something.",
     "hint": "Bea Miller",
     "difficulty": "mittel",
     "sources": {
@@ -15698,7 +15698,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ölivia Dean — Man I Need."",
+    "answer": "Ölivia Dean — Man I Need.",
     "hint": "Ölivia Dean",
     "difficulty": "mittel",
     "sources": {
@@ -15717,7 +15717,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Billie Eilish — BIRDS OF A FEATHER."",
+    "answer": "Billie Eilish — BIRDS OF A FEATHER.",
     "hint": "Billie Eilish",
     "difficulty": "leicht",
     "sources": {
@@ -15736,7 +15736,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sabrina Carpenter — Manchild."",
+    "answer": "Sabrina Carpenter — Manchild.",
     "hint": "Sabrina Carpenter",
     "difficulty": "schwer",
     "sources": {
@@ -15755,7 +15755,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Justin Bieber — DAISIES."",
+    "answer": "Justin Bieber — DAISIES.",
     "hint": "Justin Bieber",
     "difficulty": "leicht",
     "sources": {
@@ -15774,7 +15774,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tate McRae, F1 The Album — Just Keep Watching (From F1® The Movie)."",
+    "answer": "Tate McRae, F1 The Album — Just Keep Watching (From F1® The Movie).",
     "hint": "Tate McRae, F1 The Album",
     "difficulty": "leicht",
     "sources": {
@@ -15793,7 +15793,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Benson Boone — Sorry I'm Here For Someone Else."",
+    "answer": "Benson Boone — Sorry I'm Here For Someone Else.",
     "hint": "Benson Boone",
     "difficulty": "mittel",
     "sources": {
@@ -15812,7 +15812,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ed Sheeran — Sapphire."",
+    "answer": "Ed Sheeran — Sapphire.",
     "hint": "Ed Sheeran",
     "difficulty": "leicht",
     "sources": {
@@ -15831,7 +15831,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga, Bruno Mars — Die With A Smile."",
+    "answer": "Lady Gaga, Bruno Mars — Die With A Smile.",
     "hint": "Lady Gaga, Bruno Mars",
     "difficulty": "leicht",
     "sources": {
@@ -15850,7 +15850,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nina Chuba, makko — Fucked Up feat. makko."",
+    "answer": "Nina Chuba, makko — Fucked Up feat. makko.",
     "hint": "Nina Chuba, makko",
     "difficulty": "mittel",
     "sources": {
@@ -15870,7 +15870,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — The Dead Dance."",
+    "answer": "Lady Gaga — The Dead Dance.",
     "hint": "Lady Gaga",
     "difficulty": "leicht",
     "sources": {
@@ -15889,7 +15889,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — Opalite."",
+    "answer": "Taylor Swift — Opalite.",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
     "sources": {
@@ -15908,7 +15908,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sabrina Carpenter — Espresso."",
+    "answer": "Sabrina Carpenter — Espresso.",
     "hint": "Sabrina Carpenter",
     "difficulty": "schwer",
     "sources": {
@@ -15927,7 +15927,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Benson Boone — Beautiful Things."",
+    "answer": "Benson Boone — Beautiful Things.",
     "hint": "Benson Boone",
     "difficulty": "mittel",
     "sources": {
@@ -15946,7 +15946,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ed Sheeran — Azizam."",
+    "answer": "Ed Sheeran — Azizam.",
     "hint": "Ed Sheeran",
     "difficulty": "leicht",
     "sources": {
@@ -15965,7 +15965,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "MOLIY, Silent Addy, Skillibeng, Shenseea — Shake It To The Max (FLY) - Remix."",
+    "answer": "MOLIY, Silent Addy, Skillibeng, Shenseea — Shake It To The Max (FLY) - Remix.",
     "hint": "MOLIY, Silent Addy, Skillibeng, Shenseea",
     "difficulty": "mittel",
     "sources": {
@@ -15984,7 +15984,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gigi Perez — Sailor Song."",
+    "answer": "Gigi Perez — Sailor Song.",
     "hint": "Gigi Perez",
     "difficulty": "mittel",
     "sources": {
@@ -16003,7 +16003,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Zerb, Ty Dolla $ign, Wiz Khalifa — Location."",
+    "answer": "Zerb, Ty Dolla $ign, Wiz Khalifa — Location.",
     "hint": "Zerb, Ty Dolla $ign, Wiz Khalifa",
     "difficulty": "mittel",
     "sources": {
@@ -16023,7 +16023,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay — feelslikeimfallinginlove - Single Version."",
+    "answer": "Coldplay — feelslikeimfallinginlove - Single Version.",
     "hint": "Coldplay",
     "difficulty": "leicht",
     "sources": {
@@ -16042,7 +16042,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dua Lipa — Houdini."",
+    "answer": "Dua Lipa — Houdini.",
     "hint": "Dua Lipa",
     "difficulty": "leicht",
     "sources": {
@@ -16061,7 +16061,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Miley Cyrus — End of the World."",
+    "answer": "Miley Cyrus — End of the World.",
     "hint": "Miley Cyrus",
     "difficulty": "leicht",
     "sources": {
@@ -16080,7 +16080,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "CYRIL — Stumblin' In."",
+    "answer": "CYRIL — Stumblin' In.",
     "hint": "CYRIL",
     "difficulty": "mittel",
     "sources": {
@@ -16099,7 +16099,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — Abracadabra."",
+    "answer": "Lady Gaga — Abracadabra.",
     "hint": "Lady Gaga",
     "difficulty": "leicht",
     "sources": {
@@ -16118,7 +16118,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "KAMRAD — Be Mine."",
+    "answer": "KAMRAD — Be Mine.",
     "hint": "KAMRAD",
     "difficulty": "mittel",
     "sources": {
@@ -16137,7 +16137,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nina Chuba — Wenn das Liebe ist."",
+    "answer": "Nina Chuba — Wenn das Liebe ist.",
     "hint": "Nina Chuba",
     "difficulty": "mittel",
     "sources": {
@@ -16156,7 +16156,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Provinz — Walzer."",
+    "answer": "Provinz — Walzer.",
     "hint": "Provinz",
     "difficulty": "mittel",
     "sources": {
@@ -16194,7 +16194,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kendrick Lamar, SZA — luther (with sza)."",
+    "answer": "Kendrick Lamar, SZA — luther (with sza).",
     "hint": "Kendrick Lamar, SZA",
     "difficulty": "leicht",
     "sources": {
@@ -16214,7 +16214,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — Abracadabra."",
+    "answer": "Lady Gaga — Abracadabra.",
     "hint": "Lady Gaga",
     "difficulty": "leicht",
     "sources": {
@@ -16233,7 +16233,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Äriana Grande — twilight zone."",
+    "answer": "Äriana Grande — twilight zone.",
     "hint": "Äriana Grande",
     "difficulty": "leicht",
     "sources": {
@@ -16252,7 +16252,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "ROSÉ, Bruno Mars — APT.."",
+    "answer": "ROSÉ, Bruno Mars — APT..",
     "hint": "ROSÉ, Bruno Mars",
     "difficulty": "leicht",
     "sources": {
@@ -16271,7 +16271,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lola Young — Messy."",
+    "answer": "Lola Young — Messy.",
     "hint": "Lola Young",
     "difficulty": "mittel",
     "sources": {
@@ -16290,7 +16290,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "WizTheMc, bees & honey — Show Me Love."",
+    "answer": "WizTheMc, bees & honey — Show Me Love.",
     "hint": "WizTheMc, bees & honey",
     "difficulty": "mittel",
     "sources": {
@@ -16309,7 +16309,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Damiano David — The First Time."",
+    "answer": "Damiano David — The First Time.",
     "hint": "Damiano David",
     "difficulty": "mittel",
     "sources": {
@@ -16328,7 +16328,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "NIKI — You'll Be in My Heart."",
+    "answer": "NIKI — You'll Be in My Heart.",
     "hint": "NIKI",
     "difficulty": "mittel",
     "sources": {
@@ -16347,7 +16347,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay, PNAU — ALL MY LOVE - PNAU x Coldplay."",
+    "answer": "Coldplay, PNAU — ALL MY LOVE - PNAU x Coldplay.",
     "hint": "Coldplay, PNAU",
     "difficulty": "leicht",
     "sources": {
@@ -16366,7 +16366,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "VIZE, Tokio Hotel — White Lies."",
+    "answer": "VIZE, Tokio Hotel — White Lies.",
     "hint": "VIZE, Tokio Hotel",
     "difficulty": "mittel",
     "sources": {
@@ -16385,7 +16385,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Take That, Robin Schulz, Calum Scott — Greatest Day (feat. Calum Scott) - Robin Schulz Rework."",
+    "answer": "Take That, Robin Schulz, Calum Scott — Greatest Day (feat. Calum Scott) - Robin Schulz Rework.",
     "hint": "Take That, Robin Schulz, Calum Scott",
     "difficulty": "mittel",
     "sources": {
@@ -16404,7 +16404,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Doechii — Anxiety."",
+    "answer": "Doechii — Anxiety.",
     "hint": "Doechii",
     "difficulty": "mittel",
     "sources": {
@@ -16423,7 +16423,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "RIAN — Hausparty."",
+    "answer": "RIAN — Hausparty.",
     "hint": "RIAN",
     "difficulty": "mittel",
     "sources": {
@@ -16442,7 +16442,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Chappell Roan — Pink Pony Club."",
+    "answer": "Chappell Roan — Pink Pony Club.",
     "hint": "Chappell Roan",
     "difficulty": "mittel",
     "sources": {
@@ -16461,7 +16461,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sabrina Carpenter — Taste."",
+    "answer": "Sabrina Carpenter — Taste.",
     "hint": "Sabrina Carpenter",
     "difficulty": "schwer",
     "sources": {
@@ -16480,7 +16480,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Coldplay, Little Simz, Burna Boy, Elyanna, TINI — WE PRAY."",
+    "answer": "Coldplay, Little Simz, Burna Boy, Elyanna, TINI — WE PRAY.",
     "hint": "Coldplay, Little Simz, Burna Boy, Elyanna, TINI",
     "difficulty": "leicht",
     "sources": {
@@ -16499,7 +16499,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Kendrick Lamar, SZA — luther (with sza)."",
+    "answer": "Kendrick Lamar, SZA — luther (with sza).",
     "hint": "Kendrick Lamar, SZA",
     "difficulty": "leicht",
     "sources": {
@@ -16519,7 +16519,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Myles Smith — Nice To Meet You."",
+    "answer": "Myles Smith — Nice To Meet You.",
     "hint": "Myles Smith",
     "difficulty": "mittel",
     "sources": {
@@ -16538,7 +16538,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÁSDÍS — Touch Me."",
+    "answer": "ÁSDÍS — Touch Me.",
     "hint": "ÁSDÍS",
     "difficulty": "mittel",
     "sources": {
@@ -16557,7 +16557,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nico Santos — Human Being."",
+    "answer": "Nico Santos — Human Being.",
     "hint": "Nico Santos",
     "difficulty": "mittel",
     "sources": {
@@ -16576,7 +16576,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Loi — Left In Your Love."",
+    "answer": "Loi — Left In Your Love.",
     "hint": "Loi",
     "difficulty": "mittel",
     "sources": {
@@ -16595,7 +16595,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "FAST BOY, Raf — Wave."",
+    "answer": "FAST BOY, Raf — Wave.",
     "hint": "FAST BOY, Raf",
     "difficulty": "mittel",
     "sources": {
@@ -16614,7 +16614,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Myles Smith — Stargazing."",
+    "answer": "Myles Smith — Stargazing.",
     "hint": "Myles Smith",
     "difficulty": "mittel",
     "sources": {
@@ -16633,7 +16633,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Crystal Rock, Marc Kiss, Pule, Voice Impact, Yazik — Happy Ending (feat. Voice Impact & Yazik)."",
+    "answer": "Crystal Rock, Marc Kiss, Pule, Voice Impact, Yazik — Happy Ending (feat. Voice Impact & Yazik).",
     "hint": "Crystal Rock, Marc Kiss, Pule, Voice Impact, Yazik",
     "difficulty": "mittel",
     "sources": {
@@ -16652,7 +16652,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Berq — Rote Flaggen."",
+    "answer": "Berq — Rote Flaggen.",
     "hint": "Berq",
     "difficulty": "mittel",
     "sources": {
@@ -16671,7 +16671,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gracie Abrams — That’s So True."",
+    "answer": "Gracie Abrams — That’s So True.",
     "hint": "Gracie Abrams",
     "difficulty": "schwer",
     "sources": {
@@ -16690,7 +16690,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Älex Warren — Eternity."",
+    "answer": "Älex Warren — Eternity.",
     "hint": "Älex Warren",
     "difficulty": "mittel",
     "sources": {
@@ -16709,7 +16709,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Doja Cat, SZA — Kiss Me More (feat. SZA)."",
+    "answer": "Doja Cat, SZA — Kiss Me More (feat. SZA).",
     "hint": "Doja Cat, SZA",
     "difficulty": "leicht",
     "sources": {
@@ -16728,7 +16728,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ed Sheeran — Overpass Graffiti."",
+    "answer": "Ed Sheeran — Overpass Graffiti.",
     "hint": "Ed Sheeran",
     "difficulty": "leicht",
     "sources": {
@@ -16747,7 +16747,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄnnenMayKantereit, Giant Rooks — Tom's Diner."",
+    "answer": "ÄnnenMayKantereit, Giant Rooks — Tom's Diner.",
     "hint": "ÄnnenMayKantereit, Giant Rooks",
     "difficulty": "mittel",
     "sources": {
@@ -16766,7 +16766,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Miksu / Macloud, makko — Nachts wach."",
+    "answer": "Miksu / Macloud, makko — Nachts wach.",
     "hint": "Miksu / Macloud, makko",
     "difficulty": "mittel",
     "sources": {
@@ -16786,7 +16786,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Teddy Swims — Bad Dreams."",
+    "answer": "Teddy Swims — Bad Dreams.",
     "hint": "Teddy Swims",
     "difficulty": "mittel",
     "sources": {
@@ -16805,7 +16805,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nina Chuba — Fata Morgana."",
+    "answer": "Nina Chuba — Fata Morgana.",
     "hint": "Nina Chuba",
     "difficulty": "mittel",
     "sources": {
@@ -16824,7 +16824,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Maroon 5 — Lost."",
+    "answer": "Maroon 5 — Lost.",
     "hint": "Maroon 5",
     "difficulty": "leicht",
     "sources": {
@@ -16843,7 +16843,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Harry Styles — Adore You."",
+    "answer": "Harry Styles — Adore You.",
     "hint": "Harry Styles",
     "difficulty": "leicht",
     "sources": {
@@ -16862,7 +16862,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄYLIVA — Nein!."",
+    "answer": "ÄYLIVA — Nein!.",
     "hint": "ÄYLIVA",
     "difficulty": "mittel",
     "sources": {
@@ -16881,7 +16881,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Rea Garvey, VIZE — The One."",
+    "answer": "Rea Garvey, VIZE — The One.",
     "hint": "Rea Garvey, VIZE",
     "difficulty": "mittel",
     "sources": {
@@ -16900,7 +16900,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "LEA — 110 (Prolog)."",
+    "answer": "LEA — 110 (Prolog).",
     "hint": "LEA",
     "difficulty": "mittel",
     "sources": {
@@ -16919,7 +16919,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2025,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daniel Seavey — Sleeping With The Lights On."",
+    "answer": "Daniel Seavey — Sleeping With The Lights On.",
     "hint": "Daniel Seavey",
     "difficulty": "mittel",
     "sources": {
@@ -16938,7 +16938,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "ClockClock — Someday Soon."",
+    "answer": "ClockClock — Someday Soon.",
     "hint": "ClockClock",
     "difficulty": "mittel",
     "sources": {
@@ -16957,7 +16957,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Zwette, Tom Rosenthal — Go Solo (feat. Tom Rosenthal)."",
+    "answer": "Zwette, Tom Rosenthal — Go Solo (feat. Tom Rosenthal).",
     "hint": "Zwette, Tom Rosenthal",
     "difficulty": "mittel",
     "sources": {
@@ -16976,7 +16976,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ärtemas — i like the way you kiss me."",
+    "answer": "Ärtemas — i like the way you kiss me.",
     "hint": "Ärtemas",
     "difficulty": "mittel",
     "sources": {
@@ -16995,7 +16995,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lost Frequencies, Calum Scott — Where Are You Now."",
+    "answer": "Lost Frequencies, Calum Scott — Where Are You Now.",
     "hint": "Lost Frequencies, Calum Scott",
     "difficulty": "mittel",
     "sources": {
@@ -17014,7 +17014,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shaboozey — A Bar Song (Tipsy)."",
+    "answer": "Shaboozey — A Bar Song (Tipsy).",
     "hint": "Shaboozey",
     "difficulty": "mittel",
     "sources": {
@@ -17033,7 +17033,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Weeknd — Dancing In The Flames."",
+    "answer": "The Weeknd — Dancing In The Flames.",
     "hint": "The Weeknd",
     "difficulty": "leicht",
     "sources": {
@@ -17052,7 +17052,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dua Lipa — Love Again."",
+    "answer": "Dua Lipa — Love Again.",
     "hint": "Dua Lipa",
     "difficulty": "leicht",
     "sources": {
@@ -17071,7 +17071,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shirin David — bauch beine po."",
+    "answer": "Shirin David — bauch beine po.",
     "hint": "Shirin David",
     "difficulty": "mittel",
     "sources": {
@@ -17091,7 +17091,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Kid LAROI, Miley Cyrus — WITHOUT YOU (with Miley Cyrus)."",
+    "answer": "The Kid LAROI, Miley Cyrus — WITHOUT YOU (with Miley Cyrus).",
     "hint": "The Kid LAROI, Miley Cyrus",
     "difficulty": "leicht",
     "sources": {
@@ -17110,7 +17110,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Üdo Lindenberg, Apache 207 — Komet."",
+    "answer": "Üdo Lindenberg, Apache 207 — Komet.",
     "hint": "Üdo Lindenberg, Apache 207",
     "difficulty": "mittel",
     "sources": {
@@ -17130,7 +17130,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mark Ambor — Belong Together."",
+    "answer": "Mark Ambor — Belong Together.",
     "hint": "Mark Ambor",
     "difficulty": "mittel",
     "sources": {
@@ -17149,7 +17149,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Hozier — Too Sweet."",
+    "answer": "Hozier — Too Sweet.",
     "hint": "Hozier",
     "difficulty": "schwer",
     "sources": {
@@ -17168,7 +17168,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "24kGoldn, Justin Bieber, J Balvin, iann dior — Mood (Remix) feat. Justin Bieber, J Balvin & iann dior."",
+    "answer": "24kGoldn, Justin Bieber, J Balvin, iann dior — Mood (Remix) feat. Justin Bieber, J Balvin & iann dior.",
     "hint": "24kGoldn, Justin Bieber, J Balvin, iann dior",
     "difficulty": "leicht",
     "sources": {
@@ -17188,7 +17188,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄnnenMayKantereit — 3 Tage am Meer."",
+    "answer": "ÄnnenMayKantereit — 3 Tage am Meer.",
     "hint": "ÄnnenMayKantereit",
     "difficulty": "mittel",
     "sources": {
@@ -17207,7 +17207,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "KAMRAD — I Believe."",
+    "answer": "KAMRAD — I Believe.",
     "hint": "KAMRAD",
     "difficulty": "mittel",
     "sources": {
@@ -17226,7 +17226,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tate McRae — greedy."",
+    "answer": "Tate McRae — greedy.",
     "hint": "Tate McRae",
     "difficulty": "leicht",
     "sources": {
@@ -17245,7 +17245,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Beyoncé — TEXAS HOLD 'EM."",
+    "answer": "Beyoncé — TEXAS HOLD 'EM.",
     "hint": "Beyoncé",
     "difficulty": "leicht",
     "sources": {
@@ -17264,7 +17264,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shaboozey — A Bar Song (Tipsy)."",
+    "answer": "Shaboozey — A Bar Song (Tipsy).",
     "hint": "Shaboozey",
     "difficulty": "mittel",
     "sources": {
@@ -17283,7 +17283,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Taylor Swift — Cruel Summer."",
+    "answer": "Taylor Swift — Cruel Summer.",
     "hint": "Taylor Swift",
     "difficulty": "leicht",
     "sources": {
@@ -17302,7 +17302,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "cassö, RAYE, D-Block Europe — Prada."",
+    "answer": "cassö, RAYE, D-Block Europe — Prada.",
     "hint": "cassö, RAYE, D-Block Europe",
     "difficulty": "mittel",
     "sources": {
@@ -17322,7 +17322,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Äva Max — Maybe You’re The Problem."",
+    "answer": "Äva Max — Maybe You’re The Problem.",
     "hint": "Äva Max",
     "difficulty": "mittel",
     "sources": {
@@ -17341,7 +17341,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Don Diablo, AR/CO — Hot Air Balloon."",
+    "answer": "Don Diablo, AR/CO — Hot Air Balloon.",
     "hint": "Don Diablo, AR/CO",
     "difficulty": "mittel",
     "sources": {
@@ -17360,7 +17360,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Sia, Chromeo — I Forgive You - (Chromeo Remix) [radio edit]."",
+    "answer": "Sia, Chromeo — I Forgive You - (Chromeo Remix) [radio edit].",
     "hint": "Sia, Chromeo",
     "difficulty": "leicht",
     "sources": {
@@ -17379,7 +17379,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tyla — Water."",
+    "answer": "Tyla — Water.",
     "hint": "Tyla",
     "difficulty": "mittel",
     "sources": {
@@ -17398,7 +17398,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Dasha — Austin (Boots Stop Workin')."",
+    "answer": "Dasha — Austin (Boots Stop Workin').",
     "hint": "Dasha",
     "difficulty": "mittel",
     "sources": {
@@ -17417,7 +17417,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄYLIVA, Apache 207 — Wunder."",
+    "answer": "ÄYLIVA, Apache 207 — Wunder.",
     "hint": "ÄYLIVA, Apache 207",
     "difficulty": "mittel",
     "sources": {
@@ -17437,7 +17437,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Zerb, Sofiya Nzau — Mwaki."",
+    "answer": "Zerb, Sofiya Nzau — Mwaki.",
     "hint": "Zerb, Sofiya Nzau",
     "difficulty": "mittel",
     "sources": {
@@ -17456,7 +17456,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ölly Alexander (Years & Years) — Cupid's Bow."",
+    "answer": "Ölly Alexander (Years & Years) — Cupid's Bow.",
     "hint": "Ölly Alexander (Years & Years)",
     "difficulty": "mittel",
     "sources": {
@@ -17475,7 +17475,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nelly Furtado — Ready For Myself."",
+    "answer": "Nelly Furtado — Ready For Myself.",
     "hint": "Nelly Furtado",
     "difficulty": "leicht",
     "sources": {
@@ -17494,7 +17494,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Major Lazer, Marcus Mumford, Diplo — Lay Your Head On Me."",
+    "answer": "Major Lazer, Marcus Mumford, Diplo — Lay Your Head On Me.",
     "hint": "Major Lazer, Marcus Mumford, Diplo",
     "difficulty": "mittel",
     "sources": {
@@ -17513,7 +17513,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "KALUMA, Chris van Dutch — L'Amour Toujours (I'll Fly With You)."",
+    "answer": "KALUMA, Chris van Dutch — L'Amour Toujours (I'll Fly With You).",
     "hint": "KALUMA, Chris van Dutch",
     "difficulty": "mittel",
     "sources": {
@@ -17532,7 +17532,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Noah Kahan — Stick Season."",
+    "answer": "Noah Kahan — Stick Season.",
     "hint": "Noah Kahan",
     "difficulty": "mittel",
     "sources": {
@@ -17551,7 +17551,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Justin Timberlake — Selfish."",
+    "answer": "Justin Timberlake — Selfish.",
     "hint": "Justin Timberlake",
     "difficulty": "leicht",
     "sources": {
@@ -17570,7 +17570,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "The Kid LAROI, Justin Bieber — STAY (with Justin Bieber)."",
+    "answer": "The Kid LAROI, Justin Bieber — STAY (with Justin Bieber).",
     "hint": "The Kid LAROI, Justin Bieber",
     "difficulty": "leicht",
     "sources": {
@@ -17589,7 +17589,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "NBSPLV — The Lost Soul Down."",
+    "answer": "NBSPLV — The Lost Soul Down.",
     "hint": "NBSPLV",
     "difficulty": "mittel",
     "sources": {
@@ -17608,7 +17608,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Purple Disco Machine, Sophie and the Giants — In The Dark."",
+    "answer": "Purple Disco Machine, Sophie and the Giants — In The Dark.",
     "hint": "Purple Disco Machine, Sophie and the Giants",
     "difficulty": "mittel",
     "sources": {
@@ -17627,7 +17627,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Crystal Rock, Marc Kiss, LØU — Flowers."",
+    "answer": "Crystal Rock, Marc Kiss, LØU — Flowers.",
     "hint": "Crystal Rock, Marc Kiss, LØU",
     "difficulty": "mittel",
     "sources": {
@@ -17646,7 +17646,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Nina Chuba, Provinz — Ich glaub ich will heut nicht mehr gehen."",
+    "answer": "Nina Chuba, Provinz — Ich glaub ich will heut nicht mehr gehen.",
     "hint": "Nina Chuba, Provinz",
     "difficulty": "mittel",
     "sources": {
@@ -17665,7 +17665,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Troye Sivan — One Of Your Girls."",
+    "answer": "Troye Sivan — One Of Your Girls.",
     "hint": "Troye Sivan",
     "difficulty": "mittel",
     "sources": {
@@ -17684,7 +17684,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "Paul Russell — Lil Boo Thang."",
+    "answer": "Paul Russell — Lil Boo Thang.",
     "hint": "Paul Russell",
     "difficulty": "mittel",
     "sources": {
@@ -17703,7 +17703,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Tom Odell, Tiësto — Another Love - Tiësto Remix."",
+    "answer": "Tom Odell, Tiësto — Another Love - Tiësto Remix.",
     "hint": "Tom Odell, Tiësto",
     "difficulty": "mittel",
     "sources": {
@@ -17722,7 +17722,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "Gesaffelstein, The Weeknd — Lost in the Fire (feat. The Weeknd)."",
+    "answer": "Gesaffelstein, The Weeknd — Lost in the Fire (feat. The Weeknd).",
     "hint": "Gesaffelstein, The Weeknd",
     "difficulty": "leicht",
     "sources": {
@@ -17741,7 +17741,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "01099, Paul, Ski Aggu — Anders."",
+    "answer": "01099, Paul, Ski Aggu — Anders.",
     "hint": "01099, Paul, Ski Aggu",
     "difficulty": "mittel",
     "sources": {
@@ -17761,7 +17761,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Chappell Roan — Good Luck, Babe!."",
+    "answer": "Chappell Roan — Good Luck, Babe!.",
     "hint": "Chappell Roan",
     "difficulty": "mittel",
     "sources": {
@@ -17780,7 +17780,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "5 Seconds of Summer — BLENDER."",
+    "answer": "5 Seconds of Summer — BLENDER.",
     "hint": "5 Seconds of Summer",
     "difficulty": "mittel",
     "sources": {
@@ -17799,7 +17799,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2021,
     "cue": "Song anhören und einordnen.",
-    "answer": "Honey Gee, Crystal Rock, Moestwanted — Teenage Dirtbag."",
+    "answer": "Honey Gee, Crystal Rock, Moestwanted — Teenage Dirtbag.",
     "hint": "Honey Gee, Crystal Rock, Moestwanted",
     "difficulty": "mittel",
     "sources": {
@@ -17818,7 +17818,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Zoe Wees — Control."",
+    "answer": "Zoe Wees — Control.",
     "hint": "Zoe Wees",
     "difficulty": "mittel",
     "sources": {
@@ -17837,7 +17837,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "MEDUZA, Dermot Kennedy — Paradise (feat. Dermot Kennedy)."",
+    "answer": "MEDUZA, Dermot Kennedy — Paradise (feat. Dermot Kennedy).",
     "hint": "MEDUZA, Dermot Kennedy",
     "difficulty": "mittel",
     "sources": {
@@ -17856,7 +17856,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Daði Freyr — Think About Things."",
+    "answer": "Daði Freyr — Think About Things.",
     "hint": "Daði Freyr",
     "difficulty": "mittel",
     "sources": {
@@ -17875,7 +17875,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lost Frequencies, Zonderling, Kelvin Jones — Love To Go."",
+    "answer": "Lost Frequencies, Zonderling, Kelvin Jones — Love To Go.",
     "hint": "Lost Frequencies, Zonderling, Kelvin Jones",
     "difficulty": "mittel",
     "sources": {
@@ -17894,7 +17894,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ädam Port, Stryv, Keinemusik, Orso, Malachiii — Move."",
+    "answer": "Ädam Port, Stryv, Keinemusik, Orso, Malachiii — Move.",
     "hint": "Ädam Port, Stryv, Keinemusik, Orso, Malachiii",
     "difficulty": "mittel",
     "sources": {
@@ -17913,7 +17913,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "CYRIL, Kita Alexander — True."",
+    "answer": "CYRIL, Kita Alexander — True.",
     "hint": "CYRIL, Kita Alexander",
     "difficulty": "mittel",
     "sources": {
@@ -17932,7 +17932,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Mark Ambor — Belong Together."",
+    "answer": "Mark Ambor — Belong Together.",
     "hint": "Mark Ambor",
     "difficulty": "mittel",
     "sources": {
@@ -17951,7 +17951,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "RAYE, 070 Shake — Escapism.."",
+    "answer": "RAYE, 070 Shake — Escapism..",
     "hint": "RAYE, 070 Shake",
     "difficulty": "mittel",
     "sources": {
@@ -17970,7 +17970,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Glass Animals — Heat Waves."",
+    "answer": "Glass Animals — Heat Waves.",
     "hint": "Glass Animals",
     "difficulty": "leicht",
     "sources": {
@@ -17989,7 +17989,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Song anhören und einordnen.",
-    "answer": "ÄYLIVA — Hässlich."",
+    "answer": "ÄYLIVA — Hässlich.",
     "hint": "ÄYLIVA",
     "difficulty": "mittel",
     "sources": {
@@ -18008,7 +18008,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2015,
     "cue": "Song anhören und einordnen.",
-    "answer": "Lord Huron — The Night We Met."",
+    "answer": "Lord Huron — The Night We Met.",
     "hint": "Lord Huron",
     "difficulty": "mittel",
     "sources": {
@@ -18027,7 +18027,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2013,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ärctic Monkeys — I Wanna Be Yours."",
+    "answer": "Ärctic Monkeys — I Wanna Be Yours.",
     "hint": "Ärctic Monkeys",
     "difficulty": "mittel",
     "sources": {
@@ -18046,7 +18046,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2019,
     "cue": "Song anhören und einordnen.",
-    "answer": "SLANDER, Dylan Matthew — Love Is Gone - Acoustic."",
+    "answer": "SLANDER, Dylan Matthew — Love Is Gone - Acoustic.",
     "hint": "SLANDER, Dylan Matthew",
     "difficulty": "mittel",
     "sources": {
@@ -18065,7 +18065,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Post Malone, Morgan Wallen — I Had Some Help (Feat. Morgan Wallen)."",
+    "answer": "Post Malone, Morgan Wallen — I Had Some Help (Feat. Morgan Wallen).",
     "hint": "Post Malone, Morgan Wallen",
     "difficulty": "leicht",
     "sources": {
@@ -18084,7 +18084,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2020,
     "cue": "Song anhören und einordnen.",
-    "answer": "Shawn Mendes, Justin Bieber — Monster (Shawn Mendes & Justin Bieber)."",
+    "answer": "Shawn Mendes, Justin Bieber — Monster (Shawn Mendes & Justin Bieber).",
     "hint": "Shawn Mendes, Justin Bieber",
     "difficulty": "leicht",
     "sources": {
@@ -18103,7 +18103,7 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2024,
     "cue": "Song anhören und einordnen.",
-    "answer": "Örville Peck, Kylie Minogue, Diplo — Midnight Ride."",
+    "answer": "Örville Peck, Kylie Minogue, Diplo — Midnight Ride.",
     "hint": "Örville Peck, Kylie Minogue, Diplo",
     "difficulty": "mittel",
     "sources": {

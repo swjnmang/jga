@@ -1139,7 +1139,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1977,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Star Wars: Episode IV – Ikonischer Satz der Saga.'',
+    'answer': 'Star Wars: Episode IV – Ikonischer Satz der Saga.',
     hint: 'Science-Fiction-Klassiker.',
     difficulty: 'leicht',
     sources: {
@@ -1153,7 +1153,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1972,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Der Pate (The Godfather) – Don Vito Corleone.'',
+    'answer': 'Der Pate (The Godfather) – Don Vito Corleone.',
     hint: 'Mafia-Klassiker von Francis Ford Coppola.',
     difficulty: 'mittel',
     sources: {
@@ -1167,7 +1167,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1942,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Casablanca – Rick Blaine (Humphrey Bogart).'',
+    'answer': 'Casablanca – Rick Blaine (Humphrey Bogart).',
     hint: 'Romantischer Kriegsfilm.',
     difficulty: 'schwer',
     sources: {
@@ -1181,7 +1181,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1994,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Forrest Gump – Forrest Gump (Tom Hanks).'',
+    'answer': 'Forrest Gump – Forrest Gump (Tom Hanks).',
     hint: 'Oscar-prämiertes Drama.',
     difficulty: 'leicht',
     sources: {
@@ -1195,7 +1195,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1984,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Terminator – T-800 (Arnold Schwarzenegger).'',
+    'answer': 'Terminator – T-800 (Arnold Schwarzenegger).',
     hint: 'Science-Fiction-Action mit Zeitreisen.',
     difficulty: 'leicht',
     sources: {
@@ -1209,7 +1209,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1976,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Taxi Driver – Travis Bickle (Robert De Niro).'',
+    'answer': 'Taxi Driver – Travis Bickle (Robert De Niro).',
     hint: 'Psychologisches Drama von Martin Scorsese.',
     difficulty: 'mittel',
     sources: {
@@ -1223,7 +1223,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1999,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'The Sixth Sense – Cole Sear (Haley Joel Osment).'',
+    'answer': 'The Sixth Sense – Cole Sear (Haley Joel Osment).',
     hint: 'Übernatürlicher Thriller mit Twist.',
     difficulty: 'leicht',
     sources: {
@@ -1237,7 +1237,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1939,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Vom Winde verweht – Rhett Butler (Clark Gable).'',
+    'answer': 'Vom Winde verweht – Rhett Butler (Clark Gable).',
     hint: 'Historisches Epos um den amerikanischen Bürgerkrieg.',
     difficulty: 'schwer',
     sources: {
@@ -1251,7 +1251,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1995,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Apollo 13 (Film) – Jim Lovell (Tom Hanks).'',
+    'answer': 'Apollo 13 (Film) – Jim Lovell (Tom Hanks).',
     hint: 'Raumfahrtdrama basierend auf wahren Ereignissen.',
     difficulty: 'mittel',
     sources: {
@@ -1265,7 +1265,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1992,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'A Few Good Men – Colonel Jessup (Jack Nicholson).'',
+    'answer': 'A Few Good Men – Colonel Jessup (Jack Nicholson).',
     hint: 'Gerichtsdrama im Militärkontext.',
     difficulty: 'mittel',
     sources: {
@@ -1279,7 +1279,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1987,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Dirty Dancing – Johnny Castle (Patrick Swayze).'',
+    'answer': 'Dirty Dancing – Johnny Castle (Patrick Swayze).',
     hint: 'Tanz- und Liebesfilm der 80er.',
     difficulty: 'leicht',
     sources: {
@@ -1293,7 +1293,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2011,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Game of Thrones – Motto der Stark-Familie.'',
+    'answer': 'Game of Thrones – Motto der Stark-Familie.',
     hint: 'Fantasy-Serie basierend auf Büchern von George R. R. Martin.',
     difficulty: 'leicht',
     sources: {
@@ -1307,7 +1307,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2012,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Breaking Bad – Walter White (Bryan Cranston).'',
+    'answer': 'Breaking Bad – Walter White (Bryan Cranston).',
     hint: 'Drogendrama über einen Chemielehrer.',
     difficulty: 'mittel',
     sources: {
@@ -1321,7 +1321,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2005,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'The Office (US) – Michael Scott (Steve Carell).'',
+    'answer': 'The Office (US) – Michael Scott (Steve Carell).',
     hint: 'Mockumentary-Comedy im Büro.',
     difficulty: 'leicht',
     sources: {
@@ -1335,7 +1335,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1994,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Friends – Joey Tribbiani (Matt LeBlanc).'',
+    'answer': 'Friends – Joey Tribbiani (Matt LeBlanc).',
     hint: 'Sitcom über sechs Freunde in New York.',
     difficulty: 'leicht',
     sources: {
@@ -1349,7 +1349,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1997,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Titanic – Jack Dawson (Leonardo DiCaprio).'',
+    'answer': 'Titanic – Jack Dawson (Leonardo DiCaprio).',
     hint: 'Romantisches Drama auf der Titanic.',
     difficulty: 'leicht',
     sources: {
@@ -1363,7 +1363,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1980,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Star Wars: Episode V – Darth Vader.'',
+    'answer': 'Star Wars: Episode V – Darth Vader.',
     hint: 'Berühmter Plot Twist in Star Wars.',
     difficulty: 'leicht',
     sources: {
@@ -1377,7 +1377,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2008,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'The Dark Knight – Joker (Heath Ledger).'',
+    'answer': 'The Dark Knight – Joker (Heath Ledger).',
     hint: 'Batman-Film mit unvergesslicher Schurken-Performance.',
     difficulty: 'leicht',
     sources: {
@@ -1391,7 +1391,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1974,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Der Pate II – Michael Corleone.'',
+    'answer': 'Der Pate II – Michael Corleone.',
     hint: 'Fortsetzung des Mafia-Epos.',
     difficulty: 'mittel',
     sources: {
@@ -1405,7 +1405,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1983,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Scarface – Tony Montana (Al Pacino).'',
+    'answer': 'Scarface – Tony Montana (Al Pacino).',
     hint: 'Gangsterfilm über den Aufstieg und Fall eines Drogenbosses.',
     difficulty: 'mittel',
     sources: {
@@ -1419,7 +1419,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1986,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Top Gun – Maverick und Goose.'',
+    'answer': 'Top Gun – Maverick und Goose.',
     hint: 'Action-Film über Kampfpiloten.',
     difficulty: 'mittel',
     sources: {
@@ -1433,7 +1433,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1996,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Jerry Maguire – Dorothy Boyd (Renée Zellweger).'',
+    'answer': 'Jerry Maguire – Dorothy Boyd (Renée Zellweger).',
     hint: 'Romantisches Drama über einen Sportagenten.',
     difficulty: 'mittel',
     sources: {
@@ -1447,7 +1447,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1999,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'The Matrix – Spoon Boy.'',
+    'answer': 'The Matrix – Spoon Boy.',
     hint: 'Science-Fiction über simulierte Realität.',
     difficulty: 'leicht',
     sources: {
@@ -1461,7 +1461,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1969,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Midnight Cowboy – Ratso Rizzo (Dustin Hoffman).'',
+    'answer': 'Midnight Cowboy – Ratso Rizzo (Dustin Hoffman).',
     hint: 'Drama über zwei Auüenseiter in New York.',
     difficulty: 'schwer',
     sources: {
@@ -1475,7 +1475,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1996,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Jerry Maguire – Rod Tidwell (Cuba Gooding Jr.).'',
+    'answer': 'Jerry Maguire – Rod Tidwell (Cuba Gooding Jr.).',
     hint: 'Sportagenten-Drama.',
     difficulty: 'mittel',
     sources: {
@@ -1503,7 +1503,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2001,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Der Herr der Ringe: Die Gefährten – Gandalf.'',
+    'answer': 'Der Herr der Ringe: Die Gefährten – Gandalf.',
     hint: 'Fantasy-Epos von Peter Jackson.',
     difficulty: 'leicht',
     sources: {
@@ -1517,7 +1517,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2002,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Der Herr der Ringe: Die zwei Türme – Gollum.'',
+    'answer': 'Der Herr der Ringe: Die zwei Türme – Gollum.',
     hint: 'Fantasy-Fortsetzung mit besessener Kreatur.',
     difficulty: 'leicht',
     sources: {
@@ -1531,7 +1531,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2012,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Die Tribute von Panem – Katniss Everdeen.'',
+    'answer': 'Die Tribute von Panem – Katniss Everdeen.',
     hint: 'Dystopischer Jugendfilm.',
     difficulty: 'leicht',
     sources: {
@@ -1545,7 +1545,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2011,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Harry Potter und die Heiligtümer des Todes – Teil 2 – Severus Snape.'',
+    'answer': 'Harry Potter und die Heiligtümer des Todes – Teil 2 – Severus Snape.',
     hint: 'Abschluss der Harry Potter-Filmreihe.',
     difficulty: 'leicht',
     sources: {
@@ -1559,7 +1559,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2003,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Findet Nemo – Dory.'',
+    'answer': 'Findet Nemo – Dory.',
     hint: 'Pixar-Animationsfilm über einen Clownfisch.',
     difficulty: 'leicht',
     sources: {
@@ -1573,7 +1573,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1995,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Toy Story – Buzz Lightyear.'',
+    'answer': 'Toy Story – Buzz Lightyear.',
     hint: 'Erster vollständig computeranimierter Spielfilm.',
     difficulty: 'leicht',
     sources: {
@@ -1587,7 +1587,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1994,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Forrest Gump – Jenny Curran.'',
+    'answer': 'Forrest Gump – Jenny Curran.',
     hint: 'Drama mit Tom Hanks.',
     difficulty: 'leicht',
     sources: {
@@ -1601,7 +1601,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1980,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    'answer': 'Fame (Song) – Irene Cara.'',
+    'answer': 'Fame (Song) – Irene Cara.',
     hint: 'Titelsong des gleichnamigen Films.',
     difficulty: 'mittel',
     sources: {
