@@ -258,47 +258,36 @@ function SettingsPageContent() {
       <section className="card-surface rounded-2xl p-5 space-y-4">
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-lg font-semibold">Kategorien</h2>
-          <p className="text-xs text-ink/60">Wähle Kategorien aus, die du spielen möchtest</p>
+          <p className="text-xs text-ink/60">Wenig ← → Viel</p>
         </div>
-        <div className="space-y-3">
-          <label className="flex items-center gap-3 cursor-pointer p-3 rounded-xl bg-ink/5 border border-ink/20">
+        <div className="space-y-2">
+          <label className="flex items-center gap-3 cursor-pointer p-2 rounded-lg bg-ink/5 border border-ink/20">
             <input
               type="checkbox"
               checked={availableCategories.every(cat => settings.categoryWeights[cat] > 0)}
               onChange={toggleAllCategories}
               className="h-5 w-5 accent-sky-700"
             />
-            <span className="text-sm font-semibold">Alle Kategorien an/aus</span>
+            <span className="text-sm font-semibold">Alle an/aus</span>
           </label>
-          <div className="space-y-2">
+          <div className="space-y-1">
             {availableCategories.map((category) => {
               const isActive = settings.categoryWeights[category] > 0;
               const value = settings.categoryWeights[category] ?? 0;
-              const triviaOnly = TRIVIA_ONLY_CATEGORIES.includes(category);
               return (
-                <div key={category} className="space-y-2">
-                  <label className="flex items-center gap-3 cursor-pointer">
+                <div key={category} className="space-y-1">
+                  <label className="flex items-center gap-3 cursor-pointer py-1">
                     <input
                       type="checkbox"
                       checked={isActive}
                       onChange={() => toggleCategory(category)}
                       className="h-5 w-5 accent-sky-700"
                     />
-                    <span className="text-sm font-medium capitalize">{categoryLabels[category] ?? category}</span>
-                    {triviaOnly && (
-                      <span className="rounded-full bg-ink text-inkDark px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide">Trivia only</span>
-                    )}
+                    <span className="text-sm font-medium capitalize flex-1">{categoryLabels[category] ?? category}</span>
+                    {isActive && <span className="text-xs text-ink/60 font-semibold">{value}%</span>}
                   </label>
                   {isActive && (
-                    <div className="ml-8 space-y-2">
-                      <label className="flex items-center justify-between text-sm text-ink/70">
-                        <div className="flex items-center gap-2">
-                          <span className="uppercase tracking-wide text-[11px]">Wenig</span>
-                          <div className="h-px w-8 bg-ink/20" aria-hidden />
-                          <span className="uppercase tracking-wide text-[11px]">Viel</span>
-                        </div>
-                        <span className="font-semibold text-ink">{value}%</span>
-                      </label>
+                    <div className="ml-8 -mt-1">
                       <input
                         type="range"
                         min={1}
