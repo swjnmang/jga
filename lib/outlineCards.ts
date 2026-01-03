@@ -1659,9 +1659,9 @@ export const outlineCards: Card[] = [
     "id": "outline-ky",
     "title": "Umriss Kaimaninseln",
     "category": "country",
-    "year": 1900,
+    "year": 2009,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Kaimaninseln – 2009, Verfassungsordnung.",
+    "answer": "Kaimaninseln – Verfassungsordnung.",
     "hint": "Kaimaninseln",
     "difficulty": "schwer",
     "sources": {

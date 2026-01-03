@@ -14,7 +14,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 1991,
     cue: 'Starte den Song und ordne ihn zeitlich ein.',
-    answer: 'Nirvana „ Release 1991 auf dem Album Nevermind.',
+    answer: 'Nirvana — Nevermind.',
     hint: 'Grunge aus Seattle.',
     difficulty: 'mittel',
     sources: {
@@ -66,7 +66,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 2010,
     cue: 'Song anhören und einordnen.',
-    answer: 'Adele " 2010, Album 21.',
+    answer: 'Adele — Album 21.',
     hint: 'Londoner Sängerin, Durchbruch-Single.',
     difficulty: 'leicht',
     sources: {
@@ -79,7 +79,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 1975,
     cue: 'Song anhören und einordnen.',
-    answer: 'Queen " 1975, Album A Night at the Opera.',
+    answer: 'Queen — Album A Night at the Opera.',
     hint: 'Opernartige Rock-Hymne.',
     difficulty: 'mittel',
     sources: {
@@ -92,7 +92,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 1982,
     cue: 'Song anhören und einordnen.',
-    answer: 'Michael Jackson " 1982, Album Thriller.',
+    answer: 'Michael Jackson — Album Thriller.',
     hint: 'King of Pop.',
     difficulty: 'mittel',
     sources: {
@@ -105,7 +105,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 2017,
     cue: 'Song anhören und einordnen.',
-    answer: 'Ed Sheeran " 2017, Album ".',
+    answer: 'Ed Sheeran — Album ".',
     hint: 'Pop-Hit aus UK.',
     difficulty: 'leicht',
     sources: {
@@ -118,7 +118,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 2019,
     cue: 'Song anhören und einordnen.',
-    answer: 'The Weeknd " 2019, Album After Hours.',
+    answer: 'The Weeknd — Album After Hours.',
     hint: 'Synthwave-Revival.',
     difficulty: 'leicht',
     sources: {
@@ -131,7 +131,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 1985,
     cue: 'Song anhören und einordnen.',
-    answer: 'a-ha " 1985, Album Hunting High and Low.',
+    answer: 'a-ha — Album Hunting High and Low.',
     hint: 'Norwegische Synth-Pop-Band.',
     difficulty: 'mittel',
     sources: {
@@ -157,7 +157,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2001,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Nelson Mandela, 2001.',
+    answer: 'Nelson Mandela.',
     hint: 'S"dafrika, Vers"hnung.',
     difficulty: 'mittel',
     sources: {
@@ -184,7 +184,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 1977,
     cue: 'Song anspielen und zeitlich einordnen.',
-    answer: 'David Bowie " 1977, aus dem Album "Heroes".',
+    answer: 'David Bowie — aus dem Album "Heroes".',
     hint: 'Aufgenommen in Berlin.',
     difficulty: 'mittel',
     sources: {
@@ -197,7 +197,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 1971,
     cue: 'Song anhören und einordnen.',
-    answer: 'John Lennon " 1971, Friedenshymne.',
+    answer: 'John Lennon — Friedenshymne.',
     hint: 'Ehemaliger Beatle.',
     difficulty: 'leicht',
     sources: {
@@ -210,7 +210,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 1976,
     cue: 'Song anhören und einordnen.',
-    answer: 'Eagles " 1976, Klassiker der Westküte.',
+    answer: 'Eagles — Klassiker der Westküte.',
     hint: 'Kalifornische Rockband.',
     difficulty: 'mittel',
     sources: {
@@ -223,7 +223,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 2003,
     cue: 'Song anhören und einordnen.',
-    answer: 'OutKast " 2003, aus Speakerboxxx/The Love Below.',
+    answer: 'OutKast — aus Speakerboxxx/The Love Below.',
     hint: 'Shake it like a Polaroid picture.',
     difficulty: 'leicht',
     sources: {
@@ -236,7 +236,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 2002,
     cue: 'Song anhören und einordnen.',
-    answer: 'Eminem " 2002, Soundtrack zu 8 Mile.',
+    answer: 'Eminem — Soundtrack zu 8 Mile.',
     hint: 'Der Moment, eine Chance.',
     difficulty: 'mittel',
     sources: {
@@ -249,7 +249,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 2003,
     cue: 'Song anhören und einordnen.',
-    answer: 'The White Stripes " 2003, markante Basslinie.',
+    answer: 'The White Stripes — markante Basslinie.',
     hint: 'Zweier-Band aus Detroit.',
     difficulty: 'leicht',
     sources: {
@@ -262,7 +262,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 2019,
     cue: 'Song anhören und einordnen.',
-    answer: 'Billie Eilish " 2019, Deb"talbum When We All Fall Asleep.',
+    answer: 'Billie Eilish — Deb"talbum When We All Fall Asleep.',
     hint: 'Flüterpop mit Bass.',
     difficulty: 'leicht',
     sources: {
@@ -275,7 +275,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 2013,
     cue: 'Song anhören und einordnen.',
-    answer: 'Daft Punk feat. Pharrell Williams " 2013.',
+    answer: 'Daft Punk feat. Pharrell Williams.',
     hint: 'Franzüisches Duo mit Helmen.',
     difficulty: 'leicht',
     sources: {
@@ -288,7 +288,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 2008,
     cue: 'Song anhören und einordnen.',
-    answer: 'Coldplay " 2008, Album Viva la Vida or Death and All His Friends.',
+    answer: 'Coldplay — Album Viva la Vida or Death and All His Friends.',
     hint: 'Britische Band mit Streicher-Hook.',
     difficulty: 'leicht',
     sources: {
@@ -301,7 +301,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 2006,
     cue: 'Song anhören und einordnen.',
-    answer: 'Shakira feat. Wyclef Jean " 2006.',
+    answer: 'Shakira feat. Wyclef Jean.',
     hint: 'Kolumbianische Sängerin, weltweiter Tanzhit.',
     difficulty: 'leicht',
     sources: {
@@ -314,7 +314,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 1977,
     cue: 'Song anhören und einordnen.',
-    answer: 'Fleetwood Mac " 1977, Album Rumours.',
+    answer: 'Fleetwood Mac — Album Rumours.',
     hint: 'Soft-Rock-Klassiker.',
     difficulty: 'mittel',
     sources: {
@@ -327,7 +327,7 @@ const baseCards: Card[] = [
     category: 'music',
     year: 1999,
     cue: 'Song anhören und einordnen.',
-    answer: 'Backstreet Boys " 1999, Boyband-Evergreen.',
+    answer: 'Backstreet Boys — Boyband-Evergreen.',
     hint: 'Tell me why.',
     difficulty: 'leicht',
     sources: {
@@ -437,7 +437,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1989,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Aus Dead Poets Society, 1989 „ Ermutigung, den Tag zu nutzen.',
+    answer: 'Aus Dead Poets Society — Ermutigung, den Tag zu nutzen.',
     hint: 'Literaturlehrer inspiriert seine Klasse.',
     difficulty: 'mittel',
     sources: {
@@ -856,7 +856,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1986,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Norbert Bl"m, 1986 "Die Rente ist sicher." in einer Pressekonferenz zur Rentenreform.',
+    answer: 'Norbert Bl"m "Die Rente ist sicher." in einer Pressekonferenz zur Rentenreform.',
     hint: 'Bundesarbeitsminister.',
     difficulty: 'mittel',
     sources: { text: 'Die Rente ist sicher.' }
@@ -867,7 +867,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2006,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Hape Kerkeling, 2006 „ Buchtitel und gefl"geltes Wort "ber seine Pilgerreise auf dem Jakobsweg.',
+    answer: 'Hape Kerkeling — Buchtitel und gefl"geltes Wort "ber seine Pilgerreise auf dem Jakobsweg.',
     hint: 'Comedian, Jakobsweg.',
     difficulty: 'leicht',
     sources: { text: 'Ich bin dann mal weg.' }
@@ -917,7 +917,7 @@ const baseCards: Card[] = [
     category: 'country',
     year: 1981,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Spanien „ Rot-Gelb-Rot mit Wappen, 1981.',
+    answer: 'Spanien „ Rot-Gelb-Rot mit Wappen.',
     hint: 'Mittelstreifen doppelt so breit.',
     difficulty: 'leicht',
     sources: {
@@ -969,7 +969,7 @@ const baseCards: Card[] = [
     category: 'country',
     year: 1949,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Volksrepublik China „ Rot mit f"nf Sternen, 1949.',
+    answer: 'Volksrepublik China „ Rot mit f"nf Sternen.',
     hint: 'Ein gro"er, vier kleine Sterne.',
     difficulty: 'leicht',
     sources: {
@@ -982,7 +982,7 @@ const baseCards: Card[] = [
     category: 'country',
     year: 1889,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Brasilien „ Gr"n, Gelb-Raute und Sternenkugel, 1889.',
+    answer: 'Brasilien „ Gr"n, Gelb-Raute und Sternenkugel.',
     hint: 'Ordem e Progresso.',
     difficulty: 'mittel',
     sources: {
@@ -995,7 +995,7 @@ const baseCards: Card[] = [
     category: 'country',
     year: 1947,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Indien „ Safran, Wei", Gr"n mit Ashoka-Chakra, 1947.',
+    answer: 'Indien „ Safran, Wei", Gr"n mit Ashoka-Chakra.',
     hint: '24-Speichen-Rad.',
     difficulty: 'mittel',
     sources: {
@@ -1008,7 +1008,7 @@ const baseCards: Card[] = [
     category: 'country',
     year: 1903,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Australien „ Union Jack, Commonwealth Star und S"dliches Kreuz, 1903.',
+    answer: 'Australien „ Union Jack, Commonwealth Star und S"dliches Kreuz.',
     hint: 'Blau mit Sternbildern.',
     difficulty: 'mittel',
     sources: {
@@ -1021,7 +1021,7 @@ const baseCards: Card[] = [
     category: 'country',
     year: 1965,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Kanada „ Ahornblatt auf Rot-Wei"-Rot, 1965.',
+    answer: 'Kanada „ Ahornblatt auf Rot-Wei"-Rot.',
     hint: 'Rotes Ahornblatt.',
     difficulty: 'leicht',
     sources: {
@@ -1034,7 +1034,7 @@ const baseCards: Card[] = [
     category: 'country',
     year: 1994,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'S"dafrika „ Y-Form mit sechs Farben, 1994.',
+    answer: 'S"dafrika „ Y-Form mit sechs Farben.',
     hint: 'Post-Apartheid Symbol.',
     difficulty: 'mittel',
     sources: {
@@ -1047,7 +1047,7 @@ const baseCards: Card[] = [
     category: 'country',
     year: 1906,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Schweden „ Blau mit gelbem Kreuz, 1906.',
+    answer: 'Schweden „ Blau mit gelbem Kreuz.',
     hint: 'Nordisches Kreuz.',
     difficulty: 'mittel',
     sources: {
@@ -1060,7 +1060,7 @@ const baseCards: Card[] = [
     category: 'country',
     year: 1821,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Norwegen „ Rot mit blauem Kreuz, 1821.',
+    answer: 'Norwegen „ Rot mit blauem Kreuz.',
     hint: 'Nordisches Kreuz mit Wei" und Blau.',
     difficulty: 'mittel',
     sources: {
@@ -1073,7 +1073,7 @@ const baseCards: Card[] = [
     category: 'country',
     year: 1918,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Finnland „ Wei" mit blauem Kreuz, 1918.',
+    answer: 'Finnland „ Wei" mit blauem Kreuz.',
     hint: 'Seen, Schnee, Blau-Wei".',
     difficulty: 'mittel',
     sources: {
@@ -1086,7 +1086,7 @@ const baseCards: Card[] = [
     category: 'country',
     year: 1818,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Argentinien „ Hellblau-Wei" mit Sonne, 1818.',
+    answer: 'Argentinien „ Hellblau-Wei" mit Sonne.',
     hint: 'Sonne der Mai-Revolution.',
     difficulty: 'mittel',
     sources: {
@@ -1099,7 +1099,7 @@ const baseCards: Card[] = [
     category: 'country',
     year: 1968,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Mexiko „ Gr"n, Wei", Rot mit Adler und Schlange, 1968.',
+    answer: 'Mexiko „ Gr"n, Wei", Rot mit Adler und Schlange.',
     hint: 'Tricolore mit Wappen.',
     difficulty: 'mittel',
     sources: {
@@ -1112,7 +1112,7 @@ const baseCards: Card[] = [
     category: 'country',
     year: 1889,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Schweiz „ Rotes Quadrat mit wei"em Kreuz, 1889.',
+    answer: 'Schweiz „ Rotes Quadrat mit wei"em Kreuz.',
     hint: 'Quadratische Flagge.',
     difficulty: 'leicht',
     sources: {
@@ -1125,7 +1125,7 @@ const baseCards: Card[] = [
     category: 'country',
     year: 1937,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
-    answer: 'Niederlande „ Rot, Wei", Blau, 1937.',
+    answer: 'Niederlande „ Rot, Wei", Blau.',
     hint: 'Waagerechte Tricolore.',
     difficulty: 'leicht',
     sources: {
@@ -1139,7 +1139,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1977,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Star Wars: Episode IV, 1977 – Ikonischer Satz der Saga.',
+    'answer': 'Star Wars: Episode IV – Ikonischer Satz der Saga.'',
     hint: 'Science-Fiction-Klassiker.',
     difficulty: 'leicht',
     sources: {
@@ -1153,7 +1153,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1972,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Der Pate (The Godfather), 1972 – Don Vito Corleone.',
+    'answer': 'Der Pate (The Godfather) – Don Vito Corleone.'',
     hint: 'Mafia-Klassiker von Francis Ford Coppola.',
     difficulty: 'mittel',
     sources: {
@@ -1167,7 +1167,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1942,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Casablanca, 1942 – Rick Blaine (Humphrey Bogart).',
+    'answer': 'Casablanca – Rick Blaine (Humphrey Bogart).'',
     hint: 'Romantischer Kriegsfilm.',
     difficulty: 'schwer',
     sources: {
@@ -1181,7 +1181,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1994,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Forrest Gump, 1994 – Forrest Gump (Tom Hanks).',
+    'answer': 'Forrest Gump – Forrest Gump (Tom Hanks).'',
     hint: 'Oscar-prämiertes Drama.',
     difficulty: 'leicht',
     sources: {
@@ -1195,7 +1195,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1984,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Terminator, 1984 – T-800 (Arnold Schwarzenegger).',
+    'answer': 'Terminator – T-800 (Arnold Schwarzenegger).'',
     hint: 'Science-Fiction-Action mit Zeitreisen.',
     difficulty: 'leicht',
     sources: {
@@ -1209,7 +1209,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1976,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Taxi Driver, 1976 – Travis Bickle (Robert De Niro).',
+    'answer': 'Taxi Driver – Travis Bickle (Robert De Niro).'',
     hint: 'Psychologisches Drama von Martin Scorsese.',
     difficulty: 'mittel',
     sources: {
@@ -1223,7 +1223,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1999,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'The Sixth Sense, 1999 – Cole Sear (Haley Joel Osment).',
+    'answer': 'The Sixth Sense – Cole Sear (Haley Joel Osment).'',
     hint: 'Übernatürlicher Thriller mit Twist.',
     difficulty: 'leicht',
     sources: {
@@ -1237,7 +1237,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1939,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Vom Winde verweht, 1939 – Rhett Butler (Clark Gable).',
+    'answer': 'Vom Winde verweht – Rhett Butler (Clark Gable).'',
     hint: 'Historisches Epos um den amerikanischen Bürgerkrieg.',
     difficulty: 'schwer',
     sources: {
@@ -1251,7 +1251,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1995,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Apollo 13 (Film), 1995 – Jim Lovell (Tom Hanks).',
+    'answer': 'Apollo 13 (Film) – Jim Lovell (Tom Hanks).'',
     hint: 'Raumfahrtdrama basierend auf wahren Ereignissen.',
     difficulty: 'mittel',
     sources: {
@@ -1265,7 +1265,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1992,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'A Few Good Men, 1992 – Colonel Jessup (Jack Nicholson).',
+    'answer': 'A Few Good Men – Colonel Jessup (Jack Nicholson).'',
     hint: 'Gerichtsdrama im Militärkontext.',
     difficulty: 'mittel',
     sources: {
@@ -1279,7 +1279,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1987,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Dirty Dancing, 1987 – Johnny Castle (Patrick Swayze).',
+    'answer': 'Dirty Dancing – Johnny Castle (Patrick Swayze).'',
     hint: 'Tanz- und Liebesfilm der 80er.',
     difficulty: 'leicht',
     sources: {
@@ -1293,7 +1293,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2011,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Game of Thrones, 2011 – Motto der Stark-Familie.',
+    'answer': 'Game of Thrones – Motto der Stark-Familie.'',
     hint: 'Fantasy-Serie basierend auf Büchern von George R. R. Martin.',
     difficulty: 'leicht',
     sources: {
@@ -1307,7 +1307,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2012,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Breaking Bad, 2012 – Walter White (Bryan Cranston).',
+    'answer': 'Breaking Bad – Walter White (Bryan Cranston).'',
     hint: 'Drogendrama über einen Chemielehrer.',
     difficulty: 'mittel',
     sources: {
@@ -1321,7 +1321,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2005,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'The Office (US), 2005 – Michael Scott (Steve Carell).',
+    'answer': 'The Office (US) – Michael Scott (Steve Carell).'',
     hint: 'Mockumentary-Comedy im Büro.',
     difficulty: 'leicht',
     sources: {
@@ -1335,7 +1335,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1994,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Friends, 1994 – Joey Tribbiani (Matt LeBlanc).',
+    'answer': 'Friends – Joey Tribbiani (Matt LeBlanc).'',
     hint: 'Sitcom über sechs Freunde in New York.',
     difficulty: 'leicht',
     sources: {
@@ -1349,7 +1349,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1997,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Titanic, 1997 – Jack Dawson (Leonardo DiCaprio).',
+    'answer': 'Titanic – Jack Dawson (Leonardo DiCaprio).'',
     hint: 'Romantisches Drama auf der Titanic.',
     difficulty: 'leicht',
     sources: {
@@ -1363,7 +1363,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1980,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Star Wars: Episode V, 1980 – Darth Vader.',
+    'answer': 'Star Wars: Episode V – Darth Vader.'',
     hint: 'Berühmter Plot Twist in Star Wars.',
     difficulty: 'leicht',
     sources: {
@@ -1377,7 +1377,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2008,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'The Dark Knight, 2008 – Joker (Heath Ledger).',
+    'answer': 'The Dark Knight – Joker (Heath Ledger).'',
     hint: 'Batman-Film mit unvergesslicher Schurken-Performance.',
     difficulty: 'leicht',
     sources: {
@@ -1391,7 +1391,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1974,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Der Pate II, 1974 – Michael Corleone.',
+    'answer': 'Der Pate II – Michael Corleone.'',
     hint: 'Fortsetzung des Mafia-Epos.',
     difficulty: 'mittel',
     sources: {
@@ -1405,7 +1405,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1983,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Scarface, 1983 – Tony Montana (Al Pacino).',
+    'answer': 'Scarface – Tony Montana (Al Pacino).'',
     hint: 'Gangsterfilm über den Aufstieg und Fall eines Drogenbosses.',
     difficulty: 'mittel',
     sources: {
@@ -1419,7 +1419,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1986,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Top Gun, 1986 – Maverick und Goose.',
+    'answer': 'Top Gun – Maverick und Goose.'',
     hint: 'Action-Film über Kampfpiloten.',
     difficulty: 'mittel',
     sources: {
@@ -1433,7 +1433,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1996,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Jerry Maguire, 1996 – Dorothy Boyd (Renée Zellweger).',
+    'answer': 'Jerry Maguire – Dorothy Boyd (Renée Zellweger).'',
     hint: 'Romantisches Drama über einen Sportagenten.',
     difficulty: 'mittel',
     sources: {
@@ -1447,7 +1447,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1999,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'The Matrix, 1999 – Spoon Boy.',
+    'answer': 'The Matrix – Spoon Boy.'',
     hint: 'Science-Fiction über simulierte Realität.',
     difficulty: 'leicht',
     sources: {
@@ -1461,7 +1461,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1969,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Midnight Cowboy, 1969 – Ratso Rizzo (Dustin Hoffman).',
+    'answer': 'Midnight Cowboy – Ratso Rizzo (Dustin Hoffman).'',
     hint: 'Drama über zwei Auüenseiter in New York.',
     difficulty: 'schwer',
     sources: {
@@ -1475,7 +1475,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1996,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Jerry Maguire, 1996 – Rod Tidwell (Cuba Gooding Jr.).',
+    'answer': 'Jerry Maguire – Rod Tidwell (Cuba Gooding Jr.).'',
     hint: 'Sportagenten-Drama.',
     difficulty: 'mittel',
     sources: {
@@ -1489,7 +1489,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1988,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Stirb langsam, 1988 – John McClane (Bruce Willis).',
+    answer: 'Stirb langsam – John McClane (Bruce Willis).',
     hint: 'Action-Thriller in einem Hochhaus.',
     difficulty: 'leicht',
     sources: {
@@ -1503,7 +1503,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2001,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Der Herr der Ringe: Die Gefährten, 2001 – Gandalf.',
+    'answer': 'Der Herr der Ringe: Die Gefährten – Gandalf.'',
     hint: 'Fantasy-Epos von Peter Jackson.',
     difficulty: 'leicht',
     sources: {
@@ -1517,7 +1517,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2002,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Der Herr der Ringe: Die zwei Türme, 2002 – Gollum.',
+    'answer': 'Der Herr der Ringe: Die zwei Türme – Gollum.'',
     hint: 'Fantasy-Fortsetzung mit besessener Kreatur.',
     difficulty: 'leicht',
     sources: {
@@ -1531,7 +1531,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2012,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Die Tribute von Panem, 2012 – Katniss Everdeen.',
+    'answer': 'Die Tribute von Panem – Katniss Everdeen.'',
     hint: 'Dystopischer Jugendfilm.',
     difficulty: 'leicht',
     sources: {
@@ -1545,7 +1545,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2011,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Harry Potter und die Heiligtümer des Todes – Teil 2, 2011 – Severus Snape.',
+    'answer': 'Harry Potter und die Heiligtümer des Todes – Teil 2 – Severus Snape.'',
     hint: 'Abschluss der Harry Potter-Filmreihe.',
     difficulty: 'leicht',
     sources: {
@@ -1559,7 +1559,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2003,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Findet Nemo, 2003 – Dory.',
+    'answer': 'Findet Nemo – Dory.'',
     hint: 'Pixar-Animationsfilm über einen Clownfisch.',
     difficulty: 'leicht',
     sources: {
@@ -1573,7 +1573,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1995,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Toy Story, 1995 – Buzz Lightyear.',
+    'answer': 'Toy Story – Buzz Lightyear.'',
     hint: 'Erster vollständig computeranimierter Spielfilm.',
     difficulty: 'leicht',
     sources: {
@@ -1587,7 +1587,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1994,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Forrest Gump, 1994 – Jenny Curran.',
+    'answer': 'Forrest Gump – Jenny Curran.'',
     hint: 'Drama mit Tom Hanks.',
     difficulty: 'leicht',
     sources: {
@@ -1601,7 +1601,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1980,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Fame (Song), 1980 – Irene Cara.',
+    'answer': 'Fame (Song) – Irene Cara.'',
     hint: 'Titelsong des gleichnamigen Films.',
     difficulty: 'mittel',
     sources: {
@@ -1615,7 +1615,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1993,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'What Is Love – Haddaway, 1993.',
+    answer: 'What Is Love – Haddaway.',
     hint: 'Eurodance-Hit.',
     difficulty: 'leicht',
     sources: {
@@ -1629,7 +1629,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1987,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Sweet Child O\' Mine – Guns N\' Roses, 1987.',
+    answer: 'Sweet Child O\' Mine – Guns N\' Roses.',
     hint: 'Hard-Rock-Klassiker.',
     difficulty: 'mittel',
     sources: {
@@ -1643,7 +1643,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1984,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'I Want to Break Free – Queen, 1984.',
+    answer: 'I Want to Break Free – Queen.',
     hint: 'Rock-Hymne über Befreiung.',
     difficulty: 'mittel',
     sources: {
@@ -1657,7 +1657,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1981,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Don\'t Stop Believin\' – Journey, 1981.',
+    answer: 'Don\'t Stop Believin\' – Journey.',
     hint: 'Arena-Rock-Hymne.',
     difficulty: 'leicht',
     sources: {
@@ -1671,7 +1671,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1971,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Imagine – John Lennon, 1971.',
+    answer: 'Imagine – John Lennon.',
     hint: 'Friedenshymne eines Beatles.',
     difficulty: 'leicht',
     sources: {
@@ -1685,7 +1685,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1977,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'We Are the Champions – Queen, 1977.',
+    answer: 'We Are the Champions – Queen.',
     hint: 'Siegeshymne im Sport.',
     difficulty: 'leicht',
     sources: {
@@ -1699,7 +1699,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1983,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Every Breath You Take – The Police, 1983.',
+    answer: 'Every Breath You Take – The Police.',
     hint: 'Song über Besessenheit.',
     difficulty: 'mittel',
     sources: {
@@ -1713,7 +1713,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1991,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Smells Like Teen Spirit – Nirvana, 1991.',
+    answer: 'Smells Like Teen Spirit – Nirvana.',
     hint: 'Grunge-Hymne der 90er.',
     difficulty: 'mittel',
     sources: {
@@ -1727,7 +1727,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1986,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Livin\' on a Prayer – Bon Jovi, 1986.',
+    answer: 'Livin\' on a Prayer – Bon Jovi.',
     hint: 'Rock-Anthem der 80er.',
     difficulty: 'leicht',
     sources: {
@@ -1741,7 +1741,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2002,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Lose Yourself – Eminem, 2002.',
+    answer: 'Lose Yourself – Eminem.',
     hint: 'Rap-Song aus dem Film 8 Mile.',
     difficulty: 'leicht',
     sources: {
@@ -1755,7 +1755,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1968,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Hey Jude – The Beatles, 1968.',
+    answer: 'Hey Jude – The Beatles.',
     hint: 'Längster Beatles-Hit.',
     difficulty: 'leicht',
     sources: {
@@ -1769,7 +1769,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1976,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Hotel California – Eagles, 1976.',
+    answer: 'Hotel California – Eagles.',
     hint: 'Klassischer Rock über den American Dream.',
     difficulty: 'mittel',
     sources: {
@@ -1783,7 +1783,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1971,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Stairway to Heaven – Led Zeppelin, 1971.',
+    answer: 'Stairway to Heaven – Led Zeppelin.',
     hint: 'Epischer Rock-Song.',
     difficulty: 'mittel',
     sources: {
@@ -1797,7 +1797,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1976,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Somebody to Love – Queen, 1976.',
+    answer: 'Somebody to Love – Queen.',
     hint: 'Gospel-beeinflusster Rock.',
     difficulty: 'mittel',
     sources: {
@@ -1811,7 +1811,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1982,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Billie Jean – Michael Jackson, 1982.',
+    answer: 'Billie Jean – Michael Jackson.',
     hint: 'King of Pop.',
     difficulty: 'leicht',
     sources: {
@@ -1825,7 +1825,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1982,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Thriller – Michael Jackson, 1982.',
+    answer: 'Thriller – Michael Jackson.',
     hint: 'Meistverkauftes Album aller Zeiten.',
     difficulty: 'leicht',
     sources: {
@@ -1839,7 +1839,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1984,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Like a Virgin – Madonna, 1984.',
+    answer: 'Like a Virgin – Madonna.',
     hint: 'Pop-Ikone der 80er.',
     difficulty: 'leicht',
     sources: {
@@ -1853,7 +1853,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1992,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'I Will Always Love You – Whitney Houston, 1992.',
+    answer: 'I Will Always Love You – Whitney Houston.',
     hint: 'Power-Ballade aus The Bodyguard.',
     difficulty: 'leicht',
     sources: {
@@ -1867,7 +1867,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2010,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Rolling in the Deep – Adele, 2010.',
+    answer: 'Rolling in the Deep – Adele.',
     hint: 'Soul-Pop-Hit.',
     difficulty: 'leicht',
     sources: {
@@ -1881,7 +1881,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2011,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Somebody That I Used to Know – Gotye, 2011.',
+    answer: 'Somebody That I Used to Know – Gotye.',
     hint: 'Indie-Pop-Hit.',
     difficulty: 'leicht',
     sources: {
@@ -1895,7 +1895,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2013,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Happy – Pharrell Williams, 2013.',
+    answer: 'Happy – Pharrell Williams.',
     hint: 'Feelgood-Song aus Despicable Me 2.',
     difficulty: 'leicht',
     sources: {
@@ -1909,7 +1909,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2014,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Uptown Funk – Mark Ronson ft. Bruno Mars, 2014.',
+    answer: 'Uptown Funk – Mark Ronson ft. Bruno Mars.',
     hint: 'Funk-Pop-Hit.',
     difficulty: 'leicht',
     sources: {
@@ -1923,7 +1923,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2017,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Shape of You – Ed Sheeran, 2017.',
+    answer: 'Shape of You – Ed Sheeran.',
     hint: 'Meistgestreamter Song auf Spotify.',
     difficulty: 'leicht',
     sources: {
@@ -1937,7 +1937,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2014,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Thinking Out Loud – Ed Sheeran, 2014.',
+    answer: 'Thinking Out Loud – Ed Sheeran.',
     hint: 'Romantische Ballade.',
     difficulty: 'leicht',
     sources: {
@@ -1951,7 +1951,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2017,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Despacito – Luis Fonsi ft. Daddy Yankee, 2017.',
+    answer: 'Despacito – Luis Fonsi ft. Daddy Yankee.',
     hint: 'Lateinamerikanischer Welthit.',
     difficulty: 'leicht',
     sources: {
@@ -1965,7 +1965,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2019,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Old Town Road – Lil Nas X, 2019.',
+    answer: 'Old Town Road – Lil Nas X.',
     hint: 'Country-Rap-Crossover.',
     difficulty: 'leicht',
     sources: {
@@ -1979,7 +1979,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2019,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Blinding Lights – The Weeknd, 2019.',
+    answer: 'Blinding Lights – The Weeknd.',
     hint: 'Synthwave-Pop-Hit.',
     difficulty: 'leicht',
     sources: {
@@ -1993,7 +1993,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2019,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'bad guy – Billie Eilish, 2019.',
+    answer: 'bad guy – Billie Eilish.',
     hint: 'Alternative Pop von Billie Eilish.',
     difficulty: 'leicht',
     sources: {
@@ -2007,7 +2007,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2019,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Señorita – Shawn Mendes & Camila Cabello, 2019.',
+    answer: 'Señorita – Shawn Mendes & Camila Cabello.',
     hint: 'Duett zweier Pop-Stars.',
     difficulty: 'leicht',
     sources: {
@@ -2021,7 +2021,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2017,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Believer – Imagine Dragons, 2017.',
+    answer: 'Believer – Imagine Dragons.',
     hint: 'Alternative Rock-Hymne.',
     difficulty: 'leicht',
     sources: {
@@ -2035,7 +2035,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2012,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Radioactive – Imagine Dragons, 2012.',
+    answer: 'Radioactive – Imagine Dragons.',
     hint: 'Alternative Rock über Neuanfang.',
     difficulty: 'leicht',
     sources: {
@@ -2049,7 +2049,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2016,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Can\'t Stop the Feeling! – Justin Timberlake, 2016.',
+    answer: 'Can\'t Stop the Feeling! – Justin Timberlake.',
     hint: 'Pop-Song aus Trolls.',
     difficulty: 'leicht',
     sources: {
@@ -2063,7 +2063,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2013,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Counting Stars – OneRepublic, 2013.',
+    answer: 'Counting Stars – OneRepublic.',
     hint: 'Pop-Rock über Träume.',
     difficulty: 'leicht',
     sources: {
@@ -2077,7 +2077,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2013,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Let It Go – Idina Menzel (Die Eiskönigin), 2013.',
+    answer: 'Let It Go – Idina Menzel (Die Eiskönigin).',
     hint: 'Disney-Song aus Frozen.',
     difficulty: 'leicht',
     sources: {
@@ -2091,7 +2091,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1996,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Wannabe – Spice Girls, 1996.',
+    answer: 'Wannabe – Spice Girls.',
     hint: 'Debut-Hit der Spice Girls.',
     difficulty: 'leicht',
     sources: {
@@ -2105,7 +2105,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1998,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: '...Baby One More Time – Britney Spears, 1998.',
+    answer: '...Baby One More Time – Britney Spears.',
     hint: 'Britney Spears\' Durchbruch.',
     difficulty: 'leicht',
     sources: {
@@ -2119,7 +2119,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2003,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Toxic – Britney Spears, 2003.',
+    answer: 'Toxic – Britney Spears.',
     hint: 'Pop-Hit mit Streichern.',
     difficulty: 'leicht',
     sources: {
@@ -2133,7 +2133,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2007,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Umbrella – Rihanna ft. Jay-Z, 2007.',
+    answer: 'Umbrella – Rihanna ft. Jay-Z.',
     hint: 'Pop-R&B-Hit.',
     difficulty: 'leicht',
     sources: {
@@ -2147,7 +2147,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2008,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Viva la Vida – Coldplay, 2008.',
+    answer: 'Viva la Vida – Coldplay.',
     hint: 'Alternative Rock inspiriert von Revolution.',
     difficulty: 'leicht',
     sources: {
@@ -2161,7 +2161,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1983,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: '99 Luftballons – Nena, 1983.',
+    answer: '99 Luftballons – Nena.',
     hint: 'Deutscher New-Wave-Hit.',
     difficulty: 'leicht',
     sources: {
@@ -2175,7 +2175,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1983,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Major Tom – Peter Schilling, 1983.',
+    answer: 'Major Tom – Peter Schilling.',
     hint: 'Deutscher New-Wave-Song über Raumfahrer.',
     difficulty: 'mittel',
     sources: {
@@ -2189,7 +2189,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2013,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Atemlos durch die Nacht – Helene Fischer, 2013.',
+    answer: 'Atemlos durch die Nacht – Helene Fischer.',
     hint: 'Deutscher Schlager-Hit.',
     difficulty: 'leicht',
     sources: {
@@ -2203,7 +2203,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1988,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Don\'t Worry, Be Happy – Bobby McFerrin, 1988.',
+    answer: 'Don\'t Worry, Be Happy – Bobby McFerrin.',
     hint: 'A-cappella-Hit.',
     difficulty: 'leicht',
     sources: {
@@ -2217,7 +2217,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1999,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'All Star – Smash Mouth, 1999.',
+    answer: 'All Star – Smash Mouth.',
     hint: 'Rock-Song aus Shrek.',
     difficulty: 'leicht',
     sources: {
@@ -2231,7 +2231,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2003,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Mr. Brightside – The Killers, 2003.',
+    answer: 'Mr. Brightside – The Killers.',
     hint: 'Alternative Rock über Eifersucht.',
     difficulty: 'leicht',
     sources: {
@@ -2245,7 +2245,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1985,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat?',
-    answer: 'Take On Me – a-ha, 1985.',
+    answer: 'Take On Me – a-ha.',
     hint: 'Synthpop mit ikonischem Video.',
     difficulty: 'leicht',
     sources: {
