@@ -2171,7 +2171,7 @@ const baseCards: Card[] = [
       text: '"If you wanna be my lover, you gotta get with my friends."',
       textDe: 'Wenn du mein Liebhaber sein willst, musst du dich mit meinen Freunden verstehen.'
     },
-    distractors: ['Britney Spears, ... Baby One More Time', 'TLC, Waterfalls', 'Destiny's Child, Say My Name']
+    distractors: ['Britney Spears, ... Baby One More Time', 'TLC, Waterfalls', 'Destiny\'s Child, Say My Name']
   },
   {
     id: 'quote-baby-one-more-time',
