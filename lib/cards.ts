@@ -1534,14 +1534,14 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2001,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    'answer': 'Der Herr der Ringe: Die Gefahrten – Gandalf.',
+    answer: 'Der Herr der Ringe: Die Gefahrten – Gandalf.',
     hint: 'Fantasy-Epos von Peter Jackson.',
     difficulty: 'leicht',
     sources: {
       text: '"You shall not pass!"',
       textDe: 'Du kommst hier nicht vorbei!'
     },
-    distractors: ['LOTR, My precious', 'LOTR, One ring to rule them all', 'LOTR, You have my sword']
+    distractors: ['Star Wars – Yoda', 'Harry Potter – Dumbledore', 'Der Hobbit – Bilbo Beutlin']
   },
   {
     id: 'quote-my-precious',
@@ -1691,7 +1691,7 @@ const baseCards: Card[] = [
       text: '"I want to break free."',
       textDe: 'Ich will frei sein.'
     },
-    distractors: ['Queen, We Will Rock You', 'Queen, Bohemian Rhapsody', 'Queen, We Are Champions']
+    distractors: ['The Beatles, Hey Jude', 'The Weeknd, Blinding Lights', 'Ed Sheeran, Shape of You']
   },
   {
     id: 'quote-dont-stop-believin',
@@ -1721,7 +1721,7 @@ const baseCards: Card[] = [
       text: '"Imagine all the people, living life in peace."',
       textDe: 'Stell dir vor, alle Menschen leben in Frieden.'
     },
-    distractors: ['John Lennon, Imagine', 'The Beatles, Let it be', 'The Beatles, Hey Jude']
+    distractors: ['Nirvana, Smells Like Teen Spirit', 'The Beatles, Hey Jude', 'David Bowie, Heroes']
   },
   {
     id: 'quote-we-are-the-champions',
@@ -1736,7 +1736,7 @@ const baseCards: Card[] = [
       text: '"We are the champions, my friends."',
       textDe: 'Wir sind die Meister, meine Freunde.'
     },
-    distractors: ['Queen, We Will Rock You', 'Queen, Dont Stop Me Now', 'Queen, Somebody to Love']
+    distractors: ['The Beatles, Hey Jude', 'The Weeknd, Blinding Lights', 'Ed Sheeran, Shape of You']
   },
   {
     id: 'quote-every-breath-you-take',
@@ -1751,7 +1751,7 @@ const baseCards: Card[] = [
       text: '"Every breath you take, every move you make, I\'ll be watching you."',
       textDe: 'Jeden Atemzug, den du nimmst, jede Bewegung, die du machst, ich werde dich beobachten.'
     },
-    distractors: ['The Police, Roxanne', 'The Police, Message in Bottle', 'The Police, Dont Stand So Close']
+    distractors: ['Nirvana, Smells Like Teen Spirit', 'The Killers, Mr. Brightside', 'Coldplay, Viva la Vida']
   },
   {
     id: 'quote-smells-like-teen-spirit-lyric',
@@ -1766,7 +1766,7 @@ const baseCards: Card[] = [
       text: '"Here we are now, entertain us."',
       textDe: 'Hier sind wir jetzt, unterhalte uns.'
     },
-    distractors: ['Nirvana, Come As You Are', 'Nirvana, Heart-Shaped Box', 'Nirvana, Lithium']
+    distractors: ['The Beatles, Hey Jude', 'Queen, Bohemian Rhapsody', 'The White Stripes, Seven Nation Army']
   },
   {
     id: 'quote-livin-on-a-prayer',
@@ -1796,7 +1796,7 @@ const baseCards: Card[] = [
       text: '"You only get one shot, do not miss your chance to blow."',
       textDe: 'Du hast nur eine Chance, verpasse sie nicht.'
     },
-    distractors: ['Eminem, The Real Slim Shady', 'Eminem, Stan', 'Eminem, Without Me']
+    distractors: ['The Weeknd, Blinding Lights', 'Coldplay, Viva la Vida', 'OutKast, Hey Ya!']
   },
   {
     id: 'quote-hey-jude',
@@ -1811,7 +1811,7 @@ const baseCards: Card[] = [
       text: '"Hey Jude, don\'t make it bad, take a sad song and make it better."',
       textDe: 'Hey Jude, mach es nicht schlecht, nimm ein trauriges Lied und mach es besser.'
     },
-    distractors: ['The Beatles, Let It Be', 'The Beatles, Yesterday', 'The Beatles, Help']
+    distractors: ['The Weeknd, Blinding Lights', 'David Bowie, Heroes', 'a-ha, Take On Me']
   },
   {
     id: 'quote-hotel-california',
@@ -1826,7 +1826,7 @@ const baseCards: Card[] = [
       text: '"You can check out any time you like, but you can never leave."',
       textDe: 'Du kannst auschecken, wann du willst, aber du kannst niemals gehen.'
     },
-    distractors: ['Eagles, Take It Easy', 'Eagles, Desperado', 'Fleetwood Mac, Dreams']
+    distractors: ['The Beatles, Hey Jude', 'Coldplay, Viva la Vida', 'Fleetwood Mac, Dreams']
   },
   {
     id: 'quote-stairway-to-heaven',
@@ -1841,7 +1841,7 @@ const baseCards: Card[] = [
       text: 'Aend she\'s buying a stairway to heaven."',
       textDe: 'Und sie kauft eine Treppe zum Himmel.'
     },
-    distractors: ['Led Zeppelin, Whole Lotta Love', 'Led Zeppelin, Kashmir', 'Deep Purple, Smoke on Water']
+    distractors: ['The Beatles, Hey Jude', 'Queen, Bohemian Rhapsody', 'Deep Purple, Smoke on Water']
   },
   {
     id: 'quote-somebody-to-love',
@@ -1856,7 +1856,7 @@ const baseCards: Card[] = [
       text: '"Can anybody find me somebody to love?"',
       textDe: 'Kann mir jemand jemanden finden, den ich lieben kann?'
     },
-    distractors: ['Queen, Bohemian Rhapsody', 'Queen, We Are Champions', 'Queen, Dont Stop Me Now']
+    distractors: ['The Beatles, Hey Jude', 'David Bowie, Heroes', 'The Weeknd, Blinding Lights']
   },
   {
     id: 'quote-billie-jean-lyric',
@@ -1871,7 +1871,7 @@ const baseCards: Card[] = [
       text: '"Billie Jean is not my lover, she\'s just a girl who claims that I am the one."',
       textDe: 'Billie Jean ist nicht meine Geliebte, sie ist nur ein Maedchen, das behauptet, ich sei der Eine.'
     },
-    distractors: ['Michael Jackson, Thriller', 'Michael Jackson, Beat It', 'Michael Jackson, Smooth Criminal']
+    distractors: ['Queen, Bohemian Rhapsody', 'The Killers, Mr. Brightside', 'Bon Jovi, Livin\' on a Prayer']
   },
   {
     id: 'quote-thriller',
@@ -1886,7 +1886,7 @@ const baseCards: Card[] = [
       text: '"\'Cause this is thriller, thriller night."',
       textDe: 'Denn das ist Thriller, Thriller-Nacht.'
     },
-    distractors: ['Michael Jackson, Billie Jean', 'Michael Jackson, Bad', 'Michael Jackson, Black or White']
+    distractors: ['Queen, Bohemian Rhapsody', 'Eminem, Lose Yourself', 'The White Stripes, Seven Nation Army']
   },
   {
     id: 'quote-like-a-virgin',
@@ -1901,7 +1901,7 @@ const baseCards: Card[] = [
       text: '"Like a virgin, touched for the very first time."',
       textDe: 'Wie eine Jungfrau, zum allerersten Mal beruehrt.'
     },
-    distractors: ['Madonna, Material Girl', 'Madonna, Like a Prayer', 'Madonna, Vogue']
+    distractors: ['Britney Spears, ... Baby One More Time', 'Janet Jackson, Control', 'Cher, If I Could Turn Back Time']
   },
   {
     id: 'quote-i-will-always-love-you',
@@ -1916,7 +1916,7 @@ const baseCards: Card[] = [
       text: 'Aend I will always love you."',
       textDe: 'Und ich werde dich immer lieben.'
     },
-    distractors: ['Whitney Houston, I Wanna Dance', 'Mariah Carey, Hero', 'Celine Dion, My Heart Will Go On']
+    distractors: ['Mariah Carey, We Belong Together', 'Celine Dion, My Heart Will Go On', 'Toni Braxton, Un-Break My Heart']
   },
   {
     id: 'quote-rolling-in-the-deep-lyric',
@@ -1931,7 +1931,7 @@ const baseCards: Card[] = [
       text: '"We could have had it all, rolling in the deep."',
       textDe: 'Wir haetten alles haben koennen, rolling in the deep.'
     },
-    distractors: ['Adele, Someone Like You', 'Adele, Set Fire to Rain', 'Adele, Hello']
+    distractors: ['Billie Eilish, Bad Guy', 'Amy Winehouse, Back to Black', 'Beyoncé, Halo']
   },
   {
     id: 'quote-somebody-that-i-used-to-know',
@@ -1946,7 +1946,7 @@ const baseCards: Card[] = [
       text: '"Now you\'re just somebody that I used to know."',
       textDe: 'Jetzt bist du nur noch jemand, den ich kannte.'
     },
-    distractors: ['Gotye, 2011', 'Fun, We Are Young', 'Passenger, Let Her Go']
+    distractors: ['Ed Sheeran, Shape of You', 'The Weeknd, Blinding Lights', 'Coldplay, Viva la Vida']
   },
   {
     id: 'quote-happy',
@@ -1961,7 +1961,7 @@ const baseCards: Card[] = [
       text: '"Because I\'m happy, clap along if you feel like a room without a roof."',
       textDe: 'Weil ich gluecklich bin, klatsch mit, wenn du dich fuehlst wie ein Raum ohne Dach.'
     },
-    distractors: ['Pharrell Williams, 2013', 'Mark Ronson, Uptown Funk', 'Justin Timberlake, Cant Stop Feeling']
+    distractors: ['The Weeknd, Blinding Lights', 'Ed Sheeran, Shape of You', 'The Killers, Mr. Brightside']
   },
   {
     id: 'quote-uptown-funk',
@@ -1976,7 +1976,7 @@ const baseCards: Card[] = [
       text: '"Don\'t believe me, just watch."',
       textDe: 'Glaub mir nicht, schau einfach zu.'
     },
-    distractors: ['Mark Ronson ft Bruno Mars', 'Bruno Mars, Just the Way You Are', 'Bruno Mars, Locked Out of Heaven']
+    distractors: ['OutKast, Hey Ya!', 'Imagine Dragons, Radioactive', 'Bon Jovi, Livin\' on a Prayer']
   },
   {
     id: 'quote-shape-of-you',
@@ -1991,7 +1991,7 @@ const baseCards: Card[] = [
       text: '"I\'m in love with the shape of you."',
       textDe: 'Ich bin verliebt in deine Form.'
     },
-    distractors: ['Ed Sheeran, Thinking Out Loud', 'Ed Sheeran, Perfect', 'Ed Sheeran, Photograph']
+    distractors: ['The Weeknd, Blinding Lights', 'Coldplay, Viva la Vida', 'The Killers, Mr. Brightside']
   },
   {
     id: 'quote-thinking-out-loud',
@@ -2006,7 +2006,7 @@ const baseCards: Card[] = [
       text: '"When your legs don\'t work like they used to before."',
       textDe: 'Wenn deine Beine nicht mehr so funktionieren wie frueher.'
     },
-    distractors: ['Ed Sheeran, Shape of You', 'Ed Sheeran, Photograph', 'John Legend, All of Me']
+    distractors: ['John Lennon, Imagine', 'a-ha, Take On Me', 'Daft Punk, Get Lucky']
   },
   {
     id: 'quote-despacito',
@@ -2036,7 +2036,7 @@ const baseCards: Card[] = [
       text: '"I\'m gonna take my horse to the old town road."',
       textDe: 'Ich nehme mein Pferd zur alten Stadtstrauee.'
     },
-    distractors: ['Lil Nas X, 2019', 'Post Malone, Rockstar', 'Travis Scott, SICKO MODE']
+    distractors: ['The Weeknd, Blinding Lights', 'Ed Sheeran, Shape of You', 'OutKast, Hey Ya!']
   },
   {
     id: 'quote-blinding-lights',
@@ -2051,7 +2051,7 @@ const baseCards: Card[] = [
       text: '"I said, ooh, I\'m blinded by the lights."',
       textDe: 'Ich sagte, ooh, ich bin geblendet von den Lichtern.'
     },
-    distractors: ['The Weeknd, Starboy', 'The Weeknd, Cant Feel My Face', 'The Weeknd, Save Your Tears']
+    distractors: ['The Killers, Mr. Brightside', 'Ed Sheeran, Shape of You', 'Coldplay, Viva la Vida']
   },
   {
     id: 'quote-bad-guy',
@@ -2066,7 +2066,7 @@ const baseCards: Card[] = [
       text: '"I\'m the bad guy, duh."',
       textDe: 'Ich bin der Boesewicht, duh.'
     },
-    distractors: ['Billie Eilish, when party is over', 'Billie Eilish, everything i wanted', 'Billie Eilish, ocean eyes']
+    distractors: ['Adele, Rolling in the Deep', 'Amy Winehouse, Rehab', 'Lady Gaga, Bad Romance']
   },
   {
     id: 'quote-senorita',
@@ -2096,7 +2096,7 @@ const baseCards: Card[] = [
       text: '"Pain! You made me a, you made me a believer, believer."',
       textDe: 'Schmerz! Du hast mich zu einem, du hast mich zu einem Glaeubigen gemacht.'
     },
-    distractors: ['Imagine Dragons, Radioactive', 'Imagine Dragons, Thunder', 'Imagine Dragons, Demons']
+    distractors: ['The Killers, Mr. Brightside', 'Coldplay, Viva la Vida', 'The Weeknd, Blinding Lights']
   },
   {
     id: 'quote-radioactive',
@@ -2111,7 +2111,7 @@ const baseCards: Card[] = [
       text: '"I\'m radioactive, radioactive."',
       textDe: 'Ich bin radioaktiv, radioaktiv.'
     },
-    distractors: ['Imagine Dragons, Believer', 'Imagine Dragons, Its Time', 'Imagine Dragons, Demons']
+    distractors: ['The Killers, Mr. Brightside', 'Coldplay, Viva la Vida', 'The Weeknd, Blinding Lights']
   },
   {
     id: 'quote-cant-stop-the-feeling',
@@ -2141,7 +2141,7 @@ const baseCards: Card[] = [
       text: '"Lately I\'ve been, I\'ve been losing sleep, dreaming about the things that we could be."',
       textDe: 'In letzter Zeit habe ich Schlaf verloren, traeumend von den Dingen, die wir sein koennten.'
     },
-    distractors: ['OneRepublic, Apologize', 'OneRepublic, Good Life', 'OneRepublic, Secrets']
+    distractors: ['The Weeknd, Blinding Lights', 'Coldplay, Viva la Vida', 'Ed Sheeran, Shape of You']
   },
   {
     id: 'quote-let-it-go',
@@ -2171,7 +2171,7 @@ const baseCards: Card[] = [
       text: '"If you wanna be my lover, you gotta get with my friends."',
       textDe: 'Wenn du mein Liebhaber sein willst, musst du dich mit meinen Freunden verstehen.'
     },
-    distractors: ['Spice Girls, Spice Up Your Life', 'Spice Girls, 2 Become 1', 'Backstreet Boys, I Want It That Way']
+    distractors: ['Britney Spears, ... Baby One More Time', 'TLC, Waterfalls', 'Destiny's Child, Say My Name']
   },
   {
     id: 'quote-baby-one-more-time',
@@ -2186,7 +2186,7 @@ const baseCards: Card[] = [
       text: '"Hit me baby one more time."',
       textDe: 'Triff mich, Baby, noch ein Mal.'
     },
-    distractors: ['Britney Spears, Oops I Did It Again', 'Britney Spears, Toxic', 'Christina Aguilera, Genie in Bottle']
+    distractors: ['Spice Girls, Wannabe', 'Christina Aguilera, Genie in a Bottle', 'TLC, No Scrubs']
   },
   {
     id: 'quote-toxic',
@@ -2201,7 +2201,7 @@ const baseCards: Card[] = [
       text: '"With a taste of your lips, I\'m on a ride."',
       textDe: 'Mit einem Geschmack deiner Lippen bin ich auf einer Fahrt.'
     },
-    distractors: ['Britney Spears, Baby One More Time', 'Britney Spears, Oops I Did It Again', 'Britney Spears, Womanizer']
+    distractors: ['Lady Gaga, Bad Romance', 'Katy Perry, Firework', 'Rihanna, Umbrella']
   },
   {
     id: 'quote-umbrella',
@@ -2231,7 +2231,7 @@ const baseCards: Card[] = [
       text: '"I used to rule the world."',
       textDe: 'Ich herrschte einst ueber die Welt.'
     },
-    distractors: ['Coldplay, Yellow', 'Coldplay, The Scientist', 'Coldplay, Fix You']
+    distractors: ['The Weeknd, Blinding Lights', 'Ed Sheeran, Shape of You', 'The Killers, Mr. Brightside']
   },
   {
     id: 'quote-99-luftballons',
@@ -2246,7 +2246,7 @@ const baseCards: Card[] = [
       text: '"99 Luftballons auf ihrem Weg zum Horizont."',
       textDe: '99 Luftballons auf ihrem Weg zum Horizont.'
     },
-    distractors: ['Nena, Irgendwie irgendwo', 'Nena, Nur getraeumt', 'Nena, Leuchtturm']
+    distractors: ['Falco, Der Kommissar', 'Kraftwerk, Das Model', 'Trio, Da Da Da']
   },
   {
     id: 'quote-major-tom',
@@ -2261,7 +2261,7 @@ const baseCards: Card[] = [
       text: '"Voellig losgeloest von der Erde."',
       textDe: 'Voellig losgeloest von der Erde.'
     },
-    distractors: ['Peter Schilling, Terra Titanic', 'David Bowie, Space Oddity', 'Nena, 99 Luftballons']
+    distractors: ['David Bowie, Heroes', 'a-ha, Take On Me', 'The Beatles, Hey Jude']
   },
   {
     id: 'quote-atemlos',
@@ -2276,7 +2276,7 @@ const baseCards: Card[] = [
       text: 'Aetemlos durch die Nacht."',
       textDe: 'Atemlos durch die Nacht.'
     },
-    distractors: ['Helene Fischer, 2013', 'Andrea Berg, Du hast mich belogen', 'Matthias Reim, Verdammt ich lieb dich']
+    distractors: ['Andrea Berg, Du hast mich 1000 mal belogen', 'Vanessa Mai, Regenbogen', 'Michelle, Wer Liebe lebt']
   },
   {
     id: 'quote-dont-worry-be-happy',
@@ -2306,7 +2306,7 @@ const baseCards: Card[] = [
       text: '"Somebody once told me the world is gonna roll me."',
       textDe: 'Jemand hat mir mal gesagt, die Welt wird mich ueberrollen.'
     },
-    distractors: ['Smash Mouth, Im a Believer', 'Smash Mouth, Walkin on the Sun', 'Sugar Ray, Fly']
+    distractors: ['The Killers, Mr. Brightside', 'Coldplay, Viva la Vida', 'The Weeknd, Blinding Lights']
   },
   {
     id: 'quote-mr-brightside',
@@ -2321,7 +2321,7 @@ const baseCards: Card[] = [
       text: '"It was only a kiss, how did it end up like this?"',
       textDe: 'Es war nur ein Kuss, wie endete es so?'
     },
-    distractors: ['The Killers, Somebody Told Me', 'The Killers, Human', 'The Killers, When You Were Young']
+    distractors: ['The Weeknd, Blinding Lights', 'Coldplay, Viva la Vida', 'Ed Sheeran, Shape of You']
   },
   {
     id: 'quote-take-on-me',
@@ -2336,7 +2336,7 @@ const baseCards: Card[] = [
       text: '"Take on me, take me on."',
       textDe: 'Nimm mich an, nimm mich mit.'
     },
-    distractors: ['a-ha, The Sun Always Shines', 'a-ha, Hunting High and Low', 'Tears for Fears, Shout']
+    distractors: ['David Bowie, Heroes', 'The Weeknd, Blinding Lights', 'Ed Sheeran, Shape of You']
   }
 ];
 
