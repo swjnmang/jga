@@ -2,7 +2,7 @@
 
 import clsx from 'clsx';
 import Image from 'next/image';
-import { forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
+import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
 import { Card, MediaPreference } from '@/lib/types';
 
 function toYouTubeEmbed(url: string) {
@@ -199,6 +199,78 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     loadToken();
   }, [choice?.type, spotifyToken]);
 
+  const refreshDeviceId = useCallback(async (): Promise<string | null> => {
+    if (!spotifyToken) return null;
+    try {
+      const res = await fetch('https://api.spotify.com/v1/me/player/devices', {
+        headers: { Authorization: `Bearer ${spotifyToken}` }
+      });
+      if (!res.ok) {
+        const txt = await res.text().catch(() => null);
+        console.error('Spotify devices failed', res.status, txt);
+        return null;
+      }
+      const json = await res.json();
+      const device = (json.devices as any[] | undefined)?.find((d) => d?.name === 'Flex Quiz Player');
+      if (device?.id) {
+        setSpotifyDevice(device.id as string);
+        return device.id as string;
+      }
+    } catch (err) {
+      console.error('Spotify devices exception', err);
+    }
+    return null;
+  }, [spotifyToken]);
+
+  const ensureDevice = useCallback(async (): Promise<string | null> => {
+    if (!spotifyToken) return null;
+    // Vorrang: gespeicherte ID, sonst frisch aus Spotify laden.
+    if (spotifyDevice) {
+      return spotifyDevice;
+    }
+    return refreshDeviceId();
+  }, [refreshDeviceId, spotifyDevice, spotifyToken]);
+
+  const transferPlayback = useCallback(async () => {
+    if (!spotifyToken) return false;
+    const target = await ensureDevice();
+    if (!target) return false;
+
+    const doTransfer = async (targetDevice: string) =>
+      fetch('https://api.spotify.com/v1/me/player', {
+        method: 'PUT',
+        headers: {
+          Authorization: `Bearer ${spotifyToken}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ device_ids: [targetDevice], play: false })
+      });
+
+    const res = await doTransfer(target);
+    if (res.ok) return true;
+
+    // 404: Device not found – tritt auf, wenn die Device-ID veraltet ist oder Spotify
+    // den Web Playback Player noch nicht registriert hat. Versuche ein Refresh.
+    if (res.status === 404) {
+      const refreshed = await refreshDeviceId();
+      if (refreshed) {
+        const retry = await doTransfer(refreshed);
+        if (retry.ok) return true;
+        const detail = await retry.text().catch(() => null);
+        setSpotifyError('Spotify-Device konnte nicht übernommen werden');
+        setSpotifyErrorDetail(detail || `HTTP ${retry.status}`);
+        console.error('Spotify transfer retry failed', retry.status, detail);
+        return false;
+      }
+    }
+
+    const detail = await res.text().catch(() => null);
+    setSpotifyError('Spotify-Device konnte nicht übernommen werden');
+    setSpotifyErrorDetail(detail || `HTTP ${res.status}`);
+    console.error('Spotify transfer failed', res.status, detail);
+    return false;
+  }, [ensureDevice, refreshDeviceId, spotifyToken]);
+
   // Load Spotify Web Playback SDK and connect
   useEffect(() => {
     if (choice?.type !== 'spotify') return;
@@ -294,79 +366,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         spotifyPlayerRef.current = null;
       }
     };
-  }, [card.id, choice?.type, onPlaybackError, spotifyToken]);
-
-  const ensureDevice = async (): Promise<string | null> => {
-    if (!spotifyToken) return null;
-    // Vorrang: gespeicherte ID, sonst frisch aus Spotify laden.
-    if (spotifyDevice) {
-      return spotifyDevice;
-    }
-    return refreshDeviceId();
-  };
-
-  const transferPlayback = async () => {
-    if (!spotifyToken) return false;
-    const target = await ensureDevice();
-    if (!target) return false;
-
-    const doTransfer = async (targetDevice: string) =>
-      fetch('https://api.spotify.com/v1/me/player', {
-        method: 'PUT',
-        headers: {
-          Authorization: `Bearer ${spotifyToken}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ device_ids: [targetDevice], play: false })
-      });
-
-    const res = await doTransfer(target);
-    if (res.ok) return true;
-
-    // 404: Device not found – tritt auf, wenn die Device-ID veraltet ist oder Spotify
-    // den Web Playback Player noch nicht registriert hat. Versuche ein Refresh.
-    if (res.status === 404) {
-      const refreshed = await refreshDeviceId();
-      if (refreshed) {
-        const retry = await doTransfer(refreshed);
-        if (retry.ok) return true;
-        const detail = await retry.text().catch(() => null);
-        setSpotifyError('Spotify-Device konnte nicht übernommen werden');
-        setSpotifyErrorDetail(detail || `HTTP ${retry.status}`);
-        console.error('Spotify transfer retry failed', retry.status, detail);
-        return false;
-      }
-    }
-
-    const detail = await res.text().catch(() => null);
-    setSpotifyError('Spotify-Device konnte nicht übernommen werden');
-    setSpotifyErrorDetail(detail || `HTTP ${res.status}`);
-    console.error('Spotify transfer failed', res.status, detail);
-    return false;
-  };
-
-  const refreshDeviceId = async (): Promise<string | null> => {
-    if (!spotifyToken) return null;
-    try {
-      const res = await fetch('https://api.spotify.com/v1/me/player/devices', {
-        headers: { Authorization: `Bearer ${spotifyToken}` }
-      });
-      if (!res.ok) {
-        const txt = await res.text().catch(() => null);
-        console.error('Spotify devices failed', res.status, txt);
-        return null;
-      }
-      const json = await res.json();
-      const device = (json.devices as any[] | undefined)?.find((d) => d?.name === 'Flex Quiz Player');
-      if (device?.id) {
-        setSpotifyDevice(device.id as string);
-        return device.id as string;
-      }
-    } catch (err) {
-      console.error('Spotify devices exception', err);
-    }
-    return null;
-  };
+  }, [card.id, choice?.type, onPlaybackError, refreshDeviceId, spotifyToken, transferPlayback]);
 
   const activatePlayer = async () => {
     if (spotifyPlayerRef.current && 'activateElement' in spotifyPlayerRef.current) {

@@ -332,30 +332,6 @@ function PlayPageContent() {
     return unseen.length > 0 ? unseen : base;
   }, [blockedCards, mode, sessionSeen, settings.decades, settings.genres, settings.playlists]);
 
-  const logMetric = useCallback(
-    (reason: QuizMetric['reason']) => {
-      const current = filteredDeck[index];
-      if (!current) return;
-      const elapsed = (typeof performance !== 'undefined' ? performance.now() : Date.now()) - cardStartRef.current;
-      const metrics = loadMetrics();
-      const correct = mcOptions && selectedAnswer !== null ? selectedAnswer === mcOptions.correctIndex : null;
-      metrics.push({
-        cardId: current.id,
-        category: current.category,
-        difficulty: current.difficulty,
-        mode,
-        correct,
-        timeMs: Math.max(0, elapsed),
-        timerSeconds: settings.timerSeconds,
-        reason,
-        timestamp: Date.now()
-      });
-      saveMetrics(metrics);
-      updateMetricFlags(metrics);
-      loggedRef.current = true;
-    },
-    [filteredDeck, index, mcOptions, mode, selectedAnswer, settings.timerSeconds]
-  );
   const filteredDeck = useMemo(
     () => {
       void deckKey; // force recompute when deckKey changes (restart)
@@ -382,6 +358,31 @@ function PlayPageContent() {
   const offlineRef = useRef<boolean>(false);
   const card = filteredDeck[index];
   const isLast = index === filteredDeck.length - 1;
+
+  const logMetric = useCallback(
+    (reason: QuizMetric['reason']) => {
+      const current = filteredDeck[index];
+      if (!current) return;
+      const elapsed = (typeof performance !== 'undefined' ? performance.now() : Date.now()) - cardStartRef.current;
+      const metrics = loadMetrics();
+      const correct = mcOptions && selectedAnswer !== null ? selectedAnswer === mcOptions.correctIndex : null;
+      metrics.push({
+        cardId: current.id,
+        category: current.category,
+        difficulty: current.difficulty,
+        mode,
+        correct,
+        timeMs: Math.max(0, elapsed),
+        timerSeconds: settings.timerSeconds,
+        reason,
+        timestamp: Date.now()
+      });
+      saveMetrics(metrics);
+      updateMetricFlags(metrics);
+      loggedRef.current = true;
+    },
+    [filteredDeck, index, mcOptions, mode, selectedAnswer, settings.timerSeconds]
+  );
 
   const requiresPlayStart = useCallback((c?: Card) => c?.category === 'music', []);
 
