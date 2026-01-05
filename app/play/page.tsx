@@ -619,20 +619,34 @@ function PlayPageContent() {
     setCurrentGroupIndex(0);
   }, []);
 
-  const handleDigitalTimelinePlacement = useCallback((before: boolean) => {
+  const handleDigitalTimelinePlacement = useCallback((position: number) => {
     if (!card || typeof card.year !== 'number') return;
     
     const currentTimeline = groupTimelines.get(currentGroupIndex) || [];
     
-    // Find the reference point (initially 1950, but can be any card in the timeline)
-    // For simplicity, we check against 1950 as the fixed reference
-    const referenceYear = 1950;
-    const isCorrect = before ? card.year < referenceYear : card.year >= referenceYear;
+    // Check if placement is correct
+    // Position 0 = before all cards
+    // Position n = after card n-1 (and before card n if it exists)
+    let isCorrect = false;
+    
+    if (position === 0) {
+      // Before all cards
+      isCorrect = currentTimeline.length === 0 || card.year <= currentTimeline[0].year;
+    } else if (position >= currentTimeline.length) {
+      // After all cards
+      isCorrect = card.year >= currentTimeline[currentTimeline.length - 1].year;
+    } else {
+      // Between two cards
+      const before = currentTimeline[position - 1];
+      const after = currentTimeline[position];
+      isCorrect = card.year >= before.year && card.year <= after.year;
+    }
     
     if (isCorrect) {
-      // Add card to timeline in sorted order
+      // Insert card at the correct position
       const newEntry = { year: card.year, answer: card.answer };
-      const updated = [...currentTimeline, newEntry].sort((a, b) => a.year - b.year);
+      const updated = [...currentTimeline];
+      updated.splice(position, 0, newEntry);
       const newTimelines = new Map(groupTimelines);
       newTimelines.set(currentGroupIndex, updated);
       setGroupTimelines(newTimelines);
@@ -1071,21 +1085,69 @@ function PlayPageContent() {
       </section>
 
       {digitalTimelineStarted && !showSolution && (
-        <div className="grid grid-cols-2 gap-3">
-          <button
-            type="button"
-            className="rounded-full bg-blue-600 text-white px-6 py-4 text-base font-semibold hover:bg-blue-700 transition-colors"
-            onClick={() => handleDigitalTimelinePlacement(true)}
-          >
-            ← Vor 1950
-          </button>
-          <button
-            type="button"
-            className="rounded-full bg-green-600 text-white px-6 py-4 text-base font-semibold hover:bg-green-700 transition-colors"
-            onClick={() => handleDigitalTimelinePlacement(false)}
-          >
-            Nach 1950 →
-          </button>
+        <div className="card-surface rounded-2xl p-5 space-y-4">
+          <h3 className="text-sm font-semibold text-center">Platziere die Karte in der Timeline von {groupNames[currentGroupIndex]}</h3>
+          
+          {(() => {
+            const currentTimeline = groupTimelines.get(currentGroupIndex) || [];
+            
+            // If no cards yet, show simple before/after 1950
+            if (currentTimeline.length === 0) {
+              return (
+                <div className="grid grid-cols-2 gap-3">
+                  <button
+                    type="button"
+                    className="rounded-xl bg-blue-600 text-white px-6 py-4 text-sm font-semibold hover:bg-blue-700 transition-colors"
+                    onClick={() => handleDigitalTimelinePlacement(0)}
+                  >
+                    ← Vor 1950
+                  </button>
+                  <button
+                    type="button"
+                    className="rounded-xl bg-green-600 text-white px-6 py-4 text-sm font-semibold hover:bg-green-700 transition-colors"
+                    onClick={() => handleDigitalTimelinePlacement(1)}
+                  >
+                    Nach 1950 →
+                  </button>
+                </div>
+              );
+            }
+            
+            // Show timeline with gaps for placement
+            return (
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 overflow-x-auto pb-2">
+                  {currentTimeline.map((item, idx) => (
+                    <div key={idx} className="flex items-center">
+                      {idx === 0 && (
+                        <button
+                          type="button"
+                          onClick={() => handleDigitalTimelinePlacement(0)}
+                          className="flex-shrink-0 rounded-lg border-2 border-dashed border-ink/30 bg-ink/5 px-3 py-2 text-xs hover:border-ink hover:bg-ink/10 transition-colors mx-1"
+                        >
+                          ← Davor
+                        </button>
+                      )}
+                      <div className="flex-shrink-0 rounded-lg border-2 border-ink bg-ink/10 px-4 py-3 min-w-[120px]">
+                        <p className="text-xs font-bold text-ink">{item.year}</p>
+                        <p className="text-xs text-ink/70 truncate">{item.answer}</p>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => handleDigitalTimelinePlacement(idx + 1)}
+                        className="flex-shrink-0 rounded-lg border-2 border-dashed border-ink/30 bg-ink/5 px-3 py-2 text-xs hover:border-ink hover:bg-ink/10 transition-colors mx-1"
+                      >
+                        {idx === currentTimeline.length - 1 ? 'Danach →' : '↔'}
+                      </button>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-center text-ink/60">
+                  Wähle eine Lücke, um die neue Karte zu platzieren
+                </p>
+              </div>
+            );
+          })()}
         </div>
       )}
 
