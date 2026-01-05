@@ -366,7 +366,8 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         spotifyPlayerRef.current = null;
       }
     };
-  }, [card.id, choice?.type, onPlaybackError, refreshDeviceId, spotifyToken, transferPlayback]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [card.id, choice?.type, onPlaybackError, spotifyToken]);
 
   const activatePlayer = async () => {
     if (spotifyPlayerRef.current && 'activateElement' in spotifyPlayerRef.current) {
