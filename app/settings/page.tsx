@@ -399,6 +399,17 @@ function SettingsPageContent() {
           />
           <span className="text-sm">Multiple-Choice Antworten anzeigen (4 Optionen)</span>
         </label>
+        {mode === 'timeline' && (
+          <label className="flex items-center gap-3 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={settings.digitalTimelineMode}
+              onChange={(e) => updateSettings({ ...settings, digitalTimelineMode: e.target.checked })}
+              className="h-5 w-5 accent-sky-700"
+            />
+            <span className="text-sm">Vollständig digitaler Timeline-Modus (mit Gruppenspiel)</span>
+          </label>
+        )}
       </section>
 
       <section className="card-surface rounded-2xl p-5 space-y-3">

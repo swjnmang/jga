@@ -9,6 +9,7 @@ export type UserSettings = {
   decades: DecadeTag[];
   playlists: string[];
   multipleChoice: boolean;
+  digitalTimelineMode: boolean;
 };
 
 const STORAGE_KEY = 'jga-user-settings';
@@ -58,7 +59,8 @@ export function getDefaultSettings(
     genres: ALL_GENRES,
     decades: availableDecades && availableDecades.length > 0 ? availableDecades : ALL_DECADES,
     playlists: availablePlaylists && availablePlaylists.length > 0 ? availablePlaylists : [],
-    multipleChoice: mode === 'solo'
+    multipleChoice: mode === 'solo',
+    digitalTimelineMode: false
   };
 }
 
@@ -89,7 +91,8 @@ export function loadSettings(defaults: UserSettings): UserSettings {
         parsed.difficulties && parsed.difficulties.length > 0 ? parsed.difficulties : defaults.difficulties,
       timerSeconds: parsed.timerSeconds && parsed.timerSeconds > 0 ? parsed.timerSeconds : defaults.timerSeconds,
       categoryWeights: weights,
-      multipleChoice: typeof parsed.multipleChoice === 'boolean' ? parsed.multipleChoice : defaults.multipleChoice
+      multipleChoice: typeof parsed.multipleChoice === 'boolean' ? parsed.multipleChoice : defaults.multipleChoice,
+      digitalTimelineMode: typeof parsed.digitalTimelineMode === 'boolean' ? parsed.digitalTimelineMode : defaults.digitalTimelineMode
     };
   } catch (_err) {
     return defaults;

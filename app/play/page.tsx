@@ -287,6 +287,15 @@ function PlayPageContent() {
   const [sessionSeen, setSessionSeen] = useState<Set<string>>(new Set());
   const [mode, setMode] = useState<GameMode | null>(preselectedMode && startFlag ? preselectedMode : null);
   const [selectedMode, setSelectedMode] = useState<GameMode | null>(null);
+  
+  // Digital Timeline Mode states
+  const [showGroupSetup, setShowGroupSetup] = useState(false);
+  const [numGroups, setNumGroups] = useState(2);
+  const [groupNames, setGroupNames] = useState<string[]>(['Gruppe 1', 'Gruppe 2']);
+  const [digitalTimelineStarted, setDigitalTimelineStarted] = useState(false);
+  const [currentGroupIndex, setCurrentGroupIndex] = useState(0);
+  const [groupTimelines, setGroupTimelines] = useState<Map<number, { year: number; answer: string }[]>>(new Map());
+  
   const allowedCategoriesForMode = useMemo(
     () => (mode === 'timeline' ? availableCategories.filter((cat) => !triviaOnlySet.has(cat)) : availableCategories),
     [mode, availableCategories]
@@ -414,8 +423,13 @@ function PlayPageContent() {
   useEffect(() => {
     if (startFlag && preselectedMode) {
       setMode(preselectedMode);
+      // Check if digital timeline mode is enabled - then show group setup
+      const stored = loadSettings(defaults);
+      if (preselectedMode === 'timeline' && stored.digitalTimelineMode) {
+        setShowGroupSetup(true);
+      }
     }
-  }, [preselectedMode, startFlag]);
+  }, [preselectedMode, startFlag, defaults]);
 
   useEffect(() => {
     setIndex(0);
@@ -600,7 +614,137 @@ function PlayPageContent() {
     setShowSolution(false);
     setScore(0);
     setMode(null);
+    setDigitalTimelineStarted(false);
+    setGroupTimelines(new Map());
+    setCurrentGroupIndex(0);
   }, []);
+
+  const handleDigitalTimelinePlacement = useCallback((before: boolean) => {
+    if (!card || typeof card.year !== 'number') return;
+    
+    const currentTimeline = groupTimelines.get(currentGroupIndex) || [];
+    
+    // Find the reference point (initially 1950, but can be any card in the timeline)
+    // For simplicity, we check against 1950 as the fixed reference
+    const referenceYear = 1950;
+    const isCorrect = before ? card.year < referenceYear : card.year >= referenceYear;
+    
+    if (isCorrect) {
+      // Add card to timeline in sorted order
+      const newEntry = { year: card.year, answer: card.answer };
+      const updated = [...currentTimeline, newEntry].sort((a, b) => a.year - b.year);
+      const newTimelines = new Map(groupTimelines);
+      newTimelines.set(currentGroupIndex, updated);
+      setGroupTimelines(newTimelines);
+    }
+    
+    setShowSolution(true);
+    setTimer((prev) => ({ ...prev, running: false }));
+  }, [card, currentGroupIndex, groupTimelines]);
+
+  const nextDigitalTimelineCard = useCallback(() => {
+    mediaRef.current?.stop();
+    setShowSolution(false);
+    
+    // Move to next group
+    const nextGroup = (currentGroupIndex + 1) % numGroups;
+    setCurrentGroupIndex(nextGroup);
+    
+    // Move to next card
+    if (index < filteredDeck.length - 1) {
+      setIndex((i) => i + 1);
+    } else {
+      // End game
+      setBlackedOut(false);
+      setTimer({ secondsLeft: 0, running: false });
+    }
+  }, [currentGroupIndex, filteredDeck.length, index, numGroups]);
+
+  // Group setup screen for digital timeline mode
+  if (showGroupSetup && !digitalTimelineStarted) {
+    const startDigitalTimeline = () => {
+      // Initialize timelines for each group with 1950 as reference
+      const initialTimelines = new Map<number, { year: number; answer: string }[]>();
+      for (let i = 0; i < numGroups; i++) {
+        initialTimelines.set(i, [{ year: 1950, answer: 'Referenzjahr' }]);
+      }
+      setGroupTimelines(initialTimelines);
+      setDigitalTimelineStarted(true);
+      setShowGroupSetup(false);
+    };
+
+    return (
+      <main className="mx-auto max-w-3xl px-5 py-12 space-y-6">
+        <h1 className="text-3xl font-display text-center">Digitaler Timeline-Modus</h1>
+        <p className="text-center text-ink/70">Richte dein Gruppenspiel ein</p>
+
+        <section className="card-surface rounded-2xl p-5 space-y-4">
+          <h2 className="text-lg font-semibold">Anzahl der Gruppen</h2>
+          <div className="grid grid-cols-3 gap-3">
+            {[2, 3, 4].map((n) => (
+              <button
+                key={n}
+                type="button"
+                onClick={() => {
+                  setNumGroups(n);
+                  setGroupNames(Array.from({ length: n }, (_, i) => `Gruppe ${i + 1}`));
+                }}
+                className={`rounded-xl border-2 px-6 py-4 text-lg font-semibold transition-all ${
+                  numGroups === n
+                    ? 'bg-ink text-inkDark border-ink'
+                    : 'border-ink/20 hover:border-ink/40'
+                }`}
+              >
+                {n} Gruppen
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <section className="card-surface rounded-2xl p-5 space-y-4">
+          <h2 className="text-lg font-semibold">Gruppennamen</h2>
+          <div className="space-y-3">
+            {groupNames.map((name, idx) => (
+              <div key={idx} className="flex items-center gap-3">
+                <span className="text-sm text-ink/60 w-20">Gruppe {idx + 1}:</span>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => {
+                    const updated = [...groupNames];
+                    updated[idx] = e.target.value;
+                    setGroupNames(updated);
+                  }}
+                  className="flex-1 rounded-lg border border-ink/20 px-3 py-2 text-sm focus:border-ink/40 focus:outline-none"
+                  placeholder={`Gruppe ${idx + 1}`}
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <div className="flex gap-3">
+          <button
+            type="button"
+            onClick={startDigitalTimeline}
+            className="flex-1 rounded-full bg-ink text-inkDark px-6 py-3 text-sm font-semibold hover:scale-[1.02] transition-transform"
+          >
+            Spiel starten
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setShowGroupSetup(false);
+              setMode(null);
+            }}
+            className="rounded-full border border-ink/20 px-6 py-3 text-sm hover:bg-ink/5"
+          >
+            Abbrechen
+          </button>
+        </div>
+      </main>
+    );
+  }
 
   if (!card) {
     return (
@@ -798,12 +942,39 @@ function PlayPageContent() {
             {mode === 'timeline' ? 'Timeline' : mode === 'solo' ? 'Solo' : 'Trivia'}
             {mode === 'solo' && settings.multipleChoice && <span className="text-lg ml-3 text-ink/70">• {score} Punkte</span>}
           </h1>
+          {digitalTimelineStarted && (
+            <p className="text-sm text-ink/70 mt-1">
+              Aktuell: <span className="font-semibold text-ink">{groupNames[currentGroupIndex]}</span>
+            </p>
+          )}
         </div>
         <div className="text-right space-y-1 flex-shrink-0">
           <p className="text-xs text-ink/60">Timer</p>
           <div className={`text-3xl sm:text-4xl font-display tabular-nums ${getTimerColorClass()}`}>{minutes}:{seconds}</div>
         </div>
       </div>
+
+      {digitalTimelineStarted && (
+        <section className="card-surface rounded-2xl p-4 space-y-3">
+          <h3 className="text-sm font-semibold">Timelines der Gruppen</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {Array.from({ length: numGroups }).map((_, idx) => {
+              const timeline = groupTimelines.get(idx) || [];
+              return (
+                <div
+                  key={idx}
+                  className={`rounded-lg border-2 p-3 ${
+                    idx === currentGroupIndex ? 'border-ink bg-ink/5' : 'border-ink/20'
+                  }`}
+                >
+                  <p className="text-xs font-semibold text-ink/60 mb-2">{groupNames[idx]}</p>
+                  <p className="text-sm text-ink">{timeline.length} Karte{timeline.length !== 1 ? 'n' : ''}</p>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       <section key={`card-${card.id}`} className="card-surface rounded-2xl p-4 sm:p-5 space-y-3 animate-slide-up">
         {card.category === 'schaetzfragen' && mode !== 'solo' && (
@@ -899,31 +1070,62 @@ function PlayPageContent() {
         )}
       </section>
 
-      <div className="flex flex-col sm:flex-row flex-wrap gap-3 pb-4 sm:pb-0">
-        {(!settings.multipleChoice || showSolution) && (
+      {digitalTimelineStarted && !showSolution && (
+        <div className="grid grid-cols-2 gap-3">
           <button
             type="button"
-            className="rounded-full bg-ink text-black px-4 py-3 text-sm font-semibold w-full sm:flex-1 text-center smooth-transition hover:scale-[1.02] active:scale-[0.98]"
-            onClick={nextCard}
+            className="rounded-full bg-blue-600 text-white px-6 py-4 text-base font-semibold hover:bg-blue-700 transition-colors"
+            onClick={() => handleDigitalTimelinePlacement(true)}
           >
-            {isLast ? 'Fertig' : showSolution ? 'Zur nächsten Frage →' : 'Lösung anzeigen'}
+            ← Vor 1950
           </button>
-        )}
+          <button
+            type="button"
+            className="rounded-full bg-green-600 text-white px-6 py-4 text-base font-semibold hover:bg-green-700 transition-colors"
+            onClick={() => handleDigitalTimelinePlacement(false)}
+          >
+            Nach 1950 →
+          </button>
+        </div>
+      )}
+
+      {digitalTimelineStarted && showSolution && (
         <button
           type="button"
-          className="rounded-full border border-ink/20 px-4 py-3 text-sm w-full sm:w-auto text-center smooth-transition hover:bg-ink/5"
-          onClick={restartGame}
+          className="w-full rounded-full bg-ink text-inkDark px-6 py-3 text-sm font-semibold hover:scale-[1.02] transition-transform"
+          onClick={nextDigitalTimelineCard}
         >
-          ↻ Neu starten
+          Nächste Gruppe: {groupNames[(currentGroupIndex + 1) % numGroups]}
         </button>
-        <button
-          type="button"
-          className="rounded-full border border-red-400 text-red-200 px-4 py-3 text-sm w-full sm:w-auto text-center smooth-transition hover:bg-red-400/10"
-          onClick={endGame}
-        >
-          ✕ Beenden
-        </button>
-      </div>
+      )}
+
+      {!digitalTimelineStarted && (
+        <div className="flex flex-col sm:flex-row flex-wrap gap-3 pb-4 sm:pb-0">
+          {(!settings.multipleChoice || showSolution) && (
+            <button
+              type="button"
+              className="rounded-full bg-ink text-black px-4 py-3 text-sm font-semibold w-full sm:flex-1 text-center smooth-transition hover:scale-[1.02] active:scale-[0.98]"
+              onClick={nextCard}
+            >
+              {isLast ? 'Fertig' : showSolution ? 'Zur nächsten Frage →' : 'Lösung anzeigen'}
+            </button>
+          )}
+          <button
+            type="button"
+            className="rounded-full border border-ink/20 px-4 py-3 text-sm w-full sm:w-auto text-center smooth-transition hover:bg-ink/5"
+            onClick={restartGame}
+          >
+            ↻ Neu starten
+          </button>
+          <button
+            type="button"
+            className="rounded-full border border-red-400 text-red-200 px-4 py-3 text-sm w-full sm:w-auto text-center smooth-transition hover:bg-red-400/10"
+            onClick={endGame}
+          >
+            ✕ Beenden
+          </button>
+        </div>
+      )}
 
       {playbackError && (
         <div className="rounded-xl bg-red-50 text-red-800 p-3 text-sm border border-red-200">
