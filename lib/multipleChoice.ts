@@ -19,6 +19,48 @@ const allCards = [
   ...schaetzfragenCards
 ];
 
+// Keep the original order index for religion cards so we can pick nearby, thematically similar entries
+const religionIndexById = new Map<string, number>();
+triviaExtraCards.forEach((card, index) => {
+  if (card.category === 'religionglaube') {
+    religionIndexById.set(card.id, index);
+  }
+});
+
+function pickUniqueAnswers(candidates: Card[], currentAnswer: string, limit = 3): string[] {
+  const shuffled = [...candidates].sort(() => Math.random() - 0.5);
+  const picked: string[] = [];
+
+  for (const candidate of shuffled) {
+    if (picked.length >= limit) break;
+    if (candidate.answer === currentAnswer) continue;
+    if (!picked.includes(candidate.answer)) {
+      picked.push(candidate.answer);
+    }
+  }
+
+  return picked;
+}
+
+function getReligionDistractors(currentCard: Card): string[] {
+  if (currentCard.category !== 'religionglaube') return [];
+  const currentIdx = religionIndexById.get(currentCard.id);
+  if (currentIdx === undefined) return [];
+
+  const windowSize = 6;
+  const start = Math.max(0, currentIdx - windowSize);
+  const end = Math.min(triviaExtraCards.length, currentIdx + windowSize + 1);
+
+  const windowCards = triviaExtraCards.slice(start, end).filter(
+    (card) => card.category === 'religionglaube' && card.id !== currentCard.id
+  );
+
+  const sameDifficulty = windowCards.filter((card) => card.difficulty === currentCard.difficulty);
+  const candidatePool = sameDifficulty.length >= 3 ? sameDifficulty : windowCards;
+
+  return pickUniqueAnswers(candidatePool, currentCard.answer, 3);
+}
+
 // Extract the region/continent from country card IDs (e.g., "flag-de" -> "europe")
 function getRegion(cardId: string): string | null {
   const regionPrefixes = {
@@ -154,6 +196,15 @@ export function generateDistractors(currentCard: Card): string[] {
   if (currentCard.distractors && currentCard.distractors.length >= 3) {
     return currentCard.distractors.slice(0, 3);
   }
+
+  // ===== RELIGION: Use nearby thematically similar cards to avoid off-topic options =====
+  if (!currentCard.distractors || currentCard.distractors.length === 0) {
+    const religionDistractors = getReligionDistractors(currentCard);
+    if (religionDistractors.length >= 3) {
+      return religionDistractors.slice(0, 3);
+    }
+  }
+
   if (currentCard.category === 'schaetzfragen') {
     const numericValue = extractNumericValue(currentCard.answer);
     if (numericValue !== null && numericValue > 0) {
