@@ -295,6 +295,7 @@ function PlayPageContent() {
   const [digitalTimelineStarted, setDigitalTimelineStarted] = useState(false);
   const [currentGroupIndex, setCurrentGroupIndex] = useState(0);
   const [groupTimelines, setGroupTimelines] = useState<Map<number, { year: number; answer: string }[]>>(new Map());
+  const [timelinePlacementCorrect, setTimelinePlacementCorrect] = useState<boolean | null>(null);
   
   const allowedCategoriesForMode = useMemo(
     () => (mode === 'timeline' ? availableCategories.filter((cat) => !triviaOnlySet.has(cat)) : availableCategories),
@@ -642,6 +643,8 @@ function PlayPageContent() {
       isCorrect = card.year >= before.year && card.year <= after.year;
     }
     
+    setTimelinePlacementCorrect(isCorrect);
+    
     if (isCorrect) {
       // Insert card at the correct position
       const newEntry = { year: card.year, answer: card.answer };
@@ -650,6 +653,7 @@ function PlayPageContent() {
       const newTimelines = new Map(groupTimelines);
       newTimelines.set(currentGroupIndex, updated);
       setGroupTimelines(newTimelines);
+      setScore((s) => s + 1);
     }
     
     setShowSolution(true);
@@ -659,6 +663,7 @@ function PlayPageContent() {
   const nextDigitalTimelineCard = useCallback(() => {
     mediaRef.current?.stop();
     setShowSolution(false);
+    setTimelinePlacementCorrect(null);
     
     // Move to next group
     const nextGroup = (currentGroupIndex + 1) % numGroups;
@@ -1152,13 +1157,31 @@ function PlayPageContent() {
       )}
 
       {digitalTimelineStarted && showSolution && (
-        <button
-          type="button"
-          className="w-full rounded-full bg-ink text-inkDark px-6 py-3 text-sm font-semibold hover:scale-[1.02] transition-transform"
-          onClick={nextDigitalTimelineCard}
-        >
-          Nächste Gruppe: {groupNames[(currentGroupIndex + 1) % numGroups]}
-        </button>
+        <>
+          <div className={`rounded-xl p-4 text-center animate-flip-in ${
+            timelinePlacementCorrect
+              ? 'bg-green-500/20 border-2 border-green-500'
+              : 'bg-red-500/20 border-2 border-red-500'
+          }`}>
+            <p className={`text-lg font-bold ${
+              timelinePlacementCorrect ? 'text-green-700' : 'text-red-700'
+            }`}>
+              {timelinePlacementCorrect ? '✓ Richtig!' : '✗ Falsch!'}
+            </p>
+            <p className="text-sm mt-1 text-ink/80">
+              {timelinePlacementCorrect
+                ? 'Die Karte wurde korrekt eingeordnet.'
+                : 'Die Karte wurde falsch platziert.'}
+            </p>
+          </div>
+          <button
+            type="button"
+            className="w-full rounded-full bg-ink text-inkDark px-6 py-3 text-sm font-semibold hover:scale-[1.02] transition-transform"
+            onClick={nextDigitalTimelineCard}
+          >
+            Nächste Gruppe: {groupNames[(currentGroupIndex + 1) % numGroups]}
+          </button>
+        </>
       )}
 
       {!digitalTimelineStarted && (
