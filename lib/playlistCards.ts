@@ -14192,10 +14192,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-waka-waka-this-time-for-africa-the-official-2010-fifa-world-cup-tm-song-feat-freshlyground-2023",
+    "id": "song-waka-waka-this-time-for-africa-the-official-2010-fifa-world-cup-tm-song-feat-freshlyground-2010",
     "title": "Waka Waka (This Time for Africa) [The Official 2010 FIFA World Cup (TM) Song] (feat. Freshlyground)",
     "category": "music",
-    "year": 2023,
+    "year": 2010,
     "cue": "Song anhören und einordnen.",
     "answer": "Shakira, Freshlyground — Waka Waka (This Time for Africa) [The Official 2010 FIFA World Cup (TM) Song] (feat. Freshlyground).",
     "hint": "Shakira, Freshlyground",

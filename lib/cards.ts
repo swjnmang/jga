@@ -27,13 +27,13 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2015,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Angela Merkel, Pressekonferenz zur Fluechtlingspolitik am 31.08..',
+    answer: 'Angela Merkel, Pressekonferenz zur Flüchtlingspolitik am 31.08..',
     hint: 'Bundeskanzlerin zur Migrationslage.',
     difficulty: 'leicht',
     sources: {
       text: '"Wir schaffen das."'
     },
-    distractors: ['Helmut Kohl, Wiedervereinigung 1990', 'Gerhard Schroeder, Agenda 2010', 'Willy Brandt, Kniefall von Warschau']
+    distractors: ['Helmut Kohl, Wiedervereinigung 1990', 'Gerhard Schröder, Agenda 2010', 'Willy Brandt, Kniefall von Warschau']
   },
   {
     id: 'image-berliner-mauerfall',
@@ -162,11 +162,11 @@ const baseCards: Card[] = [
     year: 2001,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Nelson Mandela.',
-    hint: 'Soedafrika, Versuehnung.',
+    hint: 'Südafrika, Versöhnung.',
     difficulty: 'mittel',
     sources: {
-      text: '"It always seems impossible until itue done."',
-      textDe: 'Es erscheint immer unmueglich, bis es getan ist.'
+      text: '"It always seems impossible until it\'s done."',
+      textDe: 'Es erscheint immer unmöglich, bis es getan ist.'
     },
     distractors: ['Martin Luther King Jr., I Have a Dream', 'Mahatma Gandhi, Salzmarsch 1930', 'Desmond Tutu, Wahrheitskommission']
   },
@@ -346,13 +346,13 @@ const baseCards: Card[] = [
     year: 1987,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Ronald Reagan, Rede am Brandenburger Tor, 12.06..',
-    hint: 'US-Praesident fordert Oeffnung der Mauer.',
+    hint: 'US-Präsident fordert Öffnung der Mauer.',
     difficulty: 'mittel',
     sources: {
       text: '"Mr. Gorbachev, tear down this wall!"',
-      textDe: 'Herr Gorbatschow, reiueen Sie diese Mauer ein!'
+      textDe: 'Herr Gorbatschow, reißen Sie diese Mauer ein!'
     },
-    distractors: ['John F. Kennedy, Ich bin ein Berliner', 'Winston Churchill, Iron Curtain Speech', 'Helmut Kohl, Bluehende Landschaften']
+    distractors: ['John F. Kennedy, Ich bin ein Berliner', 'Winston Churchill, Iron Curtain Speech', 'Helmut Kohl, Blühende Landschaften']
   },
   {
     id: 'quote-yes-we-can',
@@ -464,11 +464,11 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 2013,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Lothar Matthues "Hoette, huette, Fahrradkette." in der Sky90-Runde als spoettischer Kommentar zur Spielanalyse.',
-    hint: 'Fuueballweltmeister, TV-Experte.',
+    answer: 'Lothar Matthäus "Wäre, wäre Fahrradkette." in der Sky90-Runde als spöttischer Kommentar zur Spielanalyse.',
+    hint: 'Fußballweltmeister, TV-Experte.',
     difficulty: 'leicht',
-    sources: { text: 'Hoette, huette, Fahrradkette.' },
-    distractors: ['Franz Beckenbauer, Schaun mer mal', 'Andi Moeller, Mailand oder Madrid', 'Juergen Klopp, Normale Eins']
+    sources: { text: 'Wäre, wäre Fahrradkette.' },
+    distractors: ['Franz Beckenbauer, Schaun mer mal', 'Andi Möller, Mailand oder Madrid', 'Jürgen Klopp, Normale Eins']
   },
   {
     id: 'quote-mailand-oder-madrid',
