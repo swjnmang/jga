@@ -231,6 +231,19 @@ export function generateDistractors(currentCard: Card): string[] {
         candidates = regionalCandidates;
       }
     }
+    // For country cards, format as "Country - Year"
+    const formatCountryAnswer = (c: Card) => 
+      typeof c.year === 'number' ? `${c.answer} - ${c.year}` : c.answer;
+    
+    const shuffled = [...candidates].sort(() => Math.random() - 0.5);
+    for (const candidate of shuffled) {
+      if (distractors.length >= 3) break;
+      const formattedAnswer = formatCountryAnswer(candidate);
+      if (!distractors.includes(formattedAnswer)) {
+        distractors.push(formattedAnswer);
+      }
+    }
+    return distractors;
   }
   
   // MUSIC CARDS: Filter by decade (±5 years)
@@ -306,6 +319,11 @@ export function getMultipleChoiceOptions(card: Card): { options: string[]; corre
     correctAnswer = correctAnswer.replace(/^ca\.\s*/, '');
     // Add "ca." prefix
     correctAnswer = `ca. ${correctAnswer}`;
+  }
+  
+  // For country cards: format as "Country - Year"
+  if (card.category === 'country' && typeof card.year === 'number') {
+    correctAnswer = `${card.answer} - ${card.year}`;
   }
   
   const allOptions = [correctAnswer, ...distractors];
