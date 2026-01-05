@@ -10,6 +10,23 @@ import { Card, CardCategory, DecadeTag, Difficulty, GenreTag } from '@/lib/types
 import { getMultipleChoiceOptions } from '@/lib/multipleChoice';
 
 const FALLBACK_PLAYLIST_ID = 'imported-playlist';
+const METRIC_STORAGE_KEY = 'quizMetrics';
+const METRIC_FLAGS_KEY = 'quizMetricFlags';
+const SESSION_SEEN_KEY = 'sessionSeenCardIds';
+
+type QuizMetric = {
+  cardId: string;
+  category: CardCategory;
+  difficulty: Difficulty;
+  mode: GameMode | null;
+  correct: boolean | null;
+  timeMs: number;
+  timerSeconds: number;
+  reason: 'answer' | 'timeout' | 'reveal';
+  timestamp: number;
+};
+
+type QuizMetricFlags = Record<string, { attempts: number; correct: number; flag: 'too-hard' | 'too-easy' | 'outlier' | null }>;
 
 function shuffle<T>(arr: T[]): T[] {
   const copy = [...arr];
@@ -18,6 +35,86 @@ function shuffle<T>(arr: T[]): T[] {
     [copy[i], copy[j]] = [copy[j], copy[i]];
   }
   return copy;
+}
+
+function pickBalancedOptionOrder(options: string[], correctIndex: number): { options: string[]; correctIndex: number } {
+  if (options.length === 0) return { options, correctIndex };
+  const lengths = options.map((o) => o.length);
+  const sortedLen = [...lengths].sort((a, b) => a - b);
+  const mid = Math.floor(sortedLen.length / 2);
+  const median = sortedLen.length % 2 === 0 ? (sortedLen[mid - 1] + sortedLen[mid]) / 2 : sortedLen[mid];
+
+  const orderedIndices = options
+    .map((opt, idx) => ({ idx, delta: Math.abs(opt.length - median) }))
+    .sort((a, b) => a.delta - b.delta)
+    .map((item) => item.idx);
+
+  // Random rotate to keep unpredictability
+  const rotation = Math.floor(Math.random() * options.length);
+  const rotated = orderedIndices.map((_, i) => orderedIndices[(i + rotation) % orderedIndices.length]);
+
+  const balanced = rotated.map((idx) => options[idx]);
+  const newCorrectIndex = rotated.indexOf(correctIndex);
+  return { options: balanced, correctIndex: newCorrectIndex >= 0 ? newCorrectIndex : correctIndex };
+}
+
+function loadSessionSeen(): Set<string> {
+  if (typeof window === 'undefined') return new Set();
+  const raw = sessionStorage.getItem(SESSION_SEEN_KEY);
+  if (!raw) return new Set();
+  try {
+    return new Set(JSON.parse(raw) as string[]);
+  } catch (_err) {
+    return new Set();
+  }
+}
+
+function persistSessionSeen(ids: Set<string>) {
+  if (typeof window === 'undefined') return;
+  sessionStorage.setItem(SESSION_SEEN_KEY, JSON.stringify(Array.from(ids)));
+}
+
+function loadMetrics(): QuizMetric[] {
+  if (typeof window === 'undefined') return [];
+  try {
+    return JSON.parse(localStorage.getItem(METRIC_STORAGE_KEY) || '[]') as QuizMetric[];
+  } catch (_err) {
+    return [];
+  }
+}
+
+function saveMetrics(data: QuizMetric[]) {
+  if (typeof window === 'undefined') return;
+  localStorage.setItem(METRIC_STORAGE_KEY, JSON.stringify(data.slice(-200)));
+}
+
+function saveMetricFlags(flags: QuizMetricFlags) {
+  if (typeof window === 'undefined') return;
+  localStorage.setItem(METRIC_FLAGS_KEY, JSON.stringify(flags));
+}
+
+function updateMetricFlags(metrics: QuizMetric[]) {
+  const flags: QuizMetricFlags = {};
+  const grouped = new Map<string, QuizMetric[]>();
+  metrics.forEach((m) => {
+    const list = grouped.get(m.cardId) ?? [];
+    list.push(m);
+    grouped.set(m.cardId, list);
+  });
+
+  grouped.forEach((list, cardId) => {
+    const attempts = list.length;
+    const correct = list.filter((m) => m.correct === true).length;
+    const p = attempts > 0 ? correct / attempts : 0;
+    let flag: QuizMetricFlags[string]['flag'] = null;
+    if (attempts >= 5 && p < 0.2) flag = 'too-hard';
+    if (attempts >= 5 && p > 0.95) flag = 'too-easy';
+    const slowOutliers = list.some((m) => m.timeMs > (m.timerSeconds + 15) * 1000);
+    if (!flag && slowOutliers) flag = 'outlier';
+    flags[cardId] = { attempts, correct, flag };
+  });
+
+  saveMetricFlags(flags);
 }
 
 type TimerState = {
@@ -115,14 +212,20 @@ function buildWeightedDeck(
 
   const deck: Card[] = [];
 
-  const drawCategory = (availableCats: CardCategory[]) => {
+  const drawCategory = (availableCats: CardCategory[], prevCat: CardCategory | null) => {
     const weights = availableCats.map((cat) => Math.max(0, settings.categoryWeights[cat] ?? 0));
     const total = weights.reduce((a, b) => a + b, 0);
     const norm = total > 0 ? total : availableCats.length;
     let r = Math.random() * norm;
     for (let i = 0; i < availableCats.length; i += 1) {
       const w = total > 0 ? weights[i] : 1;
-      if (r <= w) return availableCats[i];
+      const cat = availableCats[i];
+      if (r <= w) {
+        if (cat !== prevCat || availableCats.length === 1) return cat;
+        // try a different category to improve rotation
+        const alt = availableCats.find((c) => c !== prevCat);
+        return alt ?? cat;
+      }
       r -= w;
     }
     return availableCats[availableCats.length - 1];
@@ -135,7 +238,8 @@ function buildWeightedDeck(
       .filter(([, list]) => list.length > 0)
       .map(([cat]) => cat);
     if (availableCats.length === 0) break;
-    const chosen = drawCategory(availableCats);
+    const prevCat = deck.length > 0 ? deck[deck.length - 1].category : null;
+    const chosen = drawCategory(availableCats, prevCat);
     const list = buckets.get(chosen);
     const card = list?.pop();
     if (card) deck.push(card);
@@ -180,6 +284,7 @@ function PlayPageContent() {
   const [settings, setSettings] = useState<UserSettings>(defaults);
   const [deckKey, setDeckKey] = useState(0);
   const [blockedCards, setBlockedCards] = useState<Set<string>>(new Set());
+  const [sessionSeen, setSessionSeen] = useState<Set<string>>(new Set());
   const [mode, setMode] = useState<GameMode | null>(preselectedMode && startFlag ? preselectedMode : null);
   const [selectedMode, setSelectedMode] = useState<GameMode | null>(null);
   const allowedCategoriesForMode = useMemo(
@@ -214,7 +319,7 @@ function PlayPageContent() {
       if (settings.playlists.length === 0) return true;
       return ids.some((id) => settings.playlists.includes(id));
     };
-    return cards.filter(
+    const base = cards.filter(
       (c) =>
         c.category !== 'video' &&
         !blockedCards.has(c.id) &&
@@ -223,7 +328,34 @@ function PlayPageContent() {
         playlistAllowed(c) &&
         (mode !== 'timeline' || !triviaOnlySet.has(c.category))
     );
-  }, [blockedCards, mode, settings.decades, settings.genres, settings.playlists]);
+    const unseen = base.filter((c) => !sessionSeen.has(c.id));
+    return unseen.length > 0 ? unseen : base;
+  }, [blockedCards, mode, sessionSeen, settings.decades, settings.genres, settings.playlists]);
+
+  const logMetric = useCallback(
+    (reason: QuizMetric['reason']) => {
+      const current = filteredDeck[index];
+      if (!current) return;
+      const elapsed = (typeof performance !== 'undefined' ? performance.now() : Date.now()) - cardStartRef.current;
+      const metrics = loadMetrics();
+      const correct = mcOptions && selectedAnswer !== null ? selectedAnswer === mcOptions.correctIndex : null;
+      metrics.push({
+        cardId: current.id,
+        category: current.category,
+        difficulty: current.difficulty,
+        mode,
+        correct,
+        timeMs: Math.max(0, elapsed),
+        timerSeconds: settings.timerSeconds,
+        reason,
+        timestamp: Date.now()
+      });
+      saveMetrics(metrics);
+      updateMetricFlags(metrics);
+      loggedRef.current = true;
+    },
+    [filteredDeck, index, mcOptions, mode, selectedAnswer, settings.timerSeconds]
+  );
   const filteredDeck = useMemo(
     () => {
       void deckKey; // force recompute when deckKey changes (restart)
@@ -238,12 +370,16 @@ function PlayPageContent() {
   // Multiple choice state
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [mcOptions, setMcOptions] = useState<{ options: string[]; correctIndex: number } | null>(null);
+  const mcCacheRef = useRef<Map<number, { options: string[]; correctIndex: number }>>(new Map());
   // Solo mode scoring
   const [score, setScore] = useState(0);
   // Start with auth prompt open; will be hidden immediately if session is already valid.
   const [needsSpotifyAuth, setNeedsSpotifyAuth] = useState<boolean>(true);
   const [playbackError, setPlaybackError] = useState<string | null>(null);
   const mediaRef = useRef<MediaEmbedHandle | null>(null);
+  const cardStartRef = useRef<number>(0);
+  const loggedRef = useRef(false);
+  const offlineRef = useRef<boolean>(false);
   const card = filteredDeck[index];
   const isLast = index === filteredDeck.length - 1;
 
@@ -268,6 +404,7 @@ function PlayPageContent() {
         // ignore parse errors
       }
     }
+    setSessionSeen(loadSessionSeen());
     const deck = buildWeightedDeck(cards, stored, FALLBACK_PLAYLIST_ID, availableCategories);
     setTimerForCard(stored.timerSeconds, deck[0]);
     setIndex(0);
@@ -292,13 +429,41 @@ function PlayPageContent() {
     setShowSolution(false);
     setPlaybackError(null);
     setSelectedAnswer(null);
+    loggedRef.current = false;
+    cardStartRef.current = typeof performance !== 'undefined' ? performance.now() : Date.now();
     // Generate multiple choice options if enabled
     if (settings.multipleChoice && current) {
-      setMcOptions(getMultipleChoiceOptions(current));
+      const cached = mcCacheRef.current.get(index);
+      if (cached) {
+        setMcOptions(cached);
+      } else {
+        const base = getMultipleChoiceOptions(current);
+        const balanced = pickBalancedOptionOrder(base.options, base.correctIndex);
+        mcCacheRef.current.set(index, balanced);
+        setMcOptions(balanced);
+      }
+      // Preload next card options
+      const nextCard = filteredDeck[index + 1];
+      if (nextCard && settings.multipleChoice) {
+        const baseNext = getMultipleChoiceOptions(nextCard);
+        mcCacheRef.current.set(index + 1, pickBalancedOptionOrder(baseNext.options, baseNext.correctIndex));
+      }
     } else {
       setMcOptions(null);
     }
   }, [filteredDeck, index, settings.timerSeconds, settings.multipleChoice, setTimerForCard]);
+
+  useEffect(() => {
+    const current = filteredDeck[index];
+    if (!current) return;
+    setSessionSeen((prev) => {
+      if (prev.has(current.id)) return prev;
+      const next = new Set(prev);
+      next.add(current.id);
+      persistSessionSeen(next);
+      return next;
+    });
+  }, [filteredDeck, index]);
 
   const rememberBlocked = useCallback((set: Set<string>) => {
     localStorage.setItem('blockedCards', JSON.stringify(Array.from(set)));
@@ -322,6 +487,12 @@ function PlayPageContent() {
   }, [timer.secondsLeft]);
 
   useEffect(() => {
+    if (!showSolution || loggedRef.current) return;
+    const reason: QuizMetric['reason'] = timer.secondsLeft === 0 ? 'timeout' : selectedAnswer !== null ? 'answer' : 'reveal';
+    logMetric(reason);
+  }, [logMetric, selectedAnswer, showSolution, timer.secondsLeft]);
+
+  useEffect(() => {
     const checkSpotify = async () => {
       try {
         const res = await fetch('/api/spotify/session');
@@ -332,6 +503,24 @@ function PlayPageContent() {
       }
     };
     checkSpotify();
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const onOffline = () => {
+      offlineRef.current = true;
+      setPlaybackError('Offline erkannt – Medienwiedergabe und API-Calls können eingeschränkt sein.');
+    };
+    const onOnline = () => {
+      offlineRef.current = false;
+      setPlaybackError(null);
+    };
+    window.addEventListener('offline', onOffline);
+    window.addEventListener('online', onOnline);
+    return () => {
+      window.removeEventListener('offline', onOffline);
+      window.removeEventListener('online', onOnline);
+    };
   }, []);
 
   const nextCard = useCallback(() => {
