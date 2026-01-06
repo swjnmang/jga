@@ -58,9 +58,18 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     flexActive: false
   };
 
-  // Wähle eine Referenzkarte (erste im Deck)
-  const referenceCard = params.deck.length > 0 ? params.deck[0] : null;
-  const actualDeck = params.deck.slice(1); // Rest des Decks
+  // Erzeuge eine feste Referenzkarte (1950)
+  const referenceCard: Card = {
+    id: 'reference-1950',
+    title: 'Referenzjahr',
+    category: 'schaetzfragen',
+    year: 1950,
+    cue: 'Referenzjahr',
+    answer: 'Referenzjahr',
+    difficulty: 'leicht',
+    sources: {}
+  };
+  const actualDeck = params.deck; // Volles Deck verwenden
 
   const gameSession: GameSession = {
     id: pin,

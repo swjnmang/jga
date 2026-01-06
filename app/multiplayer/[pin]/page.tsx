@@ -417,29 +417,31 @@ export default function MultiplayerGamePage() {
           
           // Wenn nur Referenzkarte: Einfache Vor/Nach Buttons
           if (displayTimeline.length === 1) {
+            const ref = displayTimeline[0];
             return (
               <div className="card-surface rounded-2xl p-6 space-y-4">
                 <h3 className="text-lg font-semibold text-center">
                   Platziere die Karte in der Timeline von {currentGroup.name}
                 </h3>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-center justify-center gap-3">
                   <button
                     onClick={() => handlePlaceCard(0)}
                     disabled={isProcessing}
-                    className="p-6 rounded-xl border-2 border-ink/30 hover:border-ink hover:bg-ink/5 transition-all disabled:opacity-50"
+                    className="p-4 rounded-xl border-2 border-ink/30 hover:border-ink hover:bg-ink/5 transition-all disabled:opacity-50"
                   >
-                    <div className="text-3xl mb-2">⬅️</div>
-                    <div className="font-semibold">Davor</div>
-                    <div className="text-sm text-ink/60 mt-1">Früher</div>
+                    ← Davor
                   </button>
+                  <div className="flex-shrink-0 rounded-lg border-2 border-yellow-500 bg-yellow-100 text-inkDark px-4 py-3 min-w-[140px]">
+                    <p className="text-xs font-bold">{ref.year}</p>
+                    <p className="text-xs text-inkDark/70 truncate">{getShortTimelineLabel(ref.answer || ref.title || '')}</p>
+                    <p className="text-xs text-yellow-700 mt-1">Referenz</p>
+                  </div>
                   <button
                     onClick={() => handlePlaceCard(1)}
                     disabled={isProcessing}
-                    className="p-6 rounded-xl border-2 border-ink/30 hover:border-ink hover:bg-ink/5 transition-all disabled:opacity-50"
+                    className="p-4 rounded-xl border-2 border-ink/30 hover:border-ink hover:bg-ink/5 transition-all disabled:opacity-50"
                   >
-                    <div className="text-3xl mb-2">➡️</div>
-                    <div className="font-semibold">Danach</div>
-                    <div className="text-sm text-ink/60 mt-1">Später</div>
+                    Danach →
                   </button>
                 </div>
               </div>
@@ -465,9 +467,9 @@ export default function MultiplayerGamePage() {
                         ← Davor
                       </button>
                     )}
-                    <div className={`flex-shrink-0 rounded-lg border-2 px-4 py-3 min-w-[120px] ${item.id === game.referenceCard?.id ? 'border-yellow-500 bg-yellow-100' : 'border-ink bg-ink/10'}`}>
-                      <p className="text-xs font-bold text-ink">{item.year}</p>
-                      <p className="text-xs text-ink/70 truncate">{getShortTimelineLabel(item.answer || item.title || '')}</p>
+                    <div className={`flex-shrink-0 rounded-lg border-2 px-4 py-3 min-w-[120px] ${item.id === game.referenceCard?.id ? 'border-yellow-500 bg-yellow-100 text-inkDark' : 'border-ink bg-ink/10'}`}>
+                      <p className={`text-xs font-bold ${item.id === game.referenceCard?.id ? '' : 'text-ink'}`}>{item.year}</p>
+                      <p className={`text-xs truncate ${item.id === game.referenceCard?.id ? 'text-inkDark/70' : 'text-ink/70'}`}>{getShortTimelineLabel(item.answer || item.title || '')}</p>
                       {item.id === game.referenceCard?.id && <p className="text-xs text-yellow-700 mt-1">Referenz</p>}
                     </div>
                     <button
@@ -511,9 +513,9 @@ export default function MultiplayerGamePage() {
                 {displayTimeline.map((item, idx) => (
                   <div key={idx} className="flex items-center">
                     {idx > 0 && <div className="text-ink/30 mx-1">↔</div>}
-                    <div className={`flex-shrink-0 rounded-lg border-2 px-4 py-3 min-w-[120px] ${item.id === game.referenceCard?.id ? 'border-yellow-500 bg-yellow-100' : 'border-ink bg-ink/10'}`}>
-                      <p className="text-xs font-bold text-ink">{item.year}</p>
-                      <p className="text-xs text-ink/70 truncate">{getShortTimelineLabel(item.answer || item.title || '')}</p>
+                    <div className={`flex-shrink-0 rounded-lg border-2 px-4 py-3 min-w-[120px] ${item.id === game.referenceCard?.id ? 'border-yellow-500 bg-yellow-100 text-inkDark' : 'border-ink bg-ink/10'}`}>
+                      <p className={`text-xs font-bold ${item.id === game.referenceCard?.id ? '' : 'text-ink'}`}>{item.year}</p>
+                      <p className={`text-xs truncate ${item.id === game.referenceCard?.id ? 'text-inkDark/70' : 'text-ink/70'}`}>{getShortTimelineLabel(item.answer || item.title || '')}</p>
                       {item.id === game.referenceCard?.id && <p className="text-xs text-yellow-700 mt-1">Referenz</p>}
                     </div>
                   </div>

@@ -17,7 +17,7 @@ export default function MultiplayerLobby() {
 
   // Create Game Form
   const [groupName, setGroupName] = useState('');
-  const [gameMode, setGameMode] = useState<'timeline' | 'solo'>('timeline');
+  const [gameMode, setGameMode] = useState<'timeline' | 'trivia'>('timeline');
 
   // Join Game Form
   const [pin, setPin] = useState('');
@@ -333,7 +333,7 @@ export default function MultiplayerLobby() {
             <div>
               <label className="block text-sm font-semibold mb-2">Spielmodus</label>
               <div className="grid grid-cols-2 gap-2">
-                {(['timeline', 'solo'] as const).map((m) => (
+                {(['timeline', 'trivia'] as const).map((m) => (
                   <button
                     key={m}
                     onClick={() => setGameMode(m)}
@@ -343,7 +343,7 @@ export default function MultiplayerLobby() {
                         : 'border-ink/30 hover:border-ink/60'
                     }`}
                   >
-                    {m === 'timeline' ? '🔢 Timeline' : '👤 Solo'}
+                    {m === 'timeline' ? '🔢 Timeline' : '🧠 Trivia'}
                   </button>
                 ))}
               </div>
