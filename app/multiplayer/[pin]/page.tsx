@@ -6,9 +6,13 @@ import {
   subscribeToGame,
   setGroupReady,
   startGame,
-  leaveGame
+  leaveGame,
+  placeCard,
+  nextCard
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
+import { getCardById } from '@/lib/cards';
+import MediaEmbed from '@/components/MediaEmbed';
 
 interface SessionInfo {
   pin: string;
@@ -28,6 +32,11 @@ export default function MultiplayerGamePage() {
   const [session, setSession] = useState<SessionInfo | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  
+  // Spielzustand
+  const [myPlacement, setMyPlacement] = useState<'before' | 'after' | null>(null);
+  const [showSolution, setShowSolution] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
 
   // Lade Session-Infos
   useEffect(() => {
@@ -101,6 +110,57 @@ export default function MultiplayerGamePage() {
 
   const copyPin = () => {
     navigator.clipboard.writeText(pin);
+  };
+
+  const handlePlaceCard = async (placement: 'before' | 'after') => {
+    if (!session || !game || !game.currentCardId || isProcessing) return;
+    
+    setIsProcessing(true);
+    setMyPlacement(placement);
+    
+    try {
+      const card = getCardById(game.currentCardId);
+      if (!card) return;
+      
+      const isCorrect = (placement === 'before' && card.year < 1950) || 
+                       (placement === 'after' && card.year >= 1950);
+      
+      await placeCard(pin, session.groupId, card.id, card.year, isCorrect);
+    } catch (err) {
+      console.error('Error placing card:', err);
+      setError('Fehler beim Platzieren der Karte');
+    } finally {
+      setIsProcessing(false);
+    }
+  };
+
+  const handleShowSolution = () => {
+    setShowSolution(true);
+  };
+
+  const handleNextCard = async () => {
+    if (!session || !game || isProcessing) return;
+    
+    setIsProcessing(true);
+    setShowSolution(false);
+    setMyPlacement(null);
+    
+    try {
+      await nextCard(pin);
+    } catch (err) {
+      console.error('Error going to next card:', err);
+      setError('Fehler beim Wechseln zur nächsten Karte');
+    } finally {
+      setIsProcessing(false);
+    }
+  };
+  
+  // Check if current group has placed
+  const hasPlaced = () => {
+    if (!game || !session) return false;
+    const group = game.groups[session.groupId];
+    if (!group || !game.currentCardId) return false;
+    return group.timeline.some(c => c.cardId === game.currentCardId);
   };
 
   if (loading) {
@@ -248,7 +308,249 @@ export default function MultiplayerGamePage() {
     );
   }
 
-  // Spielansicht - Placeholder für später
+  // Spielansicht
+  if (game.state === 'playing') {
+    const currentCard = game.currentCardId ? getCardById(game.currentCardId) : null;
+    const groupPlaced = hasPlaced();
+    const allGroupsPlaced = groupList.every(g => 
+      g.timeline.some(c => c.cardId === game.currentCardId)
+    );
+
+    return (
+      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+        {/* Header */}
+        <div className="text-center space-y-2">
+          <h1 className="text-3xl font-display">Timeline Multiplayer</h1>
+          <p className="text-ink/70">
+            Karte {game.currentCardIndex + 1} / {game.deck.length}
+          </p>
+          <div className="inline-flex items-center gap-2 text-sm text-ink/60">
+            <span>PIN: {pin}</span>
+            <button onClick={copyPin} className="hover:opacity-70">📋</button>
+          </div>
+        </div>
+
+        {/* Aktuelle Karte */}
+        {currentCard && (
+          <div className="card-surface rounded-2xl p-6 space-y-4">
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-semibold">{currentCard.title}</h2>
+              <span className="text-sm px-3 py-1 rounded-full bg-ink/10">
+                {currentCard.difficulty}
+              </span>
+            </div>
+
+            <p className="text-lg">{currentCard.cue}</p>
+
+            {currentCard.sources && (
+              <MediaEmbed 
+                sources={currentCard.sources}
+                title={currentCard.title}
+              />
+            )}
+
+            {currentCard.hint && (
+              <div className="text-sm text-ink/70">
+                <span className="font-semibold">Hinweis:</span> {currentCard.hint}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Platzierungs-Optionen */}
+        {!groupPlaced && !showSolution && currentCard && (
+          <div className="card-surface rounded-2xl p-6 space-y-4">
+            <h3 className="text-lg font-semibold text-center">
+              Wo ordnest du dieses Ereignis ein?
+            </h3>
+            <div className="grid grid-cols-2 gap-4">
+              <button
+                onClick={() => handlePlaceCard('before')}
+                disabled={isProcessing}
+                className="p-6 rounded-xl border-2 border-ink/30 hover:border-ink hover:bg-ink/5 transition-all disabled:opacity-50"
+              >
+                <div className="text-3xl mb-2">⬅️</div>
+                <div className="font-semibold">Vor 1950</div>
+                <div className="text-sm text-ink/60 mt-1">Älter</div>
+              </button>
+              <button
+                onClick={() => handlePlaceCard('after')}
+                disabled={isProcessing}
+                className="p-6 rounded-xl border-2 border-ink/30 hover:border-ink hover:bg-ink/5 transition-all disabled:opacity-50"
+              >
+                <div className="text-3xl mb-2">➡️</div>
+                <div className="font-semibold">Ab 1950</div>
+                <div className="text-sm text-ink/60 mt-1">Neuer</div>
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Warte-Status */}
+        {groupPlaced && !showSolution && (
+          <div className="card-surface rounded-2xl p-6 text-center space-y-3">
+            <div className="text-4xl">⏳</div>
+            <p className="font-semibold">Platzierung gespeichert!</p>
+            <p className="text-sm text-ink/60">
+              Warte auf andere Gruppen...
+            </p>
+            <div className="text-sm">
+              {groupList.filter(g => g.timeline.some(c => c.cardId === game.currentCardId)).length} / {groupList.length} Gruppen haben platziert
+            </div>
+            
+            {allGroupsPlaced && session.isHost && (
+              <button
+                onClick={handleShowSolution}
+                className="mt-4 px-6 py-3 bg-ink text-inkDark rounded-lg font-semibold hover:opacity-90"
+              >
+                Lösung zeigen
+              </button>
+            )}
+          </div>
+        )}
+
+        {/* Lösung */}
+        {showSolution && currentCard && (
+          <div className="card-surface rounded-2xl p-6 space-y-4 animate-flip-in">
+            <h3 className="text-xl font-semibold text-center">Lösung</h3>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-ink mb-2">{currentCard.year}</div>
+              <p className="text-lg">{currentCard.answer}</p>
+            </div>
+
+            {/* Gruppen-Ergebnisse */}
+            <div className="space-y-2 mt-6">
+              <h4 className="font-semibold">Ergebnisse:</h4>
+              {groupList.map(group => {
+                const placement = group.timeline.find(c => c.cardId === game.currentCardId);
+                if (!placement) return null;
+                
+                return (
+                  <div
+                    key={group.id}
+                    className="flex items-center justify-between p-3 rounded-lg"
+                    style={{ backgroundColor: `${group.color}20` }}
+                  >
+                    <div className="flex items-center gap-2">
+                      <div
+                        className="w-3 h-3 rounded-full"
+                        style={{ backgroundColor: group.color }}
+                      />
+                      <span className="font-semibold">{group.name}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm">
+                        {placement.year < 1950 ? '⬅️ Vor 1950' : '➡️ Ab 1950'}
+                      </span>
+                      <span className="text-xl">
+                        {placement.correct ? '✅' : '❌'}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Nächste Karte Button (nur Host) */}
+            {session.isHost && (
+              <button
+                onClick={handleNextCard}
+                disabled={isProcessing}
+                className="w-full mt-6 px-6 py-4 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors disabled:opacity-50"
+              >
+                {game.currentCardIndex + 1 >= game.deck.length ? 'Spiel beenden' : 'Nächste Karte'}
+              </button>
+            )}
+          </div>
+        )}
+
+        {/* Live Scoreboard */}
+        <div className="card-surface rounded-2xl p-6 space-y-3">
+          <h3 className="font-semibold">Live Scoreboard</h3>
+          {groupList
+            .sort((a, b) => b.score - a.score)
+            .map((group, index) => (
+              <div
+                key={group.id}
+                className="flex items-center justify-between p-3 rounded-lg"
+                style={{ backgroundColor: `${group.color}20` }}
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">
+                    {index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : `${index + 1}.`}
+                  </span>
+                  <span className="font-semibold">
+                    {group.name}
+                    {group.id === session.groupId && ' (Du)'}
+                  </span>
+                </div>
+                <span className="text-xl font-bold">{group.score}</span>
+              </div>
+            ))}
+        </div>
+      </main>
+    );
+  }
+
+  // Endbildschirm
+  if (game.state === 'finished') {
+    const winner = groupList.sort((a, b) => b.score - a.score)[0];
+    const isWinner = winner?.id === session.groupId;
+
+    return (
+      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+        <div className="text-center space-y-4">
+          <div className="text-6xl">🎉</div>
+          <h1 className="text-4xl font-display">Spiel beendet!</h1>
+          {isWinner ? (
+            <p className="text-2xl text-green-600 font-semibold">
+              🏆 Glückwunsch, ihr habt gewonnen!
+            </p>
+          ) : (
+            <p className="text-xl">
+              Gewinner: {winner?.name} 🏆
+            </p>
+          )}
+        </div>
+
+        {/* Endstand */}
+        <div className="card-surface rounded-2xl p-6 space-y-4">
+          <h2 className="text-2xl font-semibold text-center">Endstand</h2>
+          {groupList
+            .sort((a, b) => b.score - a.score)
+            .map((group, index) => (
+              <div
+                key={group.id}
+                className="flex items-center justify-between p-4 rounded-lg"
+                style={{ backgroundColor: `${group.color}20` }}
+              >
+                <div className="flex items-center gap-4">
+                  <span className="text-3xl">
+                    {index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : `${index + 1}.`}
+                  </span>
+                  <span className="text-xl font-semibold">
+                    {group.name}
+                    {group.id === session.groupId && ' (Du)'}
+                  </span>
+                </div>
+                <span className="text-2xl font-bold">{group.score} Punkte</span>
+              </div>
+            ))}
+        </div>
+
+        <div className="flex gap-4">
+          <button
+            onClick={() => router.push('/multiplayer')}
+            className="flex-1 px-6 py-4 bg-ink text-inkDark rounded-lg font-semibold hover:opacity-90"
+          >
+            Zurück zur Lobby
+          </button>
+        </div>
+      </main>
+    );
+  }
+
+  // Fallback
   return (
     <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
       <div className="text-center">
