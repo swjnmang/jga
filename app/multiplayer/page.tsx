@@ -22,8 +22,7 @@ export default function MultiplayerLobby() {
   const [pin, setPin] = useState('');
   const [joinGroupName, setJoinGroupName] = useState('');
   const [firebaseAvailable, setFirebaseAvailable] = useState(true);
-  const [spotifyLinkedCreate, setSpotifyLinkedCreate] = useState(false);
-  const [spotifyLinkedJoin, setSpotifyLinkedJoin] = useState(false);
+  const [spotifyLinked, setSpotifyLinked] = useState(false);
   
   // Settings State
   const availableCategories = useMemo(() => {
@@ -43,6 +42,27 @@ export default function MultiplayerLobby() {
   useEffect(() => {
     setSettings(defaultSettings);
   }, [defaultSettings]);
+
+  // Check Spotify session on mount
+  useEffect(() => {
+    const checkSpotifySession = async () => {
+      try {
+        const res = await fetch('/api/spotify/session');
+        const data = await res.json();
+        setSpotifyLinked(data.authenticated);
+      } catch (err) {
+        console.error('Failed to check Spotify session:', err);
+      }
+    };
+    checkSpotifySession();
+    
+    // Re-check when window regains focus (after Spotify login redirect)
+    const handleFocus = () => {
+      checkSpotifySession();
+    };
+    window.addEventListener('focus', handleFocus);
+    return () => window.removeEventListener('focus', handleFocus);
+  }, []);
 
   // Playlists (Music)
   const availablePlaylists = useMemo(() => {
@@ -77,7 +97,7 @@ export default function MultiplayerLobby() {
     setError(null);
 
     try {
-      if (settings.categories.includes('music') && !spotifyLinkedCreate) {
+      if (settings.categories.includes('music') && !spotifyLinked) {
         setError('Bitte zuerst Spotify Premium verbinden (Pflicht für Musik).');
         setLoading(false);
         return;
@@ -232,7 +252,7 @@ export default function MultiplayerLobby() {
         pin: pin.toUpperCase(),
         groupName: joinGroupName,
         playerName: joinGroupName,
-        spotifyLinked: spotifyLinkedJoin
+        spotifyLinked: spotifyLinked
       });
 
       // Speichere Session-Infos im localStorage
@@ -414,18 +434,26 @@ export default function MultiplayerLobby() {
             </div>
 
             {settings.categories.includes('music') && (
-              <div className="rounded-lg border-2 border-ink/20 bg-ink/5 p-4 flex items-start gap-3">
-                <input
-                  id="spotify-create"
-                  type="checkbox"
-                  checked={spotifyLinkedCreate}
-                  onChange={(e) => setSpotifyLinkedCreate(e.target.checked)}
-                  className="mt-1 h-5 w-5 accent-ink"
-                />
-                <label htmlFor="spotify-create" className="text-sm space-y-1">
-                  <div className="font-semibold">Spotify Premium verbunden?</div>
-                  <p className="text-ink/70">Musik-Kategorien erfordern eine aktive Spotify Premium Verbindung.</p>
-                </label>
+              <div className="rounded-lg border-2 border-ink/20 bg-ink/5 p-4 space-y-3">
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-ink/60 mb-2">Spotify</p>
+                  <h3 className="text-sm font-semibold mb-1">Spotify Premium erforderlich</h3>
+                  <p className="text-sm text-ink/70">Musik-Kategorien benötigen eine aktive Spotify Premium Verbindung.</p>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {spotifyLinked ? (
+                    <div className="flex items-center gap-2 bg-green-100 text-green-700 px-3 py-2 rounded-lg text-sm">
+                      <span>✓ Verbunden</span>
+                    </div>
+                  ) : (
+                    <a
+                      href={`/api/spotify/authorize?return=/multiplayer`}
+                      className="rounded-lg bg-[#1DB954] hover:bg-[#17a74a] text-white px-4 py-2 text-sm font-semibold transition-colors"
+                    >
+                      Spotify-Login starten
+                    </a>
+                  )}
+                </div>
               </div>
             )}
 
@@ -486,18 +514,26 @@ export default function MultiplayerLobby() {
               />
             </div>
 
-            <div className="rounded-lg border-2 border-ink/20 bg-ink/5 p-4 flex items-start gap-3">
-              <input
-                id="spotify-join"
-                type="checkbox"
-                checked={spotifyLinkedJoin}
-                onChange={(e) => setSpotifyLinkedJoin(e.target.checked)}
-                className="mt-1 h-5 w-5 accent-ink"
-              />
-              <label htmlFor="spotify-join" className="text-sm space-y-1">
-                <div className="font-semibold">Spotify Premium verbunden?</div>
-                <p className="text-ink/70">Pflicht, falls das Spiel Musik-Kategorien enthält.</p>
-              </label>
+            <div className="rounded-lg border-2 border-ink/20 bg-ink/5 p-4 space-y-3">
+              <div>
+                <p className="text-xs uppercase tracking-wide text-ink/60 mb-2">Spotify</p>
+                <h3 className="text-sm font-semibold mb-1">Spotify Premium erforderlich</h3>
+                <p className="text-sm text-ink/70">Falls das Spiel Musik-Kategorien enthält, benötigst du eine Spotify Premium Verbindung.</p>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {spotifyLinked ? (
+                  <div className="flex items-center gap-2 bg-green-100 text-green-700 px-3 py-2 rounded-lg text-sm">
+                    <span>✓ Verbunden</span>
+                  </div>
+                ) : (
+                  <a
+                    href={`/api/spotify/authorize?return=/multiplayer`}
+                    className="rounded-lg bg-[#1DB954] hover:bg-[#17a74a] text-white px-4 py-2 text-sm font-semibold transition-colors"
+                  >
+                    Spotify-Login starten
+                  </a>
+                )}
+              </div>
             </div>
 
             {error && (
