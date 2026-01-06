@@ -119,8 +119,16 @@ export default function MultiplayerGamePage() {
     setMyPlacement(placement);
     
     try {
+      if (!game.currentCardId) {
+        setError('Keine aktuelle Karte vorhanden');
+        return;
+      }
+      
       const card = getCardById(game.currentCardId);
-      if (!card) return;
+      if (!card) {
+        setError('Karte nicht gefunden');
+        return;
+      }
       
       const isCorrect = (placement === 'before' && card.year < 1950) || 
                        (placement === 'after' && card.year >= 1950);
@@ -315,6 +323,23 @@ export default function MultiplayerGamePage() {
     const allGroupsPlaced = groupList.every(g => 
       g.timeline.some(c => c.cardId === game.currentCardId)
     );
+
+    // Wenn keine Karte verfügbar ist, zeige Warnung
+    if (!currentCard) {
+      return (
+        <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+          <div className="text-center space-y-4">
+            <h1 className="text-3xl font-display">Timeline Multiplayer</h1>
+            <div className="card-surface rounded-2xl p-6">
+              <p className="text-lg text-ink/70">Lade Karte...</p>
+              <p className="text-sm text-ink/50 mt-2">
+                Karte {game.currentCardIndex + 1} / {game.deck.length}
+              </p>
+            </div>
+          </div>
+        </main>
+      );
+    }
 
     return (
       <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
