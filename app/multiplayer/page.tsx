@@ -186,7 +186,7 @@ export default function MultiplayerLobby() {
                 value={groupName}
                 onChange={(e) => setGroupName(e.target.value)}
                 placeholder="z.B. Team Rot"
-                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-ink bg-white"
+                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-gray-900 bg-white placeholder:text-gray-400"
                 maxLength={20}
               />
             </div>
@@ -198,7 +198,7 @@ export default function MultiplayerLobby() {
                 value={playerName}
                 onChange={(e) => setPlayerName(e.target.value)}
                 placeholder="z.B. Anna"
-                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-ink bg-white"
+                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-gray-900 bg-white placeholder:text-gray-400"
                 maxLength={20}
               />
             </div>
@@ -243,7 +243,7 @@ export default function MultiplayerLobby() {
                 value={pin}
                 onChange={(e) => setPin(e.target.value.toUpperCase())}
                 placeholder="ABC123"
-                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-center text-2xl font-mono tracking-wider text-ink bg-white"
+                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-center text-2xl font-mono tracking-wider text-gray-900 bg-white placeholder:text-gray-400"
                 maxLength={6}
               />
             </div>
@@ -255,7 +255,7 @@ export default function MultiplayerLobby() {
                 value={joinGroupName}
                 onChange={(e) => setJoinGroupName(e.target.value)}
                 placeholder="z.B. Team Blau"
-                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-ink bg-white"
+                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-gray-900 bg-white placeholder:text-gray-400"
                 maxLength={20}
               />
             </div>
@@ -267,7 +267,7 @@ export default function MultiplayerLobby() {
                 value={joinPlayerName}
                 onChange={(e) => setJoinPlayerName(e.target.value)}
                 placeholder="z.B. Max"
-                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-ink bg-white"
+                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-gray-900 bg-white placeholder:text-gray-400"
                 maxLength={20}
               />
             </div>
