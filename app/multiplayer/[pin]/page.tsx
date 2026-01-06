@@ -170,7 +170,7 @@ export default function MultiplayerGamePage() {
     if (!game || !session) return false;
     const group = game.groups[session.groupId];
     if (!group || !game.currentCardId || !group.timeline) return false;
-    return group.timeline.some(c => c.cardId === game.currentCardId);
+    return group.timeline.some(c => c.id === game.currentCardId);
   };
 
   if (loading) {
@@ -436,7 +436,7 @@ export default function MultiplayerGamePage() {
               Warte auf andere Gruppen...
             </p>
             <div className="text-sm">
-              {groupList.filter(g => g.timeline && g.timeline.some(c => c.cardId === game.currentCardId)).length} / {groupList.length} Gruppen haben platziert
+              {groupList.filter(g => g.timeline && g.timeline.some(c => c.id === game.currentCardId)).length} / {groupList.length} Gruppen haben platziert
             </div>
             
             {allGroupsPlaced && session.isHost && (
@@ -464,7 +464,7 @@ export default function MultiplayerGamePage() {
               <h4 className="font-semibold">Ergebnisse:</h4>
               {groupList.map(group => {
                 if (!group.timeline) return null;
-                const placement = group.timeline.find(c => c.cardId === game.currentCardId);
+                const placement = group.timeline.find(c => c.id === game.currentCardId);
                 if (!placement) return null;
                 
                 return (
@@ -484,9 +484,7 @@ export default function MultiplayerGamePage() {
                       <span className="text-sm">
                         {placement.year < 1950 ? '⬅️ Vor 1950' : '➡️ Ab 1950'}
                       </span>
-                      <span className="text-xl">
-                        {placement.correct ? '✅' : '❌'}
-                      </span>
+                      <span className="text-xs text-ink/60">{placement.title}</span>
                     </div>
                   </div>
                 );
