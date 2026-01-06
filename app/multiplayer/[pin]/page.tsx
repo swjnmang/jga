@@ -137,12 +137,14 @@ export default function MultiplayerGamePage() {
       const correct = await placeCardInTimeline(pin, session.groupId, card, position);
       setPlacementResult(correct ? 'correct' : 'wrong');
 
-      // Kurzes Feedback zeigen, dann weiter
-      await new Promise((resolve) => setTimeout(resolve, 1200));
-
-      // Nächster Zug und nächste Karte
-      await nextCard(pin);
-      await nextTurn(pin);
+      // Bei korrekter Antwort automatisch weiter nach kurzer Pause
+      if (correct) {
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+        await nextCard(pin);
+        await nextTurn(pin);
+        setPlacementResult(null);
+      }
+      // Bei falscher Antwort: Warten auf manuelle Bestätigung (Button wird angezeigt)
     } catch (err) {
       console.error('Error placing card:', err);
       setError('Fehler beim Platzieren der Karte');
@@ -159,12 +161,11 @@ export default function MultiplayerGamePage() {
     if (!session || !game || isProcessing) return;
     
     setIsProcessing(true);
-    setShowSolution(false);
-    setMyPlacement(null);
-    setPlacementResult(null);
+    setPlacementResult(null); // Reset für nächste Runde
     
     try {
       await nextCard(pin);
+      await nextTurn(pin);
     } catch (err) {
       console.error('Error going to next card:', err);
       setError('Fehler beim Wechseln zur nächsten Karte');
@@ -420,7 +421,7 @@ export default function MultiplayerGamePage() {
         )}
 
         {/* Platzierungs-Optionen */}
-        {!groupPlaced && !showSolution && currentCard && (
+        {!groupPlaced && !placementResult && currentCard && (
           <div className="card-surface rounded-2xl p-6 space-y-4">
             <h3 className="text-lg font-semibold text-center">
               Wo ordnest du dieses Ereignis ein?
@@ -448,16 +449,56 @@ export default function MultiplayerGamePage() {
           </div>
         )}
 
-        {/* Warte-Status */}
-        {groupPlaced && !showSolution && (
+        {/* Feedback nach Platzierung */}
+        {placementResult && currentCard && (
+          <div className="card-surface rounded-2xl p-6 space-y-4">
+            {placementResult === 'correct' ? (
+              <div className="text-center space-y-3">
+                <div className="text-6xl">✅</div>
+                <p className="text-xl font-semibold text-green-600">Richtig!</p>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <div className="text-center space-y-2">
+                  <div className="text-6xl">❌</div>
+                  <p className="text-xl font-semibold text-red-600">Leider falsch</p>
+                </div>
+                
+                {/* Lösung anzeigen */}
+                <div className="border-t-2 border-ink/10 pt-4 space-y-3">
+                  <h3 className="text-lg font-semibold text-center">Lösung:</h3>
+                  <div className="text-center space-y-2">
+                    <div className="text-4xl font-bold text-ink">{currentCard.year}</div>
+                    <p className="text-lg text-ink/80">{currentCard.answer}</p>
+                  </div>
+                </div>
+
+                {/* Weiter-Button nur für aktives Team */}
+                {isActiveTurn && (
+                  <button
+                    onClick={handleNextCard}
+                    disabled={isProcessing}
+                    className="w-full mt-4 px-6 py-4 bg-ink text-inkDark rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50"
+                  >
+                    Weiter zum nächsten Team
+                  </button>
+                )}
+                
+                {!isActiveTurn && (
+                  <p className="text-center text-sm text-ink/60 mt-4">
+                    Warte auf das aktive Team...
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Alte Warte-Status Sektion entfernen */}
+        {groupPlaced && !placementResult && !showSolution && (
           <div className="card-surface rounded-2xl p-6 text-center space-y-3">
             <div className="text-4xl">⏳</div>
             <p className="font-semibold">Platzierung gespeichert!</p>
-            {placementResult && (
-              <p className={`text-sm font-semibold ${placementResult === 'correct' ? 'text-green-600' : 'text-red-600'}`}>
-                {placementResult === 'correct' ? 'Richtig eingeordnet!' : 'Falsch eingeordnet.'}
-              </p>
-            )}
             <p className="text-sm text-ink/60">
               Warte auf andere Gruppen...
             </p>
