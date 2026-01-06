@@ -12,7 +12,7 @@ import {
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
-import MediaEmbed from '@/components/MediaEmbed';
+import { MediaEmbed } from '@/components/MediaEmbed';
 
 interface SessionInfo {
   pin: string;
