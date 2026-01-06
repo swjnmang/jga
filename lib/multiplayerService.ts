@@ -216,7 +216,7 @@ export async function placeCardInTimeline(
   groupId: string,
   card: any, // Card object
   position: number // Index in der Timeline wo die Karte eingefügt wird
-): Promise<void> {
+): Promise<boolean> {
   checkFirebase();
   
   const gameRef = ref(database!, `games/${pin}`);
@@ -252,6 +252,8 @@ export async function placeCardInTimeline(
   if (game.currentTurnGroupId === groupId && !isCorrect) {
     await handleFlexSteal(pin, card, game);
   }
+
+  return isCorrect;
 }
 
 /**

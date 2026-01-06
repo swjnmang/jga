@@ -38,6 +38,7 @@ export default function MultiplayerGamePage() {
   const [myPlacement, setMyPlacement] = useState<'before' | 'after' | null>(null);
   const [showSolution, setShowSolution] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [placementResult, setPlacementResult] = useState<'correct' | 'wrong' | null>(null);
 
   // Lade Session-Infos
   useEffect(() => {
@@ -120,6 +121,7 @@ export default function MultiplayerGamePage() {
 
     setIsProcessing(true);
     setMyPlacement(placement);
+    setPlacementResult(null);
     
     try {
       const card = getCardById(game.currentCardId);
@@ -132,7 +134,12 @@ export default function MultiplayerGamePage() {
       const timeline = game.groups[session.groupId]?.timeline || [];
       const position = placement === 'before' ? 0 : timeline.length;
 
-      await placeCardInTimeline(pin, session.groupId, card, position);
+      const correct = await placeCardInTimeline(pin, session.groupId, card, position);
+      setPlacementResult(correct ? 'correct' : 'wrong');
+
+      // Kurzes Feedback zeigen, dann weiter
+      await new Promise((resolve) => setTimeout(resolve, 1200));
+
       // Nächster Zug und nächste Karte
       await nextCard(pin);
       await nextTurn(pin);
@@ -154,6 +161,7 @@ export default function MultiplayerGamePage() {
     setIsProcessing(true);
     setShowSolution(false);
     setMyPlacement(null);
+    setPlacementResult(null);
     
     try {
       await nextCard(pin);
@@ -386,7 +394,7 @@ export default function MultiplayerGamePage() {
         {currentCard && (
           <div className={`card-surface rounded-2xl p-6 space-y-4 ${!isActiveTurn ? 'opacity-70 pointer-events-none select-none' : ''}`}>
             <div className="flex items-center justify-between">
-              <h2 className="text-xl font-semibold">{currentCard.title}</h2>
+              <h2 className="text-xl font-semibold">Musikfrage</h2>
               <span className="text-sm px-3 py-1 rounded-full bg-ink/10">
                 {currentCard.difficulty}
               </span>
@@ -408,11 +416,6 @@ export default function MultiplayerGamePage() {
               </div>
             )}
 
-            {currentCard.hint && (
-              <div className="text-sm text-ink/70">
-                <span className="font-semibold">Hinweis:</span> {currentCard.hint}
-              </div>
-            )}
           </div>
         )}
 
@@ -450,6 +453,11 @@ export default function MultiplayerGamePage() {
           <div className="card-surface rounded-2xl p-6 text-center space-y-3">
             <div className="text-4xl">⏳</div>
             <p className="font-semibold">Platzierung gespeichert!</p>
+            {placementResult && (
+              <p className={`text-sm font-semibold ${placementResult === 'correct' ? 'text-green-600' : 'text-red-600'}`}>
+                {placementResult === 'correct' ? 'Richtig eingeordnet!' : 'Falsch eingeordnet.'}
+              </p>
+            )}
             <p className="text-sm text-ink/60">
               Warte auf andere Gruppen...
             </p>
