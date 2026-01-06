@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { createGame, joinGame } from '@/lib/multiplayerService';
-import { cards } from '@/lib/cards';
-import { getDefaultSettings } from '@/lib/userSettings';
+import { cards, getCategories } from '@/lib/cards';
+import { getDefaultSettings, TIMELINE_CATEGORIES } from '@/lib/userSettings';
 import { isFirebaseEnabled } from '@/lib/firebase';
+import { CardCategory, Difficulty } from '@/lib/types';
 
 export default function MultiplayerLobby() {
   const router = useRouter();
@@ -21,6 +22,25 @@ export default function MultiplayerLobby() {
   const [pin, setPin] = useState('');
   const [joinGroupName, setJoinGroupName] = useState('');
   const [firebaseAvailable, setFirebaseAvailable] = useState(true);
+  
+  // Settings State
+  const availableCategories = useMemo(() => {
+    const base = getCategories(cards).filter((c) => c !== 'video');
+    if (gameMode === 'timeline') return base.filter((c) => TIMELINE_CATEGORIES.includes(c));
+    return base;
+  }, [gameMode]);
+  
+  const defaultSettings = useMemo(
+    () => getDefaultSettings(availableCategories, undefined, undefined, gameMode),
+    [availableCategories, gameMode]
+  );
+  
+  const [settings, setSettings] = useState(defaultSettings);
+  
+  // Update settings when game mode changes
+  useEffect(() => {
+    setSettings(defaultSettings);
+  }, [defaultSettings]);
 
   useEffect(() => {
     if (!isFirebaseEnabled) {
@@ -43,12 +63,6 @@ export default function MultiplayerLobby() {
     setError(null);
 
     try {
-      const availableCategories = cards
-        .map(c => c.category)
-        .filter((c, i, arr) => arr.indexOf(c) === i && c !== 'video');
-      
-      const settings = getDefaultSettings(availableCategories, undefined, undefined, gameMode);
-      
       const { pin, groupId, playerId } = await createGame({
         mode: gameMode,
         settings,
@@ -73,6 +87,76 @@ export default function MultiplayerLobby() {
     } finally {
       setLoading(false);
     }
+  };
+  
+  // Settings Helper Functions
+  const toggleDifficulty = (difficulty: Difficulty) => {
+    setSettings((prev) => {
+      const nextDifficulties = prev.difficulties.includes(difficulty)
+        ? prev.difficulties.filter((d) => d !== difficulty)
+        : [...prev.difficulties, difficulty];
+      if (nextDifficulties.length === 0) return prev;
+      return { ...prev, difficulties: nextDifficulties };
+    });
+  };
+  
+  const toggleCategory = (category: CardCategory) => {
+    setSettings((prev) => {
+      const isCurrentlyActive = prev.categoryWeights[category] > 0;
+      const nextWeights = { ...prev.categoryWeights };
+      
+      if (isCurrentlyActive) {
+        nextWeights[category] = 0;
+      } else {
+        nextWeights[category] = 10;
+      }
+
+      const active = Object.entries(nextWeights)
+        .filter(([_, w]) => (w as number) > 0)
+        .map(([cat]) => cat as CardCategory);
+
+      if (active.length === 0) {
+        nextWeights[category] = 10;
+        active.push(category);
+      }
+
+      return {
+        ...prev,
+        categoryWeights: nextWeights,
+        categories: active
+      };
+    });
+  };
+  
+  const updateCategoryWeight = (category: CardCategory, value: number) => {
+    const weight = Math.min(100, Math.max(0, Math.round(value)));
+    const nextWeights = { ...settings.categoryWeights, [category]: weight } as Record<CardCategory, number>;
+    const active = Object.entries(nextWeights)
+      .filter(([_, w]) => (w as number) > 0)
+      .map(([cat]) => cat as CardCategory);
+
+    if (active.length === 0) {
+      nextWeights[category] = 10;
+      active.push(category);
+    }
+
+    setSettings({
+      ...settings,
+      categoryWeights: nextWeights,
+      categories: active
+    });
+  };
+  
+  const categoryLabels: Partial<Record<CardCategory, string>> = {
+    quote: 'Berühmte Zitate',
+    image: 'Bilder erkennen',
+    country: 'Länder erkennen',
+    music: 'Musik',
+    naturtechnik: 'Natur & Technik',
+    filmeserien: 'Filme & Serien',
+    religionglaube: 'Religion & Glaube',
+    sportfreizeit: 'Sport & Freizeit',
+    geogeschichte: 'Geographie & Geschichte'
   };
 
   const handleJoinGame = async () => {
@@ -187,6 +271,86 @@ export default function MultiplayerLobby() {
                 className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-gray-900 bg-white placeholder:text-gray-400"
                 maxLength={20}
               />
+            </div>
+
+            {/* Schwierigkeitsgrade */}
+            <div>
+              <label className="block text-sm font-semibold mb-2">Schwierigkeitsgrade</label>
+              <div className="grid grid-cols-3 gap-2">
+                {(['leicht', 'mittel', 'schwer'] as Difficulty[]).map((diff) => {
+                  const checked = settings.difficulties.includes(diff);
+                  return (
+                    <button
+                      key={diff}
+                      onClick={() => toggleDifficulty(diff)}
+                      className={`px-3 py-2 rounded-lg border-2 transition-colors text-sm ${
+                        checked
+                          ? 'border-ink bg-ink text-inkDark'
+                          : 'border-ink/30 hover:border-ink/60'
+                      }`}
+                    >
+                      {diff.charAt(0).toUpperCase() + diff.slice(1)}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Kategorien */}
+            <div>
+              <label className="block text-sm font-semibold mb-2">
+                Kategorien auswählen & gewichten
+              </label>
+              <div className="space-y-2">
+                {availableCategories.map((cat) => {
+                  const weight = settings.categoryWeights[cat] || 0;
+                  const isActive = weight > 0;
+                  return (
+                    <div
+                      key={cat}
+                      className={`rounded-lg border-2 p-3 transition-colors ${
+                        isActive ? 'border-ink/30' : 'border-ink/10 opacity-60'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <button
+                          onClick={() => toggleCategory(cat)}
+                          className="flex items-center gap-2 text-sm font-medium hover:opacity-70"
+                        >
+                          <div
+                            className={`w-4 h-4 rounded border-2 flex items-center justify-center ${
+                              isActive
+                                ? 'border-ink bg-ink'
+                                : 'border-ink/30'
+                            }`}
+                          >
+                            {isActive && (
+                              <svg className="w-3 h-3 text-inkDark" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                              </svg>
+                            )}
+                          </div>
+                          {categoryLabels[cat] || cat}
+                        </button>
+                        {isActive && (
+                          <span className="text-xs text-ink/60">{weight}%</span>
+                        )}
+                      </div>
+                      {isActive && (
+                        <input
+                          type="range"
+                          min="10"
+                          max="100"
+                          step="10"
+                          value={weight}
+                          onChange={(e) => updateCategoryWeight(cat, Number(e.target.value))}
+                          className="w-full accent-ink"
+                        />
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
             {error && (
