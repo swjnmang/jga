@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { createGame, joinGame } from '@/lib/multiplayerService';
 import { cards, getCategories } from '@/lib/cards';
+import { playlistInfo } from '@/lib/playlistCards';
 import { getDefaultSettings, TIMELINE_CATEGORIES } from '@/lib/userSettings';
 import { isFirebaseEnabled } from '@/lib/firebase';
 import { CardCategory, Difficulty, GenreTag } from '@/lib/types';
@@ -31,9 +32,28 @@ export default function MultiplayerLobby() {
     return base;
   }, [gameMode]);
   
+  // Playlists (Music)
+  const availablePlaylists = useMemo(() => {
+    const set = new Set<string>();
+    cards
+      .filter((c) => c.category === 'music')
+      .forEach((c) => {
+        const list = c.playlists && c.playlists.length > 0 ? c.playlists : ['imported-playlist'];
+        list.forEach((id) => set.add(id));
+      });
+    return Array.from(set);
+  }, []);
+
+  const playlistNameMap = useMemo(() => {
+    return playlistInfo.reduce<Record<string, string>>((acc, p) => {
+      acc[p.id] = p.name;
+      return acc;
+    }, {});
+  }, []);
+
   const defaultSettings = useMemo(
-    () => getDefaultSettings(availableCategories, undefined, undefined, gameMode),
-    [availableCategories, gameMode]
+    () => getDefaultSettings(availableCategories, undefined, availablePlaylists, gameMode),
+    [availableCategories, availablePlaylists, gameMode]
   );
   
   const [settings, setSettings] = useState(defaultSettings);
@@ -62,18 +82,6 @@ export default function MultiplayerLobby() {
     };
     window.addEventListener('focus', handleFocus);
     return () => window.removeEventListener('focus', handleFocus);
-  }, []);
-
-  // Playlists (Music)
-  const availablePlaylists = useMemo(() => {
-    const set = new Set<string>();
-    cards
-      .filter((c) => c.category === 'music')
-      .forEach((c) => {
-        const list = c.playlists && c.playlists.length > 0 ? c.playlists : ['imported-playlist'];
-        list.forEach((id) => set.add(id));
-      });
-    return Array.from(set);
   }, []);
 
   useEffect(() => {
@@ -487,7 +495,7 @@ export default function MultiplayerLobby() {
                             : 'border-ink/30 hover:border-ink/60'
                         }`}
                       >
-                        {playlistId}
+                        {playlistNameMap[playlistId] || playlistId}
                       </button>
                     );
                   })}
