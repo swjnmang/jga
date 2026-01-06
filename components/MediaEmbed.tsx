@@ -89,10 +89,6 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const [spotifyLoading, setSpotifyLoading] = useState(false);
   const [embedError, setEmbedError] = useState<string | null>(null);
   const spotifyPlayerRef = useRef<Spotify.Player | null>(null);
-  const isIOS = useMemo(() => {
-    if (typeof navigator === 'undefined') return false;
-    return /iPad|iPhone|iPod/.test(navigator.userAgent);
-  }, []);
   const choiceSignature = useMemo(() => {
     if (!choice) return '';
     if (choice.type === 'text') return `text:${choice.text}:${choice.textDe ?? ''}`;
@@ -186,13 +182,6 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   // Fetch Spotify token from server (httpOnly cookie proxied)
   useEffect(() => {
     if (choice?.type !== 'spotify') return;
-    // Safari/iOS cannot run Spotify Web Playback SDK reliably; force app-open fallback
-    if (isIOS) {
-      setSpotifyError('Spotify Web Player wird auf iOS/Safari nicht unterstützt. Bitte in der Spotify-App öffnen.');
-      setSpotifyErrorDetail('Öffne den Song direkt in Spotify.');
-      setSpotifyReady(false);
-      return;
-    }
     if (spotifyToken) return;
     const loadToken = async () => {
       try {
@@ -208,7 +197,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       }
     };
     loadToken();
-  }, [choice?.type, spotifyToken, isIOS]);
+  }, [choice?.type, spotifyToken]);
 
   const refreshDeviceId = useCallback(async (): Promise<string | null> => {
     if (!spotifyToken) return null;
@@ -629,7 +618,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       );
     }
     case 'spotify': {
-      const showSpotifyFallback = Boolean(embedError || spotifyError || !spotifyReady || isIOS);
+      const showSpotifyFallback = Boolean(embedError || spotifyError || !spotifyReady);
       const primaryLabel = spotifyLoading ? 'Lädt…' : isPlaying ? 'Pause' : 'Play';
       const primaryIcon = spotifyLoading ? '⏳' : isPlaying ? '⏸' : '▶';
       return (
@@ -651,32 +640,28 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               {!spotifyToken && <p className="text-xs text-red-200">Spotify Login erforderlich</p>}
             </div>
             <div className="flex flex-col items-center gap-3">
-              {!isIOS && (
-                <>
-                  <button
-                    type="button"
-                    className="rounded-full bg-sand text-inkDark px-8 py-5 text-xl font-semibold shadow disabled:opacity-50 flex flex-col items-center gap-2"
-                    onClick={toggleSpotify}
-                    disabled={!spotifyToken || spotifyLoading || !spotifyReady}
-                  >
-                    <span className="text-3xl leading-none">{primaryIcon}</span>
-                    <span className="text-sm leading-none">{primaryLabel}</span>
-                  </button>
-                  <button
-                    type="button"
-                    className="rounded-full border border-sand/40 px-4 py-2 text-xs"
-                    onClick={resetSpotify}
-                  >
-                    Neu verbinden
-                  </button>
-                </>
-              )}
+              <button
+                type="button"
+                className="rounded-full bg-sand text-inkDark px-8 py-5 text-xl font-semibold shadow disabled:opacity-50 flex flex-col items-center gap-2"
+                onClick={toggleSpotify}
+                disabled={!spotifyToken || spotifyLoading || !spotifyReady}
+              >
+                <span className="text-3xl leading-none">{primaryIcon}</span>
+                <span className="text-sm leading-none">{primaryLabel}</span>
+              </button>
+              <button
+                type="button"
+                className="rounded-full border border-sand/40 px-4 py-2 text-xs"
+                onClick={resetSpotify}
+              >
+                Neu verbinden
+              </button>
             </div>
           </div>
           {showSpotifyFallback && (
             <div className="rounded-xl bg-ink/10 p-3 text-xs text-ink/80 space-y-2">
               <p className="font-semibold text-ink">Spotify-Embed meldet eine Störung.</p>
-              <p>Öffne den Song direkt in Spotify{isIOS ? ' (Web Player wird auf iOS/Safari nicht unterstützt)' : ', wenn im Player z. B. „upstream request timeout" steht'}.</p>
+              <p>Öffne den Song direkt in Spotify, wenn im Player z. B. „upstream request timeout" steht.</p>
               <div className="flex flex-wrap gap-2">
                 <a
                   href={choice.url}
@@ -686,15 +671,13 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
                 >
                   In Spotify öffnen
                 </a>
-                {!isIOS && (
-                  <button
-                    type="button"
-                    className="rounded-full border border-ink/20 px-3 py-1"
-                    onClick={resetSpotify}
-                  >
-                    Neu versuchen
-                  </button>
-                )}
+                <button
+                  type="button"
+                  className="rounded-full border border-ink/20 px-3 py-1"
+                  onClick={resetSpotify}
+                >
+                  Neu versuchen
+                </button>
               </div>
             </div>
           )}
