@@ -7,8 +7,9 @@ import {
   setGroupReady,
   startGame,
   leaveGame,
-  placeCard,
-  nextCard
+  placeCardInTimeline,
+  nextCard,
+  nextTurn
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
@@ -114,26 +115,27 @@ export default function MultiplayerGamePage() {
 
   const handlePlaceCard = async (placement: 'before' | 'after') => {
     if (!session || !game || !game.currentCardId || isProcessing) return;
-    
+    // Nur die aktive Gruppe darf setzen
+    if (game.currentTurnGroupId && game.currentTurnGroupId !== session.groupId) return;
+
     setIsProcessing(true);
     setMyPlacement(placement);
     
     try {
-      if (!game.currentCardId) {
-        setError('Keine aktuelle Karte vorhanden');
-        return;
-      }
-      
       const card = getCardById(game.currentCardId);
       if (!card) {
         setError('Karte nicht gefunden');
         return;
       }
-      
-      const isCorrect = (placement === 'before' && card.year < 1950) || 
-                       (placement === 'after' && card.year >= 1950);
-      
-      await placeCard(pin, session.groupId, card.id, card.year, isCorrect);
+
+      // Einfache Platzierung: vor = an den Anfang, nach = ans Ende
+      const timeline = game.groups[session.groupId]?.timeline || [];
+      const position = placement === 'before' ? 0 : timeline.length;
+
+      await placeCardInTimeline(pin, session.groupId, card, position);
+      // Nächster Zug und nächste Karte
+      await nextCard(pin);
+      await nextTurn(pin);
     } catch (err) {
       console.error('Error placing card:', err);
       setError('Fehler beim Platzieren der Karte');
