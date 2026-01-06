@@ -35,7 +35,6 @@ export default function MultiplayerGamePage() {
   const [error, setError] = useState<string | null>(null);
   
   // Spielzustand
-  const [showSolution, setShowSolution] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [placementResult, setPlacementResult] = useState<'correct' | 'wrong' | null>(null);
 
@@ -153,10 +152,6 @@ export default function MultiplayerGamePage() {
     return text.slice(0, 32) + '...';
   };
 
-  const handleShowSolution = () => {
-    setShowSolution(true);
-  };
-
   const handleNextCard = async () => {
     if (!session || !game || isProcessing) return;
     
@@ -174,14 +169,6 @@ export default function MultiplayerGamePage() {
     }
   };
   
-  // Check if current group has placed
-  const hasPlaced = () => {
-    if (!game || !session) return false;
-    const group = game.groups[session.groupId];
-    if (!group || !game.currentCardId || !group.timeline) return false;
-    return group.timeline.some(c => c.id === game.currentCardId);
-  };
-
   if (loading) {
     return (
       <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10">
@@ -350,10 +337,6 @@ export default function MultiplayerGamePage() {
     
     const currentCard = getCardById(game.currentCardId);
     const isActiveTurn = game.currentTurnGroupId === session.groupId;
-    const groupPlaced = hasPlaced();
-    const allGroupsPlaced = groupList.every(g => 
-      g.timeline && g.timeline.some(c => c.id === game.currentCardId)
-    );
 
     // Wenn keine Karte verfügbar ist, zeige Warnung
     if (!currentCard) {
@@ -421,7 +404,7 @@ export default function MultiplayerGamePage() {
         )}
 
         {/* Timeline mit Platzierungs-Optionen */}
-        {!groupPlaced && !placementResult && currentCard && isActiveTurn && (() => {
+        {placementResult === null && currentCard && isActiveTurn && (() => {
           const timeline = currentGroup.timeline || [];
           
           // Wenn noch keine Karten: Einfache Vor/Nach 1950 Buttons
@@ -497,7 +480,7 @@ export default function MultiplayerGamePage() {
         })()}
 
         {/* Nicht am Zug - Timeline nur anzeigen */}
-        {!isActiveTurn && !placementResult && (() => {
+        {!isActiveTurn && placementResult === null && (() => {
           const timeline = currentGroup.timeline || [];
           if (timeline.length === 0) return null;
 
@@ -562,83 +545,6 @@ export default function MultiplayerGamePage() {
                   </p>
                 )}
               </div>
-            )}
-          </div>
-        )}
-
-        {/* Alte Warte-Status Sektion entfernen */}
-        {groupPlaced && !placementResult && !showSolution && (
-          <div className="card-surface rounded-2xl p-6 text-center space-y-3">
-            <div className="text-4xl">⏳</div>
-            <p className="font-semibold">Platzierung gespeichert!</p>
-            <p className="text-sm text-ink/60">
-              Warte auf andere Gruppen...
-            </p>
-            <div className="text-sm">
-              {groupList.filter(g => g.timeline && g.timeline.some(c => c.id === game.currentCardId)).length} / {groupList.length} Gruppen haben platziert
-            </div>
-            
-            {allGroupsPlaced && session.isHost && (
-              <button
-                onClick={handleShowSolution}
-                className="mt-4 px-6 py-3 bg-ink text-inkDark rounded-lg font-semibold hover:opacity-90"
-              >
-                Lösung zeigen
-              </button>
-            )}
-          </div>
-        )}
-
-        {/* Lösung */}
-        {showSolution && currentCard && (
-          <div className="card-surface rounded-2xl p-6 space-y-4 animate-flip-in">
-            <h3 className="text-xl font-semibold text-center">Lösung</h3>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-ink mb-2">{currentCard.year}</div>
-              <p className="text-lg">{currentCard.answer}</p>
-            </div>
-
-            {/* Gruppen-Ergebnisse */}
-            <div className="space-y-2 mt-6">
-              <h4 className="font-semibold">Ergebnisse:</h4>
-              {groupList.map(group => {
-                if (!group.timeline) return null;
-                const placement = group.timeline.find(c => c.id === game.currentCardId);
-                if (!placement) return null;
-                
-                return (
-                  <div
-                    key={group.id}
-                    className="flex items-center justify-between p-3 rounded-lg"
-                    style={{ backgroundColor: `${group.color}20` }}
-                  >
-                    <div className="flex items-center gap-2">
-                      <div
-                        className="w-3 h-3 rounded-full"
-                        style={{ backgroundColor: group.color }}
-                      />
-                      <span className="font-semibold">{group.name}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm">
-                        {placement.year < 1950 ? '⬅️ Vor 1950' : '➡️ Ab 1950'}
-                      </span>
-                      <span className="text-xs text-ink/60">{placement.title}</span>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Nächste Karte Button (nur Host) */}
-            {session.isHost && (
-              <button
-                onClick={handleNextCard}
-                disabled={isProcessing}
-                className="w-full mt-6 px-6 py-4 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors disabled:opacity-50"
-              >
-                {game.currentCardIndex + 1 >= game.deck.length ? 'Spiel beenden' : 'Nächste Karte'}
-              </button>
             )}
           </div>
         )}

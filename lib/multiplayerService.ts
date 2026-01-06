@@ -235,17 +235,25 @@ export async function placeCardInTimeline(
 
   const safeTimeline = Array.isArray(group.timeline) ? group.timeline : [];
 
-  // Füge Karte in Timeline ein
-  const newTimeline = [...safeTimeline];
-  newTimeline.splice(position, 0, card);
+  // Füge Karte temporär in Timeline ein um zu prüfen
+  const testTimeline = [...safeTimeline];
+  testTimeline.splice(position, 0, card);
   
   // Prüfe ob die Platzierung korrekt ist
-  const isCorrect = isTimelineCorrect(newTimeline);
+  const isCorrect = isTimelineCorrect(testTimeline);
+  
+  // NUR bei korrekter Platzierung wird die Karte zur Timeline hinzugefügt
+  let finalTimeline = safeTimeline;
+  if (isCorrect) {
+    finalTimeline = testTimeline;
+    // Sortiere Timeline zur Sicherheit nochmal (klein -> groß)
+    finalTimeline.sort((a, b) => a.year - b.year);
+  }
   
   // Update Gruppe
   await update(ref(database!, `games/${pin}/groups/${groupId}`), {
-    timeline: newTimeline,
-    score: isCorrect ? newTimeline.length : group.score
+    timeline: finalTimeline,
+    score: isCorrect ? finalTimeline.length : group.score
   });
 
   // Wenn die aktive Gruppe falsch platziert hat, prüfe Flex-Gruppen
