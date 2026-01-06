@@ -6,7 +6,7 @@ import { createGame, joinGame } from '@/lib/multiplayerService';
 import { cards, getCategories } from '@/lib/cards';
 import { getDefaultSettings, TIMELINE_CATEGORIES } from '@/lib/userSettings';
 import { isFirebaseEnabled } from '@/lib/firebase';
-import { CardCategory, Difficulty } from '@/lib/types';
+import { CardCategory, Difficulty, GenreTag } from '@/lib/types';
 
 export default function MultiplayerLobby() {
   const router = useRouter();
@@ -22,6 +22,8 @@ export default function MultiplayerLobby() {
   const [pin, setPin] = useState('');
   const [joinGroupName, setJoinGroupName] = useState('');
   const [firebaseAvailable, setFirebaseAvailable] = useState(true);
+  const [spotifyLinkedCreate, setSpotifyLinkedCreate] = useState(false);
+  const [spotifyLinkedJoin, setSpotifyLinkedJoin] = useState(false);
   
   // Settings State
   const availableCategories = useMemo(() => {
@@ -41,6 +43,18 @@ export default function MultiplayerLobby() {
   useEffect(() => {
     setSettings(defaultSettings);
   }, [defaultSettings]);
+
+  // Playlists (Music)
+  const availablePlaylists = useMemo(() => {
+    const set = new Set<string>();
+    cards
+      .filter((c) => c.category === 'music')
+      .forEach((c) => {
+        const list = c.playlists && c.playlists.length > 0 ? c.playlists : ['imported-playlist'];
+        list.forEach((id) => set.add(id));
+      });
+    return Array.from(set);
+  }, []);
 
   useEffect(() => {
     if (!isFirebaseEnabled) {
@@ -63,23 +77,20 @@ export default function MultiplayerLobby() {
     setError(null);
 
     try {
+      if (settings.categories.includes('music') && !spotifyLinkedCreate) {
+        setError('Bitte zuerst Spotify Premium verbinden (Pflicht für Musik).');
+        setLoading(false);
+        return;
+      }
+
       // Filter und shuffle Karten basierend auf Settings
       const filteredCards = cards.filter(card => {
-        // Filter nach Kategorie
         if (!settings.categories.includes(card.category)) return false;
-        
-        // Filter nach Schwierigkeitsgrad
         if (!settings.difficulties.includes(card.difficulty)) return false;
-        
         return true;
       });
-      
-      // Shuffle die gefilterten Karten
       const shuffled = [...filteredCards].sort(() => Math.random() - 0.5);
-      
-      // Verwende alle gefilterten Karten
       const deck = shuffled;
-      
       if (deck.length === 0) {
         setError('Keine Karten für die ausgewählten Einstellungen verfügbar');
         setLoading(false);
@@ -150,6 +161,31 @@ export default function MultiplayerLobby() {
       };
     });
   };
+
+  const toggleGenre = (genre: GenreTag) => {
+    setSettings((prev) => {
+      const nextList = prev.genres.includes(genre)
+        ? prev.genres.filter((g) => g !== genre)
+        : [...prev.genres, genre];
+      return { ...prev, genres: nextList.length > 0 ? nextList : prev.genres };
+    });
+  };
+
+  const togglePlaylist = (playlistId: string) => {
+    setSettings((prev) => {
+      const nextList = prev.playlists.includes(playlistId)
+        ? prev.playlists.filter((p) => p !== playlistId)
+        : [...prev.playlists, playlistId];
+      return { ...prev, playlists: nextList };
+    });
+  };
+
+  const updateTimerMinutes = (value: string) => {
+    const minutes = Number.parseFloat(value);
+    if (Number.isNaN(minutes)) return;
+    const seconds = Math.max(30, Math.round(minutes * 60));
+    setSettings((prev) => ({ ...prev, timerSeconds: seconds }));
+  };
   
   const updateCategoryWeight = (category: CardCategory, value: number) => {
     const weight = Math.min(100, Math.max(0, Math.round(value)));
@@ -195,7 +231,8 @@ export default function MultiplayerLobby() {
       const { groupId, playerId } = await joinGame({
         pin: pin.toUpperCase(),
         groupName: joinGroupName,
-        playerName: joinGroupName
+        playerName: joinGroupName,
+        spotifyLinked: spotifyLinkedJoin
       });
 
       // Speichere Session-Infos im localStorage
@@ -376,6 +413,22 @@ export default function MultiplayerLobby() {
               </div>
             </div>
 
+            {settings.categories.includes('music') && (
+              <div className="rounded-lg border-2 border-ink/20 bg-ink/5 p-4 flex items-start gap-3">
+                <input
+                  id="spotify-create"
+                  type="checkbox"
+                  checked={spotifyLinkedCreate}
+                  onChange={(e) => setSpotifyLinkedCreate(e.target.checked)}
+                  className="mt-1 h-5 w-5 accent-ink"
+                />
+                <label htmlFor="spotify-create" className="text-sm space-y-1">
+                  <div className="font-semibold">Spotify Premium verbunden?</div>
+                  <p className="text-ink/70">Musik-Kategorien erfordern eine aktive Spotify Premium Verbindung.</p>
+                </label>
+              </div>
+            )}
+
             {error && (
               <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
                 {error}
@@ -431,6 +484,20 @@ export default function MultiplayerLobby() {
                 className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-gray-900 bg-white placeholder:text-gray-400"
                 maxLength={20}
               />
+            </div>
+
+            <div className="rounded-lg border-2 border-ink/20 bg-ink/5 p-4 flex items-start gap-3">
+              <input
+                id="spotify-join"
+                type="checkbox"
+                checked={spotifyLinkedJoin}
+                onChange={(e) => setSpotifyLinkedJoin(e.target.checked)}
+                className="mt-1 h-5 w-5 accent-ink"
+              />
+              <label htmlFor="spotify-join" className="text-sm space-y-1">
+                <div className="font-semibold">Spotify Premium verbunden?</div>
+                <p className="text-ink/70">Pflicht, falls das Spiel Musik-Kategorien enthält.</p>
+              </label>
             </div>
 
             {error && (

@@ -60,6 +60,7 @@ export interface JoinGameParams {
   pin: string;
   groupName: string;
   playerName: string;
+  spotifyLinked?: boolean;
 }
 
 // Farben für Gruppen
