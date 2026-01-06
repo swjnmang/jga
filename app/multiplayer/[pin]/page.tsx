@@ -406,9 +406,17 @@ export default function MultiplayerGamePage() {
         {/* Timeline mit Platzierungs-Optionen */}
         {placementResult === null && currentCard && isActiveTurn && (() => {
           const timeline = currentGroup.timeline || [];
+          // Erstelle Display-Timeline: Referenzkarte + platzierte Karten
+          const displayTimeline = [];
+          if (game.referenceCard) {
+            displayTimeline.push(game.referenceCard);
+          }
+          displayTimeline.push(...timeline);
+          // Sortiere chronologisch
+          displayTimeline.sort((a, b) => a.year - b.year);
           
-          // Wenn noch keine Karten: Einfache Vor/Nach 1950 Buttons
-          if (timeline.length === 0) {
+          // Wenn nur Referenzkarte: Einfache Vor/Nach Buttons
+          if (displayTimeline.length === 1) {
             return (
               <div className="card-surface rounded-2xl p-6 space-y-4">
                 <h3 className="text-lg font-semibold text-center">
@@ -421,8 +429,8 @@ export default function MultiplayerGamePage() {
                     className="p-6 rounded-xl border-2 border-ink/30 hover:border-ink hover:bg-ink/5 transition-all disabled:opacity-50"
                   >
                     <div className="text-3xl mb-2">⬅️</div>
-                    <div className="font-semibold">Vor 1950</div>
-                    <div className="text-sm text-ink/60 mt-1">Älter</div>
+                    <div className="font-semibold">Davor</div>
+                    <div className="text-sm text-ink/60 mt-1">Früher</div>
                   </button>
                   <button
                     onClick={() => handlePlaceCard(1)}
@@ -430,8 +438,8 @@ export default function MultiplayerGamePage() {
                     className="p-6 rounded-xl border-2 border-ink/30 hover:border-ink hover:bg-ink/5 transition-all disabled:opacity-50"
                   >
                     <div className="text-3xl mb-2">➡️</div>
-                    <div className="font-semibold">Ab 1950</div>
-                    <div className="text-sm text-ink/60 mt-1">Neuer</div>
+                    <div className="font-semibold">Danach</div>
+                    <div className="text-sm text-ink/60 mt-1">Später</div>
                   </button>
                 </div>
               </div>
@@ -445,7 +453,7 @@ export default function MultiplayerGamePage() {
                 Platziere die Karte in der Timeline von {currentGroup.name}
               </h3>
               <div className="flex items-center gap-2 overflow-x-auto pb-2">
-                {timeline.map((item, idx) => (
+                {displayTimeline.map((item, idx) => (
                   <div key={idx} className="flex items-center">
                     {idx === 0 && (
                       <button
@@ -457,9 +465,10 @@ export default function MultiplayerGamePage() {
                         ← Davor
                       </button>
                     )}
-                    <div className="flex-shrink-0 rounded-lg border-2 border-ink bg-ink/10 px-4 py-3 min-w-[120px]">
+                    <div className={`flex-shrink-0 rounded-lg border-2 px-4 py-3 min-w-[120px] ${item.id === game.referenceCard?.id ? 'border-yellow-500 bg-yellow-100' : 'border-ink bg-ink/10'}`}>
                       <p className="text-xs font-bold text-ink">{item.year}</p>
                       <p className="text-xs text-ink/70 truncate">{getShortTimelineLabel(item.answer || item.title || '')}</p>
+                      {item.id === game.referenceCard?.id && <p className="text-xs text-yellow-700 mt-1">Referenz</p>}
                     </div>
                     <button
                       type="button"
@@ -467,13 +476,13 @@ export default function MultiplayerGamePage() {
                       disabled={isProcessing}
                       className="flex-shrink-0 rounded-lg border-2 border-dashed border-ink/30 bg-ink/5 px-3 py-2 text-xs hover:border-ink hover:bg-ink/10 transition-colors mx-1 disabled:opacity-50"
                     >
-                      {idx === timeline.length - 1 ? 'Danach →' : '↔'}
+                      {idx === displayTimeline.length - 1 ? 'Danach →' : '↔'}
                     </button>
                   </div>
                 ))}
               </div>
               <p className="text-xs text-center text-ink/60">
-                Wähle eine Lücke, um die neue Karte zu platzieren
+                Wähle eine Lücke, um die neue Karte korrekt einzuordnen
               </p>
             </div>
           );
@@ -482,7 +491,16 @@ export default function MultiplayerGamePage() {
         {/* Nicht am Zug - Timeline nur anzeigen */}
         {!isActiveTurn && placementResult === null && (() => {
           const timeline = currentGroup.timeline || [];
-          if (timeline.length === 0) return null;
+          // Erstelle Display-Timeline: Referenzkarte + platzierte Karten
+          const displayTimeline = [];
+          if (game.referenceCard) {
+            displayTimeline.push(game.referenceCard);
+          }
+          displayTimeline.push(...timeline);
+          // Sortiere chronologisch
+          displayTimeline.sort((a, b) => a.year - b.year);
+          
+          if (displayTimeline.length === 0) return null;
 
           return (
             <div className="card-surface rounded-2xl p-6 space-y-4 opacity-60">
@@ -490,12 +508,13 @@ export default function MultiplayerGamePage() {
                 Deine Timeline
               </h3>
               <div className="flex items-center gap-2 overflow-x-auto pb-2">
-                {timeline.map((item, idx) => (
+                {displayTimeline.map((item, idx) => (
                   <div key={idx} className="flex items-center">
                     {idx > 0 && <div className="text-ink/30 mx-1">↔</div>}
-                    <div className="flex-shrink-0 rounded-lg border-2 border-ink bg-ink/10 px-4 py-3 min-w-[120px]">
+                    <div className={`flex-shrink-0 rounded-lg border-2 px-4 py-3 min-w-[120px] ${item.id === game.referenceCard?.id ? 'border-yellow-500 bg-yellow-100' : 'border-ink bg-ink/10'}`}>
                       <p className="text-xs font-bold text-ink">{item.year}</p>
                       <p className="text-xs text-ink/70 truncate">{getShortTimelineLabel(item.answer || item.title || '')}</p>
+                      {item.id === game.referenceCard?.id && <p className="text-xs text-yellow-700 mt-1">Referenz</p>}
                     </div>
                   </div>
                 ))}

@@ -215,7 +215,7 @@ export async function placeCardInTimeline(
   pin: string,
   groupId: string,
   card: any, // Card object
-  position: number // Index in der Timeline wo die Karte eingefügt wird
+  position: number // Index in der Display-Timeline (inklusive Referenzkarte) wo die Karte eingefügt wird
 ): Promise<boolean> {
   checkFirebase();
   
@@ -235,18 +235,36 @@ export async function placeCardInTimeline(
 
   const safeTimeline = Array.isArray(group.timeline) ? group.timeline : [];
 
-  // Füge Karte temporär in Timeline ein um zu prüfen
-  const testTimeline = [...safeTimeline];
-  testTimeline.splice(position, 0, card);
+  // Erstelle Display-Timeline: Referenzkarte + platzierte Karten (zur Validierung)
+  const displayTimeline = [];
+  if (game.referenceCard) {
+    displayTimeline.push(game.referenceCard);
+  }
+  displayTimeline.push(...safeTimeline);
+  // Sortiere für Validierung
+  displayTimeline.sort((a, b) => a.year - b.year);
   
-  // Prüfe ob die Platzierung korrekt ist
-  const isCorrect = isTimelineCorrect(testTimeline);
+  // Validiere die Platzierung basierend auf der Display-Timeline
+  let isCorrect = false;
+  
+  if (position === 0) {
+    // Vor alle Karten
+    isCorrect = displayTimeline.length === 0 || card.year <= displayTimeline[0].year;
+  } else if (position >= displayTimeline.length) {
+    // Nach alle Karten
+    isCorrect = card.year >= displayTimeline[displayTimeline.length - 1].year;
+  } else {
+    // Zwischen zwei Karten
+    const before = displayTimeline[position - 1];
+    const after = displayTimeline[position];
+    isCorrect = card.year >= before.year && card.year <= after.year;
+  }
   
   // NUR bei korrekter Platzierung wird die Karte zur Timeline hinzugefügt
   let finalTimeline = safeTimeline;
   if (isCorrect) {
-    finalTimeline = testTimeline;
-    // Sortiere Timeline zur Sicherheit nochmal (klein -> groß)
+    finalTimeline = [...safeTimeline, card];
+    // Sortiere Timeline (klein -> groß)
     finalTimeline.sort((a, b) => a.year - b.year);
   }
   
@@ -262,18 +280,6 @@ export async function placeCardInTimeline(
   }
 
   return isCorrect;
-}
-
-/**
- * Prüft ob eine Timeline korrekt sortiert ist
- */
-function isTimelineCorrect(timeline: any[]): boolean {
-  for (let i = 1; i < timeline.length; i++) {
-    if (timeline[i].year < timeline[i - 1].year) {
-      return false;
-    }
-  }
-  return true;
 }
 
 /**
