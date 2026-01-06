@@ -660,6 +660,22 @@ function PlayPageContent() {
     setTimer((prev) => ({ ...prev, running: false }));
   }, [card, currentGroupIndex, groupTimelines]);
 
+  // Extract short display name from answer (author/band/artist only)
+  const getShortTimelineLabel = useCallback((answer: string): string => {
+    if (answer === 'Referenzjahr') return 'Referenzjahr';
+    
+    // For music: extract artist before "—" or before first "."
+    const dashMatch = answer.match(/^([^—]+)—/);
+    if (dashMatch) return dashMatch[1].trim();
+    
+    // For quotes: extract name before comma or first period
+    const commaMatch = answer.match(/^([^,\.]+)/);
+    if (commaMatch) return commaMatch[1].trim();
+    
+    // Fallback: take first 30 chars
+    return answer.substring(0, 30);
+  }, []);
+
   const nextDigitalTimelineCard = useCallback(() => {
     mediaRef.current?.stop();
     setShowSolution(false);
@@ -1135,7 +1151,7 @@ function PlayPageContent() {
                       )}
                       <div className="flex-shrink-0 rounded-lg border-2 border-ink bg-ink/10 px-4 py-3 min-w-[120px]">
                         <p className="text-xs font-bold text-ink">{item.year}</p>
-                        <p className="text-xs text-ink/70 truncate">{item.answer}</p>
+                        <p className="text-xs text-ink/70 truncate">{getShortTimelineLabel(item.answer)}</p>
                       </div>
                       <button
                         type="button"
