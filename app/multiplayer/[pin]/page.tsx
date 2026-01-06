@@ -318,7 +318,21 @@ export default function MultiplayerGamePage() {
 
   // Spielansicht
   if (game.state === 'playing') {
-    const currentCard = game.currentCardId ? getCardById(game.currentCardId) : null;
+    // Warte bis Karte geladen ist
+    if (!game.currentCardId || game.currentCardIndex < 0) {
+      return (
+        <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+          <div className="text-center space-y-4">
+            <h1 className="text-3xl font-display">Timeline Multiplayer</h1>
+            <div className="card-surface rounded-2xl p-6">
+              <p className="text-lg text-ink/70">Spiel wird vorbereitet...</p>
+            </div>
+          </div>
+        </main>
+      );
+    }
+    
+    const currentCard = getCardById(game.currentCardId);
     const groupPlaced = hasPlaced();
     const allGroupsPlaced = groupList.every(g => 
       g.timeline.some(c => c.cardId === game.currentCardId)
