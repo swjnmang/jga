@@ -15,13 +15,11 @@ export default function MultiplayerLobby() {
 
   // Create Game Form
   const [groupName, setGroupName] = useState('');
-  const [playerName, setPlayerName] = useState('');
   const [gameMode, setGameMode] = useState<'timeline' | 'trivia' | 'solo'>('timeline');
 
   // Join Game Form
   const [pin, setPin] = useState('');
   const [joinGroupName, setJoinGroupName] = useState('');
-  const [joinPlayerName, setJoinPlayerName] = useState('');
   const [firebaseAvailable, setFirebaseAvailable] = useState(true);
 
   useEffect(() => {
@@ -36,8 +34,8 @@ export default function MultiplayerLobby() {
       setError('Firebase ist nicht konfiguriert. Bitte konfiguriere Firebase zuerst (siehe FIREBASE_SETUP.md).');
       return;
     }
-    if (!groupName.trim() || !playerName.trim()) {
-      setError('Bitte Gruppen- und Spielername eingeben');
+    if (!groupName.trim()) {
+      setError('Bitte Namen eingeben');
       return;
     }
 
@@ -56,7 +54,7 @@ export default function MultiplayerLobby() {
         settings,
         deck: cards.slice(0, 50), // Erste 50 Karten als Beispiel
         hostGroupName: groupName,
-        hostPlayerName: playerName
+        hostPlayerName: groupName
       });
 
       // Speichere Session-Infos im localStorage
@@ -65,7 +63,7 @@ export default function MultiplayerLobby() {
         groupId,
         playerId,
         groupName,
-        playerName,
+        playerName: groupName,
         isHost: true
       }));
 
@@ -78,7 +76,7 @@ export default function MultiplayerLobby() {
   };
 
   const handleJoinGame = async () => {
-    if (!pin.trim() || !joinGroupName.trim() || !joinPlayerName.trim()) {
+    if (!pin.trim() || !joinGroupName.trim()) {
       setError('Bitte alle Felder ausfüllen');
       return;
     }
@@ -90,7 +88,7 @@ export default function MultiplayerLobby() {
       const { groupId, playerId } = await joinGame({
         pin: pin.toUpperCase(),
         groupName: joinGroupName,
-        playerName: joinPlayerName
+        playerName: joinGroupName
       });
 
       // Speichere Session-Infos im localStorage
@@ -99,7 +97,7 @@ export default function MultiplayerLobby() {
         groupId,
         playerId,
         groupName: joinGroupName,
-        playerName: joinPlayerName,
+        playerName: joinGroupName,
         isHost: false
       }));
 
@@ -180,24 +178,12 @@ export default function MultiplayerLobby() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold mb-2">Gruppenname</label>
+              <label className="block text-sm font-semibold mb-2">Name/Gruppenname</label>
               <input
                 type="text"
                 value={groupName}
                 onChange={(e) => setGroupName(e.target.value)}
                 placeholder="z.B. Team Rot"
-                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-gray-900 bg-white placeholder:text-gray-400"
-                maxLength={20}
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2">Dein Name</label>
-              <input
-                type="text"
-                value={playerName}
-                onChange={(e) => setPlayerName(e.target.value)}
-                placeholder="z.B. Anna"
                 className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-gray-900 bg-white placeholder:text-gray-400"
                 maxLength={20}
               />
@@ -249,24 +235,12 @@ export default function MultiplayerLobby() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold mb-2">Gruppenname</label>
+              <label className="block text-sm font-semibold mb-2">Name/Gruppenname</label>
               <input
                 type="text"
                 value={joinGroupName}
                 onChange={(e) => setJoinGroupName(e.target.value)}
                 placeholder="z.B. Team Blau"
-                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-gray-900 bg-white placeholder:text-gray-400"
-                maxLength={20}
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2">Dein Name</label>
-              <input
-                type="text"
-                value={joinPlayerName}
-                onChange={(e) => setJoinPlayerName(e.target.value)}
-                placeholder="z.B. Max"
                 className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-gray-900 bg-white placeholder:text-gray-400"
                 maxLength={20}
               />
