@@ -861,7 +861,7 @@ function PlayPageContent() {
             }`}
             onClick={() => setSelectedMode('timeline')}
           >
-            <div className="text-4xl sm:text-5xl mb-2 sm:mb-3">⏳</div>
+            <div className="text-4xl sm:text-5xl mb-2 sm:mb-3">🔢</div>
             <div className="text-lg sm:text-xl font-semibold">Timeline</div>
             <div className="text-xs opacity-60 mt-1 sm:mt-2">Ereignisse zeitlich ordnen</div>
           </button>
@@ -874,7 +874,7 @@ function PlayPageContent() {
             }`}
             onClick={() => setSelectedMode('trivia')}
           >
-            <div className="text-4xl sm:text-5xl mb-2 sm:mb-3">🧠</div>
+            <div className="text-4xl sm:text-5xl mb-2 sm:mb-3">🎓</div>
             <div className="text-lg sm:text-xl font-semibold">Trivia</div>
             <div className="text-xs opacity-60 mt-1 sm:mt-2">Wissen testen</div>
           </button>
@@ -887,7 +887,7 @@ function PlayPageContent() {
             }`}
             onClick={() => setSelectedMode('solo')}
           >
-            <div className="text-4xl sm:text-5xl mb-2 sm:mb-3">🎯</div>
+            <div className="text-4xl sm:text-5xl mb-2 sm:mb-3">👤</div>
             <div className="text-lg sm:text-xl font-semibold">Solo</div>
             <div className="text-xs opacity-60 mt-1 sm:mt-2">Alleine punkten</div>
           </button>
