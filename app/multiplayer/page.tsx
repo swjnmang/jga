@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { createGame, joinGame } from '@/lib/multiplayerService';
 import { cards } from '@/lib/cards';
 import { getDefaultSettings } from '@/lib/userSettings';
+import { isFirebaseEnabled } from '@/lib/firebase';
 
 export default function MultiplayerLobby() {
   const router = useRouter();
@@ -21,8 +22,20 @@ export default function MultiplayerLobby() {
   const [pin, setPin] = useState('');
   const [joinGroupName, setJoinGroupName] = useState('');
   const [joinPlayerName, setJoinPlayerName] = useState('');
+  const [firebaseAvailable, setFirebaseAvailable] = useState(true);
+
+  useEffect(() => {
+    if (!isFirebaseEnabled) {
+      setFirebaseAvailable(false);
+      setError('Firebase ist nicht konfiguriert. Bitte siehe FIREBASE_SETUP.md für Anweisungen.');
+    }
+  }, []);
 
   const handleCreateGame = async () => {
+    if (!isFirebaseEnabled) {
+      setError('Firebase ist nicht konfiguriert. Bitte konfiguriere Firebase zuerst (siehe FIREBASE_SETUP.md).');
+      return;
+    }
     if (!groupName.trim() || !playerName.trim()) {
       setError('Bitte Gruppen- und Spielername eingeben');
       return;
@@ -173,7 +186,7 @@ export default function MultiplayerLobby() {
                 value={groupName}
                 onChange={(e) => setGroupName(e.target.value)}
                 placeholder="z.B. Team Rot"
-                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none"
+                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-ink bg-white"
                 maxLength={20}
               />
             </div>
@@ -185,7 +198,7 @@ export default function MultiplayerLobby() {
                 value={playerName}
                 onChange={(e) => setPlayerName(e.target.value)}
                 placeholder="z.B. Anna"
-                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none"
+                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-ink bg-white"
                 maxLength={20}
               />
             </div>
@@ -230,7 +243,7 @@ export default function MultiplayerLobby() {
                 value={pin}
                 onChange={(e) => setPin(e.target.value.toUpperCase())}
                 placeholder="ABC123"
-                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-center text-2xl font-mono tracking-wider"
+                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-center text-2xl font-mono tracking-wider text-ink bg-white"
                 maxLength={6}
               />
             </div>
@@ -242,7 +255,7 @@ export default function MultiplayerLobby() {
                 value={joinGroupName}
                 onChange={(e) => setJoinGroupName(e.target.value)}
                 placeholder="z.B. Team Blau"
-                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none"
+                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-ink bg-white"
                 maxLength={20}
               />
             </div>
@@ -254,7 +267,7 @@ export default function MultiplayerLobby() {
                 value={joinPlayerName}
                 onChange={(e) => setJoinPlayerName(e.target.value)}
                 placeholder="z.B. Max"
-                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none"
+                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-ink bg-white"
                 maxLength={20}
               />
             </div>

@@ -750,7 +750,7 @@ function PlayPageContent() {
                     updated[idx] = e.target.value;
                     setGroupNames(updated);
                   }}
-                  className="flex-1 rounded-lg border border-ink/20 px-3 py-2 text-sm focus:border-ink/40 focus:outline-none"
+                  className="flex-1 rounded-lg border border-ink/20 px-3 py-2 text-sm focus:border-ink/40 focus:outline-none text-ink bg-white"
                   placeholder={`Gruppe ${idx + 1}`}
                 />
               </div>

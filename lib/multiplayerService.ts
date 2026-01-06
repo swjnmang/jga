@@ -11,6 +11,13 @@ import {
   GameState
 } from './multiplayerTypes';
 
+// Überprüfe ob Firebase verfügbar ist
+function checkFirebase() {
+  if (!database) {
+    throw new Error('Firebase ist nicht konfiguriert. Bitte siehe FIREBASE_SETUP.md für Anweisungen.');
+  }
+}
+
 // Generiere einen 6-stelligen PIN
 function generatePin(): string {
   return Math.random().toString(36).substring(2, 8).toUpperCase();
@@ -18,13 +25,16 @@ function generatePin(): string {
 
 // Generiere eine eindeutige ID
 function generateId(): string {
-  return push(ref(database)).key || Date.now().toString();
+  checkFirebase();
+  return push(ref(database!)).key || Date.now().toString();
 }
 
 /**
  * Erstellt ein neues Multiplayer-Spiel
  */
 export async function createGame(params: CreateGameParams): Promise<{ pin: string; groupId: string; playerId: string }> {
+  checkFirebase();
+  
   const pin = generatePin();
   const hostGroupId = generateId();
   const hostPlayerId = generateId();
@@ -66,7 +76,7 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
   };
 
   // Speichere in Firebase
-  await set(ref(database, `games/${pin}`), gameSession);
+  await set(ref(database!, `games/${pin}`), gameSession);
 
   return { pin, groupId: hostGroupId, playerId: hostPlayerId };
 }
@@ -75,7 +85,9 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
  * Tritt einem bestehenden Spiel bei
  */
 export async function joinGame(params: JoinGameParams): Promise<{ groupId: string; playerId: string }> {
-  const gameRef = ref(database, `games/${params.pin}`);
+  checkFirebase();
+  
+  const gameRef = ref(database!, `games/${params.pin}`);
   const snapshot = await get(gameRef);
 
   if (!snapshot.exists()) {
@@ -116,7 +128,7 @@ export async function joinGame(params: JoinGameParams): Promise<{ groupId: strin
   };
 
   // Füge Gruppe hinzu
-  await update(ref(database, `games/${params.pin}/groups/${newGroupId}`), newGroup);
+  await update(ref(database!, `games/${params.pin}/groups/${newGroupId}`), newGroup);
 
   return { groupId: newGroupId, playerId: newPlayerId };
 }
@@ -125,7 +137,9 @@ export async function joinGame(params: JoinGameParams): Promise<{ groupId: strin
  * Startet das Spiel (nur Host)
  */
 export async function startGame(pin: string, hostGroupId: string): Promise<void> {
-  const gameRef = ref(database, `games/${pin}`);
+  checkFirebase();
+  
+  const gameRef = ref(database!, `games/${pin}`);
   const snapshot = await get(gameRef);
 
   if (!snapshot.exists()) {
@@ -160,7 +174,8 @@ export async function startGame(pin: string, hostGroupId: string): Promise<void>
  * Markiert eine Gruppe als bereit
  */
 export async function setGroupReady(pin: string, groupId: string, ready: boolean): Promise<void> {
-  await update(ref(database, `games/${pin}/groups/${groupId}`), {
+  checkFirebase();
+  await update(ref(database!, `games/${pin}/groups/${groupId}`), {
     isReady: ready
   });
 }
@@ -169,7 +184,8 @@ export async function setGroupReady(pin: string, groupId: string, ready: boolean
  * Geht zur nächsten Karte
  */
 export async function nextCard(pin: string): Promise<void> {
-  const gameRef = ref(database, `games/${pin}`);
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
   const snapshot = await get(gameRef);
 
   if (!snapshot.exists()) {
@@ -204,6 +220,8 @@ export async function placeCard(
   year: number,
   correct: boolean
 ): Promise<void> {
+  checkFirebase();
+  
   const placedCard = {
     cardId,
     year,
@@ -211,7 +229,7 @@ export async function placeCard(
     placedAt: Date.now()
   };
 
-  const timelineRef = ref(database, `games/${pin}/groups/${groupId}/timeline`);
+  const timelineRef = ref(database!, `games/${pin}/groups/${groupId}/timeline`);
   const snapshot = await get(timelineRef);
   const timeline = snapshot.exists() ? snapshot.val() : [];
   
@@ -221,7 +239,7 @@ export async function placeCard(
 
   // Update Score wenn korrekt
   if (correct) {
-    const groupRef = ref(database, `games/${pin}/groups/${groupId}`);
+    const groupRef = ref(database!, `games/${pin}/groups/${groupId}`);
     const groupSnapshot = await get(groupRef);
     const group: GroupData = groupSnapshot.val();
     
@@ -235,7 +253,8 @@ export async function placeCard(
  * Aktualisiert Flex Buttons
  */
 export async function updateFlexButtons(pin: string, groupId: string, count: number): Promise<void> {
-  await update(ref(database, `games/${pin}/groups/${groupId}`), {
+  checkFirebase();
+  await update(ref(database!, `games/${pin}/groups/${groupId}`), {
     flexButtons: count
   });
 }
@@ -244,7 +263,8 @@ export async function updateFlexButtons(pin: string, groupId: string, count: num
  * Lauscht auf Änderungen des Spielstatus
  */
 export function subscribeToGame(pin: string, callback: (game: GameSession | null) => void): () => void {
-  const gameRef = ref(database, `games/${pin}`);
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
   
   const unsubscribe = onValue(gameRef, (snapshot) => {
     if (snapshot.exists()) {
@@ -262,7 +282,8 @@ export function subscribeToGame(pin: string, callback: (game: GameSession | null
  * Aktualisiert den "Last Seen" Timestamp eines Spielers
  */
 export async function updatePlayerPresence(pin: string, groupId: string, playerId: string): Promise<void> {
-  const playerRef = ref(database, `games/${pin}/groups/${groupId}/players`);
+  checkFirebase();
+  const playerRef = ref(database!, `games/${pin}/groups/${groupId}/players`);
   const snapshot = await get(playerRef);
   
   if (snapshot.exists()) {
@@ -280,7 +301,8 @@ export async function updatePlayerPresence(pin: string, groupId: string, playerI
  * Verlässt das Spiel
  */
 export async function leaveGame(pin: string, groupId: string): Promise<void> {
-  const gameRef = ref(database, `games/${pin}`);
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
   const snapshot = await get(gameRef);
 
   if (!snapshot.exists()) {
@@ -296,13 +318,14 @@ export async function leaveGame(pin: string, groupId: string): Promise<void> {
   }
 
   // Entferne Gruppe
-  await remove(ref(database, `games/${pin}/groups/${groupId}`));
+  await remove(ref(database!, `games/${pin}/groups/${groupId}`));
 }
 
 /**
  * Überprüft ob ein PIN existiert
  */
 export async function checkPinExists(pin: string): Promise<boolean> {
-  const snapshot = await get(ref(database, `games/${pin}`));
+  checkFirebase();
+  const snapshot = await get(ref(database!, `games/${pin}`));
   return snapshot.exists();
 }
