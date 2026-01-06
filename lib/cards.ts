@@ -156,6 +156,118 @@ const baseCards: Card[] = [
     distractors: ['Mars, 20.07.1976 – Viking 1 Landung.', 'Weltraum, 12.04.1961 – Gagarin erster Mensch im All.', 'ISS, 20.11.1998 – Erste ISS-Module verbunden.']
   },
   {
+    id: 'image-prohibition-end',
+    title: 'Ende der Prohibition',
+    category: 'image',
+    year: 1933,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Wo und wann war das?',
+    answer: 'USA, 05.12.1933 – Ende der Prohibition.',
+    hint: 'USA, Alkoholverbot aufgehoben.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/images/After_End_of_Prohibition_New_York_Times_1933_3.jpg'
+    },
+    distractors: ['USA, 16.01.1920 – Beginn der Prohibition.', 'USA, 24.10.1929 – Schwarzer Donnerstag (Börsencrash).', 'USA, 1929-1939 – Great Depression.']
+  },
+  {
+    id: 'image-wm-finale-1974',
+    title: 'WM-Finale 1974',
+    category: 'image',
+    year: 1974,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Welches Ereignis und wann?',
+    answer: 'München, 07.07.1974 – WM-Finale BRD-Niederlande 2:1.',
+    hint: 'Deutschland wird Fußball-Weltmeister.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/images/Bundesarchiv_Bild_183-N0716-0314,_Fußball-WM,_BRD_-_Niederlande_2-1.jpg'
+    },
+    distractors: ['Bern, 04.07.1954 – WM-Finale BRD-Ungarn 3:2 (Wunder von Bern).', 'Rom, 11.07.1982 – WM-Finale Italien-BRD 3:1.', 'Mexiko, 29.06.1986 – WM-Viertelfinale England-Argentinien 1:2.']
+  },
+  {
+    id: 'image-versailles-treaty',
+    title: 'Versailler Vertrag',
+    category: 'image',
+    year: 1919,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Welches historische Dokument und wann?',
+    answer: 'Versailles, 28.06.1919 – Unterzeichnung des Versailler Vertrags.',
+    hint: 'Friedensvertrag nach dem Ersten Weltkrieg.',
+    difficulty: 'schwer',
+    sources: {
+      image: '/assets/images/England_Objects_to_the_Treaty_of_Versailles,_June_1,_1919.png'
+    },
+    distractors: ['Paris, 10.02.1947 – Pariser Friedensverträge nach WW2.', 'Wien, 09.06.1815 – Wiener Kongress.', 'Potsdam, 17.07.1945 – Potsdamer Konferenz.']
+  },
+  {
+    id: 'image-eiffelturm-bau',
+    title: 'Bau des Eiffelturms',
+    category: 'image',
+    year: 1889,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Welches Bauwerk und wann fertiggestellt?',
+    answer: 'Paris, 31.03.1889 – Fertigstellung des Eiffelturms.',
+    hint: 'Wahrzeichen von Paris, Weltausstellung.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/images/Petit,_Pierre_-_Bau_des_Eiffelturms_(Zeno_Fotografie).jpg'
+    },
+    distractors: ['New York, 01.05.1931 – Empire State Building fertiggestellt.', 'London, 1894 – Tower Bridge fertiggestellt.', 'Sydney, 20.10.1973 – Sydney Opera House eröffnet.']
+  },
+  {
+    id: 'image-bastille-sturm',
+    title: 'Sturm auf die Bastille',
+    category: 'image',
+    year: 1789,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Welches historische Ereignis und wann?',
+    answer: 'Paris, 14.07.1789 – Sturm auf die Bastille.',
+    hint: 'Beginn der Französischen Revolution.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/images/Prise_de_la_Bastille_clean.jpg'
+    },
+    distractors: ['Paris, 21.01.1793 – Hinrichtung von Ludwig XVI.', 'Paris, 27.07.1794 – Sturz von Robespierre.', 'Wien, 13.03.1848 – Märzrevolution.']
+  },
+  {
+    id: 'image-everest-erstbesteigung',
+    title: 'Mount Everest Erstbesteigung',
+    category: 'image',
+    year: 1953,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Welche Leistung und wann?',
+    answer: 'Mount Everest, 29.05.1953 – Hillary und Tenzing erreichen den Gipfel.',
+    hint: 'Höchster Berg der Welt erstmals bestiegen.',
+    difficulty: 'schwer',
+    sources: {
+      image: '/assets/images/Tenzing_and_Hillary.jpg'
+    },
+    distractors: ['K2, 31.07.1954 – Erstbesteigung durch italienische Expedition.', 'Matterhorn, 14.07.1865 – Erstbesteigung durch Edward Whymper.', 'Mont Blanc, 08.08.1786 – Erstbesteigung.']
+  },
+  {
+    id: 'image-tiananmen-tank-man',
+    title: 'Tank Man',
+    category: 'image',
+    year: 1989,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Wo und wann war das?',
+    answer: 'Peking, 05.06.1989 – Tank Man auf dem Tiananmen-Platz.',
+    hint: 'Ikonisches Protestbild, China.',
+    difficulty: 'schwer',
+    sources: {
+      image: '/assets/images/tian-anmen-platz-100.webp'
+    },
+    distractors: ['Hongkong, 04.06.2019 – Proteste gegen Auslieferungsgesetz.', 'Seoul, 18.05.1980 – Gwangju-Aufstand.', 'Prag, 16.01.1969 – Jan Palach verbrennt sich.']
+  },
+  {
+    id: 'image-brandenburger-tor-1989',
+    title: 'Brandenburger Tor 1989',
+    category: 'image',
+    year: 1989,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Wo und wann war das?',
+    answer: 'Berlin, November 1989 – Menschen am Brandenburger Tor nach Mauerfall.',
+    hint: 'Deutsche Wiedervereinigung, Fall der Mauer.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/images/West_and_East_Germans_at_the_Brandenburg_Gate_in_1989_(cropped).jpg'
+    },
+    distractors: ['Berlin, 17.06.1953 – Volksaufstand in der DDR.', 'Berlin, 13.08.1961 – Bau der Berliner Mauer.', 'Berlin, 03.10.1990 – Tag der Deutschen Einheit.']
+  },
+  {
     id: 'quote-mandela',
     title: 'It always seems impossible',
     category: 'quote',
