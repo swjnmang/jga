@@ -222,8 +222,8 @@ export default function MultiplayerGamePage() {
           </div>
         </div>
 
-        {/* Gruppen-Liste */}
-              <div className={`card-surface rounded-2xl p-6 space-y-4 ${!isActiveTurn ? 'opacity-70 pointer-events-none select-none' : ''}`}>
+          {/* Gruppen-Liste */}
+          <div className="card-surface rounded-2xl p-6 space-y-4">
           <h2 className="text-xl font-semibold">
             Gruppen ({groupList.length})
           </h2>
