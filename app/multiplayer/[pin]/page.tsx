@@ -35,7 +35,6 @@ export default function MultiplayerGamePage() {
   const [error, setError] = useState<string | null>(null);
   
   // Spielzustand
-  const [myPlacement, setMyPlacement] = useState<'before' | 'after' | null>(null);
   const [showSolution, setShowSolution] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [placementResult, setPlacementResult] = useState<'correct' | 'wrong' | null>(null);
@@ -114,13 +113,12 @@ export default function MultiplayerGamePage() {
     navigator.clipboard.writeText(pin);
   };
 
-  const handlePlaceCard = async (placement: 'before' | 'after') => {
+  const handlePlaceCard = async (position: number) => {
     if (!session || !game || !game.currentCardId || isProcessing) return;
     // Nur die aktive Gruppe darf setzen
     if (game.currentTurnGroupId && game.currentTurnGroupId !== session.groupId) return;
 
     setIsProcessing(true);
-    setMyPlacement(placement);
     setPlacementResult(null);
     
     try {
@@ -129,10 +127,6 @@ export default function MultiplayerGamePage() {
         setError('Karte nicht gefunden');
         return;
       }
-
-      // Einfache Platzierung: vor = an den Anfang, nach = ans Ende
-      const timeline = game.groups[session.groupId]?.timeline || [];
-      const position = placement === 'before' ? 0 : timeline.length;
 
       const correct = await placeCardInTimeline(pin, session.groupId, card, position);
       setPlacementResult(correct ? 'correct' : 'wrong');
@@ -151,6 +145,12 @@ export default function MultiplayerGamePage() {
     } finally {
       setIsProcessing(false);
     }
+  };
+
+  // Helper für Timeline-Label (gekürzt)
+  const getShortTimelineLabel = (text: string): string => {
+    if (text.length <= 35) return text;
+    return text.slice(0, 32) + '...';
   };
 
   const handleShowSolution = () => {
@@ -420,34 +420,106 @@ export default function MultiplayerGamePage() {
           </div>
         )}
 
-        {/* Platzierungs-Optionen */}
-        {!groupPlaced && !placementResult && currentCard && (
-          <div className="card-surface rounded-2xl p-6 space-y-4">
-            <h3 className="text-lg font-semibold text-center">
-              Wo ordnest du dieses Ereignis ein?
-            </h3>
-            <div className="grid grid-cols-2 gap-4">
-              <button
-                onClick={() => handlePlaceCard('before')}
-                disabled={isProcessing}
-                className="p-6 rounded-xl border-2 border-ink/30 hover:border-ink hover:bg-ink/5 transition-all disabled:opacity-50"
-              >
-                <div className="text-3xl mb-2">⬅️</div>
-                <div className="font-semibold">Vor 1950</div>
-                <div className="text-sm text-ink/60 mt-1">Älter</div>
-              </button>
-              <button
-                onClick={() => handlePlaceCard('after')}
-                disabled={isProcessing}
-                className="p-6 rounded-xl border-2 border-ink/30 hover:border-ink hover:bg-ink/5 transition-all disabled:opacity-50"
-              >
-                <div className="text-3xl mb-2">➡️</div>
-                <div className="font-semibold">Ab 1950</div>
-                <div className="text-sm text-ink/60 mt-1">Neuer</div>
-              </button>
+        {/* Timeline mit Platzierungs-Optionen */}
+        {!groupPlaced && !placementResult && currentCard && isActiveTurn && (() => {
+          const timeline = currentGroup.timeline || [];
+          
+          // Wenn noch keine Karten: Einfache Vor/Nach 1950 Buttons
+          if (timeline.length === 0) {
+            return (
+              <div className="card-surface rounded-2xl p-6 space-y-4">
+                <h3 className="text-lg font-semibold text-center">
+                  Platziere die Karte in der Timeline von {currentGroup.name}
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <button
+                    onClick={() => handlePlaceCard(0)}
+                    disabled={isProcessing}
+                    className="p-6 rounded-xl border-2 border-ink/30 hover:border-ink hover:bg-ink/5 transition-all disabled:opacity-50"
+                  >
+                    <div className="text-3xl mb-2">⬅️</div>
+                    <div className="font-semibold">Vor 1950</div>
+                    <div className="text-sm text-ink/60 mt-1">Älter</div>
+                  </button>
+                  <button
+                    onClick={() => handlePlaceCard(1)}
+                    disabled={isProcessing}
+                    className="p-6 rounded-xl border-2 border-ink/30 hover:border-ink hover:bg-ink/5 transition-all disabled:opacity-50"
+                  >
+                    <div className="text-3xl mb-2">➡️</div>
+                    <div className="font-semibold">Ab 1950</div>
+                    <div className="text-sm text-ink/60 mt-1">Neuer</div>
+                  </button>
+                </div>
+              </div>
+            );
+          }
+
+          // Timeline mit Karten und Platzierungs-Buttons
+          return (
+            <div className="card-surface rounded-2xl p-6 space-y-4">
+              <h3 className="text-sm font-semibold text-center">
+                Platziere die Karte in der Timeline von {currentGroup.name}
+              </h3>
+              <div className="flex items-center gap-2 overflow-x-auto pb-2">
+                {timeline.map((item, idx) => (
+                  <div key={idx} className="flex items-center">
+                    {idx === 0 && (
+                      <button
+                        type="button"
+                        onClick={() => handlePlaceCard(0)}
+                        disabled={isProcessing}
+                        className="flex-shrink-0 rounded-lg border-2 border-dashed border-ink/30 bg-ink/5 px-3 py-2 text-xs hover:border-ink hover:bg-ink/10 transition-colors mx-1 disabled:opacity-50"
+                      >
+                        ← Davor
+                      </button>
+                    )}
+                    <div className="flex-shrink-0 rounded-lg border-2 border-ink bg-ink/10 px-4 py-3 min-w-[120px]">
+                      <p className="text-xs font-bold text-ink">{item.year}</p>
+                      <p className="text-xs text-ink/70 truncate">{getShortTimelineLabel(item.answer || item.title || '')}</p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => handlePlaceCard(idx + 1)}
+                      disabled={isProcessing}
+                      className="flex-shrink-0 rounded-lg border-2 border-dashed border-ink/30 bg-ink/5 px-3 py-2 text-xs hover:border-ink hover:bg-ink/10 transition-colors mx-1 disabled:opacity-50"
+                    >
+                      {idx === timeline.length - 1 ? 'Danach →' : '↔'}
+                    </button>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-center text-ink/60">
+                Wähle eine Lücke, um die neue Karte zu platzieren
+              </p>
             </div>
-          </div>
-        )}
+          );
+        })()}
+
+        {/* Nicht am Zug - Timeline nur anzeigen */}
+        {!isActiveTurn && !placementResult && (() => {
+          const timeline = currentGroup.timeline || [];
+          if (timeline.length === 0) return null;
+
+          return (
+            <div className="card-surface rounded-2xl p-6 space-y-4 opacity-60">
+              <h3 className="text-sm font-semibold text-center">
+                Deine Timeline
+              </h3>
+              <div className="flex items-center gap-2 overflow-x-auto pb-2">
+                {timeline.map((item, idx) => (
+                  <div key={idx} className="flex items-center">
+                    {idx > 0 && <div className="text-ink/30 mx-1">↔</div>}
+                    <div className="flex-shrink-0 rounded-lg border-2 border-ink bg-ink/10 px-4 py-3 min-w-[120px]">
+                      <p className="text-xs font-bold text-ink">{item.year}</p>
+                      <p className="text-xs text-ink/70 truncate">{getShortTimelineLabel(item.answer || item.title || '')}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
 
         {/* Feedback nach Platzierung */}
         {placementResult && currentCard && (
