@@ -167,7 +167,7 @@ export default function MultiplayerGamePage() {
   const hasPlaced = () => {
     if (!game || !session) return false;
     const group = game.groups[session.groupId];
-    if (!group || !game.currentCardId) return false;
+    if (!group || !game.currentCardId || !group.timeline) return false;
     return group.timeline.some(c => c.cardId === game.currentCardId);
   };
 
@@ -335,7 +335,7 @@ export default function MultiplayerGamePage() {
     const currentCard = getCardById(game.currentCardId);
     const groupPlaced = hasPlaced();
     const allGroupsPlaced = groupList.every(g => 
-      g.timeline.some(c => c.cardId === game.currentCardId)
+      g.timeline && g.timeline.some(c => c.cardId === game.currentCardId)
     );
 
     // Wenn keine Karte verfügbar ist, zeige Warnung
@@ -434,7 +434,7 @@ export default function MultiplayerGamePage() {
               Warte auf andere Gruppen...
             </p>
             <div className="text-sm">
-              {groupList.filter(g => g.timeline.some(c => c.cardId === game.currentCardId)).length} / {groupList.length} Gruppen haben platziert
+              {groupList.filter(g => g.timeline && g.timeline.some(c => c.cardId === game.currentCardId)).length} / {groupList.length} Gruppen haben platziert
             </div>
             
             {allGroupsPlaced && session.isHost && (
@@ -461,6 +461,7 @@ export default function MultiplayerGamePage() {
             <div className="space-y-2 mt-6">
               <h4 className="font-semibold">Ergebnisse:</h4>
               {groupList.map(group => {
+                if (!group.timeline) return null;
                 const placement = group.timeline.find(c => c.cardId === game.currentCardId);
                 if (!placement) return null;
                 
