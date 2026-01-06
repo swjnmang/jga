@@ -254,7 +254,7 @@ export default function MultiplayerGamePage() {
                   {group.isReady ? (
                     <span className="text-green-600 font-semibold">✓ Bereit</span>
                   ) : (
-                    <span className="text-ink/40">Nicht bereit</span>
+                    <span className="text-red-600 font-semibold">✗ Nicht bereit</span>
                   )}
                 </div>
               </div>
