@@ -433,6 +433,118 @@ export default function MultiplayerLobby() {
               </div>
             </div>
 
+            {/* Musik-Genres */}
+            {settings.categories.includes('music') && (
+              <div>
+                <label className="block text-sm font-semibold mb-2">
+                  Musik-Genres
+                  <span className="text-xs text-ink/60 ml-1">Wirkt nur auf Musikfragen</span>
+                </label>
+                <div className="grid grid-cols-2 gap-2">
+                  {['poprock', 'metal', 'hiphop', 'schlagerparty'].map((genre) => {
+                    const genreLabel: Record<string, string> = {
+                      poprock: 'Pop & Rock',
+                      metal: 'Metal',
+                      hiphop: 'Hip-Hop',
+                      schlagerparty: 'Schlager & Party'
+                    };
+                    const checked = settings.genres.includes(genre as GenreTag);
+                    return (
+                      <button
+                        key={genre}
+                        onClick={() => toggleGenre(genre as GenreTag)}
+                        className={`px-3 py-2 rounded-lg border-2 transition-colors text-sm ${
+                          checked
+                            ? 'border-ink bg-ink text-inkDark'
+                            : 'border-ink/30 hover:border-ink/60'
+                        }`}
+                      >
+                        {genreLabel[genre]}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Playlists */}
+            {settings.categories.includes('music') && availablePlaylists.length > 0 && (
+              <div>
+                <label className="block text-sm font-semibold mb-2">
+                  Playlists
+                  <span className="text-xs text-ink/60 ml-1">Aktiviere, welche Playlists gespielt werden</span>
+                </label>
+                <div className="grid grid-cols-2 gap-2">
+                  {availablePlaylists.map((playlistId) => {
+                    const checked = settings.playlists.includes(playlistId);
+                    return (
+                      <button
+                        key={playlistId}
+                        onClick={() => togglePlaylist(playlistId)}
+                        className={`px-3 py-2 rounded-lg border-2 transition-colors text-sm ${
+                          checked
+                            ? 'border-ink bg-ink text-inkDark'
+                            : 'border-ink/30 hover:border-ink/60'
+                        }`}
+                      >
+                        {playlistId}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Zeit pro Frage */}
+            <div>
+              <label className="block text-sm font-semibold mb-2">
+                Zeit pro Frage
+                <span className="text-xs text-ink/60 ml-1">Standard: {(settings.timerSeconds / 60).toFixed(1)} min</span>
+              </label>
+              <div className="flex items-center gap-4">
+                <input
+                  type="range"
+                  min="0.5"
+                  max="5"
+                  step="0.5"
+                  defaultValue={settings.timerSeconds / 60}
+                  onChange={(e) => updateTimerMinutes(e.target.value)}
+                  className="flex-1 accent-ink"
+                />
+                <span className="text-sm font-semibold min-w-16 text-right">
+                  {(settings.timerSeconds / 60).toFixed(1)} min
+                </span>
+              </div>
+              <div className="text-xs text-ink/60 mt-2">0:30 - 5:00</div>
+            </div>
+
+            {/* Spielmodus */}
+            <div>
+              <label className="block text-sm font-semibold mb-2">Spielmodus</label>
+              <div className="space-y-2">
+                <label className="flex items-center gap-3 p-3 rounded-lg border-2 border-ink/30 hover:border-ink/60 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={settings.multipleChoice}
+                    onChange={(e) => setSettings((prev) => ({ ...prev, multipleChoice: e.target.checked }))}
+                    className="w-5 h-5 accent-ink"
+                  />
+                  <span className="text-sm font-medium">Multiple-Choice Antworten anzeigen (4 Optionen)</span>
+                </label>
+                {gameMode === 'timeline' && (
+                  <label className="flex items-center gap-3 p-3 rounded-lg border-2 border-ink/30 hover:border-ink/60 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={settings.digitalTimelineMode}
+                      onChange={(e) => setSettings((prev) => ({ ...prev, digitalTimelineMode: e.target.checked }))}
+                      className="w-5 h-5 accent-ink"
+                    />
+                    <span className="text-sm font-medium">Vollständig digitaler Timeline-Modus (mit Gruppenspiel)</span>
+                  </label>
+                )}
+              </div>
+            </div>
+
             {settings.categories.includes('music') && (
               <div className="rounded-lg border-2 border-ink/20 bg-ink/5 p-4 space-y-3">
                 <div>
