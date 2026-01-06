@@ -344,8 +344,8 @@ export default function MultiplayerGamePage() {
 
             {currentCard.sources && (
               <MediaEmbed 
-                sources={currentCard.sources}
-                title={currentCard.title}
+                card={currentCard}
+                preference="youtube"
               />
             )}
 
