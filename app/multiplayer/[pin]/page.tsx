@@ -223,7 +223,7 @@ export default function MultiplayerGamePage() {
         </div>
 
         {/* Gruppen-Liste */}
-        <div className="card-surface rounded-2xl p-6 space-y-4">
+              <div className={`card-surface rounded-2xl p-6 space-y-4 ${!isActiveTurn ? 'opacity-70 pointer-events-none select-none' : ''}`}>
           <h2 className="text-xl font-semibold">
             Gruppen ({groupList.length})
           </h2>
@@ -328,6 +328,11 @@ export default function MultiplayerGamePage() {
             <h1 className="text-3xl font-display">Timeline Multiplayer</h1>
             <div className="card-surface rounded-2xl p-6">
               <p className="text-lg text-ink/70">Spiel wird vorbereitet...</p>
+              {game.currentTurnGroupId && (
+                <p className="text-sm text-ink/60 mt-2">
+                  Aktuell am Zug: {game.groups[game.currentTurnGroupId]?.name}
+                </p>
+              )}
             </div>
           </div>
         </main>
@@ -335,6 +340,7 @@ export default function MultiplayerGamePage() {
     }
     
     const currentCard = getCardById(game.currentCardId);
+    const isActiveTurn = game.currentTurnGroupId === session.groupId;
     const groupPlaced = hasPlaced();
     const allGroupsPlaced = groupList.every(g => 
       g.timeline && g.timeline.some(c => c.id === game.currentCardId)
@@ -369,11 +375,16 @@ export default function MultiplayerGamePage() {
             <span>PIN: {pin}</span>
             <button onClick={copyPin} className="hover:opacity-70">📋</button>
           </div>
+          {game.currentTurnGroupId && (
+            <div className="inline-flex items-center gap-2 mt-2 px-3 py-1 rounded-full bg-ink/10 text-ink font-semibold">
+              Am Zug: {game.groups[game.currentTurnGroupId]?.name || 'Team'}
+            </div>
+          )}
         </div>
 
         {/* Aktuelle Karte */}
         {currentCard && (
-          <div className="card-surface rounded-2xl p-6 space-y-4">
+          <div className={`card-surface rounded-2xl p-6 space-y-4 ${!isActiveTurn ? 'opacity-70 pointer-events-none select-none' : ''}`}>
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold">{currentCard.title}</h2>
               <span className="text-sm px-3 py-1 rounded-full bg-ink/10">
@@ -384,10 +395,17 @@ export default function MultiplayerGamePage() {
             <p className="text-lg">{currentCard.cue}</p>
 
             {currentCard.sources && (
-              <MediaEmbed 
-                card={currentCard}
-                preference="youtube"
-              />
+              <div className="relative">
+                {!isActiveTurn && (
+                  <div className="absolute inset-0 z-10 flex items-center justify-center bg-white/60 backdrop-blur-sm rounded-xl text-sm font-semibold text-ink/80">
+                    Nur das aktive Team kann abspielen
+                  </div>
+                )}
+                <MediaEmbed 
+                  card={currentCard}
+                  preference="youtube"
+                />
+              </div>
             )}
 
             {currentCard.hint && (
@@ -512,7 +530,7 @@ export default function MultiplayerGamePage() {
             .map((group, index) => (
               <div
                 key={group.id}
-                className="flex items-center justify-between p-3 rounded-lg"
+                className={`flex items-center justify-between p-3 rounded-lg ${group.id === game.currentTurnGroupId ? 'ring-2 ring-ink' : ''}`}
                 style={{ backgroundColor: `${group.color}20` }}
               >
                 <div className="flex items-center gap-3">

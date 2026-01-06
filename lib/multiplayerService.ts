@@ -233,8 +233,10 @@ export async function placeCardInTimeline(
     throw new Error('Gruppe nicht gefunden.');
   }
 
+  const safeTimeline = Array.isArray(group.timeline) ? group.timeline : [];
+
   // Füge Karte in Timeline ein
-  const newTimeline = [...group.timeline];
+  const newTimeline = [...safeTimeline];
   newTimeline.splice(position, 0, card);
   
   // Prüfe ob die Platzierung korrekt ist
