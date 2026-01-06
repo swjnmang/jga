@@ -526,33 +526,6 @@ export default function MultiplayerLobby() {
               <div className="text-xs text-ink/60 mt-2">0:30 - 5:00</div>
             </div>
 
-            {/* Spielmodus */}
-            <div>
-              <label className="block text-sm font-semibold mb-2">Spielmodus</label>
-              <div className="space-y-2">
-                <label className="flex items-center gap-3 p-3 rounded-lg border-2 border-ink/30 hover:border-ink/60 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={settings.multipleChoice}
-                    onChange={(e) => setSettings((prev) => ({ ...prev, multipleChoice: e.target.checked }))}
-                    className="w-5 h-5 accent-ink"
-                  />
-                  <span className="text-sm font-medium">Multiple-Choice Antworten anzeigen (4 Optionen)</span>
-                </label>
-                {gameMode === 'timeline' && (
-                  <label className="flex items-center gap-3 p-3 rounded-lg border-2 border-ink/30 hover:border-ink/60 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={settings.digitalTimelineMode}
-                      onChange={(e) => setSettings((prev) => ({ ...prev, digitalTimelineMode: e.target.checked }))}
-                      className="w-5 h-5 accent-ink"
-                    />
-                    <span className="text-sm font-medium">Vollständig digitaler Timeline-Modus (mit Gruppenspiel)</span>
-                  </label>
-                )}
-              </div>
-            </div>
-
             {settings.categories.includes('music') && (
               <div className="rounded-lg border-2 border-ink/20 bg-ink/5 p-4 space-y-3">
                 <div>
