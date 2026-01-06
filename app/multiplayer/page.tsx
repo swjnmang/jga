@@ -77,8 +77,8 @@ export default function MultiplayerLobby() {
       // Shuffle die gefilterten Karten
       const shuffled = [...filteredCards].sort(() => Math.random() - 0.5);
       
-      // Nehme die ersten 50 Karten (oder weniger falls nicht genug vorhanden)
-      const deck = shuffled.slice(0, Math.min(50, shuffled.length));
+      // Verwende alle gefilterten Karten
+      const deck = shuffled;
       
       if (deck.length === 0) {
         setError('Keine Karten für die ausgewählten Einstellungen verfügbar');
