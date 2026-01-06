@@ -63,10 +63,33 @@ export default function MultiplayerLobby() {
     setError(null);
 
     try {
+      // Filter und shuffle Karten basierend auf Settings
+      const filteredCards = cards.filter(card => {
+        // Filter nach Kategorie
+        if (!settings.categories.includes(card.category)) return false;
+        
+        // Filter nach Schwierigkeitsgrad
+        if (!settings.difficulties.includes(card.difficulty)) return false;
+        
+        return true;
+      });
+      
+      // Shuffle die gefilterten Karten
+      const shuffled = [...filteredCards].sort(() => Math.random() - 0.5);
+      
+      // Nehme die ersten 50 Karten (oder weniger falls nicht genug vorhanden)
+      const deck = shuffled.slice(0, Math.min(50, shuffled.length));
+      
+      if (deck.length === 0) {
+        setError('Keine Karten für die ausgewählten Einstellungen verfügbar');
+        setLoading(false);
+        return;
+      }
+
       const { pin, groupId, playerId } = await createGame({
         mode: gameMode,
         settings,
-        deck: cards.slice(0, 50), // Erste 50 Karten als Beispiel
+        deck,
         hostGroupName: groupName,
         hostPlayerName: groupName
       });
