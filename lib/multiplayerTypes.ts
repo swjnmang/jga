@@ -15,10 +15,11 @@ export interface GroupData {
   name: string;
   color: string;
   players: PlayerInfo[];
-  timeline: PlacedCard[];
+  timeline: Card[]; // Vollständige Karten, nicht nur IDs
   flexButtons: number;
   score: number;
   isReady: boolean;
+  flexActive: boolean; // Ob Flex-Button für aktuelle Runde aktiviert ist
 }
 
 export interface PlacedCard {
@@ -36,12 +37,14 @@ export interface GameSession {
   settings: UserSettings;
   currentCardIndex: number;
   currentCardId: string | null;
+  currentTurnGroupId: string | null; // Welche Gruppe ist am Zug
   deck: string[]; // Array von Card-IDs
   groups: Record<string, GroupData>; // groupId -> GroupData
   createdAt: number;
   startedAt: number | null;
   finishedAt: number | null;
   maxGroups: number;
+  referenceCard: Card | null; // Die Startkarte für alle Gruppen
 }
 
 export interface CreateGameParams {

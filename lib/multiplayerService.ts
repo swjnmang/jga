@@ -52,10 +52,15 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     color: GROUP_COLORS[0],
     players: [hostPlayer],
     timeline: [],
-    flexButtons: 3,
+    flexButtons: 2,
     score: 0,
-    isReady: true
+    isReady: true,
+    flexActive: false
   };
+
+  // Wähle eine Referenzkarte (erste im Deck)
+  const referenceCard = params.deck.length > 0 ? params.deck[0] : null;
+  const actualDeck = params.deck.slice(1); // Rest des Decks
 
   const gameSession: GameSession = {
     id: pin,
@@ -63,9 +68,11 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     state: 'lobby',
     mode: params.mode,
     settings: params.settings,
-    currentCardIndex: -1,
-    currentCardId: null,
-    deck: params.deck.map(card => card.id),
+    currentCardIndex: 0,
+    currentCardId: actualDeck.length > 0 ? actualDeck[0].id : null,
+    currentTurnGroupId: null,
+    deck: actualDeck.map(card => card.id),
+    referenceCard,
     groups: {
       [hostGroupId]: hostGroup
     },
@@ -122,9 +129,10 @@ export async function joinGame(params: JoinGameParams): Promise<{ groupId: strin
     color: GROUP_COLORS[groupCount % GROUP_COLORS.length],
     players: [newPlayer],
     timeline: [],
-    flexButtons: 3,
+    flexButtons: 2,
     score: 0,
-    isReady: false
+    isReady: false,
+    flexActive: false
   };
 
   // Füge Gruppe hinzu
@@ -162,11 +170,16 @@ export async function startGame(pin: string, hostGroupId: string): Promise<void>
     throw new Error('Nicht alle Gruppen sind bereit.');
   }
 
+  // Setze erste Gruppe als aktive Gruppe
+  const groupIds = Object.keys(game.groups);
+  const firstGroupId = groupIds[0];
+
   await update(gameRef, {
     state: 'playing',
     startedAt: Date.now(),
     currentCardIndex: 0,
-    currentCardId: game.deck[0]
+    currentCardId: game.deck[0],
+    currentTurnGroupId: firstGroupId
   });
 }
 
@@ -178,6 +191,122 @@ export async function setGroupReady(pin: string, groupId: string, ready: boolean
   await update(ref(database!, `games/${pin}/groups/${groupId}`), {
     isReady: ready
   });
+}
+
+/**
+ * Aktiviert/Deaktiviert den Flex-Button einer Gruppe
+ */
+export async function toggleFlexButton(pin: string, groupId: string, active: boolean): Promise<void> {
+  checkFirebase();
+  await update(ref(database!, `games/${pin}/groups/${groupId}`), {
+    flexActive: active
+  });
+}
+
+/**
+ * Platziert eine Karte für die aktive Gruppe
+ */
+export async function placeCardInTimeline(
+  pin: string,
+  groupId: string,
+  card: any, // Card object
+  position: number // Index in der Timeline wo die Karte eingefügt wird
+): Promise<void> {
+  checkFirebase();
+  
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+
+  if (!snapshot.exists()) {
+    throw new Error('Spiel nicht gefunden.');
+  }
+
+  const game: GameSession = snapshot.val();
+  const group = game.groups[groupId];
+  
+  if (!group) {
+    throw new Error('Gruppe nicht gefunden.');
+  }
+
+  // Füge Karte in Timeline ein
+  const newTimeline = [...group.timeline];
+  newTimeline.splice(position, 0, card);
+  
+  // Prüfe ob die Platzierung korrekt ist
+  const isCorrect = isTimelineCorrect(newTimeline);
+  
+  // Update Gruppe
+  await update(ref(database!, `games/${pin}/groups/${groupId}`), {
+    timeline: newTimeline,
+    score: isCorrect ? newTimeline.length : group.score
+  });
+
+  // Wenn die aktive Gruppe falsch platziert hat, prüfe Flex-Gruppen
+  if (game.currentTurnGroupId === groupId && !isCorrect) {
+    await handleFlexSteal(pin, card, game);
+  }
+}
+
+/**
+ * Prüft ob eine Timeline korrekt sortiert ist
+ */
+function isTimelineCorrect(timeline: any[]): boolean {
+  for (let i = 1; i < timeline.length; i++) {
+    if (timeline[i].year < timeline[i - 1].year) {
+      return false;
+    }
+  }
+  return true;
+}
+
+/**
+ * Behandelt Flex-Button Karten-Klau-Mechanik
+ */
+async function handleFlexSteal(pin: string, card: any, game: GameSession): Promise<void> {
+  // Finde alle Gruppen mit aktivem Flex-Button
+  const flexGroups = Object.entries(game.groups)
+    .filter(([gid, g]) => g.flexActive && gid !== game.currentTurnGroupId)
+    .map(([gid]) => gid);
+
+  // Für jede Flex-Gruppe: prüfe ob sie die Karte korrekt platzieren würde
+  // (Das wird in der UI entschieden, hier nur vorbereiten)
+}
+
+/**
+ * Geht zur nächsten Gruppe (Rundenende)
+ */
+export async function nextTurn(pin: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+
+  if (!snapshot.exists()) {
+    throw new Error('Spiel nicht gefunden.');
+  }
+
+  const game: GameSession = snapshot.val();
+  const groupIds = Object.keys(game.groups);
+  const currentIndex = groupIds.indexOf(game.currentTurnGroupId || '');
+  const nextIndex = (currentIndex + 1) % groupIds.length;
+  const nextGroupId = groupIds[nextIndex];
+
+  // Reset alle Flex-Buttons
+  const updates: Record<string, any> = {
+    currentTurnGroupId: nextGroupId
+  };
+
+  groupIds.forEach(gid => {
+    updates[`groups/${gid}/flexActive`] = false;
+  });
+
+  // Prüfe ob eine Gruppe gewonnen hat (10 Karten korrekt)
+  const winner = Object.values(game.groups).find(g => g.score >= 10);
+  if (winner) {
+    updates.state = 'finished';
+    updates.finishedAt = Date.now();
+  }
+
+  await update(gameRef, updates);
 }
 
 /**
@@ -196,55 +325,14 @@ export async function nextCard(pin: string): Promise<void> {
   const nextIndex = game.currentCardIndex + 1;
 
   if (nextIndex >= game.deck.length) {
-    // Spiel beendet
+    // Keine Karten mehr
     await update(gameRef, {
-      state: 'finished',
-      finishedAt: Date.now(),
       currentCardId: null
     });
   } else {
     await update(gameRef, {
       currentCardIndex: nextIndex,
       currentCardId: game.deck[nextIndex]
-    });
-  }
-}
-
-/**
- * Platziert eine Karte in der Timeline einer Gruppe
- */
-export async function placeCard(
-  pin: string,
-  groupId: string,
-  cardId: string,
-  year: number,
-  correct: boolean
-): Promise<void> {
-  checkFirebase();
-  
-  const placedCard = {
-    cardId,
-    year,
-    correct,
-    placedAt: Date.now()
-  };
-
-  const timelineRef = ref(database!, `games/${pin}/groups/${groupId}/timeline`);
-  const snapshot = await get(timelineRef);
-  const timeline = snapshot.exists() ? snapshot.val() : [];
-  
-  timeline.push(placedCard);
-
-  await set(timelineRef, timeline);
-
-  // Update Score wenn korrekt
-  if (correct) {
-    const groupRef = ref(database!, `games/${pin}/groups/${groupId}`);
-    const groupSnapshot = await get(groupRef);
-    const group: GroupData = groupSnapshot.val();
-    
-    await update(groupRef, {
-      score: group.score + 1
     });
   }
 }
