@@ -337,7 +337,7 @@ export default function MultiplayerGamePage() {
     const currentCard = getCardById(game.currentCardId);
     const groupPlaced = hasPlaced();
     const allGroupsPlaced = groupList.every(g => 
-      g.timeline && g.timeline.some(c => c.cardId === game.currentCardId)
+      g.timeline && g.timeline.some(c => c.id === game.currentCardId)
     );
 
     // Wenn keine Karte verfügbar ist, zeige Warnung
