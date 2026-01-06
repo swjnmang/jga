@@ -1,0 +1,291 @@
+"use client";
+
+import { useEffect, useState } from 'react';
+import { useRouter, useParams } from 'next/navigation';
+import {
+  subscribeToGame,
+  setGroupReady,
+  startGame,
+  leaveGame
+} from '@/lib/multiplayerService';
+import { GameSession, GroupData } from '@/lib/multiplayerTypes';
+
+interface SessionInfo {
+  pin: string;
+  groupId: string;
+  playerId: string;
+  groupName: string;
+  playerName: string;
+  isHost: boolean;
+}
+
+export default function MultiplayerGamePage() {
+  const router = useRouter();
+  const params = useParams();
+  const pin = params?.pin as string;
+
+  const [game, setGame] = useState<GameSession | null>(null);
+  const [session, setSession] = useState<SessionInfo | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // Lade Session-Infos
+  useEffect(() => {
+    const sessionStr = localStorage.getItem('multiplayer_session');
+    if (!sessionStr) {
+      router.push('/multiplayer');
+      return;
+    }
+
+    const sessionData: SessionInfo = JSON.parse(sessionStr);
+    if (sessionData.pin !== pin) {
+      router.push('/multiplayer');
+      return;
+    }
+
+    setSession(sessionData);
+  }, [pin, router]);
+
+  // Subscribe to game updates
+  useEffect(() => {
+    if (!pin) return;
+
+    const unsubscribe = subscribeToGame(pin, (gameData) => {
+      if (gameData) {
+        setGame(gameData);
+        setLoading(false);
+      } else {
+        setError('Spiel nicht gefunden');
+        setLoading(false);
+      }
+    });
+
+    return () => unsubscribe();
+  }, [pin]);
+
+  const handleToggleReady = async () => {
+    if (!session || !game) return;
+    
+    const group = game.groups[session.groupId];
+    if (!group) return;
+
+    try {
+      await setGroupReady(pin, session.groupId, !group.isReady);
+    } catch (err) {
+      console.error('Error toggling ready:', err);
+    }
+  };
+
+  const handleStartGame = async () => {
+    if (!session || !game) return;
+
+    try {
+      await startGame(pin, session.groupId);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Fehler beim Starten');
+    }
+  };
+
+  const handleLeaveGame = async () => {
+    if (!session) return;
+
+    try {
+      await leaveGame(pin, session.groupId);
+      localStorage.removeItem('multiplayer_session');
+      router.push('/multiplayer');
+    } catch (err) {
+      console.error('Error leaving game:', err);
+      router.push('/multiplayer');
+    }
+  };
+
+  const copyPin = () => {
+    navigator.clipboard.writeText(pin);
+  };
+
+  if (loading) {
+    return (
+      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10">
+        <div className="text-center">
+          <p className="text-lg">Lade Spiel...</p>
+        </div>
+      </main>
+    );
+  }
+
+  if (error || !game || !session) {
+    return (
+      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10">
+        <div className="text-center space-y-4">
+          <p className="text-lg text-red-600">{error || 'Fehler beim Laden'}</p>
+          <button
+            onClick={() => router.push('/multiplayer')}
+            className="px-6 py-3 bg-ink text-inkDark rounded-lg"
+          >
+            Zurück zur Lobby
+          </button>
+        </div>
+      </main>
+    );
+  }
+
+  const currentGroup = game.groups[session.groupId];
+  const groupList = Object.values(game.groups);
+  const allReady = groupList.every(g => g.isReady);
+
+  // Lobby-Ansicht
+  if (game.state === 'lobby') {
+    return (
+      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+        <div className="text-center space-y-2">
+          <h1 className="text-3xl font-display">Lobby</h1>
+          <div className="inline-flex items-center gap-3 bg-ink text-inkDark px-6 py-3 rounded-xl">
+            <span className="text-sm">PIN:</span>
+            <span className="text-2xl font-mono font-bold tracking-wider">{pin}</span>
+            <button
+              onClick={copyPin}
+              className="ml-2 hover:opacity-70 transition-opacity"
+              title="PIN kopieren"
+            >
+              📋
+            </button>
+          </div>
+        </div>
+
+        {/* Gruppen-Liste */}
+        <div className="card-surface rounded-2xl p-6 space-y-4">
+          <h2 className="text-xl font-semibold">
+            Gruppen ({groupList.length})
+          </h2>
+          <div className="space-y-3">
+            {groupList.map((group) => (
+              <div
+                key={group.id}
+                className="flex items-center justify-between p-4 rounded-lg border-2"
+                style={{ borderColor: group.color }}
+              >
+                <div className="flex items-center gap-3">
+                  <div
+                    className="w-4 h-4 rounded-full"
+                    style={{ backgroundColor: group.color }}
+                  />
+                  <div>
+                    <p className="font-semibold">
+                      {group.name}
+                      {group.id === session.groupId && ' (Du)'}
+                      {group.id === game.hostId && ' 👑'}
+                    </p>
+                    <p className="text-sm text-ink/60">
+                      {group.players.map(p => p.name).join(', ')}
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  {group.isReady ? (
+                    <span className="text-green-600 font-semibold">✓ Bereit</span>
+                  ) : (
+                    <span className="text-ink/40">Nicht bereit</span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Spielmodus Info */}
+        <div className="card-surface rounded-2xl p-6">
+          <h3 className="font-semibold mb-2">Spielmodus</h3>
+          <p className="text-lg">
+            {game.mode === 'timeline' ? '🔢 Timeline' : game.mode === 'trivia' ? '🎓 Trivia' : '👤 Solo'}
+          </p>
+        </div>
+
+        {/* Aktionen */}
+        <div className="flex gap-3">
+          <button
+            onClick={handleLeaveGame}
+            className="flex-1 px-6 py-4 rounded-lg border-2 border-ink/30 hover:border-ink/60 transition-colors"
+          >
+            Verlassen
+          </button>
+          
+          {currentGroup && (
+            <button
+              onClick={handleToggleReady}
+              className={`flex-1 px-6 py-4 rounded-lg font-semibold transition-colors ${
+                currentGroup.isReady
+                  ? 'bg-ink/10 border-2 border-ink/30 hover:bg-ink/20'
+                  : 'bg-ink text-inkDark hover:opacity-90'
+              }`}
+            >
+              {currentGroup.isReady ? 'Nicht mehr bereit' : 'Bereit'}
+            </button>
+          )}
+
+          {session.isHost && (
+            <button
+              onClick={handleStartGame}
+              disabled={!allReady || groupList.length < 2}
+              className="flex-1 px-6 py-4 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Spiel starten
+            </button>
+          )}
+        </div>
+
+        {session.isHost && !allReady && groupList.length >= 2 && (
+          <p className="text-center text-sm text-ink/60">
+            Warte darauf, dass alle Gruppen bereit sind...
+          </p>
+        )}
+
+        {groupList.length < 2 && (
+          <p className="text-center text-sm text-ink/60">
+            Warte auf weitere Gruppen...
+          </p>
+        )}
+      </main>
+    );
+  }
+
+  // Spielansicht - Placeholder für später
+  return (
+    <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+      <div className="text-center">
+        <h1 className="text-3xl font-display">Spiel läuft</h1>
+        <p className="text-ink/70 mt-2">
+          Karte {game.currentCardIndex + 1} / {game.deck.length}
+        </p>
+      </div>
+
+      <div className="card-surface rounded-2xl p-6">
+        <p className="text-center text-lg">
+          Spielansicht wird in der nächsten Phase implementiert...
+        </p>
+        <p className="text-center text-sm text-ink/60 mt-2">
+          Aktuell in {game.state} Modus
+        </p>
+      </div>
+
+      {/* Gruppen-Scoreboard */}
+      <div className="card-surface rounded-2xl p-6 space-y-3">
+        <h3 className="font-semibold">Scoreboard</h3>
+        {groupList
+          .sort((a, b) => b.score - a.score)
+          .map((group, index) => (
+            <div
+              key={group.id}
+              className="flex items-center justify-between p-3 rounded-lg"
+              style={{ backgroundColor: `${group.color}20` }}
+            >
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">{index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : `${index + 1}.`}</span>
+                <span className="font-semibold">{group.name}</span>
+              </div>
+              <span className="text-xl font-bold">{group.score}</span>
+            </div>
+          ))}
+      </div>
+    </main>
+  );
+}
