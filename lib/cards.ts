@@ -165,7 +165,7 @@ const baseCards: Card[] = [
     hint: 'USA, Alkoholverbot aufgehoben.',
     difficulty: 'mittel',
     sources: {
-      image: '/assets/images/After_End_of_Prohibition_New_York_Times_1933_3.jpg'
+      image: '/assets/images/prohibition-end-1933.jpg'
     },
     distractors: ['USA, 16.01.1920 – Beginn der Prohibition.', 'USA, 24.10.1929 – Schwarzer Donnerstag (Börsencrash).', 'USA, 1929-1939 – Great Depression.']
   },
@@ -179,7 +179,7 @@ const baseCards: Card[] = [
     hint: 'Deutschland wird Fußball-Weltmeister.',
     difficulty: 'mittel',
     sources: {
-      image: '/assets/images/Bundesarchiv_Bild_183-N0716-0314,_Fußball-WM,_BRD_-_Niederlande_2-1.jpg'
+      image: '/assets/images/wm-finale-1974.jpg'
     },
     distractors: ['Bern, 04.07.1954 – WM-Finale BRD-Ungarn 3:2 (Wunder von Bern).', 'Rom, 11.07.1982 – WM-Finale Italien-BRD 3:1.', 'Mexiko, 29.06.1986 – WM-Viertelfinale England-Argentinien 1:2.']
   },
@@ -193,7 +193,7 @@ const baseCards: Card[] = [
     hint: 'Friedensvertrag nach dem Ersten Weltkrieg.',
     difficulty: 'schwer',
     sources: {
-      image: '/assets/images/England_Objects_to_the_Treaty_of_Versailles,_June_1,_1919.png'
+      image: '/assets/images/versailles-treaty-1919.png'
     },
     distractors: ['Paris, 10.02.1947 – Pariser Friedensverträge nach WW2.', 'Wien, 09.06.1815 – Wiener Kongress.', 'Potsdam, 17.07.1945 – Potsdamer Konferenz.']
   },
@@ -207,7 +207,7 @@ const baseCards: Card[] = [
     hint: 'Wahrzeichen von Paris, Weltausstellung.',
     difficulty: 'mittel',
     sources: {
-      image: '/assets/images/Petit,_Pierre_-_Bau_des_Eiffelturms_(Zeno_Fotografie).jpg'
+      image: '/assets/images/eiffelturm-bau-1889.jpg'
     },
     distractors: ['New York, 01.05.1931 – Empire State Building fertiggestellt.', 'London, 1894 – Tower Bridge fertiggestellt.', 'Sydney, 20.10.1973 – Sydney Opera House eröffnet.']
   },
@@ -221,7 +221,7 @@ const baseCards: Card[] = [
     hint: 'Beginn der Französischen Revolution.',
     difficulty: 'mittel',
     sources: {
-      image: '/assets/images/Prise_de_la_Bastille_clean.jpg'
+      image: '/assets/images/bastille-1789.jpg'
     },
     distractors: ['Paris, 21.01.1793 – Hinrichtung von Ludwig XVI.', 'Paris, 27.07.1794 – Sturz von Robespierre.', 'Wien, 13.03.1848 – Märzrevolution.']
   },
@@ -235,7 +235,7 @@ const baseCards: Card[] = [
     hint: 'Höchster Berg der Welt erstmals bestiegen.',
     difficulty: 'schwer',
     sources: {
-      image: '/assets/images/Tenzing_and_Hillary.jpg'
+      image: '/assets/images/everest-1953.jpg'
     },
     distractors: ['K2, 31.07.1954 – Erstbesteigung durch italienische Expedition.', 'Matterhorn, 14.07.1865 – Erstbesteigung durch Edward Whymper.', 'Mont Blanc, 08.08.1786 – Erstbesteigung.']
   },
@@ -263,7 +263,7 @@ const baseCards: Card[] = [
     hint: 'Deutsche Wiedervereinigung, Fall der Mauer.',
     difficulty: 'leicht',
     sources: {
-      image: '/assets/images/West_and_East_Germans_at_the_Brandenburg_Gate_in_1989_(cropped).jpg'
+      image: '/assets/images/brandenburger-tor-1989.jpg'
     },
     distractors: ['Berlin, 17.06.1953 – Volksaufstand in der DDR.', 'Berlin, 13.08.1961 – Bau der Berliner Mauer.', 'Berlin, 03.10.1990 – Tag der Deutschen Einheit.']
   },
