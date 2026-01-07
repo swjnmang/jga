@@ -337,6 +337,8 @@ export default function MultiplayerGamePage() {
     
     const currentCard = getCardById(game.currentCardId);
     const isActiveTurn = game.currentTurnGroupId === session.groupId;
+    const isHostSession = session.isHost;
+    const canControlMedia = isActiveTurn || isHostSession;
 
     // Wenn keine Karte verfügbar ist, zeige Warnung
     if (!currentCard) {
@@ -388,14 +390,14 @@ export default function MultiplayerGamePage() {
 
             {currentCard.sources && (
               <div className="relative">
-                {!isActiveTurn && (
+                {!canControlMedia && (
                   <div className="absolute inset-0 z-10 flex items-center justify-center bg-white/60 backdrop-blur-sm rounded-xl text-sm font-semibold text-ink/80">
-                    Nur das aktive Team kann abspielen
+                    Mediensteuerung nur durch den Host
                   </div>
                 )}
                 <MediaEmbed 
                   card={currentCard}
-                  preference="youtube"
+                  preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
                 />
               </div>
             )}

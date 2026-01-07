@@ -121,10 +121,8 @@ export async function joinGame(params: JoinGameParams): Promise<{ groupId: strin
     throw new Error('Das Spiel ist bereits voll.');
   }
 
-  const requiresSpotify = game.settings?.categories?.includes('music');
-  if (requiresSpotify && !params.spotifyLinked) {
-    throw new Error('Dieses Spiel enthält Musik-Karten. Bitte verbinde Spotify Premium und versuche es erneut.');
-  }
+  // Gäste dürfen beitreten, auch wenn Musik-Kategorien aktiv sind.
+  // Die Spotify-Verbindung wird nur vom Host benötigt und geprüft.
 
   // Erstelle neue Gruppe
   const newGroupId = generateId();
