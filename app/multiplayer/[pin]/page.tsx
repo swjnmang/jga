@@ -138,14 +138,7 @@ export default function MultiplayerGamePage() {
       const correct = await placeCardInTimeline(pin, session.groupId, card, position);
       setPlacementResult(correct ? 'correct' : 'wrong');
 
-      // Bei korrekter Antwort automatisch weiter nach kurzer Pause
-      if (correct) {
-        await new Promise((resolve) => setTimeout(resolve, 1500));
-        await nextCard(pin);
-        await nextTurn(pin);
-        setPlacementResult(null);
-      }
-      // Bei falscher Antwort: Warten auf manuelle Bestätigung (Button wird angezeigt)
+      // Kein automatisches Weiterleiten mehr - Team muss auf "Weiter" klicken
     } catch (err) {
       console.error('Error placing card:', err);
       setError('Fehler beim Platzieren der Karte');
@@ -608,9 +601,39 @@ export default function MultiplayerGamePage() {
         {placementResult && currentCard && (
           <div className="card-surface rounded-2xl p-6 space-y-4">
             {placementResult === 'correct' ? (
-              <div className="text-center space-y-3">
-                <div className="text-6xl">✅</div>
-                <p className="text-xl font-semibold text-green-600">Richtig!</p>
+              <div className="space-y-4">
+                <div className="text-center space-y-3">
+                  <div className="text-6xl">✅</div>
+                  <p className="text-xl font-semibold text-green-600">Richtig!</p>
+                </div>
+                
+                {/* Song-Info anzeigen */}
+                <div className="border-t-2 border-ink/10 pt-4 space-y-3">
+                  <h3 className="text-lg font-semibold text-center">Es war:</h3>
+                  <div className="text-center space-y-2">
+                    <p className="text-2xl font-bold text-ink">{currentCard.answer}</p>
+                    <div className="text-lg text-ink/70">
+                      <span className="font-semibold">{currentCard.year}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Weiter-Button nur für aktives Team */}
+                {isActiveTurn && (
+                  <button
+                    onClick={handleNextCard}
+                    disabled={isProcessing}
+                    className="w-full mt-4 px-6 py-4 bg-ink text-inkDark rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50"
+                  >
+                    Weiter zum nächsten Team
+                  </button>
+                )}
+                
+                {!isActiveTurn && (
+                  <p className="text-center text-sm text-ink/60 mt-4">
+                    Warte auf das aktive Team...
+                  </p>
+                )}
               </div>
             ) : (
               <div className="space-y-4">
