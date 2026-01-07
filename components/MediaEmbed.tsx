@@ -64,6 +64,8 @@ type Props = {
 
 export type MediaEmbedHandle = {
   stop: () => void;
+  play: () => void;
+  pause: () => void;
 };
 
 export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbed(
@@ -529,6 +531,29 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       setIsPlaying(false);
       setShowSpotify(false);
       setShowYouTube(false);
+    },
+    play: () => {
+      if (choice?.type === 'youtube') {
+        sendYouTubeCommand('playVideo');
+        setShowYouTube(true);
+        setIsPlaying(true);
+      }
+      if (choice?.type === 'spotify') {
+        if (showSpotify) {
+          resumeSpotify();
+        } else {
+          playSpotifyTrack(choice.url);
+        }
+      }
+    },
+    pause: () => {
+      if (choice?.type === 'youtube') {
+        sendYouTubeCommand('pauseVideo');
+        setIsPlaying(false);
+      }
+      if (choice?.type === 'spotify') {
+        pauseSpotify();
+      }
     }
   }));
 

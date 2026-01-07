@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import {
   subscribeToGame,
@@ -9,11 +9,12 @@ import {
   leaveGame,
   placeCardInTimeline,
   nextCard,
-  nextTurn
+  nextTurn,
+  sendPlaybackControl
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
-import { MediaEmbed } from '@/components/MediaEmbed';
+import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
 
 interface SessionInfo {
   pin: string;
@@ -37,6 +38,8 @@ export default function MultiplayerGamePage() {
   // Spielzustand
   const [isProcessing, setIsProcessing] = useState(false);
   const [placementResult, setPlacementResult] = useState<'correct' | 'wrong' | null>(null);
+  const mediaEmbedRef = useRef<MediaEmbedHandle>(null);
+  const [isMediaPlaying, setIsMediaPlaying] = useState(false);
 
   // Lade Session-Infos
   useEffect(() => {
@@ -173,6 +176,40 @@ export default function MultiplayerGamePage() {
       setIsProcessing(false);
     }
   };
+
+  // Handle remote playback control (for guests)
+  const handleRemotePlay = async () => {
+    if (!session || !game || !game.currentCardId) return;
+    setIsMediaPlaying(true);
+    await sendPlaybackControl(pin, session.groupId, 'play', game.currentCardId);
+  };
+
+  const handleRemotePause = async () => {
+    if (!session || !game || !game.currentCardId) return;
+    setIsMediaPlaying(false);
+    await sendPlaybackControl(pin, session.groupId, 'pause', game.currentCardId);
+  };
+
+  // Host listens for playback control commands
+  useEffect(() => {
+    if (!session?.isHost || !game?.playbackControl) return;
+    
+    const control = game.playbackControl;
+    const currentCardId = game.currentCardId;
+    
+    if (control.cardId !== currentCardId) return; // Ignore old commands
+    
+    if (control.action === 'play') {
+      mediaEmbedRef.current?.play();
+      setIsMediaPlaying(true);
+    } else if (control.action === 'pause') {
+      mediaEmbedRef.current?.pause();
+      setIsMediaPlaying(false);
+    } else if (control.action === 'stop') {
+      mediaEmbedRef.current?.stop();
+      setIsMediaPlaying(false);
+    }
+  }, [game?.playbackControl, game?.currentCardId, session?.isHost]);
   
   if (loading) {
     return (
@@ -405,16 +442,33 @@ export default function MultiplayerGamePage() {
                 {/* Nur Host bekommt die Steuerung */}
                 {isHostSession ? (
                   <MediaEmbed 
+                    ref={mediaEmbedRef}
                     card={currentCard}
                     preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
                   />
                 ) : (
-                  /* Mitspieler sehen nur Info-Box */
-                  <div className="rounded-2xl card-surface bg-ink/5 p-8 text-center space-y-3">
+                  /* Mitspieler sehen Play/Pause Buttons */
+                  <div className="rounded-2xl card-surface bg-ink/5 p-8 text-center space-y-4">
                     <div className="text-4xl">🎵</div>
                     <p className="text-sm text-ink/70">
                       Der Host steuert die Musikwiedergabe
                     </p>
+                    <div className="flex justify-center gap-3">
+                      <button
+                        onClick={handleRemotePlay}
+                        disabled={isMediaPlaying}
+                        className="px-6 py-3 rounded-lg bg-ink text-inkDark font-semibold hover:opacity-90 transition-opacity disabled:opacity-50"
+                      >
+                        ▶ Play
+                      </button>
+                      <button
+                        onClick={handleRemotePause}
+                        disabled={!isMediaPlaying}
+                        className="px-6 py-3 rounded-lg border-2 border-ink/30 font-semibold hover:border-ink/60 transition-colors disabled:opacity-50"
+                      >
+                        ⏸ Pause
+                      </button>
+                    </div>
                     {currentCard.category === 'music' && (
                       <p className="text-xs text-ink/60">
                         Song wird auf dem Gerät des Hosts abgespielt

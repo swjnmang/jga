@@ -29,6 +29,13 @@ export interface PlacedCard {
   placedAt: number; // timestamp
 }
 
+export interface PlaybackControl {
+  action: 'play' | 'pause' | 'stop';
+  cardId: string;
+  timestamp: number;
+  requestedBy: string; // groupId
+}
+
 export interface GameSession {
   id: string; // PIN
   hostId: string;
@@ -45,6 +52,7 @@ export interface GameSession {
   finishedAt: number | null;
   maxGroups: number;
   referenceCard: Card | null; // Die Startkarte für alle Gruppen
+  playbackControl?: PlaybackControl; // Remote-Steuerung für Medien (Host führt aus)
 }
 
 export interface CreateGameParams {

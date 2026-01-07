@@ -447,3 +447,23 @@ export async function checkPinExists(pin: string): Promise<boolean> {
   const snapshot = await get(ref(database!, `games/${pin}`));
   return snapshot.exists();
 }
+
+/**
+ * Sendet einen Playback-Befehl (play/pause/stop) an den Host
+ */
+export async function sendPlaybackControl(
+  pin: string,
+  groupId: string,
+  action: 'play' | 'pause' | 'stop',
+  cardId: string
+): Promise<void> {
+  checkFirebase();
+  await update(ref(database!, `games/${pin}`), {
+    playbackControl: {
+      action,
+      cardId,
+      timestamp: Date.now(),
+      requestedBy: groupId
+    }
+  });
+}
