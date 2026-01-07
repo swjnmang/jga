@@ -112,6 +112,11 @@ export default function MultiplayerGamePage() {
     navigator.clipboard.writeText(pin);
   };
 
+  const copyInviteLink = () => {
+    const inviteUrl = `${window.location.origin}/multiplayer?pin=${pin}`;
+    navigator.clipboard.writeText(inviteUrl);
+  };
+
   const handlePlaceCard = async (position: number) => {
     if (!session || !game || !game.currentCardId || isProcessing) return;
     // Nur die aktive Gruppe darf setzen
@@ -216,6 +221,13 @@ export default function MultiplayerGamePage() {
               📋
             </button>
           </div>
+          <button
+            onClick={copyInviteLink}
+            className="mt-2 inline-flex items-center gap-2 text-sm text-ink/70 hover:text-ink transition-colors"
+          >
+            <span>🔗</span>
+            <span>Einladungslink kopieren</span>
+          </button>
         </div>
 
           {/* Gruppen-Liste */}

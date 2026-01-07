@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { createGame, joinGame } from '@/lib/multiplayerService';
 import { cards, getCategories } from '@/lib/cards';
 import { playlistInfo } from '@/lib/playlistCards';
@@ -11,6 +11,7 @@ import { CardCategory, Difficulty, GenreTag } from '@/lib/types';
 
 export default function MultiplayerLobby() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [mode, setMode] = useState<'create' | 'join' | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -90,6 +91,15 @@ export default function MultiplayerLobby() {
       setError('Firebase ist nicht konfiguriert. Bitte siehe FIREBASE_SETUP.md für Anweisungen.');
     }
   }, []);
+
+  // Check for invite link with pin parameter
+  useEffect(() => {
+    const pinFromUrl = searchParams.get('pin');
+    if (pinFromUrl) {
+      setPin(pinFromUrl.toUpperCase());
+      setMode('join');
+    }
+  }, [searchParams]);
 
   const handleCreateGame = async () => {
     if (!isFirebaseEnabled) {
