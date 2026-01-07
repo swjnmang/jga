@@ -247,8 +247,16 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       for (let attempt = 0; attempt < maxAttempts; attempt += 1) {
         const target = await ensureDevice();
         if (!target) {
+          // Kein Device gefunden - versuche Player zu reconnecten
+          if (spotifyPlayerRef.current) {
+            try {
+              await spotifyPlayerRef.current.connect();
+            } catch (e) {
+              console.warn('Player reconnect failed', e);
+            }
+          }
           await refreshDeviceId();
-          await new Promise((r) => setTimeout(r, 150 * (attempt + 1)));
+          await new Promise((r) => setTimeout(r, 300 * (attempt + 1)));
           continue;
         }
 
@@ -270,10 +278,21 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         const detail = await res.text().catch(() => null);
         lastDetail = detail || `HTTP ${res.status}`;
 
-        // 404 / No active device -> refresh and retry.
+        // 404 / No active device -> reconnect player und retry.
         if (res.status === 404) {
+          console.log(`Transfer 404 (attempt ${attempt + 1}/${maxAttempts}), reconnecting...`);
+          if (spotifyPlayerRef.current) {
+            try {
+              await spotifyPlayerRef.current.disconnect();
+              await new Promise((r) => setTimeout(r, 200));
+              await spotifyPlayerRef.current.connect();
+              await new Promise((r) => setTimeout(r, 500));
+            } catch (e) {
+              console.warn('Player reconnect failed', e);
+            }
+          }
           await refreshDeviceId();
-          await new Promise((r) => setTimeout(r, 200 * (attempt + 1)));
+          await new Promise((r) => setTimeout(r, 400 * (attempt + 1)));
           continue;
         }
 
@@ -283,6 +302,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
       setSpotifyError('Spotify-Device konnte nicht übernommen werden');
       if (lastDetail) setSpotifyErrorDetail(lastDetail);
+      console.error('Transfer failed after all retries:', lastDetail);
       return false;
     },
     [ensureDevice, refreshDeviceId, spotifyToken]
@@ -316,6 +336,10 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         setSpotifyDevice(device_id);
         setSpotifyReady(true);
         setSpotifyErrorDetail(null);
+        setSpotifyError(null);
+
+        // Warte kurz, damit Spotify die Device-Registrierung abschließt
+        await new Promise((r) => setTimeout(r, 800));
 
         // Erneut von Spotify abfragen, falls die erste ID noch nicht registriert ist.
         const refreshed = await refreshDeviceId();
@@ -324,7 +348,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         }
 
         // Sofort versuchen zu transferieren, damit Play nicht mit 404 endet.
-        transferPlaybackWithRetry(2).catch(() => {
+        transferPlaybackWithRetry(3).catch(() => {
           // ok, zweiter Versuch beim Play-Klick
         });
       });
