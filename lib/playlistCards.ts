@@ -33,8 +33,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Mehnersmoos — 2023, Bir.",
       "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn.",
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Linkin Park — 2000, In the End."
+      "K.I.Z — 2024, Familienfeier.",
+      "Roy Bianco & Die Abbrunzati Boys — 2024, Velocità."
     ]
   },
   {
@@ -59,8 +59,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
       "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn.",
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Linkin Park — 2000, In the End."
+      "K.I.Z — 2024, Familienfeier.",
+      "Roy Bianco & Die Abbrunzati Boys — 2024, Velocità."
     ]
   },
   {
@@ -109,10 +109,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "System Of A Down — 2005, B.Y.O.B..",
-      "Die Ärzte — 2007, Junge.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Afrob, Ferris MC — 1999, Reimemonster (feat. Ferris MC).",
+      "Samy Deluxe — 2001, Weck mich auf.",
+      "Das Bo — 2000, Türlich, Türlich (Sicher, Dicker).",
+      "Heino — 2018, Blau blüht der Enzian."
     ]
   },
   {
@@ -137,8 +137,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
       "Mehnersmoos — 2023, Bir.",
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Linkin Park — 2000, In the End."
+      "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn.",
+      "Roy Bianco & Die Abbrunzati Boys — 2024, Velocità."
     ]
   },
   {
@@ -216,8 +216,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Linkin Park — 2003, Numb.",
       "Linkin Park — 2000, Crawling.",
-      "Papa Roach — 2000, Last Resort.",
-      "Wheatus — 1999, Teenage Dirtbag."
+      "Linkin Park — 2024, The Emptiness Machine.",
+      "Bon Jovi — 1986, Livin' On A Prayer."
     ]
   },
   {
@@ -243,8 +243,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2000, Crawling.",
-      "Papa Roach — 2000, Last Resort.",
-      "Wheatus — 1999, Teenage Dirtbag."
+      "Linkin Park — 2024, The Emptiness Machine.",
+      "Bon Jovi — 1986, Livin' On A Prayer."
     ]
   },
   {
@@ -270,8 +270,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Papa Roach — 2000, Last Resort.",
-      "Wheatus — 1999, Teenage Dirtbag."
+      "Linkin Park — 2024, The Emptiness Machine.",
+      "Bon Jovi — 1986, Livin' On A Prayer."
     ]
   },
   {
@@ -297,8 +297,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2000, Crawling.",
+      "Bon Jovi — 1986, Livin' On A Prayer."
     ]
   },
   {
@@ -322,9 +322,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "Bon Jovi — 1994, Always.",
-      "Metallica — 1986, Master Of Puppets.",
-      "Metallica — 1983, Seek & Destroy - Remastered.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Linkin Park — 2000, In the End.",
+      "Linkin Park — 2003, Numb.",
+      "Linkin Park — 2000, Crawling."
     ]
   },
   {
@@ -348,9 +348,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "Bon Jovi — 1986, Livin' On A Prayer.",
-      "Wheatus — 1999, Teenage Dirtbag.",
-      "blink-182 — 1999, All The Small Things.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Linkin Park — 2000, In the End.",
+      "Linkin Park — 2003, Numb.",
+      "Linkin Park — 2000, Crawling."
     ]
   },
   {
@@ -375,8 +375,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Metallica — 1986, Master Of Puppets.",
       "Metallica — 2021, Sad But True - Remastered 2021.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Metallica — 1983, Seek & Destroy - Remastered.",
+      "Linkin Park — 2000, In the End."
     ]
   },
   {
@@ -401,8 +401,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Metallica — 2021, Enter Sandman - Remastered 2021.",
       "Metallica — 2021, Sad But True - Remastered 2021.",
-      "Bon Jovi — 1986, Livin' On A Prayer.",
-      "Guns N' Roses — 1987, Paradise City."
+      "Metallica — 1983, Seek & Destroy - Remastered.",
+      "Linkin Park — 2000, In the End."
     ]
   },
   {
@@ -427,8 +427,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Metallica — 2021, Enter Sandman - Remastered 2021.",
       "Metallica — 1986, Master Of Puppets.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Metallica — 1983, Seek & Destroy - Remastered.",
+      "Linkin Park — 2000, In the End."
     ]
   },
   {
@@ -453,8 +453,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Metallica — 2021, Enter Sandman - Remastered 2021.",
       "Metallica — 1986, Master Of Puppets.",
-      "Bon Jovi — 1986, Livin' On A Prayer.",
-      "Guns N' Roses — 1987, Paradise City."
+      "Metallica — 2021, Sad But True - Remastered 2021.",
+      "Linkin Park — 2000, In the End."
     ]
   },
   {
@@ -480,8 +480,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2000, Crawling.",
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -505,8 +505,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2000, Crawling.",
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -530,9 +530,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "Guns N' Roses — 1991, Knockin' On Heaven's Door.",
-      "Bon Jovi — 1986, Livin' On A Prayer.",
-      "Metallica — 1986, Master Of Puppets.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Linkin Park — 2000, In the End.",
+      "Linkin Park — 2003, Numb.",
+      "Linkin Park — 2000, Crawling."
     ]
   },
   {
@@ -554,10 +554,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Bon Jovi — 1986, Livin' On A Prayer.",
-      "Metallica — 1986, Master Of Puppets.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2000, In the End.",
+      "Linkin Park — 2003, Numb.",
+      "Linkin Park — 2000, Crawling.",
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -584,7 +584,7 @@ export const playlistCards: Card[] = [
       "Limp Bizkit — 1999, Break Stuff.",
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Linkin Park — 2000, Crawling."
     ]
   },
   {
@@ -609,7 +609,7 @@ export const playlistCards: Card[] = [
       "blink-182 — 1999, What's My Age Again?.",
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Linkin Park — 2000, Crawling."
     ]
   },
   {
@@ -635,8 +635,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2000, Crawling.",
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -660,8 +660,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2000, Crawling.",
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -688,7 +688,7 @@ export const playlistCards: Card[] = [
       "System Of A Down — 2005, B.Y.O.B..",
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Linkin Park — 2000, Crawling."
     ]
   },
   {
@@ -712,8 +712,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2000, Crawling.",
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -738,8 +738,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2000, Crawling.",
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -763,9 +763,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "Guns N' Roses — 1987, Paradise City.",
-      "Bon Jovi — 1986, Livin' On A Prayer.",
-      "Bon Jovi — 1994, Always.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Linkin Park — 2000, In the End.",
+      "Linkin Park — 2003, Numb.",
+      "Linkin Park — 2000, Crawling."
     ]
   },
   {
@@ -790,9 +790,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "System Of A Down — 2001, Chop Suey!.",
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
       "Linkin Park — 2000, In the End.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Linkin Park — 2003, Numb.",
+      "Linkin Park — 2000, Crawling."
     ]
   },
   {
@@ -816,8 +816,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2000, Crawling.",
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -841,9 +841,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "Dr. Dre, Snoop Dogg — 1999, Still D.R.E..",
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Lenny Kravitz — 1998, Fly Away.",
+      "Eminem — 2004, Lose Yourself.",
+      "USHER, Lil Jon, Ludacris — 2004, Yeah! (feat. Lil Jon & Ludacris)."
     ]
   },
   {
@@ -866,10 +866,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Alexander Marcus — 2009, Hawaii Toast Song.",
+      "Samy Deluxe — 2001, Weck mich auf.",
+      "Das Bo — 2000, Türlich, Türlich (Sicher, Dicker).",
+      "Heino — 2018, Blau blüht der Enzian."
     ]
   },
   {
@@ -892,10 +892,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Alexander Marcus — 2009, Hawaii Toast Song.",
+      "Afrob, Ferris MC — 1999, Reimemonster (feat. Ferris MC).",
+      "Das Bo — 2000, Türlich, Türlich (Sicher, Dicker).",
+      "Heino — 2018, Blau blüht der Enzian."
     ]
   },
   {
@@ -918,10 +918,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
       "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Mehnersmoos — 2023, Bir.",
+      "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn.",
+      "K.I.Z — 2024, Familienfeier."
     ]
   },
   {
@@ -944,10 +944,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Alexander Marcus — 2009, Hawaii Toast Song.",
+      "Afrob, Ferris MC — 1999, Reimemonster (feat. Ferris MC).",
+      "Samy Deluxe — 2001, Weck mich auf.",
+      "Heino — 2018, Blau blüht der Enzian."
     ]
   },
   {
@@ -971,8 +971,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Britney Spears — 1999, ...Baby One More Time.",
       "Britney Spears — 2003, Toxic.",
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb."
+      "Cher — 1998, Believe.",
+      "Madonna — 1989, Like a Prayer."
     ]
   },
   {
@@ -994,10 +994,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir.",
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Linkin Park — 2000, In the End."
+      "Avril Lavigne — 2002, Sk8er Boi.",
+      "Nelly Furtado — 2000, I'm Like A Bird.",
+      "Britney Spears — 2000, Oops!...I Did It Again.",
+      "Cher — 1998, Believe."
     ]
   },
   {
@@ -1019,10 +1019,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Britney Spears — 2000, Oops!...I Did It Again.",
+      "Madonna — 1989, Like a Prayer.",
+      "Lady Gaga — 2009, Bad Romance.",
+      "Britney Spears — 1999, ...Baby One More Time."
     ]
   },
   {
@@ -1045,10 +1045,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir.",
       "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "K.I.Z — 2024, Familienfeier."
+      "Afrob, Ferris MC — 1999, Reimemonster (feat. Ferris MC).",
+      "Samy Deluxe — 2001, Weck mich auf.",
+      "Das Bo — 2000, Türlich, Türlich (Sicher, Dicker)."
     ]
   },
   {
@@ -1071,9 +1071,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "Die Ärzte — 2003, Deine Schuld.",
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
+      "Mehnersmoos — 2023, Bir.",
+      "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn."
     ]
   },
   {
@@ -1096,9 +1096,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "Die Ärzte — 2007, Junge.",
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
+      "Mehnersmoos — 2023, Bir.",
+      "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn."
     ]
   },
   {
@@ -1121,10 +1121,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir.",
       "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Linkin Park — 2000, In the End."
+      "Afrob, Ferris MC — 1999, Reimemonster (feat. Ferris MC).",
+      "Samy Deluxe — 2001, Weck mich auf.",
+      "Das Bo — 2000, Türlich, Türlich (Sicher, Dicker)."
     ]
   },
   {
@@ -1149,8 +1149,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
       "Mehnersmoos — 2023, Bir.",
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Linkin Park — 2000, In the End."
+      "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn.",
+      "K.I.Z — 2024, Familienfeier."
     ]
   },
   {
@@ -1174,8 +1174,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2000, Crawling.",
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -1197,10 +1197,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
       "Linkin Park — 2000, In the End.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2003, Numb.",
+      "Linkin Park — 2000, Crawling.",
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -1222,10 +1222,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2000, Crawling.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Gorillaz, De La Soul — 2005, Feel Good Inc..",
+      "Radiohead — 1993, Creep.",
+      "Toploader — 2000, Dancing in the Moonlight.",
+      "Muse — 2006, Supermassive Black Hole."
     ]
   },
   {
@@ -1247,10 +1247,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Eminem — 2004, Lose Yourself.",
+      "USHER, Lil Jon, Ludacris — 2004, Yeah! (feat. Lil Jon & Ludacris).",
+      "Eminem — 2014, Lose Yourself."
     ]
   },
   {
@@ -1272,10 +1272,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Bon Jovi — 1994, Always.",
-      "Wheatus — 1999, Teenage Dirtbag.",
       "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Mehnersmoos — 2023, Bir.",
+      "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn.",
+      "K.I.Z — 2024, Familienfeier."
     ]
   },
   {
@@ -1299,9 +1299,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "Massive Töne — 2002, Traumreise.",
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
+      "Mehnersmoos — 2023, Bir.",
+      "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn."
     ]
   },
   {
@@ -1325,9 +1325,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "Massive Töne — 2002, Cruisen.",
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
+      "Mehnersmoos — 2023, Bir.",
+      "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn."
     ]
   },
   {
@@ -1349,10 +1349,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Céline Dion — 2019, That's the Way It Is.",
-      "Heino — 2018, Blau blüht der Enzian.",
       "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Mehnersmoos — 2023, Bir.",
+      "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn.",
+      "K.I.Z — 2024, Familienfeier."
     ]
   },
   {
@@ -1374,10 +1374,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
       "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Mehnersmoos — 2023, Bir.",
+      "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn.",
+      "K.I.Z — 2024, Familienfeier."
     ]
   },
   {
@@ -1399,10 +1399,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Céline Dion — 2019, That's the Way It Is.",
+      "Nelly Furtado — 2000, I'm Like A Bird.",
+      "Britney Spears — 2000, Oops!...I Did It Again.",
+      "Cher — 1998, Believe."
     ]
   },
   {
@@ -1426,10 +1426,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
       "Linkin Park — 2000, In the End.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2003, Numb.",
+      "Linkin Park — 2000, Crawling.",
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -1456,7 +1456,7 @@ export const playlistCards: Card[] = [
       "Limp Bizkit — 2000, Take A Look Around.",
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Linkin Park — 2000, Crawling."
     ]
   },
   {
@@ -1481,7 +1481,7 @@ export const playlistCards: Card[] = [
       "blink-182 — 1999, All The Small Things.",
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Linkin Park — 2000, Crawling."
     ]
   },
   {
@@ -1504,10 +1504,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
       "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Mehnersmoos — 2023, Bir.",
+      "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn.",
+      "K.I.Z — 2024, Familienfeier."
     ]
   },
   {
@@ -1533,8 +1533,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2000, Crawling.",
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -1556,10 +1556,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Bon Jovi — 1986, Livin' On A Prayer.",
-      "Metallica — 1986, Master Of Puppets.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Alexander Marcus — 2009, Hawaii Toast Song.",
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Afrob, Ferris MC — 1999, Reimemonster (feat. Ferris MC).",
+      "Samy Deluxe — 2001, Weck mich auf."
     ]
   },
   {
@@ -1582,10 +1582,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Linkin Park — 2000, In the End.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Blur — 1997, Song 2 - 2012 Remaster.",
+      "Radiohead — 1993, Creep.",
+      "Toploader — 2000, Dancing in the Moonlight.",
+      "Muse — 2006, Supermassive Black Hole."
     ]
   },
   {
@@ -1611,7 +1611,7 @@ export const playlistCards: Card[] = [
       "Outkast — 2000, Ms. Jackson.",
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Linkin Park — 2000, Crawling."
     ]
   },
   {
@@ -1635,8 +1635,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Sum 41 — 2001, In Too Deep.",
       "Sum 41 — 2001, Fat Lip.",
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb."
+      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
+      "Mehnersmoos — 2023, Bir."
     ]
   },
   {
@@ -1658,10 +1658,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Bon Jovi — 1986, Livin' On A Prayer.",
-      "Bon Jovi — 1994, Always.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Britney Spears — 2000, Oops!...I Did It Again.",
+      "Cher — 1998, Believe.",
+      "Lady Gaga — 2009, Bad Romance.",
+      "Britney Spears — 1999, ...Baby One More Time."
     ]
   },
   {
@@ -1683,10 +1683,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Bon Jovi — 1994, Always.",
-      "Guns N' Roses — 1991, Knockin' On Heaven's Door.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Blur — 1997, Song 2 - 2012 Remaster.",
+      "Gorillaz, De La Soul — 2005, Feel Good Inc..",
+      "Toploader — 2000, Dancing in the Moonlight.",
+      "Muse — 2006, Supermassive Black Hole."
     ]
   },
   {
@@ -1710,8 +1710,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Green Day — 2004, Holiday / Boulevard of Broken Dreams.",
       "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2000, Crawling.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Linkin Park — 2003, Numb.",
+      "Linkin Park — 2000, Crawling."
     ]
   },
   {
@@ -1733,10 +1733,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Bon Jovi — 1986, Livin' On A Prayer.",
-      "Metallica — 1986, Master Of Puppets.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Alexander Marcus — 2009, Hawaii Toast Song.",
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Afrob, Ferris MC — 1999, Reimemonster (feat. Ferris MC).",
+      "Samy Deluxe — 2001, Weck mich auf."
     ]
   },
   {
@@ -1762,7 +1762,7 @@ export const playlistCards: Card[] = [
       "Outkast — 2003, Hey Ya!.",
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Linkin Park — 2000, Crawling."
     ]
   },
   {
@@ -1786,8 +1786,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2000, Crawling.",
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -1811,8 +1811,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Sum 41 — 2002, Still Waiting.",
       "Sum 41 — 2001, Fat Lip.",
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb."
+      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
+      "Mehnersmoos — 2023, Bir."
     ]
   },
   {
@@ -1834,10 +1834,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Blur — 1997, Song 2 - 2012 Remaster.",
+      "Gorillaz, De La Soul — 2005, Feel Good Inc..",
+      "Radiohead — 1993, Creep.",
+      "Muse — 2006, Supermassive Black Hole."
     ]
   },
   {
@@ -1861,8 +1861,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Sum 41 — 2002, Still Waiting.",
       "Sum 41 — 2001, In Too Deep.",
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb."
+      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
+      "Mehnersmoos — 2023, Bir."
     ]
   },
   {
@@ -1885,9 +1885,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "Green Day — 1997, Good Riddance (Time of Your Life).",
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
       "Linkin Park — 2000, In the End.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Linkin Park — 2003, Numb.",
+      "Linkin Park — 2000, Crawling."
     ]
   },
   {
@@ -1909,10 +1909,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Blur — 1997, Song 2 - 2012 Remaster.",
+      "Gorillaz, De La Soul — 2005, Feel Good Inc..",
+      "Radiohead — 1993, Creep.",
+      "Toploader — 2000, Dancing in the Moonlight."
     ]
   },
   {
@@ -1935,9 +1935,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "Natasha Bedingfield — 2004, Unwritten.",
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Britney Spears — 2000, Oops!...I Did It Again.",
+      "Céline Dion — 2019, That's the Way It Is.",
+      "Cher — 1998, Believe."
     ]
   },
   {
@@ -1959,10 +1959,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
       "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Mehnersmoos — 2023, Bir.",
+      "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn.",
+      "K.I.Z — 2024, Familienfeier."
     ]
   },
   {
@@ -1984,10 +1984,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Die Ärzte — 2007, Junge.",
       "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Mehnersmoos — 2023, Bir.",
+      "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn.",
+      "K.I.Z — 2024, Familienfeier."
     ]
   },
   {
@@ -2012,8 +2012,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Eminem — 2014, Lose Yourself.",
       "Eminem — 2004, Mockingbird.",
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Linkin Park — 2000, In the End."
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Lenny Kravitz — 1998, Fly Away."
     ]
   },
   {
@@ -2035,10 +2035,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Die Ärzte — 2007, Junge.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2000, In the End.",
+      "Linkin Park — 2003, Numb.",
+      "Linkin Park — 2000, Crawling.",
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -2062,8 +2062,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Linkin Park — 2000, In the End.",
       "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2000, Crawling.",
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -2085,10 +2085,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "System Of A Down — 2005, B.Y.O.B..",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Britney Spears — 2000, Oops!...I Did It Again.",
+      "Cher — 1998, Believe.",
+      "Madonna — 1989, Like a Prayer.",
+      "Britney Spears — 1999, ...Baby One More Time."
     ]
   },
   {
@@ -2111,9 +2111,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "Natasha Bedingfield — 2007, Pocketful of Sunshine.",
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Linkin Park — 2000, In the End.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Britney Spears — 2000, Oops!...I Did It Again.",
+      "Céline Dion — 2019, That's the Way It Is.",
+      "Cher — 1998, Believe."
     ]
   },
   {
@@ -2136,10 +2136,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Linkin Park — 2000, In the End.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Lenny Kravitz — 1998, Fly Away.",
+      "Eminem — 2004, Lose Yourself.",
+      "Eminem — 2014, Lose Yourself."
     ]
   },
   {
@@ -2163,8 +2163,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Britney Spears — 2000, Oops!...I Did It Again.",
       "Britney Spears — 2003, Toxic.",
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb."
+      "Cher — 1998, Believe.",
+      "Madonna — 1989, Like a Prayer."
     ]
   },
   {
@@ -2189,8 +2189,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Eminem — 2004, Lose Yourself.",
       "Eminem — 2004, Mockingbird.",
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Céline Dion — 2019, That's the Way It Is."
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Lenny Kravitz — 1998, Fly Away."
     ]
   },
   {
@@ -2215,8 +2215,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Eminem — 2004, Lose Yourself.",
       "Eminem — 2014, Lose Yourself.",
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Linkin Park — 2000, In the End."
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Lenny Kravitz — 1998, Fly Away."
     ]
   },
   {
@@ -2239,10 +2239,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Lenny Kravitz — 1998, Fly Away.",
+      "Eminem — 2004, Lose Yourself.",
+      "USHER, Lil Jon, Ludacris — 2004, Yeah! (feat. Lil Jon & Ludacris)."
     ]
   },
   {
@@ -2264,10 +2264,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Céline Dion — 2019, That's the Way It Is.",
+      "Avril Lavigne — 2002, Sk8er Boi.",
+      "Britney Spears — 2000, Oops!...I Did It Again.",
+      "Cher — 1998, Believe."
     ]
   },
   {
@@ -2289,10 +2289,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Bon Jovi — 1986, Livin' On A Prayer.",
-      "Metallica — 1986, Master Of Puppets.",
       "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Mehnersmoos — 2023, Bir.",
+      "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn.",
+      "K.I.Z — 2024, Familienfeier."
     ]
   },
   {
@@ -2316,8 +2316,8 @@ export const playlistCards: Card[] = [
     "distractors": [
       "Britney Spears — 2000, Oops!...I Did It Again.",
       "Britney Spears — 1999, ...Baby One More Time.",
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb."
+      "Cher — 1998, Believe.",
+      "Madonna — 1989, Like a Prayer."
     ]
   },
   {
@@ -2339,10 +2339,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Lenny Kravitz — 1998, Fly Away.",
+      "Eminem — 2004, Lose Yourself.",
+      "USHER, Lil Jon, Ludacris — 2004, Yeah! (feat. Lil Jon & Ludacris)."
     ]
   },
   {
@@ -2365,10 +2365,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Lenny Kravitz — 1998, Fly Away.",
+      "Eminem — 2004, Lose Yourself.",
+      "USHER, Lil Jon, Ludacris — 2004, Yeah! (feat. Lil Jon & Ludacris)."
     ]
   },
   {
@@ -2390,10 +2390,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2000, Crawling.",
       "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Mehnersmoos — 2023, Bir.",
+      "Roy Bianco & Die Abbrunzati Boys — 2022, Brennerautobahn.",
+      "K.I.Z — 2024, Familienfeier."
     ]
   },
   {
@@ -2417,9 +2417,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "Linkin Park — 2000, In the End.",
+      "Linkin Park — 2003, Numb.",
       "Linkin Park — 2000, Crawling.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Linkin Park — 2024, The Emptiness Machine."
     ]
   },
   {
@@ -2442,10 +2442,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Die Ärzte — 2007, Junge.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Lenny Kravitz — 1998, Fly Away.",
+      "Eminem — 2004, Lose Yourself.",
+      "USHER, Lil Jon, Ludacris — 2004, Yeah! (feat. Lil Jon & Ludacris)."
     ]
   },
   {
@@ -2469,9 +2469,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "JAY-Z — 2003, Dirt Off Your Shoulder.",
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Lenny Kravitz — 1998, Fly Away.",
+      "Eminem — 2004, Lose Yourself."
     ]
   },
   {
@@ -2495,9 +2495,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "JAY-Z — 2003, 99 Problems.",
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Lenny Kravitz — 1998, Fly Away.",
+      "Eminem — 2004, Lose Yourself."
     ]
   },
   {
@@ -2519,10 +2519,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Blur — 1997, Song 2 - 2012 Remaster.",
+      "Gorillaz, De La Soul — 2005, Feel Good Inc..",
+      "Radiohead — 1993, Creep.",
+      "Toploader — 2000, Dancing in the Moonlight."
     ]
   },
   {
@@ -2546,9 +2546,9 @@ export const playlistCards: Card[] = [
     ],
     "distractors": [
       "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts."
+      "Lenny Kravitz — 1998, Fly Away.",
+      "Eminem — 2004, Lose Yourself.",
+      "USHER, Lil Jon, Ludacris — 2004, Yeah! (feat. Lil Jon & Ludacris)."
     ]
   },
   {
@@ -2571,10 +2571,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Alexander Marcus — 2009, Hawaii Toast Song.",
-      "Linkin Park — 2000, In the End.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Lenny Kravitz — 1998, Fly Away.",
+      "Eminem — 2004, Lose Yourself.",
+      "USHER, Lil Jon, Ludacris — 2004, Yeah! (feat. Lil Jon & Ludacris)."
     ]
   },
   {
@@ -2597,10 +2597,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Lenny Kravitz — 1998, Fly Away.",
+      "Eminem — 2004, Lose Yourself.",
+      "USHER, Lil Jon, Ludacris — 2004, Yeah! (feat. Lil Jon & Ludacris)."
     ]
   },
   {
@@ -2623,10 +2623,10 @@ export const playlistCards: Card[] = [
       "4likPQLIX9PUqyNiJ3xsqT"
     ],
     "distractors": [
-      "Linkin Park — 2000, In the End.",
-      "Linkin Park — 2003, Numb.",
-      "Mehnersmoos, DJ Arschlochficker — 2022, 3 Uhr Nachts.",
-      "Mehnersmoos — 2023, Bir."
+      "Dr. Dre, Snoop Dogg — 1999, The Next Episode.",
+      "Lenny Kravitz — 1998, Fly Away.",
+      "Eminem — 2004, Lose Yourself.",
+      "USHER, Lil Jon, Ludacris — 2004, Yeah! (feat. Lil Jon & Ludacris)."
     ]
   }
 ];
