@@ -400,10 +400,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-teenage-dirtbag-1999",
+    "id": "song-teenage-dirtbag-2000",
     "title": "Teenage Dirtbag",
     "category": "music",
-    "year": 1999,
+    "year": 2000,
     "cue": "Song anhören und einordnen.",
     "answer": "Wheatus — Teenage Dirtbag.",
     "hint": "Wheatus",
@@ -1564,10 +1564,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lose-yourself-2004",
+    "id": "song-lose-yourself-2002",
     "title": "Lose Yourself",
     "category": "music",
-    "year": 2004,
+    "year": 2002,
     "cue": "Song anhören und einordnen.",
     "answer": "Eminem — Lose Yourself.",
     "hint": "Eminem",
@@ -1682,10 +1682,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-baby-one-more-time-1999",
+    "id": "song-baby-one-more-time-1998",
     "title": "...Baby One More Time",
     "category": "music",
-    "year": 1999,
+    "year": 1998,
     "cue": "Song anhören und einordnen.",
     "answer": "Britney Spears — ...Baby One More Time.",
     "hint": "Britney Spears",
@@ -1701,10 +1701,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-lose-yourself-2014",
+    "id": "song-lose-yourself-2002",
     "title": "Lose Yourself",
     "category": "music",
-    "year": 2014,
+    "year": 2002,
     "cue": "Song anhören und einordnen.",
     "answer": "Eminem — Lose Yourself.",
     "hint": "Eminem",
@@ -2058,10 +2058,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-baby-one-more-time-2014",
+    "id": "song-baby-one-more-time-1998",
     "title": "...Baby One More Time",
     "category": "music",
-    "year": 2014,
+    "year": 1998,
     "cue": "Song anhören und einordnen.",
     "answer": "Britney Spears — ...Baby One More Time.",
     "hint": "Britney Spears",
@@ -2346,10 +2346,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-im-outta-love-radio-edit-2014",
+    "id": "song-im-outta-love-radio-edit-1999",
     "title": "I'm Outta Love - Radio Edit",
     "category": "music",
-    "year": 2014,
+    "year": 1999,
     "cue": "Song anhören und einordnen.",
     "answer": "Anastacia — I'm Outta Love - Radio Edit.",
     "hint": "Anastacia",
@@ -2422,10 +2422,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-butterfly-2014",
+    "id": "song-butterfly-1999",
     "title": "Butterfly",
     "category": "music",
-    "year": 2014,
+    "year": 1999,
     "cue": "Song anhören und einordnen.",
     "answer": "Crazy Town — Butterfly.",
     "hint": "Crazy Town",
@@ -2653,10 +2653,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-genie-in-a-bottle-2014",
+    "id": "song-genie-in-a-bottle-1999",
     "title": "Genie In a Bottle",
     "category": "music",
-    "year": 2014,
+    "year": 1999,
     "cue": "Song anhören und einordnen.",
     "answer": "Christina Aguilera — Genie In a Bottle.",
     "hint": "Christina Aguilera",
@@ -3113,10 +3113,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wake-me-up-before-you-go-go-2010",
+    "id": "song-wake-me-up-before-you-go-go-1984",
     "title": "Wake Me Up Before You Go-Go",
     "category": "music",
-    "year": 2010,
+    "year": 1984,
     "cue": "Song anhören und einordnen.",
     "answer": "Wham! — Wake Me Up Before You Go-Go.",
     "hint": "Wham!",
@@ -3170,10 +3170,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-final-countdown-2010",
+    "id": "song-the-final-countdown-1986",
     "title": "The Final Countdown",
     "category": "music",
-    "year": 2010,
+    "year": 1986,
     "cue": "Song anhören und einordnen.",
     "answer": "Europe — The Final Countdown.",
     "hint": "Europe",
@@ -3190,10 +3190,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-eye-of-the-tiger-2010",
+    "id": "song-eye-of-the-tiger-1982",
     "title": "Eye of the Tiger",
     "category": "music",
-    "year": 2010,
+    "year": 1982,
     "cue": "Song anhören und einordnen.",
     "answer": "Survivor — Eye of the Tiger.",
     "hint": "Survivor",
@@ -3247,10 +3247,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-walk-like-an-egyptian-2010",
+    "id": "song-walk-like-an-egyptian-1986",
     "title": "Walk Like an Egyptian",
     "category": "music",
-    "year": 2010,
+    "year": 1986,
     "cue": "Song anhören und einordnen.",
     "answer": "The Bangles — Walk Like an Egyptian.",
     "hint": "The Bangles",
@@ -3266,10 +3266,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dont-stop-believin-2010",
+    "id": "song-dont-stop-believin-1981",
     "title": "Don't Stop Believin'",
     "category": "music",
-    "year": 2010,
+    "year": 1981,
     "cue": "Song anhören und einordnen.",
     "answer": "Journey — Don't Stop Believin'.",
     "hint": "Journey",
@@ -3304,10 +3304,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-total-eclipse-of-the-heart-2010",
+    "id": "song-total-eclipse-of-the-heart-1983",
     "title": "Total Eclipse of the Heart",
     "category": "music",
-    "year": 2010,
+    "year": 1983,
     "cue": "Song anhören und einordnen.",
     "answer": "Bonnie Tyler — Total Eclipse of the Heart.",
     "hint": "Bonnie Tyler",
@@ -3323,10 +3323,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-africa-2010",
+    "id": "song-africa-1982",
     "title": "Africa",
     "category": "music",
-    "year": 2010,
+    "year": 1982,
     "cue": "Song anhören und einordnen.",
     "answer": "TOTO — Africa.",
     "hint": "TOTO",
@@ -3497,10 +3497,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-eternal-flame-2011",
+    "id": "song-eternal-flame-1988",
     "title": "Eternal Flame",
     "category": "music",
-    "year": 2011,
+    "year": 1988,
     "cue": "Song anhören und einordnen.",
     "answer": "The Bangles, Susanna Hoffs — Eternal Flame.",
     "hint": "The Bangles, Susanna Hoffs",
@@ -3516,10 +3516,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-we-built-this-city-2011",
+    "id": "song-we-built-this-city-1985",
     "title": "We Built This City",
     "category": "music",
-    "year": 2011,
+    "year": 1985,
     "cue": "Song anhören und einordnen.",
     "answer": "Starship — We Built This City.",
     "hint": "Starship",
@@ -3630,10 +3630,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-winner-takes-it-all-2015",
+    "id": "song-the-winner-takes-it-all-1980",
     "title": "The Winner Takes It All",
     "category": "music",
-    "year": 2015,
+    "year": 1980,
     "cue": "Song anhören und einordnen.",
     "answer": "ÄBBA — The Winner Takes It All.",
     "hint": "ÄBBA",
@@ -4315,10 +4315,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-dont-stop-believin-2001",
+    "id": "song-dont-stop-believin-1981",
     "title": "Don't Stop Believin'",
     "category": "music",
-    "year": 2001,
+    "year": 1981,
     "cue": "Song anhören und einordnen.",
     "answer": "Journey — Don't Stop Believin'.",
     "hint": "Journey",
@@ -4562,10 +4562,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-walk-like-an-egyptian-1985",
+    "id": "song-walk-like-an-egyptian-1986",
     "title": "Walk Like an Egyptian",
     "category": "music",
-    "year": 1985,
+    "year": 1986,
     "cue": "Song anhören und einordnen.",
     "answer": "The Bangles — Walk Like an Egyptian.",
     "hint": "The Bangles",
@@ -4638,10 +4638,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-eternal-flame-2004",
+    "id": "song-eternal-flame-1988",
     "title": "Eternal Flame",
     "category": "music",
-    "year": 2004,
+    "year": 1988,
     "cue": "Song anhören und einordnen.",
     "answer": "The Bangles, Susanna Hoffs — Eternal Flame.",
     "hint": "The Bangles, Susanna Hoffs",
@@ -4999,10 +4999,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-abracadabra-2019",
+    "id": "song-abracadabra-1982",
     "title": "Abracadabra",
     "category": "music",
-    "year": 2019,
+    "year": 1982,
     "cue": "Song anhören und einordnen.",
     "answer": "Steve Miller Band — Abracadabra.",
     "hint": "Steve Miller Band",
@@ -5571,10 +5571,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-eye-of-the-tiger-1985",
+    "id": "song-eye-of-the-tiger-1982",
     "title": "Eye of the Tiger",
     "category": "music",
-    "year": 1985,
+    "year": 1982,
     "cue": "Song anhören und einordnen.",
     "answer": "Survivor — Eye of the Tiger.",
     "hint": "Survivor",
@@ -5669,10 +5669,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-total-eclipse-of-the-heart-2009",
+    "id": "song-total-eclipse-of-the-heart-1983",
     "title": "Total Eclipse of the Heart",
     "category": "music",
-    "year": 2009,
+    "year": 1983,
     "cue": "Song anhören und einordnen.",
     "answer": "Bonnie Tyler — Total Eclipse of the Heart.",
     "hint": "Bonnie Tyler",
@@ -5821,10 +5821,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-the-safety-dance-2010",
+    "id": "song-the-safety-dance-1982",
     "title": "The Safety Dance",
     "category": "music",
-    "year": 2010,
+    "year": 1982,
     "cue": "Song anhören und einordnen.",
     "answer": "Men Without Hats — The Safety Dance.",
     "hint": "Men Without Hats",
@@ -11417,10 +11417,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-in-the-end-2023",
+    "id": "song-in-the-end-2000",
     "title": "In the End",
     "category": "music",
-    "year": 2023,
+    "year": 2000,
     "cue": "Song anhören und einordnen.",
     "answer": "Linkin Park — In the End.",
     "hint": "Linkin Park",
@@ -11496,10 +11496,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-numb-2023",
+    "id": "song-numb-2003",
     "title": "Numb",
     "category": "music",
-    "year": 2023,
+    "year": 2003,
     "cue": "Song anhören und einordnen.",
     "answer": "Linkin Park — Numb.",
     "hint": "Linkin Park",
@@ -11556,10 +11556,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-jar-of-hearts-2023",
+    "id": "song-jar-of-hearts-2011",
     "title": "Jar of Hearts",
     "category": "music",
-    "year": 2023,
+    "year": 2011,
     "cue": "Song anhören und einordnen.",
     "answer": "Christina Perri — Jar of Hearts.",
     "hint": "Christina Perri",
@@ -11765,10 +11765,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-memories-2023",
+    "id": "song-memories-2010",
     "title": "Memories",
     "category": "music",
-    "year": 2023,
+    "year": 2010,
     "cue": "Song anhören und einordnen.",
     "answer": "David Guetta, Kid Cudi — Memories.",
     "hint": "David Guetta, Kid Cudi",
@@ -11784,10 +11784,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-just-the-way-you-are-2023",
+    "id": "song-just-the-way-you-are-2010",
     "title": "Just the Way You Are",
     "category": "music",
-    "year": 2023,
+    "year": 2010,
     "cue": "Song anhören und einordnen.",
     "answer": "Bruno Mars — Just the Way You Are.",
     "hint": "Bruno Mars",
@@ -11822,10 +11822,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-wake-me-up-when-september-ends-2023",
+    "id": "song-wake-me-up-when-september-ends-2004",
     "title": "Wake Me Up When September Ends",
     "category": "music",
-    "year": 2023,
+    "year": 2004,
     "cue": "Song anhören und einordnen.",
     "answer": "Green Day — Wake Me Up When September Ends.",
     "hint": "Green Day",
@@ -11841,10 +11841,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-clint-eastwood-2023",
+    "id": "song-clint-eastwood-2001",
     "title": "Clint Eastwood",
     "category": "music",
-    "year": 2023,
+    "year": 2001,
     "cue": "Song anhören und einordnen.",
     "answer": "Gorillaz — Clint Eastwood.",
     "hint": "Gorillaz",
@@ -11917,10 +11917,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-how-you-remind-me-2023",
+    "id": "song-how-you-remind-me-2001",
     "title": "How You Remind Me",
     "category": "music",
-    "year": 2023,
+    "year": 2001,
     "cue": "Song anhören und einordnen.",
     "answer": "Nickelback — How You Remind Me.",
     "hint": "Nickelback",
@@ -11956,10 +11956,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-holiday-boulevard-of-broken-dreams-2023",
+    "id": "song-holiday-boulevard-of-broken-dreams-2004",
     "title": "Holiday / Boulevard of Broken Dreams",
     "category": "music",
-    "year": 2023,
+    "year": 2004,
     "cue": "Song anhören und einordnen.",
     "answer": "Green Day — Holiday / Boulevard of Broken Dreams.",
     "hint": "Green Day",
@@ -11994,10 +11994,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-viva-la-vida-2023",
+    "id": "song-viva-la-vida-2008",
     "title": "Viva La Vida",
     "category": "music",
-    "year": 2023,
+    "year": 2008,
     "cue": "Song anhören und einordnen.",
     "answer": "Coldplay — Viva La Vida.",
     "hint": "Coldplay",
@@ -12225,10 +12225,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-a-sky-full-of-stars-2023",
+    "id": "song-a-sky-full-of-stars-2014",
     "title": "Ä Sky Full of Stars",
     "category": "music",
-    "year": 2023,
+    "year": 2014,
     "cue": "Song anhören und einordnen.",
     "answer": "Coldplay — A Sky Full of Stars.",
     "hint": "Coldplay",
@@ -12282,10 +12282,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-yellow-2023",
+    "id": "song-yellow-2000",
     "title": "Yellow",
     "category": "music",
-    "year": 2023,
+    "year": 2000,
     "cue": "Song anhören und einordnen.",
     "answer": "Coldplay — Yellow.",
     "hint": "Coldplay",
@@ -12474,11 +12474,11 @@ export const playlistCards: Card[] = [
   },
   {
     "id": "song-jar-of-hearts-2011",
-    "title": "jar of hearts",
+    "title": "Jar of Hearts",
     "category": "music",
     "year": 2011,
     "cue": "Song anhören und einordnen.",
-    "answer": "Christina Perri — jar of hearts.",
+    "answer": "Christina Perri — Jar of Hearts.",
     "hint": "Christina Perri",
     "difficulty": "schwer",
     "sources": {
@@ -13084,10 +13084,10 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-memories-2021",
+    "id": "song-memories-2019",
     "title": "Memories",
     "category": "music",
-    "year": 2021,
+    "year": 2019,
     "cue": "Song anhören und einordnen.",
     "answer": "Maroon 5 — Memories.",
     "hint": "Maroon 5",
@@ -16094,25 +16094,6 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-abracadabra-2025",
-    "title": "Abracadabra",
-    "category": "music",
-    "year": 2025,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — Abracadabra.",
-    "hint": "Lady Gaga",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/2LHNTC9QZxsL3nWpt8iaSR"
-    },
-    "genres": [
-      "poprock"
-    ],
-    "playlists": [
-      "4KjWmH3FN4nz2BRbkwVCQW"
-    ]
-  },
-  {
     "id": "song-be-mine-2025",
     "title": "Be Mine",
     "category": "music",
@@ -16202,25 +16183,6 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "hiphop",
-      "poprock"
-    ],
-    "playlists": [
-      "4KjWmH3FN4nz2BRbkwVCQW"
-    ]
-  },
-  {
-    "id": "song-abracadabra-2025",
-    "title": "Abracadabra",
-    "category": "music",
-    "year": 2025,
-    "cue": "Song anhören und einordnen.",
-    "answer": "Lady Gaga — Abracadabra.",
-    "hint": "Lady Gaga",
-    "difficulty": "leicht",
-    "sources": {
-      "spotify": "https://open.spotify.com/track/5ZLUm9eab8y3tqQ1OhQSHI"
-    },
-    "genres": [
       "poprock"
     ],
     "playlists": [

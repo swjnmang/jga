@@ -446,20 +446,16 @@ export default function MultiplayerGamePage() {
                     <p className="text-sm text-ink/70">
                       Der Host steuert die Musikwiedergabe
                     </p>
-                    <div className="flex justify-center gap-3">
+                    <div className="flex justify-center">
                       <button
-                        onClick={handleRemotePlay}
-                        disabled={isMediaPlaying}
-                        className="px-6 py-3 rounded-lg bg-ink text-inkDark font-semibold hover:opacity-90 transition-opacity disabled:opacity-50"
+                        onClick={isMediaPlaying ? handleRemotePause : handleRemotePlay}
+                        className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+                          isMediaPlaying
+                            ? 'border-2 border-ink/30 hover:border-ink/60'
+                            : 'bg-ink text-inkDark hover:opacity-90'
+                        }`}
                       >
-                        ▶ Play
-                      </button>
-                      <button
-                        onClick={handleRemotePause}
-                        disabled={!isMediaPlaying}
-                        className="px-6 py-3 rounded-lg border-2 border-ink/30 font-semibold hover:border-ink/60 transition-colors disabled:opacity-50"
-                      >
-                        ⏸ Pause
+                        {isMediaPlaying ? '⏸ Pause' : '▶ Play'}
                       </button>
                     </div>
                     {currentCard.category === 'music' && (
