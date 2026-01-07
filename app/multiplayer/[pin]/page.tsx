@@ -402,15 +402,26 @@ export default function MultiplayerGamePage() {
 
             {currentCard.sources && (
               <div className="relative">
-                {!canControlMedia && (
-                  <div className="absolute inset-0 z-10 flex items-center justify-center bg-white/60 backdrop-blur-sm rounded-xl text-sm font-semibold text-ink/80">
-                    Mediensteuerung nur durch den Host
+                {/* Nur Host bekommt die Steuerung */}
+                {isHostSession ? (
+                  <MediaEmbed 
+                    card={currentCard}
+                    preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
+                  />
+                ) : (
+                  /* Mitspieler sehen nur Info-Box */
+                  <div className="rounded-2xl card-surface bg-ink/5 p-8 text-center space-y-3">
+                    <div className="text-4xl">🎵</div>
+                    <p className="text-sm text-ink/70">
+                      Der Host steuert die Musikwiedergabe
+                    </p>
+                    {currentCard.category === 'music' && (
+                      <p className="text-xs text-ink/60">
+                        Song wird auf dem Gerät des Hosts abgespielt
+                      </p>
+                    )}
                   </div>
                 )}
-                <MediaEmbed 
-                  card={currentCard}
-                  preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
-                />
               </div>
             )}
 
