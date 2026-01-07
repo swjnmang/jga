@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { createGame, joinGame } from '@/lib/multiplayerService';
 import { cards, getCategories } from '@/lib/cards';
@@ -9,7 +9,7 @@ import { getDefaultSettings, TIMELINE_CATEGORIES } from '@/lib/userSettings';
 import { isFirebaseEnabled } from '@/lib/firebase';
 import { CardCategory, Difficulty, GenreTag } from '@/lib/types';
 
-export default function MultiplayerLobby() {
+function MultiplayerLobbyContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [mode, setMode] = useState<'create' | 'join' | null>(null);
@@ -656,5 +656,20 @@ export default function MultiplayerLobby() {
         </div>
       )}
     </main>
+  );
+}
+
+export default function MultiplayerLobby() {
+  return (
+    <Suspense fallback={
+      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+        <div className="text-center space-y-2">
+          <h1 className="text-3xl sm:text-4xl font-display">Multiplayer</h1>
+          <p className="text-ink/70">Lade...</p>
+        </div>
+      </main>
+    }>
+      <MultiplayerLobbyContent />
+    </Suspense>
   );
 }
