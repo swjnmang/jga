@@ -20,15 +20,18 @@ export default function HomePage() {
               Dein Spiel. Deine Regeln.
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Schnell starten. Smart flexen. Das schnelle Quiz für Teams, die Regeln lieben und brechen.
+              Gelangweilt bei „Wer wird Millionär"? „Hitster" zum vierten Mal durchgespielt? Du bist ein echter Quizchamp und brauchst mehr?
             </p>
-            <p className="text-sm text-white/60 tracking-wide uppercase">„Start. Flex. Win.“</p>
+            <p className="text-base text-white/90 max-w-2xl mx-auto font-semibold">
+              Dann ist Flex Quiz genau das Richtige für dich! Dein Quiz. Deine Regeln.
+            </p>
+            <p className="text-sm text-white/60 tracking-wide uppercase mt-4">„Start. Flex. Win."</p>
           </div>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
           <PrimaryButton href="/play" label="Neues Spiel starten" />
-          <SecondaryButton href="/multiplayer" label="🎮 Multiplayer" />
+          <SecondaryButton href="/multiplayer" label="Multiplayer" />
           <SecondaryButton href="/app-settings" label="Einstellungen" />
           <SecondaryButton href="/rules" label="Spielregeln" />
         </div>
