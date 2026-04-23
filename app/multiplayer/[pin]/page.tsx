@@ -300,7 +300,7 @@ export default function MultiplayerGamePage() {
   }
 
   const currentGroup = game.groups[session.groupId];
-  const groupList = Object.values(game.groups);
+  const groupList = Object.values(game.groups).filter(g => !g.isHost); // Spielleiter aus Liste entfernen
   const allReady = groupList.every(g => g.isReady);
 
   // Lobby-Ansicht
@@ -329,127 +329,138 @@ export default function MultiplayerGamePage() {
           </button>
         </div>
 
-          {/* Gruppen-Liste */}
-          <div className="card-surface rounded-2xl p-6 space-y-4">
-          <h2 className="text-xl font-semibold">
-            Gruppen ({groupList.length})
-          </h2>
-          <div className="space-y-3">
-            {groupList.map((group) => (
-              <div
-                key={group.id}
-                className="flex items-center justify-between p-4 rounded-lg border-2"
-                style={{ borderColor: group.color }}
-              >
-                <div className="flex items-center gap-3">
-                  <div
-                    className="w-4 h-4 rounded-full"
-                    style={{ backgroundColor: group.color }}
-                  />
-                  <div>
-                    <p className="font-semibold">
-                      {group.name}
-                      {group.id === session.groupId && ' (Du)'}
-                      {group.id === game.hostId && ' 👑'}
-                    </p>
-                    <p className="text-sm text-ink/60">
-                      {group.players.map(p => p.name).join(', ')}
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  {group.isReady ? (
-                    <span className="text-green-600 font-semibold">✓ Bereit</span>
-                  ) : (
-                    <span className="text-red-600 font-semibold">✗ Nicht bereit</span>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Spielmodus Info */}
-        <div className="card-surface rounded-2xl p-6">
-          <h3 className="font-semibold mb-2">Spielmodus</h3>
-          <p className="text-lg">
-            {game.mode === 'timeline' ? '🔢 Timeline' : game.mode === 'trivia' ? '🎓 Trivia' : '👤 Solo'}
-          </p>
-        </div>
-
-        {/* Aktionen */}
-        <div className="flex gap-3">
-          <button
-            onClick={handleLeaveGame}
-            className="flex-1 px-6 py-4 rounded-lg border-2 border-ink/30 hover:border-ink/60 transition-colors"
-          >
-            Verlassen
-          </button>
-          
-          {currentGroup && (
-            <button
-              onClick={handleToggleReady}
-              className={`flex-1 px-6 py-4 rounded-lg font-semibold transition-colors ${
-                currentGroup.isReady
-                  ? 'bg-ink/10 border-2 border-ink/30 hover:bg-ink/20'
-                  : 'bg-ink text-inkDark hover:opacity-90'
-              }`}
-            >
-              {currentGroup.isReady ? 'Nicht mehr bereit' : 'Bereit'}
-            </button>
-          )}
-
-          {session.isHost && (
-            <button
-              onClick={handleStartGame}
-              disabled={!allReady || groupList.length < 2}
-              className="flex-1 px-6 py-4 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              Spiel starten
-            </button>
-          )}
-        </div>
-
-        {/* Host Panel mit QR-Code */}
+        {/* Host-Panel - Nur wenn du der Spielleiter bist */}
         {session.isHost && (
-          <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
-            <h2 className="text-xl font-semibold text-green-700">👑 Host-Panel</h2>
-            <div className="flex flex-col sm:flex-row gap-6 items-center">
-              <div className="flex-1 space-y-2">
+          <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30 bg-green-50/10">
+            <h2 className="text-xl font-semibold text-green-700">👑 Spielleiter-Panel</h2>
+            <div className="space-y-4">
+              <div className="space-y-2">
                 <p className="text-sm font-semibold">PIN zum Beitreten: <span className="font-mono text-lg">{pin}</span></p>
                 <p className="text-xs text-ink/60">Spieler können diese PIN eingeben um beizutreten</p>
               </div>
-              <div className="flex-1 space-y-2">
-                <p className="text-sm font-semibold">Gruppenliste:</p>
+              <div className="space-y-2">
+                <p className="text-sm font-semibold">Spielende Gruppen ({groupList.length}):</p>
                 <div className="space-y-1 text-sm">
                   {groupList.map(g => (
-                    <div key={g.id} className="flex itemes-center gap-2">
+                    <div key={g.id} className="flex items-center gap-2">
                       <div 
                         className="w-2 h-2 rounded-full" 
                         style={{ backgroundColor: g.color }}
                       />
                       <span>{g.name}</span>
                       <span className={g.isReady ? 'text-green-600' : 'text-red-600'}>
-                        {g.isReady ? '✓' : '✗'}
+                        {g.isReady ? '✓ Bereit' : '✗ Nicht bereit'}
                       </span>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
+            
+            {/* Nur Spiel starten / Beenden Buttons für Host */}
+            <div className="flex gap-3 pt-4">
+              <button
+                onClick={handleLeaveGame}
+                className="flex-1 px-4 py-3 rounded-lg border-2 border-ink/30 hover:border-ink/60 transition-colors text-sm"
+              >
+                Verlassen
+              </button>
+              <button
+                onClick={handleStartGame}
+                disabled={!allReady || groupList.length < 2}
+                className="flex-1 px-4 py-3 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+              >
+                Spiel starten
+              </button>
+            </div>
           </div>
         )}
 
-        {session.isHost && !allReady && groupList.length >= 2 && (
-          <p className="text-center text-sm text-ink/60">
-            Warte darauf, dass alle Gruppen bereit sind...
-          </p>
-        )}
+        {/* Gruppen-Liste - Nur für nicht-Host */}
+        {!session.isHost && (
+          <>
+            {/* Andere Gruppen */}
+            <div className="card-surface rounded-2xl p-6 space-y-4">
+              <h2 className="text-xl font-semibold">
+                Gruppen ({groupList.length})
+              </h2>
+              <div className="space-y-3">
+                {groupList.map((group) => (
+                  <div
+                    key={group.id}
+                    className="flex items-center justify-between p-4 rounded-lg border-2"
+                    style={{ borderColor: group.color }}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div
+                        className="w-4 h-4 rounded-full"
+                        style={{ backgroundColor: group.color }}
+                      />
+                      <div>
+                        <p className="font-semibold">
+                          {group.name}
+                          {group.id === session.groupId && ' (Du)'}
+                        </p>
+                        <p className="text-sm text-ink/60">
+                          {group.players.map(p => p.name).join(', ')}
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      {group.isReady ? (
+                        <span className="text-green-600 font-semibold">✓ Bereit</span>
+                      ) : (
+                        <span className="text-red-600 font-semibold">✗ Nicht bereit</span>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-        {groupList.length < 2 && (
-          <p className="text-center text-sm text-ink/60">
-            Warte auf weitere Gruppen...
-          </p>
+            {/* Spielmodus Info */}
+            <div className="card-surface rounded-2xl p-6">
+              <h3 className="font-semibold mb-2">Spielmodus</h3>
+              <p className="text-lg">
+                {game.mode === 'timeline' ? '🔢 Timeline' : game.mode === 'trivia' ? '🎓 Trivia' : '👤 Solo'}
+              </p>
+            </div>
+
+            {/* Aktionen für Spieler */}
+            <div className="flex gap-3">
+              <button
+                onClick={handleLeaveGame}
+                className="flex-1 px-6 py-4 rounded-lg border-2 border-ink/30 hover:border-ink/60 transition-colors"
+              >
+                Verlassen
+              </button>
+              
+              {currentGroup && (
+                <button
+                  onClick={handleToggleReady}
+                  className={`flex-1 px-6 py-4 rounded-lg font-semibold transition-colors ${
+                    currentGroup.isReady
+                      ? 'bg-ink/10 border-2 border-ink/30 hover:bg-ink/20'
+                      : 'bg-ink text-inkDark hover:opacity-90'
+                  }`}
+                >
+                  {currentGroup.isReady ? 'Nicht mehr bereit' : 'Bereit'}
+                </button>
+              )}
+            </div>
+
+            {!allReady && groupList.length >= 2 && (
+              <p className="text-center text-sm text-ink/60">
+                Warte darauf, dass der Spielleiter das Spiel startet...
+              </p>
+            )}
+
+            {groupList.length < 2 && (
+              <p className="text-center text-sm text-ink/60">
+                Warte auf weitere Gruppen...
+              </p>
+            )}
+          </>
         )}
       </main>
     );
@@ -477,7 +488,7 @@ export default function MultiplayerGamePage() {
     }
     
     const currentCard = getCardById(game.currentCardId);
-    const isActiveTurn = game.currentTurnGroupId === session.groupId;
+    const isActiveTurn = game.currentTurnGroupId === session.groupId && !session.isHost; // Host kann nicht spielen
     const isHostSession = session.isHost;
     const canControlMedia = isActiveTurn || isHostSession;
 
