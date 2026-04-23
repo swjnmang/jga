@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import {
   subscribeToGame,
   setGroupReady,
@@ -10,7 +11,12 @@ import {
   placeCardInTimeline,
   nextCard,
   nextTurn,
-  sendPlaybackControl
+  sendPlaybackControl,
+  requestFlexButton,
+  confirmFlexButton,
+  rejectFlexButton,
+  editGroupScore,
+  endGame
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
@@ -40,6 +46,11 @@ export default function MultiplayerGamePage() {
   const [placementResult, setPlacementResult] = useState<'correct' | 'wrong' | null>(null);
   const mediaEmbedRef = useRef<MediaEmbedHandle>(null);
   const [isMediaPlaying, setIsMediaPlaying] = useState(false);
+  
+  // Host-Funktionen
+  const [editingGroupId, setEditingGroupId] = useState<string | null>(null);
+  const [editingScore, setEditingScore] = useState<number | null>(null);
+  const [showFlexConfirm, setShowFlexConfirm] = useState(false);
 
   // Lade Session-Infos
   useEffect(() => {
@@ -181,6 +192,64 @@ export default function MultiplayerGamePage() {
     if (!session || !game || !game.currentCardId) return;
     setIsMediaPlaying(false);
     await sendPlaybackControl(pin, session.groupId, 'pause', game.currentCardId);
+  };
+
+  // Host-Funktionen
+  const handleConfirmFlex = async () => {
+    if (!session || !game?.flexPendingGroupId) return;
+    
+    try {
+      await confirmFlexButton(pin, session.groupId, game.flexPendingGroupId);
+      setShowFlexConfirm(false);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Fehler beim Bestätigen');
+    }
+  };
+
+  const handleRejectFlex = async () => {
+    if (!session) return;
+    
+    try {
+      await rejectFlexButton(pin, session.groupId);
+      setShowFlexConfirm(false);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Fehler beim Ablehnen');
+    }
+  };
+
+  const handleUpdateScore = async (groupId: string) => {
+    if (!session || editingScore === null) return;
+    
+    try {
+      await editGroupScore(pin, session.groupId, groupId, editingScore);
+      setEditingGroupId(null);
+      setEditingScore(null);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Fehler beim Aktualisieren');
+    }
+  };
+
+  const handleEndGame = async () => {
+    if (!session) return;
+    
+    if (!window.confirm('Soll das Spiel wirklich beendet werden?')) return;
+    
+    try {
+      await endGame(pin, session.groupId);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Fehler beim Beenden');
+    }
+  };
+
+  const handleRequestFlex = async () => {
+    if (!session || !game || game.currentTurnGroupId !== session.groupId) return;
+    
+    try {
+      await requestFlexButton(pin, session.groupId);
+      setShowFlexConfirm(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Fehler beim Anfordern');
+    }
   };
 
   // Host listens for playback control commands
@@ -341,6 +410,38 @@ export default function MultiplayerGamePage() {
           )}
         </div>
 
+        {/* Host Panel mit QR-Code */}
+        {session.isHost && (
+          <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
+            <h2 className="text-xl font-semibold text-green-700">👑 Host-Panel</h2>
+            <div className="flex flex-col sm:flex-row gap-6 items-center">
+              <div>
+                <p className="text-xs uppercase tracking-wide text-ink/60 mb-2">QR-Code zum Beitreten</p>
+                <QRCodeWrapper 
+                  value={`${typeof window !== 'undefined' ? window.location.origin : ''}/multiplayer?pin=${pin}`}
+                />
+              </div>
+              <div className="flex-1 space-y-2">
+                <p className="text-sm font-semibold">Gruppenliste:</p>
+                <div className="space-y-1 text-sm">
+                  {groupList.map(g => (
+                    <div key={g.id} className="flex itemes-center gap-2">
+                      <div 
+                        className="w-2 h-2 rounded-full" 
+                        style={{ backgroundColor: g.color }}
+                      />
+                      <span>{g.name}</span>
+                      <span className={g.isReady ? 'text-green-600' : 'text-red-600'}>
+                        {g.isReady ? '✓' : '✗'}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {session.isHost && !allReady && groupList.length >= 2 && (
           <p className="text-center text-sm text-ink/60">
             Warte darauf, dass alle Gruppen bereit sind...
@@ -417,6 +518,87 @@ export default function MultiplayerGamePage() {
             </div>
           )}
         </div>
+
+        {/* Host-Panel: Flex-Bestätigung und Score-Editing */}
+        {session.isHost && (
+          <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
+            <h2 className="text-lg font-semibold text-green-700">👑 Host-Steuerung</h2>
+            
+            {/* Flex-Button Bestätigung */}
+            {game.flexPendingGroupId && (
+              <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-500 p-4 space-y-3">
+                <p className="font-semibold text-yellow-700">
+                  {game.groups[game.flexPendingGroupId]?.name} fordert Flex-Button an!
+                </p>
+                <div className="flex gap-2">
+                  <button
+                    onClick={handleConfirmFlex}
+                    className="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700"
+                  >
+                    ✓ Bestätigen (+1 Punkt)
+                  </button>
+                  <button
+                    onClick={handleRejectFlex}
+                    className="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700"
+                  >
+                    ✗ Ablehnen
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* Score-Editing */}
+            <div className="space-y-2">
+              <p className="text-sm font-semibold">Punkte bearbeiten:</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                {groupList.map(group => (
+                  <div key={group.id} className="text-sm">
+                    {editingGroupId === group.id ? (
+                      <div className="flex gap-1">
+                        <input
+                          type="number"
+                          value={editingScore ?? group.score}
+                          onChange={(e) => setEditingScore(Number(e.target.value))}
+                          className="flex-1 px-2 py-1 rounded border-2 border-ink/30 text-gray-900"
+                        />
+                        <button
+                          onClick={() => handleUpdateScore(group.id)}
+                          className="px-2 py-1 bg-green-600 text-white rounded"
+                        >
+                          ✓
+                        </button>
+                        <button
+                          onClick={() => setEditingGroupId(null)}
+                          className="px-2 py-1 bg-red-600 text-white rounded"
+                        >
+                          ✗
+                        </button>
+                      </div>
+                    ) : (
+                      <button
+                        onClick={() => {
+                          setEditingGroupId(group.id);
+                          setEditingScore(group.score);
+                        }}
+                        className="w-full px-2 py-1 rounded border-2 border-ink/20 hover:border-ink/60 text-left text-xs"
+                      >
+                        {group.name}: {group.score}
+                      </button>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Spiel-Beenden */}
+            <button
+              onClick={handleEndGame}
+              className="w-full px-4 py-2 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700"
+            >
+              Spiel beenden
+            </button>
+          </div>
+        )}
 
         {/* Aktuelle Karte */}
         {currentCard && (
@@ -793,5 +975,31 @@ export default function MultiplayerGamePage() {
           ))}
       </div>
     </main>
+  );
+}
+
+// QR-Code-Komponente als Wrapper (verhindert SSR-Probleme)
+const QRCodeWrapper = ({ value }: { value: string }) => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <div className="w-32 h-32 bg-gray-200 rounded-lg animate-pulse" />;
+  }
+
+  const QRCode = require('qrcode.react').default;
+
+  return (
+    <div className="bg-white p-3 rounded-lg inline-block">
+      <QRCode 
+        value={value}
+        size={128}
+        level="H"
+        includeMargin={true}
+      />
+    </div>
   );
 }

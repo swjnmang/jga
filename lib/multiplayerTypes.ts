@@ -20,6 +20,9 @@ export interface GroupData {
   score: number;
   isReady: boolean;
   flexActive: boolean; // Ob Flex-Button für aktuelle Runde aktiviert ist
+  isHost: boolean; // Ist diese Gruppe der Spielleiter
+  flexRequested?: boolean; // Hat die aktive Gruppe einen Flex-Button angefordert
+  lastFlexRequest?: number; // Timestamp des letzten Flex-Requests
 }
 
 export interface PlacedCard {
@@ -53,6 +56,8 @@ export interface GameSession {
   maxGroups: number;
   referenceCard: Card | null; // Die Startkarte für alle Gruppen
   playbackControl?: PlaybackControl; // Remote-Steuerung für Medien (Host führt aus)
+  flexPendingGroupId?: string | null; // Welche Gruppe wartet auf Flex-Bestätigung
+  winnerGroupId?: string | null; // Erste Gruppe mit 10 Karten (Timeline) oder erste mit X Punkte (Trivia)
 }
 
 export interface CreateGameParams {

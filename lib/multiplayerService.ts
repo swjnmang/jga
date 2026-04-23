@@ -55,7 +55,8 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     flexButtons: 2,
     score: 0,
     isReady: true,
-    flexActive: false
+    flexActive: false,
+    isHost: true
   };
 
   // Erzeuge eine feste Referenzkarte (1950)
@@ -144,7 +145,8 @@ export async function joinGame(params: JoinGameParams): Promise<{ groupId: strin
     flexButtons: 2,
     score: 0,
     isReady: false,
-    flexActive: false
+    flexActive: false,
+    isHost: false
   };
 
   // Füge Gruppe hinzu
@@ -284,6 +286,11 @@ export async function placeCardInTimeline(
   // Wenn die aktive Gruppe falsch platziert hat, prüfe Flex-Gruppen
   if (game.currentTurnGroupId === groupId && !isCorrect) {
     await handleFlexSteal(pin, card, game);
+  }
+
+  // Prüfe Auto-Win Bedingung bei korrekter Platzierung (Timeline: 10 Karten = Gewinn)
+  if (isCorrect) {
+    await checkAutoWinTimeline(pin);
   }
 
   return isCorrect;
@@ -466,4 +473,215 @@ export async function sendPlaybackControl(
       requestedBy: groupId
     }
   });
+}
+
+/**
+ * Fordert einen Flex-Button an (von aktiver Gruppe)
+ */
+export async function requestFlexButton(pin: string, groupId: string): Promise<void> {
+  checkFirebase();
+  
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+
+  if (!snapshot.exists()) {
+    throw new Error('Spiel nicht gefunden.');
+  }
+
+  const game: GameSession = snapshot.val();
+  const group = game.groups[groupId];
+
+  if (!group || groupId !== game.currentTurnGroupId) {
+    throw new Error('Nur die aktive Gruppe kann Flex anfordern.');
+  }
+
+  await update(ref(database!, `games/${pin}/groups/${groupId}`), {
+    flexRequested: true,
+    lastFlexRequest: Date.now()
+  });
+
+  // Setze flexPendingGroupId in GameSession
+  await update(gameRef, {
+    flexPendingGroupId: groupId
+  });
+}
+
+/**
+ * Host bestätigt Flex-Button (gibt +1 Punkt)
+ */
+export async function confirmFlexButton(pin: string, hostGroupId: string, targetGroupId: string): Promise<void> {
+  checkFirebase();
+  
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+
+  if (!snapshot.exists()) {
+    throw new Error('Spiel nicht gefunden.');
+  }
+
+  const game: GameSession = snapshot.val();
+
+  if (game.hostId !== hostGroupId) {
+    throw new Error('Nur der Host kann Flex bestätigen.');
+  }
+
+  const targetGroup = game.groups[targetGroupId];
+  if (!targetGroup) {
+    throw new Error('Gruppe nicht gefunden.');
+  }
+
+  // +1 Punkt für die Gruppe
+  await update(ref(database!, `games/${pin}/groups/${targetGroupId}`), {
+    score: targetGroup.score + 1,
+    flexRequested: false
+  });
+
+  // Entferne flexPendingGroupId
+  await update(gameRef, {
+    flexPendingGroupId: null
+  });
+}
+
+/**
+ * Host lehnt Flex-Button ab
+ */
+export async function rejectFlexButton(pin: string, hostGroupId: string): Promise<void> {
+  checkFirebase();
+  
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+
+  if (!snapshot.exists()) {
+    throw new Error('Spiel nicht gefunden.');
+  }
+
+  const game: GameSession = snapshot.val();
+
+  if (game.hostId !== hostGroupId) {
+    throw new Error('Nur der Host kann Flex ablehnen.');
+  }
+
+  const pendingGroupId = game.flexPendingGroupId;
+  if (pendingGroupId) {
+    await update(ref(database!, `games/${pin}/groups/${pendingGroupId}`), {
+      flexRequested: false
+    });
+  }
+
+  await update(gameRef, {
+    flexPendingGroupId: null
+  });
+}
+
+/**
+ * Host ändert den Score einer Gruppe
+ */
+export async function editGroupScore(pin: string, hostGroupId: string, targetGroupId: string, newScore: number): Promise<void> {
+  checkFirebase();
+  
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+
+  if (!snapshot.exists()) {
+    throw new Error('Spiel nicht gefunden.');
+  }
+
+  const game: GameSession = snapshot.val();
+
+  if (game.hostId !== hostGroupId) {
+    throw new Error('Nur der Host kann Punkte ändern.');
+  }
+
+  const targetGroup = game.groups[targetGroupId];
+  if (!targetGroup) {
+    throw new Error('Gruppe nicht gefunden.');
+  }
+
+  const sanitizedScore = Math.max(0, Math.round(newScore));
+
+  await update(ref(database!, `games/${pin}/groups/${targetGroupId}`), {
+    score: sanitizedScore
+  });
+}
+
+/**
+ * Host beendet das Spiel (nur Timeline/Trivia, nicht wenn bereits beendet)
+ */
+export async function endGame(pin: string, hostGroupId: string): Promise<void> {
+  checkFirebase();
+  
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+
+  if (!snapshot.exists()) {
+    throw new Error('Spiel nicht gefunden.');
+  }
+
+  const game: GameSession = snapshot.val();
+
+  if (game.hostId !== hostGroupId) {
+    throw new Error('Nur der Host kann das Spiel beenden.');
+  }
+
+  if (game.state === 'finished') {
+    throw new Error('Das Spiel ist bereits beendet.');
+  }
+
+  // Finde Gewinner (höchster Score)
+  const groups = Object.values(game.groups);
+  let winner: GroupData | null = null;
+  let maxScore = -1;
+
+  groups.forEach(group => {
+    if (group.score > maxScore) {
+      maxScore = group.score;
+      winner = group;
+    }
+  });
+
+  await update(gameRef, {
+    state: 'finished',
+    finishedAt: Date.now(),
+    winnerGroupId: winner?.id || null
+  });
+}
+
+/**
+ * Prüft Auto-Win Bedingung für Timeline (erste Gruppe mit 10 Karten)
+ */
+export async function checkAutoWinTimeline(pin: string): Promise<void> {
+  checkFirebase();
+  
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+
+  if (!snapshot.exists()) {
+    throw new Error('Spiel nicht gefunden.');
+  }
+
+  const game: GameSession = snapshot.val();
+
+  // Nur für Timeline-Spiele
+  if (game.mode !== 'timeline') {
+    return;
+  }
+
+  // Prüfe ob eine Gruppe 10 Karten hat
+  const groups = Object.values(game.groups);
+  let winner: GroupData | null = null;
+
+  for (const group of groups) {
+    if (group.timeline.length >= 10) {
+      winner = group;
+      break;
+    }
+  }
+
+  if (winner) {
+    await update(gameRef, {
+      state: 'finished',
+      finishedAt: Date.now(),
+      winnerGroupId: winner.id
+    });
+  }
 }
