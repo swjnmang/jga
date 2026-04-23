@@ -9,6 +9,81 @@ import { getDefaultSettings, loadSettings, toDecadeTag, TRIVIA_ONLY_CATEGORIES, 
 import { Card, CardCategory, DecadeTag, Difficulty, GenreTag } from '@/lib/types';
 import { getMultipleChoiceOptions } from '@/lib/multipleChoice';
 
+// Menu Component für Spielmodus-Auswahl
+function PlayMenuContent() {
+  return (
+    <main className="min-h-screen bg-grid flex items-center justify-center px-6 py-16">
+      <div className="w-full max-w-2xl rounded-3xl bg-glass border border-white/20 shadow-2xl backdrop-blur-xl p-10 md:p-14 space-y-10 text-center">
+        <div className="space-y-4">
+          <h1 className="text-4xl md:text-5xl font-display font-semibold text-white leading-tight">
+            Spielmodus wählen
+          </h1>
+          <p className="text-lg text-white/80">
+            Wie möchtest du spielen?
+          </p>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-3">
+          <ModeCard 
+            href="/app-settings?mode=solo&return=%2Fplay%3Fmode%3Dsolo%26start%3D1"
+            label="Solo Modus"
+            icon="🎮"
+            description="Trainiere allein"
+          />
+          <ModeCard 
+            href="/multiplayer?gameMode=timeline"
+            label="Timeline Multiplayer"
+            icon="📅"
+            description="Mit Freunden spielen"
+          />
+          <ModeCard 
+            href="/multiplayer?gameMode=trivia"
+            label="Trivia Multiplayer"
+            icon="🎯"
+            description="Klassisches Quiz"
+          />
+        </div>
+
+        <div className="flex justify-center">
+          <Link
+            href="/"
+            className="text-white/70 hover:text-white text-sm font-semibold transition"
+          >
+            ← Zurück zum Hauptmenü
+          </Link>
+        </div>
+      </div>
+    </main>
+  );
+}
+
+function ModeCard({ href, label, icon, description }: { href: string; label: string; icon: string; description: string }) {
+  return (
+    <Link
+      href={href}
+      className="group inline-flex flex-col items-center justify-center rounded-2xl border border-white/30 text-white font-semibold px-6 py-6 bg-white/10 backdrop-blur transition hover:-translate-y-0.5 hover:border-white/60 hover:bg-white/20 gap-3"
+    >
+      <span className="text-4xl">{icon}</span>
+      <span className="text-lg">{label}</span>
+      <span className="text-xs text-white/60">{description}</span>
+    </Link>
+  );
+}
+
+// Quiz Content Component
+function PlayMenuWrapper() {
+  const searchParams = useSearchParams();
+  const mode = searchParams.get('mode');
+
+  // If no mode is specified, show the menu
+  if (!mode) {
+    return <PlayMenuContent />;
+  }
+
+  // Otherwise show the quiz
+  return <QuizContent />;
+}
+
 const FALLBACK_PLAYLIST_ID = 'imported-playlist';
 const METRIC_STORAGE_KEY = 'quizMetrics';
 const METRIC_FLAGS_KEY = 'quizMetricFlags';
@@ -248,7 +323,7 @@ function buildWeightedDeck(
   return deck;
 }
 
-function PlayPageContent() {
+function QuizContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const modeQuery = searchParams.get('mode');
@@ -1288,7 +1363,7 @@ function PlayPageContent() {
 export default function PlayPage() {
   return (
     <Suspense>
-      <PlayPageContent />
+      <PlayMenuWrapper />
     </Suspense>
   );
 }

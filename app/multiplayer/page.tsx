@@ -99,6 +99,12 @@ function MultiplayerLobbyContent() {
       setPin(pinFromUrl.toUpperCase());
       setMode('join');
     }
+    
+    // Check for gameMode parameter
+    const gameModeFromUrl = searchParams.get('gameMode');
+    if (gameModeFromUrl === 'timeline' || gameModeFromUrl === 'trivia') {
+      setGameMode(gameModeFromUrl);
+    }
   }, [searchParams]);
 
   const handleCreateGame = async () => {
