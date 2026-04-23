@@ -415,11 +415,9 @@ export default function MultiplayerGamePage() {
           <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
             <h2 className="text-xl font-semibold text-green-700">👑 Host-Panel</h2>
             <div className="flex flex-col sm:flex-row gap-6 items-center">
-              <div>
-                <p className="text-xs uppercase tracking-wide text-ink/60 mb-2">QR-Code zum Beitreten</p>
-                <QRCodeWrapper 
-                  value={`${typeof window !== 'undefined' ? window.location.origin : ''}/multiplayer?pin=${pin}`}
-                />
+              <div className="flex-1 space-y-2">
+                <p className="text-sm font-semibold">PIN zum Beitreten: <span className="font-mono text-lg">{pin}</span></p>
+                <p className="text-xs text-ink/60">Spieler können diese PIN eingeben um beizutreten</p>
               </div>
               <div className="flex-1 space-y-2">
                 <p className="text-sm font-semibold">Gruppenliste:</p>
@@ -978,25 +976,4 @@ export default function MultiplayerGamePage() {
   );
 }
 
-// Importiere QRCode dynamisch (nur client-seitig)
-const QRCode = dynamic(
-  () => import('qrcode.react').then(mod => (mod as any).default || mod as any),
-  {
-    ssr: false,
-    loading: () => <div className="w-32 h-32 bg-gray-200 rounded-lg animate-pulse" />
-  }
-);
 
-// QR-Code-Komponente als Wrapper (verhindert SSR-Probleme)
-const QRCodeWrapper = ({ value }: { value: string }) => {
-  return (
-    <div className="bg-white p-3 rounded-lg inline-block">
-      {React.createElement(QRCode as any, {
-        value,
-        size: 128,
-        level: 'H',
-        includeMargin: true
-      })}
-    </div>
-  );
-}
