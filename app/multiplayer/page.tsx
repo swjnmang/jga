@@ -26,6 +26,15 @@ function MultiplayerLobbyContent() {
   const [firebaseAvailable, setFirebaseAvailable] = useState(true);
   const [spotifyLinked, setSpotifyLinked] = useState(false);
   
+  // Build return URL for Spotify login
+  const spotifyReturnUrl = useMemo(() => {
+    if (typeof window === 'undefined') return '/multiplayer';
+    const currentPath = '/multiplayer';
+    const currentQuery = searchParams.toString();
+    const fullUrl = currentQuery ? `${currentPath}?${currentQuery}` : currentPath;
+    return encodeURIComponent(fullUrl);
+  }, [searchParams]);
+  
   // Settings State
   const availableCategories = useMemo(() => {
     const base = getCategories(cards).filter((c) => c !== 'video');
@@ -551,7 +560,7 @@ function MultiplayerLobbyContent() {
                     </div>
                   ) : (
                     <a
-                      href={`/api/spotify/authorize?return=/multiplayer`}
+                      href={`/api/spotify/authorize?return=${spotifyReturnUrl}`}
                       className="rounded-lg bg-[#1DB954] hover:bg-[#17a74a] text-white px-4 py-2 text-sm font-semibold transition-colors"
                     >
                       Spotify-Login starten
@@ -631,7 +640,7 @@ function MultiplayerLobbyContent() {
                   </div>
                 ) : (
                   <a
-                    href={`/api/spotify/authorize?return=/multiplayer`}
+                    href={`/api/spotify/authorize?return=${spotifyReturnUrl}`}
                     className="rounded-lg bg-[#1DB954] hover:bg-[#17a74a] text-white px-4 py-2 text-sm font-semibold transition-colors"
                   >
                     Spotify-Login starten
