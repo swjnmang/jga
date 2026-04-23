@@ -184,9 +184,13 @@ export async function startGame(pin: string, hostGroupId: string): Promise<void>
     throw new Error('Nicht alle Gruppen sind bereit.');
   }
 
-  // Setze erste Gruppe als aktive Gruppe
+  // Setze erste nicht-Host Gruppe als aktive Gruppe
   const groupIds = Object.keys(game.groups);
-  const firstGroupId = groupIds[0];
+  const firstGroupId = groupIds.find(id => !game.groups[id].isHost);
+
+  if (!firstGroupId) {
+    throw new Error('Keine Spielgruppen verfügbar.');
+  }
 
   await update(gameRef, {
     state: 'playing',
