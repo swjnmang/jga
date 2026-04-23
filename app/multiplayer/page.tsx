@@ -112,10 +112,6 @@ function MultiplayerLobbyContent() {
       setError('Firebase ist nicht konfiguriert. Bitte konfiguriere Firebase zuerst (siehe FIREBASE_SETUP.md).');
       return;
     }
-    if (!groupName.trim()) {
-      setError('Bitte Namen eingeben');
-      return;
-    }
 
     setLoading(true);
     setError(null);
@@ -141,12 +137,15 @@ function MultiplayerLobbyContent() {
         return;
       }
 
+      // Host hat keinen Gruppennamen, nur Spielleiter-Status
+      const hostName = 'Spielleiter';
+
       const { pin, groupId, playerId } = await createGame({
         mode: gameMode,
         settings,
         deck,
-        hostGroupName: groupName,
-        hostPlayerName: groupName
+        hostGroupName: hostName,
+        hostPlayerName: hostName
       });
 
       // Speichere Session-Infos im localStorage
@@ -154,8 +153,8 @@ function MultiplayerLobbyContent() {
         pin,
         groupId,
         playerId,
-        groupName,
-        playerName: groupName,
+        groupName: hostName,
+        playerName: hostName,
         isHost: true
       }));
 
@@ -365,16 +364,12 @@ function MultiplayerLobbyContent() {
               </div>
             </div>
 
-            <div>
-              <label className="block text-sm font-semibold mb-2">Name/Gruppenname</label>
-              <input
-                type="text"
-                value={groupName}
-                onChange={(e) => setGroupName(e.target.value)}
-                placeholder="z.B. Team Rot"
-                className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-gray-900 bg-white placeholder:text-gray-400"
-                maxLength={20}
-              />
+            {/* Host Info */}
+            <div className="rounded-lg bg-green-100/20 border-2 border-green-500 p-4 space-y-2">
+              <p className="text-sm font-semibold text-green-700">👑 Du bist der Spielleiter</p>
+              <p className="text-sm text-green-600">
+                Als Spielleiter spielst du nicht mit, sondern leitest das Spiel. Du steuerst den Ablauf, bestätigst Flex-Buttons und verwaltest die Punkte.
+              </p>
             </div>
 
             {/* Schwierigkeitsgrade */}
