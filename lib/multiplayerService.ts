@@ -632,17 +632,17 @@ export async function endGame(pin: string, hostGroupId: string): Promise<void> {
   let winner: GroupData | null = null;
   let maxScore = -1;
 
-  groups.forEach(group => {
+  for (const group of groups) {
     if (group.score > maxScore) {
       maxScore = group.score;
       winner = group;
     }
-  });
+  }
 
   await update(gameRef, {
     state: 'finished',
     finishedAt: Date.now(),
-    winnerGroupId: winner?.id || null
+    winnerGroupId: winner ? winner.id : null
   });
 }
 
