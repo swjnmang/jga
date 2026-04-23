@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import {
@@ -978,30 +978,20 @@ export default function MultiplayerGamePage() {
   );
 }
 
+// Importiere QRCode dynamisch (nur client-seitig)
+const QRCode = dynamic(
+  () => import('qrcode.react'),
+  {
+    ssr: false,
+    loading: () => <div className="w-32 h-32 bg-gray-200 rounded-lg animate-pulse" />
+  }
+);
+
 // QR-Code-Komponente als Wrapper (verhindert SSR-Probleme)
 const QRCodeWrapper = ({ value }: { value: string }) => {
-  const [mounted, setMounted] = useState(false);
-  const [QRCodeComponent, setQRCodeComponent] = useState<any>(null);
-
-  useEffect(() => {
-    setMounted(true);
-    // Importiere qrcode.react dynamisch
-    import('qrcode.react').then(module => {
-      // qrcode.react exportiert die Komponente als default
-      setQRCodeComponent(() => module.default || module);
-    }).catch(err => {
-      console.error('Error loading QRCode:', err);
-    });
-  }, []);
-
-  if (!mounted || !QRCodeComponent) {
-    return <div className="w-32 h-32 bg-gray-200 rounded-lg animate-pulse" />;
-  }
-
-  // Dynamisch rendern mit React.createElement, da JSX mit dynamischen Komponenten Probleme haben kann
   return (
     <div className="bg-white p-3 rounded-lg inline-block">
-      {React.createElement(QRCodeComponent, {
+      {React.createElement(QRCode as any, {
         value,
         size: 128,
         level: 'H',
