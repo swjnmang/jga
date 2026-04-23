@@ -627,28 +627,6 @@ function MultiplayerLobbyContent() {
               />
             </div>
 
-            <div className="rounded-lg border-2 border-ink/20 bg-ink/5 p-4 space-y-3">
-              <div>
-                <p className="text-xs uppercase tracking-wide text-ink/60 mb-2">Spotify</p>
-                <h3 className="text-sm font-semibold mb-1">Spotify Premium erforderlich</h3>
-                <p className="text-sm text-ink/70">Falls das Spiel Musik-Kategorien enthält, benötigst du eine Spotify Premium Verbindung.</p>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {spotifyLinked ? (
-                  <div className="flex items-center gap-2 bg-green-100 text-green-700 px-3 py-2 rounded-lg text-sm">
-                    <span>✓ Verbunden</span>
-                  </div>
-                ) : (
-                  <a
-                    href={`/api/spotify/authorize?return=${spotifyReturnUrl}`}
-                    className="rounded-lg bg-[#1DB954] hover:bg-[#17a74a] text-white px-4 py-2 text-sm font-semibold transition-colors"
-                  >
-                    Spotify-Login starten
-                  </a>
-                )}
-              </div>
-            </div>
-
             {error && (
               <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
                 {error}
