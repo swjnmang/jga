@@ -623,7 +623,7 @@ export default function MultiplayerGamePage() {
 
             {currentCard.sources && (
               <div className="relative">
-                {/* Nur Host bekommt die Steuerung */}
+                {/* Host sieht volle Kontrolle */}
                 {isHostSession ? (
                   <MediaEmbed 
                     ref={mediaEmbedRef}
@@ -631,30 +631,36 @@ export default function MultiplayerGamePage() {
                     preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
                   />
                 ) : (
-                  /* Mitspieler sehen Play/Pause Buttons */
-                  <div className="rounded-2xl card-surface bg-ink/5 p-8 text-center space-y-4">
-                    <div className="text-4xl">🎵</div>
-                    <p className="text-sm text-ink/70">
-                      Der Host steuert die Musikwiedergabe
-                    </p>
-                    <div className="flex justify-center">
-                      <button
-                        onClick={isMediaPlaying ? handleRemotePause : handleRemotePlay}
-                        className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
-                          isMediaPlaying
-                            ? 'border-2 border-ink/30 hover:border-ink/60'
-                            : 'bg-ink text-inkDark hover:opacity-90'
-                        }`}
-                      >
-                        {isMediaPlaying ? '⏸ Pause' : '▶ Play'}
-                      </button>
-                    </div>
-                    {currentCard.category === 'music' && (
+                  /* Mitspieler: musak nur mit Play/Pause, andere Medien vollständig */
+                  currentCard.category === 'music' ? (
+                    <div className="rounded-2xl card-surface bg-ink/5 p-8 text-center space-y-4">
+                      <div className="text-4xl">🎵</div>
+                      <p className="text-sm text-ink/70">
+                        Der Host steuert die Musikwiedergabe
+                      </p>
+                      <div className="flex justify-center">
+                        <button
+                          onClick={isMediaPlaying ? handleRemotePause : handleRemotePlay}
+                          className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+                            isMediaPlaying
+                              ? 'border-2 border-ink/30 hover:border-ink/60'
+                              : 'bg-ink text-inkDark hover:opacity-90'
+                          }`}
+                        >
+                          {isMediaPlaying ? '⏸ Pause' : '▶ Play'}
+                        </button>
+                      </div>
                       <p className="text-xs text-ink/60">
                         Song wird auf dem Gerät des Hosts abgespielt
                       </p>
-                    )}
-                  </div>
+                    </div>
+                  ) : (
+                    /* Andere Medien-Typen (Bilder, etc.) für Spieler anzeigen */
+                    <MediaEmbed 
+                      card={currentCard}
+                      preference="youtube"
+                    />
+                  )
                 )}
               </div>
             )}
