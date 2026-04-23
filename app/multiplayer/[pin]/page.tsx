@@ -980,7 +980,7 @@ export default function MultiplayerGamePage() {
 
 // Importiere QRCode dynamisch (nur client-seitig)
 const QRCode = dynamic(
-  () => import('qrcode.react'),
+  () => import('qrcode.react').then(mod => mod.default || mod as any),
   {
     ssr: false,
     loading: () => <div className="w-32 h-32 bg-gray-200 rounded-lg animate-pulse" />
