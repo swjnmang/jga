@@ -981,30 +981,32 @@ export default function MultiplayerGamePage() {
 // QR-Code-Komponente als Wrapper (verhindert SSR-Probleme)
 const QRCodeWrapper = ({ value }: { value: string }) => {
   const [mounted, setMounted] = useState(false);
-  const [QRCode, setQRCode] = useState<any>(null);
+  const [QRCodeComponent, setQRCodeComponent] = useState<any>(null);
 
   useEffect(() => {
     setMounted(true);
     // Importiere qrcode.react dynamisch
     import('qrcode.react').then(module => {
-      setQRCode(() => module);
+      // qrcode.react exportiert die Komponente als default
+      setQRCodeComponent(() => module.default || module);
     }).catch(err => {
       console.error('Error loading QRCode:', err);
     });
   }, []);
 
-  if (!mounted || !QRCode) {
+  if (!mounted || !QRCodeComponent) {
     return <div className="w-32 h-32 bg-gray-200 rounded-lg animate-pulse" />;
   }
 
+  // Dynamisch rendern mit React.createElement, da JSX mit dynamischen Komponenten Probleme haben kann
   return (
     <div className="bg-white p-3 rounded-lg inline-block">
-      <QRCode 
-        value={value}
-        size={128}
-        level="H"
-        includeMargin={true}
-      />
+      {React.createElement(QRCodeComponent, {
+        value,
+        size: 128,
+        level: 'H',
+        includeMargin: true
+      })}
     </div>
   );
 }
