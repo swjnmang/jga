@@ -155,7 +155,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     reportedErrorRef.current = false;
     autoPlayPendingRef.current = choice?.type === 'spotify';
     latestSpotifyUrlRef.current = choice?.type === 'spotify' ? choice.url : null;
-  }, [choiceSignature]);
+  }, [choice]);
 
   useEffect(() => {
     let cancelled = false;
