@@ -211,13 +211,14 @@ const CATEGORY_META: Record<CardCategory, { label: string; icon: string }> = {
   music: { label: 'Musik', icon: '🎵' },
   quote: { label: 'Zitate', icon: '💬' },
   image: { label: 'Bilder erkennen', icon: '🖼️' },
-  country: { label: 'Länder/Flaggen', icon: '🏳️' },
+  flag: { label: 'Länder/Flaggen', icon: '🏳️' },
+  outline: { label: 'Umrisse', icon: '⬜' },
   video: { label: 'Video', icon: '🎬' },
   sportfreizeit: { label: 'Sport & Freizeit', icon: '🏆' },
   religionglaube: { label: 'Religion & Glaube', icon: '✝️' },
   geogeschichte: { label: 'Geographie & Geschichte', icon: '🌍' },
-  naturtechnik: { label: 'Natur & Technik', icon: '🔬' },
-  filmeserien: { label: 'Filme & Serien', icon: '🎞️' },
+  natur: { label: 'Natur & Technik', icon: '🔬' },
+  filmserien: { label: 'Filme & Serien', icon: '🎞️' },
   schaetzfragen: { label: 'Schätzfragen', icon: '🎯' }
 };
 
@@ -229,7 +230,7 @@ function triviaCue(card: Card): string {
       return 'Von wem stammt dieses Zitat?';
     case 'image':
       return 'Was bzw. welches Ereignis ist auf dem Bild?';
-    case 'country':
+    case 'flag':
       return 'Zu welchem Land gehört das Gezeigte?';
     case 'video':
       return 'Was wird hier gezeigt?';

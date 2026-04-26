@@ -261,10 +261,12 @@ function MultiplayerLobbyContent() {
   const categoryLabels: Partial<Record<CardCategory, string>> = {
     quote: 'Berühmte Zitate',
     image: 'Bilder erkennen',
-    country: 'Länder erkennen',
+    flag: 'Länder erkennen',
+    outline: 'Umrisse erkennen',
     music: 'Musik',
-    naturtechnik: 'Natur & Technik',
-    filmeserien: 'Filme & Serien',
+    natur: 'Natur & Technik',
+    filmserien: 'Filme & Serien',
+    schaetzfragen: 'Schätzfragen',
     religionglaube: 'Religion & Glaube',
     sportfreizeit: 'Sport & Freizeit',
     geogeschichte: 'Geographie & Geschichte'
