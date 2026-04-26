@@ -356,35 +356,19 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
       player.addListener('ready', async ({ device_id }) => {
         console.log('✅ Player ready, device_id:', device_id);
-        // Erste Device-ID übernehmen.
+        // **WICHTIG**: Nutze die SDK Device-ID DIREKT - nicht von der API abfragen!
+        // Die API gibt oft ganz andere Devices zurück (z.B. Desktop App)
         setSpotifyDevice(device_id);
         setSpotifyReady(true);
         setSpotifyErrorDetail(null);
         setSpotifyError(null);
 
-        // Warte deutlich länger, damit Spotify die Device-Registrierung abschließt
-        // Das SDK kennt die Device sofort, aber die API braucht VIEL länger
-        console.log('⏳ Warte 3500ms für Spotify Device-Backend-Sync (wichtig!)...');
-        await new Promise((r) => setTimeout(r, 3500));
+        // Warte, damit Spotify die Device-Registrierung abschließt
+        console.log('⏳ Warte 2000ms für Spotify Device-Backend-Sync...');
+        await new Promise((r) => setTimeout(r, 2000));
 
-        // Versuche mehrfach UND länger, die aktualisierte Device zu bekommen
-        let deviceId = device_id;
-        for (let attempt = 0; attempt < 5; attempt++) {
-          const refreshed = await refreshDeviceId();
-          if (refreshed) {
-            console.log(`✅ Device aktualisiert nach ${attempt + 1} Versuchen: ${refreshed}`);
-            deviceId = refreshed;
-            break;
-          }
-          if (attempt < 4) {
-            console.log(`🔄 Device-Refresh ${attempt + 1}/4 fehlgeschlagen, versuche erneut...`);
-            await new Promise((r) => setTimeout(r, 800)); // Längere Wartezeit zwischen Versuchen
-          }
-        }
-        setSpotifyDevice(deviceId);
-
-        // Sofort versuchen zu transferieren, mit der aktuellen Device-ID
-        console.log('🎵 Starte Transfer mit Device-ID:', deviceId);
+        // Starte sofort Transfer mit der SDK Device-ID
+        console.log('🎵 Starte Transfer mit SDK-Device-ID:', device_id);
         transferPlaybackWithRetry(10).catch((err) => {
           console.error('⚠️  Transfer beim Ready fehlgeschlagen, Retry beim Play:', err);
         });
