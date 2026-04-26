@@ -6,7 +6,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ad",
     "title": "Flagge Andorra",
-    "category": "country",
+    "category": "flag",
     "year": 1993,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Andorra — Erste Verfassung (Souveränität)",
@@ -19,7 +19,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ae",
     "title": "Flagge Vereinigte Arabische Emirate",
-    "category": "country",
+    "category": "flag",
     "year": 1971,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Vereinigte Arabische Emirate — Gründung der Föderation und Unabhängigkeit.",
@@ -32,7 +32,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-af",
     "title": "Flagge Afghanistan",
-    "category": "country",
+    "category": "flag",
     "year": 2021,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Äfghanistan — Machtübernahme der Taliban (Ende der Republik).",
@@ -45,7 +45,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ag",
     "title": "Flagge Antigua und Barbuda",
-    "category": "country",
+    "category": "flag",
     "year": 1981,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Äntigua und Barbuda – Unabhängigkeit vom Vereinigten Königreich.",
@@ -58,7 +58,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ai",
     "title": "Flagge Anguilla",
-    "category": "country",
+    "category": "flag",
     "year": 1982,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Änguilla – Inkrafttreten der aktuellen Verfassungsordnung.",
@@ -71,7 +71,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-al",
     "title": "Flagge Albanien",
-    "category": "country",
+    "category": "flag",
     "year": 1998,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Älbanien – Inkrafttreten der aktuellen Verfassung.",
@@ -84,7 +84,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-am",
     "title": "Flagge Armenien",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Ärmenie – 2015, Wechsel zum parlamentarischen Regierungssystem.",
@@ -97,7 +97,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ao",
     "title": "Flagge Angola",
-    "category": "country",
+    "category": "flag",
     "year": 1975,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Ängola – 2010, Inkrafttreten der aktuellen Verfassung.",
@@ -110,7 +110,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-as",
     "title": "Flagge Amerikanisch-Samoa",
-    "category": "country",
+    "category": "flag",
     "year": 1962,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Samoa – Unabhängigkeit von Neuseeland.",
@@ -123,7 +123,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-at",
     "title": "Flagge Österreich",
-    "category": "country",
+    "category": "flag",
     "year": 1945,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Österreich — Zweite Republik",
@@ -136,7 +136,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-au",
     "title": "Flagge Australien",
-    "category": "country",
+    "category": "flag",
     "year": 1901,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Äustralien – 1986, Australia Act (völlige Souveränität).",
@@ -149,7 +149,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-aw",
     "title": "Flagge Aruba",
-    "category": "country",
+    "category": "flag",
     "year": 1983,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Niederlande – Totalrevision der Verfassung.",
@@ -162,7 +162,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ax",
     "title": "Flagge Ålandinseln",
-    "category": "country",
+    "category": "flag",
     "year": 2000,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Finnland – Neue Verfassung (Stärkung des Parlaments).",
@@ -175,7 +175,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-az",
     "title": "Flagge Aserbaidschan",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Äserbaidschan – 1995, Erste Verfassung nach der Unabhängigkeit.",
@@ -188,7 +188,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ba",
     "title": "Flagge Bosnien und Herzegowina",
-    "category": "country",
+    "category": "flag",
     "year": 1995,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Bosnien und Herzegowina – Dayton-Abkommen (Verfassung als Teil des Vertrags).",
@@ -201,7 +201,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bb",
     "title": "Flagge Barbados",
-    "category": "country",
+    "category": "flag",
     "year": 2021,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Barbados — Übergang zur Republik",
@@ -214,7 +214,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bd",
     "title": "Flagge Bangladesch",
-    "category": "country",
+    "category": "flag",
     "year": 1971,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Bangladesch — Unabhängigkeit",
@@ -227,7 +227,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-be",
     "title": "Flagge Belgien",
-    "category": "country",
+    "category": "flag",
     "year": 1831,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Belgien — Unabhängigkeit und Verfassung nach der Revolution",
@@ -240,7 +240,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bf",
     "title": "Flagge Burkina Faso",
-    "category": "country",
+    "category": "flag",
     "year": 1960,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Burkina Faso — Unabhängigkeit",
@@ -253,7 +253,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bg",
     "title": "Flagge Bulgarien",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Bulgarien – Neue Verfassung nach Ende des Sozialismus.",
@@ -266,7 +266,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bh",
     "title": "Flagge Bahrain",
-    "category": "country",
+    "category": "flag",
     "year": 1971,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Bahrain — Unabhängigkeit",
@@ -279,7 +279,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bi",
     "title": "Flagge Burundi",
-    "category": "country",
+    "category": "flag",
     "year": 1962,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Burundi — Unabhängigkeit",
@@ -292,7 +292,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bj",
     "title": "Flagge Benin",
-    "category": "country",
+    "category": "flag",
     "year": 1960,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Benin — Unabhängigkeit",
@@ -305,7 +305,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bl",
     "title": "Flagge St. Barthélemy",
-    "category": "country",
+    "category": "flag",
     "year": 1946,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Guadeloupe – Umwandlung in ein Überseedépartement.",
@@ -318,7 +318,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bm",
     "title": "Flagge Bermuda",
-    "category": "country",
+    "category": "flag",
     "year": 1968,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Bermuda – Inkrafttreten der aktuellen Verfassungsordnung.",
@@ -331,7 +331,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bn",
     "title": "Flagge Brunei Darussalam",
-    "category": "country",
+    "category": "flag",
     "year": 1984,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Brunei – Vollständige Unabhängigkeit vom UK.",
@@ -344,7 +344,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bo",
     "title": "Flagge Bolivien",
-    "category": "country",
+    "category": "flag",
     "year": 2009,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Bolivien – Neugründung als Plurinationaler Staat.",
@@ -357,7 +357,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bq",
     "title": "Flagge Karibische Niederlande",
-    "category": "country",
+    "category": "flag",
     "year": 1983,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Niederlande – Totalrevision der Verfassung.",
@@ -370,7 +370,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-br",
     "title": "Flagge Brasilien",
-    "category": "country",
+    "category": "flag",
     "year": 1988,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Brasilien — Aktuelle Verfassung",
@@ -383,7 +383,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bs",
     "title": "Flagge Bahamas",
-    "category": "country",
+    "category": "flag",
     "year": 1973,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Bahamas — Unabhängigkeit",
@@ -396,7 +396,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bt",
     "title": "Flagge Bhutan",
-    "category": "country",
+    "category": "flag",
     "year": 2008,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Bhutan – Übergang zur konstitutionellen Monarchie.",
@@ -409,7 +409,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bv",
     "title": "Flagge Bouvetinsel",
-    "category": "country",
+    "category": "flag",
     "year": 1930,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Bouvetinsel – Unterstellung unter norwegische Souveränität.",
@@ -422,7 +422,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bw",
     "title": "Flagge Botsuana",
-    "category": "country",
+    "category": "flag",
     "year": 1966,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Botsuana – Unabhängigkeit vom Vereinigten Königreich.",
@@ -435,7 +435,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-by",
     "title": "Flagge Belarus",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Belarus — Unabhängigkeit von der UdSSR",
@@ -448,7 +448,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-bz",
     "title": "Flagge Belize",
-    "category": "country",
+    "category": "flag",
     "year": 1981,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Belize — Unabhängigkeit",
@@ -461,7 +461,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ca",
     "title": "Flagge Kanada",
-    "category": "country",
+    "category": "flag",
     "year": 1867,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kanada — British North America Act (Beginn der Eigenstaatlichkeit)",
@@ -474,7 +474,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-cc",
     "title": "Flagge Kokosinseln",
-    "category": "country",
+    "category": "flag",
     "year": 1984,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kokosinseln – Referendum zur Integration in Australien.",
@@ -487,7 +487,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-cd",
     "title": "Flagge Kongo-Kinshasa",
-    "category": "country",
+    "category": "flag",
     "year": 2006,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kongo-Kinshasa – Verfassung der Dritten Republik.",
@@ -500,7 +500,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-cf",
     "title": "Flagge Zentralafrikanische Republik",
-    "category": "country",
+    "category": "flag",
     "year": 2023,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Zentralafrikanische Republik – Inkrafttreten der neuen Verfassung.",
@@ -513,7 +513,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-cg",
     "title": "Flagge Kongo-Brazzaville",
-    "category": "country",
+    "category": "flag",
     "year": 2015,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kongo-Brazzaville – Neue Verfassung nach Referendum.",
@@ -526,7 +526,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ch",
     "title": "Flagge Schweiz",
-    "category": "country",
+    "category": "flag",
     "year": 1848,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Schweiz — Gründung des modernen Bundesstaates",
@@ -539,7 +539,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ci",
     "title": "Flagge Côte d’Ivoire",
-    "category": "country",
+    "category": "flag",
     "year": 1960,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Côte d’Ivoire – 7. August 1960, Unabhaengigkeitserklaerung.",
@@ -552,7 +552,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ck",
     "title": "Flagge Cookinseln",
-    "category": "country",
+    "category": "flag",
     "year": 1965,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Cookinseln – Erlangung der Selbstverwaltung.",
@@ -565,7 +565,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-cl",
     "title": "Flagge Chile",
-    "category": "country",
+    "category": "flag",
     "year": 2005,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Chile – Große Verfassungsreform (Bruch mit Pinochet-Resten).",
@@ -578,7 +578,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-cm",
     "title": "Flagge Kamerun",
-    "category": "country",
+    "category": "flag",
     "year": 1960,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kamerun — Unabhängigkeit",
@@ -591,7 +591,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-cn",
     "title": "Flagge China",
-    "category": "country",
+    "category": "flag",
     "year": 1982,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "China – Aktuelle Verfassung der Volksrepublik.",
@@ -604,7 +604,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-co",
     "title": "Flagge Kolumbien",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kolumbien – Inkrafttreten der modernen Verfassung.",
@@ -617,7 +617,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-cr",
     "title": "Flagge Costa Rica",
-    "category": "country",
+    "category": "flag",
     "year": 1949,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Costa Rica – Neue Verfassung nach dem Bürgerkrieg.",
@@ -630,7 +630,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-cu",
     "title": "Flagge Kuba",
-    "category": "country",
+    "category": "flag",
     "year": 2019,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kuba — Neue Verfassung",
@@ -643,7 +643,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-cv",
     "title": "Flagge Cabo Verde",
-    "category": "country",
+    "category": "flag",
     "year": 1992,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Cabo Verde – Demokratisierung und neue Verfassung.",
@@ -656,7 +656,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-cw",
     "title": "Flagge Curaçao",
-    "category": "country",
+    "category": "flag",
     "year": 2010,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Curaçao – Eigenständiges Land im Königreich.",
@@ -669,7 +669,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-cx",
     "title": "Flagge Weihnachtsinsel",
-    "category": "country",
+    "category": "flag",
     "year": 1958,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Weihnachtsinsel – Übertragung der Hoheitsgewalt an Australien.",
@@ -682,7 +682,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-cy",
     "title": "Flagge Zypern",
-    "category": "country",
+    "category": "flag",
     "year": 1960,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Zypern — Unabhängigkeit",
@@ -695,7 +695,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-cz",
     "title": "Flagge Tschechien",
-    "category": "country",
+    "category": "flag",
     "year": 1993,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Tschechien — Teilung der Tschechoslowakei",
@@ -708,7 +708,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-de",
     "title": "Flagge Deutschland",
-    "category": "country",
+    "category": "flag",
     "year": 1949,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Deutschland — Grundgesetz (BRD)",
@@ -721,7 +721,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-dj",
     "title": "Flagge Dschibuti",
-    "category": "country",
+    "category": "flag",
     "year": 1977,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Dschibuti — Unabhängigkeit",
@@ -734,7 +734,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-dk",
     "title": "Flagge Dänemark",
-    "category": "country",
+    "category": "flag",
     "year": 1953,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Dänemark – Letzte große Grundgesetzänderung.",
@@ -747,7 +747,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-dm",
     "title": "Flagge Dominica",
-    "category": "country",
+    "category": "flag",
     "year": 1978,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Dominica — Unabhängigkeit",
@@ -760,7 +760,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-do",
     "title": "Flagge Dominikanische Republik",
-    "category": "country",
+    "category": "flag",
     "year": 2015,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Dominikanische Republik – Letzte große Verfassungsreform.",
@@ -773,7 +773,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-dz",
     "title": "Flagge Algerien",
-    "category": "country",
+    "category": "flag",
     "year": 1962,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Älgerien – 2020, Neue Verfassung nach den Hirak-Protesten.",
@@ -786,7 +786,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ec",
     "title": "Flagge Ecuador",
-    "category": "country",
+    "category": "flag",
     "year": 2008,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Ecuador – Inkrafttreten der aktuellen Verfassung.",
@@ -799,7 +799,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ee",
     "title": "Flagge Estland",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Estland — Wiederherstellung der Unabhängigkeit",
@@ -812,7 +812,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-eg",
     "title": "Flagge Ägypten",
-    "category": "country",
+    "category": "flag",
     "year": 1953,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Ägypten — Ausrufung der Republik",
@@ -825,7 +825,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-eh",
     "title": "Flagge Westsahara",
-    "category": "country",
+    "category": "flag",
     "year": 1976,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Westsahara – Proklamation der D.A.R.S. (Bruch mit Besatzung).",
@@ -838,7 +838,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-er",
     "title": "Flagge Eritrea",
-    "category": "country",
+    "category": "flag",
     "year": 1993,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Äthiopien – 1995, Inkrafttreten der föderalen Verfassung.",
@@ -851,7 +851,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-es",
     "title": "Flagge Spanien",
-    "category": "country",
+    "category": "flag",
     "year": 1978,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Spanien — Demokratische Verfassung",
@@ -864,7 +864,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-et",
     "title": "Flagge Äthiopien",
-    "category": "country",
+    "category": "flag",
     "year": 1995,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Äthiopien – Inkrafttreten der föderalen Verfassung.",
@@ -877,7 +877,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-fi",
     "title": "Flagge Finnland",
-    "category": "country",
+    "category": "flag",
     "year": 2000,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Finnland – Neue Verfassung (Stärkung des Parlaments).",
@@ -890,7 +890,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-fj",
     "title": "Flagge Fidschi",
-    "category": "country",
+    "category": "flag",
     "year": 1970,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Fidschi — Unabhängigkeit",
@@ -903,7 +903,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-fk",
     "title": "Flagge Falklandinseln",
-    "category": "country",
+    "category": "flag",
     "year": 2009,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Falklandinseln – Aktuelle Verfassungsordnung.",
@@ -916,7 +916,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-fm",
     "title": "Flagge Mikronesien",
-    "category": "country",
+    "category": "flag",
     "year": 1986,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Mikronesien — Unabhängigkeit",
@@ -929,7 +929,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-fo",
     "title": "Flagge Färöer",
-    "category": "country",
+    "category": "flag",
     "year": 1948,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Färöer – Autonomiegesetz (Heimastýrislóg).",
@@ -942,7 +942,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-fr",
     "title": "Flagge Frankreich",
-    "category": "country",
+    "category": "flag",
     "year": 1958,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Frankreich — Fünfte Republik",
@@ -955,7 +955,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ga",
     "title": "Flagge Gabun",
-    "category": "country",
+    "category": "flag",
     "year": 1960,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Gabun — Unabhängigkeit",
@@ -968,7 +968,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gb-eng",
     "title": "Flagge GB-ENG",
-    "category": "country",
+    "category": "flag",
     "year": 1707,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "GB-ENG – Acts of Union (Systembruch/Zusammenschluss).",
@@ -981,7 +981,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gb-nir",
     "title": "Flagge GB-NIR",
-    "category": "country",
+    "category": "flag",
     "year": 1998,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "GB-NIR – Karfreitagsabkommen (neuer systemischer Rahmen).",
@@ -994,7 +994,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gb-sct",
     "title": "Flagge GB-SCT",
-    "category": "country",
+    "category": "flag",
     "year": 1999,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "GB-SCT – Wiedereinführung des schottischen Parlaments.",
@@ -1007,7 +1007,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gb-wls",
     "title": "Flagge Wales",
-    "category": "country",
+    "category": "flag",
     "year": 1922,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Wales — Anerkennung als Landesgebiet Großbritanniens.",
@@ -1020,7 +1020,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gb",
     "title": "Flagge Vereinigtes Königreich",
-    "category": "country",
+    "category": "flag",
     "year": 1922,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Vereinigtes Königreich – Heutige Zusammensetzung (Austritt Irlands).",
@@ -1033,7 +1033,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gd",
     "title": "Flagge Grenada",
-    "category": "country",
+    "category": "flag",
     "year": 1974,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Grenada — Unabhängigkeit",
@@ -1046,7 +1046,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ge",
     "title": "Flagge Georgien",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Georgien — Unabhängigkeit von der UdSSR",
@@ -1059,7 +1059,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gf",
     "title": "Flagge Französisch-Guayana",
-    "category": "country",
+    "category": "flag",
     "year": 1946,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Französisch-Guayana – Umwandlung in ein Überseedépartement.",
@@ -1072,7 +1072,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gg",
     "title": "Flagge Guernsey",
-    "category": "country",
+    "category": "flag",
     "year": 2005,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Guernsey – Umfassende Reform der Regierungsstruktur.",
@@ -1085,7 +1085,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gh",
     "title": "Flagge Ghana",
-    "category": "country",
+    "category": "flag",
     "year": 1957,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Ghana — Unabhängigkeit",
@@ -1098,7 +1098,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gi",
     "title": "Flagge Gibraltar",
-    "category": "country",
+    "category": "flag",
     "year": 2006,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Gibraltar – Neue Verfassungsordnung.",
@@ -1111,7 +1111,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gl",
     "title": "Flagge Grönland",
-    "category": "country",
+    "category": "flag",
     "year": 2009,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Grönland – Erweiterte Selbstverwaltung (Self-Government).",
@@ -1124,7 +1124,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gm",
     "title": "Flagge Gambia",
-    "category": "country",
+    "category": "flag",
     "year": 1965,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Gambia — Unabhängigkeit",
@@ -1137,7 +1137,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gn",
     "title": "Flagge Guinea",
-    "category": "country",
+    "category": "flag",
     "year": 1958,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Guinea — Unabhängigkeit",
@@ -1150,7 +1150,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gp",
     "title": "Flagge Guadeloupe",
-    "category": "country",
+    "category": "flag",
     "year": 1946,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Guadeloupe – Umwandlung in ein Überseedépartement.",
@@ -1163,7 +1163,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gq",
     "title": "Flagge Äquatorialguinea",
-    "category": "country",
+    "category": "flag",
     "year": 1968,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Äquatorialguinea — Unabhängigkeit",
@@ -1176,7 +1176,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gr",
     "title": "Flagge Griechenland",
-    "category": "country",
+    "category": "flag",
     "year": 1975,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Griechenland – Verfassung nach Ende der Militärdiktatur.",
@@ -1189,7 +1189,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gs",
     "title": "Flagge Südgeorgien und die Südlichen Sandwichinseln",
-    "category": "country",
+    "category": "flag",
     "year": 2009,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Falklandinseln – Aktuelle Verfassungsordnung.",
@@ -1202,7 +1202,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gt",
     "title": "Flagge Guatemala",
-    "category": "country",
+    "category": "flag",
     "year": 1985,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Guatemala – Aktuelle demokratische Verfassung.",
@@ -1215,7 +1215,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gu",
     "title": "Flagge Guam",
-    "category": "country",
+    "category": "flag",
     "year": 1950,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Guam – Guam Organic Act (zivile US-Verwaltung).",
@@ -1228,7 +1228,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gw",
     "title": "Flagge Guinea-Bissau",
-    "category": "country",
+    "category": "flag",
     "year": 1974,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Guinea-Bissau — Unabhängigkeit",
@@ -1241,7 +1241,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-gy",
     "title": "Flagge Guyana",
-    "category": "country",
+    "category": "flag",
     "year": 1966,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Guyana — Unabhängigkeit",
@@ -1254,7 +1254,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-hk",
     "title": "Flagge Sonderverwaltungsregion Hongkong",
-    "category": "country",
+    "category": "flag",
     "year": 1982,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "China – Aktuelle Verfassung der Volksrepublik.",
@@ -1267,7 +1267,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-hm",
     "title": "Flagge Heard und McDonaldinseln",
-    "category": "country",
+    "category": "flag",
     "year": 1947,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Heard und McDonaldinseln – Übertragung der Verwaltung an Australien.",
@@ -1280,7 +1280,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-hn",
     "title": "Flagge Honduras",
-    "category": "country",
+    "category": "flag",
     "year": 1982,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Honduras – Rückkehr zur Demokratie und neue Verfassung.",
@@ -1293,7 +1293,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-hr",
     "title": "Flagge Kroatien",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kroatien — Unabhängigkeit von Jugoslawien",
@@ -1306,7 +1306,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ht",
     "title": "Flagge Haiti",
-    "category": "country",
+    "category": "flag",
     "year": 1987,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Haiti – Verfassung nach Ende der Duvalier-Diktatur.",
@@ -1319,7 +1319,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-id",
     "title": "Flagge Indonesien",
-    "category": "country",
+    "category": "flag",
     "year": 1945,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Indonesien — Unabhängigkeit",
@@ -1332,7 +1332,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ie",
     "title": "Flagge Irland",
-    "category": "country",
+    "category": "flag",
     "year": 1921,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Irland — Unabhängigkeit (Freistaat)",
@@ -1345,7 +1345,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-il",
     "title": "Flagge Israel",
-    "category": "country",
+    "category": "flag",
     "year": 1948,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Israel — Staatsgründung",
@@ -1358,7 +1358,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-im",
     "title": "Flagge Isle of Man",
-    "category": "country",
+    "category": "flag",
     "year": 1979,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Isle of Man – Festigung des Autonomiestatus (Tynwald).",
@@ -1371,7 +1371,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-in",
     "title": "Flagge Indien",
-    "category": "country",
+    "category": "flag",
     "year": 1947,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Indien — Unabhängigkeit",
@@ -1384,7 +1384,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-io",
     "title": "Flagge Britisches Territorium im Indischen Ozean",
-    "category": "country",
+    "category": "flag",
     "year": 1965,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Britisches Territorium im Indischen Ozean – Einrichtung als eigenständiges Territorium.",
@@ -1397,7 +1397,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-iq",
     "title": "Flagge Irak",
-    "category": "country",
+    "category": "flag",
     "year": 2005,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Irak — Post-Saddam Verfassung",
@@ -1410,7 +1410,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ir",
     "title": "Flagge Iran",
-    "category": "country",
+    "category": "flag",
     "year": 1979,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Iran — Islamische Republik",
@@ -1423,7 +1423,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-is",
     "title": "Flagge Island",
-    "category": "country",
+    "category": "flag",
     "year": 1944,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Island — Republikgründung",
@@ -1436,7 +1436,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-it",
     "title": "Flagge Italien",
-    "category": "country",
+    "category": "flag",
     "year": 1948,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Italien — Republikanische Verfassung",
@@ -1449,7 +1449,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-je",
     "title": "Flagge Jersey",
-    "category": "country",
+    "category": "flag",
     "year": 2005,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Jersey – Reform der Regierungsstruktur.",
@@ -1462,7 +1462,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-jm",
     "title": "Flagge Jamaika",
-    "category": "country",
+    "category": "flag",
     "year": 1962,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Jamaika — Unabhängigkeit",
@@ -1475,7 +1475,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-jo",
     "title": "Flagge Jordanien",
-    "category": "country",
+    "category": "flag",
     "year": 1946,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Jordanien — Unabhängigkeit",
@@ -1488,7 +1488,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-jp",
     "title": "Flagge Japan",
-    "category": "country",
+    "category": "flag",
     "year": 1946,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Japan — Nachkriegsverfassung",
@@ -1501,7 +1501,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ke",
     "title": "Flagge Kenia",
-    "category": "country",
+    "category": "flag",
     "year": 1963,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kenia — Unabhängigkeit",
@@ -1514,7 +1514,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-kg",
     "title": "Flagge Kirgisistan",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kirgisistan — Unabhängigkeit von der UdSSR",
@@ -1527,7 +1527,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-kh",
     "title": "Flagge Kambodscha",
-    "category": "country",
+    "category": "flag",
     "year": 1953,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kambodscha — Unabhängigkeit",
@@ -1540,7 +1540,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ki",
     "title": "Flagge Kiribati",
-    "category": "country",
+    "category": "flag",
     "year": 1979,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kiribati — Unabhängigkeit",
@@ -1553,7 +1553,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-km",
     "title": "Flagge Komoren",
-    "category": "country",
+    "category": "flag",
     "year": 1975,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Komoren — Unabhängigkeit",
@@ -1566,7 +1566,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-kn",
     "title": "Flagge St. Kitts und Nevis",
-    "category": "country",
+    "category": "flag",
     "year": 1983,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "St. Kitts und Nevis – Unabhängigkeit vom Vereinigten Königreich.",
@@ -1579,7 +1579,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-kp",
     "title": "Flagge Nordkorea",
-    "category": "country",
+    "category": "flag",
     "year": 1948,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Nordkorea — Gründung der DVRK",
@@ -1592,7 +1592,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-kr",
     "title": "Flagge Südkorea",
-    "category": "country",
+    "category": "flag",
     "year": 1948,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Südkorea — Gründung der Republik",
@@ -1605,7 +1605,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-kw",
     "title": "Flagge Kuwait",
-    "category": "country",
+    "category": "flag",
     "year": 1961,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kuwait — Unabhängigkeit",
@@ -1618,7 +1618,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ky",
     "title": "Flagge Kaimaninseln",
-    "category": "country",
+    "category": "flag",
     "year": 2009,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kaimaninseln – Aktuelle Verfassungsordnung.",
@@ -1631,7 +1631,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-kz",
     "title": "Flagge Kasachstan",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kasachstan — Unabhängigkeit von der UdSSR",
@@ -1644,7 +1644,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-la",
     "title": "Flagge Laos",
-    "category": "country",
+    "category": "flag",
     "year": 1949,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Laos — Unabhängigkeit von Frankreich",
@@ -1657,7 +1657,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-lb",
     "title": "Flagge Libanon",
-    "category": "country",
+    "category": "flag",
     "year": 1943,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Libanon — Unabhängigkeit von Frankreich",
@@ -1670,7 +1670,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-lc",
     "title": "Flagge St. Lucia",
-    "category": "country",
+    "category": "flag",
     "year": 1979,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "St. Lucia — Unabhängigkeit",
@@ -1683,7 +1683,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-li",
     "title": "Flagge Liechtenstein",
-    "category": "country",
+    "category": "flag",
     "year": 2003,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Liechtenstein – Umfassende Verfassungsreform.",
@@ -1696,7 +1696,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-lk",
     "title": "Flagge Sri Lanka",
-    "category": "country",
+    "category": "flag",
     "year": 1948,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Sri Lanka — Unabhängigkeit",
@@ -1709,7 +1709,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-lr",
     "title": "Flagge Liberia",
-    "category": "country",
+    "category": "flag",
     "year": 1986,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Liberia – Aktuelle Verfassung nach Bürgerkrieg.",
@@ -1722,7 +1722,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ls",
     "title": "Flagge Lesotho",
-    "category": "country",
+    "category": "flag",
     "year": 1966,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Lesotho — Unabhängigkeit",
@@ -1735,7 +1735,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-lt",
     "title": "Flagge Litauen",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Litauen — Wiederherstellung der Unabhängigkeit",
@@ -1748,7 +1748,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-lu",
     "title": "Flagge Luxemburg",
-    "category": "country",
+    "category": "flag",
     "year": 1868,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Luxemburg — Aktuelle Verfassung",
@@ -1761,7 +1761,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-lv",
     "title": "Flagge Lettland",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Lettland — Wiederherstellung der Unabhängigkeit",
@@ -1774,7 +1774,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ly",
     "title": "Flagge Libyen",
-    "category": "country",
+    "category": "flag",
     "year": 1951,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Libyen — Unabhängigkeit (Systemwechsel 2011)",
@@ -1787,7 +1787,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ma",
     "title": "Flagge Marokko",
-    "category": "country",
+    "category": "flag",
     "year": 1956,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Marokko — Ende der Protektorate",
@@ -1800,7 +1800,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mc",
     "title": "Flagge Monaco",
-    "category": "country",
+    "category": "flag",
     "year": 1962,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Monaco – Große Verfassungsreform.",
@@ -1813,7 +1813,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-md",
     "title": "Flagge Republik Moldau",
-    "category": "country",
+    "category": "flag",
     "year": 1994,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Republik Moldau – Inkrafttreten der Verfassung.",
@@ -1826,7 +1826,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-me",
     "title": "Flagge Montenegro",
-    "category": "country",
+    "category": "flag",
     "year": 2006,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Montenegro — Unabhängigkeit von Serbien",
@@ -1839,7 +1839,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mf",
     "title": "Flagge St. Martin",
-    "category": "country",
+    "category": "flag",
     "year": 1946,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Guadeloupe – Umwandlung in ein Überseedépartement.",
@@ -1852,7 +1852,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mg",
     "title": "Flagge Madagaskar",
-    "category": "country",
+    "category": "flag",
     "year": 1960,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Madagaskar — Unabhängigkeit",
@@ -1865,7 +1865,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mh",
     "title": "Flagge Marshallinseln",
-    "category": "country",
+    "category": "flag",
     "year": 1986,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Marshallinseln — Unabhängigkeit",
@@ -1878,7 +1878,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mk",
     "title": "Flagge Nordmazedonien",
-    "category": "country",
+    "category": "flag",
     "year": 1992,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Nordmazedonien — Unabhängigkeit von Jugoslawien",
@@ -1891,7 +1891,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ml",
     "title": "Flagge Mali",
-    "category": "country",
+    "category": "flag",
     "year": 1960,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Mali — Unabhängigkeit",
@@ -1904,7 +1904,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mm",
     "title": "Flagge Myanmar",
-    "category": "country",
+    "category": "flag",
     "year": 1948,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Myanmar — Unabhängigkeit",
@@ -1917,7 +1917,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mn",
     "title": "Flagge Mongolei",
-    "category": "country",
+    "category": "flag",
     "year": 1992,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Mongolei – Verfassung nach Ende des Einparteiensystems.",
@@ -1930,7 +1930,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mo",
     "title": "Flagge Sonderverwaltungsregion Macau",
-    "category": "country",
+    "category": "flag",
     "year": 1982,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "China – Aktuelle Verfassung der Volksrepublik.",
@@ -1943,7 +1943,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mp",
     "title": "Flagge Nördliche Marianen",
-    "category": "country",
+    "category": "flag",
     "year": 1978,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Nördliche Marianen – Inkrafttreten der eigenen Verfassung.",
@@ -1956,7 +1956,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mq",
     "title": "Flagge Martinique",
-    "category": "country",
+    "category": "flag",
     "year": 1946,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Martinique – Umwandlung in ein Überseedépartement.",
@@ -1969,7 +1969,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mr",
     "title": "Flagge Mauretanien",
-    "category": "country",
+    "category": "flag",
     "year": 1960,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Mauretanien — Unabhängigkeit",
@@ -1982,7 +1982,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ms",
     "title": "Flagge Montserrat",
-    "category": "country",
+    "category": "flag",
     "year": 2010,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Montserrat – Aktuelle Verfassungsordnung.",
@@ -1995,7 +1995,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mt",
     "title": "Flagge Malta",
-    "category": "country",
+    "category": "flag",
     "year": 1964,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Malta — Unabhängigkeit",
@@ -2008,7 +2008,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mu",
     "title": "Flagge Mauritius",
-    "category": "country",
+    "category": "flag",
     "year": 1968,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Mauritius — Unabhängigkeit",
@@ -2021,7 +2021,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mv",
     "title": "Flagge Malediven",
-    "category": "country",
+    "category": "flag",
     "year": 1965,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Malediven — Unabhängigkeit",
@@ -2034,7 +2034,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mw",
     "title": "Flagge Malawi",
-    "category": "country",
+    "category": "flag",
     "year": 1964,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Malawi — Unabhängigkeit",
@@ -2047,7 +2047,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mx",
     "title": "Flagge Mexiko",
-    "category": "country",
+    "category": "flag",
     "year": 1917,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Mexiko – Verfassung nach der Revolution.",
@@ -2060,7 +2060,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-my",
     "title": "Flagge Malaysia",
-    "category": "country",
+    "category": "flag",
     "year": 1957,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Malaysia — Unabhängigkeit",
@@ -2073,7 +2073,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-mz",
     "title": "Flagge Mosambik",
-    "category": "country",
+    "category": "flag",
     "year": 1975,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Mosambik — Unabhängigkeit",
@@ -2086,7 +2086,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-na",
     "title": "Flagge Namibia",
-    "category": "country",
+    "category": "flag",
     "year": 1990,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Namibia — Unabhängigkeit",
@@ -2099,7 +2099,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-nc",
     "title": "Flagge Neukaledonien",
-    "category": "country",
+    "category": "flag",
     "year": 1998,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Neukaledonien – Abkommen von Nouméa (Sonderstatus).",
@@ -2112,7 +2112,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ne",
     "title": "Flagge Niger",
-    "category": "country",
+    "category": "flag",
     "year": 1960,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Niger — Unabhängigkeit",
@@ -2125,7 +2125,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-nf",
     "title": "Flagge Norfolkinsel",
-    "category": "country",
+    "category": "flag",
     "year": 2016,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Norfolkinsel – Aufhebung der Selbstverwaltung (Bruch).",
@@ -2138,7 +2138,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ng",
     "title": "Flagge Nigeria",
-    "category": "country",
+    "category": "flag",
     "year": 1960,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Nigeria — Unabhängigkeit",
@@ -2151,7 +2151,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ni",
     "title": "Flagge Nicaragua",
-    "category": "country",
+    "category": "flag",
     "year": 1987,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Nicaragua – Inkrafttreten der aktuellen Verfassung.",
@@ -2164,7 +2164,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-nl",
     "title": "Flagge Niederlande",
-    "category": "country",
+    "category": "flag",
     "year": 1983,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Niederlande – Totalrevision der Verfassung.",
@@ -2177,7 +2177,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-no",
     "title": "Flagge Norwegen",
-    "category": "country",
+    "category": "flag",
     "year": 1814,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Norwegen — Verfassung von Eidsvoll (Konstitutionelle Monarchie)",
@@ -2190,7 +2190,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-np",
     "title": "Flagge Nepal",
-    "category": "country",
+    "category": "flag",
     "year": 2008,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Nepal — Ausrufung der Republik",
@@ -2203,7 +2203,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-nr",
     "title": "Flagge Nauru",
-    "category": "country",
+    "category": "flag",
     "year": 1968,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Nauru – Unabhängigkeit und Verfassungsgebung.",
@@ -2216,7 +2216,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-nu",
     "title": "Flagge Niue",
-    "category": "country",
+    "category": "flag",
     "year": 1974,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Niue – Erlangung der Selbstverwaltung (Assoziierung).",
@@ -2229,7 +2229,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-nz",
     "title": "Flagge Neuseeland",
-    "category": "country",
+    "category": "flag",
     "year": 1890,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Neuseeland — Erlangung des Selbstverwaltungsstatus (Dominion-Status 1907)",
@@ -2242,7 +2242,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-pa",
     "title": "Flagge Panama",
-    "category": "country",
+    "category": "flag",
     "year": 1972,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Panama – Aktuelle Verfassung (reformiert).",
@@ -2255,7 +2255,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-pe",
     "title": "Flagge Peru",
-    "category": "country",
+    "category": "flag",
     "year": 1993,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Peru – Aktuelle Verfassung.",
@@ -2268,7 +2268,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-pf",
     "title": "Flagge Französisch-Polynesien",
-    "category": "country",
+    "category": "flag",
     "year": 2004,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Französisch-Polynesien – Status als Überseeland (POM).",
@@ -2281,7 +2281,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-pg",
     "title": "Flagge Papua-Neuguinea",
-    "category": "country",
+    "category": "flag",
     "year": 1975,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Papua-Neuguinea — Unabhängigkeit",
@@ -2294,7 +2294,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ph",
     "title": "Flagge Philippinen",
-    "category": "country",
+    "category": "flag",
     "year": 1987,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Philippinen — Aktuelle Verfassung",
@@ -2307,7 +2307,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-pk",
     "title": "Flagge Pakistan",
-    "category": "country",
+    "category": "flag",
     "year": 1947,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Pakistan — Unabhängigkeit",
@@ -2320,7 +2320,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-pl",
     "title": "Flagge Polen",
-    "category": "country",
+    "category": "flag",
     "year": 1997,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Polen — Aktuelle Verfassung",
@@ -2333,7 +2333,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-pm",
     "title": "Flagge St. Pierre und Miquelon",
-    "category": "country",
+    "category": "flag",
     "year": 2003,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "St. Pierre und Miquelon – Status als Überseekollektiv.",
@@ -2346,7 +2346,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-pn",
     "title": "Flagge Pitcairninseln",
-    "category": "country",
+    "category": "flag",
     "year": 2010,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Pitcairninseln – Erste moderne Verfassungsordnung.",
@@ -2359,7 +2359,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-pr",
     "title": "Flagge Puerto Rico",
-    "category": "country",
+    "category": "flag",
     "year": 1952,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Puerto Rico – Inkrafttreten der eigenen Verfassung.",
@@ -2372,7 +2372,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ps",
     "title": "Flagge Palästinensische Autonomiegebiete",
-    "category": "country",
+    "category": "flag",
     "year": 2003,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Palästinensische Autonomiegebiete – Revidiertes Grundgesetz.",
@@ -2385,7 +2385,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-pt",
     "title": "Flagge Portugal",
-    "category": "country",
+    "category": "flag",
     "year": 1976,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Portugal – Verfassung nach der Nelkenrevolution.",
@@ -2398,7 +2398,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-pw",
     "title": "Flagge Palau",
-    "category": "country",
+    "category": "flag",
     "year": 1981,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Palau — Verfassung (Souveränität 1994)",
@@ -2411,7 +2411,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-py",
     "title": "Flagge Paraguay",
-    "category": "country",
+    "category": "flag",
     "year": 1992,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Paraguay – Verfassung nach Ende der Diktatur.",
@@ -2424,7 +2424,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-qa",
     "title": "Flagge Katar",
-    "category": "country",
+    "category": "flag",
     "year": 1971,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Katar — Unabhängigkeit",
@@ -2437,7 +2437,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-re",
     "title": "Flagge Réunion",
-    "category": "country",
+    "category": "flag",
     "year": 1946,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Réunion – Umwandlung in ein Überseedépartement.",
@@ -2450,7 +2450,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ro",
     "title": "Flagge Rumänien",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Rumänien – Verfassung nach Ende des Kommunismus.",
@@ -2463,7 +2463,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-rs",
     "title": "Flagge Serbien",
-    "category": "country",
+    "category": "flag",
     "year": 2006,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Serbien — Auflösung der Union mit Montenegro",
@@ -2476,7 +2476,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ru",
     "title": "Flagge Russland",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Russland — Russische Föderation (Post-Sowjet)",
@@ -2489,7 +2489,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-rw",
     "title": "Flagge Ruanda",
-    "category": "country",
+    "category": "flag",
     "year": 1962,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Ruanda — Unabhängigkeit",
@@ -2502,7 +2502,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sa",
     "title": "Flagge Saudi-Arabien",
-    "category": "country",
+    "category": "flag",
     "year": 1932,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Saudi-Arabien — Vereinigung der Königreiche",
@@ -2515,7 +2515,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sb",
     "title": "Flagge Salomonen",
-    "category": "country",
+    "category": "flag",
     "year": 1978,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Salomonen — Unabhängigkeit",
@@ -2528,7 +2528,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sc",
     "title": "Flagge Seychellen",
-    "category": "country",
+    "category": "flag",
     "year": 1993,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Seychellen – Rückkehr zur Mehrparteiendemokratie.",
@@ -2541,7 +2541,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sd",
     "title": "Flagge Sudan",
-    "category": "country",
+    "category": "flag",
     "year": 1956,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Sudan — Unabhängigkeit",
@@ -2554,7 +2554,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-se",
     "title": "Flagge Schweden",
-    "category": "country",
+    "category": "flag",
     "year": 1974,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Schweden – Aktuelle Regierungsform (Regeringsformen).",
@@ -2567,7 +2567,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sg",
     "title": "Flagge Singapur",
-    "category": "country",
+    "category": "flag",
     "year": 1965,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Singapur — Trennung von Malaysia",
@@ -2580,7 +2580,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sh",
     "title": "Flagge St. Helena",
-    "category": "country",
+    "category": "flag",
     "year": 2009,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "St. Helena – Aktuelle Verfassungsordnung.",
@@ -2593,7 +2593,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-si",
     "title": "Flagge Slowenien",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Slowenien — Unabhängigkeit von Jugoslawien",
@@ -2606,7 +2606,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sj",
     "title": "Flagge Spitzbergen und Jan Mayen",
-    "category": "country",
+    "category": "flag",
     "year": 1925,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Spitzbergen und Jan Mayen – Inkrafttreten des Spitzbergen-Vertrags.",
@@ -2619,7 +2619,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sk",
     "title": "Flagge Slowakei",
-    "category": "country",
+    "category": "flag",
     "year": 1993,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Slowakei — Teilung der Tschechoslowakei",
@@ -2632,7 +2632,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sl",
     "title": "Flagge Sierra Leone",
-    "category": "country",
+    "category": "flag",
     "year": 1961,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Sierra Leone — Unabhängigkeit",
@@ -2645,7 +2645,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sm",
     "title": "Flagge San Marino",
-    "category": "country",
+    "category": "flag",
     "year": 1600,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "San Marino — Verabschiedung der Statuten (älteste Republik)",
@@ -2658,7 +2658,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sn",
     "title": "Flagge Senegal",
-    "category": "country",
+    "category": "flag",
     "year": 1960,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Senegal — Unabhängigkeit",
@@ -2671,7 +2671,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-so",
     "title": "Flagge Somalia",
-    "category": "country",
+    "category": "flag",
     "year": 1960,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Somalia — Unabhängigkeit",
@@ -2684,7 +2684,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sr",
     "title": "Flagge Suriname",
-    "category": "country",
+    "category": "flag",
     "year": 1975,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Suriname — Unabhängigkeit",
@@ -2697,7 +2697,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ss",
     "title": "Flagge Südsudan",
-    "category": "country",
+    "category": "flag",
     "year": 2011,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Südsudan — Unabhängigkeit vom Sudan",
@@ -2710,7 +2710,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-st",
     "title": "Flagge São Tomé und Príncipe",
-    "category": "country",
+    "category": "flag",
     "year": 1990,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "São Tomé und Príncipe – Einführung des Mehrparteiensystems.",
@@ -2723,7 +2723,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sv",
     "title": "Flagge El Salvador",
-    "category": "country",
+    "category": "flag",
     "year": 1983,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "El Salvador – Inkrafttreten der aktuellen Verfassung.",
@@ -2736,7 +2736,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sx",
     "title": "Flagge Sint Maarten",
-    "category": "country",
+    "category": "flag",
     "year": 2010,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Sint Maarten – Auflösung der NL-Antillen (Eigenständigkeit).",
@@ -2749,7 +2749,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sy",
     "title": "Flagge Syrien",
-    "category": "country",
+    "category": "flag",
     "year": 1946,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Syrien — Unabhängigkeit von Frankreich",
@@ -2762,7 +2762,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-sz",
     "title": "Flagge Eswatini",
-    "category": "country",
+    "category": "flag",
     "year": 1968,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Eswatini — Unabhängigkeit",
@@ -2775,7 +2775,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-tc",
     "title": "Flagge Turks- und Caicosinseln",
-    "category": "country",
+    "category": "flag",
     "year": 2011,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Turks- und Caicosinseln – Neue Verfassung nach politischer Krise.",
@@ -2788,7 +2788,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-td",
     "title": "Flagge Tschad",
-    "category": "country",
+    "category": "flag",
     "year": 2022,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Tschad — Neue Verfassung/Übergangsrat",
@@ -2801,7 +2801,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-tf",
     "title": "Flagge Französische Süd- und Antarktisgebiete",
-    "category": "country",
+    "category": "flag",
     "year": 1961,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Antarktis – Inkrafttreten des Antarktis-Vertrags.",
@@ -2814,7 +2814,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-tg",
     "title": "Flagge Togo",
-    "category": "country",
+    "category": "flag",
     "year": 1960,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Togo — Unabhängigkeit",
@@ -2827,7 +2827,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-th",
     "title": "Flagge Thailand",
-    "category": "country",
+    "category": "flag",
     "year": 1932,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Thailand — Ende der absoluten Monarchie",
@@ -2840,7 +2840,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-tj",
     "title": "Flagge Tadschikistan",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Tadschikistan — Unabhängigkeit von der UdSSR",
@@ -2853,7 +2853,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-tk",
     "title": "Flagge Tokelau",
-    "category": "country",
+    "category": "flag",
     "year": 2006,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Tokelau – Tokelau Constitution Act.",
@@ -2866,7 +2866,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-tl",
     "title": "Flagge Timor-Leste",
-    "category": "country",
+    "category": "flag",
     "year": 2002,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Timor-Leste — Unabhängigkeit und Verfassung.",
@@ -2879,7 +2879,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-tm",
     "title": "Flagge Turkmenistan",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Turkmenistan — Unabhängigkeit von der UdSSR",
@@ -2892,7 +2892,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-tn",
     "title": "Flagge Tunesien",
-    "category": "country",
+    "category": "flag",
     "year": 2014,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Tunesien — Neue Verfassung (Arabischer Frühling)",
@@ -2905,7 +2905,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-to",
     "title": "Flagge Tonga",
-    "category": "country",
+    "category": "flag",
     "year": 2010,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Tonga – Parlamentarisierung der Monarchie.",
@@ -2918,7 +2918,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-tr",
     "title": "Flagge Türkei",
-    "category": "country",
+    "category": "flag",
     "year": 1923,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Türkei — Ausrufung der Republik",
@@ -2931,7 +2931,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-tt",
     "title": "Flagge Trinidad und Tobago",
-    "category": "country",
+    "category": "flag",
     "year": 1976,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Trinidad und Tobago – Umwandlung in eine Republik.",
@@ -2944,7 +2944,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-tv",
     "title": "Flagge Tuvalu",
-    "category": "country",
+    "category": "flag",
     "year": 1978,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Tuvalu — Unabhängigkeit",
@@ -2957,7 +2957,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-tw",
     "title": "Flagge Taiwan",
-    "category": "country",
+    "category": "flag",
     "year": 1991,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Taiwan – Beginn der Demokratisierung (Zusatzartikel).",
@@ -2970,7 +2970,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-tz",
     "title": "Flagge Tansania",
-    "category": "country",
+    "category": "flag",
     "year": 1961,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Tansania — Unabhängigkeit (als Tanganjika)",
@@ -2983,7 +2983,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-us",
     "title": "Flagge Vereinigte Staaten",
-    "category": "country",
+    "category": "flag",
     "year": 1789,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Vereinigte Staaten — Inkrafttreten der US-Verfassung.",
@@ -2996,7 +2996,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-va",
     "title": "Flagge Vatikanstadt",
-    "category": "country",
+    "category": "flag",
     "year": 1929,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Vatikanstadt — Lateranverträge",
@@ -3009,7 +3009,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-vc",
     "title": "Flagge St. Vincent und die Grenadinen",
-    "category": "country",
+    "category": "flag",
     "year": 1985,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "St. Vincent und die Grenadinen – Neuer systemischer Bruch (Politik/Flagge).",
@@ -3022,7 +3022,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ve",
     "title": "Flagge Venezuela",
-    "category": "country",
+    "category": "flag",
     "year": 1999,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Venezuela – Inkrafttreten der Bolivarischen Verfassung.",
@@ -3035,7 +3035,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-vg",
     "title": "Flagge Britische Jungferninseln",
-    "category": "country",
+    "category": "flag",
     "year": 2007,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Britische Jungferninseln – Neue Verfassungsordnung.",
@@ -3048,7 +3048,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-vn",
     "title": "Flagge Vietnam",
-    "category": "country",
+    "category": "flag",
     "year": 1975,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Vietnam — Wiedervereinigung",
@@ -3061,7 +3061,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-vu",
     "title": "Flagge Vanuatu",
-    "category": "country",
+    "category": "flag",
     "year": 1980,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Vanuatu — Unabhängigkeit",
@@ -3074,7 +3074,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-wf",
     "title": "Flagge Wallis und Futuna",
-    "category": "country",
+    "category": "flag",
     "year": 1961,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Wallis und Futuna – Status als Überseegebiet.",
@@ -3087,7 +3087,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ws",
     "title": "Flagge Samoa",
-    "category": "country",
+    "category": "flag",
     "year": 1962,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Samoa – Unabhängigkeit von Neuseeland.",
@@ -3100,7 +3100,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-xk",
     "title": "Flagge Kosovo",
-    "category": "country",
+    "category": "flag",
     "year": 2008,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Kosovo — Unabhängigkeit (Teilweise anerkannt)",
@@ -3113,7 +3113,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-ye",
     "title": "Flagge Jemen",
-    "category": "country",
+    "category": "flag",
     "year": 1990,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Jemen — Wiedervereinigung",
@@ -3126,7 +3126,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-yt",
     "title": "Flagge Mayotte",
-    "category": "country",
+    "category": "flag",
     "year": 2011,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Mayotte – Status als französisches Département.",
@@ -3139,7 +3139,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-za",
     "title": "Flagge Südafrika",
-    "category": "country",
+    "category": "flag",
     "year": 1994,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Südafrika — Erste freie Wahlen (Ende Apartheid)",
@@ -3152,7 +3152,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-zm",
     "title": "Flagge Sambia",
-    "category": "country",
+    "category": "flag",
     "year": 1964,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Sambia — Unabhängigkeit",
@@ -3165,7 +3165,7 @@ export const flagCards: Card[] = [
   {
     "id": "flag-zw",
     "title": "Flagge Simbabwe",
-    "category": "country",
+    "category": "flag",
     "year": 1980,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
     "answer": "Simbabwe — Unabhängigkeit",

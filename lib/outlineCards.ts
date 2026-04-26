@@ -6,7 +6,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ad",
     "title": "Umriss Andorra",
-    "category": "country",
+    "category": "outline",
     "year": 1993,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Andorra – Erste Verfassung (Souveränität)",
@@ -25,7 +25,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ae",
     "title": "Umriss Vereinigte Arabische Emirate",
-    "category": "country",
+    "category": "outline",
     "year": 1971,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Vereinigte Arabische Emirate – Gründung der Föderation.",
@@ -44,7 +44,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-af",
     "title": "Umriss Afghanistan",
-    "category": "country",
+    "category": "outline",
     "year": 2021,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Äfghanistan – Machtübernahme der Taliban.",
@@ -63,7 +63,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ag",
     "title": "Umriss Antigua und Barbuda",
-    "category": "country",
+    "category": "outline",
     "year": 1981,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Äntigua und Barbuda – Unabhängigkeit vom UK.",
@@ -82,7 +82,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ai",
     "title": "Umriss Anguilla",
-    "category": "country",
+    "category": "outline",
     "year": 1982,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Änguilla – Aktuelle Verfassungsordnung.",
@@ -101,7 +101,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-al",
     "title": "Umriss Albanien",
-    "category": "country",
+    "category": "outline",
     "year": 1998,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Älbanien – Aktuelle Verfassung.",
@@ -120,7 +120,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-am",
     "title": "Umriss Armenien",
-    "category": "country",
+    "category": "outline",
     "year": 2015,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Ärmenie – Wechsel zum Parlamentarismus.",
@@ -139,7 +139,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ao",
     "title": "Umriss Angola",
-    "category": "country",
+    "category": "outline",
     "year": 2010,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Ängola – Aktuelle Verfassung.",
@@ -158,7 +158,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-as",
     "title": "Umriss Amerikanisch-Samoa",
-    "category": "country",
+    "category": "outline",
     "year": 1962,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Samoa – Unabhängigkeit.",
@@ -177,7 +177,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-at",
     "title": "Umriss Österreich",
-    "category": "country",
+    "category": "outline",
     "year": 1945,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Österreich – Zweite Republik",
@@ -196,7 +196,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-au",
     "title": "Umriss Australien",
-    "category": "country",
+    "category": "outline",
     "year": 1986,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Äustralien – Australia Act.",
@@ -215,7 +215,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-aw",
     "title": "Umriss Aruba",
-    "category": "country",
+    "category": "outline",
     "year": 1986,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Äruba – Status Aparte.",
@@ -234,7 +234,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ax",
     "title": "Umriss Ålandinseln",
-    "category": "country",
+    "category": "outline",
     "year": 1993,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Ålandinseln – Neue Autonomie-Akte.",
@@ -253,7 +253,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-az",
     "title": "Umriss Aserbaidschan",
-    "category": "country",
+    "category": "outline",
     "year": 1995,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Äserbaidschan – Unabhängigkeitsverfassung.",
@@ -272,7 +272,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ba",
     "title": "Umriss Bosnien und Herzegowina",
-    "category": "country",
+    "category": "outline",
     "year": 1995,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Bosnien und Herzegowina – Dayton-Abkommen.",
@@ -291,7 +291,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bb",
     "title": "Umriss Barbados",
-    "category": "country",
+    "category": "outline",
     "year": 2021,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Barbados – Übergang zur Republik",
@@ -310,7 +310,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bd",
     "title": "Umriss Bangladesch",
-    "category": "country",
+    "category": "outline",
     "year": 1971,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Bangladesch – Unabhängigkeit",
@@ -329,7 +329,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-be",
     "title": "Umriss Belgien",
-    "category": "country",
+    "category": "outline",
     "year": 1831,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Belgien – Unabhängigkeit und Verfassung nach der Revolution",
@@ -348,7 +348,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bf",
     "title": "Umriss Burkina Faso",
-    "category": "country",
+    "category": "outline",
     "year": 1960,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Burkina Faso – Unabhängigkeit",
@@ -367,7 +367,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bg",
     "title": "Umriss Bulgarien",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Bulgarien – Post-sozialistische Verfassung.",
@@ -386,7 +386,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bh",
     "title": "Umriss Bahrain",
-    "category": "country",
+    "category": "outline",
     "year": 1971,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Bahrain – Unabhängigkeit",
@@ -405,7 +405,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bi",
     "title": "Umriss Burundi",
-    "category": "country",
+    "category": "outline",
     "year": 1962,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Burundi – Unabhängigkeit",
@@ -424,7 +424,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bj",
     "title": "Umriss Benin",
-    "category": "country",
+    "category": "outline",
     "year": 1960,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Benin – Unabhängigkeit",
@@ -443,7 +443,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bl",
     "title": "Umriss St. Barthélemy",
-    "category": "country",
+    "category": "outline",
     "year": 2007,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "St. Barthélemy – Überseekollektiv.",
@@ -462,7 +462,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bm",
     "title": "Umriss Bermuda",
-    "category": "country",
+    "category": "outline",
     "year": 1968,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Bermuda – Verfassungsordnung.",
@@ -481,7 +481,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bn",
     "title": "Umriss Brunei Darussalam",
-    "category": "country",
+    "category": "outline",
     "year": 1984,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Brunei Darussalam – Unabhängigkeit.",
@@ -500,7 +500,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bo",
     "title": "Umriss Bolivien",
-    "category": "country",
+    "category": "outline",
     "year": 2009,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Bolivien – Plurinationaler Staat.",
@@ -519,7 +519,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bq",
     "title": "Umriss Karibische Niederlande",
-    "category": "country",
+    "category": "outline",
     "year": 1983,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Niederlande – Totalrevision.",
@@ -538,7 +538,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-br",
     "title": "Umriss Brasilien",
-    "category": "country",
+    "category": "outline",
     "year": 1988,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Brasilien – Aktuelle Verfassung",
@@ -557,7 +557,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bs",
     "title": "Umriss Bahamas",
-    "category": "country",
+    "category": "outline",
     "year": 1973,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Bahamas – Unabhängigkeit",
@@ -576,7 +576,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bt",
     "title": "Umriss Bhutan",
-    "category": "country",
+    "category": "outline",
     "year": 2008,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Bhutan – Konstitutionelle Monarchie.",
@@ -595,7 +595,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bv",
     "title": "Umriss Bouvetinsel",
-    "category": "country",
+    "category": "outline",
     "year": 1930,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Bouvetinsel – Norwegische Souveränität.",
@@ -614,7 +614,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bw",
     "title": "Umriss Botsuana",
-    "category": "country",
+    "category": "outline",
     "year": 1966,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Botsuana – Unabhängigkeit.",
@@ -633,7 +633,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-by",
     "title": "Umriss Belarus",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Belarus – Unabhängigkeit von der UdSSR",
@@ -652,7 +652,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-bz",
     "title": "Umriss Belize",
-    "category": "country",
+    "category": "outline",
     "year": 1981,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Belize – Unabhängigkeit",
@@ -671,7 +671,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ca",
     "title": "Umriss Kanada",
-    "category": "country",
+    "category": "outline",
     "year": 1867,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kanada – British North America Act (Beginn der Eigenstaatlichkeit)",
@@ -690,7 +690,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-cc",
     "title": "Umriss Kokosinseln",
-    "category": "country",
+    "category": "outline",
     "year": 1984,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kokosinseln – Integration in Australien.",
@@ -709,7 +709,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-cd",
     "title": "Umriss Kongo-Kinshasa",
-    "category": "country",
+    "category": "outline",
     "year": 2006,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kongo-Kinshasa – III. Republik.",
@@ -728,7 +728,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-cf",
     "title": "Umriss Zentralafrikanische Republik",
-    "category": "country",
+    "category": "outline",
     "year": 2023,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Zentralafrikanische Republik – Neue Verfassung.",
@@ -747,7 +747,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-cg",
     "title": "Umriss Kongo-Brazzaville",
-    "category": "country",
+    "category": "outline",
     "year": 2015,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kongo-Brazzaville – Neue Verfassung.",
@@ -766,7 +766,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ch",
     "title": "Umriss Schweiz",
-    "category": "country",
+    "category": "outline",
     "year": 1848,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Schweiz – Gründung des modernen Bundesstaates",
@@ -785,7 +785,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ci",
     "title": "Umriss Côte d’Ivoire",
-    "category": "country",
+    "category": "outline",
     "year": 1960,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Côte d’Ivoire – 7. August 1960, Unabhaengigkeitserklaerung.",
@@ -804,7 +804,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ck",
     "title": "Umriss Cookinseln",
-    "category": "country",
+    "category": "outline",
     "year": 1965,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Cookinseln – Selbstverwaltung.",
@@ -823,7 +823,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-cl",
     "title": "Umriss Chile",
-    "category": "country",
+    "category": "outline",
     "year": 2005,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Chile – Verfassungsreform.",
@@ -842,7 +842,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-cm",
     "title": "Umriss Kamerun",
-    "category": "country",
+    "category": "outline",
     "year": 1960,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kamerun – Unabhängigkeit",
@@ -861,7 +861,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-cn",
     "title": "Umriss China",
-    "category": "country",
+    "category": "outline",
     "year": 1982,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "China – Aktuelle Verfassung.",
@@ -880,7 +880,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-co",
     "title": "Umriss Kolumbien",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kolumbien – Moderne Verfassung.",
@@ -899,7 +899,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-cr",
     "title": "Umriss Costa Rica",
-    "category": "country",
+    "category": "outline",
     "year": 1949,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Costa Rica – Post-Bürgerkriegsverfassung.",
@@ -918,7 +918,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-cu",
     "title": "Umriss Kuba",
-    "category": "country",
+    "category": "outline",
     "year": 2019,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kuba – Neue Verfassung",
@@ -937,7 +937,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-cv",
     "title": "Umriss Cabo Verde",
-    "category": "country",
+    "category": "outline",
     "year": 1992,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Cabo Verde – Demokratisierung.",
@@ -956,7 +956,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-cw",
     "title": "Umriss Curaçao",
-    "category": "country",
+    "category": "outline",
     "year": 2010,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Curaçao – Eigenständiges Land.",
@@ -975,7 +975,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-cx",
     "title": "Umriss Weihnachtsinsel",
-    "category": "country",
+    "category": "outline",
     "year": 1958,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Weihnachtsinsel – Australische Verwaltung.",
@@ -994,7 +994,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-cy",
     "title": "Umriss Zypern",
-    "category": "country",
+    "category": "outline",
     "year": 1960,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Zypern – Unabhängigkeit",
@@ -1013,7 +1013,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-cz",
     "title": "Umriss Tschechien",
-    "category": "country",
+    "category": "outline",
     "year": 1993,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Tschechien – Teilung der Tschechoslowakei",
@@ -1032,7 +1032,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-de",
     "title": "Umriss Deutschland",
-    "category": "country",
+    "category": "outline",
     "year": 1949,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Deutschland – Grundgesetz (BRD)",
@@ -1051,7 +1051,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-dj",
     "title": "Umriss Dschibuti",
-    "category": "country",
+    "category": "outline",
     "year": 1977,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Dschibuti – Unabhängigkeit",
@@ -1070,7 +1070,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-dk",
     "title": "Umriss Dänemark",
-    "category": "country",
+    "category": "outline",
     "year": 1953,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Dänemark – Verfassungsänderung.",
@@ -1089,7 +1089,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-dm",
     "title": "Umriss Dominica",
-    "category": "country",
+    "category": "outline",
     "year": 1978,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Dominica – Unabhängigkeit",
@@ -1108,7 +1108,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-do",
     "title": "Umriss Dominikanische Republik",
-    "category": "country",
+    "category": "outline",
     "year": 2015,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Dominikanische Republik – Verfassungsreform.",
@@ -1127,7 +1127,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-dz",
     "title": "Umriss Algerien",
-    "category": "country",
+    "category": "outline",
     "year": 2020,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Älgerien – Post-Hirak-Verfassung.",
@@ -1146,7 +1146,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ec",
     "title": "Umriss Ecuador",
-    "category": "country",
+    "category": "outline",
     "year": 2008,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Ecuador – Aktuelle Verfassung.",
@@ -1165,7 +1165,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ee",
     "title": "Umriss Estland",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Estland – Wiederherstellung der Unabhängigkeit",
@@ -1184,7 +1184,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-eg",
     "title": "Umriss Ägypten",
-    "category": "country",
+    "category": "outline",
     "year": 1953,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Ägypten – Ausrufung der Republik",
@@ -1203,7 +1203,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-eh",
     "title": "Umriss Westsahara",
-    "category": "country",
+    "category": "outline",
     "year": 1976,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Westsahara – Proklamation der D.A.R.S..",
@@ -1222,7 +1222,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-er",
     "title": "Umriss Eritrea",
-    "category": "country",
+    "category": "outline",
     "year": 1995,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Äthiopien – Föderale Verfassung.",
@@ -1241,7 +1241,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-es",
     "title": "Umriss Spanien",
-    "category": "country",
+    "category": "outline",
     "year": 1978,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Spanien – Demokratische Verfassung",
@@ -1260,7 +1260,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-et",
     "title": "Umriss Äthiopien",
-    "category": "country",
+    "category": "outline",
     "year": 1995,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Äthiopien – Föderale Verfassung.",
@@ -1279,7 +1279,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-fi",
     "title": "Umriss Finnland",
-    "category": "country",
+    "category": "outline",
     "year": 2000,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Finnland – Neue Verfassung.",
@@ -1298,7 +1298,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-fj",
     "title": "Umriss Fidschi",
-    "category": "country",
+    "category": "outline",
     "year": 1970,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Fidschi – Unabhängigkeit",
@@ -1317,7 +1317,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-fk",
     "title": "Umriss Falklandinseln",
-    "category": "country",
+    "category": "outline",
     "year": 2009,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Falklandinseln – Verfassungsordnung.",
@@ -1336,7 +1336,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-fo",
     "title": "Umriss Färöer",
-    "category": "country",
+    "category": "outline",
     "year": 1948,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Färöer – Autonomiegesetz.",
@@ -1355,7 +1355,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-fr",
     "title": "Umriss Frankreich",
-    "category": "country",
+    "category": "outline",
     "year": 1958,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Frankreich – Fünfte Republik",
@@ -1374,7 +1374,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ga",
     "title": "Umriss Gabun",
-    "category": "country",
+    "category": "outline",
     "year": 1960,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Gabun – Unabhängigkeit",
@@ -1393,7 +1393,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gb",
     "title": "Umriss Vereinigtes Königreich",
-    "category": "country",
+    "category": "outline",
     "year": 1922,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Vereinigtes Königreich – Heutiger Staatsrahmen.",
@@ -1412,7 +1412,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gd",
     "title": "Umriss Grenada",
-    "category": "country",
+    "category": "outline",
     "year": 1974,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Grenada – Unabhängigkeit",
@@ -1431,7 +1431,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ge",
     "title": "Umriss Georgien",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Georgien – Unabhängigkeit von der UdSSR",
@@ -1450,7 +1450,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gf",
     "title": "Umriss Französisch-Guayana",
-    "category": "country",
+    "category": "outline",
     "year": 1946,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Französisch-Guayana – Überseedépartement.",
@@ -1469,7 +1469,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gg",
     "title": "Umriss Guernsey",
-    "category": "country",
+    "category": "outline",
     "year": 2005,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Guernsey – Regierungsreform.",
@@ -1488,7 +1488,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gh",
     "title": "Umriss Ghana",
-    "category": "country",
+    "category": "outline",
     "year": 1957,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Ghana – Unabhängigkeit",
@@ -1507,7 +1507,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gi",
     "title": "Umriss Gibraltar",
-    "category": "country",
+    "category": "outline",
     "year": 2006,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Gibraltar – Verfassungsordnung.",
@@ -1526,7 +1526,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gl",
     "title": "Umriss Grönland",
-    "category": "country",
+    "category": "outline",
     "year": 2009,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Grönland – Self-Government.",
@@ -1545,7 +1545,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gm",
     "title": "Umriss Gambia",
-    "category": "country",
+    "category": "outline",
     "year": 1965,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Gambia – Unabhängigkeit",
@@ -1564,7 +1564,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gn",
     "title": "Umriss Guinea",
-    "category": "country",
+    "category": "outline",
     "year": 1958,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Guinea – Unabhängigkeit",
@@ -1583,7 +1583,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gp",
     "title": "Umriss Guadeloupe",
-    "category": "country",
+    "category": "outline",
     "year": 1946,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Guadeloupe – Überseedépartement.",
@@ -1602,7 +1602,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gq",
     "title": "Umriss Äquatorialguinea",
-    "category": "country",
+    "category": "outline",
     "year": 1968,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Äquatorialguinea – Unabhängigkeit",
@@ -1621,7 +1621,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gr",
     "title": "Umriss Griechenland",
-    "category": "country",
+    "category": "outline",
     "year": 1975,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Griechenland – Post-Diktatur-Verfassung.",
@@ -1640,7 +1640,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gs",
     "title": "Umriss Südgeorgien und die Südlichen Sandwichinseln",
-    "category": "country",
+    "category": "outline",
     "year": 1985,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Südgeorgien und die Südlichen Sandwichinseln – Eigenständiges Territorium.",
@@ -1659,7 +1659,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gt",
     "title": "Umriss Guatemala",
-    "category": "country",
+    "category": "outline",
     "year": 1985,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Guatemala – Demokratische Verfassung.",
@@ -1678,7 +1678,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gu",
     "title": "Umriss Guam",
-    "category": "country",
+    "category": "outline",
     "year": 1950,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Guam – Organic Act.",
@@ -1697,7 +1697,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gw",
     "title": "Umriss Guinea-Bissau",
-    "category": "country",
+    "category": "outline",
     "year": 1974,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Guinea-Bissau – Unabhängigkeit",
@@ -1716,7 +1716,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-gy",
     "title": "Umriss Guyana",
-    "category": "country",
+    "category": "outline",
     "year": 1966,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Guyana – Unabhängigkeit",
@@ -1735,7 +1735,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-hk",
     "title": "Umriss Sonderverwaltungsregion Hongkong",
-    "category": "country",
+    "category": "outline",
     "year": 1997,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Hongkong – Übergabe an China.",
@@ -1754,7 +1754,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-hm",
     "title": "Umriss Heard und McDonaldinseln",
-    "category": "country",
+    "category": "outline",
     "year": 1947,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Heard und McDonaldinseln – Australische Verwaltung.",
@@ -1773,7 +1773,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-hn",
     "title": "Umriss Honduras",
-    "category": "country",
+    "category": "outline",
     "year": 1982,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Honduras – Demokratisierung.",
@@ -1792,7 +1792,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-hr",
     "title": "Umriss Kroatien",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kroatien – Unabhängigkeit von Jugoslawien",
@@ -1811,7 +1811,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ht",
     "title": "Umriss Haiti",
-    "category": "country",
+    "category": "outline",
     "year": 1987,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Haiti – Post-Duvalier-Verfassung.",
@@ -1830,7 +1830,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-id",
     "title": "Umriss Indonesien",
-    "category": "country",
+    "category": "outline",
     "year": 1945,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Indonesien – Unabhängigkeit",
@@ -1849,7 +1849,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ie",
     "title": "Umriss Irland",
-    "category": "country",
+    "category": "outline",
     "year": 1921,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Irland – Unabhängigkeit (Freistaat)",
@@ -1868,7 +1868,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-il",
     "title": "Umriss Israel",
-    "category": "country",
+    "category": "outline",
     "year": 1948,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Israel – Staatsgründung",
@@ -1887,7 +1887,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-im",
     "title": "Umriss Isle of Man",
-    "category": "country",
+    "category": "outline",
     "year": 1979,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Isle of Man – Tynwald-Jubiläum.",
@@ -1906,7 +1906,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-in",
     "title": "Umriss Indien",
-    "category": "country",
+    "category": "outline",
     "year": 1947,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Indien – Unabhängigkeit",
@@ -1925,7 +1925,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-io",
     "title": "Umriss Britisches Territorium im Indischen Ozean",
-    "category": "country",
+    "category": "outline",
     "year": 1965,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Britisches Territorium im Indischen Ozean – Eigenes Territorium.",
@@ -1944,7 +1944,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-iq",
     "title": "Umriss Irak",
-    "category": "country",
+    "category": "outline",
     "year": 2005,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Irak – Post-Saddam Verfassung",
@@ -1963,7 +1963,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ir",
     "title": "Umriss Iran",
-    "category": "country",
+    "category": "outline",
     "year": 1979,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Iran – Islamische Republik",
@@ -1982,7 +1982,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-is",
     "title": "Umriss Island",
-    "category": "country",
+    "category": "outline",
     "year": 1944,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Island – Republikgründung",
@@ -2001,7 +2001,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-it",
     "title": "Umriss Italien",
-    "category": "country",
+    "category": "outline",
     "year": 1948,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Italien – Republikanische Verfassung",
@@ -2020,7 +2020,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-jm",
     "title": "Umriss Jamaika",
-    "category": "country",
+    "category": "outline",
     "year": 1962,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Jamaika – Unabhängigkeit",
@@ -2039,7 +2039,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-jo",
     "title": "Umriss Jordanien",
-    "category": "country",
+    "category": "outline",
     "year": 1946,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Jordanien – Unabhängigkeit",
@@ -2058,7 +2058,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-jp",
     "title": "Umriss Japan",
-    "category": "country",
+    "category": "outline",
     "year": 1946,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Japan – Nachkriegsverfassung",
@@ -2077,7 +2077,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ke",
     "title": "Umriss Kenia",
-    "category": "country",
+    "category": "outline",
     "year": 1963,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kenia – Unabhängigkeit",
@@ -2096,7 +2096,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-kg",
     "title": "Umriss Kirgisistan",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kirgisistan – Unabhängigkeit von der UdSSR",
@@ -2115,7 +2115,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-kh",
     "title": "Umriss Kambodscha",
-    "category": "country",
+    "category": "outline",
     "year": 1953,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kambodscha – Unabhängigkeit",
@@ -2134,7 +2134,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ki",
     "title": "Umriss Kiribati",
-    "category": "country",
+    "category": "outline",
     "year": 1979,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kiribati – Unabhängigkeit",
@@ -2153,7 +2153,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-km",
     "title": "Umriss Komoren",
-    "category": "country",
+    "category": "outline",
     "year": 1975,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Komoren – Unabhängigkeit",
@@ -2172,7 +2172,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-kn",
     "title": "Umriss St. Kitts und Nevis",
-    "category": "country",
+    "category": "outline",
     "year": 1983,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "St. Kitts und Nevis – Unabhängigkeit.",
@@ -2191,7 +2191,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-kp",
     "title": "Umriss Nordkorea",
-    "category": "country",
+    "category": "outline",
     "year": 1948,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Nordkorea – Gründung der DVRK",
@@ -2210,7 +2210,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-kr",
     "title": "Umriss Südkorea",
-    "category": "country",
+    "category": "outline",
     "year": 1948,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Südkorea – Gründung der Republik",
@@ -2229,7 +2229,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-kw",
     "title": "Umriss Kuwait",
-    "category": "country",
+    "category": "outline",
     "year": 1961,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kuwait – Unabhängigkeit",
@@ -2248,7 +2248,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ky",
     "title": "Umriss Kaimaninseln",
-    "category": "country",
+    "category": "outline",
     "year": 2009,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kaimaninseln – Verfassungsordnung.",
@@ -2267,7 +2267,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-kz",
     "title": "Umriss Kasachstan",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Kasachstan – Unabhängigkeit von der UdSSR",
@@ -2286,7 +2286,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-la",
     "title": "Umriss Laos",
-    "category": "country",
+    "category": "outline",
     "year": 1949,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Laos – Unabhängigkeit von Frankreich",
@@ -2305,7 +2305,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-lb",
     "title": "Umriss Libanon",
-    "category": "country",
+    "category": "outline",
     "year": 1943,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Libanon – Unabhängigkeit von Frankreich",
@@ -2324,7 +2324,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-lc",
     "title": "Umriss St. Lucia",
-    "category": "country",
+    "category": "outline",
     "year": 1979,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "St. Lucia – Unabhängigkeit",
@@ -2343,7 +2343,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-li",
     "title": "Umriss Liechtenstein",
-    "category": "country",
+    "category": "outline",
     "year": 2003,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Liechtenstein – Verfassungsreform.",
@@ -2362,7 +2362,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-lk",
     "title": "Umriss Sri Lanka",
-    "category": "country",
+    "category": "outline",
     "year": 1948,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Sri Lanka – Unabhängigkeit",
@@ -2381,7 +2381,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-lr",
     "title": "Umriss Liberia",
-    "category": "country",
+    "category": "outline",
     "year": 1986,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Liberia – Post-Bürgerkrieg-Verfassung.",
@@ -2400,7 +2400,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ls",
     "title": "Umriss Lesotho",
-    "category": "country",
+    "category": "outline",
     "year": 1966,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Lesotho – Unabhängigkeit",
@@ -2419,7 +2419,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-lt",
     "title": "Umriss Litauen",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Litauen – Wiederherstellung der Unabhängigkeit",
@@ -2438,7 +2438,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-lu",
     "title": "Umriss Luxemburg",
-    "category": "country",
+    "category": "outline",
     "year": 1868,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Luxemburg – Aktuelle Verfassung",
@@ -2457,7 +2457,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-lv",
     "title": "Umriss Lettland",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Lettland – Wiederherstellung der Unabhängigkeit",
@@ -2476,7 +2476,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ly",
     "title": "Umriss Libyen",
-    "category": "country",
+    "category": "outline",
     "year": 1951,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Libyen – Unabhängigkeit (Systemwechsel 2011)",
@@ -2495,7 +2495,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ma",
     "title": "Umriss Marokko",
-    "category": "country",
+    "category": "outline",
     "year": 1956,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Marokko – Ende der Protektorate",
@@ -2514,7 +2514,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-mc",
     "title": "Umriss Monaco",
-    "category": "country",
+    "category": "outline",
     "year": 1962,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Monaco – Verfassungsreform.",
@@ -2533,7 +2533,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-md",
     "title": "Umriss Republik Moldau",
-    "category": "country",
+    "category": "outline",
     "year": 1994,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Republik Moldau – Verfassung.",
@@ -2552,7 +2552,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-me",
     "title": "Umriss Montenegro",
-    "category": "country",
+    "category": "outline",
     "year": 2006,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Montenegro – Unabhängigkeit von Serbien",
@@ -2571,7 +2571,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-mf",
     "title": "Umriss St. Martin",
-    "category": "country",
+    "category": "outline",
     "year": 2007,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "St. Martin – Überseekollektiv.",
@@ -2590,7 +2590,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-mg",
     "title": "Umriss Madagaskar",
-    "category": "country",
+    "category": "outline",
     "year": 1960,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Madagaskar – Unabhängigkeit",
@@ -2609,7 +2609,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-mk",
     "title": "Umriss Nordmazedonien",
-    "category": "country",
+    "category": "outline",
     "year": 1992,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Nordmazedonien – Unabhängigkeit von Jugoslawien",
@@ -2628,7 +2628,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ml",
     "title": "Umriss Mali",
-    "category": "country",
+    "category": "outline",
     "year": 1960,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Mali – Unabhängigkeit",
@@ -2647,7 +2647,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-mm",
     "title": "Umriss Myanmar",
-    "category": "country",
+    "category": "outline",
     "year": 1948,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Myanmar – Unabhängigkeit",
@@ -2666,7 +2666,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-mn",
     "title": "Umriss Mongolei",
-    "category": "country",
+    "category": "outline",
     "year": 1992,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Mongolei – Post-Einparteiensystem.",
@@ -2685,7 +2685,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-mo",
     "title": "Umriss Sonderverwaltungsregion Macau",
-    "category": "country",
+    "category": "outline",
     "year": 1999,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Macau – Übergabe an China.",
@@ -2704,7 +2704,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-mq",
     "title": "Umriss Martinique",
-    "category": "country",
+    "category": "outline",
     "year": 1946,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Martinique – Überseedépartement.",
@@ -2723,7 +2723,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-mr",
     "title": "Umriss Mauretanien",
-    "category": "country",
+    "category": "outline",
     "year": 1960,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Mauretanien – Unabhängigkeit",
@@ -2742,7 +2742,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ms",
     "title": "Umriss Montserrat",
-    "category": "country",
+    "category": "outline",
     "year": 2010,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Montserrat – Verfassungsordnung.",
@@ -2761,7 +2761,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-mt",
     "title": "Umriss Malta",
-    "category": "country",
+    "category": "outline",
     "year": 1964,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Malta – Unabhängigkeit",
@@ -2780,7 +2780,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-mu",
     "title": "Umriss Mauritius",
-    "category": "country",
+    "category": "outline",
     "year": 1968,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Mauritius – Unabhängigkeit",
@@ -2799,7 +2799,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-mv",
     "title": "Umriss Malediven",
-    "category": "country",
+    "category": "outline",
     "year": 1965,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Malediven – Unabhängigkeit",
@@ -2818,7 +2818,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-mw",
     "title": "Umriss Malawi",
-    "category": "country",
+    "category": "outline",
     "year": 1964,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Malawi – Unabhängigkeit",
@@ -2837,7 +2837,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-mx",
     "title": "Umriss Mexiko",
-    "category": "country",
+    "category": "outline",
     "year": 1917,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Mexiko – Post-Revolution-Verfassung.",
@@ -2856,7 +2856,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-my",
     "title": "Umriss Malaysia",
-    "category": "country",
+    "category": "outline",
     "year": 1957,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Malaysia – Unabhängigkeit",
@@ -2875,7 +2875,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-mz",
     "title": "Umriss Mosambik",
-    "category": "country",
+    "category": "outline",
     "year": 1975,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Mosambik – Unabhängigkeit",
@@ -2894,7 +2894,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-na",
     "title": "Umriss Namibia",
-    "category": "country",
+    "category": "outline",
     "year": 1990,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Namibia – Unabhängigkeit",
@@ -2913,7 +2913,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-nc",
     "title": "Umriss Neukaledonien",
-    "category": "country",
+    "category": "outline",
     "year": 1998,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Neukaledonien – Nouméa-Abkommen.",
@@ -2932,7 +2932,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ne",
     "title": "Umriss Niger",
-    "category": "country",
+    "category": "outline",
     "year": 1960,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Niger – Unabhängigkeit",
@@ -2951,7 +2951,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-nf",
     "title": "Umriss Norfolkinsel",
-    "category": "country",
+    "category": "outline",
     "year": 2016,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Norfolkinsel – Ende der Selbstverwaltung.",
@@ -2970,7 +2970,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ng",
     "title": "Umriss Nigeria",
-    "category": "country",
+    "category": "outline",
     "year": 1960,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Nigeria – Unabhängigkeit",
@@ -2989,7 +2989,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ni",
     "title": "Umriss Nicaragua",
-    "category": "country",
+    "category": "outline",
     "year": 1987,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Nicaragua – Verfassung.",
@@ -3008,7 +3008,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-nl",
     "title": "Umriss Niederlande",
-    "category": "country",
+    "category": "outline",
     "year": 1983,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Niederlande – Totalrevision.",
@@ -3027,7 +3027,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-no",
     "title": "Umriss Norwegen",
-    "category": "country",
+    "category": "outline",
     "year": 1814,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Norwegen – Verfassung von Eidsvoll (Konstitutionelle Monarchie)",
@@ -3046,7 +3046,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-np",
     "title": "Umriss Nepal",
-    "category": "country",
+    "category": "outline",
     "year": 2008,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Nepal – Ausrufung der Republik",
@@ -3065,7 +3065,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-nr",
     "title": "Umriss Nauru",
-    "category": "country",
+    "category": "outline",
     "year": 1968,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Nauru – Unabhängigkeit.",
@@ -3084,7 +3084,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-nu",
     "title": "Umriss Niue",
-    "category": "country",
+    "category": "outline",
     "year": 1974,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Niue – Selbstverwaltung.",
@@ -3103,7 +3103,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-nz",
     "title": "Umriss Neuseeland",
-    "category": "country",
+    "category": "outline",
     "year": 1890,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Neuseeland – Erlangung des Selbstverwaltungsstatus (Dominion-Status 1907)",
@@ -3122,7 +3122,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-pa",
     "title": "Umriss Panama",
-    "category": "country",
+    "category": "outline",
     "year": 1972,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Panama – Verfassung.",
@@ -3141,7 +3141,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-pe",
     "title": "Umriss Peru",
-    "category": "country",
+    "category": "outline",
     "year": 1993,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Peru – Verfassung.",
@@ -3160,7 +3160,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-pf",
     "title": "Umriss Französisch-Polynesien",
-    "category": "country",
+    "category": "outline",
     "year": 2004,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Französisch-Polynesien – Status Überseeland.",
@@ -3179,7 +3179,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-pg",
     "title": "Umriss Papua-Neuguinea",
-    "category": "country",
+    "category": "outline",
     "year": 1975,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Papua-Neuguinea – Unabhängigkeit",
@@ -3198,7 +3198,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ph",
     "title": "Umriss Philippinen",
-    "category": "country",
+    "category": "outline",
     "year": 1987,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Philippinen – Aktuelle Verfassung",
@@ -3217,7 +3217,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-pk",
     "title": "Umriss Pakistan",
-    "category": "country",
+    "category": "outline",
     "year": 1947,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Pakistan – Unabhängigkeit",
@@ -3236,7 +3236,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-pl",
     "title": "Umriss Polen",
-    "category": "country",
+    "category": "outline",
     "year": 1997,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Polen – Aktuelle Verfassung",
@@ -3255,7 +3255,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-pm",
     "title": "Umriss St. Pierre und Miquelon",
-    "category": "country",
+    "category": "outline",
     "year": 2003,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "St. Pierre und Miquelon – Überseekollektiv.",
@@ -3274,7 +3274,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-pn",
     "title": "Umriss Pitcairninseln",
-    "category": "country",
+    "category": "outline",
     "year": 2010,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Pitcairninseln – Verfassungsordnung.",
@@ -3293,7 +3293,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-pr",
     "title": "Umriss Puerto Rico",
-    "category": "country",
+    "category": "outline",
     "year": 1952,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Puerto Rico – Verfassung.",
@@ -3312,7 +3312,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-pt",
     "title": "Umriss Portugal",
-    "category": "country",
+    "category": "outline",
     "year": 1976,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Portugal – Post-Nelkenrevolution.",
@@ -3331,7 +3331,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-pw",
     "title": "Umriss Palau",
-    "category": "country",
+    "category": "outline",
     "year": 1981,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Palau – Verfassung (Souveränität 1994)",
@@ -3350,7 +3350,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-py",
     "title": "Umriss Paraguay",
-    "category": "country",
+    "category": "outline",
     "year": 1992,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Paraguay – Post-Diktatur-Verfassung.",
@@ -3369,7 +3369,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-qa",
     "title": "Umriss Katar",
-    "category": "country",
+    "category": "outline",
     "year": 1971,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Katar – Unabhängigkeit",
@@ -3388,7 +3388,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-re",
     "title": "Umriss Réunion",
-    "category": "country",
+    "category": "outline",
     "year": 1946,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Réunion – Überseedépartement.",
@@ -3407,7 +3407,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ro",
     "title": "Umriss Rumänien",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Rumänien – Post-Kommunismus.",
@@ -3426,7 +3426,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-rs",
     "title": "Umriss Serbien",
-    "category": "country",
+    "category": "outline",
     "year": 2006,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Serbien – Auflösung der Union mit Montenegro",
@@ -3445,7 +3445,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ru",
     "title": "Umriss Russland",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Russland – Russische Föderation (Post-Sowjet)",
@@ -3464,7 +3464,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-rw",
     "title": "Umriss Ruanda",
-    "category": "country",
+    "category": "outline",
     "year": 1962,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Ruanda – Unabhängigkeit",
@@ -3483,7 +3483,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sa",
     "title": "Umriss Saudi-Arabien",
-    "category": "country",
+    "category": "outline",
     "year": 1932,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Saudi-Arabien – Vereinigung der Königreiche",
@@ -3502,7 +3502,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sb",
     "title": "Umriss Salomonen",
-    "category": "country",
+    "category": "outline",
     "year": 1978,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Salomonen – Unabhängigkeit",
@@ -3521,7 +3521,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sc",
     "title": "Umriss Seychellen",
-    "category": "country",
+    "category": "outline",
     "year": 1993,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Seychellen – Mehrparteiendemokratie.",
@@ -3540,7 +3540,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sd",
     "title": "Umriss Sudan",
-    "category": "country",
+    "category": "outline",
     "year": 1956,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Sudan – Unabhängigkeit",
@@ -3559,7 +3559,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-se",
     "title": "Umriss Schweden",
-    "category": "country",
+    "category": "outline",
     "year": 1974,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Schweden – Regierungsform.",
@@ -3578,7 +3578,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sg",
     "title": "Umriss Singapur",
-    "category": "country",
+    "category": "outline",
     "year": 1965,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Singapur – Trennung von Malaysia",
@@ -3597,7 +3597,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sh",
     "title": "Umriss St. Helena",
-    "category": "country",
+    "category": "outline",
     "year": 2009,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "St. Helena – Verfassungsordnung.",
@@ -3616,7 +3616,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-si",
     "title": "Umriss Slowenien",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Slowenien – Unabhängigkeit von Jugoslawien",
@@ -3635,7 +3635,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sj",
     "title": "Umriss Spitzbergen und Jan Mayen",
-    "category": "country",
+    "category": "outline",
     "year": 1925,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Spitzbergen und Jan Mayen – Spitzbergen-Vertrag.",
@@ -3654,7 +3654,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sk",
     "title": "Umriss Slowakei",
-    "category": "country",
+    "category": "outline",
     "year": 1993,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Slowakei – Teilung der Tschechoslowakei",
@@ -3673,7 +3673,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sl",
     "title": "Umriss Sierra Leone",
-    "category": "country",
+    "category": "outline",
     "year": 1961,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Sierra Leone – Unabhängigkeit",
@@ -3692,7 +3692,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sm",
     "title": "Umriss San Marino",
-    "category": "country",
+    "category": "outline",
     "year": 1600,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "San Marino – Verabschiedung der Statuten (älteste Republik)",
@@ -3711,7 +3711,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sn",
     "title": "Umriss Senegal",
-    "category": "country",
+    "category": "outline",
     "year": 1960,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Senegal – Unabhängigkeit",
@@ -3730,7 +3730,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-so",
     "title": "Umriss Somalia",
-    "category": "country",
+    "category": "outline",
     "year": 1960,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Somalia – Unabhängigkeit",
@@ -3749,7 +3749,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sr",
     "title": "Umriss Suriname",
-    "category": "country",
+    "category": "outline",
     "year": 1975,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Suriname – Unabhängigkeit",
@@ -3768,7 +3768,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ss",
     "title": "Umriss Südsudan",
-    "category": "country",
+    "category": "outline",
     "year": 2011,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Südsudan – Unabhängigkeit vom Sudan",
@@ -3787,7 +3787,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-st",
     "title": "Umriss São Tomé und Príncipe",
-    "category": "country",
+    "category": "outline",
     "year": 1990,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "São Tomé und Príncipe – Systemwechsel.",
@@ -3806,7 +3806,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sv",
     "title": "Umriss El Salvador",
-    "category": "country",
+    "category": "outline",
     "year": 1983,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "El Salvador – Verfassung.",
@@ -3825,7 +3825,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sx",
     "title": "Umriss Sint Maarten",
-    "category": "country",
+    "category": "outline",
     "year": 2010,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Sint Maarten – Eigenständigkeit.",
@@ -3844,7 +3844,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sy",
     "title": "Umriss Syrien",
-    "category": "country",
+    "category": "outline",
     "year": 1946,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Syrien – Unabhängigkeit von Frankreich",
@@ -3863,7 +3863,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-sz",
     "title": "Umriss Eswatini",
-    "category": "country",
+    "category": "outline",
     "year": 1968,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Eswatini – Unabhängigkeit",
@@ -3882,7 +3882,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-tc",
     "title": "Umriss Turks- und Caicosinseln",
-    "category": "country",
+    "category": "outline",
     "year": 2011,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Turks- und Caicosinseln – Post-Krisen-Verfassung.",
@@ -3901,7 +3901,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-td",
     "title": "Umriss Tschad",
-    "category": "country",
+    "category": "outline",
     "year": 2022,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Tschad – Neue Verfassung/Übergangsrat",
@@ -3920,7 +3920,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-tf",
     "title": "Umriss Französische Süd- und Antarktisgebiete",
-    "category": "country",
+    "category": "outline",
     "year": 1961,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Antarktis – Antarktis-Vertrag.",
@@ -3939,7 +3939,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-tg",
     "title": "Umriss Togo",
-    "category": "country",
+    "category": "outline",
     "year": 1960,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Togo – Unabhängigkeit",
@@ -3958,7 +3958,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-th",
     "title": "Umriss Thailand",
-    "category": "country",
+    "category": "outline",
     "year": 1932,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Thailand – Ende der absoluten Monarchie",
@@ -3977,7 +3977,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-tj",
     "title": "Umriss Tadschikistan",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Tadschikistan – Unabhängigkeit von der UdSSR",
@@ -3996,7 +3996,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-tk",
     "title": "Umriss Tokelau",
-    "category": "country",
+    "category": "outline",
     "year": 2006,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Tokelau – Constitution Act.",
@@ -4015,7 +4015,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-tl",
     "title": "Umriss Timor-Leste",
-    "category": "country",
+    "category": "outline",
     "year": 2002,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Timor-Leste – Unabhängigkeit.",
@@ -4034,7 +4034,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-tm",
     "title": "Umriss Turkmenistan",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Turkmenistan – Unabhängigkeit von der UdSSR",
@@ -4053,7 +4053,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-tn",
     "title": "Umriss Tunesien",
-    "category": "country",
+    "category": "outline",
     "year": 2014,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Tunesien – Neue Verfassung (Arabischer Frühling)",
@@ -4072,7 +4072,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-to",
     "title": "Umriss Tonga",
-    "category": "country",
+    "category": "outline",
     "year": 2010,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Tonga – Demokratisierung.",
@@ -4091,7 +4091,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-tr",
     "title": "Umriss Türkei",
-    "category": "country",
+    "category": "outline",
     "year": 1923,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Türkei – Ausrufung der Republik",
@@ -4110,7 +4110,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-tt",
     "title": "Umriss Trinidad und Tobago",
-    "category": "country",
+    "category": "outline",
     "year": 1976,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Trinidad und Tobago – Republikgründung.",
@@ -4129,7 +4129,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-tw",
     "title": "Umriss Taiwan",
-    "category": "country",
+    "category": "outline",
     "year": 1991,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Taiwan – Demokratisierung.",
@@ -4148,7 +4148,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-tz",
     "title": "Umriss Tansania",
-    "category": "country",
+    "category": "outline",
     "year": 1961,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Tansania – Unabhängigkeit (als Tanganjika)",
@@ -4167,7 +4167,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-us",
     "title": "Umriss Vereinigte Staaten",
-    "category": "country",
+    "category": "outline",
     "year": 1789,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Vereinigte Staaten – Verfassungsinkrafttreten.",
@@ -4186,7 +4186,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-va",
     "title": "Umriss Vatikanstadt",
-    "category": "country",
+    "category": "outline",
     "year": 1929,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Vatikanstadt – Lateranverträge",
@@ -4205,7 +4205,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-vc",
     "title": "Umriss St. Vincent und die Grenadinen",
-    "category": "country",
+    "category": "outline",
     "year": 1985,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "St. Vincent und die Grenadinen – Systembruch.",
@@ -4224,7 +4224,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ve",
     "title": "Umriss Venezuela",
-    "category": "country",
+    "category": "outline",
     "year": 1999,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Venezuela – Bolivarische Verfassung.",
@@ -4243,7 +4243,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-vg",
     "title": "Umriss Britische Jungferninseln",
-    "category": "country",
+    "category": "outline",
     "year": 2007,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Britische Jungferninseln – Verfassungsordnung.",
@@ -4262,7 +4262,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-vn",
     "title": "Umriss Vietnam",
-    "category": "country",
+    "category": "outline",
     "year": 1975,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Vietnam – Wiedervereinigung",
@@ -4281,7 +4281,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-vu",
     "title": "Umriss Vanuatu",
-    "category": "country",
+    "category": "outline",
     "year": 1980,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Vanuatu – Unabhängigkeit",
@@ -4300,7 +4300,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-wf",
     "title": "Umriss Wallis und Futuna",
-    "category": "country",
+    "category": "outline",
     "year": 1961,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Wallis und Futuna – Überseegebiet-Status.",
@@ -4319,7 +4319,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ws",
     "title": "Umriss Samoa",
-    "category": "country",
+    "category": "outline",
     "year": 1962,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Samoa – Unabhängigkeit.",
@@ -4338,7 +4338,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-ye",
     "title": "Umriss Jemen",
-    "category": "country",
+    "category": "outline",
     "year": 1990,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Jemen – Wiedervereinigung",
@@ -4357,7 +4357,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-yt",
     "title": "Umriss Mayotte",
-    "category": "country",
+    "category": "outline",
     "year": 2011,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Mayotte – Departement-Status.",
@@ -4376,7 +4376,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-za",
     "title": "Umriss Südafrika",
-    "category": "country",
+    "category": "outline",
     "year": 1994,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Südafrika – Erste freie Wahlen (Ende Apartheid)",
@@ -4395,7 +4395,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-zm",
     "title": "Umriss Sambia",
-    "category": "country",
+    "category": "outline",
     "year": 1964,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Sambia – Unabhängigkeit",
@@ -4414,7 +4414,7 @@ export const outlineCards: Card[] = [
   {
     "id": "outline-zw",
     "title": "Umriss Simbabwe",
-    "category": "country",
+    "category": "outline",
     "year": 1980,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
     "answer": "Simbabwe – Unabhängigkeit",
