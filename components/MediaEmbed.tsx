@@ -191,22 +191,36 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   // Fetch Spotify token from server (httpOnly cookie proxied)
   useEffect(() => {
     if (choice?.type !== 'spotify') return;
-    if (spotifyToken) return;
+    
+    const controller = new AbortController();
+    
     const loadToken = async () => {
       try {
-        const res = await fetch('/api/spotify/token');
+        console.log('🎵 Loading Spotify token...');
+        const res = await fetch('/api/spotify/token', {
+          signal: controller.signal
+        });
         if (!res.ok) {
+          console.error('❌ Spotify token response:', res.status);
           setSpotifyError('Spotify Login erforderlich');
           return;
         }
         const json = await res.json();
+        console.log('✅ Spotify token received');
         setSpotifyToken(json.accessToken as string);
-      } catch (_err) {
+      } catch (err) {
+        if (controller.signal.aborted) {
+          console.log('🛑 Token load aborted');
+          return;
+        }
+        console.error('❌ Spotify token error:', err);
         setSpotifyError('Spotify Token konnte nicht geladen werden');
       }
     };
+    
     loadToken();
-  }, [choice?.type, spotifyToken]);
+    return () => controller.abort();
+  }, [choice?.type]);
 
   const refreshDeviceId = useCallback(async (): Promise<string | null> => {
     if (!spotifyToken) return null;
@@ -326,13 +340,17 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
       const player = new window.Spotify.Player({
         name: 'Flex Quiz Player',
-        getOAuthToken: (cb) => cb(spotifyToken),
+        getOAuthToken: (cb) => {
+          console.log('🎵 Token callback triggered');
+          cb(spotifyToken);
+        },
         volume: 0.8
       });
 
       spotifyPlayerRef.current = player;
 
       player.addListener('ready', async ({ device_id }) => {
+        console.log('✅ Player ready, device_id:', device_id);
         // Erste Device-ID übernehmen.
         setSpotifyDevice(device_id);
         setSpotifyReady(true);
@@ -358,20 +376,31 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         setIsPlaying(Boolean(state && !state.paused));
       });
 
-      player.addListener('initialization_error', ({ message }) => setSpotifyError(message));
-      player.addListener('authentication_error', ({ message }) => setSpotifyError(message));
-      player.addListener('account_error', ({ message }) => setSpotifyError(message));
+      player.addListener('initialization_error', ({ message }: any) => {
+        console.error('❌ initialization_error:', message);
+        setSpotifyError(message);
+      });
+      player.addListener('authentication_error', ({ message }: any) => {
+        console.error('❌ authentication_error:', message);
+        setSpotifyError(message);
+      });
+      player.addListener('account_error', ({ message }: any) => {
+        console.error('❌ account_error:', message);
+        setSpotifyError(message);
+      });
       (player as any).addListener('playback_error', ({ message, error_type }: any) => {
+        console.error('❌ playback_error:', error_type, message);
         setSpotifyError('Spotify meldet einen Wiedergabefehler');
         setSpotifyErrorDetail(`${error_type}: ${message}`);
         onPlaybackError?.(card.id, 'playback-error');
-        console.error('Spotify playback_error', error_type, message);
       });
       (player as any).addListener('not_ready', ({ device_id }: any) => {
+        console.warn('⚠️  not_ready:', device_id);
         setSpotifyReady(false);
         setSpotifyErrorDetail(`Device ${device_id} nicht bereit`);
       });
 
+      console.log('🎵 Calling player.connect()...');
       player.connect();
     };
 
@@ -381,23 +410,54 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     }
 
     const ensureScript = () =>
-      new Promise<void>((resolve) => {
-        if (window.Spotify) return resolve();
+      new Promise<void>((resolve, reject) => {
+        if (window.Spotify) {
+          console.log('✅ Spotify SDK already loaded');
+          return resolve();
+        }
         const existing = document.getElementById('spotify-sdk');
         if (existing) {
-          existing.addEventListener('load', () => resolve(), { once: true });
+          console.log('⏳ Waiting for existing Spotify SDK script...');
+          existing.addEventListener('load', () => {
+            console.log('✅ Existing SDK script loaded');
+            resolve();
+          }, { once: true });
+          existing.addEventListener('error', () => {
+            console.error('❌ SDK script error');
+            reject(new Error('SDK script error'));
+          }, { once: true });
           return;
         }
+        console.log('📥 Loading Spotify SDK script...');
         const script = document.createElement('script');
         script.id = 'spotify-sdk';
         script.src = 'https://sdk.scdn.co/spotify-player.js';
-        script.onload = () => resolve();
+        script.onload = () => {
+          console.log('✅ SDK script loaded');
+          resolve();
+        };
+        script.onerror = () => {
+          console.error('❌ SDK script load failed');
+          reject(new Error('SDK load failed'));
+        };
         document.body.appendChild(script);
       });
 
     const setup = async () => {
-      await ensureScript();
-      if (window.Spotify) initializePlayer();
+      try {
+        console.log('🎵 Starting Spotify setup...');
+        await ensureScript();
+        if (window.Spotify) {
+          console.log('🎵 Spotify SDK available, initializing player...');
+          initializePlayer();
+        } else {
+          console.error('❌ Spotify SDK not available');
+          setSpotifyError('Spotify SDK wurde nicht geladen');
+        }
+      } catch (err) {
+        console.error('❌ Setup error:', err);
+        setSpotifyError('Fehler beim Laden des Spotify-Spielers');
+      }
     };
 
     setup();
