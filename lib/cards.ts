@@ -285,7 +285,7 @@ const baseCards: Card[] = [
   {
     id: 'country-germany-flag',
     title: 'Flagge Deutschlands',
-    category: 'country',
+    category: 'flag',
     year: 1949,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Bundesrepublik Deutschland " 23.05.1949 (Grundgesetz in Kraft).',
@@ -1022,7 +1022,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-de',
     title: 'Flagge Deutschland',
-    category: 'country',
+    category: 'flag',
     year: 1949,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Deutschland „ Schwarz-Rot-Gold, 1949 best"tigt.',
@@ -1035,7 +1035,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-fr',
     title: 'Flagge Frankreich',
-    category: 'country',
+    category: 'flag',
     year: 1794,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Frankreich „ Bleu-Blanc-Rouge, 1794 offiziell.',
@@ -1048,7 +1048,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-it',
     title: 'Flagge Italien',
-    category: 'country',
+    category: 'flag',
     year: 1946,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Italien „ Gr"n-Wei"-Rot, 1946 republikanisch.',
@@ -1061,7 +1061,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-es',
     title: 'Flagge Spanien',
-    category: 'country',
+    category: 'flag',
     year: 1981,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Spanien „ Rot-Gelb-Rot mit Wappen.',
@@ -1074,7 +1074,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-us',
     title: 'Flagge USA',
-    category: 'country',
+    category: 'flag',
     year: 1960,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Vereinigte Staaten „ Stars and Stripes mit 50 Sternen, seit 1960.',
@@ -1087,7 +1087,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-gb',
     title: 'Flagge Vereinigtes K"nigreich',
-    category: 'country',
+    category: 'flag',
     year: 1801,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Vereinigtes K"nigreich „ Union Jack, seit 1801.',
@@ -1100,7 +1100,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-jp',
     title: 'Flagge Japan',
-    category: 'country',
+    category: 'flag',
     year: 1999,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Japan „ Roter Kreis auf Wei", 1999 gesetzlich best"tigt.',
@@ -1113,7 +1113,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-cn',
     title: 'Flagge China',
-    category: 'country',
+    category: 'flag',
     year: 1949,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Volksrepublik China „ Rot mit f"nf Sternen.',
@@ -1126,7 +1126,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-br',
     title: 'Flagge Brasilien',
-    category: 'country',
+    category: 'flag',
     year: 1889,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Brasilien „ Gr"n, Gelb-Raute und Sternenkugel.',
@@ -1139,7 +1139,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-in',
     title: 'Flagge Indien',
-    category: 'country',
+    category: 'flag',
     year: 1947,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Indien „ Safran, Wei", Gr"n mit Ashoka-Chakra.',
@@ -1152,7 +1152,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-au',
     title: 'Flagge Australien',
-    category: 'country',
+    category: 'flag',
     year: 1903,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Australien „ Union Jack, Commonwealth Star und S"dliches Kreuz.',
@@ -1165,7 +1165,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-ca',
     title: 'Flagge Kanada',
-    category: 'country',
+    category: 'flag',
     year: 1965,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Kanada „ Ahornblatt auf Rot-Wei"-Rot.',
@@ -1178,7 +1178,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-za',
     title: 'Flagge S"dafrika',
-    category: 'country',
+    category: 'flag',
     year: 1994,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'S"dafrika „ Y-Form mit sechs Farben.',
@@ -1191,7 +1191,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-se',
     title: 'Flagge Schweden',
-    category: 'country',
+    category: 'flag',
     year: 1906,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Schweden „ Blau mit gelbem Kreuz.',
@@ -1204,7 +1204,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-no',
     title: 'Flagge Norwegen',
-    category: 'country',
+    category: 'flag',
     year: 1821,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Norwegen „ Rot mit blauem Kreuz.',
@@ -1217,7 +1217,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-fi',
     title: 'Flagge Finnland',
-    category: 'country',
+    category: 'flag',
     year: 1918,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Finnland „ Wei" mit blauem Kreuz.',
@@ -1230,7 +1230,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-ar',
     title: 'Flagge Argentinien',
-    category: 'country',
+    category: 'flag',
     year: 1818,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Argentinien „ Hellblau-Wei" mit Sonne.',
@@ -1243,7 +1243,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-mx',
     title: 'Flagge Mexiko',
-    category: 'country',
+    category: 'flag',
     year: 1968,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Mexiko „ Gr"n, Wei", Rot mit Adler und Schlange.',
@@ -1256,7 +1256,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-ch',
     title: 'Flagge Schweiz',
-    category: 'country',
+    category: 'flag',
     year: 1889,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Schweiz „ Rotes Quadrat mit wei"em Kreuz.',
@@ -1269,7 +1269,7 @@ const baseCards: Card[] = [
   {
     id: 'flag-nl',
     title: 'Flagge Niederlande',
-    category: 'country',
+    category: 'flag',
     year: 1937,
     cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
     answer: 'Niederlande „ Rot, Wei", Blau.',
