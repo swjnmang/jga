@@ -149,13 +149,14 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
   useEffect(() => {
     // Stop playback when source changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     resetSpotify();
     setShowYouTube(false);
     setEmbedError(null);
     reportedErrorRef.current = false;
     autoPlayPendingRef.current = choice?.type === 'spotify';
     latestSpotifyUrlRef.current = choice?.type === 'spotify' ? choice.url : null;
-  }, [choice]);
+  }, [choiceSignature]);
 
   useEffect(() => {
     let cancelled = false;
