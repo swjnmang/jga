@@ -295,19 +295,24 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
         // 404 / No active device -> reconnect player und retry.
         if (res.status === 404) {
-          console.log(`Transfer 404 (attempt ${attempt + 1}/${maxAttempts}), reconnecting...`);
+          console.log(`Transfer 404 (attempt ${attempt + 1}/${maxAttempts}), Device-Sync läuft...`);
           if (spotifyPlayerRef.current) {
             try {
+              console.log('🔌 Disconnect Player bewusst...');
               await spotifyPlayerRef.current.disconnect();
-              await new Promise((r) => setTimeout(r, 200));
+              await new Promise((r) => setTimeout(r, 300));
+              console.log('🔌 Reconnect Player...');
               await spotifyPlayerRef.current.connect();
-              await new Promise((r) => setTimeout(r, 500));
+              await new Promise((r) => setTimeout(r, 1000)); // Längere Wartezeit nach Reconnect
             } catch (e) {
-              console.warn('Player reconnect failed', e);
+              console.warn('❌ Player reconnect fehlgeschlagen', e);
             }
           }
+          console.log('🔄 Refreshe Device-Liste...');
           await refreshDeviceId();
-          await new Promise((r) => setTimeout(r, 400 * (attempt + 1)));
+          const waitMs = 1200 * (attempt + 1); // Länger warten zwischen Versuchen: 1200, 2400, 3600
+          console.log(`⏳ Warte ${waitMs}ms vor Retry...`);
+          await new Promise((r) => setTimeout(r, waitMs));
           continue;
         }
 
@@ -357,18 +362,31 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         setSpotifyErrorDetail(null);
         setSpotifyError(null);
 
-        // Warte kurz, damit Spotify die Device-Registrierung abschließt
-        await new Promise((r) => setTimeout(r, 800));
+        // Warte länger, damit Spotify die Device-Registrierung abschließt
+        // Das SDK kennt die Device sofort, aber die API braucht länger
+        console.log('⏳ Warte 2500ms für Spotify Device-Backend-Sync...');
+        await new Promise((r) => setTimeout(r, 2500));
 
-        // Erneut von Spotify abfragen, falls die erste ID noch nicht registriert ist.
-        const refreshed = await refreshDeviceId();
-        if (refreshed) {
-          setSpotifyDevice(refreshed);
+        // Versuche mehrfach, die aktualisierte Device zu bekommen
+        let deviceId = device_id;
+        for (let attempt = 0; attempt < 3; attempt++) {
+          const refreshed = await refreshDeviceId();
+          if (refreshed) {
+            console.log(`✅ Device aktualisiert nach ${attempt + 1} Versuchen: ${refreshed}`);
+            deviceId = refreshed;
+            break;
+          }
+          if (attempt < 2) {
+            console.log(`🔄 Device-Refresh ${attempt + 1} fehlgeschlagen, versuche erneut...`);
+            await new Promise((r) => setTimeout(r, 500));
+          }
         }
+        setSpotifyDevice(deviceId);
 
-        // Sofort versuchen zu transferieren, damit Play nicht mit 404 endet.
-        transferPlaybackWithRetry(3).catch(() => {
-          // ok, zweiter Versuch beim Play-Klick
+        // Sofort versuchen zu transferieren, mit der aktuellen Device-ID
+        console.log('🎵 Starte Transfer mit Device-ID:', deviceId);
+        transferPlaybackWithRetry(5).catch((err) => {
+          console.error('⚠️  Transfer beim Ready fehlgeschlagen, Retry beim Play:', err);
         });
       });
 
