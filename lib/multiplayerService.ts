@@ -313,17 +313,27 @@ export async function nextTurn(pin: string): Promise<void> {
   }
 
   const game: GameSession = snapshot.val();
-  const groupIds = Object.keys(game.groups);
-  const currentIndex = groupIds.indexOf(game.currentTurnGroupId || '');
-  const nextIndex = (currentIndex + 1) % groupIds.length;
-  const nextGroupId = groupIds[nextIndex];
+  
+  // Nur spielende Gruppen (nicht Host)
+  const playingGroupIds = Object.entries(game.groups)
+    .filter(([_, group]) => !group.isHost)
+    .map(([id]) => id);
+  
+  if (playingGroupIds.length === 0) {
+    throw new Error('Keine spielenden Gruppen gefunden.');
+  }
+
+  const currentIndex = playingGroupIds.indexOf(game.currentTurnGroupId || '');
+  const nextIndex = (currentIndex + 1) % playingGroupIds.length;
+  const nextGroupId = playingGroupIds[nextIndex];
 
   // Reset alle Flex-Buttons
   const updates: Record<string, any> = {
     currentTurnGroupId: nextGroupId
   };
 
-  groupIds.forEach(gid => {
+  const allGroupIds = Object.keys(game.groups);
+  allGroupIds.forEach(gid => {
     updates[`groups/${gid}/flexActive`] = false;
   });
 
