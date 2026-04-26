@@ -778,8 +778,8 @@ export default function MultiplayerGamePage() {
           );
         })()}
 
-        {/* Feedback nach Platzierung */}
-        {placementResult && currentCard && (
+        {/* Feedback nach Platzierung - NUR für aktives Team */}
+        {placementResult && currentCard && isActiveTurn && (
           <div className="card-surface rounded-2xl p-6 space-y-4">
             {placementResult === 'correct' ? (
               <div className="space-y-4">
