@@ -3,12 +3,13 @@
   | 'quote'
   | 'video'
   | 'image'
-  | 'country'
+  | 'flag'
+  | 'outline'
   | 'sportfreizeit'
   | 'religionglaube'
   | 'geogeschichte'
-  | 'naturtechnik'
-  | 'filmeserien'
+  | 'natur'
+  | 'filmserien'
   | 'schaetzfragen';
 
 export type Difficulty = 'leicht' | 'mittel' | 'schwer';
