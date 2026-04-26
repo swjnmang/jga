@@ -631,27 +631,15 @@ export default function MultiplayerGamePage() {
                     preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
                   />
                 ) : (
-                  /* Mitspieler: musak nur mit Play/Pause, andere Medien vollständig */
+                  /* Mitspieler: Musik nur Symbol, andere Medien vollständig */
                   currentCard.category === 'music' ? (
                     <div className="rounded-2xl card-surface bg-ink/5 p-8 text-center space-y-4">
-                      <div className="text-4xl">🎵</div>
+                      <div className="text-6xl">🎵</div>
+                      <p className="text-lg font-semibold text-ink">
+                        Musikfrage
+                      </p>
                       <p className="text-sm text-ink/70">
                         Der Host steuert die Musikwiedergabe
-                      </p>
-                      <div className="flex justify-center">
-                        <button
-                          onClick={isMediaPlaying ? handleRemotePause : handleRemotePlay}
-                          className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
-                            isMediaPlaying
-                              ? 'border-2 border-ink/30 hover:border-ink/60'
-                              : 'bg-ink text-inkDark hover:opacity-90'
-                          }`}
-                        >
-                          {isMediaPlaying ? '⏸ Pause' : '▶ Play'}
-                        </button>
-                      </div>
-                      <p className="text-xs text-ink/60">
-                        Song wird auf dem Gerät des Hosts abgespielt
                       </p>
                     </div>
                   ) : (

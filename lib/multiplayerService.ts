@@ -287,30 +287,17 @@ export async function placeCardInTimeline(
     score: isCorrect ? finalTimeline.length : group.score
   });
 
-  // Wenn die aktive Gruppe falsch platziert hat, prüfe Flex-Gruppen
-  if (game.currentTurnGroupId === groupId && !isCorrect) {
-    await handleFlexSteal(pin, card, game);
+  // Bei falscher Platzierung: gehe zur nächsten Karte und nächsten Gruppe
+  if (!isCorrect) {
+    await nextCard(pin);
+    await nextTurn(pin);
+    return false;
   }
 
   // Prüfe Auto-Win Bedingung bei korrekter Platzierung (Timeline: 10 Karten = Gewinn)
-  if (isCorrect) {
-    await checkAutoWinTimeline(pin);
-  }
+  await checkAutoWinTimeline(pin);
 
   return isCorrect;
-}
-
-/**
- * Behandelt Flex-Button Karten-Klau-Mechanik
- */
-async function handleFlexSteal(pin: string, card: any, game: GameSession): Promise<void> {
-  // Finde alle Gruppen mit aktivem Flex-Button
-  const flexGroups = Object.entries(game.groups)
-    .filter(([gid, g]) => g.flexActive && gid !== game.currentTurnGroupId)
-    .map(([gid]) => gid);
-
-  // Für jede Flex-Gruppe: prüfe ob sie die Karte korrekt platzieren würde
-  // (Das wird in der UI entschieden, hier nur vorbereiten)
 }
 
 /**
