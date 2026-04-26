@@ -222,8 +222,8 @@ export function generateDistractors(currentCard: Card): string[] {
     c.category === currentCard.category
   );
 
-  // COUNTRY CARDS: Filter by region (same continent)
-  if (currentCard.category === 'country') {
+  // FLAG CARDS: Filter by region (same continent)
+  if (currentCard.category === 'flag') {
     const region = getRegion(currentCard.id);
     if (region) {
       const regionalCandidates = candidates.filter(c => getRegion(c.id) === region);
@@ -321,8 +321,8 @@ export function getMultipleChoiceOptions(card: Card): { options: string[]; corre
     correctAnswer = `ca. ${correctAnswer}`;
   }
   
-  // For country cards: format as "Country - Year"
-  if (card.category === 'country' && typeof card.year === 'number') {
+  // For flag cards: format as "Country - Year"
+  if (card.category === 'flag' && typeof card.year === 'number') {
     correctAnswer = `${card.answer} - ${card.year}`;
   }
   
