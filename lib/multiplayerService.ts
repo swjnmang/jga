@@ -675,7 +675,10 @@ export async function checkAutoWinTimeline(pin: string): Promise<void> {
   let winner: GroupData | null = null;
 
   for (const group of groups) {
-    if (group.timeline.length >= 10) {
+    const tl = Array.isArray(group.timeline)
+      ? group.timeline
+      : Object.values(group.timeline ?? {});
+    if (tl.length >= 10) {
       winner = group;
       break;
     }
