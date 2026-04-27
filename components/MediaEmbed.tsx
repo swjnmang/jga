@@ -436,7 +436,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [card.id, choice?.type, onPlaybackError, spotifyToken]);
+  }, [choice?.type, onPlaybackError, spotifyToken]);
 
   const activatePlayer = useCallback(async () => {
     if (spotifyPlayerRef.current && 'activateElement' in spotifyPlayerRef.current) {
