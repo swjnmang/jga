@@ -59,12 +59,12 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     isHost: true
   };
 
-  // Erzeuge eine feste Referenzkarte (1950)
+  // Erzeuge eine feste Referenzkarte (1990)
   const referenceCard: Card = {
-    id: 'reference-1950',
+    id: 'reference-1990',
     title: 'Referenzjahr',
     category: 'schaetzfragen',
-    year: 1950,
+    year: 1990,
     cue: 'Referenzjahr',
     answer: 'Referenzjahr',
     difficulty: 'leicht',

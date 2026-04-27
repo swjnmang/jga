@@ -709,9 +709,13 @@ export default function MultiplayerGamePage() {
                         : 'border-ink/60 bg-ink/10'
                     }`}>
                       <p className="text-xs font-bold">{item.year}</p>
-                      <p className="text-xs truncate text-ink/70">{getShortTimelineLabel(item.answer || item.title || '')}</p>
-                      {item.id === game.referenceCard?.id && (
+                      {item.id === game.referenceCard?.id ? (
                         <p className="text-xs text-yellow-700 mt-0.5">Referenz</p>
+                      ) : (
+                        <>
+                          <p className="text-xs truncate text-ink/70">{item.hint || ''}</p>
+                          <p className="text-xs truncate text-ink/50">{item.title || ''}</p>
+                        </>
                       )}
                     </div>
 
@@ -792,8 +796,14 @@ export default function MultiplayerGamePage() {
                     {idx > 0 && <div className="text-ink/30 mx-1">↔</div>}
                     <div className={`flex-shrink-0 rounded-lg border-2 px-4 py-3 min-w-[120px] ${item.id === game.referenceCard?.id ? 'border-yellow-500 bg-yellow-100 text-inkDark' : 'border-ink bg-ink/10'}`}>
                       <p className={`text-xs font-bold ${item.id === game.referenceCard?.id ? '' : 'text-ink'}`}>{item.year}</p>
-                      <p className={`text-xs truncate ${item.id === game.referenceCard?.id ? 'text-inkDark/70' : 'text-ink/70'}`}>{getShortTimelineLabel(item.answer || item.title || '')}</p>
-                      {item.id === game.referenceCard?.id && <p className="text-xs text-yellow-700 mt-1">Referenz</p>}
+                      {item.id === game.referenceCard?.id ? (
+                        <p className="text-xs text-yellow-700 mt-1">Referenz</p>
+                      ) : (
+                        <>
+                          <p className="text-xs truncate text-ink/70">{item.hint || ''}</p>
+                          <p className="text-xs truncate text-ink/50">{item.title || ''}</p>
+                        </>
+                      )}
                     </div>
                   </div>
                 ))}
