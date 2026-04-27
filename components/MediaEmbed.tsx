@@ -392,59 +392,38 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       player.connect();
     };
 
-    // Define callback before script loads to avoid missing onSpotifyWebPlaybackSDKReady.
-    if (!window.onSpotifyWebPlaybackSDKReady) {
-      window.onSpotifyWebPlaybackSDKReady = initializePlayer;
-    }
+    const setup = () => {
+      console.log('🎵 Starting Spotify setup...');
 
-    const ensureScript = () =>
-      new Promise<void>((resolve, reject) => {
-        if (window.Spotify) {
-          console.log('✅ Spotify SDK already loaded');
-          return resolve();
-        }
-        const existing = document.getElementById('spotify-sdk');
-        if (existing) {
-          console.log('⏳ Waiting for existing Spotify SDK script...');
-          existing.addEventListener('load', () => {
-            console.log('✅ Existing SDK script loaded');
-            resolve();
-          }, { once: true });
-          existing.addEventListener('error', () => {
-            console.error('❌ SDK script error');
-            reject(new Error('SDK script error'));
-          }, { once: true });
-          return;
-        }
+      if (window.Spotify) {
+        // SDK already loaded (z.B. zweite Karte) → direkt initialisieren
+        console.log('✅ Spotify SDK already loaded, initializing player...');
+        initializePlayer();
+        return;
+      }
+
+      // SDK noch nicht geladen → Callback setzen UND Script laden.
+      // WICHTIG: initializePlayer() wird NUR über onSpotifyWebPlaybackSDKReady aufgerufen,
+      //          NICHT zusätzlich nach dem script.onload! Sonst doppelte Initialisierung.
+      window.onSpotifyWebPlaybackSDKReady = () => {
+        console.log('✅ onSpotifyWebPlaybackSDKReady fired');
+        initializePlayer();
+      };
+
+      if (!document.getElementById('spotify-sdk')) {
         console.log('📥 Loading Spotify SDK script...');
         const script = document.createElement('script');
         script.id = 'spotify-sdk';
         script.src = 'https://sdk.scdn.co/spotify-player.js';
-        script.onload = () => {
-          console.log('✅ SDK script loaded');
-          resolve();
-        };
         script.onerror = () => {
           console.error('❌ SDK script load failed');
-          reject(new Error('SDK load failed'));
+          setSpotifyError('Fehler beim Laden des Spotify-Spielers');
         };
         document.body.appendChild(script);
-      });
-
-    const setup = async () => {
-      try {
-        console.log('🎵 Starting Spotify setup...');
-        await ensureScript();
-        if (window.Spotify) {
-          console.log('🎵 Spotify SDK available, initializing player...');
-          initializePlayer();
-        } else {
-          console.error('❌ Spotify SDK not available');
-          setSpotifyError('Spotify SDK wurde nicht geladen');
-        }
-      } catch (err) {
-        console.error('❌ Setup error:', err);
-        setSpotifyError('Fehler beim Laden des Spotify-Spielers');
+        // KEIN script.onload → initializePlayer(), das würde doppelt aufgerufen!
+        // onSpotifyWebPlaybackSDKReady übernimmt das.
+      } else {
+        console.log('⏳ SDK script tag already exists, waiting for onSpotifyWebPlaybackSDKReady...');
       }
     };
 
