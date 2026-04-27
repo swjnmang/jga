@@ -762,9 +762,9 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               <button
                 type="button"
                 className="rounded-full border border-sand/40 px-4 py-2 text-xs"
-                onClick={resetSpotify}
+                onClick={() => window.location.reload()}
               >
-                Neu verbinden
+                🔄 Refresh / Aktualisieren
               </button>
             </div>
           </div>
