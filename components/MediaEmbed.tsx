@@ -259,19 +259,12 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       if (!spotifyToken) return false;
       let lastDetail: string | null = null;
 
+      // Wichtig: KEIN Disconnect/Reconnect bei 404 - das startet neue ready Events!
+      // Einfach mit Wartezeit + exponential backoff retry
       for (let attempt = 0; attempt < maxAttempts; attempt += 1) {
-        const target = await ensureDevice();
+        const target = spotifyDevice ?? (await ensureDevice());
         if (!target) {
-          // Kein Device gefunden - versuche Player zu reconnecten
-          if (spotifyPlayerRef.current) {
-            try {
-              await spotifyPlayerRef.current.connect();
-            } catch (e) {
-              console.warn('Player reconnect failed', e);
-            }
-          }
-          await refreshDeviceId();
-          await new Promise((r) => setTimeout(r, 300 * (attempt + 1)));
+          await new Promise((r) => setTimeout(r, 500 * (attempt + 1)));
           continue;
         }
 
@@ -285,6 +278,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         });
 
         if (res.ok) {
+          console.log(`✅ Transfer erfolgreich nach ${attempt + 1} Versuchen`);
           setSpotifyError(null);
           setSpotifyErrorDetail(null);
           return true;
@@ -293,30 +287,13 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         const detail = await res.text().catch(() => null);
         lastDetail = detail || `HTTP ${res.status}`;
 
-        // 404 / No active device -> reconnect player und retry.
         if (res.status === 404) {
-          console.log(`❌ Transfer 404 (attempt ${attempt + 1}/${maxAttempts}), Device im Backend nicht sichtbar...`);
-          if (spotifyPlayerRef.current) {
-            try {
-              console.log('🔌 Disconnect Player...');
-              await spotifyPlayerRef.current.disconnect();
-              await new Promise((r) => setTimeout(r, 500));
-              console.log('🔌 Reconnect Player...');
-              await spotifyPlayerRef.current.connect();
-              await new Promise((r) => setTimeout(r, 2000)); // Noch längere Wartezeit nach Reconnect
-            } catch (e) {
-              console.warn('❌ Player reconnect fehlgeschlagen', e);
-            }
-          }
-          console.log('🔄 Refreshe Device-Liste...');
-          await refreshDeviceId();
-          const waitMs = 2000 * (attempt + 1); // Deutlich länger warten: 2000, 4000, 6000, 8000...
-          console.log(`⏳ Warte ${waitMs}ms vor Retry...`);
+          const waitMs = 1000 * (attempt + 1);
+          console.log(`⏳ Transfer 404 (attempt ${attempt + 1}/${maxAttempts}), warte ${waitMs}ms...`);
           await new Promise((r) => setTimeout(r, waitMs));
           continue;
         }
 
-        // Any other status: abort early.
         break;
       }
 
@@ -325,7 +302,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       console.error('Transfer failed after all retries:', lastDetail);
       return false;
     },
-    [ensureDevice, refreshDeviceId, spotifyToken]
+    [ensureDevice, spotifyDevice, spotifyToken]
   );
 
   // Load Spotify Web Playback SDK and connect
@@ -354,24 +331,14 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
       spotifyPlayerRef.current = player;
 
-      player.addListener('ready', async ({ device_id }) => {
+      player.addListener('ready', ({ device_id }: any) => {
         console.log('✅ Player ready, device_id:', device_id);
-        // **WICHTIG**: Nutze die SDK Device-ID DIREKT - nicht von der API abfragen!
-        // Die API gibt oft ganz andere Devices zurück (z.B. Desktop App)
+        // Speichere die SDK Device-ID direkt - kein API-Refresh nötig
         setSpotifyDevice(device_id);
         setSpotifyReady(true);
         setSpotifyErrorDetail(null);
         setSpotifyError(null);
-
-        // Warte, damit Spotify die Device-Registrierung abschließt
-        console.log('⏳ Warte 2000ms für Spotify Device-Backend-Sync...');
-        await new Promise((r) => setTimeout(r, 2000));
-
-        // Starte sofort Transfer mit der SDK Device-ID
-        console.log('🎵 Starte Transfer mit SDK-Device-ID:', device_id);
-        transferPlaybackWithRetry(10).catch((err) => {
-          console.error('⚠️  Transfer beim Ready fehlgeschlagen, Retry beim Play:', err);
-        });
+        // Kein Auto-Transfer hier – das passiert beim Play-Klick mit activateElement()
       });
 
       player.addListener('player_state_changed', (state) => {
@@ -487,13 +454,14 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     async (url: string) => {
       if (!spotifyToken) {
         setSpotifyError('Spotify Login erforderlich');
-        setSpotifyErrorDetail(null);
         return;
       }
-
       if (!spotifyPlayerRef.current) {
-        setSpotifyError('Spotify Player nicht initialisiert');
-        setSpotifyErrorDetail('Bitte warte kurz...');
+        setSpotifyError('Spotify Player nicht bereit');
+        return;
+      }
+      if (!spotifyDevice) {
+        setSpotifyError('Kein Spotify-Gerät aktiv');
         return;
       }
 
@@ -505,41 +473,74 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         return;
       }
 
-      console.log('🎵 Versuche, Track direkt vom SDK zu spielen:', trackId);
-      
+      // activateElement() ist PFLICHT für Chrome autoplay-Policies
       try {
-        // Nutze den SDK player.play() Aufruf direkt, nicht die API!
-        // Das SDK kennt die Device, muss nicht über API gehen
-        const played = await (spotifyPlayerRef.current as any).play({
-          uris: [`spotify:track:${trackId}`]
-        });
-        
-        if (played === false) {
-          console.warn('❌ player.play() returned false');
-          setSpotifyError('Fehler beim Abspielen');
-          setSpotifyErrorDetail('SDK player.play() schlug fehl');
-          return;
-        }
-        
-        console.log('✅ Track wird über SDK abgespielt!');
-        setSpotifyError(null);
-        setSpotifyErrorDetail(null);
-        setShowSpotify(true);
-        setIsPlaying(true);
-        onPlay?.();
+        console.log('🎵 activateElement()...');
+        await (spotifyPlayerRef.current as any).activateElement();
+        console.log('✅ activateElement() erfolgreich');
       } catch (err) {
-        console.error('❌ SDK player.play() exception:', err);
-        setSpotifyError('Fehler beim Abspielen: ' + (err instanceof Error ? err.message : String(err)));
-        setIsPlaying(false);
+        console.warn('⚠️  activateElement() fehlgeschlagen:', err);
+        // Kein Abbruch - weiter versuchen
       }
+
+      setSpotifyLoading(true);
+
+      // Direkt spielen mit der SDK Device-ID - kein Pre-Transfer nötig
+      const maxAttempts = 5;
+      for (let attempt = 0; attempt < maxAttempts; attempt++) {
+        try {
+          console.log(`🎵 Play-Versuch ${attempt + 1}/${maxAttempts}, device_id: ${spotifyDevice}`);
+          const res = await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${spotifyDevice}`, {
+            method: 'PUT',
+            headers: {
+              Authorization: `Bearer ${spotifyToken}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ uris: [`spotify:track:${trackId}`] })
+          });
+
+          if (res.ok) {
+            console.log('✅ Spotify Track spielt!');
+            setSpotifyError(null);
+            setSpotifyErrorDetail(null);
+            setShowSpotify(true);
+            setIsPlaying(true);
+            setSpotifyLoading(false);
+            onPlay?.();
+            return;
+          }
+
+          const detail = await res.text().catch(() => null);
+          console.error(`❌ Play fehlgeschlagen ${res.status}:`, detail);
+
+          if (res.status === 404 && attempt < maxAttempts - 1) {
+            const waitMs = 1500 * (attempt + 1);
+            console.log(`⏳ Warte ${waitMs}ms, dann retry...`);
+            await new Promise((r) => setTimeout(r, waitMs));
+            continue;
+          }
+
+          setSpotifyError('Wiedergabe konnte nicht gestartet werden');
+          setSpotifyErrorDetail(detail || `HTTP ${res.status}`);
+          setIsPlaying(false);
+          onPlaybackError?.(card.id, 'play-failed');
+          break;
+        } catch (err) {
+          console.error('❌ Play exception:', err);
+          setSpotifyError('Netzwerkfehler beim Abspielen');
+          setIsPlaying(false);
+          break;
+        }
+      }
+
+      setSpotifyLoading(false);
     },
-    [spotifyToken, onPlay, onPlaybackError, card.id]
+    [spotifyToken, spotifyDevice, onPlay, onPlaybackError, card.id]
   );
 
   const pauseSpotify = async () => {
     if (!spotifyPlayerRef.current) return;
     try {
-      console.log('⏸ Pausiere Spotify Playback...');
       await (spotifyPlayerRef.current as any).pause();
       setIsPlaying(false);
     } catch (err) {
@@ -550,8 +551,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const resumeSpotify = async () => {
     if (!spotifyPlayerRef.current) return;
     try {
-      console.log('▶️  Fortsetzen Spotify Playback...');
-      await (spotifyPlayerRef.current as any).play();
+      await (spotifyPlayerRef.current as any).resume();
       setIsPlaying(true);
     } catch (err) {
       console.error('❌ Resume fehlgeschlagen:', err);
