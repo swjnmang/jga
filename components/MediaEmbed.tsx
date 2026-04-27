@@ -333,12 +333,31 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
       player.addListener('ready', ({ device_id }: any) => {
         console.log('✅ Player ready, device_id:', device_id);
-        // Speichere die SDK Device-ID direkt - kein API-Refresh nötig
+        // Speichere die SDK Device-ID direkt
         setSpotifyDevice(device_id);
         setSpotifyReady(true);
         setSpotifyErrorDetail(null);
         setSpotifyError(null);
-        // Kein Auto-Transfer hier – das passiert beim Play-Klick mit activateElement()
+        // Transfer playback to SDK-Device damit die REST-API das Gerät kennt.
+        // WICHTIG: Kein Disconnect/Reconnect hier – das würde neue ready Events auslösen!
+        if (spotifyToken) {
+          setTimeout(async () => {
+            try {
+              const res = await fetch('https://api.spotify.com/v1/me/player', {
+                method: 'PUT',
+                headers: { Authorization: `Bearer ${spotifyToken}`, 'Content-Type': 'application/json' },
+                body: JSON.stringify({ device_ids: [device_id], play: false })
+              });
+              if (res.ok || res.status === 204) {
+                console.log('✅ Playback auf SDK-Device übertragen, REST-API kennt jetzt device_id:', device_id);
+              } else {
+                console.warn('⚠️  Transfer in ready-handler fehlgeschlagen:', res.status, await res.text().catch(() => ''));
+              }
+            } catch (err) {
+              console.warn('⚠️  Transfer in ready-handler exception:', err);
+            }
+          }, 500);
+        }
       });
 
       player.addListener('player_state_changed', (state) => {
@@ -485,7 +504,22 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
       setSpotifyLoading(true);
 
-      // Direkt spielen mit der SDK Device-ID - kein Pre-Transfer nötig
+      // Sicherstellen dass das Gerät aktiv ist (Transfer, falls nötig)
+      console.log('🎵 Übertrage Playback auf SDK-Device vor Play...');
+      const preTransferRes = await fetch('https://api.spotify.com/v1/me/player', {
+        method: 'PUT',
+        headers: { Authorization: `Bearer ${spotifyToken}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ device_ids: [spotifyDevice], play: false })
+      }).catch(() => null);
+      if (preTransferRes && (preTransferRes.ok || preTransferRes.status === 204)) {
+        console.log('✅ Pre-Transfer erfolgreich');
+        await new Promise((r) => setTimeout(r, 500));
+      } else {
+        console.warn('⚠️  Pre-Transfer fehlgeschlagen:', preTransferRes?.status);
+        await new Promise((r) => setTimeout(r, 300));
+      }
+
+      // Spielen mit der SDK Device-ID
       const maxAttempts = 5;
       for (let attempt = 0; attempt < maxAttempts; attempt++) {
         try {
