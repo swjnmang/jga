@@ -490,14 +490,12 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         setSpotifyErrorDetail(null);
         return;
       }
-      const deviceId = (await ensureDevice()) ?? spotifyDevice;
-      if (!deviceId) {
-        setSpotifyError('Kein Spotify-Gerät aktiv');
-        setSpotifyErrorDetail('Öffne die Spotify-App kurz oder starte dort irgendeinen Song.');
-        setIsPlaying(false);
+
+      if (!spotifyPlayerRef.current) {
+        setSpotifyError('Spotify Player nicht initialisiert');
+        setSpotifyErrorDetail('Bitte warte kurz...');
         return;
       }
-      setSpotifyDevice(deviceId);
 
       const match = url.match(/spotify\.com\/(?:track|episode)\/([A-Za-z0-9]+)/);
       const trackId = match ? match[1] : null;
@@ -507,95 +505,56 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         return;
       }
 
-      const maxPlayAttempts = 3;
-
-      const attemptPlay = async (attempt: number): Promise<boolean> => {
-        const targetDevice = (await ensureDevice()) ?? spotifyDevice ?? deviceId;
-        if (targetDevice && targetDevice !== spotifyDevice) {
-          setSpotifyDevice(targetDevice);
-        }
-        const res = await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${targetDevice}`, {
-          method: 'PUT',
-          headers: {
-            Authorization: `Bearer ${spotifyToken}`,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ uris: [`spotify:track:${trackId}`] })
-        });
-
-        if (res.ok) {
-          setSpotifyError(null);
-          setSpotifyErrorDetail(null);
-          setShowSpotify(true);
-          setIsPlaying(true);
-          return true;
-        }
-
-        const detail = await res.text().catch(() => null);
-        const lowered = detail?.toLowerCase() ?? '';
-        const isNoDevice = res.status === 404 || lowered.includes('no active device');
-
-        if (isNoDevice && attempt + 1 < maxPlayAttempts) {
-          await new Promise((r) => setTimeout(r, 250 * (attempt + 1)));
-          await transferPlaybackWithRetry(Math.max(2, maxPlayAttempts - attempt));
-          return attemptPlay(attempt + 1);
-        }
-
-        setSpotifyError('Wiedergabe konnte nicht gestartet werden');
-        setSpotifyErrorDetail(detail || `HTTP ${res.status}`);
-        setIsPlaying(false);
-        onPlaybackError?.(card.id, 'play-failed');
-        console.error('Spotify play failed', res.status, detail);
-        return false;
-      };
-
-      setSpotifyLoading(true);
+      console.log('🎵 Versuche, Track direkt vom SDK zu spielen:', trackId);
+      
       try {
-        await activatePlayer();
-        const transferred = await transferPlaybackWithRetry(3);
-        if (!transferred) {
-          setSpotifyError('Spotify Player konnte nicht aktiviert werden');
-          setSpotifyErrorDetail('Device transfer nicht möglich (404). Bitte Spotify-App öffnen und erneut versuchen.');
-          setIsPlaying(false);
+        // Nutze den SDK player.play() Aufruf direkt, nicht die API!
+        // Das SDK kennt die Device, muss nicht über API gehen
+        const played = await (spotifyPlayerRef.current as any).play({
+          uris: [`spotify:track:${trackId}`]
+        });
+        
+        if (played === false) {
+          console.warn('❌ player.play() returned false');
+          setSpotifyError('Fehler beim Abspielen');
+          setSpotifyErrorDetail('SDK player.play() schlug fehl');
           return;
         }
-        await attemptPlay(0);
-      } catch (_err) {
-        setSpotifyError('Wiedergabe konnte nicht gestartet werden');
-        setSpotifyErrorDetail(_err instanceof Error ? _err.message : 'Unbekannter Fehler');
+        
+        console.log('✅ Track wird über SDK abgespielt!');
+        setSpotifyError(null);
+        setSpotifyErrorDetail(null);
+        setShowSpotify(true);
+        setIsPlaying(true);
+        onPlay?.();
+      } catch (err) {
+        console.error('❌ SDK player.play() exception:', err);
+        setSpotifyError('Fehler beim Abspielen: ' + (err instanceof Error ? err.message : String(err)));
         setIsPlaying(false);
-        onPlaybackError?.(card.id, 'exception');
-        console.error('Spotify play exception', _err);
-      } finally {
-        setSpotifyLoading(false);
       }
     },
-    [activatePlayer, ensureDevice, onPlaybackError, spotifyDevice, spotifyToken, transferPlaybackWithRetry, card.id]
+    [spotifyToken, onPlay, onPlaybackError, card.id]
   );
 
   const pauseSpotify = async () => {
-    if (!spotifyToken || !spotifyDevice) return;
+    if (!spotifyPlayerRef.current) return;
     try {
-      await fetch(`https://api.spotify.com/v1/me/player/pause?device_id=${spotifyDevice}`, {
-        method: 'PUT',
-        headers: { Authorization: `Bearer ${spotifyToken}` }
-      });
+      console.log('⏸ Pausiere Spotify Playback...');
+      await (spotifyPlayerRef.current as any).pause();
       setIsPlaying(false);
-    } catch (_err) {
-      // ignore
+    } catch (err) {
+      console.error('❌ Pause fehlgeschlagen:', err);
     }
   };
 
   const resumeSpotify = async () => {
-    if (!spotifyToken || !spotifyDevice) return;
+    if (!spotifyPlayerRef.current) return;
     try {
-      await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${spotifyDevice}`, {
-        method: 'PUT',
-        headers: { Authorization: `Bearer ${spotifyToken}` }
-      });
+      console.log('▶️  Fortsetzen Spotify Playback...');
+      await (spotifyPlayerRef.current as any).play();
       setIsPlaying(true);
-    } catch (_err) {
-      // ignore
+    } catch (err) {
+      console.error('❌ Resume fehlgeschlagen:', err);
     }
   };
 
