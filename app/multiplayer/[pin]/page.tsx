@@ -48,6 +48,17 @@ export default function MultiplayerGamePage() {
   const [selectedPosition, setSelectedPosition] = useState<number | null>(null); // Gewählte Position vor Bestätigung
   const mediaEmbedRef = useRef<MediaEmbedHandle>(null);
   const [isMediaPlaying, setIsMediaPlaying] = useState(false);
+  const prevTurnGroupRef = useRef<string | null>(null);
+
+  // Auto-Reload für den Host bei Gruppenwechsel (Spotify Player braucht frischen Start)
+  useEffect(() => {
+    if (!session?.isHost || !game?.currentTurnGroupId) return;
+    const prev = prevTurnGroupRef.current;
+    if (prev !== null && prev !== game.currentTurnGroupId) {
+      window.location.reload();
+    }
+    prevTurnGroupRef.current = game.currentTurnGroupId;
+  }, [game?.currentTurnGroupId, session?.isHost]);
   
   // Host-Funktionen
   const [editingGroupId, setEditingGroupId] = useState<string | null>(null);
