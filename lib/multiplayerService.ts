@@ -281,21 +281,19 @@ export async function placeCardInTimeline(
     finalTimeline.sort((a, b) => a.year - b.year);
   }
   
-  // Update Gruppe
+  // Update Gruppe (Score nur bei korrekter Platzierung)
   await update(ref(database!, `games/${pin}/groups/${groupId}`), {
     timeline: finalTimeline,
-    score: isCorrect ? finalTimeline.length : group.score
+    score: isCorrect ? (group.score ?? 0) + 1 : (group.score ?? 0)
   });
 
-  // Bei falscher Platzierung: gehe zur nächsten Karte und nächsten Gruppe
-  if (!isCorrect) {
-    await nextCard(pin);
-    await nextTurn(pin);
-    return false;
-  }
+  // KEIN automatischer nextCard/nextTurn hier – die Page steuert das
+  // (sonst würde falsche Platzierung doppelt voranschreiten)
 
   // Prüfe Auto-Win Bedingung bei korrekter Platzierung (Timeline: 10 Karten = Gewinn)
-  await checkAutoWinTimeline(pin);
+  if (isCorrect) {
+    await checkAutoWinTimeline(pin);
+  }
 
   return isCorrect;
 }
@@ -360,9 +358,14 @@ export async function nextCard(pin: string): Promise<void> {
   }
 
   const game: GameSession = snapshot.val();
-  const nextIndex = game.currentCardIndex + 1;
+  // Firebase kann Arrays als Objekte speichern → sicher umwandeln
+  const deck: string[] = Array.isArray(game.deck)
+    ? game.deck
+    : Object.values(game.deck ?? {});
 
-  if (nextIndex >= game.deck.length) {
+  const nextIndex = (game.currentCardIndex ?? 0) + 1;
+
+  if (nextIndex >= deck.length) {
     // Keine Karten mehr
     await update(gameRef, {
       currentCardId: null
@@ -370,7 +373,7 @@ export async function nextCard(pin: string): Promise<void> {
   } else {
     await update(gameRef, {
       currentCardIndex: nextIndex,
-      currentCardId: game.deck[nextIndex]
+      currentCardId: deck[nextIndex]
     });
   }
 }

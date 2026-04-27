@@ -45,6 +45,7 @@ export default function MultiplayerGamePage() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [placementResult, setPlacementResult] = useState<'correct' | 'wrong' | null>(null);
   const [placementError, setPlacementError] = useState<string | null>(null);
+  const [selectedPosition, setSelectedPosition] = useState<number | null>(null); // Gewählte Position vor Bestätigung
   const mediaEmbedRef = useRef<MediaEmbedHandle>(null);
   const [isMediaPlaying, setIsMediaPlaying] = useState(false);
   
@@ -140,6 +141,7 @@ export default function MultiplayerGamePage() {
     setIsProcessing(true);
     setPlacementResult(null);
     setPlacementError(null);
+    setSelectedPosition(null);
     
     try {
       const card = getCardById(game.currentCardId);
@@ -151,8 +153,6 @@ export default function MultiplayerGamePage() {
 
       const correct = await placeCardInTimeline(pin, session.groupId, card, position);
       setPlacementResult(correct ? 'correct' : 'wrong');
-
-      // Kein automatisches Weiterleiten mehr - Team muss auf "Weiter" klicken
     } catch (err) {
       console.error('Error placing card:', err);
       setPlacementError('Platzierung fehlgeschlagen – bitte nochmal versuchen.');
@@ -172,7 +172,8 @@ export default function MultiplayerGamePage() {
     
     setIsProcessing(true);
     setPlacementResult(null);
-    setPlacementError(null); // Reset für nächste Runde
+    setPlacementError(null);
+    setSelectedPosition(null);
     
     try {
       await nextCard(pin);
@@ -662,103 +663,103 @@ export default function MultiplayerGamePage() {
 
         {/* Timeline mit Platzierungs-Optionen */}
         {placementResult === null && currentCard && isActiveTurn && (() => {
-          const timeline = currentGroup.timeline || [];
-          // Erstelle Display-Timeline: Referenzkarte + platzierte Karten
-          const displayTimeline = [];
-          if (game.referenceCard) {
-            displayTimeline.push(game.referenceCard);
-          }
+          const timeline = Array.isArray(currentGroup.timeline) ? currentGroup.timeline : [];
+          const displayTimeline: typeof timeline = [];
+          if (game.referenceCard) displayTimeline.push(game.referenceCard as any);
           displayTimeline.push(...timeline);
-          // Sortiere chronologisch
-          displayTimeline.sort((a, b) => a.year - b.year);
-          
-          // Wenn nur Referenzkarte: Einfache Vor/Nach Buttons
-          if (displayTimeline.length === 1) {
-            const ref = displayTimeline[0];
-            return (
-              <div className="card-surface rounded-2xl p-6 space-y-4">
-                <h3 className="text-lg font-semibold text-center">
-                  Platziere die Karte in der Timeline von {currentGroup.name}
-                </h3>
-                <div className="flex items-center justify-center gap-3">
-                  <button
-                    onClick={() => handlePlaceCard(0)}
-                    disabled={isProcessing}
-                    className="p-4 rounded-xl border-2 border-ink/30 hover:border-ink hover:bg-ink/5 transition-all disabled:opacity-50"
-                  >
-                    ← Davor
-                  </button>
-                  <div className="flex-shrink-0 rounded-lg border-2 border-yellow-500 bg-yellow-100 text-inkDark px-4 py-3 min-w-[140px]">
-                    <p className="text-xs font-bold">{ref.year}</p>
-                    <p className="text-xs text-inkDark/70 truncate">{getShortTimelineLabel(ref.answer || ref.title || '')}</p>
-                    <p className="text-xs text-yellow-700 mt-1">Referenz</p>
-                  </div>
-                  <button
-                    onClick={() => handlePlaceCard(1)}
-                    disabled={isProcessing}
-                    className="p-4 rounded-xl border-2 border-ink/30 hover:border-ink hover:bg-ink/5 transition-all disabled:opacity-50"
-                  >
-                    Danach →
-                  </button>
-                </div>
-              </div>
-            );
-          }
+          displayTimeline.sort((a: any, b: any) => a.year - b.year);
 
-          // Timeline mit Karten und Platzierungs-Buttons
+          const positionLabel = (idx: number) => {
+            if (idx === 0) return '← Davor';
+            if (idx === displayTimeline.length) return 'Danach →';
+            return '↔ Hier';
+          };
+
           return (
             <div className="card-surface rounded-2xl p-6 space-y-4">
-              <h3 className="text-sm font-semibold text-center">
-                Platziere die Karte in der Timeline von {currentGroup.name}
+              <h3 className="text-lg font-semibold text-center">
+                Wo liegt dieses Lied in der Timeline von <span className="text-ink">{currentGroup.name}</span>?
               </h3>
-              <div className="flex items-center gap-2 overflow-x-auto pb-2">
-                {displayTimeline.map((item, idx) => (
-                  <div key={idx} className="flex items-center">
-                    {idx === 0 && (
-                      <button
-                        type="button"
-                        onClick={() => handlePlaceCard(0)}
-                        disabled={isProcessing}
-                        className="flex-shrink-0 rounded-lg border-2 border-dashed border-ink/30 bg-ink/5 px-3 py-2 text-xs hover:border-ink hover:bg-ink/10 transition-colors mx-1 disabled:opacity-50"
-                      >
-                        ← Davor
-                      </button>
-                    )}
-                    <div className={`flex-shrink-0 rounded-lg border-2 px-4 py-3 min-w-[120px] ${item.id === game.referenceCard?.id ? 'border-yellow-500 bg-yellow-100 text-inkDark' : 'border-ink bg-ink/10'}`}>
-                      <p className={`text-xs font-bold ${item.id === game.referenceCard?.id ? '' : 'text-ink'}`}>{item.year}</p>
-                      <p className={`text-xs truncate ${item.id === game.referenceCard?.id ? 'text-inkDark/70' : 'text-ink/70'}`}>{getShortTimelineLabel(item.answer || item.title || '')}</p>
-                      {item.id === game.referenceCard?.id && <p className="text-xs text-yellow-700 mt-1">Referenz</p>}
+              <p className="text-xs text-center text-ink/60">
+                Wähle eine Position — dann „Ergebnis einreichen"
+              </p>
+
+              {/* Timeline + Positions-Buttons */}
+              <div className="flex items-center gap-1 overflow-x-auto pb-2 justify-start">
+                {/* Button vor Position 0 */}
+                <button
+                  type="button"
+                  onClick={() => setSelectedPosition(0)}
+                  disabled={isProcessing}
+                  className={`flex-shrink-0 rounded-lg border-2 px-3 py-3 text-xs font-semibold transition-all disabled:opacity-50 ${
+                    selectedPosition === 0
+                      ? 'border-ink bg-ink text-inkDark scale-105'
+                      : 'border-dashed border-ink/30 bg-ink/5 hover:border-ink hover:bg-ink/10'
+                  }`}
+                >
+                  ← Davor
+                </button>
+
+                {displayTimeline.map((item: any, idx: number) => (
+                  <div key={idx} className="flex items-center gap-1 flex-shrink-0">
+                    {/* Karte */}
+                    <div className={`flex-shrink-0 rounded-lg border-2 px-3 py-2 min-w-[110px] ${
+                      item.id === game.referenceCard?.id
+                        ? 'border-yellow-500 bg-yellow-100 text-inkDark'
+                        : 'border-ink/60 bg-ink/10'
+                    }`}>
+                      <p className="text-xs font-bold">{item.year}</p>
+                      <p className="text-xs truncate text-ink/70">{getShortTimelineLabel(item.answer || item.title || '')}</p>
+                      {item.id === game.referenceCard?.id && (
+                        <p className="text-xs text-yellow-700 mt-0.5">Referenz</p>
+                      )}
                     </div>
+
+                    {/* Button nach dieser Karte */}
                     <button
                       type="button"
-                      onClick={() => handlePlaceCard(idx + 1)}
+                      onClick={() => setSelectedPosition(idx + 1)}
                       disabled={isProcessing}
-                      className="flex-shrink-0 rounded-lg border-2 border-dashed border-ink/30 bg-ink/5 px-3 py-2 text-xs hover:border-ink hover:bg-ink/10 transition-colors mx-1 disabled:opacity-50"
+                      className={`flex-shrink-0 rounded-lg border-2 px-3 py-3 text-xs font-semibold transition-all disabled:opacity-50 ${
+                        selectedPosition === idx + 1
+                          ? 'border-ink bg-ink text-inkDark scale-105'
+                          : 'border-dashed border-ink/30 bg-ink/5 hover:border-ink hover:bg-ink/10'
+                      }`}
                     >
                       {idx === displayTimeline.length - 1 ? 'Danach →' : '↔'}
                     </button>
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-center text-ink/60">
-                Wähle eine Lücke, um die neue Karte korrekt einzuordnen
-              </p>
+
+              {/* Ausgewählte Position anzeigen */}
+              {selectedPosition !== null && (
+                <p className="text-center text-sm font-semibold text-ink">
+                  Gewählte Position: <span className="text-ink/80">{positionLabel(selectedPosition)}</span>
+                </p>
+              )}
+
+              {/* Platzierungs-Fehler */}
+              {placementError && (
+                <div className="rounded-xl border-2 border-red-500/50 bg-red-50/10 p-3">
+                  <p className="text-red-600 text-sm font-semibold">⚠️ {placementError}</p>
+                  <button onClick={() => setPlacementError(null)} className="text-xs text-red-500 underline mt-1">
+                    Schließen
+                  </button>
+                </div>
+              )}
+
+              {/* Bestätigen-Button */}
+              <button
+                onClick={() => selectedPosition !== null && handlePlaceCard(selectedPosition)}
+                disabled={selectedPosition === null || isProcessing}
+                className="w-full py-4 rounded-xl bg-ink text-inkDark font-bold text-lg hover:opacity-90 transition-opacity disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                {isProcessing ? '⏳ Wird geprüft...' : '✅ Ergebnis einreichen'}
+              </button>
             </div>
           );
         })()}
-
-        {/* Placement error anzeigen */}
-        {placementError && (
-          <div className="card-surface rounded-2xl p-4 border-2 border-red-500/50 bg-red-50/10">
-            <p className="text-red-600 font-semibold">⚠️ {placementError}</p>
-            <button
-              onClick={() => setPlacementError(null)}
-              className="mt-2 text-sm text-red-500 underline"
-            >
-              Schließen
-            </button>
-          </div>
-        )}
 
         {/* Nicht am Zug - Timeline nur anzeigen */}
         {!isActiveTurn && placementResult === null && (() => {
