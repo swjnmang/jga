@@ -44,6 +44,7 @@ export default function MultiplayerGamePage() {
   // Spielzustand
   const [isProcessing, setIsProcessing] = useState(false);
   const [placementResult, setPlacementResult] = useState<'correct' | 'wrong' | null>(null);
+  const [placementError, setPlacementError] = useState<string | null>(null);
   const mediaEmbedRef = useRef<MediaEmbedHandle>(null);
   const [isMediaPlaying, setIsMediaPlaying] = useState(false);
   
@@ -138,11 +139,13 @@ export default function MultiplayerGamePage() {
 
     setIsProcessing(true);
     setPlacementResult(null);
+    setPlacementError(null);
     
     try {
       const card = getCardById(game.currentCardId);
       if (!card) {
-        setError('Karte nicht gefunden');
+        setPlacementError('Karte nicht gefunden – bitte Seite neu laden.');
+        setIsProcessing(false);
         return;
       }
 
@@ -152,7 +155,7 @@ export default function MultiplayerGamePage() {
       // Kein automatisches Weiterleiten mehr - Team muss auf "Weiter" klicken
     } catch (err) {
       console.error('Error placing card:', err);
-      setError('Fehler beim Platzieren der Karte');
+      setPlacementError('Platzierung fehlgeschlagen – bitte nochmal versuchen.');
     } finally {
       setIsProcessing(false);
     }
@@ -168,7 +171,8 @@ export default function MultiplayerGamePage() {
     if (!session || !game || isProcessing) return;
     
     setIsProcessing(true);
-    setPlacementResult(null); // Reset für nächste Runde
+    setPlacementResult(null);
+    setPlacementError(null); // Reset für nächste Runde
     
     try {
       await nextCard(pin);
@@ -611,7 +615,7 @@ export default function MultiplayerGamePage() {
 
         {/* Aktuelle Karte */}
         {currentCard && (
-          <div className={`card-surface rounded-2xl p-6 space-y-4 ${!isActiveTurn ? 'opacity-70 pointer-events-none select-none' : ''}`}>
+          <div className={`card-surface rounded-2xl p-6 space-y-4 ${(!isActiveTurn && !isHostSession) ? 'opacity-70 pointer-events-none select-none' : ''}`}>
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold">Musikfrage</h2>
               <span className="text-sm px-3 py-1 rounded-full bg-ink/10">
@@ -743,9 +747,28 @@ export default function MultiplayerGamePage() {
           );
         })()}
 
+        {/* Placement error anzeigen */}
+        {placementError && (
+          <div className="card-surface rounded-2xl p-4 border-2 border-red-500/50 bg-red-50/10">
+            <p className="text-red-600 font-semibold">⚠️ {placementError}</p>
+            <button
+              onClick={() => setPlacementError(null)}
+              className="mt-2 text-sm text-red-500 underline"
+            >
+              Schließen
+            </button>
+          </div>
+        )}
+
         {/* Nicht am Zug - Timeline nur anzeigen */}
         {!isActiveTurn && placementResult === null && (() => {
-          const timeline = currentGroup.timeline || [];
+          // Host zeigt Timeline der aktiven Gruppe (nicht seine eigene)
+          const activeGroupId = isHostSession ? game.currentTurnGroupId : session.groupId;
+          const displayGroup = activeGroupId ? game.groups[activeGroupId] : currentGroup;
+          const timeline = displayGroup?.timeline || [];          
+          const timelineLabel = isHostSession
+            ? `Timeline von ${displayGroup?.name ?? 'Team'}`
+            : 'Deine Timeline';
           // Erstelle Display-Timeline: Referenzkarte + platzierte Karten
           const displayTimeline = [];
           if (game.referenceCard) {
@@ -758,9 +781,9 @@ export default function MultiplayerGamePage() {
           if (displayTimeline.length === 0) return null;
 
           return (
-            <div className="card-surface rounded-2xl p-6 space-y-4 opacity-60">
+            <div className={`card-surface rounded-2xl p-6 space-y-4 ${isHostSession ? '' : 'opacity-60'}`}>
               <h3 className="text-sm font-semibold text-center">
-                Deine Timeline
+                {timelineLabel}
               </h3>
               <div className="flex items-center gap-2 overflow-x-auto pb-2">
                 {displayTimeline.map((item, idx) => (

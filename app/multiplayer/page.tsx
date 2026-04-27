@@ -116,6 +116,29 @@ function MultiplayerLobbyContent() {
     }
   }, [searchParams]);
 
+  // Wenn Session im localStorage vorhanden → automatisch zurück ins laufende Spiel
+  useEffect(() => {
+    const sessionStr = localStorage.getItem('multiplayer_session');
+    if (!sessionStr) return;
+    try {
+      const sessionData = JSON.parse(sessionStr);
+      if (sessionData?.pin) {
+        // Kurz prüfen ob das Spiel noch existiert, dann weiterleiten
+        import('@/lib/multiplayerService').then(({ subscribeToGame }) => {
+          const unsub = subscribeToGame(sessionData.pin, (gameData) => {
+            unsub();
+            if (gameData && gameData.state === 'playing') {
+              router.replace(`/multiplayer/${sessionData.pin}`);
+            }
+          });
+        });
+      }
+    } catch {
+      localStorage.removeItem('multiplayer_session');
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const handleCreateGame = async () => {
     if (!isFirebaseEnabled) {
       setError('Firebase ist nicht konfiguriert. Bitte konfiguriere Firebase zuerst (siehe FIREBASE_SETUP.md).');
