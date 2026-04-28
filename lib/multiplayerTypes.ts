@@ -23,6 +23,7 @@ export interface GroupData {
   isHost: boolean; // Ist diese Gruppe der Spielleiter
   flexRequested?: boolean; // Hat die aktive Gruppe einen Flex-Button angefordert
   lastFlexRequest?: number; // Timestamp des letzten Flex-Requests
+  pendingPosition?: number | null; // Live-Vorschau: gewählte Position (noch nicht eingereicht)
 }
 
 export interface PlacedCard {

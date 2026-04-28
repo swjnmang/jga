@@ -460,6 +460,15 @@ export async function checkPinExists(pin: string): Promise<boolean> {
 }
 
 /**
+ * Sendet die aktuell gewählte (noch nicht eingereichte) Position der aktiven Gruppe
+ * an Firebase, damit der Host sie live sieht.
+ */
+export async function broadcastPendingPosition(pin: string, groupId: string, position: number | null): Promise<void> {
+  checkFirebase();
+  await update(ref(database!, `games/${pin}/groups/${groupId}`), { pendingPosition: position ?? null });
+}
+
+/**
  * Sendet einen Playback-Befehl (play/pause/stop) an den Host
  */
 export async function sendPlaybackControl(

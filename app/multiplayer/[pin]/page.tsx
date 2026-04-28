@@ -12,6 +12,7 @@ import {
   nextCard,
   nextTurn,
   sendPlaybackControl,
+  broadcastPendingPosition,
   requestFlexButton,
   confirmFlexButton,
   rejectFlexButton,
@@ -144,11 +145,20 @@ export default function MultiplayerGamePage() {
     navigator.clipboard.writeText(inviteUrl);
   };
 
+  const handleSelectPosition = (pos: number) => {
+    setSelectedPosition(pos);
+    if (session && pin) {
+      broadcastPendingPosition(pin, session.groupId, pos).catch(() => {});
+    }
+  };
+
   const handlePlaceCard = async (position: number) => {
     if (!session || !game || !game.currentCardId || isProcessing) return;
     // Nur die aktive Gruppe darf setzen
     if (game.currentTurnGroupId && game.currentTurnGroupId !== session.groupId) return;
 
+    // Clear pending position preview before submitting
+    broadcastPendingPosition(pin, session.groupId, null).catch(() => {});
     setIsProcessing(true);
     setPlacementResult(null);
     setPlacementError(null);
@@ -709,7 +719,7 @@ export default function MultiplayerGamePage() {
                 {/* Button vor Position 0 */}
                 <button
                   type="button"
-                  onClick={() => setSelectedPosition(0)}
+                  onClick={() => handleSelectPosition(0)}
                   disabled={isProcessing}
                   className={`flex-shrink-0 rounded-lg border-2 px-3 py-3 text-xs font-semibold transition-all disabled:opacity-50 ${
                     selectedPosition === 0
@@ -742,7 +752,7 @@ export default function MultiplayerGamePage() {
                     {/* Button nach dieser Karte */}
                     <button
                       type="button"
-                      onClick={() => setSelectedPosition(idx + 1)}
+                      onClick={() => handleSelectPosition(idx + 1)}
                       disabled={isProcessing}
                       className={`flex-shrink-0 rounded-lg border-2 px-3 py-3 text-xs font-semibold transition-all disabled:opacity-50 ${
                         selectedPosition === idx + 1
@@ -805,12 +815,33 @@ export default function MultiplayerGamePage() {
           
           if (displayTimeline.length === 0) return null;
 
+          const pendingPos = isHostSession ? (displayGroup?.pendingPosition ?? null) : null;
+
+          // Build display with ghost card inserted at pendingPos
+          const ghostCard = isHostSession && pendingPos !== null && currentCard ? currentCard : null;
+
+          const renderGhost = () => (
+            <div className="flex items-center flex-shrink-0">
+              <div className="text-ink/30 mx-1">↔</div>
+              <div className="flex-shrink-0 rounded-lg border-2 border-dashed border-blue-400 bg-blue-400/10 px-4 py-3 min-w-[120px] animate-pulse">
+                <p className="text-xs font-bold text-blue-400">?</p>
+                <p className="text-xs truncate text-blue-400/80">{currentCard?.hint || ''}</p>
+                <p className="text-xs truncate text-blue-400/60">{currentCard?.title || ''}</p>
+              </div>
+            </div>
+          );
+
           return (
             <div className={`card-surface rounded-2xl p-6 space-y-4 ${isHostSession ? '' : 'opacity-60'}`}>
               <h3 className="text-sm font-semibold text-center">
                 {timelineLabel}
+                {isHostSession && pendingPos !== null && (
+                  <span className="ml-2 text-blue-400 text-xs">(wählt Position…)</span>
+                )}
               </h3>
               <div className="flex items-center gap-2 overflow-x-auto pb-2">
+                {/* Ghost before position 0 */}
+                {ghostCard && pendingPos === 0 && renderGhost()}
                 {displayTimeline.map((item, idx) => (
                   <div key={idx} className="flex items-center">
                     {idx > 0 && <div className="text-ink/30 mx-1">↔</div>}
@@ -825,6 +856,8 @@ export default function MultiplayerGamePage() {
                         </>
                       )}
                     </div>
+                    {/* Ghost after this card */}
+                    {ghostCard && pendingPos === idx + 1 && renderGhost()}
                   </div>
                 ))}
               </div>
