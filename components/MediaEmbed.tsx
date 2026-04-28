@@ -154,7 +154,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     setShowYouTube(false);
     setEmbedError(null);
     reportedErrorRef.current = false;
-    autoPlayPendingRef.current = choice?.type === 'spotify';
+    autoPlayPendingRef.current = false; // Never auto-play; host must press Play manually
     latestSpotifyUrlRef.current = choice?.type === 'spotify' ? choice.url : null;
   }, [choiceSignature]);
 
