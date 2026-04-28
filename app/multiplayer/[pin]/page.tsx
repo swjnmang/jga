@@ -305,10 +305,10 @@ export default function MultiplayerGamePage() {
         <div className="text-center space-y-4">
           <p className="text-lg text-red-600">{error || 'Fehler beim Laden'}</p>
           <button
-            onClick={() => router.push('/multiplayer')}
+            onClick={() => router.push('/')}
             className="px-6 py-3 bg-ink text-inkDark rounded-lg"
           >
-            Zurück zur Lobby
+            Zurück zum Hauptmenü
           </button>
         </div>
       </main>
@@ -974,10 +974,10 @@ export default function MultiplayerGamePage() {
 
         <div className="flex gap-4">
           <button
-            onClick={() => router.push('/multiplayer')}
+            onClick={() => router.push('/')}
             className="flex-1 px-6 py-4 bg-ink text-inkDark rounded-lg font-semibold hover:opacity-90"
           >
-            Zurück zur Lobby
+            Zurück zum Hauptmenü
           </button>
         </div>
       </main>
