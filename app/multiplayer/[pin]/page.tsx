@@ -562,7 +562,7 @@ export default function MultiplayerGamePage() {
         {session.isHost && (
           <details className="card-surface rounded-2xl border-2 border-green-500/30 group">
             <summary className="px-6 py-4 cursor-pointer list-none flex items-center justify-between select-none">
-              <span className="text-lg font-semibold text-green-700">👑 Host-Steuerung</span>
+              <span className="text-lg font-semibold text-green-700">👑 Einstellungen</span>
               <span className="text-ink/50 text-sm transition-transform group-open:rotate-180">▼</span>
             </summary>
             <div className="px-6 pb-6 space-y-4">
