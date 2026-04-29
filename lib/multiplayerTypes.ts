@@ -59,6 +59,7 @@ export interface GameSession {
   playbackControl?: PlaybackControl; // Remote-Steuerung für Medien (Host führt aus)
   flexPendingGroupId?: string | null; // Welche Gruppe wartet auf Flex-Bestätigung
   winnerGroupId?: string | null; // Erste Gruppe mit 10 Karten (Timeline) oder erste mit X Punkte (Trivia)
+  pendingResult?: 'correct' | 'wrong' | null; // Letztes Platzierungsergebnis — Host entscheidet wann weiter
 }
 
 export interface CreateGameParams {

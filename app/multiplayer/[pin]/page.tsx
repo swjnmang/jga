@@ -13,6 +13,7 @@ import {
   nextTurn,
   sendPlaybackControl,
   broadcastPendingPosition,
+  broadcastPlacementResult,
   requestFlexButton,
   confirmFlexButton,
   rejectFlexButton,
@@ -174,6 +175,8 @@ export default function MultiplayerGamePage() {
 
       const correct = await placeCardInTimeline(pin, session.groupId, card, position);
       setPlacementResult(correct ? 'correct' : 'wrong');
+      // Write result to Firebase so host can see it and advance
+      await broadcastPlacementResult(pin, correct ? 'correct' : 'wrong');
     } catch (err) {
       console.error('Error placing card:', err);
       setPlacementError('Platzierung fehlgeschlagen – bitte nochmal versuchen.');
@@ -197,6 +200,7 @@ export default function MultiplayerGamePage() {
     setSelectedPosition(null);
     
     try {
+      await broadcastPlacementResult(pin, null); // clear result flag
       await nextCard(pin);
       await nextTurn(pin);
     } catch (err) {
@@ -884,8 +888,8 @@ export default function MultiplayerGamePage() {
           );
         })()}
 
-        {/* Feedback nach Platzierung - NUR für aktives Team */}
-        {placementResult && currentCard && isActiveTurn && (
+        {/* Feedback nach Platzierung — aktives Team sieht Ergebnis, Host hat den "Weiter"-Button */}
+        {(placementResult && currentCard && isActiveTurn) && (
           <div className="card-surface rounded-2xl p-6 space-y-4">
             {placementResult === 'correct' ? (
               <div className="space-y-4">
@@ -893,8 +897,6 @@ export default function MultiplayerGamePage() {
                   <div className="text-6xl">✅</div>
                   <p className="text-xl font-semibold text-green-600">Richtig!</p>
                 </div>
-                
-                {/* Song-Info anzeigen */}
                 <div className="border-t-2 border-ink/10 pt-4 space-y-3">
                   <h3 className="text-lg font-semibold text-center">Es war:</h3>
                   <div className="text-center space-y-2">
@@ -908,23 +910,9 @@ export default function MultiplayerGamePage() {
                     </div>
                   </div>
                 </div>
-
-                {/* Weiter-Button nur für aktives Team */}
-                {isActiveTurn && (
-                  <button
-                    onClick={handleNextCard}
-                    disabled={isProcessing}
-                    className="w-full mt-4 px-6 py-4 bg-ink text-inkDark rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50"
-                  >
-                    Weiter zum nächsten Team
-                  </button>
-                )}
-                
-                {!isActiveTurn && (
-                  <p className="text-center text-sm text-ink/60 mt-4">
-                    Warte auf das aktive Team...
-                  </p>
-                )}
+                <p className="text-center text-sm text-ink/60 mt-4">
+                  Warte auf den Spielleiter…
+                </p>
               </div>
             ) : (
               <div className="space-y-4">
@@ -932,8 +920,6 @@ export default function MultiplayerGamePage() {
                   <div className="text-6xl">❌</div>
                   <p className="text-xl font-semibold text-red-600">Leider falsch</p>
                 </div>
-                
-                {/* Lösung anzeigen */}
                 <div className="border-t-2 border-ink/10 pt-4 space-y-3">
                   <h3 className="text-lg font-semibold text-center">Lösung:</h3>
                   <div className="text-center space-y-2">
@@ -945,25 +931,43 @@ export default function MultiplayerGamePage() {
                     </p>
                   </div>
                 </div>
-
-                {/* Weiter-Button nur für aktives Team */}
-                {isActiveTurn && (
-                  <button
-                    onClick={handleNextCard}
-                    disabled={isProcessing}
-                    className="w-full mt-4 px-6 py-4 bg-ink text-inkDark rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50"
-                  >
-                    Weiter zum nächsten Team
-                  </button>
-                )}
-                
-                {!isActiveTurn && (
-                  <p className="text-center text-sm text-ink/60 mt-4">
-                    Warte auf das aktive Team...
-                  </p>
-                )}
+                <p className="text-center text-sm text-ink/60 mt-4">
+                  Warte auf den Spielleiter…
+                </p>
               </div>
             )}
+          </div>
+        )}
+
+        {/* Host-Ansicht: Ergebnis der Platzierung + "Weiter"-Button */}
+        {isHostSession && game.pendingResult && currentCard && (
+          <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-ink/20">
+            {game.pendingResult === 'correct' ? (
+              <div className="text-center space-y-2">
+                <div className="text-5xl">✅</div>
+                <p className="text-lg font-semibold text-green-600">Richtig!</p>
+              </div>
+            ) : (
+              <div className="text-center space-y-2">
+                <div className="text-5xl">❌</div>
+                <p className="text-lg font-semibold text-red-600">Falsch!</p>
+              </div>
+            )}
+            <div className="border-t-2 border-ink/10 pt-4 text-center space-y-1">
+              <p className="text-xl font-bold">
+                {currentCard.category === 'music'
+                  ? `${currentCard.hint} — ${currentCard.title}`
+                  : currentCard.answer}
+              </p>
+              <p className="text-lg text-ink/70 font-semibold">{currentCard.year}</p>
+            </div>
+            <button
+              onClick={handleNextCard}
+              disabled={isProcessing}
+              className="w-full mt-2 px-6 py-4 bg-ink text-inkDark rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 text-lg"
+            >
+              {isProcessing ? '⏳ Bitte warten…' : 'Weiter zum nächsten Team →'}
+            </button>
           </div>
         )}
 

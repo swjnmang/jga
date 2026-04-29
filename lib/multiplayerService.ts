@@ -469,6 +469,14 @@ export async function broadcastPendingPosition(pin: string, groupId: string, pos
 }
 
 /**
+ * Schreibt das Platzierungsergebnis nach Firebase, damit der Host "Weiter" steuern kann.
+ */
+export async function broadcastPlacementResult(pin: string, result: 'correct' | 'wrong' | null): Promise<void> {
+  checkFirebase();
+  await update(ref(database!, `games/${pin}`), { pendingResult: result ?? null });
+}
+
+/**
  * Sendet einen Playback-Befehl (play/pause/stop) an den Host
  */
 export async function sendPlaybackControl(
