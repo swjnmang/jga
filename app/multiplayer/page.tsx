@@ -30,10 +30,12 @@ function MultiplayerLobbyContent() {
   const spotifyReturnUrl = useMemo(() => {
     if (typeof window === 'undefined') return '/multiplayer';
     const currentPath = '/multiplayer';
-    const currentQuery = searchParams.toString();
-    const fullUrl = currentQuery ? `${currentPath}?${currentQuery}` : currentPath;
+    const params = new URLSearchParams(searchParams.toString());
+    if (mode) params.set('open', mode); // preserve current mode so it's restored after OAuth
+    const query = params.toString();
+    const fullUrl = query ? `${currentPath}?${query}` : currentPath;
     return encodeURIComponent(fullUrl);
-  }, [searchParams]);
+  }, [searchParams, mode]);
   
   // Settings State
   const availableCategories = useMemo(() => {
@@ -113,6 +115,12 @@ function MultiplayerLobbyContent() {
     const gameModeFromUrl = searchParams.get('gameMode');
     if (gameModeFromUrl === 'timeline' || gameModeFromUrl === 'trivia') {
       setGameMode(gameModeFromUrl);
+    }
+
+    // Restore mode after Spotify OAuth redirect
+    const openFromUrl = searchParams.get('open');
+    if (openFromUrl === 'create' || openFromUrl === 'join') {
+      setMode(openFromUrl);
     }
   }, [searchParams]);
 
