@@ -51,6 +51,7 @@ export default function MultiplayerGamePage() {
   const mediaEmbedRef = useRef<MediaEmbedHandle>(null);
   const [isMediaPlaying, setIsMediaPlaying] = useState(false);
   const prevTurnGroupRef = useRef<string | null>(null);
+  const [timeLeft, setTimeLeft] = useState<number | null>(null);
 
   // Auto-Reload für den Host bei Gruppenwechsel (Spotify Player braucht frischen Start)
   useEffect(() => {
@@ -100,6 +101,22 @@ export default function MultiplayerGamePage() {
 
     return () => unsubscribe();
   }, [pin]);
+
+  // Timer: Countdown pro Karte
+  useEffect(() => {
+    if (!game || game.state !== 'playing') return;
+    const duration = game.settings?.timerSeconds;
+    if (!duration || duration <= 0) { setTimeLeft(null); return; }
+    setTimeLeft(duration);
+    const id = window.setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev === null || prev <= 1) { clearInterval(id); return 0; }
+        return prev - 1;
+      });
+    }, 1000);
+    return () => clearInterval(id);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [game?.currentCardIndex, game?.state]);
 
   const handleToggleReady = async () => {
     if (!session || !game) return;
@@ -671,9 +688,18 @@ export default function MultiplayerGamePage() {
           <div className={`card-surface rounded-2xl p-6 space-y-4 ${(!isActiveTurn && !isHostSession) ? 'opacity-70 pointer-events-none select-none' : ''}`}>
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold">{categoryLabel}</h2>
-              <span className="text-sm px-3 py-1 rounded-full bg-ink/10">
-                {currentCard.difficulty}
-              </span>
+              <div className="flex items-center gap-2">
+                {timeLeft !== null && (
+                  <span className={`text-sm font-mono font-bold px-3 py-1 rounded-full ${
+                    timeLeft <= 10 ? 'bg-red-500/20 text-red-600 animate-pulse' : 'bg-ink/10'
+                  }`}>
+                    ⏱ {Math.floor(timeLeft / 60).toString().padStart(2, '0')}:{(timeLeft % 60).toString().padStart(2, '0')}
+                  </span>
+                )}
+                <span className="text-sm px-3 py-1 rounded-full bg-ink/10">
+                  {currentCard.difficulty}
+                </span>
+              </div>
             </div>
 
             <p className="text-lg">{currentCard.cue}</p>
