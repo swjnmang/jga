@@ -873,9 +873,9 @@ export default function MultiplayerGamePage() {
             <div className="flex items-center flex-shrink-0">
               <div className="text-ink/30 mx-1">↔</div>
               <div className="flex-shrink-0 rounded-lg border-2 border-dashed border-blue-400 bg-blue-400/10 px-4 py-3 min-w-[120px] animate-pulse">
-                <p className="text-xs font-bold text-blue-400">?</p>
-                <p className="text-xs truncate text-blue-400/80">{currentCard?.hint || ''}</p>
-                <p className="text-xs truncate text-blue-400/60">{currentCard?.title || ''}</p>
+                <p className="text-xs font-bold text-blue-400">???</p>
+                <p className="text-xs truncate text-blue-400/80">???</p>
+                <p className="text-xs truncate text-blue-400/60">???</p>
               </div>
             </div>
           );
