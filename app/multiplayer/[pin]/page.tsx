@@ -1001,54 +1001,106 @@ export default function MultiplayerGamePage() {
 
   // Endbildschirm
   if (game.state === 'finished') {
-    const winner = groupList.sort((a, b) => b.score - a.score)[0];
-    const isWinner = winner?.id === session.groupId;
+    const sorted = [...groupList].sort((a, b) => b.score - a.score);
+    const winner = sorted[0];
+
+    // Podium order: 2nd (left), 1st (centre), 3rd (right)
+    const podium = [sorted[1], sorted[0], sorted[2]].filter(Boolean);
+    const podiumHeights = ['h-28', 'h-40', 'h-20'];
+    const podiumRanks  = ['🥈', '🥇', '🥉'];
+    const podiumLabels = ['2', '1', '3'];
+
+    // Confetti particles (generated once)
+    const confettiColors = ['#FF6B6B','#FFD93D','#6BCB77','#4D96FF','#C77DFF','#FF922B','#F06595','#74C0FC'];
+    const confettiPieces = Array.from({ length: 80 }, (_, i) => ({
+      id: i,
+      left: `${Math.random() * 100}%`,
+      color: confettiColors[i % confettiColors.length],
+      delay: `${(Math.random() * 3).toFixed(2)}s`,
+      duration: `${(2.5 + Math.random() * 2).toFixed(2)}s`,
+      size: Math.random() > 0.5 ? 8 : 6,
+      rotate: Math.round(Math.random() * 360),
+      isCircle: Math.random() > 0.6,
+    }));
 
     return (
-      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
-        <div className="text-center space-y-4">
+      <main className="relative overflow-hidden mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-8">
+        {/* Confetti layer */}
+        <style>{`
+          @keyframes confetti-fall {
+            0%   { transform: translateY(-40px) rotate(0deg); opacity: 1; }
+            80%  { opacity: 1; }
+            100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+          }
+          @keyframes winner-pulse {
+            0%, 100% { transform: scale(1); }
+            50%       { transform: scale(1.06); }
+          }
+          .confetti-piece { position: fixed; top: 0; pointer-events: none; animation: confetti-fall linear infinite; }
+          .winner-card    { animation: winner-pulse 1.4s ease-in-out infinite; }
+        `}</style>
+        {confettiPieces.map(p => (
+          <div key={p.id} className="confetti-piece" style={{
+            left: p.left,
+            width: p.size,
+            height: p.isCircle ? p.size : p.size * 1.6,
+            borderRadius: p.isCircle ? '50%' : 2,
+            backgroundColor: p.color,
+            animationDelay: p.delay,
+            animationDuration: p.duration,
+            transform: `rotate(${p.rotate}deg)`,
+            zIndex: 50,
+          }} />
+        ))}
+
+        {/* Header */}
+        <div className="text-center space-y-2 relative z-10">
           <div className="text-6xl">🎉</div>
           <h1 className="text-4xl font-display">Spiel beendet!</h1>
-          {isWinner ? (
-            <p className="text-2xl text-green-600 font-semibold">
-              🏆 Glückwunsch, ihr habt gewonnen!
-            </p>
-          ) : (
-            <p className="text-xl">
-              Gewinner: {winner?.name} 🏆
-            </p>
-          )}
+          <p className="text-2xl font-bold text-yellow-400">{winner?.name} gewinnt! 🏆</p>
         </div>
 
-        {/* Endstand */}
-        <div className="card-surface rounded-2xl p-6 space-y-4">
-          <h2 className="text-2xl font-semibold text-center">Endstand</h2>
-          {groupList
-            .sort((a, b) => b.score - a.score)
-            .map((group, index) => (
+        {/* Podium */}
+        <div className="relative z-10 flex items-end justify-center gap-3 px-4">
+          {podium.map((group, i) => (
+            <div key={group.id} className="flex flex-col items-center gap-2" style={{ width: '32%' }}>
+              {/* Name + score above block */}
+              <div className={`text-center ${i === 1 ? 'winner-card' : ''}`}>
+                <div className="text-2xl mb-1">{podiumRanks[i]}</div>
+                <p className="font-bold text-sm sm:text-base leading-tight">{group.name}</p>
+                <p className="text-sm font-semibold text-ink/70">{group.score} Pkt.</p>
+              </div>
+              {/* Podium block */}
               <div
-                key={group.id}
-                className="flex items-center justify-between p-4 rounded-lg"
-                style={{ backgroundColor: `${group.color}20` }}
+                className={`w-full ${podiumHeights[i]} rounded-t-xl flex items-center justify-center text-4xl font-black text-white`}
+                style={{ backgroundColor: i === 1 ? '#FFD700' : i === 0 ? '#C0C0C0' : '#CD7F32' }}
               >
-                <div className="flex items-center gap-4">
-                  <span className="text-3xl">
-                    {index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : `${index + 1}.`}
-                  </span>
-                  <span className="text-xl font-semibold">
-                    {group.name}
-                    {group.id === session.groupId && ' (Du)'}
-                  </span>
+                {podiumLabels[i]}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Full scoreboard for 4+ teams */}
+        {sorted.length > 3 && (
+          <div className="relative z-10 card-surface rounded-2xl p-4 space-y-2">
+            <h3 className="text-sm font-semibold text-ink/60 text-center">Weitere Platzierungen</h3>
+            {sorted.slice(3).map((group, i) => (
+              <div key={group.id} className="flex items-center justify-between p-3 rounded-lg" style={{ backgroundColor: `${group.color}20` }}>
+                <div className="flex items-center gap-3">
+                  <span className="font-bold text-ink/60">{i + 4}.</span>
+                  <span className="font-semibold">{group.name}</span>
                 </div>
-                <span className="text-2xl font-bold">{group.score} Punkte</span>
+                <span className="font-bold">{group.score} Pkt.</span>
               </div>
             ))}
-        </div>
+          </div>
+        )}
 
-        <div className="flex gap-4">
+        <div className="relative z-10">
           <button
             onClick={() => router.push('/')}
-            className="flex-1 px-6 py-4 bg-ink text-inkDark rounded-lg font-semibold hover:opacity-90"
+            className="w-full px-6 py-4 bg-ink text-inkDark rounded-lg font-semibold hover:opacity-90"
           >
             Zurück zum Hauptmenü
           </button>

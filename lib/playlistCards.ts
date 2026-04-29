@@ -11585,12 +11585,12 @@ export const playlistCards: Card[] = [
     ]
   },
   {
-    "id": "song-bambolina-e-barracuda-2023",
+    "id": "song-bambolina-e-barracuda-1990",
     "title": "Bambolina e barracuda",
     "category": "music",
-    "year": 2023,
+    "year": 1990,
     "cue": "Song anhören und einordnen.",
-    "answer": "Ligabue — 2023, Bambolina e barracuda.",
+    "answer": "Ligabue — 1990, Bambolina e barracuda.",
     "hint": "Ligabue",
     "difficulty": "mittel",
     "sources": {
