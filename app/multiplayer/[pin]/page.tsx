@@ -570,6 +570,17 @@ export default function MultiplayerGamePage() {
         }
       };
 
+      const triviaCategories: string[] = Array.isArray(game.triviaCategories)
+        ? game.triviaCategories
+        : Object.values(game.triviaCategories ?? {});
+
+      const catLabel = (cat: string) => ({
+        music: 'Musik', quote: 'Zitat', film: 'Film', filmserien: 'Film',
+        flag: 'Flagge', outline: 'Umriss', natur: 'Natur', naturtechnik: 'Natur',
+        triviaextra: 'Trivia', schaetzfragen: 'Schätzfr.', geogeschichte: 'Geo',
+        religionglaube: 'Religion', sportfreizeit: 'Sport', popkultur: 'Popkultur',
+      } as Record<string, string>)[cat] ?? cat;
+
       return (
         <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
           {/* Header */}
@@ -586,21 +597,40 @@ export default function MultiplayerGamePage() {
             )}
           </div>
 
-          {/* Scoreboard */}
-          <div className="card-surface rounded-2xl p-4">
-            <div className="flex flex-wrap gap-3 justify-center">
-              {groupList.map(g => (
+          {/* Scoreboard mit Kategorien-Fortschritt */}
+          <div className="card-surface rounded-2xl p-4 space-y-3">
+            {groupList.map(g => {
+              const completed: string[] = Array.isArray(g.completedCategories)
+                ? g.completedCategories
+                : Object.values(g.completedCategories ?? {}) as string[];
+              const isActive = g.id === game.currentTurnGroupId;
+              return (
                 <div key={g.id}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full font-semibold text-sm ${
-                    g.id === game.currentTurnGroupId ? 'ring-2 ring-offset-2 ring-ink' : ''
-                  }`}
-                  style={{ backgroundColor: `${g.color}30` }}
+                  className={`rounded-xl p-3 ${isActive ? 'ring-2 ring-ink' : ''}`}
+                  style={{ backgroundColor: `${g.color}20` }}
                 >
-                  <span>{g.name}</span>
-                  <span className="font-bold">{g.score} Pkt.</span>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-bold text-sm">{g.name} {isActive ? '🎮' : ''}</span>
+                    <span className="font-semibold text-sm">{g.score} Pkt. · {completed.length}/{triviaCategories.length} Kat.</span>
+                  </div>
+                  {triviaCategories.length > 0 && (
+                    <div className="flex flex-wrap gap-1">
+                      {triviaCategories.map(cat => (
+                        <span key={cat}
+                          className={`text-xs px-2 py-0.5 rounded-full font-semibold ${
+                            completed.includes(cat)
+                              ? 'bg-green-500 text-white'
+                              : 'bg-ink/10 text-ink/50'
+                          }`}
+                        >
+                          {completed.includes(cat) ? '✓ ' : ''}{catLabel(cat)}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
 
           {/* Frage */}

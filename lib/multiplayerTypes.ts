@@ -24,6 +24,7 @@ export interface GroupData {
   flexRequested?: boolean; // Hat die aktive Gruppe einen Flex-Button angefordert
   lastFlexRequest?: number; // Timestamp des letzten Flex-Requests
   pendingPosition?: number | null; // Live-Vorschau: gewählte Position (noch nicht eingereicht)
+  completedCategories?: string[]; // Trivia: bereits korrekt beantwortete Kategorien
 }
 
 export interface PlacedCard {
@@ -60,6 +61,10 @@ export interface GameSession {
   flexPendingGroupId?: string | null; // Welche Gruppe wartet auf Flex-Bestätigung
   winnerGroupId?: string | null; // Erste Gruppe mit 10 Karten (Timeline) oder erste mit X Punkte (Trivia)
   pendingResult?: 'correct' | 'wrong' | null; // Letztes Platzierungsergebnis — Host entscheidet wann weiter
+  // Trivia-Modus
+  triviaCategories?: string[];           // Alle Kategorien die im Deck vorhanden sind (einmalig beim Erstellen berechnet)
+  deckMeta?: Record<string, string>;     // cardId → category (für Server-seitige Logik)
+  availableDeck?: string[];              // Noch nicht gestellte Karten (cardIds)
 }
 
 export interface CreateGameParams {

@@ -72,6 +72,17 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
   };
   const actualDeck = params.deck; // Volles Deck verwenden
 
+  // Trivia-Modus: Metadaten für kategoriebasierte Gewinnbedingung
+  const deckMeta: Record<string, string> = {};
+  const triviaCatSet = new Set<string>();
+  if (params.mode === 'trivia') {
+    for (const card of actualDeck) {
+      deckMeta[card.id] = card.category;
+      triviaCatSet.add(card.category);
+    }
+  }
+  const triviaCategories = params.mode === 'trivia' ? Array.from(triviaCatSet) : undefined;
+
   const gameSession: GameSession = {
     id: pin,
     hostId: hostGroupId,
@@ -83,8 +94,13 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     currentTurnGroupId: null,
     deck: actualDeck.map(card => card.id),
     referenceCard,
+    ...(params.mode === 'trivia' ? {
+      triviaCategories,
+      deckMeta,
+      availableDeck: actualDeck.map(c => c.id),
+    } : {}),
     groups: {
-      [hostGroupId]: hostGroup
+      [hostGroupId]: { ...hostGroup, completedCategories: [] }
     },
     createdAt: Date.now(),
     startedAt: null,
@@ -146,7 +162,8 @@ export async function joinGame(params: JoinGameParams): Promise<{ groupId: strin
     score: 0,
     isReady: false,
     flexActive: false,
-    isHost: false
+    isHost: false,
+    completedCategories: []
   };
 
   // Füge Gruppe hinzu
@@ -710,9 +727,8 @@ export async function checkAutoWinTimeline(pin: string): Promise<void> {
   }
 }
 /**
- * Trivia-Modus: Host bewertet Antwort der aktiven Gruppe
- * correct=true  → Gruppe +1 Punkt, dann nächste Karte + nächster Zug
- * correct=false → kein Punkt, nächste Karte + nächster Zug
+ * Trivia-Modus: Host bewertet Antwort der aktiven Gruppe.
+ * Trivial-Pursuit-Gewinnbedingung: alle Kategorien im Deck korrekt beantwortet.
  */
 export async function submitTriviaAnswer(pin: string, correct: boolean): Promise<void> {
   checkFirebase();
@@ -722,49 +738,70 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
   if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
 
   const game: GameSession = snapshot.val();
+  const deckMeta: Record<string, string> = game.deckMeta ?? {};
+  const triviaCategories: string[] = Array.isArray(game.triviaCategories)
+    ? game.triviaCategories
+    : Object.values(game.triviaCategories ?? {});
 
   const playingGroupIds = Object.entries(game.groups)
     .filter(([_, g]) => !g.isHost)
     .map(([id]) => id);
 
-  const currentIndex = playingGroupIds.indexOf(game.currentTurnGroupId || '');
+  const activeGroupId = game.currentTurnGroupId!;
+  const currentIndex = playingGroupIds.indexOf(activeGroupId);
   const nextGroupId = playingGroupIds[(currentIndex + 1) % playingGroupIds.length];
 
-  const deck: string[] = Array.isArray(game.deck)
-    ? game.deck
-    : Object.values(game.deck ?? {});
-  const nextCardIndex = (game.currentCardIndex ?? 0) + 1;
+  // completedCategories der aktiven Gruppe
+  const prevCompleted: string[] = Array.isArray(game.groups[activeGroupId]?.completedCategories)
+    ? game.groups[activeGroupId].completedCategories!
+    : Object.values(game.groups[activeGroupId]?.completedCategories ?? {}) as string[];
 
-  const activeGroupId = game.currentTurnGroupId!;
-  const currentScore = game.groups[activeGroupId]?.score ?? 0;
-  const newScore = correct ? currentScore + 1 : currentScore;
+  const currentCategory = game.currentCardId ? (deckMeta[game.currentCardId] ?? '') : '';
+  const newCompleted = correct && currentCategory && !prevCompleted.includes(currentCategory)
+    ? [...prevCompleted, currentCategory]
+    : prevCompleted;
+
+  // Karte aus availableDeck entfernen
+  const prevAvailable: string[] = Array.isArray(game.availableDeck)
+    ? game.availableDeck
+    : Object.values(game.availableDeck ?? {});
+  const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
+
+  // Naechste Karte fuer nextGroup: Kategorie die sie noch nicht abgehakt haben
+  const nextGroupCompleted: string[] = Array.isArray(game.groups[nextGroupId]?.completedCategories)
+    ? game.groups[nextGroupId].completedCategories!
+    : Object.values(game.groups[nextGroupId]?.completedCategories ?? {}) as string[];
+  const nextCardId = newAvailable.find(id => {
+    const cat = deckMeta[id] ?? '';
+    return cat !== '' && !nextGroupCompleted.includes(cat);
+  }) ?? null;
 
   const updates: Record<string, any> = {
+    [`groups/${activeGroupId}/score`]: correct
+      ? (game.groups[activeGroupId]?.score ?? 0) + 1
+      : (game.groups[activeGroupId]?.score ?? 0),
+    [`groups/${activeGroupId}/completedCategories`]: newCompleted,
+    availableDeck: newAvailable,
     currentTurnGroupId: nextGroupId,
-    [`groups/${activeGroupId}/score`]: newScore,
   };
 
-  // Reset flex-active für alle
+  // Reset flex-active
   Object.keys(game.groups).forEach(gid => {
     updates[`groups/${gid}/flexActive`] = false;
   });
 
-  // Win condition: erste Gruppe mit 10 Punkten
-  const newScores = { ...Object.fromEntries(Object.entries(game.groups).map(([id, g]) => [id, g.score])) };
-  newScores[activeGroupId] = newScore;
-  const winnerEntry = Object.entries(newScores).find(([_, s]) => s >= 10);
-
-  if (winnerEntry) {
+  // Gewinnbedingung: aktive Gruppe hat alle Kategorien abgehakt?
+  if (correct && triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
     updates.state = 'finished';
     updates.finishedAt = Date.now();
-    updates.winnerGroupId = winnerEntry[0];
-  } else if (nextCardIndex >= deck.length) {
-    // Keine Karten mehr → Spiel beenden
+    updates.winnerGroupId = activeGroupId;
+  } else if (!nextCardId) {
+    // Keine passende Karte mehr fuer naechste Gruppe -> Spiel beenden
     updates.state = 'finished';
     updates.finishedAt = Date.now();
   } else {
-    updates.currentCardIndex = nextCardIndex;
-    updates.currentCardId = deck[nextCardIndex];
+    updates.currentCardId = nextCardId;
+    updates.currentCardIndex = (game.currentCardIndex ?? 0) + 1;
   }
 
   await update(gameRef, updates);
