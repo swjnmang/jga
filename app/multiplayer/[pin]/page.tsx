@@ -645,10 +645,28 @@ export default function MultiplayerGamePage() {
         )}
 
         {/* Aktuelle Karte */}
-        {currentCard && (
+        {currentCard && (() => {
+          const categoryLabels: Record<string, string> = {
+            music: 'Musikfrage',
+            quote: 'Zitat',
+            film: 'Film & Serie',
+            filmserien: 'Film & Serie',
+            flag: 'Flagge',
+            outline: 'Umriss',
+            natur: 'Natur & Technik',
+            naturtechnik: 'Natur & Technik',
+            triviaextra: 'Trivia',
+            schaetzfragen: 'Schätzfrage',
+            geogeschichte: 'Geo & Geschichte',
+            religionglaube: 'Religion & Glaube',
+            sportfreizeit: 'Sport & Freizeit',
+            popkultur: 'Popkultur',
+          };
+          const categoryLabel = categoryLabels[currentCard.category] ?? currentCard.category;
+          return (
           <div className={`card-surface rounded-2xl p-6 space-y-4 ${(!isActiveTurn && !isHostSession) ? 'opacity-70 pointer-events-none select-none' : ''}`}>
             <div className="flex items-center justify-between">
-              <h2 className="text-xl font-semibold">Musikfrage</h2>
+              <h2 className="text-xl font-semibold">{categoryLabel}</h2>
               <span className="text-sm px-3 py-1 rounded-full bg-ink/10">
                 {currentCard.difficulty}
               </span>
@@ -689,7 +707,8 @@ export default function MultiplayerGamePage() {
             )}
 
           </div>
-        )}
+          );
+        })()}
 
         {/* Timeline mit Platzierungs-Optionen */}
         {placementResult === null && currentCard && isActiveTurn && (() => {
