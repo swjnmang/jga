@@ -709,3 +709,63 @@ export async function checkAutoWinTimeline(pin: string): Promise<void> {
     });
   }
 }
+/**
+ * Trivia-Modus: Host bewertet Antwort der aktiven Gruppe
+ * correct=true  → Gruppe +1 Punkt, dann nächste Karte + nächster Zug
+ * correct=false → kein Punkt, nächste Karte + nächster Zug
+ */
+export async function submitTriviaAnswer(pin: string, correct: boolean): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+
+  const playingGroupIds = Object.entries(game.groups)
+    .filter(([_, g]) => !g.isHost)
+    .map(([id]) => id);
+
+  const currentIndex = playingGroupIds.indexOf(game.currentTurnGroupId || '');
+  const nextGroupId = playingGroupIds[(currentIndex + 1) % playingGroupIds.length];
+
+  const deck: string[] = Array.isArray(game.deck)
+    ? game.deck
+    : Object.values(game.deck ?? {});
+  const nextCardIndex = (game.currentCardIndex ?? 0) + 1;
+
+  const activeGroupId = game.currentTurnGroupId!;
+  const currentScore = game.groups[activeGroupId]?.score ?? 0;
+  const newScore = correct ? currentScore + 1 : currentScore;
+
+  const updates: Record<string, any> = {
+    currentTurnGroupId: nextGroupId,
+    [`groups/${activeGroupId}/score`]: newScore,
+  };
+
+  // Reset flex-active für alle
+  Object.keys(game.groups).forEach(gid => {
+    updates[`groups/${gid}/flexActive`] = false;
+  });
+
+  // Win condition: erste Gruppe mit 10 Punkten
+  const newScores = { ...Object.fromEntries(Object.entries(game.groups).map(([id, g]) => [id, g.score])) };
+  newScores[activeGroupId] = newScore;
+  const winnerEntry = Object.entries(newScores).find(([_, s]) => s >= 10);
+
+  if (winnerEntry) {
+    updates.state = 'finished';
+    updates.finishedAt = Date.now();
+    updates.winnerGroupId = winnerEntry[0];
+  } else if (nextCardIndex >= deck.length) {
+    // Keine Karten mehr → Spiel beenden
+    updates.state = 'finished';
+    updates.finishedAt = Date.now();
+  } else {
+    updates.currentCardIndex = nextCardIndex;
+    updates.currentCardId = deck[nextCardIndex];
+  }
+
+  await update(gameRef, updates);
+}

@@ -18,7 +18,8 @@ import {
   confirmFlexButton,
   rejectFlexButton,
   editGroupScore,
-  endGame
+  endGame,
+  submitTriviaAnswer
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
@@ -67,6 +68,7 @@ export default function MultiplayerGamePage() {
   const [editingGroupId, setEditingGroupId] = useState<string | null>(null);
   const [editingScore, setEditingScore] = useState<number | null>(null);
   const [showFlexConfirm, setShowFlexConfirm] = useState(false);
+  const [showTriviaAnswer, setShowTriviaAnswer] = useState(false);
 
   // Lade Session-Infos
   useEffect(() => {
@@ -108,6 +110,7 @@ export default function MultiplayerGamePage() {
     const duration = game.settings?.timerSeconds;
     if (!duration || duration <= 0) { setTimeLeft(null); return; }
     setTimeLeft(duration);
+    setShowTriviaAnswer(false);
     const id = window.setInterval(() => {
       setTimeLeft(prev => {
         if (prev === null || prev <= 1) { clearInterval(id); return 0; }
@@ -538,6 +541,173 @@ export default function MultiplayerGamePage() {
     const isActiveTurn = game.currentTurnGroupId === session.groupId && !session.isHost; // Host kann nicht spielen
     const isHostSession = session.isHost;
     const canControlMedia = isActiveTurn || isHostSession;
+
+    // ──────────────────────────────────────────────────
+    // TRIVIA MODUS
+    // ──────────────────────────────────────────────────
+    if (game.mode === 'trivia' && currentCard) {
+      const activeGroup = game.currentTurnGroupId ? game.groups[game.currentTurnGroupId] : null;
+      const isMyTurn = game.currentTurnGroupId === session.groupId && !session.isHost;
+
+      const categoryLabels: Record<string, string> = {
+        music: 'Musikfrage', quote: 'Zitat', film: 'Film & Serie', filmserien: 'Film & Serie',
+        flag: 'Flagge', outline: 'Umriss', natur: 'Natur & Technik', naturtechnik: 'Natur & Technik',
+        triviaextra: 'Trivia', schaetzfragen: 'Schätzfrage', geogeschichte: 'Geo & Geschichte',
+        religionglaube: 'Religion & Glaube', sportfreizeit: 'Sport & Freizeit', popkultur: 'Popkultur',
+      };
+      const categoryLabel = categoryLabels[currentCard.category] ?? currentCard.category;
+
+      const handleTriviaAnswer = async (correct: boolean) => {
+        if (!session || !game || isProcessing) return;
+        setIsProcessing(true);
+        setShowTriviaAnswer(false);
+        try {
+          await submitTriviaAnswer(pin, correct);
+        } catch (err) {
+          console.error(err);
+        } finally {
+          setIsProcessing(false);
+        }
+      };
+
+      return (
+        <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+          {/* Header */}
+          <div className="text-center space-y-2">
+            <h1 className="text-3xl font-display">Trivia Multiplayer</h1>
+            <p className="text-ink/70">Frage {game.currentCardIndex + 1} / {game.deck.length}</p>
+            <div className="inline-flex items-center gap-2 text-sm text-ink/60">
+              <span>PIN: {pin}</span>
+            </div>
+            {activeGroup && (
+              <div className="mt-3 w-full px-4 py-3 rounded-xl bg-ink/15 text-ink font-bold text-xl">
+                🎮 Am Zug: {activeGroup.name}
+              </div>
+            )}
+          </div>
+
+          {/* Scoreboard */}
+          <div className="card-surface rounded-2xl p-4">
+            <div className="flex flex-wrap gap-3 justify-center">
+              {groupList.map(g => (
+                <div key={g.id}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-full font-semibold text-sm ${
+                    g.id === game.currentTurnGroupId ? 'ring-2 ring-offset-2 ring-ink' : ''
+                  }`}
+                  style={{ backgroundColor: `${g.color}30` }}
+                >
+                  <span>{g.name}</span>
+                  <span className="font-bold">{g.score} Pkt.</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Frage */}
+          <div className="card-surface rounded-2xl p-6 space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-sm px-3 py-1 rounded-full bg-ink/10 font-semibold">{categoryLabel}</span>
+              {timeLeft !== null && (
+                <span className={`text-sm font-mono font-bold px-3 py-1 rounded-full ${
+                  timeLeft <= 10 ? 'bg-red-500/20 text-red-600 animate-pulse' : 'bg-ink/10'
+                }`}>
+                  ⏱ {Math.floor(timeLeft / 60).toString().padStart(2, '0')}:{(timeLeft % 60).toString().padStart(2, '0')}
+                </span>
+              )}
+            </div>
+            <p className="text-2xl font-semibold">{currentCard.cue}</p>
+            {isMyTurn && (
+              <div className="rounded-xl bg-green-500/10 border-2 border-green-500 px-4 py-3">
+                <p className="text-green-700 font-bold">🎤 Ihr seid dran! Beantwortet die Frage laut.</p>
+              </div>
+            )}
+            {!isMyTurn && !session.isHost && (
+              <p className="text-sm text-ink/60 text-center">Warte auf die Antwort von {activeGroup?.name ?? 'dem aktiven Team'}…</p>
+            )}
+          </div>
+
+          {/* Host-Steuerung */}
+          {session.isHost && (
+            <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
+              <h3 className="text-lg font-semibold text-green-700">👑 Spielleitung</h3>
+
+              {/* Antwort anzeigen */}
+              <button
+                onClick={() => setShowTriviaAnswer(v => !v)}
+                className="w-full px-4 py-3 rounded-xl border-2 border-ink/20 hover:border-ink/50 font-semibold transition-colors"
+              >
+                {showTriviaAnswer ? '🙈 Antwort verbergen' : '👁 Antwort anzeigen'}
+              </button>
+              {showTriviaAnswer && (
+                <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-400 px-4 py-3">
+                  <p className="text-sm font-semibold text-yellow-700 mb-1">Korrekte Antwort:</p>
+                  <p className="text-xl font-bold">{currentCard.answer}</p>
+                  {currentCard.year && (
+                    <p className="text-sm text-ink/60 mt-1">Jahr: {currentCard.year}</p>
+                  )}
+                </div>
+              )}
+
+              {/* Bewertungs-Buttons */}
+              <div className="grid grid-cols-2 gap-3">
+                <button
+                  onClick={() => handleTriviaAnswer(true)}
+                  disabled={isProcessing}
+                  className="px-4 py-4 bg-green-600 text-white rounded-xl font-bold text-lg hover:bg-green-700 disabled:opacity-50"
+                >
+                  ✅ Richtig
+                </button>
+                <button
+                  onClick={() => handleTriviaAnswer(false)}
+                  disabled={isProcessing}
+                  className="px-4 py-4 bg-red-600 text-white rounded-xl font-bold text-lg hover:bg-red-700 disabled:opacity-50"
+                >
+                  ❌ Falsch
+                </button>
+              </div>
+              <p className="text-xs text-ink/50 text-center">Nach Klick: nächste Frage, nächstes Team dran</p>
+
+              {/* Host-Panel (Score-Editing + Spiel beenden) */}
+              <details className="border-t border-ink/10 pt-4">
+                <summary className="cursor-pointer text-sm text-ink/60 select-none">⚙️ Weitere Einstellungen</summary>
+                <div className="mt-3 space-y-3">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                    {groupList.map(group => (
+                      <div key={group.id}>
+                        {editingGroupId === group.id ? (
+                          <div className="flex gap-1">
+                            <input type="number" value={editingScore ?? group.score}
+                              onChange={e => setEditingScore(Number(e.target.value))}
+                              className="w-16 rounded border border-ink/30 px-2 py-1 text-sm"
+                            />
+                            <button onClick={async () => {
+                              if (editingScore !== null && session) {
+                                await editGroupScore(pin, session.groupId, group.id, editingScore);
+                              }
+                              setEditingGroupId(null);
+                            }} className="text-green-600 font-bold px-1">✓</button>
+                            <button onClick={() => setEditingGroupId(null)} className="text-red-600 font-bold px-1">✗</button>
+                          </div>
+                        ) : (
+                          <button onClick={() => { setEditingGroupId(group.id); setEditingScore(group.score); }}
+                            className="w-full px-2 py-1 rounded border-2 border-ink/20 hover:border-ink/60 text-left text-xs">
+                            {group.name}: {group.score}
+                          </button>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                  <button onClick={handleEndGame}
+                    className="w-full px-4 py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700">
+                    Spiel beenden
+                  </button>
+                </div>
+              </details>
+            </div>
+          )}
+        </main>
+      );
+    }
 
     // Wenn keine Karte verfügbar ist, zeige Warnung
     if (!currentCard) {
