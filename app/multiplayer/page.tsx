@@ -15,6 +15,7 @@ function MultiplayerLobbyContent() {
   const [mode, setMode] = useState<'create' | 'join' | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [rejoinSession, setRejoinSession] = useState<{ pin: string } | null>(null);
 
   // Create Game Form
   const [groupName, setGroupName] = useState('');
@@ -124,19 +125,21 @@ function MultiplayerLobbyContent() {
     }
   }, [searchParams]);
 
-  // Wenn Session im localStorage vorhanden → automatisch zurück ins laufende Spiel
+  // Wenn Session im localStorage vorhanden → Rejoin-Banner anzeigen (kein stiller Redirect)
   useEffect(() => {
     const sessionStr = localStorage.getItem('multiplayer_session');
     if (!sessionStr) return;
     try {
       const sessionData = JSON.parse(sessionStr);
       if (sessionData?.pin) {
-        // Kurz prüfen ob das Spiel noch existiert, dann weiterleiten
         import('@/lib/multiplayerService').then(({ subscribeToGame }) => {
           const unsub = subscribeToGame(sessionData.pin, (gameData) => {
             unsub();
-            if (gameData && gameData.state === 'playing') {
-              router.replace(`/multiplayer/${sessionData.pin}`);
+            if (gameData && (gameData.state === 'playing' || gameData.state === 'lobby')) {
+              setRejoinSession({ pin: sessionData.pin });
+            } else {
+              // Spiel existiert nicht mehr oder ist beendet → aufräumen
+              localStorage.removeItem('multiplayer_session');
             }
           });
         });
@@ -344,6 +347,32 @@ function MultiplayerLobbyContent() {
         <h1 className="text-3xl sm:text-4xl font-display">Multiplayer</h1>
         <p className="text-ink/70">Spiele gemeinsam mit mehreren Gruppen</p>
       </div>
+
+      {/* Rejoin-Banner */}
+      {rejoinSession && (
+        <div className="rounded-2xl border-2 border-yellow-400 bg-yellow-100/10 p-5 space-y-3">
+          <p className="font-semibold text-yellow-700">
+            🔄 Du hast noch ein laufendes Spiel (PIN: <span className="font-mono">{rejoinSession.pin}</span>)
+          </p>
+          <div className="flex gap-3">
+            <button
+              onClick={() => router.push(`/multiplayer/${rejoinSession.pin}`)}
+              className="flex-1 px-4 py-2 bg-yellow-500 text-white rounded-lg font-semibold hover:bg-yellow-600"
+            >
+              Weiterspielen
+            </button>
+            <button
+              onClick={() => {
+                localStorage.removeItem('multiplayer_session');
+                setRejoinSession(null);
+              }}
+              className="flex-1 px-4 py-2 rounded-lg border-2 border-ink/20 hover:border-ink/50 font-semibold"
+            >
+              Ignorieren
+            </button>
+          </div>
+        </div>
+      )}
 
       {!mode && (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
