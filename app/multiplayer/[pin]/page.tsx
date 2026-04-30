@@ -647,6 +647,25 @@ export default function MultiplayerGamePage() {
               )}
             </div>
             <p className="text-2xl font-semibold">{currentCard.cue}</p>
+
+            {/* Medien-Einbettung */}
+            {currentCard.sources && (
+              session.isHost ? (
+                <MediaEmbed
+                  ref={mediaEmbedRef}
+                  card={currentCard}
+                  preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
+                />
+              ) : currentCard.category === 'music' ? (
+                <div className="rounded-2xl card-surface bg-ink/5 p-6 text-center space-y-3">
+                  <div className="text-5xl">🎵</div>
+                  <p className="text-sm font-semibold">Der Spielleiter steuert die Musikwiedergabe</p>
+                </div>
+              ) : (
+                <MediaEmbed card={currentCard} preference="youtube" />
+              )
+            )}
+
             {isMyTurn && (
               <div className="rounded-xl bg-green-500/10 border-2 border-green-500 px-4 py-3">
                 <p className="text-green-700 font-bold">🎤 Ihr seid dran! Beantwortet die Frage laut.</p>
