@@ -55,14 +55,15 @@ export default function MultiplayerGamePage() {
   const [timeLeft, setTimeLeft] = useState<number | null>(null);
 
   // Auto-Reload für den Host bei Gruppenwechsel (Spotify Player braucht frischen Start)
+  // Nur im Timeline-Modus — im Trivia-Modus wechselt currentTurnGroupId nach jeder Frage normal
   useEffect(() => {
-    if (!session?.isHost || !game?.currentTurnGroupId) return;
+    if (!session?.isHost || !game?.currentTurnGroupId || game?.mode === 'trivia') return;
     const prev = prevTurnGroupRef.current;
     if (prev !== null && prev !== game.currentTurnGroupId) {
       window.location.reload();
     }
     prevTurnGroupRef.current = game.currentTurnGroupId;
-  }, [game?.currentTurnGroupId, session?.isHost]);
+  }, [game?.currentTurnGroupId, session?.isHost, game?.mode]);
   
   // Host-Funktionen
   const [editingGroupId, setEditingGroupId] = useState<string | null>(null);
