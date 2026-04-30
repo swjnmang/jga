@@ -544,9 +544,22 @@ export default function MultiplayerGamePage() {
     const canControlMedia = isActiveTurn || isHostSession;
 
     // ──────────────────────────────────────────────────
-    // TRIVIA MODUS
+    // TRIVIA MODUS — Guard ohne currentCard damit Host nie "durchfällt"
     // ──────────────────────────────────────────────────
-    if (game.mode === 'trivia' && currentCard) {
+    if (game.mode === 'trivia') {
+      // Karte noch nicht gefunden → Ladestand zeigen (Host bleibt Host)
+      if (!currentCard) {
+        return (
+          <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+            <div className="text-center space-y-4">
+              <h1 className="text-3xl font-display">Trivia Multiplayer</h1>
+              <div className="card-surface rounded-2xl p-6">
+                <p className="text-lg text-ink/70">Nächste Frage wird geladen…</p>
+              </div>
+            </div>
+          </main>
+        );
+      }
       const activeGroup = game.currentTurnGroupId ? game.groups[game.currentTurnGroupId] : null;
       const isMyTurn = game.currentTurnGroupId === session.groupId && !session.isHost;
 
@@ -652,6 +665,7 @@ export default function MultiplayerGamePage() {
             {currentCard.sources && (
               session.isHost ? (
                 <MediaEmbed
+                  key={game.currentCardId ?? 'trivia-host'}
                   ref={mediaEmbedRef}
                   card={currentCard}
                   preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
