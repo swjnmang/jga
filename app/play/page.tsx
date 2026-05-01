@@ -29,6 +29,7 @@ function PlayMenuContent() {
             label="Solo Modus"
             icon="🎮"
             description="Trainiere allein"
+            disabled
           />
           <ModeCard 
             href="/multiplayer?gameMode=timeline"
@@ -57,7 +58,16 @@ function PlayMenuContent() {
   );
 }
 
-function ModeCard({ href, label, icon, description }: { href: string; label: string; icon: string; description: string }) {
+function ModeCard({ href, label, icon, description, disabled }: { href: string; label: string; icon: string; description: string; disabled?: boolean }) {
+  if (disabled) {
+    return (
+      <div className="inline-flex flex-col items-center justify-center rounded-2xl border border-white/15 text-white/40 font-semibold px-6 py-6 bg-white/5 backdrop-blur gap-3 cursor-not-allowed opacity-50">
+        <span className="text-4xl">{icon}</span>
+        <span className="text-lg">{label}</span>
+        <span className="text-xs">Demnächst verfügbar</span>
+      </div>
+    );
+  }
   return (
     <Link
       href={href}
@@ -956,16 +966,12 @@ function QuizContent() {
           </button>
           <button
             type="button"
-            className={`rounded-2xl border-2 px-6 sm:px-8 py-6 sm:py-8 transition-all transform active:scale-95 sm:hover:scale-105 ${
-              selectedMode === 'solo'
-                ? 'bg-ink text-inkDark border-ink shadow-lg'
-                : 'border-ink/30 hover:border-ink/60 hover:bg-sand/5'
-            }`}
-            onClick={() => setSelectedMode('solo')}
+            disabled
+            className="rounded-2xl border-2 px-6 sm:px-8 py-6 sm:py-8 border-ink/15 opacity-40 cursor-not-allowed relative"
           >
             <div className="text-4xl sm:text-5xl mb-2 sm:mb-3">👤</div>
             <div className="text-lg sm:text-xl font-semibold">Solo</div>
-            <div className="text-xs opacity-60 mt-1 sm:mt-2">Alleine punkten</div>
+            <div className="text-xs opacity-60 mt-1 sm:mt-2">Demnächst verfügbar</div>
           </button>
         </div>
 
