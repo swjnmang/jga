@@ -25,6 +25,7 @@ export interface GroupData {
   lastFlexRequest?: number; // Timestamp des letzten Flex-Requests
   pendingPosition?: number | null; // Live-Vorschau: gewählte Position (noch nicht eingereicht)
   completedCategories?: string[]; // Trivia: bereits korrekt beantwortete Kategorien
+  schaetzSubmission?: string | null; // Trivia Schätzfrage: eingereichte Schätzung
 }
 
 export interface PlacedCard {

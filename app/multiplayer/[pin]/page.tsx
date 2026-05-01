@@ -19,7 +19,11 @@ import {
   rejectFlexButton,
   editGroupScore,
   endGame,
-  submitTriviaAnswer
+  submitTriviaAnswer,
+  submitSchaetzGuess,
+  evaluateSchaetzfrage,
+  extractNumericFromAnswer,
+  extractUnitFromAnswer,
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
@@ -70,6 +74,8 @@ export default function MultiplayerGamePage() {
   const [editingScore, setEditingScore] = useState<number | null>(null);
   const [showFlexConfirm, setShowFlexConfirm] = useState(false);
   const [showTriviaAnswer, setShowTriviaAnswer] = useState(false);
+  const [schaetzInput, setSchaetzInput] = useState('');
+  const [schaetzSubmitted, setSchaetzSubmitted] = useState(false);
 
   // Lade Session-Infos
   useEffect(() => {
@@ -112,6 +118,8 @@ export default function MultiplayerGamePage() {
     if (!duration || duration <= 0) { setTimeLeft(null); return; }
     setTimeLeft(duration);
     setShowTriviaAnswer(false);
+    setSchaetzInput('');
+    setSchaetzSubmitted(false);
     const id = window.setInterval(() => {
       setTimeLeft(prev => {
         if (prev === null || prev <= 1) { clearInterval(id); return 0; }
@@ -647,7 +655,169 @@ export default function MultiplayerGamePage() {
             })}
           </div>
 
-          {/* Frage */}
+          {/* ── SCHÄTZFRAGE: alle Gruppen antworten gleichzeitig ── */}
+          {currentCard.category === 'schaetzfragen' ? (() => {
+            const playingGroups = groupList.filter(g => !g.isHost);
+            const unit = extractUnitFromAnswer(currentCard.answer);
+            const correctNum = extractNumericFromAnswer(currentCard.answer);
+            const allSubmitted = playingGroups.every(g => g.schaetzSubmission != null && g.schaetzSubmission !== '');
+            const submittedCount = playingGroups.filter(g => g.schaetzSubmission != null && g.schaetzSubmission !== '').length;
+
+            // Schätzung einreichen (Spieler)
+            const handleSchaetzSubmit = async () => {
+              if (!schaetzInput.trim() || schaetzSubmitted || isProcessing) return;
+              setIsProcessing(true);
+              try {
+                await submitSchaetzGuess(pin, session.groupId, schaetzInput.trim());
+                setSchaetzSubmitted(true);
+              } catch (err) { console.error(err); }
+              finally { setIsProcessing(false); }
+            };
+
+            // Auswertung (Host)
+            const handleSchaetzEvaluation = async () => {
+              if (isProcessing) return;
+              const withSubmissions = playingGroups
+                .filter(g => g.schaetzSubmission != null && g.schaetzSubmission !== '')
+                .map(g => ({
+                  id: g.id,
+                  val: parseFloat((g.schaetzSubmission ?? '').replace(/\./g, '').replace(',', '.')),
+                }))
+                .filter(s => !isNaN(s.val));
+              if (withSubmissions.length === 0) return;
+              const winner = withSubmissions.reduce((best, s) =>
+                Math.abs(s.val - correctNum) < Math.abs(best.val - correctNum) ? s : best
+              );
+              setIsProcessing(true);
+              try { await evaluateSchaetzfrage(pin, winner.id); }
+              catch (err) { console.error(err); }
+              finally { setIsProcessing(false); }
+            };
+
+            return (
+              <>
+                {/* Frage-Karte */}
+                <div className="card-surface rounded-2xl p-6 space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm px-3 py-1 rounded-full bg-ink/10 font-semibold">{categoryLabel}</span>
+                    {timeLeft !== null && (
+                      <span className={`text-sm font-mono font-bold px-3 py-1 rounded-full ${timeLeft <= 10 ? 'bg-red-500/20 text-red-600 animate-pulse' : 'bg-ink/10'}`}>
+                        ⏱ {Math.floor(timeLeft / 60).toString().padStart(2, '0')}:{(timeLeft % 60).toString().padStart(2, '0')}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-2xl font-semibold">{currentCard.cue}</p>
+
+                  {/* Spieler-Eingabe */}
+                  {!session.isHost && (() => {
+                    const mySubmission = currentGroup?.schaetzSubmission;
+                    if (mySubmission) {
+                      return (
+                        <div className="rounded-xl bg-green-500/10 border-2 border-green-500 px-4 py-3 space-y-1">
+                          <p className="text-green-700 font-bold">✅ Eingereicht: <span className="font-mono">{mySubmission}{unit ? ` ${unit}` : ''}</span></p>
+                          <p className="text-sm text-ink/60">Warte bis alle Gruppen geantwortet haben…</p>
+                        </div>
+                      );
+                    }
+                    return (
+                      <div className="space-y-3">
+                        <p className="text-sm font-semibold text-ink/70">Deine Schätzung{unit ? ` (in ${unit})` : ''}:</p>
+                        <div className="flex gap-2">
+                          <input
+                            type="number"
+                            value={schaetzInput}
+                            onChange={e => setSchaetzInput(e.target.value)}
+                            onKeyDown={e => e.key === 'Enter' && handleSchaetzSubmit()}
+                            placeholder={unit ? `Zahl in ${unit}` : 'Zahl eingeben'}
+                            className="flex-1 rounded-xl border-2 border-ink/20 px-4 py-3 text-lg font-semibold text-gray-900 focus:border-ink/60 outline-none"
+                          />
+                          {unit && <span className="self-center text-ink/60 font-semibold">{unit}</span>}
+                        </div>
+                        <button
+                          onClick={handleSchaetzSubmit}
+                          disabled={!schaetzInput.trim() || isProcessing}
+                          className="w-full py-3 rounded-xl bg-ink text-inkDark font-bold text-lg hover:opacity-90 disabled:opacity-40"
+                        >
+                          📤 Schätzung einreichen
+                        </button>
+                      </div>
+                    );
+                  })()}
+                </div>
+
+                {/* Host: Übersicht + Auswertung */}
+                {session.isHost && (
+                  <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
+                    <h3 className="text-lg font-semibold text-green-700">👑 Spielleitung — Schätzfrage</h3>
+                    <p className="text-sm text-ink/60">{submittedCount}/{playingGroups.length} Gruppen haben geantwortet</p>
+
+                    {/* Eingaben der Gruppen */}
+                    <div className="space-y-2">
+                      {playingGroups.map(g => (
+                        <div key={g.id} className="flex items-center justify-between rounded-lg px-4 py-3" style={{ backgroundColor: `${g.color}20` }}>
+                          <span className="font-semibold">{g.name}</span>
+                          <span className="font-mono font-bold">
+                            {g.schaetzSubmission != null && g.schaetzSubmission !== ''
+                              ? `${g.schaetzSubmission}${unit ? ` ${unit}` : ''}`
+                              : <span className="text-ink/40 italic text-sm">Noch nicht eingereicht</span>}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Korrekte Antwort */}
+                    <button onClick={() => setShowTriviaAnswer(v => !v)}
+                      className="w-full px-4 py-3 rounded-xl border-2 border-ink/20 hover:border-ink/50 font-semibold transition-colors">
+                      {showTriviaAnswer ? '🙈 Antwort verbergen' : '👁 Korrekte Antwort anzeigen'}
+                    </button>
+                    {showTriviaAnswer && (
+                      <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-400 px-4 py-3">
+                        <p className="text-sm font-semibold text-yellow-700 mb-1">Korrekte Antwort:</p>
+                        <p className="text-xl font-bold">{currentCard.answer}</p>
+                      </div>
+                    )}
+
+                    {/* Auswertungs-Button */}
+                    <button
+                      onClick={handleSchaetzEvaluation}
+                      disabled={isProcessing || submittedCount === 0}
+                      className="w-full py-4 rounded-xl bg-blue-600 text-white font-bold text-lg hover:bg-blue-700 disabled:opacity-50"
+                    >
+                      {isProcessing ? '⏳ Wird ausgewertet…' : `🏆 Auswertung Schätzfrage ${allSubmitted ? '' : `(${submittedCount}/${playingGroups.length})`}`}
+                    </button>
+                    <p className="text-xs text-ink/50 text-center">Die nahestliegende Schätzung gewinnt den Punkt</p>
+
+                    {/* Weitere Einstellungen */}
+                    <details className="border-t border-ink/10 pt-4">
+                      <summary className="cursor-pointer text-sm text-ink/60 select-none">⚙️ Weitere Einstellungen</summary>
+                      <div className="mt-3 space-y-3">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                          {groupList.map(group => (
+                            <div key={group.id}>
+                              {editingGroupId === group.id ? (
+                                <div className="flex gap-1">
+                                  <input type="number" value={editingScore ?? group.score}
+                                    onChange={e => setEditingScore(Number(e.target.value))}
+                                    className="w-16 rounded border border-ink/30 px-2 py-1 text-sm" />
+                                  <button onClick={async () => { if (editingScore !== null && session) await editGroupScore(pin, session.groupId, group.id, editingScore); setEditingGroupId(null); }} className="text-green-600 font-bold px-1">✓</button>
+                                  <button onClick={() => setEditingGroupId(null)} className="text-red-600 font-bold px-1">✗</button>
+                                </div>
+                              ) : (
+                                <button onClick={() => { setEditingGroupId(group.id); setEditingScore(group.score); }} className="w-full px-2 py-1 rounded border-2 border-ink/20 hover:border-ink/60 text-left text-xs">{group.name}: {group.score}</button>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                        <button onClick={handleEndGame} className="w-full px-4 py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700">Spiel beenden</button>
+                      </div>
+                    </details>
+                  </div>
+                )}
+              </>
+            );
+          })() : (
+          <>
+          {/* ── STANDARD TRIVIA FRAGE ── */}
           <div className="card-surface rounded-2xl p-6 space-y-4">
             <div className="flex items-center justify-between">
               <span className="text-sm px-3 py-1 rounded-full bg-ink/10 font-semibold">{categoryLabel}</span>
@@ -768,6 +938,8 @@ export default function MultiplayerGamePage() {
                 </div>
               </details>
             </div>
+          )}
+          </>
           )}
         </main>
       );
