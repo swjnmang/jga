@@ -415,6 +415,14 @@ function MultiplayerLobbyContent() {
             </button>
           </div>
 
+          {/* Host Info – direkt unter Überschrift */}
+          <div className="rounded-lg bg-green-100/20 border-2 border-green-500 p-4 space-y-2">
+            <p className="text-sm font-semibold text-green-700">👑 Du bist der Spielleiter</p>
+            <p className="text-sm text-green-600">
+              Als Spielleiter spielst du nicht mit, sondern leitest das Spiel. Du steuerst den Ablauf, bestätigst Flex-Buttons und verwaltest die Punkte.
+            </p>
+          </div>
+
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-semibold mb-2">Spielmodus</label>
@@ -433,14 +441,17 @@ function MultiplayerLobbyContent() {
                   </button>
                 ))}
               </div>
-            </div>
-
-            {/* Host Info */}
-            <div className="rounded-lg bg-green-100/20 border-2 border-green-500 p-4 space-y-2">
-              <p className="text-sm font-semibold text-green-700">👑 Du bist der Spielleiter</p>
-              <p className="text-sm text-green-600">
-                Als Spielleiter spielst du nicht mit, sondern leitest das Spiel. Du steuerst den Ablauf, bestätigst Flex-Buttons und verwaltest die Punkte.
-              </p>
+              {/* Modus-Beschreibung */}
+              {gameMode === 'trivia' && (
+                <p className="mt-2 text-sm text-ink/70">
+                  🧠 <strong>Trivia</strong> – Klassische Quizfragen aus verschiedenen Kategorien. Jede Gruppe muss mindestens eine Frage pro Kategorie korrekt beantworten, um zu gewinnen. Schätzfragen, Musik, Bilder und mehr warten auf euch.
+                </p>
+              )}
+              {gameMode === 'timeline' && (
+                <p className="mt-2 text-sm text-ink/70">
+                  🔢 <strong>Timeline</strong> – Ereignisse und Fakten müssen in die richtige chronologische Reihenfolge gebracht werden. Die erste Gruppe mit 10 korrekt platzierten Karten gewinnt.
+                </p>
+              )}
             </div>
 
             {/* Schwierigkeitsgrade */}
