@@ -844,14 +844,32 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
     : Object.values(game.availableDeck ?? {});
   const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
 
+  // Kategorie-Streak aktualisieren
+  const numGroups = playingGroupIds.length;
+  const prevStreak = game.categoryStreak;
+  const newStreak: { category: string; count: number } =
+    prevStreak && prevStreak.category === currentCategory
+      ? { category: currentCategory, count: prevStreak.count + 1 }
+      : { category: currentCategory, count: 1 };
+  // Wenn die Streak-Grenze erreicht ist, wird die aktuelle Kategorie beim naechsten Zug ausgeschlossen
+  const blockedCategory = newStreak.count >= numGroups ? currentCategory : null;
+
   // Naechste Karte fuer nextGroup: Kategorie die sie noch nicht abgehakt haben
   const nextGroupCompleted: string[] = Array.isArray(game.groups[nextGroupId]?.completedCategories)
     ? game.groups[nextGroupId].completedCategories!
     : Object.values(game.groups[nextGroupId]?.completedCategories ?? {}) as string[];
-  const nextCardId = newAvailable.find(id => {
+  // Erst ohne gesperrte Kategorie suchen; Fallback: gesperrte erlauben (Streak-Reset)
+  let nextCardId = newAvailable.find(id => {
     const cat = deckMeta[id] ?? '';
-    return cat !== '' && !nextGroupCompleted.includes(cat);
+    return cat !== '' && !nextGroupCompleted.includes(cat) && cat !== blockedCategory;
   }) ?? null;
+  if (!nextCardId && blockedCategory) {
+    // Kein Wechsel moeglich – alle verbleibenden Karten sind in der gesperrten Kategorie
+    nextCardId = newAvailable.find(id => {
+      const cat = deckMeta[id] ?? '';
+      return cat !== '' && !nextGroupCompleted.includes(cat);
+    }) ?? null;
+  }
 
   const updates: Record<string, any> = {
     lastActivity: Date.now(),
@@ -861,6 +879,7 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
     [`groups/${activeGroupId}/completedCategories`]: newCompleted,
     availableDeck: newAvailable,
     currentTurnGroupId: nextGroupId,
+    categoryStreak: nextCardId ? (deckMeta[nextCardId] === currentCategory ? newStreak : { category: deckMeta[nextCardId] ?? '', count: 0 }) : newStreak,
   };
 
   // Reset flex-active
@@ -945,19 +964,35 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
     : Object.values(game.availableDeck ?? {});
   const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
 
-  const nextGroupCompleted: string[] = Array.isArray(game.groups[nextGroupId]?.completedCategories)
-    ? game.groups[nextGroupId].completedCategories!
-    : Object.values(game.groups[nextGroupId]?.completedCategories ?? {}) as string[];
-  const nextCardId = newAvailable.find(id => {
-    const cat = deckMeta[id] ?? '';
-    return cat !== '' && !nextGroupCompleted.includes(cat);
-  }) ?? null;
-
   const updates: Record<string, any> = {
     lastActivity: Date.now(),
     availableDeck: newAvailable,
     currentTurnGroupId: nextGroupId,
   };
+
+  // Kategorie-Streak aktualisieren
+  const numGroups = playingGroupIds.length;
+  const prevStreak = game.categoryStreak;
+  const newStreak: { category: string; count: number } =
+    prevStreak && prevStreak.category === currentCategory
+      ? { category: currentCategory, count: prevStreak.count + 1 }
+      : { category: currentCategory, count: 1 };
+  const blockedCategory = newStreak.count >= numGroups ? currentCategory : null;
+
+  // Naechste Karte berechnen (nach Streak-Limit ggf. andere Kategorie)
+  const nextGroupCompleted2: string[] = Array.isArray(game.groups[nextGroupId]?.completedCategories)
+    ? game.groups[nextGroupId].completedCategories!
+    : Object.values(game.groups[nextGroupId]?.completedCategories ?? {}) as string[];
+  let nextCardId = newAvailable.find(id => {
+    const cat = deckMeta[id] ?? '';
+    return cat !== '' && !nextGroupCompleted2.includes(cat) && cat !== blockedCategory;
+  }) ?? null;
+  if (!nextCardId && blockedCategory) {
+    nextCardId = newAvailable.find(id => {
+      const cat = deckMeta[id] ?? '';
+      return cat !== '' && !nextGroupCompleted2.includes(cat);
+    }) ?? null;
+  }
 
   // Punkte + completedCategories für ALLE Gewinnergruppen (Unentschieden)
   let anyFinished = false;
@@ -976,6 +1011,10 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
       firstWinnerId = firstWinnerId ?? wid;
     }
   }
+
+  updates.categoryStreak = nextCardId
+    ? (deckMeta[nextCardId] === currentCategory ? newStreak : { category: deckMeta[nextCardId] ?? '', count: 0 })
+    : newStreak;
 
   // Schätzungen + Flex-State zurücksetzen
   Object.keys(game.groups).forEach(gid => {
