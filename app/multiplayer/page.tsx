@@ -469,55 +469,24 @@ function MultiplayerLobbyContent() {
             {/* Kategorien */}
             <div>
               <label className="block text-sm font-semibold mb-2">
-                Kategorien auswählen & gewichten
+                Kategorien auswählen
               </label>
-              <div className="space-y-2">
+              <div className="space-y-1">
                 {availableCategories.map((cat) => {
-                  const weight = settings.categoryWeights[cat] || 0;
-                  const isActive = weight > 0;
+                  const isActive = (settings.categoryWeights[cat] || 0) > 0;
                   return (
-                    <div
+                    <label
                       key={cat}
-                      className={`rounded-lg border-2 p-3 transition-colors ${
-                        isActive ? 'border-ink/30' : 'border-ink/10 opacity-60'
-                      }`}
+                      className="flex items-center gap-3 cursor-pointer py-1 px-2 rounded-lg hover:bg-ink/5"
                     >
-                      <div className="flex items-center justify-between mb-2">
-                        <button
-                          onClick={() => toggleCategory(cat)}
-                          className="flex items-center gap-2 text-sm font-medium hover:opacity-70"
-                        >
-                          <div
-                            className={`w-4 h-4 rounded border-2 flex items-center justify-center ${
-                              isActive
-                                ? 'border-ink bg-ink'
-                                : 'border-ink/30'
-                            }`}
-                          >
-                            {isActive && (
-                              <svg className="w-3 h-3 text-inkDark" fill="currentColor" viewBox="0 0 20 20">
-                                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                              </svg>
-                            )}
-                          </div>
-                          {categoryLabels[cat] || cat}
-                        </button>
-                        {isActive && (
-                          <span className="text-xs text-ink/60">{weight}%</span>
-                        )}
-                      </div>
-                      {isActive && (
-                        <input
-                          type="range"
-                          min="10"
-                          max="100"
-                          step="10"
-                          value={weight}
-                          onChange={(e) => updateCategoryWeight(cat, Number(e.target.value))}
-                          className="w-full accent-ink"
-                        />
-                      )}
-                    </div>
+                      <input
+                        type="checkbox"
+                        checked={isActive}
+                        onChange={() => toggleCategory(cat)}
+                        className="h-5 w-5 accent-sky-700"
+                      />
+                      <span className="text-sm font-medium">{categoryLabels[cat] || cat}</span>
+                    </label>
                   );
                 })}
               </div>
