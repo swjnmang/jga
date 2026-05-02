@@ -916,9 +916,9 @@ export async function submitSchaetzGuess(pin: string, groupId: string, guess: st
 
 /**
  * Host wertet Schätzfrage aus.
- * winnerGroupId: Gruppe die am nächsten dran war (client-seitig berechnet, host übergibt).
+ * winnerGroupIds: Alle Gruppen die am nächsten dran waren (Unentschieden möglich).
  */
-export async function evaluateSchaetzfrage(pin: string, winnerGroupId: string): Promise<void> {
+export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]): Promise<void> {
   checkFirebase();
   const gameRef = ref(database!, `games/${pin}`);
   const snapshot = await get(gameRef);
@@ -939,12 +939,6 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupId: string): 
   const nextGroupId = playingGroupIds[(currentIndex + 1) % playingGroupIds.length];
 
   const currentCategory = game.currentCardId ? (deckMeta[game.currentCardId] ?? '') : '';
-  const prevCompleted: string[] = Array.isArray(game.groups[winnerGroupId]?.completedCategories)
-    ? game.groups[winnerGroupId].completedCategories!
-    : Object.values(game.groups[winnerGroupId]?.completedCategories ?? {}) as string[];
-  const newCompleted = currentCategory && !prevCompleted.includes(currentCategory)
-    ? [...prevCompleted, currentCategory]
-    : prevCompleted;
 
   const prevAvailable: string[] = Array.isArray(game.availableDeck)
     ? game.availableDeck
@@ -961,11 +955,27 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupId: string): 
 
   const updates: Record<string, any> = {
     lastActivity: Date.now(),
-    [`groups/${winnerGroupId}/score`]: (game.groups[winnerGroupId]?.score ?? 0) + 1,
-    [`groups/${winnerGroupId}/completedCategories`]: newCompleted,
     availableDeck: newAvailable,
     currentTurnGroupId: nextGroupId,
   };
+
+  // Punkte + completedCategories für ALLE Gewinnergruppen (Unentschieden)
+  let anyFinished = false;
+  let firstWinnerId: string | null = null;
+  for (const wid of winnerGroupIds) {
+    const prevCompleted: string[] = Array.isArray(game.groups[wid]?.completedCategories)
+      ? game.groups[wid].completedCategories!
+      : Object.values(game.groups[wid]?.completedCategories ?? {}) as string[];
+    const newCompleted = currentCategory && !prevCompleted.includes(currentCategory)
+      ? [...prevCompleted, currentCategory]
+      : prevCompleted;
+    updates[`groups/${wid}/score`] = (game.groups[wid]?.score ?? 0) + 1;
+    updates[`groups/${wid}/completedCategories`] = newCompleted;
+    if (triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
+      anyFinished = true;
+      firstWinnerId = firstWinnerId ?? wid;
+    }
+  }
 
   // Schätzungen + Flex-State zurücksetzen
   Object.keys(game.groups).forEach(gid => {
@@ -973,10 +983,10 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupId: string): 
     updates[`groups/${gid}/flexActive`] = false;
   });
 
-  if (triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
+  if (anyFinished) {
     updates.state = 'finished';
     updates.finishedAt = Date.now();
-    updates.winnerGroupId = winnerGroupId;
+    updates.winnerGroupId = firstWinnerId;
   } else if (!nextCardId) {
     updates.state = 'finished';
     updates.finishedAt = Date.now();

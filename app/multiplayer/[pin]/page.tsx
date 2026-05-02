@@ -818,11 +818,10 @@ export default function MultiplayerGamePage() {
                 }))
                 .filter(s => !isNaN(s.val));
               if (withSubmissions.length === 0) return;
-              const winner = withSubmissions.reduce((best, s) =>
-                Math.abs(s.val - correctNum) < Math.abs(best.val - correctNum) ? s : best
-              );
+              const minDist = Math.min(...withSubmissions.map(s => Math.abs(s.val - correctNum)));
+              const winners = withSubmissions.filter(s => Math.abs(s.val - correctNum) === minDist);
               setIsProcessing(true);
-              try { await evaluateSchaetzfrage(pin, winner.id); }
+              try { await evaluateSchaetzfrage(pin, winners.map(w => w.id)); }
               catch (err) { console.error(err); }
               finally { setIsProcessing(false); }
             };
