@@ -900,7 +900,11 @@ export default function MultiplayerGamePage() {
 
                     {/* Korrekte Antwort */}
                     <button onClick={() => setShowTriviaAnswer(v => !v)}
-                      className="w-full px-4 py-3 rounded-xl border-2 border-ink/20 hover:border-ink/50 font-semibold transition-colors">
+                      className={`w-full px-4 py-3 rounded-xl font-bold text-lg transition-colors ${
+                        showTriviaAnswer
+                          ? 'bg-sky-900 text-sky-200 hover:bg-sky-800'
+                          : 'bg-sky-700 text-white hover:bg-sky-600'
+                      }`}>
                       {showTriviaAnswer ? '🙈 Antwort verbergen' : '👁 Korrekte Antwort anzeigen'}
                     </button>
                     {showTriviaAnswer && (
@@ -1023,7 +1027,11 @@ export default function MultiplayerGamePage() {
               {/* Antwort anzeigen */}
               <button
                 onClick={() => setShowTriviaAnswer(v => !v)}
-                className="w-full px-4 py-4 rounded-xl border-2 border-ink/30 hover:border-ink/60 font-bold text-lg transition-colors"
+                className={`w-full px-4 py-4 rounded-xl font-bold text-lg transition-colors ${
+                  showTriviaAnswer
+                    ? 'bg-sky-900 text-sky-200 hover:bg-sky-800'
+                    : 'bg-sky-700 text-white hover:bg-sky-600'
+                }`}
               >
                 {showTriviaAnswer ? '🙈 Antwort verbergen' : '👁 Korrekte Antwort anzeigen'}
               </button>
