@@ -839,7 +839,7 @@ export default function MultiplayerGamePage() {
                       </span>
                     )}
                   </div>
-                  <p className="text-2xl font-semibold">{currentCard.cue}</p>
+                  <p className="text-2xl font-semibold">{currentCard.category === 'music' ? 'Von wem ist der Song und wie heißt er?' : currentCard.cue}</p>
 
                   {/* Spieler-Eingabe */}
                   {!effectiveIsHost && (() => {
@@ -962,7 +962,7 @@ export default function MultiplayerGamePage() {
                 </span>
               )}
             </div>
-            <p className="text-2xl font-semibold">{currentCard.cue}</p>
+            <p className="text-2xl font-semibold">{currentCard.category === 'music' ? 'Von wem ist der Song und wie heißt er?' : currentCard.cue}</p>
 
             {/* Medien-Einbettung */}
             {currentCard.sources && (
