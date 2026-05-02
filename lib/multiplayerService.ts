@@ -920,6 +920,21 @@ export function extractNumericFromAnswer(answer: string): number {
   return parseGermanNumber(match[0]);
 }
 
+/**
+ * Erkennt "von X bis Y"- oder "X bis Y"- oder "zwischen X und Y"-Antworten
+ * und gibt untere/obere Grenze zurück. Sonst null (= konkreter Einzelwert).
+ */
+export function extractRangeFromAnswer(answer: string): { low: number; high: number } | null {
+  // Muster: (von)? Zahl (bis|–|-|und) Zahl, z.B. "von 1.000 bis 2.000" oder "500–1.500"
+  const rangeRe = /(?:von\s+)?([\d.,]+)\s*(?:bis|–|-|und)\s*([\d.,]+)/i;
+  const m = answer.match(rangeRe);
+  if (!m) return null;
+  const low = parseGermanNumber(m[1]);
+  const high = parseGermanNumber(m[2]);
+  if (isNaN(low) || isNaN(high)) return null;
+  return { low: Math.min(low, high), high: Math.max(low, high) };
+}
+
 export function extractUnitFromAnswer(answer: string): string {
   const match = answer.match(/[\d.,]+\s+([A-Za-zÄÖÜäöüß]+(?:\s+[A-Za-zÄÖÜäöüß]+)?)/);
   return match ? match[1] : '';

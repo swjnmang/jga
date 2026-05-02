@@ -24,6 +24,7 @@ import {
   submitSchaetzGuess,
   evaluateSchaetzfrage,
   extractNumericFromAnswer,
+  extractRangeFromAnswer,
   extractUnitFromAnswer,
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
@@ -792,7 +793,15 @@ export default function MultiplayerGamePage() {
           {currentCard.category === 'schaetzfragen' ? (() => {
             const playingGroups = groupList.filter(g => !g.isHost);
             const unit = extractUnitFromAnswer(currentCard.answer);
-            const correctNum = extractNumericFromAnswer(currentCard.answer);
+            const correctRange = extractRangeFromAnswer(currentCard.answer);
+            const correctNum = correctRange ? null : extractNumericFromAnswer(currentCard.answer);
+            // Abstandsfunktion: bei Bereichs-Antwort = Abstand zur nächsten Grenze
+            const distToCorrect = (val: number) =>
+              correctRange
+                ? (val >= correctRange.low && val <= correctRange.high
+                    ? 0
+                    : Math.min(Math.abs(val - correctRange.low), Math.abs(val - correctRange.high)))
+                : Math.abs(val - (correctNum ?? NaN));
             const allSubmitted = playingGroups.every(g => g.schaetzSubmission != null && g.schaetzSubmission !== '');
             const submittedCount = playingGroups.filter(g => g.schaetzSubmission != null && g.schaetzSubmission !== '').length;
 
@@ -818,8 +827,8 @@ export default function MultiplayerGamePage() {
                 }))
                 .filter(s => !isNaN(s.val));
               if (withSubmissions.length === 0) return;
-              const minDist = Math.min(...withSubmissions.map(s => Math.abs(s.val - correctNum)));
-              const winners = withSubmissions.filter(s => Math.abs(s.val - correctNum) === minDist);
+              const minDist = Math.min(...withSubmissions.map(s => distToCorrect(s.val)));
+              const winners = withSubmissions.filter(s => distToCorrect(s.val) === minDist);
               setIsProcessing(true);
               try { await evaluateSchaetzfrage(pin, winners.map(w => w.id)); }
               catch (err) { console.error(err); }
