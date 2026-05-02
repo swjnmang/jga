@@ -453,13 +453,18 @@ function MultiplayerLobbyContent() {
                     <button
                       key={diff}
                       onClick={() => toggleDifficulty(diff)}
-                      className={`px-3 py-2 rounded-lg border-2 transition-colors text-sm ${
-                        checked
-                          ? 'border-ink bg-ink text-inkDark'
-                          : 'border-ink/30 hover:border-ink/60'
-                      }`}
+                      className="flex items-center gap-2 px-3 py-2 rounded-lg border border-ink/20 hover:bg-ink/5 transition-colors text-sm"
                     >
-                      {diff.charAt(0).toUpperCase() + diff.slice(1)}
+                      <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                        checked ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
+                      }`}>
+                        {checked && (
+                          <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="1,5 4.5,9 11,1" />
+                          </svg>
+                        )}
+                      </span>
+                      <span>{diff.charAt(0).toUpperCase() + diff.slice(1)}</span>
                     </button>
                   );
                 })}
@@ -471,22 +476,26 @@ function MultiplayerLobbyContent() {
               <label className="block text-sm font-semibold mb-2">
                 Kategorien auswählen
               </label>
-              <div className="space-y-1">
+              <div className="grid grid-cols-2 gap-1">
                 {availableCategories.map((cat) => {
                   const isActive = (settings.categoryWeights[cat] || 0) > 0;
                   return (
-                    <label
+                    <button
                       key={cat}
-                      className="flex items-center gap-3 cursor-pointer py-1 px-2 rounded-lg hover:bg-ink/5"
+                      onClick={() => toggleCategory(cat)}
+                      className="flex items-center gap-2 cursor-pointer py-1.5 px-2 rounded-lg hover:bg-ink/5 transition-colors text-left w-full"
                     >
-                      <input
-                        type="checkbox"
-                        checked={isActive}
-                        onChange={() => toggleCategory(cat)}
-                        className="h-5 w-5 accent-sky-700"
-                      />
+                      <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                        isActive ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
+                      }`}>
+                        {isActive && (
+                          <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="1,5 4.5,9 11,1" />
+                          </svg>
+                        )}
+                      </span>
                       <span className="text-sm font-medium">{categoryLabels[cat] || cat}</span>
-                    </label>
+                    </button>
                   );
                 })}
               </div>
@@ -499,7 +508,7 @@ function MultiplayerLobbyContent() {
                   Musik-Genres
                   <span className="text-xs text-ink/60 ml-1">Wirkt nur auf Musikfragen</span>
                 </label>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-1">
                   {['poprock', 'metal', 'hiphop', 'schlagerparty'].map((genre) => {
                     const genreLabel: Record<string, string> = {
                       poprock: 'Pop & Rock',
@@ -512,12 +521,17 @@ function MultiplayerLobbyContent() {
                       <button
                         key={genre}
                         onClick={() => toggleGenre(genre as GenreTag)}
-                        className={`px-3 py-2 rounded-lg border-2 transition-colors text-sm ${
-                          checked
-                            ? 'border-ink bg-ink text-inkDark'
-                            : 'border-ink/30 hover:border-ink/60'
-                        }`}
+                        className="flex items-center gap-2 py-1.5 px-2 rounded-lg border border-ink/20 hover:bg-ink/5 transition-colors text-sm text-left"
                       >
+                        <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                          checked ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
+                        }`}>
+                          {checked && (
+                            <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="1,5 4.5,9 11,1" />
+                            </svg>
+                          )}
+                        </span>
                         {genreLabel[genre]}
                       </button>
                     );
@@ -533,19 +547,24 @@ function MultiplayerLobbyContent() {
                   Playlists
                   <span className="text-xs text-ink/60 ml-1">Aktiviere, welche Playlists gespielt werden</span>
                 </label>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-1">
                   {availablePlaylists.map((playlistId) => {
                     const checked = settings.playlists.includes(playlistId);
                     return (
                       <button
                         key={playlistId}
                         onClick={() => togglePlaylist(playlistId)}
-                        className={`px-3 py-2 rounded-lg border-2 transition-colors text-sm ${
-                          checked
-                            ? 'border-ink bg-ink text-inkDark'
-                            : 'border-ink/30 hover:border-ink/60'
-                        }`}
+                        className="flex items-center gap-2 py-1.5 px-2 rounded-lg border border-ink/20 hover:bg-ink/5 transition-colors text-sm text-left"
                       >
+                        <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                          checked ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
+                        }`}>
+                          {checked && (
+                            <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="1,5 4.5,9 11,1" />
+                            </svg>
+                          )}
+                        </span>
                         {playlistNameMap[playlistId] || playlistId}
                       </button>
                     );

@@ -32,7 +32,12 @@ export default function HomePage() {
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           <PrimaryButton href="/play" label="Neues Spiel starten" />
           <SecondaryButton href="/app-settings" label="Einstellungen" />
-          <SecondaryButton href="/rules" label="Spielregeln" />
+          <span
+            className="flex items-center justify-center px-6 py-3 rounded-xl border-2 border-ink/20 text-ink/30 text-sm font-semibold cursor-not-allowed select-none"
+            title="Spielregeln werden derzeit überarbeitet"
+          >
+            Spielregeln
+          </span>
         </div>
 
         <div className="text-xs text-white/60">
