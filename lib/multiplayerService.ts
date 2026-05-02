@@ -256,6 +256,22 @@ export async function banCategory(pin: string, groupId: string, category: string
     // Erste nicht-Host-Gruppe als aktiven Spieler setzen
     const firstGroupId = order[0];
 
+    // Trivia-Rotation initialisieren: zufällig gemischte Kategorien-Runde
+    const deckMeta: Record<string, string> = game.deckMeta ?? {};
+    const deckForLookup = filteredAvailable ?? filteredDeck;
+    const filteredCats: string[] = game.triviaCategories
+      ? game.triviaCategories.filter(c => !bannedSet.has(c))
+      : [];
+    const shuffledCats = shuffleArray(filteredCats);
+    let firstCat = '';
+    let firstCardId: string | null = null;
+    let catQueueStart: string[] = [];
+    for (let i = 0; i < shuffledCats.length; i++) {
+      const card = deckForLookup.find(id => deckMeta[id] === shuffledCats[i]);
+      if (card) { firstCat = shuffledCats[i]; firstCardId = card; catQueueStart = shuffledCats.slice(i + 1); break; }
+    }
+    if (!firstCardId) firstCardId = deckForLookup[0] ?? null;
+
     const updates: Record<string, unknown> = {
       state: 'playing',
       lastActivity: Date.now(),
@@ -263,15 +279,18 @@ export async function banCategory(pin: string, groupId: string, category: string
       banPhaseCurrentIndex: newIndex,
       deck: filteredDeck,
       currentCardIndex: 0,
-      currentCardId: filteredDeck[0] ?? null,
+      currentCardId: firstCardId,
       currentTurnGroupId: firstGroupId,
+      currentRoundCategory: firstCat,
+      categoryRoundQueue: catQueueStart,
+      categoryGroupQueue: [...order],
     };
     if (filteredAvailable !== undefined) {
       updates.availableDeck = filteredAvailable;
     }
     // Auch triviaCategories aktualisieren (gebannte herausfiltern)
     if (game.triviaCategories) {
-      updates.triviaCategories = game.triviaCategories.filter(c => !bannedSet.has(c));
+      updates.triviaCategories = filteredCats;
     }
     await update(gameRef, updates);
   } else {
@@ -803,6 +822,85 @@ export async function checkAutoWinTimeline(pin: string): Promise<void> {
     });
   }
 }
+// ---------------------------------------------------------------------------
+// Kategorie-Rotations-Helfer (Trivia)
+// ---------------------------------------------------------------------------
+
+function shuffleArray<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+interface NextTurnResult {
+  nextGroupId: string;
+  nextCardId: string | null;
+  currentRoundCategory: string;
+  categoryRoundQueue: string[];
+  categoryGroupQueue: string[];
+}
+
+/**
+ * Berechnet den nächsten Spielzustand nach einem Trivia-Zug.
+ * - Gleiche Kategorie, nächste Gruppe, falls noch Gruppen übrig.
+ * - Nächste Kategorie (zufällig), alle Gruppen spielen neu, wenn Kategorie-Runde fertig.
+ * - Neue Runde (neue Mischung), wenn alle Kategorien einmal gespielt wurden.
+ */
+function computeNextTurn(
+  playingGroupIds: string[],
+  currentRoundCat: string,
+  catGroupQueue: string[],    // [0] = active group, rest = pending
+  catRoundQueue: string[],    // remaining categories this round
+  triviaCategories: string[], // all categories
+  newAvailable: string[],
+  deckMeta: Record<string, string>
+): NextTurnResult {
+  const remainingGroups = catGroupQueue.slice(1); // active group consumed
+
+  if (remainingGroups.length > 0) {
+    const nextCardId = newAvailable.find(id => deckMeta[id] === currentRoundCat) ?? null;
+    if (nextCardId !== null) {
+      return {
+        nextGroupId: remainingGroups[0],
+        nextCardId,
+        currentRoundCategory: currentRoundCat,
+        categoryRoundQueue: catRoundQueue,
+        categoryGroupQueue: remainingGroups,
+      };
+    }
+    // Keine Karte mehr für diese Kategorie → Kategorie wechseln
+  }
+
+  // Alle Gruppen fertig (oder keine Karte mehr) → nächste Kategorie
+  const tryQueue = catRoundQueue.length > 0 ? catRoundQueue : shuffleArray(triviaCategories);
+  for (let i = 0; i < tryQueue.length; i++) {
+    const nextCat = tryQueue[i];
+    const nextCardId = newAvailable.find(id => deckMeta[id] === nextCat) ?? null;
+    if (nextCardId !== null) {
+      return {
+        nextGroupId: playingGroupIds[0],
+        nextCardId,
+        currentRoundCategory: nextCat,
+        categoryRoundQueue: tryQueue.slice(i + 1),
+        categoryGroupQueue: [...playingGroupIds],
+      };
+    }
+  }
+
+  // Keine Karten mehr überhaupt
+  return {
+    nextGroupId: playingGroupIds[0],
+    nextCardId: null,
+    currentRoundCategory: currentRoundCat,
+    categoryRoundQueue: [],
+    categoryGroupQueue: [...playingGroupIds],
+  };
+}
+
+// ---------------------------------------------------------------------------
 /**
  * Trivia-Modus: Host bewertet Antwort der aktiven Gruppe.
  * Trivial-Pursuit-Gewinnbedingung: alle Kategorien im Deck korrekt beantwortet.
@@ -825,8 +923,6 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
     .map(([id]) => id);
 
   const activeGroupId = game.currentTurnGroupId!;
-  const currentIndex = playingGroupIds.indexOf(activeGroupId);
-  const nextGroupId = playingGroupIds[(currentIndex + 1) % playingGroupIds.length];
 
   // completedCategories der aktiven Gruppe
   const prevCompleted: string[] = Array.isArray(game.groups[activeGroupId]?.completedCategories)
@@ -844,32 +940,18 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
     : Object.values(game.availableDeck ?? {});
   const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
 
-  // Kategorie-Streak aktualisieren
-  const numGroups = playingGroupIds.length;
-  const prevStreak = game.categoryStreak;
-  const newStreak: { category: string; count: number } =
-    prevStreak && prevStreak.category === currentCategory
-      ? { category: currentCategory, count: prevStreak.count + 1 }
-      : { category: currentCategory, count: 1 };
-  // Wenn die Streak-Grenze erreicht ist, wird die aktuelle Kategorie beim naechsten Zug ausgeschlossen
-  const blockedCategory = newStreak.count >= numGroups ? currentCategory : null;
+  // Kategorie-Rotation
+  const catGroupQueue: string[] = Array.isArray(game.categoryGroupQueue)
+    ? game.categoryGroupQueue
+    : Object.values(game.categoryGroupQueue ?? { 0: activeGroupId });
+  const catRoundQueue: string[] = Array.isArray(game.categoryRoundQueue)
+    ? game.categoryRoundQueue
+    : Object.values(game.categoryRoundQueue ?? {});
+  const currentRoundCat = game.currentRoundCategory ?? currentCategory;
 
-  // Naechste Karte fuer nextGroup: Kategorie die sie noch nicht abgehakt haben
-  const nextGroupCompleted: string[] = Array.isArray(game.groups[nextGroupId]?.completedCategories)
-    ? game.groups[nextGroupId].completedCategories!
-    : Object.values(game.groups[nextGroupId]?.completedCategories ?? {}) as string[];
-  // Erst ohne gesperrte Kategorie suchen; Fallback: gesperrte erlauben (Streak-Reset)
-  let nextCardId = newAvailable.find(id => {
-    const cat = deckMeta[id] ?? '';
-    return cat !== '' && !nextGroupCompleted.includes(cat) && cat !== blockedCategory;
-  }) ?? null;
-  if (!nextCardId && blockedCategory) {
-    // Kein Wechsel moeglich – alle verbleibenden Karten sind in der gesperrten Kategorie
-    nextCardId = newAvailable.find(id => {
-      const cat = deckMeta[id] ?? '';
-      return cat !== '' && !nextGroupCompleted.includes(cat);
-    }) ?? null;
-  }
+  const next = computeNextTurn(
+    playingGroupIds, currentRoundCat, catGroupQueue, catRoundQueue, triviaCategories, newAvailable, deckMeta
+  );
 
   const updates: Record<string, any> = {
     lastActivity: Date.now(),
@@ -878,8 +960,10 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
       : (game.groups[activeGroupId]?.score ?? 0),
     [`groups/${activeGroupId}/completedCategories`]: newCompleted,
     availableDeck: newAvailable,
-    currentTurnGroupId: nextGroupId,
-    categoryStreak: nextCardId ? (deckMeta[nextCardId] === currentCategory ? newStreak : { category: deckMeta[nextCardId] ?? '', count: 0 }) : newStreak,
+    currentTurnGroupId: next.nextGroupId,
+    currentRoundCategory: next.currentRoundCategory,
+    categoryRoundQueue: next.categoryRoundQueue,
+    categoryGroupQueue: next.categoryGroupQueue,
   };
 
   // Reset flex-active
@@ -892,12 +976,11 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
     updates.state = 'finished';
     updates.finishedAt = Date.now();
     updates.winnerGroupId = activeGroupId;
-  } else if (!nextCardId) {
-    // Keine passende Karte mehr fuer naechste Gruppe -> Spiel beenden
+  } else if (!next.nextCardId) {
     updates.state = 'finished';
     updates.finishedAt = Date.now();
   } else {
-    updates.currentCardId = nextCardId;
+    updates.currentCardId = next.nextCardId;
     updates.currentCardIndex = (game.currentCardIndex ?? 0) + 1;
   }
 
@@ -985,29 +1068,16 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
     currentTurnGroupId: nextGroupId,
   };
 
-  // Kategorie-Streak aktualisieren
-  const numGroups = playingGroupIds.length;
-  const prevStreak = game.categoryStreak;
-  const newStreak: { category: string; count: number } =
-    prevStreak && prevStreak.category === currentCategory
-      ? { category: currentCategory, count: prevStreak.count + 1 }
-      : { category: currentCategory, count: 1 };
-  const blockedCategory = newStreak.count >= numGroups ? currentCategory : null;
-
-  // Naechste Karte berechnen (nach Streak-Limit ggf. andere Kategorie)
-  const nextGroupCompleted2: string[] = Array.isArray(game.groups[nextGroupId]?.completedCategories)
-    ? game.groups[nextGroupId].completedCategories!
-    : Object.values(game.groups[nextGroupId]?.completedCategories ?? {}) as string[];
-  let nextCardId = newAvailable.find(id => {
-    const cat = deckMeta[id] ?? '';
-    return cat !== '' && !nextGroupCompleted2.includes(cat) && cat !== blockedCategory;
-  }) ?? null;
-  if (!nextCardId && blockedCategory) {
-    nextCardId = newAvailable.find(id => {
-      const cat = deckMeta[id] ?? '';
-      return cat !== '' && !nextGroupCompleted2.includes(cat);
-    }) ?? null;
-  }
+  // Kategorie-Rotation: Schätzfrage alle Gruppen spielen gleichzeitig
+  // → nach Auswertung direkt zur nächsten Kategorie (gesamte Gruppe-Queue verbraucht)
+  const catRoundQueue: string[] = Array.isArray(game.categoryRoundQueue)
+    ? game.categoryRoundQueue
+    : Object.values(game.categoryRoundQueue ?? {});
+  const currentRoundCat = game.currentRoundCategory ?? currentCategory;
+  // Simulate all groups consumed → pass empty group queue to force category advance
+  const next = computeNextTurn(
+    playingGroupIds, currentRoundCat, [], catRoundQueue, triviaCategories, newAvailable, deckMeta
+  );
 
   // Punkte + completedCategories für ALLE Gewinnergruppen (Unentschieden)
   let anyFinished = false;
@@ -1027,9 +1097,10 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
     }
   }
 
-  updates.categoryStreak = nextCardId
-    ? (deckMeta[nextCardId] === currentCategory ? newStreak : { category: deckMeta[nextCardId] ?? '', count: 0 })
-    : newStreak;
+  updates.currentTurnGroupId = next.nextGroupId;
+  updates.currentRoundCategory = next.currentRoundCategory;
+  updates.categoryRoundQueue = next.categoryRoundQueue;
+  updates.categoryGroupQueue = next.categoryGroupQueue;
 
   // Schätzungen + Flex-State zurücksetzen
   Object.keys(game.groups).forEach(gid => {
@@ -1041,11 +1112,11 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
     updates.state = 'finished';
     updates.finishedAt = Date.now();
     updates.winnerGroupId = firstWinnerId;
-  } else if (!nextCardId) {
+  } else if (!next.nextCardId) {
     updates.state = 'finished';
     updates.finishedAt = Date.now();
   } else {
-    updates.currentCardId = nextCardId;
+    updates.currentCardId = next.nextCardId;
     updates.currentCardIndex = (game.currentCardIndex ?? 0) + 1;
   }
 

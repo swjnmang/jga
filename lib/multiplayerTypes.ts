@@ -71,8 +71,10 @@ export interface GameSession {
   bannedCategories?: string[];           // Von Gruppen gebannte Kategorien
   banPhaseGroupOrder?: string[];         // Reihenfolge der Gruppen in der Ban-Phase
   banPhaseCurrentIndex?: number;         // Index der aktuell bannenden Gruppe
-  // Kategorie-Rotation
-  categoryStreak?: { category: string; count: number }; // Wie oft die aktuelle Kategorie in Folge gespielt wurde
+  // Kategorie-Rotation (Trivia)
+  currentRoundCategory?: string;       // Aktuelle Kategorie, aus der alle Gruppen spielen
+  categoryRoundQueue?: string[];       // Noch ausstehende Kategorien in dieser Runde (gemischt)
+  categoryGroupQueue?: string[];       // Gruppen, die in der aktuellen Kategorie noch spielen müssen
 }
 
 export interface CreateGameParams {
