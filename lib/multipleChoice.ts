@@ -122,7 +122,7 @@ function extractUnit(answer: string): string {
     'Strophen',
     'Jahre', 'Tage',
     'Stunden', 'Minuten', 'Sekunden',
-    'Eier', 'Haare', 'Zahne', 'Blätter', 'Federn', 'Saiten', 'Schlage', 'Inseln', 'Stockwerke', 'Atemzuege',
+    'Eier', 'Haare', 'Zahne', 'Blätter', 'Federn', 'Saiten', 'Schläge', 'Inseln', 'Stockwerke', 'Atemzuege',
     'Millionen', 'Milliarden', 'Billiarden',
     'kcal', 'Grad Celsius', 'km/h'
   ];

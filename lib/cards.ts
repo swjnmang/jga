@@ -911,8 +911,8 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1998,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Heinz Schenk/Klaus Lage „ Aelles nur geliehen." als Schlagerzeile und Fernseh-Scherz.',
-    hint: 'Deutscher Schlager/Witz.',
+    answer: 'Heinz Schenk/Klaus Lage „ Aelles nur geliehen." als Schlägerzeile und Fernseh-Scherz.',
+    hint: 'Deutscher Schläger/Witz.',
     difficulty: 'leicht',
     sources: { text: 'Alles nur geliehen.' },
     distractors: ['Heinz Schenk, Blaue Bock', 'Wim Thoelke, Der grosse Preis', 'Frank Elstner, Wetten dass']
@@ -2382,7 +2382,7 @@ const baseCards: Card[] = [
     year: 2013,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Atemlos durch die Nacht – Helene Fischer.',
-    hint: 'Deutscher Schlager-Hit.',
+    hint: 'Deutscher Schläger-Hit.',
     difficulty: 'leicht',
     sources: {
       text: 'Aetemlos durch die Nacht."',

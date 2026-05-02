@@ -17539,11 +17539,11 @@ export const playlistCards: Card[] = [
   },
   {
     "id": "song-stick-season-2022",
-    "title": "Stick Season",
+    "title": "Stück Season",
     "category": "music",
     "year": 2022,
     "cue": "Song anhören und einordnen.",
-    "answer": "Noah Kahan — 2022, Stick Season.",
+    "answer": "Noah Kahan — 2022, Stück Season.",
     "hint": "Noah Kahan",
     "difficulty": "mittel",
     "sources": {
