@@ -260,7 +260,6 @@ function SettingsPageContent() {
       <section className="card-surface rounded-2xl p-5 space-y-4">
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-lg font-semibold">Kategorien</h2>
-          <p className="text-xs text-ink/60">Wenig ← → Viel</p>
         </div>
         <div className="space-y-2">
           <label className="flex items-center gap-3 cursor-pointer p-2 rounded-lg bg-ink/5 border border-ink/20">
@@ -286,21 +285,7 @@ function SettingsPageContent() {
                       className="h-5 w-5 accent-sky-700"
                     />
                     <span className="text-sm font-medium capitalize flex-1">{categoryLabels[category] ?? category}</span>
-                    {isActive && <span className="text-xs text-ink/60 font-semibold">{value}%</span>}
                   </label>
-                  {isActive && (
-                    <div className="ml-8 -mt-1">
-                      <input
-                        type="range"
-                        min={1}
-                        max={100}
-                        value={value || 10}
-                        onChange={(e) => updateCategoryWeight(category, Number(e.target.value))}
-                        className="w-full accent-ink"
-                        aria-label={`Gewichtung für ${category}: ${value}%`}
-                      />
-                    </div>
-                  )}
                 </div>
               );
             })}
@@ -423,12 +408,12 @@ function SettingsPageContent() {
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
-          <Link
+          <a
             href={`/api/spotify/authorize?return=${encodeURIComponent(settingsReturn)}`}
             className="rounded-full bg-[#1DB954] hover:bg-[#17a74a] text-white px-5 py-2.5 text-sm font-semibold shadow-md transition"
           >
             Spotify-Login starten
-          </Link>
+          </a>
         </div>
       </section>
 

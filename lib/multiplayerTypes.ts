@@ -1,7 +1,7 @@
 import { Card } from './types';
 import { UserSettings } from './userSettings';
 
-export type GameState = 'lobby' | 'playing' | 'finished';
+export type GameState = 'lobby' | 'banning' | 'playing' | 'finished';
 
 export interface PlayerInfo {
   id: string;
@@ -67,6 +67,10 @@ export interface GameSession {
   triviaCategories?: string[];           // Alle Kategorien die im Deck vorhanden sind (einmalig beim Erstellen berechnet)
   deckMeta?: Record<string, string>;     // cardId → category (für Server-seitige Logik)
   availableDeck?: string[];              // Noch nicht gestellte Karten (cardIds)
+  // Ban-Phase
+  bannedCategories?: string[];           // Von Gruppen gebannte Kategorien
+  banPhaseGroupOrder?: string[];         // Reihenfolge der Gruppen in der Ban-Phase
+  banPhaseCurrentIndex?: number;         // Index der aktuell bannenden Gruppe
 }
 
 export interface CreateGameParams {

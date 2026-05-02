@@ -72,16 +72,14 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
   };
   const actualDeck = params.deck; // Volles Deck verwenden
 
-  // Trivia-Modus: Metadaten für kategoriebasierte Gewinnbedingung
+  // Metadaten für alle Modi (für Ban-Phase und Trivia-Gewinnbedingung)
   const deckMeta: Record<string, string> = {};
-  const triviaCatSet = new Set<string>();
-  if (params.mode === 'trivia') {
-    for (const card of actualDeck) {
-      deckMeta[card.id] = card.category;
-      triviaCatSet.add(card.category);
-    }
+  const deckCatSet = new Set<string>();
+  for (const card of actualDeck) {
+    deckMeta[card.id] = card.category;
+    deckCatSet.add(card.category);
   }
-  const triviaCategories = params.mode === 'trivia' ? Array.from(triviaCatSet) : undefined;
+  const deckCategories = Array.from(deckCatSet);
 
   const gameSession: GameSession = {
     id: pin,
@@ -94,9 +92,9 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     currentTurnGroupId: null,
     deck: actualDeck.map(card => card.id),
     referenceCard,
+    triviaCategories: deckCategories,
+    deckMeta,
     ...(params.mode === 'trivia' ? {
-      triviaCategories,
-      deckMeta,
       availableDeck: actualDeck.map(c => c.id),
     } : {}),
     groups: {
@@ -209,22 +207,80 @@ export async function startGame(pin: string, hostGroupId: string): Promise<void>
     throw new Error('Nicht alle Gruppen sind bereit.');
   }
 
-  // Setze erste nicht-Host Gruppe als aktive Gruppe
-  const groupIds = Object.keys(game.groups);
-  const firstGroupId = groupIds.find(id => !game.groups[id].isHost);
+  // Reihenfolge der Gruppen für die Ban-Phase (alle Nicht-Host-Gruppen)
+  const nonHostGroupIds = Object.keys(game.groups).filter(id => !game.groups[id].isHost);
 
-  if (!firstGroupId) {
+  if (nonHostGroupIds.length === 0) {
     throw new Error('Keine Spielgruppen verfügbar.');
   }
 
   await update(gameRef, {
-    state: 'playing',
+    state: 'banning',
     startedAt: Date.now(),
     lastActivity: Date.now(),
-    currentCardIndex: 0,
-    currentCardId: game.deck[0],
-    currentTurnGroupId: firstGroupId
+    bannedCategories: [],
+    banPhaseGroupOrder: nonHostGroupIds,
+    banPhaseCurrentIndex: 0,
   });
+}
+
+/**
+ * Bannt eine Kategorie (oder überspringt die Ban-Runde mit null)
+ */
+export async function banCategory(pin: string, groupId: string, category: string | null): Promise<void> {
+  checkFirebase();
+
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  if (game.state !== 'banning') throw new Error('Nicht in der Ban-Phase.');
+
+  const order = game.banPhaseGroupOrder ?? [];
+  const currentIndex = game.banPhaseCurrentIndex ?? 0;
+  if (order[currentIndex] !== groupId) throw new Error('Du bist gerade nicht an der Reihe.');
+
+  const newBanned: string[] = [...(game.bannedCategories ?? []), ...(category ? [category] : [])];
+  const newIndex = currentIndex + 1;
+  const banDone = newIndex >= order.length;
+
+  if (banDone) {
+    // Ban-Phase abgeschlossen → Deck filtern und Spiel starten
+    const bannedSet = new Set(newBanned);
+    const filteredDeck = (game.deck ?? []).filter(cardId => !bannedSet.has((game.deckMeta ?? {})[cardId] ?? ''));
+    const filteredAvailable = game.availableDeck
+      ? game.availableDeck.filter(cardId => !bannedSet.has((game.deckMeta ?? {})[cardId] ?? ''))
+      : undefined;
+
+    // Erste nicht-Host-Gruppe als aktiven Spieler setzen
+    const firstGroupId = order[0];
+
+    const updates: Record<string, unknown> = {
+      state: 'playing',
+      lastActivity: Date.now(),
+      bannedCategories: newBanned,
+      banPhaseCurrentIndex: newIndex,
+      deck: filteredDeck,
+      currentCardIndex: 0,
+      currentCardId: filteredDeck[0] ?? null,
+      currentTurnGroupId: firstGroupId,
+    };
+    if (filteredAvailable !== undefined) {
+      updates.availableDeck = filteredAvailable;
+    }
+    // Auch triviaCategories aktualisieren (gebannte herausfiltern)
+    if (game.triviaCategories) {
+      updates.triviaCategories = game.triviaCategories.filter(c => !bannedSet.has(c));
+    }
+    await update(gameRef, updates);
+  } else {
+    await update(gameRef, {
+      bannedCategories: newBanned,
+      banPhaseCurrentIndex: newIndex,
+      lastActivity: Date.now(),
+    });
+  }
 }
 
 /**

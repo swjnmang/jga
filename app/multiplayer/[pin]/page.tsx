@@ -7,6 +7,7 @@ import {
   subscribeToGame,
   setGroupReady,
   startGame,
+  banCategory,
   leaveGame,
   placeCardInTimeline,
   nextCard,
@@ -76,6 +77,8 @@ export default function MultiplayerGamePage() {
   const [showTriviaAnswer, setShowTriviaAnswer] = useState(false);
   const [schaetzInput, setSchaetzInput] = useState('');
   const [schaetzSubmitted, setSchaetzSubmitted] = useState(false);
+
+  const [isBanning, setIsBanning] = useState(false);
 
   // Lade Session-Infos
   useEffect(() => {
@@ -361,6 +364,133 @@ export default function MultiplayerGamePage() {
   const currentGroup = game.groups[session.groupId];
   const groupList = Object.values(game.groups).filter(g => !g.isHost); // Spielleiter aus Liste entfernen
   const allReady = groupList.every(g => g.isReady);
+
+  const CATEGORY_LABELS: Record<string, string> = {
+    quote: 'Berühmte Zitate', image: 'Bilder erkennen', flag: 'Länder erkennen',
+    outline: 'Umrisse erkennen', music: 'Musik', natur: 'Natur & Technik',
+    filmserien: 'Filme & Serien', schaetzfragen: 'Schätzfragen',
+    religionglaube: 'Religion & Glaube', sportfreizeit: 'Sport & Freizeit',
+    geogeschichte: 'Geographie & Geschichte',
+  };
+
+  const handleBanCategory = async (category: string | null) => {
+    if (!session || isBanning) return;
+    setIsBanning(true);
+    try {
+      await banCategory(pin, session.groupId, category);
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setIsBanning(false);
+    }
+  };
+
+  // Ban-Phase-Ansicht
+  if (game.state === 'banning') {
+    const order = game.banPhaseGroupOrder ?? [];
+    const currentIndex = game.banPhaseCurrentIndex ?? 0;
+    const currentBanGroupId = order[currentIndex];
+    const isMyTurn = currentBanGroupId === session?.groupId;
+    const currentBanGroup = game.groups[currentBanGroupId];
+    const availableCategories = (game.triviaCategories ?? []).filter(
+      c => !(game.bannedCategories ?? []).includes(c)
+    );
+    const banned = game.bannedCategories ?? [];
+
+    return (
+      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+        <div className="text-center space-y-2">
+          <h1 className="text-3xl font-display">🚫 Kategorie-Ban</h1>
+          <p className="text-sm text-ink/60">
+            Jede Gruppe kann eine Kategorie aus dem Spiel ausschließen.
+          </p>
+          <div className="text-sm text-ink/70">
+            Runde {Math.min(currentIndex + 1, order.length)} / {order.length}
+          </div>
+        </div>
+
+        {/* Bereits gebannte Kategorien */}
+        {banned.length > 0 && (
+          <div className="card-surface rounded-2xl p-4 space-y-2">
+            <p className="text-xs uppercase tracking-wide text-ink/60">Gebannte Kategorien</p>
+            <div className="flex flex-wrap gap-2">
+              {banned.map(c => (
+                <span key={c} className="bg-red-100 text-red-700 text-xs font-semibold px-3 py-1 rounded-full border border-red-300">
+                  🚫 {CATEGORY_LABELS[c] ?? c}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Aktuell an der Reihe */}
+        <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-amber-400/40 bg-amber-50/10">
+          <p className="text-center font-semibold text-amber-700">
+            {isMyTurn
+              ? '👉 Du bist dran — wähle eine Kategorie zum Bannen'
+              : `⏳ ${currentBanGroup?.name ?? '...'} wählt gerade...`}
+          </p>
+
+          {isMyTurn && (
+            <>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {availableCategories.map(c => (
+                  <button
+                    key={c}
+                    onClick={() => handleBanCategory(c)}
+                    disabled={isBanning}
+                    className="rounded-xl border-2 border-red-400 bg-red-50 hover:bg-red-100 text-red-800 text-sm font-semibold px-3 py-3 transition disabled:opacity-50"
+                  >
+                    🚫 {CATEGORY_LABELS[c] ?? c}
+                  </button>
+                ))}
+              </div>
+              <button
+                onClick={() => handleBanCategory(null)}
+                disabled={isBanning}
+                className="w-full rounded-xl border-2 border-ink/20 hover:border-ink/50 text-sm px-3 py-3 transition disabled:opacity-50"
+              >
+                ⏭️ Überspringen (keine Kategorie bannen)
+              </button>
+            </>
+          )}
+        </div>
+
+        {/* Ban-Reihenfolge */}
+        <div className="card-surface rounded-2xl p-4 space-y-2">
+          <p className="text-xs uppercase tracking-wide text-ink/60">Ban-Reihenfolge</p>
+          <div className="space-y-1">
+            {order.map((gid, i) => {
+              const g = game.groups[gid];
+              const done = i < currentIndex;
+              const active = i === currentIndex;
+              return (
+                <div key={gid} className={`flex items-center gap-2 text-sm py-1 ${
+                  active ? 'font-bold text-amber-700' : done ? 'text-ink/40 line-through' : 'text-ink/70'
+                }`}>
+                  <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: g?.color }} />
+                  <span>{g?.name ?? gid}</span>
+                  {done && (
+                    <span className="ml-auto text-xs">
+                      {banned[i] ? `🚫 ${CATEGORY_LABELS[banned[i]] ?? banned[i]}` : '⏭️ übersprungen'}
+                    </span>
+                  )}
+                  {active && <span className="ml-auto text-xs text-amber-600">👉 dran</span>}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Host-Hinweis */}
+        {session?.isHost && (
+          <div className="card-surface rounded-2xl p-4 border border-green-500/30 bg-green-50/10">
+            <p className="text-sm text-green-700">👑 Spielleiter: Das Spiel startet automatisch, wenn alle Gruppen gebannt haben.</p>
+          </div>
+        )}
+      </main>
+    );
+  }
 
   // Lobby-Ansicht
   if (game.state === 'lobby') {
