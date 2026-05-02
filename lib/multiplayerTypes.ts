@@ -54,6 +54,7 @@ export interface GameSession {
   deck: string[]; // Array von Card-IDs
   groups: Record<string, GroupData>; // groupId -> GroupData
   createdAt: number;
+  lastActivity: number;
   startedAt: number | null;
   finishedAt: number | null;
   maxGroups: number;

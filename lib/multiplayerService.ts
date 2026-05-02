@@ -103,6 +103,7 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
       [hostGroupId]: { ...hostGroup, completedCategories: [] }
     },
     createdAt: Date.now(),
+    lastActivity: Date.now(),
     startedAt: null,
     finishedAt: null,
     maxGroups: params.maxGroups || 8
@@ -128,6 +129,13 @@ export async function joinGame(params: JoinGameParams): Promise<{ groupId: strin
   }
 
   const game: GameSession = snapshot.val();
+
+  // Spiel nach 3 Stunden Inaktivität automatisch schließen
+  const STALE_MS = 3 * 60 * 60 * 1000;
+  if (Date.now() - (game.lastActivity ?? game.createdAt) > STALE_MS) {
+    await remove(gameRef);
+    throw new Error('Dieses Spiel ist abgelaufen (mehr als 3 Stunden ohne Aktivität). Bitte erstelle ein neues Spiel.');
+  }
 
   if (game.state !== 'lobby') {
     throw new Error('Das Spiel hat bereits begonnen.');
@@ -212,6 +220,7 @@ export async function startGame(pin: string, hostGroupId: string): Promise<void>
   await update(gameRef, {
     state: 'playing',
     startedAt: Date.now(),
+    lastActivity: Date.now(),
     currentCardIndex: 0,
     currentCardId: game.deck[0],
     currentTurnGroupId: firstGroupId
@@ -344,6 +353,7 @@ export async function nextTurn(pin: string): Promise<void> {
 
   // Reset alle Flex-Buttons
   const updates: Record<string, any> = {
+    lastActivity: Date.now(),
     currentTurnGroupId: nextGroupId
   };
 
@@ -385,10 +395,12 @@ export async function nextCard(pin: string): Promise<void> {
   if (nextIndex >= deck.length) {
     // Keine Karten mehr
     await update(gameRef, {
+      lastActivity: Date.now(),
       currentCardId: null
     });
   } else {
     await update(gameRef, {
+      lastActivity: Date.now(),
       currentCardIndex: nextIndex,
       currentCardId: deck[nextIndex]
     });
@@ -408,13 +420,22 @@ export async function updateFlexButtons(pin: string, groupId: string, count: num
 /**
  * Lauscht auf Änderungen des Spielstatus
  */
+const STALE_GAME_MS = 3 * 60 * 60 * 1000; // 3 Stunden
+
 export function subscribeToGame(pin: string, callback: (game: GameSession | null) => void): () => void {
   checkFirebase();
   const gameRef = ref(database!, `games/${pin}`);
   
   const unsubscribe = onValue(gameRef, (snapshot) => {
     if (snapshot.exists()) {
-      callback(snapshot.val());
+      const game: GameSession = snapshot.val();
+      // Abgelaufene Spiele automatisch löschen
+      if (Date.now() - (game.lastActivity ?? game.createdAt) > STALE_GAME_MS) {
+        remove(gameRef).catch(() => {});
+        callback(null);
+        return;
+      }
+      callback(game);
     } else {
       callback(null);
     }
@@ -777,6 +798,7 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
   }) ?? null;
 
   const updates: Record<string, any> = {
+    lastActivity: Date.now(),
     [`groups/${activeGroupId}/score`]: correct
       ? (game.groups[activeGroupId]?.score ?? 0) + 1
       : (game.groups[activeGroupId]?.score ?? 0),
@@ -882,6 +904,7 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupId: string): 
   }) ?? null;
 
   const updates: Record<string, any> = {
+    lastActivity: Date.now(),
     [`groups/${winnerGroupId}/score`]: (game.groups[winnerGroupId]?.score ?? 0) + 1,
     [`groups/${winnerGroupId}/completedCategories`]: newCompleted,
     availableDeck: newAvailable,
