@@ -112,7 +112,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-easy-053', title: 'Wie nennt man Schutzwälle gegen Hochwasser', category: 'natur', year: 0, cue: 'Wie nennt man Schutzwälle gegen Hochwasser?', answer: 'Deiche.', difficulty: 'leicht', sources: {}, distractors: ['Dämme.', 'Mauern.', 'Wälle.'] },
 
-  { id: 'naturtechnik-easy-054', title: 'Was fressen Pandabären hauptsachlich', category: 'natur', year: 0, cue: 'Was fressen Pandabären hauptsachlich?', answer: 'Bambus.', difficulty: 'leicht', sources: {}, distractors: ['Eukalyptus.', 'Fisch.', 'Beeren.'] },
+  { id: 'naturtechnik-easy-054', title: 'Was fressen Pandabären hauptsächlich', category: 'natur', year: 0, cue: 'Was fressen Pandabären hauptsächlich?', answer: 'Bambus.', difficulty: 'leicht', sources: {}, distractors: ['Eukalyptus.', 'Fisch.', 'Beeren.'] },
 
   { id: 'naturtechnik-easy-055', title: 'Wie nennt man die elektrische Entladung bei Gewitter', category: 'natur', year: 0, cue: 'Wie nennt man die elektrische Entladung bei Gewitter?', answer: 'Blitz.', difficulty: 'leicht', sources: {}, distractors: ['Donner.', 'Funken.', 'Plasma.'] },
 
@@ -134,7 +134,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-easy-064', title: 'Wie nennt man Energie aus Erdwärme', category: 'natur', year: 0, cue: 'Wie nennt man Energie aus Erdwärme?', answer: 'Geothermie.', difficulty: 'leicht', sources: {}, distractors: ['Biomasse.', 'Solarenergie.', 'Kernenergie.'] },
 
-  { id: 'naturtechnik-easy-065', title: 'Woraus besteht Sand hauptsachlich', category: 'natur', year: 0, cue: 'Woraus besteht Sand hauptsachlich?', answer: 'Quarz.', difficulty: 'leicht', sources: {}, distractors: ['Kalkstein.', 'Granit.', 'Feldspat.'] },
+  { id: 'naturtechnik-easy-065', title: 'Woraus besteht Sand hauptsächlich', category: 'natur', year: 0, cue: 'Woraus besteht Sand hauptsächlich?', answer: 'Quarz.', difficulty: 'leicht', sources: {}, distractors: ['Kalkstein.', 'Granit.', 'Feldspat.'] },
 
   { id: 'naturtechnik-easy-066', title: 'Welches Organ ist das größte beim Menschen', category: 'natur', year: 0, cue: 'Welches Organ ist das größte beim Menschen?', answer: 'Die Haut.', difficulty: 'leicht', sources: {}, distractors: ['Die Leber.', 'Die Lunge.', 'Der Darm.'] },
 
@@ -172,9 +172,9 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-easy-083', title: 'Was ist die natürliche Farbe von reinem Wasser in großen Mengen', category: 'natur', year: 0, cue: 'Was ist die natürliche Farbe von reinem Wasser in großen Mengen?', answer: 'Blau.', difficulty: 'leicht', sources: {}, distractors: ['Farblos.', 'Grün.', 'Weiß.'] },
 
-  { id: 'naturtechnik-easy-084', title: 'Woraus besteht die Schale eines Huhnereis hauptsachlich', category: 'natur', year: 0, cue: 'Woraus besteht die Schale eines Huhnereis hauptsachlich?', answer: 'Kalk (Calciumcarbonat).', difficulty: 'leicht', sources: {}, distractors: ['Chitin.', 'Protein.', 'Silizium.'] },
+  { id: 'naturtechnik-easy-084', title: 'Woraus besteht die Schale eines Hühnereis hauptsächlich', category: 'natur', year: 0, cue: 'Woraus besteht die Schale eines Hühnereis hauptsächlich?', answer: 'Kalk (Calciumcarbonat).', difficulty: 'leicht', sources: {}, distractors: ['Chitin.', 'Protein.', 'Silizium.'] },
 
-  { id: 'naturtechnik-easy-085', title: 'Wie nennt man den Schattenbereich wahrend einer Sonnenfinsternis', category: 'natur', year: 0, cue: 'Wie nennt man den Schattenbereich wahrend einer Sonnenfinsternis?', answer: 'Kernschatten.', difficulty: 'leicht', sources: {}, distractors: ['Halbschatten.', 'Umbra.', 'Penumbra.'] },
+  { id: 'naturtechnik-easy-085', title: 'Wie nennt man den Schattenbereich während einer Sonnenfinsternis', category: 'natur', year: 0, cue: 'Wie nennt man den Schattenbereich während einer Sonnenfinsternis?', answer: 'Kernschatten.', difficulty: 'leicht', sources: {}, distractors: ['Halbschatten.', 'Umbra.', 'Penumbra.'] },
 
   { id: 'naturtechnik-medium-086', title: 'Welches Prinzip erklärt, warum ein Schiff aus Stahl im Wasser schwimmt', category: 'natur', year: 0, cue: 'Welches Prinzip erklärt, warum ein Schiff aus Stahl im Wasser schwimmt?', answer: 'Das Archimedische Prinzip.', difficulty: 'mittel', sources: {}, distractors: ['Das Newtonsche Gesetz.', 'Das Bernoulli-Prinzip.', 'Das Pascalsche Gesetz.'] },
 

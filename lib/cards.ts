@@ -791,7 +791,7 @@ const baseCards: Card[] = [
     category: 'quote',
     year: 1989,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Ruf der Montagsdemos "Wir sind das Volk." auf den Straueen von Leipzig und anderen DDR-Stuedten.',
+    answer: 'Ruf der Montagsdemos "Wir sind das Volk." auf den Straßen von Leipzig und anderen DDR-Städten.',
     hint: 'DDR, Wendezeit.',
     difficulty: 'mittel',
     sources: { text: 'Wir sind das Volk.' },
@@ -2146,7 +2146,7 @@ const baseCards: Card[] = [
     difficulty: 'leicht',
     sources: {
       text: '"I\'m gonna take my horse to the old town road."',
-      textDe: 'Ich nehme mein Pferd zur alten Stadtstrauee.'
+      textDe: 'Ich nehme mein Pferd zur alten Stadtstraße.'
     },
     distractors: ['The Weeknd, Blinding Lights', 'Ed Sheeran, Shape of You', 'OutKast, Hey Ya!']
   },
