@@ -62,13 +62,13 @@ export default function MultiplayerGamePage() {
   // Auto-Reload für den Host bei Gruppenwechsel (Spotify Player braucht frischen Start)
   // Nur im Timeline-Modus — im Trivia-Modus wechselt currentTurnGroupId nach jeder Frage normal
   useEffect(() => {
-    if (!session?.isHost || !game?.currentTurnGroupId || game?.mode === 'trivia') return;
+    if (!effectiveIsHost || !game?.currentTurnGroupId || game?.mode === 'trivia') return;
     const prev = prevTurnGroupRef.current;
     if (prev !== null && prev !== game.currentTurnGroupId) {
       window.location.reload();
     }
     prevTurnGroupRef.current = game.currentTurnGroupId;
-  }, [game?.currentTurnGroupId, session?.isHost, game?.mode]);
+  }, [game?.currentTurnGroupId, session?.isHost, game?.hostId, game?.mode]);
   
   // Host-Funktionen
   const [editingGroupId, setEditingGroupId] = useState<string | null>(null);
@@ -316,7 +316,7 @@ export default function MultiplayerGamePage() {
 
   // Host listens for playback control commands
   useEffect(() => {
-    if (!session?.isHost || !game?.playbackControl) return;
+    if (!effectiveIsHost || !game?.playbackControl) return;
     
     const control = game.playbackControl;
     const currentCardId = game.currentCardId;
@@ -333,7 +333,7 @@ export default function MultiplayerGamePage() {
       mediaEmbedRef.current?.stop();
       setIsMediaPlaying(false);
     }
-  }, [game?.playbackControl, game?.currentCardId, session?.isHost]);
+  }, [game?.playbackControl, game?.currentCardId, session?.isHost, game?.hostId]);
   
   if (loading) {
     return (
@@ -362,6 +362,9 @@ export default function MultiplayerGamePage() {
   }
 
   const currentGroup = game.groups[session.groupId];
+  // Derive host status robustly: cross-check localStorage with Firebase game.hostId
+  // so a stale/refreshed session still identifies the host correctly
+  const effectiveIsHost = session.isHost || game.hostId === session.groupId;
   const groupList = Object.values(game.groups).filter(g => !g.isHost); // Spielleiter aus Liste entfernen
   const allReady = groupList.every(g => g.isReady);
 
@@ -483,7 +486,7 @@ export default function MultiplayerGamePage() {
         </div>
 
         {/* Host-Hinweis */}
-        {session?.isHost && (
+        {effectiveIsHost && (
           <div className="card-surface rounded-2xl p-4 border border-green-500/30 bg-green-50/10">
             <p className="text-sm text-green-700">👑 Spielleiter: Das Spiel startet automatisch, wenn alle Gruppen gebannt haben.</p>
           </div>
@@ -519,7 +522,7 @@ export default function MultiplayerGamePage() {
         </div>
 
         {/* Host-Panel - Nur wenn du der Spielleiter bist */}
-        {session.isHost && (
+        {effectiveIsHost && (
           <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30 bg-green-50/10">
             <h2 className="text-xl font-semibold text-green-700">👑 Spielleiter-Panel</h2>
             <div className="space-y-4">
@@ -566,7 +569,7 @@ export default function MultiplayerGamePage() {
         )}
 
         {/* Gruppen-Liste - Nur für nicht-Host */}
-        {!session.isHost && (
+        {!effectiveIsHost && (
           <>
             {/* Andere Gruppen */}
             <div className="card-surface rounded-2xl p-6 space-y-4">
@@ -677,8 +680,8 @@ export default function MultiplayerGamePage() {
     }
     
     const currentCard = getCardById(game.currentCardId);
-    const isActiveTurn = game.currentTurnGroupId === session.groupId && !session.isHost; // Host kann nicht spielen
-    const isHostSession = session.isHost;
+    const isActiveTurn = game.currentTurnGroupId === session.groupId && !effectiveIsHost; // Host kann nicht spielen
+    const isHostSession = effectiveIsHost;
     const canControlMedia = isActiveTurn || isHostSession;
 
     // ──────────────────────────────────────────────────
@@ -699,7 +702,7 @@ export default function MultiplayerGamePage() {
         );
       }
       const activeGroup = game.currentTurnGroupId ? game.groups[game.currentTurnGroupId] : null;
-      const isMyTurn = game.currentTurnGroupId === session.groupId && !session.isHost;
+      const isMyTurn = game.currentTurnGroupId === session.groupId && !effectiveIsHost;
 
       const categoryLabels: Record<string, string> = {
         music: 'Musikfrage', quote: 'Zitat', film: 'Film & Serie', filmserien: 'Film & Serie',
@@ -839,7 +842,7 @@ export default function MultiplayerGamePage() {
                   <p className="text-2xl font-semibold">{currentCard.cue}</p>
 
                   {/* Spieler-Eingabe */}
-                  {!session.isHost && (() => {
+                  {!effectiveIsHost && (() => {
                     const mySubmission = currentGroup?.schaetzSubmission;
                     if (mySubmission) {
                       return (
@@ -876,7 +879,7 @@ export default function MultiplayerGamePage() {
                 </div>
 
                 {/* Host: Übersicht + Auswertung */}
-                {session.isHost && (
+                {effectiveIsHost && (
                   <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
                     <h3 className="text-lg font-semibold text-green-700">👑 Spielleitung — Schätzfrage</h3>
                     <p className="text-sm text-ink/60">{submittedCount}/{playingGroups.length} Gruppen haben geantwortet</p>
@@ -963,7 +966,7 @@ export default function MultiplayerGamePage() {
 
             {/* Medien-Einbettung */}
             {currentCard.sources && (
-              session.isHost ? (
+              effectiveIsHost ? (
                 <MediaEmbed
                   key={game.currentCardId ?? 'trivia-host'}
                   ref={mediaEmbedRef}
@@ -985,13 +988,13 @@ export default function MultiplayerGamePage() {
                 <p className="text-green-700 font-bold">🎤 Ihr seid dran! Beantwortet die Frage laut.</p>
               </div>
             )}
-            {!isMyTurn && !session.isHost && (
+            {!isMyTurn && !effectiveIsHost && (
               <p className="text-sm text-ink/60 text-center">Warte auf die Antwort von {activeGroup?.name ?? 'dem aktiven Team'}…</p>
             )}
           </div>
 
           {/* Host-Steuerung */}
-          {session.isHost && (
+          {effectiveIsHost && (
             <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
               <h3 className="text-lg font-semibold text-green-700">👑 Spielleitung</h3>
 
@@ -1100,7 +1103,7 @@ export default function MultiplayerGamePage() {
         {/* Header */}
         <div className="text-center space-y-2">
           <h1 className="text-3xl font-display">Timeline Multiplayer</h1>
-          {!session.isHost && (
+          {!effectiveIsHost && (
             <>
               <p className="text-ink/70">
                 Karte {game.currentCardIndex + 1} / {game.deck.length}
@@ -1119,7 +1122,7 @@ export default function MultiplayerGamePage() {
         </div>
 
         {/* Host-Panel: Flex-Bestätigung und Score-Editing */}
-        {session.isHost && (
+        {effectiveIsHost && (
           <details className="card-surface rounded-2xl border-2 border-green-500/30 group">
             <summary className="px-6 py-4 cursor-pointer list-none flex items-center justify-between select-none">
               <span className="text-lg font-semibold text-green-700">👑 Einstellungen</span>
