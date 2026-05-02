@@ -995,12 +995,34 @@ export default function MultiplayerGamePage() {
             <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
               <h3 className="text-lg font-semibold text-green-700">👑 Spielleitung</h3>
 
+              {/* Bewertungs-Buttons */}
+              <p className="text-base font-semibold text-center text-ink/80">
+                Hat Gruppe <span className="font-bold">&bdquo;{activeGroup?.name ?? '…'}&ldquo;</span> die Frage korrekt beantwortet?
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                <button
+                  onClick={() => handleTriviaAnswer(true)}
+                  disabled={isProcessing}
+                  className="px-4 py-5 bg-green-600 text-white rounded-xl font-bold text-xl hover:bg-green-700 disabled:opacity-50"
+                >
+                  ✅ Richtig
+                </button>
+                <button
+                  onClick={() => handleTriviaAnswer(false)}
+                  disabled={isProcessing}
+                  className="px-4 py-5 bg-red-600 text-white rounded-xl font-bold text-xl hover:bg-red-700 disabled:opacity-50"
+                >
+                  ❌ Falsch
+                </button>
+              </div>
+              <p className="text-xs text-ink/50 text-center">Nach Klick: nächste Frage, nächstes Team dran</p>
+
               {/* Antwort anzeigen */}
               <button
                 onClick={() => setShowTriviaAnswer(v => !v)}
-                className="w-full px-4 py-3 rounded-xl border-2 border-ink/20 hover:border-ink/50 font-semibold transition-colors"
+                className="w-full px-4 py-4 rounded-xl border-2 border-ink/30 hover:border-ink/60 font-bold text-lg transition-colors"
               >
-                {showTriviaAnswer ? '🙈 Antwort verbergen' : '👁 Antwort anzeigen'}
+                {showTriviaAnswer ? '🙈 Antwort verbergen' : '👁 Korrekte Antwort anzeigen'}
               </button>
               {showTriviaAnswer && (
                 <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-400 px-4 py-3">
@@ -1011,25 +1033,6 @@ export default function MultiplayerGamePage() {
                   )}
                 </div>
               )}
-
-              {/* Bewertungs-Buttons */}
-              <div className="grid grid-cols-2 gap-3">
-                <button
-                  onClick={() => handleTriviaAnswer(true)}
-                  disabled={isProcessing}
-                  className="px-4 py-4 bg-green-600 text-white rounded-xl font-bold text-lg hover:bg-green-700 disabled:opacity-50"
-                >
-                  ✅ Richtig
-                </button>
-                <button
-                  onClick={() => handleTriviaAnswer(false)}
-                  disabled={isProcessing}
-                  className="px-4 py-4 bg-red-600 text-white rounded-xl font-bold text-lg hover:bg-red-700 disabled:opacity-50"
-                >
-                  ❌ Falsch
-                </button>
-              </div>
-              <p className="text-xs text-ink/50 text-center">Nach Klick: nächste Frage, nächstes Team dran</p>
 
               {/* Host-Panel (Score-Editing + Spiel beenden) */}
               <details className="border-t border-ink/10 pt-4">
