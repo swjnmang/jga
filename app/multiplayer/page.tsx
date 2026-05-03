@@ -20,7 +20,7 @@ function MultiplayerLobbyContent() {
   // Create Game Form
   const [groupName, setGroupName] = useState('');
   const [gameMode, setGameMode] = useState<'timeline' | 'trivia'>('timeline');
-  const [banMode, setBanMode] = useState(false);
+  const [banMode, setBanMode] = useState(true);
   const [triviaWinCondition, setTriviaWinCondition] = useState<'categories' | 'points'>('categories');
 
   // Join Game Form

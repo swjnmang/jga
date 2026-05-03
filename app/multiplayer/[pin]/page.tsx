@@ -731,6 +731,14 @@ export default function MultiplayerGamePage() {
         }
       };
 
+      // Cue für Trivia anpassen: Outline immer nur Land-Frage, kein Jahr
+      const triviaDisplayCue = (card: typeof currentCard) => {
+        if (!card) return '';
+        if (card.category === 'outline') return 'Zu welchem Land gehört dieser Umriss?';
+        if (card.category === 'music') return 'Von wem ist der Song und wie heißt er?';
+        return card.cue;
+      };
+
       const triviaCategories: string[] = Array.isArray(game.triviaCategories)
         ? game.triviaCategories
         : Object.values(game.triviaCategories ?? {});
@@ -865,7 +873,7 @@ export default function MultiplayerGamePage() {
                       </span>
                     )}
                   </div>
-                  <p className="text-2xl font-semibold">{(currentCard.category as string) === 'music' ? 'Von wem ist der Song und wie heißt er?' : currentCard.cue}</p>
+                  <p className="text-2xl font-semibold">{triviaDisplayCue(currentCard)}</p>
 
                   {/* Spieler-Eingabe */}
                   {!effectiveIsHost && (() => {
@@ -992,7 +1000,7 @@ export default function MultiplayerGamePage() {
                 </span>
               )}
             </div>
-            <p className="text-2xl font-semibold">{currentCard.category === 'music' ? 'Von wem ist der Song und wie heißt er?' : currentCard.cue}</p>
+            <p className="text-2xl font-semibold">{triviaDisplayCue(currentCard)}</p>
 
             {/* Medien-Einbettung */}
             {currentCard.sources && (
