@@ -883,9 +883,10 @@ interface NextTurnResult {
 
 /**
  * Berechnet den nächsten Spielzustand nach einem Trivia-Zug.
- * - Gleiche Kategorie, nächste Gruppe, falls noch Gruppen übrig.
- * - Nächste Kategorie (zufällig), alle Gruppen spielen neu, wenn Kategorie-Runde fertig.
- * - Neue Runde (neue Mischung), wenn alle Kategorien einmal gespielt wurden.
+ * - Gleiche Kategorie, nächste Gruppe, falls noch Gruppen übrig (und noch nicht gesammelt).
+ * - Nächste Kategorie (zufällig), berechtigte Gruppen spielen, wenn Kategorie-Runde fertig.
+ * - Schätzfragen-Ausnahme: alle Gruppen spielen stets mit.
+ * - Im Punkte-Modus: keine Kategorie-Filterung.
  */
 function computeNextTurn(
   playingGroupIds: string[],
@@ -894,9 +895,22 @@ function computeNextTurn(
   catRoundQueue: string[],    // remaining categories this round
   triviaCategories: string[], // all categories
   newAvailable: string[],
-  deckMeta: Record<string, string>
+  deckMeta: Record<string, string>,
+  groupCompletedCategories: Record<string, string[]>,  // gid -> completed cats (with updated active group)
+  winCondition: string        // 'categories' | 'points'
 ): NextTurnResult {
-  const remainingGroups = catGroupQueue.slice(1); // active group consumed
+  // Eine Gruppe ist für eine Kategorie spielberechtigt wenn:
+  // - Modus ist Punkte, ODER
+  // - Kategorie ist 'schaetzfragen' (jeder kann immer mitspielen), ODER
+  // - Die Gruppe hat diese Kategorie noch nicht gesammelt
+  const isEligible = (gid: string, cat: string): boolean => {
+    if (winCondition !== 'categories') return true;
+    if (cat === 'schaetzfragen') return true;
+    return !(groupCompletedCategories[gid] ?? []).includes(cat);
+  };
+
+  // Verbleibende Gruppen in dieser Kategorie – nur berechtigte behalten
+  const remainingGroups = catGroupQueue.slice(1).filter(gid => isEligible(gid, currentRoundCat));
 
   if (remainingGroups.length > 0) {
     const nextCardId = newAvailable.find(id => deckMeta[id] === currentRoundCat) ?? null;
@@ -918,12 +932,15 @@ function computeNextTurn(
     const nextCat = tryQueue[i];
     const nextCardId = newAvailable.find(id => deckMeta[id] === nextCat) ?? null;
     if (nextCardId !== null) {
+      // Gruppen-Queue für neue Kategorie: nur berechtigte Gruppen
+      const eligibleGroups = playingGroupIds.filter(gid => isEligible(gid, nextCat));
+      if (eligibleGroups.length === 0) continue; // alle haben diese Kat. schon → überspringen
       return {
-        nextGroupId: playingGroupIds[0],
+        nextGroupId: eligibleGroups[0],
         nextCardId,
         currentRoundCategory: nextCat,
         categoryRoundQueue: tryQueue.slice(i + 1),
-        categoryGroupQueue: [...playingGroupIds],
+        categoryGroupQueue: [...eligibleGroups],
       };
     }
   }
@@ -987,8 +1004,20 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
     : Object.values(game.categoryRoundQueue ?? {});
   const currentRoundCat = game.currentRoundCategory ?? currentCategory;
 
+  // Gesammelte Kategorien pro Gruppe (für Kategorie-Filterung im categories-Modus)
+  const winCondition = game.triviaWinCondition ?? 'categories';
+  const groupCompletedCategories: Record<string, string[]> = {};
+  Object.entries(game.groups).forEach(([gid, g]) => {
+    const completed: string[] = Array.isArray(g.completedCategories)
+      ? g.completedCategories
+      : Object.values(g.completedCategories ?? {}) as string[];
+    // Für die aktive Gruppe: bereits aktualisierte Liste verwenden
+    groupCompletedCategories[gid] = gid === activeGroupId ? newCompleted : completed;
+  });
+
   const next = computeNextTurn(
-    playingGroupIds, currentRoundCat, catGroupQueue, catRoundQueue, triviaCategories, newAvailable, deckMeta
+    playingGroupIds, currentRoundCat, catGroupQueue, catRoundQueue, triviaCategories, newAvailable, deckMeta,
+    groupCompletedCategories, winCondition
   );
 
   const updates: Record<string, any> = {
@@ -1010,7 +1039,6 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
   });
 
   // Gewinnbedingung prüfen
-  const winCondition = game.triviaWinCondition ?? 'categories';
   if (winCondition === 'categories') {
     // Kategorie-Modus: aktive Gruppe hat alle Kategorien abgehakt?
     if (correct && triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
@@ -1133,9 +1161,26 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
     ? game.categoryRoundQueue
     : Object.values(game.categoryRoundQueue ?? {});
   const currentRoundCat = game.currentRoundCategory ?? currentCategory;
+  const winConditionS = game.triviaWinCondition ?? 'categories';
+
+  // Gesammelte Kategorien pro Gruppe (schon nach Gewinner-Update)
+  const groupCompletedCatsS: Record<string, string[]> = {};
+  Object.entries(game.groups).forEach(([gid, g]) => {
+    const prev: string[] = Array.isArray(g.completedCategories)
+      ? g.completedCategories
+      : Object.values(g.completedCategories ?? {}) as string[];
+    // Gewinnergruppen haben currentCategory jetzt gesammelt
+    if (winnerGroupIds.includes(gid) && currentCategory && !prev.includes(currentCategory)) {
+      groupCompletedCatsS[gid] = [...prev, currentCategory];
+    } else {
+      groupCompletedCatsS[gid] = prev;
+    }
+  });
+
   // Simulate all groups consumed → pass empty group queue to force category advance
   const next = computeNextTurn(
-    playingGroupIds, currentRoundCat, [], catRoundQueue, triviaCategories, newAvailable, deckMeta
+    playingGroupIds, currentRoundCat, [], catRoundQueue, triviaCategories, newAvailable, deckMeta,
+    groupCompletedCatsS, winConditionS
   );
 
   // Punkte + completedCategories für ALLE Gewinnergruppen (Unentschieden)
@@ -1168,7 +1213,6 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
   });
 
   // Gewinnbedingung prüfen (Schätzfrage)
-  const winConditionS = game.triviaWinCondition ?? 'categories';
   if (winConditionS === 'categories') {
     if (anyFinished) {
       updates.state = 'finished';
