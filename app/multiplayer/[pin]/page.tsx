@@ -26,6 +26,7 @@ import {
   extractNumericFromAnswer,
   extractRangeFromAnswer,
   extractUnitFromAnswer,
+  parseGermanNumber,
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
@@ -764,6 +765,7 @@ export default function MultiplayerGamePage() {
                 ? g.completedCategories
                 : Object.values(g.completedCategories ?? {}) as string[];
               const isActive = g.id === game.currentTurnGroupId;
+              const winCondition = game.triviaWinCondition ?? 'categories';
               return (
                 <div key={g.id}
                   className={`rounded-xl p-3 ${isActive ? 'ring-2 ring-ink' : ''}`}
@@ -771,9 +773,12 @@ export default function MultiplayerGamePage() {
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span className="font-bold text-sm">{g.name} {isActive ? '🎮' : ''}</span>
-                    <span className="font-semibold text-sm">{g.score} Pkt. · {completed.length}/{triviaCategories.length} Kat.</span>
+                    {winCondition === 'categories'
+                      ? <span className="font-semibold text-sm">{g.score} Pkt. · {completed.length}/{triviaCategories.length} Kat.</span>
+                      : <span className="font-bold text-base">{g.score} Pkt.</span>
+                    }
                   </div>
-                  {triviaCategories.length > 0 && (
+                  {winCondition === 'categories' && triviaCategories.length > 0 && (
                     <div className="flex flex-wrap gap-1">
                       {triviaCategories.map(cat => (
                         <span key={cat}
@@ -827,12 +832,21 @@ export default function MultiplayerGamePage() {
                 .filter(g => g.schaetzSubmission != null && g.schaetzSubmission !== '')
                 .map(g => ({
                   id: g.id,
-                  val: parseFloat((g.schaetzSubmission ?? '').replace(/\./g, '').replace(',', '.')),
+                  // parseGermanNumber handles "1.234,56" → 1234.56
+                  val: parseGermanNumber(g.schaetzSubmission ?? ''),
                 }))
-                .filter(s => !isNaN(s.val));
+                .filter(s => isFinite(s.val));
               if (withSubmissions.length === 0) return;
-              const minDist = Math.min(...withSubmissions.map(s => distToCorrect(s.val)));
-              const winners = withSubmissions.filter(s => distToCorrect(s.val) === minDist);
+              const distances = withSubmissions.map(s => distToCorrect(s.val));
+              // Guard: if any distance is NaN (e.g. answer has no parseable number), bail out
+              if (distances.some(d => isNaN(d))) {
+                console.warn('Schätzfrage: Korrekte Antwort konnte nicht geparst werden', currentCard.answer);
+                return;
+              }
+              const minDist = Math.min(...distances);
+              // Use small epsilon for float comparison
+              const EPS = 0.001;
+              const winners = withSubmissions.filter((s, i) => Math.abs(distances[i] - minDist) < EPS);
               setIsProcessing(true);
               try { await evaluateSchaetzfrage(pin, winners.map(w => w.id)); }
               catch (err) { console.error(err); }

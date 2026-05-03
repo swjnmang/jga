@@ -20,6 +20,8 @@ function MultiplayerLobbyContent() {
   // Create Game Form
   const [groupName, setGroupName] = useState('');
   const [gameMode, setGameMode] = useState<'timeline' | 'trivia'>('timeline');
+  const [banMode, setBanMode] = useState(false);
+  const [triviaWinCondition, setTriviaWinCondition] = useState<'categories' | 'points'>('categories');
 
   // Join Game Form
   const [pin, setPin] = useState('');
@@ -188,7 +190,9 @@ function MultiplayerLobbyContent() {
         settings,
         deck,
         hostGroupName: hostName,
-        hostPlayerName: hostName
+        hostPlayerName: hostName,
+        banModeEnabled: gameMode === 'trivia' ? banMode : false,
+        triviaWinCondition: gameMode === 'trivia' ? triviaWinCondition : 'categories',
       });
 
       // Speichere Session-Infos im localStorage
@@ -430,7 +434,8 @@ function MultiplayerLobbyContent() {
                 {(['timeline', 'trivia'] as const).map((m) => (
                   <button
                     key={m}
-                    onClick={() => setGameMode(m)}
+                    type="button"
+                    onClick={() => { setGameMode(m); if (m !== 'trivia') { setBanMode(false); setTriviaWinCondition('categories'); } }}
                     className={`px-4 py-3 rounded-lg border-2 transition-colors ${
                       gameMode === m
                         ? 'border-ink bg-ink text-inkDark'
@@ -443,9 +448,68 @@ function MultiplayerLobbyContent() {
               </div>
               {/* Modus-Beschreibung */}
               {gameMode === 'trivia' && (
-                <p className="mt-2 text-sm text-ink/70">
-                  🧠 <strong>Trivia</strong> – Klassische Quizfragen aus verschiedenen Kategorien. Jede Gruppe muss mindestens eine Frage pro Kategorie korrekt beantworten, um zu gewinnen. Schätzfragen, Musik, Bilder und mehr warten auf euch.
-                </p>
+                <>
+                  <p className="mt-2 text-sm text-ink/70">
+                    🧠 <strong>Trivia</strong> – Klassische Quizfragen aus verschiedenen Kategorien. Jede Gruppe muss mindestens eine Frage pro Kategorie korrekt beantworten, um zu gewinnen. Schätzfragen, Musik, Bilder und mehr warten auf euch.
+                  </p>
+                  {/* Ban-Modus */}
+                  <button
+                    type="button"
+                    onClick={() => setBanMode(v => !v)}
+                    className="mt-3 w-full flex items-start gap-3 rounded-xl border-2 border-ink/20 bg-ink/5 hover:bg-ink/10 transition-colors px-4 py-3 text-left"
+                  >
+                    <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                      banMode ? 'bg-green-600 border-green-600' : 'border-ink/40 bg-transparent'
+                    }`}>
+                      {banMode && (
+                        <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="1,5 4.5,9 11,1" />
+                        </svg>
+                      )}
+                    </span>
+                    <span>
+                      <span className="text-sm font-semibold block">🚫 Ban-Modus aktivieren</span>
+                      <span className="text-xs text-ink/60">Wenn der Ban-Modus aktiviert ist, können Gruppen vor Spielbeginn jeweils eine Kategorie sperren.</span>
+                    </span>
+                  </button>
+                  {/* Gewinnbedingung */}
+                  <div className="mt-3 space-y-2">
+                    <p className="text-sm font-semibold">Gewinnbedingung</p>
+                    <div className="grid grid-cols-1 gap-2">
+                      {(['categories', 'points'] as const).map((wc) => (
+                        <button
+                          key={wc}
+                          type="button"
+                          onClick={() => setTriviaWinCondition(wc)}
+                          className={`flex items-start gap-3 rounded-xl border-2 px-4 py-3 text-left transition-colors ${
+                            triviaWinCondition === wc
+                              ? 'border-ink bg-ink/10'
+                              : 'border-ink/20 bg-ink/5 hover:bg-ink/10'
+                          }`}
+                        >
+                          <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors ${
+                            triviaWinCondition === wc ? 'border-ink' : 'border-ink/40'
+                          }`}>
+                            {triviaWinCondition === wc && <span className="w-2.5 h-2.5 rounded-full bg-ink block" />}
+                          </span>
+                          <span>
+                            {wc === 'categories' ? (
+                              <>
+                                <span className="text-sm font-semibold block">🏶 Kategorien sammeln</span>
+                                <span className="text-xs text-ink/60">Eine Gruppe gewinnt, sobald sie aus jeder Kategorie mindestens eine Frage korrekt beantwortet hat.</span>
+                              </>
+                            ) : (
+                              <>
+                                <span className="text-sm font-semibold block">🏆 Meiste Punkte gewinnen</span>
+                                <span className="text-xs text-ink/60">Pro richtige Antwort gibt es einen Punkt. Die Gruppe mit den meisten Punkten am Ende gewinnt.</span>
+                              </>
+                            )}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </>
               )}
               {gameMode === 'timeline' && (
                 <p className="mt-2 text-sm text-ink/70">

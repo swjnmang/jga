@@ -68,9 +68,12 @@ export interface GameSession {
   deckMeta?: Record<string, string>;     // cardId → category (für Server-seitige Logik)
   availableDeck?: string[];              // Noch nicht gestellte Karten (cardIds)
   // Ban-Phase
+  banModeEnabled?: boolean;              // Ob der Ban-Modus aktiviert ist (Gruppen können Kategorien sperren)
   bannedCategories?: string[];           // Von Gruppen gebannte Kategorien
   banPhaseGroupOrder?: string[];         // Reihenfolge der Gruppen in der Ban-Phase
   banPhaseCurrentIndex?: number;         // Index der aktuell bannenden Gruppe
+  // Gewinnbedingung Trivia
+  triviaWinCondition?: 'categories' | 'points'; // 'categories' = alle Kats. abgehakt; 'points' = meiste Punkte
   // Kategorie-Rotation (Trivia)
   currentRoundCategory?: string;       // Aktuelle Kategorie, aus der alle Gruppen spielen
   categoryRoundQueue?: string[];       // Noch ausstehende Kategorien in dieser Runde (gemischt)
@@ -84,6 +87,8 @@ export interface CreateGameParams {
   hostGroupName: string;
   hostPlayerName: string;
   maxGroups?: number;
+  banModeEnabled?: boolean;
+  triviaWinCondition?: 'categories' | 'points';
 }
 
 export interface JoinGameParams {

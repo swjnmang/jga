@@ -97,6 +97,8 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     ...(params.mode === 'trivia' ? {
       availableDeck: actualDeck.map(c => c.id),
     } : {}),
+    banModeEnabled: params.mode === 'trivia' ? (params.banModeEnabled ?? false) : false,
+    triviaWinCondition: params.mode === 'trivia' ? (params.triviaWinCondition ?? 'categories') : 'categories',
     groups: {
       [hostGroupId]: { ...hostGroup, completedCategories: [] }
     },
@@ -214,14 +216,50 @@ export async function startGame(pin: string, hostGroupId: string): Promise<void>
     throw new Error('Keine Spielgruppen verfügbar.');
   }
 
-  await update(gameRef, {
-    state: 'banning',
-    startedAt: Date.now(),
-    lastActivity: Date.now(),
-    bannedCategories: [],
-    banPhaseGroupOrder: nonHostGroupIds,
-    banPhaseCurrentIndex: 0,
-  });
+  if (game.banModeEnabled && game.mode === 'trivia') {
+    // Ban-Phase starten
+    await update(gameRef, {
+      state: 'banning',
+      startedAt: Date.now(),
+      lastActivity: Date.now(),
+      bannedCategories: [],
+      banPhaseGroupOrder: nonHostGroupIds,
+      banPhaseCurrentIndex: 0,
+    });
+  } else {
+    // Ban-Phase überspringen → direkt zu playing
+    const deckMeta: Record<string, string> = game.deckMeta ?? {};
+    const availableDeck: string[] = game.availableDeck ?? game.deck ?? [];
+    const triviaCategories: string[] = Array.isArray(game.triviaCategories)
+      ? game.triviaCategories
+      : Object.values(game.triviaCategories ?? {});
+    const shuffledCats = shuffleArray([...triviaCategories]);
+    let firstCat = '';
+    let firstCardId: string | null = null;
+    let catQueueStart: string[] = [];
+    for (let i = 0; i < shuffledCats.length; i++) {
+      const card = availableDeck.find(id => deckMeta[id] === shuffledCats[i]);
+      if (card) { firstCat = shuffledCats[i]; firstCardId = card; catQueueStart = shuffledCats.slice(i + 1); break; }
+    }
+    if (!firstCardId) firstCardId = availableDeck[0] ?? null;
+    const firstGroupId = nonHostGroupIds[0];
+    const updates: Record<string, unknown> = {
+      state: 'playing',
+      startedAt: Date.now(),
+      lastActivity: Date.now(),
+      bannedCategories: [],
+      currentCardIndex: 0,
+      currentCardId: firstCardId,
+      currentTurnGroupId: firstGroupId,
+      currentRoundCategory: firstCat,
+      categoryRoundQueue: catQueueStart,
+      categoryGroupQueue: [...nonHostGroupIds],
+    };
+    if (game.availableDeck !== undefined) {
+      updates.availableDeck = availableDeck;
+    }
+    await update(gameRef, updates);
+  }
 }
 
 /**
@@ -971,17 +1009,37 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
     updates[`groups/${gid}/flexActive`] = false;
   });
 
-  // Gewinnbedingung: aktive Gruppe hat alle Kategorien abgehakt?
-  if (correct && triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
-    updates.state = 'finished';
-    updates.finishedAt = Date.now();
-    updates.winnerGroupId = activeGroupId;
-  } else if (!next.nextCardId) {
-    updates.state = 'finished';
-    updates.finishedAt = Date.now();
+  // Gewinnbedingung prüfen
+  const winCondition = game.triviaWinCondition ?? 'categories';
+  if (winCondition === 'categories') {
+    // Kategorie-Modus: aktive Gruppe hat alle Kategorien abgehakt?
+    if (correct && triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
+      updates.state = 'finished';
+      updates.finishedAt = Date.now();
+      updates.winnerGroupId = activeGroupId;
+    } else if (!next.nextCardId) {
+      updates.state = 'finished';
+      updates.finishedAt = Date.now();
+    } else {
+      updates.currentCardId = next.nextCardId;
+      updates.currentCardIndex = (game.currentCardIndex ?? 0) + 1;
+    }
   } else {
-    updates.currentCardId = next.nextCardId;
-    updates.currentCardIndex = (game.currentCardIndex ?? 0) + 1;
+    // Punkte-Modus: Spiel endet wenn Deck leer, Gewinner = meiste Punkte
+    if (!next.nextCardId) {
+      updates.state = 'finished';
+      updates.finishedAt = Date.now();
+      const allGroups = Object.entries(game.groups).filter(([_, g]) => !g.isHost);
+      // Berücksichtige den soeben aktualisierten Score
+      const winnerEntry = allGroups.reduce((best, [id, g]) => {
+        const sc = id === activeGroupId ? (correct ? (g.score ?? 0) + 1 : (g.score ?? 0)) : (g.score ?? 0);
+        return sc > best.score ? { id, score: sc } : best;
+      }, { id: allGroups[0]?.[0] ?? '', score: -1 });
+      updates.winnerGroupId = winnerEntry.id;
+    } else {
+      updates.currentCardId = next.nextCardId;
+      updates.currentCardIndex = (game.currentCardIndex ?? 0) + 1;
+    }
   }
 
   await update(gameRef, updates);
@@ -998,7 +1056,8 @@ export function parseGermanNumber(str: string): number {
 }
 
 export function extractNumericFromAnswer(answer: string): number {
-  const match = answer.match(/[\d.]+/);
+  // Match German numbers: digits with optional thousand-dots and/or decimal-comma
+  const match = answer.match(/[\d]+(?:[.,][\d]+)*/);
   if (!match) return NaN;
   return parseGermanNumber(match[0]);
 }
@@ -1108,16 +1167,35 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
     updates[`groups/${gid}/flexActive`] = false;
   });
 
-  if (anyFinished) {
-    updates.state = 'finished';
-    updates.finishedAt = Date.now();
-    updates.winnerGroupId = firstWinnerId;
-  } else if (!next.nextCardId) {
-    updates.state = 'finished';
-    updates.finishedAt = Date.now();
+  // Gewinnbedingung prüfen (Schätzfrage)
+  const winConditionS = game.triviaWinCondition ?? 'categories';
+  if (winConditionS === 'categories') {
+    if (anyFinished) {
+      updates.state = 'finished';
+      updates.finishedAt = Date.now();
+      updates.winnerGroupId = firstWinnerId;
+    } else if (!next.nextCardId) {
+      updates.state = 'finished';
+      updates.finishedAt = Date.now();
+    } else {
+      updates.currentCardId = next.nextCardId;
+      updates.currentCardIndex = (game.currentCardIndex ?? 0) + 1;
+    }
   } else {
-    updates.currentCardId = next.nextCardId;
-    updates.currentCardIndex = (game.currentCardIndex ?? 0) + 1;
+    // Punkte-Modus
+    if (!next.nextCardId) {
+      updates.state = 'finished';
+      updates.finishedAt = Date.now();
+      const allGroupsS = Object.entries(game.groups).filter(([_, g]) => !g.isHost);
+      const winnerEntryS = allGroupsS.reduce((best, [id, g]) => {
+        const sc = winnerGroupIds.includes(id) ? (g.score ?? 0) + 1 : (g.score ?? 0);
+        return sc > best.score ? { id, score: sc } : best;
+      }, { id: allGroupsS[0]?.[0] ?? '', score: -1 });
+      updates.winnerGroupId = winnerEntryS.id;
+    } else {
+      updates.currentCardId = next.nextCardId;
+      updates.currentCardIndex = (game.currentCardIndex ?? 0) + 1;
+    }
   }
 
   await update(gameRef, updates);
