@@ -275,6 +275,24 @@ function SettingsPageContent() {
             {availableCategories.map((category) => {
               const isActive = settings.categoryWeights[category] > 0;
               const value = settings.categoryWeights[category] ?? 0;
+              const isDisabled = category === 'image';
+              if (isDisabled) {
+                return (
+                  <div key={category} className="space-y-1 opacity-40 cursor-not-allowed" title="Demnächst verfügbar">
+                    <div className="flex items-center gap-3 py-1">
+                      <input
+                        type="checkbox"
+                        checked={false}
+                        disabled
+                        className="h-5 w-5 accent-sky-700 cursor-not-allowed"
+                        readOnly
+                      />
+                      <span className="text-sm font-medium capitalize flex-1">{categoryLabels[category] ?? category}</span>
+                      <span className="text-xs text-ink/50 italic">Demnächst</span>
+                    </div>
+                  </div>
+                );
+              }
               return (
                 <div key={category} className="space-y-1">
                   <label className="flex items-center gap-3 cursor-pointer py-1">

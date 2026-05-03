@@ -554,6 +554,20 @@ function MultiplayerLobbyContent() {
               <div className="grid grid-cols-2 gap-1">
                 {availableCategories.map((cat) => {
                   const isActive = (settings.categoryWeights[cat] || 0) > 0;
+                  const isDisabled = cat === 'image';
+                  if (isDisabled) {
+                    return (
+                      <div
+                        key={cat}
+                        className="flex items-center gap-2 py-1.5 px-2 rounded-lg text-left w-full opacity-40 cursor-not-allowed"
+                        title="Demnächst verfügbar"
+                      >
+                        <span className="flex-shrink-0 w-5 h-5 rounded border-2 border-ink/20 bg-transparent flex items-center justify-center" />
+                        <span className="text-sm font-medium">{categoryLabels[cat] || cat}</span>
+                        <span className="ml-auto text-xs text-ink/50 italic">Demnächst</span>
+                      </div>
+                    );
+                  }
                   return (
                     <button
                       key={cat}
