@@ -1006,7 +1006,7 @@ export default function MultiplayerGamePage() {
             {currentCard.sources && (
               effectiveIsHost ? (
                 <MediaEmbed
-                  key={game.currentCardId ?? 'trivia-host'}
+                  key="trivia-host-media"
                   ref={mediaEmbedRef}
                   card={currentCard}
                   preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}

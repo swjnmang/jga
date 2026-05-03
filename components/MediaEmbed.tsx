@@ -150,12 +150,27 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   useEffect(() => {
     // Stop playback when source changes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    resetSpotify();
+    const newChoiceIsSpotify = choice?.type === 'spotify';
+    const sdkAlive = Boolean(spotifyPlayerRef.current);
+
+    if (newChoiceIsSpotify && sdkAlive) {
+      // Keep the Spotify SDK connected – only pause the current track and update URL.
+      // This preserves the device_id so the next Play works immediately.
+      try { (spotifyPlayerRef.current as any)?.pause(); } catch (_) {}
+      setIsPlaying(false);
+      setShowSpotify(false);
+      setEmbedError(null);
+      reportedErrorRef.current = false;
+      autoPlayPendingRef.current = false;
+      latestSpotifyUrlRef.current = choice.url;
+    } else {
+      resetSpotify();
+      setEmbedError(null);
+      reportedErrorRef.current = false;
+      autoPlayPendingRef.current = false;
+      latestSpotifyUrlRef.current = newChoiceIsSpotify ? (choice?.url ?? null) : null;
+    }
     setShowYouTube(false);
-    setEmbedError(null);
-    reportedErrorRef.current = false;
-    autoPlayPendingRef.current = false; // Never auto-play; host must press Play manually
-    latestSpotifyUrlRef.current = choice?.type === 'spotify' ? choice.url : null;
   }, [choiceSignature]);
 
   useEffect(() => {
