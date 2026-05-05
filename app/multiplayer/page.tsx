@@ -31,7 +31,7 @@ function MultiplayerLobbyContent() {
   const [gameMode, setGameMode] = useState<'timeline' | 'trivia'>('timeline');
   const [banMode, setBanMode] = useState(true);
   const [triviaWinCondition, setTriviaWinCondition] = useState<'categories' | 'points'>('categories');
-  const [timelineWinTarget, setTimelineWinTarget] = useState(10);
+  const [timelineWinTarget, setTimelineWinTarget] = useState(10); // range 8–20
 
   // Join Game Form
   const [pin, setPin] = useState('');
@@ -547,15 +547,15 @@ function MultiplayerLobbyContent() {
                   <div>
                     <label className="block text-sm font-semibold mb-2">🏆 Karten zum Gewinnen: <span className="text-ink">{timelineWinTarget}</span></label>
                     <div className="flex items-center gap-3">
-                      <button type="button" onClick={() => setTimelineWinTarget(v => Math.max(3, v - 1))} className="w-9 h-9 rounded-lg border-2 border-ink/30 text-lg font-bold hover:bg-ink/10 flex items-center justify-center">−</button>
+                      <button type="button" onClick={() => setTimelineWinTarget(v => Math.max(8, v - 1))} className="w-9 h-9 rounded-lg border-2 border-ink/30 text-lg font-bold hover:bg-ink/10 flex items-center justify-center">−</button>
                       <input
-                        type="range" min={3} max={30} value={timelineWinTarget}
+                        type="range" min={8} max={20} value={timelineWinTarget}
                         onChange={e => setTimelineWinTarget(Number(e.target.value))}
                         className="flex-1 accent-ink"
                       />
-                      <button type="button" onClick={() => setTimelineWinTarget(v => Math.min(30, v + 1))} className="w-9 h-9 rounded-lg border-2 border-ink/30 text-lg font-bold hover:bg-ink/10 flex items-center justify-center">+</button>
+                      <button type="button" onClick={() => setTimelineWinTarget(v => Math.min(20, v + 1))} className="w-9 h-9 rounded-lg border-2 border-ink/30 text-lg font-bold hover:bg-ink/10 flex items-center justify-center">+</button>
                     </div>
-                    <div className="flex justify-between text-xs text-ink/40 mt-1 px-1"><span>3</span><span>30</span></div>
+                    <div className="flex justify-between text-xs text-ink/40 mt-1 px-1"><span>8</span><span>20</span></div>
                   </div>
                 </div>
               )}
