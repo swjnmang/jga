@@ -1,301 +1,404 @@
-Nr;Jahr (ca.);Zitat;Urheber
-1;400 v. Chr.;Ich wei�, dass ich nichts wei�.;Sokrates
-2;49 v. Chr.;Die W�rfel sind gefallen.;Julius C�sar
-3;1603;Sein oder Nichtsein, das ist hier die Frage.;William Shakespeare
-4;1637;Ich denke, also bin ich.;Ren� Descartes
-5;1781;Habe Mut, dich deines eigenen Verstandes zu bedienen!;Immanuel Kant
-6;1791;Was du heute kannst besorgen, das verschiebe nicht auf morgen.;Benjamin Franklin
-7;1808;Da steh ich nun, ich armer Tor! Und bin so klug als wie zuvor.;Johann Wolfgang von Goethe
-8;1848;Ein Gespenst geht um in Europa � das Gespenst des Kommunismus.;Karl Marx & Friedrich Engels
-9;1883;Gott ist tot.;Friedrich Nietzsche
-10;1897;Wer k�mpft, kann verlieren. Wer nicht k�mpft, hat schon verloren.;Bertolt Brecht
+﻿Nummer;Jahr (ca.);Zitat;Urheber
+1;1603;Sein oder Nichtsein, das ist hier die Frage.;William Shakespeare
+2;1637;Ich denke, also bin ich.;René Descartes
+3;1774;Edel sei der Mensch, hilfreich und gut.;Johann Wolfgang von Goethe
+4;1781;Habe Mut, dich deines eigenen Verstandes zu bedienen!;Immanuel Kant
+5;1791;Was du heute kannst besorgen, das verschiebe nicht auf morgen.;Benjamin Franklin
+6;1808;Da steh ich nun, ich armer Tor! Und bin so klug als wie zuvor.;Johann Wolfgang von Goethe
+7;1848;Ein Gespenst geht um in Europa – das Gespenst des Kommunismus.;Karl Marx & Friedrich Engels
+8;1883;Gott ist tot.;Friedrich Nietzsche
+9;1892;Elementar, mein lieber Watson.;Sherlock Holmes (Arthur Conan Doyle)
+10;1897;Wer kämpft, kann verlieren. Wer nicht kämpft, hat schon verloren.;Bertolt Brecht
 11;1905;Phantasie ist wichtiger als Wissen, denn Wissen ist begrenzt.;Albert Einstein
-12;1910;Das Herz hat seine Gr�nde, die die Vernunft nicht kennt.;Blaise Pascal
+12;1910;Das Herz hat seine Gründe, die die Vernunft nicht kennt.;Blaise Pascal
 13;1939;Frankly, my dear, I don't give a damn.;Rhett Butler (Vom Winde verweht)
-14;1940;Ich habe nichts zu bieten au�er Blut, M�hsal, Tr�nen und Schwei�.;Winston Churchill
-15;1943;Man sieht nur mit dem Herzen gut. Das Wesentliche ist f�r die Augen unsichtbar.;Antoine de Saint-Exup�ry
+14;1940;Ich habe nichts zu bieten außer Blut, Mühsal, Tränen und Schweiß.;Winston Churchill
+15;1943;Man sieht nur mit dem Herzen gut. Das Wesentliche ist für die Augen unsichtbar.;Antoine de Saint-Exupéry
 16;1944;Die Freiheit ist immer Freiheit der Andersdenkenden.;Rosa Luxemburg
-17;1948;Auge um Auge � und die ganze Welt wird blind sein.;Mahatma Gandhi
+17;1948;Auge um Auge – und die ganze Welt wird blind sein.;Mahatma Gandhi
 18;1952;Niemand hat die Absicht, eine Mauer zu errichten!;Walter Ulbricht
-19;1961;Fragt nicht, was euer Land f�r euch tun kann � fragt, was ihr f�r euer Land tun k�nnt.;John F. Kennedy
+19;1961;Fragt nicht, was euer Land für euch tun kann – fragt, was ihr für euer Land tun könnt.;John F. Kennedy
 20;1963;I have a dream.;Martin Luther King
-21;1966;Fu�ball ist ein Spiel von elf gegen elf, und am Ende gewinnen die Deutschen.;Gary Lineker
-22;1969;Das ist ein kleiner Schritt f�r einen Menschen, aber ein gewaltiger Sprung f�r die Menschheit.;Neil Armstrong
-23;1977;M�ge die Macht mit dir sein.;Star Wars (Obi-Wan Kenobi)
+21;1966;Fußball ist ein Spiel von elf gegen elf, und am Ende gewinnen die Deutschen.;Gary Lineker
+22;1969;Das ist ein kleiner Schritt für einen Menschen, aber ein gewaltiger Sprung für die Menschheit.;Neil Armstrong
+23;1977;Möge die Macht mit dir sein.;Star Wars (Obi-Wan Kenobi)
 24;1980;Ich bin dein Vater.;Star Wars (Darth Vader)
-25;1982;E.T. nach Hause telefonieren.;E.T. - Der Au�erirdische
+25;1982;E.T. nach Hause telefonieren.;E.T. - Der Außerirdische
 26;1984;Ich komme wieder.;Terminator (Arnold Schwarzenegger)
-27;1985;Das Leben ist wie eine Schachtel Pralinen, man wei� nie, was man bekommt.;Forrest Gump
+27;1985;Das Leben ist wie eine Schachtel Pralinen, man weiß nie, was man bekommt.;Forrest Gump
 28;1987;Tear down this wall!;Ronald Reagan
 29;1989;Wir sind das Volk!;Montagsdemonstrationen DDR
 30;1991;Es gibt kein richtiges Leben im falschen.;Theodor W. Adorno
 31;1994;Hasta la vista, baby.;Terminator 2
-32;1997;Ich bin der K�nig der Welt!;Titanic (Jack Dawson)
+32;1997;Ich bin der König der Welt!;Titanic (Jack Dawson)
 33;2005;Wir sind Papst.;BILD-Zeitung
 34;2015;Wir schaffen das.;Angela Merkel
-35;1774;Edel sei der Mensch, hilfreich und gut.;Johann Wolfgang von Goethe
-36;1892;Elementar, mein lieber Watson.;Sherlock Holmes (Arthur Conan Doyle)
-37;1849;Alles;was wir sehen oder scheinen
-38;1945;Die Welt hat genug f�r jedermanns Bed�rfnisse;aber nicht f�r jedermanns Gier.
-39;1968;In Zukunft wird jeder f�r 15 Minuten weltber�hmt sein.;Andy Warhol
-40;1974;Es gibt nur ein Tempo: Vorw�rts!;Franz Beckenbauer
-41;1859;Es ist nicht die st�rkste Spezies die �berlebt, sondern diejenige, die sich am ehesten dem Wandel anpasst.;Charles Darwin
-42;1942;Schau mir in die Augen, Kleines.;Casablanca (Rick Blaine)
-43;1966;Warp-Geschwindigkeit, Mr. Sulu.;Star Trek (Captain Kirk)
-44;1919;Zwei Dinge sind unendlich, das Universum und die menschliche Dummheit.;Albert Einstein
-45;1889;Was mich nicht umbringt;macht mich st�rker.
-46;2008;Manche Menschen wollen die Welt einfach nur brennen sehen.;The Dark Knight (Alfred)
-47;1999;Willkommen in der W�ste der Realit�t.;The Matrix (Morpheus)
-48;1949;Big Brother is watching you.;George Orwell (1984)
-49;1913;Wir m�ssen der Wandel sein;den wir in der Welt zu sehen w�nschen.
-50;1920;Ein Experten ist ein Mann, der alle Fehler gemacht hat, die man in einem sehr schmalen Fachgebiet machen kann.;Niels Bohr
-51;1925;Geben Sie mir ein Museum;und ich werde es f�llen.
-52;1954;Es gibt kein Ende. Es gibt keinen Anfang. Es gibt nur die unendliche Leidenschaft des Lebens.;Federico Fellini
-53;1900;Der Weg ist das Ziel.;Konfuzius (zugeschrieben)
-54;1854;Das Geheimnis des Gl�cks ist die Freiheit, und das Geheimnis der Freiheit ist der Mut.;Perikles
-55;1931;Alles, was man sich vorstellen kann, ist real.;Pablo Picasso
-56;1971;Imagine all the people living life in peace.;John Lennon
-57;1797;Die Geister;die ich rief
-58;1980;Do or do not. There is no try.;Yoda (Star Wars)
-59;1920;Das Unm�gliche m�glich machen.;Walt Disney
-60;1915;Die Metamorphose: Als Gregor Samsa eines Morgens aus unruhigen Tr�umen erwachte...;Franz Kafka
-61;1942;Das Tagebuch der Anne Frank: Trotz allem glaube ich an das Gute im Menschen.;Anne Frank
-62;1952;Ein Raum ohne B�cher ist wie ein K�rper ohne Seele.;Cicero
-63;1891;Ich habe einen ganz einfachen Geschmack: Ich bin immer mit dem Besten zufrieden.;Oscar Wilde
-64;1964;I can't get no satisfaction.;The Rolling Stones
-65;1932;Sch�ne neue Welt.;Aldous Huxley
-66;1979;Don't Panic.;Douglas Adams (Per Anhalter durch die Galaxis)
-67;1928;Erst kommt das Fressen, dann kommt die Moral.;Bertolt Brecht
-68;1895;Das Genie ist ein Prozent Inspiration und neunundneunzig Prozent Transpiration.;Thomas Edison
-69;1953;Warten auf Godot.;Samuel Beckett
-70;1902;Es ist nicht wenig Zeit, die wir haben, sondern es ist viel Zeit, die wir nicht nutzen.;Seneca
-71;1922;Alles Flie�t.;Heraklit
-72;1918;Der Krieg ist der Vater aller Dinge.;Heraklit
-73;1951;Der F�nger im Roggen.;J.D. Salinger
-74;1988;Just Do It.;Nike (Slogan)
-75;1975;Der Wei�e Hai: Wir brauchen ein gr��eres Boot.;Chief Brody
-76;1930;Das Sein bestimmt das Bewusstsein.;Karl Marx
-77;1995;Houston, wir haben ein Problem.;Apollo 13 (Film)
-78;1955;Denn sie wissen nicht, was sie tun.;James Dean (Film)
-79;1947;Freiheit bedeutet Verantwortlichkeit. Das ist der Grund;warum die meisten Menschen sich vor ihr f�rchten.
-80;1924;Der Zauberberg.;Thomas Mann
-81;1962;James Bond: Mein Name ist Bond. James Bond.;Sean Connery
-82;1908;Wichtig ist nicht der Sieg, sondern die Teilnahme.;Pierre de Coubertin
-83;1841;Einigkeit und Recht und Freiheit.;August Heinrich Hoffmann von Fallersleben
-84;1790;Was ist Aufkl�rung?;Immanuel Kant
-85;1936;L'�tat c'est moi (Der Staat bin ich).;Ludwig XIV (zugeschrieben)
-86;1929;Pfeife: Dies ist keine Pfeife.;Ren� Magritte
-87;1950;Alle Menschen sind frei und gleich an W�rde und Rechten geboren.;UN-Menschenrechtscharta
-88;1972;Der Pate: Ich mache ihm ein Angebot, das er nicht ablehnen kann.;Marlon Brando
-89;1984;Think Different.;Apple (Slogan)
-90;1960;Psycho: Wir alle drehen manchmal ein bisschen durch.;Norman Bates
-91;1912;Der Steppenwolf.;Hermann Hesse
-92;1943;Das Glas ist halb voll oder halb leer.;Volksmund
-93;1959;Manche m�gen's hei�.;Filmtitel
-94;1967;All You Need Is Love.;The Beatles
-95;1970;Let It Be.;The Beatles
-96;1982;The Winner Takes It All.;ABBA
-97;1990;Wind of Change.;Scorpions
-98;1926;Gott w�rfelt nicht.;Albert Einstein
-99;1941;Man braucht zwei Jahre, um sprechen zu lernen, und f�nfzig, um schweigen zu lernen.;Ernest Hemingway
-100;2001;Einer f�r alle, alle f�r einen.;Die drei Musketiere (Alexandre Dumas)
-101;1919;Ein Volk, das seine Geschichte nicht kennt, ist dazu verdammt, sie zu wiederholen.;George Santayana
-102;1940;Die einzige Sache, die wir zu f�rchten haben, ist die Furcht selbst.;Franklin D. Roosevelt
-103;1958;Wer sp�ter bremst ist l�nger schnell.;Volksmund (Motorsport)
-104;1981;Niemand ist eine Insel, in sich ganz.;John Donne
-105;1904;The purpose of our lives is to be happy.;Dalai Lama
-106;1993;I'll be back.;Terminator
-107;1922;Stay hungry, stay foolish.;Steve Jobs (zitiert Stewart Brand)
-108;1965;Turn on tune in drop out.;Timothy Leary
-109;1931;In der Ruhe liegt die Kraft.;Konfuzius (zugeschrieben)
-110;1862;Blut und Eisen.;Otto von Bismarck
-111;1945;Krieg ist Frieden, Freiheit ist Sklaverei, Unwissenheit ist St�rke.;George Orwell
-112;1983;Every breath you take.;The Police
-113;1957;Der Mensch ist das Ma� aller Dinge.;Protagoras
-114;1994;Life is like a box of chocolates.;Forrest Gump
-115;2001;I'm the king of the world!;Titanic
-116;1938;E=mc�;Albert Einstein
-117;1941;Der Weg zum Erfolg ist gepflastert mit Misserfolgen.;Winston Churchill
-118;1989;Another brick in the wall.;Pink Floyd
-119;1927;Der Mensch ist dem Menschen ein Wolf.;Thomas Hobbes
-120;1969;One small step for man.;Neil Armstrong
-121;1977;May the force be with you.;Star Wars
-122;1942;Here's looking at you kid.;Casablanca
-123;1954;Under the boardwalk.;The Drifters
-124;1991;Smells like teen spirit.;Nirvana
-125;1921;Ich wei� nicht, ob es besser wird, wenn es anders wird. Aber es muss anders werden, wenn es besser werden soll.;Georg Christoph Lichtenberg
-126;1936;Modern Times.;Charlie Chaplin
-127;1962;To be or not to be.;William Shakespeare
-128;1950;The quality of mercy is not strained.;William Shakespeare
-129;1943;The little prince.;Antoine de Saint-Exup�ry
-130;1980;You talkin' to me?;Taxi Driver
-131;1972;I'm gonna make him an offer he can't refuse.;The Godfather
-132;1999;The first rule of Fight Club is: You do not talk about Fight Club.;Fight Club
-133;1939;There's no place like home.;The Wizard of Oz
-134;1985;We are the world, we are the children.;USA for Africa
-135;1963;I want to hold your hand.;The Beatles
-136;1920;The Waste Land.;T.S. Eliot
-137;1956;Heartbreak Hotel.;Elvis Presley
-138;1979;The wall.;Pink Floyd
-139;1948;1984.;George Orwell
-140;1900;The Interpretation of Dreams.;Sigmund Freud
-141;1925;The Great Gatsby.;F. Scott Fitzgerald
-142;1951;The Catcher in the Rye.;J.D. Salinger
-143;1961;Catch-22.;Joseph Heller
-144;1974;The Godfather Part II.;Francis Ford Coppola
-145;1994;Pulp Fiction.;Quentin Tarantino
-146;1982;Blade Runner.;Ridley Scott
-147;1977;Star Wars.;George Lucas
-148;1968;2001: A Space Odyssey.;Stanley Kubrick
-149;1941;Citizen Kane.;Orson Welles
-150;1952;Singin' in the Rain.;Gene Kelly
-151;1905;Special Relativity.;Albert Einstein
-152;1915;General Relativity.;Albert Einstein
-153;1928;The Threepenny Opera.;Bertolt Brecht
-154;1953;The Crucible.;Arthur Miller
-155;1947;A Streetcar Named Desire.;Tennessee Williams
-156;1960;To Kill a Mockingbird.;Harper Lee
-157;1954;Lord of the Flies.;William Golding
-158;1945;Animal Farm.;George Orwell
-159;1937;The Hobbit.;J.R.R. Tolkien
-160;1954;The Lord of the Rings.;J.R.R. Tolkien
-161;1922;Ulysses.;James Joyce
-162;1913;In Search of Lost Time.;Marcel Proust
-163;1942;The Stranger.;Albert Camus
-164;1952;Waiting for Godot.;Samuel Beckett
-165;1958;Things Fall Apart.;Chinua Achebe
-166;1967;One Hundred Years of Solitude.;Gabriel Garc�a M�rquez
-167;1987;Beloved.;Toni Morrison
-168;1924;The Magic Mountain.;Thomas Mann
-169;1932;Brave New World.;Aldous Huxley
-170;1949;The Second Sex.;Simone de Beauvoir
-171;1962;The Silent Spring.;Rachel Carson
-172;1921;The Prophet.;Kahlil Gibran
-173;1936;The General Theory of Employment Interest and Money.;John Maynard Keynes
-174;1859;On the Origin of Species.;Charles Darwin
-175;1848;The Communist Manifesto.;Karl Marx & Friedrich Engels
-176;1776;The Wealth of Nations.;Adam Smith
-177;1687;Principia Mathematica.;Isaac Newton
-178;1637;Discourse on the Method.;Ren� Descartes
-179;1605;Don Quixote.;Miguel de Cervantes
-180;1513;The Prince.;Niccol� Machiavelli
-181;1929;A Room of One's Own.;Virginia Woolf
-182;1944;The Road to Serfdom.;Friedrich Hayek
-183;1963;The Feminine Mystique.;Betty Friedan
-184;1971;A Theory of Justice.;John Rawls
-185;1948;The Kinsey Reports.;Alfred Kinsey
-186;1902;The Varieties of Religious Experience.;William James
-187;1910;The Principles of Psychology.;William James
-188;1934;The Logic of Scientific Discovery.;Karl Popper
-189;1962;The Structure of Scientific Revolutions.;Thomas Kuhn
-190;1975;Discipline and Punish.;Michel Foucault
-191;1905;The Protestant Ethic and the Spirit of Capitalism.;Max Weber
-192;1917;The Russian Revolution.;Leon Trotsky
-193;1945;The Open Society and Its Enemies.;Karl Popper
-194;1951;The Origins of Totalitarianism.;Hannah Arendt
-195;1961;The Wretched of the Earth.;Frantz Fanon
-196;1972;Ways of Seeing.;John Berger
-197;1978;Orientalism.;Edward Said
-198;1990;Gender Trouble.;Judith Butler
-199;1993;The Clash of Civilizations.;Samuel Huntington
-200;2014;Capital in the Twenty-First Century.;Thomas Piketty
-201;1987;Never Gonna Give You Up.;Rick Astley
-202;1991;Losing My Religion.;R.E.M.
-203;1992;Smells Like Teen Spirit.;Nirvana
-204;1994;Black Hole Sun.;Soundgarden
-205;1995;Wonderwall.;Oasis
-206;1997;Bitter Sweet Symphony.;The Verve
-207;1999;...Baby One More Time.;Britney Spears
-208;2000;Stan.;Eminem
-209;2003;Seven Nation Army.;The White Stripes
-210;2006;Rehab.;Amy Winehouse
-211;2008;Poker Face.;Lady Gaga
-212;2010;Rolling in the Deep.;Adele
-213;2011;Video Games.;Lana Del Rey
-214;2013;Get Lucky.;Daft Punk
-215;2015;Hello.;Adele
-216;2017;Shape of You.;Ed Sheeran
-217;2019;Bad Guy.;Billie Eilish
-218;2020;Blinding Lights.;The Weeknd
-219;1789;Libert�;�galit�
-220;1863;Government of the people;by the people
-221;1917;Friede;Land und Brot.
-222;1933;Das einzige;was wir zu f�rchten haben
-223;1940;Blood;Toil
-224;1945;I have returned.;Douglas MacArthur
-225;1961;Ich bin ein Berliner.;John F. Kennedy
-226;1963;I have a dream.;Martin Luther King
-227;1987;Mr. Gorbachev;tear down this wall!
-228;1989;Wir sind das Volk.;DDR-B�rgerrechtler
-229;2008;Yes We Can.;Barack Obama
-230;1968;In der Zukunft wird jeder f�r 15 Minuten ber�hmt sein.;Andy Warhol
-231;1921;Genie ist 1 % Inspiration und 99 % Transpiration.;Thomas Edison
-232;1901;Wer aufh�rt;besser zu werden
-233;1914;Die Welt ist alles;was der Fall ist.
-234;1851;Alles;was an der Welt misslungen ist
-235;1787;Edel sei der Mensch;hilfreich und gut.
-236;1808;Zwei Seelen wohnen;ach! in meiner Brust.
-237;1781;Habe Mut;dich deines eigenen Verstandes zu bedienen!
-238;1883;Gott ist tot.;Friedrich Nietzsche
-239;1883;Also sprach Zarathustra.;Friedrich Nietzsche
-240;1923;Das Es;das Ich und das �ber-Ich.
-241;1930;Das Unbehagen in der Kultur.;Sigmund Freud
-242;1943;Das Sein und das Nichts.;Jean-Paul Sartre
-243;1949;Das andere Geschlecht.;Simone de Beauvoir
-244;1967;Die Gesellschaft des Spektakels.;Guy Debord
-245;1979;Die postmoderne Bedingung.;Jean-Fran�ois Lyotard
-246;1981;Simulakren und Simulation.;Jean Baudrillard
-247;1990;Das Unbehagen der Geschlechter.;Judith Butler
-248;1992;Das Ende der Geschichte.;Francis Fukuyama
-249;1993;Kampf der Kulturen.;Samuel P. Huntington
-250;2011;Schnelles Denken;langsames Denken.
-251;1942;Schau mir in die Augen;Kleines.
-252;1939;M�ge die Macht mit dir sein.;Star Wars
-253;1972;Ich mache ihm ein Angebot;das er nicht ablehnen kann.
-254;1980;Ich bin dein Vater.;Darth Vader
-255;1984;Ich komme wieder.;Terminator
-256;1994;Das Leben ist wie eine Schachtel Pralinen.;Forrest Gump
-257;1939;Nach Hause telefonieren.;E.T.
-258;1975;Wir brauchen ein gr��eres Boot.;Jaws
-259;1991;Hasta la vista;Baby.
-260;1997;Ich bin der K�nig der Welt.;Titanic
-261;1976;Redest du mit mir?;Taxi Driver
-262;1939;Ehrlich gesagt;meine Liebe
-263;1950;Alles;was wir sehen oder scheinen
-264;1960;Es gibt kein richtiges Leben im falschen.;Theodor W. Adorno
-265;1920;Die Banane reift beim Kunden.;Volksmund
-266;1988;Just do it.;Nike
-267;1997;Think different.;Apple
-268;1971;Vorsprung durch Technik.;Audi
-269;1954;Nichts ist unm�glich.;Toyota
-270;1922;Haribo macht Kinder froh.;Haribo
-271;1947;Diamonds are a girl's best friend.;Marilyn Monroe
-272;1968;because you're worth it.;L'Or�al
-273;2002;Geiz ist geil.;Saturn
-274;1991;Wohnst du noch oder lebst du schon?;IKEA
-275;2003;I'm lovin' it.;McDonald's
-276;1930;Gute Freunde kann niemand trennen.;Franz Beckenbauer
-277;1954;Das Wunder von Bern.;Herbert Zimmermann
-278;1966;Das Wembley-Tor.;Fu�ball-WM 1966
-279;1974;Der Kaiser.;Franz Beckenbauer
-280;1985;Bumm Bumm Boris.;Boris Becker
-281;1990;Wir sind die Nummer eins.;Fu�ball-WM 1990
-282;1997;Qu�le dich;du Sau!
-283;2006;Das Sommerm�rchen.;Fu�ball-WM 2006
-284;2014;Mach ihn! Er macht ihn!;Tom Bartels (WM 2014)
-285;1896;Dabei sein ist alles.;Olympische Spiele
-286;1920;Der Weg ist das Ziel.;Konfuzius (zugeschrieben)
-287;1900;Carpe Diem.;Horaz
-288;1850;Wer zu sp�t kommt;den bestraft das Leben.
-289;1930;Es gibt nichts Gutes;au�er man tut es.
-290;1945;Phantasie ist wichtiger als Wissen.;Albert Einstein
-291;1915;Logik bringt dich von A nach B. Phantasie �berall hin.;Albert Einstein
-292;1920;Ein Tag ohne L�cheln ist ein verlorener Tag.;Charlie Chaplin
-293;1940;Am Ende wird alles gut. Wenn es nicht gut ist;ist es noch nicht das Ende.
-294;1880;Erfahrung ist der Name;den jeder seinen Fehlern gibt.
-295;1900;Die besten Dinge im Leben sind nicht die;die man f�r Geld bekommt.
-296;1920;Wer k�mpft;kann verlieren. Wer nicht k�mpft
-297;1950;Gib jedem Tag die Chance;der sch�nste deines Lebens zu werden.
-298;1900;Man sieht nur mit dem Herzen gut.;Antoine de Saint-Exup�ry
-299;2005;Stay hungry;stay foolish.
-300;2006;Ich bin dann mal weg.;Hape Kerkeling
+35;400 v. Chr.;Ich weiß, dass ich nichts weiß.;Sokrates
+36;49 v. Chr.;Die Würfel sind gefallen.;Julius Cäsar
+37;1968;In Zukunft wird jeder für 15 Minuten weltberühmt sein.;Andy Warhol
+38;1974;Es gibt nur ein Tempo: Vorwärts!;Franz Beckenbauer
+39;1859;Es ist nicht die stärkste Spezies die überlebt, sondern diejenige, die sich am ehesten dem Wandel anpasst.;Charles Darwin
+40;1942;Schau mir in die Augen, Kleines.;Casablanca (Rick Blaine)
+41;1966;Warp-Geschwindigkeit, Mr. Sulu.;Star Trek (Captain Kirk)
+42;1919;Zwei Dinge sind unendlich, das Universum und die menschliche Dummheit.;Albert Einstein
+43;2008;Manche Menschen wollen die Welt einfach nur brennen sehen.;The Dark Knight (Alfred)
+44;1999;Willkommen in der Wüste der Realität.;The Matrix (Morpheus)
+45;1949;Big Brother is watching you.;George Orwell (1984)
+46;1920;Ein Experten ist ein Mann, der alle Fehler gemacht hat, die man in einem sehr schmalen Fachgebiet machen kann.;Niels Bohr
+47;1954;Es gibt kein Ende. Es gibt keinen Anfang. Es gibt nur die unendliche Leidenschaft des Lebens.;Federico Fellini
+48;1900;Der Weg ist das Ziel.;Konfuzius (zugeschrieben)
+49;1854;Das Geheimnis des Glücks ist die Freiheit, und das Geheimnis der Freiheit ist der Mut.;Perikles
+50;1931;Alles, was man sich vorstellen kann, ist real.;Pablo Picasso
+51;1971;Imagine all the people living life in peace.;John Lennon
+52;1980;Do or do not. There is no try.;Yoda (Star Wars)
+53;1920;Das Unmögliche möglich machen.;Walt Disney
+54;1915;Die Metamorphose: Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte...;Franz Kafka
+55;1952;Ein Raum ohne Bücher ist wie ein Körper ohne Seele.;Cicero
+56;1891;Ich habe einen ganz einfachen Geschmack: Ich bin immer mit dem Besten zufrieden.;Oscar Wilde
+57;1964;I can't get no satisfaction.;The Rolling Stones
+58;1932;Schöne neue Welt.;Aldous Huxley
+59;1979;Don't Panic.;Douglas Adams (Per Anhalter durch die Galaxis)
+60;1928;Erst kommt das Fressen, dann kommt die Moral.;Bertolt Brecht
+61;1895;Das Genie ist ein Prozent Inspiration und neunundneunzig Prozent Transpiration.;Thomas Edison
+62;1953;Warten auf Godot.;Samuel Beckett
+63;1902;Es ist nicht wenig Zeit, die wir haben, sondern es ist viel Zeit, die wir nicht nutzen.;Seneca
+64;1922;Alles Fließt.;Heraklit
+65;1918;Der Krieg ist der Vater aller Dinge.;Heraklit
+66;1951;Der Fänger im Roggen.;J.D. Salinger
+67;1975;Der Weiße Hai: Wir brauchen ein größeres Boot.;Chief Brody
+68;1930;Das Sein bestimmt das Bewusstsein.;Karl Marx
+69;1995;Houston, wir haben ein Problem.;Apollo 13 (Film)
+70;1947;Freiheit bedeutet Verantwortlichkeit. Das ist der Grund;warum die meisten Menschen sich vor ihr fürchten.
+71;1908;Wichtig ist nicht der Sieg, sondern die Teilnahme.;Pierre de Coubertin
+72;1841;Einigkeit und Recht und Freiheit.;August Heinrich Hoffmann von Fallersleben
+73;1790;Was ist Aufklärung?;Immanuel Kant
+74;1936;L'état c'est moi (Der Staat bin ich).;Ludwig XIV (zugeschrieben)
+75;1929;Pfeife: Dies ist keine Pfeife.;René Magritte
+76;1950;Alle Menschen sind frei und gleich an Würde und Rechten geboren.;UN-Menschenrechtscharta
+77;1972;Der Pate: Ich mache ihm ein Angebot, das er nicht ablehnen kann.;Marlon Brando
+78;1984;Think Different.;Apple (Slogan)
+79;1960;Psycho: Wir alle drehen manchmal ein bisschen durch.;Norman Bates
+80;1943;Das Glas ist halb voll oder halb leer.;Volksmund
+81;1959;Manche mögen's heiß.;Filmtitel
+82;1926;Gott würfelt nicht.;Albert Einstein
+83;1941;Man braucht zwei Jahre, um sprechen zu lernen, und fünfzig, um schweigen zu lernen.;Ernest Hemingway
+84;2001;Einer für alle, alle für einen.;Die drei Musketiere (Alexandre Dumas)
+85;1919;Ein Volk, das seine Geschichte nicht kennt, ist dazu verdammt, sie zu wiederholen.;George Santayana
+86;1940;Die einzige Sache, die wir zu fürchten haben, ist die Furcht selbst.;Franklin D. Roosevelt
+87;1981;Niemand ist eine Insel, in sich ganz.;John Donne
+88;1904;The purpose of our lives is to be happy.;Dalai Lama
+89;1993;I'll be back.;Terminator
+90;1922;Stay hungry, stay foolish.;Steve Jobs (zitiert Stewart Brand)
+91;1965;Turn on tune in drop out.;Timothy Leary
+92;1931;In der Ruhe liegt die Kraft.;Konfuzius (zugeschrieben)
+93;1862;Blut und Eisen.;Otto von Bismarck
+94;1945;Krieg ist Frieden, Freiheit ist Sklaverei, Unwissenheit ist Stärke.;George Orwell
+95;1983;Every breath you take.;The Police
+96;1957;Der Mensch ist das Maß aller Dinge.;Protagoras
+97;1941;Der Weg zum Erfolg ist gepflastert mit Misserfolgen.;Winston Churchill
+98;1927;Der Mensch ist dem Menschen ein Wolf.;Thomas Hobbes
+99;1969;One small step for man.;Neil Armstrong
+100;1921;Ich weiß nicht, ob es besser wird, wenn es anders wird. Aber es muss anders werden, wenn es besser werden soll.;Georg Christoph Lichtenberg
+101;1950;The quality of mercy is not strained.;William Shakespeare
+102;1972;I'm gonna make him an offer he can't refuse.;The Godfather
+103;1939;There's no place like home.;The Wizard of Oz
+104;47 v. Chr.;Veni, vidi, vici. (Ich kam, ich sah, ich siegte.);Julius Caesar
+105;1603;Sein oder Nichtsein, das ist hier die Frage.;William Shakespeare (Hamlet)
+106;1637;Cogito, ergo sum. (Ich denke, also bin ich.);René Descartes
+107;1791;Was du heute kannst besorgen, das verschiebe nicht auf morgen.;Christian F. Gellert
+108;1808;Hier bin ich Mensch, hier darf ich’s sein!;Johann Wolfgang von Goethe (Faust I)
+109;1939;Frankly, my dear, I don't give a damn.;Clark Gable (Vom Winde verweht)
+110;1940;Ich habe nichts zu bieten außer Blut, Mühsal, Tränen und Schweiß.;Winston Churchill
+111;1948;Die Welt hat genug für jedermanns Bedürfnisse, aber nicht für jedermanns Gier.;Mahatma Gandhi
+112;1953;Zwei Dinge sind unendlich, das Universum und die menschliche Dummheit, aber bei dem Universum bin ich mir noch nicht ganz sicher.;Albert Einstein
+113;1959;Nobody’s perfect. (Niemand ist vollkommen.);Joe E. Brown (Manche mögen’s heiß)
+114;1961;Niemand hat die Absicht, eine Mauer zu errichten!;Walter Ulbricht
+115;1961;Frage nicht, was dein Land für dich tun kann – frage, was du für dein Land tun kannst.;John F. Kennedy
+116;1962;Bond. James Bond.;Sean Connery (James Bond – 007 jagt Dr. No)
+117;1963;Ich bin ein Berliner.;John F. Kennedy
+118;1963;I have a dream.;Martin Luther King Jr.
+119;1966;Fußball ist ein Spiel von 22 Leuten, die rumlaufen, und am Ende gewinnt immer Deutschland.;Gary Lineker
+120;1969;Das ist ein kleiner Schritt für einen Menschen, aber ein gewaltiger Sprung für die Menschheit.;Neil Armstrong
+121;1972;Ich mache ihm ein Angebot, das er nicht ablehnen kann.;Marlon Brando (Der Pate)
+122;1977;Möge die Macht mit dir sein.;Alec Guinness (Star Wars)
+123;1980;Ich bin dein Vater.;David Prowse / James Earl Jones (Das Imperium schlägt zurück)
+124;1982;E.T. nach Hause telefonieren.;E.T. (E.T. – Der Außerirdische)
+125;1984;I'll be back.;Arnold Schwarzenegger (Terminator)
+126;1985;Wo wir hinfahren, brauchen wir keine Straßen.;Christopher Lloyd (Zurück in die Zukunft)
+127;1989;Wir sind das Volk!;Montagsdemonstranten (DDR)
+128;1991;Hast du Verspätung, ist die Bahn nicht pünktlich. (Legendärer Versprecher);Diverse (Volksmund/Fußball)
+129;1994;Das Leben ist wie eine Schachtel Pralinen. Man weiß nie, was man kriegt.;Tom Hanks (Forrest Gump)
+130;1997;Ich bin der König der Welt!;Leonardo DiCaprio (Titanic)
+131;2001;Mein Schatzzz!;Andy Serkis (Der Herr der Ringe)
+132;2005;Ich bin ein Star – Holt mich hier raus!;Format-Titel (Reality TV)
+133;2015;Wir schaffen das.;Angela Merkel
+134;399 v. Chr.;Ich weiß, dass ich nichts weiß.;Sokrates
+135;49 v. Chr.;Alea iacta est. (Der Würfel ist gefallen.);Julius Caesar
+136;23 v. Chr.;Carpe diem. (Nutze den Tag.);Horaz
+137;500 v. Chr.;Alles fließt. (Panta rhei.);Heraklit
+138;1521;Hier stehe ich, ich kann nicht anders. Gott helfe mir, Amen!;Martin Luther
+139;1597;Wissen ist Macht.;Francis Bacon
+140;1599;Et tu, Brute? (Auch du, Brutus?);William Shakespeare (Julius Caesar)
+141;1655;L'État, c'est moi. (Der Staat bin ich.);Ludwig XIV. (zugeschrieben)
+142;1783;Der Mohr hat seine Arbeit getan, der Mohr kann gehen.;Friedrich Schiller (Die Verschwörung des Fiesco zu Genua)
+143;1784;Habe Mut, dich deines eigenen Verstandes zu bedienen!;Immanuel Kant
+144;1804;Die Axt im Haus erspart den Zimmermann.;Friedrich Schiller (Wilhelm Tell)
+145;1808;Das also war des Pudels Kern!;Johann Wolfgang von Goethe (Faust I)
+146;1808;Zwei Seelen wohnen, ach! in meiner Brust.;Johann Wolfgang von Goethe (Faust I)
+147;1832;Mehr Licht!;Johann Wolfgang von Goethe (zugeschriebene letzte Worte)
+148;1848;Ein Gespenst geht um in Europa – das Gespenst des Kommunismus.;Karl Marx & Friedrich Engels
+149;1862;Nicht durch Reden und Majoritätsbeschlüsse werden die großen Fragen der Zeit entschieden, sondern durch Eisen und Blut.;Otto von Bismarck
+150;1882;Gott ist tot.;Friedrich Nietzsche
+151;1888;Was mich nicht umbringt, macht mich stärker.;Friedrich Nietzsche
+152;1903;Genie ist 1 % Inspiration und 99 % Transpiration.;Thomas Alva Edison
+153;1911;Halleluja! – Sog i.;Ludwig Thoma (Ein Münchner im Himmel)
+154;1929;Elementar, mein lieber Watson.;Sherlock Holmes (Filmzitat, nicht im Buch)
+155;1939;Wir sind nicht mehr in Kansas, Toto.;Judy Garland (Der Zauberer von Oz)
+156;1942;Ich seh’ dir in die Augen, Kleines.;Humphrey Bogart (Casablanca)
+157;1942;Spiel es noch einmal, Sam.;Ingrid Bergman (Casablanca - oft falsch zitiert)
+158;1943;Man sieht nur mit dem Herzen gut. Das Wesentliche ist für die Augen unsichtbar.;Antoine de Saint-Exupéry
+159;1948;Völker der Welt, schaut auf diese Stadt!;Ernst Reuter
+160;1949;Die Würde des Menschen ist unantastbar.;Grundgesetz für die Bundesrepublik Deutschland
+161;1950;Es gibt nichts Gutes, außer man tut es.;Erich Kästner
+162;1954;Der Ball ist rund und ein Spiel dauert 90 Minuten.;Sepp Herberger
+163;1954;Nach dem Spiel ist vor dem Spiel.;Sepp Herberger
+164;1966;Turn on, tune in, drop out.;Timothy Leary
+165;1970;Houston, wir haben ein Problem.;Jack Swigert (Apollo 13 - im Film durch Tom Hanks populär)
+166;1976;Du redest mit mir? (You talkin' to me?);Robert De Niro (Taxi Driver)
+167;1979;Ich liebe den Geruch von Napalm am Morgen.;Robert Duvall (Apocalypse Now)
+168;1980;Mitleid bekommt man geschenkt, Neid muss man sich verdienen.;Robert Lembke
+169;1982;Ich will ein Rindvieh von dir!;Uschi Glas (Zwei Nasen tanken Super)
+170;1987;Gier ist gut. (Greed is good.);Michael Douglas (Wall Street)
+171;1987;Niemand lässt Baby in der Ecke stehen.;Patrick Swayze (Dirty Dancing)
+172;1988;Just do it.;Nike (Werbeslogan)
+173;1989;Wer zu spät kommt, den bestraft das Leben.;Michail Gorbatschow (zugeschrieben)
+174;1989;Jetzt wächst zusammen, was zusammengehört.;Willy Brandt
+175;1991;Hasta la vista, baby.;Arnold Schwarzenegger (Terminator 2)
+176;1991;Hello. I'm Inigo Montoya. You killed my father. Prepare to die.;Mandy Patinkin (Die Braut des Prinzen)
+177;1996;Show me the money! (Führ mich zum Schotter!);Cuba Gooding Jr. (Jerry Maguire)
+178;1996;Winter is coming.;George R. R. Martin (Game of Thrones)
+179;1998;Ich habe fertig!;Giovanni Trapattoni
+180;1998;Was erlauben Strunz?!;Giovanni Trapattoni
+181;1999;Die erste Regel des Fight Club lautet: Ihr verliert kein Wort über den Fight Club.;Brad Pitt (Fight Club)
+182;2005;Stay hungry, stay foolish.;Steve Jobs
+183;2008;Yes, we can.;Barack Obama
+184;1776;All men are created equal.;Thomas Jefferson (Unabhängigkeitserklärung)
+185;1863;Regierung des Volkes durch das Volk für das Volk.;Abraham Lincoln
+186;1865;Alles, was wir sehen oder scheinen, ist nur ein Traum in einem Traum.;Edgar Allan Poe
+187;1890;Bankraub ist eine Initiative von Dilettanten. Wahre Profis gründen eine Bank.;Bertolt Brecht (Die Dreigroschenoper)
+188;1891;Versuchungen sollte man nachgeben. Wer weiß, ob sie wiederkommen!;Oscar Wilde
+189;1900;Was ein Mensch an Gutem in die Welt hinausgibt, geht nicht verloren.;Albert Schweitzer
+190;1918;Freiheit ist immer Freiheit der Andersdenkenden.;Rosa Luxemburg
+191;1921;Logik bringt dich von A nach B. Fantasie bringt dich überall hin.;Albert Einstein
+192;1925;Der Weg ist das Ziel.;Konfuzius (zugeschrieben)
+193;1931;Es gibt kein gutmütigeres, aber auch kein leichtgläubigeres Volk als das deutsche.;Heinrich Heine (oft zitiert)
+194;1933;Das Einzige, was wir zu fürchten haben, ist die Furcht selbst.;Franklin D. Roosevelt
+195;1937;Nicht alle, die umherwandern, sind verloren.;J.R.R. Tolkien (Der Herr der Ringe)
+196;1940;Wir werden auf den Stränden kämpfen... wir werden uns niemals ergeben.;Winston Churchill
+197;1943;Die Geschichte wird mich freisprechen.;Fidel Castro
+198;1945;Alle Tiere sind gleich, aber manche sind gleicher.;George Orwell (Farm der Tiere)
+199;1945;Hier wird die Verantwortung übernommen. (The buck stops here);Harry S. Truman
+200;1947;Trotz allem glaube ich an das Gute im Menschen.;Anne Frank
+201;1949;Big Brother is watching you.;George Orwell (1984)
+202;1950;Wer nicht liest, hat keinen Vorteil gegenüber dem, der nicht lesen kann.;Mark Twain
+203;1951;Manche Menschen sind so arm, das Einzige, was sie haben, ist Geld.;Patrick Meagher (oft Bob Marley zugeschrieben)
+204;1952;Warten wir auf Godot.;Samuel Beckett
+205;1954;Das Wunder von Bern. (Bezug auf das WM-Finale);Herbert Zimmermann (Radiokommentar)
+206;1955;Denn sie wissen nicht, was sie tun.;Filmtitel (James Dean) / Bibel (Lukas 23,34)
+207;1958;Lerne aus der Vergangenheit, träume von der Zukunft, lebe in der Gegenwart.;Unbekannt (oft fälschlich Einstein)
+208;1960;Die beste Freundin eines Sohnes ist seine Mutter.;Anthony Perkins (Psycho)
+209;1963;Ein kleiner Schritt für mich, ein großer für die Schwiegermutter.;(Parodie auf Armstrong / Volksmund)
+210;1964;Schütteln, nicht rühren.;Sean Connery (James Bond – Goldfinger)
+211;1966;Fußball ist ein einfaches Spiel: 22 Männer jagen 90 Minuten lang einem Ball nach.;Gary Lineker
+212;1967;All you need is love.;The Beatles
+213;1968;In der Zukunft wird jeder für 15 Minuten weltberühmt sein.;Andy Warhol
+214;1971;Fragst du dich, ob ich sechs Schuss abgefeuert habe oder nur fünf?;Clint Eastwood (Dirty Harry)
+215;1975;Sie werden ein größeres Boot brauchen.;Roy Scheider (Der weiße Hai)
+216;1977;Das ist kein Mond. Das ist eine Raumstation.;Alec Guinness (Star Wars)
+217;1979;Im Weltraum hört dich niemand schreien.;Slogan (Alien – Das unheimliche Wesen aus einer fremden Welt)
+218;1980;Das Leben ist das, was passiert, während du eifrig dabei bist, andere Pläne zu machen.;John Lennon
+219;1983;Das Problem am Sozialismus ist, dass einem irgendwann das Geld anderer Leute ausgeht.;Margaret Thatcher
+220;1984;Ozeanien war schon immer im Krieg mit Ostasien.;George Orwell (1984)
+221;1985;Ich liebe es, wenn ein Plan funktioniert.;George Peppard (A-Team)
+222;1986;Ich spüre die Gier... die Gier nach Tempo!;Tom Cruise (Top Gun)
+223;1987;Ich habe eine Wassermelone getragen.;Jennifer Grey (Dirty Dancing)
+224;1990;Es scheint immer unmöglich, bis es getan ist.;Nelson Mandela
+225;1992;Sie können die Wahrheit doch gar nicht vertragen!;Jack Nicholson (Eine Frage der Ehre)
+226;1994;König der Löwen: Hakuna Matata!;Nathan Lane & Ernie Sabella (Timon & Pumbaa)
+227;1995;Bis zur Unendlichkeit und noch viel weiter!;Buzz Lightyear (Toy Story)
+228;1997;Morgens um sieben ist die Welt noch in Ordnung.;Eric Malpass (Buchtitel/Redewendung)
+229;1999;Nimmst du die blaue Kapsel... nimmst du die rote Kapsel.;Laurence Fishburne (Matrix)
+230;2001;Viel mehr als unsere Fähigkeiten sind es unsere Entscheidungen, die zeigen, wer wir wirklich sind.;Albus Dumbledore (Harry Potter)
+231;2003;Einfach schwimmen, einfach schwimmen.;Dorie (Findet Nemo)
+232;2008;Warum denn so ernst? (Why so serious?);Heath Ledger (The Dark Knight)
+233;2011;Du weißt gar nichts, Jon Schnee.;Rose Leslie (Game of Thrones)
+234;1808;Die Botschaft hör ich wohl, allein mir fehlt der Glaube.;Johann Wolfgang von Goethe (Faust I)
+235;300 v. Chr.;Jeder ist seines Glückes Schmied.;Appius Claudius Caecus
+236;1926;Gott würfelt nicht.;Albert Einstein
+237;1921;Wovon man nicht sprechen kann, darüber muss man schweigen.;Ludwig Wittgenstein
+238;1880;Einen Staat, der mit der Presse im Kriege liegt, kann man auf die Dauer nicht regieren.;Otto von Bismarck
+239;1930;Wer kämpft, kann verlieren. Wer nicht kämpft, hat schon verloren.;Bertolt Brecht (zugeschrieben)
+240;1987;Tear down this wall! (Reißen Sie diese Mauer nieder!);Ronald Reagan
+241;1940;Ich denke, also spinn ich.;Karl Valentin
+242;1992;Mailand oder Madrid – Hauptsache Italien!;Andreas Möller
+243;1808;Ein Teil von jener Kraft, die stets das Böse will und stets das Gute schafft.;Johann Wolfgang von Goethe (Mephisto in Faust I)
+244;1889;Ohne Musik wäre das Leben ein Irrtum.;Friedrich Nietzsche
+245;1790;Die Freiheit des Einzelnen endet dort, wo die Freiheit des Anderen beginnt.;Immanuel Kant (zugeschrieben)
+246;1920;Ich bin so knallvergnügt erwacht.;Joachim Ringelnatz
+247;1900;Das Beste oder nichts.;Gottlieb Daimler
+248;1988;Read my lips: No new taxes.;George H.W. Bush
+249;1998;I did not have sexual relations with that woman.;Bill Clinton
+250;1942;Louis, ich glaube, das ist der Beginn einer wunderbaren Freundschaft.;Humphrey Bogart (Casablanca)
+251;1964;Float like a butterfly, sting like a bee.;Muhammad Ali
+252;1801;Gegen Dummheit kämpfen Götter selbst vergebens.;Friedrich Schiller (Die Jungfrau von Orleans)
+253;1796;Die Kunst ist zwar nicht das Brot, aber der Wein des Lebens.;Jean Paul
+254;1596;Es ist nicht alles Gold, was glänzt.;William Shakespeare (Der Kaufmann von Venedig)
+255;1880;Der Klügere gibt nach.;Marie von Ebner-Eschenbach
+256;1929;Phantasie ist wichtiger als Wissen.;Albert Einstein
+257;2013;Das Internet ist für uns alle Neuland.;Angela Merkel
+258;2005;Wir sind Papst.;Schlagzeile der Bild-Zeitung
+259;1750;Je öfter eine Dummheit wiederholt wird, desto mehr bekommt sie den Anschein von Klugheit.;Voltaire
+260;1669;Das Herz hat seine Gründe, die die Vernunft nicht kennt.;Blaise Pascal
+261;1835;Die Revolution frisst ihre eigenen Kinder.;Georg Büchner (Dantons Tod)
+262;1799;Leben und leben lassen.;Friedrich Schiller (Wallensteins Lager)
+263;1949;Ich weiß nicht, mit welchen Waffen der dritte Weltkrieg ausgefochten wird, aber der vierte wird mit Stöcken und Steinen ausgefochten.;Albert Einstein
+264;1945;Ein Experte ist ein Mann, der hinterher genau sagen kann, warum seine Prognose nicht eingetroffen ist.;Winston Churchill
+265;1755;Wer die Freiheit aufgibt, um Sicherheit zu gewinnen, wird am Ende beides verlieren.;Benjamin Franklin
+266;1841;Die einzige Art, einen Freund zu haben, ist die, selbst einer zu sein.;Ralph Waldo Emerson
+267;1960;In der Politik ist es wie in der Mathematik: Alles, was nicht ganz richtig ist, ist ganz falsch.;Edward Kennedy
+268;1738;Niemand ist so blind wie der, der nicht sehen will.;Jonathan Swift
+269;500 v. Chr.;Wähle einen Beruf, den du liebst, und du brauchst keinen Tag in deinem Leben mehr zu arbeiten.;Konfuzius (zugeschrieben)
+270;1940;Wenn du durch die Hölle gehst, geh weiter.;Winston Churchill (zugeschrieben)
+271;1943;Der Preis der Größe ist Verantwortung.;Winston Churchill
+272;1961;Es gibt nur eine Sache, die teurer ist als Bildung – keine Bildung.;John F. Kennedy
+273;1930;Ein Tag ohne Lächeln ist ein verlorener Tag.;Charlie Chaplin
+274;1850;Wer nicht mit der Zeit geht, geht mit der Zeit.;Friedrich Schiller (zugeschrieben / Friedrich Nietzsche)
+275;1900;Ordnung ist das halbe Leben.;Sprichwort / Volksmund
+276;1930;Lerne, als würdest du ewig leben. Lebe, als würdest du morgen sterben.;Mahatma Gandhi
+277;1994;Dumm ist der, der Dummes tut.;Tom Hanks (Forrest Gump)
+278;1986;Alles hat ein Ende, nur die Wurst hat zwei.;Stephan Remmler
+279;1970;Die Zukunft war früher auch besser.;Karl Valentin
+280;1914;Ich kenne keine Parteien mehr, ich kenne nur noch Deutsche.;Kaiser Wilhelm II.
+281;1805;Es gibt keine schlechten Soldaten, nur schlechte Offiziere.;Napoleon Bonaparte
+282;1920;Die Basis einer gesunden Ordnung ist ein großer Mülleimer.;Kurt Tucholsky
+283;1980;In Deutschland ist die höchste Form der Anerkennung der Neid.;Arthur Schopenhauer (oft in diesem Kontext zitiert)
+284;~500 v. Chr.;Nichts ist so beständig wie der Wandel.;Heraklit
+285;1921;Ein Bild sagt mehr als tausend Worte.;Kurt Tucholsky / Fred Barnard
+286;1599;Die Welt ist eine Bühne, und alle Männer und Frauen sind bloße Spieler.;William Shakespeare
+287;~1665;Essen ist ein Bedürfnis, Genießen eine Kunst.;François de La Rochefoucauld
+288;1970;Wunder gibt es immer wieder.;Katja Ebstein
+289;~500 v. Chr.;Es ist nicht von Bedeutung, wie langsam du gehst, solange du nicht stehen bleibst.;Konfuzius
+290;~500 v. Chr.;In der Ruhe liegt die Kraft.;Konfuzius (zugeschrieben)
+291;2002;Wir dürfen jetzt nur nicht den Sand in den Kopf stecken.;Lothar Matthäus
+292;~2000;Geld allein macht nicht glücklich, aber es ist besser, in einem Taxi zu weinen als in der Straßenbahn.;Marcel Reich-Ranicki
+293;~1940;Ich habe keine Zeit, mich zu beeilen.;Igor Strawinsky
+294;1988;Yippie-ya-yay, Schweinebacke!;Bruce Willis (Stirb Langsam)
+295;2005;The only way to do great work is to love what you do.;Steve Jobs
+296;1997;Think different.;Apple (Werbeslogan)
+297;1942;Uns bleibt immer noch Paris.;Humphrey Bogart (Casablanca)
+298;1974;Halte deine Freunde nahe bei dir, aber deine Feinde noch näher.;Al Pacino (Der Pate II)
+299;1665;Wahre Liebe ist wie eine Geistererscheinung: alle reden davon, aber wenige haben sie gesehen.;François de La Rochefoucauld
+300;~1830;Ein Kluger bemerkt alles, ein Dummer macht zu allem eine Bemerkung.;Heinrich Heine
+301;1795;Aller Anfang ist schwer.;Johann Wolfgang von Goethe
+302;~1900;Man ist so jung, wie man sich fühlt.;Volksmund
+303;1930;Ich denke nicht an die Zukunft. Sie kommt früh genug.;Albert Einstein
+304;1939;There's no place like home.;Judy Garland (Der Zauberer von Oz)
+305;~1760;Alle Menschen sind klug – die einen vorher, die anderen nachher.;Voltaire
+306;1775;Der Weg zur Hölle ist mit guten Vorsätzen gepflastert.;Samuel Johnson
+307;1949;Freiheit ist die Freiheit, zu sagen, dass zwei und zwei vier ist.;George Orwell (1984)
+308;~1980;If you can dream it, you can do it.;Walt Disney
+309;1954;Das Runde muss ins Eckige.;Sepp Herberger
+310;~1990;Wir müssen das Spiel jetzt erst einmal sacken lassen.;Sportler-Floskel (populär durch L. Matthäus)
+311;~1850;Das Leben ist eine Reise, kein Ziel.;Ralph Waldo Emerson
+312;~1860;Was immer du bist, sei ein guter.;Abraham Lincoln
+313;1. Jhd. n. Chr.;Das Auge isst mit.;Apicius (zugeschrieben)
+314;1930;Ich bin von Kopf bis Fuß auf Liebe eingestellt.;Marlene Dietrich
+315;1939;Ein Mann muss tun, was ein Mann tun muss.;John Wayne (Ringo)
+316;~1960;Sollten wir nicht lieber die Welt verändern, bevor sie uns verändert?;Che Guevara
+317;~1940;Der Horizont vieler Menschen ist ein Kreis mit dem Radius Null – und das nennen sie ihren Standpunkt.;Albert Einstein
+318;~1700;Es gibt keine großen Entdeckungen ohne kühne Vermutungen.;Isaac Newton
+319;~1940;Bildung ist das, was übrig bleibt, wenn man alles vergessen hat, was man in der Schule gelernt hat.;Albert Einstein
+320;1980;The winner takes it all.;ABBA (Songtitel)
+321;~1890;Ich habe einen ganz einfachen Geschmack: Ich bin immer mit dem Besten zufrieden.;Oscar Wilde
+322;~1890;Was wir heute tun, entscheidet darüber, wie die Welt morgen aussieht.;Marie von Ebner-Eschenbach
+323;~1900;Wer nicht weiß, wohin er will, der darf sich nicht wundern, wenn er ganz woanders ankommt.;Mark Twain
+324;1961;Der Sieg hat hundert Väter, die Niederlage ist ein Waisenkind.;John F. Kennedy
+325;1952;Am Ende sind es nicht die Jahre im Leben, die zählen, sondern das Leben in den Jahren.;Adlai Stevenson
+326;~1500;Ein Tag ohne Wein ist wie ein Tag ohne Sonne.;Sprichwort (Frankreich/Italien)
+327;1923;Worte sind die mächtigste Droge, welche die Menschheit benutzt.;Rudyard Kipling
+328;1971;Die beste Art, die Zukunft vorherzusagen, ist, sie zu erfinden.;Alan Kay
+329;~1960;Ich kenne keine bessere Definition für Glück als: Keine Angst zu haben.;Ingeborg Bachmann
+330;~1800;Wer die Musik bestellt, muss sie auch bezahlen.;Sprichwort
+331;~500 v. Chr.;Alles, was wir sind, ist das Ergebnis dessen, was wir gedacht haben.;Buddha
+332;1892;Erfahrung ist der Name, den jeder seinen Irrtümern gibt.;Oscar Wilde
+333;1823;Dort, wo man Bücher verbrennt, verbrennt man am Ende auch Menschen.;Heinrich Heine
+334;1967;Man kann nicht nicht kommunizieren.;Paul Watzlawick
+335;1980;Tu es oder tu es nicht. Es gibt kein Versuchen.;Yoda (Das Imperium schlägt zurück)
+336;1981;Wahr ist nicht, was A sagt, sondern was B versteht.;Friedemann Schulz von Thun
+337;~431 v. Chr.;Das Geheimnis des Glücks ist die Freiheit, und das Geheimnis der Freiheit ist der Mut.;Perikles
+338;1984;I want to break free.;Queen / Freddie Mercury
+339;1930;Wer A sagt, muss nicht B sagen. Er kann auch erkennen, dass A falsch war.;Bertolt Brecht
+340;1893;Wer nichts weiß, muss alles glauben.;Marie von Ebner-Eschenbach
+341;~1948;Auge um Auge – und die ganze Welt wird blind sein.;Mahatma Gandhi (zugeschrieben)
+342;1993;Ich bin so klug, K-L-U-K.;Homer Simpson
+343;~1770;Ich weiß nicht, ob es besser wird, wenn es anders wird. Aber es muss anders werden, wenn es besser werden soll.;Georg Christoph Lichtenberg
+344;~1800;Das Leben ist zu kurz, um schlechten Wein zu trinken.;Johann Wolfgang von Goethe (zugeschrieben)
+345;~400 v. Chr.;Eure Nahrungsmittel sollen eure Heilmittel sein.;Hippokrates
+346;1624;Kein Mensch ist eine Insel.;John Donne
+347;1611;Wir sind vom gleichen Stoff, aus dem die Träume sind.;William Shakespeare (Der Sturm)
+348;~1910;Wer sich nicht bewegt, spürt seine Fesseln nicht.;Rosa Luxemburg
+349;1983;Say hello to my little friend!;Al Pacino (Scarface)
+350;1776;Das Leben ist eine Komödie für den, der denkt, und eine Tragödie für den, der fühlt.;Horace Walpole
+351;~1950;Die reinste Form des Wahnsinns ist es, alles beim Alten zu lassen und gleichzeitig zu hoffen, dass sich was ändert.;Albert Einstein (zugeschrieben)
+352;~1960;Wer aufhört, besser zu werden, hat aufgehört, gut zu sein.;Philip Rosenthal
+353;1965;Am Ende werden wir uns nicht an die Worte unserer Feinde erinnern, sondern an das Schweigen unserer Freunde.;Martin Luther King Jr.
+354;2008;Wir sind die, auf die wir gewartet haben.;Barack Obama
+355;1951;Es gibt kein richtiges Leben im falschen.;Theodor W. Adorno
+356;2006;Ich bin dann mal weg.;Hape Kerkeling
+357;1978;Früher war mehr Lametta.;Loriot (Weihnachten bei Hoppenstedts)
+358;1988;Mein Name ist Lohse, ich kaufe hier ein.;Loriot (Ödipussi)
+359;1977;Das Ei ist hart!;Loriot (Das Frühstücksei)
+360;1969;Mehr Demokratie wagen.;Willy Brandt
+361;~1950;Man braucht zwei Jahre, um sprechen zu lernen, und fünfzig, um schweigen zu lernen.;Ernest Hemingway
+362;1877;Alle glücklichen Familien gleichen einander, jede unglückliche Familie ist auf ihre eigene Weise unglücklich.;Leo Tolstoi (Anna Karenina)
+363;~50 n. Chr.;Die Kunst zu leben besteht darin, zu lernen, wie man im Regen tanzt, anstatt auf die Sonne zu warten.;Seneca (zugeschrieben)
+364;2013;Ein Kind, ein Lehrer, ein Buch und ein Stift können die Welt verändern.;Malala Yousafzai
+365;1930;Das Schönste, was wir erleben können, ist das Geheimnisvolle.;Albert Einstein
+366;~1950;Alles, was du dir vorstellen kannst, ist echt.;Pablo Picasso
+367;1921;Die Grenzen meiner Sprache bedeuten die Grenzen meiner Welt.;Ludwig Wittgenstein
+368;~500 v. Chr.;Was du nicht willst, dass man dir tu, das füg auch keinem andern zu.;Konfuzius / Bibel (Goldene Regel)
+369;1952;Ich habe keine besondere Begabung, ich bin nur leidenschaftlich neugierig.;Albert Einstein
+370;~50 n. Chr.;Nicht das Leben ist kurz, sondern wir machen es dazu.;Seneca
+371;Traditionell;Möge die Straße dir entgegeneilen.;Irischer Segenswunsch
+372;~400 v. Chr.;Es ist keine Schande, nichts zu wissen, wohl aber, nichts lernen zu wollen.;Sokrates (zugeschrieben)
+373;~50 n. Chr.;Wer nicht arbeitet, soll auch nicht essen.;Bibel (2. Thessalonicher 3,10)
+374;1947;Demokratie ist die schlechteste aller Staatsformen, ausgenommen alle anderen.;Winston Churchill
+375;Traditionell;Wer im Glashaus sitzt, soll nicht mit Steinen werfen.;Sprichwort
+376;1532;Der Zweck heiligt die Mittel.;Niccolò Machiavelli (zugeschrieben)
+377;1999;Wissen ist Nacht.;Walter Moers (Professor Nachtigaller)
+378;1757;Hunde, wollt ihr ewig leben?;Friedrich der Große
+379;1593;Paris ist immer eine Messe wert.;Heinrich IV.
+380;1789;In dieser Welt ist nichts sicher, außer dem Tod und den Steuern.;Benjamin Franklin
+381;~1920;Zusammenkunft ist ein Anfang. Zusammenhalt ist ein Fortschritt. Zusammenarbeit ist der Erfolg.;Henry Ford
+382;1970;Macht kaputt, was euch kaputt macht.;Ton Steine Scherben
+383;2006;Das ist Sparta!;Gerard Butler (Film: 300)
+384;~1300;Es ist besser, ein Licht zu entzünden, als über die Dunkelheit zu klagen.;Konfuzius (zugeschrieben)
+385;~1933;Alles sollte so einfach wie möglich gemacht werden, aber nicht einfacher.;Albert Einstein
+386;Traditionell;Der Teufel steckt im Detail.;Redewendung
+387;~1900;Überall ist man nur dort richtig, wo man mit dem Herzen ist.;Christian Morgenstern
+388;1852;Die Welt gehört dem, der sie genießt.;Giacomo Leopardi
+389;~1950;Bange machen gilt nicht.;Theodor Heuss
+390;1939;Wer die Wahrheit nicht weiß, der ist bloß ein Dummkopf. Aber wer sie weiß und sie eine Lüge nennt, der ist ein Verbrecher!;Bertolt Brecht (Leben des Galilei)
+391;~1960;Alles Große in unserer Welt geschieht nur, weil jemand mehr tut, als er muss.;Hermann Gmeiner
+392;~1900;Das Genie beherrscht das Chaos.;Albert Einstein (zugeschrieben)
+393;1980;Wer Visionen hat, sollte zum Arzt gehen.;Helmut Schmidt
+394;~1980;Qualität ist, wenn der Kunde zurückkommt und nicht die Ware.;Hermann Tietz
+395;~1940;Ein kluger Mann macht nicht alle Fehler selbst. Er gibt auch anderen eine Chance.;Winston Churchill
+396;1620;Wahrheit ist eine Tochter der Zeit.;Francis Bacon
+397;1579;In der Liebe und im Krieg ist alles erlaubt.;John Lyly
+398;1852;Es gibt nichts Stärkeres als eine Idee, deren Zeit gekommen ist.;Victor Hugo
+399;~1950;Jedes Kind ist ein Künstler. Das Problem ist nur, wie man ein Künstler bleibt, wenn man erwächst.;Pablo Picasso
+400;~1900;Das Leben ist das Zeichnen ohne Radiergummi.;John W. Gardner
+401;1609;Ein tiefer Fall führt oft zu höherem Glück.;William Shakespeare (Cymbeline)
+402;Traditionell;Gute Freunde sind wie Sterne. Du kannst sie nicht immer sehen, aber du weißt, sie sind immer da.;Volksmund
+403;~30 n. Chr.;Es ist vollbracht.;Jesus von Nazaret (Johannes 19,30)
