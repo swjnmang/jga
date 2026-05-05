@@ -1,0 +1,2481 @@
+﻿import { Card } from './types';
+import { playlistCards } from './playlistCards';
+import { flagCards } from './flagCards';
+import { outlineCards } from './outlineCards';
+import { triviaExtraCards } from './triviaExtraCards';
+import { naturTechnikCards } from './naturTechnikCards';
+import { filmSerienCards } from './filmSerienCards';
+import { schaetzfragenCards } from './schaetzfragenCards';
+
+const baseCards: Card[] = [
+  {
+    id: 'song-smells-like-teen-spirit',
+    title: 'Smells Like Teen Spirit',
+    category: 'music',
+    year: 1991,
+    cue: 'Starte den Song und ordne ihn zeitlich ein.',
+    answer: 'Nirvana — Nevermind.',
+    hint: 'Grunge aus Seattle.',
+    difficulty: 'mittel',
+    sources: {
+      spotify: 'https://open.spotify.com/track/5ghIJDpPoe3CfHMGu71E6T'
+    }
+  },
+  {
+    id: 'quote-wir-schaffen-das',
+    title: 'Wir schaffen das',
+    category: 'quote',
+    year: 2015,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Angela Merkel, Pressekonferenz zur Flüchtlingspolitik am 31.08..',
+    hint: 'Bundeskanzlerin zur Migrationslage.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Wir schaffen das."'
+    },
+    distractors: ['Helmut Kohl, Wiedervereinigung 1990', 'Gerhard Schröder, Agenda 2010', 'Willy Brandt, Kniefall von Warschau']
+  },
+  {
+    id: 'image-berliner-mauerfall',
+    title: 'Fall der Berliner Mauer',
+    category: 'image',
+    year: 1989,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Wo und wann war das?',
+    answer: 'Berlin, 09.11.1989 „ Fall der Berliner Mauer.',
+    hint: 'Europa, Kalter Krieg.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/images/mauerfall.jpg'
+    },
+    distractors: ['Prag, 17.11.1989 – Samtene Revolution.', 'Budapest, 23.10.1989 – Ausrufung der Republik.', 'Warschau, 04.06.1989 – Solidarność siegt.']
+  },
+  {
+    id: 'image-cheops-pyramide',
+    title: 'Cheops-Pyramide',
+    category: 'image',
+    year: -2560,
+    cue: 'Bild ansehen und einordnen. Frage: Wo und wann war das?',
+    answer: 'Gizeh, ca. 2560 v. Chr. „ Cheops-Pyramide.',
+    hint: 'Altes "Agypten.',
+    difficulty: 'schwer',
+    sources: {
+      image: '/assets/images/pyramide.png'
+    },
+    distractors: ['Babylon, ca. 600 v. Chr. – Hängende Gärten.', 'Athen, ca. 447 v. Chr. – Parthenon.', 'Teotihuacán, ca. 200 n. Chr. – Sonnenpyramide.']
+  },
+  {
+    id: 'song-rolling-in-the-deep',
+    title: 'Rolling in the Deep',
+    category: 'music',
+    year: 2010,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Adele — Album 21.',
+    hint: 'Londoner Sängerin, Durchbruch-Single.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/6j6ZtpxjR0L9gLd7krr6m3'
+    }
+  },
+  {
+    id: 'song-bohemian-rhapsody',
+    title: 'Bohemian Rhapsody',
+    category: 'music',
+    year: 1975,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Queen — Album A Night at the Opera.',
+    hint: 'Opernartige Rock-Hymne.',
+    difficulty: 'mittel',
+    sources: {
+      spotify: 'https://open.spotify.com/track/7tFiyTwD0nx5a1eklYtX2J'
+    }
+  },
+  {
+    id: 'song-billie-jean',
+    title: 'Billie Jean',
+    category: 'music',
+    year: 1982,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Michael Jackson — Album Thriller.',
+    hint: 'King of Pop.',
+    difficulty: 'mittel',
+    sources: {
+      spotify: 'https://open.spotify.com/track/5ChkMS8OtdzJeqyybCc9R5'
+    }
+  },
+  {
+    id: 'song-shape-of-you',
+    title: 'Shape of You',
+    category: 'music',
+    year: 2017,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Ed Sheeran — Album ".',
+    hint: 'Pop-Hit aus UK.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/7qiZfU4dY1lWllzX7mPBI3'
+    }
+  },
+  {
+    id: 'song-blinding-lights',
+    title: 'Blinding Lights',
+    category: 'music',
+    year: 2019,
+    cue: 'Song anhören und einordnen.',
+    answer: 'The Weeknd — Album After Hours.',
+    hint: 'Synthwave-Revival.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b'
+    }
+  },
+  {
+    id: 'song-take-on-me',
+    title: 'Take On Me',
+    category: 'music',
+    year: 1985,
+    cue: 'Song anhören und einordnen.',
+    answer: 'a-ha — Album Hunting High and Low.',
+    hint: 'Norwegische Synth-Pop-Band.',
+    difficulty: 'mittel',
+    sources: {
+      spotify: 'https://open.spotify.com/track/2WfaOiMkCvy7F5fcp2zZ8L'
+    }
+  },
+  {
+    id: 'image-apollo11-flag',
+    title: 'Apollo 11 Flagge',
+    category: 'image',
+    year: 1969,
+    cue: 'Bild ansehen: Wo und wann war das?',
+    answer: 'Mond, 20.07.1969 „ Apollo 11 Flaggenaufstellung.',
+    hint: 'Erste bemannte Mondlandung.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/images/apollo11.jpg'
+    },
+    distractors: ['Mars, 20.07.1976 – Viking 1 Landung.', 'Weltraum, 12.04.1961 – Gagarin erster Mensch im All.', 'ISS, 20.11.1998 – Erste ISS-Module verbunden.']
+  },
+  {
+    id: 'image-prohibition-end',
+    title: 'Ende der Prohibition',
+    category: 'image',
+    year: 1933,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Wo und wann war das?',
+    answer: 'USA, 05.12.1933 – Ende der Prohibition.',
+    hint: 'USA, Alkoholverbot aufgehoben.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/images/prohibition-end-1933.jpg'
+    },
+    distractors: ['USA, 16.01.1920 – Beginn der Prohibition.', 'USA, 24.10.1929 – Schwarzer Donnerstag (Börsencrash).', 'USA, 1929-1939 – Great Depression.']
+  },
+  {
+    id: 'image-wm-finale-1974',
+    title: 'WM-Finale 1974',
+    category: 'image',
+    year: 1974,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Welches Ereignis und wann?',
+    answer: 'München, 07.07.1974 – WM-Finale BRD-Niederlande 2:1.',
+    hint: 'Deutschland wird Fußball-Weltmeister.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/images/wm-finale-1974.jpg'
+    },
+    distractors: ['Bern, 04.07.1954 – WM-Finale BRD-Ungarn 3:2 (Wunder von Bern).', 'Rom, 11.07.1982 – WM-Finale Italien-BRD 3:1.', 'Mexiko, 29.06.1986 – WM-Viertelfinale England-Argentinien 1:2.']
+  },
+  {
+    id: 'image-versailles-treaty',
+    title: 'Versailler Vertrag',
+    category: 'image',
+    year: 1919,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Welches historische Dokument und wann?',
+    answer: 'Versailles, 28.06.1919 – Unterzeichnung des Versailler Vertrags.',
+    hint: 'Friedensvertrag nach dem Ersten Weltkrieg.',
+    difficulty: 'schwer',
+    sources: {
+      image: '/assets/images/versailles-treaty-1919.png'
+    },
+    distractors: ['Paris, 10.02.1947 – Pariser Friedensverträge nach WW2.', 'Wien, 09.06.1815 – Wiener Kongress.', 'Potsdam, 17.07.1945 – Potsdamer Konferenz.']
+  },
+  {
+    id: 'image-eiffelturm-bau',
+    title: 'Bau des Eiffelturms',
+    category: 'image',
+    year: 1889,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Welches Bauwerk und wann fertiggestellt?',
+    answer: 'Paris, 31.03.1889 – Fertigstellung des Eiffelturms.',
+    hint: 'Wahrzeichen von Paris, Weltausstellung.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/images/eiffelturm-bau-1889.jpg'
+    },
+    distractors: ['New York, 01.05.1931 – Empire State Building fertiggestellt.', 'London, 1894 – Tower Bridge fertiggestellt.', 'Sydney, 20.10.1973 – Sydney Opera House eröffnet.']
+  },
+  {
+    id: 'image-bastille-sturm',
+    title: 'Sturm auf die Bastille',
+    category: 'image',
+    year: 1789,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Welches historische Ereignis und wann?',
+    answer: 'Paris, 14.07.1789 – Sturm auf die Bastille.',
+    hint: 'Beginn der Französischen Revolution.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/images/bastille-1789.jpg'
+    },
+    distractors: ['Paris, 21.01.1793 – Hinrichtung von Ludwig XVI.', 'Paris, 27.07.1794 – Sturz von Robespierre.', 'Wien, 13.03.1848 – Märzrevolution.']
+  },
+  {
+    id: 'image-everest-erstbesteigung',
+    title: 'Mount Everest Erstbesteigung',
+    category: 'image',
+    year: 1953,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Welche Leistung und wann?',
+    answer: 'Mount Everest, 29.05.1953 – Hillary und Tenzing erreichen den Gipfel.',
+    hint: 'Höchster Berg der Welt erstmals bestiegen.',
+    difficulty: 'schwer',
+    sources: {
+      image: '/assets/images/everest-1953.jpg'
+    },
+    distractors: ['K2, 31.07.1954 – Erstbesteigung durch italienische Expedition.', 'Matterhorn, 14.07.1865 – Erstbesteigung durch Edward Whymper.', 'Mont Blanc, 08.08.1786 – Erstbesteigung.']
+  },
+  {
+    id: 'image-tiananmen-tank-man',
+    title: 'Tank Man',
+    category: 'image',
+    year: 1989,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Wo und wann war das?',
+    answer: 'Peking, 05.06.1989 – Tank Man auf dem Tiananmen-Platz.',
+    hint: 'Ikonisches Protestbild, China.',
+    difficulty: 'schwer',
+    sources: {
+      image: '/assets/images/tian-anmen-platz-100.webp'
+    },
+    distractors: ['Hongkong, 04.06.2019 – Proteste gegen Auslieferungsgesetz.', 'Seoul, 18.05.1980 – Gwangju-Aufstand.', 'Prag, 16.01.1969 – Jan Palach verbrennt sich.']
+  },
+  {
+    id: 'image-brandenburger-tor-1989',
+    title: 'Brandenburger Tor 1989',
+    category: 'image',
+    year: 1989,
+    cue: 'Bild ansehen und chronologisch einordnen. Frage: Wo und wann war das?',
+    answer: 'Berlin, November 1989 – Menschen am Brandenburger Tor nach Mauerfall.',
+    hint: 'Deutsche Wiedervereinigung, Fall der Mauer.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/images/brandenburger-tor-1989.jpg'
+    },
+    distractors: ['Berlin, 17.06.1953 – Volksaufstand in der DDR.', 'Berlin, 13.08.1961 – Bau der Berliner Mauer.', 'Berlin, 03.10.1990 – Tag der Deutschen Einheit.']
+  },
+  {
+    id: 'quote-mandela',
+    title: 'It always seems impossible',
+    category: 'quote',
+    year: 2001,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Nelson Mandela.',
+    hint: 'Südafrika, Versöhnung.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"It always seems impossible until it\'s done."',
+      textDe: 'Es erscheint immer unmöglich, bis es getan ist.'
+    },
+    distractors: ['Martin Luther King Jr., I Have a Dream', 'Mahatma Gandhi, Salzmarsch 1930', 'Desmond Tutu, Wahrheitskommission']
+  },
+  {
+    id: 'country-germany-flag',
+    title: 'Flagge Deutschlands',
+    category: 'flag',
+    year: 1949,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Bundesrepublik Deutschland " 23.05.1949 (Grundgesetz in Kraft).',
+    hint: 'Europa, schwarz-rot-gold.',
+    difficulty: 'leicht',
+    sources: {
+      image: 'https://placehold.co/900x600/000000/ffce00?text=Deutschland'
+    }
+  },
+  {
+    id: 'song-heroes',
+    title: 'Heroes',
+    category: 'music',
+    year: 1977,
+    cue: 'Song anspielen und zeitlich einordnen.',
+    answer: 'David Bowie — aus dem Album "Heroes".',
+    hint: 'Aufgenommen in Berlin.',
+    difficulty: 'mittel',
+    sources: {
+      spotify: 'https://open.spotify.com/track/0z7pVZyS0G0vXh18vvzJpZ'
+    }
+  },
+  {
+    id: 'song-imagine',
+    title: 'Imagine',
+    category: 'music',
+    year: 1971,
+    cue: 'Song anhören und einordnen.',
+    answer: 'John Lennon — Friedenshymne.',
+    hint: 'Ehemaliger Beatle.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/7pKfPomDEeI4TPT6EOYjn9'
+    }
+  },
+  {
+    id: 'song-hotel-california',
+    title: 'Hotel California',
+    category: 'music',
+    year: 1976,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Eagles — Klassiker der Westküte.',
+    hint: 'Kalifornische Rockband.',
+    difficulty: 'mittel',
+    sources: {
+      spotify: 'https://open.spotify.com/track/40riOy7x9W7GXjyGp4pjAv'
+    }
+  },
+  {
+    id: 'song-hey-ya',
+    title: 'Hey Ya!',
+    category: 'music',
+    year: 2003,
+    cue: 'Song anhören und einordnen.',
+    answer: 'OutKast — aus Speakerboxxx/The Love Below.',
+    hint: 'Shake it like a Polaroid picture.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/2PpruBYCo4H7WOBJ7Q2EwM'
+    }
+  },
+  {
+    id: 'song-lose-yourself',
+    title: 'Lose Yourself',
+    category: 'music',
+    year: 2002,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Eminem — Soundtrack zu 8 Mile.',
+    hint: 'Der Moment, eine Chance.',
+    difficulty: 'mittel',
+    sources: {
+      spotify: 'https://open.spotify.com/track/7lQqaqZu0jqQMYt5qLRO4i'
+    }
+  },
+  {
+    id: 'song-seven-nation-army',
+    title: 'Seven Nation Army',
+    category: 'music',
+    year: 2003,
+    cue: 'Song anhören und einordnen.',
+    answer: 'The White Stripes — markante Basslinie.',
+    hint: 'Zweier-Band aus Detroit.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/3d9DChrdc6BOeFsbrZ3Is0'
+    }
+  },
+  {
+    id: 'song-bad-guy',
+    title: 'bad guy',
+    category: 'music',
+    year: 2019,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Billie Eilish — Deb"talbum When We All Fall Asleep.',
+    hint: 'Flüterpop mit Bass.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/2Fxmhks0bxGSBdJ92vM42m'
+    }
+  },
+  {
+    id: 'song-get-lucky',
+    title: 'Get Lucky',
+    category: 'music',
+    year: 2013,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Daft Punk feat. Pharrell Williams.',
+    hint: 'Franzuisches Duo mit Helmen.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/69kOkLUCkxIZYexIgSG8rq'
+    }
+  },
+  {
+    id: 'song-viva-la-vida',
+    title: 'Viva La Vida',
+    category: 'music',
+    year: 2008,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Coldplay — Album Viva la Vida or Death and All His Friends.',
+    hint: 'Britische Band mit Streicher-Hook.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b'
+    }
+  },
+  {
+    id: 'song-hips-dont-lie',
+    title: "Hips Don't Lie",
+    category: 'music',
+    year: 2006,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Shakira feat. Wyclef Jean.',
+    hint: 'Kolumbianische Sängerin, weltweiter Tanzhit.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/0EmeFodog0BfCgMzAIvKQp'
+    }
+  },
+  {
+    id: 'song-dreams-fleetwood',
+    title: 'Dreams',
+    category: 'music',
+    year: 1977,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Fleetwood Mac — Album Rumours.',
+    hint: 'Soft-Rock-Klassiker.',
+    difficulty: 'mittel',
+    sources: {
+      spotify: 'https://open.spotify.com/track/0ofHAoxe9vBkTCp2UQIavz'
+    }
+  },
+  {
+    id: 'song-i-want-it-that-way',
+    title: 'I Want It That Way',
+    category: 'music',
+    year: 1999,
+    cue: 'Song anhören und einordnen.',
+    answer: 'Backstreet Boys — Boyband-Evergreen.',
+    hint: 'Tell me why.',
+    difficulty: 'leicht',
+    sources: {
+      spotify: 'https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6'
+    }
+  },
+  {
+    id: 'quote-tear-down-this-wall',
+    title: 'Tear down this wall',
+    category: 'quote',
+    year: 1987,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Ronald Reagan, Rede am Brandenburger Tor, 12.06..',
+    hint: 'US-Präsident fordert Öffnung der Mauer.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"Mr. Gorbachev, tear down this wall!"',
+      textDe: 'Herr Gorbatschow, reißen Sie diese Mauer ein!'
+    },
+    distractors: ['John F. Kennedy, Ich bin ein Berliner', 'Winston Churchill, Iron Curtain Speech', 'Helmut Kohl, Blühende Landschaften']
+  },
+  {
+    id: 'quote-yes-we-can',
+    title: 'Yes we can',
+    category: 'quote',
+    year: 2008,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Barack Obama, Wahlkampfrede.',
+    hint: 'Slogan einer US-Praesidentschaftskampagne.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Yes we can."',
+      textDe: 'Ja, wir koennen das.'
+    },
+    distractors: ['Bill Clinton, I feel your pain', 'John F. Kennedy, Ask not what your country', 'Franklin D. Roosevelt, The only thing we have to fear']
+  },
+  {
+    id: 'quote-ich-bin-ein-berliner',
+    title: 'Ich bin ein Berliner',
+    category: 'quote',
+    year: 1963,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'John F. Kennedy, Rede in Berlin, 26.06..',
+    hint: 'Kaltes Kriegs-Statement.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"Ich bin ein Berliner."'
+    },
+    distractors: ['Ronald Reagan, Tear down this wall', 'Willy Brandt, Mehr Demokratie wagen', 'Helmut Schmidt, Bundeskanzler 1974']
+  },
+  {
+    id: 'quote-houston-problem',
+    title: "Houston, we've had a problem",
+    category: 'quote',
+    year: 1970,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Jack Swigert/Jim Lovell, Apollo-13-Mission, 13.04..',
+    hint: 'Raumfahrt-Notfall.',
+    difficulty: 'schwer',
+    sources: {
+      text: '"Houston, we have a problem!"',
+      textDe: 'Houston, wir haben ein Problem!'
+    },
+    distractors: ['Neil Armstrong, One small step', 'Buzz Aldrin, Magnificent desolation', 'John Glenn, Godspeed']
+  },
+  {
+    id: 'quote-one-small-step',
+    title: 'One small step',
+    category: 'quote',
+    year: 1969,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Neil Armstrong, Mondlandung, 20.07..',
+    hint: 'Erster Fuaebdruck auf dem Mond.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Thatue one small step for man, one giant leap for mankind."',
+      textDe: 'Das ist ein kleiner Schritt fuer einen Menschen, aber ein gewaltiger Sprung fuer die Menschheit.'
+    },
+    distractors: ['Juri Gagarin, Die Erde ist blau', 'Buzz Aldrin, Houston the Eagle has landed', 'Alan Shepard, Freedom 7 Mission']
+  },
+  {
+    id: 'quote-fear-itself',
+    title: 'Fear itself',
+    category: 'quote',
+    year: 1933,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Franklin D. Roosevelt, Antrittsrede, 04.03..',
+    hint: 'Beginn des New Deal.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"The only thing we have to fear is fear itself."',
+      textDe: 'Wir haben nichts zu fuerchten auueer der Furcht selbst.'
+    },
+    distractors: ['Winston Churchill, We shall never surrender', 'John F. Kennedy, Ask not', 'Abraham Lincoln, Of the people']
+  },
+  {
+    id: 'quote-stay-hungry',
+    title: 'Stay hungry, stay foolish',
+    category: 'quote',
+    year: 2005,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Steve Jobs, Stanford Commencement Speech, 12.06..',
+    hint: 'Abschlussrede an einer US-Eliteuni.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Stay hungry, stay foolish."',
+      textDe: 'Bleibt hungrig, bleibt tuericht.'
+    },
+    distractors: ['Mark Zuckerberg, Move fast and break things', 'Bill Gates, Most people overestimate', 'Elon Musk, When something is important']
+  },
+  {
+    id: 'quote-carpe-diem',
+    title: 'Carpe Diem',
+    category: 'quote',
+    year: 1989,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Aus Dead Poets Society — Ermutigung, den Tag zu nutzen.',
+    hint: 'Literaturlehrer inspiriert seine Klasse.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"Carpe diem. Seize the day, boys."',
+      textDe: 'Carpe diem „ Nutzt den Tag, Jungs.'
+    },
+    distractors: ['Dead Poets Society, O Captain My Captain', 'Good Will Hunting, Its not your fault', 'The Shawshank Redemption, Get busy living']
+  },
+  {
+    id: 'quote-hatte-hatte-fahrradkette',
+    title: 'H"tte, h"tte, Fahrradkette',
+    category: 'quote',
+    year: 2013,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Lothar Matthäus "Wäre, wäre Fahrradkette." in der Sky90-Runde als spöttischer Kommentar zur Spielanalyse.',
+    hint: 'Fußballweltmeister, TV-Experte.',
+    difficulty: 'leicht',
+    sources: { text: 'Wäre, wäre Fahrradkette.' },
+    distractors: ['Franz Beckenbauer, Schaun mer mal', 'Andi Möller, Mailand oder Madrid', 'Jürgen Klopp, Normale Eins']
+  },
+  {
+    id: 'quote-mailand-oder-madrid',
+    title: 'Mailand oder Madrid',
+    category: 'quote',
+    year: 1998,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Andreas Moeller "Mailand oder Madrid „ Hauptsache Italien." in einem TV-Interview nach einer internationalen Auslosung.',
+    hint: 'Dortmunder Offensivspieler.',
+    difficulty: 'leicht',
+    sources: { text: 'Mailand oder Madrid „ Hauptsache Italien.' },
+    distractors: ['Lothar Matthaeus, Huette Fahrradkette', 'Giovanni Trapattoni, Ich habe fertig', 'Franz Beckenbauer, Der Kaiser']
+  },
+  {
+    id: 'quote-mr-gorbachev-tear-down-this-wall',
+    title: 'Tear down this wall',
+    category: 'quote',
+    year: 1987,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Ronald Reagan "Mr. Gorbachev, tear down this wall!" in seiner Rede am Brandenburger Tor in Berlin.',
+    hint: 'US-Prueident, Brandenburger Tor.',
+    difficulty: 'mittel',
+    sources: {
+      text: 'Mr. Gorbachev, tear down this wall!',
+      textDe: 'Herr Gorbatschow, reiueen Sie diese Mauer ein!'
+    },
+    distractors: ['John F. Kennedy, Ich bin ein Berliner', 'Winston Churchill, Iron Curtain', 'George H. W. Bush, Berlin Wall 1989']
+  },
+  {
+    id: 'quote-houston-we-have-a-problem',
+    title: 'Houston, we have a problem',
+    category: 'quote',
+    year: 1970,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Apollo-13-Besatzung "Houston, we have a problem." als Funkmeldung nach der Explosion des Sauerstofftanks.',
+    hint: 'NASA, Raumfahrt.',
+    difficulty: 'mittel',
+    sources: {
+      text: 'Houston, we have a problem!',
+      textDe: 'Houston, wir haben ein Problem!'
+    },
+    distractors: ['Neil Armstrong, One small step', 'Gene Kranz, Failure is not an option', 'Apollo 11, Eagle has landed']
+  },
+  {
+    id: 'quote-ein-kleiner-schritt',
+    title: 'One small step',
+    category: 'quote',
+    year: 1969,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Neil Armstrong "Thatue one small step for (a) man"" beim ersten Schritt auf die Mondoberflaeche.',
+    hint: 'Mondlandung.',
+    difficulty: 'leicht',
+    sources: {
+      text: "That's one small step for man, one giant leap for mankind.",
+      textDe: 'Das ist ein kleiner Schritt fuer einen Menschen, aber ein gewaltiger Sprung fuer die Menschheit.'
+    },
+    distractors: ['Juri Gagarin, Poekhali (Los gehts)', 'Buzz Aldrin, Magnificent desolation', 'John Glenn, Zero-G']
+  },
+{
+    id: 'quote-ich-bin-dann-mal-weg',
+    title: 'Ich bin dann mal weg',
+    category: 'quote',
+    year: 2006,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Hape Kerkeling "Ich bin dann mal weg." als Titel seines Jakobsweg-Reiseberichts.',
+    hint: 'Autor, Jakobsweg.',
+    difficulty: 'leicht',
+    sources: { text: 'Ich bin dann mal weg.' },
+    distractors: ['Hape Kerkeling, Jakobsweg Buch 2006', 'Thomas Gottschalk, Wetten dass', 'Harald Schmidt, Late Night Show']
+  },
+  {
+    id: 'quote-zwei-seelen-wohnen',
+    title: 'Zwei Seelen wohnen',
+    category: 'quote',
+    year: 1808,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Goethe, Faust I (ca. ) "Zwei Seelen wohnen, ach! in meiner Brust." im Monolog des Faust "ber innere Zerrissenheit.',
+    hint: 'Deutscher Dichter, Faust.',
+    difficulty: 'mittel',
+    sources: { text: 'Zwei Seelen wohnen, ach! in meiner Brust.' },
+    distractors: ['Goethe, Verweile doch du bist so schoen', 'Schiller, Die Raeuber', 'Goethe, Goetz von Berlichingen']
+  },
+  {
+    id: 'quote-sein-oder-nichtsein',
+    title: 'Sein oder Nichtsein',
+    category: 'quote',
+    year: 1600,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'William Shakespeare, Hamlet (ca. ) "To be, or not to be"" als Auftakt von Hamlets beruehmtem Selbstgespruech.',
+    hint: 'Englischer Dramatiker.',
+    difficulty: 'mittel',
+    sources: {
+      text: 'To be, or not to be, that is the question.',
+      textDe: 'Sein oder Nichtsein, das ist hier die Frage.'
+    },
+    distractors: ['Shakespeare, Romeo und Julia', 'Shakespeare, Macbeth Tomorrow speech', 'Goethe, Faust Gretchenfrage']
+  },
+  {
+    id: 'quote-ich-denke-also-bin-ich',
+    title: 'Cogito ergo sum',
+    category: 'quote',
+    year: 1637,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Ren„ Descartes "Cogito, ergo sum." im "Discours de la muethode" als Grundsatz des Rationalismus.',
+    hint: 'Franzueischer Philosoph.',
+    difficulty: 'mittel',
+    sources: {
+      text: 'Cogito, ergo sum.',
+      textDe: 'Ich denke, also bin ich.'
+    },
+    distractors: ['Sokrates, Ich weiss dass ich nichts weiss', 'Kant, Kategorischer Imperativ', 'Nietzsche, Gott ist tot']
+  },
+  {
+    id: 'quote-zeit-ist-geld',
+    title: 'Zeit ist Geld',
+    category: 'quote',
+    year: 1748,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Benjamin Franklin "Time is money." in Aedvice to a Young Tradesman" als Ratschlag fuer Geschaeftsleute.',
+    hint: 'US-Staatsmann, Erfinder.',
+    difficulty: 'leicht',
+    sources: {
+      text: 'Time is money.',
+      textDe: 'Zeit ist Geld.'
+    },
+    distractors: ['Benjamin Franklin, Early to bed early to rise', 'Adam Smith, Unsichtbare Hand', 'Karl Marx, Opium des Volkes']
+  },
+  {
+    id: 'quote-ich-wei"-dass-ich-nichts-wei"',
+    title: 'Sokrates Nichtwissen',
+    category: 'quote',
+    year: -400,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Sokrates zugeschrieben "Ich wei", dass ich nichts wei"." aus Platons Aepologie" als Bekenntnis philosophischer Demut.',
+    hint: 'Antike Philosophie.',
+    difficulty: 'mittel',
+    sources: { text: 'Ich wei", dass ich nichts wei".' }
+  },
+  {
+    id: 'quote-mach-dein-ding',
+    title: 'Mach dein Ding',
+    category: 'quote',
+    year: 2010,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Herbert Gruenemeyer, 2014 "Mach dein Ding." als Refrain seines Songs und Lebensmotto auf Konzerten.',
+    hint: 'Deutscher Musiker.',
+    difficulty: 'leicht',
+    sources: { text: 'Mach dein Ding.' },
+    distractors: ['Herbert Groenemeyer, Mensch 2002', 'Herbert Groenemeyer, Bochum 1984', 'Udo Lindenberg, Hinterm Horizont']
+  },
+  {
+    id: 'quote-ich-bin-dumm-und-das-ist-gut-so',
+    title: 'Ich bin dumm',
+    category: 'quote',
+    year: 2010,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Patrick Star (SpongeBob), 2010er "Ich bin dumm, und das ist gut so." in einer Cartoon-Szene als selbstironischer Moment.',
+    hint: 'Zeichentrick-Seestern.',
+    difficulty: 'leicht',
+    sources: { text: 'Ich bin dumm, und das ist gut so.' },
+    distractors: ['SpongeBob, Im ready', 'Homer Simpson, Doh', 'Peter Griffin, Family Guy']
+  },
+  {
+    id: 'quote-ich-habe-einen-traum',
+    title: 'I have a dream',
+    category: 'quote',
+    year: 1963,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Martin Luther King Jr. "I have a dream." in seiner Rede beim March on Washington fuer Buergerrechte.',
+    hint: 'US-Boergerrechtler.',
+    difficulty: 'leicht',
+    sources: {
+      text: 'I have a dream.',
+      textDe: 'Ich habe einen Traum.'
+    },
+    distractors: ['Malcolm X, By any means necessary', 'Nelson Mandela, Education is the weapon', 'Rosa Parks, Montgomery Bus Boycott']
+  },
+  {
+    id: 'quote-veni-vidi-vici',
+    title: 'Veni vidi vici',
+    category: 'quote',
+    year: -47,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Julius Caesar, 47 v. Chr. "Veni, vidi, vici." im Bericht an den Senat nach dem Sieg bei Zela.',
+    hint: 'Roemischer Feldherr.',
+    difficulty: 'mittel',
+    sources: {
+      text: 'Veni, vidi, vici.',
+      textDe: 'Ich kam, sah und siegte.'
+    },
+    distractors: ['Julius Caesar, Alea iacta est', 'Marcus Aurelius, Memento mori', 'Cicero, O tempora o mores']
+  },
+  {
+    id: 'quote-keine-experimente',
+    title: 'Keine Experimente',
+    category: 'quote',
+    year: 1957,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'CDU-Wahlkampfslogan "Keine Experimente!" als zentraler Claim im Bundestagswahlkampf.',
+    hint: 'Deutsche Nachkriegspolitik.',
+    difficulty: 'mittel',
+    sources: { text: 'Keine Experimente!' },
+    distractors: ['Willy Brandt, Mehr Demokratie wagen', 'Helmut Kohl, Geistig-moralische Wende', 'Gerhard Schroeder, Neue Mitte']
+  },
+  {
+    id: 'quote-wir-sind-das-volk',
+    title: 'Wir sind das Volk',
+    category: 'quote',
+    year: 1989,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Ruf der Montagsdemos "Wir sind das Volk." auf den Straßen von Leipzig und anderen DDR-Städten.',
+    hint: 'DDR, Wendezeit.',
+    difficulty: 'mittel',
+    sources: { text: 'Wir sind das Volk.' },
+    distractors: ['Helmut Kohl, Bluehende Landschaften', 'Willy Brandt, Zusammenwaechst', 'Richard von Weizsaecker, 8. Mai 1985']
+  },
+  {
+    id: 'quote-sag-mir-wo-die-blumen-sind',
+    title: 'Wo sind die Blumen',
+    category: 'quote',
+    year: 1955,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Pete Seeger/Marlen Dietrich, 1950er "Sag mir, wo die Blumen sind"" als Antikriegslied in Konzerten.',
+    hint: 'Antikriegslied.',
+    difficulty: 'mittel',
+    sources: { text: 'Sag mir, wo die Blumen sind.' },
+    distractors: ['Marlene Dietrich, Lili Marleen', 'Joan Baez, We Shall Overcome', 'Bob Dylan, Blowin in the Wind']
+  },
+  {
+    id: 'quote-einmal-im-leben',
+    title: 'Einmal im Leben',
+    category: 'quote',
+    year: 2006,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Juergen Klopp "Ich dachte, einmal im Leben muss ich das probieren." im Interview "ber seinen Trainerjob.',
+    hint: 'Trainer, Fuueball.',
+    difficulty: 'mittel',
+    sources: { text: 'Einmal im Leben muss ich das probieren.' },
+    distractors: ['Juergen Klopp, Vollgasfussball', 'Juergen Klopp, Normal one', 'Pep Guardiola, Tiki-Taka']
+  },
+  {
+    id: 'quote-die-lage-ist-ernst-aber-nicht-hoffnungslos',
+    title: 'Ernst aber nicht hoffnungslos',
+    category: 'quote',
+    year: 1980,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Karl Valentin zugeschrieben "Die Lage ist hoffnungslos, aber nicht ernst." als kabarettistischer Wortdreher.',
+    hint: 'Kabarett, Wortspiel.',
+    difficulty: 'mittel',
+    sources: { text: 'Die Lage ist hoffnungslos, aber nicht ernst.' },
+    distractors: ['Karl Valentin, Muenchen Kabarett', 'Loriot, Das Ei ist hart', 'Heinz Erhardt, Gedichte']
+  },
+  {
+    id: 'quote-zwei-dinge-unendlich',
+    title: 'Zwei Dinge sind unendlich',
+    category: 'quote',
+    year: 1920,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Albert Einstein zugeschrieben "Zwei Dinge sind unendlich: das Universum und die menschliche Dummheit"" als oft erzuehlte Anekdote.',
+    hint: 'Physiker, Relativituet.',
+    difficulty: 'mittel',
+    sources: { text: 'Zwei Dinge sind unendlich: das Universum und die menschliche Dummheit; aber beim Universum bin ich mir nicht ganz sicher.' },
+    distractors: ['Albert Einstein, E=mc2', 'Stephen Hawking, Schwarze Loecher', 'Richard Feynman, Quantenphysik']
+  },
+  {
+    id: 'quote-keep-calm',
+    title: 'Keep calm',
+    category: 'quote',
+    year: 1939,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Britisches Motiv "Keep calm and carry on." als Propagandaposter zu Beginn des Zweiten Weltkriegs.',
+    hint: 'Britische Propaganda WWII.',
+    difficulty: 'leicht',
+    sources: {
+      text: 'Keep calm and carry on.',
+      textDe: 'Bleib ruhig und mach weiter.'
+    },
+    distractors: ['Winston Churchill, Never surrender', 'FDR, Day of infamy', 'Charles de Gaulle, La France libre']
+  },
+  {
+    id: 'quote-furcht-ist-der-weg-zur-dunklen-seite',
+    title: 'Furcht zur dunklen Seite',
+    category: 'quote',
+    year: 1999,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Yoda "Furcht ist der Pfad zur dunklen Seite." in Star Wars: Episode I als Warnung an Anakin.',
+    hint: 'Star Wars Jedi-Meister.',
+    difficulty: 'leicht',
+    sources: {
+      text: 'Fear is the path to the dark side.',
+      textDe: 'Furcht ist der Pfad zur dunklen Seite.'
+    },
+    distractors: ['Obi-Wan Kenobi, The Force will be with you', 'Yoda, Do or do not', 'Darth Vader, I am your father']
+  },
+  {
+    id: 'quote-winter-is-coming',
+    title: 'Winter is coming',
+    category: 'quote',
+    year: 2011,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Game of Thrones "Winter is coming." als Motto des Hauses Stark in der Pilotfolge.',
+    hint: 'Haus Stark.',
+    difficulty: 'leicht',
+    sources: {
+      text: 'Winter is coming.',
+      textDe: 'Der Winter naht.'
+    },
+    distractors: ['Game of Thrones, A Lannister always pays', 'Game of Thrones, The North remembers', 'Game of Thrones, Dracarys']
+  },
+  {
+    id: 'quote-valar-morghulis',
+    title: 'Valar Morghulis',
+    category: 'quote',
+    year: 2012,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Game of Thrones "Valar Morghulis." als Gruueformel der Faceless Men in Braavos.',
+    hint: 'Alte Sprache, jeder muss sterben.',
+    difficulty: 'mittel',
+    sources: {
+      text: 'Valar Morghulis.',
+      textDe: 'Alle Menschen muessen sterben.'
+    },
+    distractors: ['Game of Thrones, Valar Dohaeris', 'Game of Thrones, Hold the door', 'Game of Thrones, You know nothing']
+  },
+  {
+    id: 'quote-alles-nur-geliehen',
+    title: 'Alles nur geliehen',
+    category: 'quote',
+    year: 1998,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Heinz Schenk/Klaus Lage „ Aelles nur geliehen." als Schlägerzeile und Fernseh-Scherz.',
+    hint: 'Deutscher Schläger/Witz.',
+    difficulty: 'leicht',
+    sources: { text: 'Alles nur geliehen.' },
+    distractors: ['Heinz Schenk, Blaue Bock', 'Wim Thoelke, Der grosse Preis', 'Frank Elstner, Wetten dass']
+  },
+  {
+    id: 'quote-ich-habe-fertig',
+    title: 'Ich habe fertig',
+    category: 'quote',
+    year: 1998,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Giovanni Trapattoni "Ich habe fertig." in der legendueren Bayern-Pressekonferenz.',
+    hint: 'Trainer-Pressekonferenz Bayern.',
+    difficulty: 'leicht',
+    sources: { text: 'Ich habe fertig.' },
+    distractors: ['Lothar Matthaeus, Huette Fahrradkette', 'Andi Moeller, Mailand oder Madrid', 'Franz Beckenbauer, Schaun mer mal']
+  },
+  {
+    id: 'quote-flasche-leer',
+    title: 'Flasche leer',
+    category: 'quote',
+    year: 1998,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Giovanni Trapattoni "Flasche leer!" in derselben Bayern-Pressekonferenz als Kritik am Team.',
+    hint: 'Trainer-Pressekonferenz.',
+    difficulty: 'leicht',
+    sources: { text: 'Flasche leer!' },
+    distractors: ['Trapattoni, Schwach wie Flasche', 'Trapattoni, Spielen wie Flasche', 'Trapattoni, Was erlauben Strunz']
+  },
+  {
+    id: 'quote-ich-bin-zu-alt-fuer-diesen-mist',
+    title: 'Zu alt für diesen Mist',
+    category: 'quote',
+    year: 1987,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Roger Murtaugh (Lethal Weapon) "Ioem too old for this"" im Buddy-Cop-Film als resignierter Kommentar.',
+    hint: 'Actionfilm Buddy-Cop.',
+    difficulty: 'leicht',
+    sources: {
+      text: "I'm too old for this shit.",
+      textDe: 'Ich bin zu alt fuer diesen Mist.'
+    },
+    distractors: ['Die Hard, Yippee ki yay', 'Beverly Hills Cop, Axel Foley', 'Lethal Weapon 2, Diplomatic immunity']
+  },
+  {
+    id: 'quote-ich-bin-dein-vater',
+    title: 'Ich bin dein Vater',
+    category: 'quote',
+    year: 1980,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Darth Vader "No, I am your father." im Duell auf Cloud City (Star Wars Episode V).',
+    hint: 'Star Wars Episode V.',
+    difficulty: 'leicht',
+    sources: {
+      text: 'No, I am your father.',
+      textDe: 'Nein, ich bin dein Vater.'
+    },
+    distractors: ['Star Wars, May the Force be with you', 'Star Wars, I have a bad feeling', 'Star Wars, Do or do not']
+  },
+  {
+    id: 'quote-immer-weiter',
+    title: 'Immer weiter',
+    category: 'quote',
+    year: 2014,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Juergen Klopp "Wir muessen immer weiter machen." auf einer Pressekonferenz nach einem Spiel.',
+    hint: 'Trainer, Bundesliga.',
+    difficulty: 'leicht',
+    sources: { text: 'Wir muessen immer weiter machen.' },
+    distractors: ['Juergen Klopp, Vollgas', 'Juergen Klopp, Mentalitaet', 'Juergen Klopp, Heavy Metal Football']
+  },
+  {
+    id: 'quote-keine-macht-den-drogen',
+    title: 'Keine Macht den Drogen',
+    category: 'quote',
+    year: 1990,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Praeventionskampagne, 1990er "Keine Macht den Drogen." als Slogan der Jugendpraevention.',
+    hint: 'Jugendkampagne.',
+    difficulty: 'mittel',
+    sources: { text: 'Keine Macht den Drogen.' },
+    distractors: ['Aids-Kampagne, Gib Aids keine Chance', 'Rauchfrei-Kampagne', 'Dont drink and drive']
+  },
+  {
+    id: 'quote-die-rente-ist-sicher',
+    title: 'Die Rente ist sicher',
+    category: 'quote',
+    year: 1986,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Norbert Bluem "Die Rente ist sicher." in einer Pressekonferenz zur Rentenreform.',
+    hint: 'Bundesarbeitsminister.',
+    difficulty: 'mittel',
+    sources: { text: 'Die Rente ist sicher.' },
+    distractors: ['Helmut Kohl, Bluehende Landschaften', 'Gerhard Schroeder, Agenda 2010', 'Angela Merkel, Wir schaffen das']
+  },
+  {
+    id: 'quote-ich-bin-dann-mal-weg-zitat',
+    title: 'Ich bin dann mal weg (Zitat)',
+    category: 'quote',
+    year: 2006,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Hape Kerkeling — Buchtitel und gefluegeltes Wort "ber seine Pilgerreise auf dem Jakobsweg.',
+    hint: 'Comedian, Jakobsweg.',
+    difficulty: 'leicht',
+    sources: { text: 'Ich bin dann mal weg.' },
+    distractors: ['Hape Kerkeling, Jakobsweg', 'Harald Schmidt, Late Night', 'Stefan Raab, TV Total']
+  },
+  {
+    id: 'flag-de',
+    title: 'Flagge Deutschland',
+    category: 'flag',
+    year: 1949,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Deutschland „ Schwarz-Rot-Gold, 1949 best"tigt.',
+    hint: 'Mitteleuropa, Trikolore.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/de.png'
+    }
+  },
+  {
+    id: 'flag-fr',
+    title: 'Flagge Frankreich',
+    category: 'flag',
+    year: 1794,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Frankreich „ Bleu-Blanc-Rouge, 1794 offiziell.',
+    hint: 'Tricolore mit Blau links.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/fr.png'
+    }
+  },
+  {
+    id: 'flag-it',
+    title: 'Flagge Italien',
+    category: 'flag',
+    year: 1946,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Italien „ Gr"n-Wei"-Rot, 1946 republikanisch.',
+    hint: 'Vertikale Tricolore, Gr"n am Mast.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/it.png'
+    }
+  },
+  {
+    id: 'flag-es',
+    title: 'Flagge Spanien',
+    category: 'flag',
+    year: 1981,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Spanien „ Rot-Gelb-Rot mit Wappen.',
+    hint: 'Mittelstreifen doppelt so breit.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/es.png'
+    }
+  },
+  {
+    id: 'flag-us',
+    title: 'Flagge USA',
+    category: 'flag',
+    year: 1960,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Vereinigte Staaten „ Stars and Stripes mit 50 Sternen, seit 1960.',
+    hint: 'Streifen und Sterne.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/us.png'
+    }
+  },
+  {
+    id: 'flag-gb',
+    title: 'Flagge Vereinigtes K"nigreich',
+    category: 'flag',
+    year: 1801,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Vereinigtes K"nigreich „ Union Jack, seit 1801.',
+    hint: '"berlagerte Kreuze.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/gb.png'
+    }
+  },
+  {
+    id: 'flag-jp',
+    title: 'Flagge Japan',
+    category: 'flag',
+    year: 1999,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Japan „ Roter Kreis auf Wei", 1999 gesetzlich best"tigt.',
+    hint: 'Hinomaru.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/jp.png'
+    }
+  },
+  {
+    id: 'flag-cn',
+    title: 'Flagge China',
+    category: 'flag',
+    year: 1949,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Volksrepublik China „ Rot mit f"nf Sternen.',
+    hint: 'Ein gro"er, vier kleine Sterne.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/cn.png'
+    }
+  },
+  {
+    id: 'flag-br',
+    title: 'Flagge Brasilien',
+    category: 'flag',
+    year: 1889,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Brasilien „ Gr"n, Gelb-Raute und Sternenkugel.',
+    hint: 'Ordem e Progresso.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/br.png'
+    }
+  },
+  {
+    id: 'flag-in',
+    title: 'Flagge Indien',
+    category: 'flag',
+    year: 1947,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Indien „ Safran, Wei", Gr"n mit Ashoka-Chakra.',
+    hint: '24-Speichen-Rad.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/in.png'
+    }
+  },
+  {
+    id: 'flag-au',
+    title: 'Flagge Australien',
+    category: 'flag',
+    year: 1903,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Australien „ Union Jack, Commonwealth Star und S"dliches Kreuz.',
+    hint: 'Blau mit Sternbildern.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/au.png'
+    }
+  },
+  {
+    id: 'flag-ca',
+    title: 'Flagge Kanada',
+    category: 'flag',
+    year: 1965,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Kanada „ Ahornblatt auf Rot-Wei"-Rot.',
+    hint: 'Rotes Ahornblatt.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/ca.png'
+    }
+  },
+  {
+    id: 'flag-za',
+    title: 'Flagge S"dafrika',
+    category: 'flag',
+    year: 1994,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'S"dafrika „ Y-Form mit sechs Farben.',
+    hint: 'Post-Apartheid Symbol.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/za.png'
+    }
+  },
+  {
+    id: 'flag-se',
+    title: 'Flagge Schweden',
+    category: 'flag',
+    year: 1906,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Schweden „ Blau mit gelbem Kreuz.',
+    hint: 'Nordisches Kreuz.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/se.png'
+    }
+  },
+  {
+    id: 'flag-no',
+    title: 'Flagge Norwegen',
+    category: 'flag',
+    year: 1821,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Norwegen „ Rot mit blauem Kreuz.',
+    hint: 'Nordisches Kreuz mit Wei" und Blau.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/no.png'
+    }
+  },
+  {
+    id: 'flag-fi',
+    title: 'Flagge Finnland',
+    category: 'flag',
+    year: 1918,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Finnland „ Wei" mit blauem Kreuz.',
+    hint: 'Seen, Schnee, Blau-Wei".',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/fi.png'
+    }
+  },
+  {
+    id: 'flag-ar',
+    title: 'Flagge Argentinien',
+    category: 'flag',
+    year: 1818,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Argentinien „ Hellblau-Wei" mit Sonne.',
+    hint: 'Sonne der Mai-Revolution.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/ar.png'
+    }
+  },
+  {
+    id: 'flag-mx',
+    title: 'Flagge Mexiko',
+    category: 'flag',
+    year: 1968,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Mexiko „ Gr"n, Wei", Rot mit Adler und Schlange.',
+    hint: 'Tricolore mit Wappen.',
+    difficulty: 'mittel',
+    sources: {
+      image: '/assets/flags/mx.png'
+    }
+  },
+  {
+    id: 'flag-ch',
+    title: 'Flagge Schweiz',
+    category: 'flag',
+    year: 1889,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Schweiz „ Rotes Quadrat mit wei"em Kreuz.',
+    hint: 'Quadratische Flagge.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/ch.png'
+    }
+  },
+  {
+    id: 'flag-nl',
+    title: 'Flagge Niederlande',
+    category: 'flag',
+    year: 1937,
+    cue: 'Zu welchem Land gehört diese Flagge und wann wurde es gegründet?',
+    answer: 'Niederlande „ Rot, Wei", Blau.',
+    hint: 'Waagerechte Tricolore.',
+    difficulty: 'leicht',
+    sources: {
+      image: '/assets/flags/nl.png'
+    }
+  },
+  // 100 neue Zitate aus Filmen, Liedern und bekannten Persönlichkeiten
+  {
+    id: 'quote-may-the-force',
+    title: 'May the Force be with you',
+    category: 'quote',
+    year: 1977,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Star Wars: Episode IV – Ikonischer Satz der Saga.',
+    hint: 'Science-Fiction-Klassiker.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"May the Force be with you."',
+      textDe: 'Moege die Macht mit dir sein.'
+    },
+    distractors: ['Star Wars, I am your father', 'Star Wars, Do or do not', 'Star Wars, The Force will be with you']
+  },
+  {
+    id: 'quote-im-gonna-make-him',
+    title: 'I\'m gonna make him an offer',
+    category: 'quote',
+    year: 1972,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Der Pate (The Godfather) – Don Vito Corleone.',
+    hint: 'Mafia-Klassiker von Francis Ford Coppola.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"I\'m gonna make him an offer he can\'t refuse."',
+      textDe: 'Ich werde ihm ein Angebot machen, das er nicht ablehnen kann.'
+    },
+    distractors: ['Der Pate, Leave the gun take cannoli', 'Der Pate, Keep your friends close', 'Scarface, Say hello to my friend']
+  },
+  {
+    id: 'quote-heres-looking-at-you',
+    title: 'Here\'s looking at you, kid',
+    category: 'quote',
+    year: 1942,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Casablanca – Rick Blaine (Humphrey Bogart).',
+    hint: 'Romantischer Kriegsfilm.',
+    difficulty: 'schwer',
+    sources: {
+      text: '"Here\'s looking at you, kid."',
+      textDe: 'Ich seh dir in die Augen, Kleines.'
+    },
+    distractors: ['Casablanca, Well always have Paris', 'Casablanca, Play it Sam', 'Casablanca, Round up usual suspects']
+  },
+  {
+    id: 'quote-life-is-like-a-box',
+    title: 'Life is like a box of chocolates',
+    category: 'quote',
+    year: 1994,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Forrest Gump – Forrest Gump (Tom Hanks).',
+    hint: 'Oscar-praemiertes Drama.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Life is like a box of chocolates. You never know what you\'re gonna get."',
+      textDe: 'Das Leben ist wie eine Schachtel Pralinen, man weiue nie, was man kriegt.'
+    },
+    distractors: ['Forrest Gump, Run Forrest run', 'Forrest Gump, Stupid is as stupid does', 'Forrest Gump, My mama always said']
+  },
+  {
+    id: 'quote-ill-be-back',
+    title: 'I\'ll be back',
+    category: 'quote',
+    year: 1984,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Terminator – T-800 (Arnold Schwarzenegger).',
+    hint: 'Science-Fiction-Action mit Zeitreisen.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"I\'ll be back."',
+      textDe: 'Ich komme wieder.'
+    },
+    distractors: ['Terminator, Hasta la vista baby', 'Die Hard, Yippee ki yay', 'Predator, Get to the chopper']
+  },
+  {
+    id: 'quote-you-talking-to-me',
+    title: 'You talking to me?',
+    category: 'quote',
+    year: 1976,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Taxi Driver – Travis Bickle (Robert De Niro).',
+    hint: 'Psychologisches Drama von Martin Scorsese.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"You talking to me?"',
+      textDe: 'Redest du mit mir?'
+    },
+    distractors: ['Goodfellas, Funny how', 'Raging Bull, You never got me down', 'Casino, Robert De Niro']
+  },
+  {
+    id: 'quote-i-see-dead-people',
+    title: 'I see dead people',
+    category: 'quote',
+    year: 1999,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'The Sixth Sense – Cole Sear (Haley Joel Osment).',
+    hint: 'Uebernatuerlicher Thriller mit Twist.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"I see dead people."',
+      textDe: 'Ich sehe tote Menschen.'
+    },
+    distractors: ['The Sixth Sense, Bruce Willis', 'The Others, Nicole Kidman', 'Ghost, Demi Moore Patrick Swayze']
+  },
+  {
+    id: 'quote-frankly-my-dear',
+    title: 'Frankly, my dear',
+    category: 'quote',
+    year: 1939,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Vom Winde verweht – Rhett Butler (Clark Gable).',
+    hint: 'Historisches Epos um den amerikanischen Buergerkrieg.',
+    difficulty: 'schwer',
+    sources: {
+      text: '"Frankly, my dear, I don\'t give a damn."',
+      textDe: 'Ehrlich gesagt, meine Liebe, ist mir das verdammt egal.'
+    },
+    distractors: ['Vom Winde verweht, Tomorrow is another day', 'Casablanca, Heres looking at you', 'Gone with the Wind, Scarlett']
+  },
+{
+    id: 'quote-you-cant-handle-the-truth',
+    title: 'You can\'t handle the truth!',
+    category: 'quote',
+    year: 1992,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'A Few Good Men – Colonel Jessup (Jack Nicholson).',
+    hint: 'Gerichtsdrama im Militaerkontext.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"You can\'t handle the truth!"',
+      textDe: 'Sie vertragen die Wahrheit doch gar nicht!'
+    },
+    distractors: ['A Few Good Men, You want me on that wall', 'The Shining, Heres Johnny', 'Full Metal Jacket, Sir yes sir']
+  },
+  {
+    id: 'quote-nobody-puts-baby',
+    title: 'Nobody puts Baby in a corner',
+    category: 'quote',
+    year: 1987,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Dirty Dancing – Johnny Castle (Patrick Swayze).',
+    hint: 'Tanz- und Liebesfilm der 80er.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Nobody puts Baby in a corner."',
+      textDe: 'Niemand steckt Baby in eine Ecke.'
+    },
+    distractors: ['Dirty Dancing, Time of my life', 'Footloose, Lets dance', 'Flashdance, What a feeling']
+  },
+{
+    id: 'quote-i-am-the-one-who-knocks',
+    title: 'I am the one who knocks',
+    category: 'quote',
+    year: 2012,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Breaking Bad – Walter White (Bryan Cranston).',
+    hint: 'Drogendrama ueber einen Chemielehrer.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"I am not in danger, Skyler. I am the danger. I am the one who knocks!"',
+      textDe: 'Ich bin nicht in Gefahr, Skyler. Ich bin die Gefahr. Ich bin der, der anklopft!'
+    },
+    distractors: ['Breaking Bad, Say my name', 'Breaking Bad, Yeah science', 'Breaking Bad, I am the danger']
+  },
+  {
+    id: 'quote-thats-what-she-said',
+    title: 'That\'s what she said',
+    category: 'quote',
+    year: 2005,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'The Office (US) – Michael Scott (Steve Carell).',
+    hint: 'Mockumentary-Comedy im Buero.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"That\'s what she said!"',
+      textDe: 'Das hat sie gesagt!'
+    },
+    distractors: ['The Office, Michael Scott', 'Friends, How you doin', 'Seinfeld, No soup for you']
+  },
+  {
+    id: 'quote-how-you-doin',
+    title: 'How you doin\'?',
+    category: 'quote',
+    year: 1994,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Friends – Joey Tribbiani (Matt LeBlanc).',
+    hint: 'Sitcom ueber sechs Freunde in New York.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"How you doin\'?"',
+      textDe: 'Wie geht\'s dir?'
+    },
+    distractors: ['Friends, We were on a break', 'Friends, Pivot', 'Friends, Smelly cat']
+  },
+  {
+    id: 'quote-im-the-king-of-the-world',
+    title: 'I\'m the king of the world!',
+    category: 'quote',
+    year: 1997,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Titanic – Jack Dawson (Leonardo DiCaprio).',
+    hint: 'Romantisches Drama auf der Titanic.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"I\'m the king of the world!"',
+      textDe: 'Ich bin der Koenig der Welt!'
+    },
+    distractors: ['Titanic, Ill never let go', 'Titanic, Draw me like one of your', 'Titanic, Near far wherever']
+  },
+  {
+    id: 'quote-i-am-your-father',
+    title: 'I am your father',
+    category: 'quote',
+    year: 1980,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Star Wars: Episode V – Darth Vader.',
+    hint: 'Beruehmter Plot Twist in Star Wars.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"No, I am your father."',
+      textDe: 'Nein, ich bin dein Vater.'
+    },
+    distractors: ['Star Wars, The Force is strong', 'Star Wars, Strike me down', 'Star Wars, Search your feelings']
+  },
+  {
+    id: 'quote-why-so-serious',
+    title: 'Why so serious?',
+    category: 'quote',
+    year: 2008,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'The Dark Knight – Joker (Heath Ledger).',
+    hint: 'Batman-Film mit unvergesslicher Schurken-Performance.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Why so serious?"',
+      textDe: 'Warum so ernst?'
+    },
+    distractors: ['The Dark Knight, Agent of chaos', 'The Dark Knight, Hero we deserve', 'Batman Begins, Im Batman']
+  },
+  {
+    id: 'quote-keep-your-friends-close',
+    title: 'Keep your friends close',
+    category: 'quote',
+    year: 1974,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Der Pate II – Michael Corleone.',
+    hint: 'Fortsetzung des Mafia-Epos.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"Keep your friends close, but your enemies closer."',
+      textDe: 'Halte deine Freunde nah, aber deine Feinde noch naeher.'
+    },
+    distractors: ['Der Pate II, Fredo youre nothing', 'Der Pate, Make him an offer', 'Goodfellas, Funny how']
+  },
+  {
+    id: 'quote-say-hello-to-my-little-friend',
+    title: 'Say hello to my little friend',
+    category: 'quote',
+    year: 1983,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Scarface – Tony Montana (Al Pacino).',
+    hint: 'Gangsterfilm ueber den Aufstieg und Fall eines Drogenbosses.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"Say hello to my little friend!"',
+      textDe: 'Sag hallo zu meinem kleinen Freund!'
+    },
+    distractors: ['Scarface, The world is yours', 'Scarface, First you get money', 'Carlitos Way, Al Pacino']
+  },
+  {
+    id: 'quote-i-feel-the-need',
+    title: 'I feel the need for speed',
+    category: 'quote',
+    year: 1986,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Top Gun – Maverick und Goose.',
+    hint: 'Action-Film ueber Kampfpiloten.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"I feel the need... the need for speed!"',
+      textDe: 'Ich brauche... ich brauche Geschwindigkeit!'
+    },
+    distractors: ['Top Gun, Need for speed', 'Top Gun, You can be my wingman', 'Top Gun, Danger Zone']
+  },
+  {
+    id: 'quote-you-had-me-at-hello',
+    title: 'You had me at hello',
+    category: 'quote',
+    year: 1996,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Jerry Maguire – Dorothy Boyd (Renée Zellweger).',
+    hint: 'Romantisches Drama ueber einen Sportagenten.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"You had me at hello."',
+      textDe: 'Du hattest mich bei Hallo.'
+    },
+    distractors: ['Jerry Maguire, Show me the money', 'Jerry Maguire, You complete me', 'Jerry Maguire, Help me help you']
+  },
+  {
+    id: 'quote-there-is-no-spoon',
+    title: 'There is no spoon',
+    category: 'quote',
+    year: 1999,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'The Matrix – Spoon Boy.',
+    hint: 'Science-Fiction ueber simulierte Realitaet.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"There is no spoon."',
+      textDe: 'Es gibt keinen Loeffel.'
+    },
+    distractors: ['The Matrix, What is the Matrix', 'The Matrix, Red pill or blue pill', 'The Matrix, I know kung fu']
+  },
+  {
+    id: 'quote-im-walking-here',
+    title: 'I\'m walking here!',
+    category: 'quote',
+    year: 1969,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Midnight Cowboy – Ratso Rizzo (Dustin Hoffman).',
+    hint: 'Drama ueber zwei Auueenseiter in New York.',
+    difficulty: 'schwer',
+    sources: {
+      text: '"I\'m walking here!"',
+      textDe: 'Ich gehe hier!'
+    },
+    distractors: ['Midnight Cowboy, Dustin Hoffman', 'Taxi Driver, You talking to me', 'Mean Streets, Robert De Niro']
+  },
+  {
+    id: 'quote-show-me-the-money',
+    title: 'Show me the money',
+    category: 'quote',
+    year: 1996,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Jerry Maguire – Rod Tidwell (Cuba Gooding Jr.).',
+    hint: 'Sportagenten-Drama.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"Show me the money!"',
+      textDe: 'Zeig mir das Geld!'
+    },
+    distractors: ['Jerry Maguire, You had me at hello', 'Jerry Maguire, You complete me', 'Wall Street, Greed is good']
+  },
+  {
+    id: 'quote-yippee-ki-yay',
+    title: 'Yippee-ki-yay',
+    category: 'quote',
+    year: 1988,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Stirb langsam – John McClane (Bruce Willis).',
+    hint: 'Action-Thriller in einem Hochhaus.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Yippee-ki-yay, motherfucker!"',
+      textDe: 'Yippee-ki-yay, Schweinebacke!'
+    },
+    distractors: ['Die Hard, Welcome to the party', 'Die Hard, Now I have machine gun', 'Lethal Weapon, Too old for this']
+  },
+  {
+    id: 'quote-you-shall-not-pass',
+    title: 'You shall not pass',
+    category: 'quote',
+    year: 2001,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Der Herr der Ringe: Die Gefahrten – Gandalf.',
+    hint: 'Fantasy-Epos von Peter Jackson.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"You shall not pass!"',
+      textDe: 'Du kommst hier nicht vorbei!'
+    },
+    distractors: ['Star Wars – Yoda', 'Harry Potter – Dumbledore', 'Der Hobbit – Bilbo Beutlin']
+  },
+  {
+    id: 'quote-my-precious',
+    title: 'My precious',
+    category: 'quote',
+    year: 2002,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Der Herr der Ringe: Die zwei Türme – Gollum.',
+    hint: 'Fantasy-Fortsetzung mit besessener Kreatur.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"My precious!"',
+      textDe: 'Mein Schatz!'
+    },
+    distractors: ['LOTR, Filthy hobbitses', 'LOTR, We wants it', 'LOTR, Tricksy hobbitses']
+  },
+  {
+    id: 'quote-i-volunteer-as-tribute',
+    title: 'I volunteer as tribute',
+    category: 'quote',
+    year: 2012,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Die Tribute von Panem – Katniss Everdeen.',
+    hint: 'Dystopischer Jugendfilm.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"I volunteer as tribute!"',
+      textDe: 'Ich melde mich freiwillig als Tribut!'
+    },
+    distractors: ['Hunger Games, May the odds be ever', 'Hunger Games, Fire is catching', 'Hunger Games, Real or not real']
+  },
+  {
+    id: 'quote-always',
+    title: 'Always (Snape)',
+    category: 'quote',
+    year: 2011,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Harry Potter und die Heiligtümer des Todes – Teil 2 – Severus Snape.',
+    hint: 'Abschluss der Harry Potter-Filmreihe.',
+    difficulty: 'leicht',
+    sources: {
+      text: 'Aelways."',
+      textDe: 'Immer.'
+    },
+    distractors: ['Harry Potter, After all this time', 'Harry Potter, Turn to page 394', 'Harry Potter, Expecto patronum']
+  },
+  {
+    id: 'quote-just-keep-swimming',
+    title: 'Just keep swimming',
+    category: 'quote',
+    year: 2003,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Findet Nemo – Dory.',
+    hint: 'Pixar-Animationsfilm ueber einen Clownfisch.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Just keep swimming, just keep swimming."',
+      textDe: 'Einfach schwimmen, einfach schwimmen.'
+    },
+    distractors: ['Findet Nemo, Fish are friends not food', 'Findet Nemo, P Sherman 42 Wallaby', 'Findet Nemo, Mine mine mine']
+  },
+  {
+    id: 'quote-to-infinity-and-beyond',
+    title: 'To infinity and beyond',
+    category: 'quote',
+    year: 1995,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Toy Story – Buzz Lightyear.',
+    hint: 'Erster vollstaendig computeranimierter Spielfilm.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"To infinity and beyond!"',
+      textDe: 'Bis zur Unendlichkeit und noch viel weiter!'
+    },
+    distractors: ['Toy Story, Youve got a friend in me', 'Toy Story, Theres a snake in my boot', 'Toy Story, Woody Buzz']
+  },
+  {
+    id: 'quote-run-forrest-run',
+    title: 'Run, Forrest, run!',
+    category: 'quote',
+    year: 1994,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Forrest Gump – Jenny Curran.',
+    hint: 'Drama mit Tom Hanks.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Run, Forrest, run!"',
+      textDe: 'Lauf, Forrest, lauf!'
+    },
+    distractors: ['Forrest Gump, Mama always said', 'Forrest Gump, Stupid is as stupid does', 'Forrest Gump, Box of chocolates']
+  },
+  {
+    id: 'quote-im-gonna-live-forever',
+    title: 'I\'m gonna live forever',
+    category: 'quote',
+    year: 1980,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    'answer': 'Fame (Song) – Irene Cara.',
+    hint: 'Titelsong des gleichnamigen Films.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"I\'m gonna live forever, I\'m gonna learn how to fly."',
+      textDe: 'Ich werde ewig leben, ich werde lernen zu fliegen.'
+    },
+    distractors: ['Fame, Remember my name', 'Flashdance, What a feeling', 'Footloose, Kenny Loggins']
+  },
+  {
+    id: 'quote-what-is-love',
+    title: 'What is love?',
+    category: 'quote',
+    year: 1993,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'What Is Love – Haddaway.',
+    hint: 'Eurodance-Hit.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"What is love? Baby don\'t hurt me, don\'t hurt me, no more."',
+      textDe: 'Was ist Liebe? Baby, tu mir nicht weh, tu mir nicht weh, nicht mehr.'
+    },
+    distractors: ['Haddaway, 1993', 'Snap, Rhythm is a dancer', 'Culture Beat, Mr Vain']
+  },
+  {
+    id: 'quote-sweet-child-o-mine',
+    title: 'Sweet Child O\' Mine',
+    category: 'quote',
+    year: 1987,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Sweet Child O\' Mine – Guns N\' Roses.',
+    hint: 'Hard-Rock-Klassiker.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"Where do we go now?"',
+      textDe: 'Wo gehen wir jetzt hin?'
+    },
+    distractors: ['Guns N Roses, November Rain', 'Guns N Roses, Paradise City', 'Guns N Roses, Welcome to Jungle']
+  },
+  {
+    id: 'quote-i-want-to-break-free',
+    title: 'I Want to Break Free',
+    category: 'quote',
+    year: 1984,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'I Want to Break Free – Queen.',
+    hint: 'Rock-Hymne ueber Befreiung.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"I want to break free."',
+      textDe: 'Ich will frei sein.'
+    },
+    distractors: ['The Beatles, Hey Jude', 'The Weeknd, Blinding Lights', 'Ed Sheeran, Shape of You']
+  },
+  {
+    id: 'quote-dont-stop-believin',
+    title: 'Don\'t Stop Believin\'',
+    category: 'quote',
+    year: 1981,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Don\'t Stop Believin\' – Journey.',
+    hint: 'Arena-Rock-Hymne.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Don\'t stop believin\', hold on to that feelin\'."',
+      textDe: 'Hoer nicht auf zu glauben, halt an diesem Gefuehl fest.'
+    },
+    distractors: ['Journey, Separate Ways', 'Journey, Open Arms', 'Journey, Wheel in the Sky']
+  },
+  {
+    id: 'quote-imagine-all-the-people',
+    title: 'Imagine',
+    category: 'quote',
+    year: 1971,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Imagine – John Lennon.',
+    hint: 'Friedenshymne eines Beatles.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Imagine all the people, living life in peace."',
+      textDe: 'Stell dir vor, alle Menschen leben in Frieden.'
+    },
+    distractors: ['Nirvana, Smells Like Teen Spirit', 'The Beatles, Hey Jude', 'David Bowie, Heroes']
+  },
+  {
+    id: 'quote-we-are-the-champions',
+    title: 'We Are the Champions',
+    category: 'quote',
+    year: 1977,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'We Are the Champions – Queen.',
+    hint: 'Siegeshymne im Sport.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"We are the champions, my friends."',
+      textDe: 'Wir sind die Meister, meine Freunde.'
+    },
+    distractors: ['The Beatles, Hey Jude', 'The Weeknd, Blinding Lights', 'Ed Sheeran, Shape of You']
+  },
+  {
+    id: 'quote-every-breath-you-take',
+    title: 'Every Breath You Take',
+    category: 'quote',
+    year: 1983,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Every Breath You Take – The Police.',
+    hint: 'Song ueber Besessenheit.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"Every breath you take, every move you make, I\'ll be watching you."',
+      textDe: 'Jeden Atemzug, den du nimmst, jede Bewegung, die du machst, ich werde dich beobachten.'
+    },
+    distractors: ['Nirvana, Smells Like Teen Spirit', 'The Killers, Mr. Brightside', 'Coldplay, Viva la Vida']
+  },
+  {
+    id: 'quote-smells-like-teen-spirit-lyric',
+    title: 'Smells Like Teen Spirit (Lyric)',
+    category: 'quote',
+    year: 1991,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Smells Like Teen Spirit – Nirvana.',
+    hint: 'Grunge-Hymne der 90er.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"Here we are now, entertain us."',
+      textDe: 'Hier sind wir jetzt, unterhalte uns.'
+    },
+    distractors: ['The Beatles, Hey Jude', 'Queen, Bohemian Rhapsody', 'The White Stripes, Seven Nation Army']
+  },
+  {
+    id: 'quote-livin-on-a-prayer',
+    title: 'Livin\' on a Prayer',
+    category: 'quote',
+    year: 1986,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Livin\' on a Prayer – Bon Jovi.',
+    hint: 'Rock-Anthem der 80er.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Whoa, we\'re halfway there, whoa-oh, livin\' on a prayer."',
+      textDe: 'Whoa, wir sind auf halbem Weg, whoa-oh, leben auf einem Gebet.'
+    },
+    distractors: ['Bon Jovi, You Give Love Bad Name', 'Bon Jovi, Wanted Dead or Alive', 'Bon Jovi, Its My Life']
+  },
+  {
+    id: 'quote-lose-yourself',
+    title: 'Lose Yourself',
+    category: 'quote',
+    year: 2002,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Lose Yourself – Eminem.',
+    hint: 'Rap-Song aus dem Film 8 Mile.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"You only get one shot, do not miss your chance to blow."',
+      textDe: 'Du hast nur eine Chance, verpasse sie nicht.'
+    },
+    distractors: ['The Weeknd, Blinding Lights', 'Coldplay, Viva la Vida', 'OutKast, Hey Ya!']
+  },
+  {
+    id: 'quote-hey-jude',
+    title: 'Hey Jude',
+    category: 'quote',
+    year: 1968,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Hey Jude – The Beatles.',
+    hint: 'Laengster Beatles-Hit.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Hey Jude, don\'t make it bad, take a sad song and make it better."',
+      textDe: 'Hey Jude, mach es nicht schlecht, nimm ein trauriges Lied und mach es besser.'
+    },
+    distractors: ['The Weeknd, Blinding Lights', 'David Bowie, Heroes', 'a-ha, Take On Me']
+  },
+  {
+    id: 'quote-hotel-california',
+    title: 'Hotel California',
+    category: 'quote',
+    year: 1976,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Hotel California – Eagles.',
+    hint: 'Klassischer Rock ueber den American Dream.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"You can check out any time you like, but you can never leave."',
+      textDe: 'Du kannst auschecken, wann du willst, aber du kannst niemals gehen.'
+    },
+    distractors: ['The Beatles, Hey Jude', 'Coldplay, Viva la Vida', 'Fleetwood Mac, Dreams']
+  },
+  {
+    id: 'quote-stairway-to-heaven',
+    title: 'Stairway to Heaven',
+    category: 'quote',
+    year: 1971,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Stairway to Heaven – Led Zeppelin.',
+    hint: 'Epischer Rock-Song.',
+    difficulty: 'mittel',
+    sources: {
+      text: 'Aend she\'s buying a stairway to heaven."',
+      textDe: 'Und sie kauft eine Treppe zum Himmel.'
+    },
+    distractors: ['The Beatles, Hey Jude', 'Queen, Bohemian Rhapsody', 'Deep Purple, Smoke on Water']
+  },
+  {
+    id: 'quote-somebody-to-love',
+    title: 'Somebody to Love',
+    category: 'quote',
+    year: 1976,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Somebody to Love – Queen.',
+    hint: 'Gospel-beeinflusster Rock.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"Can anybody find me somebody to love?"',
+      textDe: 'Kann mir jemand jemanden finden, den ich lieben kann?'
+    },
+    distractors: ['The Beatles, Hey Jude', 'David Bowie, Heroes', 'The Weeknd, Blinding Lights']
+  },
+  {
+    id: 'quote-billie-jean-lyric',
+    title: 'Billie Jean (Lyric)',
+    category: 'quote',
+    year: 1982,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Billie Jean – Michael Jackson.',
+    hint: 'King of Pop.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Billie Jean is not my lover, she\'s just a girl who claims that I am the one."',
+      textDe: 'Billie Jean ist nicht meine Geliebte, sie ist nur ein Maedchen, das behauptet, ich sei der Eine.'
+    },
+    distractors: ['Queen, Bohemian Rhapsody', 'The Killers, Mr. Brightside', 'Bon Jovi, Livin\' on a Prayer']
+  },
+  {
+    id: 'quote-thriller',
+    title: 'Thriller',
+    category: 'quote',
+    year: 1982,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Thriller – Michael Jackson.',
+    hint: 'Meistverkauftes Album aller Zeiten.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"\'Cause this is thriller, thriller night."',
+      textDe: 'Denn das ist Thriller, Thriller-Nacht.'
+    },
+    distractors: ['Queen, Bohemian Rhapsody', 'Eminem, Lose Yourself', 'The White Stripes, Seven Nation Army']
+  },
+  {
+    id: 'quote-like-a-virgin',
+    title: 'Like a Virgin',
+    category: 'quote',
+    year: 1984,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Like a Virgin – Madonna.',
+    hint: 'Pop-Ikone der 80er.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Like a virgin, touched for the very first time."',
+      textDe: 'Wie eine Jungfrau, zum allerersten Mal beruehrt.'
+    },
+    distractors: ['Britney Spears, ... Baby One More Time', 'Janet Jackson, Control', 'Cher, If I Could Turn Back Time']
+  },
+  {
+    id: 'quote-i-will-always-love-you',
+    title: 'I Will Always Love You',
+    category: 'quote',
+    year: 1992,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'I Will Always Love You – Whitney Houston.',
+    hint: 'Power-Ballade aus The Bodyguard.',
+    difficulty: 'leicht',
+    sources: {
+      text: 'Aend I will always love you."',
+      textDe: 'Und ich werde dich immer lieben.'
+    },
+    distractors: ['Mariah Carey, We Belong Together', 'Celine Dion, My Heart Will Go On', 'Toni Braxton, Un-Break My Heart']
+  },
+  {
+    id: 'quote-rolling-in-the-deep-lyric',
+    title: 'Rolling in the Deep (Lyric)',
+    category: 'quote',
+    year: 2010,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Rolling in the Deep – Adele.',
+    hint: 'Soul-Pop-Hit.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"We could have had it all, rolling in the deep."',
+      textDe: 'Wir haetten alles haben koennen, rolling in the deep.'
+    },
+    distractors: ['Billie Eilish, Bad Guy', 'Amy Winehouse, Back to Black', 'Beyoncé, Halo']
+  },
+  {
+    id: 'quote-somebody-that-i-used-to-know',
+    title: 'Somebody That I Used to Know',
+    category: 'quote',
+    year: 2011,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Somebody That I Used to Know – Gotye.',
+    hint: 'Indie-Pop-Hit.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Now you\'re just somebody that I used to know."',
+      textDe: 'Jetzt bist du nur noch jemand, den ich kannte.'
+    },
+    distractors: ['Ed Sheeran, Shape of You', 'The Weeknd, Blinding Lights', 'Coldplay, Viva la Vida']
+  },
+  {
+    id: 'quote-happy',
+    title: 'Happy',
+    category: 'quote',
+    year: 2013,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Happy – Pharrell Williams.',
+    hint: 'Feelgood-Song aus Despicable Me 2.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Because I\'m happy, clap along if you feel like a room without a roof."',
+      textDe: 'Weil ich gluecklich bin, klatsch mit, wenn du dich fuehlst wie ein Raum ohne Dach.'
+    },
+    distractors: ['The Weeknd, Blinding Lights', 'Ed Sheeran, Shape of You', 'The Killers, Mr. Brightside']
+  },
+  {
+    id: 'quote-uptown-funk',
+    title: 'Uptown Funk',
+    category: 'quote',
+    year: 2014,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Uptown Funk – Mark Ronson ft. Bruno Mars.',
+    hint: 'Funk-Pop-Hit.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Don\'t believe me, just watch."',
+      textDe: 'Glaub mir nicht, schau einfach zu.'
+    },
+    distractors: ['OutKast, Hey Ya!', 'Imagine Dragons, Radioactive', 'Bon Jovi, Livin\' on a Prayer']
+  },
+  {
+    id: 'quote-shape-of-you',
+    title: 'Shape of You',
+    category: 'quote',
+    year: 2017,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Shape of You – Ed Sheeran.',
+    hint: 'Meistgestreamter Song auf Spotify.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"I\'m in love with the shape of you."',
+      textDe: 'Ich bin verliebt in deine Form.'
+    },
+    distractors: ['The Weeknd, Blinding Lights', 'Coldplay, Viva la Vida', 'The Killers, Mr. Brightside']
+  },
+  {
+    id: 'quote-thinking-out-loud',
+    title: 'Thinking Out Loud',
+    category: 'quote',
+    year: 2014,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Thinking Out Loud – Ed Sheeran.',
+    hint: 'Romantische Ballade.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"When your legs don\'t work like they used to before."',
+      textDe: 'Wenn deine Beine nicht mehr so funktionieren wie frueher.'
+    },
+    distractors: ['John Lennon, Imagine', 'a-ha, Take On Me', 'Daft Punk, Get Lucky']
+  },
+  {
+    id: 'quote-despacito',
+    title: 'Despacito',
+    category: 'quote',
+    year: 2017,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Despacito – Luis Fonsi ft. Daddy Yankee.',
+    hint: 'Lateinamerikanischer Welthit.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Despacito, quiero respirar tu cuello despacito."',
+      textDe: 'Langsam, ich will langsam deinen Hals atmen.'
+    },
+    distractors: ['Luis Fonsi, 2017', 'Daddy Yankee, Gasolina', 'Shakira, Waka Waka']
+  },
+  {
+    id: 'quote-old-town-road',
+    title: 'Old Town Road',
+    category: 'quote',
+    year: 2019,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Old Town Road – Lil Nas X.',
+    hint: 'Country-Rap-Crossover.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"I\'m gonna take my horse to the old town road."',
+      textDe: 'Ich nehme mein Pferd zur alten Stadtstraße.'
+    },
+    distractors: ['The Weeknd, Blinding Lights', 'Ed Sheeran, Shape of You', 'OutKast, Hey Ya!']
+  },
+  {
+    id: 'quote-blinding-lights',
+    title: 'Blinding Lights',
+    category: 'quote',
+    year: 2019,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Blinding Lights – The Weeknd.',
+    hint: 'Synthwave-Pop-Hit.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"I said, ooh, I\'m blinded by the lights."',
+      textDe: 'Ich sagte, ooh, ich bin geblendet von den Lichtern.'
+    },
+    distractors: ['The Killers, Mr. Brightside', 'Ed Sheeran, Shape of You', 'Coldplay, Viva la Vida']
+  },
+  {
+    id: 'quote-bad-guy',
+    title: 'bad guy',
+    category: 'quote',
+    year: 2019,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'bad guy – Billie Eilish.',
+    hint: 'Alternative Pop von Billie Eilish.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"I\'m the bad guy, duh."',
+      textDe: 'Ich bin der Boesewicht, duh.'
+    },
+    distractors: ['Adele, Rolling in the Deep', 'Amy Winehouse, Rehab', 'Lady Gaga, Bad Romance']
+  },
+  {
+    id: 'quote-senorita',
+    title: 'Señorita',
+    category: 'quote',
+    year: 2019,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Señorita – Shawn Mendes & Camila Cabello.',
+    hint: 'Duett zweier Pop-Stars.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"I love it when you call me señorita."',
+      textDe: 'Ich liebe es, wenn du mich Señorita nennst.'
+    },
+    distractors: ['Shawn Mendes Camila Cabello', 'Shawn Mendes, Stitches', 'Camila Cabello, Havana']
+  },
+  {
+    id: 'quote-believer',
+    title: 'Believer',
+    category: 'quote',
+    year: 2017,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Believer – Imagine Dragons.',
+    hint: 'Alternative Rock-Hymne.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Pain! You made me a, you made me a believer, believer."',
+      textDe: 'Schmerz! Du hast mich zu einem, du hast mich zu einem Glaeubigen gemacht.'
+    },
+    distractors: ['The Killers, Mr. Brightside', 'Coldplay, Viva la Vida', 'The Weeknd, Blinding Lights']
+  },
+  {
+    id: 'quote-radioactive',
+    title: 'Radioactive',
+    category: 'quote',
+    year: 2012,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Radioactive – Imagine Dragons.',
+    hint: 'Alternative Rock ueber Neuanfang.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"I\'m radioactive, radioactive."',
+      textDe: 'Ich bin radioaktiv, radioaktiv.'
+    },
+    distractors: ['The Killers, Mr. Brightside', 'Coldplay, Viva la Vida', 'The Weeknd, Blinding Lights']
+  },
+  {
+    id: 'quote-cant-stop-the-feeling',
+    title: 'Can\'t Stop the Feeling!',
+    category: 'quote',
+    year: 2016,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Can\'t Stop the Feeling! – Justin Timberlake.',
+    hint: 'Pop-Song aus Trolls.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"I got that sunshine in my pocket."',
+      textDe: 'Ich habe den Sonnenschein in meiner Tasche.'
+    },
+    distractors: ['Justin Timberlake, Mirrors', 'Justin Timberlake, SexyBack', 'Justin Timberlake, Suit and Tie']
+  },
+  {
+    id: 'quote-counting-stars',
+    title: 'Counting Stars',
+    category: 'quote',
+    year: 2013,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Counting Stars – OneRepublic.',
+    hint: 'Pop-Rock ueber Traeume.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Lately I\'ve been, I\'ve been losing sleep, dreaming about the things that we could be."',
+      textDe: 'In letzter Zeit habe ich Schlaf verloren, traeumend von den Dingen, die wir sein koennten.'
+    },
+    distractors: ['The Weeknd, Blinding Lights', 'Coldplay, Viva la Vida', 'Ed Sheeran, Shape of You']
+  },
+  {
+    id: 'quote-let-it-go',
+    title: 'Let It Go',
+    category: 'quote',
+    year: 2013,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Let It Go – Idina Menzel (Die Eiskoenigin).',
+    hint: 'Disney-Song aus Frozen.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Let it go, let it go, can\'t hold it back anymore."',
+      textDe: 'Lass es los, lass es los, kann es nicht mehr zurueckhalten.'
+    },
+    distractors: ['Frozen, Do You Want Build Snowman', 'Frozen, For First Time in Forever', 'Moana, How Far Ill Go']
+  },
+  {
+    id: 'quote-wannabe',
+    title: 'Wannabe',
+    category: 'quote',
+    year: 1996,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Wannabe – Spice Girls.',
+    hint: 'Debut-Hit der Spice Girls.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"If you wanna be my lover, you gotta get with my friends."',
+      textDe: 'Wenn du mein Liebhaber sein willst, musst du dich mit meinen Freunden verstehen.'
+    },
+    distractors: ['Britney Spears, ... Baby One More Time', 'TLC, Waterfalls', 'Destiny\'s Child, Say My Name']
+  },
+  {
+    id: 'quote-baby-one-more-time',
+    title: '...Baby One More Time',
+    category: 'quote',
+    year: 1998,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: '...Baby One More Time – Britney Spears.',
+    hint: 'Britney Spears\' Durchbruch.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Hit me baby one more time."',
+      textDe: 'Triff mich, Baby, noch ein Mal.'
+    },
+    distractors: ['Spice Girls, Wannabe', 'Christina Aguilera, Genie in a Bottle', 'TLC, No Scrubs']
+  },
+  {
+    id: 'quote-toxic',
+    title: 'Toxic',
+    category: 'quote',
+    year: 2003,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Toxic – Britney Spears.',
+    hint: 'Pop-Hit mit Streichern.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"With a taste of your lips, I\'m on a ride."',
+      textDe: 'Mit einem Geschmack deiner Lippen bin ich auf einer Fahrt.'
+    },
+    distractors: ['Lady Gaga, Bad Romance', 'Katy Perry, Firework', 'Rihanna, Umbrella']
+  },
+  {
+    id: 'quote-umbrella',
+    title: 'Umbrella',
+    category: 'quote',
+    year: 2007,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Umbrella – Rihanna ft. Jay-Z.',
+    hint: 'Pop-R&B-Hit.',
+    difficulty: 'leicht',
+    sources: {
+      text: 'Uender my umbrella, ella, ella, eh, eh, eh."',
+      textDe: 'Unter meinem Regenschirm, ella, ella, eh, eh, eh.'
+    },
+    distractors: ['Rihanna, Diamonds', 'Rihanna, We Found Love', 'Rihanna, Only Girl']
+  },
+  {
+    id: 'quote-viva-la-vida',
+    title: 'Viva la Vida',
+    category: 'quote',
+    year: 2008,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Viva la Vida – Coldplay.',
+    hint: 'Alternative Rock inspiriert von Revolution.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"I used to rule the world."',
+      textDe: 'Ich herrschte einst ueber die Welt.'
+    },
+    distractors: ['The Weeknd, Blinding Lights', 'Ed Sheeran, Shape of You', 'The Killers, Mr. Brightside']
+  },
+  {
+    id: 'quote-99-luftballons',
+    title: '99 Luftballons',
+    category: 'quote',
+    year: 1983,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: '99 Luftballons – Nena.',
+    hint: 'Deutscher New-Wave-Hit.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"99 Luftballons auf ihrem Weg zum Horizont."',
+      textDe: '99 Luftballons auf ihrem Weg zum Horizont.'
+    },
+    distractors: ['Falco, Der Kommissar', 'Kraftwerk, Das Model', 'Trio, Da Da Da']
+  },
+  {
+    id: 'quote-major-tom',
+    title: 'Major Tom',
+    category: 'quote',
+    year: 1983,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Major Tom – Peter Schilling.',
+    hint: 'Deutscher New-Wave-Song ueber Raumfahrer.',
+    difficulty: 'mittel',
+    sources: {
+      text: '"Voellig losgeloest von der Erde."',
+      textDe: 'Voellig losgeloest von der Erde.'
+    },
+    distractors: ['David Bowie, Heroes', 'a-ha, Take On Me', 'The Beatles, Hey Jude']
+  },
+  {
+    id: 'quote-atemlos',
+    title: 'Atemlos durch die Nacht',
+    category: 'quote',
+    year: 2013,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Atemlos durch die Nacht – Helene Fischer.',
+    hint: 'Deutscher Schläger-Hit.',
+    difficulty: 'leicht',
+    sources: {
+      text: 'Aetemlos durch die Nacht."',
+      textDe: 'Atemlos durch die Nacht.'
+    },
+    distractors: ['Andrea Berg, Du hast mich 1000 mal belogen', 'Vanessa Mai, Regenbogen', 'Michelle, Wer Liebe lebt']
+  },
+  {
+    id: 'quote-dont-worry-be-happy',
+    title: 'Don\'t Worry, Be Happy',
+    category: 'quote',
+    year: 1988,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Don\'t Worry, Be Happy – Bobby McFerrin.',
+    hint: 'A-cappella-Hit.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Don\'t worry, be happy."',
+      textDe: 'Mach dir keine Sorgen, sei gluecklich.'
+    },
+    distractors: ['Bobby McFerrin, 1988', 'Louis Armstrong, What Wonderful World', 'Bill Withers, Lean on Me']
+  },
+  {
+    id: 'quote-all-star',
+    title: 'All Star',
+    category: 'quote',
+    year: 1999,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'All Star – Smash Mouth.',
+    hint: 'Rock-Song aus Shrek.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Somebody once told me the world is gonna roll me."',
+      textDe: 'Jemand hat mir mal gesagt, die Welt wird mich ueberrollen.'
+    },
+    distractors: ['The Killers, Mr. Brightside', 'Coldplay, Viva la Vida', 'The Weeknd, Blinding Lights']
+  },
+  {
+    id: 'quote-mr-brightside',
+    title: 'Mr. Brightside',
+    category: 'quote',
+    year: 2003,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Mr. Brightside – The Killers.',
+    hint: 'Alternative Rock ueber Eifersucht.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"It was only a kiss, how did it end up like this?"',
+      textDe: 'Es war nur ein Kuss, wie endete es so?'
+    },
+    distractors: ['The Weeknd, Blinding Lights', 'Coldplay, Viva la Vida', 'Ed Sheeran, Shape of You']
+  },
+  {
+    id: 'quote-take-on-me',
+    title: 'Take On Me',
+    category: 'quote',
+    year: 1985,
+    cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
+    answer: 'Take On Me – a-ha.',
+    hint: 'Synthpop mit ikonischem Video.',
+    difficulty: 'leicht',
+    sources: {
+      text: '"Take on me, take me on."',
+      textDe: 'Nimm mich an, nimm mich mit.'
+    },
+    distractors: ['David Bowie, Heroes', 'The Weeknd, Blinding Lights', 'Ed Sheeran, Shape of You']
+  }
+];
+
+const baseNonMusicCards = [
+  ...baseCards.filter((c) => c.category !== 'music' && !c.id.startsWith('flag-') && !c.id.startsWith('outline-')),
+  ...naturTechnikCards,
+  ...filmSerienCards,
+  ...triviaExtraCards,
+  ...schaetzfragenCards
+];
+
+const playlistTaggedCards = playlistCards.map((card) => {
+  if (card.category !== 'music') return card;
+  if (card.playlists && card.playlists.length > 0) return card;
+  return { ...card, playlists: ['imported-playlist'] } as Card;
+});
+
+export function getCardById(id: string) {
+  return cards.find((card) => card.id === id);
+}
+
+export function getCategories(list: Card[]) {
+  const unique = new Set(list.map((c) => c.category));
+  return Array.from(unique);
+}
+
+// Only use playlist songs for music; keep non-music from base set.
+export const cards: Card[] = [...baseNonMusicCards, ...flagCards, ...outlineCards, ...playlistTaggedCards];
+
+
