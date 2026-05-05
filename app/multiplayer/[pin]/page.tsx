@@ -443,6 +443,7 @@ export default function MultiplayerGamePage() {
 
           {isMyTurn && (
             <>
+              <p className="text-xs text-ink/60 text-center">Wähle eine Kategorie, die du aus dem Spiel ausschließen möchtest – oder wähle „Nichts bannen".</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {availableCategories.map(c => (
                   <button
@@ -454,14 +455,14 @@ export default function MultiplayerGamePage() {
                     🚫 {CATEGORY_LABELS[c] ?? c}
                   </button>
                 ))}
+                <button
+                  onClick={() => handleBanCategory(null)}
+                  disabled={isBanning}
+                  className="rounded-xl border-2 border-green-500 bg-green-50 hover:bg-green-100 text-green-800 text-sm font-semibold px-3 py-3 transition disabled:opacity-50 col-span-2 sm:col-span-1"
+                >
+                  ✅ Nichts bannen
+                </button>
               </div>
-              <button
-                onClick={() => handleBanCategory(null)}
-                disabled={isBanning}
-                className="w-full rounded-xl border-2 border-ink/20 hover:border-ink/50 text-sm px-3 py-3 transition disabled:opacity-50"
-              >
-                ⏭️ Überspringen (keine Kategorie bannen)
-              </button>
             </>
           )}
         </div>
@@ -483,7 +484,7 @@ export default function MultiplayerGamePage() {
                   <span>{g?.name ?? gid}</span>
                   {done && (
                     <span className="ml-auto text-xs">
-                      {banned[i] ? `🚫 ${CATEGORY_LABELS[banned[i]] ?? banned[i]}` : '⏭️ übersprungen'}
+                      {banned[i] ? `🚫 ${CATEGORY_LABELS[banned[i]] ?? banned[i]}` : '✅ Nichts gebannt'}
                     </span>
                   )}
                   {active && <span className="ml-auto text-xs text-amber-600">👉 dran</span>}
