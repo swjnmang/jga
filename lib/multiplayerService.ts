@@ -522,6 +522,56 @@ export async function nextCard(pin: string): Promise<void> {
 }
 
 /**
+ * Überspringt die aktuelle Karte – gleiche Gruppe bleibt dran, neue Karte wird geladen.
+ * Funktioniert in beiden Modi (timeline & trivia).
+ */
+export async function skipCard(pin: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+
+  if (game.mode === 'trivia') {
+    // Trivia: aktuelle Karte aus availableDeck entfernen, neue Karte gleicher Kategorie oder beliebig
+    const prevAvailable: string[] = Array.isArray(game.availableDeck)
+      ? game.availableDeck
+      : Object.values(game.availableDeck ?? {});
+    const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
+
+    const deckMeta: Record<string, string> = game.deckMeta ?? {};
+    const currentCat = game.currentRoundCategory ?? (game.currentCardId ? deckMeta[game.currentCardId] : '');
+    // Nächste Karte: gleiche Kategorie bevorzugt, sonst beliebige
+    const nextCardId =
+      newAvailable.find(id => deckMeta[id] === currentCat) ??
+      newAvailable[0] ??
+      null;
+
+    await update(gameRef, {
+      lastActivity: Date.now(),
+      availableDeck: newAvailable,
+      currentCardId: nextCardId,
+    });
+  } else {
+    // Timeline: nächste Karte im Deck, gleiche Gruppe bleibt aktiv
+    const deck: string[] = Array.isArray(game.deck)
+      ? game.deck
+      : Object.values(game.deck ?? {});
+    const nextIndex = (game.currentCardIndex ?? 0) + 1;
+    if (nextIndex >= deck.length) {
+      await update(gameRef, { lastActivity: Date.now(), currentCardId: null });
+    } else {
+      await update(gameRef, {
+        lastActivity: Date.now(),
+        currentCardIndex: nextIndex,
+        currentCardId: deck[nextIndex],
+      });
+    }
+  }
+}
+
+/**
  * Aktualisiert Flex Buttons
  */
 export async function updateFlexButtons(pin: string, groupId: string, count: number): Promise<void> {

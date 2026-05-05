@@ -20,6 +20,7 @@ import {
   rejectFlexButton,
   editGroupScore,
   endGame,
+  skipCard,
   submitTriviaAnswer,
   submitSchaetzGuess,
   evaluateSchaetzfrage,
@@ -1062,6 +1063,19 @@ export default function MultiplayerGamePage() {
               </div>
               <p className="text-xs text-ink/50 text-center">Nach Klick: nächste Frage, nächstes Team dran</p>
 
+              {/* Karte überspringen */}
+              <button
+                onClick={async () => {
+                  if (isProcessing) return;
+                  setIsProcessing(true);
+                  try { await skipCard(pin); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
+                }}
+                disabled={isProcessing}
+                className="w-full px-4 py-3 bg-ink/10 text-ink rounded-xl font-semibold text-base hover:bg-ink/20 disabled:opacity-50"
+              >
+                ⏭ Frage überspringen (gleiche Gruppe bleibt dran)
+              </button>
+
               {/* Antwort anzeigen */}
               <button
                 onClick={() => setShowTriviaAnswer(v => !v)}
@@ -1241,6 +1255,19 @@ export default function MultiplayerGamePage() {
                   ))}
                 </div>
               </div>
+
+              {/* Karte überspringen */}
+              <button
+                onClick={async () => {
+                  if (isProcessing) return;
+                  setIsProcessing(true);
+                  try { await skipCard(pin); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
+                }}
+                disabled={isProcessing}
+                className="w-full px-4 py-3 bg-ink/10 text-ink rounded-lg font-semibold hover:bg-ink/20 disabled:opacity-50"
+              >
+                ⏭ Karte überspringen (gleiche Gruppe bleibt dran)
+              </button>
 
               {/* Spiel-Beenden */}
               <button
