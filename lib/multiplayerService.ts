@@ -1083,29 +1083,40 @@ function computeNextTurn(
   }
 
   // Alle Gruppen fertig → nächste Kategorie
+  // Neue Runde startet bei der Gruppe NACH der zuletzt spielenden Gruppe (striktes Round-Robin)
+  const lastPlayedGroupId = catGroupQueue[0] ?? '';
+  const lastPlayedIdx = playingGroupIds.indexOf(lastPlayedGroupId);
+  // Rotierte Gruppen-Reihenfolge: beginnt bei der Gruppe nach der zuletzt spielenden
+  const rotatedGroupIds = lastPlayedIdx >= 0
+    ? [...playingGroupIds.slice(lastPlayedIdx + 1), ...playingGroupIds.slice(0, lastPlayedIdx + 1)]
+    : [...playingGroupIds];
+
   const tryQueue = catRoundQueue.length > 0 ? catRoundQueue : shuffleArray(triviaCategories);
   for (let i = 0; i < tryQueue.length; i++) {
     const nextCat = tryQueue[i];
-    const firstGroup = playingGroupIds[0];
+    const catPool = newAvailable.filter(id => deckMeta[id] === nextCat);
+    if (catPool.length === 0) continue;
+    const firstGroup = rotatedGroupIds[0];
+    // card for firstGroup (may fall back to different category if they completed nextCat)
     const found = findCardForGroup(firstGroup, nextCat, tryQueue.slice(i + 1));
     if (found !== null) {
       return {
         nextGroupId: firstGroup,
         nextCardId: found.cardId,
-        currentRoundCategory: found.cat,
+        currentRoundCategory: nextCat, // keep the round's category consistent for other groups
         categoryRoundQueue: tryQueue.slice(i + 1),
-        categoryGroupQueue: [...playingGroupIds],
+        categoryGroupQueue: [...rotatedGroupIds],
       };
     }
   }
 
   // Keine Karten mehr überhaupt
   return {
-    nextGroupId: playingGroupIds[0],
+    nextGroupId: rotatedGroupIds[0],
     nextCardId: null,
     currentRoundCategory: currentRoundCat,
     categoryRoundQueue: [],
-    categoryGroupQueue: [...playingGroupIds],
+    categoryGroupQueue: [...rotatedGroupIds],
   };
 }
 
