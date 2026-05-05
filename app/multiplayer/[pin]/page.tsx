@@ -777,6 +777,7 @@ export default function MultiplayerGamePage() {
       const triviaDisplayCue = (card: typeof currentCard) => {
         if (!card) return '';
         if (card.category === 'outline') return 'Zu welchem Land gehört dieser Umriss?';
+        if (card.category === 'flag') return 'Zu welchem Land gehört diese Flagge?';
         if (card.category === 'music') return 'Von wem ist der Song und wie heißt er?';
         if (card.category === 'quote') return 'Woher stammt das nachfolgende Zitat (Filme, Lieder, Personen)?';
         return card.cue;
