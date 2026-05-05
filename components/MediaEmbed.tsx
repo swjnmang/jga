@@ -110,6 +110,23 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
   const reportedErrorRef = useRef(false);
 
+  function reconnectSpotify() {
+    // Sanfter Reconnect: Player bleibt erhalten, bekommt aber neue device_id via ready-Event.
+    setSpotifyReady(false);
+    setSpotifyDevice(null);
+    setSpotifyError(null);
+    setSpotifyErrorDetail(null);
+    setShowSpotify(false);
+    setIsPlaying(false);
+    autoPlayPendingRef.current = false;
+    if (spotifyPlayerRef.current) {
+      try {
+        spotifyPlayerRef.current.disconnect();
+        spotifyPlayerRef.current.connect();
+      } catch (_) {}
+    }
+  }
+
   function resetSpotify() {
     if (spotifyPlayerRef.current) {
       spotifyPlayerRef.current.disconnect();
@@ -154,15 +171,22 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     const sdkAlive = Boolean(spotifyPlayerRef.current);
 
     if (newChoiceIsSpotify && sdkAlive) {
-      // Keep the Spotify SDK connected – only pause the current track and update URL.
-      // This preserves the device_id so the next Play works immediately.
+      // Neue Spotify-Karte → SDK reconnect um eine frische device_id zu erhalten.
+      // Die alte device_id ist nach einer Pause oft nicht mehr bei Spotify bekannt (404).
       try { (spotifyPlayerRef.current as any)?.pause(); } catch (_) {}
       setIsPlaying(false);
       setShowSpotify(false);
       setEmbedError(null);
       reportedErrorRef.current = false;
-      autoPlayPendingRef.current = false;
+      autoPlayPendingRef.current = false;  // Kein Auto-Play – User muss manuell starten
       latestSpotifyUrlRef.current = choice.url;
+      setSpotifyReady(false);
+      setSpotifyDevice(null);
+      try {
+        spotifyPlayerRef.current!.disconnect();
+        spotifyPlayerRef.current!.connect();
+      } catch (_) {}
+      // ready-Event liefert neue device_id → setSpotifyReady(true) → Player bereit
     } else {
       resetSpotify();
       setEmbedError(null);
@@ -796,7 +820,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               <button
                 type="button"
                 className="rounded-full border border-sand/40 px-4 py-2 text-xs"
-                onClick={resetSpotify}
+                onClick={reconnectSpotify}
               >
                 🔄 Refresh / Aktualisieren
               </button>
@@ -818,7 +842,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
                 <button
                   type="button"
                   className="rounded-full border border-ink/20 px-3 py-1"
-                  onClick={resetSpotify}
+                  onClick={reconnectSpotify}
                 >
                   Neu versuchen
                 </button>
