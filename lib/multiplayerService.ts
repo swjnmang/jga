@@ -96,7 +96,9 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     deckMeta,
     ...(params.mode === 'trivia' ? {
       availableDeck: actualDeck.map(c => c.id),
-    } : {}),
+    } : {
+      availableDeck: actualDeck.map(c => c.id), // Timeline also needs availableDeck for category rotation
+    }),
     banModeEnabled: params.mode === 'trivia' ? (params.banModeEnabled ?? false) : false,
     triviaWinCondition: params.mode === 'trivia' ? (params.triviaWinCondition ?? 'categories') : 'categories',
     groups: {
@@ -256,7 +258,7 @@ export async function startGame(pin: string, hostGroupId: string): Promise<void>
       categoryRoundQueue: catQueueStart,
       categoryGroupQueue: [...nonHostGroupIds],
     };
-    if (game.availableDeck !== undefined) {
+    if (game.availableDeck !== undefined || game.mode === 'timeline') {
       updates.availableDeck = availableDeck;
     }
     await update(gameRef, updates);
@@ -486,9 +488,6 @@ export async function nextTurn(pin: string): Promise<void> {
   await update(gameRef, updates);
 }
 
-/**
- * Geht zur nächsten Karte
- */
 export async function nextCard(pin: string): Promise<void> {
   checkFirebase();
   const gameRef = ref(database!, `games/${pin}`);
@@ -499,11 +498,75 @@ export async function nextCard(pin: string): Promise<void> {
   }
 
   const game: GameSession = snapshot.val();
-  // Firebase kann Arrays als Objekte speichern → sicher umwandeln
+
+  if (game.mode === 'timeline') {
+    // ── Timeline: category-rotation (same as Trivia) ──────────────────────────
+    const deckMeta: Record<string, string> = game.deckMeta ?? {};
+    const triviaCategories: string[] = Array.isArray(game.triviaCategories)
+      ? game.triviaCategories
+      : Object.values(game.triviaCategories ?? {});
+    const prevAvailable: string[] = Array.isArray(game.availableDeck)
+      ? game.availableDeck
+      : Object.values(game.availableDeck ?? {});
+    const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
+    const catGroupQueue: string[] = Array.isArray(game.categoryGroupQueue)
+      ? game.categoryGroupQueue
+      : Object.values(game.categoryGroupQueue ?? {});
+    const catRoundQueue: string[] = Array.isArray(game.categoryRoundQueue)
+      ? game.categoryRoundQueue
+      : Object.values(game.categoryRoundQueue ?? {});
+    const currentRoundCat = game.currentRoundCategory ?? '';
+    const playingGroupIds = Object.entries(game.groups)
+      .filter(([_, g]) => !g.isHost)
+      .map(([id]) => id);
+
+    // In Timeline, all groups are always eligible (no "collect category" mechanic)
+    const groupCompletedCats: Record<string, string[]> = {};
+    playingGroupIds.forEach(gid => { groupCompletedCats[gid] = []; });
+
+    const next = computeNextTurn(
+      playingGroupIds, currentRoundCat, catGroupQueue, catRoundQueue,
+      triviaCategories, newAvailable, deckMeta,
+      groupCompletedCats, 'points' // 'points' = always eligible
+    );
+
+    const updates: Record<string, unknown> = {
+      lastActivity: Date.now(),
+      availableDeck: newAvailable,
+      currentCardId: next.nextCardId,
+      currentCardIndex: (game.currentCardIndex ?? 0) + 1,
+      currentTurnGroupId: next.nextGroupId,
+      currentRoundCategory: next.currentRoundCategory,
+      categoryRoundQueue: next.categoryRoundQueue,
+      categoryGroupQueue: next.categoryGroupQueue,
+      pendingResult: null,
+    };
+
+    // Reset flex buttons
+    Object.keys(game.groups).forEach(gid => {
+      updates[`groups/${gid}/flexActive`] = false;
+    });
+
+    // Check win condition (10 correct placements)
+    const winner = Object.values(game.groups).find(g => !g.isHost && g.score >= 10);
+    if (winner) {
+      updates.state = 'finished';
+      updates.finishedAt = Date.now();
+      updates.winnerGroupId = winner.id;
+    } else if (!next.nextCardId) {
+      updates.state = 'finished';
+      updates.finishedAt = Date.now();
+    }
+
+    await update(gameRef, updates);
+    return;
+  }
+
+  // ── Legacy sequential path (not used for Timeline anymore) ────────────────
+
   const deck: string[] = Array.isArray(game.deck)
     ? game.deck
     : Object.values(game.deck ?? {});
-
   const nextIndex = (game.currentCardIndex ?? 0) + 1;
 
   if (nextIndex >= deck.length) {
@@ -532,6 +595,26 @@ export async function skipCard(pin: string): Promise<void> {
   if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
 
   const game: GameSession = snapshot.val();
+
+  if (game.mode === 'timeline') {
+    // Timeline skip: same group stays active, pick new card from same category
+    const deckMeta: Record<string, string> = game.deckMeta ?? {};
+    const prevAvailable: string[] = Array.isArray(game.availableDeck)
+      ? game.availableDeck
+      : Object.values(game.availableDeck ?? {});
+    const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
+    const currentCat = game.currentRoundCategory ?? (game.currentCardId ? deckMeta[game.currentCardId] : '');
+    const catPool = newAvailable.filter(id => deckMeta[id] === currentCat);
+    const nextCardId = catPool.length > 0
+      ? catPool[Math.floor(Math.random() * catPool.length)]
+      : newAvailable[0] ?? null;
+    await update(gameRef, {
+      lastActivity: Date.now(),
+      availableDeck: newAvailable,
+      currentCardId: nextCardId,
+    });
+    return;
+  }
 
   if (game.mode === 'trivia') {
     // Trivia: aktuelle Karte aus availableDeck entfernen, neue Karte gleicher Kategorie oder beliebig

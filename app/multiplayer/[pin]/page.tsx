@@ -240,8 +240,10 @@ export default function MultiplayerGamePage() {
     
     try {
       await broadcastPlacementResult(pin, null); // clear result flag
-      await nextCard(pin);
-      await nextTurn(pin);
+      await nextCard(pin); // handles card + group rotation (incl. category round-robin for Timeline)
+      if (game.mode !== 'timeline') {
+        await nextTurn(pin); // Trivia/solo: group rotation handled separately
+      }
     } catch (err) {
       console.error('Error going to next card:', err);
       setError('Fehler beim Wechseln zur nächsten Karte');
