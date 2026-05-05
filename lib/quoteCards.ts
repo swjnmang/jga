@@ -19,8 +19,8 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1637,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'RenÃ© Descartes (1637)',
-    hint: 'Von RenÃ© Descartes.',
+    answer: 'René Descartes (1637)',
+    hint: 'Von René Descartes.',
     difficulty: 'schwer',
     sources: { text: '"Ich denke, also bin ich."' },
     distractors: ['Theodor W. Adorno (1991)', 'Konfuzius (zugeschrieben) (1900)', 'George Orwell (1984) (1949)']
@@ -47,7 +47,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Immanuel Kant.',
     difficulty: 'schwer',
     sources: { text: '"Habe Mut, dich deines eigenen Verstandes zu bedienen!"' },
-    distractors: ['E.T. (E.T. â€“ Der AuÃŸerirdische) (1982)', 'Grundgesetz fÃ¼r die Bundesrepublik Deutschland (1949)', 'Franz Kafka (1915)']
+    distractors: ['E.T. (E.T. – Der Außerirdische) (1982)', 'Grundgesetz für die Bundesrepublik Deutschland (1949)', 'Franz Kafka (1915)']
   },
   {
     id: 'quote-5',
@@ -75,14 +75,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-7',
-    title: 'Ein Gespenst geht um in Europa â€“ das Gespenst de',
+    title: 'Ein Gespenst geht um in Europa – das Gespenst des ',
     category: 'quote',
     year: 1848,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Karl Marx & Friedrich Engels (1848)',
     hint: 'Von Karl Marx & Friedrich Engels.',
     difficulty: 'mittel',
-    sources: { text: '"Ein Gespenst geht um in Europa â€“ das Gespenst des Kommunismus."' },
+    sources: { text: '"Ein Gespenst geht um in Europa – das Gespenst des Kommunismus."' },
     distractors: ['Uschi Glas (Zwei Nasen tanken Super) (1982)', 'Volksmund (1943)', 'Filmtitel (James Dean) / Bibel (Lukas 23,34) (1955)']
   },
   {
@@ -111,14 +111,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-10',
-    title: 'Wer kÃ¤mpft, kann verlieren. Wer nicht kÃ¤mpft, ha',
+    title: 'Wer kämpft, kann verlieren. Wer nicht kämpft, hat ',
     category: 'quote',
     year: 1897,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Bertolt Brecht (1897)',
     hint: 'Von Bertolt Brecht.',
     difficulty: 'mittel',
-    sources: { text: '"Wer kÃ¤mpft, kann verlieren. Wer nicht kÃ¤mpft, hat schon verloren."' },
+    sources: { text: '"Wer kämpft, kann verlieren. Wer nicht kämpft, hat schon verloren."' },
     distractors: ['Apple (Werbeslogan) (1997)', 'Walter Ulbricht (1952)', 'Jennifer Grey (Dirty Dancing) (1987)']
   },
   {
@@ -135,14 +135,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-12',
-    title: 'Das Herz hat seine GrÃ¼nde, die die Vernunft nicht',
+    title: 'Das Herz hat seine Gründe, die die Vernunft nicht ',
     category: 'quote',
     year: 1910,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Blaise Pascal (1910)',
     hint: 'Von Blaise Pascal.',
     difficulty: 'mittel',
-    sources: { text: '"Das Herz hat seine GrÃ¼nde, die die Vernunft nicht kennt."' },
+    sources: { text: '"Das Herz hat seine Gründe, die die Vernunft nicht kennt."' },
     distractors: ['Immanuel Kant (zugeschrieben) (1790)', 'William Shakespeare (Julius Caesar) (1599)', 'Marie von Ebner-Eschenbach (1893)']
   },
   {
@@ -159,14 +159,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-14',
-    title: 'Ich habe nichts zu bieten auÃŸer Blut, MÃ¼hsal, Tr',
+    title: 'Ich habe nichts zu bieten außer Blut, Mühsal, Trän',
     category: 'quote',
     year: 1940,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Winston Churchill (1940)',
     hint: 'Von Winston Churchill.',
     difficulty: 'mittel',
-    sources: { text: '"Ich habe nichts zu bieten auÃŸer Blut, MÃ¼hsal, TrÃ¤nen und SchweiÃŸ."' },
+    sources: { text: '"Ich habe nichts zu bieten außer Blut, Mühsal, Tränen und Schweiß."' },
     distractors: ['Oscar Wilde (1891)', 'Mark Twain (~1900)', 'Ludwig Wittgenstein (1921)']
   },
   {
@@ -175,10 +175,10 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1943,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Antoine de Saint-ExupÃ©ry (1943)',
-    hint: 'Von Antoine de Saint-ExupÃ©ry.',
+    answer: 'Antoine de Saint-Exupéry (1943)',
+    hint: 'Von Antoine de Saint-Exupéry.',
     difficulty: 'mittel',
-    sources: { text: '"Man sieht nur mit dem Herzen gut. Das Wesentliche ist fÃ¼r die Augen unsichtbar."' },
+    sources: { text: '"Man sieht nur mit dem Herzen gut. Das Wesentliche ist für die Augen unsichtbar."' },
     distractors: ['Clark Gable (Vom Winde verweht) (1939)', 'Johann Wolfgang von Goethe (1808)', 'Winston Churchill (zugeschrieben) (1940)']
   },
   {
@@ -195,14 +195,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-17',
-    title: 'Auge um Auge â€“ und die ganze Welt wird blind sei',
+    title: 'Auge um Auge – und die ganze Welt wird blind sein.',
     category: 'quote',
     year: 1948,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Mahatma Gandhi (1948)',
     hint: 'Von Mahatma Gandhi.',
     difficulty: 'mittel',
-    sources: { text: '"Auge um Auge â€“ und die ganze Welt wird blind sein."' },
+    sources: { text: '"Auge um Auge – und die ganze Welt wird blind sein."' },
     distractors: ['Winston Churchill (1943)', 'Alec Guinness (Star Wars) (1977)', 'Ernst Reuter (1948)']
   },
   {
@@ -219,14 +219,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-19',
-    title: 'Fragt nicht, was euer Land fÃ¼r euch tun kann â€“ ',
+    title: 'Fragt nicht, was euer Land für euch tun kann – fra',
     category: 'quote',
     year: 1961,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'John F. Kennedy (1961)',
     hint: 'Von John F. Kennedy.',
     difficulty: 'leicht',
-    sources: { text: '"Fragt nicht, was euer Land fÃ¼r euch tun kann â€“ fragt, was ihr fÃ¼r euer Land tun kÃ¶nnt."' },
+    sources: { text: '"Fragt nicht, was euer Land für euch tun kann – fragt, was ihr für euer Land tun könnt."' },
     distractors: ['Martin Luther King Jr. (1965)', 'Star Wars (Darth Vader) (1980)', 'Winston Churchill (1943)']
   },
   {
@@ -243,38 +243,38 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-21',
-    title: 'FuÃŸball ist ein Spiel von elf gegen elf, und am E',
+    title: 'Fußball ist ein Spiel von elf gegen elf, und am En',
     category: 'quote',
     year: 1966,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Gary Lineker (1966)',
     hint: 'Von Gary Lineker.',
     difficulty: 'leicht',
-    sources: { text: '"FuÃŸball ist ein Spiel von elf gegen elf, und am Ende gewinnen die Deutschen."' },
-    distractors: ['John Donne (1981)', 'Margaret Thatcher (1983)', 'Loriot (Ã–dipussi) (1988)']
+    sources: { text: '"Fußball ist ein Spiel von elf gegen elf, und am Ende gewinnen die Deutschen."' },
+    distractors: ['John Donne (1981)', 'Margaret Thatcher (1983)', 'Loriot (Ödipussi) (1988)']
   },
   {
     id: 'quote-22',
-    title: 'Das ist ein kleiner Schritt fÃ¼r einen Menschen, a',
+    title: 'Das ist ein kleiner Schritt für einen Menschen, ab',
     category: 'quote',
     year: 1969,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Neil Armstrong (1969)',
     hint: 'Von Neil Armstrong.',
     difficulty: 'leicht',
-    sources: { text: '"Das ist ein kleiner Schritt fÃ¼r einen Menschen, aber ein gewaltiger Sprung fÃ¼r die Menschheit."' },
+    sources: { text: '"Das ist ein kleiner Schritt für einen Menschen, aber ein gewaltiger Sprung für die Menschheit."' },
     distractors: ['Ludwig XIV (zugeschrieben) (1936)', 'Tom Hanks (Forrest Gump) (1994)', 'Rhett Butler (Vom Winde verweht) (1939)']
   },
   {
     id: 'quote-23',
-    title: 'MÃ¶ge die Macht mit dir sein.',
+    title: 'Möge die Macht mit dir sein.',
     category: 'quote',
     year: 1977,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Star Wars (Obi-Wan Kenobi) (1977)',
     hint: 'Von Star Wars (Obi-Wan Kenobi).',
     difficulty: 'leicht',
-    sources: { text: '"MÃ¶ge die Macht mit dir sein."' },
+    sources: { text: '"Möge die Macht mit dir sein."' },
     distractors: ['Volksmund (Traditionell)', 'Friedrich Nietzsche (1888)', 'The Matrix (Morpheus) (1999)']
   },
   {
@@ -295,8 +295,8 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1982,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'E.T. - Der AuÃŸerirdische (1982)',
-    hint: 'Von E.T. - Der AuÃŸerirdische.',
+    answer: 'E.T. - Der Außerirdische (1982)',
+    hint: 'Von E.T. - Der Außerirdische.',
     difficulty: 'leicht',
     sources: { text: '"E.T. nach Hause telefonieren."' },
     distractors: ['Winston Churchill (1940)', 'Francis Bacon (1620)', 'Friedrich Nietzsche (1883)']
@@ -311,7 +311,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Terminator (Arnold Schwarzenegger).',
     difficulty: 'leicht',
     sources: { text: '"Ich komme wieder."' },
-    distractors: ['Albert Einstein (~1933)', 'RenÃ© Descartes (1637)', 'Marie von Ebner-Eschenbach (1893)']
+    distractors: ['Albert Einstein (~1933)', 'René Descartes (1637)', 'Marie von Ebner-Eschenbach (1893)']
   },
   {
     id: 'quote-27',
@@ -322,8 +322,8 @@ export const quoteCards: Card[] = [
     answer: 'Forrest Gump (1985)',
     hint: 'Von Forrest Gump.',
     difficulty: 'leicht',
-    sources: { text: '"Das Leben ist wie eine Schachtel Pralinen, man weiÃŸ nie, was man bekommt."' },
-    distractors: ['Yoda (Das Imperium schlÃ¤gt zurÃ¼ck) (1980)', 'George H.W. Bush (1988)', 'Leo Tolstoi (Anna Karenina) (1877)']
+    sources: { text: '"Das Leben ist wie eine Schachtel Pralinen, man weiß nie, was man bekommt."' },
+    distractors: ['Yoda (Das Imperium schlägt zurück) (1980)', 'George H.W. Bush (1988)', 'Leo Tolstoi (Anna Karenina) (1877)']
   },
   {
     id: 'quote-28',
@@ -375,14 +375,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-32',
-    title: 'Ich bin der KÃ¶nig der Welt!',
+    title: 'Ich bin der König der Welt!',
     category: 'quote',
     year: 1997,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Titanic (Jack Dawson) (1997)',
     hint: 'Von Titanic (Jack Dawson).',
     difficulty: 'leicht',
-    sources: { text: '"Ich bin der KÃ¶nig der Welt!"' },
+    sources: { text: '"Ich bin der König der Welt!"' },
     distractors: ['Star Trek (Captain Kirk) (1966)', 'Albert Einstein (1953)', 'Marlon Brando (1972)']
   },
   {
@@ -411,62 +411,62 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-35',
-    title: 'Ich weiÃŸ, dass ich nichts weiÃŸ.',
+    title: 'Ich weiß, dass ich nichts weiß.',
     category: 'quote',
     year: -400,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Sokrates (400 v. Chr.)',
     hint: 'Von Sokrates.',
     difficulty: 'schwer',
-    sources: { text: '"Ich weiÃŸ, dass ich nichts weiÃŸ."' },
+    sources: { text: '"Ich weiß, dass ich nichts weiß."' },
     distractors: ['Heraklit (~500 v. Chr.)', 'Arnold Schwarzenegger (Terminator 2) (1991)', 'Giacomo Leopardi (1852)']
   },
   {
     id: 'quote-36',
-    title: 'Die WÃ¼rfel sind gefallen.',
+    title: 'Die Würfel sind gefallen.',
     category: 'quote',
     year: -49,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Julius CÃ¤sar (49 v. Chr.)',
-    hint: 'Von Julius CÃ¤sar.',
+    answer: 'Julius Cäsar (49 v. Chr.)',
+    hint: 'Von Julius Cäsar.',
     difficulty: 'schwer',
-    sources: { text: '"Die WÃ¼rfel sind gefallen."' },
+    sources: { text: '"Die Würfel sind gefallen."' },
     distractors: ['Patrick Swayze (Dirty Dancing) (1987)', 'Theodor W. Adorno (1991)', 'Albert Einstein (1905)']
   },
   {
     id: 'quote-37',
-    title: 'In Zukunft wird jeder fÃ¼r 15 Minuten weltberÃ¼hmt',
+    title: 'In Zukunft wird jeder für 15 Minuten weltberühmt s',
     category: 'quote',
     year: 1968,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Andy Warhol (1968)',
     hint: 'Von Andy Warhol.',
     difficulty: 'leicht',
-    sources: { text: '"In Zukunft wird jeder fÃ¼r 15 Minuten weltberÃ¼hmt sein."' },
+    sources: { text: '"In Zukunft wird jeder für 15 Minuten weltberühmt sein."' },
     distractors: ['Martin Luther King Jr. (1965)', 'John Wayne (Ringo) (1939)', 'Konfuzius (zugeschrieben) (1900)']
   },
   {
     id: 'quote-38',
-    title: 'Es gibt nur ein Tempo: VorwÃ¤rts!',
+    title: 'Es gibt nur ein Tempo: Vorwärts!',
     category: 'quote',
     year: 1974,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Franz Beckenbauer (1974)',
     hint: 'Von Franz Beckenbauer.',
     difficulty: 'leicht',
-    sources: { text: '"Es gibt nur ein Tempo: VorwÃ¤rts!"' },
+    sources: { text: '"Es gibt nur ein Tempo: Vorwärts!"' },
     distractors: ['Sprichwort (~1800)', 'John Lennon (1980)', 'Tom Cruise (Top Gun) (1986)']
   },
   {
     id: 'quote-39',
-    title: 'Es ist nicht die stÃ¤rkste Spezies die Ã¼berlebt, ',
+    title: 'Es ist nicht die stärkste Spezies die überlebt, so',
     category: 'quote',
     year: 1859,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Charles Darwin (1859)',
     hint: 'Von Charles Darwin.',
     difficulty: 'mittel',
-    sources: { text: '"Es ist nicht die stÃ¤rkste Spezies die Ã¼berlebt, sondern diejenige, die sich am ehesten dem Wandel anpasst."' },
+    sources: { text: '"Es ist nicht die stärkste Spezies die überlebt, sondern diejenige, die sich am ehesten dem Wandel anpasst."' },
     distractors: ['Winston Churchill (1940)', 'Julius Caesar (49 v. Chr.)', 'Anne Frank (1947)']
   },
   {
@@ -479,7 +479,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Casablanca (Rick Blaine).',
     difficulty: 'mittel',
     sources: { text: '"Schau mir in die Augen, Kleines."' },
-    distractors: ['Ludwig Wittgenstein (1921)', 'FranÃ§ois de La Rochefoucauld (1665)', 'Winston Churchill (1943)']
+    distractors: ['Ludwig Wittgenstein (1921)', 'François de La Rochefoucauld (1665)', 'Winston Churchill (1943)']
   },
   {
     id: 'quote-41',
@@ -515,18 +515,18 @@ export const quoteCards: Card[] = [
     hint: 'Von The Dark Knight (Alfred).',
     difficulty: 'leicht',
     sources: { text: '"Manche Menschen wollen die Welt einfach nur brennen sehen."' },
-    distractors: ['Martin Luther King (1963)', 'Otto von Bismarck (1862)', 'Loriot (Das FrÃ¼hstÃ¼cksei) (1977)']
+    distractors: ['Martin Luther King (1963)', 'Otto von Bismarck (1862)', 'Loriot (Das Frühstücksei) (1977)']
   },
   {
     id: 'quote-44',
-    title: 'Willkommen in der WÃ¼ste der RealitÃ¤t.',
+    title: 'Willkommen in der Wüste der Realität.',
     category: 'quote',
     year: 1999,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'The Matrix (Morpheus) (1999)',
     hint: 'Von The Matrix (Morpheus).',
     difficulty: 'leicht',
-    sources: { text: '"Willkommen in der WÃ¼ste der RealitÃ¤t."' },
+    sources: { text: '"Willkommen in der Wüste der Realität."' },
     distractors: ['The Beatles (1967)', 'Konfuzius (zugeschrieben) (500 v. Chr.)', 'Kaiser Wilhelm II. (1914)']
   },
   {
@@ -539,7 +539,7 @@ export const quoteCards: Card[] = [
     hint: 'Von George Orwell (1984).',
     difficulty: 'mittel',
     sources: { text: '"Big Brother is watching you."' },
-    distractors: ['Friedrich Schiller (Die VerschwÃ¶rung des Fiesco zu Genua) (1783)', 'Slogan (Alien â€“ Das unheimliche Wesen aus einer fremden Welt) (1979)', 'William Shakespeare (Der Kaufmann von Venedig) (1596)']
+    distractors: ['Friedrich Schiller (Die Verschwörung des Fiesco zu Genua) (1783)', 'Slogan (Alien – Das unheimliche Wesen aus einer fremden Welt) (1979)', 'William Shakespeare (Der Kaufmann von Venedig) (1596)']
   },
   {
     id: 'quote-46',
@@ -551,7 +551,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Niels Bohr.',
     difficulty: 'mittel',
     sources: { text: '"Ein Experten ist ein Mann, der alle Fehler gemacht hat, die man in einem sehr schmalen Fachgebiet machen kann."' },
-    distractors: ['Casablanca (Rick Blaine) (1942)', 'Unbekannt (oft fÃ¤lschlich Einstein) (1958)', 'Gary Lineker (1966)']
+    distractors: ['Casablanca (Rick Blaine) (1942)', 'Unbekannt (oft fälschlich Einstein) (1958)', 'Gary Lineker (1966)']
   },
   {
     id: 'quote-47',
@@ -575,18 +575,18 @@ export const quoteCards: Card[] = [
     hint: 'Von Konfuzius (zugeschrieben).',
     difficulty: 'mittel',
     sources: { text: '"Der Weg ist das Ziel."' },
-    distractors: ['William Shakespeare (1599)', 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populÃ¤r) (1970)', 'Apollo 13 (Film) (1995)']
+    distractors: ['William Shakespeare (1599)', 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populär) (1970)', 'Apollo 13 (Film) (1995)']
   },
   {
     id: 'quote-49',
-    title: 'Das Geheimnis des GlÃ¼cks ist die Freiheit, und da',
+    title: 'Das Geheimnis des Glücks ist die Freiheit, und das',
     category: 'quote',
     year: 1854,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Perikles (1854)',
     hint: 'Von Perikles.',
     difficulty: 'mittel',
-    sources: { text: '"Das Geheimnis des GlÃ¼cks ist die Freiheit, und das Geheimnis der Freiheit ist der Mut."' },
+    sources: { text: '"Das Geheimnis des Glücks ist die Freiheit, und das Geheimnis der Freiheit ist der Mut."' },
     distractors: ['Sokrates (400 v. Chr.)', 'Giovanni Trapattoni (1998)', 'Clint Eastwood (Dirty Harry) (1971)']
   },
   {
@@ -611,7 +611,7 @@ export const quoteCards: Card[] = [
     hint: 'Von John Lennon.',
     difficulty: 'leicht',
     sources: { text: '"Imagine all the people living life in peace."' },
-    distractors: ['Montagsdemonstranten (DDR) (1989)', 'Georg BÃ¼chner (Dantons Tod) (1835)', 'William Shakespeare (1599)']
+    distractors: ['Montagsdemonstranten (DDR) (1989)', 'Georg Büchner (Dantons Tod) (1835)', 'William Shakespeare (1599)']
   },
   {
     id: 'quote-52',
@@ -627,15 +627,15 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-53',
-    title: 'Das UnmÃ¶gliche mÃ¶glich machen.',
+    title: 'Das Unmögliche möglich machen.',
     category: 'quote',
     year: 1920,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Walt Disney (1920)',
     hint: 'Von Walt Disney.',
     difficulty: 'mittel',
-    sources: { text: '"Das UnmÃ¶gliche mÃ¶glich machen."' },
-    distractors: ['Albert Einstein (~1940)', 'Joe E. Brown (Manche mÃ¶genâ€™s heiÃŸ) (1959)', 'Albert Einstein (1926)']
+    sources: { text: '"Das Unmögliche möglich machen."' },
+    distractors: ['Albert Einstein (~1940)', 'Joe E. Brown (Manche mögen’s heiß) (1959)', 'Albert Einstein (1926)']
   },
   {
     id: 'quote-54',
@@ -646,19 +646,19 @@ export const quoteCards: Card[] = [
     answer: 'Franz Kafka (1915)',
     hint: 'Von Franz Kafka.',
     difficulty: 'mittel',
-    sources: { text: '"Die Metamorphose: Als Gregor Samsa eines Morgens aus unruhigen TrÃ¤umen erwachte..."' },
-    distractors: ['Immanuel Kant (1790)', 'Buzz Lightyear (Toy Story) (1995)', 'FranÃ§ois de La Rochefoucauld (~1665)']
+    sources: { text: '"Die Metamorphose: Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte..."' },
+    distractors: ['Immanuel Kant (1790)', 'Buzz Lightyear (Toy Story) (1995)', 'François de La Rochefoucauld (~1665)']
   },
   {
     id: 'quote-55',
-    title: 'Ein Raum ohne BÃ¼cher ist wie ein KÃ¶rper ohne See',
+    title: 'Ein Raum ohne Bücher ist wie ein Körper ohne Seele',
     category: 'quote',
     year: 1952,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Cicero (1952)',
     hint: 'Von Cicero.',
     difficulty: 'mittel',
-    sources: { text: '"Ein Raum ohne BÃ¼cher ist wie ein KÃ¶rper ohne Seele."' },
+    sources: { text: '"Ein Raum ohne Bücher ist wie ein Körper ohne Seele."' },
     distractors: ['Federico Fellini (1954)', 'The Wizard of Oz (1939)', 'Norman Bates (1960)']
   },
   {
@@ -687,14 +687,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-58',
-    title: 'SchÃ¶ne neue Welt.',
+    title: 'Schöne neue Welt.',
     category: 'quote',
     year: 1932,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Aldous Huxley (1932)',
     hint: 'Von Aldous Huxley.',
     difficulty: 'mittel',
-    sources: { text: '"SchÃ¶ne neue Welt."' },
+    sources: { text: '"Schöne neue Welt."' },
     distractors: ['Heinrich Heine (~1830)', 'The Wizard of Oz (1939)', 'Johann Wolfgang von Goethe (Faust I) (1808)']
   },
   {
@@ -719,7 +719,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Bertolt Brecht.',
     difficulty: 'mittel',
     sources: { text: '"Erst kommt das Fressen, dann kommt die Moral."' },
-    distractors: ['Erich KÃ¤stner (1950)', 'Otto von Bismarck (1862)', 'FranÃ§ois de La Rochefoucauld (1665)']
+    distractors: ['Erich Kästner (1950)', 'Otto von Bismarck (1862)', 'François de La Rochefoucauld (1665)']
   },
   {
     id: 'quote-61',
@@ -755,18 +755,18 @@ export const quoteCards: Card[] = [
     hint: 'Von Seneca.',
     difficulty: 'mittel',
     sources: { text: '"Es ist nicht wenig Zeit, die wir haben, sondern es ist viel Zeit, die wir nicht nutzen."' },
-    distractors: ['Albus Dumbledore (Harry Potter) (2001)', 'Ludwig Thoma (Ein MÃ¼nchner im Himmel) (1911)', 'Format-Titel (Reality TV) (2005)']
+    distractors: ['Albus Dumbledore (Harry Potter) (2001)', 'Ludwig Thoma (Ein Münchner im Himmel) (1911)', 'Format-Titel (Reality TV) (2005)']
   },
   {
     id: 'quote-64',
-    title: 'Alles FlieÃŸt.',
+    title: 'Alles Fließt.',
     category: 'quote',
     year: 1922,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Heraklit (1922)',
     hint: 'Von Heraklit.',
     difficulty: 'mittel',
-    sources: { text: '"Alles FlieÃŸt."' },
+    sources: { text: '"Alles Fließt."' },
     distractors: ['George H.W. Bush (1988)', 'J.D. Salinger (1951)', 'Alan Kay (1971)']
   },
   {
@@ -779,30 +779,30 @@ export const quoteCards: Card[] = [
     hint: 'Von Heraklit.',
     difficulty: 'mittel',
     sources: { text: '"Der Krieg ist der Vater aller Dinge."' },
-    distractors: ['Slogan (Alien â€“ Das unheimliche Wesen aus einer fremden Welt) (1979)', 'Thomas Alva Edison (1903)', 'Jonathan Swift (1738)']
+    distractors: ['Slogan (Alien – Das unheimliche Wesen aus einer fremden Welt) (1979)', 'Thomas Alva Edison (1903)', 'Jonathan Swift (1738)']
   },
   {
     id: 'quote-66',
-    title: 'Der FÃ¤nger im Roggen.',
+    title: 'Der Fänger im Roggen.',
     category: 'quote',
     year: 1951,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'J.D. Salinger (1951)',
     hint: 'Von J.D. Salinger.',
     difficulty: 'mittel',
-    sources: { text: '"Der FÃ¤nger im Roggen."' },
+    sources: { text: '"Der Fänger im Roggen."' },
     distractors: ['Andy Warhol (1968)', 'Sepp Herberger (1954)', 'Jack Nicholson (Eine Frage der Ehre) (1992)']
   },
   {
     id: 'quote-67',
-    title: 'Der WeiÃŸe Hai: Wir brauchen ein grÃ¶ÃŸeres Boot.',
+    title: 'Der Weiße Hai: Wir brauchen ein größeres Boot.',
     category: 'quote',
     year: 1975,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Chief Brody (1975)',
     hint: 'Von Chief Brody.',
     difficulty: 'leicht',
-    sources: { text: '"Der WeiÃŸe Hai: Wir brauchen ein grÃ¶ÃŸeres Boot."' },
+    sources: { text: '"Der Weiße Hai: Wir brauchen ein größeres Boot."' },
     distractors: ['Charles Darwin (1859)', 'Bertolt Brecht (1928)', 'Winston Churchill (~1940)']
   },
   {
@@ -838,7 +838,7 @@ export const quoteCards: Card[] = [
     answer: 'Unbekannt (1947)',
     hint: 'Entstanden ca. 1947.',
     difficulty: 'mittel',
-    sources: { text: '"Freiheit bedeutet Verantwortlichkeit. Das ist der Grund, warum die meisten Menschen sich vor ihr fÃ¼rchten."' },
+    sources: { text: '"Freiheit bedeutet Verantwortlichkeit. Das ist der Grund, warum die meisten Menschen sich vor ihr fürchten."' },
     distractors: ['Thomas Edison (1895)', 'Thomas Alva Edison (1903)', 'Ernest Hemingway (~1950)']
   },
   {
@@ -867,26 +867,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-73',
-    title: 'Was ist AufklÃ¤rung?',
+    title: 'Was ist Aufklärung?',
     category: 'quote',
     year: 1790,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Immanuel Kant (1790)',
     hint: 'Von Immanuel Kant.',
     difficulty: 'schwer',
-    sources: { text: '"Was ist AufklÃ¤rung?"' },
+    sources: { text: '"Was ist Aufklärung?"' },
     distractors: ['Karl Marx & Friedrich Engels (1848)', 'Heraklit (1922)', 'Friedrich Schiller (Wallensteins Lager) (1799)']
   },
   {
     id: 'quote-74',
-    title: 'L\'Ã©tat c\'est moi (Der Staat bin ich).',
+    title: 'L\'état c\'est moi (Der Staat bin ich).',
     category: 'quote',
     year: 1936,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Ludwig XIV (zugeschrieben) (1936)',
     hint: 'Von Ludwig XIV (zugeschrieben).',
     difficulty: 'mittel',
-    sources: { text: '"L\'Ã©tat c\'est moi (Der Staat bin ich)."' },
+    sources: { text: '"L\'état c\'est moi (Der Staat bin ich)."' },
     distractors: ['John Wayne (Ringo) (1939)', 'Ralph Waldo Emerson (1841)', 'Douglas Adams (Per Anhalter durch die Galaxis) (1979)']
   },
   {
@@ -895,22 +895,22 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1929,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'RenÃ© Magritte (1929)',
-    hint: 'Von RenÃ© Magritte.',
+    answer: 'René Magritte (1929)',
+    hint: 'Von René Magritte.',
     difficulty: 'mittel',
     sources: { text: '"Pfeife: Dies ist keine Pfeife."' },
     distractors: ['Rose Leslie (Game of Thrones) (2011)', 'Volksmund (~1900)', 'Nathan Lane & Ernie Sabella (Timon & Pumbaa) (1994)']
   },
   {
     id: 'quote-76',
-    title: 'Alle Menschen sind frei und gleich an WÃ¼rde und R',
+    title: 'Alle Menschen sind frei und gleich an Würde und Re',
     category: 'quote',
     year: 1950,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'UN-Menschenrechtscharta (1950)',
     hint: 'Von UN-Menschenrechtscharta.',
     difficulty: 'mittel',
-    sources: { text: '"Alle Menschen sind frei und gleich an WÃ¼rde und Rechten geboren."' },
+    sources: { text: '"Alle Menschen sind frei und gleich an Würde und Rechten geboren."' },
     distractors: ['Konfuzius (zugeschrieben) (1925)', 'Ronald Reagan (1987)', 'Mark Twain (1950)']
   },
   {
@@ -959,30 +959,30 @@ export const quoteCards: Card[] = [
     hint: 'Von Volksmund.',
     difficulty: 'mittel',
     sources: { text: '"Das Glas ist halb voll oder halb leer."' },
-    distractors: ['Friedrich Schiller (Die VerschwÃ¶rung des Fiesco zu Genua) (1783)', 'Samuel Beckett (1952)', 'Kaiser Wilhelm II. (1914)']
+    distractors: ['Friedrich Schiller (Die Verschwörung des Fiesco zu Genua) (1783)', 'Samuel Beckett (1952)', 'Kaiser Wilhelm II. (1914)']
   },
   {
     id: 'quote-81',
-    title: 'Manche mÃ¶gen\'s heiÃŸ.',
+    title: 'Manche mögen\'s heiß.',
     category: 'quote',
     year: 1959,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Filmtitel (1959)',
     hint: 'Von Filmtitel.',
     difficulty: 'mittel',
-    sources: { text: '"Manche mÃ¶gen\'s heiÃŸ."' },
+    sources: { text: '"Manche mögen\'s heiß."' },
     distractors: ['Friedrich Schiller (Wallensteins Lager) (1799)', 'Appius Claudius Caecus (300 v. Chr.)', 'Mandy Patinkin (Die Braut des Prinzen) (1991)']
   },
   {
     id: 'quote-82',
-    title: 'Gott wÃ¼rfelt nicht.',
+    title: 'Gott würfelt nicht.',
     category: 'quote',
     year: 1926,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Albert Einstein (1926)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
-    sources: { text: '"Gott wÃ¼rfelt nicht."' },
+    sources: { text: '"Gott würfelt nicht."' },
     distractors: ['Apple (Slogan) (1984)', 'Voltaire (1750)', 'Jonathan Swift (1738)']
   },
   {
@@ -994,19 +994,19 @@ export const quoteCards: Card[] = [
     answer: 'Ernest Hemingway (1941)',
     hint: 'Von Ernest Hemingway.',
     difficulty: 'mittel',
-    sources: { text: '"Man braucht zwei Jahre, um sprechen zu lernen, und fÃ¼nfzig, um schweigen zu lernen."' },
+    sources: { text: '"Man braucht zwei Jahre, um sprechen zu lernen, und fünfzig, um schweigen zu lernen."' },
     distractors: ['Angela Merkel (2013)', 'Otto von Bismarck (1880)', 'Niels Bohr (1920)']
   },
   {
     id: 'quote-84',
-    title: 'Einer fÃ¼r alle, alle fÃ¼r einen.',
+    title: 'Einer für alle, alle für einen.',
     category: 'quote',
     year: 2001,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Die drei Musketiere (Alexandre Dumas) (2001)',
     hint: 'Von Die drei Musketiere (Alexandre Dumas).',
     difficulty: 'leicht',
-    sources: { text: '"Einer fÃ¼r alle, alle fÃ¼r einen."' },
+    sources: { text: '"Einer für alle, alle für einen."' },
     distractors: ['Walter Moers (Professor Nachtigaller) (1999)', 'Karl Marx & Friedrich Engels (1848)', 'Pablo Picasso (~1950)']
   },
   {
@@ -1023,14 +1023,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-86',
-    title: 'Die einzige Sache, die wir zu fÃ¼rchten haben, ist',
+    title: 'Die einzige Sache, die wir zu fürchten haben, ist ',
     category: 'quote',
     year: 1940,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Franklin D. Roosevelt (1940)',
     hint: 'Von Franklin D. Roosevelt.',
     difficulty: 'mittel',
-    sources: { text: '"Die einzige Sache, die wir zu fÃ¼rchten haben, ist die Furcht selbst."' },
+    sources: { text: '"Die einzige Sache, die wir zu fürchten haben, ist die Furcht selbst."' },
     distractors: ['Volksmund (Traditionell)', 'Rosa Luxemburg (1944)', 'Katja Ebstein (1970)']
   },
   {
@@ -1126,7 +1126,7 @@ export const quoteCards: Card[] = [
     answer: 'George Orwell (1945)',
     hint: 'Von George Orwell.',
     difficulty: 'mittel',
-    sources: { text: '"Krieg ist Frieden, Freiheit ist Sklaverei, Unwissenheit ist StÃ¤rke."' },
+    sources: { text: '"Krieg ist Frieden, Freiheit ist Sklaverei, Unwissenheit ist Stärke."' },
     distractors: ['Kurt Tucholsky (1920)', 'Protagoras (1957)', 'Heraklit (1922)']
   },
   {
@@ -1143,14 +1143,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-96',
-    title: 'Der Mensch ist das MaÃŸ aller Dinge.',
+    title: 'Der Mensch ist das Maß aller Dinge.',
     category: 'quote',
     year: 1957,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Protagoras (1957)',
     hint: 'Von Protagoras.',
     difficulty: 'mittel',
-    sources: { text: '"Der Mensch ist das MaÃŸ aller Dinge."' },
+    sources: { text: '"Der Mensch ist das Maß aller Dinge."' },
     distractors: ['Konfuzius (zugeschrieben) (1925)', 'Timothy Leary (1966)', 'William Shakespeare (Der Sturm) (1611)']
   },
   {
@@ -1187,18 +1187,18 @@ export const quoteCards: Card[] = [
     hint: 'Von Neil Armstrong.',
     difficulty: 'leicht',
     sources: { text: '"One small step for man."' },
-    distractors: ['Gary Lineker (1966)', 'Harry S. Truman (1945)', 'RenÃ© Descartes (1637)']
+    distractors: ['Gary Lineker (1966)', 'Harry S. Truman (1945)', 'René Descartes (1637)']
   },
   {
     id: 'quote-100',
-    title: 'Ich weiÃŸ nicht, ob es besser wird, wenn es anders',
+    title: 'Ich weiß nicht, ob es besser wird, wenn es anders ',
     category: 'quote',
     year: 1921,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Georg Christoph Lichtenberg (1921)',
     hint: 'Von Georg Christoph Lichtenberg.',
     difficulty: 'mittel',
-    sources: { text: '"Ich weiÃŸ nicht, ob es besser wird, wenn es anders wird. Aber es muss anders werden, wenn es besser werden soll."' },
+    sources: { text: '"Ich weiß nicht, ob es besser wird, wenn es anders wird. Aber es muss anders werden, wenn es besser werden soll."' },
     distractors: ['UN-Menschenrechtscharta (1950)', 'Otto von Bismarck (1880)', 'Appius Claudius Caecus (300 v. Chr.)']
   },
   {
@@ -1247,7 +1247,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Julius Caesar.',
     difficulty: 'schwer',
     sources: { text: '"Veni, vidi, vici. (Ich kam, ich sah, ich siegte.)"' },
-    distractors: ['Albert Einstein (1905)', 'The Wizard of Oz (1939)', 'Friedrich der GroÃŸe (1757)']
+    distractors: ['Albert Einstein (1905)', 'The Wizard of Oz (1939)', 'Friedrich der Große (1757)']
   },
   {
     id: 'quote-105',
@@ -1267,8 +1267,8 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1637,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'RenÃ© Descartes (1637)',
-    hint: 'Von RenÃ© Descartes.',
+    answer: 'René Descartes (1637)',
+    hint: 'Von René Descartes.',
     difficulty: 'schwer',
     sources: { text: '"Cogito, ergo sum. (Ich denke, also bin ich.)"' },
     distractors: ['Ludwig Wittgenstein (1921)', 'Bill Clinton (1998)', 'Bertolt Brecht (1897)']
@@ -1287,14 +1287,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-108',
-    title: 'Hier bin ich Mensch, hier darf ichâ€™s sein!',
+    title: 'Hier bin ich Mensch, hier darf ich’s sein!',
     category: 'quote',
     year: 1808,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Johann Wolfgang von Goethe (Faust I) (1808)',
     hint: 'Von Johann Wolfgang von Goethe (Faust I).',
     difficulty: 'mittel',
-    sources: { text: '"Hier bin ich Mensch, hier darf ichâ€™s sein!"' },
+    sources: { text: '"Hier bin ich Mensch, hier darf ich’s sein!"' },
     distractors: ['Chief Brody (1975)', 'Sokrates (zugeschrieben) (~400 v. Chr.)', 'The Matrix (Morpheus) (1999)']
   },
   {
@@ -1311,27 +1311,27 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-110',
-    title: 'Ich habe nichts zu bieten auÃŸer Blut, MÃ¼hsal, Tr',
+    title: 'Ich habe nichts zu bieten außer Blut, Mühsal, Trän',
     category: 'quote',
     year: 1940,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Winston Churchill (1940)',
     hint: 'Von Winston Churchill.',
     difficulty: 'mittel',
-    sources: { text: '"Ich habe nichts zu bieten auÃŸer Blut, MÃ¼hsal, TrÃ¤nen und SchweiÃŸ."' },
+    sources: { text: '"Ich habe nichts zu bieten außer Blut, Mühsal, Tränen und Schweiß."' },
     distractors: ['Samuel Beckett (1952)', 'John Wayne (Ringo) (1939)', 'Andy Serkis (Der Herr der Ringe) (2001)']
   },
   {
     id: 'quote-111',
-    title: 'Die Welt hat genug fÃ¼r jedermanns BedÃ¼rfnisse, a',
+    title: 'Die Welt hat genug für jedermanns Bedürfnisse, abe',
     category: 'quote',
     year: 1948,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Mahatma Gandhi (1948)',
     hint: 'Von Mahatma Gandhi.',
     difficulty: 'mittel',
-    sources: { text: '"Die Welt hat genug fÃ¼r jedermanns BedÃ¼rfnisse, aber nicht fÃ¼r jedermanns Gier."' },
-    distractors: ['Albert Einstein (1953)', 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populÃ¤r) (1970)', 'Albert Einstein (1929)']
+    sources: { text: '"Die Welt hat genug für jedermanns Bedürfnisse, aber nicht für jedermanns Gier."' },
+    distractors: ['Albert Einstein (1953)', 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populär) (1970)', 'Albert Einstein (1929)']
   },
   {
     id: 'quote-112',
@@ -1347,14 +1347,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-113',
-    title: 'Nobodyâ€™s perfect. (Niemand ist vollkommen.)',
+    title: 'Nobody’s perfect. (Niemand ist vollkommen.)',
     category: 'quote',
     year: 1959,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Joe E. Brown (Manche mÃ¶genâ€™s heiÃŸ) (1959)',
-    hint: 'Von Joe E. Brown (Manche mÃ¶genâ€™s heiÃŸ).',
+    answer: 'Joe E. Brown (Manche mögen’s heiß) (1959)',
+    hint: 'Von Joe E. Brown (Manche mögen’s heiß).',
     difficulty: 'mittel',
-    sources: { text: '"Nobodyâ€™s perfect. (Niemand ist vollkommen.)"' },
+    sources: { text: '"Nobody’s perfect. (Niemand ist vollkommen.)"' },
     distractors: ['Rosa Luxemburg (1944)', 'Perikles (~431 v. Chr.)', 'Sokrates (zugeschrieben) (~400 v. Chr.)']
   },
   {
@@ -1371,14 +1371,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-115',
-    title: 'Frage nicht, was dein Land fÃ¼r dich tun kann â€“ ',
+    title: 'Frage nicht, was dein Land für dich tun kann – fra',
     category: 'quote',
     year: 1961,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'John F. Kennedy (1961)',
     hint: 'Von John F. Kennedy.',
     difficulty: 'leicht',
-    sources: { text: '"Frage nicht, was dein Land fÃ¼r dich tun kann â€“ frage, was du fÃ¼r dein Land tun kannst."' },
+    sources: { text: '"Frage nicht, was dein Land für dich tun kann – frage, was du für dein Land tun kannst."' },
     distractors: ['Friedrich Nietzsche (1882)', 'The Wizard of Oz (1939)', 'Bertolt Brecht (1928)']
   },
   {
@@ -1387,11 +1387,11 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1962,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Sean Connery (James Bond â€“ 007 jagt Dr. No) (1962)',
-    hint: 'Von Sean Connery (James Bond â€“ 007 jagt Dr. No).',
+    answer: 'Sean Connery (James Bond – 007 jagt Dr. No) (1962)',
+    hint: 'Von Sean Connery (James Bond – 007 jagt Dr. No).',
     difficulty: 'leicht',
     sources: { text: '"Bond. James Bond."' },
-    distractors: ['Konfuzius (zugeschrieben) (~1300)', 'Sportler-Floskel (populÃ¤r durch L. MatthÃ¤us) (~1990)', 'Kurt Tucholsky (1920)']
+    distractors: ['Konfuzius (zugeschrieben) (~1300)', 'Sportler-Floskel (populär durch L. Matthäus) (~1990)', 'Kurt Tucholsky (1920)']
   },
   {
     id: 'quote-117',
@@ -1419,26 +1419,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-119',
-    title: 'FuÃŸball ist ein Spiel von 22 Leuten, die rumlaufe',
+    title: 'Fußball ist ein Spiel von 22 Leuten, die rumlaufen',
     category: 'quote',
     year: 1966,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Gary Lineker (1966)',
     hint: 'Von Gary Lineker.',
     difficulty: 'leicht',
-    sources: { text: '"FuÃŸball ist ein Spiel von 22 Leuten, die rumlaufen, und am Ende gewinnt immer Deutschland."' },
+    sources: { text: '"Fußball ist ein Spiel von 22 Leuten, die rumlaufen, und am Ende gewinnt immer Deutschland."' },
     distractors: ['Friedrich Nietzsche (1882)', 'The Police (1983)', 'Gerard Butler (Film: 300) (2006)']
   },
   {
     id: 'quote-120',
-    title: 'Das ist ein kleiner Schritt fÃ¼r einen Menschen, a',
+    title: 'Das ist ein kleiner Schritt für einen Menschen, ab',
     category: 'quote',
     year: 1969,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Neil Armstrong (1969)',
     hint: 'Von Neil Armstrong.',
     difficulty: 'leicht',
-    sources: { text: '"Das ist ein kleiner Schritt fÃ¼r einen Menschen, aber ein gewaltiger Sprung fÃ¼r die Menschheit."' },
+    sources: { text: '"Das ist ein kleiner Schritt für einen Menschen, aber ein gewaltiger Sprung für die Menschheit."' },
     distractors: ['Jonathan Swift (1738)', 'Andy Serkis (Der Herr der Ringe) (2001)', 'Georg Christoph Lichtenberg (1921)']
   },
   {
@@ -1451,18 +1451,18 @@ export const quoteCards: Card[] = [
     hint: 'Von Marlon Brando (Der Pate).',
     difficulty: 'leicht',
     sources: { text: '"Ich mache ihm ein Angebot, das er nicht ablehnen kann."' },
-    distractors: ['George Orwell (1984) (1949)', 'Joe E. Brown (Manche mÃ¶genâ€™s heiÃŸ) (1959)', 'Johann Wolfgang von Goethe (1795)']
+    distractors: ['George Orwell (1984) (1949)', 'Joe E. Brown (Manche mögen’s heiß) (1959)', 'Johann Wolfgang von Goethe (1795)']
   },
   {
     id: 'quote-122',
-    title: 'MÃ¶ge die Macht mit dir sein.',
+    title: 'Möge die Macht mit dir sein.',
     category: 'quote',
     year: 1977,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Alec Guinness (Star Wars) (1977)',
     hint: 'Von Alec Guinness (Star Wars).',
     difficulty: 'leicht',
-    sources: { text: '"MÃ¶ge die Macht mit dir sein."' },
+    sources: { text: '"Möge die Macht mit dir sein."' },
     distractors: ['Benjamin Franklin (1755)', 'Mahatma Gandhi (1948)', 'Sepp Herberger (1954)']
   },
   {
@@ -1471,8 +1471,8 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1980,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'David Prowse / James Earl Jones (Das Imperium schlÃ¤gt zurÃ¼ck) (1980)',
-    hint: 'Von David Prowse / James Earl Jones (Das Imperium schlÃ¤gt zurÃ¼ck).',
+    answer: 'David Prowse / James Earl Jones (Das Imperium schlägt zurück) (1980)',
+    hint: 'Von David Prowse / James Earl Jones (Das Imperium schlägt zurück).',
     difficulty: 'leicht',
     sources: { text: '"Ich bin dein Vater."' },
     distractors: ['Forrest Gump (1985)', 'William Shakespeare (Julius Caesar) (1599)', 'George Orwell (1984) (1949)']
@@ -1483,8 +1483,8 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1982,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'E.T. (E.T. â€“ Der AuÃŸerirdische) (1982)',
-    hint: 'Von E.T. (E.T. â€“ Der AuÃŸerirdische).',
+    answer: 'E.T. (E.T. – Der Außerirdische) (1982)',
+    hint: 'Von E.T. (E.T. – Der Außerirdische).',
     difficulty: 'leicht',
     sources: { text: '"E.T. nach Hause telefonieren."' },
     distractors: ['Johann Wolfgang von Goethe (Faust I) (1808)', 'Arthur Schopenhauer (oft in diesem Kontext zitiert) (1980)', 'Johann Wolfgang von Goethe (1774)']
@@ -1503,14 +1503,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-126',
-    title: 'Wo wir hinfahren, brauchen wir keine StraÃŸen.',
+    title: 'Wo wir hinfahren, brauchen wir keine Straßen.',
     category: 'quote',
     year: 1985,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Christopher Lloyd (ZurÃ¼ck in die Zukunft) (1985)',
-    hint: 'Von Christopher Lloyd (ZurÃ¼ck in die Zukunft).',
+    answer: 'Christopher Lloyd (Zurück in die Zukunft) (1985)',
+    hint: 'Von Christopher Lloyd (Zurück in die Zukunft).',
     difficulty: 'leicht',
-    sources: { text: '"Wo wir hinfahren, brauchen wir keine StraÃŸen."' },
+    sources: { text: '"Wo wir hinfahren, brauchen wir keine Straßen."' },
     distractors: ['Apple (Werbeslogan) (1997)', 'Terminator 2 (1994)', 'Al Pacino (Der Pate II) (1974)']
   },
   {
@@ -1527,15 +1527,15 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-128',
-    title: 'Hast du VerspÃ¤tung, ist die Bahn nicht pÃ¼nktlich',
+    title: 'Hast du Verspätung, ist die Bahn nicht pünktlich. ',
     category: 'quote',
     year: 1991,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Diverse (Volksmund/FuÃŸball) (1991)',
-    hint: 'Von Diverse (Volksmund/FuÃŸball).',
+    answer: 'Diverse (Volksmund/Fußball) (1991)',
+    hint: 'Von Diverse (Volksmund/Fußball).',
     difficulty: 'leicht',
-    sources: { text: '"Hast du VerspÃ¤tung, ist die Bahn nicht pÃ¼nktlich. (LegendÃ¤rer Versprecher)"' },
-    distractors: ['David Prowse / James Earl Jones (Das Imperium schlÃ¤gt zurÃ¼ck) (1980)', 'Sean Connery (James Bond â€“ Goldfinger) (1964)', 'Winston Churchill (1945)']
+    sources: { text: '"Hast du Verspätung, ist die Bahn nicht pünktlich. (Legendärer Versprecher)"' },
+    distractors: ['David Prowse / James Earl Jones (Das Imperium schlägt zurück) (1980)', 'Sean Connery (James Bond – Goldfinger) (1964)', 'Winston Churchill (1945)']
   },
   {
     id: 'quote-129',
@@ -1546,20 +1546,20 @@ export const quoteCards: Card[] = [
     answer: 'Tom Hanks (Forrest Gump) (1994)',
     hint: 'Von Tom Hanks (Forrest Gump).',
     difficulty: 'leicht',
-    sources: { text: '"Das Leben ist wie eine Schachtel Pralinen. Man weiÃŸ nie, was man kriegt."' },
-    distractors: ['Judy Garland (Der Zauberer von Oz) (1939)', 'Konfuzius (zugeschrieben) (500 v. Chr.)', 'Friedrich Schiller (Die VerschwÃ¶rung des Fiesco zu Genua) (1783)']
+    sources: { text: '"Das Leben ist wie eine Schachtel Pralinen. Man weiß nie, was man kriegt."' },
+    distractors: ['Judy Garland (Der Zauberer von Oz) (1939)', 'Konfuzius (zugeschrieben) (500 v. Chr.)', 'Friedrich Schiller (Die Verschwörung des Fiesco zu Genua) (1783)']
   },
   {
     id: 'quote-130',
-    title: 'Ich bin der KÃ¶nig der Welt!',
+    title: 'Ich bin der König der Welt!',
     category: 'quote',
     year: 1997,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Leonardo DiCaprio (Titanic) (1997)',
     hint: 'Von Leonardo DiCaprio (Titanic).',
     difficulty: 'leicht',
-    sources: { text: '"Ich bin der KÃ¶nig der Welt!"' },
-    distractors: ['Konfuzius (zugeschrieben) (500 v. Chr.)', 'George Orwell (1984) (1984)', 'Friedrich Schiller (Die VerschwÃ¶rung des Fiesco zu Genua) (1783)']
+    sources: { text: '"Ich bin der König der Welt!"' },
+    distractors: ['Konfuzius (zugeschrieben) (500 v. Chr.)', 'George Orwell (1984) (1984)', 'Friedrich Schiller (Die Verschwörung des Fiesco zu Genua) (1783)']
   },
   {
     id: 'quote-131',
@@ -1575,14 +1575,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-132',
-    title: 'Ich bin ein Star â€“ Holt mich hier raus!',
+    title: 'Ich bin ein Star – Holt mich hier raus!',
     category: 'quote',
     year: 2005,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Format-Titel (Reality TV) (2005)',
     hint: 'Von Format-Titel (Reality TV).',
     difficulty: 'leicht',
-    sources: { text: '"Ich bin ein Star â€“ Holt mich hier raus!"' },
+    sources: { text: '"Ich bin ein Star – Holt mich hier raus!"' },
     distractors: ['Clint Eastwood (Dirty Harry) (1971)', 'Filmtitel (1959)', 'Gary Lineker (1966)']
   },
   {
@@ -1599,26 +1599,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-134',
-    title: 'Ich weiÃŸ, dass ich nichts weiÃŸ.',
+    title: 'Ich weiß, dass ich nichts weiß.',
     category: 'quote',
     year: -399,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Sokrates (399 v. Chr.)',
     hint: 'Von Sokrates.',
     difficulty: 'schwer',
-    sources: { text: '"Ich weiÃŸ, dass ich nichts weiÃŸ."' },
+    sources: { text: '"Ich weiß, dass ich nichts weiß."' },
     distractors: ['Muhammad Ali (1964)', 'Winston Churchill (1943)', 'Julius Caesar (47 v. Chr.)']
   },
   {
     id: 'quote-135',
-    title: 'Alea iacta est. (Der WÃ¼rfel ist gefallen.)',
+    title: 'Alea iacta est. (Der Würfel ist gefallen.)',
     category: 'quote',
     year: -49,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Julius Caesar (49 v. Chr.)',
     hint: 'Von Julius Caesar.',
     difficulty: 'schwer',
-    sources: { text: '"Alea iacta est. (Der WÃ¼rfel ist gefallen.)"' },
+    sources: { text: '"Alea iacta est. (Der Würfel ist gefallen.)"' },
     distractors: ['John Donne (1624)', 'J.R.R. Tolkien (Der Herr der Ringe) (1937)', 'John F. Kennedy (1961)']
   },
   {
@@ -1635,14 +1635,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-137',
-    title: 'Alles flieÃŸt. (Panta rhei.)',
+    title: 'Alles fließt. (Panta rhei.)',
     category: 'quote',
     year: -500,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Heraklit (500 v. Chr.)',
     hint: 'Von Heraklit.',
     difficulty: 'schwer',
-    sources: { text: '"Alles flieÃŸt. (Panta rhei.)"' },
+    sources: { text: '"Alles fließt. (Panta rhei.)"' },
     distractors: ['Franz Beckenbauer (1974)', 'Protagoras (1957)', 'Clint Eastwood (Dirty Harry) (1971)']
   },
   {
@@ -1667,7 +1667,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Francis Bacon.',
     difficulty: 'schwer',
     sources: { text: '"Wissen ist Macht."' },
-    distractors: ['William Shakespeare (1603)', 'Loriot (Ã–dipussi) (1988)', 'Isaac Newton (~1700)']
+    distractors: ['William Shakespeare (1603)', 'Loriot (Ödipussi) (1988)', 'Isaac Newton (~1700)']
   },
   {
     id: 'quote-140',
@@ -1683,14 +1683,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-141',
-    title: 'L\'Ã‰tat, c\'est moi. (Der Staat bin ich.)',
+    title: 'L\'État, c\'est moi. (Der Staat bin ich.)',
     category: 'quote',
     year: 1655,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Ludwig XIV. (zugeschrieben) (1655)',
     hint: 'Von Ludwig XIV. (zugeschrieben).',
     difficulty: 'schwer',
-    sources: { text: '"L\'Ã‰tat, c\'est moi. (Der Staat bin ich.)"' },
+    sources: { text: '"L\'État, c\'est moi. (Der Staat bin ich.)"' },
     distractors: ['Edward Kennedy (1960)', 'William Shakespeare (Cymbeline) (1609)', 'Rosa Luxemburg (1944)']
   },
   {
@@ -1699,8 +1699,8 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1783,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Friedrich Schiller (Die VerschwÃ¶rung des Fiesco zu Genua) (1783)',
-    hint: 'Von Friedrich Schiller (Die VerschwÃ¶rung des Fiesco zu Genua).',
+    answer: 'Friedrich Schiller (Die Verschwörung des Fiesco zu Genua) (1783)',
+    hint: 'Von Friedrich Schiller (Die Verschwörung des Fiesco zu Genua).',
     difficulty: 'schwer',
     sources: { text: '"Der Mohr hat seine Arbeit getan, der Mohr kann gehen."' },
     distractors: ['Johann Wolfgang von Goethe (1795)', 'Loriot (Weihnachten bei Hoppenstedts) (1978)', 'Albert Einstein (zugeschrieben) (~1950)']
@@ -1715,7 +1715,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Immanuel Kant.',
     difficulty: 'schwer',
     sources: { text: '"Habe Mut, dich deines eigenen Verstandes zu bedienen!"' },
-    distractors: ['Thomas Hobbes (1927)', 'E.T. - Der AuÃŸerirdische (1982)', 'Bertolt Brecht (1897)']
+    distractors: ['Thomas Hobbes (1927)', 'E.T. - Der Außerirdische (1982)', 'Bertolt Brecht (1897)']
   },
   {
     id: 'quote-144',
@@ -1767,26 +1767,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-148',
-    title: 'Ein Gespenst geht um in Europa â€“ das Gespenst de',
+    title: 'Ein Gespenst geht um in Europa – das Gespenst des ',
     category: 'quote',
     year: 1848,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Karl Marx & Friedrich Engels (1848)',
     hint: 'Von Karl Marx & Friedrich Engels.',
     difficulty: 'mittel',
-    sources: { text: '"Ein Gespenst geht um in Europa â€“ das Gespenst des Kommunismus."' },
-    distractors: ['Sean Connery (James Bond â€“ Goldfinger) (1964)', 'Seneca (zugeschrieben) (~50 n. Chr.)', 'Ingeborg Bachmann (~1960)']
+    sources: { text: '"Ein Gespenst geht um in Europa – das Gespenst des Kommunismus."' },
+    distractors: ['Sean Connery (James Bond – Goldfinger) (1964)', 'Seneca (zugeschrieben) (~50 n. Chr.)', 'Ingeborg Bachmann (~1960)']
   },
   {
     id: 'quote-149',
-    title: 'Nicht durch Reden und MajoritÃ¤tsbeschlÃ¼sse werde',
+    title: 'Nicht durch Reden und Majoritätsbeschlüsse werden ',
     category: 'quote',
     year: 1862,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Otto von Bismarck (1862)',
     hint: 'Von Otto von Bismarck.',
     difficulty: 'mittel',
-    sources: { text: '"Nicht durch Reden und MajoritÃ¤tsbeschlÃ¼sse werden die groÃŸen Fragen der Zeit entschieden, sondern durch Eisen und Blut."' },
+    sources: { text: '"Nicht durch Reden und Majoritätsbeschlüsse werden die großen Fragen der Zeit entschieden, sondern durch Eisen und Blut."' },
     distractors: ['Andy Warhol (1968)', 'John Lennon (1971)', 'Andy Serkis (Der Herr der Ringe) (2001)']
   },
   {
@@ -1803,14 +1803,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-151',
-    title: 'Was mich nicht umbringt, macht mich stÃ¤rker.',
+    title: 'Was mich nicht umbringt, macht mich stärker.',
     category: 'quote',
     year: 1888,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Friedrich Nietzsche (1888)',
     hint: 'Von Friedrich Nietzsche.',
     difficulty: 'mittel',
-    sources: { text: '"Was mich nicht umbringt, macht mich stÃ¤rker."' },
+    sources: { text: '"Was mich nicht umbringt, macht mich stärker."' },
     distractors: ['Ludwig Wittgenstein (1921)', 'Clint Eastwood (Dirty Harry) (1971)', 'Seneca (~50 n. Chr.)']
   },
   {
@@ -1827,14 +1827,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-153',
-    title: 'Halleluja! â€“ Sog i.',
+    title: 'Halleluja! – Sog i.',
     category: 'quote',
     year: 1911,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Ludwig Thoma (Ein MÃ¼nchner im Himmel) (1911)',
-    hint: 'Von Ludwig Thoma (Ein MÃ¼nchner im Himmel).',
+    answer: 'Ludwig Thoma (Ein Münchner im Himmel) (1911)',
+    hint: 'Von Ludwig Thoma (Ein Münchner im Himmel).',
     difficulty: 'mittel',
-    sources: { text: '"Halleluja! â€“ Sog i."' },
+    sources: { text: '"Halleluja! – Sog i."' },
     distractors: ['William Shakespeare (Der Kaufmann von Venedig) (1596)', 'Charles Darwin (1859)', 'Martin Luther King (1963)']
   },
   {
@@ -1847,7 +1847,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Sherlock Holmes (Filmzitat, nicht im Buch).',
     difficulty: 'mittel',
     sources: { text: '"Elementar, mein lieber Watson."' },
-    distractors: ['RenÃ© Descartes (1637)', 'J.R.R. Tolkien (Der Herr der Ringe) (1937)', 'Friedrich Schiller (Die Jungfrau von Orleans) (1801)']
+    distractors: ['René Descartes (1637)', 'J.R.R. Tolkien (Der Herr der Ringe) (1937)', 'Friedrich Schiller (Die Jungfrau von Orleans) (1801)']
   },
   {
     id: 'quote-155',
@@ -1863,14 +1863,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-156',
-    title: 'Ich sehâ€™ dir in die Augen, Kleines.',
+    title: 'Ich seh’ dir in die Augen, Kleines.',
     category: 'quote',
     year: 1942,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Humphrey Bogart (Casablanca) (1942)',
     hint: 'Von Humphrey Bogart (Casablanca).',
     difficulty: 'mittel',
-    sources: { text: '"Ich sehâ€™ dir in die Augen, Kleines."' },
+    sources: { text: '"Ich seh’ dir in die Augen, Kleines."' },
     distractors: ['Jean Paul (1796)', 'Alec Guinness (Star Wars) (1977)', 'Konfuzius (zugeschrieben) (~1300)']
   },
   {
@@ -1891,47 +1891,47 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1943,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Antoine de Saint-ExupÃ©ry (1943)',
-    hint: 'Von Antoine de Saint-ExupÃ©ry.',
+    answer: 'Antoine de Saint-Exupéry (1943)',
+    hint: 'Von Antoine de Saint-Exupéry.',
     difficulty: 'mittel',
-    sources: { text: '"Man sieht nur mit dem Herzen gut. Das Wesentliche ist fÃ¼r die Augen unsichtbar."' },
+    sources: { text: '"Man sieht nur mit dem Herzen gut. Das Wesentliche ist für die Augen unsichtbar."' },
     distractors: ['Barack Obama (2008)', 'John F. Kennedy (1961)', 'Franz Kafka (1915)']
   },
   {
     id: 'quote-159',
-    title: 'VÃ¶lker der Welt, schaut auf diese Stadt!',
+    title: 'Völker der Welt, schaut auf diese Stadt!',
     category: 'quote',
     year: 1948,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Ernst Reuter (1948)',
     hint: 'Von Ernst Reuter.',
     difficulty: 'mittel',
-    sources: { text: '"VÃ¶lker der Welt, schaut auf diese Stadt!"' },
+    sources: { text: '"Völker der Welt, schaut auf diese Stadt!"' },
     distractors: ['Samuel Beckett (1952)', 'Terminator (1993)', 'William Shakespeare (Der Sturm) (1611)']
   },
   {
     id: 'quote-160',
-    title: 'Die WÃ¼rde des Menschen ist unantastbar.',
+    title: 'Die Würde des Menschen ist unantastbar.',
     category: 'quote',
     year: 1949,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Grundgesetz fÃ¼r die Bundesrepublik Deutschland (1949)',
-    hint: 'Von Grundgesetz fÃ¼r die Bundesrepublik Deutschland.',
+    answer: 'Grundgesetz für die Bundesrepublik Deutschland (1949)',
+    hint: 'Von Grundgesetz für die Bundesrepublik Deutschland.',
     difficulty: 'mittel',
-    sources: { text: '"Die WÃ¼rde des Menschen ist unantastbar."' },
-    distractors: ['Seneca (1902)', 'Georg BÃ¼chner (Dantons Tod) (1835)', 'George R. R. Martin (Game of Thrones) (1996)']
+    sources: { text: '"Die Würde des Menschen ist unantastbar."' },
+    distractors: ['Seneca (1902)', 'Georg Büchner (Dantons Tod) (1835)', 'George R. R. Martin (Game of Thrones) (1996)']
   },
   {
     id: 'quote-161',
-    title: 'Es gibt nichts Gutes, auÃŸer man tut es.',
+    title: 'Es gibt nichts Gutes, außer man tut es.',
     category: 'quote',
     year: 1950,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Erich KÃ¤stner (1950)',
-    hint: 'Von Erich KÃ¤stner.',
+    answer: 'Erich Kästner (1950)',
+    hint: 'Von Erich Kästner.',
     difficulty: 'mittel',
-    sources: { text: '"Es gibt nichts Gutes, auÃŸer man tut es."' },
-    distractors: ['Jonathan Swift (1738)', 'RenÃ© Descartes (1637)', 'Heraklit (~500 v. Chr.)']
+    sources: { text: '"Es gibt nichts Gutes, außer man tut es."' },
+    distractors: ['Jonathan Swift (1738)', 'René Descartes (1637)', 'Heraklit (~500 v. Chr.)']
   },
   {
     id: 'quote-162',
@@ -1943,7 +1943,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Sepp Herberger.',
     difficulty: 'mittel',
     sources: { text: '"Der Ball ist rund und ein Spiel dauert 90 Minuten."' },
-    distractors: ['Ronald Reagan (1987)', 'Loriot (Ã–dipussi) (1988)', 'Sprichwort (Frankreich/Italien) (~1500)']
+    distractors: ['Ronald Reagan (1987)', 'Loriot (Ödipussi) (1988)', 'Sprichwort (Frankreich/Italien) (~1500)']
   },
   {
     id: 'quote-163',
@@ -1975,8 +1975,8 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1970,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populÃ¤r) (1970)',
-    hint: 'Von Jack Swigert (Apollo 13 - im Film durch Tom Hanks populÃ¤r).',
+    answer: 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populär) (1970)',
+    hint: 'Von Jack Swigert (Apollo 13 - im Film durch Tom Hanks populär).',
     difficulty: 'leicht',
     sources: { text: '"Houston, wir haben ein Problem."' },
     distractors: ['Sherlock Holmes (Arthur Conan Doyle) (1892)', 'Titanic (Jack Dawson) (1997)', 'Seneca (~50 n. Chr.)']
@@ -2039,18 +2039,18 @@ export const quoteCards: Card[] = [
     hint: 'Von Michael Douglas (Wall Street).',
     difficulty: 'leicht',
     sources: { text: '"Gier ist gut. (Greed is good.)"' },
-    distractors: ['Giovanni Trapattoni (1998)', 'Albert Einstein (1930)', 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populÃ¤r) (1970)']
+    distractors: ['Giovanni Trapattoni (1998)', 'Albert Einstein (1930)', 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populär) (1970)']
   },
   {
     id: 'quote-171',
-    title: 'Niemand lÃ¤sst Baby in der Ecke stehen.',
+    title: 'Niemand lässt Baby in der Ecke stehen.',
     category: 'quote',
     year: 1987,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Patrick Swayze (Dirty Dancing) (1987)',
     hint: 'Von Patrick Swayze (Dirty Dancing).',
     difficulty: 'leicht',
-    sources: { text: '"Niemand lÃ¤sst Baby in der Ecke stehen."' },
+    sources: { text: '"Niemand lässt Baby in der Ecke stehen."' },
     distractors: ['Jesus von Nazaret (Johannes 19,30) (~30 n. Chr.)', 'Konfuzius (zugeschrieben) (~500 v. Chr.)', 'George Orwell (1984) (1949)']
   },
   {
@@ -2067,26 +2067,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-173',
-    title: 'Wer zu spÃ¤t kommt, den bestraft das Leben.',
+    title: 'Wer zu spät kommt, den bestraft das Leben.',
     category: 'quote',
     year: 1989,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Michail Gorbatschow (zugeschrieben) (1989)',
     hint: 'Von Michail Gorbatschow (zugeschrieben).',
     difficulty: 'leicht',
-    sources: { text: '"Wer zu spÃ¤t kommt, den bestraft das Leben."' },
+    sources: { text: '"Wer zu spät kommt, den bestraft das Leben."' },
     distractors: ['Robert Duvall (Apocalypse Now) (1979)', 'Friedrich Schiller (Die Jungfrau von Orleans) (1801)', 'Hippokrates (~400 v. Chr.)']
   },
   {
     id: 'quote-174',
-    title: 'Jetzt wÃ¤chst zusammen, was zusammengehÃ¶rt.',
+    title: 'Jetzt wächst zusammen, was zusammengehört.',
     category: 'quote',
     year: 1989,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Willy Brandt (1989)',
     hint: 'Von Willy Brandt.',
     difficulty: 'leicht',
-    sources: { text: '"Jetzt wÃ¤chst zusammen, was zusammengehÃ¶rt."' },
+    sources: { text: '"Jetzt wächst zusammen, was zusammengehört."' },
     distractors: ['Johann Wolfgang von Goethe (1774)', 'Laurence Fishburne (Matrix) (1999)', 'Rhett Butler (Vom Winde verweht) (1939)']
   },
   {
@@ -2115,14 +2115,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-177',
-    title: 'Show me the money! (FÃ¼hr mich zum Schotter!)',
+    title: 'Show me the money! (Führ mich zum Schotter!)',
     category: 'quote',
     year: 1996,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Cuba Gooding Jr. (Jerry Maguire) (1996)',
     hint: 'Von Cuba Gooding Jr. (Jerry Maguire).',
     difficulty: 'leicht',
-    sources: { text: '"Show me the money! (FÃ¼hr mich zum Schotter!)"' },
+    sources: { text: '"Show me the money! (Führ mich zum Schotter!)"' },
     distractors: ['Albert Einstein (1953)', 'Schlagzeile der Bild-Zeitung (2005)', 'John Lennon (1980)']
   },
   {
@@ -2135,7 +2135,7 @@ export const quoteCards: Card[] = [
     hint: 'Von George R. R. Martin (Game of Thrones).',
     difficulty: 'leicht',
     sources: { text: '"Winter is coming."' },
-    distractors: ['Aldous Huxley (1932)', 'Katja Ebstein (1970)', 'Andreas MÃ¶ller (1992)']
+    distractors: ['Aldous Huxley (1932)', 'Katja Ebstein (1970)', 'Andreas Möller (1992)']
   },
   {
     id: 'quote-179',
@@ -2159,7 +2159,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Giovanni Trapattoni.',
     difficulty: 'leicht',
     sources: { text: '"Was erlauben Strunz?!"' },
-    distractors: ['RenÃ© Magritte (1929)', 'Star Trek (Captain Kirk) (1966)', 'Al Pacino (Scarface) (1983)']
+    distractors: ['René Magritte (1929)', 'Star Trek (Captain Kirk) (1966)', 'Al Pacino (Scarface) (1983)']
   },
   {
     id: 'quote-181',
@@ -2170,7 +2170,7 @@ export const quoteCards: Card[] = [
     answer: 'Brad Pitt (Fight Club) (1999)',
     hint: 'Von Brad Pitt (Fight Club).',
     difficulty: 'leicht',
-    sources: { text: '"Die erste Regel des Fight Club lautet: Ihr verliert kein Wort Ã¼ber den Fight Club."' },
+    sources: { text: '"Die erste Regel des Fight Club lautet: Ihr verliert kein Wort über den Fight Club."' },
     distractors: ['Heinrich Heine (~1830)', 'Willy Brandt (1969)', 'Franz Kafka (1915)']
   },
   {
@@ -2203,22 +2203,22 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1776,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Thomas Jefferson (UnabhÃ¤ngigkeitserklÃ¤rung) (1776)',
-    hint: 'Von Thomas Jefferson (UnabhÃ¤ngigkeitserklÃ¤rung).',
+    answer: 'Thomas Jefferson (Unabhängigkeitserklärung) (1776)',
+    hint: 'Von Thomas Jefferson (Unabhängigkeitserklärung).',
     difficulty: 'schwer',
     sources: { text: '"All men are created equal."' },
     distractors: ['Immanuel Kant (1784)', 'Immanuel Kant (1781)', 'Arnold Schwarzenegger (Terminator) (1984)']
   },
   {
     id: 'quote-185',
-    title: 'Regierung des Volkes durch das Volk fÃ¼r das Volk.',
+    title: 'Regierung des Volkes durch das Volk für das Volk.',
     category: 'quote',
     year: 1863,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Abraham Lincoln (1863)',
     hint: 'Von Abraham Lincoln.',
     difficulty: 'mittel',
-    sources: { text: '"Regierung des Volkes durch das Volk fÃ¼r das Volk."' },
+    sources: { text: '"Regierung des Volkes durch das Volk für das Volk."' },
     distractors: ['Aldous Huxley (1932)', 'Norman Bates (1960)', 'Filmtitel (1959)']
   },
   {
@@ -2231,7 +2231,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Edgar Allan Poe.',
     difficulty: 'mittel',
     sources: { text: '"Alles, was wir sehen oder scheinen, ist nur ein Traum in einem Traum."' },
-    distractors: ['Cuba Gooding Jr. (Jerry Maguire) (1996)', 'Mahatma Gandhi (zugeschrieben) (~1948)', 'Roy Scheider (Der weiÃŸe Hai) (1975)']
+    distractors: ['Cuba Gooding Jr. (Jerry Maguire) (1996)', 'Mahatma Gandhi (zugeschrieben) (~1948)', 'Roy Scheider (Der weiße Hai) (1975)']
   },
   {
     id: 'quote-187',
@@ -2242,20 +2242,20 @@ export const quoteCards: Card[] = [
     answer: 'Bertolt Brecht (Die Dreigroschenoper) (1890)',
     hint: 'Von Bertolt Brecht (Die Dreigroschenoper).',
     difficulty: 'mittel',
-    sources: { text: '"Bankraub ist eine Initiative von Dilettanten. Wahre Profis grÃ¼nden eine Bank."' },
+    sources: { text: '"Bankraub ist eine Initiative von Dilettanten. Wahre Profis gründen eine Bank."' },
     distractors: ['Brad Pitt (Fight Club) (1999)', 'Joachim Ringelnatz (1920)', 'Samuel Johnson (1775)']
   },
   {
     id: 'quote-188',
-    title: 'Versuchungen sollte man nachgeben. Wer weiÃŸ, ob s',
+    title: 'Versuchungen sollte man nachgeben. Wer weiß, ob si',
     category: 'quote',
     year: 1891,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Oscar Wilde (1891)',
     hint: 'Von Oscar Wilde.',
     difficulty: 'mittel',
-    sources: { text: '"Versuchungen sollte man nachgeben. Wer weiÃŸ, ob sie wiederkommen!"' },
-    distractors: ['Ludwig Wittgenstein (1921)', 'Sean Connery (James Bond â€“ 007 jagt Dr. No) (1962)', 'Martin Luther (1521)']
+    sources: { text: '"Versuchungen sollte man nachgeben. Wer weiß, ob sie wiederkommen!"' },
+    distractors: ['Ludwig Wittgenstein (1921)', 'Sean Connery (James Bond – 007 jagt Dr. No) (1962)', 'Martin Luther (1521)']
   },
   {
     id: 'quote-189',
@@ -2267,7 +2267,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Albert Schweitzer.',
     difficulty: 'mittel',
     sources: { text: '"Was ein Mensch an Gutem in die Welt hinausgibt, geht nicht verloren."' },
-    distractors: ['Humphrey Bogart (Casablanca) (1942)', 'Gerard Butler (Film: 300) (2006)', 'Friedrich Schiller (Die VerschwÃ¶rung des Fiesco zu Genua) (1783)']
+    distractors: ['Humphrey Bogart (Casablanca) (1942)', 'Gerard Butler (Film: 300) (2006)', 'Friedrich Schiller (Die Verschwörung des Fiesco zu Genua) (1783)']
   },
   {
     id: 'quote-190',
@@ -2290,7 +2290,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (1921)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
-    sources: { text: '"Logik bringt dich von A nach B. Fantasie bringt dich Ã¼berall hin."' },
+    sources: { text: '"Logik bringt dich von A nach B. Fantasie bringt dich überall hin."' },
     distractors: ['Kaiser Wilhelm II. (1914)', 'Igor Strawinsky (~1940)', 'John F. Kennedy (1961)']
   },
   {
@@ -2307,26 +2307,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-193',
-    title: 'Es gibt kein gutmÃ¼tigeres, aber auch kein leichtg',
+    title: 'Es gibt kein gutmütigeres, aber auch kein leichtgl',
     category: 'quote',
     year: 1931,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Heinrich Heine (oft zitiert) (1931)',
     hint: 'Von Heinrich Heine (oft zitiert).',
     difficulty: 'mittel',
-    sources: { text: '"Es gibt kein gutmÃ¼tigeres, aber auch kein leichtglÃ¤ubigeres Volk als das deutsche."' },
+    sources: { text: '"Es gibt kein gutmütigeres, aber auch kein leichtgläubigeres Volk als das deutsche."' },
     distractors: ['Konfuzius (zugeschrieben) (~500 v. Chr.)', 'Bertolt Brecht (zugeschrieben) (1930)', 'Helmut Schmidt (1980)']
   },
   {
     id: 'quote-194',
-    title: 'Das Einzige, was wir zu fÃ¼rchten haben, ist die F',
+    title: 'Das Einzige, was wir zu fürchten haben, ist die Fu',
     category: 'quote',
     year: 1933,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Franklin D. Roosevelt (1933)',
     hint: 'Von Franklin D. Roosevelt.',
     difficulty: 'mittel',
-    sources: { text: '"Das Einzige, was wir zu fÃ¼rchten haben, ist die Furcht selbst."' },
+    sources: { text: '"Das Einzige, was wir zu fürchten haben, ist die Furcht selbst."' },
     distractors: ['Abraham Lincoln (~1860)', 'Sokrates (400 v. Chr.)', 'Johann Wolfgang von Goethe (1795)']
   },
   {
@@ -2343,14 +2343,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-196',
-    title: 'Wir werden auf den StrÃ¤nden kÃ¤mpfen... wir werde',
+    title: 'Wir werden auf den Stränden kämpfen... wir werden ',
     category: 'quote',
     year: 1940,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Winston Churchill (1940)',
     hint: 'Von Winston Churchill.',
     difficulty: 'mittel',
-    sources: { text: '"Wir werden auf den StrÃ¤nden kÃ¤mpfen... wir werden uns niemals ergeben."' },
+    sources: { text: '"Wir werden auf den Stränden kämpfen... wir werden uns niemals ergeben."' },
     distractors: ['Marie von Ebner-Eschenbach (1893)', 'Ralph Waldo Emerson (1841)', 'Sokrates (zugeschrieben) (~400 v. Chr.)']
   },
   {
@@ -2379,14 +2379,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-199',
-    title: 'Hier wird die Verantwortung Ã¼bernommen. (The buck',
+    title: 'Hier wird die Verantwortung übernommen. (The buck ',
     category: 'quote',
     year: 1945,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Harry S. Truman (1945)',
     hint: 'Von Harry S. Truman.',
     difficulty: 'mittel',
-    sources: { text: '"Hier wird die Verantwortung Ã¼bernommen. (The buck stops here)"' },
+    sources: { text: '"Hier wird die Verantwortung übernommen. (The buck stops here)"' },
     distractors: ['George R. R. Martin (Game of Thrones) (1996)', 'Konfuzius (zugeschrieben) (~1300)', 'Samuel Beckett (1952)']
   },
   {
@@ -2399,7 +2399,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Anne Frank.',
     difficulty: 'mittel',
     sources: { text: '"Trotz allem glaube ich an das Gute im Menschen."' },
-    distractors: ['Star Wars (Darth Vader) (1980)', 'RenÃ© Descartes (1637)', 'Heinrich IV. (1593)']
+    distractors: ['Star Wars (Darth Vader) (1980)', 'René Descartes (1637)', 'Heinrich IV. (1593)']
   },
   {
     id: 'quote-201',
@@ -2415,14 +2415,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-202',
-    title: 'Wer nicht liest, hat keinen Vorteil gegenÃ¼ber dem',
+    title: 'Wer nicht liest, hat keinen Vorteil gegenüber dem,',
     category: 'quote',
     year: 1950,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Mark Twain (1950)',
     hint: 'Von Mark Twain.',
     difficulty: 'mittel',
-    sources: { text: '"Wer nicht liest, hat keinen Vorteil gegenÃ¼ber dem, der nicht lesen kann."' },
+    sources: { text: '"Wer nicht liest, hat keinen Vorteil gegenüber dem, der nicht lesen kann."' },
     distractors: ['Winston Churchill (~1940)', 'Harry S. Truman (1945)', 'Paul Watzlawick (1967)']
   },
   {
@@ -2447,7 +2447,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Samuel Beckett.',
     difficulty: 'mittel',
     sources: { text: '"Warten wir auf Godot."' },
-    distractors: ['Unbekannt (oft fÃ¤lschlich Einstein) (1958)', 'The Matrix (Morpheus) (1999)', 'Volksmund (~1900)']
+    distractors: ['Unbekannt (oft fälschlich Einstein) (1958)', 'The Matrix (Morpheus) (1999)', 'Volksmund (~1900)']
   },
   {
     id: 'quote-205',
@@ -2471,18 +2471,18 @@ export const quoteCards: Card[] = [
     hint: 'Von Filmtitel (James Dean) / Bibel (Lukas 23,34).',
     difficulty: 'mittel',
     sources: { text: '"Denn sie wissen nicht, was sie tun."' },
-    distractors: ['Benjamin Franklin (1791)', 'Star Trek (Captain Kirk) (1966)', 'Antoine de Saint-ExupÃ©ry (1943)']
+    distractors: ['Benjamin Franklin (1791)', 'Star Trek (Captain Kirk) (1966)', 'Antoine de Saint-Exupéry (1943)']
   },
   {
     id: 'quote-207',
-    title: 'Lerne aus der Vergangenheit, trÃ¤ume von der Zukun',
+    title: 'Lerne aus der Vergangenheit, träume von der Zukunf',
     category: 'quote',
     year: 1958,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Unbekannt (oft fÃ¤lschlich Einstein) (1958)',
-    hint: 'Von Unbekannt (oft fÃ¤lschlich Einstein).',
+    answer: 'Unbekannt (oft fälschlich Einstein) (1958)',
+    hint: 'Von Unbekannt (oft fälschlich Einstein).',
     difficulty: 'mittel',
-    sources: { text: '"Lerne aus der Vergangenheit, trÃ¤ume von der Zukunft, lebe in der Gegenwart."' },
+    sources: { text: '"Lerne aus der Vergangenheit, träume von der Zukunft, lebe in der Gegenwart."' },
     distractors: ['Friedrich Schiller (Wallensteins Lager) (1799)', 'Marie von Ebner-Eschenbach (1893)', 'Hippokrates (~400 v. Chr.)']
   },
   {
@@ -2499,38 +2499,38 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-209',
-    title: 'Ein kleiner Schritt fÃ¼r mich, ein groÃŸer fÃ¼r di',
+    title: 'Ein kleiner Schritt für mich, ein großer für die S',
     category: 'quote',
     year: 1963,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: '(Parodie auf Armstrong / Volksmund) (1963)',
     hint: 'Von (Parodie auf Armstrong / Volksmund).',
     difficulty: 'leicht',
-    sources: { text: '"Ein kleiner Schritt fÃ¼r mich, ein groÃŸer fÃ¼r die Schwiegermutter."' },
+    sources: { text: '"Ein kleiner Schritt für mich, ein großer für die Schwiegermutter."' },
     distractors: ['Katja Ebstein (1970)', 'Bertolt Brecht (1930)', 'Blaise Pascal (1910)']
   },
   {
     id: 'quote-210',
-    title: 'SchÃ¼tteln, nicht rÃ¼hren.',
+    title: 'Schütteln, nicht rühren.',
     category: 'quote',
     year: 1964,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Sean Connery (James Bond â€“ Goldfinger) (1964)',
-    hint: 'Von Sean Connery (James Bond â€“ Goldfinger).',
+    answer: 'Sean Connery (James Bond – Goldfinger) (1964)',
+    hint: 'Von Sean Connery (James Bond – Goldfinger).',
     difficulty: 'leicht',
-    sources: { text: '"SchÃ¼tteln, nicht rÃ¼hren."' },
+    sources: { text: '"Schütteln, nicht rühren."' },
     distractors: ['George Orwell (Farm der Tiere) (1945)', 'Immanuel Kant (1781)', 'Albert Einstein (zugeschrieben) (~1950)']
   },
   {
     id: 'quote-211',
-    title: 'FuÃŸball ist ein einfaches Spiel: 22 MÃ¤nner jagen',
+    title: 'Fußball ist ein einfaches Spiel: 22 Männer jagen 9',
     category: 'quote',
     year: 1966,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Gary Lineker (1966)',
     hint: 'Von Gary Lineker.',
     difficulty: 'leicht',
-    sources: { text: '"FuÃŸball ist ein einfaches Spiel: 22 MÃ¤nner jagen 90 Minuten lang einem Ball nach."' },
+    sources: { text: '"Fußball ist ein einfaches Spiel: 22 Männer jagen 90 Minuten lang einem Ball nach."' },
     distractors: ['Bruce Willis (Stirb Langsam) (1988)', 'Edgar Allan Poe (1865)', 'Konfuzius (zugeschrieben) (~1300)']
   },
   {
@@ -2547,14 +2547,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-213',
-    title: 'In der Zukunft wird jeder fÃ¼r 15 Minuten weltberÃ',
+    title: 'In der Zukunft wird jeder für 15 Minuten weltberüh',
     category: 'quote',
     year: 1968,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Andy Warhol (1968)',
     hint: 'Von Andy Warhol.',
     difficulty: 'leicht',
-    sources: { text: '"In der Zukunft wird jeder fÃ¼r 15 Minuten weltberÃ¼hmt sein."' },
+    sources: { text: '"In der Zukunft wird jeder für 15 Minuten weltberühmt sein."' },
     distractors: ['Volksmund (1943)', 'Gary Lineker (1966)', 'John F. Kennedy (1961)']
   },
   {
@@ -2566,19 +2566,19 @@ export const quoteCards: Card[] = [
     answer: 'Clint Eastwood (Dirty Harry) (1971)',
     hint: 'Von Clint Eastwood (Dirty Harry).',
     difficulty: 'leicht',
-    sources: { text: '"Fragst du dich, ob ich sechs Schuss abgefeuert habe oder nur fÃ¼nf?"' },
-    distractors: ['Edward Kennedy (1960)', 'NiccolÃ² Machiavelli (zugeschrieben) (1532)', 'Barack Obama (2008)']
+    sources: { text: '"Fragst du dich, ob ich sechs Schuss abgefeuert habe oder nur fünf?"' },
+    distractors: ['Edward Kennedy (1960)', 'Niccolò Machiavelli (zugeschrieben) (1532)', 'Barack Obama (2008)']
   },
   {
     id: 'quote-215',
-    title: 'Sie werden ein grÃ¶ÃŸeres Boot brauchen.',
+    title: 'Sie werden ein größeres Boot brauchen.',
     category: 'quote',
     year: 1975,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Roy Scheider (Der weiÃŸe Hai) (1975)',
-    hint: 'Von Roy Scheider (Der weiÃŸe Hai).',
+    answer: 'Roy Scheider (Der weiße Hai) (1975)',
+    hint: 'Von Roy Scheider (Der weiße Hai).',
     difficulty: 'leicht',
-    sources: { text: '"Sie werden ein grÃ¶ÃŸeres Boot brauchen."' },
+    sources: { text: '"Sie werden ein größeres Boot brauchen."' },
     distractors: ['Star Wars (Obi-Wan Kenobi) (1977)', 'Sprichwort (Frankreich/Italien) (~1500)', 'Michael Douglas (Wall Street) (1987)']
   },
   {
@@ -2595,26 +2595,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-217',
-    title: 'Im Weltraum hÃ¶rt dich niemand schreien.',
+    title: 'Im Weltraum hört dich niemand schreien.',
     category: 'quote',
     year: 1979,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Slogan (Alien â€“ Das unheimliche Wesen aus einer fremden Welt) (1979)',
-    hint: 'Von Slogan (Alien â€“ Das unheimliche Wesen aus einer fremden Welt).',
+    answer: 'Slogan (Alien – Das unheimliche Wesen aus einer fremden Welt) (1979)',
+    hint: 'Von Slogan (Alien – Das unheimliche Wesen aus einer fremden Welt).',
     difficulty: 'leicht',
-    sources: { text: '"Im Weltraum hÃ¶rt dich niemand schreien."' },
+    sources: { text: '"Im Weltraum hört dich niemand schreien."' },
     distractors: ['Karl Marx & Friedrich Engels (1848)', 'Alec Guinness (Star Wars) (1977)', 'Protagoras (1957)']
   },
   {
     id: 'quote-218',
-    title: 'Das Leben ist das, was passiert, wÃ¤hrend du eifri',
+    title: 'Das Leben ist das, was passiert, während du eifrig',
     category: 'quote',
     year: 1980,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'John Lennon (1980)',
     hint: 'Von John Lennon.',
     difficulty: 'leicht',
-    sources: { text: '"Das Leben ist das, was passiert, wÃ¤hrend du eifrig dabei bist, andere PlÃ¤ne zu machen."' },
+    sources: { text: '"Das Leben ist das, was passiert, während du eifrig dabei bist, andere Pläne zu machen."' },
     distractors: ['Humphrey Bogart (Casablanca) (1942)', 'Thomas Hobbes (1927)', 'The Rolling Stones (1964)']
   },
   {
@@ -2655,14 +2655,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-222',
-    title: 'Ich spÃ¼re die Gier... die Gier nach Tempo!',
+    title: 'Ich spüre die Gier... die Gier nach Tempo!',
     category: 'quote',
     year: 1986,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Tom Cruise (Top Gun) (1986)',
     hint: 'Von Tom Cruise (Top Gun).',
     difficulty: 'leicht',
-    sources: { text: '"Ich spÃ¼re die Gier... die Gier nach Tempo!"' },
+    sources: { text: '"Ich spüre die Gier... die Gier nach Tempo!"' },
     distractors: ['William Shakespeare (Cymbeline) (1609)', 'Oscar Wilde (1891)', 'Alec Guinness (Star Wars) (1977)']
   },
   {
@@ -2679,38 +2679,38 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-224',
-    title: 'Es scheint immer unmÃ¶glich, bis es getan ist.',
+    title: 'Es scheint immer unmöglich, bis es getan ist.',
     category: 'quote',
     year: 1990,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Nelson Mandela (1990)',
     hint: 'Von Nelson Mandela.',
     difficulty: 'leicht',
-    sources: { text: '"Es scheint immer unmÃ¶glich, bis es getan ist."' },
+    sources: { text: '"Es scheint immer unmöglich, bis es getan ist."' },
     distractors: ['BILD-Zeitung (2005)', 'Neil Armstrong (1969)', 'Ronald Reagan (1987)']
   },
   {
     id: 'quote-225',
-    title: 'Sie kÃ¶nnen die Wahrheit doch gar nicht vertragen!',
+    title: 'Sie können die Wahrheit doch gar nicht vertragen!',
     category: 'quote',
     year: 1992,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Jack Nicholson (Eine Frage der Ehre) (1992)',
     hint: 'Von Jack Nicholson (Eine Frage der Ehre).',
     difficulty: 'leicht',
-    sources: { text: '"Sie kÃ¶nnen die Wahrheit doch gar nicht vertragen!"' },
-    distractors: ['Ernest Hemingway (~1950)', 'E.T. (E.T. â€“ Der AuÃŸerirdische) (1982)', 'Otto von Bismarck (1862)']
+    sources: { text: '"Sie können die Wahrheit doch gar nicht vertragen!"' },
+    distractors: ['Ernest Hemingway (~1950)', 'E.T. (E.T. – Der Außerirdische) (1982)', 'Otto von Bismarck (1862)']
   },
   {
     id: 'quote-226',
-    title: 'KÃ¶nig der LÃ¶wen: Hakuna Matata!',
+    title: 'König der Löwen: Hakuna Matata!',
     category: 'quote',
     year: 1994,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Nathan Lane & Ernie Sabella (Timon & Pumbaa) (1994)',
     hint: 'Von Nathan Lane & Ernie Sabella (Timon & Pumbaa).',
     difficulty: 'leicht',
-    sources: { text: '"KÃ¶nig der LÃ¶wen: Hakuna Matata!"' },
+    sources: { text: '"König der Löwen: Hakuna Matata!"' },
     distractors: ['Humphrey Bogart (Casablanca) (1942)', 'Mahatma Gandhi (1948)', 'Buddha (~500 v. Chr.)']
   },
   {
@@ -2735,7 +2735,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Eric Malpass (Buchtitel/Redewendung).',
     difficulty: 'leicht',
     sources: { text: '"Morgens um sieben ist die Welt noch in Ordnung."' },
-    distractors: ['Theodor Heuss (~1950)', 'Loriot (Das FrÃ¼hstÃ¼cksei) (1977)', 'Bertolt Brecht (1930)']
+    distractors: ['Theodor Heuss (~1950)', 'Loriot (Das Frühstücksei) (1977)', 'Bertolt Brecht (1930)']
   },
   {
     id: 'quote-229',
@@ -2751,14 +2751,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-230',
-    title: 'Viel mehr als unsere FÃ¤higkeiten sind es unsere E',
+    title: 'Viel mehr als unsere Fähigkeiten sind es unsere En',
     category: 'quote',
     year: 2001,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Albus Dumbledore (Harry Potter) (2001)',
     hint: 'Von Albus Dumbledore (Harry Potter).',
     difficulty: 'leicht',
-    sources: { text: '"Viel mehr als unsere FÃ¤higkeiten sind es unsere Entscheidungen, die zeigen, wer wir wirklich sind."' },
+    sources: { text: '"Viel mehr als unsere Fähigkeiten sind es unsere Entscheidungen, die zeigen, wer wir wirklich sind."' },
     distractors: ['Seneca (zugeschrieben) (~50 n. Chr.)', 'Die drei Musketiere (Alexandre Dumas) (2001)', 'Humphrey Bogart (Casablanca) (1942)']
   },
   {
@@ -2787,62 +2787,62 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-233',
-    title: 'Du weiÃŸt gar nichts, Jon Schnee.',
+    title: 'Du weißt gar nichts, Jon Schnee.',
     category: 'quote',
     year: 2011,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Rose Leslie (Game of Thrones) (2011)',
     hint: 'Von Rose Leslie (Game of Thrones).',
     difficulty: 'leicht',
-    sources: { text: '"Du weiÃŸt gar nichts, Jon Schnee."' },
+    sources: { text: '"Du weißt gar nichts, Jon Schnee."' },
     distractors: ['Philip Rosenthal (~1960)', 'John F. Kennedy (1961)', 'Timothy Leary (1965)']
   },
   {
     id: 'quote-234',
-    title: 'Die Botschaft hÃ¶r ich wohl, allein mir fehlt der ',
+    title: 'Die Botschaft hör ich wohl, allein mir fehlt der G',
     category: 'quote',
     year: 1808,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Johann Wolfgang von Goethe (Faust I) (1808)',
     hint: 'Von Johann Wolfgang von Goethe (Faust I).',
     difficulty: 'mittel',
-    sources: { text: '"Die Botschaft hÃ¶r ich wohl, allein mir fehlt der Glaube."' },
+    sources: { text: '"Die Botschaft hör ich wohl, allein mir fehlt der Glaube."' },
     distractors: ['Giovanni Trapattoni (1998)', 'Martin Luther (1521)', 'Theodor W. Adorno (1991)']
   },
   {
     id: 'quote-235',
-    title: 'Jeder ist seines GlÃ¼ckes Schmied.',
+    title: 'Jeder ist seines Glückes Schmied.',
     category: 'quote',
     year: -300,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Appius Claudius Caecus (300 v. Chr.)',
     hint: 'Von Appius Claudius Caecus.',
     difficulty: 'schwer',
-    sources: { text: '"Jeder ist seines GlÃ¼ckes Schmied."' },
+    sources: { text: '"Jeder ist seines Glückes Schmied."' },
     distractors: ['Giovanni Trapattoni (1998)', 'Winston Churchill (1947)', 'Ralph Waldo Emerson (1841)']
   },
   {
     id: 'quote-236',
-    title: 'Gott wÃ¼rfelt nicht.',
+    title: 'Gott würfelt nicht.',
     category: 'quote',
     year: 1926,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Albert Einstein (1926)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
-    sources: { text: '"Gott wÃ¼rfelt nicht."' },
+    sources: { text: '"Gott würfelt nicht."' },
     distractors: ['Loriot (Weihnachten bei Hoppenstedts) (1978)', 'Winston Churchill (1940)', 'Friedrich Schiller (Wallensteins Lager) (1799)']
   },
   {
     id: 'quote-237',
-    title: 'Wovon man nicht sprechen kann, darÃ¼ber muss man s',
+    title: 'Wovon man nicht sprechen kann, darüber muss man sc',
     category: 'quote',
     year: 1921,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Ludwig Wittgenstein (1921)',
     hint: 'Von Ludwig Wittgenstein.',
     difficulty: 'mittel',
-    sources: { text: '"Wovon man nicht sprechen kann, darÃ¼ber muss man schweigen."' },
+    sources: { text: '"Wovon man nicht sprechen kann, darüber muss man schweigen."' },
     distractors: ['Oscar Wilde (~1890)', 'Albert Einstein (1929)', 'Dalai Lama (1904)']
   },
   {
@@ -2859,26 +2859,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-239',
-    title: 'Wer kÃ¤mpft, kann verlieren. Wer nicht kÃ¤mpft, ha',
+    title: 'Wer kämpft, kann verlieren. Wer nicht kämpft, hat ',
     category: 'quote',
     year: 1930,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Bertolt Brecht (zugeschrieben) (1930)',
     hint: 'Von Bertolt Brecht (zugeschrieben).',
     difficulty: 'mittel',
-    sources: { text: '"Wer kÃ¤mpft, kann verlieren. Wer nicht kÃ¤mpft, hat schon verloren."' },
+    sources: { text: '"Wer kämpft, kann verlieren. Wer nicht kämpft, hat schon verloren."' },
     distractors: ['Thomas Edison (1895)', 'Georg Christoph Lichtenberg (1921)', 'Pablo Picasso (~1950)']
   },
   {
     id: 'quote-240',
-    title: 'Tear down this wall! (ReiÃŸen Sie diese Mauer nied',
+    title: 'Tear down this wall! (Reißen Sie diese Mauer niede',
     category: 'quote',
     year: 1987,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Ronald Reagan (1987)',
     hint: 'Von Ronald Reagan.',
     difficulty: 'leicht',
-    sources: { text: '"Tear down this wall! (ReiÃŸen Sie diese Mauer nieder!)"' },
+    sources: { text: '"Tear down this wall! (Reißen Sie diese Mauer nieder!)"' },
     distractors: ['Albert Einstein (~1940)', 'Titanic (Jack Dawson) (1997)', 'John F. Kennedy (1961)']
   },
   {
@@ -2895,38 +2895,38 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-242',
-    title: 'Mailand oder Madrid â€“ Hauptsache Italien!',
+    title: 'Mailand oder Madrid – Hauptsache Italien!',
     category: 'quote',
     year: 1992,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Andreas MÃ¶ller (1992)',
-    hint: 'Von Andreas MÃ¶ller.',
+    answer: 'Andreas Möller (1992)',
+    hint: 'Von Andreas Möller.',
     difficulty: 'leicht',
-    sources: { text: '"Mailand oder Madrid â€“ Hauptsache Italien!"' },
-    distractors: ['Michail Gorbatschow (zugeschrieben) (1989)', 'Antoine de Saint-ExupÃ©ry (1943)', 'Angela Merkel (2013)']
+    sources: { text: '"Mailand oder Madrid – Hauptsache Italien!"' },
+    distractors: ['Michail Gorbatschow (zugeschrieben) (1989)', 'Antoine de Saint-Exupéry (1943)', 'Angela Merkel (2013)']
   },
   {
     id: 'quote-243',
-    title: 'Ein Teil von jener Kraft, die stets das BÃ¶se will',
+    title: 'Ein Teil von jener Kraft, die stets das Böse will ',
     category: 'quote',
     year: 1808,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Johann Wolfgang von Goethe (Mephisto in Faust I) (1808)',
     hint: 'Von Johann Wolfgang von Goethe (Mephisto in Faust I).',
     difficulty: 'mittel',
-    sources: { text: '"Ein Teil von jener Kraft, die stets das BÃ¶se will und stets das Gute schafft."' },
+    sources: { text: '"Ein Teil von jener Kraft, die stets das Böse will und stets das Gute schafft."' },
     distractors: ['John F. Kennedy (1961)', 'Sepp Herberger (1954)', 'Margaret Thatcher (1983)']
   },
   {
     id: 'quote-244',
-    title: 'Ohne Musik wÃ¤re das Leben ein Irrtum.',
+    title: 'Ohne Musik wäre das Leben ein Irrtum.',
     category: 'quote',
     year: 1889,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Friedrich Nietzsche (1889)',
     hint: 'Von Friedrich Nietzsche.',
     difficulty: 'mittel',
-    sources: { text: '"Ohne Musik wÃ¤re das Leben ein Irrtum."' },
+    sources: { text: '"Ohne Musik wäre das Leben ein Irrtum."' },
     distractors: ['Bertolt Brecht (Leben des Galilei) (1939)', 'Barack Obama (2008)', 'Clint Eastwood (Dirty Harry) (1971)']
   },
   {
@@ -2943,14 +2943,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-246',
-    title: 'Ich bin so knallvergnÃ¼gt erwacht.',
+    title: 'Ich bin so knallvergnügt erwacht.',
     category: 'quote',
     year: 1920,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Joachim Ringelnatz (1920)',
     hint: 'Von Joachim Ringelnatz.',
     difficulty: 'mittel',
-    sources: { text: '"Ich bin so knallvergnÃ¼gt erwacht."' },
+    sources: { text: '"Ich bin so knallvergnügt erwacht."' },
     distractors: ['Terminator 2 (1994)', 'Edward Kennedy (1960)', 'Anne Frank (1947)']
   },
   {
@@ -3015,14 +3015,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-252',
-    title: 'Gegen Dummheit kÃ¤mpfen GÃ¶tter selbst vergebens.',
+    title: 'Gegen Dummheit kämpfen Götter selbst vergebens.',
     category: 'quote',
     year: 1801,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Friedrich Schiller (Die Jungfrau von Orleans) (1801)',
     hint: 'Von Friedrich Schiller (Die Jungfrau von Orleans).',
     difficulty: 'mittel',
-    sources: { text: '"Gegen Dummheit kÃ¤mpfen GÃ¶tter selbst vergebens."' },
+    sources: { text: '"Gegen Dummheit kämpfen Götter selbst vergebens."' },
     distractors: ['John W. Gardner (~1900)', 'Oscar Wilde (~1890)', 'Sherlock Holmes (Arthur Conan Doyle) (1892)']
   },
   {
@@ -3039,26 +3039,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-254',
-    title: 'Es ist nicht alles Gold, was glÃ¤nzt.',
+    title: 'Es ist nicht alles Gold, was glänzt.',
     category: 'quote',
     year: 1596,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'William Shakespeare (Der Kaufmann von Venedig) (1596)',
     hint: 'Von William Shakespeare (Der Kaufmann von Venedig).',
     difficulty: 'schwer',
-    sources: { text: '"Es ist nicht alles Gold, was glÃ¤nzt."' },
+    sources: { text: '"Es ist nicht alles Gold, was glänzt."' },
     distractors: ['Heinrich Heine (oft zitiert) (1931)', 'Voltaire (1750)', 'Leonardo DiCaprio (Titanic) (1997)']
   },
   {
     id: 'quote-255',
-    title: 'Der KlÃ¼gere gibt nach.',
+    title: 'Der Klügere gibt nach.',
     category: 'quote',
     year: 1880,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Marie von Ebner-Eschenbach (1880)',
     hint: 'Von Marie von Ebner-Eschenbach.',
     difficulty: 'mittel',
-    sources: { text: '"Der KlÃ¼gere gibt nach."' },
+    sources: { text: '"Der Klügere gibt nach."' },
     distractors: ['Montagsdemonstrationen DDR (1989)', 'Robert Lembke (1980)', 'Buddha (~500 v. Chr.)']
   },
   {
@@ -3075,14 +3075,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-257',
-    title: 'Das Internet ist fÃ¼r uns alle Neuland.',
+    title: 'Das Internet ist für uns alle Neuland.',
     category: 'quote',
     year: 2013,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Angela Merkel (2013)',
     hint: 'Von Angela Merkel.',
     difficulty: 'leicht',
-    sources: { text: '"Das Internet ist fÃ¼r uns alle Neuland."' },
+    sources: { text: '"Das Internet ist für uns alle Neuland."' },
     distractors: ['Robert De Niro (Taxi Driver) (1976)', 'Clint Eastwood (Dirty Harry) (1971)', 'Walt Disney (1920)']
   },
   {
@@ -3099,26 +3099,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-259',
-    title: 'Je Ã¶fter eine Dummheit wiederholt wird, desto meh',
+    title: 'Je öfter eine Dummheit wiederholt wird, desto mehr',
     category: 'quote',
     year: 1750,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Voltaire (1750)',
     hint: 'Von Voltaire.',
     difficulty: 'schwer',
-    sources: { text: '"Je Ã¶fter eine Dummheit wiederholt wird, desto mehr bekommt sie den Anschein von Klugheit."' },
+    sources: { text: '"Je öfter eine Dummheit wiederholt wird, desto mehr bekommt sie den Anschein von Klugheit."' },
     distractors: ['Gary Lineker (1966)', 'Heraklit (~500 v. Chr.)', 'Federico Fellini (1954)']
   },
   {
     id: 'quote-260',
-    title: 'Das Herz hat seine GrÃ¼nde, die die Vernunft nicht',
+    title: 'Das Herz hat seine Gründe, die die Vernunft nicht ',
     category: 'quote',
     year: 1669,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Blaise Pascal (1669)',
     hint: 'Von Blaise Pascal.',
     difficulty: 'schwer',
-    sources: { text: '"Das Herz hat seine GrÃ¼nde, die die Vernunft nicht kennt."' },
+    sources: { text: '"Das Herz hat seine Gründe, die die Vernunft nicht kennt."' },
     distractors: ['Winston Churchill (1940)', 'Franz Beckenbauer (1974)', 'Gary Lineker (1966)']
   },
   {
@@ -3127,8 +3127,8 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1835,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Georg BÃ¼chner (Dantons Tod) (1835)',
-    hint: 'Von Georg BÃ¼chner (Dantons Tod).',
+    answer: 'Georg Büchner (Dantons Tod) (1835)',
+    hint: 'Von Georg Büchner (Dantons Tod).',
     difficulty: 'mittel',
     sources: { text: '"Die Revolution frisst ihre eigenen Kinder."' },
     distractors: ['Jennifer Grey (Dirty Dancing) (1987)', 'Rosa Luxemburg (1944)', 'Timothy Leary (1965)']
@@ -3147,14 +3147,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-263',
-    title: 'Ich weiÃŸ nicht, mit welchen Waffen der dritte Wel',
+    title: 'Ich weiß nicht, mit welchen Waffen der dritte Welt',
     category: 'quote',
     year: 1949,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Albert Einstein (1949)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
-    sources: { text: '"Ich weiÃŸ nicht, mit welchen Waffen der dritte Weltkrieg ausgefochten wird, aber der vierte wird mit StÃ¶cken und Steinen ausgefochten."' },
+    sources: { text: '"Ich weiß nicht, mit welchen Waffen der dritte Weltkrieg ausgefochten wird, aber der vierte wird mit Stöcken und Steinen ausgefochten."' },
     distractors: ['Winston Churchill (~1940)', 'Volksmund (Traditionell)', 'Jack Nicholson (Eine Frage der Ehre) (1992)']
   },
   {
@@ -3191,7 +3191,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Ralph Waldo Emerson.',
     difficulty: 'mittel',
     sources: { text: '"Die einzige Art, einen Freund zu haben, ist die, selbst einer zu sein."' },
-    distractors: ['Julius CÃ¤sar (49 v. Chr.)', 'Kaiser Wilhelm II. (1914)', 'Martin Luther King Jr. (1965)']
+    distractors: ['Julius Cäsar (49 v. Chr.)', 'Kaiser Wilhelm II. (1914)', 'Martin Luther King Jr. (1965)']
   },
   {
     id: 'quote-267',
@@ -3219,38 +3219,38 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-269',
-    title: 'WÃ¤hle einen Beruf, den du liebst, und du brauchst',
+    title: 'Wähle einen Beruf, den du liebst, und du brauchst ',
     category: 'quote',
     year: -500,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Konfuzius (zugeschrieben) (500 v. Chr.)',
     hint: 'Von Konfuzius (zugeschrieben).',
     difficulty: 'schwer',
-    sources: { text: '"WÃ¤hle einen Beruf, den du liebst, und du brauchst keinen Tag in deinem Leben mehr zu arbeiten."' },
+    sources: { text: '"Wähle einen Beruf, den du liebst, und du brauchst keinen Tag in deinem Leben mehr zu arbeiten."' },
     distractors: ['Gary Lineker (1966)', 'Winston Churchill (1940)', 'Angela Merkel (2015)']
   },
   {
     id: 'quote-270',
-    title: 'Wenn du durch die HÃ¶lle gehst, geh weiter.',
+    title: 'Wenn du durch die Hölle gehst, geh weiter.',
     category: 'quote',
     year: 1940,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Winston Churchill (zugeschrieben) (1940)',
     hint: 'Von Winston Churchill (zugeschrieben).',
     difficulty: 'mittel',
-    sources: { text: '"Wenn du durch die HÃ¶lle gehst, geh weiter."' },
+    sources: { text: '"Wenn du durch die Hölle gehst, geh weiter."' },
     distractors: ['Otto von Bismarck (1862)', 'Abraham Lincoln (1863)', 'Star Trek (Captain Kirk) (1966)']
   },
   {
     id: 'quote-271',
-    title: 'Der Preis der GrÃ¶ÃŸe ist Verantwortung.',
+    title: 'Der Preis der Größe ist Verantwortung.',
     category: 'quote',
     year: 1943,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Winston Churchill (1943)',
     hint: 'Von Winston Churchill.',
     difficulty: 'mittel',
-    sources: { text: '"Der Preis der GrÃ¶ÃŸe ist Verantwortung."' },
+    sources: { text: '"Der Preis der Größe ist Verantwortung."' },
     distractors: ['Jean Paul (1796)', 'Georg Christoph Lichtenberg (~1770)', 'Bertolt Brecht (Die Dreigroschenoper) (1890)']
   },
   {
@@ -3262,19 +3262,19 @@ export const quoteCards: Card[] = [
     answer: 'John F. Kennedy (1961)',
     hint: 'Von John F. Kennedy.',
     difficulty: 'leicht',
-    sources: { text: '"Es gibt nur eine Sache, die teurer ist als Bildung â€“ keine Bildung."' },
+    sources: { text: '"Es gibt nur eine Sache, die teurer ist als Bildung – keine Bildung."' },
     distractors: ['Bill Clinton (1998)', 'Oscar Wilde (1891)', 'Angela Merkel (2015)']
   },
   {
     id: 'quote-273',
-    title: 'Ein Tag ohne LÃ¤cheln ist ein verlorener Tag.',
+    title: 'Ein Tag ohne Lächeln ist ein verlorener Tag.',
     category: 'quote',
     year: 1930,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Charlie Chaplin (1930)',
     hint: 'Von Charlie Chaplin.',
     difficulty: 'mittel',
-    sources: { text: '"Ein Tag ohne LÃ¤cheln ist ein verlorener Tag."' },
+    sources: { text: '"Ein Tag ohne Lächeln ist ein verlorener Tag."' },
     distractors: ['Georg Christoph Lichtenberg (1921)', 'Georg Christoph Lichtenberg (~1770)', 'Rudyard Kipling (1923)']
   },
   {
@@ -3287,7 +3287,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Friedrich Schiller (zugeschrieben / Friedrich Nietzsche).',
     difficulty: 'mittel',
     sources: { text: '"Wer nicht mit der Zeit geht, geht mit der Zeit."' },
-    distractors: ['RenÃ© Magritte (1929)', 'Albert Einstein (1926)', 'Albert Einstein (1921)']
+    distractors: ['René Magritte (1929)', 'Albert Einstein (1926)', 'Albert Einstein (1921)']
   },
   {
     id: 'quote-275',
@@ -3303,14 +3303,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-276',
-    title: 'Lerne, als wÃ¼rdest du ewig leben. Lebe, als wÃ¼rd',
+    title: 'Lerne, als würdest du ewig leben. Lebe, als würdes',
     category: 'quote',
     year: 1930,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Mahatma Gandhi (1930)',
     hint: 'Von Mahatma Gandhi.',
     difficulty: 'mittel',
-    sources: { text: '"Lerne, als wÃ¼rdest du ewig leben. Lebe, als wÃ¼rdest du morgen sterben."' },
+    sources: { text: '"Lerne, als würdest du ewig leben. Lebe, als würdest du morgen sterben."' },
     distractors: ['Franklin D. Roosevelt (1933)', 'Andy Warhol (1968)', 'Julius Caesar (47 v. Chr.)']
   },
   {
@@ -3323,7 +3323,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Tom Hanks (Forrest Gump).',
     difficulty: 'leicht',
     sources: { text: '"Dumm ist der, der Dummes tut."' },
-    distractors: ['Niels Bohr (1920)', 'Winston Churchill (1941)', 'Joe E. Brown (Manche mÃ¶genâ€™s heiÃŸ) (1959)']
+    distractors: ['Niels Bohr (1920)', 'Winston Churchill (1941)', 'Joe E. Brown (Manche mögen’s heiß) (1959)']
   },
   {
     id: 'quote-278',
@@ -3339,14 +3339,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-279',
-    title: 'Die Zukunft war frÃ¼her auch besser.',
+    title: 'Die Zukunft war früher auch besser.',
     category: 'quote',
     year: 1970,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Karl Valentin (1970)',
     hint: 'Von Karl Valentin.',
     difficulty: 'leicht',
-    sources: { text: '"Die Zukunft war frÃ¼her auch besser."' },
+    sources: { text: '"Die Zukunft war früher auch besser."' },
     distractors: ['The Beatles (1967)', 'Barack Obama (2008)', 'Forrest Gump (1985)']
   },
   {
@@ -3359,7 +3359,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Kaiser Wilhelm II..',
     difficulty: 'mittel',
     sources: { text: '"Ich kenne keine Parteien mehr, ich kenne nur noch Deutsche."' },
-    distractors: ['Grundgesetz fÃ¼r die Bundesrepublik Deutschland (1949)', 'Dorie (Findet Nemo) (2003)', 'Queen / Freddie Mercury (1984)']
+    distractors: ['Grundgesetz für die Bundesrepublik Deutschland (1949)', 'Dorie (Findet Nemo) (2003)', 'Queen / Freddie Mercury (1984)']
   },
   {
     id: 'quote-281',
@@ -3371,42 +3371,42 @@ export const quoteCards: Card[] = [
     hint: 'Von Napoleon Bonaparte.',
     difficulty: 'mittel',
     sources: { text: '"Es gibt keine schlechten Soldaten, nur schlechte Offiziere."' },
-    distractors: ['Albert Einstein (1905)', 'Antoine de Saint-ExupÃ©ry (1943)', 'Andy Serkis (Der Herr der Ringe) (2001)']
+    distractors: ['Albert Einstein (1905)', 'Antoine de Saint-Exupéry (1943)', 'Andy Serkis (Der Herr der Ringe) (2001)']
   },
   {
     id: 'quote-282',
-    title: 'Die Basis einer gesunden Ordnung ist ein groÃŸer M',
+    title: 'Die Basis einer gesunden Ordnung ist ein großer Mü',
     category: 'quote',
     year: 1920,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Kurt Tucholsky (1920)',
     hint: 'Von Kurt Tucholsky.',
     difficulty: 'mittel',
-    sources: { text: '"Die Basis einer gesunden Ordnung ist ein groÃŸer MÃ¼lleimer."' },
+    sources: { text: '"Die Basis einer gesunden Ordnung ist ein großer Mülleimer."' },
     distractors: ['John Donne (1624)', 'Gary Lineker (1966)', 'Georg Christoph Lichtenberg (~1770)']
   },
   {
     id: 'quote-283',
-    title: 'In Deutschland ist die hÃ¶chste Form der Anerkennu',
+    title: 'In Deutschland ist die höchste Form der Anerkennun',
     category: 'quote',
     year: 1980,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Arthur Schopenhauer (oft in diesem Kontext zitiert) (1980)',
     hint: 'Von Arthur Schopenhauer (oft in diesem Kontext zitiert).',
     difficulty: 'leicht',
-    sources: { text: '"In Deutschland ist die hÃ¶chste Form der Anerkennung der Neid."' },
+    sources: { text: '"In Deutschland ist die höchste Form der Anerkennung der Neid."' },
     distractors: ['Winston Churchill (1947)', 'Albert Einstein (1905)', 'Pierre de Coubertin (1908)']
   },
   {
     id: 'quote-284',
-    title: 'Nichts ist so bestÃ¤ndig wie der Wandel.',
+    title: 'Nichts ist so beständig wie der Wandel.',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Heraklit (~500 v. Chr.)',
     hint: 'Von Heraklit.',
     difficulty: 'schwer',
-    sources: { text: '"Nichts ist so bestÃ¤ndig wie der Wandel."' },
+    sources: { text: '"Nichts ist so beständig wie der Wandel."' },
     distractors: ['Mahatma Gandhi (1948)', 'Johann Wolfgang von Goethe (zugeschriebene letzte Worte) (1832)', 'Franklin D. Roosevelt (1933)']
   },
   {
@@ -3423,26 +3423,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-286',
-    title: 'Die Welt ist eine BÃ¼hne, und alle MÃ¤nner und Fra',
+    title: 'Die Welt ist eine Bühne, und alle Männer und Fraue',
     category: 'quote',
     year: 1599,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'William Shakespeare (1599)',
     hint: 'Von William Shakespeare.',
     difficulty: 'schwer',
-    sources: { text: '"Die Welt ist eine BÃ¼hne, und alle MÃ¤nner und Frauen sind bloÃŸe Spieler."' },
+    sources: { text: '"Die Welt ist eine Bühne, und alle Männer und Frauen sind bloße Spieler."' },
     distractors: ['Marie von Ebner-Eschenbach (1880)', 'Charles Darwin (1859)', 'Robert De Niro (Taxi Driver) (1976)']
   },
   {
     id: 'quote-287',
-    title: 'Essen ist ein BedÃ¼rfnis, GenieÃŸen eine Kunst.',
+    title: 'Essen ist ein Bedürfnis, Genießen eine Kunst.',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'FranÃ§ois de La Rochefoucauld (~1665)',
-    hint: 'Von FranÃ§ois de La Rochefoucauld.',
+    answer: 'François de La Rochefoucauld (~1665)',
+    hint: 'Von François de La Rochefoucauld.',
     difficulty: 'schwer',
-    sources: { text: '"Essen ist ein BedÃ¼rfnis, GenieÃŸen eine Kunst."' },
+    sources: { text: '"Essen ist ein Bedürfnis, Genießen eine Kunst."' },
     distractors: ['William Shakespeare (1599)', 'Rhett Butler (Vom Winde verweht) (1939)', 'Sepp Herberger (1954)']
   },
   {
@@ -3483,26 +3483,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-291',
-    title: 'Wir dÃ¼rfen jetzt nur nicht den Sand in den Kopf s',
+    title: 'Wir dürfen jetzt nur nicht den Sand in den Kopf st',
     category: 'quote',
     year: 2002,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Lothar MatthÃ¤us (2002)',
-    hint: 'Von Lothar MatthÃ¤us.',
+    answer: 'Lothar Matthäus (2002)',
+    hint: 'Von Lothar Matthäus.',
     difficulty: 'leicht',
-    sources: { text: '"Wir dÃ¼rfen jetzt nur nicht den Sand in den Kopf stecken."' },
-    distractors: ['Marie von Ebner-Eschenbach (1893)', 'Friedrich Nietzsche (1889)', 'Friedrich der GroÃŸe (1757)']
+    sources: { text: '"Wir dürfen jetzt nur nicht den Sand in den Kopf stecken."' },
+    distractors: ['Marie von Ebner-Eschenbach (1893)', 'Friedrich Nietzsche (1889)', 'Friedrich der Große (1757)']
   },
   {
     id: 'quote-292',
-    title: 'Geld allein macht nicht glÃ¼cklich, aber es ist be',
+    title: 'Geld allein macht nicht glücklich, aber es ist bes',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Marcel Reich-Ranicki (~2000)',
     hint: 'Von Marcel Reich-Ranicki.',
     difficulty: 'schwer',
-    sources: { text: '"Geld allein macht nicht glÃ¼cklich, aber es ist besser, in einem Taxi zu weinen als in der StraÃŸenbahn."' },
+    sources: { text: '"Geld allein macht nicht glücklich, aber es ist besser, in einem Taxi zu weinen als in der Straßenbahn."' },
     distractors: ['Francis Bacon (1620)', 'UN-Menschenrechtscharta (1950)', 'Hermann Tietz (~1980)']
   },
   {
@@ -3515,7 +3515,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Igor Strawinsky.',
     difficulty: 'schwer',
     sources: { text: '"Ich habe keine Zeit, mich zu beeilen."' },
-    distractors: ['Joachim Ringelnatz (1920)', 'Andreas MÃ¶ller (1992)', 'Douglas Adams (Per Anhalter durch die Galaxis) (1979)']
+    distractors: ['Joachim Ringelnatz (1920)', 'Andreas Möller (1992)', 'Douglas Adams (Per Anhalter durch die Galaxis) (1979)']
   },
   {
     id: 'quote-294',
@@ -3574,7 +3574,7 @@ export const quoteCards: Card[] = [
     answer: 'Al Pacino (Der Pate II) (1974)',
     hint: 'Von Al Pacino (Der Pate II).',
     difficulty: 'leicht',
-    sources: { text: '"Halte deine Freunde nahe bei dir, aber deine Feinde noch nÃ¤her."' },
+    sources: { text: '"Halte deine Freunde nahe bei dir, aber deine Feinde noch näher."' },
     distractors: ['Christian F. Gellert (1791)', 'Kurt Tucholsky / Fred Barnard (1921)', 'Paul Watzlawick (1967)']
   },
   {
@@ -3583,8 +3583,8 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1665,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'FranÃ§ois de La Rochefoucauld (1665)',
-    hint: 'Von FranÃ§ois de La Rochefoucauld.',
+    answer: 'François de La Rochefoucauld (1665)',
+    hint: 'Von François de La Rochefoucauld.',
     difficulty: 'schwer',
     sources: { text: '"Wahre Liebe ist wie eine Geistererscheinung: alle reden davon, aber wenige haben sie gesehen."' },
     distractors: ['Oscar Wilde (1891)', 'Samuel Johnson (1775)', 'Sokrates (zugeschrieben) (~400 v. Chr.)']
@@ -3599,7 +3599,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Heinrich Heine.',
     difficulty: 'schwer',
     sources: { text: '"Ein Kluger bemerkt alles, ein Dummer macht zu allem eine Bemerkung."' },
-    distractors: ['Sepp Herberger (1954)', 'Thomas Jefferson (UnabhÃ¤ngigkeitserklÃ¤rung) (1776)', 'George R. R. Martin (Game of Thrones) (1996)']
+    distractors: ['Sepp Herberger (1954)', 'Thomas Jefferson (Unabhängigkeitserklärung) (1776)', 'George R. R. Martin (Game of Thrones) (1996)']
   },
   {
     id: 'quote-301',
@@ -3615,27 +3615,27 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-302',
-    title: 'Man ist so jung, wie man sich fÃ¼hlt.',
+    title: 'Man ist so jung, wie man sich fühlt.',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Volksmund (~1900)',
     hint: 'Von Volksmund.',
     difficulty: 'schwer',
-    sources: { text: '"Man ist so jung, wie man sich fÃ¼hlt."' },
+    sources: { text: '"Man ist so jung, wie man sich fühlt."' },
     distractors: ['Katja Ebstein (1970)', 'Stephan Remmler (1986)', 'William Shakespeare (1599)']
   },
   {
     id: 'quote-303',
-    title: 'Ich denke nicht an die Zukunft. Sie kommt frÃ¼h ge',
+    title: 'Ich denke nicht an die Zukunft. Sie kommt früh gen',
     category: 'quote',
     year: 1930,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Albert Einstein (1930)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
-    sources: { text: '"Ich denke nicht an die Zukunft. Sie kommt frÃ¼h genug."' },
-    distractors: ['Walter Ulbricht (1952)', 'Diverse (Volksmund/FuÃŸball) (1991)', 'Winston Churchill (~1940)']
+    sources: { text: '"Ich denke nicht an die Zukunft. Sie kommt früh genug."' },
+    distractors: ['Walter Ulbricht (1952)', 'Diverse (Volksmund/Fußball) (1991)', 'Winston Churchill (~1940)']
   },
   {
     id: 'quote-304',
@@ -3651,26 +3651,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-305',
-    title: 'Alle Menschen sind klug â€“ die einen vorher, die ',
+    title: 'Alle Menschen sind klug – die einen vorher, die an',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Voltaire (~1760)',
     hint: 'Von Voltaire.',
     difficulty: 'schwer',
-    sources: { text: '"Alle Menschen sind klug â€“ die einen vorher, die anderen nachher."' },
+    sources: { text: '"Alle Menschen sind klug – die einen vorher, die anderen nachher."' },
     distractors: ['The Police (1983)', 'Humphrey Bogart (Casablanca) (1942)', 'Igor Strawinsky (~1940)']
   },
   {
     id: 'quote-306',
-    title: 'Der Weg zur HÃ¶lle ist mit guten VorsÃ¤tzen gepfla',
+    title: 'Der Weg zur Hölle ist mit guten Vorsätzen gepflast',
     category: 'quote',
     year: 1775,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Samuel Johnson (1775)',
     hint: 'Von Samuel Johnson.',
     difficulty: 'schwer',
-    sources: { text: '"Der Weg zur HÃ¶lle ist mit guten VorsÃ¤tzen gepflastert."' },
+    sources: { text: '"Der Weg zur Hölle ist mit guten Vorsätzen gepflastert."' },
     distractors: ['Tom Cruise (Top Gun) (1986)', 'Winston Churchill (zugeschrieben) (1940)', 'Neil Armstrong (1969)']
   },
   {
@@ -3695,7 +3695,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Walt Disney.',
     difficulty: 'schwer',
     sources: { text: '"If you can dream it, you can do it."' },
-    distractors: ['Thomas Hobbes (1927)', 'Apple (Slogan) (1984)', 'Unbekannt (oft fÃ¤lschlich Einstein) (1958)']
+    distractors: ['Thomas Hobbes (1927)', 'Apple (Slogan) (1984)', 'Unbekannt (oft fälschlich Einstein) (1958)']
   },
   {
     id: 'quote-309',
@@ -3711,14 +3711,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-310',
-    title: 'Wir mÃ¼ssen das Spiel jetzt erst einmal sacken las',
+    title: 'Wir müssen das Spiel jetzt erst einmal sacken lass',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Sportler-Floskel (populÃ¤r durch L. MatthÃ¤us) (~1990)',
-    hint: 'Von Sportler-Floskel (populÃ¤r durch L. MatthÃ¤us).',
+    answer: 'Sportler-Floskel (populär durch L. Matthäus) (~1990)',
+    hint: 'Von Sportler-Floskel (populär durch L. Matthäus).',
     difficulty: 'schwer',
-    sources: { text: '"Wir mÃ¼ssen das Spiel jetzt erst einmal sacken lassen."' },
+    sources: { text: '"Wir müssen das Spiel jetzt erst einmal sacken lassen."' },
     distractors: ['Heraklit (~500 v. Chr.)', 'Sokrates (400 v. Chr.)', 'Thomas Hobbes (1927)']
   },
   {
@@ -3755,18 +3755,18 @@ export const quoteCards: Card[] = [
     hint: 'Von Apicius (zugeschrieben).',
     difficulty: 'schwer',
     sources: { text: '"Das Auge isst mit."' },
-    distractors: ['Lothar MatthÃ¤us (2002)', 'George Santayana (1919)', 'Johann Wolfgang von Goethe (zugeschrieben) (~1800)']
+    distractors: ['Lothar Matthäus (2002)', 'George Santayana (1919)', 'Johann Wolfgang von Goethe (zugeschrieben) (~1800)']
   },
   {
     id: 'quote-314',
-    title: 'Ich bin von Kopf bis FuÃŸ auf Liebe eingestellt.',
+    title: 'Ich bin von Kopf bis Fuß auf Liebe eingestellt.',
     category: 'quote',
     year: 1930,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Marlene Dietrich (1930)',
     hint: 'Von Marlene Dietrich.',
     difficulty: 'mittel',
-    sources: { text: '"Ich bin von Kopf bis FuÃŸ auf Liebe eingestellt."' },
+    sources: { text: '"Ich bin von Kopf bis Fuß auf Liebe eingestellt."' },
     distractors: ['The Godfather (1972)', 'Appius Claudius Caecus (300 v. Chr.)', 'Aldous Huxley (1932)']
   },
   {
@@ -3783,15 +3783,15 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-316',
-    title: 'Sollten wir nicht lieber die Welt verÃ¤ndern, bevo',
+    title: 'Sollten wir nicht lieber die Welt verändern, bevor',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Che Guevara (~1960)',
     hint: 'Von Che Guevara.',
     difficulty: 'schwer',
-    sources: { text: '"Sollten wir nicht lieber die Welt verÃ¤ndern, bevor sie uns verÃ¤ndert?"' },
-    distractors: ['Winston Churchill (1940)', 'Karl Marx & Friedrich Engels (1848)', 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populÃ¤r) (1970)']
+    sources: { text: '"Sollten wir nicht lieber die Welt verändern, bevor sie uns verändert?"' },
+    distractors: ['Winston Churchill (1940)', 'Karl Marx & Friedrich Engels (1848)', 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populär) (1970)']
   },
   {
     id: 'quote-317',
@@ -3802,31 +3802,31 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (~1940)',
     hint: 'Von Albert Einstein.',
     difficulty: 'schwer',
-    sources: { text: '"Der Horizont vieler Menschen ist ein Kreis mit dem Radius Null â€“ und das nennen sie ihren Standpunkt."' },
+    sources: { text: '"Der Horizont vieler Menschen ist ein Kreis mit dem Radius Null – und das nennen sie ihren Standpunkt."' },
     distractors: ['Friedrich Nietzsche (1889)', 'Blaise Pascal (1910)', 'Sprichwort (Traditionell)']
   },
   {
     id: 'quote-318',
-    title: 'Es gibt keine groÃŸen Entdeckungen ohne kÃ¼hne Ver',
+    title: 'Es gibt keine großen Entdeckungen ohne kühne Vermu',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Isaac Newton (~1700)',
     hint: 'Von Isaac Newton.',
     difficulty: 'schwer',
-    sources: { text: '"Es gibt keine groÃŸen Entdeckungen ohne kÃ¼hne Vermutungen."' },
-    distractors: ['Willy Brandt (1969)', 'Perikles (~431 v. Chr.)', 'E.T. - Der AuÃŸerirdische (1982)']
+    sources: { text: '"Es gibt keine großen Entdeckungen ohne kühne Vermutungen."' },
+    distractors: ['Willy Brandt (1969)', 'Perikles (~431 v. Chr.)', 'E.T. - Der Außerirdische (1982)']
   },
   {
     id: 'quote-319',
-    title: 'Bildung ist das, was Ã¼brig bleibt, wenn man alles',
+    title: 'Bildung ist das, was übrig bleibt, wenn man alles ',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Albert Einstein (~1940)',
     hint: 'Von Albert Einstein.',
     difficulty: 'schwer',
-    sources: { text: '"Bildung ist das, was Ã¼brig bleibt, wenn man alles vergessen hat, was man in der Schule gelernt hat."' },
+    sources: { text: '"Bildung ist das, was übrig bleibt, wenn man alles vergessen hat, was man in der Schule gelernt hat."' },
     distractors: ['Protagoras (1957)', 'Neil Armstrong (1969)', 'Sokrates (zugeschrieben) (~400 v. Chr.)']
   },
   {
@@ -3855,50 +3855,50 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-322',
-    title: 'Was wir heute tun, entscheidet darÃ¼ber, wie die W',
+    title: 'Was wir heute tun, entscheidet darüber, wie die We',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Marie von Ebner-Eschenbach (~1890)',
     hint: 'Von Marie von Ebner-Eschenbach.',
     difficulty: 'schwer',
-    sources: { text: '"Was wir heute tun, entscheidet darÃ¼ber, wie die Welt morgen aussieht."' },
+    sources: { text: '"Was wir heute tun, entscheidet darüber, wie die Welt morgen aussieht."' },
     distractors: ['Konfuzius / Bibel (Goldene Regel) (~500 v. Chr.)', 'Volksmund (Traditionell)', 'Alec Guinness (Star Wars) (1977)']
   },
   {
     id: 'quote-323',
-    title: 'Wer nicht weiÃŸ, wohin er will, der darf sich nich',
+    title: 'Wer nicht weiß, wohin er will, der darf sich nicht',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Mark Twain (~1900)',
     hint: 'Von Mark Twain.',
     difficulty: 'schwer',
-    sources: { text: '"Wer nicht weiÃŸ, wohin er will, der darf sich nicht wundern, wenn er ganz woanders ankommt."' },
+    sources: { text: '"Wer nicht weiß, wohin er will, der darf sich nicht wundern, wenn er ganz woanders ankommt."' },
     distractors: ['Heinrich IV. (1593)', 'Sprichwort (Traditionell)', 'Aldous Huxley (1932)']
   },
   {
     id: 'quote-324',
-    title: 'Der Sieg hat hundert VÃ¤ter, die Niederlage ist ei',
+    title: 'Der Sieg hat hundert Väter, die Niederlage ist ein',
     category: 'quote',
     year: 1961,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'John F. Kennedy (1961)',
     hint: 'Von John F. Kennedy.',
     difficulty: 'leicht',
-    sources: { text: '"Der Sieg hat hundert VÃ¤ter, die Niederlage ist ein Waisenkind."' },
+    sources: { text: '"Der Sieg hat hundert Väter, die Niederlage ist ein Waisenkind."' },
     distractors: ['Walt Disney (~1980)', 'Terminator (1993)', 'Bibel (2. Thessalonicher 3,10) (~50 n. Chr.)']
   },
   {
     id: 'quote-325',
-    title: 'Am Ende sind es nicht die Jahre im Leben, die zÃ¤h',
+    title: 'Am Ende sind es nicht die Jahre im Leben, die zähl',
     category: 'quote',
     year: 1952,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Adlai Stevenson (1952)',
     hint: 'Von Adlai Stevenson.',
     difficulty: 'mittel',
-    sources: { text: '"Am Ende sind es nicht die Jahre im Leben, die zÃ¤hlen, sondern das Leben in den Jahren."' },
+    sources: { text: '"Am Ende sind es nicht die Jahre im Leben, die zählen, sondern das Leben in den Jahren."' },
     distractors: ['Arthur Schopenhauer (oft in diesem Kontext zitiert) (1980)', 'Heraklit (1918)', 'Konfuzius (zugeschrieben) (~500 v. Chr.)']
   },
   {
@@ -3911,18 +3911,18 @@ export const quoteCards: Card[] = [
     hint: 'Von Sprichwort (Frankreich/Italien).',
     difficulty: 'schwer',
     sources: { text: '"Ein Tag ohne Wein ist wie ein Tag ohne Sonne."' },
-    distractors: ['Franz Kafka (1915)', 'Friedrich Nietzsche (1889)', 'Grundgesetz fÃ¼r die Bundesrepublik Deutschland (1949)']
+    distractors: ['Franz Kafka (1915)', 'Friedrich Nietzsche (1889)', 'Grundgesetz für die Bundesrepublik Deutschland (1949)']
   },
   {
     id: 'quote-327',
-    title: 'Worte sind die mÃ¤chtigste Droge, welche die Mensc',
+    title: 'Worte sind die mächtigste Droge, welche die Mensch',
     category: 'quote',
     year: 1923,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Rudyard Kipling (1923)',
     hint: 'Von Rudyard Kipling.',
     difficulty: 'mittel',
-    sources: { text: '"Worte sind die mÃ¤chtigste Droge, welche die Menschheit benutzt."' },
+    sources: { text: '"Worte sind die mächtigste Droge, welche die Menschheit benutzt."' },
     distractors: ['Terminator 2 (1994)', 'Ralph Waldo Emerson (1841)', 'Laurence Fishburne (Matrix) (1999)']
   },
   {
@@ -3939,15 +3939,15 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-329',
-    title: 'Ich kenne keine bessere Definition fÃ¼r GlÃ¼ck als',
+    title: 'Ich kenne keine bessere Definition für Glück als: ',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Ingeborg Bachmann (~1960)',
     hint: 'Von Ingeborg Bachmann.',
     difficulty: 'schwer',
-    sources: { text: '"Ich kenne keine bessere Definition fÃ¼r GlÃ¼ck als: Keine Angst zu haben."' },
-    distractors: ['Immanuel Kant (zugeschrieben) (1790)', 'Grundgesetz fÃ¼r die Bundesrepublik Deutschland (1949)', 'Albert Einstein (1949)']
+    sources: { text: '"Ich kenne keine bessere Definition für Glück als: Keine Angst zu haben."' },
+    distractors: ['Immanuel Kant (zugeschrieben) (1790)', 'Grundgesetz für die Bundesrepublik Deutschland (1949)', 'Albert Einstein (1949)']
   },
   {
     id: 'quote-330',
@@ -3975,26 +3975,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-332',
-    title: 'Erfahrung ist der Name, den jeder seinen IrrtÃ¼mer',
+    title: 'Erfahrung ist der Name, den jeder seinen Irrtümern',
     category: 'quote',
     year: 1892,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Oscar Wilde (1892)',
     hint: 'Von Oscar Wilde.',
     difficulty: 'mittel',
-    sources: { text: '"Erfahrung ist der Name, den jeder seinen IrrtÃ¼mern gibt."' },
+    sources: { text: '"Erfahrung ist der Name, den jeder seinen Irrtümern gibt."' },
     distractors: ['Leonardo DiCaprio (Titanic) (1997)', 'Winston Churchill (zugeschrieben) (1940)', 'Friedrich Schiller (zugeschrieben / Friedrich Nietzsche) (1850)']
   },
   {
     id: 'quote-333',
-    title: 'Dort, wo man BÃ¼cher verbrennt, verbrennt man am E',
+    title: 'Dort, wo man Bücher verbrennt, verbrennt man am En',
     category: 'quote',
     year: 1823,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Heinrich Heine (1823)',
     hint: 'Von Heinrich Heine.',
     difficulty: 'mittel',
-    sources: { text: '"Dort, wo man BÃ¼cher verbrennt, verbrennt man am Ende auch Menschen."' },
+    sources: { text: '"Dort, wo man Bücher verbrennt, verbrennt man am Ende auch Menschen."' },
     distractors: ['William Shakespeare (1599)', 'Brad Pitt (Fight Club) (1999)', 'Steve Jobs (2005)']
   },
   {
@@ -4007,7 +4007,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Paul Watzlawick.',
     difficulty: 'leicht',
     sources: { text: '"Man kann nicht nicht kommunizieren."' },
-    distractors: ['Diverse (Volksmund/FuÃŸball) (1991)', 'William Shakespeare (1599)', 'Fidel Castro (1943)']
+    distractors: ['Diverse (Volksmund/Fußball) (1991)', 'William Shakespeare (1599)', 'Fidel Castro (1943)']
   },
   {
     id: 'quote-335',
@@ -4015,8 +4015,8 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1980,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Yoda (Das Imperium schlÃ¤gt zurÃ¼ck) (1980)',
-    hint: 'Von Yoda (Das Imperium schlÃ¤gt zurÃ¼ck).',
+    answer: 'Yoda (Das Imperium schlägt zurück) (1980)',
+    hint: 'Von Yoda (Das Imperium schlägt zurück).',
     difficulty: 'leicht',
     sources: { text: '"Tu es oder tu es nicht. Es gibt kein Versuchen."' },
     distractors: ['UN-Menschenrechtscharta (1950)', 'William Shakespeare (1603)', 'Victor Hugo (1852)']
@@ -4035,15 +4035,15 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-337',
-    title: 'Das Geheimnis des GlÃ¼cks ist die Freiheit, und da',
+    title: 'Das Geheimnis des Glücks ist die Freiheit, und das',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Perikles (~431 v. Chr.)',
     hint: 'Von Perikles.',
     difficulty: 'schwer',
-    sources: { text: '"Das Geheimnis des GlÃ¼cks ist die Freiheit, und das Geheimnis der Freiheit ist der Mut."' },
-    distractors: ['RenÃ© Descartes (1637)', 'Schlagzeile der Bild-Zeitung (2005)', 'Konfuzius (zugeschrieben) (500 v. Chr.)']
+    sources: { text: '"Das Geheimnis des Glücks ist die Freiheit, und das Geheimnis der Freiheit ist der Mut."' },
+    distractors: ['René Descartes (1637)', 'Schlagzeile der Bild-Zeitung (2005)', 'Konfuzius (zugeschrieben) (500 v. Chr.)']
   },
   {
     id: 'quote-338',
@@ -4071,26 +4071,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-340',
-    title: 'Wer nichts weiÃŸ, muss alles glauben.',
+    title: 'Wer nichts weiß, muss alles glauben.',
     category: 'quote',
     year: 1893,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Marie von Ebner-Eschenbach (1893)',
     hint: 'Von Marie von Ebner-Eschenbach.',
     difficulty: 'mittel',
-    sources: { text: '"Wer nichts weiÃŸ, muss alles glauben."' },
+    sources: { text: '"Wer nichts weiß, muss alles glauben."' },
     distractors: ['Filmtitel (James Dean) / Bibel (Lukas 23,34) (1955)', 'Humphrey Bogart (Casablanca) (1942)', 'Perikles (1854)']
   },
   {
     id: 'quote-341',
-    title: 'Auge um Auge â€“ und die ganze Welt wird blind sei',
+    title: 'Auge um Auge – und die ganze Welt wird blind sein.',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Mahatma Gandhi (zugeschrieben) (~1948)',
     hint: 'Von Mahatma Gandhi (zugeschrieben).',
     difficulty: 'schwer',
-    sources: { text: '"Auge um Auge â€“ und die ganze Welt wird blind sein."' },
+    sources: { text: '"Auge um Auge – und die ganze Welt wird blind sein."' },
     distractors: ['Heinrich Heine (~1830)', 'Sherlock Holmes (Filmzitat, nicht im Buch) (1929)', 'Marcel Reich-Ranicki (~2000)']
   },
   {
@@ -4107,14 +4107,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-343',
-    title: 'Ich weiÃŸ nicht, ob es besser wird, wenn es anders',
+    title: 'Ich weiß nicht, ob es besser wird, wenn es anders ',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Georg Christoph Lichtenberg (~1770)',
     hint: 'Von Georg Christoph Lichtenberg.',
     difficulty: 'schwer',
-    sources: { text: '"Ich weiÃŸ nicht, ob es besser wird, wenn es anders wird. Aber es muss anders werden, wenn es besser werden soll."' },
+    sources: { text: '"Ich weiß nicht, ob es besser wird, wenn es anders wird. Aber es muss anders werden, wenn es besser werden soll."' },
     distractors: ['Thomas Hobbes (1927)', 'Schlagzeile der Bild-Zeitung (2005)', 'Helmut Schmidt (1980)']
   },
   {
@@ -4155,26 +4155,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-347',
-    title: 'Wir sind vom gleichen Stoff, aus dem die TrÃ¤ume s',
+    title: 'Wir sind vom gleichen Stoff, aus dem die Träume si',
     category: 'quote',
     year: 1611,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'William Shakespeare (Der Sturm) (1611)',
     hint: 'Von William Shakespeare (Der Sturm).',
     difficulty: 'schwer',
-    sources: { text: '"Wir sind vom gleichen Stoff, aus dem die TrÃ¤ume sind."' },
-    distractors: ['Brad Pitt (Fight Club) (1999)', 'Walt Disney (~1980)', 'Andreas MÃ¶ller (1992)']
+    sources: { text: '"Wir sind vom gleichen Stoff, aus dem die Träume sind."' },
+    distractors: ['Brad Pitt (Fight Club) (1999)', 'Walt Disney (~1980)', 'Andreas Möller (1992)']
   },
   {
     id: 'quote-348',
-    title: 'Wer sich nicht bewegt, spÃ¼rt seine Fesseln nicht.',
+    title: 'Wer sich nicht bewegt, spürt seine Fesseln nicht.',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Rosa Luxemburg (~1910)',
     hint: 'Von Rosa Luxemburg.',
     difficulty: 'schwer',
-    sources: { text: '"Wer sich nicht bewegt, spÃ¼rt seine Fesseln nicht."' },
+    sources: { text: '"Wer sich nicht bewegt, spürt seine Fesseln nicht."' },
     distractors: ['Robert De Niro (Taxi Driver) (1976)', 'Victor Hugo (1852)', 'Protagoras (1957)']
   },
   {
@@ -4191,15 +4191,15 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-350',
-    title: 'Das Leben ist eine KomÃ¶die fÃ¼r den, der denkt, u',
+    title: 'Das Leben ist eine Komödie für den, der denkt, und',
     category: 'quote',
     year: 1776,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Horace Walpole (1776)',
     hint: 'Von Horace Walpole.',
     difficulty: 'schwer',
-    sources: { text: '"Das Leben ist eine KomÃ¶die fÃ¼r den, der denkt, und eine TragÃ¶die fÃ¼r den, der fÃ¼hlt."' },
-    distractors: ['Bertolt Brecht (Die Dreigroschenoper) (1890)', 'George Orwell (1945)', 'Unbekannt (oft fÃ¤lschlich Einstein) (1958)']
+    sources: { text: '"Das Leben ist eine Komödie für den, der denkt, und eine Tragödie für den, der fühlt."' },
+    distractors: ['Bertolt Brecht (Die Dreigroschenoper) (1890)', 'George Orwell (1945)', 'Unbekannt (oft fälschlich Einstein) (1958)']
   },
   {
     id: 'quote-351',
@@ -4210,20 +4210,20 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (zugeschrieben) (~1950)',
     hint: 'Von Albert Einstein (zugeschrieben).',
     difficulty: 'schwer',
-    sources: { text: '"Die reinste Form des Wahnsinns ist es, alles beim Alten zu lassen und gleichzeitig zu hoffen, dass sich was Ã¤ndert."' },
+    sources: { text: '"Die reinste Form des Wahnsinns ist es, alles beim Alten zu lassen und gleichzeitig zu hoffen, dass sich was ändert."' },
     distractors: ['Marlene Dietrich (1930)', 'Apple (Werbeslogan) (1997)', 'Giovanni Trapattoni (1998)']
   },
   {
     id: 'quote-352',
-    title: 'Wer aufhÃ¶rt, besser zu werden, hat aufgehÃ¶rt, gu',
+    title: 'Wer aufhört, besser zu werden, hat aufgehört, gut ',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Philip Rosenthal (~1960)',
     hint: 'Von Philip Rosenthal.',
     difficulty: 'schwer',
-    sources: { text: '"Wer aufhÃ¶rt, besser zu werden, hat aufgehÃ¶rt, gut zu sein."' },
-    distractors: ['Johann Wolfgang von Goethe (zugeschriebene letzte Worte) (1832)', 'RenÃ© Magritte (1929)', 'Ton Steine Scherben (1970)']
+    sources: { text: '"Wer aufhört, besser zu werden, hat aufgehört, gut zu sein."' },
+    distractors: ['Johann Wolfgang von Goethe (zugeschriebene letzte Worte) (1832)', 'René Magritte (1929)', 'Ton Steine Scherben (1970)']
   },
   {
     id: 'quote-353',
@@ -4275,14 +4275,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-357',
-    title: 'FrÃ¼her war mehr Lametta.',
+    title: 'Früher war mehr Lametta.',
     category: 'quote',
     year: 1978,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Loriot (Weihnachten bei Hoppenstedts) (1978)',
     hint: 'Von Loriot (Weihnachten bei Hoppenstedts).',
     difficulty: 'leicht',
-    sources: { text: '"FrÃ¼her war mehr Lametta."' },
+    sources: { text: '"Früher war mehr Lametta."' },
     distractors: ['Protagoras (1957)', 'Heinrich Heine (oft zitiert) (1931)', 'Ernest Hemingway (~1950)']
   },
   {
@@ -4291,11 +4291,11 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1988,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Loriot (Ã–dipussi) (1988)',
-    hint: 'Von Loriot (Ã–dipussi).',
+    answer: 'Loriot (Ödipussi) (1988)',
+    hint: 'Von Loriot (Ödipussi).',
     difficulty: 'leicht',
     sources: { text: '"Mein Name ist Lohse, ich kaufe hier ein."' },
-    distractors: ['Hermann Tietz (~1980)', 'E.T. (E.T. â€“ Der AuÃŸerirdische) (1982)', 'Johann Wolfgang von Goethe (Faust I) (1808)']
+    distractors: ['Hermann Tietz (~1980)', 'E.T. (E.T. – Der Außerirdische) (1982)', 'Johann Wolfgang von Goethe (Faust I) (1808)']
   },
   {
     id: 'quote-359',
@@ -4303,8 +4303,8 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1977,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Loriot (Das FrÃ¼hstÃ¼cksei) (1977)',
-    hint: 'Von Loriot (Das FrÃ¼hstÃ¼cksei).',
+    answer: 'Loriot (Das Frühstücksei) (1977)',
+    hint: 'Von Loriot (Das Frühstücksei).',
     difficulty: 'leicht',
     sources: { text: '"Das Ei ist hart!"' },
     distractors: ['Konfuzius (zugeschrieben) (1900)', 'Blaise Pascal (1669)', 'Anthony Perkins (Psycho) (1960)']
@@ -4319,7 +4319,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Willy Brandt.',
     difficulty: 'leicht',
     sources: { text: '"Mehr Demokratie wagen."' },
-    distractors: ['Neil Armstrong (1969)', 'Antoine de Saint-ExupÃ©ry (1943)', 'Christopher Lloyd (ZurÃ¼ck in die Zukunft) (1985)']
+    distractors: ['Neil Armstrong (1969)', 'Antoine de Saint-Exupéry (1943)', 'Christopher Lloyd (Zurück in die Zukunft) (1985)']
   },
   {
     id: 'quote-361',
@@ -4330,19 +4330,19 @@ export const quoteCards: Card[] = [
     answer: 'Ernest Hemingway (~1950)',
     hint: 'Von Ernest Hemingway.',
     difficulty: 'schwer',
-    sources: { text: '"Man braucht zwei Jahre, um sprechen zu lernen, und fÃ¼nfzig, um schweigen zu lernen."' },
+    sources: { text: '"Man braucht zwei Jahre, um sprechen zu lernen, und fünfzig, um schweigen zu lernen."' },
     distractors: ['Isaac Newton (~1700)', 'Chief Brody (1975)', 'Christian Morgenstern (~1900)']
   },
   {
     id: 'quote-362',
-    title: 'Alle glÃ¼cklichen Familien gleichen einander, jede',
+    title: 'Alle glücklichen Familien gleichen einander, jede ',
     category: 'quote',
     year: 1877,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Leo Tolstoi (Anna Karenina) (1877)',
     hint: 'Von Leo Tolstoi (Anna Karenina).',
     difficulty: 'mittel',
-    sources: { text: '"Alle glÃ¼cklichen Familien gleichen einander, jede unglÃ¼ckliche Familie ist auf ihre eigene Weise unglÃ¼cklich."' },
+    sources: { text: '"Alle glücklichen Familien gleichen einander, jede unglückliche Familie ist auf ihre eigene Weise unglücklich."' },
     distractors: ['Winston Churchill (~1940)', 'Winston Churchill (zugeschrieben) (1940)', 'Jonathan Swift (1738)']
   },
   {
@@ -4359,27 +4359,27 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-364',
-    title: 'Ein Kind, ein Lehrer, ein Buch und ein Stift kÃ¶nn',
+    title: 'Ein Kind, ein Lehrer, ein Buch und ein Stift könne',
     category: 'quote',
     year: 2013,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Malala Yousafzai (2013)',
     hint: 'Von Malala Yousafzai.',
     difficulty: 'leicht',
-    sources: { text: '"Ein Kind, ein Lehrer, ein Buch und ein Stift kÃ¶nnen die Welt verÃ¤ndern."' },
-    distractors: ['RenÃ© Descartes (1637)', 'Konfuzius (zugeschrieben) (1900)', 'Albert Einstein (1929)']
+    sources: { text: '"Ein Kind, ein Lehrer, ein Buch und ein Stift können die Welt verändern."' },
+    distractors: ['René Descartes (1637)', 'Konfuzius (zugeschrieben) (1900)', 'Albert Einstein (1929)']
   },
   {
     id: 'quote-365',
-    title: 'Das SchÃ¶nste, was wir erleben kÃ¶nnen, ist das Ge',
+    title: 'Das Schönste, was wir erleben können, ist das Gehe',
     category: 'quote',
     year: 1930,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Albert Einstein (1930)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
-    sources: { text: '"Das SchÃ¶nste, was wir erleben kÃ¶nnen, ist das Geheimnisvolle."' },
-    distractors: ['Loriot (Das FrÃ¼hstÃ¼cksei) (1977)', 'Friedrich Nietzsche (1882)', 'Friedrich der GroÃŸe (1757)']
+    sources: { text: '"Das Schönste, was wir erleben können, ist das Geheimnisvolle."' },
+    distractors: ['Loriot (Das Frühstücksei) (1977)', 'Friedrich Nietzsche (1882)', 'Friedrich der Große (1757)']
   },
   {
     id: 'quote-366',
@@ -4391,7 +4391,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Pablo Picasso.',
     difficulty: 'schwer',
     sources: { text: '"Alles, was du dir vorstellen kannst, ist echt."' },
-    distractors: ['Julius CÃ¤sar (49 v. Chr.)', 'Friedrich Schiller (Die Jungfrau von Orleans) (1801)', 'Winston Churchill (1947)']
+    distractors: ['Julius Cäsar (49 v. Chr.)', 'Friedrich Schiller (Die Jungfrau von Orleans) (1801)', 'Winston Churchill (1947)']
   },
   {
     id: 'quote-367',
@@ -4407,15 +4407,15 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-368',
-    title: 'Was du nicht willst, dass man dir tu, das fÃ¼g auc',
+    title: 'Was du nicht willst, dass man dir tu, das füg auch',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Konfuzius / Bibel (Goldene Regel) (~500 v. Chr.)',
     hint: 'Von Konfuzius / Bibel (Goldene Regel).',
     difficulty: 'schwer',
-    sources: { text: '"Was du nicht willst, dass man dir tu, das fÃ¼g auch keinem andern zu."' },
-    distractors: ['Joachim Ringelnatz (1920)', 'FranÃ§ois de La Rochefoucauld (1665)', 'Forrest Gump (1985)']
+    sources: { text: '"Was du nicht willst, dass man dir tu, das füg auch keinem andern zu."' },
+    distractors: ['Joachim Ringelnatz (1920)', 'François de La Rochefoucauld (1665)', 'Forrest Gump (1985)']
   },
   {
     id: 'quote-369',
@@ -4427,7 +4427,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
     sources: { text: '"Ich habe keine besondere Begabung, ich bin nur leidenschaftlich neugierig."' },
-    distractors: ['Franklin D. Roosevelt (1933)', 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populÃ¤r) (1970)', 'Henry Ford (~1920)']
+    distractors: ['Franklin D. Roosevelt (1933)', 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populär) (1970)', 'Henry Ford (~1920)']
   },
   {
     id: 'quote-370',
@@ -4443,15 +4443,15 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-371',
-    title: 'MÃ¶ge die StraÃŸe dir entgegeneilen.',
+    title: 'Möge die Straße dir entgegeneilen.',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Irischer Segenswunsch (Traditionell)',
     hint: 'Von Irischer Segenswunsch.',
     difficulty: 'schwer',
-    sources: { text: '"MÃ¶ge die StraÃŸe dir entgegeneilen."' },
-    distractors: ['Erich KÃ¤stner (1950)', 'Walt Disney (~1980)', 'Clint Eastwood (Dirty Harry) (1971)']
+    sources: { text: '"Möge die Straße dir entgegeneilen."' },
+    distractors: ['Erich Kästner (1950)', 'Walt Disney (~1980)', 'Clint Eastwood (Dirty Harry) (1971)']
   },
   {
     id: 'quote-372',
@@ -4487,7 +4487,7 @@ export const quoteCards: Card[] = [
     hint: 'Von Winston Churchill.',
     difficulty: 'mittel',
     sources: { text: '"Demokratie ist die schlechteste aller Staatsformen, ausgenommen alle anderen."' },
-    distractors: ['Willy Brandt (1989)', 'Albert Einstein (1926)', 'NiccolÃ² Machiavelli (zugeschrieben) (1532)']
+    distractors: ['Willy Brandt (1989)', 'Albert Einstein (1926)', 'Niccolò Machiavelli (zugeschrieben) (1532)']
   },
   {
     id: 'quote-375',
@@ -4507,8 +4507,8 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1532,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'NiccolÃ² Machiavelli (zugeschrieben) (1532)',
-    hint: 'Von NiccolÃ² Machiavelli (zugeschrieben).',
+    answer: 'Niccolò Machiavelli (zugeschrieben) (1532)',
+    hint: 'Von Niccolò Machiavelli (zugeschrieben).',
     difficulty: 'schwer',
     sources: { text: '"Der Zweck heiligt die Mittel."' },
     distractors: ['John Donne (1624)', 'Walter Moers (Professor Nachtigaller) (1999)', 'Seneca (~50 n. Chr.)']
@@ -4531,8 +4531,8 @@ export const quoteCards: Card[] = [
     category: 'quote',
     year: 1757,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
-    answer: 'Friedrich der GroÃŸe (1757)',
-    hint: 'Von Friedrich der GroÃŸe.',
+    answer: 'Friedrich der Große (1757)',
+    hint: 'Von Friedrich der Große.',
     difficulty: 'schwer',
     sources: { text: '"Hunde, wollt ihr ewig leben?"' },
     distractors: ['Blaise Pascal (1910)', 'Friedrich Nietzsche (1882)', 'Malala Yousafzai (2013)']
@@ -4551,14 +4551,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-380',
-    title: 'In dieser Welt ist nichts sicher, auÃŸer dem Tod u',
+    title: 'In dieser Welt ist nichts sicher, außer dem Tod un',
     category: 'quote',
     year: 1789,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Benjamin Franklin (1789)',
     hint: 'Von Benjamin Franklin.',
     difficulty: 'schwer',
-    sources: { text: '"In dieser Welt ist nichts sicher, auÃŸer dem Tod und den Steuern."' },
+    sources: { text: '"In dieser Welt ist nichts sicher, außer dem Tod und den Steuern."' },
     distractors: ['Apollo 13 (Film) (1995)', 'Patrick Swayze (Dirty Dancing) (1987)', 'Igor Strawinsky (~1940)']
   },
   {
@@ -4599,26 +4599,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-384',
-    title: 'Es ist besser, ein Licht zu entzÃ¼nden, als Ã¼ber ',
+    title: 'Es ist besser, ein Licht zu entzünden, als über di',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Konfuzius (zugeschrieben) (~1300)',
     hint: 'Von Konfuzius (zugeschrieben).',
     difficulty: 'schwer',
-    sources: { text: '"Es ist besser, ein Licht zu entzÃ¼nden, als Ã¼ber die Dunkelheit zu klagen."' },
-    distractors: ['Friedemann Schulz von Thun (1981)', 'George Orwell (1984) (1949)', 'E.T. - Der AuÃŸerirdische (1982)']
+    sources: { text: '"Es ist besser, ein Licht zu entzünden, als über die Dunkelheit zu klagen."' },
+    distractors: ['Friedemann Schulz von Thun (1981)', 'George Orwell (1984) (1949)', 'E.T. - Der Außerirdische (1982)']
   },
   {
     id: 'quote-385',
-    title: 'Alles sollte so einfach wie mÃ¶glich gemacht werde',
+    title: 'Alles sollte so einfach wie möglich gemacht werden',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Albert Einstein (~1933)',
     hint: 'Von Albert Einstein.',
     difficulty: 'schwer',
-    sources: { text: '"Alles sollte so einfach wie mÃ¶glich gemacht werden, aber nicht einfacher."' },
+    sources: { text: '"Alles sollte so einfach wie möglich gemacht werden, aber nicht einfacher."' },
     distractors: ['Sokrates (400 v. Chr.)', 'Winston Churchill (1945)', '(Parodie auf Armstrong / Volksmund) (1963)']
   },
   {
@@ -4635,26 +4635,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-387',
-    title: 'Ãœberall ist man nur dort richtig, wo man mit dem ',
+    title: 'Überall ist man nur dort richtig, wo man mit dem H',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Christian Morgenstern (~1900)',
     hint: 'Von Christian Morgenstern.',
     difficulty: 'schwer',
-    sources: { text: '"Ãœberall ist man nur dort richtig, wo man mit dem Herzen ist."' },
-    distractors: ['Buzz Lightyear (Toy Story) (1995)', 'RenÃ© Descartes (1637)', 'Gary Lineker (1966)']
+    sources: { text: '"Überall ist man nur dort richtig, wo man mit dem Herzen ist."' },
+    distractors: ['Buzz Lightyear (Toy Story) (1995)', 'René Descartes (1637)', 'Gary Lineker (1966)']
   },
   {
     id: 'quote-388',
-    title: 'Die Welt gehÃ¶rt dem, der sie genieÃŸt.',
+    title: 'Die Welt gehört dem, der sie genießt.',
     category: 'quote',
     year: 1852,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Giacomo Leopardi (1852)',
     hint: 'Von Giacomo Leopardi.',
     difficulty: 'mittel',
-    sources: { text: '"Die Welt gehÃ¶rt dem, der sie genieÃŸt."' },
+    sources: { text: '"Die Welt gehört dem, der sie genießt."' },
     distractors: ['Rosa Luxemburg (1918)', 'Giovanni Trapattoni (1998)', 'Oscar Wilde (1891)']
   },
   {
@@ -4671,26 +4671,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-390',
-    title: 'Wer die Wahrheit nicht weiÃŸ, der ist bloÃŸ ein Du',
+    title: 'Wer die Wahrheit nicht weiß, der ist bloß ein Dumm',
     category: 'quote',
     year: 1939,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Bertolt Brecht (Leben des Galilei) (1939)',
     hint: 'Von Bertolt Brecht (Leben des Galilei).',
     difficulty: 'mittel',
-    sources: { text: '"Wer die Wahrheit nicht weiÃŸ, der ist bloÃŸ ein Dummkopf. Aber wer sie weiÃŸ und sie eine LÃ¼ge nennt, der ist ein Verbrecher!"' },
+    sources: { text: '"Wer die Wahrheit nicht weiß, der ist bloß ein Dummkopf. Aber wer sie weiß und sie eine Lüge nennt, der ist ein Verbrecher!"' },
     distractors: ['Marcel Reich-Ranicki (~2000)', 'Johann Wolfgang von Goethe (1795)', 'Niels Bohr (1920)']
   },
   {
     id: 'quote-391',
-    title: 'Alles GroÃŸe in unserer Welt geschieht nur, weil j',
+    title: 'Alles Große in unserer Welt geschieht nur, weil je',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Hermann Gmeiner (~1960)',
     hint: 'Von Hermann Gmeiner.',
     difficulty: 'schwer',
-    sources: { text: '"Alles GroÃŸe in unserer Welt geschieht nur, weil jemand mehr tut, als er muss."' },
+    sources: { text: '"Alles Große in unserer Welt geschieht nur, weil jemand mehr tut, als er muss."' },
     distractors: ['William Shakespeare (Der Kaufmann von Venedig) (1596)', 'Dalai Lama (1904)', 'Ludwig Wittgenstein (1921)']
   },
   {
@@ -4719,15 +4719,15 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-394',
-    title: 'QualitÃ¤t ist, wenn der Kunde zurÃ¼ckkommt und nic',
+    title: 'Qualität ist, wenn der Kunde zurückkommt und nicht',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Hermann Tietz (~1980)',
     hint: 'Von Hermann Tietz.',
     difficulty: 'schwer',
-    sources: { text: '"QualitÃ¤t ist, wenn der Kunde zurÃ¼ckkommt und nicht die Ware."' },
-    distractors: ['E.T. (E.T. â€“ Der AuÃŸerirdische) (1982)', 'Diverse (Volksmund/FuÃŸball) (1991)', 'Brad Pitt (Fight Club) (1999)']
+    sources: { text: '"Qualität ist, wenn der Kunde zurückkommt und nicht die Ware."' },
+    distractors: ['E.T. (E.T. – Der Außerirdische) (1982)', 'Diverse (Volksmund/Fußball) (1991)', 'Brad Pitt (Fight Club) (1999)']
   },
   {
     id: 'quote-395',
@@ -4767,26 +4767,26 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-398',
-    title: 'Es gibt nichts StÃ¤rkeres als eine Idee, deren Zei',
+    title: 'Es gibt nichts Stärkeres als eine Idee, deren Zeit',
     category: 'quote',
     year: 1852,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Victor Hugo (1852)',
     hint: 'Von Victor Hugo.',
     difficulty: 'mittel',
-    sources: { text: '"Es gibt nichts StÃ¤rkeres als eine Idee, deren Zeit gekommen ist."' },
+    sources: { text: '"Es gibt nichts Stärkeres als eine Idee, deren Zeit gekommen ist."' },
     distractors: ['(Parodie auf Armstrong / Volksmund) (1963)', 'George Peppard (A-Team) (1985)', 'Alec Guinness (Star Wars) (1977)']
   },
   {
     id: 'quote-399',
-    title: 'Jedes Kind ist ein KÃ¼nstler. Das Problem ist nur,',
+    title: 'Jedes Kind ist ein Künstler. Das Problem ist nur, ',
     category: 'quote',
     year: 0,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'Pablo Picasso (~1950)',
     hint: 'Von Pablo Picasso.',
     difficulty: 'schwer',
-    sources: { text: '"Jedes Kind ist ein KÃ¼nstler. Das Problem ist nur, wie man ein KÃ¼nstler bleibt, wenn man erwÃ¤chst."' },
+    sources: { text: '"Jedes Kind ist ein Künstler. Das Problem ist nur, wie man ein Künstler bleibt, wenn man erwächst."' },
     distractors: ['John F. Kennedy (1961)', 'Ernest Hemingway (1941)', 'Konfuzius / Bibel (Goldene Regel) (~500 v. Chr.)']
   },
   {
@@ -4803,14 +4803,14 @@ export const quoteCards: Card[] = [
   },
   {
     id: 'quote-401',
-    title: 'Ein tiefer Fall fÃ¼hrt oft zu hÃ¶herem GlÃ¼ck.',
+    title: 'Ein tiefer Fall führt oft zu höherem Glück.',
     category: 'quote',
     year: 1609,
     cue: 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?',
     answer: 'William Shakespeare (Cymbeline) (1609)',
     hint: 'Von William Shakespeare (Cymbeline).',
     difficulty: 'schwer',
-    sources: { text: '"Ein tiefer Fall fÃ¼hrt oft zu hÃ¶herem GlÃ¼ck."' },
+    sources: { text: '"Ein tiefer Fall führt oft zu höherem Glück."' },
     distractors: ['Albert Einstein (1929)', 'Yoda (Star Wars) (1980)', 'George Orwell (1984) (1984)']
   },
   {
@@ -4822,8 +4822,8 @@ export const quoteCards: Card[] = [
     answer: 'Volksmund (Traditionell)',
     hint: 'Von Volksmund.',
     difficulty: 'schwer',
-    sources: { text: '"Gute Freunde sind wie Sterne. Du kannst sie nicht immer sehen, aber du weiÃŸt, sie sind immer da."' },
-    distractors: ['Jean Paul (1796)', 'Pablo Picasso (1931)', 'Loriot (Das FrÃ¼hstÃ¼cksei) (1977)']
+    sources: { text: '"Gute Freunde sind wie Sterne. Du kannst sie nicht immer sehen, aber du weißt, sie sind immer da."' },
+    distractors: ['Jean Paul (1796)', 'Pablo Picasso (1931)', 'Loriot (Das Frühstücksei) (1977)']
   },
   {
     id: 'quote-403',
