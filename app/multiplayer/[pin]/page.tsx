@@ -55,6 +55,7 @@ export default function MultiplayerGamePage() {
   
   // Spielzustand
   const [isProcessing, setIsProcessing] = useState(false);
+  const backGuardPushed = useRef(false); // ensures dummy history entry is pushed only once
   const [placementResult, setPlacementResult] = useState<'correct' | 'wrong' | null>(null);
   const [placementError, setPlacementError] = useState<string | null>(null);
   const [selectedPosition, setSelectedPosition] = useState<number | null>(null); // Gewählte Position vor Bestätigung
@@ -348,16 +349,22 @@ export default function MultiplayerGamePage() {
     if (!game || !session) return;
     const isHost = session.isHost || game.hostId === session.groupId;
     const activeGame = game.state === 'playing' || game.state === 'banning';
-    if (!isHost || !activeGame) return;
+    if (!isHost || !activeGame) {
+      backGuardPushed.current = false; // reset so guard re-arms for a new game
+      return;
+    }
 
     const handleBeforeUnload = (e: BeforeUnloadEvent) => {
       e.preventDefault();
       e.returnValue = 'Das Spiel läuft noch. Wenn du die Seite verlässt, kann das Spiel nicht mehr fortgesetzt werden. Wirklich verlassen?';
     };
 
-    // Browser-Back-Button guard: push a dummy history entry so that pressing back
+    // Browser-Back-Button guard: push a dummy history entry ONCE so pressing back
     // only pops to this dummy entry, then we ask for confirmation.
-    history.pushState(null, '', window.location.href);
+    if (!backGuardPushed.current) {
+      history.pushState(null, '', window.location.href);
+      backGuardPushed.current = true;
+    }
     const handlePopState = () => {
       // Push again so the URL doesn't change
       history.pushState(null, '', window.location.href);
