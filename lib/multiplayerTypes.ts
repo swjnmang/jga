@@ -79,6 +79,12 @@ export interface GameSession {
   currentRoundCategory?: string;       // Aktuelle Kategorie, aus der alle Gruppen spielen
   categoryRoundQueue?: string[];       // Noch ausstehende Kategorien in dieser Runde (gemischt)
   categoryGroupQueue?: string[];       // Gruppen, die in der aktuellen Kategorie noch spielen müssen
+  // Schätzfrage-Ergebnis (transient: gesetzt nach Auswertung, gelöscht beim Weiter)
+  schaetzResult?: {
+    answer: string;
+    winnerIds: string[];
+    submissions: { groupId: string; groupName: string; value: string; isWinner: boolean; color: string; }[];
+  } | null;
 }
 
 export interface CreateGameParams {

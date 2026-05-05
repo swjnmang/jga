@@ -964,7 +964,8 @@ function computeNextTurn(
   const remainingGroups = catGroupQueue.slice(1).filter(gid => isEligible(gid, currentRoundCat));
 
   if (remainingGroups.length > 0) {
-    const nextCardId = newAvailable.find(id => deckMeta[id] === currentRoundCat) ?? null;
+    const catMatches = newAvailable.filter(id => deckMeta[id] === currentRoundCat);
+    const nextCardId = catMatches.length > 0 ? catMatches[Math.floor(Math.random() * catMatches.length)] : null;
     if (nextCardId !== null) {
       return {
         nextGroupId: remainingGroups[0],
@@ -981,7 +982,8 @@ function computeNextTurn(
   const tryQueue = catRoundQueue.length > 0 ? catRoundQueue : shuffleArray(triviaCategories);
   for (let i = 0; i < tryQueue.length; i++) {
     const nextCat = tryQueue[i];
-    const nextCardId = newAvailable.find(id => deckMeta[id] === nextCat) ?? null;
+    const catPool = newAvailable.filter(id => deckMeta[id] === nextCat);
+    const nextCardId = catPool.length > 0 ? catPool[Math.floor(Math.random() * catPool.length)] : null;
     if (nextCardId !== null) {
       // Gruppen-Queue für neue Kategorie: nur berechtigte Gruppen
       const eligibleGroups = playingGroupIds.filter(gid => isEligible(gid, nextCat));
@@ -1173,6 +1175,14 @@ export async function submitSchaetzGuess(pin: string, groupId: string, guess: st
  * Host wertet Schätzfrage aus.
  * winnerGroupIds: Alle Gruppen die am nächsten dran waren (Unentschieden möglich).
  */
+export async function showSchaetzResult(
+  pin: string,
+  result: { answer: string; winnerIds: string[]; submissions: { groupId: string; groupName: string; value: string; isWinner: boolean; color: string; }[] }
+): Promise<void> {
+  checkFirebase();
+  await update(ref(database!, `games/${pin}`), { schaetzResult: result, lastActivity: Date.now() });
+}
+
 export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]): Promise<void> {
   checkFirebase();
   const gameRef = ref(database!, `games/${pin}`);
@@ -1257,7 +1267,8 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
   updates.categoryRoundQueue = next.categoryRoundQueue;
   updates.categoryGroupQueue = next.categoryGroupQueue;
 
-  // Schätzungen + Flex-State zurücksetzen
+  // Schätzungen + Flex-State + Ergebnis-Anzeige zurücksetzen
+  updates.schaetzResult = null;
   Object.keys(game.groups).forEach(gid => {
     updates[`groups/${gid}/schaetzSubmission`] = null;
     updates[`groups/${gid}/flexActive`] = false;
