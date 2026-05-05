@@ -128,6 +128,14 @@ export default function MultiplayerGamePage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [game?.currentCardIndex, game?.state]);
 
+  // Clear local placement result whenever the card changes (new round)
+  // Without this, a previous wrong/correct result reappears when it's the group's turn again
+  useEffect(() => {
+    setPlacementResult(null);
+    setPlacementError(null);
+    setSelectedPosition(null);
+  }, [game?.currentCardId]);
+
   const handleToggleReady = async () => {
     if (!session || !game) return;
     
