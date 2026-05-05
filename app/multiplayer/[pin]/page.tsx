@@ -1773,7 +1773,7 @@ export default function MultiplayerGamePage() {
                     {group.id === session.groupId && ' (Du)'}
                   </span>
                 </div>
-                <span className="text-xl font-bold">{group.score}</span>
+                <span className="text-xl font-bold">{group.score} / {game.timelineWinTarget ?? 10}</span>
               </div>
             ))}
         </div>

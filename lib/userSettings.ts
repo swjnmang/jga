@@ -22,7 +22,7 @@ export const TRIVIA_ONLY_CATEGORIES: CardCategory[] = [
   'filmserien',
   'schaetzfragen'
 ];
-export const TIMELINE_CATEGORIES: CardCategory[] = ['quote', 'image', 'flag', 'music'];
+export const TIMELINE_CATEGORIES: CardCategory[] = ['quote', 'image', 'flag', 'music', 'outline', 'filmserien'];
 
 export const ALL_GENRES: GenreTag[] = ['poprock', 'metal', 'hiphop', 'schlagerparty'];
 export const ALL_DECADES: DecadeTag[] = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];

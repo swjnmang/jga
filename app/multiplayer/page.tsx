@@ -31,6 +31,7 @@ function MultiplayerLobbyContent() {
   const [gameMode, setGameMode] = useState<'timeline' | 'trivia'>('timeline');
   const [banMode, setBanMode] = useState(true);
   const [triviaWinCondition, setTriviaWinCondition] = useState<'categories' | 'points'>('categories');
+  const [timelineWinTarget, setTimelineWinTarget] = useState(10);
 
   // Join Game Form
   const [pin, setPin] = useState('');
@@ -217,6 +218,7 @@ function MultiplayerLobbyContent() {
         hostPlayerName: hostName,
         banModeEnabled: gameMode === 'trivia' ? banMode : false,
         triviaWinCondition: gameMode === 'trivia' ? triviaWinCondition : 'categories',
+        timelineWinTarget: gameMode === 'timeline' ? timelineWinTarget : undefined,
       });
 
       // Speichere Session-Infos im localStorage
@@ -538,9 +540,24 @@ function MultiplayerLobbyContent() {
                 </>
               )}
               {gameMode === 'timeline' && (
-                <p className="mt-2 text-sm text-ink/70">
-                  🔢 <strong>Timeline</strong> – Ereignisse und Fakten müssen in die richtige chronologische Reihenfolge gebracht werden. Die erste Gruppe mit 10 korrekt platzierten Karten gewinnt.
-                </p>
+                <div className="mt-2 space-y-3">
+                  <p className="text-sm text-ink/70">
+                    🔢 <strong>Timeline</strong> – Ereignisse und Fakten müssen in die richtige chronologische Reihenfolge gebracht werden. Die erste Gruppe mit <strong>{timelineWinTarget}</strong> korrekt platzierten Karten gewinnt.
+                  </p>
+                  <div>
+                    <label className="block text-sm font-semibold mb-2">🏆 Karten zum Gewinnen: <span className="text-ink">{timelineWinTarget}</span></label>
+                    <div className="flex items-center gap-3">
+                      <button type="button" onClick={() => setTimelineWinTarget(v => Math.max(3, v - 1))} className="w-9 h-9 rounded-lg border-2 border-ink/30 text-lg font-bold hover:bg-ink/10 flex items-center justify-center">−</button>
+                      <input
+                        type="range" min={3} max={30} value={timelineWinTarget}
+                        onChange={e => setTimelineWinTarget(Number(e.target.value))}
+                        className="flex-1 accent-ink"
+                      />
+                      <button type="button" onClick={() => setTimelineWinTarget(v => Math.min(30, v + 1))} className="w-9 h-9 rounded-lg border-2 border-ink/30 text-lg font-bold hover:bg-ink/10 flex items-center justify-center">+</button>
+                    </div>
+                    <div className="flex justify-between text-xs text-ink/40 mt-1 px-1"><span>3</span><span>30</span></div>
+                  </div>
+                </div>
               )}
             </div>
 

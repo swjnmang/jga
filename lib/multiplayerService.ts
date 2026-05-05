@@ -101,6 +101,7 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     }),
     banModeEnabled: params.mode === 'trivia' ? (params.banModeEnabled ?? false) : false,
     triviaWinCondition: params.mode === 'trivia' ? (params.triviaWinCondition ?? 'categories') : 'categories',
+    timelineWinTarget: params.mode === 'timeline' ? (params.timelineWinTarget ?? 10) : undefined,
     groups: {
       [hostGroupId]: { ...hostGroup, completedCategories: [] }
     },
@@ -478,8 +479,9 @@ export async function nextTurn(pin: string): Promise<void> {
     updates[`groups/${gid}/flexActive`] = false;
   });
 
-  // Prüfe ob eine Gruppe gewonnen hat (10 Karten korrekt)
-  const winner = Object.values(game.groups).find(g => g.score >= 10);
+  // Prüfe ob eine Gruppe gewonnen hat
+  const winTarget = game.timelineWinTarget ?? 10;
+  const winner = Object.values(game.groups).find(g => g.score >= winTarget);
   if (winner) {
     updates.state = 'finished';
     updates.finishedAt = Date.now();
@@ -547,8 +549,9 @@ export async function nextCard(pin: string): Promise<void> {
       updates[`groups/${gid}/flexActive`] = false;
     });
 
-    // Check win condition (10 correct placements)
-    const winner = Object.values(game.groups).find(g => !g.isHost && g.score >= 10);
+    // Check win condition
+    const winTarget = game.timelineWinTarget ?? 10;
+    const winner = Object.values(game.groups).find(g => !g.isHost && g.score >= winTarget);
     if (winner) {
       updates.state = 'finished';
       updates.finishedAt = Date.now();
@@ -980,7 +983,8 @@ export async function checkAutoWinTimeline(pin: string): Promise<void> {
     const tl = Array.isArray(group.timeline)
       ? group.timeline
       : Object.values(group.timeline ?? {});
-    if (tl.length >= 10) {
+    const winTarget = game.timelineWinTarget ?? 10;
+    if (tl.length >= winTarget) {
       winner = group;
       break;
     }
