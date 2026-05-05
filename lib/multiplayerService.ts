@@ -1043,40 +1043,58 @@ function computeNextTurn(
     return !(groupCompletedCategories[gid] ?? []).includes(cat);
   };
 
-  // Verbleibende Gruppen in dieser Kategorie – nur berechtigte behalten
-  const remainingGroups = catGroupQueue.slice(1).filter(gid => isEligible(gid, currentRoundCat));
+  // Finde die passende Kategorie + Karte für eine Gruppe:
+  // Bevorzuge preferredCat, weicht auf nächste unerledigte Kategorie aus.
+  const findCardForGroup = (gid: string, preferredCat: string, extraSearchOrder: string[]): { cardId: string; cat: string } | null => {
+    if (isEligible(gid, preferredCat)) {
+      const matches = newAvailable.filter(id => deckMeta[id] === preferredCat);
+      if (matches.length > 0) {
+        return { cardId: matches[Math.floor(Math.random() * matches.length)], cat: preferredCat };
+      }
+    }
+    const searchOrder = [...extraSearchOrder, ...triviaCategories.filter(c => !extraSearchOrder.includes(c) && c !== preferredCat)];
+    for (const cat of searchOrder) {
+      if (!isEligible(gid, cat)) continue;
+      const matches = newAvailable.filter(id => deckMeta[id] === cat);
+      if (matches.length > 0) {
+        return { cardId: matches[Math.floor(Math.random() * matches.length)], cat };
+      }
+    }
+    return null;
+  };
+
+  // Verbleibende Gruppen in dieser Kategorie – ALLE behalten (kein Skip!)
+  // Gruppen die currentRoundCat schon haben, bekommen eine andere Kategorie.
+  const remainingGroups = catGroupQueue.slice(1); // strict round-robin, never skip
 
   if (remainingGroups.length > 0) {
-    const catMatches = newAvailable.filter(id => deckMeta[id] === currentRoundCat);
-    const nextCardId = catMatches.length > 0 ? catMatches[Math.floor(Math.random() * catMatches.length)] : null;
-    if (nextCardId !== null) {
+    const nextGroupId = remainingGroups[0];
+    const found = findCardForGroup(nextGroupId, currentRoundCat, catRoundQueue);
+    if (found !== null) {
       return {
-        nextGroupId: remainingGroups[0],
-        nextCardId,
-        currentRoundCategory: currentRoundCat,
+        nextGroupId,
+        nextCardId: found.cardId,
+        currentRoundCategory: found.cat,
         categoryRoundQueue: catRoundQueue,
         categoryGroupQueue: remainingGroups,
       };
     }
-    // Keine Karte mehr für diese Kategorie → Kategorie wechseln
+    // Keine Karte mehr für diese Gruppe → Kategorie-Runde beenden
   }
 
-  // Alle Gruppen fertig (oder keine Karte mehr) → nächste Kategorie
+  // Alle Gruppen fertig → nächste Kategorie
   const tryQueue = catRoundQueue.length > 0 ? catRoundQueue : shuffleArray(triviaCategories);
   for (let i = 0; i < tryQueue.length; i++) {
     const nextCat = tryQueue[i];
-    const catPool = newAvailable.filter(id => deckMeta[id] === nextCat);
-    const nextCardId = catPool.length > 0 ? catPool[Math.floor(Math.random() * catPool.length)] : null;
-    if (nextCardId !== null) {
-      // Gruppen-Queue für neue Kategorie: nur berechtigte Gruppen
-      const eligibleGroups = playingGroupIds.filter(gid => isEligible(gid, nextCat));
-      if (eligibleGroups.length === 0) continue; // alle haben diese Kat. schon → überspringen
+    const firstGroup = playingGroupIds[0];
+    const found = findCardForGroup(firstGroup, nextCat, tryQueue.slice(i + 1));
+    if (found !== null) {
       return {
-        nextGroupId: eligibleGroups[0],
-        nextCardId,
-        currentRoundCategory: nextCat,
+        nextGroupId: firstGroup,
+        nextCardId: found.cardId,
+        currentRoundCategory: found.cat,
         categoryRoundQueue: tryQueue.slice(i + 1),
-        categoryGroupQueue: [...eligibleGroups],
+        categoryGroupQueue: [...playingGroupIds],
       };
     }
   }
