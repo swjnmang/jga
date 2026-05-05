@@ -1521,7 +1521,7 @@ export default function MultiplayerGamePage() {
           return (
             <div className="card-surface rounded-2xl p-6 space-y-4">
               <h3 className="text-lg font-semibold text-center">
-                Wo liegt dieses Lied in der Timeline von <span className="text-ink">{currentGroup.name}</span>?
+                Timeline von Gruppe: <span className="text-ink">{currentGroup.name}</span>
               </h3>
               <p className="text-xs text-center text-ink/60">
                 Wähle eine Position — dann „Ergebnis einreichen"
