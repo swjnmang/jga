@@ -405,8 +405,8 @@ export default function MultiplayerGamePage() {
   const allReady = groupList.every(g => g.isReady);
 
   const CATEGORY_LABELS: Record<string, string> = {
-    quote: 'Berühmte Zitate', image: 'Bilder erkennen', flag: 'Länder erkennen',
-    outline: 'Umrisse erkennen', music: 'Musik', natur: 'Natur & Technik',
+    quote: 'Berühmte Zitate', image: 'Bilder erkennen', flag: 'Flaggen erkennen',
+    outline: 'Länder am Umriss erkennen', music: 'Musik', natur: 'Natur & Technik',
     filmserien: 'Filme & Serien', schaetzfragen: 'Schätzfragen',
     religionglaube: 'Religion & Glaube', sportfreizeit: 'Sport & Freizeit',
     geogeschichte: 'Geographie & Geschichte',
@@ -1129,7 +1129,7 @@ export default function MultiplayerGamePage() {
               {showTriviaAnswer && (
                 <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-400 px-4 py-3">
                   <p className="text-sm font-semibold text-yellow-700 mb-1">Korrekte Antwort:</p>
-                  <p className="text-xl font-bold">{currentCard.answer}</p>
+                  <p className="text-xl font-bold">{currentCard.category === 'music' ? currentCard.answer.replace(/ [–—] -?\d+, /, ' — ') : currentCard.answer}</p>
                   {currentCard.year && (
                     <p className="text-sm text-ink/60 mt-1">Jahr: {currentCard.year}</p>
                   )}

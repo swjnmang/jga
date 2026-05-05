@@ -7,13 +7,13 @@ import { Suspense } from 'react';
 import { applyTheme, loadTheme, saveTheme, themes, ThemeId } from '@/lib/theme';
 
 function AppSettingsContent() {
-  const [theme, setTheme] = useState<ThemeId>('aurora');
+  const [theme, setTheme] = useState<ThemeId>('dark');
   const searchParams = useSearchParams();
   const authError = searchParams.get('authError');
   const authSuccess = searchParams.get('authSuccess');
 
   useEffect(() => {
-    const initialTheme = loadTheme('aurora');
+    const initialTheme = loadTheme('dark');
     setTheme(initialTheme);
     applyTheme(initialTheme);
   }, []);

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { createGame, joinGame } from '@/lib/multiplayerService';
+import { createGame, joinGame, subscribeToGame } from '@/lib/multiplayerService';
 import { cards, getCategories } from '@/lib/cards';
 import { playlistInfo } from '@/lib/playlistCards';
 import { getDefaultSettings, TIMELINE_CATEGORIES } from '@/lib/userSettings';
@@ -10,9 +10,12 @@ import { isFirebaseEnabled } from '@/lib/firebase';
 import { CardCategory, Difficulty, GenreTag } from '@/lib/types';
 
 const GROUP_AVATARS = [
-  '🦁', '🐈', '🐭', '🐢', '🐻', '🖁',
-  '🐼', '🐺', '🦊', '🐧', '🦄', '🐉',
-  '🐸', '🐎', '🪜', '🦅',
+  // Einzeltiere
+  '🦁', '🐈', '🐭', '🐢', '🐻', '🐼', '🐺', '🦊', '🐧', '🦄', '🐉', '🐸', '🐎', '🦅', '🦋', '🐬',
+  // Gruppen / mehrere Personen
+  '👨\u200d👩\u200d👧\u200d👦', '👫', '👬', '👭', '🧑\u200d🤝\u200d🧑', '👯', '🫂', '🎭', '🫶', '🤝',
+  // Fun / Sonstiges
+  '🎸', '🏆', '🚀', '🎉', '⚽', '🦸',
 ];
 
 function MultiplayerLobbyContent() {
@@ -33,6 +36,7 @@ function MultiplayerLobbyContent() {
   const [pin, setPin] = useState('');
   const [joinGroupName, setJoinGroupName] = useState('');
   const [joinGroupAvatar, setJoinGroupAvatar] = useState('🦁');
+  const [takenAvatars, setTakenAvatars] = useState<string[]>([]);
   const [firebaseAvailable, setFirebaseAvailable] = useState(true);
   const [spotifyLinked, setSpotifyLinked] = useState(false);
   
@@ -133,6 +137,19 @@ function MultiplayerLobbyContent() {
       setMode(openFromUrl);
     }
   }, [searchParams]);
+
+  // Fetch taken avatars when a 6-char PIN is typed
+  useEffect(() => {
+    if (pin.length !== 6) { setTakenAvatars([]); return; }
+    const unsub = subscribeToGame(pin, (game) => {
+      if (!game) { setTakenAvatars([]); return; }
+      const taken = Object.values(game.groups)
+        .filter(g => !g.isHost && g.avatar)
+        .map(g => g.avatar as string);
+      setTakenAvatars(taken);
+    });
+    return () => unsub();
+  }, [pin]);
 
   // Wenn Session im localStorage vorhanden → Rejoin-Banner anzeigen (kein stiller Redirect)
   useEffect(() => {
@@ -306,8 +323,8 @@ function MultiplayerLobbyContent() {
   const categoryLabels: Partial<Record<CardCategory, string>> = {
     quote: 'Berühmte Zitate',
     image: 'Bilder erkennen',
-    flag: 'Länder erkennen',
-    outline: 'Umrisse erkennen',
+    flag: 'Flaggen erkennen',
+    outline: 'Länder am Umriss erkennen',
     music: 'Musik',
     natur: 'Natur & Technik',
     filmserien: 'Filme & Serien',
@@ -778,21 +795,27 @@ function MultiplayerLobbyContent() {
             <div>
               <label className="block text-sm font-semibold mb-2">Gruppen-Avatar wählen</label>
               <div className="grid grid-cols-8 gap-2">
-                {GROUP_AVATARS.map((emoji) => (
-                  <button
-                    key={emoji}
-                    type="button"
-                    onClick={() => setJoinGroupAvatar(emoji)}
-                    className={`text-2xl rounded-xl p-2 border-2 transition-all ${
-                      joinGroupAvatar === emoji
-                        ? 'border-ink bg-ink/10 scale-110 shadow-md'
-                        : 'border-ink/20 hover:border-ink/50 hover:bg-ink/5'
-                    }`}
-                    title={emoji}
-                  >
-                    {emoji}
-                  </button>
-                ))}
+                {GROUP_AVATARS.map((emoji) => {
+                  const isTaken = takenAvatars.includes(emoji) && emoji !== joinGroupAvatar;
+                  return (
+                    <button
+                      key={emoji}
+                      type="button"
+                      onClick={() => !isTaken && setJoinGroupAvatar(emoji)}
+                      disabled={isTaken}
+                      className={`text-2xl rounded-xl p-2 border-2 transition-all ${
+                        joinGroupAvatar === emoji
+                          ? 'border-ink bg-ink/10 scale-110 shadow-md'
+                          : isTaken
+                          ? 'border-red-400/40 opacity-30 cursor-not-allowed'
+                          : 'border-ink/20 hover:border-ink/50 hover:bg-ink/5'
+                      }`}
+                      title={isTaken ? 'Bereits vergeben' : emoji}
+                    >
+                      {emoji}
+                    </button>
+                  );
+                })}
               </div>
               {joinGroupAvatar && (
                 <p className="mt-2 text-sm text-ink/60">Gewählt: <span className="text-base">{joinGroupAvatar}</span> {joinGroupName || '...'}</p>
