@@ -1356,7 +1356,7 @@ export default function MultiplayerGamePage() {
               </div>
             </div>
 
-            <p className="text-lg">{currentCard.category === 'quote' ? 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?' : currentCard.cue}</p>
+            <p className="text-lg">{currentCard.category === 'quote' ? 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?' : currentCard.category === 'filmserien' ? currentCard.cue + ' – Und in welchem Jahr war das?' : currentCard.cue}</p>
 
             {currentCard.sources && (
               <div className="relative">
