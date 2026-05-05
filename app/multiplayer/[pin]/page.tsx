@@ -353,9 +353,30 @@ export default function MultiplayerGamePage() {
       e.preventDefault();
       e.returnValue = 'Das Spiel läuft noch. Wenn du die Seite verlässt, kann das Spiel nicht mehr fortgesetzt werden. Wirklich verlassen?';
     };
+
+    // Browser-Back-Button guard: push a dummy history entry so that pressing back
+    // only pops to this dummy entry, then we ask for confirmation.
+    history.pushState(null, '', window.location.href);
+    const handlePopState = () => {
+      // Push again so the URL doesn't change
+      history.pushState(null, '', window.location.href);
+      const leave = window.confirm(
+        'Das Spiel läuft noch!\n\nAls Spielleiter kannst du das Spiel nicht fortsetzen, wenn du diese Seite verlässt.\n\nWirklich verlassen?'
+      );
+      if (leave) {
+        window.removeEventListener('popstate', handlePopState);
+        window.removeEventListener('beforeunload', handleBeforeUnload);
+        router.push('/');
+      }
+    };
+
     window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-  }, [game?.state, session?.isHost, game?.hostId, session?.groupId]);
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [game?.state, session?.isHost, game?.hostId, session?.groupId, router]);
 
   // Auto-skip invalid card IDs in Trivia mode (stale Firebase data from old deployments)
   useEffect(() => {

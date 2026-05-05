@@ -686,7 +686,7 @@ const baseCards: Card[] = [
 ];
 
 const baseNonMusicCards = [
-  ...baseCards.filter((c) => c.category !== 'music' && !c.id.startsWith('flag-') && !c.id.startsWith('outline-')),
+  ...baseCards.filter((c) => c.category !== 'music' && c.category !== 'image' && !c.id.startsWith('flag-') && !c.id.startsWith('outline-')),
   ...naturTechnikCards,
   ...filmSerienCards,
   ...triviaExtraCards,
