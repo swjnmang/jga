@@ -341,7 +341,22 @@ export default function MultiplayerGamePage() {
       setIsMediaPlaying(false);
     }
   }, [game?.playbackControl, game?.currentCardId, session?.isHost, game?.hostId]);
-  
+
+  // Warn host before accidental browser refresh / back navigation
+  useEffect(() => {
+    if (!game || !session) return;
+    const isHost = session.isHost || game.hostId === session.groupId;
+    const activeGame = game.state === 'playing' || game.state === 'banning';
+    if (!isHost || !activeGame) return;
+
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+      e.returnValue = 'Das Spiel läuft noch. Wenn du die Seite verlässt, kann das Spiel nicht mehr fortgesetzt werden. Wirklich verlassen?';
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [game?.state, session?.isHost, game?.hostId, session?.groupId]);
+
   if (loading) {
     return (
       <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10">
