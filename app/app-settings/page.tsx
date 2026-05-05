@@ -2,10 +2,15 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 import { applyTheme, loadTheme, saveTheme, themes, ThemeId } from '@/lib/theme';
 
-export default function AppSettingsPage() {
+function AppSettingsContent() {
   const [theme, setTheme] = useState<ThemeId>('aurora');
+  const searchParams = useSearchParams();
+  const authError = searchParams.get('authError');
+  const authSuccess = searchParams.get('authSuccess');
 
   useEffect(() => {
     const initialTheme = loadTheme('aurora');
@@ -19,8 +24,26 @@ export default function AppSettingsPage() {
     saveTheme(value);
   };
 
+  const errorMessage = authError === 'missing_client_id'
+    ? 'Spotify ist serverseitig nicht konfiguriert (SPOTIFY_CLIENT_ID fehlt). Bitte prüfe die Vercel-Umgebungsvariablen.'
+    : authError === 'access_denied'
+    ? 'Du hast den Spotify-Zugriff abgelehnt. Bitte erneut versuchen.'
+    : authError
+    ? `Spotify-Fehler: ${authError}`
+    : null;
+
   return (
     <main className="mx-auto max-w-4xl px-6 py-10 space-y-8">
+      {errorMessage && (
+        <div className="rounded-xl bg-red-500/15 border border-red-500/40 px-4 py-3 text-sm text-red-700 dark:text-red-300">
+          ⚠️ {errorMessage}
+        </div>
+      )}
+      {authSuccess === '1' && (
+        <div className="rounded-xl bg-green-500/15 border border-green-500/40 px-4 py-3 text-sm text-green-700 dark:text-green-300">
+          ✅ Spotify erfolgreich verbunden!
+        </div>
+      )}
       <div className="space-y-2">
         <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Einstellungen</p>
         <h1 className="text-3xl font-display leading-tight">App-Design & Dienste</h1>
@@ -85,5 +108,13 @@ export default function AppSettingsPage() {
         </Link>
       </div>
     </main>
+  );
+}
+
+export default function AppSettingsPage() {
+  return (
+    <Suspense>
+      <AppSettingsContent />
+    </Suspense>
   );
 }

@@ -12,13 +12,13 @@ function base64Url(input: Buffer) {
 }
 
 export async function GET(request: Request) {
-  if (!process.env.SPOTIFY_CLIENT_ID) {
-    return NextResponse.json({ error: 'Missing SPOTIFY_CLIENT_ID' }, { status: 500 });
-  }
-
   const url = new URL(request.url);
   const returnToRaw = url.searchParams.get('return') || '/play';
   const returnTo = returnToRaw.startsWith('/') ? returnToRaw : '/play';
+
+  if (!process.env.SPOTIFY_CLIENT_ID) {
+    return NextResponse.redirect(new URL(`${returnTo}?authError=missing_client_id`, url.origin));
+  }
 
   const verifier = base64Url(randomBytes(64));
   const challenge = base64Url(createHash('sha256').update(verifier).digest());

@@ -60,7 +60,9 @@ export async function GET(request: Request) {
     scope: string;
   };
 
-  const response = NextResponse.redirect(new URL(safeReturnTo, url.origin));
+  const successUrl = new URL(safeReturnTo, url.origin);
+  successUrl.searchParams.set('authSuccess', '1');
+  const response = NextResponse.redirect(successUrl);
   response.cookies.set('spotify_access_token', data.access_token, {
     httpOnly: true,
     secure: true,
