@@ -357,6 +357,20 @@ export default function MultiplayerGamePage() {
     return () => window.removeEventListener('beforeunload', handleBeforeUnload);
   }, [game?.state, session?.isHost, game?.hostId, session?.groupId]);
 
+  // Auto-skip invalid card IDs in Trivia mode (stale Firebase data from old deployments)
+  useEffect(() => {
+    if (!game || !session) return;
+    if (game.state !== 'playing' || game.mode !== 'trivia') return;
+    if (!game.currentCardId) return;
+    const isHost = session.isHost || game.hostId === session.groupId;
+    if (!isHost) return;
+    if (getCardById(game.currentCardId)) return; // card found – nothing to do
+    const t = setTimeout(async () => {
+      try { await skipCard(pin); } catch (e) { console.error('auto-skip failed', e); }
+    }, 1500);
+    return () => clearTimeout(t);
+  }, [game?.currentCardId, game?.state, game?.mode, session?.isHost, game?.hostId, session?.groupId, pin]);
+
   if (loading) {
     return (
       <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10">
@@ -714,7 +728,7 @@ export default function MultiplayerGamePage() {
     // TRIVIA MODUS — Guard ohne currentCard damit Host nie "durchfällt"
     // ──────────────────────────────────────────────────
     if (game.mode === 'trivia') {
-      // Karte noch nicht gefunden → Ladestand zeigen (Host bleibt Host)
+      // Karte nicht gefunden → Host kann überbrücken, Clients warten
       if (!currentCard) {
         return (
           <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
@@ -722,6 +736,14 @@ export default function MultiplayerGamePage() {
               <h1 className="text-3xl font-display">Trivia Multiplayer</h1>
               <div className="card-surface rounded-2xl p-6">
                 <p className="text-lg text-ink/70">Nächste Frage wird geladen…</p>
+                {effectiveIsHost && (
+                  <button
+                    onClick={async () => { try { await skipCard(pin); } catch(e) { console.error(e); } }}
+                    className="mt-4 px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-semibold"
+                  >
+                    ⏭ Frage überspringen
+                  </button>
+                )}
               </div>
             </div>
           </main>
