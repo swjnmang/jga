@@ -1034,6 +1034,19 @@ export default function MultiplayerGamePage() {
             {!isMyTurn && !effectiveIsHost && (
               <p className="text-sm text-ink/60 text-center">Warte auf die Antwort von {activeGroup?.name ?? 'dem aktiven Team'}…</p>
             )}
+            {effectiveIsHost && (
+              <button
+                onClick={async () => {
+                  if (isProcessing) return;
+                  setIsProcessing(true);
+                  try { await skipCard(pin); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
+                }}
+                disabled={isProcessing}
+                className="w-full px-4 py-2 bg-ink/10 text-ink rounded-xl font-semibold text-sm hover:bg-ink/20 disabled:opacity-50"
+              >
+                ⏭ Frage überspringen (gleiche Gruppe bleibt dran)
+              </button>
+            )}
           </div>
 
           {/* Host-Steuerung */}
@@ -1062,19 +1075,6 @@ export default function MultiplayerGamePage() {
                 </button>
               </div>
               <p className="text-xs text-ink/50 text-center">Nach Klick: nächste Frage, nächstes Team dran</p>
-
-              {/* Karte überspringen */}
-              <button
-                onClick={async () => {
-                  if (isProcessing) return;
-                  setIsProcessing(true);
-                  try { await skipCard(pin); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
-                }}
-                disabled={isProcessing}
-                className="w-full px-4 py-3 bg-ink/10 text-ink rounded-xl font-semibold text-base hover:bg-ink/20 disabled:opacity-50"
-              >
-                ⏭ Frage überspringen (gleiche Gruppe bleibt dran)
-              </button>
 
               {/* Antwort anzeigen */}
               <button
