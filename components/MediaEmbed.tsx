@@ -541,11 +541,30 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
           const detail = await res.text().catch(() => null);
           console.error(`❌ Play fehlgeschlagen ${res.status}:`, detail);
 
-          if (res.status === 404 && attempt < maxAttempts - 1) {
-            const waitMs = 1500 * (attempt + 1);
-            console.log(`⏳ Warte ${waitMs}ms, dann retry...`);
-            await new Promise((r) => setTimeout(r, waitMs));
-            continue;
+          if (res.status === 404) {
+            if (attempt < maxAttempts - 1) {
+              const waitMs = 1500 * (attempt + 1);
+              console.log(`⏳ Warte ${waitMs}ms, dann retry...`);
+              await new Promise((r) => setTimeout(r, waitMs));
+              continue;
+            }
+            // All retries exhausted with 404 → SDK device gone, force reconnect
+            console.log('🔄 Alle Versuche fehlgeschlagen (404), SDK reconnect...');
+            if (spotifyPlayerRef.current) {
+              autoPlayPendingRef.current = true;
+              latestSpotifyUrlRef.current = url;
+              setSpotifyReady(false);
+              setSpotifyDevice(null);
+              setSpotifyError(null);
+              setSpotifyLoading(false);
+              try {
+                spotifyPlayerRef.current.disconnect();
+                spotifyPlayerRef.current.connect();
+              } catch (err) {
+                console.error('SDK reconnect failed:', err);
+              }
+            }
+            return;
           }
 
           setSpotifyError('Wiedergabe konnte nicht gestartet werden');
