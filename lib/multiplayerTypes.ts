@@ -26,6 +26,7 @@ export interface GroupData {
   pendingPosition?: number | null; // Live-Vorschau: gewählte Position (noch nicht eingereicht)
   completedCategories?: string[]; // Trivia: bereits korrekt beantwortete Kategorien
   schaetzSubmission?: string | null; // Trivia Schätzfrage: eingereichte Schätzung
+  avatar?: string; // Emoji-Avatar der Gruppe
 }
 
 export interface PlacedCard {
@@ -96,6 +97,7 @@ export interface JoinGameParams {
   groupName: string;
   playerName: string;
   spotifyLinked?: boolean;
+  avatar?: string;
 }
 
 // Farben für Gruppen

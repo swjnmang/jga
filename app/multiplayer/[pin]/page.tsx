@@ -402,7 +402,7 @@ export default function MultiplayerGamePage() {
     const isMyTurn = currentBanGroupId === session?.groupId;
     const currentBanGroup = game.groups[currentBanGroupId];
     const availableCategories = (game.triviaCategories ?? []).filter(
-      c => !(game.bannedCategories ?? []).includes(c)
+      c => !(game.bannedCategories ?? []).includes(c) && c !== 'image'
     );
     const banned = game.bannedCategories ?? [];
 
@@ -477,6 +477,7 @@ export default function MultiplayerGamePage() {
                 <div key={gid} className={`flex items-center gap-2 text-sm py-1 ${
                   active ? 'font-bold text-amber-700' : done ? 'text-ink/40 line-through' : 'text-ink/70'
                 }`}>
+                  {g?.avatar && <span className="text-base">{g.avatar}</span>}
                   <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: g?.color }} />
                   <span>{g?.name ?? gid}</span>
                   {done && (
@@ -541,6 +542,7 @@ export default function MultiplayerGamePage() {
                 <div className="space-y-1 text-sm">
                   {groupList.map(g => (
                     <div key={g.id} className="flex items-center gap-2">
+                      {g.avatar && <span className="text-lg">{g.avatar}</span>}
                       <div 
                         className="w-2 h-2 rounded-full" 
                         style={{ backgroundColor: g.color }}
@@ -590,6 +592,7 @@ export default function MultiplayerGamePage() {
                     style={{ borderColor: group.color }}
                   >
                     <div className="flex items-center gap-3">
+                      {group.avatar && <span className="text-2xl">{group.avatar}</span>}
                       <div
                         className="w-4 h-4 rounded-full"
                         style={{ backgroundColor: group.color }}
@@ -736,6 +739,7 @@ export default function MultiplayerGamePage() {
         if (!card) return '';
         if (card.category === 'outline') return 'Zu welchem Land gehört dieser Umriss?';
         if (card.category === 'music') return 'Von wem ist der Song und wie heißt er?';
+        if (card.category === 'quote') return 'Woher stammt das nachfolgende Zitat (Filme, Lieder, Personen)?';
         return card.cue;
       };
 
@@ -1286,7 +1290,7 @@ export default function MultiplayerGamePage() {
               </div>
             </div>
 
-            <p className="text-lg">{currentCard.cue}</p>
+            <p className="text-lg">{currentCard.category === 'quote' ? 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?' : currentCard.cue}</p>
 
             {currentCard.sources && (
               <div className="relative">

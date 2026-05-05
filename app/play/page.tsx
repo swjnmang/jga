@@ -237,7 +237,7 @@ function triviaCue(card: Card): string {
     case 'music':
       return 'Wer ist der Artist oder wie heißt der Song?';
     case 'quote':
-      return 'Von wem stammt dieses Zitat?';
+      return 'Woher stammt das nachfolgende Zitat (Filme, Lieder, Personen)?';
     case 'image':
       return 'Was bzw. welches Ereignis ist auf dem Bild?';
     case 'flag':
@@ -1129,7 +1129,7 @@ function QuizContent() {
             <p>Als Datum gilt das Inkrafttreten der aktuellen Verfassung oder der Zeitpunkt des letzten systemischen Bruchs (z. B. Ende einer Monarchie, Ende einer Besatzung oder Neugründung).</p>
           </div>
         )}
-        <p className="text-base sm:text-lg font-semibold text-ink">{mode === 'timeline' ? card.cue : card.cue || triviaCue(card)}</p>
+        <p className="text-base sm:text-lg font-semibold text-ink">{mode === 'timeline' && card.category === 'quote' ? 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?' : mode === 'timeline' ? card.cue : card.cue || triviaCue(card)}</p>
         <MediaEmbed
           ref={mediaRef}
           card={card}

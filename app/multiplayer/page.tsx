@@ -9,6 +9,12 @@ import { getDefaultSettings, TIMELINE_CATEGORIES } from '@/lib/userSettings';
 import { isFirebaseEnabled } from '@/lib/firebase';
 import { CardCategory, Difficulty, GenreTag } from '@/lib/types';
 
+const GROUP_AVATARS = [
+  '🦁', '🐈', '🐭', '🐢', '🐻', '🖁',
+  '🐼', '🐺', '🦊', '🐧', '🦄', '🐉',
+  '🐸', '🐎', '🪜', '🦅',
+];
+
 function MultiplayerLobbyContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -26,6 +32,7 @@ function MultiplayerLobbyContent() {
   // Join Game Form
   const [pin, setPin] = useState('');
   const [joinGroupName, setJoinGroupName] = useState('');
+  const [joinGroupAvatar, setJoinGroupAvatar] = useState('🦁');
   const [firebaseAvailable, setFirebaseAvailable] = useState(true);
   const [spotifyLinked, setSpotifyLinked] = useState(false);
   
@@ -324,7 +331,8 @@ function MultiplayerLobbyContent() {
         pin: pin.toUpperCase(),
         groupName: joinGroupName,
         playerName: joinGroupName,
-        spotifyLinked: spotifyLinked
+        spotifyLinked: spotifyLinked,
+        avatar: joinGroupAvatar,
       });
 
       // Speichere Session-Infos im localStorage
@@ -334,6 +342,7 @@ function MultiplayerLobbyContent() {
         playerId,
         groupName: joinGroupName,
         playerName: joinGroupName,
+        avatar: joinGroupAvatar,
         isHost: false
       }));
 
@@ -764,6 +773,30 @@ function MultiplayerLobbyContent() {
                 className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-gray-900 bg-white placeholder:text-gray-400"
                 maxLength={20}
               />
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold mb-2">Gruppen-Avatar wählen</label>
+              <div className="grid grid-cols-8 gap-2">
+                {GROUP_AVATARS.map((emoji) => (
+                  <button
+                    key={emoji}
+                    type="button"
+                    onClick={() => setJoinGroupAvatar(emoji)}
+                    className={`text-2xl rounded-xl p-2 border-2 transition-all ${
+                      joinGroupAvatar === emoji
+                        ? 'border-ink bg-ink/10 scale-110 shadow-md'
+                        : 'border-ink/20 hover:border-ink/50 hover:bg-ink/5'
+                    }`}
+                    title={emoji}
+                  >
+                    {emoji}
+                  </button>
+                ))}
+              </div>
+              {joinGroupAvatar && (
+                <p className="mt-2 text-sm text-ink/60">Gewählt: <span className="text-base">{joinGroupAvatar}</span> {joinGroupName || '...'}</p>
+              )}
             </div>
 
             {error && (

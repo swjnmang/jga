@@ -171,7 +171,8 @@ export async function joinGame(params: JoinGameParams): Promise<{ groupId: strin
     isReady: false,
     flexActive: false,
     isHost: false,
-    completedCategories: []
+    completedCategories: [],
+    avatar: params.avatar ?? '',
   };
 
   // Füge Gruppe hinzu
