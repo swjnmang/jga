@@ -1405,19 +1405,6 @@ export default function MultiplayerGamePage() {
                 </div>
               </div>
 
-              {/* Karte überspringen */}
-              <button
-                onClick={async () => {
-                  if (isProcessing) return;
-                  setIsProcessing(true);
-                  try { await skipCard(pin); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
-                }}
-                disabled={isProcessing}
-                className="w-full px-4 py-3 bg-ink/10 text-ink rounded-lg font-semibold hover:bg-ink/20 disabled:opacity-50"
-              >
-                ⏭ Karte überspringen (gleiche Gruppe bleibt dran)
-              </button>
-
               {/* Spiel-Beenden */}
               <button
                 onClick={handleEndGame}
@@ -1500,6 +1487,19 @@ export default function MultiplayerGamePage() {
               </div>
             )}
 
+            {isHostSession && (
+              <button
+                onClick={async () => {
+                  if (isProcessing) return;
+                  setIsProcessing(true);
+                  try { await skipCard(pin); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
+                }}
+                disabled={isProcessing}
+                className="w-full px-4 py-2 bg-ink/10 text-ink rounded-xl font-semibold text-sm hover:bg-ink/20 disabled:opacity-50"
+              >
+                ⏭ Frage überspringen (gleiche Gruppe bleibt dran)
+              </button>
+            )}
           </div>
           );
         })()}
