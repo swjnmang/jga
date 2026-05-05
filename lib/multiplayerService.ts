@@ -258,6 +258,8 @@ export async function startGame(pin: string, hostGroupId: string): Promise<void>
       currentRoundCategory: firstCat,
       categoryRoundQueue: catQueueStart,
       categoryGroupQueue: [...nonHostGroupIds],
+      // Kanonische Kategorien-Reihenfolge: einmal zufällig gemischt, danach immer in dieser Reihenfolge rotiert
+      triviaCategories: shuffledCats,
     };
     if (game.availableDeck !== undefined || game.mode === 'timeline') {
       updates.availableDeck = availableDeck;
@@ -1095,7 +1097,17 @@ function computeNextTurn(
     ? [...playingGroupIds.slice(lastPlayedIdx + 1), ...playingGroupIds.slice(0, lastPlayedIdx + 1)]
     : [...playingGroupIds];
 
-  const tryQueue = catRoundQueue.length > 0 ? catRoundQueue : shuffleArray(triviaCategories);
+  // Alle Gruppen fertig → nächste Kategorie (striktes Round-Robin: rotiere ab aktueller Kategorie)
+  // Nie neu mischen — die einmalig beim Spielstart festgelegte Reihenfolge wird immer wiederholt.
+  const nextCatQueue = (() => {
+    if (catRoundQueue.length > 0) return catRoundQueue;
+    // Queue leer → nächste Runde: starte bei der Kategorie NACH der aktuellen
+    const lastCatIdx = triviaCategories.indexOf(currentRoundCat);
+    return lastCatIdx >= 0
+      ? [...triviaCategories.slice(lastCatIdx + 1), ...triviaCategories.slice(0, lastCatIdx + 1)]
+      : [...triviaCategories];
+  })();
+  const tryQueue = nextCatQueue;
   for (let i = 0; i < tryQueue.length; i++) {
     const nextCat = tryQueue[i];
     const catPool = newAvailable.filter(id => deckMeta[id] === nextCat);
