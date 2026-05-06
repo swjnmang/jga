@@ -52,7 +52,7 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     color: GROUP_COLORS[0],
     players: [hostPlayer],
     timeline: [],
-    flexButtons: 2,
+    flexButtons: 1,
     score: 0,
     isReady: true,
     flexActive: false,
@@ -169,7 +169,7 @@ export async function joinGame(params: JoinGameParams): Promise<{ groupId: strin
     color: GROUP_COLORS[groupCount % GROUP_COLORS.length],
     players: [newPlayer],
     timeline: [],
-    flexButtons: 2,
+    flexButtons: 1,
     score: 0,
     isReady: false,
     flexActive: false,
@@ -882,6 +882,73 @@ export async function rejectFlexButton(pin: string, hostGroupId: string): Promis
   await update(gameRef, {
     flexPendingGroupId: null
   });
+}
+
+/**
+ * Gruppe setzt einen Flex-Button ein → neue Karte aus derselben Kategorie, gleiche Gruppe bleibt dran.
+ */
+export async function useFlexButton(pin: string, groupId: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  const group = game.groups[groupId];
+  if (!group) throw new Error('Gruppe nicht gefunden.');
+  if (groupId !== game.currentTurnGroupId) throw new Error('Nur die aktive Gruppe kann Flex einsetzen.');
+  if ((group.flexButtons ?? 0) < 1) throw new Error('Keine Flex-Buttons mehr vorhanden.');
+
+  // Flex-Button abziehen
+  const newFlex = (group.flexButtons ?? 1) - 1;
+  await update(ref(database!, `games/${pin}/groups/${groupId}`), { flexButtons: newFlex });
+
+  // Neue Karte aus gleicher Kategorie (wie skipCard in Timeline-Modus)
+  const deckMeta: Record<string, string> = game.deckMeta ?? {};
+  const prevAvailable: string[] = Array.isArray(game.availableDeck)
+    ? game.availableDeck
+    : Object.values(game.availableDeck ?? {});
+  const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
+  const currentCat = game.currentRoundCategory ?? (game.currentCardId ? deckMeta[game.currentCardId] : '');
+  const catPool = newAvailable.filter(id => deckMeta[id] === currentCat);
+  const nextCardId = catPool.length > 0
+    ? catPool[Math.floor(Math.random() * catPool.length)]
+    : newAvailable[0] ?? null;
+
+  await update(gameRef, {
+    lastActivity: Date.now(),
+    availableDeck: newAvailable,
+    currentCardId: nextCardId,
+    pendingResult: null,
+    pendingFlexAward: null,
+  });
+}
+
+/**
+ * Host vergibt einen Flex-Button an eine Gruppe (nach korrekter Antwort auf Titel/Interpret etc.)
+ */
+export async function awardFlexButton(pin: string, targetGroupId: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  const group = game.groups[targetGroupId];
+  if (!group) throw new Error('Gruppe nicht gefunden.');
+
+  await update(ref(database!, `games/${pin}/groups/${targetGroupId}`), {
+    flexButtons: (group.flexButtons ?? 0) + 1,
+  });
+  await update(gameRef, { pendingFlexAward: null });
+}
+
+/**
+ * Host lehnt Flex-Vergabe ab (nach Antwortbewertung)
+ */
+export async function declineFlexAward(pin: string): Promise<void> {
+  checkFirebase();
+  await update(ref(database!, `games/${pin}`), { pendingFlexAward: null });
 }
 
 /**

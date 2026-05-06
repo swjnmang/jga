@@ -18,6 +18,8 @@ import {
   requestFlexButton,
   confirmFlexButton,
   rejectFlexButton,
+  useFlexButton,
+  awardFlexButton,
   editGroupScore,
   endGame,
   skipCard,
@@ -55,6 +57,7 @@ export default function MultiplayerGamePage() {
   
   // Spielzustand
   const [isProcessing, setIsProcessing] = useState(false);
+  const [flexJudgmentDone, setFlexJudgmentDone] = useState(false); // Host: hat für aktuelle Karte Flex-Frage beantwortet?
   const backGuardPushed = useRef(false); // ensures dummy history entry is pushed only once
   const [placementResult, setPlacementResult] = useState<'correct' | 'wrong' | null>(null);
   const [placementError, setPlacementError] = useState<string | null>(null);
@@ -233,6 +236,7 @@ export default function MultiplayerGamePage() {
     setPlacementResult(null);
     setPlacementError(null);
     setSelectedPosition(null);
+    setFlexJudgmentDone(false);
     
     try {
       await broadcastPlacementResult(pin, null); // clear result flag
@@ -281,6 +285,33 @@ export default function MultiplayerGamePage() {
       setShowFlexConfirm(false);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Fehler beim Ablehnen');
+    }
+  };
+
+  const handleUseFlex = async () => {
+    if (!session || isProcessing) return;
+    setIsProcessing(true);
+    try {
+      await useFlexButton(pin, session.groupId);
+      setPlacementResult(null);
+      setSelectedPosition(null);
+      setPlacementError(null);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Fehler beim Flex-Button');
+    } finally {
+      setIsProcessing(false);
+    }
+  };
+
+  const handleAwardFlex = async (award: boolean) => {
+    if (!session || !game?.currentTurnGroupId) return;
+    try {
+      if (award) {
+        await awardFlexButton(pin, game.currentTurnGroupId);
+      }
+      setFlexJudgmentDone(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Fehler beim Flex vergeben');
     }
   };
 
@@ -1441,6 +1472,21 @@ export default function MultiplayerGamePage() {
                 Wähle eine Position — dann „Ergebnis einreichen"
               </p>
 
+              {/* Flex-Button einsetzen */}
+              {(currentGroup.flexButtons ?? 0) > 0 && (
+                <button
+                  type="button"
+                  onClick={handleUseFlex}
+                  disabled={isProcessing}
+                  className="w-full px-4 py-2 rounded-xl border-2 border-blue-400 text-blue-300 bg-blue-500/10 hover:bg-blue-500/20 font-semibold text-sm flex items-center justify-center gap-2 disabled:opacity-50"
+                >
+                  🔵 Flex-Button einsetzen — neue Karte aus gleicher Kategorie
+                  <span className="ml-1 text-xs bg-blue-400/30 px-2 py-0.5 rounded-full">
+                    {currentGroup.flexButtons}× verfügbar
+                  </span>
+                </button>
+              )}
+
               {/* Timeline + Positions-Buttons */}
               <div className="flex items-center gap-1 overflow-x-auto pb-2 justify-start">
                 {/* Button vor Position 0 */}
@@ -1643,7 +1689,7 @@ export default function MultiplayerGamePage() {
           </div>
         )}
 
-        {/* Host-Ansicht: Ergebnis der Platzierung + "Weiter"-Button */}
+        {/* Host-Ansicht: Ergebnis der Platzierung + Flex-Frage + "Weiter"-Button */}
         {isHostSession && game.pendingResult && currentCard && (
           <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-ink/20">
             {game.pendingResult === 'correct' ? (
@@ -1665,6 +1711,34 @@ export default function MultiplayerGamePage() {
               </p>
               <p className="text-lg text-ink/70 font-semibold">{currentCard.year}</p>
             </div>
+
+            {/* Flex-Button Vergabe: nur nach korrekter Platzierung */}
+            {game.pendingResult === 'correct' && (
+              !flexJudgmentDone ? (
+                <div className="rounded-xl bg-blue-500/10 border-2 border-blue-400/50 p-4 space-y-3">
+                  <p className="font-semibold text-center text-sm">
+                    Hat <span className="font-bold">{game.groups[game.currentTurnGroupId!]?.name}</span> die Frage korrekt beantwortet (abgesehen von der Jahreszahl)?
+                  </p>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => handleAwardFlex(true)}
+                      className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 text-sm"
+                    >
+                      🔵 Ja — +1 Flex-Button
+                    </button>
+                    <button
+                      onClick={() => handleAwardFlex(false)}
+                      className="flex-1 px-4 py-2 bg-ink/20 text-ink rounded-lg font-semibold hover:bg-ink/30 text-sm"
+                    >
+                      Nein
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <p className="text-center text-xs text-ink/50">Flex-Entscheidung getroffen ✓</p>
+              )
+            )}
+
             <button
               onClick={handleNextCard}
               disabled={isProcessing}
@@ -1695,7 +1769,14 @@ export default function MultiplayerGamePage() {
                     {group.id === session.groupId && ' (Du)'}
                   </span>
                 </div>
-                <span className="text-xl font-bold">{group.score} / {game.timelineWinTarget ?? 10}</span>
+                <div className="flex items-center gap-3">
+                  {(group.flexButtons ?? 0) > 0 && (
+                    <span className="text-sm font-semibold px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400">
+                      🔵 {group.flexButtons}×FB
+                    </span>
+                  )}
+                  <span className="text-xl font-bold">{group.score} / {game.timelineWinTarget ?? 10}</span>
+                </div>
               </div>
             ))}
         </div>
@@ -1708,29 +1789,6 @@ export default function MultiplayerGamePage() {
               <span className="text-ink/50 text-sm transition-transform group-open:rotate-180">▼</span>
             </summary>
             <div className="px-6 pb-6 space-y-4">
-
-              {/* Flex-Button Bestätigung */}
-              {game.flexPendingGroupId && (
-                <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-500 p-4 space-y-3">
-                  <p className="font-semibold text-yellow-700">
-                    {game.groups[game.flexPendingGroupId]?.name} fordert Flex-Button an!
-                  </p>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={handleConfirmFlex}
-                      className="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700"
-                    >
-                      ✓ Bestätigen (+1 Punkt)
-                    </button>
-                    <button
-                      onClick={handleRejectFlex}
-                      className="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700"
-                    >
-                      ✗ Ablehnen
-                    </button>
-                  </div>
-                </div>
-              )}
 
               {/* Score-Editing */}
               <div className="space-y-2">

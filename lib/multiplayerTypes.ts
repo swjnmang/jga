@@ -65,6 +65,7 @@ export interface GameSession {
   winnerGroupId?: string | null; // Erste Gruppe mit X Karten (Timeline) oder erste mit X Punkte (Trivia)
   timelineWinTarget?: number;    // Anzahl korrekt platzierter Karten zum Gewinnen (Timeline, Default 10)
   pendingResult?: 'correct' | 'wrong' | null; // Letztes Platzierungsergebnis — Host entscheidet wann weiter
+  pendingFlexAward?: string | null;  // groupId, die nach korrekter Platzierung auf Flex-Vergabe wartet (Host entscheidet)
   // Trivia-Modus
   triviaCategories?: string[];           // Alle Kategorien die im Deck vorhanden sind (einmalig beim Erstellen berechnet)
   deckMeta?: Record<string, string>;     // cardId → category (für Server-seitige Logik)
