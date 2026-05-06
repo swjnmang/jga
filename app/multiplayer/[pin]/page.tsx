@@ -1382,9 +1382,15 @@ export default function MultiplayerGamePage() {
             </>
           )}
           {game.currentTurnGroupId && (
-            <div className="mt-3 w-full px-4 py-3 rounded-xl bg-ink/15 text-ink font-bold text-xl">
-              🎮 Am Zug: {game.groups[game.currentTurnGroupId]?.name || 'Team'}
-            </div>
+            isActiveTurn ? (
+              <div className="mt-3 w-full px-4 py-3 rounded-xl bg-green-500 text-white font-bold text-xl animate-pulse shadow-lg shadow-green-500/30">
+                ⚡ Eure Gruppe ist am Zug!
+              </div>
+            ) : (
+              <div className="mt-3 w-full px-4 py-3 rounded-xl bg-ink/15 text-ink font-bold text-xl">
+                🎮 Am Zug: {game.groups[game.currentTurnGroupId]?.name || 'Team'}
+              </div>
+            )
           )}
         </div>
 
@@ -1671,20 +1677,27 @@ export default function MultiplayerGamePage() {
                 {displayTimeline.map((item: any, idx: number) => (
                   <div key={idx} className="flex items-center gap-1 flex-shrink-0">
                     {idx > 0 && <div className="text-ink/30 mx-0.5">↔</div>}
-                    <div className={`flex-shrink-0 rounded-lg border-2 px-3 py-2 min-w-[110px] ${
-                      item.id === game.referenceCard?.id
-                        ? 'border-yellow-500 bg-yellow-100 text-inkDark'
-                        : 'border-ink/60 bg-ink/10'
-                    }`}>
-                      <p className="text-xs font-bold">{item.year}</p>
-                      {item.id === game.referenceCard?.id ? (
-                        <p className="text-xs text-yellow-700 mt-0.5">Referenz</p>
-                      ) : (
-                        <>
-                          <p className="text-xs truncate text-ink/70">{item.hint || ''}</p>
-                          <p className="text-xs truncate text-ink/50">{item.title || ''}</p>
-                        </>
+                    <div className="relative">
+                      {item.id === game.currentCardId && game.flexPhaseActive && (
+                        <span className="absolute -top-2 -right-1 z-10 text-[10px] font-bold bg-green-500 text-white px-1.5 py-0.5 rounded-full leading-none">NEU</span>
                       )}
+                      <div className={`flex-shrink-0 rounded-lg border-2 px-3 py-2 min-w-[110px] ${
+                        item.id === game.referenceCard?.id
+                          ? 'border-yellow-500 bg-yellow-100 text-inkDark'
+                          : item.id === game.currentCardId && game.flexPhaseActive
+                            ? 'border-green-500 bg-green-500/15 ring-2 ring-green-400/50'
+                            : 'border-ink/60 bg-ink/10'
+                      }`}>
+                        <p className="text-xs font-bold">{item.year}</p>
+                        {item.id === game.referenceCard?.id ? (
+                          <p className="text-xs text-yellow-700 mt-0.5">Referenz</p>
+                        ) : (
+                          <>
+                            <p className="text-xs truncate text-ink/70">{item.hint || ''}</p>
+                            <p className="text-xs truncate text-ink/50">{item.title || ''}</p>
+                          </>
+                        )}
+                      </div>
                     </div>
 
                     {/* Ghost nach dieser Karte (Host-Vorschau) */}
