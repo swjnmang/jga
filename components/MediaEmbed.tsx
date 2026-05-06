@@ -1,5 +1,28 @@
 'use client';
 
+// =============================================================================
+// SPOTIFY INTEGRATION – FUNKTIONIERENDER ANSATZ (Stand: Mai 2026, Commit 55fc74e)
+// =============================================================================
+// WICHTIG: Dieser Ansatz funktioniert stabil für mehrere Gruppen nacheinander.
+// Bitte NICHT ohne Not ändern – jede Abweichung hat in der Vergangenheit 404-Fehler verursacht.
+//
+// Prinzip:
+//  1. Beim ersten Laden der Seite wird EINMAL ein `new Spotify.Player(...)` erstellt.
+//  2. Dieser Player und seine `device_id` bleiben für ALLE Musikfragen erhalten.
+//     → Kein Player-Neustart zwischen den Karten (kein spotifyInitKey++ bei neuer Karte)!
+//  3. Beim Wechsel zur nächsten Musikfrage wird nur pausiert + neue URL gesetzt.
+//  4. `player.connect()` feuert `ready`, das mit `GET /v1/me/player/devices` gepollt wird
+//     (bis zu 12x alle 500ms), bevor `spotifyReady=true` gesetzt wird.
+//     → Erst wenn das Gerät in Spotify's REST-API sichtbar ist, wird Play freigegeben.
+//  5. Der 🔄 Refresh-Button (`reconnectSpotify`) bleibt als manueller Fallback.
+//
+// WARUM player-neustart nicht funktioniert:
+//  - Jeder `new Spotify.Player(...)` bekommt eine neue `device_id`.
+//  - Spotify registriert neue device_ids in der REST-API oft gar nicht oder mit langer Verzögerung.
+//  - `PUT /v1/me/player/play?device_id=NEU` liefert dann dauerhaft 404.
+//  - Commit-Verlauf: 24af05a → 2b4e25f → 433d432 (alle scheiterten) → 55fc74e (Lösung)
+// =============================================================================
+
 import clsx from 'clsx';
 import Image from 'next/image';
 import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
