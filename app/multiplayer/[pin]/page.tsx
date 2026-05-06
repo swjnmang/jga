@@ -1641,6 +1641,18 @@ export default function MultiplayerGamePage() {
           const blockedPosition = game.activeGroupPlacedPosition ?? null;
           // Bereits von anderen belegte Positionen
           const takenPositions = new Set(Object.keys(game.flexTips ?? {}).map(Number));
+          // Positionen, die die neu platzierte Karte flankieren (beidseitig gesperrt)
+          const newCardIdx = game.flexPhaseActive
+            ? displayTimeline.findIndex((c: any) => c.id === game.currentCardId)
+            : -1;
+          const newCardFlankPositions = newCardIdx >= 0
+            ? new Set([newCardIdx, newCardIdx + 1])
+            : new Set<number>();
+          const isBlocked = (pos: number) =>
+            pos === blockedPosition ||
+            newCardFlankPositions.has(pos);
+          const isTaken = (pos: number) =>
+            takenPositions.has(pos) && !isBlocked(pos);
 
           return (
             <div className={`card-surface rounded-2xl p-6 space-y-4 border-2 ${isActiveTurn ? 'border-green-500' : 'border-red-500'}`}>
@@ -1659,7 +1671,7 @@ export default function MultiplayerGamePage() {
 
               <div className="flex items-center gap-1 overflow-x-auto pb-2">
                 {/* Flex-Tipp Button vor Position 0 */}
-                {canFlex && blockedPosition !== 0 && !takenPositions.has(0) && (
+                {canFlex && !isBlocked(0) && !takenPositions.has(0) && (
                   <button
                     type="button"
                     onClick={() => setFlexTipPosition(p => p === 0 ? null : 0)}
@@ -1668,10 +1680,13 @@ export default function MultiplayerGamePage() {
                     }`}
                   >← FB</button>
                 )}
-                {canFlex && (blockedPosition === 0) && (
+                {canFlex && isBlocked(0) && (
                   <div className="flex-shrink-0 rounded-lg border-2 border-red-400/30 px-2 py-2 text-xs text-red-400/50 cursor-not-allowed">
                     ← ✗
                   </div>
+                )}
+                {canFlex && isTaken(0) && (
+                  <div className="flex-shrink-0 rounded-lg border-2 border-yellow-400/30 px-2 py-2 text-xs text-yellow-400/70 cursor-not-allowed">🔒</div>
                 )}
 
                 {/* Ghost vor Position 0 (Host-Vorschau) */}
@@ -1684,30 +1699,42 @@ export default function MultiplayerGamePage() {
                       {item.id === game.currentCardId && game.flexPhaseActive && (
                         <span className="absolute -top-2 -right-1 z-10 text-[10px] font-bold bg-green-500 text-white px-1.5 py-0.5 rounded-full leading-none">NEU</span>
                       )}
-                      <div className={`flex-shrink-0 rounded-lg border-2 px-3 py-2 min-w-[110px] ${
-                        item.id === game.referenceCard?.id
-                          ? 'border-yellow-500 bg-yellow-100 text-inkDark'
-                          : item.id === game.currentCardId && game.flexPhaseActive
-                            ? 'border-green-500 bg-green-500/15 ring-2 ring-green-400/50'
-                            : 'border-ink/60 bg-ink/10'
-                      }`}>
-                        <p className="text-xs font-bold">{item.year}</p>
-                        {item.id === game.referenceCard?.id ? (
-                          <p className="text-xs text-yellow-700 mt-0.5">Referenz</p>
-                        ) : (
-                          <>
-                            <p className="text-xs truncate text-ink/70">{item.hint || ''}</p>
-                            <p className="text-xs truncate text-ink/50">{item.title || ''}</p>
-                          </>
-                        )}
-                      </div>
+                      {(() => {
+                        const isNewCard = item.id === game.currentCardId && game.flexPhaseActive;
+                        const masked = isNewCard && !game.resultRevealed;
+                        return (
+                          <div className={`flex-shrink-0 rounded-lg border-2 px-3 py-2 min-w-[110px] ${
+                            item.id === game.referenceCard?.id
+                              ? 'border-yellow-500 bg-yellow-100 text-inkDark'
+                              : isNewCard
+                                ? 'border-green-500 bg-green-500/15 ring-2 ring-green-400/50'
+                                : 'border-ink/60 bg-ink/10'
+                          }`}>
+                            <p className="text-xs font-bold">{masked ? '???' : item.year}</p>
+                            {item.id === game.referenceCard?.id ? (
+                              <p className="text-xs text-yellow-700 mt-0.5">Referenz</p>
+                            ) : masked ? (
+                              <>
+                                <p className="text-xs text-ink/40 italic">???</p>
+                                <p className="text-xs text-green-400 font-semibold mt-0.5">← Neu platziert</p>
+                              </>
+                            ) : (
+                              <>
+                                <p className="text-xs truncate text-ink/70">{item.hint || ''}</p>
+                                <p className="text-xs truncate text-ink/50">{item.title || ''}</p>
+                                {isNewCard && <p className="text-xs text-green-400 font-semibold mt-0.5">← Neu platziert</p>}
+                              </>
+                            )}
+                          </div>
+                        );
+                      })()}
                     </div>
 
                     {/* Ghost nach dieser Karte (Host-Vorschau) */}
                     {ghostCard && pendingPos === idx + 1 && renderGhost()}
 
                     {/* Flex-Tipp Button nach dieser Karte */}
-                    {canFlex && blockedPosition !== idx + 1 && !takenPositions.has(idx + 1) && (
+                    {canFlex && !isBlocked(idx + 1) && !takenPositions.has(idx + 1) && (
                       <button
                         type="button"
                         onClick={() => setFlexTipPosition(p => p === idx + 1 ? null : idx + 1)}
@@ -1716,10 +1743,10 @@ export default function MultiplayerGamePage() {
                         }`}
                       >{idx === displayTimeline.length - 1 ? 'FB →' : 'FB'}</button>
                     )}
-                    {canFlex && blockedPosition === idx + 1 && (
+                    {canFlex && isBlocked(idx + 1) && (
                       <div className="flex-shrink-0 rounded-lg border-2 border-red-400/30 px-2 py-2 text-xs text-red-400/50 cursor-not-allowed">✗</div>
                     )}
-                    {canFlex && takenPositions.has(idx + 1) && blockedPosition !== idx + 1 && (
+                    {canFlex && isTaken(idx + 1) && (
                       <div className="flex-shrink-0 rounded-lg border-2 border-yellow-400/30 px-2 py-2 text-xs text-yellow-400/70 cursor-not-allowed">🔒</div>
                     )}
                   </div>
@@ -1761,49 +1788,27 @@ export default function MultiplayerGamePage() {
                 <p className="text-lg font-semibold">Ergebnis eingereicht!</p>
                 <p className="text-sm text-ink/60">Warte auf die Auswertung durch den Spielleiter…</p>
               </div>
-            ) : placementResult === 'correct' ? (
-              <div className="space-y-4">
-                <div className="text-center space-y-3">
-                  <div className="text-6xl">✅</div>
-                  <p className="text-xl font-semibold text-green-600">Richtig!</p>
-                </div>
-                <div className="border-t-2 border-ink/10 pt-4 space-y-3">
-                  <h3 className="text-lg font-semibold text-center">Es war:</h3>
-                  <div className="text-center space-y-2">
-                    <p className="text-2xl font-bold text-ink">
-                      {currentCard.category === 'music'
-                        ? `${currentCard.hint} — ${currentCard.title}`
-                        : currentCard.answer}
-                    </p>
-                    <div className="text-lg text-ink/70">
-                      <span className="font-semibold">{currentCard.year}</span>
-                    </div>
-                  </div>
-                </div>
-                <p className="text-center text-sm text-ink/60 mt-4">
-                  Warte auf den Spielleiter…
-                </p>
-              </div>
             ) : (
-              <div className="space-y-4">
-                <div className="text-center space-y-2">
-                  <div className="text-6xl">❌</div>
-                  <p className="text-xl font-semibold text-red-600">Leider falsch</p>
+              <div className="space-y-3">
+                <div className="rounded-xl bg-ink/10 p-4 text-center space-y-1">
+                  <p className="text-sm text-ink/60">Die korrekte Antwort ist:</p>
+                  <p className="text-3xl font-bold">{currentCard.year}</p>
+                  <p className="text-base font-semibold text-ink/80">
+                    {currentCard.category === 'music'
+                      ? `${currentCard.hint} — ${currentCard.title}`
+                      : currentCard.answer}
+                  </p>
                 </div>
-                <div className="border-t-2 border-ink/10 pt-4 space-y-3">
-                  <h3 className="text-lg font-semibold text-center">Lösung:</h3>
-                  <div className="text-center space-y-2">
-                    <div className="text-4xl font-bold text-ink">{currentCard.year}</div>
-                    <p className="text-lg text-ink/80">
-                      {currentCard.category === 'music'
-                        ? `${currentCard.hint} — ${currentCard.title}`
-                        : currentCard.answer}
-                    </p>
+                {placementResult === 'correct' ? (
+                  <div className="rounded-xl bg-green-500/10 border border-green-500/30 p-3 text-center">
+                    <p className="font-semibold text-green-500">✅ Ihr habt die Karte erhalten!</p>
                   </div>
-                </div>
-                <p className="text-center text-sm text-ink/60 mt-4">
-                  Warte auf den Spielleiter…
-                </p>
+                ) : (
+                  <div className="rounded-xl bg-red-500/10 border border-red-400/30 p-3 text-center">
+                    <p className="font-semibold text-red-400">❌ Leider falsch — ihr erhaltet die Karte nicht.</p>
+                  </div>
+                )}
+                <p className="text-center text-sm text-ink/60">Warte auf den Spielleiter…</p>
               </div>
             )}
           </div>
@@ -1849,27 +1854,41 @@ export default function MultiplayerGamePage() {
                 </button>
               </>
             ) : (
-              /* Phase 2: Ergebnis anzeigen + Flex-Vergabe + Weiter */
+              /* Phase 2: Lösung + wer die Karte erhält + Flex-Vergabe + Weiter */
               <>
-                {game.pendingResult === 'correct' ? (
-                  <div className="text-center space-y-2">
-                    <div className="text-5xl">✅</div>
-                    <p className="text-lg font-semibold text-green-600">Richtig!</p>
-                  </div>
-                ) : (
-                  <div className="text-center space-y-2">
-                    <div className="text-5xl">❌</div>
-                    <p className="text-lg font-semibold text-red-600">Falsch!</p>
-                  </div>
-                )}
-                <div className="border-t-2 border-ink/10 pt-4 text-center space-y-1">
-                  <p className="text-xl font-bold">
-                    {currentCard.category === 'music'
-                      ? `${currentCard.hint} — ${currentCard.title}`
-                      : currentCard.answer}
-                  </p>
-                  <p className="text-lg text-ink/70 font-semibold">{currentCard.year}</p>
-                </div>
+                {(() => {
+                  const activeGroupName = game.groups[game.currentTurnGroupId!]?.name ?? 'Aktives Team';
+                  const correctPos = game.flexPhaseCorrectPosition;
+                  const flexWinnerId = correctPos !== undefined && correctPos !== null
+                    ? (game.flexTips ?? {})[String(correctPos)]
+                    : undefined;
+                  const flexWinnerName = flexWinnerId ? game.groups[flexWinnerId]?.name : undefined;
+                  const answerLabel = currentCard.category === 'music'
+                    ? `${currentCard.hint} — ${currentCard.title}`
+                    : currentCard.answer;
+                  return (
+                    <div className="space-y-3">
+                      <div className="rounded-xl bg-ink/10 p-4 text-center space-y-1">
+                        <p className="text-sm text-ink/60">Die korrekte Antwort ist:</p>
+                        <p className="text-2xl font-bold">{currentCard.year}</p>
+                        <p className="text-base font-semibold text-ink/80">{answerLabel}</p>
+                      </div>
+                      {game.pendingResult === 'correct' ? (
+                        <div className="rounded-xl bg-green-500/10 border border-green-500/30 p-3 text-center">
+                          <p className="font-semibold text-green-500">✅ <span className="font-bold">{activeGroupName}</span> erhält die Karte!</p>
+                        </div>
+                      ) : flexWinnerName ? (
+                        <div className="rounded-xl bg-blue-500/10 border border-blue-400/30 p-3 text-center">
+                          <p className="font-semibold text-blue-400">🔵 <span className="font-bold">{flexWinnerName}</span> hat den Flex-Tipp getroffen und erhält die Karte!</p>
+                        </div>
+                      ) : (
+                        <div className="rounded-xl bg-red-500/10 border border-red-400/30 p-3 text-center">
+                          <p className="font-semibold text-red-400">❌ Keine Gruppe erhält die Karte.</p>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })()}
 
                 {/* Flex-Button Vergabe: nur nach korrekter Platzierung */}
                 {game.pendingResult === 'correct' && (

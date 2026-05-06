@@ -974,8 +974,26 @@ export async function submitFlexTip(pin: string, groupId: string, position: numb
   const group = game.groups[groupId];
   if (!group || (group.flexButtons ?? 0) < 1) return { ok: false, reason: 'Kein Flex-Button verfügbar.' };
 
-  // Gesperrte Position: die Position der spielenden Gruppe
-  if (position === game.activeGroupPlacedPosition) return { ok: false, reason: 'Diese Position ist gesperrt (von der spielenden Gruppe belegt).' };
+  // Gesperrte Positionen: die Position der spielenden Gruppe + Positionen, die die neue Karte flankieren
+  const activeGroup = game.groups[game.currentTurnGroupId!];
+  const safeTimeline = Array.isArray(activeGroup?.timeline) ? activeGroup.timeline : [];
+  const buildDisplay = () => {
+    const d: any[] = [];
+    if (game.referenceCard) d.push(game.referenceCard);
+    d.push(...safeTimeline);
+    return d.sort((a, b) => a.year - b.year);
+  };
+  const displayTimeline = buildDisplay();
+  const newCardIdx = game.currentCardId
+    ? displayTimeline.findIndex((c: any) => c.id === game.currentCardId)
+    : -1;
+  const flankedPositions = newCardIdx >= 0
+    ? new Set([newCardIdx, newCardIdx + 1])
+    : new Set<number>();
+
+  if (position === game.activeGroupPlacedPosition || flankedPositions.has(position)) {
+    return { ok: false, reason: 'Diese Position ist gesperrt.' };
+  }
 
   // First-come-first-served: Position darf noch nicht vergeben sein
   const existingTips: Record<string, string> = game.flexTips ?? {};
