@@ -382,9 +382,24 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
       const player = new window.Spotify.Player({
         name: 'Flex Quiz Player',
-        getOAuthToken: (cb) => {
-          console.log('🎵 Token callback triggered');
-          cb(spotifyToken);
+        getOAuthToken: async (cb) => {
+          // Always fetch a fresh token from the server so that after 1h
+          // the SDK gets a new access token instead of the stale cached one.
+          console.log('🎵 Token callback triggered – fetching fresh token...');
+          try {
+            const res = await fetch('/api/spotify/token');
+            if (res.ok) {
+              const json = await res.json();
+              const freshToken = json.accessToken as string;
+              setSpotifyToken(freshToken);
+              cb(freshToken);
+              return;
+            }
+          } catch (err) {
+            console.warn('⚠️  Token refresh failed, using cached token:', err);
+          }
+          // Fallback: use whatever token we have
+          cb(spotifyToken!);
         },
         volume: 0.8
       });
@@ -444,8 +459,18 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         setSpotifyError(message);
       });
       player.addListener('authentication_error', ({ message }: any) => {
-        console.error('❌ authentication_error:', message);
-        setSpotifyError(message);
+        console.error('❌ authentication_error:', message, '– refreshing token + reconnecting...');
+        // The token has expired. Fetch a new one and reinitialise the player.
+        fetch('/api/spotify/token')
+          .then(r => r.ok ? r.json() : null)
+          .then(json => {
+            if (json?.accessToken) {
+              setSpotifyToken(json.accessToken as string);
+            }
+            // A token update triggers the SDK useEffect via spotifyToken dependency,
+            // which re-calls initializePlayer with the fresh token.
+          })
+          .catch(() => { setSpotifyError('Spotify Login abgelaufen – bitte neu verbinden'); });
       });
       player.addListener('account_error', ({ message }: any) => {
         console.error('❌ account_error:', message);
