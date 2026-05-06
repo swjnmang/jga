@@ -101,7 +101,7 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     }),
     banModeEnabled: params.mode === 'trivia' ? (params.banModeEnabled ?? false) : false,
     triviaWinCondition: params.mode === 'trivia' ? (params.triviaWinCondition ?? 'categories') : 'categories',
-    timelineWinTarget: params.mode === 'timeline' ? (params.timelineWinTarget ?? 10) : undefined,
+    timelineWinTarget: params.mode === 'timeline' ? (params.timelineWinTarget ?? 10) : null,
     groups: {
       [hostGroupId]: { ...hostGroup, completedCategories: [] }
     },
