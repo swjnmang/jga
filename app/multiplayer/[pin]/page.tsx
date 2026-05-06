@@ -1372,17 +1372,8 @@ export default function MultiplayerGamePage() {
       <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
         {/* Header */}
         <div className="text-center space-y-2">
-          <h1 className="text-3xl font-display">Timeline Multiplayer</h1>
-          {!effectiveIsHost && (
-            <>
-              <p className="text-ink/70">
-                Karte {game.currentCardIndex + 1} / {game.deck.length}
-              </p>
-              <div className="inline-flex items-center gap-2 text-sm text-ink/60">
-                <span>PIN: {pin}</span>
-                <button onClick={copyPin} className="hover:opacity-70">📋</button>
-              </div>
-            </>
+          {effectiveIsHost && (
+            <h1 className="text-3xl font-display">Timeline Multiplayer</h1>
           )}
           {game.currentTurnGroupId && (
             isActiveTurn ? (
@@ -1448,14 +1439,9 @@ export default function MultiplayerGamePage() {
                 ) : (
                   /* Mitspieler: Musik nur Symbol, andere Medien vollständig */
                   currentCard.category === 'music' ? (
-                    <div className="rounded-2xl card-surface bg-ink/5 p-8 text-center space-y-4">
-                      <div className="text-6xl">🎵</div>
-                      <p className="text-lg font-semibold text-ink">
-                        Musikfrage
-                      </p>
-                      <p className="text-sm text-ink/70">
-                        Der Host steuert die Musikwiedergabe
-                      </p>
+                    <div className="rounded-xl card-surface bg-ink/5 px-4 py-3 flex items-center gap-3">
+                      <div className="text-2xl">🎵</div>
+                      <p className="text-sm text-ink/60">Der Host steuert die Musikwiedergabe</p>
                     </div>
                   ) : (
                     /* Andere Medien-Typen (Bilder, etc.) für Spieler anzeigen */
