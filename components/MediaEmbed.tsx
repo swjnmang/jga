@@ -117,6 +117,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const autoPlayPendingRef = useRef(false);
   const latestSpotifyUrlRef = useRef<string | null>(null);
   const [spotifyInitKey, setSpotifyInitKey] = useState(0);
+  const pollGenerationRef = useRef(0); // incremented each time a new player is created; cancels stale polling loops
   const choiceSignature = useMemo(() => {
     if (!choice) return '';
     if (choice.type === 'text') return `text:${choice.text}:${choice.textDe ?? ''}`;
@@ -396,11 +397,18 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         setSpotifyErrorDetail(null);
         setSpotifyError(null);
 
-        // Poll /v1/me/player/devices until the device appears in Spotify's backend,
-        // only then mark ready. This prevents 404s when playing immediately after ready.
+        // Poll /v1/me/player/devices until the device appears in Spotify's backend.
+        // pollGenerationRef cancels stale loops from previous player instances.
+        const myGeneration = ++pollGenerationRef.current;
         (async () => {
-          for (let i = 0; i < 12; i++) {
+          const maxPolls = 30; // 30 × 500ms = 15s
+          for (let i = 0; i < maxPolls; i++) {
             await new Promise((r) => setTimeout(r, 500));
+            // Abort if a newer player was created while we were waiting
+            if (pollGenerationRef.current !== myGeneration) {
+              console.log(`🚫 Poll gen ${myGeneration} abgebrochen (aktuell: ${pollGenerationRef.current})`);
+              return;
+            }
             try {
               const res = await fetch('https://api.spotify.com/v1/me/player/devices', {
                 headers: { Authorization: `Bearer ${spotifyToken}` }
@@ -417,11 +425,13 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
             } catch (err) {
               console.warn('⚠️  device poll error:', err);
             }
-            console.log(`⏳ Device noch nicht sichtbar (attempt ${i + 1}/12)...`);
+            console.log(`⏳ Device noch nicht sichtbar (attempt ${i + 1}/${maxPolls})...`);
           }
-          // Fallback: set ready after 6s even if device not found
-          console.warn('⚠️  Device polling timeout – setze spotifyReady trotzdem');
-          setSpotifyReady(true);
+          // Fallback: set ready after 15s even if device not confirmed
+          if (pollGenerationRef.current === myGeneration) {
+            console.warn('⚠️  Device polling timeout – setze spotifyReady trotzdem');
+            setSpotifyReady(true);
+          }
         })();
       });
 
@@ -593,24 +603,21 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
           if (res.status === 404) {
             if (attempt < maxAttempts - 1) {
-              const waitMs = 1500 * (attempt + 1);
-              console.log(`⏳ Warte ${waitMs}ms, dann retry...`);
+              const waitMs = 2000 * (attempt + 1); // 2s, 4s, 6s, 8s …
+              console.log(`⏳ Warte ${waitMs}ms, dann retry (device_id refresh)...`);
               await new Promise((r) => setTimeout(r, waitMs));
+              // Refresh device_id in case the Spotify backend rotated it
+              const freshDevice = await refreshDeviceId();
+              if (freshDevice) console.log(`♻️  Frische device_id: ${freshDevice}`);
               continue;
             }
-            // All retries exhausted with 404 → full player reinit (disconnect+connect reicht nicht)
-            console.log('🔄 Alle Versuche fehlgeschlagen (404), Player-Neustart...');
-            autoPlayPendingRef.current = true;
-            latestSpotifyUrlRef.current = url;
-            setSpotifyError(null);
+            // All retries exhausted with 404 – do NOT create a new player; a new
+            // device_id won't help and causes concurrent polling loops.
+            // Show a manual reload prompt instead.
+            console.error('❌ Alle Play-Versuche fehlgeschlagen (404). Bitte ↻ Reload klicken.');
+            setSpotifyError('Spotify-Device nicht erreichbar – bitte ↻ Reload klicken');
             setSpotifyLoading(false);
-            if (spotifyPlayerRef.current) {
-              try { spotifyPlayerRef.current.disconnect(); } catch (_) {}
-              spotifyPlayerRef.current = null;
-            }
-            setSpotifyReady(false);
-            setSpotifyDevice(null);
-            setSpotifyInitKey((k) => k + 1);
+            setIsPlaying(false);
             return;
           }
 
