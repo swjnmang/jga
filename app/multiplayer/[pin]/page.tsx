@@ -18,7 +18,7 @@ import {
   requestFlexButton,
   confirmFlexButton,
   rejectFlexButton,
-  useFlexButton,
+  spendFlexButton,
   awardFlexButton,
   editGroupScore,
   endGame,
@@ -292,7 +292,7 @@ export default function MultiplayerGamePage() {
     if (!session || isProcessing) return;
     setIsProcessing(true);
     try {
-      await useFlexButton(pin, session.groupId);
+      await spendFlexButton(pin, session.groupId);
       setPlacementResult(null);
       setSelectedPosition(null);
       setPlacementError(null);

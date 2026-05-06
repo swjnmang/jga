@@ -887,7 +887,7 @@ export async function rejectFlexButton(pin: string, hostGroupId: string): Promis
 /**
  * Gruppe setzt einen Flex-Button ein → neue Karte aus derselben Kategorie, gleiche Gruppe bleibt dran.
  */
-export async function useFlexButton(pin: string, groupId: string): Promise<void> {
+export async function spendFlexButton(pin: string, groupId: string): Promise<void> {
   checkFirebase();
   const gameRef = ref(database!, `games/${pin}`);
   const snapshot = await get(gameRef);
