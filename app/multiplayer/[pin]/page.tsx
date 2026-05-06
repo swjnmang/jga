@@ -60,6 +60,7 @@ export default function MultiplayerGamePage() {
   // Spielzustand
   const [isProcessing, setIsProcessing] = useState(false);
   const [flexJudgmentDone, setFlexJudgmentDone] = useState(false);
+  const [flexPhaseEvaluated, setFlexPhaseEvaluated] = useState(false); // Host hat Auswertung gestartet
   const [flexTipPosition, setFlexTipPosition] = useState<number | null>(null); // gewählte Flex-Tipp-Position
   const [flexTipSubmitted, setFlexTipSubmitted] = useState(false); // Tipp bereits eingereicht
   const backGuardPushed = useRef(false); // ensures dummy history entry is pushed only once
@@ -143,6 +144,7 @@ export default function MultiplayerGamePage() {
     setFlexTipPosition(null);
     setFlexTipSubmitted(false);
     setFlexJudgmentDone(false);
+    setFlexPhaseEvaluated(false);
   }, [game?.currentCardId]);
 
   const handleToggleReady = async () => {
@@ -1802,80 +1804,121 @@ export default function MultiplayerGamePage() {
         {/* Host-Ansicht: Ergebnis der Platzierung + Flex-Frage + "Weiter"-Button */}
         {isHostSession && game.pendingResult && currentCard && (
           <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-ink/20">
-            {game.pendingResult === 'correct' ? (
-              <div className="text-center space-y-2">
-                <div className="text-5xl">✅</div>
-                <p className="text-lg font-semibold text-green-600">Richtig!</p>
-              </div>
+            {!flexPhaseEvaluated ? (
+              /* Phase 1: Warte auf Flex-Tipps der anderen Gruppen */
+              <>
+                <div className="text-center space-y-2">
+                  <div className="text-4xl">⏳</div>
+                  <p className="text-lg font-semibold">Warte auf Flex-Tipps…</p>
+                  <p className="text-sm text-ink/60">Andere Gruppen können jetzt noch Flex-Buttons einsetzen</p>
+                </div>
+
+                {/* Live Flex-Tipps */}
+                {(() => {
+                  const tips = game.flexTips ?? {};
+                  const tipEntries = Object.entries(tips);
+                  return (
+                    <div className="rounded-xl bg-blue-500/10 border border-blue-400/30 p-3 space-y-1">
+                      <p className="text-xs font-semibold text-blue-400">Flex-Tipps eingereicht:</p>
+                      {tipEntries.length === 0 ? (
+                        <p className="text-xs text-ink/50">Noch kein Tipp abgegeben</p>
+                      ) : (
+                        tipEntries.map(([pos, gId]) => (
+                          <p key={pos} className="text-xs text-ink/80">
+                            <span className="font-semibold">{game.groups[gId]?.name ?? gId}</span>: Position {pos}
+                          </p>
+                        ))
+                      )}
+                    </div>
+                  );
+                })()}
+
+                <button
+                  onClick={() => setFlexPhaseEvaluated(true)}
+                  className="w-full mt-2 px-6 py-4 bg-amber-500 text-white rounded-lg font-semibold hover:bg-amber-600 transition-colors text-lg"
+                >
+                  📊 Auswertung
+                </button>
+              </>
             ) : (
-              <div className="text-center space-y-2">
-                <div className="text-5xl">❌</div>
-                <p className="text-lg font-semibold text-red-600">Falsch!</p>
-              </div>
-            )}
-            <div className="border-t-2 border-ink/10 pt-4 text-center space-y-1">
-              <p className="text-xl font-bold">
-                {currentCard.category === 'music'
-                  ? `${currentCard.hint} — ${currentCard.title}`
-                  : currentCard.answer}
-              </p>
-              <p className="text-lg text-ink/70 font-semibold">{currentCard.year}</p>
-            </div>
-
-            {/* Flex-Button Vergabe: nur nach korrekter Platzierung */}
-            {game.pendingResult === 'correct' && (
-              !flexJudgmentDone ? (
-                <div className="rounded-xl bg-blue-500/10 border-2 border-blue-400/50 p-4 space-y-3">
-                  <p className="font-semibold text-center text-sm">
-                    Hat <span className="font-bold">{game.groups[game.currentTurnGroupId!]?.name}</span> die Frage korrekt beantwortet (abgesehen von der Jahreszahl)?
-                  </p>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={() => handleAwardFlex(true)}
-                      className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 text-sm"
-                    >
-                      🔵 Ja — +1 Flex-Button
-                    </button>
-                    <button
-                      onClick={() => handleAwardFlex(false)}
-                      className="flex-1 px-4 py-2 bg-ink/20 text-ink rounded-lg font-semibold hover:bg-ink/30 text-sm"
-                    >
-                      Nein
-                    </button>
+              /* Phase 2: Ergebnis anzeigen + Flex-Vergabe + Weiter */
+              <>
+                {game.pendingResult === 'correct' ? (
+                  <div className="text-center space-y-2">
+                    <div className="text-5xl">✅</div>
+                    <p className="text-lg font-semibold text-green-600">Richtig!</p>
                   </div>
+                ) : (
+                  <div className="text-center space-y-2">
+                    <div className="text-5xl">❌</div>
+                    <p className="text-lg font-semibold text-red-600">Falsch!</p>
+                  </div>
+                )}
+                <div className="border-t-2 border-ink/10 pt-4 text-center space-y-1">
+                  <p className="text-xl font-bold">
+                    {currentCard.category === 'music'
+                      ? `${currentCard.hint} — ${currentCard.title}`
+                      : currentCard.answer}
+                  </p>
+                  <p className="text-lg text-ink/70 font-semibold">{currentCard.year}</p>
                 </div>
-              ) : (
-                <p className="text-center text-xs text-ink/50">Flex-Entscheidung getroffen ✓</p>
-              )
-            )}
 
-            {/* Flex-Tipps Übersicht */}
-            {game.flexPhaseActive && (() => {
-              const tips = game.flexTips ?? {};
-              const tipEntries = Object.entries(tips);
-              return (
-                <div className="rounded-xl bg-blue-500/10 border border-blue-400/30 p-3 space-y-1">
-                  <p className="text-xs font-semibold text-blue-400">Flex-Tipps eingereicht:</p>
-                  {tipEntries.length === 0 ? (
-                    <p className="text-xs text-ink/50">Noch kein Tipp abgegeben</p>
-                  ) : (
-                    tipEntries.map(([pos, gId]) => (
-                      <p key={pos} className="text-xs text-ink/80">
-                        <span className="font-semibold">{game.groups[gId]?.name ?? gId}</span>: Position {pos}
+                {/* Flex-Button Vergabe: nur nach korrekter Platzierung */}
+                {game.pendingResult === 'correct' && (
+                  !flexJudgmentDone ? (
+                    <div className="rounded-xl bg-blue-500/10 border-2 border-blue-400/50 p-4 space-y-3">
+                      <p className="font-semibold text-center text-sm">
+                        Hat <span className="font-bold">{game.groups[game.currentTurnGroupId!]?.name}</span> die Frage korrekt beantwortet (abgesehen von der Jahreszahl)?
                       </p>
-                    ))
-                  )}
-                </div>
-              );
-            })()}
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => handleAwardFlex(true)}
+                          className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 text-sm"
+                        >
+                          🔵 Ja — +1 Flex-Button
+                        </button>
+                        <button
+                          onClick={() => handleAwardFlex(false)}
+                          className="flex-1 px-4 py-2 bg-ink/20 text-ink rounded-lg font-semibold hover:bg-ink/30 text-sm"
+                        >
+                          Nein
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    <p className="text-center text-xs text-ink/50">Flex-Entscheidung getroffen ✓</p>
+                  )
+                )}
 
-            <button
-              onClick={handleNextCard}
-              disabled={isProcessing}
-              className="w-full mt-2 px-6 py-4 bg-ink text-inkDark rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 text-lg"
-            >
-              {isProcessing ? '⏳ Bitte warten…' : 'Weiter zum nächsten Team →'}
-            </button>
+                {/* Flex-Tipps Übersicht (Auswertungsphase) */}
+                {game.flexPhaseActive && (() => {
+                  const tips = game.flexTips ?? {};
+                  const tipEntries = Object.entries(tips);
+                  return (
+                    <div className="rounded-xl bg-blue-500/10 border border-blue-400/30 p-3 space-y-1">
+                      <p className="text-xs font-semibold text-blue-400">Eingegangene Flex-Tipps:</p>
+                      {tipEntries.length === 0 ? (
+                        <p className="text-xs text-ink/50">Kein Tipp abgegeben</p>
+                      ) : (
+                        tipEntries.map(([pos, gId]) => (
+                          <p key={pos} className="text-xs text-ink/80">
+                            <span className="font-semibold">{game.groups[gId]?.name ?? gId}</span>: Position {pos}
+                          </p>
+                        ))
+                      )}
+                    </div>
+                  );
+                })()}
+
+                <button
+                  onClick={handleNextCard}
+                  disabled={isProcessing}
+                  className="w-full mt-2 px-6 py-4 bg-ink text-inkDark rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 text-lg"
+                >
+                  {isProcessing ? '⏳ Bitte warten…' : 'Weiter zum nächsten Team →'}
+                </button>
+              </>
+            )}
           </div>
         )}
 
