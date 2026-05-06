@@ -377,31 +377,37 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
       player.addListener('ready', ({ device_id }: any) => {
         console.log('✅ Player ready, device_id:', device_id);
-        // Speichere die SDK Device-ID direkt
         setSpotifyDevice(device_id);
-        setSpotifyReady(true);
         setSpotifyErrorDetail(null);
         setSpotifyError(null);
-        // Transfer playback to SDK-Device damit die REST-API das Gerät kennt.
-        // WICHTIG: Kein Disconnect/Reconnect hier – das würde neue ready Events auslösen!
-        if (spotifyToken) {
-          setTimeout(async () => {
+
+        // Poll /v1/me/player/devices until the device appears in Spotify's backend,
+        // only then mark ready. This prevents 404s when playing immediately after ready.
+        (async () => {
+          for (let i = 0; i < 12; i++) {
+            await new Promise((r) => setTimeout(r, 500));
             try {
-              const res = await fetch('https://api.spotify.com/v1/me/player', {
-                method: 'PUT',
-                headers: { Authorization: `Bearer ${spotifyToken}`, 'Content-Type': 'application/json' },
-                body: JSON.stringify({ device_ids: [device_id], play: false })
+              const res = await fetch('https://api.spotify.com/v1/me/player/devices', {
+                headers: { Authorization: `Bearer ${spotifyToken}` }
               });
-              if (res.ok || res.status === 204) {
-                console.log('✅ Playback auf SDK-Device übertragen, REST-API kennt jetzt device_id:', device_id);
-              } else {
-                console.warn('⚠️  Transfer in ready-handler fehlgeschlagen:', res.status, await res.text().catch(() => ''));
+              if (res.ok) {
+                const json = await res.json();
+                const found = (json.devices ?? []).some((d: any) => d.id === device_id);
+                if (found) {
+                  console.log(`✅ Device ${device_id} bestätigt nach ${(i + 1) * 500}ms`);
+                  setSpotifyReady(true);
+                  return;
+                }
               }
             } catch (err) {
-              console.warn('⚠️  Transfer in ready-handler exception:', err);
+              console.warn('⚠️  device poll error:', err);
             }
-          }, 500);
-        }
+            console.log(`⏳ Device noch nicht sichtbar (attempt ${i + 1}/12)...`);
+          }
+          // Fallback: set ready after 6s even if device not found
+          console.warn('⚠️  Device polling timeout – setze spotifyReady trotzdem');
+          setSpotifyReady(true);
+        })();
       });
 
       player.addListener('player_state_changed', (state) => {
@@ -798,8 +804,8 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               YouTube-Quelle nicht erreichbar, Spotify wird verwendet.
             </p>
           )}
-          <div className="rounded-2xl card-surface relative bg-ink p-4 flex flex-col items-center gap-3 text-sand">
-            <div className="text-center space-y-2">
+          <div className="rounded-2xl card-surface relative bg-ink p-3 flex flex-col items-center gap-2 text-sand">
+            <div className="text-center space-y-1">
               {spotifyError && <p className="text-xs text-red-200">{spotifyError}</p>}
               {spotifyErrorDetail && (
                 <p className="text-[11px] text-sand/60">Details: {spotifyErrorDetail}</p>
@@ -809,22 +815,22 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               )}
               {!spotifyToken && <p className="text-xs text-red-200">Spotify Login erforderlich</p>}
             </div>
-            <div className="flex flex-col items-center gap-3">
+            <div className="flex items-center gap-3">
               <button
                 type="button"
-                className="rounded-full bg-sand text-inkDark px-8 py-5 text-xl font-semibold shadow disabled:opacity-50 flex flex-col items-center gap-2"
+                className="rounded-full bg-sand text-inkDark px-6 py-3 text-base font-semibold shadow disabled:opacity-50 flex items-center gap-2"
                 onClick={toggleSpotify}
                 disabled={!spotifyToken || spotifyLoading || !spotifyReady}
               >
-                <span className="text-3xl leading-none">{primaryIcon}</span>
+                <span className="text-2xl leading-none">{primaryIcon}</span>
                 <span className="text-sm leading-none">{primaryLabel}</span>
               </button>
               <button
                 type="button"
-                className="rounded-full border border-sand/40 px-4 py-2 text-xs"
+                className="rounded-full border border-sand/40 px-3 py-2 text-xs"
                 onClick={reconnectSpotify}
               >
-                🔄 Refresh / Aktualisieren
+                🔄 Refresh
               </button>
             </div>
           </div>

@@ -1330,92 +1330,6 @@ export default function MultiplayerGamePage() {
           )}
         </div>
 
-        {/* Host-Panel: Flex-Bestätigung und Score-Editing */}
-        {effectiveIsHost && (
-          <details className="card-surface rounded-2xl border-2 border-green-500/30 group">
-            <summary className="px-6 py-4 cursor-pointer list-none flex items-center justify-between select-none">
-              <span className="text-lg font-semibold text-green-700">👑 Einstellungen</span>
-              <span className="text-ink/50 text-sm transition-transform group-open:rotate-180">▼</span>
-            </summary>
-            <div className="px-6 pb-6 space-y-4">
-
-              {/* Flex-Button Bestätigung */}
-              {game.flexPendingGroupId && (
-                <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-500 p-4 space-y-3">
-                  <p className="font-semibold text-yellow-700">
-                    {game.groups[game.flexPendingGroupId]?.name} fordert Flex-Button an!
-                  </p>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={handleConfirmFlex}
-                      className="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700"
-                    >
-                      ✓ Bestätigen (+1 Punkt)
-                    </button>
-                    <button
-                      onClick={handleRejectFlex}
-                      className="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700"
-                    >
-                      ✗ Ablehnen
-                    </button>
-                  </div>
-                </div>
-              )}
-
-              {/* Score-Editing */}
-              <div className="space-y-2">
-                <p className="text-sm font-semibold">Punkte bearbeiten:</p>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                  {groupList.map(group => (
-                    <div key={group.id} className="text-sm">
-                      {editingGroupId === group.id ? (
-                        <div className="flex gap-1">
-                          <input
-                            type="number"
-                            value={editingScore ?? group.score}
-                            onChange={(e) => setEditingScore(Number(e.target.value))}
-                            className="flex-1 px-2 py-1 rounded border-2 border-ink/30 text-gray-900"
-                          />
-                          <button
-                            onClick={() => handleUpdateScore(group.id)}
-                            className="px-2 py-1 bg-green-600 text-white rounded"
-                          >
-                            ✓
-                          </button>
-                          <button
-                            onClick={() => setEditingGroupId(null)}
-                            className="px-2 py-1 bg-red-600 text-white rounded"
-                          >
-                            ✗
-                          </button>
-                        </div>
-                      ) : (
-                        <button
-                          onClick={() => {
-                            setEditingGroupId(group.id);
-                            setEditingScore(group.score);
-                          }}
-                          className="w-full px-2 py-1 rounded border-2 border-ink/20 hover:border-ink/60 text-left text-xs"
-                        >
-                          {group.name}: {group.score}
-                        </button>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Spiel-Beenden */}
-              <button
-                onClick={handleEndGame}
-                className="w-full px-4 py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700"
-              >
-                Spiel beenden
-              </button>
-            </div>
-          </details>
-        )}
-
         {/* Aktuelle Karte */}
         {currentCard && (() => {
           const categoryLabels: Record<string, string> = {
@@ -1785,6 +1699,92 @@ export default function MultiplayerGamePage() {
               </div>
             ))}
         </div>
+
+        {/* Host-Panel: Flex-Bestätigung und Score-Editing */}
+        {effectiveIsHost && (
+          <details className="card-surface rounded-2xl border-2 border-green-500/30 group">
+            <summary className="px-6 py-4 cursor-pointer list-none flex items-center justify-between select-none">
+              <span className="text-lg font-semibold text-green-700">👑 Einstellungen</span>
+              <span className="text-ink/50 text-sm transition-transform group-open:rotate-180">▼</span>
+            </summary>
+            <div className="px-6 pb-6 space-y-4">
+
+              {/* Flex-Button Bestätigung */}
+              {game.flexPendingGroupId && (
+                <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-500 p-4 space-y-3">
+                  <p className="font-semibold text-yellow-700">
+                    {game.groups[game.flexPendingGroupId]?.name} fordert Flex-Button an!
+                  </p>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={handleConfirmFlex}
+                      className="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700"
+                    >
+                      ✓ Bestätigen (+1 Punkt)
+                    </button>
+                    <button
+                      onClick={handleRejectFlex}
+                      className="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700"
+                    >
+                      ✗ Ablehnen
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Score-Editing */}
+              <div className="space-y-2">
+                <p className="text-sm font-semibold">Punkte bearbeiten:</p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  {groupList.map(group => (
+                    <div key={group.id} className="text-sm">
+                      {editingGroupId === group.id ? (
+                        <div className="flex gap-1">
+                          <input
+                            type="number"
+                            value={editingScore ?? group.score}
+                            onChange={(e) => setEditingScore(Number(e.target.value))}
+                            className="flex-1 px-2 py-1 rounded border-2 border-ink/30 text-gray-900"
+                          />
+                          <button
+                            onClick={() => handleUpdateScore(group.id)}
+                            className="px-2 py-1 bg-green-600 text-white rounded"
+                          >
+                            ✓
+                          </button>
+                          <button
+                            onClick={() => setEditingGroupId(null)}
+                            className="px-2 py-1 bg-red-600 text-white rounded"
+                          >
+                            ✗
+                          </button>
+                        </div>
+                      ) : (
+                        <button
+                          onClick={() => {
+                            setEditingGroupId(group.id);
+                            setEditingScore(group.score);
+                          }}
+                          className="w-full px-2 py-1 rounded border-2 border-ink/20 hover:border-ink/60 text-left text-xs"
+                        >
+                          {group.name}: {group.score}
+                        </button>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Spiel-Beenden */}
+              <button
+                onClick={handleEndGame}
+                className="w-full px-4 py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700"
+              >
+                Spiel beenden
+              </button>
+            </div>
+          </details>
+        )}
       </main>
     );
   }
