@@ -93,6 +93,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const spotifyPlayerRef = useRef<Spotify.Player | null>(null);
   const autoPlayPendingRef = useRef(false);
   const latestSpotifyUrlRef = useRef<string | null>(null);
+  const [spotifyInitKey, setSpotifyInitKey] = useState(0);
   const choiceSignature = useMemo(() => {
     if (!choice) return '';
     if (choice.type === 'text') return `text:${choice.text}:${choice.textDe ?? ''}`;
@@ -111,20 +112,21 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const reportedErrorRef = useRef(false);
 
   function reconnectSpotify() {
-    // Sanfter Reconnect: Player bleibt erhalten, bekommt aber neue device_id via ready-Event.
+    // Vollständiger Player-Neustart: alten Player zerstören, neuen über spotifyInitKey erzwingen.
+    // disconnect()+connect() reicht nicht – Spotify invalidiert die device_id serverseitig.
+    if (spotifyPlayerRef.current) {
+      try { spotifyPlayerRef.current.disconnect(); } catch (_) {}
+      spotifyPlayerRef.current = null;
+    }
+    autoPlayPendingRef.current = false;
     setSpotifyReady(false);
     setSpotifyDevice(null);
     setSpotifyError(null);
     setSpotifyErrorDetail(null);
     setShowSpotify(false);
     setIsPlaying(false);
-    autoPlayPendingRef.current = false;
-    if (spotifyPlayerRef.current) {
-      try {
-        spotifyPlayerRef.current.disconnect();
-        spotifyPlayerRef.current.connect();
-      } catch (_) {}
-    }
+    // Increment key → SDK-useEffect läuft neu → neues Spotify.Player-Objekt mit frischer device_id
+    setSpotifyInitKey((k) => k + 1);
   }
 
   function resetSpotify() {
@@ -171,8 +173,9 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     const sdkAlive = Boolean(spotifyPlayerRef.current);
 
     if (newChoiceIsSpotify && sdkAlive) {
-      // Neue Spotify-Karte → SDK reconnect um eine frische device_id zu erhalten.
-      // Die alte device_id ist nach einer Pause oft nicht mehr bei Spotify bekannt (404).
+      // Neue Spotify-Karte → Player komplett zerstören und neu erstellen.
+      // disconnect()+connect() reicht nicht: Spotify invalidiert die device_id serverseitig.
+      // Vollständiger Neustart via spotifyInitKey (→ SDK-useEffect läuft mit neuem Spotify.Player).
       try { (spotifyPlayerRef.current as any)?.pause(); } catch (_) {}
       setIsPlaying(false);
       setShowSpotify(false);
@@ -180,13 +183,15 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       reportedErrorRef.current = false;
       autoPlayPendingRef.current = false;  // Kein Auto-Play – User muss manuell starten
       latestSpotifyUrlRef.current = choice.url;
+      // Alten Player zerstören
+      if (spotifyPlayerRef.current) {
+        try { spotifyPlayerRef.current.disconnect(); } catch (_) {}
+        spotifyPlayerRef.current = null;
+      }
       setSpotifyReady(false);
       setSpotifyDevice(null);
-      try {
-        spotifyPlayerRef.current!.disconnect();
-        spotifyPlayerRef.current!.connect();
-      } catch (_) {}
-      // ready-Event liefert neue device_id → setSpotifyReady(true) → Player bereit
+      // Neuen Player erzwingen: SDK-useEffect reagiert auf spotifyInitKey-Änderung
+      setSpotifyInitKey((k) => k + 1);
     } else {
       resetSpotify();
       setEmbedError(null);
@@ -475,7 +480,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [choice?.type, onPlaybackError, spotifyToken]);
+  }, [choice?.type, onPlaybackError, spotifyToken, spotifyInitKey]);
 
   const activatePlayer = useCallback(async () => {
     if (spotifyPlayerRef.current && 'activateElement' in spotifyPlayerRef.current) {
@@ -572,22 +577,19 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               await new Promise((r) => setTimeout(r, waitMs));
               continue;
             }
-            // All retries exhausted with 404 → SDK device gone, force reconnect
-            console.log('🔄 Alle Versuche fehlgeschlagen (404), SDK reconnect...');
+            // All retries exhausted with 404 → full player reinit (disconnect+connect reicht nicht)
+            console.log('🔄 Alle Versuche fehlgeschlagen (404), Player-Neustart...');
+            autoPlayPendingRef.current = true;
+            latestSpotifyUrlRef.current = url;
+            setSpotifyError(null);
+            setSpotifyLoading(false);
             if (spotifyPlayerRef.current) {
-              autoPlayPendingRef.current = true;
-              latestSpotifyUrlRef.current = url;
-              setSpotifyReady(false);
-              setSpotifyDevice(null);
-              setSpotifyError(null);
-              setSpotifyLoading(false);
-              try {
-                spotifyPlayerRef.current.disconnect();
-                spotifyPlayerRef.current.connect();
-              } catch (err) {
-                console.error('SDK reconnect failed:', err);
-              }
+              try { spotifyPlayerRef.current.disconnect(); } catch (_) {}
+              spotifyPlayerRef.current = null;
             }
+            setSpotifyReady(false);
+            setSpotifyDevice(null);
+            setSpotifyInitKey((k) => k + 1);
             return;
           }
 
