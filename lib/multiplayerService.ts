@@ -418,6 +418,20 @@ export async function placeCardInTimeline(
     isCorrect = card.year >= before.year && card.year <= after.year;
   }
   
+  // Compute the correct position (first position where card fits chronologically)
+  let flexPhaseCorrectPosition = displayTimeline.length; // default: after all
+  for (let i = 0; i <= displayTimeline.length; i++) {
+    let fits = false;
+    if (i === 0) {
+      fits = displayTimeline.length === 0 || card.year <= displayTimeline[0].year;
+    } else if (i >= displayTimeline.length) {
+      fits = card.year >= displayTimeline[displayTimeline.length - 1].year;
+    } else {
+      fits = card.year >= displayTimeline[i - 1].year && card.year <= displayTimeline[i].year;
+    }
+    if (fits) { flexPhaseCorrectPosition = i; break; }
+  }
+
   // NUR bei korrekter Platzierung wird die Karte zur Timeline hinzugefügt
   let finalTimeline = safeTimeline;
   if (isCorrect) {
@@ -430,6 +444,15 @@ export async function placeCardInTimeline(
   await update(ref(database!, `games/${pin}/groups/${groupId}`), {
     timeline: finalTimeline,
     score: isCorrect ? (group.score ?? 0) + 1 : (group.score ?? 0)
+  });
+
+  // Flex-Phase öffnen (andere Gruppen können tippen)
+  await update(gameRef, {
+    flexPhaseActive: true,
+    flexTips: {},
+    activeGroupPlacedPosition: position,
+    flexPhaseCorrectPosition,
+    flexPhaseCard: card, // Karte für Flex-Gewinner (falls aktive Gruppe falsch lag)
   });
 
   // KEIN automatischer nextCard/nextTurn hier – die Page steuert das
@@ -922,6 +945,104 @@ export async function spendFlexButton(pin: string, groupId: string): Promise<voi
     pendingResult: null,
     pendingFlexAward: null,
   });
+}
+
+/**
+ * Nicht-spielende Gruppe setzt einen Flex-Button als Tipp ein (nach Platzierung der aktiven Gruppe).
+ * First-come-first-served: Wenn die Position schon belegt ist, wird die Anfrage abgelehnt.
+ * Der Flex-Button wird sofort abgezogen.
+ */
+export async function submitFlexTip(pin: string, groupId: string, position: number): Promise<{ ok: boolean; reason?: string }> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) return { ok: false, reason: 'Spiel nicht gefunden.' };
+
+  const game: GameSession = snapshot.val();
+  if (!game.flexPhaseActive) return { ok: false, reason: 'Flex-Phase nicht aktiv.' };
+  if (groupId === game.currentTurnGroupId) return { ok: false, reason: 'Die spielende Gruppe kann keinen Flex-Tipp abgeben.' };
+
+  const group = game.groups[groupId];
+  if (!group || (group.flexButtons ?? 0) < 1) return { ok: false, reason: 'Kein Flex-Button verfügbar.' };
+
+  // Gesperrte Position: die Position der spielenden Gruppe
+  if (position === game.activeGroupPlacedPosition) return { ok: false, reason: 'Diese Position ist gesperrt (von der spielenden Gruppe belegt).' };
+
+  // First-come-first-served: Position darf noch nicht vergeben sein
+  const existingTips: Record<string, string> = game.flexTips ?? {};
+  if (existingTips[position.toString()]) return { ok: false, reason: 'Diese Position ist bereits von einer anderen Gruppe belegt.' };
+
+  // Flex-Button abziehen + Tipp speichern (atomar)
+  await update(ref(database!, `games/${pin}/groups/${groupId}`), {
+    flexButtons: (group.flexButtons ?? 1) - 1,
+  });
+  await update(ref(database!, `games/${pin}/flexTips`), {
+    [position.toString()]: groupId,
+  });
+  return { ok: true };
+}
+
+/**
+ * Host beendet die Flex-Phase, wertet Tipps aus und geht zur nächsten Karte.
+ * - Wenn aktive Gruppe falsch lag UND ein Flex-Tipp die korrekte Position hatte → Karte geht an diese Gruppe.
+ * - Alle Gruppen die einen Flex-Tipp abgegeben haben, haben bereits ihren Button verloren (in submitFlexTip).
+ */
+export async function resolveFlexPhaseAndNext(pin: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  const flexTips: Record<string, string> = game.flexTips ?? {};
+  const correctPos = game.flexPhaseCorrectPosition;
+  const pendingResult = game.pendingResult;
+
+  // Wenn aktive Gruppe falsch lag: prüfe ob ein Tipp die korrekte Position trifft
+  if (pendingResult === 'wrong' && correctPos !== undefined && correctPos !== null) {
+    const winnerGroupId = flexTips[correctPos.toString()];
+    if (winnerGroupId) {
+      const winnerGroup = game.groups[winnerGroupId];
+      const currentCardId = game.currentCardId;
+      const card = currentCardId ? Object.values(game.groups).flatMap(g =>
+        (Array.isArray(g.timeline) ? g.timeline : [])
+      ).find(c => c.id === currentCardId) ?? null : null;
+
+      // Karte aus playlistCards/cards holen — wir müssen sie aus dem Deck rekonstruieren
+      // Die Karte ist im currentCardId gespeichert, aber nicht direkt im game.
+      // Wir übergeben die Karte als Parameter oder holen sie aus dem deckMeta.
+      // Einfacher: Wir speichern die aktuelle Karte als Teil der Flex-Phase.
+      // Für jetzt: Award +1 Punkt + Karte (falls wir sie haben)
+      if (winnerGroup) {
+        const updates: Record<string, any> = {
+          score: (winnerGroup.score ?? 0) + 1,
+        };
+        // Karte in Timeline des Gewinners (falls die Karte im flexPhaseCard gespeichert wurde)
+        if ((game as any).flexPhaseCard) {
+          const safeTimeline = Array.isArray(winnerGroup.timeline) ? winnerGroup.timeline : [];
+          const newTimeline = [...safeTimeline, (game as any).flexPhaseCard].sort((a: any, b: any) => a.year - b.year);
+          updates.timeline = newTimeline;
+        }
+        await update(ref(database!, `games/${pin}/groups/${winnerGroupId}`), updates);
+        // Auto-Win prüfen
+        await checkAutoWinTimeline(pin);
+      }
+    }
+  }
+
+  // Flex-Phase schließen, Ergebnis clearen
+  await update(gameRef, {
+    flexPhaseActive: false,
+    flexTips: null,
+    activeGroupPlacedPosition: null,
+    flexPhaseCorrectPosition: null,
+    flexPhaseCard: null,
+    pendingResult: null,
+    pendingFlexAward: null,
+  });
+
+  // Nächste Karte + nächste Gruppe
+  await nextCard(pin);
 }
 
 /**

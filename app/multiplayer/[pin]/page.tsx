@@ -20,6 +20,8 @@ import {
   rejectFlexButton,
   spendFlexButton,
   awardFlexButton,
+  submitFlexTip,
+  resolveFlexPhaseAndNext,
   editGroupScore,
   endGame,
   skipCard,
@@ -57,7 +59,9 @@ export default function MultiplayerGamePage() {
   
   // Spielzustand
   const [isProcessing, setIsProcessing] = useState(false);
-  const [flexJudgmentDone, setFlexJudgmentDone] = useState(false); // Host: hat für aktuelle Karte Flex-Frage beantwortet?
+  const [flexJudgmentDone, setFlexJudgmentDone] = useState(false);
+  const [flexTipPosition, setFlexTipPosition] = useState<number | null>(null); // gewählte Flex-Tipp-Position
+  const [flexTipSubmitted, setFlexTipSubmitted] = useState(false); // Tipp bereits eingereicht
   const backGuardPushed = useRef(false); // ensures dummy history entry is pushed only once
   const [placementResult, setPlacementResult] = useState<'correct' | 'wrong' | null>(null);
   const [placementError, setPlacementError] = useState<string | null>(null);
@@ -132,11 +136,13 @@ export default function MultiplayerGamePage() {
   }, [game?.currentCardIndex, game?.state]);
 
   // Clear local placement result whenever the card changes (new round)
-  // Without this, a previous wrong/correct result reappears when it's the group's turn again
   useEffect(() => {
     setPlacementResult(null);
     setPlacementError(null);
     setSelectedPosition(null);
+    setFlexTipPosition(null);
+    setFlexTipSubmitted(false);
+    setFlexJudgmentDone(false);
   }, [game?.currentCardId]);
 
   const handleToggleReady = async () => {
@@ -239,9 +245,12 @@ export default function MultiplayerGamePage() {
     setFlexJudgmentDone(false);
     
     try {
-      await broadcastPlacementResult(pin, null); // clear result flag
-      await nextCard(pin); // handles card + group rotation (incl. category round-robin for Timeline)
-      if (game.mode !== 'timeline') {
+      if (game.mode === 'timeline') {
+        // Flex-Phase auswerten + nächste Karte (alles in einem Schritt)
+        await resolveFlexPhaseAndNext(pin);
+      } else {
+        await broadcastPlacementResult(pin, null); // clear result flag
+        await nextCard(pin);
         await nextTurn(pin); // Trivia/solo: group rotation handled separately
       }
     } catch (err) {
@@ -312,6 +321,24 @@ export default function MultiplayerGamePage() {
       setFlexJudgmentDone(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Fehler beim Flex vergeben');
+    }
+  };
+
+  const handleSubmitFlexTip = async () => {
+    if (!session || flexTipPosition === null || flexTipSubmitted || isProcessing) return;
+    setIsProcessing(true);
+    try {
+      const result = await submitFlexTip(pin, session.groupId, flexTipPosition);
+      if (result.ok) {
+        setFlexTipSubmitted(true);
+      } else {
+        setError(result.reason ?? 'Fehler beim Flex-Tipp');
+        setFlexTipPosition(null);
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Fehler beim Flex-Tipp');
+    } finally {
+      setIsProcessing(false);
     }
   };
 
@@ -1464,7 +1491,7 @@ export default function MultiplayerGamePage() {
           };
 
           return (
-            <div className="card-surface rounded-2xl p-6 space-y-4">
+            <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500">
               <h3 className="text-lg font-semibold text-center">
                 Timeline von Gruppe: <span className="text-ink">{currentGroup.name}</span>
               </h3>
@@ -1568,29 +1595,22 @@ export default function MultiplayerGamePage() {
           );
         })()}
 
-        {/* Nicht am Zug - Timeline nur anzeigen */}
-        {!isActiveTurn && placementResult === null && (() => {
-          // Host zeigt Timeline der aktiven Gruppe (nicht seine eigene)
-          const activeGroupId = isHostSession ? game.currentTurnGroupId : session.groupId;
-          const displayGroup = activeGroupId ? game.groups[activeGroupId] : currentGroup;
-          const timeline = displayGroup?.timeline || [];          
-          const timelineLabel = isHostSession
-            ? `Timeline von ${displayGroup?.name ?? 'Team'}`
-            : 'Deine Timeline';
-          // Erstelle Display-Timeline: Referenzkarte + platzierte Karten
-          const displayTimeline = [];
-          if (game.referenceCard) {
-            displayTimeline.push(game.referenceCard);
-          }
+        {/* Nicht am Zug - Timeline der spielenden Gruppe anzeigen (READ-ONLY oder Flex-Tipp) */}
+        {!isActiveTurn && (() => {
+          const activeGroupId = game.currentTurnGroupId;
+          const activeGroup = activeGroupId ? game.groups[activeGroupId] : null;
+          if (!activeGroup) return null;
+
+          const timeline = Array.isArray(activeGroup.timeline) ? activeGroup.timeline : [];
+          const displayTimeline: any[] = [];
+          if (game.referenceCard) displayTimeline.push(game.referenceCard);
           displayTimeline.push(...timeline);
-          // Sortiere chronologisch
-          displayTimeline.sort((a, b) => a.year - b.year);
-          
-          if (displayTimeline.length === 0) return null;
+          displayTimeline.sort((a: any, b: any) => a.year - b.year);
 
-          const pendingPos = isHostSession ? (displayGroup?.pendingPosition ?? null) : null;
+          if (displayTimeline.length === 0 && !game.flexPhaseActive) return null;
 
-          // Build display with ghost card inserted at pendingPos
+          // Live-Vorschau: pendingPosition für aktive Gruppe (nur Host sieht es)
+          const pendingPos = isHostSession ? (activeGroup?.pendingPosition ?? null) : null;
           const ghostCard = isHostSession && pendingPos !== null && currentCard ? currentCard : null;
 
           const renderGhost = () => (
@@ -1599,29 +1619,66 @@ export default function MultiplayerGamePage() {
               <div className="flex-shrink-0 rounded-lg border-2 border-dashed border-blue-400 bg-blue-400/10 px-4 py-3 min-w-[120px] animate-pulse">
                 <p className="text-xs font-bold text-blue-400">???</p>
                 <p className="text-xs truncate text-blue-400/80">???</p>
-                <p className="text-xs truncate text-blue-400/60">???</p>
               </div>
             </div>
           );
 
+          // Flex-Phase: Nicht-spielende Gruppen können Tipp abgeben
+          const isFlexPhase = Boolean(game.flexPhaseActive && game.pendingResult);
+          const myGroup = session ? game.groups[session.groupId] : null;
+          const canFlex = isFlexPhase && !isHostSession && !isActiveTurn
+            && (myGroup?.flexButtons ?? 0) > 0
+            && !flexTipSubmitted;
+          const blockedPosition = game.activeGroupPlacedPosition ?? null;
+          // Bereits von anderen belegte Positionen
+          const takenPositions = new Set(Object.keys(game.flexTips ?? {}).map(Number));
+
           return (
-            <div className={`card-surface rounded-2xl p-6 space-y-4 ${isHostSession ? '' : 'opacity-60'}`}>
+            <div className={`card-surface rounded-2xl p-6 space-y-4 border-2 ${isActiveTurn ? 'border-green-500' : 'border-red-500'}`}>
               <h3 className="text-sm font-semibold text-center">
-                {timelineLabel}
+                Timeline von <span className="font-bold">{activeGroup.name}</span>
+                {isFlexPhase && canFlex && (
+                  <span className="ml-2 text-blue-400 text-xs">(Flex-Tipp möglich!)</span>
+                )}
+                {isFlexPhase && flexTipSubmitted && (
+                  <span className="ml-2 text-green-400 text-xs">✓ Tipp eingereicht</span>
+                )}
                 {isHostSession && pendingPos !== null && (
                   <span className="ml-2 text-blue-400 text-xs">(wählt Position…)</span>
                 )}
               </h3>
-              <div className="flex items-center gap-2 overflow-x-auto pb-2">
-                {/* Ghost before position 0 */}
+
+              <div className="flex items-center gap-1 overflow-x-auto pb-2">
+                {/* Flex-Tipp Button vor Position 0 */}
+                {canFlex && blockedPosition !== 0 && !takenPositions.has(0) && (
+                  <button
+                    type="button"
+                    onClick={() => setFlexTipPosition(p => p === 0 ? null : 0)}
+                    className={`flex-shrink-0 rounded-lg border-2 px-2 py-2 text-xs font-semibold transition-all ${
+                      flexTipPosition === 0 ? 'border-blue-400 bg-blue-400 text-white scale-105' : 'border-dashed border-blue-400/50 bg-blue-400/10 hover:bg-blue-400/20 text-blue-400'
+                    }`}
+                  >← FB</button>
+                )}
+                {canFlex && (blockedPosition === 0) && (
+                  <div className="flex-shrink-0 rounded-lg border-2 border-red-400/30 px-2 py-2 text-xs text-red-400/50 cursor-not-allowed">
+                    ← ✗
+                  </div>
+                )}
+
+                {/* Ghost vor Position 0 (Host-Vorschau) */}
                 {ghostCard && pendingPos === 0 && renderGhost()}
-                {displayTimeline.map((item, idx) => (
-                  <div key={idx} className="flex items-center">
-                    {idx > 0 && <div className="text-ink/30 mx-1">↔</div>}
-                    <div className={`flex-shrink-0 rounded-lg border-2 px-4 py-3 min-w-[120px] ${item.id === game.referenceCard?.id ? 'border-yellow-500 bg-yellow-100 text-inkDark' : 'border-ink bg-ink/10'}`}>
-                      <p className={`text-xs font-bold ${item.id === game.referenceCard?.id ? '' : 'text-ink'}`}>{item.year}</p>
+
+                {displayTimeline.map((item: any, idx: number) => (
+                  <div key={idx} className="flex items-center gap-1 flex-shrink-0">
+                    {idx > 0 && <div className="text-ink/30 mx-0.5">↔</div>}
+                    <div className={`flex-shrink-0 rounded-lg border-2 px-3 py-2 min-w-[110px] ${
+                      item.id === game.referenceCard?.id
+                        ? 'border-yellow-500 bg-yellow-100 text-inkDark'
+                        : 'border-ink/60 bg-ink/10'
+                    }`}>
+                      <p className="text-xs font-bold">{item.year}</p>
                       {item.id === game.referenceCard?.id ? (
-                        <p className="text-xs text-yellow-700 mt-1">Referenz</p>
+                        <p className="text-xs text-yellow-700 mt-0.5">Referenz</p>
                       ) : (
                         <>
                           <p className="text-xs truncate text-ink/70">{item.hint || ''}</p>
@@ -1629,11 +1686,51 @@ export default function MultiplayerGamePage() {
                         </>
                       )}
                     </div>
-                    {/* Ghost after this card */}
+
+                    {/* Ghost nach dieser Karte (Host-Vorschau) */}
                     {ghostCard && pendingPos === idx + 1 && renderGhost()}
+
+                    {/* Flex-Tipp Button nach dieser Karte */}
+                    {canFlex && blockedPosition !== idx + 1 && !takenPositions.has(idx + 1) && (
+                      <button
+                        type="button"
+                        onClick={() => setFlexTipPosition(p => p === idx + 1 ? null : idx + 1)}
+                        className={`flex-shrink-0 rounded-lg border-2 px-2 py-2 text-xs font-semibold transition-all ${
+                          flexTipPosition === idx + 1 ? 'border-blue-400 bg-blue-400 text-white scale-105' : 'border-dashed border-blue-400/50 bg-blue-400/10 hover:bg-blue-400/20 text-blue-400'
+                        }`}
+                      >{idx === displayTimeline.length - 1 ? 'FB →' : 'FB'}</button>
+                    )}
+                    {canFlex && blockedPosition === idx + 1 && (
+                      <div className="flex-shrink-0 rounded-lg border-2 border-red-400/30 px-2 py-2 text-xs text-red-400/50 cursor-not-allowed">✗</div>
+                    )}
+                    {canFlex && takenPositions.has(idx + 1) && blockedPosition !== idx + 1 && (
+                      <div className="flex-shrink-0 rounded-lg border-2 border-yellow-400/30 px-2 py-2 text-xs text-yellow-400/70 cursor-not-allowed">🔒</div>
+                    )}
                   </div>
                 ))}
               </div>
+
+              {/* Flex-Tipp bestätigen */}
+              {canFlex && flexTipPosition !== null && (
+                <button
+                  onClick={handleSubmitFlexTip}
+                  disabled={isProcessing}
+                  className="w-full px-4 py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 disabled:opacity-50"
+                >
+                  {isProcessing ? '⏳…' : `🔵 Flex-Tipp einreichen (Position ${flexTipPosition})`}
+                </button>
+              )}
+
+              {/* Noch kein Flex möglich */}
+              {isFlexPhase && !isHostSession && !isActiveTurn && !flexTipSubmitted && (myGroup?.flexButtons ?? 0) < 1 && (
+                <p className="text-center text-xs text-ink/50">Kein Flex-Button verfügbar</p>
+              )}
+              {isFlexPhase && flexTipSubmitted && (
+                <p className="text-center text-sm text-green-400 font-semibold">✓ Flex-Tipp eingereicht — warte auf Spielleiter</p>
+              )}
+              {!isFlexPhase && !isActiveTurn && !isHostSession && (
+                <p className="text-center text-xs text-ink/50 opacity-60">Du bist nicht am Zug</p>
+              )}
             </div>
           );
         })()}
@@ -1738,6 +1835,26 @@ export default function MultiplayerGamePage() {
                 <p className="text-center text-xs text-ink/50">Flex-Entscheidung getroffen ✓</p>
               )
             )}
+
+            {/* Flex-Tipps Übersicht */}
+            {game.flexPhaseActive && (() => {
+              const tips = game.flexTips ?? {};
+              const tipEntries = Object.entries(tips);
+              return (
+                <div className="rounded-xl bg-blue-500/10 border border-blue-400/30 p-3 space-y-1">
+                  <p className="text-xs font-semibold text-blue-400">Flex-Tipps eingereicht:</p>
+                  {tipEntries.length === 0 ? (
+                    <p className="text-xs text-ink/50">Noch kein Tipp abgegeben</p>
+                  ) : (
+                    tipEntries.map(([pos, gId]) => (
+                      <p key={pos} className="text-xs text-ink/80">
+                        <span className="font-semibold">{game.groups[gId]?.name ?? gId}</span>: Position {pos}
+                      </p>
+                    ))
+                  )}
+                </div>
+              );
+            })()}
 
             <button
               onClick={handleNextCard}
