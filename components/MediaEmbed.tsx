@@ -173,9 +173,9 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     const sdkAlive = Boolean(spotifyPlayerRef.current);
 
     if (newChoiceIsSpotify && sdkAlive) {
-      // Neue Spotify-Karte → Player komplett zerstören und neu erstellen.
-      // disconnect()+connect() reicht nicht: Spotify invalidiert die device_id serverseitig.
-      // Vollständiger Neustart via spotifyInitKey (→ SDK-useEffect läuft mit neuem Spotify.Player).
+      // Neue Spotify-Karte → bestehenden Player NICHT zerstören, einfach neue URL abspielen.
+      // Jeder Player-Neustart erzeugt eine neue device_id die Spotify evtl. nie in der REST-API
+      // registriert → 404-Fehler. Stattdessen: denselben Player/device_id für alle Karten benutzen.
       try { (spotifyPlayerRef.current as any)?.pause(); } catch (_) {}
       setIsPlaying(false);
       setShowSpotify(false);
@@ -183,15 +183,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       reportedErrorRef.current = false;
       autoPlayPendingRef.current = false;  // Kein Auto-Play – User muss manuell starten
       latestSpotifyUrlRef.current = choice.url;
-      // Alten Player zerstören
-      if (spotifyPlayerRef.current) {
-        try { spotifyPlayerRef.current.disconnect(); } catch (_) {}
-        spotifyPlayerRef.current = null;
-      }
-      setSpotifyReady(false);
-      setSpotifyDevice(null);
-      // Neuen Player erzwingen: SDK-useEffect reagiert auf spotifyInitKey-Änderung
-      setSpotifyInitKey((k) => k + 1);
+      // Player und device_id bleiben unverändert – kein spotifyInitKey++
     } else {
       resetSpotify();
       setEmbedError(null);
