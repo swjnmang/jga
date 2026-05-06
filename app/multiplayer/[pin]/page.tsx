@@ -22,6 +22,7 @@ import {
   awardFlexButton,
   submitFlexTip,
   resolveFlexPhaseAndNext,
+  revealResult,
   editGroupScore,
   endGame,
   skipCard,
@@ -1753,7 +1754,14 @@ export default function MultiplayerGamePage() {
         {/* Feedback nach Platzierung — aktives Team sieht Ergebnis, Host hat den "Weiter"-Button */}
         {(placementResult && currentCard && isActiveTurn) && (
           <div className="card-surface rounded-2xl p-6 space-y-4">
-            {placementResult === 'correct' ? (
+            {!game.resultRevealed ? (
+              /* Warte auf Spielleiter-Auswertung */
+              <div className="text-center space-y-3">
+                <div className="text-5xl">⏳</div>
+                <p className="text-lg font-semibold">Ergebnis eingereicht!</p>
+                <p className="text-sm text-ink/60">Warte auf die Auswertung durch den Spielleiter…</p>
+              </div>
+            ) : placementResult === 'correct' ? (
               <div className="space-y-4">
                 <div className="text-center space-y-3">
                   <div className="text-6xl">✅</div>
@@ -1834,7 +1842,7 @@ export default function MultiplayerGamePage() {
                 })()}
 
                 <button
-                  onClick={() => setFlexPhaseEvaluated(true)}
+                  onClick={async () => { await revealResult(pin); setFlexPhaseEvaluated(true); }}
                   className="w-full mt-2 px-6 py-4 bg-amber-500 text-white rounded-lg font-semibold hover:bg-amber-600 transition-colors text-lg"
                 >
                   📊 Auswertung

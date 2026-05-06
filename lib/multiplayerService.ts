@@ -786,7 +786,15 @@ export async function broadcastPendingPosition(pin: string, groupId: string, pos
  */
 export async function broadcastPlacementResult(pin: string, result: 'correct' | 'wrong' | null): Promise<void> {
   checkFirebase();
-  await update(ref(database!, `games/${pin}`), { pendingResult: result ?? null });
+  await update(ref(database!, `games/${pin}`), { pendingResult: result ?? null, resultRevealed: false });
+}
+
+/**
+ * Host klickt "Auswertung" — Ergebnis wird für die spielende Gruppe sichtbar gemacht.
+ */
+export async function revealResult(pin: string): Promise<void> {
+  checkFirebase();
+  await update(ref(database!, `games/${pin}`), { resultRevealed: true });
 }
 
 /**
@@ -944,6 +952,7 @@ export async function spendFlexButton(pin: string, groupId: string): Promise<voi
     currentCardId: nextCardId,
     pendingResult: null,
     pendingFlexAward: null,
+    resultRevealed: false,
   });
 }
 
@@ -1039,6 +1048,7 @@ export async function resolveFlexPhaseAndNext(pin: string): Promise<void> {
     flexPhaseCard: null,
     pendingResult: null,
     pendingFlexAward: null,
+    resultRevealed: false,
   });
 
   // Nächste Karte + nächste Gruppe

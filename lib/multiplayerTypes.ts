@@ -68,6 +68,7 @@ export interface GameSession {
   pendingFlexAward?: string | null;  // groupId, die nach korrekter Platzierung auf Flex-Vergabe wartet (Host entscheidet)
   // Flex-Phase (nach Platzierung — andere Gruppen können Tipp abgeben)
   flexPhaseActive?: boolean;                   // Flex-Phase läuft (nicht-spielende Gruppen können tippen)
+  resultRevealed?: boolean;                    // Host hat auf "Auswertung" geklickt — Ergebnis wird für alle sichtbar
   flexTips?: Record<string, string>;           // position.toString() → groupId (first-come-first-served)
   activeGroupPlacedPosition?: number | null;   // Position die die spielende Gruppe gewählt hat (für Flex gesperrt)
   flexPhaseCorrectPosition?: number | null;    // Korrekte Position in der Timeline (für Flex-Auswertung)
