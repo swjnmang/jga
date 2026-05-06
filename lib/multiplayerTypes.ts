@@ -63,7 +63,7 @@ export interface GameSession {
   playbackControl?: PlaybackControl; // Remote-Steuerung für Medien (Host führt aus)
   flexPendingGroupId?: string | null; // Welche Gruppe wartet auf Flex-Bestätigung
   winnerGroupId?: string | null; // Erste Gruppe mit X Karten (Timeline) oder erste mit X Punkte (Trivia)
-  timelineWinTarget?: number;    // Anzahl korrekt platzierter Karten zum Gewinnen (Timeline, Default 10)
+  timelineWinTarget?: number | null;    // Anzahl korrekt platzierter Karten zum Gewinnen (Timeline, Default 10)
   pendingResult?: 'correct' | 'wrong' | null; // Letztes Platzierungsergebnis — Host entscheidet wann weiter
   pendingFlexAward?: string | null;  // groupId, die nach korrekter Platzierung auf Flex-Vergabe wartet (Host entscheidet)
   // Flex-Phase (nach Platzierung — andere Gruppen können Tipp abgeben)
@@ -104,7 +104,7 @@ export interface CreateGameParams {
   maxGroups?: number;
   banModeEnabled?: boolean;
   triviaWinCondition?: 'categories' | 'points';
-  timelineWinTarget?: number;
+  timelineWinTarget?: number | null;
 }
 
 export interface JoinGameParams {
