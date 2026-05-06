@@ -1890,31 +1890,29 @@ export default function MultiplayerGamePage() {
                   );
                 })()}
 
-                {/* Flex-Button Vergabe: nur nach korrekter Platzierung */}
-                {game.pendingResult === 'correct' && (
-                  !flexJudgmentDone ? (
-                    <div className="rounded-xl bg-blue-500/10 border-2 border-blue-400/50 p-4 space-y-3">
-                      <p className="font-semibold text-center text-sm">
-                        Hat <span className="font-bold">{game.groups[game.currentTurnGroupId!]?.name}</span> die Frage korrekt beantwortet (abgesehen von der Jahreszahl)?
-                      </p>
-                      <div className="flex gap-2">
-                        <button
-                          onClick={() => handleAwardFlex(true)}
-                          className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 text-sm"
-                        >
-                          🔵 Ja — +1 Flex-Button
-                        </button>
-                        <button
-                          onClick={() => handleAwardFlex(false)}
-                          className="flex-1 px-4 py-2 bg-ink/20 text-ink rounded-lg font-semibold hover:bg-ink/30 text-sm"
-                        >
-                          Nein
-                        </button>
-                      </div>
+                {/* Flex-Button Vergabe: IMMER anzeigen — Inhalt korrekt beantwortet ist unabhängig von der Jahres-Einordnung */}
+                {!flexJudgmentDone ? (
+                  <div className="rounded-xl bg-blue-500/10 border-2 border-blue-400/50 p-4 space-y-3">
+                    <p className="font-semibold text-center text-sm">
+                      Hat <span className="font-bold">{game.groups[game.currentTurnGroupId!]?.name}</span> die Frage korrekt beantwortet (Titel / Person / Film — unabhängig von der Jahreszahl)?
+                    </p>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => handleAwardFlex(true)}
+                        className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 text-sm"
+                      >
+                        🔵 Ja — +1 Flex-Button
+                      </button>
+                      <button
+                        onClick={() => handleAwardFlex(false)}
+                        className="flex-1 px-4 py-2 bg-ink/20 text-ink rounded-lg font-semibold hover:bg-ink/30 text-sm"
+                      >
+                        Nein
+                      </button>
                     </div>
-                  ) : (
-                    <p className="text-center text-xs text-ink/50">Flex-Entscheidung getroffen ✓</p>
-                  )
+                  </div>
+                ) : (
+                  <p className="text-center text-xs text-ink/50">Flex-Entscheidung getroffen ✓</p>
                 )}
 
                 {/* Flex-Tipps Übersicht (Auswertungsphase) */}
