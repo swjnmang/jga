@@ -208,6 +208,18 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       autoPlayPendingRef.current = false;  // Kein Auto-Play – User muss manuell starten
       latestSpotifyUrlRef.current = choice.url;
       // Player und device_id bleiben unverändert – kein spotifyInitKey++
+    } else if (!newChoiceIsSpotify && sdkAlive) {
+      // Karte wechselt zu Nicht-Musik (z.B. Zwischenrunde im Timeline-Modus).
+      // WICHTIG: Player NICHT zerstören! Neue device_id würde Spotify evtl. nie registrieren → 404.
+      // Nur pausieren und UI zurücksetzen, player + device_id bleiben erhalten.
+      try { (spotifyPlayerRef.current as any)?.pause(); } catch (_) {}
+      setIsPlaying(false);
+      setShowSpotify(false);
+      setEmbedError(null);
+      reportedErrorRef.current = false;
+      autoPlayPendingRef.current = false;
+      latestSpotifyUrlRef.current = null;
+      // spotifyToken, spotifyDevice, spotifyReady → unverändert (Player bleibt verbunden)
     } else {
       resetSpotify();
       setEmbedError(null);
@@ -369,6 +381,10 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   useEffect(() => {
     if (choice?.type !== 'spotify') return;
     if (!spotifyToken) return;
+    // Bereits verbundenen Player nicht neu starten – derselbe Player überlebt auch Nicht-Musik-Karten
+    // (Zwischenrunden im Timeline-Modus). Nur neu initialisieren wenn kein Player existiert oder
+    // explizit via spotifyInitKey angefordert (reconnectSpotify() setzt ref vorher auf null).
+    if (spotifyPlayerRef.current) return;
 
     const initializePlayer = () => {
       if (spotifyPlayerRef.current) {
@@ -460,15 +476,22 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       });
       player.addListener('authentication_error', ({ message }: any) => {
         console.error('❌ authentication_error:', message, '– refreshing token + reconnecting...');
-        // The token has expired. Fetch a new one and reinitialise the player.
+        // The token has expired. Fetch a new one, then force a full player restart so the
+        // SDK init effect (which now guards against re-creating an already-alive player) runs fresh.
         fetch('/api/spotify/token')
           .then(r => r.ok ? r.json() : null)
           .then(json => {
             if (json?.accessToken) {
+              // Destroy the stale player first so the guard in the SDK effect lets it re-initialize.
+              if (spotifyPlayerRef.current) {
+                try { spotifyPlayerRef.current.disconnect(); } catch (_) {}
+                spotifyPlayerRef.current = null;
+              }
+              setSpotifyReady(false);
+              setSpotifyDevice(null);
               setSpotifyToken(json.accessToken as string);
+              // spotifyToken change → SDK useEffect re-runs → guard passes (ref is null) → new player
             }
-            // A token update triggers the SDK useEffect via spotifyToken dependency,
-            // which re-calls initializePlayer with the fresh token.
           })
           .catch(() => { setSpotifyError('Spotify Login abgelaufen – bitte neu verbinden'); });
       });
@@ -529,14 +552,21 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
     setup();
 
+    // KEIN disconnect() hier beim Cleanup – der choice?.type-Wechsel (z.B. Musik→Zitat zwischen
+    // Runden) würde sonst den Player zerstören und eine neue device_id erzwingen → 404-Problem.
+    // Der Player wird nur in reconnectSpotify() oder beim Unmount (separater Effect) getrennt.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [choice?.type, onPlaybackError, spotifyToken, spotifyInitKey]);
+
+  // Disconnect-Cleanup NUR beim echten Unmount der Komponente:
+  useEffect(() => {
     return () => {
       if (spotifyPlayerRef.current) {
         spotifyPlayerRef.current.disconnect();
         spotifyPlayerRef.current = null;
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [choice?.type, onPlaybackError, spotifyToken, spotifyInitKey]);
+  }, []);
 
   const activatePlayer = useCallback(async () => {
     if (spotifyPlayerRef.current && 'activateElement' in spotifyPlayerRef.current) {
