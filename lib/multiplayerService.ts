@@ -391,7 +391,7 @@ export async function placeCardInTimeline(
     throw new Error('Gruppe nicht gefunden.');
   }
 
-  const safeTimeline = Array.isArray(group.timeline) ? group.timeline : [];
+  const safeTimeline = Array.isArray(group.timeline) ? group.timeline : Object.values(group.timeline ?? {}) as any[];
 
   // Erstelle Display-Timeline: Referenzkarte + platzierte Karten (zur Validierung)
   const displayTimeline = [];
@@ -976,7 +976,7 @@ export async function submitFlexTip(pin: string, groupId: string, position: numb
 
   // Gesperrte Positionen: die Position der spielenden Gruppe + Positionen, die die neue Karte flankieren
   const activeGroup = game.groups[game.currentTurnGroupId!];
-  const safeTimeline = Array.isArray(activeGroup?.timeline) ? activeGroup.timeline : [];
+  const safeTimeline = Array.isArray(activeGroup?.timeline) ? activeGroup.timeline : Object.values(activeGroup?.timeline ?? {}) as any[];
   const buildDisplay = () => {
     const d: any[] = [];
     if (game.referenceCard) d.push(game.referenceCard);
@@ -1032,7 +1032,7 @@ export async function resolveFlexPhaseAndNext(pin: string): Promise<void> {
       const winnerGroup = game.groups[winnerGroupId];
       const currentCardId = game.currentCardId;
       const card = currentCardId ? Object.values(game.groups).flatMap(g =>
-        (Array.isArray(g.timeline) ? g.timeline : [])
+        (Array.isArray(g.timeline) ? g.timeline : Object.values(g.timeline ?? {}) as any[])
       ).find(c => c.id === currentCardId) ?? null : null;
 
       // Karte aus playlistCards/cards holen — wir müssen sie aus dem Deck rekonstruieren
@@ -1046,7 +1046,7 @@ export async function resolveFlexPhaseAndNext(pin: string): Promise<void> {
         };
         // Karte in Timeline des Gewinners (falls die Karte im flexPhaseCard gespeichert wurde)
         if ((game as any).flexPhaseCard) {
-          const safeTimeline = Array.isArray(winnerGroup.timeline) ? winnerGroup.timeline : [];
+          const safeTimeline = Array.isArray(winnerGroup.timeline) ? winnerGroup.timeline : Object.values(winnerGroup.timeline ?? {}) as any[];
           const newTimeline = [...safeTimeline, (game as any).flexPhaseCard].sort((a: any, b: any) => a.year - b.year);
           updates.timeline = newTimeline;
         }

@@ -1473,7 +1473,7 @@ export default function MultiplayerGamePage() {
 
         {/* Timeline mit Platzierungs-Optionen */}
         {placementResult === null && currentCard && isActiveTurn && (() => {
-          const timeline = Array.isArray(currentGroup.timeline) ? currentGroup.timeline : [];
+          const timeline = Array.isArray(currentGroup.timeline) ? currentGroup.timeline : Object.values(currentGroup.timeline ?? {});
           const displayTimeline: typeof timeline = [];
           if (game.referenceCard) displayTimeline.push(game.referenceCard as any);
           displayTimeline.push(...timeline);
@@ -1596,7 +1596,7 @@ export default function MultiplayerGamePage() {
           const activeGroup = activeGroupId ? game.groups[activeGroupId] : null;
           if (!activeGroup) return null;
 
-          const timeline = Array.isArray(activeGroup.timeline) ? activeGroup.timeline : [];
+          const timeline = Array.isArray(activeGroup.timeline) ? activeGroup.timeline : Object.values(activeGroup.timeline ?? {});
           const displayTimeline: any[] = [];
           if (game.referenceCard) displayTimeline.push(game.referenceCard);
           displayTimeline.push(...timeline);
