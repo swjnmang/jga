@@ -1621,9 +1621,12 @@ export default function MultiplayerGamePage() {
           // Flex-Phase: Nicht-spielende Gruppen können Tipp abgeben
           const isFlexPhase = Boolean(game.flexPhaseActive && game.pendingResult);
           const myGroup = session ? game.groups[session.groupId] : null;
+          // Sobald der Spielleiter „Auswertung" drückt (resultRevealed = true), sind keine
+          // neuen Flex-Tipps mehr möglich – erst nach „Nächste Gruppe" wird das Flag gelöscht.
           const canFlex = isFlexPhase && !isHostSession && !isActiveTurn
             && (myGroup?.flexButtons ?? 0) > 0
-            && !flexTipSubmitted;
+            && !flexTipSubmitted
+            && !game.resultRevealed;
           const blockedPosition = game.activeGroupPlacedPosition ?? null;
           // Bereits von anderen belegte Positionen
           const takenPositions = new Set(Object.keys(game.flexTips ?? {}).map(Number));
