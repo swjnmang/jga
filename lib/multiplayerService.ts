@@ -242,8 +242,8 @@ export async function startGame(pin: string, hostGroupId: string): Promise<void>
     let firstCardId: string | null = null;
     let catQueueStart: string[] = [];
     for (let i = 0; i < shuffledCats.length; i++) {
-      const card = availableDeck.find(id => deckMeta[id] === shuffledCats[i]);
-      if (card) { firstCat = shuffledCats[i]; firstCardId = card; catQueueStart = shuffledCats.slice(i + 1); break; }
+      const matches = availableDeck.filter(id => deckMeta[id] === shuffledCats[i]);
+      if (matches.length > 0) { firstCat = shuffledCats[i]; firstCardId = matches[Math.floor(Math.random() * matches.length)]; catQueueStart = shuffledCats.slice(i + 1); break; }
     }
     if (!firstCardId) firstCardId = availableDeck[0] ?? null;
     const firstGroupId = nonHostGroupIds[0];
@@ -256,7 +256,7 @@ export async function startGame(pin: string, hostGroupId: string): Promise<void>
       currentCardId: firstCardId,
       currentTurnGroupId: firstGroupId,
       currentRoundCategory: firstCat,
-      categoryRoundQueue: catQueueStart,
+      categoryRoundQueue: game.mode === 'timeline' ? [] : catQueueStart,
       categoryGroupQueue: [...nonHostGroupIds],
       // Kanonische Kategorien-Reihenfolge: einmal zufällig gemischt, danach immer in dieser Reihenfolge rotiert
       triviaCategories: shuffledCats,
@@ -311,8 +311,8 @@ export async function banCategory(pin: string, groupId: string, category: string
     let firstCardId: string | null = null;
     let catQueueStart: string[] = [];
     for (let i = 0; i < shuffledCats.length; i++) {
-      const card = deckForLookup.find(id => deckMeta[id] === shuffledCats[i]);
-      if (card) { firstCat = shuffledCats[i]; firstCardId = card; catQueueStart = shuffledCats.slice(i + 1); break; }
+      const matches = deckForLookup.filter(id => deckMeta[id] === shuffledCats[i]);
+      if (matches.length > 0) { firstCat = shuffledCats[i]; firstCardId = matches[Math.floor(Math.random() * matches.length)]; catQueueStart = shuffledCats.slice(i + 1); break; }
     }
     if (!firstCardId) firstCardId = deckForLookup[0] ?? null;
 
@@ -527,25 +527,68 @@ export async function nextCard(pin: string): Promise<void> {
   const game: GameSession = snapshot.val();
 
   if (game.mode === 'timeline') {
-    // ── Timeline: vollständig zufällige Kartenziehung ──────────────────────────
-    // Keine Kategorie-Rotation – jede Runde wird einfach eine zufällige Karte
-    // aus dem verbleibenden Deck gezogen. Gruppen rotieren weiterhin Round-Robin.
+    // ── Timeline: Kategorie-pro-Runde ──────────────────────────────────────────
+    // Eine Runde = jede Gruppe war einmal dran. Alle Gruppen einer Runde spielen
+    // aus derselben zufällig gewählten Kategorie. Neue Runde → neue zufällige Kategorie.
     const prevAvailable: string[] = Array.isArray(game.availableDeck)
       ? game.availableDeck
       : Object.values(game.availableDeck ?? {});
     const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
+    const deckMeta: Record<string, string> = game.deckMeta ?? {};
 
-    // Zufällige Karte aus verbliebenem Deck
-    const nextCardId = newAvailable.length > 0
-      ? newAvailable[Math.floor(Math.random() * newAvailable.length)]
-      : null;
-
-    // Nächste Gruppe (einfaches Round-Robin)
     const playingGroupIds = Object.entries(game.groups)
       .filter(([_, g]) => !g.isHost)
       .map(([id]) => id);
-    const currentIdx = playingGroupIds.indexOf(game.currentTurnGroupId ?? '');
-    const nextGroupId = playingGroupIds[(currentIdx + 1) % playingGroupIds.length];
+
+    // Aktuelle Gruppe aus Gruppen-Queue entfernen
+    const prevGroupQueue: string[] = Array.isArray(game.categoryGroupQueue)
+      ? game.categoryGroupQueue
+      : Object.values(game.categoryGroupQueue ?? {});
+    const remainingGroupQueue = prevGroupQueue.slice(1);
+
+    let nextGroupId: string;
+    let nextCardId: string | null;
+    let nextRoundCategory: string;
+    let nextGroupQueue: string[];
+
+    if (remainingGroupQueue.length > 0) {
+      // Gleiche Runde: selbe Kategorie, nächste Gruppe aus Queue
+      const roundCat = game.currentRoundCategory ?? '';
+      const catPool = newAvailable.filter(id => deckMeta[id] === roundCat);
+      nextGroupId = remainingGroupQueue[0];
+      nextCardId = catPool.length > 0
+        ? catPool[Math.floor(Math.random() * catPool.length)]
+        : (newAvailable.length > 0 ? newAvailable[Math.floor(Math.random() * newAvailable.length)] : null);
+      nextRoundCategory = roundCat;
+      nextGroupQueue = remainingGroupQueue;
+    } else {
+      // Neue Runde: neue zufällige Kategorie, alle Gruppen wieder in Queue
+      const currentGroupIdx = playingGroupIds.indexOf(game.currentTurnGroupId ?? '');
+      const nextStartIdx = (currentGroupIdx + 1) % playingGroupIds.length;
+      const newGroupQueue = [
+        ...playingGroupIds.slice(nextStartIdx),
+        ...playingGroupIds.slice(0, nextStartIdx),
+      ];
+
+      // Zufällige verfügbare Kategorie wählen
+      const availableCats = [...new Set(newAvailable.map(id => deckMeta[id]).filter(Boolean))];
+      let pickedCat = '';
+      let pickedCardId: string | null = null;
+
+      if (availableCats.length > 0) {
+        const shuffled = shuffleArray([...availableCats] as string[]);
+        pickedCat = shuffled[0];
+        const pool = newAvailable.filter(id => deckMeta[id] === pickedCat);
+        pickedCardId = pool[Math.floor(Math.random() * pool.length)] ?? null;
+      } else if (newAvailable.length > 0) {
+        pickedCardId = newAvailable[Math.floor(Math.random() * newAvailable.length)];
+      }
+
+      nextGroupId = newGroupQueue[0];
+      nextCardId = pickedCardId;
+      nextRoundCategory = pickedCat;
+      nextGroupQueue = newGroupQueue;
+    }
 
     const updates: Record<string, unknown> = {
       lastActivity: Date.now(),
@@ -553,6 +596,8 @@ export async function nextCard(pin: string): Promise<void> {
       currentCardId: nextCardId,
       currentCardIndex: (game.currentCardIndex ?? 0) + 1,
       currentTurnGroupId: nextGroupId,
+      currentRoundCategory: nextRoundCategory,
+      categoryGroupQueue: nextGroupQueue,
       pendingResult: null,
     };
 
@@ -612,14 +657,18 @@ export async function skipCard(pin: string): Promise<void> {
   const game: GameSession = snapshot.val();
 
   if (game.mode === 'timeline') {
-    // Timeline skip: gleiche Gruppe bleibt dran, vollständig zufällige neue Karte
+    // Timeline skip: gleiche Gruppe bleibt dran, neue Karte aus SELBER Kategorie
     const prevAvailable: string[] = Array.isArray(game.availableDeck)
       ? game.availableDeck
       : Object.values(game.availableDeck ?? {});
     const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
-    const nextCardId = newAvailable.length > 0
-      ? newAvailable[Math.floor(Math.random() * newAvailable.length)]
-      : null;
+    const deckMeta: Record<string, string> = game.deckMeta ?? {};
+    const roundCat = game.currentRoundCategory ?? '';
+    const catPool = newAvailable.filter(id => deckMeta[id] === roundCat);
+    const nextCardId = catPool.length > 0
+      ? catPool[Math.floor(Math.random() * catPool.length)]
+      : (newAvailable.length > 0 ? newAvailable[Math.floor(Math.random() * newAvailable.length)] : null);
+    // categoryGroupQueue bleibt unverändert (gleiche Gruppe)
     await update(gameRef, {
       lastActivity: Date.now(),
       availableDeck: newAvailable,
@@ -1280,7 +1329,10 @@ function computeNextTurn(
       return {
         nextGroupId,
         nextCardId: found.cardId,
-        currentRoundCategory: found.cat,
+        // currentRoundCategory bleibt die Runden-Kategorie — auch wenn eine Gruppe
+        // eine Ersatz-Kategorie erhält, spielen die nachfolgenden Gruppen weiterhin
+        // aus der Runden-Kategorie.
+        currentRoundCategory: currentRoundCat,
         categoryRoundQueue: catRoundQueue,
         categoryGroupQueue: remainingGroups,
       };
