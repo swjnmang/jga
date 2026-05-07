@@ -892,9 +892,15 @@ export default function MultiplayerGamePage() {
               <span>PIN: {pin}</span>
             </div>
             {activeGroup && (
-              <div className="mt-3 w-full px-4 py-3 rounded-xl bg-ink/15 text-ink font-bold text-xl">
-                🎮 Am Zug: {activeGroup.name}
-              </div>
+              isActiveTurn ? (
+                <div className="mt-3 w-full px-4 py-3 rounded-xl bg-green-500 text-white font-bold text-xl animate-pulse shadow-lg shadow-green-500/30">
+                  ⚡ Eure Gruppe ist am Zug!
+                </div>
+              ) : (
+                <div className="mt-3 w-full px-4 py-3 rounded-xl bg-ink/15 text-ink font-bold text-xl">
+                  🎮 Am Zug: {activeGroup.name}
+                </div>
+              )
             )}
           </div>
 
