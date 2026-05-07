@@ -246,6 +246,7 @@ export default function MultiplayerGamePage() {
     setPlacementError(null);
     setSelectedPosition(null);
     setFlexJudgmentDone(false);
+    setFlexPhaseEvaluated(false);
     
     try {
       if (game.mode === 'timeline') {
