@@ -94,7 +94,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-burj-khalifa-stockwerke', title: 'Stockwerke Burj Khalifa', category: 'schaetzfragen', year: 0, cue: 'Wie viele Stockwerke hat das höchste Gebäude der Welt, der Burj Khalifa?', answer: '163 Stockwerke (über der Erde)', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-2-euro-muenze-kosten', title: 'Herstellungskosten 2-Euro-Münze', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tausend Euro kostet die Herstellung einer 2-Euro-Münze etwa?', answer: 'ca. 0,13 Euro (13 Cent – Schätzfrage-Trick: Es sind keine tausend Euro!)', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-2-euro-muenze-kosten', title: 'Herstellungskosten 2-Euro-Münze', category: 'schaetzfragen', year: 0, cue: 'Wie viele Cent kostet die Herstellung einer 2-Euro-Münze etwa?', answer: 'ca. 13 Cent', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-faultier-schlaf', title: 'Schlafzeit Faultier', category: 'schaetzfragen', year: 0, cue: 'Wie viele Stunden schläft ein Faultier durchschnittlich pro Tag?', answer: 'ca. 15 bis 20 Stunden', difficulty: 'leicht', sources: {}, genres: [] },
 
@@ -202,7 +202,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-bizeps-muskelfasern', title: 'Muskelfasern Bizeps', category: 'schaetzfragen', year: 0, cue: 'Wie viele Muskelfasern hat ein durchschnittlicher Bizeps?', answer: 'ca. 200.000 bis 400.000', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-schlaf-leben', title: 'Schlaf im Leben', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tage verbringt ein Deutscher in seinem Leben durchschnittlich mit Schlafen?', answer: 'ca. 24 bis 27 Jahre', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-schlaf-leben', title: 'Schlaf im Leben', category: 'schaetzfragen', year: 0, cue: 'Wie viele Jahre seines Lebens verbringt ein Mensch durchschnittlich mit Schlafen?', answer: 'ca. 24 bis 27 Jahre', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-champagner-blasen', title: 'Blasen Champagner', category: 'schaetzfragen', year: 0, cue: 'Wie viele Blasen befinden sich in einer Flasche Champagner (0,75 l)?', answer: 'ca. 49 Millionen', difficulty: 'schwer', sources: {}, genres: [] },
 
@@ -212,7 +212,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-erdrotation-aequator', title: 'Erdrotation Geschwindigkeit', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer pro Stunde schnell ist die Erdrotation am Äquator?', answer: 'ca. 1.670 km/h', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-rindfleisch-wasser', title: 'Wasser für Rindfleisch', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tausend Liter Wasser benötigt man für die Herstellung eines einzigen Kilogramms Rindfleisch?', answer: 'ca. 15.000 Liter', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-rindfleisch-wasser', title: 'Wasser für Rindfleisch', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Wasser benötigt man für die Herstellung eines einzigen Kilogramms Rindfleisch?', answer: 'ca. 15.000 Liter', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-gehirnzellen-verlust', title: 'Gehirnzellenverlust täglich', category: 'schaetzfragen', year: 0, cue: 'Wie viele Gehirnzellen verliert ein Mensch pro Tag auf natürliche Weise?', answer: 'ca. 10.000 bis 100.000 (aber keine Sorge, wir haben Milliarden)', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -220,7 +220,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-meeresschildkroete-eier', title: 'Eier Meeresschildkröte', category: 'schaetzfragen', year: 0, cue: 'Wie viele Eier legt eine Grüne Meeresschildkröte pro Gelege?', answer: 'ca. 100 bis 110 Eier', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-glasfaserkabel-meer', title: 'Glasfaserkabel Meeresgrund', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tausend Kilometer lang ist das Internet-Glasfaserkabelnetz am Meeresgrund insgesamt?', answer: 'ca. 1,3 bis 1,4 Millionen Kilometer', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-glasfaserkabel-meer', title: 'Glasfaserkabel Meeresgrund', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer lang ist das Internet-Glasfaserkabelnetz am Meeresgrund insgesamt?', answer: 'ca. 1.300.000 bis 1.400.000 Kilometer (1,3–1,4 Millionen)', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-internet-zeit-woche', title: 'Internetnutzung pro Woche', category: 'schaetzfragen', year: 0, cue: 'Wie viele Stunden pro Woche verbringt ein Deutscher durchschnittlich im Internet?', answer: 'ca. 65 bis 70 Stunden (Stand 2023/24)', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -288,7 +288,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-blutgefaesse-auge', title: 'Blutgefäße im Auge', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer Blutgefäße befinden sich in einem Auge?', answer: 'ca. 10 Kilometer', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-kaffee-finnland', title: 'Kaffeekonsum Finnland', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Kaffee trinkt ein Finne durchschnittlich pro Jahr (Weltmeister im Kaffeetrinken)?', answer: 'ca. 12 Kilogramm Kaffeebohnen (entspricht ca. 1.000 Tassen)', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-kaffee-finnland', title: 'Kaffeekonsum Finnland', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm Kaffeebohnen verbraucht ein Finne durchschnittlich pro Jahr (Weltmeister im Kaffeetrinken)?', answer: 'ca. 12 Kilogramm Kaffeebohnen (entspricht ca. 1.000 Tassen)', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-spanische-treppe', title: 'Stufen Spanische Treppe', category: 'schaetzfragen', year: 0, cue: 'Wie viele Stufen hat die berühmte Spanische Treppe in Rom?', answer: '138 Stufen', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -300,7 +300,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-toiletten-zeit', title: 'Zeit auf Toilette täglich', category: 'schaetzfragen', year: 0, cue: 'Wie viele Minuten täglich verbringt ein Mensch durchschnittlich auf der Toilette?', answer: 'ca. 12 bis 15 Minuten', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-erdkruste-gewicht', title: 'Gewicht Erdkruste', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm wiegt die Erdkruste unter unseren Füßen pro Quadratmeter (bei 35km Dicke)?', answer: 'ca. 100.000 Tonnen', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-erdkruste-gewicht', title: 'Gewicht Erdkruste', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tonnen wiegt die Erdkruste unter unseren Füßen pro Quadratmeter (bei 35 km Dicke der kontinentalen Kruste)?', answer: 'ca. 100.000 Tonnen', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-ameisen-huegel', title: 'Ameisen im Ameisenhugel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tausend Ameisen leben schätzungsweise in einem großen Ameisenhugel der Waldameise?', answer: 'bis zu 500 bis 1.000 Tausend (1 Million)', difficulty: 'schwer', sources: {}, genres: [] },
 
@@ -320,7 +320,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-berlin-tokio-entfernung', title: 'Entfernung Berlin-Tokio', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer ist die Luftlinie zwischen Berlin und Tokio?', answer: 'ca. 8.910 Kilometer', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-schweissdruesen-fuesse', title: 'Schweißdrüsen Fußsohlen', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tausend Schweißdrüsen befinden sich an den Fußsohlen eines Menschen?', answer: 'ca. 250.000 (auf beiden Füßen zusammen)', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-schweissdruesen-fuesse', title: 'Schweißdrüsen Fußsohlen', category: 'schaetzfragen', year: 0, cue: 'Wie viele Schweißdrüsen befinden sich an den Fußsohlen eines Menschen (beide Füße zusammen)?', answer: 'ca. 250.000 Schweißdrüsen', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-pottwal-gehirn', title: 'Gewicht Pottwal-Gehirn', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm wiegt das Gehirn eines Pottwals (das größte Tiergehirn)?', answer: 'ca. 7 bis 9 Kilogramm', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -356,7 +356,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-brotsorten-deutschland', title: 'Brotsorten Deutschland', category: 'schaetzfragen', year: 0, cue: 'Wie viele verschiedene Brotsorten gibt es in Deutschland laut dem Deutschen Brotinstitut?', answer: 'über 3.000 Sorten', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-ampel-warten', title: 'Zeit an roter Ampel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Minuten verbringen Menschen im Durchschnitt damit, an einer roten Ampel zu warten (im ganzen Leben)?', answer: 'ca. 6 Monate', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-ampel-warten', title: 'Zeit an roter Ampel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Monate verbringen Menschen im Durchschnitt damit, an einer roten Ampel zu warten (im ganzen Leben)?', answer: 'ca. 6 Monate', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-olympus-mons', title: 'Hohe Olympus Mons Mars', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer hoch ist der Mount Olympus auf dem Mars (der hochste Berg im Sonnensystem)?', answer: 'ca. 22 Kilometer', difficulty: 'schwer', sources: {}, genres: [] },
 
@@ -396,11 +396,11 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-kuessen-kalorien', title: 'Kalorienverbrauch Kussen', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kalorien verbrennt man beim Kussen pro Minute?', answer: 'ca. 2 bis 6 kcal', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-blinzeln-taeglich', title: 'Blinzeln pro Tag', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tausend Mal blinzelt ein Mensch durchschnittlich pro Tag?', answer: 'ca. 10.000 bis 15.000 Mal', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-blinzeln-taeglich', title: 'Blinzeln pro Tag', category: 'schaetzfragen', year: 0, cue: 'Wie viele Mal blinzelt ein Mensch durchschnittlich pro Tag?', answer: 'ca. 10.000 bis 15.000 Mal', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-ringstrasse-island', title: 'Ringstraße Island', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer lang ist die Ringstraße um Island (Hringvegur)?', answer: '1.322 Kilometer', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-golden-gate-bridge', title: 'Gewicht Golden Gate Bridge', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tausend Tonnen wiegt die Golden Gate Bridge insgesamt?', answer: 'ca. 800.000 Tonnen', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-golden-gate-bridge', title: 'Gewicht Golden Gate Bridge', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tonnen wiegt die Golden Gate Bridge insgesamt?', answer: 'ca. 800.000 Tonnen', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-koala-schlaf', title: 'Schlafzeit Koala', category: 'schaetzfragen', year: 0, cue: 'Wie viele Stunden verbringt ein Koala pro Tag mit Schlafen?', answer: 'ca. 20 bis 22 Stunden', difficulty: 'leicht', sources: {}, genres: [] },
 
@@ -412,7 +412,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-hundertjaehriger-krieg', title: 'Dauer Hundertjahriger Krieg', category: 'schaetzfragen', year: 0, cue: 'Wie viele Jahre dauerte der Hundertjahrige Krieg zwischen England und Frankreich tatsachlich?', answer: '116 Jahre (1337 bis 1453)', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-herz-schlaege-tag', title: 'Herzschlage pro Tag', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tausend Mal schlagt das menschliche Herz an einem einzigen Tag?', answer: 'ca. 100.000 Mal', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-herz-schlaege-tag', title: 'Herzschlage pro Tag', category: 'schaetzfragen', year: 0, cue: 'Wie viele Mal schlägt das menschliche Herz an einem einzigen Tag?', answer: 'ca. 100.000 Mal', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-bodensee-tiefe', title: 'Tiefe Bodensee', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter tief ist der Bodensee an seiner tiefsten Stelle?', answer: '251 Meter', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -448,7 +448,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-krone-elizabeth', title: 'Gewicht Imperial State Crown', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm wiegt die Krone von Queen Elizabeth II. (Imperial State Crown)?', answer: 'ca. 1,06 Kilogramm', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-monarchfalter-wanderung', title: 'Wanderung Monarchfalter', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tausend Kilometer legt ein monarchischer Falter (Schmetterling) bei seiner Wanderung zurück?', answer: 'bis zu 4.500 Kilometer', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-monarchfalter-wanderung', title: 'Wanderung Monarchfalter', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer legt ein Monarchfalter bei seiner jährlichen Wanderung zurück?', answer: 'bis zu 4.500 Kilometer', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-mandela-gefaengnis', title: 'Gefängnis Nelson Mandela', category: 'schaetzfragen', year: 0, cue: 'Wie viele Jahre war Nelson Mandela im Gefängnis?', answer: '27 Jahre', difficulty: 'leicht', sources: {}, genres: [] },
 
