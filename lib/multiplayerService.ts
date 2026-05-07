@@ -527,45 +527,32 @@ export async function nextCard(pin: string): Promise<void> {
   const game: GameSession = snapshot.val();
 
   if (game.mode === 'timeline') {
-    // ── Timeline: category-rotation (same as Trivia) ──────────────────────────
-    const deckMeta: Record<string, string> = game.deckMeta ?? {};
-    const triviaCategories: string[] = Array.isArray(game.triviaCategories)
-      ? game.triviaCategories
-      : Object.values(game.triviaCategories ?? {});
+    // ── Timeline: vollständig zufällige Kartenziehung ──────────────────────────
+    // Keine Kategorie-Rotation – jede Runde wird einfach eine zufällige Karte
+    // aus dem verbleibenden Deck gezogen. Gruppen rotieren weiterhin Round-Robin.
     const prevAvailable: string[] = Array.isArray(game.availableDeck)
       ? game.availableDeck
       : Object.values(game.availableDeck ?? {});
     const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
-    const catGroupQueue: string[] = Array.isArray(game.categoryGroupQueue)
-      ? game.categoryGroupQueue
-      : Object.values(game.categoryGroupQueue ?? {});
-    const catRoundQueue: string[] = Array.isArray(game.categoryRoundQueue)
-      ? game.categoryRoundQueue
-      : Object.values(game.categoryRoundQueue ?? {});
-    const currentRoundCat = game.currentRoundCategory ?? '';
+
+    // Zufällige Karte aus verbliebenem Deck
+    const nextCardId = newAvailable.length > 0
+      ? newAvailable[Math.floor(Math.random() * newAvailable.length)]
+      : null;
+
+    // Nächste Gruppe (einfaches Round-Robin)
     const playingGroupIds = Object.entries(game.groups)
       .filter(([_, g]) => !g.isHost)
       .map(([id]) => id);
-
-    // In Timeline, all groups are always eligible (no "collect category" mechanic)
-    const groupCompletedCats: Record<string, string[]> = {};
-    playingGroupIds.forEach(gid => { groupCompletedCats[gid] = []; });
-
-    const next = computeNextTurn(
-      playingGroupIds, currentRoundCat, catGroupQueue, catRoundQueue,
-      triviaCategories, newAvailable, deckMeta,
-      groupCompletedCats, 'points' // 'points' = always eligible
-    );
+    const currentIdx = playingGroupIds.indexOf(game.currentTurnGroupId ?? '');
+    const nextGroupId = playingGroupIds[(currentIdx + 1) % playingGroupIds.length];
 
     const updates: Record<string, unknown> = {
       lastActivity: Date.now(),
       availableDeck: newAvailable,
-      currentCardId: next.nextCardId,
+      currentCardId: nextCardId,
       currentCardIndex: (game.currentCardIndex ?? 0) + 1,
-      currentTurnGroupId: next.nextGroupId,
-      currentRoundCategory: next.currentRoundCategory,
-      categoryRoundQueue: next.categoryRoundQueue,
-      categoryGroupQueue: next.categoryGroupQueue,
+      currentTurnGroupId: nextGroupId,
       pendingResult: null,
     };
 
@@ -581,7 +568,7 @@ export async function nextCard(pin: string): Promise<void> {
       updates.state = 'finished';
       updates.finishedAt = Date.now();
       updates.winnerGroupId = winner.id;
-    } else if (!next.nextCardId) {
+    } else if (!nextCardId) {
       updates.state = 'finished';
       updates.finishedAt = Date.now();
     }
@@ -625,17 +612,14 @@ export async function skipCard(pin: string): Promise<void> {
   const game: GameSession = snapshot.val();
 
   if (game.mode === 'timeline') {
-    // Timeline skip: same group stays active, pick new card from same category
-    const deckMeta: Record<string, string> = game.deckMeta ?? {};
+    // Timeline skip: gleiche Gruppe bleibt dran, vollständig zufällige neue Karte
     const prevAvailable: string[] = Array.isArray(game.availableDeck)
       ? game.availableDeck
       : Object.values(game.availableDeck ?? {});
     const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
-    const currentCat = game.currentRoundCategory ?? (game.currentCardId ? deckMeta[game.currentCardId] : '');
-    const catPool = newAvailable.filter(id => deckMeta[id] === currentCat);
-    const nextCardId = catPool.length > 0
-      ? catPool[Math.floor(Math.random() * catPool.length)]
-      : newAvailable[0] ?? null;
+    const nextCardId = newAvailable.length > 0
+      ? newAvailable[Math.floor(Math.random() * newAvailable.length)]
+      : null;
     await update(gameRef, {
       lastActivity: Date.now(),
       availableDeck: newAvailable,
