@@ -1496,8 +1496,8 @@ export default function MultiplayerGamePage() {
                 Wähle eine Position — dann „Ergebnis einreichen"
               </p>
 
-              {/* Flex-Button einsetzen */}
-              {(currentGroup.flexButtons ?? 0) > 0 && (
+              {/* Flex-Button einsetzen — NUR im Trivia-Modus (im Timeline-Modus gibt es keinen Karten-Tausch) */}
+              {game.mode !== 'timeline' && (currentGroup.flexButtons ?? 0) > 0 && (
                 <button
                   type="button"
                   onClick={handleUseFlex}
