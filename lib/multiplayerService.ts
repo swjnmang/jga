@@ -960,7 +960,6 @@ export async function spendFlexButton(pin: string, groupId: string): Promise<voi
   const game: GameSession = snapshot.val();
   const group = game.groups[groupId];
   if (!group) throw new Error('Gruppe nicht gefunden.');
-  if (game.mode === 'timeline') throw new Error('Karten-Tausch ist im Timeline-Modus nicht verfügbar.');
   if (groupId !== game.currentTurnGroupId) throw new Error('Nur die aktive Gruppe kann Flex einsetzen.');
   if ((group.flexButtons ?? 0) < 1) throw new Error('Keine Flex-Buttons mehr vorhanden.');
 
