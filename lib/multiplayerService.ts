@@ -256,7 +256,7 @@ export async function startGame(pin: string, hostGroupId: string): Promise<void>
       currentCardId: firstCardId,
       currentTurnGroupId: firstGroupId,
       currentRoundCategory: firstCat,
-      categoryRoundQueue: game.mode === 'timeline' ? [] : catQueueStart,
+      categoryRoundQueue: catQueueStart,
       categoryGroupQueue: [...nonHostGroupIds],
       // Kanonische Kategorien-Reihenfolge: einmal zufällig gemischt, danach immer in dieser Reihenfolge rotiert
       triviaCategories: shuffledCats,
@@ -527,93 +527,63 @@ export async function nextCard(pin: string): Promise<void> {
   const game: GameSession = snapshot.val();
 
   if (game.mode === 'timeline') {
-    // ── Timeline: Kategorie-pro-Runde ──────────────────────────────────────────
-    // Eine Runde = jede Gruppe war einmal dran. Alle Gruppen einer Runde spielen
-    // aus derselben zufällig gewählten Kategorie. Neue Runde → neue zufällige Kategorie.
+    // ── Timeline: Kategorie-pro-Runde via computeNextTurn ─────────────────────
+    // Alle Gruppen spielen stets mit (kein Kategorie-Sammeln), daher winCondition='points'.
+    // categoryRoundQueue hält die geordnete Abfolge der verbleibenden Kategorien.
+    const deckMeta: Record<string, string> = game.deckMeta ?? {};
+    const triviaCategories: string[] = Array.isArray(game.triviaCategories)
+      ? game.triviaCategories
+      : Object.values(game.triviaCategories ?? {});
     const prevAvailable: string[] = Array.isArray(game.availableDeck)
       ? game.availableDeck
       : Object.values(game.availableDeck ?? {});
     const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
-    const deckMeta: Record<string, string> = game.deckMeta ?? {};
-
+    const catGroupQueue: string[] = Array.isArray(game.categoryGroupQueue)
+      ? game.categoryGroupQueue
+      : Object.values(game.categoryGroupQueue ?? {});
+    const catRoundQueue: string[] = Array.isArray(game.categoryRoundQueue)
+      ? game.categoryRoundQueue
+      : Object.values(game.categoryRoundQueue ?? {});
+    const currentRoundCat = game.currentRoundCategory ?? '';
     const playingGroupIds = Object.entries(game.groups)
       .filter(([_, g]) => !g.isHost)
       .map(([id]) => id);
 
-    // Aktuelle Gruppe aus Gruppen-Queue entfernen
-    const prevGroupQueue: string[] = Array.isArray(game.categoryGroupQueue)
-      ? game.categoryGroupQueue
-      : Object.values(game.categoryGroupQueue ?? {});
-    const remainingGroupQueue = prevGroupQueue.slice(1);
+    // Im Timeline-Modus haben alle Gruppen immer alle Kategorien verfügbar
+    const groupCompletedCats: Record<string, string[]> = {};
+    playingGroupIds.forEach(gid => { groupCompletedCats[gid] = []; });
 
-    let nextGroupId: string;
-    let nextCardId: string | null;
-    let nextRoundCategory: string;
-    let nextGroupQueue: string[];
-
-    if (remainingGroupQueue.length > 0) {
-      // Gleiche Runde: selbe Kategorie, nächste Gruppe aus Queue
-      const roundCat = game.currentRoundCategory ?? '';
-      const catPool = newAvailable.filter(id => deckMeta[id] === roundCat);
-      nextGroupId = remainingGroupQueue[0];
-      nextCardId = catPool.length > 0
-        ? catPool[Math.floor(Math.random() * catPool.length)]
-        : (newAvailable.length > 0 ? newAvailable[Math.floor(Math.random() * newAvailable.length)] : null);
-      nextRoundCategory = roundCat;
-      nextGroupQueue = remainingGroupQueue;
-    } else {
-      // Neue Runde: neue zufällige Kategorie, alle Gruppen wieder in Queue
-      const currentGroupIdx = playingGroupIds.indexOf(game.currentTurnGroupId ?? '');
-      const nextStartIdx = (currentGroupIdx + 1) % playingGroupIds.length;
-      const newGroupQueue = [
-        ...playingGroupIds.slice(nextStartIdx),
-        ...playingGroupIds.slice(0, nextStartIdx),
-      ];
-
-      // Zufällige verfügbare Kategorie wählen
-      const availableCats = [...new Set(newAvailable.map(id => deckMeta[id]).filter(Boolean))];
-      let pickedCat = '';
-      let pickedCardId: string | null = null;
-
-      if (availableCats.length > 0) {
-        const shuffled = shuffleArray([...availableCats] as string[]);
-        pickedCat = shuffled[0];
-        const pool = newAvailable.filter(id => deckMeta[id] === pickedCat);
-        pickedCardId = pool[Math.floor(Math.random() * pool.length)] ?? null;
-      } else if (newAvailable.length > 0) {
-        pickedCardId = newAvailable[Math.floor(Math.random() * newAvailable.length)];
-      }
-
-      nextGroupId = newGroupQueue[0];
-      nextCardId = pickedCardId;
-      nextRoundCategory = pickedCat;
-      nextGroupQueue = newGroupQueue;
-    }
+    const next = computeNextTurn(
+      playingGroupIds, currentRoundCat, catGroupQueue, catRoundQueue,
+      triviaCategories, newAvailable, deckMeta,
+      groupCompletedCats, 'points' // 'points' = immer spielberechtigt
+    );
 
     const updates: Record<string, unknown> = {
       lastActivity: Date.now(),
       availableDeck: newAvailable,
-      currentCardId: nextCardId,
+      currentCardId: next.nextCardId,
       currentCardIndex: (game.currentCardIndex ?? 0) + 1,
-      currentTurnGroupId: nextGroupId,
-      currentRoundCategory: nextRoundCategory,
-      categoryGroupQueue: nextGroupQueue,
+      currentTurnGroupId: next.nextGroupId,
+      currentRoundCategory: next.currentRoundCategory,
+      categoryRoundQueue: next.categoryRoundQueue,
+      categoryGroupQueue: next.categoryGroupQueue,
       pendingResult: null,
     };
 
-    // Reset flex buttons
+    // Flex-Status zurücksetzen
     Object.keys(game.groups).forEach(gid => {
       updates[`groups/${gid}/flexActive`] = false;
     });
 
-    // Check win condition
+    // Gewinnbedingung prüfen
     const winTarget = game.timelineWinTarget ?? 10;
     const winner = Object.values(game.groups).find(g => !g.isHost && g.score >= winTarget);
     if (winner) {
       updates.state = 'finished';
       updates.finishedAt = Date.now();
       updates.winnerGroupId = winner.id;
-    } else if (!nextCardId) {
+    } else if (!next.nextCardId) {
       updates.state = 'finished';
       updates.finishedAt = Date.now();
     }
