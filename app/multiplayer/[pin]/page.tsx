@@ -1635,6 +1635,30 @@ export default function MultiplayerGamePage() {
           const isBlocked = (pos: number) => pos === blockedPosition;
           const isTaken = (pos: number) => takenPositions.has(pos) && !isBlocked(pos);
 
+          // Host: Live-Marker für jeden eingereichten Flex-Tipp direkt in der Timeline
+          const flexTipsMap: Record<string, string> = (isHostSession && isFlexPhase)
+            ? (game.flexTips ?? {})
+            : {};
+          const renderFlexTipMarker = (pos: number) => {
+            const tippingGroupId = flexTipsMap[String(pos)];
+            if (!tippingGroupId) return null;
+            const tippingGroup = game.groups[tippingGroupId];
+            return (
+              <div
+                className="flex-shrink-0 flex flex-col items-center gap-0.5 px-1.5 py-1.5 rounded-lg border-2 border-blue-400 bg-blue-500/15 min-w-[52px]"
+                title={`Flex-Tipp von ${tippingGroup?.name ?? tippingGroupId}`}
+              >
+                <span className="text-[10px] font-bold text-blue-400">🔵 FB</span>
+                <span
+                  className="text-[9px] font-semibold truncate max-w-[48px] text-center"
+                  style={{ color: tippingGroup?.color ?? '#60a5fa' }}
+                >
+                  {tippingGroup?.name ?? '?'}
+                </span>
+              </div>
+            );
+          };
+
           return (
             <div className={`card-surface rounded-2xl p-6 space-y-4 border-2 ${isActiveTurn ? 'border-green-500' : 'border-red-500'}`}>
               <h3 className="text-sm font-semibold text-center">
@@ -1669,6 +1693,9 @@ export default function MultiplayerGamePage() {
                 {canFlex && isTaken(0) && (
                   <div className="flex-shrink-0 rounded-lg border-2 border-yellow-400/30 px-2 py-2 text-xs text-yellow-400/70 cursor-not-allowed">🔒</div>
                 )}
+
+                {/* Flex-Tipp-Marker an Position 0 (Host-Live-Ansicht) */}
+                {renderFlexTipMarker(0)}
 
                 {/* Ghost vor Position 0 (Host-Vorschau) */}
                 {ghostCard && pendingPos === 0 && renderGhost()}
@@ -1713,6 +1740,9 @@ export default function MultiplayerGamePage() {
 
                     {/* Ghost nach dieser Karte (Host-Vorschau) */}
                     {ghostCard && pendingPos === idx + 1 && renderGhost()}
+
+                    {/* Flex-Tipp-Marker nach dieser Karte (Host-Live-Ansicht) */}
+                    {renderFlexTipMarker(idx + 1)}
 
                     {/* Flex-Tipp Button nach dieser Karte */}
                     {canFlex && !isBlocked(idx + 1) && !takenPositions.has(idx + 1) && (
