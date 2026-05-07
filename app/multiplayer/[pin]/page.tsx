@@ -886,11 +886,6 @@ export default function MultiplayerGamePage() {
         <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
           {/* Header */}
           <div className="text-center space-y-2">
-            <h1 className="text-3xl font-display">Trivia Multiplayer</h1>
-            <p className="text-ink/70">Frage {game.currentCardIndex + 1} / {game.deck.length}</p>
-            <div className="inline-flex items-center gap-2 text-sm text-ink/60">
-              <span>PIN: {pin}</span>
-            </div>
             {activeGroup && (
               isActiveTurn ? (
                 <div className="mt-3 w-full px-4 py-3 rounded-xl bg-green-500 text-white font-bold text-xl animate-pulse shadow-lg shadow-green-500/30">
