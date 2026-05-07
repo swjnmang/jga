@@ -1630,18 +1630,10 @@ export default function MultiplayerGamePage() {
           const blockedPosition = game.activeGroupPlacedPosition ?? null;
           // Bereits von anderen belegte Positionen
           const takenPositions = new Set(Object.keys(game.flexTips ?? {}).map(Number));
-          // Positionen, die die neu platzierte Karte flankieren (beidseitig gesperrt)
-          const newCardIdx = game.flexPhaseActive
-            ? displayTimeline.findIndex((c: any) => c.id === game.currentCardId)
-            : -1;
-          const newCardFlankPositions = newCardIdx >= 0
-            ? new Set([newCardIdx, newCardIdx + 1])
-            : new Set<number>();
-          const isBlocked = (pos: number) =>
-            pos === blockedPosition ||
-            newCardFlankPositions.has(pos);
-          const isTaken = (pos: number) =>
-            takenPositions.has(pos) && !isBlocked(pos);
+          // Nur die exakte Position der spielenden Gruppe ist gesperrt (wo sie die Karte gelegt hat).
+          // Alle anderen Positionen – auch die direkten Nachbarn der neuen Karte – sind erlaubt.
+          const isBlocked = (pos: number) => pos === blockedPosition;
+          const isTaken = (pos: number) => takenPositions.has(pos) && !isBlocked(pos);
 
           return (
             <div className={`card-surface rounded-2xl p-6 space-y-4 border-2 ${isActiveTurn ? 'border-green-500' : 'border-red-500'}`}>
