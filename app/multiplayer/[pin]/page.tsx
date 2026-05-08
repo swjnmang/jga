@@ -1443,7 +1443,7 @@ export default function MultiplayerGamePage() {
                   currentCard.category === 'music' ? (
                     <div className="rounded-xl card-surface bg-ink/5 px-4 py-3 flex items-center gap-3">
                       <div className="text-2xl">🎵</div>
-                      <p className="text-sm text-ink/60">Der Host steuert die Musikwiedergabe</p>
+                      <p className="text-sm text-ink/60">Der Spielleiter steuert die Musikwiedergabe</p>
                     </div>
                   ) : (
                     /* Andere Medien-Typen (Bilder, etc.) für Spieler anzeigen */
@@ -1492,9 +1492,6 @@ export default function MultiplayerGamePage() {
               <h3 className="text-lg font-semibold text-center">
                 Timeline von Gruppe: <span className="text-ink">{currentGroup.name}</span>
               </h3>
-              <p className="text-xs text-center text-ink/60">
-                Wähle eine Position — dann „Ergebnis einreichen"
-              </p>
 
               {/* Flex-Button einsetzen */}
               {(currentGroup.flexButtons ?? 0) > 0 && (
