@@ -427,14 +427,16 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               </div>
             </div>
           ) : null}
-          <a
-            href={choice.url}
-            target="_blank"
-            rel="noreferrer"
-            className="text-xs text-sand/50 underline"
-          >
-            In Spotify öffnen
-          </a>
+          {!concealMetadata && (
+            <a
+              href={choice.url}
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs text-sand/50 underline"
+            >
+              In Spotify öffnen
+            </a>
+          )}
         </div>
       );
     }
