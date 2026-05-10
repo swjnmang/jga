@@ -397,7 +397,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
             ref={spotifyContainerRef}
             aria-hidden={concealMetadata}
             style={concealMetadata
-              ? { position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }
+              ? { position: 'fixed', top: '-9999px', left: '-9999px', width: '1px', height: '1px', opacity: 0, pointerEvents: 'none', overflow: 'hidden' }
               : { borderRadius: '1rem', overflow: 'hidden', minHeight: 152 }
             }
           />
