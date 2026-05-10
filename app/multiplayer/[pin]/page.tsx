@@ -1612,6 +1612,21 @@ export default function MultiplayerGamePage() {
                 ⏭ Frage überspringen (gleiche Gruppe bleibt dran)
               </button>
             )}
+
+            {/* Flex-Button einsetzen — in der Kartenbox, nur für aktive Gruppe */}
+            {isActiveTurn && (currentGroup?.flexButtons ?? 0) > 0 && (
+              <button
+                type="button"
+                onClick={handleUseFlex}
+                disabled={isProcessing}
+                className="w-full px-4 py-2 rounded-xl border-2 border-blue-400 text-blue-300 bg-blue-500/10 hover:bg-blue-500/20 font-semibold text-sm flex items-center justify-center gap-2 disabled:opacity-50"
+              >
+                🔵 Flex-Button einsetzen — neue Frage aus gleicher Kategorie
+                <span className="ml-1 text-xs bg-blue-400/30 px-2 py-0.5 rounded-full">
+                  {currentGroup.flexButtons}× verfügbar
+                </span>
+              </button>
+            )}
           </div>
           );
         })()}
@@ -1635,21 +1650,6 @@ export default function MultiplayerGamePage() {
               <h3 className="text-sm font-semibold text-center">
                 Timeline von Gruppe: <span className="text-ink">{currentGroup.name}</span>
               </h3>
-
-              {/* Flex-Button einsetzen */}
-              {(currentGroup.flexButtons ?? 0) > 0 && (
-                <button
-                  type="button"
-                  onClick={handleUseFlex}
-                  disabled={isProcessing}
-                  className="w-full px-4 py-2 rounded-xl border-2 border-blue-400 text-blue-300 bg-blue-500/10 hover:bg-blue-500/20 font-semibold text-sm flex items-center justify-center gap-2 disabled:opacity-50"
-                >
-                  🔵 Flex-Button einsetzen — neue Frage aus gleicher Kategorie
-                  <span className="ml-1 text-xs bg-blue-400/30 px-2 py-0.5 rounded-full">
-                    {currentGroup.flexButtons}× verfügbar
-                  </span>
-                </button>
-              )}
 
               {/* Timeline + Positions-Buttons */}
               <div className="flex items-center gap-1 overflow-x-auto pb-2 justify-start">
