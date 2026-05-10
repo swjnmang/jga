@@ -110,12 +110,6 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     }
   }, [choice]);
 
-  const choiceSignature = useMemo(() => {
-    if (!choice) return '';
-    if (choice.type === 'text') return `text:${choice.text}:${choice.textDe ?? ''}`;
-    return `${choice.type}:${choice.url}`;
-  }, [choice]);
-
   // Reset UI state on card/source change
   useEffect(() => {
     setIsPlaying(false);
