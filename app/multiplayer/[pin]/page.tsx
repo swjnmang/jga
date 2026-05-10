@@ -1632,9 +1632,21 @@ export default function MultiplayerGamePage() {
 
           if (displayTimeline.length === 0 && !game.flexPhaseActive) return null;
 
-          // Live-Vorschau: pendingPosition für aktive Gruppe (nur Host sieht es)
-          const pendingPos = isHostSession ? (activeGroup?.pendingPosition ?? null) : null;
-          const ghostCard = isHostSession && pendingPos !== null && currentCard ? currentCard : null;
+          // Flex-Phase: Nicht-spielende Gruppen können Tipp abgeben
+          const isFlexPhase = Boolean(game.flexPhaseActive && game.pendingResult);
+          const blockedPosition = game.activeGroupPlacedPosition ?? null;
+
+          // Fix: Falsch gelegte Karte landet NICHT in activeGroup.timeline (nur korrekte werden dort gespeichert).
+          // In der Flex-Phase trotzdem an der gelegten Position als "NEU" anzeigen, damit alle sie sehen.
+          if (isFlexPhase && blockedPosition !== null && game.flexPhaseCard &&
+              !displayTimeline.some((c: any) => c.id === game.currentCardId)) {
+            const insertIdx = Math.max(0, Math.min(blockedPosition, displayTimeline.length));
+            displayTimeline.splice(insertIdx, 0, game.flexPhaseCard);
+          }
+
+          // Live-Vorschau: pendingPosition der spielenden Gruppe — sichtbar für alle (Host + nicht-spielende Gruppen)
+          const pendingPos = activeGroup?.pendingPosition ?? null;
+          const ghostCard = pendingPos !== null && currentCard ? currentCard : null;
 
           const renderGhost = () => (
             <div className="flex items-center flex-shrink-0">
@@ -1646,8 +1658,6 @@ export default function MultiplayerGamePage() {
             </div>
           );
 
-          // Flex-Phase: Nicht-spielende Gruppen können Tipp abgeben
-          const isFlexPhase = Boolean(game.flexPhaseActive && game.pendingResult);
           const myGroup = session ? game.groups[session.groupId] : null;
           // Sobald der Spielleiter „Auswertung" drückt (resultRevealed = true), sind keine
           // neuen Flex-Tipps mehr möglich – erst nach „Nächste Gruppe" wird das Flag gelöscht.
@@ -1655,7 +1665,6 @@ export default function MultiplayerGamePage() {
             && (myGroup?.flexButtons ?? 0) > 0
             && !flexTipSubmitted
             && !game.resultRevealed;
-          const blockedPosition = game.activeGroupPlacedPosition ?? null;
           // Bereits von anderen belegte Positionen
           const takenPositions = new Set(Object.keys(game.flexTips ?? {}).map(Number));
           // Die neue Karte liegt bei Index blockedPosition in der displayTimeline.
@@ -1700,6 +1709,9 @@ export default function MultiplayerGamePage() {
                   <span className="ml-2 text-green-400 text-xs">✓ Tipp eingereicht</span>
                 )}
                 {isHostSession && pendingPos !== null && (
+                  <span className="ml-2 text-blue-400 text-xs">(wählt Position…)</span>
+                )}
+                {!isHostSession && pendingPos !== null && !isFlexPhase && (
                   <span className="ml-2 text-blue-400 text-xs">(wählt Position…)</span>
                 )}
               </h3>

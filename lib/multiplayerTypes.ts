@@ -72,6 +72,7 @@ export interface GameSession {
   flexTips?: Record<string, string>;           // position.toString() → groupId (first-come-first-served)
   activeGroupPlacedPosition?: number | null;   // Position die die spielende Gruppe gewählt hat (für Flex gesperrt)
   flexPhaseCorrectPosition?: number | null;    // Korrekte Position in der Timeline (für Flex-Auswertung)
+  flexPhaseCard?: any | null;                  // Die neu gelegte Karte (auch wenn falsch platziert, für Flex-Anzeige)
   // Trivia-Modus
   triviaCategories?: string[];           // Alle Kategorien die im Deck vorhanden sind (einmalig beim Erstellen berechnet)
   deckMeta?: Record<string, string>;     // cardId → category (für Server-seitige Logik)
