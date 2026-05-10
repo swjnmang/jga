@@ -929,7 +929,12 @@ export default function MultiplayerGamePage() {
           </div>
 
           {/* Scoreboard mit Kategorien-Fortschritt */}
-          <div className="card-surface rounded-2xl p-4 space-y-3">
+          <details className="card-surface rounded-2xl group">
+            <summary className="px-4 py-3 cursor-pointer list-none flex items-center justify-between select-none">
+              <span className="font-semibold">🏆 Scoreboard</span>
+              <span className="text-ink/50 text-sm transition-transform group-open:rotate-180">▼</span>
+            </summary>
+            <div className="px-4 pb-4 space-y-3">
             {groupList.map(g => {
               const completed: string[] = Array.isArray(g.completedCategories)
                 ? g.completedCategories
@@ -966,7 +971,8 @@ export default function MultiplayerGamePage() {
                 </div>
               );
             })}
-          </div>
+            </div>
+          </details>
 
           {/* ── SCHÄTZFRAGE: alle Gruppen antworten gleichzeitig ── */}
           {currentCard.category === 'schaetzfragen' ? (() => {
@@ -2122,8 +2128,12 @@ export default function MultiplayerGamePage() {
         )}
 
         {/* Live Scoreboard */}
-        <div className="card-surface rounded-2xl p-6 space-y-3">
-          <h3 className="font-semibold">Live Scoreboard</h3>
+        <details className="card-surface rounded-2xl group">
+          <summary className="px-4 py-3 cursor-pointer list-none flex items-center justify-between select-none">
+            <span className="font-semibold">🏆 Live Scoreboard</span>
+            <span className="text-ink/50 text-sm transition-transform group-open:rotate-180">▼</span>
+          </summary>
+          <div className="px-4 pb-4 space-y-2">
           {groupList
             .sort((a, b) => b.score - a.score)
             .map((group, index) => (
@@ -2151,7 +2161,8 @@ export default function MultiplayerGamePage() {
                 </div>
               </div>
             ))}
-        </div>
+          </div>
+        </details>
 
         {/* Host-Panel: Flex-Bestätigung und Score-Editing */}
         {effectiveIsHost && (
@@ -2350,8 +2361,12 @@ export default function MultiplayerGamePage() {
       </div>
 
       {/* Gruppen-Scoreboard */}
-      <div className="card-surface rounded-2xl p-6 space-y-3">
-        <h3 className="font-semibold">Scoreboard</h3>
+      <details className="card-surface rounded-2xl group">
+        <summary className="px-6 py-4 cursor-pointer list-none flex items-center justify-between select-none">
+          <span className="font-semibold">🏆 Scoreboard</span>
+          <span className="text-ink/50 text-sm transition-transform group-open:rotate-180">▼</span>
+        </summary>
+        <div className="px-6 pb-6 space-y-3">
         {groupList
           .sort((a, b) => b.score - a.score)
           .map((group, index) => (
@@ -2367,7 +2382,8 @@ export default function MultiplayerGamePage() {
               <span className="text-xl font-bold">{group.score}</span>
             </div>
           ))}
-      </div>
+        </div>
+      </details>
     </main>
   );
 }
