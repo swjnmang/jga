@@ -1,13 +1,12 @@
 'use client';
 
 // =============================================================================
-// SPOTIFY INTEGRATION – IFRAME-ANSATZ (Stand: Mai 2026)
+// SPOTIFY INTEGRATION – EMBED API (Stand: Mai 2026)
 // =============================================================================
-// Spotify wird per <iframe> eingebunden – kein SDK, keine REST-API, kein device_id-Problem.
-// Bei concealMetadata=true deckt ein opakes Overlay den Titel/Artist-Bereich des Iframes ab.
-// Der Play-Button (linke Seite, ~80 px) bleibt sichtbar und klickbar.
-// ref.stop() lädt den Iframe neu (stoppt die Wiedergabe).
-// ref.play() / pause() sind No-ops – der User steuert Spotify direkt im Iframe.
+// Spotify wird über die offizielle Embed-API eingebunden.
+// conceal_metadata=true versteckt Titel/Artist nativ im Iframe – kein Overlay nötig.
+// Der EmbedController ermöglicht play() / pause() direkt aus dem Code.
+// Doku: https://developer.spotify.com/documentation/embeds/tutorials/using-the-iframe-api
 // =============================================================================
 
 import clsx from 'clsx';
@@ -15,14 +14,45 @@ import Image from 'next/image';
 import { forwardRef, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
 import { Card, MediaPreference } from '@/lib/types';
 
+// Spotify Embed Controller type (minimal, not shipped in @types)
+interface SpotifyEmbedController {
+  play: () => void;
+  pause: () => void;
+  seek: (positionMs: number) => void;
+  loadUri: (uri: string) => void;
+  destroy: () => void;
+  addListener: (event: string, callback: (data?: unknown) => void) => void;
+}
+
+interface SpotifyIFrameAPI {
+  createController: (
+    element: HTMLElement,
+    options: {
+      uri: string;
+      width?: string | number;
+      height?: string | number;
+      conceal_metadata?: boolean;
+    },
+    callback: (controller: SpotifyEmbedController) => void
+  ) => void;
+}
+
+declare global {
+  interface Window {
+    onSpotifyIframeApiReady?: (api: SpotifyIFrameAPI) => void;
+    SpotifyIframeApiReadyCallbacks?: Array<(api: SpotifyIFrameAPI) => void>;
+    _spotifyIframeApiInstance?: SpotifyIFrameAPI;
+  }
+}
+
 function toYouTubeEmbed(url: string) {
   const match = url.match(/(?:v=|\.be\/|embed\/)([\w-]{11})/);
   return match ? `https://www.youtube.com/embed/${match[1]}?rel=0&modestbranding=1` : null;
 }
 
-function toSpotifyEmbed(url: string) {
-  const idMatch = url.match(/spotify\.com\/(?:track|episode)\/([A-Za-z0-9]+)/);
-  return idMatch ? `https://open.spotify.com/embed/track/${idMatch[1]}` : null;
+function toSpotifyTrackUri(url: string): string | null {
+  const idMatch = url.match(/spotify\.com\/track\/([A-Za-z0-9]+)/);
+  return idMatch ? `spotify:track:${idMatch[1]}` : null;
 }
 
 type MediaChoice =
@@ -89,7 +119,10 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     [card, preference, youtubeUnavailable]
   );
   const youtubeIframeRef = useRef<HTMLIFrameElement | null>(null);
-  const spotifyIframeRef = useRef<HTMLIFrameElement | null>(null);
+  // Spotify Embed API
+  const spotifyContainerRef = useRef<HTMLDivElement | null>(null);
+  const spotifyControllerRef = useRef<SpotifyEmbedController | null>(null);
+  const spotifyApiReadyRef = useRef(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showYouTube, setShowYouTube] = useState(false);
   const [embedError, setEmbedError] = useState<string | null>(null);
@@ -169,10 +202,9 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         sendYouTubeCommand('pauseVideo');
         setShowYouTube(false);
       }
-      if (choice?.type === 'spotify' && spotifyIframeRef.current) {
-        // Reload src to stop playback
-        // eslint-disable-next-line no-self-assign
-        spotifyIframeRef.current.src = spotifyIframeRef.current.src;
+      if (choice?.type === 'spotify') {
+        spotifyControllerRef.current?.pause();
+        spotifyControllerRef.current?.seek(0);
       }
       setIsPlaying(false);
     },
@@ -182,14 +214,20 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         setShowYouTube(true);
         setIsPlaying(true);
       }
-      // Spotify: user controls via iframe
+      if (choice?.type === 'spotify') {
+        spotifyControllerRef.current?.play();
+        setIsPlaying(true);
+      }
     },
     pause: () => {
       if (choice?.type === 'youtube') {
         sendYouTubeCommand('pauseVideo');
         setIsPlaying(false);
       }
-      // Spotify: user controls via iframe
+      if (choice?.type === 'spotify') {
+        spotifyControllerRef.current?.pause();
+        setIsPlaying(false);
+      }
     },
   }));
 
@@ -200,6 +238,71 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       onPlaybackError?.(card.id, 'embed-error');
     }
   }, [card.id, embedError, onPlaybackError]);
+
+  // Spotify Embed API: Script laden und Controller erstellen / ersetzen wenn sich der Track ändert
+  useEffect(() => {
+    if (choice?.type !== 'spotify') return;
+    const uri = toSpotifyTrackUri(choice.url);
+    if (!uri) return;
+
+    let destroyed = false;
+
+    const initController = (api: SpotifyIFrameAPI) => {
+      if (destroyed || !spotifyContainerRef.current) return;
+      // Zerstöre alten Controller, falls vorhanden
+      spotifyControllerRef.current?.destroy();
+      spotifyControllerRef.current = null;
+
+      // Container leeren (alter iframe entfernen)
+      spotifyContainerRef.current.innerHTML = '';
+
+      api.createController(
+        spotifyContainerRef.current,
+        { uri, height: 152, conceal_metadata: concealMetadata },
+        (controller) => {
+          if (destroyed) { controller.destroy(); return; }
+          spotifyControllerRef.current = controller;
+        }
+      );
+    };
+
+    // Script nur einmal laden; mehrere Callbacks via Array koordinieren
+    if (typeof window !== 'undefined') {
+      // API schon initialisiert → sofort Controller erstellen
+      if (window._spotifyIframeApiInstance) {
+        initController(window._spotifyIframeApiInstance);
+      } else {
+        if (!window.SpotifyIframeApiReadyCallbacks) {
+          window.SpotifyIframeApiReadyCallbacks = [];
+          window.onSpotifyIframeApiReady = (api: SpotifyIFrameAPI) => {
+            window._spotifyIframeApiInstance = api;
+            window.SpotifyIframeApiReadyCallbacks!.forEach(cb => cb(api));
+          };
+        }
+        // Script nur einmal ins DOM einfügen
+        if (!document.getElementById('spotify-embed-api')) {
+          const script = document.createElement('script');
+          script.id = 'spotify-embed-api';
+          script.src = 'https://open.spotify.com/embed/iframe-api/v1';
+          script.async = true;
+          document.head.appendChild(script);
+        }
+        window.SpotifyIframeApiReadyCallbacks.push(initController);
+      }
+    }
+
+    return () => {
+      destroyed = true;
+      if (window.SpotifyIframeApiReadyCallbacks) {
+        const idx = window.SpotifyIframeApiReadyCallbacks.indexOf(initController);
+        if (idx !== -1) window.SpotifyIframeApiReadyCallbacks.splice(idx, 1);
+      }
+      spotifyControllerRef.current?.destroy();
+      spotifyControllerRef.current = null;
+    };
+  // concealMetadata hier explizit im dep-array, damit ein Wechsel (z.B. Antwort zeigen) den Controller neu erstellt
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [choiceSignature, concealMetadata]);
 
   if (!choice) {
     if (card.category === 'schaetzfragen') return null;
@@ -278,8 +381,8 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       );
     }
     case 'spotify': {
-      const embedSrc = toSpotifyEmbed(choice.url);
-      if (!embedSrc) {
+      const uri = toSpotifyTrackUri(choice.url);
+      if (!uri) {
         return (
           <a href={choice.url} target="_blank" rel="noreferrer" className="text-sm underline">
             In Spotify öffnen
@@ -293,28 +396,9 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               YouTube-Quelle nicht erreichbar, Spotify wird verwendet.
             </p>
           )}
-          {/* Wrapper: position relative so the metadata overlay sits on top of the iframe */}
-          <div className="relative rounded-2xl overflow-hidden" style={{ height: 152 }}>
-            <iframe
-              ref={spotifyIframeRef}
-              src={embedSrc}
-              width="100%"
-              height="152"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="eager"
-              className="block rounded-2xl"
-              title="Spotify Player"
-            />
-            {/* Metadata overlay: covers title/artist area (right of the album-art).
-                 The play button is overlaid ON the album-art square (~152px wide),
-                 so starting at 152px keeps it fully clickable while hiding track name/artist. */}
-            {concealMetadata && (
-              <div
-                className="absolute inset-y-0 right-0 rounded-r-2xl"
-                style={{ left: 152, background: '#121212', pointerEvents: 'none' }}
-              />
-            )}
-          </div>
+          {/* Die Spotify Embed API rendert den Player in dieses div.
+              conceal_metadata=true wird direkt an die API übergeben – kein Overlay nötig. */}
+          <div ref={spotifyContainerRef} className="rounded-2xl overflow-hidden" style={{ minHeight: 152 }} />
           <a
             href={choice.url}
             target="_blank"
