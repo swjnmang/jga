@@ -392,12 +392,12 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               YouTube-Quelle nicht erreichbar, Spotify wird verwendet.
             </p>
           )}
-          {/* Spotify Embed API Player – bei concealMetadata unsichtbar off-screen, sonst sichtbar */}
+          {/* Spotify Embed API Player – bei concealMetadata visuell vollständig versteckt (clip-path), Audio läuft weiter */}
           <div
             ref={spotifyContainerRef}
             aria-hidden={concealMetadata}
             style={concealMetadata
-              ? { position: 'fixed', top: '-9999px', left: '-9999px', width: '1px', height: '1px', opacity: 0, pointerEvents: 'none', overflow: 'hidden' }
+              ? { clipPath: 'inset(100%)', position: 'absolute', width: '320px', height: '152px', pointerEvents: 'none' }
               : { borderRadius: '1rem', overflow: 'hidden', minHeight: 152 }
             }
           />
