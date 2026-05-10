@@ -1400,6 +1400,114 @@ export default function MultiplayerGamePage() {
 
     return (
       <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-3 sm:py-5 space-y-3">
+
+        {/* ═══════════════════════════════════════════════════════════
+            ERGEBNISSEITE — wird angezeigt sobald Host "Auswertung"
+            geklickt hat oder der 15s-Timer abläuft (resultRevealed)
+            ═══════════════════════════════════════════════════════════ */}
+        {game.resultRevealed && game.pendingResult && currentCard && (() => {
+          const activeGroupId = game.currentTurnGroupId!;
+          const activeGroupName = game.groups[activeGroupId]?.name ?? 'Aktives Team';
+          const correctPos = game.flexPhaseCorrectPosition;
+          const flexWinnerId = correctPos !== undefined && correctPos !== null
+            ? (game.flexTips ?? {})[String(correctPos)]
+            : undefined;
+          const flexWinnerName = flexWinnerId ? game.groups[flexWinnerId]?.name : undefined;
+          const answerLabel = currentCard.category === 'music'
+            ? `${currentCard.hint} — ${currentCard.title}`
+            : currentCard.answer;
+          const tips = game.flexTips ?? {};
+          const tipEntries = Object.entries(tips);
+
+          return (
+            <div className="space-y-3">
+              {/* Korrekte Antwort */}
+              <div className="card-surface rounded-2xl p-5 text-center space-y-1">
+                <p className="text-sm text-ink/60">Die korrekte Antwort ist:</p>
+                <p className="text-4xl font-bold">{currentCard.year}</p>
+                <p className="text-base font-semibold text-ink/80">{answerLabel}</p>
+              </div>
+
+              {/* Wer erhält die Karte? */}
+              {game.pendingResult === 'correct' ? (
+                <div className="rounded-2xl bg-green-500/10 border-2 border-green-500/40 p-4 text-center">
+                  <p className="text-lg font-bold text-green-500">✅ <span>{activeGroupName}</span> erhält die Karte!</p>
+                </div>
+              ) : flexWinnerName ? (
+                <div className="rounded-2xl bg-blue-500/10 border-2 border-blue-400/40 p-4 text-center">
+                  <p className="text-lg font-bold text-blue-400">🔵 <span>{flexWinnerName}</span> hat den Flex-Tipp getroffen und erhält die Karte!</p>
+                </div>
+              ) : (
+                <div className="rounded-2xl bg-red-500/10 border-2 border-red-400/40 p-4 text-center">
+                  <p className="text-lg font-bold text-red-400">❌ Keine Gruppe erhält die Karte.</p>
+                </div>
+              )}
+
+              {/* Host: Flex-Button Vergabe */}
+              {isHostSession && (
+                !flexJudgmentDone ? (
+                  <div className="card-surface rounded-2xl border-2 border-blue-400/50 p-4 space-y-3">
+                    <p className="font-semibold text-center text-sm">
+                      Hat <span className="font-bold">{activeGroupName}</span> die Frage korrekt beantwortet (Titel / Person / Film — unabhängig von der Jahreszahl)?
+                    </p>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => handleAwardFlex(true)}
+                        className="flex-1 px-4 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 text-sm flex items-center justify-center gap-2"
+                      >
+                        🔵 Ja — +1 Flex-Button
+                      </button>
+                      <button
+                        onClick={() => handleAwardFlex(false)}
+                        className="flex-1 px-4 py-3 bg-ink/20 text-ink rounded-xl font-semibold hover:bg-ink/30 text-sm"
+                      >
+                        Nein
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <p className="text-center text-xs text-ink/50">Flex-Entscheidung getroffen ✓</p>
+                )
+              )}
+
+              {/* Eingegangene Flex-Tipps */}
+              <div className="card-surface rounded-2xl p-4 space-y-1">
+                <p className="text-xs font-semibold text-blue-400">Eingegangene Flex-Tipps:</p>
+                {tipEntries.length === 0 ? (
+                  <p className="text-xs text-ink/50">Kein Tipp abgegeben</p>
+                ) : (
+                  tipEntries.map(([pos, gId]) => (
+                    <p key={pos} className="text-xs text-ink/80">
+                      <span className="font-semibold">{game.groups[gId]?.name ?? gId}</span>: Position {pos}
+                      {String(correctPos) === pos ? ' ✅' : ' ❌'}
+                    </p>
+                  ))
+                )}
+              </div>
+
+              {/* Host: Weiter-Button */}
+              {isHostSession && (
+                <button
+                  onClick={handleNextCard}
+                  disabled={isProcessing}
+                  className="w-full px-6 py-4 bg-ink text-inkDark rounded-2xl font-bold text-lg hover:opacity-90 transition-opacity disabled:opacity-50"
+                >
+                  {isProcessing ? '⏳ Bitte warten…' : 'Weiter zum nächsten Team →'}
+                </button>
+              )}
+
+              {/* Nicht-Host: Warte-Meldung */}
+              {!isHostSession && (
+                <div className="text-center py-3">
+                  <p className="text-sm text-ink/60">⏳ Warte auf den Spielleiter…</p>
+                </div>
+              )}
+            </div>
+          );
+        })()}
+
+        {/* Normale Spielansicht — nur wenn NICHT im Ergebnis-Modus */}
+        {!game.resultRevealed && (<>
         {/* Header */}
         <div className="text-center space-y-1">
           {effectiveIsHost && (
@@ -2107,6 +2215,7 @@ export default function MultiplayerGamePage() {
             </div>
           </details>
         )}
+        </>)}  {/* Ende !game.resultRevealed */}
       </main>
     );
   }
