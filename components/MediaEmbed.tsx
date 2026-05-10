@@ -305,11 +305,13 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               className="block rounded-2xl"
               title="Spotify Player"
             />
-            {/* Metadata overlay: covers title/artist area (right of the album-art + play button) */}
+            {/* Metadata overlay: covers title/artist area (right of the album-art).
+                 The play button is overlaid ON the album-art square (~152px wide),
+                 so starting at 152px keeps it fully clickable while hiding track name/artist. */}
             {concealMetadata && (
               <div
                 className="absolute inset-y-0 right-0 rounded-r-2xl"
-                style={{ left: 80, background: '#121212', pointerEvents: 'none' }}
+                style={{ left: 152, background: '#121212', pointerEvents: 'none' }}
               />
             )}
           </div>
