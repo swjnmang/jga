@@ -122,7 +122,6 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   // Spotify Embed API
   const spotifyContainerRef = useRef<HTMLDivElement | null>(null);
   const spotifyControllerRef = useRef<SpotifyEmbedController | null>(null);
-  const spotifyApiReadyRef = useRef(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showYouTube, setShowYouTube] = useState(false);
   const [embedError, setEmbedError] = useState<string | null>(null);
@@ -249,12 +248,9 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
     const initController = (api: SpotifyIFrameAPI) => {
       if (destroyed || !spotifyContainerRef.current) return;
-      // Zerstöre alten Controller, falls vorhanden
+      // Zerstöre alten Controller, falls vorhanden – destroy() entfernt auch den Iframe aus dem DOM
       spotifyControllerRef.current?.destroy();
       spotifyControllerRef.current = null;
-
-      // Container leeren (alter iframe entfernen)
-      spotifyContainerRef.current.innerHTML = '';
 
       api.createController(
         spotifyContainerRef.current,
