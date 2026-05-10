@@ -427,7 +427,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               </div>
             </div>
           ) : null}
-          <aa
+          <a
             href={choice.url}
             target="_blank"
             rel="noreferrer"
