@@ -1399,19 +1399,19 @@ export default function MultiplayerGamePage() {
     }
 
     return (
-      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-3 sm:py-5 space-y-3">
         {/* Header */}
-        <div className="text-center space-y-2">
+        <div className="text-center space-y-1">
           {effectiveIsHost && (
-            <h1 className="text-3xl font-display">Timeline Multiplayer</h1>
+            <h1 className="text-2xl font-display">Timeline Multiplayer</h1>
           )}
           {game.currentTurnGroupId && (
             isActiveTurn ? (
-              <div className="mt-3 w-full px-4 py-3 rounded-xl bg-green-500 text-white font-bold text-xl animate-pulse shadow-lg shadow-green-500/30">
+              <div className="mt-1 w-full px-3 py-1.5 rounded-xl bg-green-500 text-white font-bold text-sm animate-pulse shadow-lg shadow-green-500/30">
                 ⚡ Eure Gruppe ist am Zug!
               </div>
             ) : (
-              <div className="mt-3 w-full px-4 py-3 rounded-xl bg-ink/15 text-ink font-bold text-xl">
+              <div className="mt-1 w-full px-3 py-1.5 rounded-xl bg-ink/15 text-ink font-bold text-sm">
                 🎮 Am Zug: {game.groups[game.currentTurnGroupId]?.name || 'Team'}
               </div>
             )
@@ -1438,9 +1438,9 @@ export default function MultiplayerGamePage() {
           };
           const categoryLabel = categoryLabels[currentCard.category] ?? currentCard.category;
           return (
-          <div className={`card-surface rounded-2xl p-6 space-y-4 ${(!isActiveTurn && !isHostSession) ? 'opacity-70 pointer-events-none select-none' : ''}`}>
+          <div className={`card-surface rounded-2xl p-3 sm:p-4 space-y-2 ${(!isActiveTurn && !isHostSession) ? 'opacity-70 pointer-events-none select-none' : ''}`}>
             <div className="flex items-center justify-between">
-              <h2 className="text-xl font-semibold">{categoryLabel}</h2>
+              <h2 className="text-sm font-semibold">{categoryLabel}</h2>
               <div className="flex items-center gap-2">
                 {timeLeft !== null && (
                   <span className={`text-sm font-mono font-bold px-3 py-1 rounded-full ${
@@ -1455,7 +1455,7 @@ export default function MultiplayerGamePage() {
               </div>
             </div>
 
-            <p className="text-lg">{currentCard.category === 'quote' ? 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?' : currentCard.category === 'filmserien' ? currentCard.cue + ' – Und in welchem Jahr war das?' : currentCard.cue}</p>
+            <p className="text-sm">{currentCard.category === 'quote' ? 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?' : currentCard.category === 'filmserien' ? currentCard.cue + ' – Und in welchem Jahr war das?' : currentCard.cue}</p>
 
             {currentCard.sources && (
               <div className="relative">
@@ -1517,8 +1517,8 @@ export default function MultiplayerGamePage() {
           };
 
           return (
-            <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500">
-              <h3 className="text-lg font-semibold text-center">
+            <div className="card-surface rounded-2xl p-3 sm:p-4 space-y-2 border-2 border-green-500">
+              <h3 className="text-sm font-semibold text-center">
                 Timeline von Gruppe: <span className="text-ink">{currentGroup.name}</span>
               </h3>
 
@@ -1544,7 +1544,7 @@ export default function MultiplayerGamePage() {
                   type="button"
                   onClick={() => handleSelectPosition(0)}
                   disabled={isProcessing}
-                  className={`flex-shrink-0 rounded-lg border-2 px-3 py-3 text-xs font-semibold transition-all disabled:opacity-50 ${
+                  className={`flex-shrink-0 rounded-lg border-2 px-2 py-1.5 text-xs font-semibold transition-all disabled:opacity-50 ${
                     selectedPosition === 0
                       ? 'border-ink bg-ink text-inkDark scale-105'
                       : 'border-dashed border-ink/30 bg-ink/5 hover:border-ink hover:bg-ink/10'
@@ -1577,7 +1577,7 @@ export default function MultiplayerGamePage() {
                       type="button"
                       onClick={() => handleSelectPosition(idx + 1)}
                       disabled={isProcessing}
-                      className={`flex-shrink-0 rounded-lg border-2 px-3 py-3 text-xs font-semibold transition-all disabled:opacity-50 ${
+                      className={`flex-shrink-0 rounded-lg border-2 px-2 py-1.5 text-xs font-semibold transition-all disabled:opacity-50 ${
                         selectedPosition === idx + 1
                           ? 'border-ink bg-ink text-inkDark scale-105'
                           : 'border-dashed border-ink/30 bg-ink/5 hover:border-ink hover:bg-ink/10'
@@ -1588,13 +1588,6 @@ export default function MultiplayerGamePage() {
                   </div>
                 ))}
               </div>
-
-              {/* Ausgewählte Position anzeigen */}
-              {selectedPosition !== null && (
-                <p className="text-center text-sm font-semibold text-ink">
-                  Gewählte Position: <span className="text-ink/80">{positionLabel(selectedPosition)}</span>
-                </p>
-              )}
 
               {/* Platzierungs-Fehler */}
               {placementError && (
@@ -1610,7 +1603,7 @@ export default function MultiplayerGamePage() {
               <button
                 onClick={() => selectedPosition !== null && handlePlaceCard(selectedPosition)}
                 disabled={selectedPosition === null || isProcessing}
-                className="w-full py-4 rounded-xl bg-ink text-inkDark font-bold text-lg hover:opacity-90 transition-opacity disabled:opacity-40 disabled:cursor-not-allowed"
+                className="w-full py-2.5 rounded-xl bg-ink text-inkDark font-bold text-sm hover:opacity-90 transition-opacity disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 {isProcessing ? '⏳ Wird geprüft...' : '✅ Ergebnis einreichen'}
               </button>
@@ -1699,7 +1692,7 @@ export default function MultiplayerGamePage() {
           };
 
           return (
-            <div className={`card-surface rounded-2xl p-6 space-y-4 border-2 ${isActiveTurn ? 'border-green-500' : 'border-red-500'}`}>
+            <div className={`card-surface rounded-2xl p-3 sm:p-4 space-y-2 border-2 ${isActiveTurn ? 'border-green-500' : 'border-red-500'}`}>
               <h3 className="text-sm font-semibold text-center">
                 Timeline von <span className="font-bold">{activeGroup.name}</span>
                 {isFlexPhase && canFlex && (
@@ -1844,9 +1837,7 @@ export default function MultiplayerGamePage() {
               {isFlexPhase && flexTipSubmitted && (
                 <p className="text-center text-sm text-green-400 font-semibold">✓ Flex-Tipp eingereicht — warte auf Spielleiter</p>
               )}
-              {!isFlexPhase && !isActiveTurn && !isHostSession && (
-                <p className="text-center text-xs text-ink/50 opacity-60">Du bist nicht am Zug</p>
-              )}
+
             </div>
           );
         })()}
