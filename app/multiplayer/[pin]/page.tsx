@@ -1437,11 +1437,11 @@ export default function MultiplayerGamePage() {
               {/* Wer erhält die Karte? */}
               {game.pendingResult === 'correct' ? (
                 <div className="rounded-2xl bg-green-500/10 border-2 border-green-500/40 p-4 text-center">
-                  <p className="text-lg font-bold text-green-500">✅ <span>{activeGroupName}</span> erhält die Karte!</p>
+                  <p className="text-lg font-bold text-green-500">✅ Team: <span>{activeGroupName}</span> erhält die Karte!</p>
                 </div>
               ) : flexWinnerName ? (
                 <div className="rounded-2xl bg-blue-500/10 border-2 border-blue-400/40 p-4 text-center">
-                  <p className="text-lg font-bold text-blue-400">🔵 <span>{flexWinnerName}</span> hat den Flex-Tipp getroffen und erhält die Karte!</p>
+                  <p className="text-lg font-bold text-blue-400">✅ Team: <span>{flexWinnerName}</span> wusste es besser und hat die Karte gestohlen - nice flex!</p>
                 </div>
               ) : (
                 <div className="rounded-2xl bg-red-500/10 border-2 border-red-400/40 p-4 text-center">
@@ -2055,11 +2055,11 @@ export default function MultiplayerGamePage() {
                       </div>
                       {game.pendingResult === 'correct' ? (
                         <div className="rounded-xl bg-green-500/10 border border-green-500/30 p-3 text-center">
-                          <p className="font-semibold text-green-500">✅ <span className="font-bold">{activeGroupName}</span> erhält die Karte!</p>
+                          <p className="font-semibold text-green-500">✅ Team: <span className="font-bold">{activeGroupName}</span> erhält die Karte!</p>
                         </div>
                       ) : flexWinnerName ? (
                         <div className="rounded-xl bg-blue-500/10 border border-blue-400/30 p-3 text-center">
-                          <p className="font-semibold text-blue-400">🔵 <span className="font-bold">{flexWinnerName}</span> hat den Flex-Tipp getroffen und erhält die Karte!</p>
+                          <p className="font-semibold text-blue-400">✅ Team: <span className="font-bold">{flexWinnerName}</span> wusste es besser und hat die Karte gestohlen - nice flex!</p>
                         </div>
                       ) : (
                         <div className="rounded-xl bg-red-500/10 border border-red-400/30 p-3 text-center">
