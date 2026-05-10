@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo, Suspense } from 'react';
+import { useState, useEffect, useMemo, useRef, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { createGame, joinGame, subscribeToGame } from '@/lib/multiplayerService';
 import { cards, getCategories } from '@/lib/cards';
@@ -84,9 +84,15 @@ function MultiplayerLobbyContent() {
   );
   
   const [settings, setSettings] = useState(defaultSettings);
-  
-  // Update settings when game mode changes
+  // Tracks whether settings were just restored from sessionStorage (Spotify-Redirect)
+  const restoredFromStorage = useRef(false);
+
+  // Update settings when game mode changes — but not if we just restored from sessionStorage
   useEffect(() => {
+    if (restoredFromStorage.current) {
+      restoredFromStorage.current = false;
+      return;
+    }
     setSettings(defaultSettings);
   }, [defaultSettings]);
 
@@ -136,6 +142,27 @@ function MultiplayerLobbyContent() {
     const openFromUrl = searchParams.get('open');
     if (openFromUrl === 'create' || openFromUrl === 'join') {
       setMode(openFromUrl);
+    }
+
+    // Restore settings saved before Spotify redirect
+    if (openFromUrl === 'create') {
+      try {
+        const saved = sessionStorage.getItem('jga_draft_settings');
+        if (saved) {
+          const draft = JSON.parse(saved);
+          sessionStorage.removeItem('jga_draft_settings');
+          if (draft.gameMode) setGameMode(draft.gameMode);
+          if (draft.banMode !== undefined) setBanMode(draft.banMode);
+          if (draft.triviaWinCondition) setTriviaWinCondition(draft.triviaWinCondition);
+          if (draft.timelineWinTarget) setTimelineWinTarget(draft.timelineWinTarget);
+          if (draft.settings) {
+            restoredFromStorage.current = true;
+            setSettings(draft.settings);
+          }
+        }
+      } catch {
+        sessionStorage.removeItem('jga_draft_settings');
+      }
     }
   }, [searchParams]);
 
@@ -194,9 +221,18 @@ function MultiplayerLobbyContent() {
       }
 
       // Filter und shuffle Karten basierend auf Settings
-      const filteredCards = cards.filter(card => {
+      const filteredCards = cards.filter((card: any) => {
         if (!settings.categories.includes(card.category)) return false;
         if (!settings.difficulties.includes(card.difficulty)) return false;
+        // Musik-Karten: nach Playlists und Genres filtern
+        if (card.category === 'music') {
+          const cardPlaylists: string[] = card.playlists && card.playlists.length > 0 ? card.playlists : ['imported-playlist'];
+          const hasPlaylist = settings.playlists.length === 0 || cardPlaylists.some((p: string) => settings.playlists.includes(p));
+          if (!hasPlaylist) return false;
+          const cardGenres: string[] = card.genres ?? [];
+          const hasGenre = cardGenres.length === 0 || settings.genres.length === 0 || cardGenres.some((g: string) => (settings.genres as string[]).includes(g));
+          if (!hasGenre) return false;
+        }
         return true;
       });
       const shuffled = [...filteredCards].sort(() => Math.random() - 0.5);
@@ -744,6 +780,17 @@ function MultiplayerLobbyContent() {
                     <a
                       href={`/api/spotify/authorize?return=${spotifyReturnUrl}`}
                       className="rounded-lg bg-[#1DB954] hover:bg-[#17a74a] text-white px-4 py-2 text-sm font-semibold transition-colors"
+                      onClick={() => {
+                        try {
+                          sessionStorage.setItem('jga_draft_settings', JSON.stringify({
+                            settings,
+                            gameMode,
+                            banMode,
+                            triviaWinCondition,
+                            timelineWinTarget,
+                          }));
+                        } catch { /* ignore */ }
+                      }}
                     >
                       Spotify-Login starten
                     </a>
