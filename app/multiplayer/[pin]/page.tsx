@@ -1261,6 +1261,7 @@ export default function MultiplayerGamePage() {
                   ref={mediaEmbedRef}
                   card={currentCard}
                   preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
+                  concealMetadata={currentCard.category === 'music'}
                 />
               ) : currentCard.category === 'music' ? (
                 <div className="rounded-2xl card-surface bg-ink/5 p-6 text-center space-y-3">
@@ -1580,6 +1581,7 @@ export default function MultiplayerGamePage() {
                     ref={mediaEmbedRef}
                     card={currentCard}
                     preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
+                    concealMetadata={currentCard.category === 'music'}
                   />
                 ) : (
                   /* Mitspieler: Musik nur Symbol, andere Medien vollständig */
