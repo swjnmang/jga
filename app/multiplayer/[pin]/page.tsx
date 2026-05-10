@@ -1264,7 +1264,7 @@ export default function MultiplayerGamePage() {
             {currentCard.sources && (
               effectiveIsHost ? (
                 <MediaEmbed
-                  key="trivia-host-media"
+                  key={`trivia-host-media-${currentCard.id}`}
                   ref={mediaEmbedRef}
                   card={currentCard}
                   preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
@@ -1584,7 +1584,7 @@ export default function MultiplayerGamePage() {
                 {/* Host sieht volle Kontrolle */}
                 {isHostSession ? (
                   <MediaEmbed 
-                    key="timeline-host-media"
+                    key={`timeline-host-media-${currentCard.id}`}
                     ref={mediaEmbedRef}
                     card={currentCard}
                     preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
