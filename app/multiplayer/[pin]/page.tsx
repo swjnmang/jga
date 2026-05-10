@@ -1786,13 +1786,13 @@ export default function MultiplayerGamePage() {
                             ) : masked ? (
                               <>
                                 <p className="text-xs text-ink/40 italic">???</p>
-                                <p className="text-xs text-green-400 font-semibold mt-0.5">← Neu platziert</p>
+                                <p className="text-xs text-green-400 font-semibold mt-0.5">Neu platziert</p>
                               </>
                             ) : (
                               <>
                                 <p className="text-xs truncate text-ink/70">{item.hint || ''}</p>
                                 <p className="text-xs truncate text-ink/50">{item.title || ''}</p>
-                                {isNewCard && <p className="text-xs text-green-400 font-semibold mt-0.5">← Neu platziert</p>}
+                                {isNewCard && <p className="text-xs text-green-400 font-semibold mt-0.5">Neu platziert</p>}
                               </>
                             )}
                           </div>
