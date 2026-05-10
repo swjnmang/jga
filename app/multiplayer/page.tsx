@@ -267,7 +267,7 @@ function MultiplayerLobbyContent() {
         isHost: true
       }));
 
-      router.push(`/multiplayer/${pin}`);
+      router.push(`/multiplayer/${pin}?host=1`);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Fehler beim Erstellen des Spiels');
     } finally {

@@ -99,6 +99,13 @@ export default function MultiplayerGamePage() {
       return;
     }
 
+    // ?host=1 im URL-Parameter bedeutet: diese Tab ist die Spielleiter-Ansicht.
+    // Das bleibt beim F5-Refresh erhalten, anders als reine State-Variablen.
+    const searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.get('host') === '1') {
+      sessionData.isHost = true;
+    }
+
     setSession(sessionData);
   }, [pin, router]);
 
