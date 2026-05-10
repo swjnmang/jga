@@ -118,6 +118,8 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const latestSpotifyUrlRef = useRef<string | null>(null);
   const [spotifyInitKey, setSpotifyInitKey] = useState(0);
   const pollGenerationRef = useRef(0); // incremented each time a new player is created; cancels stale polling loops
+  const reconnectSpotifyRef = useRef<() => void>(() => {});
+  const autoReconnectDoneRef = useRef(false); // guard: auto-reconnect only once per play attempt
   const choiceSignature = useMemo(() => {
     if (!choice) return '';
     if (choice.type === 'text') return `text:${choice.text}:${choice.textDe ?? ''}`;
@@ -152,6 +154,8 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     // Increment key → SDK-useEffect läuft neu → neues Spotify.Player-Objekt mit frischer device_id
     setSpotifyInitKey((k) => k + 1);
   }
+  // Keep ref in sync so useCallback closures can call the latest reconnectSpotify
+  reconnectSpotifyRef.current = reconnectSpotify;
 
   function resetSpotify() {
     if (spotifyPlayerRef.current) {
@@ -205,6 +209,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       setShowSpotify(false);
       setEmbedError(null);
       reportedErrorRef.current = false;
+      autoReconnectDoneRef.current = false;
       autoPlayPendingRef.current = false;  // Kein Auto-Play – User muss manuell starten
       latestSpotifyUrlRef.current = choice.url;
       // Player und device_id bleiben unverändert – kein spotifyInitKey++
@@ -217,6 +222,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       setShowSpotify(false);
       setEmbedError(null);
       reportedErrorRef.current = false;
+      autoReconnectDoneRef.current = false;
       autoPlayPendingRef.current = false;
       latestSpotifyUrlRef.current = null;
       // spotifyToken, spotifyDevice, spotifyReady → unverändert (Player bleibt verbunden)
@@ -224,6 +230,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       resetSpotify();
       setEmbedError(null);
       reportedErrorRef.current = false;
+      autoReconnectDoneRef.current = false;
       autoPlayPendingRef.current = false;
       latestSpotifyUrlRef.current = newChoiceIsSpotify ? (choice?.url ?? null) : null;
     }
@@ -432,7 +439,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         // pollGenerationRef cancels stale loops from previous player instances.
         const myGeneration = ++pollGenerationRef.current;
         (async () => {
-          const maxPolls = 30; // 30 × 500ms = 15s
+          const maxPolls = 20; // 20 × 500ms = 10s – dann ggf. Auto-Reconnect
           for (let i = 0; i < maxPolls; i++) {
             await new Promise((r) => setTimeout(r, 500));
             // Abort if a newer player was created while we were waiting
@@ -458,10 +465,18 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
             }
             console.log(`⏳ Device noch nicht sichtbar (attempt ${i + 1}/${maxPolls})...`);
           }
-          // Fallback: set ready after 15s even if device not confirmed
+          // Device never appeared in REST-API – auto-reconnect ONCE to get a fresh device_id.
+          // A second player usually registers immediately. Guard against infinite loops.
           if (pollGenerationRef.current === myGeneration) {
-            console.warn('⚠️  Device polling timeout – setze spotifyReady trotzdem');
-            setSpotifyReady(true);
+            if (!autoReconnectDoneRef.current) {
+              autoReconnectDoneRef.current = true;
+              console.warn('⚠️  Device polling timeout – Auto-Reconnect für frische device_id...');
+              reconnectSpotifyRef.current();
+            } else {
+              // Already tried once – fall back to forced-ready so user can still attempt play.
+              console.warn('⚠️  Device polling timeout (2. Mal) – setze spotifyReady trotzdem');
+              setSpotifyReady(true);
+            }
           }
         })();
       });
@@ -666,9 +681,19 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               if (freshDevice) console.log(`♻️  Frische device_id: ${freshDevice}`);
               continue;
             }
-            // All retries exhausted with 404 – do NOT create a new player; a new
-            // device_id won't help and causes concurrent polling loops.
-            // Show a manual reload prompt instead.
+            // All retries exhausted with 404 – auto-reconnect ONCE (creates a new player
+            // with a fresh device_id). Set autoPlayPendingRef so the spotifyReady effect
+            // will replay the track automatically once the new player is confirmed.
+            if (!autoReconnectDoneRef.current) {
+              autoReconnectDoneRef.current = true;
+              console.log('🔄 Auto-Reconnect nach 5×404 – neuer Player wird erstellt...');
+              latestSpotifyUrlRef.current = url;
+              autoPlayPendingRef.current = true;
+              setSpotifyLoading(false);
+              setSpotifyError('Verbinde erneut…');
+              reconnectSpotifyRef.current();
+              return;
+            }
             console.error('❌ Alle Play-Versuche fehlgeschlagen (404). Bitte ↻ Reload klicken.');
             setSpotifyError('Spotify-Device nicht erreichbar – bitte ↻ Reload klicken');
             setSpotifyLoading(false);
