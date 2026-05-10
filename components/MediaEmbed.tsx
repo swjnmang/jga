@@ -113,6 +113,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const [spotifyErrorDetail, setSpotifyErrorDetail] = useState<string | null>(null);
   const [spotifyLoading, setSpotifyLoading] = useState(false);
   const [embedError, setEmbedError] = useState<string | null>(null);
+  const [spotifyIframeFallback, setSpotifyIframeFallback] = useState(false);
   const spotifyPlayerRef = useRef<Spotify.Player | null>(null);
   const autoPlayPendingRef = useRef(false);
   const latestSpotifyUrlRef = useRef<string | null>(null);
@@ -145,12 +146,14 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       spotifyPlayerRef.current = null;
     }
     autoPlayPendingRef.current = false;
+    autoReconnectDoneRef.current = false;
     setSpotifyReady(false);
     setSpotifyDevice(null);
     setSpotifyError(null);
     setSpotifyErrorDetail(null);
     setShowSpotify(false);
     setIsPlaying(false);
+    setSpotifyIframeFallback(false);
     // Increment key → SDK-useEffect läuft neu → neues Spotify.Player-Objekt mit frischer device_id
     setSpotifyInitKey((k) => k + 1);
   }
@@ -212,6 +215,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       autoReconnectDoneRef.current = false;
       autoPlayPendingRef.current = false;  // Kein Auto-Play – User muss manuell starten
       latestSpotifyUrlRef.current = choice.url;
+      setSpotifyIframeFallback(false);
       // Player und device_id bleiben unverändert – kein spotifyInitKey++
     } else if (!newChoiceIsSpotify && sdkAlive) {
       // Karte wechselt zu Nicht-Musik (z.B. Zwischenrunde im Timeline-Modus).
@@ -224,6 +228,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       reportedErrorRef.current = false;
       autoReconnectDoneRef.current = false;
       autoPlayPendingRef.current = false;
+      setSpotifyIframeFallback(false);
       latestSpotifyUrlRef.current = null;
       // spotifyToken, spotifyDevice, spotifyReady → unverändert (Player bleibt verbunden)
     } else {
@@ -232,6 +237,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       reportedErrorRef.current = false;
       autoReconnectDoneRef.current = false;
       autoPlayPendingRef.current = false;
+      setSpotifyIframeFallback(false);
       latestSpotifyUrlRef.current = newChoiceIsSpotify ? (choice?.url ?? null) : null;
     }
     setShowYouTube(false);
@@ -465,18 +471,12 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
             }
             console.log(`⏳ Device noch nicht sichtbar (attempt ${i + 1}/${maxPolls})...`);
           }
-          // Device never appeared in REST-API – auto-reconnect ONCE to get a fresh device_id.
-          // A second player usually registers immediately. Guard against infinite loops.
+          // Device never appeared in REST-API after 10s – switch directly to iframe embed.
+          // The iframe always works and doesn't need the SDK device to be registered.
           if (pollGenerationRef.current === myGeneration) {
-            if (!autoReconnectDoneRef.current) {
-              autoReconnectDoneRef.current = true;
-              console.warn('⚠️  Device polling timeout – Auto-Reconnect für frische device_id...');
-              reconnectSpotifyRef.current();
-            } else {
-              // Already tried once – fall back to forced-ready so user can still attempt play.
-              console.warn('⚠️  Device polling timeout (2. Mal) – setze spotifyReady trotzdem');
-              setSpotifyReady(true);
-            }
+            console.warn('⚠️  Device polling timeout – aktiviere Spotify-Iframe-Fallback');
+            setSpotifyIframeFallback(true);
+            setSpotifyReady(true); // unblock UI
           }
         })();
       });
@@ -638,6 +638,12 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       if (preTransferRes && (preTransferRes.ok || preTransferRes.status === 204)) {
         console.log('✅ Pre-Transfer erfolgreich');
         await new Promise((r) => setTimeout(r, 500));
+      } else if (preTransferRes?.status === 404) {
+        // Device not found in Spotify backend → no point retrying; switch to iframe immediately.
+        console.warn('⚠️  Pre-Transfer 404 – Device nicht registriert, Iframe-Fallback aktiviert');
+        setSpotifyIframeFallback(true);
+        setSpotifyLoading(false);
+        return;
       } else {
         console.warn('⚠️  Pre-Transfer fehlgeschlagen:', preTransferRes?.status);
         await new Promise((r) => setTimeout(r, 300));
@@ -682,20 +688,9 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               continue;
             }
             // All retries exhausted with 404 – auto-reconnect ONCE (creates a new player
-            // with a fresh device_id). Set autoPlayPendingRef so the spotifyReady effect
-            // will replay the track automatically once the new player is confirmed.
-            if (!autoReconnectDoneRef.current) {
-              autoReconnectDoneRef.current = true;
-              console.log('🔄 Auto-Reconnect nach 5×404 – neuer Player wird erstellt...');
-              latestSpotifyUrlRef.current = url;
-              autoPlayPendingRef.current = true;
-              setSpotifyLoading(false);
-              setSpotifyError('Verbinde erneut…');
-              reconnectSpotifyRef.current();
-              return;
-            }
-            console.error('❌ Alle Play-Versuche fehlgeschlagen (404). Bitte ↻ Reload klicken.');
-            setSpotifyError('Spotify-Device nicht erreichbar – bitte ↻ Reload klicken');
+            // All 5 retries failed with 404 – switch to iframe embed fallback.
+            console.error('❌ Alle Play-Versuche fehlgeschlagen (404) – Iframe-Fallback aktiviert');
+            setSpotifyIframeFallback(true);
             setSpotifyLoading(false);
             setIsPlaying(false);
             return;
@@ -896,6 +891,37 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       );
     }
     case 'spotify': {
+      // If the SDK device never registered in Spotify's backend, show the iframe embed instead.
+      if (spotifyIframeFallback) {
+        const iframeSrc = toSpotifyEmbed(choice.url);
+        return (
+          <div className="space-y-2">
+            <p className="text-xs text-amber-300">Spotify-Player wird als Einbettung angezeigt (SDK nicht erreichbar).</p>
+            {iframeSrc ? (
+              <iframe
+                src={iframeSrc}
+                width="100%"
+                height="152"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="eager"
+                className="rounded-xl"
+                title="Spotify Embed"
+              />
+            ) : (
+              <a href={choice.url} target="_blank" rel="noreferrer" className="text-sm underline">
+                In Spotify öffnen
+              </a>
+            )}
+            <button
+              type="button"
+              className="text-xs underline text-sand/60"
+              onClick={() => { setSpotifyIframeFallback(false); reconnectSpotify(); }}
+            >
+              SDK erneut versuchen
+            </button>
+          </div>
+        );
+      }
       const showSpotifyFallback = Boolean(embedError || spotifyError || !spotifyReady);
       const primaryLabel = spotifyLoading ? 'Lädt…' : isPlaying ? 'Pause' : 'Play';
       const primaryIcon = spotifyLoading ? '⏳' : isPlaying ? '⏸' : '▶';
