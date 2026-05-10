@@ -1658,9 +1658,11 @@ export default function MultiplayerGamePage() {
           const blockedPosition = game.activeGroupPlacedPosition ?? null;
           // Bereits von anderen belegte Positionen
           const takenPositions = new Set(Object.keys(game.flexTips ?? {}).map(Number));
-          // Nur die exakte Position der spielenden Gruppe ist gesperrt (wo sie die Karte gelegt hat).
-          // Alle anderen Positionen – auch die direkten Nachbarn der neuen Karte – sind erlaubt.
-          const isBlocked = (pos: number) => pos === blockedPosition;
+          // Die neue Karte liegt bei Index blockedPosition in der displayTimeline.
+          // Beide Slots, die die neue Karte flankieren (links = blockedPosition, rechts = blockedPosition+1),
+          // sind gesperrt – denn ein Flex-Button dort würde dieselbe Lücke wie die gespielte Karte bedeuten.
+          const isBlocked = (pos: number) =>
+            blockedPosition !== null && (pos === blockedPosition || pos === blockedPosition + 1);
           const isTaken = (pos: number) => takenPositions.has(pos) && !isBlocked(pos);
 
           // Host: Live-Marker für jeden eingereichten Flex-Tipp direkt in der Timeline
