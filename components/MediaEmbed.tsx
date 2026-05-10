@@ -246,15 +246,21 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
     let destroyed = false;
 
+    // Container direkt in document.body mounten – komplett außerhalb des React-Renders,
+    // damit der Spotify-iframe nie im sichtbaren DOM-Baum der Seite auftaucht.
+    const container = document.createElement('div');
+    container.style.cssText = 'position:fixed;top:-9999px;left:-9999px;width:320px;height:152px;pointer-events:none;visibility:hidden;';
+    document.body.appendChild(container);
+    spotifyContainerRef.current = container;
+
     const initController = (api: SpotifyIFrameAPI) => {
-      if (destroyed || !spotifyContainerRef.current) return;
-      // Zerstöre alten Controller, falls vorhanden – destroy() entfernt auch den Iframe aus dem DOM
+      if (destroyed) return;
       spotifyControllerRef.current?.destroy();
       spotifyControllerRef.current = null;
 
       api.createController(
-        spotifyContainerRef.current,
-        { uri, height: 152, conceal_metadata: concealMetadata },
+        container,
+        { uri, height: 152, conceal_metadata: false },
         (controller) => {
           if (destroyed) { controller.destroy(); return; }
           spotifyControllerRef.current = controller;
@@ -262,9 +268,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       );
     };
 
-    // Script nur einmal laden; mehrere Callbacks via Array koordinieren
     if (typeof window !== 'undefined') {
-      // API schon initialisiert → sofort Controller erstellen
       if (window._spotifyIframeApiInstance) {
         initController(window._spotifyIframeApiInstance);
       } else {
@@ -275,7 +279,6 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
             window.SpotifyIframeApiReadyCallbacks!.forEach(cb => cb(api));
           };
         }
-        // Script nur einmal ins DOM einfügen
         if (!document.getElementById('spotify-embed-api')) {
           const script = document.createElement('script');
           script.id = 'spotify-embed-api';
@@ -295,10 +298,11 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       }
       spotifyControllerRef.current?.destroy();
       spotifyControllerRef.current = null;
+      if (container.parentNode) container.parentNode.removeChild(container);
+      spotifyContainerRef.current = null;
     };
-  // concealMetadata hier explizit im dep-array, damit ein Wechsel (z.B. Antwort zeigen) den Controller neu erstellt
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [choiceSignature, concealMetadata]);
+  }, [choiceSignature]);
 
   if (!choice) {
     if (card.category === 'schaetzfragen') return null;
@@ -385,6 +389,8 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
           </a>
         );
       }
+      // Der Spotify Embed API Container wird in document.body gemountet (useEffect),
+      // nicht hier im JSX – dadurch ist der iframe komplett aus dem sichtbaren DOM heraus.
       return (
         <div className="space-y-2">
           {fallbackNotice && (
@@ -392,17 +398,8 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               YouTube-Quelle nicht erreichbar, Spotify wird verwendet.
             </p>
           )}
-          {/* Spotify Embed API Player – bei concealMetadata visuell vollständig versteckt (clip-path), Audio läuft weiter */}
-          <div
-            ref={spotifyContainerRef}
-            aria-hidden={concealMetadata}
-            style={concealMetadata
-              ? { clipPath: 'inset(100%)', position: 'absolute', width: '320px', height: '152px', pointerEvents: 'none' }
-              : { borderRadius: '1rem', overflow: 'hidden', minHeight: 152 }
-            }
-          />
-          {/* Sichtbare UI: eigene Play/Pause-Kontrolle, komplett metadatenfrei */}
           {concealMetadata ? (
+            // Während des Spiels: nur grüner Play/Pause-Button, keine Metadaten sichtbar
             <div className="rounded-2xl card-surface flex items-center gap-4 px-5 py-4" style={{ minHeight: 80 }}>
               <button
                 type="button"
@@ -426,16 +423,17 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
                 <span className="text-xs text-ink/40">Metadaten versteckt</span>
               </div>
             </div>
-          ) : null}
-          {!concealMetadata && (
-            <a
-              href={choice.url}
-              target="_blank"
-              rel="noreferrer"
-              className="text-xs text-sand/50 underline"
-            >
-              In Spotify öffnen
-            </a>
+          ) : (
+            // Ohne concealMetadata (z.B. Karten-Ansicht): vollständigen Player anzeigen
+            <iframe
+              src={`https://open.spotify.com/embed/track/${uri.replace('spotify:track:', '')}?utm_source=generator&theme=0`}
+              width="100%"
+              height="152"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="eager"
+              className="block rounded-2xl"
+              title="Spotify Player"
+            />
           )}
         </div>
       );
