@@ -72,6 +72,7 @@ export default function MultiplayerGamePage() {
   const [isMediaPlaying, setIsMediaPlaying] = useState(false);
   const prevTurnGroupRef = useRef<string | null>(null);
   const [timeLeft, setTimeLeft] = useState<number | null>(null);
+  const [flexTimer, setFlexTimer] = useState<number | null>(null);
 
   
   // Host-Funktionen
@@ -146,7 +147,34 @@ export default function MultiplayerGamePage() {
     setFlexTipSubmitted(false);
     setFlexJudgmentDone(false);
     setFlexPhaseEvaluated(false);
+    setFlexTimer(null);
   }, [game?.currentCardId]);
+
+  // Flex-Phase: 15-Sekunden-Countdown → automatische Auswertung
+  useEffect(() => {
+    if (!game?.flexPhaseActive || !game?.pendingResult || flexPhaseEvaluated || game?.resultRevealed) {
+      setFlexTimer(null);
+      return;
+    }
+    setFlexTimer(15);
+    const id = window.setInterval(() => {
+      setFlexTimer(prev => {
+        if (prev === null || prev <= 1) { clearInterval(id); return 0; }
+        return prev - 1;
+      });
+    }, 1000);
+    return () => clearInterval(id);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [game?.flexPhaseActive, game?.pendingResult, flexPhaseEvaluated, game?.resultRevealed]);
+
+  // Auto-Auswertung wenn Flex-Timer abläuft (nur Host führt revealResult aus)
+  useEffect(() => {
+    if (flexTimer !== 0 || flexPhaseEvaluated) return;
+    if (!effectiveIsHost) return;
+    revealResult(pin).catch(console.error);
+    setFlexPhaseEvaluated(true);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [flexTimer]);
 
   const handleToggleReady = async () => {
     if (!session || !game) return;
@@ -1434,6 +1462,7 @@ export default function MultiplayerGamePage() {
                 {/* Host sieht volle Kontrolle */}
                 {isHostSession ? (
                   <MediaEmbed 
+                    key="timeline-host-media"
                     ref={mediaEmbedRef}
                     card={currentCard}
                     preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
@@ -1673,6 +1702,26 @@ export default function MultiplayerGamePage() {
                 )}
               </h3>
 
+              {/* Flex-Phase Countdown Banner — sichtbar für alle */}
+              {isFlexPhase && !game.resultRevealed && flexTimer !== null && (
+                <div className={`rounded-xl border-2 px-4 py-3 flex items-center justify-between ${
+                  flexTimer <= 5
+                    ? 'bg-red-500/15 border-red-500/60 animate-pulse'
+                    : 'bg-blue-500/10 border-blue-400/40'
+                }`}>
+                  <span className={`text-sm font-semibold ${
+                    flexTimer <= 5 ? 'text-red-400' : 'text-blue-400'
+                  }`}>
+                    🔵 Flex-Phase — Jetzt Flex-Button einsetzen!
+                  </span>
+                  <span className={`font-mono font-bold text-lg ${
+                    flexTimer <= 5 ? 'text-red-400' : 'text-blue-400'
+                  }`}>
+                    {flexTimer}s
+                  </span>
+                </div>
+              )}
+
               <div className="flex items-center gap-1 overflow-x-auto pb-2">
                 {/* Flex-Tipp Button vor Position 0 */}
                 {canFlex && !isBlocked(0) && !takenPositions.has(0) && (
@@ -1860,7 +1909,9 @@ export default function MultiplayerGamePage() {
                   onClick={async () => { await revealResult(pin); setFlexPhaseEvaluated(true); }}
                   className="w-full mt-2 px-6 py-4 bg-amber-500 text-white rounded-lg font-semibold hover:bg-amber-600 transition-colors text-lg"
                 >
-                  📊 Auswertung
+                  {flexTimer !== null && flexTimer > 0
+                    ? `📊 Auswertung (auto in ${flexTimer}s)`
+                    : '📊 Auswertung'}
                 </button>
               </>
             ) : (

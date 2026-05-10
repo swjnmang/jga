@@ -1260,11 +1260,13 @@ function computeNextTurn(
 ): NextTurnResult {
   // Eine Gruppe ist für eine Kategorie spielberechtigt wenn:
   // - Modus ist Punkte, ODER
-  // - Kategorie ist 'schaetzfragen' (jeder kann immer mitspielen), ODER
   // - Die Gruppe hat diese Kategorie noch nicht gesammelt
+  // Hinweis: Die frühere Schätzfragen-Ausnahme ("immer spielberechtigt") wurde entfernt,
+  // da sie eine Endlosschleife verursachte: Gruppen, die Schätzfragen bereits gesammelt
+  // hatten, wurden trotzdem immer wieder in Schätzfragen-Runden geschickt und nie zu
+  // anderen Kategorien weitergeleitet.
   const isEligible = (gid: string, cat: string): boolean => {
     if (winCondition !== 'categories') return true;
-    if (cat === 'schaetzfragen') return true;
     return !(groupCompletedCategories[gid] ?? []).includes(cat);
   };
 
