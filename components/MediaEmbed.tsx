@@ -396,10 +396,42 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               YouTube-Quelle nicht erreichbar, Spotify wird verwendet.
             </p>
           )}
-          {/* Die Spotify Embed API rendert den Player in dieses div.
-              conceal_metadata=true wird direkt an die API übergeben – kein Overlay nötig. */}
-          <div ref={spotifyContainerRef} className="rounded-2xl overflow-hidden" style={{ minHeight: 152 }} />
-          <a
+          {/* Spotify Embed API Player – bei concealMetadata unsichtbar off-screen, sonst sichtbar */}
+          <div
+            ref={spotifyContainerRef}
+            aria-hidden={concealMetadata}
+            style={concealMetadata
+              ? { position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }
+              : { borderRadius: '1rem', overflow: 'hidden', minHeight: 152 }
+            }
+          />
+          {/* Sichtbare UI: eigene Play/Pause-Kontrolle, komplett metadatenfrei */}
+          {concealMetadata ? (
+            <div className="rounded-2xl card-surface flex items-center gap-4 px-5 py-4" style={{ minHeight: 80 }}>
+              <button
+                type="button"
+                onClick={() => {
+                  if (isPlaying) {
+                    spotifyControllerRef.current?.pause();
+                    setIsPlaying(false);
+                  } else {
+                    spotifyControllerRef.current?.play();
+                    setIsPlaying(true);
+                    onPlay?.();
+                  }
+                }}
+                className="flex-shrink-0 w-12 h-12 rounded-full bg-green-500 hover:bg-green-400 text-black flex items-center justify-center text-xl font-bold shadow transition-colors"
+                aria-label={isPlaying ? 'Pause' : 'Play'}
+              >
+                {isPlaying ? '⏸' : '▶'}
+              </button>
+              <div className="flex flex-col gap-1">
+                <span className="text-sm font-semibold text-ink/80">🎵 Musik läuft…</span>
+                <span className="text-xs text-ink/40">Metadaten versteckt</span>
+              </div>
+            </div>
+          ) : null}
+          <aa
             href={choice.url}
             target="_blank"
             rel="noreferrer"
