@@ -305,7 +305,18 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [choiceSignature]);
 
-  if (!choice) {
+  // Schwarzes Overlay am unteren Bildschirmrand – verdeckt den Spotify Mini-Player
+  // der vom Embed direkt in den Viewport injiziert wird.
+  useEffect(() => {
+    if (!concealMetadata || choice?.type !== 'spotify') return;
+    const overlay = document.createElement('div');
+    overlay.id = 'spotify-minibar-blocker';
+    overlay.style.cssText = 'position:fixed;bottom:0;left:0;right:0;height:120px;background:#000;z-index:2147483647;pointer-events:none;';
+    document.body.appendChild(overlay);
+    return () => {
+      if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+    };
+  }, [concealMetadata, choice?.type]);
     if (card.category === 'schaetzfragen') return null;
     return <p className="text-sm text-ink/70">Keine Quelle hinterlegt.</p>;
   }
