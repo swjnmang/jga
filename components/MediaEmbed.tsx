@@ -311,7 +311,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     if (!concealMetadata || choice?.type !== 'spotify') return;
     const overlay = document.createElement('div');
     overlay.id = 'spotify-minibar-blocker';
-    overlay.style.cssText = 'position:fixed;bottom:0;left:0;right:0;height:120px;background:#000;z-index:2147483647;pointer-events:none;';
+    overlay.style.cssText = 'position:fixed;bottom:0;left:0;right:0;height:200px;background:#000;z-index:2147483647;pointer-events:none;';
     document.body.appendChild(overlay);
     return () => {
       if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
