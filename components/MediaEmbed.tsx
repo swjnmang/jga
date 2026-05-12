@@ -124,6 +124,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const spotifyControllerRef = useRef<SpotifyEmbedController | null>(null);
   const spotifyPositionRef = useRef<number>(0); // Aktuelle Position in ms für Resume
   const [isPlaying, setIsPlaying] = useState(false);
+  const [spotifyFallback, setSpotifyFallback] = useState(false); // Fallback wenn API nicht lädt
   const [showYouTube, setShowYouTube] = useState(false);
   const [embedError, setEmbedError] = useState<string | null>(null);
   const origin = useMemo(() => (typeof window !== 'undefined' ? window.location.origin : ''), []);
@@ -148,6 +149,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     setIsPlaying(false);
     setShowYouTube(false);
     setEmbedError(null);
+    setSpotifyFallback(false);
     reportedErrorRef.current = false;
   }, [choiceSignature]);
 
@@ -215,10 +217,16 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         setIsPlaying(true);
       }
       if (choice?.type === 'spotify') {
-        const pos = spotifyPositionRef.current;
-        spotifyControllerRef.current?.play();
-        if (pos > 0) spotifyControllerRef.current?.seek(pos);
-        setIsPlaying(true);
+        if (spotifyControllerRef.current) {
+          const pos = spotifyPositionRef.current;
+          spotifyControllerRef.current.play();
+          if (pos > 0) spotifyControllerRef.current.seek(pos);
+          setIsPlaying(true);
+        } else {
+          // API not loaded — switch to iframe fallback
+          setSpotifyFallback(true);
+          setIsPlaying(true);
+        }
       }
     },
     pause: () => {
@@ -269,6 +277,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
           if (destroyed) { controller.destroy(); return; }
           spotifyControllerRef.current = controller;
           spotifyPositionRef.current = 0;
+          setSpotifyFallback(false); // API loaded successfully
           // Position kontinuierlich tracken für Resume-Funktion
           controller.addListener('playback_update', (data: unknown) => {
             const d = data as { data?: { position?: number; isPaused?: boolean } };
@@ -311,7 +320,15 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       }
     }
 
+    // Fallback: if controller not ready after 5s, offer iframe fallback
+    const fallbackTimer = setTimeout(() => {
+      if (!destroyed && !spotifyControllerRef.current) {
+        setSpotifyFallback(true);
+      }
+    }, 5000);
+
     return () => {
+      clearTimeout(fallbackTimer);
       destroyed = true;
       if (window.SpotifyIframeApiReadyCallbacks) {
         const idx = window.SpotifyIframeApiReadyCallbacks.indexOf(initController);
@@ -479,6 +496,21 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
           )}
           {concealMetadata ? (
             // Während des Spiels: nur grüner Play/Pause-Button, keine Metadaten sichtbar
+            spotifyFallback ? (
+              // Fallback: Embed API nicht verfügbar — normales iframe mit autoplay
+              <div className="space-y-2">
+                <p className="text-xs text-amber-500 text-center">⚠ Spotify API nicht erreichbar – Fallback-Player</p>
+                <iframe
+                  src={`https://open.spotify.com/embed/track/${uri.replace('spotify:track:', '')}?utm_source=generator&theme=0&autoplay=1`}
+                  width="100%"
+                  height="152"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="eager"
+                  className="block rounded-2xl"
+                  title="Spotify Player"
+                />
+              </div>
+            ) : (
             <div className="rounded-2xl card-surface flex items-center justify-center px-5 py-4" style={{ minHeight: 80 }}>
               <button
                 type="button"
@@ -487,9 +519,14 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
                     spotifyControllerRef.current?.pause();
                     setIsPlaying(false);
                   } else {
-                    const pos = spotifyPositionRef.current;
-                    spotifyControllerRef.current?.play();
-                    if (pos > 0) spotifyControllerRef.current?.seek(pos);
+                    if (spotifyControllerRef.current) {
+                      const pos = spotifyPositionRef.current;
+                      spotifyControllerRef.current.play();
+                      if (pos > 0) spotifyControllerRef.current.seek(pos);
+                    } else {
+                      // API not ready yet — fallback to iframe
+                      setSpotifyFallback(true);
+                    }
                     setIsPlaying(true);
                     onPlay?.();
                   }
@@ -500,6 +537,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
                 {isPlaying ? '⏸' : '▶'}
               </button>
             </div>
+            )
           ) : (
             // Ohne concealMetadata (z.B. Karten-Ansicht): vollständigen Player anzeigen
             <iframe
