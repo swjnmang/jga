@@ -70,6 +70,7 @@ export default function MultiplayerGamePage() {
   const [selectedPosition, setSelectedPosition] = useState<number | null>(null); // Gewählte Position vor Bestätigung
   const mediaEmbedRef = useRef<MediaEmbedHandle>(null);
   const [isMediaPlaying, setIsMediaPlaying] = useState(false);
+  const [musicElapsed, setMusicElapsed] = useState(0);
   const prevTurnGroupRef = useRef<string | null>(null);
   const [timeLeft, setTimeLeft] = useState<number | null>(null);
   const [flexTimer, setFlexTimer] = useState<number | null>(null);
@@ -438,6 +439,26 @@ export default function MultiplayerGamePage() {
       setIsMediaPlaying(false);
     }
   }, [game?.playbackControl, game?.currentCardId, session?.isHost, game?.hostId]);
+
+  // Track elapsed music time for players
+  useEffect(() => {
+    const control = game?.playbackControl;
+    if (!control || control.cardId !== game?.currentCardId) {
+      setMusicElapsed(0);
+      return;
+    }
+    if (control.action === 'play') {
+      const startTs = control.timestamp;
+      setMusicElapsed(Math.floor((Date.now() - startTs) / 1000));
+      const id = setInterval(() => {
+        setMusicElapsed(Math.floor((Date.now() - startTs) / 1000));
+      }, 1000);
+      return () => clearInterval(id);
+    } else {
+      // paused or stopped – freeze at pause time
+      setMusicElapsed(prev => prev);
+    }
+  }, [game?.playbackControl, game?.currentCardId]);
 
   // Warn host before accidental browser refresh / back navigation
   useEffect(() => {
@@ -1272,8 +1293,26 @@ export default function MultiplayerGamePage() {
                 />
               ) : currentCard.category === 'music' ? (
                 <div className="rounded-2xl card-surface bg-ink/5 p-6 text-center space-y-3">
-                  <div className="text-5xl">🎵</div>
-                  <p className="text-sm font-semibold">Der Spielleiter steuert die Musikwiedergabe</p>
+                  <div className="text-5xl">{game?.playbackControl?.action === 'play' && game.playbackControl.cardId === currentCard.id ? '🎵' : '🎵'}</div>
+                  <div className="text-2xl font-mono font-bold text-green-600 tabular-nums">
+                    {String(Math.floor(musicElapsed / 60)).padStart(2, '0')}:{String(musicElapsed % 60).padStart(2, '0')}
+                  </div>
+                  <div className="h-2 bg-ink/10 rounded-full overflow-hidden">
+                    <div
+                      className="h-full rounded-full transition-all duration-1000"
+                      style={{
+                        width: `${Math.min((musicElapsed / 240) * 100, 100)}%`,
+                        background: game?.playbackControl?.action === 'play' && game.playbackControl.cardId === currentCard.id
+                          ? '#22c55e'
+                          : '#6b7280',
+                      }}
+                    />
+                  </div>
+                  <p className="text-xs text-ink/50">
+                    {game?.playbackControl?.action === 'play' && game.playbackControl.cardId === currentCard.id
+                      ? 'Musik läuft'
+                      : 'Wartet auf Spielleiter…'}
+                  </p>
                 </div>
               ) : (
                 <MediaEmbed card={currentCard} preference="youtube" />
@@ -1593,9 +1632,29 @@ export default function MultiplayerGamePage() {
                 ) : (
                   /* Mitspieler: Musik nur Symbol, andere Medien vollständig */
                   currentCard.category === 'music' ? (
-                    <div className="rounded-xl card-surface bg-ink/5 px-4 py-3 flex items-center gap-3">
-                      <div className="text-2xl">🎵</div>
-                      <p className="text-sm text-ink/60">Der Spielleiter steuert die Musikwiedergabe</p>
+                    <div className="rounded-xl card-surface bg-ink/5 px-4 py-4 space-y-2">
+                      <div className="flex items-center gap-3">
+                        <div className="text-2xl">🎵</div>
+                        <div className="font-mono font-bold text-green-600 tabular-nums text-lg">
+                          {String(Math.floor(musicElapsed / 60)).padStart(2, '0')}:{String(musicElapsed % 60).padStart(2, '0')}
+                        </div>
+                        <div className="text-xs text-ink/50 ml-auto">
+                          {game?.playbackControl?.action === 'play' && game.playbackControl.cardId === currentCard.id
+                            ? 'Musik läuft'
+                            : 'Wartet…'}
+                        </div>
+                      </div>
+                      <div className="h-1.5 bg-ink/10 rounded-full overflow-hidden">
+                        <div
+                          className="h-full rounded-full transition-all duration-1000"
+                          style={{
+                            width: `${Math.min((musicElapsed / 240) * 100, 100)}%`,
+                            background: game?.playbackControl?.action === 'play' && game.playbackControl.cardId === currentCard.id
+                              ? '#22c55e'
+                              : '#6b7280',
+                          }}
+                        />
+                      </div>
                     </div>
                   ) : (
                     /* Andere Medien-Typen (Bilder, etc.) für Spieler anzeigen */

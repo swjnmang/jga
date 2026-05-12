@@ -134,7 +134,7 @@ function toCard(item, genres = [], playlistTag) {
     title: track.name,
     category: 'music',
     year,
-    cue: 'Aus welchem Jahr stimmt dieser Titel? Wie heißt er und von wem ist er?',
+    cue: 'Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?',
     answer: `${artistStr} — ${year}, ${track.name}.`,
     hint: artistStr,
     difficulty: 'mittel',
