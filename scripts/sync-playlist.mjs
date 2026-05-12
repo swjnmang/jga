@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -134,7 +134,7 @@ function toCard(item, genres = [], playlistTag) {
     title: track.name,
     category: 'music',
     year,
-    cue: 'Song anhören und einordnen.',
+    cue: 'Aus welchem Jahr stimmt dieser Titel? Wie heißt er und von wem ist er?',
     answer: `${artistStr} — ${year}, ${track.name}.`,
     hint: artistStr,
     difficulty: 'mittel',
