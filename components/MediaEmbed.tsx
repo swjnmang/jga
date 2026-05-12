@@ -246,11 +246,15 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
     let destroyed = false;
 
-    // Container direkt in document.body mounten – komplett außerhalb des React-Renders,
-    // damit der Spotify-iframe nie im sichtbaren DOM-Baum der Seite auftaucht.
+    // Container in ein geschlossenes <details>-Element im Body einbetten.
+    // Geschlossene <details> verstecken Inhalt (inkl. Spotify-Mini-Player) zuverlässig,
+    // ohne Audio zu stoppen – der Browser rendert den Inhalt nicht, spielt ihn aber ab.
+    const details = document.createElement('details');
+    details.style.cssText = 'position:fixed;top:-9999px;left:-9999px;width:0;height:0;overflow:hidden;';
     const container = document.createElement('div');
-    container.style.cssText = 'position:fixed;top:-9999px;left:-9999px;width:320px;height:152px;pointer-events:none;visibility:hidden;';
-    document.body.appendChild(container);
+    container.style.cssText = 'width:320px;height:152px;';
+    details.appendChild(container);
+    document.body.appendChild(details);
     spotifyContainerRef.current = container;
 
     const initController = (api: SpotifyIFrameAPI) => {
@@ -298,7 +302,8 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       }
       spotifyControllerRef.current?.destroy();
       spotifyControllerRef.current = null;
-      if (container.parentNode) container.parentNode.removeChild(container);
+      const detailsEl = container.parentElement;
+      if (detailsEl?.parentNode) detailsEl.parentNode.removeChild(detailsEl);
       spotifyContainerRef.current = null;
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
