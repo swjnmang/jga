@@ -317,6 +317,8 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
     };
   }, [concealMetadata, choice?.type]);
+
+  if (!choice) {
     if (card.category === 'schaetzfragen') return null;
     return <p className="text-sm text-ink/70">Keine Quelle hinterlegt.</p>;
   }
