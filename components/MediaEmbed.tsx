@@ -246,15 +246,12 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
 
     let destroyed = false;
 
-    // Container in ein geschlossenes <details>-Element im Body einbetten.
-    // Geschlossene <details> verstecken Inhalt (inkl. Spotify-Mini-Player) zuverlässig,
-    // ohne Audio zu stoppen – der Browser rendert den Inhalt nicht, spielt ihn aber ab.
-    const details = document.createElement('details');
-    details.style.cssText = 'position:fixed;top:-9999px;left:-9999px;width:0;height:0;overflow:hidden;';
+    // Container mit transform:scale(0) im Body – visuell unsichtbar (0×0px),
+    // Audio läuft weiter. transform macht position:fixed-Kinder relativ zum Container,
+    // damit injiziert Spotify's eigener Mini-Player nicht in den Viewport.
     const container = document.createElement('div');
-    container.style.cssText = 'width:320px;height:152px;';
-    details.appendChild(container);
-    document.body.appendChild(details);
+    container.style.cssText = 'position:fixed;top:0;left:0;width:320px;height:152px;transform:scale(0);transform-origin:top left;pointer-events:none;';
+    document.body.appendChild(container);
     spotifyContainerRef.current = container;
 
     const initController = (api: SpotifyIFrameAPI) => {
@@ -302,8 +299,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       }
       spotifyControllerRef.current?.destroy();
       spotifyControllerRef.current = null;
-      const detailsEl = container.parentElement;
-      if (detailsEl?.parentNode) detailsEl.parentNode.removeChild(detailsEl);
+      if (container.parentNode) container.parentNode.removeChild(container);
       spotifyContainerRef.current = null;
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
