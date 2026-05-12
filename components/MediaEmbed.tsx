@@ -292,11 +292,20 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
           };
         }
         if (!document.getElementById('spotify-embed-api')) {
-          const script = document.createElement('script');
-          script.id = 'spotify-embed-api';
-          script.src = 'https://open.spotify.com/embed/iframe-api/v1';
-          script.async = true;
-          document.head.appendChild(script);
+          const loadScript = () => {
+            if (destroyed || document.getElementById('spotify-embed-api') || window._spotifyIframeApiInstance) return;
+            const script = document.createElement('script');
+            script.id = 'spotify-embed-api';
+            script.src = 'https://open.spotify.com/embed/iframe-api/v1';
+            script.async = true;
+            script.onerror = () => {
+              script.remove();
+              // Retry after 3 seconds
+              setTimeout(loadScript, 3000);
+            };
+            document.head.appendChild(script);
+          };
+          loadScript();
         }
         window.SpotifyIframeApiReadyCallbacks.push(initController);
       }
