@@ -122,6 +122,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   // Spotify Embed API
   const spotifyContainerRef = useRef<HTMLDivElement | null>(null);
   const spotifyControllerRef = useRef<SpotifyEmbedController | null>(null);
+  const spotifyPositionRef = useRef<number>(0); // Aktuelle Position in ms für Resume
   const [isPlaying, setIsPlaying] = useState(false);
   const [showYouTube, setShowYouTube] = useState(false);
   const [embedError, setEmbedError] = useState<string | null>(null);
@@ -214,7 +215,9 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         setIsPlaying(true);
       }
       if (choice?.type === 'spotify') {
+        const pos = spotifyPositionRef.current;
         spotifyControllerRef.current?.play();
+        if (pos > 0) spotifyControllerRef.current?.seek(pos);
         setIsPlaying(true);
       }
     },
@@ -265,6 +268,14 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         (controller) => {
           if (destroyed) { controller.destroy(); return; }
           spotifyControllerRef.current = controller;
+          spotifyPositionRef.current = 0;
+          // Position kontinuierlich tracken für Resume-Funktion
+          controller.addListener('playback_update', (data: unknown) => {
+            const d = data as { data?: { position?: number; isPaused?: boolean } };
+            if (d?.data?.position !== undefined) {
+              spotifyPositionRef.current = d.data.position;
+            }
+          });
         }
       );
     };
@@ -459,7 +470,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
           )}
           {concealMetadata ? (
             // Während des Spiels: nur grüner Play/Pause-Button, keine Metadaten sichtbar
-            <div className="rounded-2xl card-surface flex items-center gap-4 px-5 py-4" style={{ minHeight: 80 }}>
+            <div className="rounded-2xl card-surface flex items-center justify-center px-5 py-4" style={{ minHeight: 80 }}>
               <button
                 type="button"
                 onClick={() => {
@@ -467,7 +478,9 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
                     spotifyControllerRef.current?.pause();
                     setIsPlaying(false);
                   } else {
+                    const pos = spotifyPositionRef.current;
                     spotifyControllerRef.current?.play();
+                    if (pos > 0) spotifyControllerRef.current?.seek(pos);
                     setIsPlaying(true);
                     onPlay?.();
                   }
@@ -477,10 +490,6 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               >
                 {isPlaying ? '⏸' : '▶'}
               </button>
-              <div className="flex flex-col gap-1">
-                <span className="text-sm font-semibold text-ink/80">🎵 Musik läuft…</span>
-                <span className="text-xs text-ink/40">Metadaten versteckt</span>
-              </div>
             </div>
           ) : (
             // Ohne concealMetadata (z.B. Karten-Ansicht): vollständigen Player anzeigen
