@@ -305,15 +305,60 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [choiceSignature]);
 
-  // Schwarzes Overlay am unteren Bildschirmrand – verdeckt den Spotify Mini-Player
-  // der vom Embed direkt in den Viewport injiziert wird.
+  // Overlay das sich dynamisch über den Spotify Mini-Player legt.
+  // Ein MutationObserver erkennt das vom Embed injizierte iframe und positioniert
+  // das Overlay exakt darüber – ohne andere Elemente zu überdecken.
   useEffect(() => {
     if (!concealMetadata || choice?.type !== 'spotify') return;
+
     const overlay = document.createElement('div');
     overlay.id = 'spotify-minibar-blocker';
-    overlay.style.cssText = 'position:fixed;bottom:0;left:0;right:0;height:200px;background:#000;z-index:2147483647;pointer-events:none;';
+    overlay.style.cssText = 'position:fixed;background:#000;z-index:2147483647;pointer-events:none;display:none;';
     document.body.appendChild(overlay);
+
+    const positionOverlay = (el: Element) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.width === 0 && rect.height === 0) return;
+      overlay.style.top = `${rect.top}px`;
+      overlay.style.left = `${rect.left}px`;
+      overlay.style.width = `${rect.width}px`;
+      overlay.style.height = `${rect.height}px`;
+      overlay.style.display = 'block';
+    };
+
+    // Spotify Mini-Player iframe erkennen: hat keine src die unser Container-iframe ist,
+    // sitzt direkt im body und hat einen spotify.com src
+    const findAndCover = () => {
+      const iframes = document.querySelectorAll('body > iframe, body > div > iframe');
+      iframes.forEach(iframe => {
+        const src = (iframe as HTMLIFrameElement).src || '';
+        if (src.includes('spotify.com/embed') || src.includes('open.spotify.com')) {
+          positionOverlay(iframe);
+        }
+      });
+      // Auch direkte fixed-position divs im body prüfen (Spotify Mini-Player ist ein div)
+      const bodyDivs = document.querySelectorAll('body > div[style*="fixed"]');
+      bodyDivs.forEach(div => {
+        if (div.id === 'spotify-minibar-blocker') return;
+        const inner = div.querySelector('iframe[src*="spotify"]');
+        if (inner) positionOverlay(div);
+      });
+    };
+
+    const observer = new MutationObserver(findAndCover);
+    observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style'] });
+
+    // Auch bei Resize/Scroll neu positionieren
+    const reposition = () => findAndCover();
+    window.addEventListener('resize', reposition);
+    window.addEventListener('scroll', reposition, true);
+
+    findAndCover();
+
     return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', reposition);
+      window.removeEventListener('scroll', reposition, true);
       if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
     };
   }, [concealMetadata, choice?.type]);
