@@ -1290,6 +1290,7 @@ export default function MultiplayerGamePage() {
                   card={currentCard}
                   preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
                   concealMetadata={currentCard.category === 'music'}
+                  onPlay={handleRemotePlay}
                 />
               ) : currentCard.category === 'music' ? (
                 <div className="rounded-2xl card-surface bg-ink/5 p-6 text-center space-y-3">
@@ -1628,6 +1629,7 @@ export default function MultiplayerGamePage() {
                     card={currentCard}
                     preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
                     concealMetadata={currentCard.category === 'music'}
+                    onPlay={handleRemotePlay}
                   />
                 ) : (
                   /* Mitspieler: Musik nur Symbol, andere Medien vollständig */
