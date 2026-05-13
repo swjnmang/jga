@@ -448,6 +448,25 @@ export default function MultiplayerGamePage() {
 
   // Track elapsed music time for players
   useEffect(() => {
+    const pendingPos = game?.groups?.[game?.currentTurnGroupId ?? '']?.pendingPosition;
+    if (pendingPos == null) return;
+    // small delay to let React render the ghost element first
+    const t = setTimeout(() => {
+      document.getElementById('obs-ghost-card')?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }, 50);
+    return () => clearTimeout(t);
+  }, [game?.groups?.[game?.currentTurnGroupId ?? '']?.pendingPosition]);
+
+  useEffect(() => {
+    if (!game?.resultRevealed) return;
+    const t = setTimeout(() => {
+      document.getElementById('obs-new-card')?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }, 200);
+    return () => clearTimeout(t);
+  }, [game?.resultRevealed, game?.currentCardId]);
+
+  // Track elapsed music time for players
+  useEffect(() => {
     const control = game?.playbackControl;
     if (!control || control.cardId !== game?.currentCardId) {
       setMusicElapsed(0);
@@ -1862,7 +1881,7 @@ export default function MultiplayerGamePage() {
           const ghostCard = pendingPos !== null && currentCard ? currentCard : null;
 
           const renderGhost = () => (
-            <div className="flex items-center flex-shrink-0">
+            <div id="obs-ghost-card" className="flex items-center flex-shrink-0">
               <div className="text-ink/30 mx-1">↔</div>
               <div className="flex-shrink-0 rounded-lg border-2 border-dashed border-blue-400 bg-blue-400/10 px-4 py-3 min-w-[120px] animate-pulse">
                 <p className="text-xs font-bold text-blue-400">???</p>
@@ -1986,7 +2005,9 @@ export default function MultiplayerGamePage() {
                         const isNewCard = item.id === game.currentCardId && game.flexPhaseActive;
                         const masked = isNewCard && !game.resultRevealed;
                         return (
-                          <div className={`flex-shrink-0 rounded-lg border-2 px-3 py-2 min-w-[110px] ${
+                          <div
+                            id={item.id === game.currentCardId ? 'obs-new-card' : undefined}
+                            className={`flex-shrink-0 rounded-lg border-2 px-3 py-2 min-w-[110px] ${
                             item.id === game.referenceCard?.id
                               ? 'border-yellow-500 bg-yellow-100 text-inkDark'
                               : isNewCard
