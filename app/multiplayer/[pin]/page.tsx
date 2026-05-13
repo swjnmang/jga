@@ -955,8 +955,22 @@ export default function MultiplayerGamePage() {
                   ⚡ Eure Gruppe ist am Zug!
                 </div>
               ) : (
-                <div className="mt-3 w-full px-4 py-3 rounded-xl bg-ink/15 text-ink font-bold text-xl">
-                  🎮 Am Zug: {activeGroup.name}
+                <div className="mt-3 w-full px-4 py-3 rounded-xl bg-ink/15">
+                  <div className="flex flex-wrap items-center justify-center gap-1 text-sm font-semibold">
+                    {groupList.map((g, i) => (
+                      <span key={g.id} className="flex items-center gap-1">
+                        {i > 0 && <span className="text-ink/40 text-xs">→</span>}
+                        <span
+                          className="px-2 py-0.5 rounded-lg"
+                          style={g.id === game.currentTurnGroupId
+                            ? { backgroundColor: g.color, color: '#000', fontWeight: 700 }
+                            : { color: 'var(--ink)', opacity: 0.6 }}
+                        >
+                          {g.id === game.currentTurnGroupId ? '🎮 ' : ''}{g.name}
+                        </span>
+                      </span>
+                    ))}
+                  </div>
                 </div>
               )
             )}
@@ -1580,8 +1594,22 @@ export default function MultiplayerGamePage() {
                 ⚡ Eure Gruppe ist am Zug!
               </div>
             ) : (
-              <div className="mt-1 w-full px-3 py-1.5 rounded-xl bg-ink/15 text-ink font-bold text-sm">
-                🎮 Am Zug: {game.groups[game.currentTurnGroupId]?.name || 'Team'}
+              <div className="mt-1 w-full px-3 py-2 rounded-xl bg-ink/15">
+                <div className="flex flex-wrap items-center justify-center gap-1 text-xs font-semibold">
+                  {groupList.map((g, i) => (
+                    <span key={g.id} className="flex items-center gap-1">
+                      {i > 0 && <span className="text-ink/40">→</span>}
+                      <span
+                        className="px-2 py-0.5 rounded-lg"
+                        style={g.id === game.currentTurnGroupId
+                          ? { backgroundColor: g.color, color: '#000', fontWeight: 700 }
+                          : { color: 'var(--ink)', opacity: 0.6 }}
+                      >
+                        {g.id === game.currentTurnGroupId ? '🎮 ' : ''}{g.name}
+                      </span>
+                    </span>
+                  ))}
+                </div>
               </div>
             )
           )}
