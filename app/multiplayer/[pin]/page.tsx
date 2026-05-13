@@ -65,6 +65,7 @@ export default function MultiplayerGamePage() {
   const [flexTipPosition, setFlexTipPosition] = useState<number | null>(null); // gewählte Flex-Tipp-Position
   const [flexTipSubmitted, setFlexTipSubmitted] = useState(false); // Tipp bereits eingereicht
   const backGuardPushed = useRef(false); // ensures dummy history entry is pushed only once
+  const lastPlaybackTimestampRef = useRef<number>(0); // deduplicate host playback commands
   const [placementResult, setPlacementResult] = useState<'correct' | 'wrong' | null>(null);
   const [placementError, setPlacementError] = useState<string | null>(null);
   const [selectedPosition, setSelectedPosition] = useState<number | null>(null); // Gewählte Position vor Bestätigung
@@ -427,15 +428,20 @@ export default function MultiplayerGamePage() {
     const currentCardId = game.currentCardId;
     
     if (control.cardId !== currentCardId) return; // Ignore old commands
-    
+    // Deduplicate: only act when timestamp actually changed (prevents re-fire on unrelated Firebase updates)
+    if (control.timestamp === lastPlaybackTimestampRef.current) return;
+    lastPlaybackTimestampRef.current = control.timestamp;
+    // Host already started playback locally via button click — don’t re-trigger
+    const isSelf = session && control.requestedBy === session.groupId;
+
     if (control.action === 'play') {
-      mediaEmbedRef.current?.play();
+      if (!isSelf) mediaEmbedRef.current?.play();
       setIsMediaPlaying(true);
     } else if (control.action === 'pause') {
-      mediaEmbedRef.current?.pause();
+      if (!isSelf) mediaEmbedRef.current?.pause();
       setIsMediaPlaying(false);
     } else if (control.action === 'stop') {
-      mediaEmbedRef.current?.stop();
+      if (!isSelf) mediaEmbedRef.current?.stop();
       setIsMediaPlaying(false);
     }
   }, [game?.playbackControl, game?.currentCardId, session?.isHost, game?.hostId]);
@@ -1291,6 +1297,7 @@ export default function MultiplayerGamePage() {
                   preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
                   concealMetadata={currentCard.category === 'music'}
                   onPlay={handleRemotePlay}
+                  onPause={handleRemotePause}
                 />
               ) : currentCard.category === 'music' ? (
                 <div className="rounded-2xl card-surface bg-ink/5 p-6 text-center space-y-3">
@@ -1630,6 +1637,7 @@ export default function MultiplayerGamePage() {
                     preference={currentCard.category === 'music' ? 'spotify' : 'youtube'}
                     concealMetadata={currentCard.category === 'music'}
                     onPlay={handleRemotePlay}
+                    onPause={handleRemotePause}
                   />
                 ) : (
                   /* Mitspieler: Musik nur Symbol, andere Medien vollständig */

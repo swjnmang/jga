@@ -99,6 +99,7 @@ type Props = {
   preference: MediaPreference;
   concealMetadata?: boolean;
   onPlay?: () => void;
+  onPause?: () => void;
   onPlaybackError?: (id: string, reason?: string) => void;
 };
 
@@ -109,7 +110,7 @@ export type MediaEmbedHandle = {
 };
 
 export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbed(
-  { card, preference, concealMetadata = false, onPlay, onPlaybackError }: Props,
+  { card, preference, concealMetadata = false, onPlay, onPause, onPlaybackError }: Props,
   ref
 ) {
   const [youtubeUnavailable, setYouTubeUnavailable] = useState(false);
@@ -233,10 +234,12 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       if (choice?.type === 'youtube') {
         sendYouTubeCommand('pauseVideo');
         setIsPlaying(false);
+        onPause?.();
       }
       if (choice?.type === 'spotify') {
         spotifyControllerRef.current?.pause();
         setIsPlaying(false);
+        onPause?.();
       }
     },
   }));
@@ -518,6 +521,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
                   if (isPlaying) {
                     spotifyControllerRef.current?.pause();
                     setIsPlaying(false);
+                    onPause?.();
                   } else {
                     if (spotifyControllerRef.current) {
                       const pos = spotifyPositionRef.current;
