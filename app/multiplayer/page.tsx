@@ -640,6 +640,7 @@ function MultiplayerLobbyContent() {
                 Kategorien auswählen
               </label>
               <div className="grid grid-cols-3 gap-2">
+                {availableCategories.map((cat) => {
                   const isActive = (settings.categoryWeights[cat] || 0) > 0;
                   const isDisabled = cat === 'image';
                   if (isDisabled) {
