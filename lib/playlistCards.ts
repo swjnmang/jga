@@ -48,8 +48,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4zfQShUtVvysHKDDw08sMd"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "schlagerparty"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -68,8 +67,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7JRFLBP9RgMvBjoZDLHWVV"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "schlagerparty"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -88,8 +86,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3dTTBt5Qtf6xzPOrBlG2tu"
     },
     "genres": [
-      "schlagerparty",
-      "poprock"
+      "schlagerparty"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -108,8 +105,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4Ka43W7pxLv41B2c5R1UAy"
     },
     "genres": [
-      "schlagerparty",
-      "poprock"
+      "schlagerparty"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -128,8 +124,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3XEnnhbQRI8DlhvpXo9E2X"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -148,8 +143,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0tDIFv7I1dqYewsaGlzLUx"
     },
     "genres": [
-      "schlagerparty",
-      "poprock"
+      "schlagerparty"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -168,8 +162,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1W14FFFgsM0m6DUt3Tf6NP"
     },
     "genres": [
-      "schlagerparty",
-      "poprock"
+      "schlagerparty"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -189,8 +182,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "metal",
-      "hiphop",
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -211,8 +203,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "metal",
-      "hiphop",
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -233,8 +224,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "metal",
-      "hiphop",
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -254,8 +244,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "metal",
-      "hiphop",
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -274,8 +263,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0ee1DiZF94NSqqpG0XHUzH"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -294,8 +282,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2RChe0r2cMoyOvuKobZy44"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -314,8 +301,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3DwQ7AH3xGD9h65ezslm6q"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -334,8 +320,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2MuWTIM3b0YEAskbeeFE1i"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -355,8 +340,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5ltXoDLlI0rFZAmOXbAp5T"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -375,8 +359,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/28WmNsclKsrVmdv3tDmoYU"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -396,8 +379,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "metal",
-      "hiphop",
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -416,7 +398,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/25FTMokYEbEWHEdss5JLZS"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -436,8 +419,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6eN1f9KNmiWEhpE2RhQqB5"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -457,7 +440,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5RKQ5NdjSh2QzD4MaunT91"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -477,8 +460,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "metal",
-      "hiphop",
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -497,7 +479,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2m1hi0nfMR9vdGC8UcrnwU"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -516,9 +498,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6GQ3WTaNHMFlVmN4burGat"
     },
     "genres": [
-      "metal",
-      "hiphop",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -538,7 +518,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/48UPSzbZjgc449aqz8bxox"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -557,9 +537,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2DlHlPMa4M17kufBvI2lEN"
     },
     "genres": [
-      "metal",
-      "hiphop",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -578,7 +556,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5EYdTPdJD74r9EVZBztqGG"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -599,7 +578,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "metal",
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -618,8 +597,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4JiEyzf0Md7KEFFGWDDdCr"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -638,9 +617,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0EYOdF5FCkgOJJla8DI2Md"
     },
     "genres": [
-      "metal",
-      "hiphop",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -659,7 +636,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6GG73Jik4jUlQCkKg9JuGO"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -678,8 +655,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4LwU4Vp6od3Sb08CsP99GC"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -698,8 +674,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0pgx8fWphTTM9Kv5KjWpXy"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -718,8 +693,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/47VRtROAdociHgtuVZNoBL"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -738,8 +712,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0ys1g8PTTs6ADeDp2h1xpd"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -758,8 +731,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0zv3f19rNhmZhNmNA2xJsF"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -778,7 +750,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6naxalmIoLFWR0siv8dnQQ"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -797,7 +769,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5s4catxeZsaWFnOrvrXZHf"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -816,7 +788,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2goLsvvODILDzeeiT4dAoR"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -835,8 +808,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7LHEQq3Xy7brogiqnXsT4L"
     },
     "genres": [
-      "schlagerparty",
-      "poprock"
+      "schlagerparty"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -855,7 +827,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/10waMsh44ojvTwXAIy213n"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -875,7 +848,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0oEp3d8au0a3Qp78F2QxtB"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -894,8 +868,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0Dlcu2fgHklOnajVu2dUNU"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -915,7 +888,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "metal",
-      "poprock"
+      "electronic"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -934,7 +907,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4EchqUKQ3qAQuRNKmeIpnf"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -953,7 +926,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/003vvx7Niy0yvhvHt4a68B"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -973,7 +947,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1FTSo4v6BOZH9QxKc3MbVM"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -992,7 +966,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1OxcIUqVmVYxT6427tbhDW"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -1012,7 +987,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3gjHnylel3PTRpjS44ocqr"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1031,8 +1006,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6e5kuZssmkwWL3Yt4jwTRy"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1051,8 +1025,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1tVhmi6ltumhZtd1pM8Tya"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1071,7 +1044,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1BYtg47qoPZ9DUrBTfJ5Bc"
     },
     "genres": [
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1090,7 +1063,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1fr92Vupmcs2vgLMFVQ7rd"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -1110,7 +1083,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/00Mb3DuaIH1kjrwOku9CGU"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -1131,8 +1104,8 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "hiphop",
-      "poprock",
-      "metal"
+      "metal",
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1152,8 +1125,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "metal",
-      "hiphop",
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1172,7 +1144,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4LJhJ6DQS7NwE7UKtvcM52"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1191,8 +1163,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3gVhsZtseYtY1fMuyYq06F"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1211,9 +1182,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7CpbhqKUedOIrcvc94p60Y"
     },
     "genres": [
-      "metal",
-      "hiphop",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1232,7 +1201,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/18AXbzPzBS8Y3AkgSxzJPb"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -1252,8 +1222,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0d28khcov6AiegSCpG5TuT"
     },
     "genres": [
-      "poprock",
-      "hiphop"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1272,8 +1242,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2PpruBYCo4H7WOBJ7Q2EwM"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1292,7 +1261,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0jqK7sGTLsHPkQrrcrGuKD"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1311,7 +1281,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2v7ywbUzCgcVohHaKUcacV"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -1331,7 +1301,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/70LcF31zb1H0PyJoS1Sx1r"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1350,7 +1320,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6ORqU0bHbVCRjXm9AjyHyZ"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1369,7 +1339,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0GONea6G2XdnHWjNZd6zt3"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -1389,8 +1360,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0I3q5fE6wg7LIfHGngUTnV"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1409,7 +1379,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6ECp64rv50XVz93WvxXMGF"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -1429,7 +1400,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1HNE2PX70ztbEl6MLxrpNL"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1448,7 +1420,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3Fzlg5r1IjhLk2qRw667od"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1467,7 +1440,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4KacUpvbA3Mfo05gttTjhN"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1486,7 +1460,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0MsrWnxQZxPAcov7c74sSo"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1505,7 +1479,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3lPr8ghNDBLc2uZovNyLs9"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1524,7 +1498,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1uigwk5hNV84zRd5YQQRTk"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1543,7 +1517,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0DiWol3AO6WpXZgp0goxAV"
     },
     "genres": [
-      "poprock"
+      "electronic"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1562,7 +1536,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4GewRLEiI4BDTQsoH8BRVV"
     },
     "genres": [
-      "poprock"
+      "electronic"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1581,8 +1555,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1v7L65Lzy0j0vdpRjJewt1"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1601,7 +1574,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/62yJjFtgkhUrXktIoSjgP2"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1620,7 +1594,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/47BBI51FKFwOMlIiX6m8ya"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1639,7 +1613,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0SiywuOBRcynK0uKGWdCnn"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -1659,7 +1633,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3U5JVgI2x4rDyHGObzJfNf"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -1679,7 +1653,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5rb9QrpfcKFHM1EUbSIurX"
     },
     "genres": [
-      "poprock",
+      "rnb",
       "hiphop"
     ],
     "playlists": [
@@ -1699,7 +1673,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3MjUtNVVq3C8Fn0MP3zhXa"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1718,8 +1692,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7MJQ9Nfxzh8LPZ9e9u68Fq"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1738,8 +1711,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/561jH07mF1jHuk7KlaeF0s"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1759,7 +1731,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "hiphop",
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1778,7 +1750,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2aGw77pZqli064JiPuXYRi"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -1799,7 +1772,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4S1VYqwfkLit9mKVY3MXoo"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT",
@@ -1819,7 +1792,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6I9VzXrHxO9rA9A5euc8Ak"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1838,7 +1811,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7Lf7oSEVdzZqTA0kEDSlS5"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1857,8 +1830,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7iL6o9tox1zgHpKUfh9vuC"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1877,7 +1849,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2epbL7s3RFV81K5UhTgZje"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1896,8 +1868,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0Q0IVlqMV64kNLlwjPj0Hl"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1916,8 +1887,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1auxYwYrFRqZP7t3s7w4um"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1936,8 +1906,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7sLpSWxQazJzDVG6YGzlVs"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1956,8 +1925,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3IrkbGQCoEPAkzJ0Tkv8nm"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1976,7 +1944,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3AJwUDP919kvQ9QcozQPxg"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -1995,8 +1964,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/503OTo2dSqe7qk76rgsbep"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -2016,7 +1984,8 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "hiphop",
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -2035,8 +2004,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3ia3dJETSOllPsv3LJkE35"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -2056,7 +2024,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "hiphop",
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4likPQLIX9PUqyNiJ3xsqT"
@@ -2075,7 +2043,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0kDYa8nqIIpsAZ8FctJyGQ"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2094,7 +2062,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4oc0XA7UehlFOuFz4HHjvn"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2113,7 +2081,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0ORGCNRQHRhq5YE8un6rQh"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2132,7 +2101,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/11mwFrKvLXCbcVGNxffGyP"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2151,7 +2121,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0TwBtDAWpkpM3srywFVOV5"
     },
     "genres": [
-      "poprock",
+      "rnb",
+      "pop",
       "hiphop"
     ],
     "playlists": [
@@ -2171,7 +2142,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1dzQoRqT5ucxXVaAhTcT0J"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2190,7 +2161,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4Lqom8aqPAZVPHEqnfdAZT"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2209,7 +2180,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4F1EgqGQmwlXReh9ykEH1A"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2228,8 +2199,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1x9SgLgVxZNoZpNJOsvDxe"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2248,8 +2219,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7ISA7aYBTfGYnTMD74SmW0"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2268,7 +2239,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2qYy5eF5UOPnFTD0hZAU14"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2287,7 +2258,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4bgnh8Xp8oX2XFzN76hVKo"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2306,7 +2278,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3KmuBbt55iQrAAWxlJCbOL"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2325,7 +2298,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3kFbz0krBIE739vtf0Wagl"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2344,7 +2318,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7gWc0QEt2hoIkMv3XxPY1T"
     },
     "genres": [
-      "poprock"
+      "electronic"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2363,7 +2337,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/51eiFhLhkGqbe9gOmkPtiX"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2382,7 +2357,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2HWY76uWkiZwoCe1QQ1UB4"
     },
     "genres": [
-      "poprock"
+      "rnb"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2401,7 +2376,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5jcKGKCpGvSjuChM8cywwI"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2420,7 +2396,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5HwRSfUsWzuyvlzkg6QO70"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2439,9 +2415,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3FJ9hfm9SCDHMFIItwAfSY"
     },
     "genres": [
-      "metal",
-      "hiphop",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2460,7 +2434,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5HPchyFdQZT1cDbdOTdFji"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2479,7 +2454,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7xS5Ifz4vyc5oGEOHZu05k"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2498,7 +2473,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/76rjB3tDZ8M4GpJvFKb84A"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2517,8 +2492,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7ywBmZOgWhPMj1wljWn6vL"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2537,7 +2511,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3xP9zsXKIpPIYBo2MZKMMV"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2556,7 +2530,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6sbok5dfFLkQunvKeQjrKF"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2575,7 +2549,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/07QOW5kcbhVY1l8wIhNvbT"
     },
     "genres": [
-      "poprock"
+      "electronic"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2594,7 +2568,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4RoFlWANgOs5P0f4oDOXUG"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2613,7 +2587,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5pTQYJu8tGm7bQMvww72dM"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "hiphop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2632,7 +2607,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7nAjlUFOAyWjZzlWVHWtrZ"
     },
     "genres": [
-      "poprock"
+      "rnb"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2651,7 +2626,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4QY1tatAzickt9KhxMaSm0"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "hiphop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2670,7 +2646,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2k2VvyJSikIagNmwLUOZKh"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2689,7 +2666,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4qCTTBZWiFTi4JFzlOXZTy"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2708,7 +2685,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6RdjbxpRtyxnmp61i0tyEd"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2727,7 +2704,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/42NADmH0f8icPSrVXoqp6k"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2746,7 +2723,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5VF63TxgXi22VHXTkHpMVU"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2765,7 +2743,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/52YZLJvBlDKTid2OKwblvf"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2784,7 +2763,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2Q0Y74LoaxFtiyhmdDTZx4"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2803,8 +2783,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5bYN7ttTmfpZYDgEqRF9sT"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2823,7 +2802,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0hrBpAOgrt8RXigk83LLNE"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2842,7 +2821,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0smyCrJiibi2uwCiq5R1vj"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2861,7 +2840,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3YKptz29AsOlm7WAVnztBh"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2880,7 +2860,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3i6qNxyVgIdUZTTi5m25EM"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2899,7 +2879,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1MQrMQwfqjgOjXEUaN9AMd"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2918,7 +2898,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0lnxrQAd9ZxbhBBe7d8FO8"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2937,7 +2917,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6urCAbunOQI4bLhmGpX7iS"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2956,7 +2937,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0weAUscowxeqDtpCgtbpgp"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2975,7 +2957,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6qspW4YKycviDFjHBOaqUY"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "hiphop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -2994,7 +2977,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1OutzYv6YiN93lrT3pJsWR"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -3013,7 +2997,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/11d9oUiwHuYt216EFA2tiz"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -3032,7 +3017,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1aYkkrAbPmMuorVz5HWIqE"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum",
@@ -3052,7 +3038,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2tUBqZG2AbRi7Q0BIrVrEj"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum",
@@ -3072,7 +3059,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1xNmF1Uep5OGutizZSbKvd"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -3091,7 +3079,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/62LJFaYihsdVrrkgUOJC05"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum",
@@ -3111,7 +3100,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1Je1IMUlBXcx1Fz0WE7oPT"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "0fky4kHnko4b9HsvrYVyum"
@@ -3130,7 +3119,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6ZEAXknmx2mrO3KgcDNpFI"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3149,7 +3138,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0xs0ewnEb6c2DlY7LjOD7t"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3168,7 +3157,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4EZz8Byhbjk0tOKFJlCgPB"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3188,7 +3177,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "metal",
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3207,7 +3196,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0jSRZBsn3RqAhBDzAefHAD"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3226,7 +3215,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0sTHEo24E8LxasEkSnpUkx"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3245,7 +3234,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3JgOPg3wx1ABbQv0Ax4Rdw"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3264,7 +3253,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1gb5sUe1CuRBuT8twq8uhw"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3283,7 +3272,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3HRQtRUYnnuZY7fE900XtJ"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3302,7 +3291,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0mgFy2EDy4WyGazhI7FVJM"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3321,7 +3311,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7q3MflmodGZlOgZ799EpAb"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3340,7 +3330,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/28o8m1o9RGtySbmQJtAvym"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3359,7 +3349,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5HIDIRwU38XVBozdoQwCml"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3378,7 +3369,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2WfaOiMkCvy7F5fcp2zZ8L"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3397,7 +3388,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2TxCwUlqaOH3TIyJqGgR91"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l",
@@ -3417,7 +3408,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0GjEhVFGZW8afUYGChu3Rr"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3436,7 +3427,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0B9x2BRHqj3Qer7biM3pU3"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l",
@@ -3456,7 +3447,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7o7E1nrHWncYY7PY94gCiX"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "electronic"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l",
@@ -3476,7 +3468,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2374M0fQpWi3dLnB54qaLX"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3495,7 +3487,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5zA8vzDGqPl2AzZkEYQGKh"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3514,7 +3507,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1uMYW46hhn6xHD84gdLWe8"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3533,7 +3526,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2ORpYzSw4ABvGYosZuews8"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3552,7 +3546,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0hayhLT09qy1QG85XmiPXf"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3571,7 +3566,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7AqBxvfK25nDQ0QyhsE7Jq"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3590,7 +3585,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1PtQJZVZIdWIYdARpZRDFO"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3609,7 +3604,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3IE3xbKiTG6t6eXE5VHmc0"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3628,7 +3623,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5gkwFhlzdFvC533xx7Ri8M"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3647,7 +3643,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6yTJK6Mcr1qUIPtc7NX4aw"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3666,7 +3662,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/11z9wktBsj8G2V0lbIpzSk"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3685,7 +3682,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0urtox5iyGvcqharkbmC7Y"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3704,7 +3701,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6ip3bBdMPbC6hMzBIjonAG"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3723,7 +3720,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7sMGwiS4vOMcz86ZY3vKYM"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3742,8 +3739,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7LifJa1Ymo6gbe9hSyPefs"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3762,7 +3758,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1Ppwc43WYFEBXw2n1ePhDY"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3781,7 +3777,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2CVqF1sLhwut4NiZxzNUnC"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3800,7 +3796,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2XbcujvemK0hGh0Ob4HAXQ"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3819,7 +3815,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0hLnmbp7esuygjxzHF87yz"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3838,7 +3834,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3QTTAj8piyRBfhoPEfJC6y"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3857,7 +3853,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0dOg1ySSI7NkpAe89Zo0b9"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3876,7 +3872,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/05yiiw2F3XXoighyveZTDs"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3895,7 +3891,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0odIT9B9BvOCnXfS0e4lB5"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3914,7 +3910,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0L0T4tMAaGqLgIVj1MOj9t"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3933,7 +3929,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4tcauy2xyIv1q0ckvQmc4H"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3952,7 +3948,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6mYrhCAGWzTdF8QnKuchXM"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3971,7 +3968,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3Cx4yrFaX8CeHwBMReOWXI"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -3990,7 +3988,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3SnGymj6ijE2iuUfWxLo1q"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4009,7 +4008,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5qHYXcVvc9xsFB2uH7GpMN"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4028,7 +4027,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3oEkrIfXfSh9zGnE7eBzSV"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4047,7 +4046,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0nd1Vs5BIoIU4TJlzR8KVB"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4066,7 +4065,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/66S14BkJDxgkYxLl5DCqOz"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4085,7 +4085,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1kiNatIrwDusOZfR29W0LJ"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4104,7 +4105,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3OeUlriM0EZHdWleJtjoVr"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4123,7 +4125,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2fuCquhmrzHpu5xcA1ci9x"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4142,7 +4145,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3X7uFMzJrEE0sxn62qd8Ch"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4161,7 +4165,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1uvyZBs4IZYRebHIB1747m"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4180,8 +4185,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2IJftBfq7pJ43tfnOR0RB3"
     },
     "genres": [
-      "schlagerparty",
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4200,7 +4204,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1nQRg9q9uwALGzouOX5OyQ"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4219,7 +4223,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0J2p4KYdr6Mg4ET6JPlbe1"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4238,7 +4242,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/665Jxlgi1HamPKbW1vwzx4"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4257,7 +4261,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/37BTh5g05cxBIRYMbw8g2T"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4276,7 +4280,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5NwkWwfRJaT55hEPtCmJHx"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4295,7 +4300,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1MsBRSbt5dqJSw3RxXtvCM"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4314,7 +4319,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5tVA6TkbaAH9QMITTQRrNv"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4333,7 +4338,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/77NNZQSqzLNqh2A9JhLRkg"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4352,7 +4357,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6HMvJcdw6qLsyV1b5x29sa"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4371,7 +4377,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1A2PWRltFrX8iB8IP3CUgo"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4390,7 +4396,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0YMFcrMtBowDdD5bPz0cgy"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4409,7 +4416,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4NH4xiPQ7TqNGqj6pZV4ki"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4428,7 +4435,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7Di7t9yGoxdZRLAt5a4pi0"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4447,7 +4454,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0qxYx4F3vm1AOnfux6dDxP"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4466,7 +4474,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6OnfBiiSc9RGKiBKKtZXgQ"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4485,7 +4494,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2M9ro2krNb7nr7HSprkEgo"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4504,7 +4514,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4uvjOKsp7mSjrDhWdkLPBY"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4523,7 +4533,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2olVm1lHicpveMAo4AUDRB"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4542,7 +4552,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5vdp5UmvTsnMEMESIF2Ym7"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4561,7 +4571,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0ikz6tENMONtK6qGkOrU3c"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4580,7 +4590,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3BGbqEDio3ocx1v4egIYr6"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4599,7 +4609,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1Jj6MF0xDOMA3Ut2Z368Bx"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4618,7 +4628,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5RYLa5P4qweEAKq5U1gdcK"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4637,7 +4647,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4PTG3Z6ehGkBFwjybzWkR8"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4656,7 +4666,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5MoDQWMDMaAGDEiWsJfeCi"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4675,7 +4685,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4euAGZTszWPrriggYK0HG9"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4694,7 +4704,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/34x6hEJgGAOQvmlMql5Ige"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4713,7 +4723,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1jDJFeK9x3OZboIAHsY9k2"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4732,7 +4743,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/05wIrZSwuaVWhcv5FfqeH0"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4751,7 +4762,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4w3tQBXhn5345eUXDGBWZG"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4770,7 +4781,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7FwBtcecmlpc1sLySPXeGE"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4789,7 +4800,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1KU5EHSz04JhGg3rReGJ0N"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4808,7 +4820,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5HrtZ0YLAcKIRx4tdQoHWc"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4827,7 +4840,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2D4D3hiOf5U0W6SvJoCQph"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4846,7 +4860,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1eVMuGzCj1q8pHfUdbQ042"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4865,7 +4880,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4hObp5bmIJ3PP3cKA9K9GY"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4884,7 +4899,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1F43XlPBiwAUUIhrUGzylO"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4903,7 +4918,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/63CHa6rmamv9OsehkRD8oz"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4922,7 +4938,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4GNilkZKILsug3l5pdLoxo"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4941,7 +4958,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5xl5582IihbEZAnfj0xyso"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4960,7 +4978,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5Hyr47BBGpvOfcykSCcaw9"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4979,7 +4997,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4LFwNJWoj74Yd71fIr1W8x"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -4998,7 +5016,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/254bXAqt3zP6P50BdQvEsq"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5017,7 +5035,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0fnTADkpDxvjA3v0Ss5bpb"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5036,7 +5054,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4Q3ERWBrb4lhDvAPyANjY5"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5055,7 +5074,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6ADSaE87h8Y3lccZlBJdXH"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5074,7 +5093,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2bCQHF9gdG5BNDVuEIEnNk"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5093,7 +5113,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4mnOVRRXsaqg9Nb041xR8u"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5112,7 +5132,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2MaBAGBIttgv86bYytdx1f"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5131,7 +5152,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5NoUgO4Kr93QymQGQlBC7b"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5150,7 +5172,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4p1PizAGdglm2sVvPuFPWs"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5169,7 +5191,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/00FDHurakzVEiPutdUxXXq"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5188,7 +5210,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5lWFrW5T3JtxVCLDb7etPu"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5207,7 +5230,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2JvPJ8ydPuN2NhpH4oti6I"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5226,8 +5249,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5XcZRgJv3zMhTqCyESjQrF"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5246,7 +5269,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6pPWRBubXOBAHnjl5ZIujB"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5265,7 +5289,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6wpGqhRvJGNNXwWlPmkMyO"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5284,7 +5308,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0sKlV58cODrjxGFOyf9IXY"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5303,8 +5328,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0rmGAIH9LNJewFw7nKzZnc"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5323,7 +5347,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4KFM3A5QF2IMcc6nHsu3Wp"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5342,7 +5367,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/39shmbIHICJ2Wxnk1fPSdz"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5361,7 +5386,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3h04eZTnmFLRMjZajbrp2R"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5380,7 +5405,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0IWtEFQBwRHaMXZQtGEVcM"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5399,7 +5424,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2Cdvbe2G4hZsnhNMKyGrie"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5418,7 +5443,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/31H6au3jhblhr6MMJiXnCq"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5437,7 +5463,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3iM9wFGlyR28IBZrXYZK9j"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5456,7 +5482,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4d6eqRtpDX7tydHJGDZUBQ"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5475,7 +5502,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1Qrdlkgg9I4J7r3P4kZNwr"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5494,7 +5522,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3LaHsdzzmvhx6TJedpomVy"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5513,7 +5541,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1mCsF9Tw4AkIZOjvZbZZdT"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5532,7 +5560,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/029NqmIySn1kOY305AAhxT"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5551,7 +5580,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2H7PHVdQ3mXqEHXcvclTB0"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5570,7 +5600,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4nFNJmjfgBF7jwv2oBC45b"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5589,7 +5619,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2KH16WveTQWT6KOG9Rg6e2"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5608,8 +5638,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/37ZJ0p5Jm13JPevGcx4SkF"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5628,8 +5657,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6qUEOWqOzu1rLPUPQ1ECpx"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5649,7 +5678,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "metal",
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5668,7 +5697,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7gSQv1OHpkIoAdUiRLdmI6"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5687,7 +5716,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7wuJGgpTNzbUyn26IOY6rj"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5706,7 +5735,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4rcHWl68ai6KvpXlc8vbnE"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5725,7 +5754,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/648BMGrt98kUbLo24A4vgj"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5744,7 +5773,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5fy4vfEtv6lzqLx2Mt7stF"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5763,7 +5793,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6yl8Es1tCYD9WdSkeVLFw4"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5782,7 +5813,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1JSTJqkT5qHq8MDJnJbRE1"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5801,7 +5832,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5jSz894ljfWE0IcHBSM39i"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5820,7 +5852,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4o6BgsqLIBViaGVbx5rbRk"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5839,7 +5871,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4UB3TaEGEY9WoOpxYNMgy4"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5858,8 +5890,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0X1sqQ652p1sceKM2nJlIJ"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5878,7 +5909,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4ByEFOBuLXpCqvO1kw8Wdm"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5897,7 +5928,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4YwbSZaYeYja8Umyt222Qf"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5916,8 +5948,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7snQQk1zcKl8gZ92AnueZW"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5936,7 +5968,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3FdHgoJbH3DXNtGLh56pFu"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5955,7 +5987,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3PzsbWSQdLCKDLxn7YZfkM"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5974,7 +6006,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/54b8qPFqYqIndfdxiLApea"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -5993,7 +6025,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1ChulFMnwxoD74Me8eX2TU"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6012,7 +6045,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/11leihwcsTVOTo1gxpgYNG"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6031,7 +6064,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1JLn8RhQzHz3qDqsChcmBl"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6050,7 +6083,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5tdKaKLnC4SgtDZ6RlWeal"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6069,7 +6103,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1mskmld5ZKEhRaNvYVPoqZ"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6088,7 +6122,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4gitetlGHZ9LfuJhwUhEhF"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6107,7 +6141,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5WwqdeavrQrbeAMDxGawse"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6126,7 +6160,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1UvTPXlImVd4jcucK4qJwb"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6145,7 +6179,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0xpBr84T3FTm9j4D1MdPtk"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6164,7 +6198,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1KsI8NEeAna8ZIdojI3FiT"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6183,7 +6217,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2vz1CsL5WBsbpBcwgboTAw"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6202,7 +6236,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7j74lucZ59vqN67Ipe2ZcY"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6221,7 +6255,9 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7INi4pMPG4IE0Smx5y4KVf"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop",
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6240,7 +6276,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0yJvWbn8xQKiDZ84VN5lQG"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6259,8 +6295,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/43GS3mtezoIFiuIZCLLiDY"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6279,7 +6315,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/00isIFJWVpXIQ8HkGICSQp"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6298,7 +6334,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6sby78fghipoXHQLeeZFFH"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6317,7 +6354,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5jzma6gCzYtKB1DbEwFZKH"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l",
@@ -6337,7 +6374,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/44aTAUBF0g6sMkMNE8I5kd"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6356,7 +6393,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/56GbZVwxMdf1DENCluYS8A"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6375,7 +6413,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5ac3D4hNLW7NFhYFCThXgh"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6394,7 +6432,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3Z2tPWiNiIpg8UMMoowHIk"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6413,7 +6451,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1OOtq8tRnDM8kG2gqUPjAj"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6432,7 +6471,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/71SvEDmsOwIWw1IozsZoMA"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "5eKb0TEz5FUTd8VvQVSr0l"
@@ -6451,7 +6490,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1cWnCh4EmvIE9vNGNMLTa0"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6470,8 +6510,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5kRW0Nf4FixQm3H6G8xCsV"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6490,7 +6530,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2mo7ImY2w6jiWjc8Nporfa"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6509,7 +6550,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7iN1s7xHE4ifF5povM6A48"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6528,7 +6570,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/70C4NyhjD5OZUMzvWZ3njJ"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6547,7 +6590,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5CTAcf8aS0a0sIsDwQRF9C"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6566,7 +6609,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/762B4bOcXF7I2Y8UlKTyTy"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6585,7 +6628,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7mjSHL2Eb0kAwiKbvNNyD9"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6604,7 +6647,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1xsYj84j7hUDDnTTerGWlH"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6623,7 +6667,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4BM8yJ0PzBi2ZewpMTOxtx"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6642,7 +6686,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/36xVTZU8HMpcgEdlJ4I3Kv"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6661,7 +6706,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/07GvNcU1WdyZJq3XxP0kZa"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6680,7 +6725,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2TVxnKdb3tqe1nhQWwwZCO"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6699,7 +6745,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1eN42Q7IWRzRBq8eW2Y2TE"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6718,7 +6765,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6XfxmT5QNCXvpZA6PKfWVL"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6737,7 +6785,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/54OR1VDpfkBuOY5zZjhZAY"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "electronic"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6756,7 +6805,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/26QKxvjlCo2fSd3T4c8Zpb"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6775,7 +6824,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5lpXFKgD6PeT6endUq5EX9"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6794,7 +6843,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1GcVa4jFySlun4jLSuMhiq"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6813,7 +6862,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4yugZvBYaoREkJKtbG08Qr"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6832,7 +6881,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4GhtDORJiSRYxj6M1bv0vX"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6851,7 +6901,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6mHOcVtsHLMuesJkswc0GZ"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6870,7 +6921,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1LOZMYF5s8qhW7Rv4w2gun"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6889,7 +6941,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0ofHAoxe9vBkTCp2UQIavz"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6908,7 +6960,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3pf96IFggfQuT6Gafqx2rt"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "electronic"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6927,7 +6980,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2MBwNVRASJ7ksQbhCpMIV1"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6946,7 +6999,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5fdhThPDe6jQQDqCyWrdAn"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6965,7 +7018,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/064SVQsmWl5EF0zahmzkQk"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -6984,7 +7037,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6OuRbvP4PgbuzBIapVzmFJ"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7003,7 +7057,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3DZ11M7LSpVQzYHnFx3i95"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7022,7 +7076,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2cX2coZS1PYBfPs8wgbdWE"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7041,7 +7095,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0v0XYK0pLgsPiq5u4FKHaw"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7060,7 +7115,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7HLZEgQ5ShGYrcKS8Iv3u5"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7079,7 +7134,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2gE95JskwQ1pCACTpGe1Db"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7098,7 +7153,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/68MSCSP7Y6PnzXcW1IlN7G"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7117,7 +7173,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4v2K1ZcRXUc87CLtEXI3Pf"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7136,7 +7192,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6UkMcAA19lTdjs22jtB7o2"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7155,8 +7212,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3BKrmS7x99qM9zVPTf0Lu2"
     },
     "genres": [
-      "schlagerparty",
-      "poprock"
+      "schlagerparty"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7175,7 +7231,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2JK1wOZCGUDbJOSaHAa8BM"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7194,7 +7250,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5YSI1311X8t31PBjkBG4CZ"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7213,7 +7269,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3XIEWK1V9n25PS9Vb6axj5"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7232,7 +7289,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6tunhVGD8C05MZNjSVIsjw"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7251,8 +7308,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0IbuM7HceQXATToyQSvegs"
     },
     "genres": [
-      "schlagerparty",
-      "poprock"
+      "schlagerparty"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7271,7 +7327,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4FQf1wrg6xlcfxQC7ZTIpy"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7290,7 +7347,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3vkQ5DAB1qQMYO4Mr9zJN6"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7309,7 +7366,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3wpLkju0bJy89kjgdRys0j"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7328,7 +7386,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6hTcuIQa0sxrrByu9wTD7s"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7347,7 +7405,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/17OqI90oTFZ3J8PVu6j07V"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7366,7 +7424,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1lCRw5FEZ1gPDNPzy1K4zW"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7385,7 +7443,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/476V2d6iA2tWXgQboKmTtA"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7404,7 +7462,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1Ehdm1PDlKrdfyBsjwEvd1"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7423,7 +7481,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3MFa9idQuY4iJLWsZl3tIQ"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7442,7 +7501,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4ZoBC5MhSEzuknIgAkBaoT"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7461,7 +7521,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5T8EDUDqKcs6OSOwEsfqG7"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7480,7 +7540,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0pQskrTITgmCMyr85tb9qq"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7499,7 +7560,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4TOMI010Sd4ZAX4aZ5TS85"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7518,7 +7579,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1fDsrQ23eTAVFElUMaf38X"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7537,7 +7598,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7pKfPomDEeI4TPT6EOYjn9"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7556,7 +7618,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4rDbp1vnvEhieiccprPMdI"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7575,7 +7637,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5BckPAYcKEJuYs1eV1BHHe"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7594,7 +7656,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6H3Wa6hWR9DRMzMSd4pZkT"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7613,7 +7675,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5RgFlk1fcClZd0Y4SGYhqH"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7632,7 +7695,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3P3fymPrC9KgV2Kf5oMnx0"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7651,7 +7715,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2AKOOhml62GZNFWDN7VqzT"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7670,7 +7734,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/562JrM9b7jiu8LgzV62x3o"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7689,7 +7753,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2RlgNHKcydI9sayD2Df2xp"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7708,7 +7772,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1YYhDizHx7PnDhAhko6cDS"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7727,7 +7791,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6UXXeFqMBGiqjkzQzkMT3E"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7746,7 +7810,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4pbJqGIASGPr0ZpGpnWkDn"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7765,7 +7829,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3gdewACMIVMEWVbyb8O9sY"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7784,7 +7849,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6Qb7gtV6Q4MnUjSbkFcopl"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7803,7 +7869,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0bRXwKfigvpKZUurwqAlEh"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7822,7 +7889,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6iMjntVYkchLBJcqsiSNYZ"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7841,7 +7908,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0VNzEY1G4GLqcNx5qaaTl6"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7860,7 +7927,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6QhXQOpyYvbpdbyjgAqKdY"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7879,7 +7947,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7JFoeg0arawADjGcz9gBnq"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7898,7 +7966,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/72ahyckBJfTigJCFCviVN7"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7917,7 +7985,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/38zsOOcu31XbbYj9BIPUF1"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7936,7 +8005,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6l8EbYRtQMgKOyc1gcDHF9"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7955,7 +8025,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6Ac4NVYYl2U73QiTt11ZKd"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7974,7 +8045,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/49MHCPzvMLXhRjDantBMVH"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -7993,7 +8065,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5IMtdHjJ1OtkxbGe4zfUxQ"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8012,7 +8084,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0X3d9gx7UDYgcwwkgTeNLR"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8031,7 +8103,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5y8d8RHvxb0KiTa9Nq0xWp"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8050,7 +8122,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/76TZCvJ8GitQ2FA1q5dKu0"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8069,7 +8142,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3M8FzayQWtkvOhqMn2V4T2"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8088,7 +8162,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2hitsKa8SthKhRJBXUHbIv"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8107,7 +8181,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3D9iV6cYkYJRAPFO6DRKIE"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8126,7 +8201,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4IRHwIZHzlHT1FQpRa5RdE"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8145,7 +8221,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0Q4FBn52tglZ02DCrAY8j0"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8164,7 +8241,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/40riOy7x9W7GXjyGp4pjAv"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8183,7 +8260,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7Jh1bpe76CNTCgdgAdBw4Z"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8202,7 +8280,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6zC0mpGYwbNTpk9SKwh08f"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8221,7 +8299,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1QEEqeFIZktqIpPI4jSVSF"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8240,7 +8318,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3EYOJ48Et32uATr9ZmLnAo"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8259,7 +8337,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7vidktgNZFQylTgH1GEnMs"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8278,7 +8356,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/714hERk9U1W8FMYkoC83CO"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8297,7 +8376,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4gMgiXfqyzZLMhsksGmbQV"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8316,7 +8395,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/79hJaqmVdohltPBNN6BULM"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8335,7 +8414,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6HSXNV0b4M4cLJ7ljgVVeh"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8354,7 +8433,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5ihS6UUlyQAfmp48eSkxuQ"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8373,7 +8452,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7GVUmCP00eSsqc4tzj1sDD"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8392,7 +8471,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5MXXbGYNmRHR7ULMvZYo5R"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8411,7 +8491,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2JoZzpdeP2G6Csfdq5aLXP"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8430,8 +8510,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6S9q9mEifNdnTNlli2xSuD"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8450,7 +8529,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/15BQ7vEDv2LJuh8TxWIhtd"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8469,7 +8548,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6vZZtivPrtpggT5SSXsYTy"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8488,7 +8568,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7K8QsHbmUpSX37oOCL4e2g"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8507,7 +8587,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/17arUdDWEinOOVrrVUkEM7"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8526,7 +8606,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0hMvI4iye2BtqOPL57qfya"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8545,7 +8626,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1HOMkjp0nHMaTnfAkslCQj"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8564,7 +8645,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5e9TFTbltYBg2xThimr0rU"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8583,7 +8664,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4t0Pj3iBnSCZv5pDEPNmzG"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8602,7 +8683,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6hLqEJg2GnnDG4W0Y64hyD"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8621,7 +8702,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7zMUCLm1TN9o9JlLISztxO"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8640,7 +8722,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7yFvSYKk3g5g8e7Ffl16ws"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8659,7 +8741,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/41AE8ODX2JETBCa6muhSLY"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8678,7 +8761,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2geMzjpfaN4U5YjrDtbYYk"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8697,7 +8780,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4qsAYBCJnu2OkTKUVbbOF1"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8716,7 +8799,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1Q1b8eVkUPGlpSArl8JAVw"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8735,7 +8818,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5JnHzjo25FY1fMQMQVOawB"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8754,7 +8838,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2Pzhx26KqgTTKnko0uC7F7"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8773,7 +8858,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4N0TP4Rmj6QQezWV88ARNJ"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8792,7 +8878,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1bp2IO61zbQrbWNmKKxg3f"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8811,7 +8897,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2zYzyRzz6pRmhPzyfMEC8s"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8830,7 +8917,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1oYYd2gnWZYrt89EBXdFiO"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8849,7 +8936,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3Vby4nGmtbDo7HDJamOWkT"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8868,7 +8956,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4U45aEWtQhrm8A5mxPaFZ7"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8887,7 +8976,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4bEb3KE4mSKlTFjtWJQBqO"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8906,7 +8995,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7dSCxR4LqkmxoBrq9MzVSD"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8925,7 +9015,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7LRMbd3LEoV5wZJvXT1Lwb"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8944,7 +9035,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5gOd6zDC8vhlYjqbQdJVWP"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8963,7 +9055,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4pNiE4LCVV74vfIBaUHm1b"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -8982,7 +9075,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0KMGxYKeUzK9wc5DZCt3HT"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9001,7 +9095,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5CQ30WqJwcep0pYcV4AMNc"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9020,7 +9115,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0wtHjEAzLYYyGuk2WtpGwS"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9039,7 +9135,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2LawezPeJhN4AWuSB0GtAU"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9058,7 +9154,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/52dm9op3rbfAkc1LGXgipW"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9077,7 +9173,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4T5Y25pWs2pVZVcFIqFuf8"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9096,7 +9192,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4J0DbyODwZJcmIAiTSJfMF"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9115,7 +9211,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6AbaUu4XtHu7pGkPE94Tat"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9134,7 +9231,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2kyVQg00pphEufGT59M2XH"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9153,7 +9250,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5EOoMWIB9iK4ZpcSex9Ec7"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9172,7 +9269,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4a5pNRjwmzYQuEY1E7O6pj"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9191,7 +9289,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5uuJruktM9fMdN9Va0DUMl"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9210,7 +9309,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3ZE3wv8V3w2T2f7nOCjV0N"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9229,7 +9329,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/702Xo5V8OhlY2cQEczCT2j"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "electronic"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9248,7 +9349,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1B5Tp2Ml9nLlmTSJx8xVfI"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9267,7 +9369,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3qI94hINNNeb4S7xQi18lS"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9286,7 +9389,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1QbOvACeYanja5pbnJbAmk"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9305,7 +9408,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6DjKJgwe9c90Bd2iya0fre"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9324,7 +9427,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0LoQuiekvzqx7n8flgEKzF"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9343,7 +9446,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6MrILERJLA3Jcq0E9poZsp"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9362,7 +9465,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5E3P9e1hvjyIOlFyqNB5eD"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9381,7 +9484,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2zMJN9JvDlvGP4jB03l1Bz"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "electronic"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9400,7 +9504,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5MMnwYs0hIxkENRsbkWJ2G"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9419,7 +9524,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2LScqpywMqGcnum6nNaxXX"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9438,7 +9543,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4JfuiOWlWCkjP6OKurHjSn"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9457,7 +9563,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4wOKTOwGVrie2GIbCMEe7U"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9476,7 +9582,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/78lgmZwycJ3nzsdgmPPGNx"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9495,7 +9602,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4cQJ27R11K634x5qCOwKW5"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9514,7 +9622,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/54eZmuggBFJbV7k248bTTt"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9533,7 +9642,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6zeE5tKyr8Nu882DQhhSQI"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9552,7 +9661,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/46eu3SBuFCXWsPT39Yg3tJ"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9571,7 +9681,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/54pvEYFocTlvIAQOfXSjqV"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9590,7 +9700,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2g7gviEeJr6pyxO7G35EWQ"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9609,7 +9719,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6kooDsorCpWVMGc994XjWN"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9628,7 +9738,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/77bNe6jYY8yHdP7orXrz5I"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9647,7 +9757,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5p3JunprHCxClJjOmcLV8G"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9666,7 +9776,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/76TpWFiK5YCgw1hy26DWZp"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9685,7 +9796,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2kkvB3RNRzwjFdGhaUA0tz"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9704,7 +9815,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2hdNya0b6Cc2YJ8IyaQIWp"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9723,7 +9834,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2SpEHTbUuebeLkgs9QB7Ue"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "6CyKsSLFFd2fX7Nu4yijSX"
@@ -9742,7 +9853,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0CnD7Hiw6pae6rLsZw5q5W"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -9761,7 +9872,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1BpV8IGf4XsRRJf4Xuui9q"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -9780,7 +9891,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3yjjFp94TOENrJJgvmxAoE"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -9799,7 +9911,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4r8lRYnoOGdEi6YyI5OC1o"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -9818,7 +9930,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3ZffCQKLFLUvYM59XKLbVm"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -9837,7 +9949,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1jlG3KJ3gdYmhfuySFfpO1"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -9856,7 +9968,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0mUyMawtxj1CJ76kn9gIZK"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -9875,7 +9987,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1PAgmT6YqGhd6zT9kN9gIo"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -9894,7 +10006,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2Ms33RTRCT6gArrpcrPxmo"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -9913,7 +10025,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5oPSBJ5WQNwRL9ICtohYfo"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -9932,7 +10045,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6gxycjJNMgmAyfzUXBN80P"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -9951,7 +10064,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/21aT5lIYHjyBIFrXNbNY5U"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -9970,7 +10083,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5fztgDIt1Nq32VHJrAHq0Y"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -9989,7 +10102,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1hwJKpe0BPUsq6UUrwBWTw"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10008,7 +10121,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2hKdd3qO7cWr2Jo0Bcs0MA"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10027,7 +10141,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5xEM5hIgJ1jjgcEBfpkt2F"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10046,7 +10160,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0rpIH5otu7ykvZPdcQuRPh"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10065,7 +10180,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1SKPmfSYaPsETbRHaiA18G"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10084,7 +10200,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/79EAVfOpzgfHx3IE2BVFQv"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10103,7 +10219,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2RjnnOuAvosOSAZhZQ50kO"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10122,7 +10238,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4kSKacywUJHdhyst4PL6pl"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10141,7 +10257,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3ZOEytgrvLwQaqXreDs2Jx"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10160,8 +10276,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0v1XpBHnsbkCn7iJ9Ucr1l"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10180,7 +10295,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/72zZfHPYx43shcP3eKkYi5"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10199,7 +10314,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1H5tvpoApNDxvxDexoaAUo"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10218,7 +10333,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6si71supnBUhddjR2FJc2L"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10237,7 +10352,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3DamFFqW32WihKkTVlwTYQ"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP",
@@ -10257,7 +10373,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0AKAxdNkwq9ZxRdW1DN9zW"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10276,7 +10393,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4WGTwyHPMvB3HWiEO9R0wb"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10295,8 +10412,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/78PKCefXwDLbl4FVO1Pjzh"
     },
     "genres": [
-      "metal",
-      "poprock"
+      "metal"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10315,7 +10431,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2AogRMqARWyUP7VQ3gmSoY"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10334,7 +10450,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/52Zr0sinhWTCRrQhRRY4EP"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10353,7 +10469,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4w1lzcaoZ1IC2K5TwjalRP"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10372,8 +10488,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7py0pONdy9D0DxNnT3elik"
     },
     "genres": [
-      "schlagerparty",
-      "poprock"
+      "schlagerparty"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10392,7 +10507,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6ZLGthToczpvnL5Eoy6yrY"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10411,7 +10527,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1AR0pzjw2WvAHlcst59nwT"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10430,7 +10546,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7LVHVU3tWfcxj5aiPFEW4Q"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10449,7 +10566,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/15f8Cv8RXUlOOCIf2oaceN"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10468,7 +10585,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2LxAeJ9KUj1GRS9oeHgQ3i"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10487,7 +10605,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1f2V8U1BiWaC9aJWmpOARe"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10506,7 +10624,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0gmbgwZ8iqyMPmXefof8Yf"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10525,7 +10644,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5v64DycnnkiEtJXiuObYhO"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10544,7 +10664,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5fVZC9GiM4e8vu99W0Xf6J"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10563,8 +10684,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5MDgIJMfN3VsxVBLjpDPIP"
     },
     "genres": [
-      "schlagerparty",
-      "poprock"
+      "schlagerparty"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10583,7 +10703,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5OiC3eltQO7gXvOZMbrTn3"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10602,7 +10723,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4bz7uB4edifWKJXSDxwHcs"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10621,7 +10743,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4RCWB3V8V0dignt99LZ8vH"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10640,7 +10763,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4bzmkrtJDog1RpvWAibK2n"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10659,7 +10783,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2hns6Dv29Yrg68AVTJiAyA"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10678,7 +10802,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3TCauNPqFiniaYHBvEVoHG"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10697,7 +10822,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4hYinIaRxdaoEFSQni6K6I"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10716,7 +10842,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1u0l8zWpQeMYStFkc2mLD7"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10735,7 +10862,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1jJci4qxiYcOHhQR247rEU"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10754,7 +10882,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3NLrRZoMF0Lx6zTlYqeIo4"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10773,7 +10902,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4bJygwUKrRgq1stlNXcgMg"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10792,7 +10921,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6vugYRjEYHJ3nsGP5kScpf"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10811,7 +10941,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4llK75pXNWZz6KAho2Gp16"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10830,7 +10961,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1kmhdq0RfZFdfSLaTsiTVi"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10849,7 +10980,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/75JFxkI2RXiU7L9VXzMkle"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10868,7 +11000,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3DuHOCe1dbf3XKF8uoc5oM"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10887,7 +11019,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6FLwmdmW77N1Pxb1aWsZmO"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10906,7 +11038,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0w07a1vsKahQMM0RnPXHVT"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10925,7 +11058,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0iGckQFyv6svOfAbAY9aWJ"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10944,7 +11077,6 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4EfIj3ryeMpmZNJq4xbTQf"
     },
     "genres": [
-      "poprock",
       "hiphop"
     ],
     "playlists": [
@@ -10964,7 +11096,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0xmjwnQ3FNE6HuWCt2nHdZ"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -10983,7 +11115,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3yUcJwYu7fXAfqMj9krY6l"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11002,7 +11134,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1KvoW6HPuW7Mu9i55XaibE"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11021,7 +11153,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6JY1IdkZGeIcPegKxjSKeb"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11040,7 +11173,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2LV5joNDrsyuXEh4FBARVK"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11059,7 +11193,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6kopmMZiyLmw7h66uXcXR7"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11078,7 +11213,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0OJtYfqiz0Xn53o2TnySQC"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11097,7 +11233,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5WuVWOngcRkMOx9RRLCvui"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11116,7 +11252,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7mOD9NFyZhC8PtW4joWDWT"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11135,7 +11272,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6vJ4egoPoiPKUyohVOfVHC"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11154,7 +11292,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/02jcEwywffn3Tsb48fXmlW"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11173,7 +11311,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/16DhvbuyvJob4Q9GHNYu2n"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11192,7 +11331,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2lnzGkdtDj5mtlcOW2yRtG"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11211,7 +11350,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/583xVl0Sbj93uU4ceixgU8"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11230,7 +11370,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5p9XWUdvbUzmPCukOmwoU3"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11249,7 +11390,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5S6pYZD8WH3OQapDHTDM9M"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11268,7 +11410,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7bjM0YAWS0goSo8pSokkvA"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11287,7 +11430,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7orBBkQgdmanhPCD0FyHHZ"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11306,7 +11450,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/283898Lgbl6LidapOraXiN"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11325,7 +11469,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/273QnyCvJB65rScHJ1nPZb"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11344,7 +11488,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7A4KdLy1DXOOC5fhIdDuHz"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11363,7 +11508,10 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6ucR4KfvsBFWCMVFDvyKKl"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "hiphop",
+      "pop",
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11382,7 +11530,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4dzreTCcGVgeF1vCcd22AC"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11401,7 +11549,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6fIGXxeU3C230sAm07WJxY"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11420,7 +11569,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1RKUoGiLEbcXN4GY4spQDx"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11440,8 +11590,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "metal",
-      "hiphop",
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11460,7 +11609,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3aaRRjtfKcEOZ0Prn80OhB"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11479,7 +11629,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3spBSmnzy7eKOAvNIKStf4"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11498,8 +11649,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5xvmB1OoJHXz8LsZPMhZ3G"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11519,8 +11669,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "metal",
-      "hiphop",
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11539,7 +11688,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6ELGTnvFyupaMLtxSYrrCG"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11558,8 +11707,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/22OsteZ4vFCDUY5KdtvVzR"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11578,7 +11726,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1heLEv7PekeuSueH9r1LaD"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11597,7 +11745,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6KMUWQdSdgWbUt8QGEaRIN"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11616,7 +11764,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/72fQWKhM1YBwWppS8Tmpw5"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11635,7 +11784,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0fN73V9Bj7U8JtmB2ZgFRg"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11654,7 +11804,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5ocfddG4faAWhwV8Fo3vUS"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11673,7 +11824,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0ICvakG2UnHeDlykb4cosq"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11692,7 +11844,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2sCsXgl4Egmam4efHRCWwP"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11711,7 +11864,9 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7LEXI7W7VUQBXjpxTnQ9re"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop",
+      "rnb"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11730,7 +11885,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2IYQFYlN7oY4a8loz0Iukq"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11749,7 +11905,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1EExAIJOvmpFhpSVmO3n7p"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11768,7 +11925,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2Q1eddqQet2NDCIvL5vzG1"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11787,7 +11945,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2AwnwslG1kz5mWMCC2XcUC"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11806,7 +11965,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6cAlfKuViKB9kYQU42usVi"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11825,7 +11985,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5eRx8r6X5ATv4ZWjkJh0p1"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11844,7 +12004,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2oAEWwATeqMPv8OSSkAbVH"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11863,7 +12023,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1SISahQ9QSV1H8v4Kxng5I"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11882,7 +12043,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2MgAKv8pRg5oQ2OjQRJRnC"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11901,7 +12063,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3tXCD3OSug0TxmP6OxvXeN"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11920,7 +12083,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/44XqHeiTrgraUp5xN0qTaw"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11939,7 +12103,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6ISrksefcVK74b8EpZF840"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "metal"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11958,8 +12123,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3lb2RGpr5eaRcDx2qMVg4s"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11978,7 +12142,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6tv0G7ut8ZJaFr8TexNoMx"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -11997,7 +12161,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1gfIFAX1IY5EXyxK29Lyln"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12016,7 +12180,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5EIuYTnDNdvEiBe2bd17jQ"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12035,7 +12200,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/53hniUNL15gVxnl7XV1qdV"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12054,7 +12219,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5yS49vhGk1hJEelQtYngEv"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12073,7 +12239,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2Py4Oh8CRFuI0oUm6jafL9"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12092,7 +12259,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6KJFPYolclwccbI4PlbJaF"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "hiphop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12111,7 +12279,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3akO1paFpjYKercqfXeNZ2"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12130,7 +12299,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6ALHX6JrjZ10PEO5cGtCmF"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12149,8 +12319,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6ehCzdwYGwUw8OE5TnUCah"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12169,7 +12338,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1Kk56C9SHQzSdyZlLAwqLE"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12189,8 +12359,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "metal",
-      "hiphop",
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12209,7 +12378,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6cAvyVIyljhbInVZRfspoJ"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12228,7 +12397,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0RCKFXBZfOgp5CMDI4uJYG"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12247,7 +12417,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/71W4AEIZa7uq4EP9Y2eopk"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12266,7 +12437,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6AOhDP6plSLmvVW3s6XkIi"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12285,7 +12457,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6N6hEO1niVWRD7pqdkfAhx"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12304,7 +12476,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4KFqMbI0qY6yzSg6GNTsfe"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12323,7 +12496,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6ZuneWHtW7RnW3IH2S50uz"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12342,7 +12516,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4tZ5lS9MnmNmIwWUwXcjlQ"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12361,7 +12535,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1Hq0a9H77DgC7arX0wxDos"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12380,7 +12554,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0c067hI4TS2rmTukcRVlFY"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12399,8 +12573,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5x5M9qua1FxfciF0pH9EnI"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12419,7 +12592,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4pcwQGF7bDlrXdjWpoUlYI"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12438,7 +12611,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0BpK5LhfZy0bD4pJm1jo0M"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12457,7 +12631,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/62zh7hMYM7m8xc6igXDW76"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "1K766ohE2LA7b7ghtTm7mP"
@@ -12476,7 +12651,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7xoUc6faLbCqZO6fQEYprd"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12495,7 +12670,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0HZhYMZOcUzZKSFwPOti6m"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12514,7 +12689,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7hDVYcQq6MxkdJGweuCtl9"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12533,8 +12708,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1zi7xx7UVEFkmKfv06H8x0"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12553,7 +12727,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4OSBTYWVwsQhGLF9NHvIbR"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12572,7 +12746,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6ocbgoVGwYJhOv1GgI9NsF"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12591,7 +12765,9 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2fTsFCKRFQ5M0igJgabnLA"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop",
+      "hiphop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12610,7 +12786,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2qxmye6gAegTMjLKEBoR3d"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12629,7 +12805,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6lV2MSQmRIkycDScNtrBXO"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12648,7 +12825,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0d2iYfpKoM0QCKvcLCkBao"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12667,7 +12845,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1i1rNVtxbE7rdFfpHuNq2j"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12686,7 +12865,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4kbj5MwxO1bq9wjT5g9HaA"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12705,7 +12885,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2vwlzO0Qp8kfEtzTsCXfyE"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12724,7 +12904,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1VKTdQTrcP0cMdySaCEj7F"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12743,7 +12923,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7982sGZuvo5OXsY6REzgIn"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12762,7 +12943,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1mKXFLRA179hdOWQBwUk9e"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12781,7 +12962,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/37f4ITSlgPX81ad2EvmVQr"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12800,7 +12981,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0cqRj7pUJDkTCEsJkx8snD"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12819,7 +13000,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5qaEfEh1AtSdrdrByCP7qR"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12838,7 +13020,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6md4w95cnKaW64JyEQ3A0L"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12857,7 +13040,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4VrWlk8IQxevMvERoX08iC"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12876,7 +13059,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1Yk0cQdMLx5RzzFTYwmuld"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12896,7 +13079,8 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "hiphop",
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12915,7 +13099,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3Wrjm47oTz2sjIgck11l5e"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm",
@@ -12935,7 +13119,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/20I6sIOMTCkB6w7ryavxtO"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12954,7 +13138,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5Ohxk2dO5COHF1krpoPigN"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12973,7 +13158,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/32OlwWuMpZ6b0aN2RZOeMS"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -12992,7 +13178,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4bzBPrGYD3fQfAadLgIiwT"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13011,7 +13198,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7a86XRg84qjasly9f6bPSD"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13030,7 +13218,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3JvKfv6T31zO0ini8iNItO"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13049,7 +13237,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0Dho96aJIZ5LJZXyPllbWA"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13068,7 +13257,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2ihCaVdNZmnHZWt0fvAM7B"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13087,7 +13277,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6Vc5wAMmXdKIAM7WUoEb7N"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rnb"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13106,7 +13297,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4cktbXiXOapiLBMprHFErI"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13125,7 +13317,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/04aAxqtGp5pv12UXAg4pkq"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13144,8 +13337,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2JzZzZUQj3Qff7wapcbKjc"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13164,7 +13356,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/23ihGIrYOSzNNGJ6STAxI4"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13183,7 +13375,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6QfS2wq5sSC1xAJCQsTSlj"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13202,7 +13394,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2dLLR6qlu5UJ5gk0dKz0h3"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13221,7 +13413,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5MwIGPDKeDb7SpblcaQP6O"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13240,7 +13432,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6kwAbEjseqBob48jCus7Sz"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13259,7 +13451,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4ofwffwvvnbSkrMSCKQDaC"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13278,7 +13470,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/57F80059mWaWFvWG3tBTbO"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13297,7 +13489,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4nVBt6MZDDP6tRVdQTgxJg"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13316,7 +13508,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3dYD57lRAUcMHufyqn9GcI"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13335,7 +13528,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/40EB7ABUO6MoWMUwPKptJ7"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13354,7 +13548,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6t6oULCRS6hnI7rm0h5gwl"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13373,7 +13568,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/30XU4suKzCeoCK9YFzdufg"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13392,7 +13587,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3G6hD9B2ZHOsgf4WfNu7X1"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13411,7 +13606,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2RSHsoi04658QL5xgQVov3"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13430,7 +13626,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/72FNf7DAlWLmuHiLTBcNHY"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13449,7 +13646,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7wMq5n8mYSKlQIGECKUgTX"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13468,7 +13666,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/74iZuPGwyL33VlTr6jTnab"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13487,7 +13685,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7yq4Qj7cqayVTp3FF9CWbm"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13506,7 +13704,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5O2P9iiztwhomNh8xkR9lJ"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13525,7 +13723,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2ls70nUDfjzm1lSRDuKxmw"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13544,7 +13742,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/27tNWlhdAryQY04Gb2ZhUI"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13563,7 +13761,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5Nm9ERjJZ5oyfXZTECKmRt"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13582,8 +13781,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6CjtS2JZH9RkDz5UVInsa9"
     },
     "genres": [
-      "poprock",
-      "hiphop"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13602,7 +13801,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1rqqCSm0Qe4I9rUvWncaom"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13621,7 +13821,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6lanRgr6wXibZr8KgzXxBl"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13640,7 +13840,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3lXbHd0EoryoQh3vpevNEP"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13659,7 +13859,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7795WJLVKJoAyVoOtCWqXN"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13678,7 +13879,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/34gCuhDGsG4bRPIf9bb02f"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13697,7 +13898,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3cU2wBxuV6nFiuf6PJZNlC"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13716,7 +13918,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/43zdsphuZLzwA9k4DJhU0I"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13735,7 +13937,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2BgEsaKNfHUdlh97KmvFyo"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13754,7 +13956,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/059ACLUOyEcdruA2m9f2jd"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13773,8 +13975,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1XGmzt0PVuFgQYYnV2It7A"
     },
     "genres": [
-      "poprock",
-      "hiphop"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13793,7 +13995,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1CQ2cMfrmFM1YdfmjENKVE"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13812,7 +14015,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4cluDES4hQEUhmXj6TXkSo"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13831,7 +14034,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/76hfruVvmfQbw0eYn1nmeC"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13851,7 +14054,8 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "hiphop",
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13870,7 +14074,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7w87IxuO7BDcJ3YUqCyMTT"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13889,7 +14094,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2Fxmhks0bxGSBdJ92vM42m"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13908,7 +14113,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6JV2JOEocMgcZxYSZelKcc"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13927,7 +14132,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1zB4vmk8tFRmM9UULNzbLB"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13946,7 +14152,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6tS3XVuOyu10897O3ae7bi"
     },
     "genres": [
-      "poprock",
+      "pop",
       "hiphop"
     ],
     "playlists": [
@@ -13966,7 +14172,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3EPXxR3ImUwfayaurPi3cm"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -13985,7 +14191,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1kPpge9JDLpcj15qgrPbYX"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14004,7 +14211,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1mKXfxIOA7eQQJ844OFm7L"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14023,7 +14230,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3bidbhpOYeV4knp8AIu8Xn"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14042,7 +14250,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1HNkqx9Ahdgi1Ixy2xkKkL"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14061,7 +14269,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1jF7IL57ayN4Ity3jQqGu0"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14080,7 +14288,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7qEHsqek33rTcFNT9PFqLf"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14099,7 +14307,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6FB3v4YcR57y4tXFcdxI1E"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14118,8 +14326,9 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0n4bITAu0Y0nigrz3MFJMb"
     },
     "genres": [
-      "poprock",
-      "hiphop"
+      "rnb",
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14138,7 +14347,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3CRDbSIZ4r5MsZ0YwxuEkn"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14157,7 +14367,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2tpWsVSb9UEmDRxAl1zhX1"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14176,7 +14387,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/22vgEDb5hykfaTwLuskFGD"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14195,7 +14406,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0pqnGHJpmpxLKifKRmU6WP"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14214,7 +14426,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6Hh80mBGVEObi3skGYf1PI"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14233,7 +14445,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2z4U9d5OAA4YLNXoCgioxo"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14252,7 +14464,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2ixsaeFioXJmMgkkbd4uj1"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14271,7 +14483,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6UelLqGlWMcVH1E5c4H7lY"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14290,7 +14503,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2BOqDYLOJBiMOXShCV1neZ"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14309,7 +14522,9 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/60nZcImufyMA1MKQY3dcCH"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14328,7 +14543,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0u2P5u6lvoDfwTYjAADbn4"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14347,7 +14562,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1gv4xPanImH17bKZ9rOveR"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14366,7 +14581,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2gMXnyrvIjhVBUZwvLZDMP"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14385,7 +14600,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6VObnIkLVruX4UVyxWhlqm"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14404,7 +14619,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7lGKEWMXVWWTt3X71Bv44I"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14423,7 +14639,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/235LXPXfi0SmOaS9TaCh3c"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14442,7 +14658,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/630sXRhIcfwr2e4RdNtjKN"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14461,7 +14677,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0qOnSQQF0yzuPWsXrQ9paz"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14480,7 +14697,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3bNv3VuUOKgrf5hu3YcuRo"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14499,7 +14716,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0FDzzruyVECATHXKHFs9eJ"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14518,7 +14736,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4uQY80TKE1u4ZQZQKHzVEi"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14537,7 +14755,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0fYVliAYKHuPmECRs1pbRf"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14556,7 +14775,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1PuLHwFZoh5qYK89I5YBdZ"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14575,7 +14795,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6QgjcU0zLnzq5OrUoSZ3OK"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14594,7 +14814,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/70eDxAyAraNTiD6lx2ZEnH"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14613,7 +14833,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0KAiuUOrLTIkzkpfpn9jb9"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14632,7 +14853,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1dGr1c8CrMLDpV6mPbImSI"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14651,7 +14872,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2Z8WuEywRWYTKe1NybPQEW"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14670,7 +14892,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0DwClY2t9YAWHBROMIgrXb"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14689,7 +14912,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0HPD5WQqrq7wPWR7P7Dw1i"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14708,7 +14931,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6K8VQ84MqhsoakN5MjrnVR"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14727,7 +14950,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7x5xYW5W42OGPAdHUyyguy"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14746,7 +14969,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1nInOsHbtotAmEOQhtvnzP"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14765,7 +14989,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1oAwsWBovWRIp7qLMGPIet"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14784,7 +15009,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7ueP5u2qkdZbIPN2YA6LR0"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14803,7 +15029,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0NlGoUyOJSuSHmngoibVAs"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14822,7 +15049,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3di5hcvxxciiqwMH1jarhY"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14841,7 +15068,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4esOae7i4rqTbAu9o5Pxco"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14860,7 +15088,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3WD91HQDBIavSapet3ZpjG"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14879,7 +15107,10 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5CLGzJsGqhCEECcpnFQA8x"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "electronic",
+      "pop",
+      "hiphop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14898,7 +15129,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6O20JhBJPePEkBdrB5sqRx"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14917,7 +15149,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3WALaE7UdNXx8VJ4lpWCK8"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14936,7 +15168,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/52gvlDnre9craz9dKGObp8"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14955,7 +15188,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6nek1Nin9q48AVZcWs9e9D"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14974,7 +15208,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/34xGLuxM0rkxhCVyMSqwJO"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -14993,7 +15227,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/13P5rwmk2EsoFRIz9UCeh9"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15012,7 +15247,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4u3AKBJI6vpwbcKj6jIZiA"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15031,7 +15267,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0GNI8K3VATWBABQFAzBAYe"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15050,7 +15287,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0Qh38w01QRXK6KHIv0e3hb"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15069,7 +15306,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1R0a2iXumgCiFb7HEZ7gUE"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15088,7 +15325,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6i0V12jOa3mr6uu4WYhUBr"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15107,7 +15345,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3U4isOIWM3VvDubwSI3y7a"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15126,7 +15365,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2fQxE0jVrjNMT9oJAXtSJR"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15145,7 +15385,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6ie2Bw3xLj2JcGowOlcMhb"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15164,7 +15404,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/12zpU2S4lMdrK9dvsOoL1m"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15183,7 +15424,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/378iszndTZAR4dH8kwsLC6"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "hiphop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15202,7 +15444,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/50kpGaPAhYJ3sGmk6vplg0"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15221,7 +15464,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/466s1BacUmiRdR3ISvNjyx"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15240,7 +15484,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1oew3nFNY3vMacJAsvry0S"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15259,7 +15503,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5jE48hhRu8E6zBDPRSkEq7"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15278,7 +15523,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/14AyWf6y7KlWWLfAjdKMKI"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "512n4C9VauhhFl9EhMoUlm"
@@ -15297,7 +15543,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1kuGVB7EU95pJObxwvfwKS"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15316,7 +15563,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6qYkmqFsXbj8CQjAdbYz07"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15335,7 +15583,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4WFgvKVfEhb3IUAFGrutTR"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15354,7 +15603,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6qqrTXSdwiJaq8SO0X2lSe"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15373,7 +15622,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/53iuhJlwXhSER5J2IYYv1W"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15392,7 +15641,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0FTmksd2dxiE5e3rWyJXs6"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15411,7 +15660,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/46HNZY1i7O6jwTA7Slo2PI"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15430,7 +15680,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/78nx0HDJIFD5xDq2L5420Z"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15449,7 +15700,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0oMoHEZPRd2DnD3EErXYpG"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15468,7 +15719,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/21jGcNKet2qwijlDFuPiPb"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15487,7 +15739,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1CPZ5BxNNd0n0nF4Orb9JS"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15506,7 +15759,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/37BZB0z9T8Xu7U3e65qxFy"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15525,7 +15779,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/18asYwWugKjjsihZ0YvRxO"
     },
     "genres": [
-      "poprock"
+      "electronic"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15544,7 +15798,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3cZajhyr8LmtPfHZ9296tj"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15563,7 +15818,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1O66hxri1Y6px5xZSs0OEv"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15582,7 +15837,9 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5MnmuLgPmsAFkmG5n85cna"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15601,7 +15858,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5H1sKFMzDeMtXwND3V6hRY"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15620,7 +15877,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6j8OrKDQHxXakjA7KKbWzj"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15639,7 +15897,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7DFSnCBYlus7i4U9KKlbdU"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15658,7 +15916,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4AajxCEwGEsmHmT4H1TwjY"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15677,7 +15935,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/17phhZDn6oGtzMe56NuWvj"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15696,7 +15955,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7JDWhC422Gtk1Bq0mL3OTC"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15715,7 +15974,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1qbmS6ep2hbBRaEZFpn7BX"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15734,7 +15994,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6dOtVTDdiauQNBQEDOtlAB"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15753,7 +16013,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/42UBPzRMh5yyz0EDPr6fr1"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15772,7 +16032,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5BZsQlgw21vDOAjoqkNgKb"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15791,7 +16052,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2yWlGEgEfPot0lv3OAjuG3"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15810,7 +16071,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3x3K1RP3Zfi2qeMR8kyrNO"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15829,7 +16091,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4Q0qVhFQa7j6jRKzo3HDmP"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15848,7 +16110,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2plbrEY59IikOBgBGLjaoe"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rnb"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15867,8 +16130,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4oASO8jyg0Qh7cUeve1bEA"
     },
     "genres": [
-      "poprock",
-      "hiphop"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15887,7 +16150,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3NFs3XUduzBfvc5Bx1gmzh"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15906,7 +16169,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3yWuTOYDztXjZxdE2cIRUa"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15925,7 +16188,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2qSkIjg1o9h3YT9RAgYN75"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15944,7 +16207,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6tNQ70jh4OwmPGpYy6R2o9"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15963,7 +16227,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0GRc3eGTg8HBdWLRGYgqIc"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -15982,7 +16246,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0QCIpQV3twfqo9kh0t8Zza"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16001,7 +16265,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/21IYMdzTrzSe191Cy5eMap"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16020,8 +16284,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6Ilomcr9iLplsgAvZjHkJP"
     },
     "genres": [
-      "poprock",
-      "hiphop"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16040,7 +16304,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1YsU8rW2u8z4F0pwOBQ4Ea"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16059,7 +16324,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5wtSei6pJpDEB1iKqPHhfU"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "electronic"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16078,7 +16344,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5SxahezRlC0saXbCALfB7c"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16097,7 +16363,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0h3Xy4V4apMraB5NuM8U7Z"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16116,7 +16383,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2LHNTC9QZxsL3nWpt8iaSR"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16135,7 +16402,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5ejTcCJOozPqRPMs9gW3pN"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16154,7 +16421,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1E7xmNFzqkkh1DMwBomBg3"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16173,7 +16441,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1We3jgIztlD2Tkb0yOoX4b"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16192,7 +16461,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4zpNfuWJA3K4d9TS4qnOIB"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16211,8 +16480,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/45J4avUb9Ni0bnETYaYFVJ"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16231,7 +16499,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5ZLUm9eab8y3tqQ1OhQSHI"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16250,7 +16518,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1SdJK81uqfXNIhlZI9vjlg"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16269,7 +16537,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rnb"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16288,7 +16557,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/35ISBknsCeZQtq66xABI9g"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16307,7 +16577,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5ITV0zqzjOYfFWpW0xBmRa"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16326,7 +16597,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7ETIZFr7163zFcz3RxKk5O"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16345,7 +16617,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1UPB5rYJ0bzn6mNSoAHrZC"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16364,7 +16636,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0TwKov50GELgwuAW4I3oeN"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16383,7 +16656,9 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2QuQkdLLzgktXwruPAz6f4"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop",
+      "rock"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16402,7 +16677,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1Oae67sHC45sBQMrYhMiWF"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16421,7 +16696,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1musbempyJAw5gfSKZHXP9"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16440,7 +16716,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0L1e4NytVRR42Ip0KPVgdv"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16459,7 +16735,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6393yGahSJ9slVdOwSxOVR"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16478,7 +16754,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5G2f63n7IPVPPjfNIGih7Q"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16497,7 +16773,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7xrEnNo99wrmIs8ZK3RZMK"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16516,8 +16793,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2CGNAOSuO1MEFCbBRgUzjd"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16536,7 +16812,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/726SEjbF3ToEbYbn43gnxl"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16555,7 +16831,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/74lOK0Z3WKvTpK8W8Srj1d"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16574,7 +16850,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3eQsDyIiFA52ZISozJQ1Lm"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16593,7 +16869,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5dIW2ogrgeDlOPIEM0dNcb"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16612,7 +16888,9 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5msO1c9VNP14k2t4EvXEsi"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop",
+      "rock"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16631,7 +16909,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3Vr3zh0r7ALn8VLqCiRR10"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16650,7 +16928,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2DufAlDkMT5qeTwTjVL0mo"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16669,7 +16948,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7bkUa9kDFGxgCC7d36dzFI"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16688,7 +16967,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7ne4VBA60CxGM75vw0EYad"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16707,7 +16986,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6wHpLMmp98aHcV8L1JFrj8"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16726,7 +17005,9 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3DarAbFujv6eYNliUTyqtz"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop",
+      "rnb"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16745,7 +17026,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4btFHqumCO31GksfuBLLv3"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16764,7 +17045,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0oA9wBGDY4uyILLg4GymWP"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16783,8 +17065,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0g2leZuI3jD5pRsrRIDvYe"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16803,7 +17084,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3nHuKdFJZm78CoeBnDcFKe"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16822,7 +17104,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1v1cijv1qjMJ5o9OvMWACS"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16841,7 +17124,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/18XlJEroUwFo0tLZxscgXE"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16860,7 +17144,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3jjujdWJ72nww5eGnfs2E7"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16879,7 +17164,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2wvUmObLQbxClXFsuhw8Ns"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16898,7 +17184,9 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6j0l7Hjt6qeDCQnYBZuJXY"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop",
+      "electronic"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16917,7 +17205,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7j5zuRDpIW9CdRDcsLNxBD"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16936,7 +17225,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/79WmVVG6KbCecp45eyhbfX"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16955,7 +17244,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/12OXyuPmhiyC2MYkREEAb6"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16974,7 +17264,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6vhOyWiOnO7EzxnXBllmkQ"
     },
     "genres": [
-      "poprock"
+      "electronic"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -16993,7 +17283,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2GxrNKugF82CnoRFbQfzPf"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17012,7 +17302,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3uUuGVFu1V7jTQL60S1r8z"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17031,7 +17322,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5fZJQrFKWQLb7FpJXZ1g7K"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17050,7 +17341,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7z7kvUQGwlC6iOl7vMuAr9"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17069,7 +17361,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/45BZcKdKl8OXpuGSlSvEun"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "electronic"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17088,8 +17381,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/64f3yNXsi2Vk76odcHCOnw"
     },
     "genres": [
-      "hiphop",
-      "poprock"
+      "hiphop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17108,7 +17400,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1EHUQesfVKwbthtNcpBi9g"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17128,7 +17421,6 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "schlagerparty",
-      "poprock",
       "hiphop"
     ],
     "playlists": [
@@ -17148,7 +17440,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4JGtRHnWyaNq7FIOZoBdPe"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17167,7 +17459,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5Z0UnEtpLDQyYlWwgi8m9C"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17186,8 +17479,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6FuGJB290AQMAHTfjOYVaK"
     },
     "genres": [
-      "poprock",
-      "hiphop"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17206,7 +17499,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7vmxzqidBt7y4FxRtsJBVV"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17225,7 +17519,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2CewvqbfMOcnvYE3yayAJV"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17244,7 +17538,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3rUGC1vUpkDG9CZFHMur1t"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17263,7 +17557,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7AYmToZ5y67fBjq4RLFbuq"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17282,7 +17577,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2FQrifJ1N335Ljm3TjTVVf"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17301,7 +17596,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1kHVme7OVyPqhtdiLj2SI4"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17320,8 +17615,10 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/59NraMJsLaMCVtwXTSia8i"
     },
     "genres": [
-      "poprock",
-      "hiphop"
+      "rnb",
+      "pop",
+      "metal",
+      "rock"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17340,7 +17637,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0sb8ClU3CLoNblxkpmOKzA"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17359,7 +17656,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/67p96tIoC4ESrod9kW331R"
     },
     "genres": [
-      "poprock"
+      "electronic"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17378,7 +17675,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7Bdtb10c2V4oVqsz8Ebkk5"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17397,7 +17694,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5aIVCx5tnk0ntmdiinnYvw"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17416,7 +17714,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2uqYupMHANxnwgeiXTZXzd"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17435,8 +17733,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/16f4ZN6XOfrIO8fJkm28HM"
     },
     "genres": [
-      "poprock",
-      "hiphop"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17455,7 +17753,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4HDC7Mo6uLTujRvHymiXDf"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17474,7 +17773,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2TGZSBugyuUOHFjsXYBKkD"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17493,7 +17793,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3o8piBTiYYIC9OQBY3xuNk"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17512,7 +17813,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5KDLhSpvNJX4buCQochelS"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17531,7 +17833,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/60zmUjNMSJzcMvy22azojx"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17550,7 +17852,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0mflMxspEfB0VbI1kyLiAv"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rock"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17569,7 +17872,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5GSYbwIInbmPvNRyl7nDpR"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17588,7 +17891,9 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5HCyWlXZPP0y6Gqq8TgA20"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop",
+      "rnb"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17607,7 +17912,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5dPy1CCYQ04xaQHpajf5CY"
     },
     "genres": [
-      "poprock"
+      "electronic"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17626,7 +17931,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6lHMg45o6S2ny3ZWAaNFZN"
     },
     "genres": [
-      "poprock"
+      "electronic"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17645,7 +17950,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4EncxuCewsAwSqc5S5jCmz"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17664,7 +17970,9 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4zLCLlqLivpZXvYfQCqTWh"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop",
+      "rock"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17683,7 +17991,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5Eh1nj7IjV9lwpcKAkidyY"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17702,7 +18010,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0cVyQfDyRnMJ0V3rjjdlU3"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17721,7 +18029,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/4Et6tUEO7biKxZEfJXpNj1"
     },
     "genres": [
-      "poprock"
+      "electronic"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17740,7 +18048,9 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2vXKRlJBXyOcvZYTdNeckS"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17760,7 +18070,7 @@ export const playlistCards: Card[] = [
     },
     "genres": [
       "hiphop",
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17779,7 +18089,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/0WbMK4wrZ1wFSty9F7FCgu"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17798,7 +18108,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2LBnpm1lEMkzD45ZGLmrQd"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17817,7 +18128,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/62hxFc3yOEyauOuuqbKqxt"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "electronic"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17836,7 +18148,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/50Td3qilgs8BLtv8mHyT1t"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17855,7 +18167,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6ft4hAq6yde8jPZY2i5zLr"
     },
     "genres": [
-      "poprock"
+      "electronic"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17874,7 +18186,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2iRniYXjMHKmwXqA2jYXP7"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17893,7 +18205,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/14d79QOV2pvJHH9vlUfZwJ"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17912,7 +18225,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1BJJbSX6muJVF2AK7uH1x4"
     },
     "genres": [
-      "poprock"
+      "electronic"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17931,7 +18244,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/2pw12Ta8UfYKesE52ldUFm"
     },
     "genres": [
-      "poprock"
+      "electronic",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17950,7 +18264,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5uQ7de4EWjb3rkcFxyEOpu"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17969,7 +18283,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5mHdCZtVyb4DcJw8799hZp"
     },
     "genres": [
-      "poprock"
+      "rnb",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -17988,7 +18303,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3USxtqRwSYz57Ewm6wWRMp"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -18007,7 +18323,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3an1JVi8OsE0aG6dMS4Pes"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -18026,7 +18343,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/3hRV0jL3vUpRrcy398teAU"
     },
     "genres": [
-      "poprock"
+      "rock",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -18045,7 +18363,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/5XeFesFbtLpXzIVDNQP22n"
     },
     "genres": [
-      "poprock"
+      "rock"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -18064,7 +18382,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7F1CiKqrY44kh5cDqwHOnx"
     },
     "genres": [
-      "poprock"
+      "electronic"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -18083,7 +18401,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/7221xIgOnuakPdLqT0F3nP"
     },
     "genres": [
-      "poprock"
+      "hiphop",
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -18102,7 +18421,8 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/1zFwFZ112by5yUtZOysUJb"
     },
     "genres": [
-      "poprock"
+      "pop",
+      "rnb"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
@@ -18121,7 +18441,7 @@ export const playlistCards: Card[] = [
       "spotify": "https://open.spotify.com/track/6J26td5uctWg0UlzdzCj7Y"
     },
     "genres": [
-      "poprock"
+      "pop"
     ],
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"

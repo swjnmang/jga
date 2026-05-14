@@ -20,11 +20,12 @@ export const TRIVIA_ONLY_CATEGORIES: CardCategory[] = [
   'geogeschichte',
   'natur',
   'filmserien',
-  'schaetzfragen'
+  'schaetzfragen',
+  'essentrinken'
 ];
 export const TIMELINE_CATEGORIES: CardCategory[] = ['quote', 'image', 'flag', 'music', 'outline', 'filmserien'];
 
-export const ALL_GENRES: GenreTag[] = ['poprock', 'metal', 'hiphop', 'schlagerparty'];
+export const ALL_GENRES: GenreTag[] = ['pop', 'rock', 'metal', 'hiphop', 'rnb', 'electronic', 'schlagerparty'];
 export const ALL_DECADES: DecadeTag[] = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];
 
 export function toDecadeTag(year: number): DecadeTag | undefined {
@@ -58,7 +59,7 @@ export function getDefaultSettings(
     categoryWeights,
     genres: ALL_GENRES,
     decades: availableDecades && availableDecades.length > 0 ? availableDecades : ALL_DECADES,
-    playlists: availablePlaylists && availablePlaylists.length > 0 ? availablePlaylists : [],
+    playlists: [], // Playlist-Filter deaktiviert; Jahrzehnte-Filter wird verwendet
     multipleChoice: mode === 'solo',
     digitalTimelineMode: false
   };

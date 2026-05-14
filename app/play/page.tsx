@@ -34,13 +34,13 @@ function PlayMenuContent() {
           <ModeCard 
             href="/multiplayer?gameMode=timeline"
             label="Timeline Multiplayer"
-            icon="📅"
-            description="Mit Freunden spielen"
+            icon="⏳"
+            description="Antworten chronologisch einordnen"
           />
           <ModeCard 
             href="/multiplayer?gameMode=trivia"
             label="Trivia Multiplayer"
-            icon="🎯"
+            icon="📚"
             description="Klassisches Quiz"
           />
         </div>
@@ -229,7 +229,8 @@ const CATEGORY_META: Record<CardCategory, { label: string; icon: string }> = {
   geogeschichte: { label: 'Geographie & Geschichte', icon: '🌍' },
   natur: { label: 'Natur & Technik', icon: '🔬' },
   filmserien: { label: 'Filme & Serien', icon: '🎞️' },
-  schaetzfragen: { label: 'Schätzfragen', icon: '🎯' }
+  schaetzfragen: { label: 'Schätzfragen', icon: '🎯' },
+  essentrinken: { label: 'Essen & Trinken', icon: '🍽️' }
 };
 
 function triviaCue(card: Card): string {

@@ -1,0 +1,301 @@
+Nr.;Frage;Antwort;Schwierigkeit
+1;Was ist die Hauptzutat von Hummus?;Kichererbsen;Einfach
+2;Welches Land ist für die Erfindung der Pizza bekannt?;Italien;Einfach
+3;Aus welcher Frucht wird Wein primär hergestellt?;Weintrauben;Einfach
+4;Welches Heißgetränk wird aus gerösteten Bohnen gebrüht?;Kaffee;Einfach
+5;Was ist die wichtigste Zutat in einer Guacamole?;Avocado;Einfach
+6;Welches Gewürz verleiht Curry seine typische gelbe Farbe?;Kurkuma;Einfach
+7;Wie nennt man getrocknete Weintrauben?;Rosinen;Einfach
+8;Aus welchem Getreide wird klassisches Popcorn gemacht?;Mais;Einfach
+9;Welches Tier liefert uns die Milch für Mozzarella di Bufala?;Wasserbüffel;Einfach
+10;Welches Vitamin ist besonders reichlich in Orangen enthalten?;Vitamin C;Einfach
+11;Wie heißt die japanische Meerrettich-Paste?;Wasabi;Einfach
+12;Welches Backtriebmittel lässt einen Kuchen aufgehen?;Backpulver (oder Hefe);Einfach
+13;Was ist die Hauptzutat von Marzipan?;Mandeln;Einfach
+14;In welcher Stadt wurde das Wiener Schnitzel erfunden?;Wien;Einfach
+15;Welcher Pilz wächst unter der Erde und ist sehr teuer?;Trüffel;Einfach
+16;Welches Land ist berühmt für Tequila?;Mexiko;Einfach
+17;Was ist Tofu?;Geronnener Sojaquark;Einfach
+18;Wie nennt man ein Frühstück kombiniert mit Mittagessen?;Brunch;Einfach
+19;Welches Gemüse ist die Basis für Sauerkraut?;Weißkohl;Einfach
+20;Was ist die Hauptzutat von Pesto alla Genovese?;Basilikum;Einfach
+21;Was versteht man unter dem Begriff Sous-vide?;Garen im Vakuumbeutel;Mittel
+22;Welches Land produziert den meisten Kakao weltweit?;Elfenbeinküste;Mittel
+23;Was ist eine Velouté?;Eine weiße Grundsauce (Samtsauce);Mittel
+24;Welcher Käse wird traditionell für ein echtes Tiramisu verwendet?;Mascarpone;Mittel
+25;Wie heißt die Rebsorte, aus der der Wein Barolo gewonnen wird?;Nebbiolo;Mittel
+26;Was ist der Unterschied zwischen einem Espresso und einem Ristretto?;Weniger Wasser bei gleicher Kaffeemenge;Mittel
+27;Aus welcher Pflanze wird das Gewürz Safran gewonnen?;Krokus (Crocus sativus);Mittel
+28;Was ist eine Bouillabaisse?;Eine französische Fischsuppe;Mittel
+29;Welches Getreide ist glutenfrei: Dinkel, Gerste oder Hirse?;Hirse;Mittel
+30;Wie nennt man das Schlagen von Eiweiß zu einer festen Masse?;Eischnee;Mittel
+31;Was ist Pumpernickel?;Ein westfälisches Vollkornbrot aus Roggen;Mittel
+32;Welches Kraut ist essenziell für eine klassische Sauce Béarnaise?;Estragon;Mittel
+33;Was ist ein Sommelier?;Ein Weinfachmann / Weinkellner;Mittel
+34;Aus welchem Land stammt der Halloumi-Käse ursprünglich?;Zypern;Mittel
+35;Was ist Kimchi?;Fermentiertes Gemüse (meist Chinakohl);Mittel
+36;Welches Teil des Rindes ist das Entrecôte?;Das Zwischenrippenstück;Mittel
+37;Wie heißt die mexikanische Sauce aus Schokolade und Chilis?;Mole;Mittel
+38;Was ist Chai in vielen asiatischen Sprachen?;Tee;Mittel
+39;Welcher Cocktail besteht aus Gin, Wermut und einer Olive?;Martini;Mittel
+40;Was ist Mise en Place?;Die Vorbereitung des Arbeitsplatzes in der Küche;Mittel
+41;Was ist die Maillard-Reaktion?;Chemische Bräunungsreaktion von Aminosäuren/Zucker;Schwer
+42;Welches Enzym im Lab lässt Milch gerinnen?;Chymosin;Schwer
+43;Was ist Ceviche und woher stammt es ursprünglich?;"In Limettensaft gegarter Fisch; Peru";Schwer
+44;Welcher Wein wird traditionell aus der Rebsorte Tempranillo gemacht?;Rioja;Schwer
+45;Was ist der Scoville-Grad?;Maßstab für die Schärfe von Chilis;Schwer
+46;Wie nennt man die Technik, Fleisch mit Speckstreifen zu durchziehen?;Spicken (oder Lardieren);Schwer
+47;Was ist Kopi Luwak?;Kaffee aus von Schleichkatzen verdauten Bohnen;Schwer
+48;Welches Land hat die meisten Michelin-Sterne pro Kopf?;Schweiz;Schwer
+49;Was ist eine Galantine?;Ein entbeintes, gefülltes und gerolltes Fleischstück;Schwer
+50;Aus welcher Region stammt der Champagner (exklusiv)?;Champagne (Frankreich);Schwer
+51;Was ist Umani?;Die fünfte Geschmacksrichtung (herzhaft/würzig);Schwer
+52;Welcher Fisch wird für das Gericht Stargazy Pie verwendet?;Sardinen;Schwer
+53;Was ist Dashi in der japanischen Küche?;Ein Fisch- und Algenfond;Schwer
+54;Wie heißt das Protein, das Teig elastisch macht?;Gluten;Schwer
+55;Was ist Amontillado?;Eine Sorte des Sherrys;Schwer
+56;Aus was besteht die Mutter aller Saucen, die Espagnole?;Brauner Fond, Roux und Tomatenmark;Schwer
+57;Welches Gewürz ist die getrocknete Rinde eines Baumes?;Zimt;Mittel
+58;Wie nennt man den Vorgang, Wein in eine Karaffe umzufüllen?;Dekantieren;Mittel
+59;Was ist Ghee?;Geklärte Butter;Mittel
+60;Welches Mehl hat den höchsten Proteingehalt: 405, 550 oder 1050?;1050;Mittel
+61;Was ist Tako beim Sushi?;Oktopus;Mittel
+62;Welches Land erfand das Fondue?;Schweiz;Einfach
+63;Wie nennt man die kleinen italienischen Teigklößchen?;Gnocchi;Einfach
+64;Was ist die Hauptzutat von Falafel?;Kichererbsen (oder Ackerbohnen);Einfach
+65;Welcher Schnaps wird aus Wacholderbeeren hergestellt?;Gin;Einfach
+66;Was ist ein Chateaubriand?;Ein doppeltes Filetstück vom Rind;Schwer
+67;Wie heißt der Schaumwein aus Italien (Region Venetien)?;Prosecco;Einfach
+68;Was ist Panko?;Japanisches Paniermehl (gröber/flockiger);Mittel
+69;Welches Kraut riecht für manche Menschen nach Seife?;Koriander;Mittel
+70;Was ist Sake?;Japanischer Reiswein;Einfach
+71;Wie heißt die kalte spanische Gemüsesuppe?;Gazpacho;Mittel
+72;Welches Fleisch ist in einem klassischen Ossobuco?;Kalbshaxe;Mittel
+73;Was ist Agar-Agar?;Pflanzliches Geliermittel aus Algen;Mittel
+74;Wie nennt man das Fettgewebe beim Schwein unter der Haut?;Rückenspeck;Mittel
+75;Welches Gewürz ist das teuerste der Welt?;Safran;Mittel
+76;Was ist eine Ganache?;Creme aus Schokolade und Sahne;Mittel
+77;In welchem Land trinkt man traditionell Mate?;Argentinien/Uruguay/Paraguay;Mittel
+78;Was ist Kaviar?;Gereinigter Rogen (Eier) von Stören;Mittel
+79;Welcher Zucker ist in Milch enthalten?;Laktose;Einfach
+80;Was ist Chutney?;Würzsauce aus Obst oder Gemüse (indisch);Mittel
+81;Wie heißt der Prozess, bei dem Zucker zu Alkohol wird?;Fermentation / Gärung;Mittel
+82;Was ist ein Carpaccio?;Hauchdünne Scheiben von rohem Fleisch/Fisch;Einfach
+83;Welches Öl hat einen sehr niedrigen Rauchpunkt?;Natives Olivenöl Extra;Mittel
+84;Was ist Mochi?;Japanischer Reiskuchen aus Klebreis;Mittel
+85;Wie nennt man das Garen in kochendem Wasser für kurze Zeit?;Blanchieren;Mittel
+86;Welches Obst ist die Basis für Calvados?;Äpfel;Mittel
+87;Was ist Harissa?;Eine scharfe tunesische Chilipaste;Mittel
+88;Welcher Käse wird für Quattro Formaggi oft als Blaupilzkäse genutzt?;Gorgonzola;Mittel
+89;Was ist Bottarga?;Getrockneter und gesalzener Fischrogen;Schwer
+90;Wie nennt man den Kern einer Kaffeekirsche?;Kaffeebohne;Einfach
+91;Was ist Pastrami?;Gepökeltes, geräuchertes und gewürztes Fleisch;Mittel
+92;Welches Teil ist die Hüfte beim Rind?;Sirloin (Blume);Mittel
+93;Was ist Mirin?;Süßer japanischer Reiswein zum Kochen;Schwer
+94;Welcher Pilz wird auch Eierschwamm genannt?;Pfifferling;Einfach
+95;Was ist Poutine?;Pommes mit Cheese Curds und Bratensauce;Mittel
+96;Wie heißt der berühmte Blauschimmelkäse aus Frankreich?;Roquefort;Mittel
+97;Was ist Tempeh?;Fermentierte Sojabohnen (ganz);Mittel
+98;Welches Getränk besteht aus Espresso und heißem Wasser?;Americano;Einfach
+99;Was ist Roux?;Eine Mehlschwitze;Mittel
+100;Welches Land ist der größte Produzent von Olivenöl?;Spanien;Mittel
+101;Welches Land gilt als Ursprungsland des Kaffees?;Äthiopien;Mittel
+102;Wie nennt man das Aroma, das Earl Grey Tee seinen typischen Geschmack verleiht?;Bergamotte;Mittel
+103;Was ist die Hauptzutat von Rum?;Zuckerrohr (Melasse oder Saft);Mittel
+104;Aus welcher Getreidesorte wird Bourbon Whiskey primär hergestellt?;Mais (mind. 51%);Schwer
+105;Was ist Kombucha?;Ein fermentiertes Teegetränk;Mittel
+106;Wie heißt der mexikanische Schnaps, der aus der Blauen Agave gewonnen wird?;Tequila;Einfach
+107;Welches Getränk bezeichnet man als flüssiges Brot?;Bier;Einfach
+108;Was ist ein Ristretto?;Ein stark konzentrierter Espresso;Mittel
+109;Welches Land ist berühmt für den Oolong-Tee?;China (oder Taiwan);Mittel
+110;Aus was wird Wodka traditionell hergestellt?;Getreide oder Kartoffeln;Einfach
+111;Was ist Cider (oder Apfelwein)?;Vergorener Apfelsaft;Einfach
+112;Welcher Cocktail besteht aus Tequila, Orangenlikör und Limettensaft?;Margarita;Mittel
+113;Was versteht man unter einem Cuvee beim Wein?;Ein Verschnitt aus verschiedenen Rebsorten;Mittel
+114;Wie viel Gramm Koffein sind tödlich für einen durchschnittlichen Erwachsenen?;Ca. 10 Gramm (entspricht ~100 Tassen Kaffee);Schwer
+115;Welcher Weinbrand darf nur aus einer bestimmten Region in Frankreich kommen?;Cognac;Mittel
+116;Was ist die Grundzutat von Arak?;Anis;Mittel
+117;Wie heißt die Hefe, die für obergärige Biere verwendet wird?;Saccharomyces cerevisiae;Schwer
+118;Was ist ein Flat White?;Ein Espresso mit feinporigem Milchschaum;Mittel
+119;Welcher Tee hat den höchsten Gehalt an Antioxidantien?;Grüner Tee;Mittel
+120;Wie nennt man den Vorgang, bei dem Bier in der Flasche nachreift?;Flaschengärung;Mittel
+121;Was ist Biskuitteig?;Ein lockerer Teig aus Eiern, Zucker und wenig Mehl;Einfach
+122;Wie nennt man das Gebäck aus Brandteig, das oft mit Sahne gefüllt ist?;Windbeutel (oder Profiteroles);Einfach
+123;Was ist Ganache?;Eine Mischung aus Kuvertüre und Sahne;Mittel
+124;Welches Triebmittel wird für Lebkuchen oft verwendet (statt Backpulver)?;Hirschhornsalz (oder Pottasche);Schwer
+125;Was ist der Unterschied zwischen Marzipan und Persipan?;Persipan wird aus Aprikosenkernen gemacht;Mittel
+126;Was ist Pâte Sablée?;Ein französischer Mürbeteig;Schwer
+127;Wie nennt man das Steifschlagen von Eiweiß mit Zucker?;Baiser (oder Meringue);Einfach
+128;Welches Gewürz ist essenziell für einen klassischen Käsekuchen?;Vanille (und Zitrone);Einfach
+129;Was ist Gelatine?;Ein tierisches Geliermittel aus Kollagen;Einfach
+130;Wie heißt der italienische Weihnachtskuchen mit Rosinen?;Panettone;Mittel
+131;Was ist Blindbacken?;Das Vorbacken eines Teigbodens ohne Füllung;Mittel
+132;Welches Mehl wird meist für Pasta verwendet?;Hartweizengrieß;Mittel
+133;Wie heißt der Kuchen, der wie ein Baumstamm aussieht?;Baumkuchen;Mittel
+134;Was ist Royal Icing?;Eine Glasur aus Puderzucker und Eiweiß;Mittel
+135;Was ist Sauerteig?;Ein Teig, der durch Milchsäurebakterien und Hefen gärt;Einfach
+136;Welches Fett wird traditionell für Blätterteig verwendet?;Butter;Einfach
+137;Was ist Pekannuss?;Eine nordamerikanische Nuss, verwandt mit der Walnuss;Einfach
+138;Wie heißt das Dessert aus Eigelb, Zucker und Marsala?;Zabaione;Mittel
+139;Was ist Semifreddo?;Ein italienisches Halbgefrorenes;Mittel
+140;Wie nennt man das Karamellisieren von Zucker mit Nüssen?;Krokant;Mittel
+141;Aus welcher Region stammt die Paella?;Valencia (Spanien);Mittel
+142;Was ist Miso in der japanischen Küche?;Eine Paste aus fermentierten Sojabohnen;Mittel
+143;Wie heißt das Nationalgericht Brasiliens aus Bohnen und Fleisch?;Feijoada;Schwer
+144;Was ist Nasi Goreng?;Indonesischer gebratener Reis;Einfach
+145;Wie nennt man das vietnamesische Sandwich?;Banh Mi;Mittel
+146;Welches Land ist für die Erfindung des Döners (im Brot) bekannt?;Deutschland (Berlin);Einfach
+147;Was ist Tajine?;Ein nordafrikanischer Schmortopf (und das Gefäß);Mittel
+148;Wie heißt der griechische Schafskäse?;Feta;Einfach
+149;Was ist Peking-Ente?;Ein berühmtes chinesisches Fleischgericht;Einfach
+150;Welches Land ist die Heimat des Gulasch?;Ungarn;Einfach
+151;Was ist Couscous?;Gedämpfter Hartweizengrieß;Einfach
+152;Wie heißt die scharfe Paste aus Nordafrika?;Harissa;Mittel
+153;Was ist Tandoori?;Ein indischer Lehmofen;Mittel
+154;Was ist Ceviche?;In Limettensaft marinierter roher Fisch;Mittel
+155;Aus welchem Land stammt der Bagel?;Polen (jüdische Tradition);Mittel
+156;Was ist Pisco?;Ein südamerikanischer Traubenbrand;Mittel
+157;Wie heißt das Schweizer Gericht aus geschmolzenem Käse auf Kartoffeln?;Raclette;Einfach
+158;Was ist Bibimbap?;Ein koreanisches Reisgericht;Mittel
+159;Welches Kraut ist die Basis für griechisches Tzatziki?;Dill (und Knoblauch/Gurke);Mittel
+160;Was ist Haggis?;Schottischer Schafsmagen, gefüllt mit Innereien;Schwer
+161;Was ist Gluten?;Ein Klebereiweiß in Getreide;Einfach
+162;Welches Vitamin wird durch Sonnenlicht im Körper gebildet?;Vitamin D;Mittel
+163;Wie heißt der natürliche rote Farbstoff in Tomaten?;Lycopin;Schwer
+164;Was passiert beim Homogenisieren von Milch?;Fettkügelchen werden zerkleinert;Mittel
+165;Was ist Laktose?;Milchzucker;Einfach
+166;Welches Spurenelement ist wichtig für die Schilddrüse?;Jod;Mittel
+167;Wie nennt man das Erhitzen zur Keimabtötung (bei Milch)?;Pasteurisieren;Einfach
+168;Was ist Pektin?;Ein pflanzliches Geliermittel (z.B. in Äpfeln);Mittel
+169;Welches Metall ist in Spinat enthalten (wenn auch weniger als gedacht)?;Eisen;Einfach
+170;Was ist E 621?;Glutamat (Geschmacksverstärker);Mittel
+171;Wie nennt man den Brennwert von Lebensmitteln?;Kalorien (oder Joule);Einfach
+172;Was ist Aspartam?;Ein künstlicher Süßstoff;Mittel
+173;Welches Öl enthält besonders viele Omega-3-Fettsäuren?;Leinöl;Mittel
+174;Was ist Fruktose?;Fruchtzucker;Einfach
+175;Wie nennt man den Prozess der Fettverderbnis?;Ranzig werden;Einfach
+176;Welches Organ produziert Galle zur Fettverdauung?;Leber;Mittel
+177;Was ist Chitinsäure (oft in Getreide)?;Ein Antinährstoff;Schwer
+178;Welches Vitamin ist fast nur in tierischen Produkten?;Vitamin B12;Mittel
+179;Was ist Glykogen?;Die Speicherform von Zucker im Muskel;Schwer
+180;Wie heißt das Enzym, das Stärke im Mund spaltet?;Amylase;Schwer
+181;Was ist Chicorée?;Ein bitteres Blattgemüse;Einfach
+182;Wie nennt man den Strunk bei der Ananas?;Kern / Herz;Einfach
+183;Was ist Okra?;Ein afrikanisches/asiatisches Gemüse;Mittel
+184;Welches Gewürz ist die getrocknete Narbe des Krokus?;Safran;Mittel
+185;Was ist Wasabi?;Japanischer Meerrettich;Einfach
+186;Wie nennt man die essbaren Blüten des Kapernstrauchs?;Kapern;Mittel
+187;Was ist Sojasauce?;Fermentierte Sauce aus Sojabohnen und Weizen;Einfach
+188;Welcher Pilz gilt als der König der Pilze?;Steinpilz;Mittel
+189;Was ist Topinambur?;Eine essbare Wurzelknolle;Mittel
+190;Wie heißt der schärfste Teil einer Chilischote?;Die Plazenta (Samenleisten);Schwer
+191;Was ist Tofu?;Quark aus Sojamilch;Einfach
+192;Welches Getreide ist die Basis für Couscous?;Hartweizen;Mittel
+193;Was ist Quinoa?;Ein Pseudogetreide aus Südamerika;Mittel
+194;Wie nennt man die Kerne der Pinie?;Pinienkerne;Einfach
+195;Was ist Schwarzkümmel?;Ein Gewürz, oft auf Fladenbrot;Mittel
+196;Welches Öl ist fast geschmacksneutral und hoch erhitzbar?;Raffiniertes Rapsöl;Mittel
+197;Was ist Hefe?;Ein einzelliger Pilz;Einfach
+198;Wie heißt die essbare Alge, die für Sushi verwendet wird?;Nori;Einfach
+199;Was ist Zitronengras?;Ein asiatisches Gewürzkraut;Einfach
+200;Welches Gewürz besteht aus der Rinde des Zimtbaumes?;Zimt;Einfach
+201;Wie nennt man das Küchengerät, mit dem man hauchdünne Scheiben (z.B. Gurken) hobelt?;Mandoline;Mittel
+202;Welches Besteckteil liegt bei einem formellen Gedeck ganz rechts außen?;Suppenlöffel;Mittel
+203;Was ist ein Zestenreißer?;Ein Werkzeug zum Abschälen feiner Streifen der Zitrusfruchtschale;Mittel
+204;Wie heißt das französische Messer mit der breiten, geschwungenen Klinge?;Kochmesser;Einfach
+205;Was versteht man unter Sautieren?;Kurzbraten bei hoher Hitze unter Schwenken;Mittel
+206;Wie nennt man den schweren, meist gusseisernen Topf mit Deckel?;Dutch Oven (oder Bräter);Mittel
+207;Was ist ein Chinois?;Ein feines, spitzzulaufendes Haarsieb;Schwer
+208;Welches Material leitet Hitze beim Kochgeschirr am besten?;Kupfer;Mittel
+209;Was ist eine Flotte Lotte?;Ein mechanisches Passiergerät;Mittel
+210;Wie nennt man das Messer, das speziell zum Entbeinen von Fleisch dient?;Ausbeinmesser;Mittel
+211;Welcher französische Koch gilt als König der Köche und Begründer der modernen Haute Cuisine?;Auguste Escoffier;Schwer
+212;Wie viele Sterne vergibt der Guide Michelin maximal an ein Restaurant?;Drei;Einfach
+213;In welchem Land wurde das erste Hard Rock Cafe eröffnet?;England (London);Mittel
+214;Wer erfand laut Legende das Sandwich?;John Montagu, 4. Earl of Sandwich;Einfach
+215;Wie heißt der Guide, der Restaurants mit Hauben bewertet?;Gault&Millau;Mittel
+216;Was ist ein Amuse-Gueule?;Ein kleiner Gruß aus der Küche (Appetithäppchen);Mittel
+217;Welcher Starkoch ist für seine Wutausbrüche in Hell's Kitchen bekannt?;Gordon Ramsay;Einfach
+218;Was ist das Noma in Kopenhagen?;Ein mehrfach als weltbestes Restaurant ausgezeichnetes Lokal;Mittel
+219;Welcher Kochstil wurde von Ferran Adrià im elBulli geprägt?;Molekularküche;Schwer
+220;Wie nannte man früher die giftgrüne Spirituose, die als Die grüne Fee bekannt war?;Absinth;Mittel
+221;Welcher Käse wird traditionell aus Schafsmilch hergestellt: Gouda oder Roquefort?;Roquefort;Mittel
+222;Was ist Crème fraîche im Vergleich zu saurer Sahne?;Höherer Fettgehalt (mind. 30%) und weniger Säure;Mittel
+223;Wie heißt die geschützte Ursprungsbezeichnung für Parmesan?;Parmigiano Reggiano;Mittel
+224;Aus welcher Milch wird echter griechischer Feta gemacht?;Schafs- und Ziegenmilch;Mittel
+225;Was ist Mascarpone eigentlich (biologisch gesehen)?;Ein Frischkäse;Einfach
+226;Welches Teil vom Schwein wird für Lachsschinken verwendet?;Der Rücken (Kotelettstrang);Mittel
+227;Was ist der Unterschied zwischen einem Steak Rare und Medium?;Rare ist im Kern noch fast roh/rot, Medium rosa;Einfach
+228;Wie nennt man das Fleisch junger Rinder (bis 8 Monate)?;Kalbfleisch;Einfach
+229;Was ist Dry Aging?;Die Trockenreifung von Fleisch am Knochen;Mittel
+230;Aus welchem Land stammt das Wagyu-Rind?;Japan;Einfach
+231;Was ist Surimi?;Fischmuskeleiweiß (Imitat von Krebsfleisch);Mittel
+232;Wie heißt der teuerste Speisefisch der Welt (oft für Sushi genutzt)?;Blauflossen-Thunfisch;Mittel
+233;Was ist Matjes?;Ein besonders junger, mild gesalzener Hering;Mittel
+234;Welcher Teil des Hummers gilt als Delikatesse?;Das Scherenfleisch und der Schwanz;Einfach
+235;Was ist Vannamei?;Eine Garnelenart (Zuchtgarnelen);Schwer
+236;Wie nennt man das Garen von Obst in Zuckerwasser?;Kandieren (oder Pochieren);Mittel
+237;Welches Gewürz wird aus der Frucht einer Orchidee gewonnen?;Vanille;Mittel
+238;Was ist Tonkabohne?;Ein mandelförmiger Samen mit vanilleähnlichem Aroma;Mittel
+239;Welches Mehl ist für Brandteig am besten geeignet?;Type 405 (Weizenmehl);Mittel
+240;Was ist Invertzucker?;Ein Gemisch aus Frucht- und Traubenzucker (bleibt geschmeidig);Schwer
+241;Welches Land ist der weltweit größte Produzent von Reis?;China;Mittel
+242;Was ist Polenta?;Ein Maisgrießbrei;Einfach
+243;Wie nennt man die indischen Fladenbrote, die am Ofenrand gebacken werden?;Naan;Einfach
+244;Was ist Bulgur?;Parboiled, getrockneter und zerkleinerter Weizen;Mittel
+245;Welches Getreide steckt in echtem Pumpernickel?;Roggen;Mittel
+246;Wie heißt die scharfe Wurzel, die als bayrisches Antibiotikum gilt?;Meerrettich;Einfach
+247;Was ist Schwarzwurzel optisch sehr ähnlich (nach dem Schälen)?;Spargel;Mittel
+248;Zu welcher Pflanzenfamilie gehört die Kartoffel?;Nachtschattengewächse;Mittel
+249;Was ist eine Plantain?;Eine Kochbanane;Mittel
+250;Welches Gemüse ist die Hauptzutat für Baba Ghanoush?;Aubergine;Mittel
+251;Wie nennt man das Verfahren, bei dem Wein durch Hefe prickelnd wird?;Gärung;Einfach
+252;Was ist ein Digestif?;Ein Schnaps nach dem Essen (Verdauungsschnaps);Einfach
+253;Welches Mineralwasser muss direkt am Quellort abgefüllt werden?;Natürliches Mineralwasser;Mittel
+254;Was ist der Angels' Share bei der Lagerung von Whiskey?;Der Teil, der im Fass verdunstet;Schwer
+255;Wie nennt man einen Wein, der weniger als 9g Restzucker pro Liter hat?;Trocken;Mittel
+256;Welches Land ist für den Portwein bekannt?;Portugal;Einfach
+257;Was ist Grappa?;Ein Tresterschnaps aus Weintraubenresten;Mittel
+258;Welches Getränk besteht aus Weißwein und Cassis-Likör?;Kir;Mittel
+259;Aus welcher Frucht wird Slivovitz hergestellt?;Pflaume;Mittel
+260;Wie nennt man das Mischen von Bier mit Limonade in Norddeutschland?;Alsterwasser;Einfach
+261;Was ist Umami?;Die 5. Geschmacksrichtung (würzig/herzhaft);Mittel
+262;Welches Vitamin ist in Fett löslich (nenne eines)?;A, D, E oder K;Mittel
+263;Was ist Glutamat?;Ein Salz der Glutaminsäure (Geschmacksverstärker);Mittel
+264;Wie hoch ist der Siedepunkt von Wasser auf Meereshöhe?;100 Grad Celsius;Einfach
+265;Was ist Oxidation bei aufgeschnittenen Äpfeln?;Das Braunwerden durch Kontakt mit Sauerstoff;Einfach
+266;Welcher Stoff sorgt im Kaffee für die belebende Wirkung?;Koffein;Einfach
+267;Was ist Karotin?;Der Farbstoff in Karotten (Vorstufe Vitamin A);Einfach
+268;Wie nennt man den Prozess, bei dem Milch sauer wird?;Milchsäuregärung;Mittel
+269;Was ist Lecithin (oft in Eigelb) für eine Substanz in der Küche?;Ein Emulgator;Schwer
+270;Welches Gas lässt den Teig bei der Hefegärung aufgehen?;Kohlendioxid ($CO_2$);Mittel
+271;Was ist Carpaccio im Original (welches Fleisch)?;Rinderfilet;Mittel
+272;Wie heißt die italienische Sauce aus Eigelb, Käse und Speck?;Carbonara;Einfach
+273;Was ist Saltimbocca?;Kalbsschnitzel mit Schinken und Salbei;Mittel
+274;Wie nennt man kleine spanische Häppchen?;Tapas;Einfach
+275;Was ist Ratatouille?;Ein französischer Gemüseschmortopf;Einfach
+276;Wie nennt man den Vorgang, Fleisch in einer Flüssigkeit mürbe zu machen?;Marinieren;Einfach
+277;Was ist Deglacieren?;Den Bratensatz mit Flüssigkeit ablöschen;Schwer
+278;Wie heißt das Garen unter dem Siedepunkt (ca. 70-95 Grad)?;Pochieren;Mittel
+279;Was ist Montieren einer Sauce?;Mit kalten Butterstücken aufschlagen zur Bindung;Schwer
+280;Wie nennt man das Entfernen des Darmtraktes bei Garnelen?;Entdarmen;Einfach
+281;Was ist Fünf-Gewürze-Pulver (Region)?;China;Mittel
+282;Welches Gewürz ist das Mark aus einer Rinde?;Zimt;Einfach
+283;Was ist Piment auch bekannt als?;Nelkenpfeffer (oder Allgewürz);Mittel
+284;Welches Kraut sieht aus wie Dill, schmeckt aber nach Anis?;Fenchel(grün);Mittel
+285;Was ist Sumach?;Ein säuerliches, tiefrotes Gewürz aus dem Orient;Schwer
+286;Wie heißt die größte Beere der Welt?;Kürbis;Schwer
+287;Was ist eine Physalis noch?;Kapstachelbeere;Mittel
+288;Welche Frucht wird auch Götterspeise oder Kaki genannt?;Sharonfrucht;Mittel
+289;Was ist die Hauptzutat von Marmorstein im Kuchen?;Kakao (für den dunklen Teil);Einfach
+290;Welches Obst enthält das Enzym Bromelain, das Fleisch zart macht?;Ananas;Schwer
+291;Wie nennt man die kleinen, runden Nudeln aus Sardinien?;Fregola Sarda;Schwer
+292;Was ist Pecorino?;Ein italienischer Hartkäse aus Schafsmilch;Mittel
+293;Welches Tier liefert das Fleisch für ein Wiener Schnitzel (Original)?;Kalb;Mittel
+294;Was ist Eiswein?;Wein aus gefroren geernteten Trauben;Mittel
+295;Wie heißt der japanische Tee, der zu Pulver gemahlen ist?;Matcha;Einfach
+296;Was ist Pastis?;Eine französische Anisspirituose;Mittel
+297;Wie nennt man den Schaum auf einem Espresso?;Crema;Einfach
+298;Welches Land konsumiert pro Kopf den meisten Käse?;Frankreich (oder Griechenland, je nach Statistik);Mittel
+299;Was ist Kaviar vom Stör: Schwarz oder Rot?;Schwarz;Mittel
+300;Welches Gericht wurde zu Ehren einer russischen Tänzerin benannt?;Pavlova;Mittel

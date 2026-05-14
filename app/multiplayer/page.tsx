@@ -4,10 +4,9 @@ import { useState, useEffect, useMemo, useRef, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { createGame, joinGame, subscribeToGame } from '@/lib/multiplayerService';
 import { cards, getCategories } from '@/lib/cards';
-import { playlistInfo } from '@/lib/playlistCards';
-import { getDefaultSettings, TIMELINE_CATEGORIES } from '@/lib/userSettings';
+import { getDefaultSettings, TIMELINE_CATEGORIES, toDecadeTag } from '@/lib/userSettings';
 import { isFirebaseEnabled } from '@/lib/firebase';
-import { CardCategory, Difficulty, GenreTag } from '@/lib/types';
+import { CardCategory, DecadeTag, Difficulty, GenreTag } from '@/lib/types';
 
 const GROUP_AVATARS = [
   // Einzeltiere
@@ -59,28 +58,22 @@ function MultiplayerLobbyContent() {
     return base;
   }, [gameMode]);
   
-  // Playlists (Music)
-  const availablePlaylists = useMemo(() => {
-    const set = new Set<string>();
+  // Decades (Music)
+  const availableDecades = useMemo(() => {
+    const order: DecadeTag[] = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];
+    const set = new Set<DecadeTag>();
     cards
-      .filter((c) => c.category === 'music')
+      .filter((c) => c.category === 'music' && typeof c.year === 'number')
       .forEach((c) => {
-        const list = c.playlists && c.playlists.length > 0 ? c.playlists : ['imported-playlist'];
-        list.forEach((id) => set.add(id));
+        const d = toDecadeTag(c.year as number);
+        if (d) set.add(d);
       });
-    return Array.from(set);
-  }, []);
-
-  const playlistNameMap = useMemo(() => {
-    return playlistInfo.reduce<Record<string, string>>((acc, p) => {
-      acc[p.id] = p.name;
-      return acc;
-    }, {});
+    return order.filter((d) => set.has(d));
   }, []);
 
   const defaultSettings = useMemo(
-    () => getDefaultSettings(availableCategories, undefined, availablePlaylists, gameMode),
-    [availableCategories, availablePlaylists, gameMode]
+    () => getDefaultSettings(availableCategories, availableDecades, [], gameMode),
+    [availableCategories, availableDecades, gameMode]
   );
   
   const [settings, setSettings] = useState(defaultSettings);
@@ -224,11 +217,13 @@ function MultiplayerLobbyContent() {
       const filteredCards = cards.filter((card: any) => {
         if (!settings.categories.includes(card.category)) return false;
         if (!settings.difficulties.includes(card.difficulty)) return false;
-        // Musik-Karten: nach Playlists und Genres filtern
+        // Musik-Karten: nach Jahrzehnten und Genres filtern
         if (card.category === 'music') {
-          const cardPlaylists: string[] = card.playlists && card.playlists.length > 0 ? card.playlists : ['imported-playlist'];
-          const hasPlaylist = settings.playlists.length === 0 || cardPlaylists.some((p: string) => settings.playlists.includes(p));
-          if (!hasPlaylist) return false;
+          // Jahrzehnte-Filter
+          if (typeof card.year === 'number') {
+            const decade = toDecadeTag(card.year as number);
+            if (decade && settings.decades.length > 0 && !settings.decades.includes(decade)) return false;
+          }
           const cardGenres: string[] = card.genres ?? [];
           const hasGenre = cardGenres.length === 0 || settings.genres.length === 0 || cardGenres.some((g: string) => (settings.genres as string[]).includes(g));
           if (!hasGenre) return false;
@@ -323,13 +318,26 @@ function MultiplayerLobbyContent() {
     });
   };
 
-  const togglePlaylist = (playlistId: string) => {
+  const toggleDecade = (decade: DecadeTag) => {
     setSettings((prev) => {
-      const nextList = prev.playlists.includes(playlistId)
-        ? prev.playlists.filter((p) => p !== playlistId)
-        : [...prev.playlists, playlistId];
-      return { ...prev, playlists: nextList };
+      const nextList = prev.decades.includes(decade)
+        ? prev.decades.filter((d) => d !== decade)
+        : [...prev.decades, decade];
+      return { ...prev, decades: nextList.length > 0 ? nextList : prev.decades };
     });
+  };
+
+  const decadeLabel = (tag: DecadeTag): string => {
+    const map: Record<DecadeTag, string> = {
+      '1960s': '60er',
+      '1970s': '70er',
+      '1980s': '80er',
+      '1990s': '90er',
+      '2000s': '2000er',
+      '2010s': '2010er',
+      '2020s': '2020er',
+    };
+    return map[tag] ?? tag;
   };
 
   const updateTimerMinutes = (value: string) => {
@@ -369,7 +377,8 @@ function MultiplayerLobbyContent() {
     schaetzfragen: 'Schätzfragen',
     religionglaube: 'Religion & Glaube',
     sportfreizeit: 'Sport & Freizeit',
-    geogeschichte: 'Geographie & Geschichte'
+    geogeschichte: 'Geographie & Geschichte',
+    essentrinken: 'Essen & Trinken'
   };
 
   const handleJoinGame = async () => {
@@ -677,13 +686,15 @@ function MultiplayerLobbyContent() {
                   <span className="text-xs text-ink/60 ml-1">Wirkt nur auf Musikfragen</span>
                 </label>
                 <div className="grid grid-cols-2 gap-1">
-                  {['poprock', 'metal', 'hiphop', 'schlagerparty'].map((genre) => {
-                    const genreLabel: Record<string, string> = {
-                      poprock: 'Pop & Rock',
-                      metal: 'Metal',
-                      hiphop: 'Hip-Hop',
-                      schlagerparty: 'Schlager & Party'
-                    };
+                  {[
+                    { key: 'pop', label: 'Pop' },
+                    { key: 'rock', label: 'Rock' },
+                    { key: 'metal', label: 'Metal' },
+                    { key: 'hiphop', label: 'Hip-Hop' },
+                    { key: 'rnb', label: 'R&B / Soul' },
+                    { key: 'electronic', label: 'Electronic' },
+                    { key: 'schlagerparty', label: 'Schlager & Party' },
+                  ].map(({ key: genre, label: genreLabel }) => {
                     const checked = settings.genres.includes(genre as GenreTag);
                     return (
                       <button
@@ -700,7 +711,7 @@ function MultiplayerLobbyContent() {
                             </svg>
                           )}
                         </span>
-                        {genreLabel[genre]}
+                        {genreLabel}
                       </button>
                     );
                   })}
@@ -708,20 +719,20 @@ function MultiplayerLobbyContent() {
               </div>
             )}
 
-            {/* Playlists */}
-            {settings.categories.includes('music') && availablePlaylists.length > 0 && (
+            {/* Jahrzehnte */}
+            {settings.categories.includes('music') && availableDecades.length > 0 && (
               <div>
                 <label className="block text-sm font-semibold mb-2">
-                  Playlists
-                  <span className="text-xs text-ink/60 ml-1">Aktiviere, welche Playlists gespielt werden</span>
+                  Jahrzehnte
+                  <span className="text-xs text-ink/60 ml-1">Welche Jahrzehnte sollen gespielt werden?</span>
                 </label>
                 <div className="grid grid-cols-2 gap-1">
-                  {availablePlaylists.map((playlistId) => {
-                    const checked = settings.playlists.includes(playlistId);
+                  {availableDecades.map((decade) => {
+                    const checked = settings.decades.includes(decade);
                     return (
                       <button
-                        key={playlistId}
-                        onClick={() => togglePlaylist(playlistId)}
+                        key={decade}
+                        onClick={() => toggleDecade(decade)}
                         className="flex items-center gap-2 py-1.5 px-2 rounded-lg border border-ink/20 hover:bg-ink/5 transition-colors text-sm text-left"
                       >
                         <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
@@ -733,7 +744,7 @@ function MultiplayerLobbyContent() {
                             </svg>
                           )}
                         </span>
-                        {playlistNameMap[playlistId] || playlistId}
+                        {decadeLabel(decade)}
                       </button>
                     );
                   })}

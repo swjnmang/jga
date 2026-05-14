@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { Suspense, useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { cards, getCategories } from '@/lib/cards';
-import { playlistInfo } from '@/lib/playlistCards';
 import { CardCategory, DecadeTag, Difficulty, GenreTag } from '@/lib/types';
 import {
   ALL_GENRES,
@@ -16,8 +15,6 @@ import {
   TIMELINE_CATEGORIES,
   UserSettings
 } from '@/lib/userSettings';
-
-const FALLBACK_PLAYLIST_ID = 'imported-playlist';
 
 const difficultyOptions: { value: Difficulty; label: string }[] = [
   { value: 'leicht', label: 'Leicht' },
@@ -36,7 +33,8 @@ const categoryLabels: Partial<Record<CardCategory, string>> = {
   schaetzfragen: 'Schätzfragen',
   religionglaube: 'Religion & Glaube',
   sportfreizeit: 'Sport & Freizeit',
-  geogeschichte: 'Geographie & Geschichte'
+  geogeschichte: 'Geographie & Geschichte',
+  essentrinken: 'Essen & Trinken'
 };
 
 function SettingsPageContent() {
@@ -61,20 +59,9 @@ function SettingsPageContent() {
       });
     return order.filter((d) => set.has(d));
   }, []);
-  const availablePlaylists = useMemo(() => {
-    const set = new Set<string>();
-    cards
-      .filter((c) => c.category === 'music')
-      .forEach((c) => {
-        const ids = c.playlists && c.playlists.length > 0 ? c.playlists : [FALLBACK_PLAYLIST_ID];
-        ids.forEach((id) => set.add(id));
-      });
-    return Array.from(set);
-  }, []);
-  const playlistNameMap = useMemo(() => new Map(playlistInfo.map((p) => [p.id, p.name])), []);
   const defaults = useMemo(
-    () => getDefaultSettings(availableCategories, availableDecades, availablePlaylists, mode),
-    [availableCategories, availableDecades, availablePlaylists, mode]
+    () => getDefaultSettings(availableCategories, availableDecades, [], mode),
+    [availableCategories, availableDecades, mode]
   );
   const [settings, setSettings] = useState<UserSettings>(defaults);
   const [loaded, setLoaded] = useState(false);
@@ -133,16 +120,29 @@ function SettingsPageContent() {
     });
   };
 
-  const togglePlaylist = (playlistId: string) => {
+  const toggleDecade = (decade: DecadeTag) => {
     setSettings((prev) => {
-      const nextList = prev.playlists.includes(playlistId)
-        ? prev.playlists.filter((p) => p !== playlistId)
-        : [...prev.playlists, playlistId];
-      const ensured = nextList.length > 0 ? nextList : availablePlaylists;
-      const next = { ...prev, playlists: ensured };
+      const nextList = prev.decades.includes(decade)
+        ? prev.decades.filter((d) => d !== decade)
+        : [...prev.decades, decade];
+      const ensured = nextList.length > 0 ? nextList : availableDecades;
+      const next = { ...prev, decades: ensured };
       saveSettings(next);
       return next;
     });
+  };
+
+  const decadeLabel = (tag: DecadeTag): string => {
+    const map: Record<DecadeTag, string> = {
+      '1960s': '60er',
+      '1970s': '70er',
+      '1980s': '80er',
+      '1990s': '90er',
+      '2000s': '2000er',
+      '2010s': '2010er',
+      '2020s': '2020er',
+    };
+    return map[tag] ?? tag;
   };
 
   const updateCategoryWeight = (category: CardCategory, value: number) => {
@@ -318,7 +318,15 @@ function SettingsPageContent() {
             <p className="text-xs text-ink/60">Wirkt nur auf Musikfragen</p>
           </div>
           <div className="grid sm:grid-cols-2 gap-2 text-sm">
-            {[{ key: 'poprock', label: 'Pop & Rock' }, { key: 'metal', label: 'Metal' }, { key: 'hiphop', label: 'Hip-Hop' }, { key: 'schlagerparty', label: 'Schlager & Party' }].map((g) => {
+            {[
+              { key: 'pop', label: 'Pop' },
+              { key: 'rock', label: 'Rock' },
+              { key: 'metal', label: 'Metal' },
+              { key: 'hiphop', label: 'Hip-Hop' },
+              { key: 'rnb', label: 'R\u0026B / Soul' },
+              { key: 'electronic', label: 'Electronic' },
+              { key: 'schlagerparty', label: 'Schlager \u0026 Party' },
+            ].map((g) => {
               const checked = settings.genres.includes(g.key as GenreTag);
               return (
                 <label
@@ -339,31 +347,27 @@ function SettingsPageContent() {
         </section>
       )}
 
-      {settings.categoryWeights.music > 0 && availablePlaylists.length > 0 && (
+      {settings.categoryWeights.music > 0 && availableDecades.length > 0 && (
         <section className="card-surface rounded-2xl p-5 space-y-3">
           <div className="flex items-center justify-between gap-3">
-            <h2 className="text-lg font-semibold">Playlists</h2>
-            <p className="text-xs text-ink/60">Aktiviere, welche Playlists gespielt werden</p>
+            <h2 className="text-lg font-semibold">Jahrzehnte</h2>
+            <p className="text-xs text-ink/60">Welche Jahrzehnte sollen gespielt werden?</p>
           </div>
           <div className="grid sm:grid-cols-2 gap-2 text-sm">
-            {availablePlaylists.map((playlistId) => {
-              const checked = settings.playlists.includes(playlistId);
-              const label = playlistNameMap.get(playlistId)
-                || (playlistId === FALLBACK_PLAYLIST_ID
-                  ? 'Importierte Playlist'
-                  : `Playlist ${playlistId.slice(0, 8)}…${playlistId.slice(-4)}`);
+            {availableDecades.map((decade) => {
+              const checked = settings.decades.includes(decade);
               return (
                 <label
-                  key={playlistId}
+                  key={decade}
                   className={`flex items-center gap-2 rounded-xl border px-3 py-2 ${checked ? 'border-sky-700 bg-sky-50 text-sky-900' : 'border-ink/20 text-ink'}`}
                 >
                   <input
                     type="checkbox"
                     checked={checked}
-                    onChange={() => togglePlaylist(playlistId)}
+                    onChange={() => toggleDecade(decade)}
                     className="h-4 w-4 accent-sky-700"
                   />
-                  <span className="truncate" title={label}>{label}</span>
+                  <span>{decadeLabel(decade)}</span>
                 </label>
               );
             })}
