@@ -38,7 +38,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'sportfreizeit-boxen-schwergewicht', title: 'Boxen Schwergewicht', category: 'sportfreizeit', year: 0, cue: 'Nenne einen legendären Schwergewichtsboxer.', answer: 'Muhammad Ali (alternativ Mike Tyson, Joe Louis).', difficulty: 'leicht', sources: {}, distractors: ['Mike Tyson.', 'Lennox Lewis.', 'Floyd Mayweather.'], genres: [] },
 
-  { id: 'sportfreizeit-darts-maximum', title: 'Darts Maximum', category: 'sportfreizeit', year: 0, cue: 'Was ist die hochste mogliche Punktzahl in einer Aufnahme (3 Darts) im Darts?', answer: '180 Punkte (dreimal Triple 20).', difficulty: 'leicht', sources: {}, distractors: ['171 Punkte.', '169 Punkte.', '162 Punkte.'], genres: [] },
+  { id: 'sportfreizeit-darts-maximum', title: 'Darts Maximum', category: 'sportfreizeit', year: 0, cue: 'Was ist die höchste mögliche Punktzahl in einer Aufnahme (3 Darts) im Darts?', answer: '180 Punkte (dreimal Triple 20).', difficulty: 'leicht', sources: {}, distractors: ['171 Punkte.', '169 Punkte.', '162 Punkte.'], genres: [] },
 
   { id: 'sportfreizeit-snooker-maximum-break', title: 'Snooker Maximum', category: 'sportfreizeit', year: 0, cue: 'Wie hoch ist ein Maximum Break im Snooker?', answer: '147 Punkte.', difficulty: 'leicht', sources: {}, distractors: ['142 Punkte.', '145 Punkte.', '150 Punkte.'], genres: [] },
 
@@ -144,7 +144,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'sportfreizeit-isner-mahut-tennis', title: 'Längstes Tennis-Match', category: 'sportfreizeit', year: 0, cue: 'Wie viele Minuten dauerte das längste Tennis-Match der Geschichte (Isner vs. Mahut)?', answer: '665 Minuten. (Toleranz: 631,75–698,25)', difficulty: 'mittel', sources: {}, distractors: ['618 Minuten. (Toleranz: 631,75–698,25)', '692 Minuten. (Toleranz: 631,75–698,25)', '718 Minuten. (Toleranz: 631,75–698,25)'], genres: [] },
 
-  { id: 'sportfreizeit-lisicki-aufschlag', title: 'Schnellster Aufschlag Frauen', category: 'sportfreizeit', year: 0, cue: 'Wie viele Kilometer pro Stunde betrug die hochste jemals gemessene Geschwindigkeit eines Tennis-Aufschlags der Frauen (Sabine Lisicki)?', answer: '210,8 km/h. (Toleranz: 200,26–221,34)', difficulty: 'mittel', sources: {}, distractors: ['196,0 km/h. (Toleranz: 200,26–221,34)', '219,2 km/h. (Toleranz: 200,26–221,34)', '227,7 km/h. (Toleranz: 200,26–221,34)'], genres: [] },
+  { id: 'sportfreizeit-lisicki-aufschlag', title: 'Schnellster Aufschlag Frauen', category: 'sportfreizeit', year: 0, cue: 'Wie viele Kilometer pro Stunde betrug die höchste jemals gemessene Geschwindigkeit eines Tennis-Aufschlags der Frauen (Sabine Lisicki)?', answer: '210,8 km/h. (Toleranz: 200,26–221,34)', difficulty: 'mittel', sources: {}, distractors: ['196,0 km/h. (Toleranz: 200,26–221,34)', '219,2 km/h. (Toleranz: 200,26–221,34)', '227,7 km/h. (Toleranz: 200,26–221,34)'], genres: [] },
 
   { id: 'sportfreizeit-edwards-dreisprung', title: 'Weltrekord Dreisprung Edwards', category: 'sportfreizeit', year: 0, cue: 'Wie viele Meter weit sprang Jonathan Edwards bei seinem bis heute gültigen Dreisprung-Weltrekord (1995)?', answer: '18,29 Meter. (Toleranz: 17,3755–19,2045)', difficulty: 'mittel', sources: {}, distractors: ['16,83 Meter. (Toleranz: 17,3755–19,2045)', '18,84 Meter. (Toleranz: 17,3755–19,2045)', '19,75 Meter. (Toleranz: 17,3755–19,2045)'], genres: [] },
 
@@ -364,7 +364,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'religion-026', title: 'Neues Testament', category: 'religionglaube', year: 0, cue: 'In welchem Teil der Bibel wird vom Leben Jesu erzahlt?', answer: 'Im Neuen Testament.', difficulty: 'leicht', sources: {}, distractors: ['Im Alten Testament.', 'In der Apokalypse.', 'In der Offenbarung.'], genres: [] },
 
-  { id: 'religion-027', title: 'Die Hölle', category: 'religionglaube', year: 0, cue: 'Was ist das Gegenteil vom Himmel in religiosen Vorstellungen?', answer: 'Die Hölle.', difficulty: 'leicht', sources: {}, distractors: ['Der Himmel.', 'Das Fegefeuer.', 'Nirvana.'], genres: [] },
+  { id: 'religion-027', title: 'Die Hölle', category: 'religionglaube', year: 0, cue: 'Was ist das Gegenteil vom Himmel in religiösen Vorstellungen?', answer: 'Die Hölle.', difficulty: 'leicht', sources: {}, distractors: ['Der Himmel.', 'Das Fegefeuer.', 'Nirvana.'], genres: [] },
 
   { id: 'religion-028', title: 'Moses', category: 'religionglaube', year: 0, cue: 'Wer erhielt die Zehn Gebote auf dem Berg Sinai?', answer: 'Moses.', difficulty: 'leicht', sources: {}, distractors: ['Noah.', 'Abraham.', 'Jakob.'], genres: [] },
 
@@ -468,7 +468,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'religion-078', title: 'Jesus bedeutet', category: 'religionglaube', year: 0, cue: 'Was bedeutet der Name "Jesus"?', answer: '"Gott rettet" oder "Gott hilft".', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'religion-079', title: 'Wallfahrt', category: 'religionglaube', year: 0, cue: 'Wie nennt man eine religiose Wanderung zu einem heiligen Ort?', answer: 'Wallfahrt oder Pilgerreise.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'religion-079', title: 'Wallfahrt', category: 'religionglaube', year: 0, cue: 'Wie nennt man eine religiöse Wanderung zu einem heiligen Ort?', answer: 'Wallfahrt oder Pilgerreise.', difficulty: 'leicht', sources: {}, genres: [] },
 
   { id: 'religion-080', title: 'Ganesha', category: 'religionglaube', year: 0, cue: 'Wer ist im Hinduismus der Gott mit dem Elefantenkopf?', answer: 'Ganesha.', difficulty: 'leicht', sources: {}, genres: [] },
 
@@ -504,15 +504,15 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'religion-095', title: 'Gnostizismus', category: 'religionglaube', year: 0, cue: 'Was war Gnostizismus?', answer: 'Eine Religionsbewegung, die verborgenes Wissen (Gnosis) betonte.', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'religion-096', title: 'Apokryphen', category: 'religionglaube', year: 0, cue: 'Was sind Apokryphen?', answer: 'Antike religiose Texte, die nicht in den Kanon aufgenommen wurden.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'religion-096', title: 'Apokryphen', category: 'religionglaube', year: 0, cue: 'Was sind Apokryphen?', answer: 'Antike religiöse Texte, die nicht in den Kanon aufgenommen wurden.', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'religion-097', title: 'Koranverse Suren', category: 'religionglaube', year: 0, cue: 'Wie viele Suren hat der Koran?', answer: '114 Suren.', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'religion-098', title: 'Ashura', category: 'religionglaube', year: 0, cue: 'Was ist Ashura im Islam?', answer: 'Ein Trauertag anlasslich des Todes von Imam Hussein.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'religion-098', title: 'Ashura', category: 'religionglaube', year: 0, cue: 'Was ist Ashura im Islam?', answer: 'Ein Trauertag anlässlich des Todes von Imam Hussein.', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'religion-099', title: 'Takfir', category: 'religionglaube', year: 0, cue: 'Was bedeutet Takfir?', answer: 'Die Erklärung eines Muslims als Ungläubigen durch andere.', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'religion-100', title: 'Sunni vs Schia', category: 'religionglaube', year: 0, cue: 'Worin liegt der Hauptunterschied zwischen Sunniten und Schiiten?', answer: 'In der Nachfolgeregelung Mohammeds und religioser Autorität.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'religion-100', title: 'Sunni vs Schia', category: 'religionglaube', year: 0, cue: 'Worin liegt der Hauptunterschied zwischen Sunniten und Schiiten?', answer: 'In der Nachfolgeregelung Mohammeds und religiöser Autorität.', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'religion-101', title: 'Dhikr', category: 'religionglaube', year: 0, cue: 'Was ist Dhikr?', answer: 'Eine Form der Gottesgedenken durch rhythmisches Wiederholen.', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -538,9 +538,9 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'religion-112', title: 'Moksha', category: 'religionglaube', year: 0, cue: 'Was ist Moksha?', answer: 'Die Befreiung von Samsara und Karma im Hinduismus.', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'religion-113', title: 'Vaishnavismus', category: 'religionglaube', year: 0, cue: 'Was ist Vaishnavismus?', answer: 'Die Verehrung Vishnus als hochster Gott im Hinduismus.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'religion-113', title: 'Vaishnavismus', category: 'religionglaube', year: 0, cue: 'Was ist Vaishnavismus?', answer: 'Die Verehrung Vishnus als höchster Gott im Hinduismus.', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'religion-114', title: 'Shaivismus', category: 'religionglaube', year: 0, cue: 'Was ist Shaivismus?', answer: 'Die Verehrung Shivas als hochster Gott im Hinduismus.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'religion-114', title: 'Shaivismus', category: 'religionglaube', year: 0, cue: 'Was ist Shaivismus?', answer: 'Die Verehrung Shivas als höchster Gott im Hinduismus.', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'religion-115', title: 'Tantra', category: 'religionglaube', year: 0, cue: 'Was ist Tantra?', answer: 'Ein esoterisches Praktiken- und Philosophiesystem in östlichen Religionen.', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -706,13 +706,13 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'religion-195', title: 'Martinisten', category: 'religionglaube', year: 0, cue: 'Wer waren die Martinisten?', answer: 'Eine Geheimgesellschaft mit mystischen und esoterischen Lehren (18. Jh.).', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'religion-196', title: 'Illuminaten', category: 'religionglaube', year: 0, cue: 'Was waren die Illuminaten?', answer: 'Eine bavarian Geheimgesellschaft des 18. Jh. mit rationalistischen Zielen.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'religion-196', title: 'Illuminaten', category: 'religionglaube', year: 0, cue: 'Was waren die Illuminaten?', answer: 'Eine bayerische Geheimgesellschaft des 18. Jh. mit rationalistischen Zielen.', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'religion-197', title: 'Rosenkreuzer', category: 'religionglaube', year: 0, cue: 'Was sind Rosenkreuzer?', answer: 'Eine esoterische Geheimgesellschaft mit mystischen/alchemistischen Zielen.', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'religion-198', title: 'Freimaurer', category: 'religionglaube', year: 0, cue: 'Was sind die Freimaurer?', answer: 'Ein Bund mit geheimen rituellen Praktiken, Ursprünge in mittelalterlichen Steinmetzen.', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'religion-199', title: 'Bektaschi', category: 'religionglaube', year: 0, cue: 'Was ist der Bektaschi-Orden?', answer: 'Ein heterodoxer islamischer Mystik-Orden mit Einflussen von Schiismus/Schamanismus.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'religion-199', title: 'Bektaschi', category: 'religionglaube', year: 0, cue: 'Was ist der Bektaschi-Orden?', answer: 'Ein heterodoxer islamischer Mystik-Orden mit Einflüssen von Schiismus/Schamanismus.', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'religion-200', title: 'Alawiten Aleviten', category: 'religionglaube', year: 0, cue: 'Wer sind die Alawiten/Aleviten?', answer: 'Schiitische islamische Gruppe in der Türkei/Levante mit mystischen Praktiken.', difficulty: 'schwer', sources: {}, genres: [] },
 
@@ -754,7 +754,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'religion-219', title: 'Atman', category: 'religionglaube', year: 0, cue: 'Was ist Atman im Hinduismus?', answer: 'Das individuelle Selbst/Bewusstsein, oft identisch mit Brahman.', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'religion-220', title: 'Brahman', category: 'religionglaube', year: 0, cue: 'Was ist Brahman im Hinduismus?', answer: 'Das hochste, unendliche, ungeteilte Sein/Bewusstsein.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'religion-220', title: 'Brahman', category: 'religionglaube', year: 0, cue: 'Was ist Brahman im Hinduismus?', answer: 'Das höchste, unendliche, ungeteilte Sein/Bewusstsein.', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'religion-221', title: 'Maya', category: 'religionglaube', year: 0, cue: 'Was ist Maya im Hinduismus?', answer: 'Die illusorische Kraft der Schopfung; die Welt ist Illusion.', difficulty: 'schwer', sources: {}, genres: [] },
 
@@ -812,7 +812,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'religion-248', title: 'Panj Kakaar', category: 'religionglaube', year: 0, cue: 'Was sind die Panj Kakaar?', answer: 'Die "fünf K": Kesh, Kangha, Kara, Kachera, Kirpan (Sikh-Symbole).', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'religion-249', title: 'Langar Sikh', category: 'religionglaube', year: 0, cue: 'Was ist Langar?', answer: 'Eine Gemeinschaftskuche im Gurdwara, die kostenlose Mahlzeiten unabhängig von Kaste/Religion bereit.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'religion-249', title: 'Langar Sikh', category: 'religionglaube', year: 0, cue: 'Was ist Langar?', answer: 'Eine Gemeinschaftsküche im Gurdwara, die kostenlose Mahlzeiten unabhängig von Kaste/Religion bereit.', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'religion-250', title: 'Gurdwara', category: 'religionglaube', year: 0, cue: 'Was ist ein Gurdwara?', answer: 'Ein Sikh-Tempel, wörtlich "Tür des Gurus".', difficulty: 'schwer', sources: {}, genres: [] },
 
@@ -822,9 +822,9 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'geo-groesster-kontinent', title: 'Größter Kontinent', category: 'geogeschichte', year: 0, cue: 'Welcher Kontinent ist flächenmäßig der größte?', answer: 'Asien.', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'geo-laengster-fluss', title: 'Längster Fluss', category: 'geogeschichte', year: 0, cue: 'Welcher Fluss gilt als der längste der Welt?', answer: 'Nil oder Amazonas (je nach Messung); haufig Nil.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-laengster-fluss', title: 'Längster Fluss', category: 'geogeschichte', year: 0, cue: 'Welcher Fluss gilt als der längste der Welt?', answer: 'Nil oder Amazonas (je nach Messung); häufig Nil.', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'geo-hoechster-berg', title: 'Hochster Berg', category: 'geogeschichte', year: 0, cue: 'Wie hoch ist der Mount Everest ungefahr?', answer: 'Etwa 8.849 m.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hoechster-berg', title: 'Höchster Berg', category: 'geogeschichte', year: 0, cue: 'Wie hoch ist der Mount Everest ungefähr?', answer: 'Etwa 8.849 m.', difficulty: 'leicht', sources: {}, genres: [] },
 
   { id: 'geo-tiefster-punkt', title: 'Tiefster Ozeanpunkt', category: 'geogeschichte', year: 0, cue: 'Wie heißt der tiefste Punkt der Weltmeere?', answer: 'Challenger-Tief im Marianengraben.', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -836,7 +836,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'geo-klima-koeppen', title: 'Köppen-Klimaklassifikation', category: 'geogeschichte', year: 0, cue: 'Wofür steht die Köppen-Klassifikation?', answer: 'System zur Einteilung von Klimazonen (z.B. Af, Cfa).', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'geo-europa-gebaeirge', title: 'Hochstes Gebirge Europas', category: 'geogeschichte', year: 0, cue: 'Nenne das hochste Gebirge Europas.', answer: 'Der Kaukasus (hochster Gipfel Elbrus).', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-europa-gebaeirge', title: 'Höchstes Gebirge Europas', category: 'geogeschichte', year: 0, cue: 'Nenne das höchste Gebirge Europas.', answer: 'Der Kaukasus (höchster Gipfel Elbrus).', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'geo-deutschland-bundeslaender', title: 'Bundesländer Deutschland', category: 'geogeschichte', year: 0, cue: 'Wie viele Bundesländer hat Deutschland?', answer: '16.', difficulty: 'leicht', sources: {}, genres: [] },
 

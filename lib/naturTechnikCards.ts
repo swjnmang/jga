@@ -186,7 +186,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-090', title: 'Was ist die Einheit des elektrischen Widerstands', category: 'natur', year: 0, cue: 'Was ist die Einheit des elektrischen Widerstands?', answer: 'Ohm ($Ω$).', difficulty: 'mittel', sources: {}, distractors: ['Volt (V).', 'Ampere (A).', 'Watt (W).'] },
 
-  { id: 'naturtechnik-medium-091', title: 'Welches Metall ist bei Raumtemperatur flussig', category: 'natur', year: 0, cue: 'Welches Metall ist bei Raumtemperatur flussig?', answer: 'Quecksilber.', difficulty: 'mittel', sources: {}, distractors: ['Gallium.', 'Cäsium.', 'Indium.'] },
+  { id: 'naturtechnik-medium-091', title: 'Welches Metall ist bei Raumtemperatur flüssig', category: 'natur', year: 0, cue: 'Welches Metall ist bei Raumtemperatur flüssig?', answer: 'Quecksilber.', difficulty: 'mittel', sources: {}, distractors: ['Gallium.', 'Cäsium.', 'Indium.'] },
 
   { id: 'naturtechnik-medium-092', title: 'Wie nennt man das Auge“ eines Hurrikans', category: 'natur', year: 0, cue: 'Wie nennt man das Auge“ eines Hurrikans?', answer: 'Das Zentrum/Auge des Sturms (Bereich niedrigen Drucks).', difficulty: 'mittel', sources: {}, distractors: ['Der Kern des Wirbels.', 'Der Rand des Sturms.', 'Die Wolkenbildung.'] },
 

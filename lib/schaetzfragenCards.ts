@@ -14,7 +14,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-klavier-tasten', title: 'Klaviertasten', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tasten hat ein Standard-Klavier?', answer: '88 Tasten', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-laengster-linienflug', title: 'Längster Linienflug', category: 'schaetzfragen', year: 0, cue: 'Wie viele Stunden dauerte der längste Linienflug der Welt (Singapur nach New York)?', answer: 'ca. 18 Stunden und 45 Minuten', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-laengster-linienflug', title: 'Längster Linienflug', category: 'schaetzfragen', year: 0, cue: 'Wie viele Minuten dauerte der längste Linienflug der Welt (Singapur nach New York)?', answer: 'ca. 1.125 Minuten', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-deutsche-bahn-gleise', title: 'Deutsche Bahn Streckennetz', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer Gleise umfasst das Streckennetz der Deutschen Bahn?', answer: 'ca. 33.400 Kilometer', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -70,7 +70,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-blut-pro-minute', title: 'Blutpumpleistung Herz', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Blut pumpt das menschliche Herz pro Minute in den Körper?', answer: 'ca. 5 Liter', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-zugspitze-hoehe', title: 'Hohe Zugspitze', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter hoch ist die Zugspitze, der hochste Berg Deutschlands?', answer: '2.962 Meter', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'schaetzfragen-zugspitze-hoehe', title: 'Höhe Zugspitze', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter hoch ist die Zugspitze, der höchste Berg Deutschlands?', answer: '2.962 Meter', difficulty: 'leicht', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-griechenland-inseln', title: 'Bewohnte Inseln Griechenland', category: 'schaetzfragen', year: 0, cue: 'Wie viele bewohnte Inseln gibt es in Griechenland?', answer: 'ca. 227 Inseln', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -78,7 +78,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-olympisches-schwimmbecken', title: 'Volumen Olympisches Schwimmbecken', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter passt in ein klassisches olympisches Schwimmbecken (50m x 25m x 2m)?', answer: '2.500.000 Liter (2.500 Kubikmeter)', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-sonnenlicht-erde', title: 'Lichtgeschwindigkeit Sonne-Erde', category: 'schaetzfragen', year: 0, cue: 'Wie viele Minuten braucht das Licht der Sonne, um die Erde zu erreichen?', answer: 'ca. 8 Minuten und 20 Sekunden', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-sonnenlicht-erde', title: 'Lichtgeschwindigkeit Sonne-Erde', category: 'schaetzfragen', year: 0, cue: 'Wie viele Minuten braucht das Licht der Sonne, um die Erde zu erreichen?', answer: 'ca. 8 Minuten', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-big-mac-kalorien', title: 'Kalorien Big Mac', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kalorien hat ein durchschnittlicher Big Mac?', answer: 'ca. 540 bis 560 kcal', difficulty: 'leicht', sources: {}, genres: [] },
 
@@ -86,7 +86,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-igel-stacheln', title: 'Stacheln Igel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Stacheln hat ein ausgewachsener Igel durchschnittlich?', answer: 'ca. 5.000 bis 7.000 Stacheln', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-armstrong-mondspaziergang', title: 'Armstrong Mondspaziergang Distanz', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer legte Neil Armstrong bei seinem ersten Mondspaziergang insgesamt zu Fuü zurück?', answer: 'ca. 1 Kilometer (er blieb meist in der Nahe der Landefahre)', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-armstrong-mondspaziergang', title: 'Armstrong Mondspaziergang Distanz', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer legte Neil Armstrong bei seinem ersten Mondspaziergang insgesamt zu Fuß zurück?', answer: 'ca. 1 Kilometer (er blieb meist in der Nähe der Landefähre)', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-speiseoel-verbrauch', title: 'Speiseölverbrauch Deutschland', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Speiseöl werden in Deutschland pro Kopf und Jahr verbraucht?', answer: 'ca. 12 Liter', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -216,7 +216,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-gehirnzellen-verlust', title: 'Gehirnzellenverlust täglich', category: 'schaetzfragen', year: 0, cue: 'Wie viele Gehirnzellen verliert ein Mensch pro Tag auf natürliche Weise?', answer: 'ca. 10.000 bis 100.000 (aber keine Sorge, wir haben Milliarden)', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-tsunami-rekord', title: 'Hochste Tsunami-Welle', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter hoch war die hochste jemals gemessene Tsunami-Welle (Lituya Bay, Alaska)?', answer: '524 Meter', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-tsunami-rekord', title: 'Höchste Tsunami-Welle', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter hoch war die höchste jemals gemessene Tsunami-Welle (Lituya Bay, Alaska)?', answer: '524 Meter', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-meeresschildkroete-eier', title: 'Eier Meeresschildkröte', category: 'schaetzfragen', year: 0, cue: 'Wie viele Eier legt eine Grüne Meeresschildkröte pro Gelege?', answer: 'ca. 100 bis 110 Eier', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -232,9 +232,9 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-weltbevoelkerung', title: 'Weltbevölkerung', category: 'schaetzfragen', year: 0, cue: 'Wie viele Millionen Menschen leben derzeit auf der Erde (Stand 2024/25)?', answer: 'ca. 8.100 Millionen (8,1 Milliarden)', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-laecheln-muskeln', title: 'Muskeln beim Lacheln', category: 'schaetzfragen', year: 0, cue: 'Wie viele Muskeln benutzt ein Mensch allein zum Lacheln?', answer: 'ca. 17 Muskeln', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'schaetzfragen-laecheln-muskeln', title: 'Muskeln beim Lächeln', category: 'schaetzfragen', year: 0, cue: 'Wie viele Muskeln benutzt ein Mensch allein zum Lächeln?', answer: 'ca. 17 Muskeln', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-titanic-reise', title: 'Reisedauer Titanic', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tage dauerte die Reise der Titanic, bevor sie den Eisberg rammte?', answer: '4 Tage (und ca. 14 Stunden)', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-titanic-reise', title: 'Reisedauer Titanic', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tage dauerte die Reise der Titanic, bevor sie den Eisberg rammte?', answer: '4 Tage', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-bierfass-volumen', title: 'Volumen Hektoliter-Fass', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Wasser passen in ein klassisches deutsches Bierfass (Hektoliter-Fass)?', answer: '100 Liter', difficulty: 'leicht', sources: {}, genres: [] },
 
@@ -244,39 +244,39 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-blauwal-herz', title: 'Gewicht Blauwal-Herz', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm wiegt das Herz eines Blauwals?', answer: 'ca. 600 Kilogramm', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-panama-kanal-bauzeit', title: 'Bauzeit Panama-Kanal', category: 'schaetzfragen', year: 0, cue: 'Wie viele Jahre dauerte der Bau des Panama-Kanals?', answer: 'ca. 33 Jahre (inklusive der abgebrochenen franzosischen Phase)', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-panama-kanal-bauzeit', title: 'Bauzeit Panama-Kanal', category: 'schaetzfragen', year: 0, cue: 'Wie viele Jahre dauerte der Bau des Panama-Kanals?', answer: 'ca. 33 Jahre (inklusive der abgebrochenen französischen Phase)', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-1-cent-muenze', title: 'Gewicht 1-Cent-Münze', category: 'schaetzfragen', year: 0, cue: 'Wie viele Gramm wiegt eine einzelne 1-Cent-Münze?', answer: '2,30 Gramm', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-gerueche-unterscheiden', title: 'Unterscheidbare Geruche', category: 'schaetzfragen', year: 0, cue: 'Wie viele unterschiedliche Geruche kann die menschliche Nase theoretisch unterscheiden?', answer: 'ca. 1 Billion', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-gerueche-unterscheiden', title: 'Unterscheidbare Gerüche', category: 'schaetzfragen', year: 0, cue: 'Wie viele unterschiedliche Gerüche kann die menschliche Nase theoretisch unterscheiden?', answer: 'ca. 1 Billion', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-ketchup-weltweit', title: 'Ketchup-Verkauf weltweit', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Ketchup werden weltweit pro Jahr verkauft?', answer: 'ca. 500 bis 600 Millionen Liter', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-aelteste-person', title: 'Alteste Person jemals', category: 'schaetzfragen', year: 0, cue: 'Wie viele Jahre alt war die älteste jemals lebende Person (Jeanne Calment)?', answer: '122 Jahre', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-aelteste-person', title: 'Älteste Person jemals', category: 'schaetzfragen', year: 0, cue: 'Wie viele Jahre alt war die älteste jemals lebende Person (Jeanne Calment)?', answer: '122 Jahre', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-woerter-pro-tag-frauen', title: 'Wörter pro Tag Frauen', category: 'schaetzfragen', year: 0, cue: 'Wie viele Wörter spricht eine Frau durchschnittlich pro Tag (laut gängigen Studien)?', answer: 'ca. 20.000 Wörter (Männer ca. 7.000)', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-freiheitsstatue-hoehe', title: 'Hohe Freiheitsstatue', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter hoch ist die Freiheitsstatue in New York (vom Boden bis zur Fackel)?', answer: 'ca. 93 Meter', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-freiheitsstatue-hoehe', title: 'Höhe Freiheitsstatue', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter hoch ist die Freiheitsstatue in New York (vom Boden bis zur Fackel)?', answer: 'ca. 93 Meter', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-blutspende-menge', title: 'Menge Blutspende', category: 'schaetzfragen', year: 0, cue: 'Wie viele Milliliter Blut spendet man bei einer klassischen Blutspende?', answer: '500 Milliliter', difficulty: 'leicht', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-cheops-pyramide-gewicht', title: 'Gewicht Cheops-Pyramide', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tonnen wiegt die Cheops-Pyramide insgesamt schätzungsweise?', answer: 'ca. 6 Millionen Tonnen', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-wuesten-erdoberflaeche', title: 'Wüsten auf Erdoberflache', category: 'schaetzfragen', year: 0, cue: 'Wie viele Prozent der Erdoberflache sind von Wüsten bedeckt?', answer: 'ca. 20 bis 30 Prozent', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-wuesten-erdoberflaeche', title: 'Wüsten auf Erdoberfläche', category: 'schaetzfragen', year: 0, cue: 'Wie viele Prozent der Erdoberfläche sind von Wüsten bedeckt?', answer: 'ca. 20 bis 30 Prozent', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-tennis-laengstes-match', title: 'Längstes Tennis-Match', category: 'schaetzfragen', year: 0, cue: 'Wie viele Minuten dauert das längste jemals gespielte Tennis-Match (Isner vs. Mahut)?', answer: '665 Minuten (11 Stunden und 5 Minuten)', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-tennis-laengstes-match', title: 'Längstes Tennis-Match', category: 'schaetzfragen', year: 0, cue: 'Wie viele Minuten dauert das längste jemals gespielte Tennis-Match (Isner vs. Mahut)?', answer: '665 Minuten', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-nationalhymne-griechenland', title: 'Strophen Hymne Griechenland', category: 'schaetzfragen', year: 0, cue: 'Wie viele Strophen hat die längste Nationalhymne der Welt (Griechenland)?', answer: '158 Strophen', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-strauss-auge', title: 'Gewicht Straußenauge', category: 'schaetzfragen', year: 0, cue: 'Wie viele Gramm wiegt das Auge eines Straußes (es ist größer als sein Gehirn)?', answer: 'ca. 60 Gramm', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-gold-meerwasser', title: 'Gold im Meerwasser', category: 'schaetzfragen', year: 0, cue: 'Wie viele Millionen Tonnen Gold befinden sich schätzungsweise im Meerwasser gelost?', answer: 'ca. 20 Millionen Tonnen', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-gold-meerwasser', title: 'Gold im Meerwasser', category: 'schaetzfragen', year: 0, cue: 'Wie viele Millionen Tonnen Gold befinden sich schätzungsweise im Meerwasser gelöst?', answer: 'ca. 20 Millionen Tonnen', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-grand-canyon-laenge', title: 'Länge Grand Canyon', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer misst die Grand Canyon Schlucht in der Länge?', answer: '446 Kilometer', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-groesstes-bierglas', title: 'Größtes Bierglas', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Bier passen in das größte Glas der Welt (laut Guinness-Buch)?', answer: 'ca. 2.082 Liter', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-zaehlen-milliarde', title: 'Zeit bis Milliarde zahlen', category: 'schaetzfragen', year: 0, cue: 'Wie viele Jahre brauchte ein Mensch, um bis zu einer Milliarde zu zahlen?', answer: 'ca. 31 bis 32 Jahre (ohne Pausen)', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-zaehlen-milliarde', title: 'Zeit bis Milliarde zählen', category: 'schaetzfragen', year: 0, cue: 'Wie viele Jahre brauchte ein Mensch, um bis zu einer Milliarde zu zählen?', answer: 'ca. 31 bis 32 Jahre (ohne Pausen)', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-panda-bambus', title: 'Bambus-Konsum Panda', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm Bambus frisst ein Großer Panda pro Tag?', answer: 'bis zu 12 bis 38 Kilogramm', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -292,9 +292,9 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-spanische-treppe', title: 'Stufen Spanische Treppe', category: 'schaetzfragen', year: 0, cue: 'Wie viele Stufen hat die berühmte Spanische Treppe in Rom?', answer: '138 Stufen', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-horizont-meer', title: 'Sichtweite zum Horizont', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer weit kann man bei klarer Sicht am Meer bis zum Horizont blicken (Augenhohe 1,70m)?', answer: 'ca. 4,7 Kilometer', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-horizont-meer', title: 'Sichtweite zum Horizont', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer weit kann man bei klarer Sicht am Meer bis zum Horizont blicken (Augenhöhe 1,70m)?', answer: 'ca. 4,7 Kilometer', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-hai-zaehne', title: 'Zahne Weiuer Hai', category: 'schaetzfragen', year: 0, cue: 'Wie viele Zahne hat ein Weiuer Hai gleichzeitig im Gebiss (inkl. Reservezahnen)?', answer: 'ca. 240 Zahne', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-hai-zaehne', title: 'Zähne Weißer Hai', category: 'schaetzfragen', year: 0, cue: 'Wie viele Zähne hat ein Weißer Hai gleichzeitig im Gebiss (inkl. Reservezähnen)?', answer: 'ca. 240 Zähne', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-bertha-benz-fahrt', title: 'Bertha Benz Fernfahrt', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer legte das erste Auto (Benz Patent-Motorwagen) bei der Fernfahrt von Bertha Benz zurück?', answer: 'ca. 106 Kilometer', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -302,7 +302,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-erdkruste-gewicht', title: 'Gewicht Erdkruste', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tonnen wiegt die Erdkruste unter unseren Füßen pro Quadratmeter (bei 35 km Dicke der kontinentalen Kruste)?', answer: 'ca. 100.000 Tonnen', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-ameisen-huegel', title: 'Ameisen im Ameisenhugel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tausend Ameisen leben schätzungsweise in einem großen Ameisenhugel der Waldameise?', answer: 'bis zu 500 bis 1.000 Tausend (1 Million)', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-ameisen-huegel', title: 'Ameisen im Ameisenhügel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tausend Ameisen leben schätzungsweise in einem großen Ameisenhügel der Waldameise?', answer: 'bis zu 500 bis 1.000 Tausend (1 Million)', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-big-ben-gewicht', title: 'Gewicht Big Ben Glocke', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tonnen wiegt der Big Ben (die Glocke) in London?', answer: '13,5 Tonnen', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -312,11 +312,11 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-titanic-wrack-tiefe', title: 'Tiefe Titanic-Wrack', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter tief liegt das Wrack der Titanic auf dem Grund des Atlantiks?', answer: '3.840 Meter', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-wasser-verdunstung', title: 'Verdunstung Wasser weltweit', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Wasser verdunsten pro Sekunde weltweit von der Erdoberflache?', answer: 'ca. 16 Milliarden Liter', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-wasser-verdunstung', title: 'Verdunstung Wasser weltweit', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Wasser verdunsten pro Sekunde weltweit von der Erdoberfläche?', answer: 'ca. 16 Milliarden Liter', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-geisterstaedte-usa', title: 'Geisterstadte USA', category: 'schaetzfragen', year: 0, cue: 'Wie viele Geisterstadte gibt es schätzungsweise in den USA?', answer: 'ca. 3.800', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-geisterstaedte-usa', title: 'Geisterstädte USA', category: 'schaetzfragen', year: 0, cue: 'Wie viele Geisterstädte gibt es schätzungsweise in den USA?', answer: 'ca. 3.800', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-plastik-ozeane', title: 'Plastik in Ozeanen', category: 'schaetzfragen', year: 0, cue: 'Wie viele Millionen Tonnen Plastik landen jahrlich weltweit in den Ozeanen?', answer: 'ca. 8 bis 12 Millionen Tonnen', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-plastik-ozeane', title: 'Plastik in Ozeanen', category: 'schaetzfragen', year: 0, cue: 'Wie viele Millionen Tonnen Plastik landen jährlich weltweit in den Ozeanen?', answer: 'ca. 8 bis 12 Millionen Tonnen', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-berlin-tokio-entfernung', title: 'Entfernung Berlin-Tokio', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer ist die Luftlinie zwischen Berlin und Tokio?', answer: 'ca. 8.910 Kilometer', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -324,7 +324,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-pottwal-gehirn', title: 'Gewicht Pottwal-Gehirn', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm wiegt das Gehirn eines Pottwals (das größte Tiergehirn)?', answer: 'ca. 7 bis 9 Kilogramm', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-youtube-videos-ansehen', title: 'Zeit alle YouTube-Videos', category: 'schaetzfragen', year: 0, cue: 'Wie viele Jahre dauert es theoretisch, um alle Videos auf YouTube anzusehen, die heute existieren?', answer: 'weit über 20.000 Jahre (und jede Minute kommen hunderte Stunden dazu)', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-youtube-videos-ansehen', title: 'Zeit alle YouTube-Videos', category: 'schaetzfragen', year: 0, cue: 'Wie viele Jahre dauert es theoretisch, um alle Videos auf YouTube anzusehen, die heute existieren?', answer: 'weit über 20.000 Jahre', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-erde-um-sonne', title: 'Geschwindigkeit Erde um Sonne', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer pro Stunde schnell dreht sich die Erde um die Sonne?', answer: 'ca. 107.000 km/h', difficulty: 'schwer', sources: {}, genres: [] },
 
@@ -332,25 +332,25 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-wolke-gewicht', title: 'Gewicht Cumulus-Wolke', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tonnen wiegt ein durchschnittlicher flauschiger Cumulus-Wolke am Himmel?', answer: 'ca. 500 Tonnen (500.000 kg)', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-kingda-ka-hoehe', title: 'Hohe Kingda Ka', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter hoch ist die hochste Achterbahn der Welt (Kingda Ka)?', answer: '139 Meter', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-kingda-ka-hoehe', title: 'Höhe Kingda Ka', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter hoch ist die höchste Achterbahn der Welt (Kingda Ka)?', answer: '139 Meter', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-sms-2012', title: 'SMS-Versand Deutschland 2012', category: 'schaetzfragen', year: 0, cue: 'Wie viele Milliarden SMS wurden im Jahr 2012 in Deutschland (dem Peak-Jahr) erschickt?', answer: 'ca. 59 Milliarden', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-urin-leben', title: 'Urinproduktion im Leben', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Urin produziert ein Mensch durchschnittlich in seinem ganzen Leben?', answer: 'ca. 40.000 Liter', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-fingernaegel-wachstum', title: 'Wachstum Fingernagel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Millimeter wachsen menschliche Fingernagel durchschnittlich pro Monat?', answer: 'ca. 3 Millimeter', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'schaetzfragen-fingernaegel-wachstum', title: 'Wachstum Fingernägel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Millimeter wachsen menschliche Fingernägel durchschnittlich pro Monat?', answer: 'ca. 3 Millimeter', difficulty: 'leicht', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-koerperfett-kalorien', title: 'Kalorien Körperfett', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kalorien hat ein Kilogramm reines Körperfett?', answer: 'ca. 7.000 bis 7.700 kcal', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-seeschwalbe-flug', title: 'Flugstrecke Kustenseeschwalbe', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer weit ist der weiteste Flug, den eine Kustenseeschwalbe bei ihrer Wanderung jahrlich zurücklegt?', answer: 'bis zu 70.000 bis 90.000 Kilometer', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-seeschwalbe-flug', title: 'Flugstrecke Küstenseeschwalbe', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer weit ist der weiteste Flug, den eine Küstenseeschwalbe bei ihrer Wanderung jährlich zurücklegt?', answer: 'bis zu 70.000 bis 90.000 Kilometer', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-fichte-papier', title: 'Papier aus Fichte', category: 'schaetzfragen', year: 0, cue: 'Wie viele Blätter Papier lassen sich aus einer durchschnittlich großen Fichte herstellen?', answer: 'ca. 80.000 Blatt (A4)', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-aktive-vulkane', title: 'Aktive Vulkane weltweit', category: 'schaetzfragen', year: 0, cue: 'Wie viele aktive Vulkane gibt es schätzungsweise weltweit an Land?', answer: 'ca. 1.500', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-wright-brothers-flug', title: 'Erster Motorflug Wright', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter legten die Bruder Wright bei ihrem ersten motorisierten Flug 1903 zurück?', answer: '37 Meter', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-wright-brothers-flug', title: 'Erster Motorflug Wright', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter legten die Brüder Wright bei ihrem ersten motorisierten Flug 1903 zurück?', answer: '37 Meter', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-kaese-konsum', title: 'Kasekonsum Deutschland', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm Kase isst ein Deutscher durchschnittlich pro Jahr?', answer: 'ca. 25 Kilogramm', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'schaetzfragen-kaese-konsum', title: 'Käsekonsum Deutschland', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm Käse isst ein Deutscher durchschnittlich pro Jahr?', answer: 'ca. 25 Kilogramm', difficulty: 'leicht', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-lungenvolumen', title: 'Vitalkapazität Lunge', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Luft passen maximal in die Lunge eines erwachsenen Mannes (Vitalkapazität)?', answer: 'ca. 4 bis 6 Liter', difficulty: 'leicht', sources: {}, genres: [] },
 
@@ -358,7 +358,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-ampel-warten', title: 'Zeit an roter Ampel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Monate verbringen Menschen im Durchschnitt damit, an einer roten Ampel zu warten (im ganzen Leben)?', answer: 'ca. 6 Monate', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-olympus-mons', title: 'Hohe Olympus Mons Mars', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer hoch ist der Mount Olympus auf dem Mars (der hochste Berg im Sonnensystem)?', answer: 'ca. 22 Kilometer', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-olympus-mons', title: 'Höhe Olympus Mons Mars', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer hoch ist der Mount Olympus auf dem Mars (der höchste Berg im Sonnensystem)?', answer: 'ca. 22 Kilometer', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-youtube-uploads', title: 'YouTube Uploads pro Minute', category: 'schaetzfragen', year: 0, cue: 'Wie viele Stunden Videomaterial werden jede Minute auf YouTube hochgeladen?', answer: 'ca. 500 Stunden', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -366,11 +366,11 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-niere-kapillaren', title: 'Kapillarsystem Niere', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer lang ist das Kapillarsystem in einer einzigen menschlichen Niere?', answer: 'ca. 10 bis 12 Kilometer', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-haikind-zaehne', title: 'Zahne neugeborenes Haikind', category: 'schaetzfragen', year: 0, cue: 'Wie viele Zahne hat ein neugeborenes Haikind (je nach Art)?', answer: 'oft bereits ein voll ausgebildetes Gebiss mit ca. 20-30 Zahnen pro Reihe', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-haikind-zaehne', title: 'Zähne neugeborenes Haikind', category: 'schaetzfragen', year: 0, cue: 'Wie viele Zähne hat ein neugeborenes Haikind (je nach Art)?', answer: 'oft bereits ein voll ausgebildetes Gebiss mit ca. 20-30 Zähnen pro Reihe', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-empire-state-stufen', title: 'Stufen Empire State 86. Stock', category: 'schaetzfragen', year: 0, cue: 'Wie viele Stufen hat die Treppe im Empire State Building bis zum 86. Stock?', answer: '1.576 Stufen', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-raumsonde-proxima', title: 'Reisezeit Proxima Centauri', category: 'schaetzfragen', year: 0, cue: 'Wie viele Jahre brauchte eine Raumsonde mit heutiger Technik zum nachsten Stern (Proxima Centauri)?', answer: 'ca. 75.000 Jahre', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-raumsonde-proxima', title: 'Reisezeit Proxima Centauri', category: 'schaetzfragen', year: 0, cue: 'Wie viele Jahre brauchte eine Raumsonde mit heutiger Technik zum nächsten Stern (Proxima Centauri)?', answer: 'ca. 75.000 Jahre', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-schwangerschaft-blut', title: 'Zusätzliches Blut Schwangerschaft', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Blut fließen während einer Schwangerschaft zusätzlich durch den Körper der Mutter?', answer: 'ca. 1,5 Liter', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -388,13 +388,13 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-4k-pixel', title: 'Pixel 4K-Bildschirm', category: 'schaetzfragen', year: 0, cue: 'Wie viele Millionen Pixel hat ein 4K-Bildschirm?', answer: 'ca. 8,3 Millionen Pixel', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-wachspalme-hoehe', title: 'Hohe Wachspalme', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter hoch ist die hochste Palme der Welt (Wachspalme in Kolumbien)?', answer: 'bis zu 60 Meter', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-wachspalme-hoehe', title: 'Höhe Wachspalme', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter hoch ist die höchste Palme der Welt (Wachspalme in Kolumbien)?', answer: 'bis zu 60 Meter', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-kuh-speichel', title: 'Speichelproduktion Kuh', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Speichel produziert eine Kuh pro Tag?', answer: 'ca. 150 bis 200 Liter', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-iss-gewicht', title: 'Gewicht ISS', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tonnen wiegt die internationale Raumstation ISS?', answer: 'ca. 450 Tonnen', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-kuessen-kalorien', title: 'Kalorienverbrauch Kussen', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kalorien verbrennt man beim Kussen pro Minute?', answer: 'ca. 2 bis 6 kcal', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'schaetzfragen-kuessen-kalorien', title: 'Kalorienverbrauch Küssen', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kalorien verbrennt man beim Küssen pro Minute?', answer: 'ca. 2 bis 6 kcal', difficulty: 'leicht', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-blinzeln-taeglich', title: 'Blinzeln pro Tag', category: 'schaetzfragen', year: 0, cue: 'Wie viele Mal blinzelt ein Mensch durchschnittlich pro Tag?', answer: 'ca. 10.000 bis 15.000 Mal', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -404,15 +404,15 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-koala-schlaf', title: 'Schlafzeit Koala', category: 'schaetzfragen', year: 0, cue: 'Wie viele Stunden verbringt ein Koala pro Tag mit Schlafen?', answer: 'ca. 20 bis 22 Stunden', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-blutkoerperchen-strecke', title: 'Strecke rotes Blutkörperchen', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer legt ein rotes Blutkörperchen in seiner 120-tagigen Lebensdauer im Körper zurück?', answer: 'ca. 1.600 Kilometer', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-blutkoerperchen-strecke', title: 'Strecke rotes Blutkörperchen', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer legt ein rotes Blutkörperchen in seiner 120-tägigen Lebensdauer im Körper zurück?', answer: 'ca. 1.600 Kilometer', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-oelfass-volumen', title: 'Volumen Olfass', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Wasser passen in ein klassisches Olfass (Barrel)?', answer: '158,99 Liter', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-erde-venus-abstand', title: 'Entfernung Erde-Venus', category: 'schaetzfragen', year: 0, cue: 'Wie viele Millionen Kilometer ist die Erde von der Venus entfernt (bei geringstem Abstand)?', answer: 'ca. 38 bis 40 Millionen Kilometer', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-hundertjaehriger-krieg', title: 'Dauer Hundertjahriger Krieg', category: 'schaetzfragen', year: 0, cue: 'Wie viele Jahre dauerte der Hundertjahrige Krieg zwischen England und Frankreich tatsachlich?', answer: '116 Jahre (1337 bis 1453)', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-hundertjaehriger-krieg', title: 'Dauer Hundertjähriger Krieg', category: 'schaetzfragen', year: 0, cue: 'Wie viele Jahre dauerte der Hundertjährige Krieg zwischen England und Frankreich tatsächlich?', answer: '116 Jahre (1337 bis 1453)', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-herz-schlaege-tag', title: 'Herzschlage pro Tag', category: 'schaetzfragen', year: 0, cue: 'Wie viele Mal schlägt das menschliche Herz an einem einzigen Tag?', answer: 'ca. 100.000 Mal', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-herz-schlaege-tag', title: 'Herzschläge pro Tag', category: 'schaetzfragen', year: 0, cue: 'Wie viele Mal schlägt das menschliche Herz an einem einzigen Tag?', answer: 'ca. 100.000 Mal', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-bodensee-tiefe', title: 'Tiefe Bodensee', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter tief ist der Bodensee an seiner tiefsten Stelle?', answer: '251 Meter', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -436,13 +436,13 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-strauss-laufen', title: 'Geschwindigkeit Strauß', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer pro Stunde erreicht ein Strauß beim Laufen?', answer: 'bis zu 70 km/h', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-sonnenlicht-neptun', title: 'Licht Sonne zu Neptun', category: 'schaetzfragen', year: 0, cue: 'Wie viele Minuten dauert das Licht der Sonne bis zum Planeten Neptun?', answer: 'ca. 250 Minuten (ca. 4 Stunden und 10 Minuten)', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-sonnenlicht-neptun', title: 'Licht Sonne zu Neptun', category: 'schaetzfragen', year: 0, cue: 'Wie viele Minuten dauert das Licht der Sonne bis zum Planeten Neptun?', answer: 'ca. 250 Minuten', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-wasser-ausatmen', title: 'Wasser durch Atmung', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Wasser atmet ein Mensch pro Jahr über die Atemluft aus?', answer: 'ca. 150 bis 200 Liter', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-erde-gewicht', title: 'Gewicht Erdkugel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm wiegt die Erdkugel insgesamt?', answer: 'ca. 6 · 10²¹ Tonnen (6 Trilliarden Tonnen)', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-salto-angel', title: 'Hohe Salto Ángel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter hoch ist der hochste Wasserfall der Welt (Salto Ángel)?', answer: '979 Meter', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-salto-angel', title: 'Höhe Salto Ángel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter hoch ist der höchste Wasserfall der Welt (Salto Ángel)?', answer: '979 Meter', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-nil-laenge', title: 'Länge Nil', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer ist der Nil, der längste Fluss der Erde, lang?', answer: 'ca. 6.650 Kilometer', difficulty: 'leicht', sources: {}, genres: [] },
 
