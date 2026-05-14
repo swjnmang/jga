@@ -18446,5 +18446,515 @@ export const playlistCards: Card[] = [
     "playlists": [
       "4KjWmH3FN4nz2BRbkwVCQW"
     ]
+  },
+  {
+    "id": "song-verlieben-verloren-vergessen-verzeihn-1992",
+    "title": "Verlieben, verloren, vergessen, verzeih'n",
+    "category": "music",
+    "year": 1992,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Wolfgang Petry — 1992, Verlieben, verloren, vergessen, verzeih'n.",
+    "hint": "Wolfgang Petry",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5SYHMGmqS3cOOKuCarASBT"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-warum-hast-du-nicht-nein-gesagt-club-mix-2014",
+    "title": "Warum hast Du nicht nein gesagt - Club Mix",
+    "category": "music",
+    "year": 2014,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Roland Kaiser, Maite Kelly — 2014, Warum hast Du nicht nein gesagt.",
+    "hint": "Roland Kaiser, Maite Kelly",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1OGxXjPkblmZPjoi17xN6T"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-herzbeben-2017",
+    "title": "Herzbeben",
+    "category": "music",
+    "year": 2017,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Helene Fischer — 2017, Herzbeben.",
+    "hint": "Helene Fischer",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5mWceciQV51RPCBQCLAm3U"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-1000-traume-weit-tornero-2010",
+    "title": "1000 Träume weit (Tornero)",
+    "category": "music",
+    "year": 2010,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Anna-Maria Zimmermann — 2010, 1000 Träume weit (Tornero).",
+    "hint": "Anna-Maria Zimmermann",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5nu6DLPJ91h2lSKQuPDzYd"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-idiot-version-2011",
+    "title": "Idiot - Version 2011",
+    "category": "music",
+    "year": 2011,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Michelle, Matthias Reim — 2011, Idiot.",
+    "hint": "Michelle, Matthias Reim",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4FZmjzFP31JGVPnpWanMEo"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-achterbahn-helene-2017",
+    "title": "Achterbahn",
+    "category": "music",
+    "year": 2017,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Helene Fischer — 2017, Achterbahn.",
+    "hint": "Helene Fischer",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3PeZRzO7dHCWFCOCv6HoGe"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-wahnsinn-1996",
+    "title": "Wahnsinn",
+    "category": "music",
+    "year": 1996,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Wolfgang Petry — 1996, Wahnsinn.",
+    "hint": "Wolfgang Petry",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/16CCUMReocx2dtFgmSqORr"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-atemlos-durch-die-nacht-2013",
+    "title": "Atemlos durch die Nacht",
+    "category": "music",
+    "year": 2013,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Helene Fischer — 2013, Atemlos durch die Nacht.",
+    "hint": "Helene Fischer",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1cSXzDZt8vzuUp2XREQEJN"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-ich-will-immer-wieder-dieses-fieber-spurn-2009",
+    "title": "Ich will immer wieder... dieses Fieber spür'n",
+    "category": "music",
+    "year": 2009,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Helene Fischer — 2009, Ich will immer wieder... dieses Fieber spür'n.",
+    "hint": "Helene Fischer",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/70fRUZsAxNKuxTy8gp4nKT"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-mein-herz-beatrice-egli-2013",
+    "title": "Mein Herz",
+    "category": "music",
+    "year": 2013,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Beatrice Egli — 2013, Mein Herz.",
+    "hint": "Beatrice Egli",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1CINbWotyT3WDt9EDh3cww"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-marathon-helene-fischer-2013",
+    "title": "Marathon",
+    "category": "music",
+    "year": 2013,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Helene Fischer — 2013, Marathon.",
+    "hint": "Helene Fischer",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3XdcsBr5oMyeHhkBKmgj4S"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-warum-hast-du-nicht-nein-gesagt-pop-mix-2014",
+    "title": "Warum hast Du nicht nein gesagt - Pop Mix",
+    "category": "music",
+    "year": 2014,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Roland Kaiser, Maite Kelly — 2014, Warum hast Du nicht nein gesagt.",
+    "hint": "Roland Kaiser, Maite Kelly",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2jMBfQpqT76M1iMiXgNZZ3"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-wenn-ich-rauche-2026",
+    "title": "wenn ich rauche",
+    "category": "music",
+    "year": 2026,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "SIDRIT VOKSHI — 2026, wenn ich rauche.",
+    "hint": "SIDRIT VOKSHI",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/7pp9fY5mZ0xHO09X4IQziF"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-paris-single-version-2014",
+    "title": "Paris - Single Version",
+    "category": "music",
+    "year": 2014,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Michelle — 2014, Paris.",
+    "hint": "Michelle",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0rZtsXzD2byljMFshSStcM"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-a-mann-fur-amore-single-mix-2017",
+    "title": "A Mann für Amore - Single Mix",
+    "category": "music",
+    "year": 2017,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "DJ Ötzi — 2017, A Mann für Amore.",
+    "hint": "DJ Ötzi",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0m89E9zmNzOGuuZWEvZZGm"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-die-holle-morgen-fruh-2011",
+    "title": "Die Hölle morgen früh",
+    "category": "music",
+    "year": 2011,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Helene Fischer — 2011, Die Hölle morgen früh.",
+    "hint": "Helene Fischer",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3ZmQjNmGSVfo37tTws8EU9"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-du-hast-mich-tausendmal-belogen-2001",
+    "title": "Du hast mich tausendmal belogen",
+    "category": "music",
+    "year": 2001,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Andrea Berg — 2001, Du hast mich tausendmal belogen.",
+    "hint": "Andrea Berg",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/65wKbNqjUTmdyk47Z31Czm"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-die-tanzflache-brennt-2013",
+    "title": "Die Tanzfläche brennt",
+    "category": "music",
+    "year": 2013,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Anna-Maria Zimmermann — 2013, Die Tanzfläche brennt.",
+    "hint": "Anna-Maria Zimmermann",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/0eZyB2PzHQHSdGrIcd6n31"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-te-quiero-helene-2013",
+    "title": "Te Quiero",
+    "category": "music",
+    "year": 2013,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Helene Fischer — 2013, Te Quiero.",
+    "hint": "Helene Fischer",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/2sDkaVxOik75nv1I77zk5G"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-zuckerpuppen-2013",
+    "title": "Zuckerpuppen",
+    "category": "music",
+    "year": 2013,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Andreas Gabalier — 2013, Zuckerpuppen.",
+    "hint": "Andreas Gabalier",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/47owqHZeQ8b5wyPASIN2Np"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-schatzi-schenk-mir-ein-foto-2011",
+    "title": "Schatzi Schenk Mir Ein Foto",
+    "category": "music",
+    "year": 2011,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Mickie Krause, KO&KO — 2011, Schatzi Schenk Mir Ein Foto.",
+    "hint": "Mickie Krause, KO&KO",
+    "difficulty": "leicht",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/01NNrO46sCI1hHwLACTBZQ"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-du-bist-ein-wunder-tanzbar-2014",
+    "title": "Du bist ein Wunder - Tanzbar!",
+    "category": "music",
+    "year": 2014,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Wolfgang Petry — 2014, Du bist ein Wunder.",
+    "hint": "Wolfgang Petry",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3VkDrOTzYKMjtPRRKquYp7"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-ich-sterb-fur-dich-rmx-2016",
+    "title": "Ich sterb für dich - RMX",
+    "category": "music",
+    "year": 2016,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Vanessa Mai, Roman Lüth — 2016, Ich sterb für dich.",
+    "hint": "Vanessa Mai, Roman Lüth",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6NtzdIkxZXFWptyhzJ7hea"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-wunder-geschehn-2026",
+    "title": "Wunder gescheh'n",
+    "category": "music",
+    "year": 2026,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Dr. Maibach — 2026, Wunder gescheh'n.",
+    "hint": "Dr. Maibach",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/4pCZS9XthG5vuCG5O6ohjf"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-ich-bin-solo-technoversion-2010",
+    "title": "Ich bin solo - Technoversion",
+    "category": "music",
+    "year": 2010,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Mickie Krause — 2010, Ich bin solo.",
+    "hint": "Mickie Krause",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/3oiRz6OtpChceEylSgZNJF"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-i-sing-a-liad-fur-di-disco-rock-remix-2011",
+    "title": "I sing a Liad für di - Disco-Rock-Remix",
+    "category": "music",
+    "year": 2011,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Andreas Gabalier — 2011, I sing a Liad für di.",
+    "hint": "Andreas Gabalier",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/5k7Gu7IDYFEDgNazdpBIUt"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-lotusblume-2011",
+    "title": "Lotusblume",
+    "category": "music",
+    "year": 2011,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Tobee — 2011, Lotusblume.",
+    "hint": "Tobee",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1X0XcqGaofdhLpIY6ljXKP"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-himmelblaue-augen-fosco-party-remix-2017",
+    "title": "Himmelblaue Augen - Fosco Party Remix",
+    "category": "music",
+    "year": 2017,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Anna-Maria Zimmermann, Fosco — 2017, Himmelblaue Augen.",
+    "hint": "Anna-Maria Zimmermann, Fosco",
+    "difficulty": "mittel",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/6sfVt6lPKNJvd1k06A3Aq0"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-sternschnuppn-glupperl-schunkel-version-2026",
+    "title": "Sternschnuppn Glupperl - Schunkel Version",
+    "category": "music",
+    "year": 2026,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "DJ Gildo von der Wiesn, Ludwig 3 — 2026, Sternschnuppn Glupperl.",
+    "hint": "DJ Gildo von der Wiesn, Ludwig 3",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/1O45OnZx0kmgV24ZjLyztu"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
+  },
+  {
+    "id": "song-leben-lieben-lachen-2026",
+    "title": "Leben Lieben Lachen",
+    "category": "music",
+    "year": 2026,
+    "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
+    "answer": "Kasermandl Duo — 2026, Leben Lieben Lachen.",
+    "hint": "Kasermandl Duo",
+    "difficulty": "schwer",
+    "sources": {
+      "spotify": "https://open.spotify.com/track/22EcK5TLr3Wo81oaUMpCXY"
+    },
+    "genres": [
+      "schlagerparty"
+    ],
+    "playlists": []
   }
 ];
