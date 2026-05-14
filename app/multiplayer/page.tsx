@@ -639,8 +639,7 @@ function MultiplayerLobbyContent() {
               <label className="block text-sm font-semibold mb-2">
                 Kategorien auswählen
               </label>
-              <div className="grid grid-cols-2 gap-1">
-                {availableCategories.map((cat) => {
+              <div className="grid grid-cols-3 gap-2">
                   const isActive = (settings.categoryWeights[cat] || 0) > 0;
                   const isDisabled = cat === 'image';
                   if (isDisabled) {
@@ -685,7 +684,7 @@ function MultiplayerLobbyContent() {
                   Musik-Genres
                   <span className="text-xs text-ink/60 ml-1">Wirkt nur auf Musikfragen</span>
                 </label>
-                <div className="grid grid-cols-2 gap-1">
+                <div className="grid grid-cols-3 gap-1">
                   {[
                     { key: 'pop', label: 'Pop' },
                     { key: 'rock', label: 'Rock' },
@@ -726,7 +725,7 @@ function MultiplayerLobbyContent() {
                   Jahrzehnte
                   <span className="text-xs text-ink/60 ml-1">Welche Jahrzehnte sollen gespielt werden?</span>
                 </label>
-                <div className="grid grid-cols-2 gap-1">
+                <div className="grid grid-cols-3 gap-1">
                   {availableDecades.map((decade) => {
                     const checked = settings.decades.includes(decade);
                     return (
