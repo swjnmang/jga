@@ -271,40 +271,38 @@ function SettingsPageContent() {
             />
             <span className="text-sm font-semibold">Alle an/aus</span>
           </label>
-          <div className="space-y-1">
+          <div className="grid sm:grid-cols-3 gap-2 text-sm">
             {availableCategories.map((category) => {
               const isActive = settings.categoryWeights[category] > 0;
-              const value = settings.categoryWeights[category] ?? 0;
               const isDisabled = category === 'image';
               if (isDisabled) {
                 return (
-                  <div key={category} className="space-y-1 opacity-40 cursor-not-allowed" title="Demnächst verfügbar">
-                    <div className="flex items-center gap-3 py-1">
-                      <input
-                        type="checkbox"
-                        checked={false}
-                        disabled
-                        className="h-5 w-5 accent-sky-700 cursor-not-allowed"
-                        readOnly
-                      />
-                      <span className="text-sm font-medium capitalize flex-1">{categoryLabels[category] ?? category}</span>
-                      <span className="text-xs text-ink/50 italic">Demnächst</span>
-                    </div>
+                  <div key={category} className="flex items-center gap-2 rounded-xl border px-3 py-2 border-ink/20 text-ink opacity-40 cursor-not-allowed" title="Demnächst verfügbar">
+                    <input
+                      type="checkbox"
+                      checked={false}
+                      disabled
+                      className="h-4 w-4 accent-sky-700 cursor-not-allowed"
+                      readOnly
+                    />
+                    <span className="flex-1">{categoryLabels[category] ?? category}</span>
+                    <span className="text-xs italic">Demnächst</span>
                   </div>
                 );
               }
               return (
-                <div key={category} className="space-y-1">
-                  <label className="flex items-center gap-3 cursor-pointer py-1">
-                    <input
-                      type="checkbox"
-                      checked={isActive}
-                      onChange={() => toggleCategory(category)}
-                      className="h-5 w-5 accent-sky-700"
-                    />
-                    <span className="text-sm font-medium capitalize flex-1">{categoryLabels[category] ?? category}</span>
-                  </label>
-                </div>
+                <label
+                  key={category}
+                  className={`flex items-center gap-2 rounded-xl border px-3 py-2 cursor-pointer ${isActive ? 'border-sky-700 bg-sky-50 text-sky-900' : 'border-ink/20 text-ink'}`}
+                >
+                  <input
+                    type="checkbox"
+                    checked={isActive}
+                    onChange={() => toggleCategory(category)}
+                    className="h-4 w-4 accent-sky-700"
+                  />
+                  <span>{categoryLabels[category] ?? category}</span>
+                </label>
               );
             })}
           </div>
@@ -317,7 +315,7 @@ function SettingsPageContent() {
             <h2 className="text-lg font-semibold">Musik-Genres</h2>
             <p className="text-xs text-ink/60">Wirkt nur auf Musikfragen</p>
           </div>
-          <div className="grid sm:grid-cols-2 gap-2 text-sm">
+          <div className="grid sm:grid-cols-3 gap-2 text-sm">
             {[
               { key: 'pop', label: 'Pop' },
               { key: 'rock', label: 'Rock' },
@@ -353,7 +351,7 @@ function SettingsPageContent() {
             <h2 className="text-lg font-semibold">Jahrzehnte</h2>
             <p className="text-xs text-ink/60">Welche Jahrzehnte sollen gespielt werden?</p>
           </div>
-          <div className="grid sm:grid-cols-2 gap-2 text-sm">
+          <div className="grid sm:grid-cols-3 gap-2 text-sm">
             {availableDecades.map((decade) => {
               const checked = settings.decades.includes(decade);
               return (
