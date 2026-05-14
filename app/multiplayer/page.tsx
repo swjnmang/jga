@@ -496,7 +496,7 @@ function MultiplayerLobbyContent() {
           <div className="rounded-lg bg-green-100/20 border-2 border-green-500 p-4 space-y-2">
             <p className="text-sm font-semibold text-green-700">👑 Du bist der Spielleiter</p>
             <p className="text-sm text-green-600">
-              Als Spielleiter spielst du nicht mit, sondern leitest das Spiel. Du steuerst den Ablauf, bestätigst Flex-Buttons und verwaltest die Punkte.
+              Als Spielleiter spielst du nicht mit, sondern leitest das Spiel. Du steuerst den Ablauf, bestätigst Flex-Buttons und verwaltest die Punkte. Wenn du selbst mitspielen möchtest, kannst du dich anschließend mit einem anderen Endgerät in deine Lobby einklinken.
             </p>
           </div>
 
