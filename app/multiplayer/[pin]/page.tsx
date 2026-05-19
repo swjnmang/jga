@@ -995,6 +995,74 @@ export default function MultiplayerGamePage() {
 
       const catLabel = (cat: string) => catShortLabel(cat);
 
+      // ── Würfel-Joker: Vollbild-Screen für alle, bis Spielleiter bestätigt ──
+      if (game.jokersEnabled && game.jokerDicePending && game.jokerDiceResult != null) {
+        const diceGroup = game.groups[game.jokerDiceGroupId ?? ''];
+        const roll = game.jokerDiceResult!;
+        const diceEmojis = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
+        const isJackpot = roll === 6;
+        const isBad = roll === 1;
+        const rollMsg = isJackpot
+          ? '🎉 Jackpot! +1 Punkt und aktuelle Kategorie kassiert.'
+          : isBad
+          ? '💀 Pech! 1 Punkt verloren und eine Kategorie eingebußt.'
+          : `Kein Effekt – ${diceGroup?.name ?? '?'} bleibt beim aktuellen Spielstand.`;
+        const borderColor = isJackpot ? 'border-green-500' : isBad ? 'border-red-500' : 'border-amber-400';
+        const bgGlow = isJackpot ? 'bg-green-500/10' : isBad ? 'bg-red-500/10' : 'bg-amber-500/10';
+        const textColor = isJackpot ? 'text-green-700' : isBad ? 'text-red-700' : 'text-amber-800';
+
+        return (
+          <main className="relative mx-auto max-w-lg px-4 py-12 sm:py-20 flex flex-col items-center justify-center min-h-[70vh]">
+            <div className={`w-full card-surface rounded-3xl p-8 sm:p-12 flex flex-col items-center gap-6 border-4 ${borderColor} ${bgGlow}`}>
+              {/* Gruppe */}
+              <div className="text-center space-y-1">
+                <p className="text-xs uppercase tracking-widest font-bold text-ink/40">🎲 Würfel-Joker</p>
+                <p className="text-2xl font-bold">
+                  <span style={{ color: diceGroup?.color ?? undefined }}>{diceGroup?.name ?? '?'}</span>
+                  {' '}hat gewürfelt!
+                </p>
+              </div>
+
+              {/* Würfelsymbol + Animation */}
+              <div className={`text-[9rem] leading-none select-none transition-transform duration-75 ${diceAnimating ? 'animate-bounce scale-110' : 'scale-100'}`}>
+                {diceEmojis[diceAnimating ? diceDisplayFace : roll] ?? '🎲'}
+              </div>
+
+              {/* Ergebnis */}
+              {!diceAnimating && (
+                <>
+                  <div className="text-center space-y-2">
+                    <p className={`text-6xl font-black ${textColor}`}>{roll}</p>
+                    <p className={`text-lg font-semibold ${textColor}`}>{rollMsg}</p>
+                  </div>
+
+                  {/* Neuer Punktestand für die Gruppe */}
+                  <div className="rounded-2xl bg-ink/5 border border-ink/10 px-6 py-3 text-center">
+                    <p className="text-xs text-ink/50 uppercase tracking-wide mb-1">Punktestand {diceGroup?.name ?? '?'}</p>
+                    <p className="text-3xl font-black">{diceGroup?.score ?? 0} <span className="text-base font-normal text-ink/50">Pkt.</span></p>
+                  </div>
+
+                  {effectiveIsHost ? (
+                    <button
+                      disabled={isProcessing}
+                      onClick={async () => {
+                        setIsProcessing(true);
+                        try { await confirmJokerDice(pin); } catch (e) { console.error(e); } finally { setIsProcessing(false); }
+                      }}
+                      className="w-full max-w-xs px-8 py-4 bg-green-600 text-white rounded-2xl font-bold text-lg hover:bg-green-700 disabled:opacity-50 transition-colors shadow-lg"
+                    >
+                      ✅ Weiter
+                    </button>
+                  ) : (
+                    <p className="text-sm text-ink/50 italic">Warte auf die Spielleitung…</p>
+                  )}
+                </>
+              )}
+            </div>
+          </main>
+        );
+      }
+
       return (
         <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
           {/* Header */}
@@ -1509,48 +1577,6 @@ export default function MultiplayerGamePage() {
                   </button>
                 </div>
                 {!hasAnyJoker && <p className="text-xs text-ink/50 text-center">Alle Joker wurden verbraucht.</p>}
-              </div>
-            );
-          })()}
-
-          {/* Würfel-Joker Overlay – für alle Gruppen sichtbar, bis Spielleiter bestätigt */}
-          {game.jokersEnabled && game.jokerDicePending && game.jokerDiceResult != null && (() => {
-            const diceGroup = game.groups[game.jokerDiceGroupId ?? ''];
-            const roll = game.jokerDiceResult!;
-            const diceEmojis = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
-            const rollMsg = roll === 6
-              ? `🎉 Jackpot! +1 Punkt und aktuelle Kategorie kassiert.`
-              : roll === 1
-              ? `💀 Pech! 1 Punkt verloren und eine Kategorie eingebüßt.`
-              : `Kein Effekt – ${diceGroup?.name ?? '?'} bleibt beim aktuellen Spielstand.`;
-            return (
-              <div className="card-surface rounded-2xl p-6 border-2 border-amber-400/60 text-center space-y-3">
-                <p className="text-sm font-semibold text-ink/70">
-                  🎲 {diceGroup?.name ?? '?'} hat den Würfel-Joker eingesetzt!
-                </p>
-                <div className={`text-8xl leading-none select-none transition-transform duration-75 ${diceAnimating ? 'scale-110' : 'scale-100'}`}>
-                  {diceEmojis[diceAnimating ? diceDisplayFace : roll] ?? '🎲'}
-                </div>
-                {!diceAnimating && (
-                  <>
-                    <p className="text-5xl font-bold">{roll}</p>
-                    <p className="text-base font-semibold text-ink/80">{rollMsg}</p>
-                    {effectiveIsHost ? (
-                      <button
-                        disabled={isProcessing}
-                        onClick={async () => {
-                          setIsProcessing(true);
-                          try { await confirmJokerDice(pin); } catch (e) { console.error(e); } finally { setIsProcessing(false); }
-                        }}
-                        className="mt-1 px-8 py-2.5 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 disabled:opacity-50 transition-colors"
-                      >
-                        ✅ Weiter
-                      </button>
-                    ) : (
-                      <p className="text-xs text-ink/50 italic">Warte auf die Spielleitung…</p>
-                    )}
-                  </>
-                )}
               </div>
             );
           })()}
