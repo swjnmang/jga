@@ -15,6 +15,7 @@ import {
   TIMELINE_CATEGORIES,
   UserSettings
 } from '@/lib/userSettings';
+import { catIcon, catLabel as catLabelMeta } from '@/lib/categoryMeta';
 
 const difficultyOptions: { value: Difficulty; label: string }[] = [
   { value: 'leicht', label: 'Leicht' },
@@ -22,22 +23,7 @@ const difficultyOptions: { value: Difficulty; label: string }[] = [
   { value: 'schwer', label: 'Schwer' }
 ];
 
-const categoryLabels: Partial<Record<CardCategory, string>> = {
-  quote: 'Berühmte Zitate',
-  image: 'Bilder erkennen',
-  flag: 'Länder erkennen',
-  outline: 'Umrisse erkennen',
-  music: 'Musik',
-  natur: 'Natur & Technik',
-  filmserien: 'Filme & Serien',
-  schaetzfragen: 'Schätzfragen',
-  religionglaube: 'Religion & Glaube',
-  sportfreizeit: 'Sport & Freizeit',
-  geogeschichte: 'Geographie & Geschichte',
-  essentrinken: 'Essen & Trinken',
-  gaming: 'Gaming & eSports',
-  gzsz: 'GZSZ'
-};
+const categoryLabels: Partial<Record<CardCategory, string>> = {} as Record<CardCategory, string>;
 
 function SettingsPageContent() {
   const searchParams = useSearchParams();
@@ -287,7 +273,7 @@ function SettingsPageContent() {
                       className="h-4 w-4 accent-sky-700 cursor-not-allowed"
                       readOnly
                     />
-                    <span className="flex-1">{categoryLabels[category] ?? category}</span>
+                    <span className="flex-1">{catIcon(category)} {catLabelMeta(category)}</span>
                     <span className="text-xs italic">Demnächst</span>
                   </div>
                 );
@@ -303,7 +289,7 @@ function SettingsPageContent() {
                     onChange={() => toggleCategory(category)}
                     className="h-4 w-4 accent-sky-700"
                   />
-                  <span>{categoryLabels[category] ?? category}</span>
+                  <span>{catIcon(category)} {catLabelMeta(category)}</span>
                 </label>
               );
             })}

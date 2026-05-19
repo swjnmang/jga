@@ -7,6 +7,7 @@ import { cards, getCategories } from '@/lib/cards';
 import { getDefaultSettings, TIMELINE_CATEGORIES, toDecadeTag } from '@/lib/userSettings';
 import { isFirebaseEnabled } from '@/lib/firebase';
 import { CardCategory, DecadeTag, Difficulty, GenreTag } from '@/lib/types';
+import { catIcon, catLabel as catLabelMeta } from '@/lib/categoryMeta';
 
 const GROUP_AVATARS = [
   // Einzeltiere
@@ -368,22 +369,7 @@ function MultiplayerLobbyContent() {
     });
   };
   
-  const categoryLabels: Partial<Record<CardCategory, string>> = {
-    quote: 'Berühmte Zitate',
-    image: 'Bilder erkennen',
-    flag: 'Flaggen erkennen',
-    outline: 'Länder am Umriss erkennen',
-    music: 'Musik',
-    natur: 'Natur & Technik',
-    filmserien: 'Filme & Serien',
-    schaetzfragen: 'Schätzfragen',
-    religionglaube: 'Religion & Glaube',
-    sportfreizeit: 'Sport & Freizeit',
-    geogeschichte: 'Geographie & Geschichte',
-    essentrinken: 'Essen & Trinken',
-    gaming: 'Gaming & eSports',
-    gzsz: 'GZSZ'
-  };
+  const categoryLabels: Partial<Record<CardCategory, string>> = {} as Record<CardCategory, string>;
 
   const handleJoinGame = async () => {
     if (!pin.trim() || !joinGroupName.trim()) {
@@ -675,8 +661,7 @@ function MultiplayerLobbyContent() {
                         title="Demnächst verfügbar"
                       >
                         <span className="flex-shrink-0 w-5 h-5 rounded border-2 border-ink/20 bg-transparent flex items-center justify-center" />
-                        <span className="text-sm font-medium">{categoryLabels[cat] || cat}</span>
-                        <span className="ml-auto text-xs text-ink/50 italic">Demnächst</span>
+                        <span className="text-sm font-medium">{catIcon(cat)} {catLabelMeta(cat)}</span>
                       </div>
                     );
                   }
@@ -695,7 +680,7 @@ function MultiplayerLobbyContent() {
                           </svg>
                         )}
                       </span>
-                      <span className="text-sm font-medium">{categoryLabels[cat] || cat}</span>
+                        <span className="text-sm font-medium">{catIcon(cat)} {catLabelMeta(cat)}</span>
                     </button>
                   );
                 })}

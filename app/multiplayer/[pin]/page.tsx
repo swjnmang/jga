@@ -42,6 +42,7 @@ import {
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
 import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
+import { catIcon, catLabel as catLabelMeta, catLabelWithIcon, catShortLabel } from '@/lib/categoryMeta';
 
 interface SessionInfo {
   pin: string;
@@ -617,13 +618,9 @@ export default function MultiplayerGamePage() {
   const groupList = Object.values(game.groups).filter(g => !g.isHost); // Spielleiter aus Liste entfernen
   const allReady = groupList.every(g => g.isReady);
 
-  const CATEGORY_LABELS: Record<string, string> = {
-    quote: 'Berühmte Zitate', image: 'Bilder erkennen', flag: 'Flaggen erkennen',
-    outline: 'Länder am Umriss erkennen', music: 'Musik', natur: 'Natur & Technik',
-    filmserien: 'Filme & Serien', schaetzfragen: 'Schätzfragen', essentrinken: 'Essen & Trinken',
-    religionglaube: 'Religion & Glaube', sportfreizeit: 'Sport & Freizeit',
-    geogeschichte: 'Geographie & Geschichte', gaming: 'Gaming & eSports', gzsz: 'GZSZ',
-  };
+  // Kategorie-Label + Icon für Ban-Phase und allgemeine Anzeige
+  const CATEGORY_LABEL_WITH_ICON = (cat: string) => catLabelWithIcon(cat);
+  const CATEGORY_DISPLAY = (cat: string) => catLabelMeta(cat);
 
   const handleBanCategory = async (category: string | null) => {
     if (!session || isBanning) return;
@@ -668,7 +665,7 @@ export default function MultiplayerGamePage() {
             <div className="flex flex-wrap gap-2">
               {banned.map(c => (
                 <span key={c} className="bg-red-100 text-red-700 text-xs font-semibold px-3 py-1 rounded-full border border-red-300">
-                  🚫 {CATEGORY_LABELS[c] ?? c}
+                  🚫 {catLabelWithIcon(c)}
                 </span>
               ))}
             </div>
@@ -694,7 +691,8 @@ export default function MultiplayerGamePage() {
                     disabled={isBanning}
                     className="rounded-xl border-2 border-red-400 bg-red-50 hover:bg-red-100 text-red-800 text-sm font-semibold px-3 py-3 transition disabled:opacity-50"
                   >
-                    🚫 {CATEGORY_LABELS[c] ?? c}
+                    <span className="block text-lg">{catIcon(c)}</span>
+                    <span className="block text-xs mt-0.5">{catLabelMeta(c)}</span>
                   </button>
                 ))}
                 <button
@@ -726,7 +724,7 @@ export default function MultiplayerGamePage() {
                   <span>{g?.name ?? gid}</span>
                   {done && (
                     <span className="ml-auto text-xs">
-                      {banned[i] ? `🚫 ${CATEGORY_LABELS[banned[i]] ?? banned[i]}` : '✅ Nichts gebannt'}
+                      {banned[i] ? `🚫 ${catLabelMeta(banned[i])}` : '✅ Nichts gebannt'}
                     </span>
                   )}
                   {active && <span className="ml-auto text-xs text-amber-600">👉 dran</span>}
@@ -965,14 +963,8 @@ export default function MultiplayerGamePage() {
       const activeGroup = game.currentTurnGroupId ? game.groups[game.currentTurnGroupId] : null;
       const isMyTurn = game.currentTurnGroupId === session.groupId && !effectiveIsHost;
 
-      const categoryLabels: Record<string, string> = {
-        music: 'Musikfrage', quote: 'Zitat', film: 'Film & Serie', filmserien: 'Film & Serie',
-        flag: 'Flagge', outline: 'Umriss', natur: 'Natur & Technik', naturtechnik: 'Natur & Technik',
-        triviaextra: 'Trivia', schaetzfragen: 'Schätzfrage', geogeschichte: 'Geo & Geschichte',
-        religionglaube: 'Religion & Glaube', sportfreizeit: 'Sport & Freizeit', popkultur: 'Popkultur',
-        gaming: 'Gaming & eSports', gzsz: 'GZSZ',
-      };
-      const categoryLabel = categoryLabels[currentCard.category] ?? currentCard.category;
+      const categoryLabel = catLabelMeta(currentCard.category);
+      const categoryIcon = catIcon(currentCard.category);
 
       const handleTriviaAnswer = async (correct: boolean) => {
         if (!session || !game || isProcessing) return;
@@ -1001,13 +993,7 @@ export default function MultiplayerGamePage() {
         ? game.triviaCategories
         : Object.values(game.triviaCategories ?? {});
 
-      const catLabel = (cat: string) => ({
-        music: 'Musik', quote: 'Zitat', film: 'Film', filmserien: 'Film',
-        flag: 'Flagge', outline: 'Umriss', natur: 'Natur', naturtechnik: 'Natur',
-        triviaextra: 'Trivia', schaetzfragen: 'Schätzfr.', geogeschichte: 'Geo',
-        religionglaube: 'Religion', sportfreizeit: 'Sport', popkultur: 'Popkultur',
-        gaming: 'Gaming', gzsz: 'GZSZ',
-      } as Record<string, string>)[cat] ?? cat;
+      const catLabel = (cat: string) => catShortLabel(cat);
 
       return (
         <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
@@ -1075,7 +1061,7 @@ export default function MultiplayerGamePage() {
                               : 'bg-ink/10 text-ink/50'
                           }`}
                         >
-                          {completed.includes(cat) ? '✓ ' : ''}{catLabel(cat)}
+                          {catIcon(cat)} {catShortLabel(cat)}{completed.includes(cat) ? ' ✓' : ''}
                         </span>
                       ))}
                     </div>
@@ -1235,7 +1221,7 @@ export default function MultiplayerGamePage() {
                 {/* Frage-Karte */}
                 <div className="card-surface rounded-2xl p-6 space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm px-3 py-1 rounded-full bg-ink/10 font-semibold">{categoryLabel}</span>
+                    <span className="text-sm px-3 py-1 rounded-full bg-ink/10 font-semibold">{categoryIcon} {categoryLabel}</span>
                     {timeLeft !== null && (
                       <span className={`text-sm font-mono font-bold px-3 py-1 rounded-full ${timeLeft <= 10 ? 'bg-red-500/20 text-red-600 animate-pulse' : 'bg-ink/10'}`}>
                         ⏱ {Math.floor(timeLeft / 60).toString().padStart(2, '0')}:{(timeLeft % 60).toString().padStart(2, '0')}
@@ -1361,7 +1347,7 @@ export default function MultiplayerGamePage() {
           {/* ── STANDARD TRIVIA FRAGE ── */}
           <div className="card-surface rounded-2xl p-6 space-y-4">
             <div className="flex items-center justify-between">
-              <span className="text-sm px-3 py-1 rounded-full bg-ink/10 font-semibold">{categoryLabel}</span>
+              <span className="text-sm px-3 py-1 rounded-full bg-ink/10 font-semibold">{categoryIcon} {categoryLabel}</span>
               {timeLeft !== null && (
                 <span className={`text-sm font-mono font-bold px-3 py-1 rounded-full ${
                   timeLeft <= 10 ? 'bg-red-500/20 text-red-600 animate-pulse' : 'bg-ink/10'
@@ -1833,27 +1819,12 @@ export default function MultiplayerGamePage() {
 
         {/* Aktuelle Karte */}
         {currentCard && (() => {
-          const categoryLabels: Record<string, string> = {
-            music: 'Musikfrage',
-            quote: 'Zitat',
-            film: 'Film & Serie',
-            filmserien: 'Film & Serie',
-            flag: 'Flagge',
-            outline: 'Umriss',
-            natur: 'Natur & Technik',
-            naturtechnik: 'Natur & Technik',
-            triviaextra: 'Trivia',
-            schaetzfragen: 'Schätzfrage',
-            geogeschichte: 'Geo & Geschichte',
-            religionglaube: 'Religion & Glaube',
-            sportfreizeit: 'Sport & Freizeit',
-            popkultur: 'Popkultur',
-          };
-          const categoryLabel = categoryLabels[currentCard.category] ?? currentCard.category;
+          const categoryLabel = catLabelMeta(currentCard.category);
+          const categoryIcon = catIcon(currentCard.category);
           return (
           <div className={`card-surface rounded-2xl p-3 sm:p-4 space-y-2 ${(!isActiveTurn && !isHostSession) ? 'opacity-70 pointer-events-none select-none' : ''}`}>
             <div className="flex items-center justify-between">
-              <h2 className="text-sm font-semibold">{categoryLabel}</h2>
+              <h2 className="text-sm font-semibold">{categoryIcon} {categoryLabel}</h2>
               <div className="flex items-center gap-2">
                 {timeLeft !== null && (
                   <span className={`text-sm font-mono font-bold px-3 py-1 rounded-full ${
