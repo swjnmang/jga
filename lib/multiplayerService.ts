@@ -1792,21 +1792,9 @@ export async function activateJokerDice(pin: string, groupId: string): Promise<v
 
   const roll = Math.floor(Math.random() * 6) + 1;
 
-  const triviaCategories: string[] = Array.isArray(game.triviaCategories)
-    ? game.triviaCategories
-    : Object.values(game.triviaCategories ?? {});
-  const playingGroupIds = Object.entries(game.groups)
-    .filter(([_, g]) => !g.isHost)
-    .map(([id]) => id);
-
   const prevCompleted: string[] = Array.isArray(game.groups[groupId]?.completedCategories)
     ? game.groups[groupId].completedCategories!
     : Object.values(game.groups[groupId]?.completedCategories ?? {}) as string[];
-
-  const prevAvailable: string[] = Array.isArray(game.availableDeck)
-    ? game.availableDeck
-    : Object.values(game.availableDeck ?? {});
-  const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
 
   let newCompleted = [...prevCompleted];
   let newScore = game.groups[groupId]?.score ?? 0;
@@ -1824,6 +1812,53 @@ export async function activateJokerDice(pin: string, groupId: string): Promise<v
     }
   }
 
+  // Effekte sofort anwenden, aber Zug NICHT weiterrücken – Spielleiter bestätigt erst
+  await update(gameRef, {
+    lastActivity: Date.now(),
+    jokerDiceResult: roll,
+    jokerDiceGroupId: groupId,
+    jokerDicePending: true,
+    [`groups/${groupId}/jokers/dice`]: false,
+    [`groups/${groupId}/score`]: newScore,
+    [`groups/${groupId}/completedCategories`]: newCompleted,
+  });
+}
+
+/**
+ * Spielleiter bestätigt das Würfelergebnis → Zug wird weitergerückt, Pending-State wird gelöscht.
+ */
+export async function confirmJokerDice(pin: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  if (!game.jokerDicePending) throw new Error('Kein ausstehender Würfeljoker.');
+
+  const groupId = game.jokerDiceGroupId!;
+  const roll = game.jokerDiceResult!;
+
+  const deckMeta: Record<string, string> = game.deckMeta ?? {};
+  const currentCat = game.currentRoundCategory ?? (game.currentCardId ? deckMeta[game.currentCardId] : '');
+
+  const triviaCategories: string[] = Array.isArray(game.triviaCategories)
+    ? game.triviaCategories
+    : Object.values(game.triviaCategories ?? {});
+  const playingGroupIds = Object.entries(game.groups)
+    .filter(([_, g]) => !g.isHost)
+    .map(([id]) => id);
+
+  const newCompleted: string[] = Array.isArray(game.groups[groupId]?.completedCategories)
+    ? game.groups[groupId].completedCategories!
+    : Object.values(game.groups[groupId]?.completedCategories ?? {}) as string[];
+  const newScore = game.groups[groupId]?.score ?? 0;
+
+  const prevAvailable: string[] = Array.isArray(game.availableDeck)
+    ? game.availableDeck
+    : Object.values(game.availableDeck ?? {});
+  const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
+
   const catGroupQueue: string[] = Array.isArray(game.categoryGroupQueue)
     ? game.categoryGroupQueue
     : Object.values(game.categoryGroupQueue ?? { 0: groupId });
@@ -1838,7 +1873,7 @@ export async function activateJokerDice(pin: string, groupId: string): Promise<v
     const completed: string[] = Array.isArray(g.completedCategories)
       ? g.completedCategories
       : Object.values(g.completedCategories ?? {}) as string[];
-    groupCompletedCategories[gid] = gid === groupId ? newCompleted : completed;
+    groupCompletedCategories[gid] = completed;
   });
 
   const next = computeNextTurn(
@@ -1848,11 +1883,9 @@ export async function activateJokerDice(pin: string, groupId: string): Promise<v
 
   const updates: Record<string, any> = {
     lastActivity: Date.now(),
-    jokerDiceResult: roll,
-    jokerDiceGroupId: groupId,
-    [`groups/${groupId}/jokers/dice`]: false,
-    [`groups/${groupId}/score`]: newScore,
-    [`groups/${groupId}/completedCategories`]: newCompleted,
+    jokerDicePending: null,
+    jokerDiceResult: null,
+    jokerDiceGroupId: null,
     availableDeck: newAvailable,
     currentTurnGroupId: next.nextGroupId,
     currentRoundCategory: next.currentRoundCategory,
@@ -1870,7 +1903,7 @@ export async function activateJokerDice(pin: string, groupId: string): Promise<v
     if (winCondition === 'points') {
       const allGroups = Object.entries(game.groups).filter(([_, g]) => !g.isHost);
       const winnerEntry = allGroups.reduce((best, [id, g]) => {
-        const sc = id === groupId ? newScore : (g.score ?? 0);
+        const sc = g.score ?? 0;
         return sc > best.score ? { id, score: sc } : best;
       }, { id: allGroups[0]?.[0] ?? '', score: -1 });
       updates.winnerGroupId = winnerEntry.id;

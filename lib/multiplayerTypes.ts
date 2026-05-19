@@ -96,6 +96,7 @@ export interface GameSession {
   jokerNextTargetGroupId?: string | null;   // Gruppe die die weitergegebene Frage beantworten muss
   jokerDiceResult?: number | null;          // Letztes Würfelergebnis (1–6)
   jokerDiceGroupId?: string | null;         // Gruppe die zuletzt gewürfelt hat
+  jokerDicePending?: boolean | null;        // Würfelergebnis angezeigt, Spielleiter muss bestätigen
   // Schätzfrage-Ergebnis (transient: gesetzt nach Auswertung, gelöscht beim Weiter)
   schaetzResult?: {
     answer: string;

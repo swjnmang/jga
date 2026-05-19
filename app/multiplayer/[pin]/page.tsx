@@ -37,6 +37,7 @@ import {
   activateJokerNewQuestion,
   activateJokerNext,
   activateJokerDice,
+  confirmJokerDice,
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
@@ -78,6 +79,12 @@ export default function MultiplayerGamePage() {
   const prevTurnGroupRef = useRef<string | null>(null);
   const [timeLeft, setTimeLeft] = useState<number | null>(null);
   const [flexTimer, setFlexTimer] = useState<number | null>(null);
+
+  // Würfel-Joker Animation
+  const [diceAnimating, setDiceAnimating] = useState(false);
+  const [diceDisplayFace, setDiceDisplayFace] = useState(1);
+  const prevDicePendingRef = useRef(false);
+  const diceAnimIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   
   // Host-Funktionen
@@ -543,6 +550,39 @@ export default function MultiplayerGamePage() {
     }, 1500);
     return () => clearTimeout(t);
   }, [game?.currentCardId, game?.state, game?.mode, session?.isHost, game?.hostId, session?.groupId, pin]);
+
+  // Würfel-Joker Animation: triggert wenn jokerDicePending false→true wird
+  useEffect(() => {
+    const pending = !!(game?.jokerDicePending);
+    const finalRoll = game?.jokerDiceResult ?? null;
+
+    if (pending && !prevDicePendingRef.current && finalRoll != null) {
+      prevDicePendingRef.current = true;
+      const capturedRoll = finalRoll;
+      setDiceAnimating(true);
+      setDiceDisplayFace(1);
+      let count = 0;
+      if (diceAnimIntervalRef.current) clearInterval(diceAnimIntervalRef.current);
+      diceAnimIntervalRef.current = setInterval(() => {
+        count++;
+        if (count >= 15) {
+          clearInterval(diceAnimIntervalRef.current!);
+          diceAnimIntervalRef.current = null;
+          setDiceDisplayFace(capturedRoll);
+          setDiceAnimating(false);
+        } else {
+          setDiceDisplayFace(f => f === 6 ? 1 : f + 1);
+        }
+      }, 100);
+    } else if (!pending) {
+      prevDicePendingRef.current = false;
+      if (diceAnimIntervalRef.current) {
+        clearInterval(diceAnimIntervalRef.current);
+        diceAnimIntervalRef.current = null;
+      }
+      setDiceAnimating(false);
+    }
+  }, [game?.jokerDicePending, game?.jokerDiceResult]);
 
   if (loading) {
     return (
@@ -1487,22 +1527,44 @@ export default function MultiplayerGamePage() {
             );
           })()}
 
-          {/* Würfel-Ergebnis für alle Spieler sichtbar */}
-          {game.jokersEnabled && game.jokerDiceResult != null && game.jokerDiceGroupId && (() => {
-            const diceGroup = game.groups[game.jokerDiceGroupId];
+          {/* Würfel-Joker Overlay – für alle Gruppen sichtbar, bis Spielleiter bestätigt */}
+          {game.jokersEnabled && game.jokerDicePending && game.jokerDiceResult != null && (() => {
+            const diceGroup = game.groups[game.jokerDiceGroupId ?? ''];
             const roll = game.jokerDiceResult!;
             const diceEmojis = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
             const rollMsg = roll === 6
-              ? '🎉 Jackpot! Punkt + Kategorie gewonnen!'
+              ? `🎉 Jackpot! +1 Punkt und aktuelle Kategorie kassiert.`
               : roll === 1
-              ? '💀 Pech! Punkt verloren + Kategorie eingebüßt.'
-              : `Kein Effekt – Zug geht weiter.`;
+              ? `💀 Pech! 1 Punkt verloren und eine Kategorie eingebüßt.`
+              : `Kein Effekt – ${diceGroup?.name ?? '?'} bleibt beim aktuellen Spielstand.`;
             return (
-              <div className="card-surface rounded-2xl p-4 border-2 border-yellow-400/50 text-center space-y-2">
-                <p className="text-sm font-semibold text-ink/70">{diceGroup?.name ?? '?'} hat gewürfelt:</p>
-                <p className="text-5xl">{diceEmojis[roll] ?? '🎲'}</p>
-                <p className="text-2xl font-bold">{roll}</p>
-                <p className="text-sm font-semibold">{rollMsg}</p>
+              <div className="card-surface rounded-2xl p-6 border-2 border-amber-400/60 text-center space-y-3">
+                <p className="text-sm font-semibold text-ink/70">
+                  🎲 {diceGroup?.name ?? '?'} hat den Würfel-Joker eingesetzt!
+                </p>
+                <div className={`text-8xl leading-none select-none transition-transform duration-75 ${diceAnimating ? 'scale-110' : 'scale-100'}`}>
+                  {diceEmojis[diceAnimating ? diceDisplayFace : roll] ?? '🎲'}
+                </div>
+                {!diceAnimating && (
+                  <>
+                    <p className="text-5xl font-bold">{roll}</p>
+                    <p className="text-base font-semibold text-ink/80">{rollMsg}</p>
+                    {effectiveIsHost ? (
+                      <button
+                        disabled={isProcessing}
+                        onClick={async () => {
+                          setIsProcessing(true);
+                          try { await confirmJokerDice(pin); } catch (e) { console.error(e); } finally { setIsProcessing(false); }
+                        }}
+                        className="mt-1 px-8 py-2.5 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 disabled:opacity-50 transition-colors"
+                      >
+                        ✅ Weiter
+                      </button>
+                    ) : (
+                      <p className="text-xs text-ink/50 italic">Warte auf die Spielleitung…</p>
+                    )}
+                  </>
+                )}
               </div>
             );
           })()}
