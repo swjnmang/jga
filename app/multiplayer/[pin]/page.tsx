@@ -1483,7 +1483,9 @@ export default function MultiplayerGamePage() {
               </div>
             ) : null}
             {!isMyTurn && !effectiveIsHost && (
-              <p className="text-sm text-ink/60 text-center">Warte auf die Antwort von {activeGroup?.name ?? 'dem aktiven Team'}…</p>
+              <div className="w-full px-4 py-3 rounded-xl bg-red-600 text-white font-semibold text-sm text-center">
+                Gruppe {activeGroup?.name ?? 'dem aktiven Team'} ist am Zug – ihr seid nicht dran
+              </div>
             )}
             {effectiveIsHost && (
               <button
