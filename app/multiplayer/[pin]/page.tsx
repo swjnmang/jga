@@ -34,6 +34,9 @@ import {
   extractRangeFromAnswer,
   extractUnitFromAnswer,
   parseGermanNumber,
+  useJokerNewQuestion,
+  useJokerNext,
+  useJokerDice,
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
@@ -579,7 +582,7 @@ export default function MultiplayerGamePage() {
     outline: 'Länder am Umriss erkennen', music: 'Musik', natur: 'Natur & Technik',
     filmserien: 'Filme & Serien', schaetzfragen: 'Schätzfragen',
     religionglaube: 'Religion & Glaube', sportfreizeit: 'Sport & Freizeit',
-    geogeschichte: 'Geographie & Geschichte',
+    geogeschichte: 'Geographie & Geschichte', gaming: 'Gaming & eSports',
   };
 
   const handleBanCategory = async (category: string | null) => {
@@ -1035,6 +1038,13 @@ export default function MultiplayerGamePage() {
                       ))}
                     </div>
                   )}
+                  {game.jokersEnabled && !g.isHost && g.jokers && (
+                    <div className="flex gap-1 mt-1">
+                      <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${g.jokers.newQuestion ? 'bg-purple-200 text-purple-700' : 'bg-ink/10 text-ink/30 line-through'}`}>🔄</span>
+                      <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${g.jokers.next ? 'bg-purple-200 text-purple-700' : 'bg-ink/10 text-ink/30 line-through'}`}>➡️</span>
+                      <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${g.jokers.dice ? 'bg-purple-200 text-purple-700' : 'bg-ink/10 text-ink/30 line-through'}`}>🎲</span>
+                    </div>
+                  )}
                 </div>
               );
             })}
@@ -1365,7 +1375,16 @@ export default function MultiplayerGamePage() {
                 <p className="text-green-700 font-bold">🎤 Ihr seid dran! Beantwortet die Frage laut.</p>
               </div>
             )}
-            {!isMyTurn && !effectiveIsHost && (
+            {/* NEXT-Joker: Zielgruppe wird benachrichtigt */}
+            {!isMyTurn && !effectiveIsHost && game.jokerNextActive && game.jokerNextTargetGroupId === session?.groupId && (
+              <div className="rounded-xl bg-orange-500/15 border-2 border-orange-400 px-4 py-3">
+                <p className="text-orange-700 font-bold">
+                  ⚡ Joker NEXT: {game.groups[game.jokerNextOriginGroupId ?? '']?.name ?? 'Eine Gruppe'} hat euch die Frage weitergegeben!
+                </p>
+                <p className="text-sm text-orange-600 mt-1">Wenn ihr richtig antwortet: niemand bekommt einen Punkt. Wenn ihr falsch antwortet: die andere Gruppe bekommt den Punkt.</p>
+              </div>
+            )}
+            {!isMyTurn && !effectiveIsHost && !(game.jokerNextActive && game.jokerNextTargetGroupId === session?.groupId) && (
               <p className="text-sm text-ink/60 text-center">Warte auf die Antwort von {activeGroup?.name ?? 'dem aktiven Team'}…</p>
             )}
             {effectiveIsHost && (
@@ -1383,10 +1402,110 @@ export default function MultiplayerGamePage() {
             )}
           </div>
 
+          {/* Joker-Panel – nur für aktive Gruppe, nicht für Host */}
+          {game.jokersEnabled && isMyTurn && session && (() => {
+            const myJokers = game.groups[session.groupId]?.jokers;
+            if (!myJokers) return null;
+            const hasAnyJoker = myJokers.newQuestion || myJokers.next || myJokers.dice;
+            return (
+              <div className="card-surface rounded-2xl p-4 space-y-3 border-2 border-purple-400/40">
+                <h3 className="text-sm font-bold text-purple-700">🃏 Joker</h3>
+                <div className="grid grid-cols-3 gap-2">
+                  {/* Joker 1: Neue Frage */}
+                  <button
+                    disabled={!myJokers.newQuestion || isProcessing}
+                    onClick={async () => {
+                      if (!myJokers.newQuestion || isProcessing) return;
+                      setIsProcessing(true);
+                      try { await useJokerNewQuestion(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
+                    }}
+                    className={`flex flex-col items-center gap-1 rounded-xl px-2 py-3 text-center transition-colors border-2 ${
+                      myJokers.newQuestion
+                        ? 'border-purple-400 bg-purple-500/10 hover:bg-purple-500/20 text-purple-800'
+                        : 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
+                    }`}
+                  >
+                    <span className="text-2xl">🔄</span>
+                    <span className="text-xs font-semibold leading-tight">Neue Frage</span>
+                    {!myJokers.newQuestion && <span className="text-[10px] text-ink/40">Verbraucht</span>}
+                  </button>
+                  {/* Joker 2: NEXT */}
+                  <button
+                    disabled={!myJokers.next || isProcessing}
+                    onClick={async () => {
+                      if (!myJokers.next || isProcessing) return;
+                      setIsProcessing(true);
+                      try { await useJokerNext(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
+                    }}
+                    className={`flex flex-col items-center gap-1 rounded-xl px-2 py-3 text-center transition-colors border-2 ${
+                      myJokers.next
+                        ? 'border-purple-400 bg-purple-500/10 hover:bg-purple-500/20 text-purple-800'
+                        : 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
+                    }`}
+                  >
+                    <span className="text-2xl">➡️</span>
+                    <span className="text-xs font-semibold leading-tight">NEXT</span>
+                    {!myJokers.next && <span className="text-[10px] text-ink/40">Verbraucht</span>}
+                  </button>
+                  {/* Joker 3: Würfeln */}
+                  <button
+                    disabled={!myJokers.dice || isProcessing}
+                    onClick={async () => {
+                      if (!myJokers.dice || isProcessing) return;
+                      setIsProcessing(true);
+                      try { await useJokerDice(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
+                    }}
+                    className={`flex flex-col items-center gap-1 rounded-xl px-2 py-3 text-center transition-colors border-2 ${
+                      myJokers.dice
+                        ? 'border-purple-400 bg-purple-500/10 hover:bg-purple-500/20 text-purple-800'
+                        : 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
+                    }`}
+                  >
+                    <span className="text-2xl">🎲</span>
+                    <span className="text-xs font-semibold leading-tight">Würfeln</span>
+                    {!myJokers.dice && <span className="text-[10px] text-ink/40">Verbraucht</span>}
+                  </button>
+                </div>
+                {!hasAnyJoker && <p className="text-xs text-ink/50 text-center">Alle Joker wurden verbraucht.</p>}
+              </div>
+            );
+          })()}
+
+          {/* Würfel-Ergebnis für alle Spieler sichtbar */}
+          {game.jokersEnabled && game.jokerDiceResult != null && game.jokerDiceGroupId && (() => {
+            const diceGroup = game.groups[game.jokerDiceGroupId];
+            const roll = game.jokerDiceResult!;
+            const diceEmojis = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
+            const rollMsg = roll === 6
+              ? '🎉 Jackpot! Punkt + Kategorie gewonnen!'
+              : roll === 1
+              ? '💀 Pech! Punkt verloren + Kategorie eingebüßt.'
+              : `Kein Effekt – Zug geht weiter.`;
+            return (
+              <div className="card-surface rounded-2xl p-4 border-2 border-yellow-400/50 text-center space-y-2">
+                <p className="text-sm font-semibold text-ink/70">{diceGroup?.name ?? '?'} hat gewürfelt:</p>
+                <p className="text-5xl">{diceEmojis[roll] ?? '🎲'}</p>
+                <p className="text-2xl font-bold">{roll}</p>
+                <p className="text-sm font-semibold">{rollMsg}</p>
+              </div>
+            );
+          })()}
+
           {/* Host-Steuerung */}
           {effectiveIsHost && (
             <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
               <h3 className="text-lg font-semibold text-green-700">👑 Spielleitung</h3>
+
+              {/* NEXT-Joker-Hinweis für Host */}
+              {game.jokerNextActive && game.jokerNextOriginGroupId && game.jokerNextTargetGroupId && (
+                <div className="rounded-xl bg-orange-500/15 border-2 border-orange-400 px-4 py-3 text-sm">
+                  <p className="font-bold text-orange-700">⚡ Joker NEXT aktiv</p>
+                  <p className="text-orange-600">
+                    {game.groups[game.jokerNextOriginGroupId]?.name ?? '?'} hat die Frage an {game.groups[game.jokerNextTargetGroupId]?.name ?? '?'} weitergegeben.
+                  </p>
+                  <p className="text-xs text-orange-600 mt-1">Richtig → niemand bekommt Punkt. Falsch → {game.groups[game.jokerNextOriginGroupId]?.name ?? '?'} bekommt Punkt.</p>
+                </div>
+              )}
 
               {/* Bewertungs-Buttons */}
               <p className="text-base font-semibold text-center text-ink/80">

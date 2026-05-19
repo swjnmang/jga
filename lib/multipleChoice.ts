@@ -6,6 +6,7 @@ import { playlistCards } from './playlistCards';
 import { filmSerienCards } from './filmSerienCards';
 import { naturTechnikCards } from './naturTechnikCards';
 import { triviaExtraCards } from './triviaExtraCards';
+import { gamingEsportsCards } from './gamingEsportsCards';
 import { schaetzfragenCards } from './schaetzfragenCards';
 
 const allCards = [
@@ -16,6 +17,7 @@ const allCards = [
   ...filmSerienCards,
   ...naturTechnikCards,
   ...triviaExtraCards,
+  ...gamingEsportsCards,
   ...schaetzfragenCards
 ];
 

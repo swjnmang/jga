@@ -30,6 +30,7 @@ function MultiplayerLobbyContent() {
   const [gameMode, setGameMode] = useState<'timeline' | 'trivia'>('timeline');
   const [banMode, setBanMode] = useState(true);
   const [triviaWinCondition, setTriviaWinCondition] = useState<'categories' | 'points'>('categories');
+  const [jokersEnabled, setJokersEnabled] = useState(true);
   const [timelineWinTarget, setTimelineWinTarget] = useState(10); // range 8–20
 
   // Join Game Form
@@ -249,6 +250,7 @@ function MultiplayerLobbyContent() {
         hostPlayerName: hostName,
         banModeEnabled: gameMode === 'trivia' ? banMode : false,
         triviaWinCondition: gameMode === 'trivia' ? triviaWinCondition : 'categories',
+        jokersEnabled: gameMode === 'trivia' ? jokersEnabled : false,
         timelineWinTarget: gameMode === 'timeline' ? timelineWinTarget : undefined,
       });
 
@@ -543,6 +545,26 @@ function MultiplayerLobbyContent() {
                     <span>
                       <span className="text-sm font-semibold block">🚫 Ban-Modus aktivieren</span>
                       <span className="text-xs text-ink/60">Wenn der Ban-Modus aktiviert ist, können Gruppen vor Spielbeginn jeweils eine Kategorie sperren.</span>
+                    </span>
+                  </button>
+                  {/* Joker-Modus */}
+                  <button
+                    type="button"
+                    onClick={() => setJokersEnabled(v => !v)}
+                    className="mt-3 w-full flex items-start gap-3 rounded-xl border-2 border-ink/20 bg-ink/5 hover:bg-ink/10 transition-colors px-4 py-3 text-left"
+                  >
+                    <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                      jokersEnabled ? 'bg-green-600 border-green-600' : 'border-ink/40 bg-transparent'
+                    }`}>
+                      {jokersEnabled && (
+                        <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="1,5 4.5,9 11,1" />
+                        </svg>
+                      )}
+                    </span>
+                    <span>
+                      <span className="text-sm font-semibold block">🃏 Joker aktivieren</span>
+                      <span className="text-xs text-ink/60">Jede Gruppe erhält 3 Joker: Neue Frage, NEXT (Frage weitergeben) und Würfeln. Nicht bei Schätzfragen verfügbar.</span>
                     </span>
                   </button>
                   {/* Gewinnbedingung */}

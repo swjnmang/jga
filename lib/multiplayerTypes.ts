@@ -27,6 +27,7 @@ export interface GroupData {
   completedCategories?: string[]; // Trivia: bereits korrekt beantwortete Kategorien
   schaetzSubmission?: string | null; // Trivia Schätzfrage: eingereichte Schätzung
   avatar?: string; // Emoji-Avatar der Gruppe
+  jokers?: { newQuestion: boolean; next: boolean; dice: boolean; }; // Trivia: verfügbare Joker
 }
 
 export interface PlacedCard {
@@ -88,6 +89,13 @@ export interface GameSession {
   currentRoundCategory?: string;       // Aktuelle Kategorie, aus der alle Gruppen spielen
   categoryRoundQueue?: string[];       // Noch ausstehende Kategorien in dieser Runde (gemischt)
   categoryGroupQueue?: string[];       // Gruppen, die in der aktuellen Kategorie noch spielen müssen
+  // Joker-System (Trivia)
+  jokersEnabled?: boolean;                  // Ob Joker aktiviert sind
+  jokerNextActive?: boolean;                // Joker 2 «NEXT» ist gerade aktiv
+  jokerNextOriginGroupId?: string | null;   // Gruppe die den NEXT-Joker genutzt hat
+  jokerNextTargetGroupId?: string | null;   // Gruppe die die weitergegebene Frage beantworten muss
+  jokerDiceResult?: number | null;          // Letztes Würfelergebnis (1–6)
+  jokerDiceGroupId?: string | null;         // Gruppe die zuletzt gewürfelt hat
   // Schätzfrage-Ergebnis (transient: gesetzt nach Auswertung, gelöscht beim Weiter)
   schaetzResult?: {
     answer: string;
@@ -106,6 +114,7 @@ export interface CreateGameParams {
   banModeEnabled?: boolean;
   triviaWinCondition?: 'categories' | 'points';
   timelineWinTarget?: number | null;
+  jokersEnabled?: boolean;
 }
 
 export interface JoinGameParams {

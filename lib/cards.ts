@@ -8,6 +8,7 @@ import { filmSerienCards } from './filmSerienCards';
 import { schaetzfragenCards } from './schaetzfragenCards';
 import { quoteCards } from './quoteCards';
 import { essentrinkenCards } from './essentrinkenCards';
+import { gamingEsportsCards } from './gamingEsportsCards';
 
 const baseCards: Card[] = [
   {
@@ -694,6 +695,7 @@ const baseNonMusicCards = [
   ...schaetzfragenCards,
   ...quoteCards,
   ...essentrinkenCards,
+  ...gamingEsportsCards,
 ];
 
 const playlistTaggedCards = playlistCards.map((card) => {

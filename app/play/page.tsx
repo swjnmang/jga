@@ -230,7 +230,8 @@ const CATEGORY_META: Record<CardCategory, { label: string; icon: string }> = {
   natur: { label: 'Natur & Technik', icon: '🔬' },
   filmserien: { label: 'Filme & Serien', icon: '🎞️' },
   schaetzfragen: { label: 'Schätzfragen', icon: '🎯' },
-  essentrinken: { label: 'Essen & Trinken', icon: '🍽️' }
+  essentrinken: { label: 'Essen & Trinken', icon: '🍽️' },
+  gaming: { label: 'Gaming & eSports', icon: '🎮' }
 };
 
 function triviaCue(card: Card): string {

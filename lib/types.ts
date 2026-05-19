@@ -11,7 +11,8 @@
   | 'natur'
   | 'filmserien'
   | 'schaetzfragen'
-  | 'essentrinken';
+  | 'essentrinken'
+  | 'gaming';
 
 export type Difficulty = 'leicht' | 'mittel' | 'schwer';
 

@@ -21,7 +21,8 @@ export const TRIVIA_ONLY_CATEGORIES: CardCategory[] = [
   'natur',
   'filmserien',
   'schaetzfragen',
-  'essentrinken'
+  'essentrinken',
+  'gaming'
 ];
 export const TIMELINE_CATEGORIES: CardCategory[] = ['quote', 'image', 'flag', 'music', 'outline', 'filmserien'];
 

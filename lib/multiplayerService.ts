@@ -102,6 +102,7 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     banModeEnabled: params.mode === 'trivia' ? (params.banModeEnabled ?? false) : false,
     triviaWinCondition: params.mode === 'trivia' ? (params.triviaWinCondition ?? 'categories') : 'categories',
     timelineWinTarget: params.mode === 'timeline' ? (params.timelineWinTarget ?? 10) : null,
+    jokersEnabled: params.mode === 'trivia' ? (params.jokersEnabled ?? true) : false,
     groups: {
       [hostGroupId]: { ...hostGroup, completedCategories: [] }
     },
@@ -176,6 +177,7 @@ export async function joinGame(params: JoinGameParams): Promise<{ groupId: strin
     isHost: false,
     completedCategories: [],
     avatar: params.avatar ?? '',
+    jokers: game.jokersEnabled ? { newQuestion: true, next: true, dice: true } : undefined,
   };
 
   // Füge Gruppe hinzu
@@ -1384,13 +1386,27 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
 
   const activeGroupId = game.currentTurnGroupId!;
 
-  // completedCategories der aktiven Gruppe
-  const prevCompleted: string[] = Array.isArray(game.groups[activeGroupId]?.completedCategories)
-    ? game.groups[activeGroupId].completedCategories!
-    : Object.values(game.groups[activeGroupId]?.completedCategories ?? {}) as string[];
+  // ── Joker 2 "NEXT" – Auflösung ────────────────────────────────────────────
+  // Die "Ziel"-Gruppe hat die weitergegebene Frage beantwortet.
+  // Richtig → niemand bekommt Punkt, Zug geht normal weiter.
+  // Falsch  → Ursprungsgruppe bekommt Punkt + Kategorie.
+  const isJokerNextResolution = game.jokerNextActive === true;
+  const jokerNextOriginId = game.jokerNextOriginGroupId ?? null;
+
+  // completedCategories der Gruppe, die den Punkt ggf. bekommt
+  const scoringGroupId = isJokerNextResolution && !correct && jokerNextOriginId
+    ? jokerNextOriginId
+    : activeGroupId;
+
+  const prevCompleted: string[] = Array.isArray(game.groups[scoringGroupId]?.completedCategories)
+    ? game.groups[scoringGroupId].completedCategories!
+    : Object.values(game.groups[scoringGroupId]?.completedCategories ?? {}) as string[];
 
   const currentCategory = game.currentCardId ? (deckMeta[game.currentCardId] ?? '') : '';
-  const newCompleted = correct && currentCategory && !prevCompleted.includes(currentCategory)
+
+  // Punkt und Kategorie nur wenn: (normal korrekt) oder (NEXT-Joker + falsch → Ursprungsgruppe gewinnt)
+  const awardPoint = isJokerNextResolution ? !correct : correct;
+  const newCompleted = awardPoint && currentCategory && !prevCompleted.includes(currentCategory)
     ? [...prevCompleted, currentCategory]
     : prevCompleted;
 
@@ -1416,8 +1432,7 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
     const completed: string[] = Array.isArray(g.completedCategories)
       ? g.completedCategories
       : Object.values(g.completedCategories ?? {}) as string[];
-    // Für die aktive Gruppe: bereits aktualisierte Liste verwenden
-    groupCompletedCategories[gid] = gid === activeGroupId ? newCompleted : completed;
+    groupCompletedCategories[gid] = gid === scoringGroupId ? newCompleted : completed;
   });
 
   const next = computeNextTurn(
@@ -1427,10 +1442,10 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
 
   const updates: Record<string, any> = {
     lastActivity: Date.now(),
-    [`groups/${activeGroupId}/score`]: correct
-      ? (game.groups[activeGroupId]?.score ?? 0) + 1
-      : (game.groups[activeGroupId]?.score ?? 0),
-    [`groups/${activeGroupId}/completedCategories`]: newCompleted,
+    [`groups/${scoringGroupId}/score`]: awardPoint
+      ? (game.groups[scoringGroupId]?.score ?? 0) + 1
+      : (game.groups[scoringGroupId]?.score ?? 0),
+    [`groups/${scoringGroupId}/completedCategories`]: newCompleted,
     availableDeck: newAvailable,
     currentTurnGroupId: next.nextGroupId,
     currentRoundCategory: next.currentRoundCategory,
@@ -1438,18 +1453,23 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
     categoryGroupQueue: next.categoryGroupQueue,
   };
 
-  // Reset flex-active
+  // Reset flex-active; NEXT-Joker-Zustand aufräumen
   Object.keys(game.groups).forEach(gid => {
     updates[`groups/${gid}/flexActive`] = false;
   });
+  if (isJokerNextResolution) {
+    updates.jokerNextActive = false;
+    updates.jokerNextOriginGroupId = null;
+    updates.jokerNextTargetGroupId = null;
+  }
 
   // Gewinnbedingung prüfen
   if (winCondition === 'categories') {
-    // Kategorie-Modus: aktive Gruppe hat alle Kategorien abgehakt?
-    if (correct && triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
+    // Kategorie-Modus: die scoring-Gruppe hat alle Kategorien abgehakt?
+    if (awardPoint && triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
       updates.state = 'finished';
       updates.finishedAt = Date.now();
-      updates.winnerGroupId = activeGroupId;
+      updates.winnerGroupId = scoringGroupId;
     } else if (!next.nextCardId) {
       updates.state = 'finished';
       updates.finishedAt = Date.now();
@@ -1465,7 +1485,7 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
       const allGroups = Object.entries(game.groups).filter(([_, g]) => !g.isHost);
       // Berücksichtige den soeben aktualisierten Score
       const winnerEntry = allGroups.reduce((best, [id, g]) => {
-        const sc = id === activeGroupId ? (correct ? (g.score ?? 0) + 1 : (g.score ?? 0)) : (g.score ?? 0);
+        const sc = id === scoringGroupId ? (awardPoint ? (g.score ?? 0) + 1 : (g.score ?? 0)) : (g.score ?? 0);
         return sc > best.score ? { id, score: sc } : best;
       }, { id: allGroups[0]?.[0] ?? '', score: -1 });
       updates.winnerGroupId = winnerEntry.id;
@@ -1650,6 +1670,218 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
         return sc > best.score ? { id, score: sc } : best;
       }, { id: allGroupsS[0]?.[0] ?? '', score: -1 });
       updates.winnerGroupId = winnerEntryS.id;
+    } else {
+      updates.currentCardId = next.nextCardId;
+      updates.currentCardIndex = (game.currentCardIndex ?? 0) + 1;
+    }
+  }
+
+  await update(gameRef, updates);
+}
+
+// ---------------------------------------------------------------------------
+// Joker-System (nur Trivia-Modus)
+// ---------------------------------------------------------------------------
+
+/**
+ * Joker 1: "Neue Frage" – Aktuelle Karte gegen eine neue Karte gleicher Kategorie tauschen.
+ * Die Gruppe bleibt am Zug; der Joker wird als verwendet markiert.
+ */
+export async function useJokerNewQuestion(pin: string, groupId: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  if (game.mode !== 'trivia') throw new Error('Joker nur im Trivia-Modus verfügbar.');
+  if (!game.jokersEnabled) throw new Error('Joker sind deaktiviert.');
+  if (game.currentTurnGroupId !== groupId) throw new Error('Diese Gruppe ist nicht am Zug.');
+
+  const jokers = game.groups[groupId]?.jokers;
+  if (!jokers?.newQuestion) throw new Error('Neue-Frage-Joker bereits verwendet.');
+
+  const deckMeta: Record<string, string> = game.deckMeta ?? {};
+  const currentCat = game.currentRoundCategory ?? (game.currentCardId ? deckMeta[game.currentCardId] : '');
+  if (currentCat === 'schaetzfragen') throw new Error('Joker bei Schätzfragen nicht verfügbar.');
+
+  const prevAvailable: string[] = Array.isArray(game.availableDeck)
+    ? game.availableDeck
+    : Object.values(game.availableDeck ?? {});
+  const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
+
+  // Neue Karte: bevorzuge gleiche Kategorie, sonst beliebig
+  const sameCatPool = newAvailable.filter(id => deckMeta[id] === currentCat);
+  const nextCardId = sameCatPool.length > 0
+    ? sameCatPool[Math.floor(Math.random() * sameCatPool.length)]
+    : (newAvailable[0] ?? null);
+
+  await update(gameRef, {
+    lastActivity: Date.now(),
+    availableDeck: newAvailable,
+    currentCardId: nextCardId,
+    [`groups/${groupId}/jokers/newQuestion`]: false,
+  });
+}
+
+/**
+ * Joker 2: "NEXT" – Frage an die nächste Gruppe weitergeben.
+ * Wenn die nächste Gruppe falsch antwortet, bekommt die ursprüngliche Gruppe Punkt + Kategorie.
+ * Wenn die nächste Gruppe richtig antwortet, bekommt niemand einen Punkt.
+ */
+export async function useJokerNext(pin: string, groupId: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  if (game.mode !== 'trivia') throw new Error('Joker nur im Trivia-Modus verfügbar.');
+  if (!game.jokersEnabled) throw new Error('Joker sind deaktiviert.');
+  if (game.currentTurnGroupId !== groupId) throw new Error('Diese Gruppe ist nicht am Zug.');
+
+  const jokers = game.groups[groupId]?.jokers;
+  if (!jokers?.next) throw new Error('NEXT-Joker bereits verwendet.');
+
+  const deckMeta: Record<string, string> = game.deckMeta ?? {};
+  const currentCat = game.currentRoundCategory ?? (game.currentCardId ? deckMeta[game.currentCardId] : '');
+  if (currentCat === 'schaetzfragen') throw new Error('Joker bei Schätzfragen nicht verfügbar.');
+
+  const playingGroupIds = Object.entries(game.groups)
+    .filter(([_, g]) => !g.isHost)
+    .map(([id]) => id);
+
+  if (playingGroupIds.length < 2) throw new Error('Zu wenige Gruppen für NEXT-Joker.');
+
+  const currentIdx = playingGroupIds.indexOf(groupId);
+  const nextGroupId = playingGroupIds[(currentIdx + 1) % playingGroupIds.length];
+
+  await update(gameRef, {
+    lastActivity: Date.now(),
+    jokerNextActive: true,
+    jokerNextOriginGroupId: groupId,
+    jokerNextTargetGroupId: nextGroupId,
+    currentTurnGroupId: nextGroupId,
+    [`groups/${groupId}/jokers/next`]: false,
+  });
+}
+
+/**
+ * Joker 3: "Würfeln" – Zufälliges Ergebnis 1–6.
+ * 6: Punkt + aktuelle Kategorie sammeln
+ * 1: Punkt verlieren (min 0) + zufällige gesammelte Kategorie verlieren
+ * 2–5: Zug endet ohne Effekt
+ */
+export async function useJokerDice(pin: string, groupId: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  if (game.mode !== 'trivia') throw new Error('Joker nur im Trivia-Modus verfügbar.');
+  if (!game.jokersEnabled) throw new Error('Joker sind deaktiviert.');
+  if (game.currentTurnGroupId !== groupId) throw new Error('Diese Gruppe ist nicht am Zug.');
+
+  const jokers = game.groups[groupId]?.jokers;
+  if (!jokers?.dice) throw new Error('Würfel-Joker bereits verwendet.');
+
+  const deckMeta: Record<string, string> = game.deckMeta ?? {};
+  const currentCat = game.currentRoundCategory ?? (game.currentCardId ? deckMeta[game.currentCardId] : '');
+  if (currentCat === 'schaetzfragen') throw new Error('Joker bei Schätzfragen nicht verfügbar.');
+
+  const roll = Math.floor(Math.random() * 6) + 1;
+
+  const triviaCategories: string[] = Array.isArray(game.triviaCategories)
+    ? game.triviaCategories
+    : Object.values(game.triviaCategories ?? {});
+  const playingGroupIds = Object.entries(game.groups)
+    .filter(([_, g]) => !g.isHost)
+    .map(([id]) => id);
+
+  const prevCompleted: string[] = Array.isArray(game.groups[groupId]?.completedCategories)
+    ? game.groups[groupId].completedCategories!
+    : Object.values(game.groups[groupId]?.completedCategories ?? {}) as string[];
+
+  const prevAvailable: string[] = Array.isArray(game.availableDeck)
+    ? game.availableDeck
+    : Object.values(game.availableDeck ?? {});
+  const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
+
+  let newCompleted = [...prevCompleted];
+  let newScore = game.groups[groupId]?.score ?? 0;
+
+  if (roll === 6) {
+    newScore += 1;
+    if (currentCat && !newCompleted.includes(currentCat)) {
+      newCompleted.push(currentCat);
+    }
+  } else if (roll === 1) {
+    newScore = Math.max(0, newScore - 1);
+    if (newCompleted.length > 0) {
+      const removeIdx = Math.floor(Math.random() * newCompleted.length);
+      newCompleted = newCompleted.filter((_, i) => i !== removeIdx);
+    }
+  }
+
+  const catGroupQueue: string[] = Array.isArray(game.categoryGroupQueue)
+    ? game.categoryGroupQueue
+    : Object.values(game.categoryGroupQueue ?? { 0: groupId });
+  const catRoundQueue: string[] = Array.isArray(game.categoryRoundQueue)
+    ? game.categoryRoundQueue
+    : Object.values(game.categoryRoundQueue ?? {});
+  const currentRoundCat = game.currentRoundCategory ?? currentCat;
+  const winCondition = game.triviaWinCondition ?? 'categories';
+
+  const groupCompletedCategories: Record<string, string[]> = {};
+  Object.entries(game.groups).forEach(([gid, g]) => {
+    const completed: string[] = Array.isArray(g.completedCategories)
+      ? g.completedCategories
+      : Object.values(g.completedCategories ?? {}) as string[];
+    groupCompletedCategories[gid] = gid === groupId ? newCompleted : completed;
+  });
+
+  const next = computeNextTurn(
+    playingGroupIds, currentRoundCat, catGroupQueue, catRoundQueue, triviaCategories, newAvailable, deckMeta,
+    groupCompletedCategories, winCondition
+  );
+
+  const updates: Record<string, any> = {
+    lastActivity: Date.now(),
+    jokerDiceResult: roll,
+    jokerDiceGroupId: groupId,
+    [`groups/${groupId}/jokers/dice`]: false,
+    [`groups/${groupId}/score`]: newScore,
+    [`groups/${groupId}/completedCategories`]: newCompleted,
+    availableDeck: newAvailable,
+    currentTurnGroupId: next.nextGroupId,
+    currentRoundCategory: next.currentRoundCategory,
+    categoryRoundQueue: next.categoryRoundQueue,
+    categoryGroupQueue: next.categoryGroupQueue,
+  };
+
+  Object.keys(game.groups).forEach(gid => {
+    updates[`groups/${gid}/flexActive`] = false;
+  });
+
+  if (!next.nextCardId) {
+    updates.state = 'finished';
+    updates.finishedAt = Date.now();
+    if (winCondition === 'points') {
+      const allGroups = Object.entries(game.groups).filter(([_, g]) => !g.isHost);
+      const winnerEntry = allGroups.reduce((best, [id, g]) => {
+        const sc = id === groupId ? newScore : (g.score ?? 0);
+        return sc > best.score ? { id, score: sc } : best;
+      }, { id: allGroups[0]?.[0] ?? '', score: -1 });
+      updates.winnerGroupId = winnerEntry.id;
+    } else if (roll === 6 && triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
+      updates.winnerGroupId = groupId;
+    }
+  } else {
+    if (roll === 6 && winCondition === 'categories' && triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
+      updates.state = 'finished';
+      updates.finishedAt = Date.now();
+      updates.winnerGroupId = groupId;
     } else {
       updates.currentCardId = next.nextCardId;
       updates.currentCardIndex = (game.currentCardIndex ?? 0) + 1;
