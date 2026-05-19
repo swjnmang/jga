@@ -1042,9 +1042,9 @@ export default function MultiplayerGamePage() {
                   )}
                   {game.jokersEnabled && !g.isHost && g.jokers && (
                     <div className="flex gap-1 mt-1">
-                      <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${g.jokers.newQuestion ? 'bg-purple-200 text-purple-700' : 'bg-ink/10 text-ink/30 line-through'}`}>🔄</span>
-                      <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${g.jokers.next ? 'bg-purple-200 text-purple-700' : 'bg-ink/10 text-ink/30 line-through'}`}>➡️</span>
-                      <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${g.jokers.dice ? 'bg-purple-200 text-purple-700' : 'bg-ink/10 text-ink/30 line-through'}`}>🎲</span>
+                      <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${g.jokers.newQuestion ? 'bg-amber-200 text-amber-700' : 'bg-ink/10 text-ink/30 line-through'}`}>🔄</span>
+                      <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${g.jokers.next ? 'bg-amber-200 text-amber-700' : 'bg-ink/10 text-ink/30 line-through'}`}>➡️</span>
+                      <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${g.jokers.dice ? 'bg-amber-200 text-amber-700' : 'bg-ink/10 text-ink/30 line-through'}`}>🎲</span>
                     </div>
                   )}
                 </div>
@@ -1372,21 +1372,23 @@ export default function MultiplayerGamePage() {
               )
             )}
 
-            {isMyTurn && (
+            {/* NEXT-Joker: Zielgruppe ist jetzt am Zug */}
+            {isMyTurn && game.jokerNextActive && game.jokerNextTargetGroupId === session?.groupId ? (
+              <div className="rounded-xl bg-orange-500/15 border-2 border-orange-500 px-4 py-3 space-y-1">
+                <p className="text-orange-700 font-bold text-base">⚡ Joker NEXT aktiv – ihr seid dran!</p>
+                <p className="text-sm text-orange-700">
+                  {game.groups[game.jokerNextOriginGroupId ?? '']?.name ?? 'Eine Gruppe'} hat die Frage an euch weitergegeben.
+                </p>
+                <p className="text-sm text-orange-600">
+                  Richtig → niemand bekommt einen Punkt. Falsch → {game.groups[game.jokerNextOriginGroupId ?? '']?.name ?? 'die andere Gruppe'} bekommt den Punkt.
+                </p>
+              </div>
+            ) : isMyTurn ? (
               <div className="rounded-xl bg-green-500/10 border-2 border-green-500 px-4 py-3">
                 <p className="text-green-700 font-bold">🎤 Ihr seid dran! Beantwortet die Frage laut.</p>
               </div>
-            )}
-            {/* NEXT-Joker: Zielgruppe wird benachrichtigt */}
-            {!isMyTurn && !effectiveIsHost && game.jokerNextActive && game.jokerNextTargetGroupId === session?.groupId && (
-              <div className="rounded-xl bg-orange-500/15 border-2 border-orange-400 px-4 py-3">
-                <p className="text-orange-700 font-bold">
-                  ⚡ Joker NEXT: {game.groups[game.jokerNextOriginGroupId ?? '']?.name ?? 'Eine Gruppe'} hat euch die Frage weitergegeben!
-                </p>
-                <p className="text-sm text-orange-600 mt-1">Wenn ihr richtig antwortet: niemand bekommt einen Punkt. Wenn ihr falsch antwortet: die andere Gruppe bekommt den Punkt.</p>
-              </div>
-            )}
-            {!isMyTurn && !effectiveIsHost && !(game.jokerNextActive && game.jokerNextTargetGroupId === session?.groupId) && (
+            ) : null}
+            {!isMyTurn && !effectiveIsHost && (
               <p className="text-sm text-ink/60 text-center">Warte auf die Antwort von {activeGroup?.name ?? 'dem aktiven Team'}…</p>
             )}
             {effectiveIsHost && (
@@ -1410,12 +1412,13 @@ export default function MultiplayerGamePage() {
             if (!myJokers) return null;
             const hasAnyJoker = myJokers.newQuestion || myJokers.next || myJokers.dice;
             return (
-              <div className="card-surface rounded-2xl p-4 space-y-3 border-2 border-purple-400/40">
-                <h3 className="text-sm font-bold text-purple-700">🃏 Joker</h3>
+              <div className="card-surface rounded-2xl p-4 space-y-3 border-2 border-amber-400/40">
+                <h3 className="text-sm font-bold text-amber-700">🃏 Joker</h3>
                 <div className="grid grid-cols-3 gap-2">
                   {/* Joker 1: Neue Frage */}
                   <button
                     disabled={!myJokers.newQuestion || isProcessing}
+                    title="Tauscht die aktuelle Frage gegen eine neue Frage aus derselben Kategorie."
                     onClick={async () => {
                       if (!myJokers.newQuestion || isProcessing) return;
                       setIsProcessing(true);
@@ -1423,17 +1426,21 @@ export default function MultiplayerGamePage() {
                     }}
                     className={`flex flex-col items-center gap-1 rounded-xl px-2 py-3 text-center transition-colors border-2 ${
                       myJokers.newQuestion
-                        ? 'border-purple-400 bg-purple-500/10 hover:bg-purple-500/20 text-purple-800'
+                        ? 'border-amber-400 bg-amber-500/10 hover:bg-amber-500/20 text-amber-900'
                         : 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
                     }`}
                   >
                     <span className="text-2xl">🔄</span>
                     <span className="text-xs font-semibold leading-tight">Neue Frage</span>
-                    {!myJokers.newQuestion && <span className="text-[10px] text-ink/40">Verbraucht</span>}
+                    {myJokers.newQuestion
+                      ? <span className="text-[10px] text-amber-700/70 leading-tight">Gleiche Kategorie</span>
+                      : <span className="text-[10px] text-ink/40">Verbraucht</span>
+                    }
                   </button>
                   {/* Joker 2: NEXT */}
                   <button
                     disabled={!myJokers.next || isProcessing}
+                    title="Gibt die Frage an die nächste Gruppe weiter. Antwortet diese falsch, bekommt ihr den Punkt."
                     onClick={async () => {
                       if (!myJokers.next || isProcessing) return;
                       setIsProcessing(true);
@@ -1441,17 +1448,21 @@ export default function MultiplayerGamePage() {
                     }}
                     className={`flex flex-col items-center gap-1 rounded-xl px-2 py-3 text-center transition-colors border-2 ${
                       myJokers.next
-                        ? 'border-purple-400 bg-purple-500/10 hover:bg-purple-500/20 text-purple-800'
+                        ? 'border-amber-400 bg-amber-500/10 hover:bg-amber-500/20 text-amber-900'
                         : 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
                     }`}
                   >
                     <span className="text-2xl">➡️</span>
                     <span className="text-xs font-semibold leading-tight">NEXT</span>
-                    {!myJokers.next && <span className="text-[10px] text-ink/40">Verbraucht</span>}
+                    {myJokers.next
+                      ? <span className="text-[10px] text-amber-700/70 leading-tight">Frage weitergeben</span>
+                      : <span className="text-[10px] text-ink/40">Verbraucht</span>
+                    }
                   </button>
                   {/* Joker 3: Würfeln */}
                   <button
                     disabled={!myJokers.dice || isProcessing}
+                    title="Würfle eine 6: Punkt + Kategorie kassieren. Eine 1: Punkt + Kategorie verlieren. 2–5: kein Effekt."
                     onClick={async () => {
                       if (!myJokers.dice || isProcessing) return;
                       setIsProcessing(true);
@@ -1459,13 +1470,16 @@ export default function MultiplayerGamePage() {
                     }}
                     className={`flex flex-col items-center gap-1 rounded-xl px-2 py-3 text-center transition-colors border-2 ${
                       myJokers.dice
-                        ? 'border-purple-400 bg-purple-500/10 hover:bg-purple-500/20 text-purple-800'
+                        ? 'border-amber-400 bg-amber-500/10 hover:bg-amber-500/20 text-amber-900'
                         : 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
                     }`}
                   >
                     <span className="text-2xl">🎲</span>
                     <span className="text-xs font-semibold leading-tight">Würfeln</span>
-                    {!myJokers.dice && <span className="text-[10px] text-ink/40">Verbraucht</span>}
+                    {myJokers.dice
+                      ? <span className="text-[10px] text-amber-700/70 leading-tight">6=Punkt, 1=Malus</span>
+                      : <span className="text-[10px] text-ink/40">Verbraucht</span>
+                    }
                   </button>
                 </div>
                 {!hasAnyJoker && <p className="text-xs text-ink/50 text-center">Alle Joker wurden verbraucht.</p>}
