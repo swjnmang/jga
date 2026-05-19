@@ -580,7 +580,7 @@ export default function MultiplayerGamePage() {
   const CATEGORY_LABELS: Record<string, string> = {
     quote: 'Berühmte Zitate', image: 'Bilder erkennen', flag: 'Flaggen erkennen',
     outline: 'Länder am Umriss erkennen', music: 'Musik', natur: 'Natur & Technik',
-    filmserien: 'Filme & Serien', schaetzfragen: 'Schätzfragen',
+    filmserien: 'Filme & Serien', schaetzfragen: 'Schätzfragen', essentrinken: 'Essen & Trinken',
     religionglaube: 'Religion & Glaube', sportfreizeit: 'Sport & Freizeit',
     geogeschichte: 'Geographie & Geschichte', gaming: 'Gaming & eSports', gzsz: 'GZSZ',
   };
