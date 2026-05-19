@@ -1413,7 +1413,7 @@ export default function MultiplayerGamePage() {
           })() : (
           <>
           {/* ── STANDARD TRIVIA FRAGE ── */}
-          <div className="card-surface rounded-2xl p-6 space-y-4">
+          <div className={`card-surface rounded-2xl p-6 space-y-4 transition-opacity duration-300 ${!isMyTurn && !effectiveIsHost ? 'opacity-40 grayscale pointer-events-none' : ''}`}>
             <div className="flex items-center justify-between">
               <span className="text-sm px-3 py-1 rounded-full bg-ink/10 font-semibold">{categoryIcon} {categoryLabel}</span>
               {timeLeft !== null && (
