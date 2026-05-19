@@ -22,7 +22,8 @@ export const TRIVIA_ONLY_CATEGORIES: CardCategory[] = [
   'filmserien',
   'schaetzfragen',
   'essentrinken',
-  'gaming'
+  'gaming',
+  'gzsz'
 ];
 export const TIMELINE_CATEGORIES: CardCategory[] = ['quote', 'image', 'flag', 'music', 'outline', 'filmserien'];
 

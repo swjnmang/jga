@@ -9,6 +9,7 @@ import { schaetzfragenCards } from './schaetzfragenCards';
 import { quoteCards } from './quoteCards';
 import { essentrinkenCards } from './essentrinkenCards';
 import { gamingEsportsCards } from './gamingEsportsCards';
+import { gzszCards } from './gzszCards';
 
 const baseCards: Card[] = [
   {
@@ -696,6 +697,7 @@ const baseNonMusicCards = [
   ...quoteCards,
   ...essentrinkenCards,
   ...gamingEsportsCards,
+  ...gzszCards,
 ];
 
 const playlistTaggedCards = playlistCards.map((card) => {

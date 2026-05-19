@@ -231,7 +231,8 @@ const CATEGORY_META: Record<CardCategory, { label: string; icon: string }> = {
   filmserien: { label: 'Filme & Serien', icon: '🎞️' },
   schaetzfragen: { label: 'Schätzfragen', icon: '🎯' },
   essentrinken: { label: 'Essen & Trinken', icon: '🍽️' },
-  gaming: { label: 'Gaming & eSports', icon: '🎮' }
+  gaming: { label: 'Gaming & eSports', icon: '🎮' },
+  gzsz: { label: 'GZSZ', icon: '📺' }
 };
 
 function triviaCue(card: Card): string {

@@ -12,7 +12,8 @@
   | 'filmserien'
   | 'schaetzfragen'
   | 'essentrinken'
-  | 'gaming';
+  | 'gaming'
+  | 'gzsz';
 
 export type Difficulty = 'leicht' | 'mittel' | 'schwer';
 

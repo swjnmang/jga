@@ -582,7 +582,7 @@ export default function MultiplayerGamePage() {
     outline: 'Länder am Umriss erkennen', music: 'Musik', natur: 'Natur & Technik',
     filmserien: 'Filme & Serien', schaetzfragen: 'Schätzfragen',
     religionglaube: 'Religion & Glaube', sportfreizeit: 'Sport & Freizeit',
-    geogeschichte: 'Geographie & Geschichte', gaming: 'Gaming & eSports',
+    geogeschichte: 'Geographie & Geschichte', gaming: 'Gaming & eSports', gzsz: 'GZSZ',
   };
 
   const handleBanCategory = async (category: string | null) => {
@@ -930,6 +930,7 @@ export default function MultiplayerGamePage() {
         flag: 'Flagge', outline: 'Umriss', natur: 'Natur & Technik', naturtechnik: 'Natur & Technik',
         triviaextra: 'Trivia', schaetzfragen: 'Schätzfrage', geogeschichte: 'Geo & Geschichte',
         religionglaube: 'Religion & Glaube', sportfreizeit: 'Sport & Freizeit', popkultur: 'Popkultur',
+        gaming: 'Gaming & eSports', gzsz: 'GZSZ',
       };
       const categoryLabel = categoryLabels[currentCard.category] ?? currentCard.category;
 
@@ -965,6 +966,7 @@ export default function MultiplayerGamePage() {
         flag: 'Flagge', outline: 'Umriss', natur: 'Natur', naturtechnik: 'Natur',
         triviaextra: 'Trivia', schaetzfragen: 'Schätzfr.', geogeschichte: 'Geo',
         religionglaube: 'Religion', sportfreizeit: 'Sport', popkultur: 'Popkultur',
+        gaming: 'Gaming', gzsz: 'GZSZ',
       } as Record<string, string>)[cat] ?? cat;
 
       return (

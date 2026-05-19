@@ -34,7 +34,9 @@ const categoryLabels: Partial<Record<CardCategory, string>> = {
   religionglaube: 'Religion & Glaube',
   sportfreizeit: 'Sport & Freizeit',
   geogeschichte: 'Geographie & Geschichte',
-  essentrinken: 'Essen & Trinken'
+  essentrinken: 'Essen & Trinken',
+  gaming: 'Gaming & eSports',
+  gzsz: 'GZSZ'
 };
 
 function SettingsPageContent() {
