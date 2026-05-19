@@ -1687,7 +1687,7 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
  * Joker 1: "Neue Frage" – Aktuelle Karte gegen eine neue Karte gleicher Kategorie tauschen.
  * Die Gruppe bleibt am Zug; der Joker wird als verwendet markiert.
  */
-export async function useJokerNewQuestion(pin: string, groupId: string): Promise<void> {
+export async function activateJokerNewQuestion(pin: string, groupId: string): Promise<void> {
   checkFirebase();
   const gameRef = ref(database!, `games/${pin}`);
   const snapshot = await get(gameRef);
@@ -1729,7 +1729,7 @@ export async function useJokerNewQuestion(pin: string, groupId: string): Promise
  * Wenn die nächste Gruppe falsch antwortet, bekommt die ursprüngliche Gruppe Punkt + Kategorie.
  * Wenn die nächste Gruppe richtig antwortet, bekommt niemand einen Punkt.
  */
-export async function useJokerNext(pin: string, groupId: string): Promise<void> {
+export async function activateJokerNext(pin: string, groupId: string): Promise<void> {
   checkFirebase();
   const gameRef = ref(database!, `games/${pin}`);
   const snapshot = await get(gameRef);
@@ -1772,7 +1772,7 @@ export async function useJokerNext(pin: string, groupId: string): Promise<void> 
  * 1: Punkt verlieren (min 0) + zufällige gesammelte Kategorie verlieren
  * 2–5: Zug endet ohne Effekt
  */
-export async function useJokerDice(pin: string, groupId: string): Promise<void> {
+export async function activateJokerDice(pin: string, groupId: string): Promise<void> {
   checkFirebase();
   const gameRef = ref(database!, `games/${pin}`);
   const snapshot = await get(gameRef);

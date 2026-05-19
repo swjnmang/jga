@@ -34,9 +34,9 @@ import {
   extractRangeFromAnswer,
   extractUnitFromAnswer,
   parseGermanNumber,
-  useJokerNewQuestion,
-  useJokerNext,
-  useJokerDice,
+  activateJokerNewQuestion,
+  activateJokerNext,
+  activateJokerDice,
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
@@ -1419,7 +1419,7 @@ export default function MultiplayerGamePage() {
                     onClick={async () => {
                       if (!myJokers.newQuestion || isProcessing) return;
                       setIsProcessing(true);
-                      try { await useJokerNewQuestion(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
+                      try { await activateJokerNewQuestion(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
                     }}
                     className={`flex flex-col items-center gap-1 rounded-xl px-2 py-3 text-center transition-colors border-2 ${
                       myJokers.newQuestion
@@ -1437,7 +1437,7 @@ export default function MultiplayerGamePage() {
                     onClick={async () => {
                       if (!myJokers.next || isProcessing) return;
                       setIsProcessing(true);
-                      try { await useJokerNext(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
+                      try { await activateJokerNext(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
                     }}
                     className={`flex flex-col items-center gap-1 rounded-xl px-2 py-3 text-center transition-colors border-2 ${
                       myJokers.next
@@ -1455,7 +1455,7 @@ export default function MultiplayerGamePage() {
                     onClick={async () => {
                       if (!myJokers.dice || isProcessing) return;
                       setIsProcessing(true);
-                      try { await useJokerDice(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
+                      try { await activateJokerDice(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
                     }}
                     className={`flex flex-col items-center gap-1 rounded-xl px-2 py-3 text-center transition-colors border-2 ${
                       myJokers.dice
