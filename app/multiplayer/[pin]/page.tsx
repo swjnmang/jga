@@ -1413,6 +1413,11 @@ export default function MultiplayerGamePage() {
           })() : (
           <>
           {/* ── STANDARD TRIVIA FRAGE ── */}
+          {!isMyTurn && !effectiveIsHost && (
+            <div className="w-full px-4 py-3 rounded-xl bg-red-600 text-white font-semibold text-sm text-center">
+              Gruppe {activeGroup?.name ?? 'dem aktiven Team'} ist am Zug – ihr seid nicht dran
+            </div>
+          )}
           <div className={`card-surface rounded-2xl p-6 space-y-4 transition-opacity duration-300 ${!isMyTurn && !effectiveIsHost ? 'opacity-40 grayscale pointer-events-none' : ''}`}>
             <div className="flex items-center justify-between">
               <span className="text-sm px-3 py-1 rounded-full bg-ink/10 font-semibold">{categoryIcon} {categoryLabel}</span>
@@ -1482,11 +1487,6 @@ export default function MultiplayerGamePage() {
                 <p className="text-green-700 font-bold">🎤 Ihr seid dran! Beantwortet die Frage laut.</p>
               </div>
             ) : null}
-            {!isMyTurn && !effectiveIsHost && (
-              <div className="w-full px-4 py-3 rounded-xl bg-red-600 text-white font-semibold text-sm text-center">
-                Gruppe {activeGroup?.name ?? 'dem aktiven Team'} ist am Zug – ihr seid nicht dran
-              </div>
-            )}
             {effectiveIsHost && (
               <button
                 onClick={async () => {
