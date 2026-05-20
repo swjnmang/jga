@@ -1482,10 +1482,6 @@ export default function MultiplayerGamePage() {
                   Richtig → niemand bekommt einen Punkt. Falsch → {game.groups[game.jokerNextOriginGroupId ?? '']?.name ?? 'die andere Gruppe'} bekommt den Punkt.
                 </p>
               </div>
-            ) : isMyTurn ? (
-              <div className="rounded-xl bg-green-500/10 border-2 border-green-500 px-4 py-3">
-                <p className="text-green-700 font-bold">🎤 Ihr seid dran! Beantwortet die Frage laut.</p>
-              </div>
             ) : null}
             {effectiveIsHost && (
               <button
@@ -1586,8 +1582,6 @@ export default function MultiplayerGamePage() {
           {/* Host-Steuerung */}
           {effectiveIsHost && (
             <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
-              <h3 className="text-lg font-semibold text-green-700">👑 Spielleitung</h3>
-
               {/* NEXT-Joker-Hinweis für Host */}
               {game.jokerNextActive && game.jokerNextOriginGroupId && game.jokerNextTargetGroupId && (
                 <div className="rounded-xl bg-orange-500/15 border-2 border-orange-400 px-4 py-3 text-sm">
@@ -1629,7 +1623,6 @@ export default function MultiplayerGamePage() {
                   {showTriviaAnswer ? '🙈 Verbergen' : '👁 Antwort'}
                 </button>
               </div>
-              <p className="text-xs text-ink/50 text-center">Nach Klick: nächste Frage, nächstes Team dran</p>
               {showTriviaAnswer && (
                 <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-400 px-4 py-3">
                   <p className="text-sm font-semibold text-yellow-700 mb-1">Korrekte Antwort:</p>
