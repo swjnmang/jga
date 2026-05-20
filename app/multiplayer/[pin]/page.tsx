@@ -1603,35 +1603,33 @@ export default function MultiplayerGamePage() {
               <p className="text-base font-semibold text-center text-ink/80">
                 Hat Gruppe <span className="font-bold">&bdquo;{activeGroup?.name ?? '…'}&ldquo;</span> die Frage korrekt beantwortet?
               </p>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-3 gap-2">
                 <button
                   onClick={() => handleTriviaAnswer(true)}
                   disabled={isProcessing}
-                  className="px-4 py-5 bg-green-600 text-white rounded-xl font-bold text-xl hover:bg-green-700 disabled:opacity-50"
+                  className="px-2 py-3 bg-green-600 text-white rounded-xl font-bold text-base hover:bg-green-700 disabled:opacity-50"
                 >
                   ✅ Richtig
                 </button>
                 <button
                   onClick={() => handleTriviaAnswer(false)}
                   disabled={isProcessing}
-                  className="px-4 py-5 bg-red-600 text-white rounded-xl font-bold text-xl hover:bg-red-700 disabled:opacity-50"
+                  className="px-2 py-3 bg-red-600 text-white rounded-xl font-bold text-base hover:bg-red-700 disabled:opacity-50"
                 >
                   ❌ Falsch
                 </button>
+                <button
+                  onClick={() => setShowTriviaAnswer(v => !v)}
+                  className={`px-2 py-3 rounded-xl font-bold text-base transition-colors ${
+                    showTriviaAnswer
+                      ? 'bg-sky-900 text-sky-200 hover:bg-sky-800'
+                      : 'bg-sky-700 text-white hover:bg-sky-600'
+                  }`}
+                >
+                  {showTriviaAnswer ? '🙈 Verbergen' : '👁 Antwort'}
+                </button>
               </div>
               <p className="text-xs text-ink/50 text-center">Nach Klick: nächste Frage, nächstes Team dran</p>
-
-              {/* Antwort anzeigen */}
-              <button
-                onClick={() => setShowTriviaAnswer(v => !v)}
-                className={`w-full px-4 py-4 rounded-xl font-bold text-lg transition-colors ${
-                  showTriviaAnswer
-                    ? 'bg-sky-900 text-sky-200 hover:bg-sky-800'
-                    : 'bg-sky-700 text-white hover:bg-sky-600'
-                }`}
-              >
-                {showTriviaAnswer ? '🙈 Antwort verbergen' : '👁 Korrekte Antwort anzeigen'}
-              </button>
               {showTriviaAnswer && (
                 <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-400 px-4 py-3">
                   <p className="text-sm font-semibold text-yellow-700 mb-1">Korrekte Antwort:</p>

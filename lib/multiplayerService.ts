@@ -658,11 +658,11 @@ export async function skipCard(pin: string): Promise<void> {
 
     const deckMeta: Record<string, string> = game.deckMeta ?? {};
     const currentCat = game.currentRoundCategory ?? (game.currentCardId ? deckMeta[game.currentCardId] : '');
-    // Nächste Karte: gleiche Kategorie bevorzugt, sonst beliebige
-    const nextCardId =
-      newAvailable.find(id => deckMeta[id] === currentCat) ??
-      newAvailable[0] ??
-      null;
+    // Nächste Karte: zufällig aus gleicher Kategorie, sonst zufällig beliebige
+    const catPool = newAvailable.filter(id => deckMeta[id] === currentCat);
+    const nextCardId = catPool.length > 0
+      ? catPool[Math.floor(Math.random() * catPool.length)]
+      : (newAvailable.length > 0 ? newAvailable[Math.floor(Math.random() * newAvailable.length)] : null);
 
     await update(gameRef, {
       lastActivity: Date.now(),

@@ -284,7 +284,9 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
           // Position kontinuierlich tracken für Resume-Funktion
           controller.addListener('playback_update', (data: unknown) => {
             const d = data as { data?: { position?: number; isPaused?: boolean } };
-            if (d?.data?.position !== undefined) {
+            // Only update position while actually playing – Spotify can reset position to 0
+            // internally after pausing, which would cause resume to restart from beginning.
+            if (d?.data?.position !== undefined && !d?.data?.isPaused) {
               spotifyPositionRef.current = d.data.position;
             }
           });
