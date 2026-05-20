@@ -1702,7 +1702,9 @@ export async function activateJokerNewQuestion(pin: string, groupId: string): Pr
   if (!jokers?.newQuestion) throw new Error('Neue-Frage-Joker bereits verwendet.');
 
   const deckMeta: Record<string, string> = game.deckMeta ?? {};
-  const currentCat = game.currentRoundCategory ?? (game.currentCardId ? deckMeta[game.currentCardId] : '');
+  // Use the actual category of the current card, not the round category
+  // (they can diverge when a group receives a replacement-category card)
+  const currentCat = (game.currentCardId ? deckMeta[game.currentCardId] : null) ?? game.currentRoundCategory ?? '';
   if (currentCat === 'schaetzfragen') throw new Error('Joker bei Schätzfragen nicht verfügbar.');
 
   const prevAvailable: string[] = Array.isArray(game.availableDeck)
@@ -1710,11 +1712,11 @@ export async function activateJokerNewQuestion(pin: string, groupId: string): Pr
     : Object.values(game.availableDeck ?? {});
   const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
 
-  // Neue Karte: bevorzuge gleiche Kategorie, sonst beliebig
+  // Neue Karte: gleiche Kategorie, sonst zufällig beliebig
   const sameCatPool = newAvailable.filter(id => deckMeta[id] === currentCat);
   const nextCardId = sameCatPool.length > 0
     ? sameCatPool[Math.floor(Math.random() * sameCatPool.length)]
-    : (newAvailable[0] ?? null);
+    : (newAvailable.length > 0 ? newAvailable[Math.floor(Math.random() * newAvailable.length)] : null);
 
   await update(gameRef, {
     lastActivity: Date.now(),
