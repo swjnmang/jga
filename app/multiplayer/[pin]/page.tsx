@@ -781,6 +781,7 @@ export default function MultiplayerGamePage() {
             </svg>
             <span>Einladungslink teilen</span>
           </button>
+          </div>
         </div>
 
         {/* Host-Panel - Nur wenn du der Spielleiter bist */}
