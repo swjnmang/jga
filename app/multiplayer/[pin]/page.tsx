@@ -771,7 +771,7 @@ export default function MultiplayerGamePage() {
           </div>
           <button
             onClick={shareInviteLink}
-            className="mt-2 inline-flex items-center gap-2 text-sm text-ink/70 hover:text-ink transition-colors"
+            className="mt-2 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-ink/10 hover:bg-ink/20 text-sm font-semibold transition-colors"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
