@@ -236,9 +236,17 @@ export default function MultiplayerGamePage() {
     navigator.clipboard.writeText(pin);
   };
 
-  const copyInviteLink = () => {
+  const shareInviteLink = async () => {
     const inviteUrl = `${window.location.origin}/multiplayer?pin=${pin}`;
-    navigator.clipboard.writeText(inviteUrl);
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: 'Flex Quiz – Einladung', text: `Tritt unserem Quiz bei! PIN: ${pin}`, url: inviteUrl });
+      } catch {
+        // user cancelled or share failed – silently ignore
+      }
+    } else {
+      navigator.clipboard.writeText(inviteUrl);
+    }
   };
 
   const handleSelectPosition = (pos: number) => {
@@ -762,11 +770,15 @@ export default function MultiplayerGamePage() {
             </button>
           </div>
           <button
-            onClick={copyInviteLink}
+            onClick={shareInviteLink}
             className="mt-2 inline-flex items-center gap-2 text-sm text-ink/70 hover:text-ink transition-colors"
           >
-            <span>🔗</span>
-            <span>Einladungslink kopieren</span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+              <polyline points="16 6 12 2 8 6"/>
+              <line x1="12" y1="2" x2="12" y2="15"/>
+            </svg>
+            <span>Einladungslink teilen</span>
           </button>
         </div>
 
