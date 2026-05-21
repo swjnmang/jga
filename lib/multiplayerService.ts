@@ -1619,6 +1619,7 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
   // Punkte + completedCategories für ALLE Gewinnergruppen (Unentschieden)
   let anyFinished = false;
   let firstWinnerId: string | null = null;
+  const jokerKeys = ['newQuestion', 'next', 'dice'] as const;
   for (const wid of winnerGroupIds) {
     const prevCompleted: string[] = Array.isArray(game.groups[wid]?.completedCategories)
       ? game.groups[wid].completedCategories!
@@ -1631,6 +1632,17 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
     if (triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
       anyFinished = true;
       firstWinnerId = firstWinnerId ?? wid;
+    }
+    // Schätzfragen-Bonus: einen zufällig ausgewählten verbrauchten Joker wiederherstellen
+    if (game.jokersEnabled) {
+      const groupJokers = game.groups[wid]?.jokers;
+      if (groupJokers) {
+        const usedJokers = jokerKeys.filter(k => groupJokers[k] === false);
+        if (usedJokers.length > 0) {
+          const restored = usedJokers[Math.floor(Math.random() * usedJokers.length)];
+          updates[`groups/${wid}/jokers/${restored}`] = true;
+        }
+      }
     }
   }
 
