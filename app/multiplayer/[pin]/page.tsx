@@ -1198,6 +1198,22 @@ export default function MultiplayerGamePage() {
               const winners = withSubmissions.filter((s, i) => Math.abs(distances[i] - minDist) < EPS);
               setIsProcessing(true);
               try {
+                // Pre-calculate joker restores so they can be shown on the result screen
+                const jokerKeysList = ['newQuestion', 'next', 'dice'] as const;
+                const jokerLabel: Record<string, string> = { newQuestion: 'Neue Frage', next: 'NEXT', dice: 'Würfel' };
+                const jokerRestores: { groupId: string; groupName: string; jokerKey: 'newQuestion' | 'next' | 'dice' }[] = [];
+                if (game.jokersEnabled) {
+                  for (const w of winners) {
+                    const groupJokers = game.groups[w.id]?.jokers;
+                    if (groupJokers) {
+                      const used = jokerKeysList.filter(k => groupJokers[k] === false);
+                      if (used.length > 0) {
+                        const restored = used[Math.floor(Math.random() * used.length)];
+                        jokerRestores.push({ groupId: w.id, groupName: w.name, jokerKey: restored });
+                      }
+                    }
+                  }
+                }
                 await showSchaetzResult(pin, {
                   answer: currentCard.answer,
                   winnerIds: winners.map(w => w.id),
@@ -1208,6 +1224,7 @@ export default function MultiplayerGamePage() {
                     isWinner: Math.abs(distances[i] - minDist) < EPS,
                     color: s.color,
                   })),
+                  jokerRestores,
                 });
               } catch (err) { console.error(err); }
               finally { setIsProcessing(false); }
@@ -1266,6 +1283,21 @@ export default function MultiplayerGamePage() {
                           </div>
                         ))}
                       </div>
+
+                      {/* Joker-Restore */}
+                      {res.jokerRestores && res.jokerRestores.length > 0 && (() => {
+                        const jokerLabel: Record<string, string> = { newQuestion: '🔄 Neue Frage', next: '⚡ NEXT', dice: '🎲 Würfel' };
+                        return (
+                          <div className="rounded-xl bg-amber-500/10 border border-amber-400 px-4 py-3 space-y-1">
+                            <p className="text-xs font-semibold text-amber-700 uppercase tracking-wide mb-2">🃏 Joker wiederhergestellt</p>
+                            {res.jokerRestores.map(r => (
+                              <p key={r.groupId} className="text-sm font-semibold">
+                                <span className="font-bold">{r.groupName}</span> erhält Joker <span className="font-bold">{jokerLabel[r.jokerKey] ?? r.jokerKey}</span> zurück
+                              </p>
+                            ))}
+                          </div>
+                        );
+                      })()}
 
                       {/* Weiter-Button nur für Host */}
                       {effectiveIsHost && (

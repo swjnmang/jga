@@ -102,6 +102,7 @@ export interface GameSession {
     answer: string;
     winnerIds: string[];
     submissions: { groupId: string; groupName: string; value: string; isWinner: boolean; color: string; }[];
+    jokerRestores?: { groupId: string; groupName: string; jokerKey: 'newQuestion' | 'next' | 'dice' }[];
   } | null;
 }
 
