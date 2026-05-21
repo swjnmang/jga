@@ -1530,8 +1530,8 @@ export default function MultiplayerGamePage() {
             )}
           </div>
 
-          {/* Joker-Panel – nur für aktive Gruppe, nicht für Host */}
-          {game.jokersEnabled && isMyTurn && session && (() => {
+          {/* Joker-Panel – nur für aktive Gruppe, nicht für Host, nicht wenn NEXT-Joker aktiv */}
+          {game.jokersEnabled && isMyTurn && session && !game.jokerNextActive && (() => {
             const myJokers = game.groups[session.groupId]?.jokers;
             if (!myJokers) return null;
             const hasAnyJoker = myJokers.newQuestion || myJokers.next || myJokers.dice;
