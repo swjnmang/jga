@@ -758,21 +758,22 @@ export default function MultiplayerGamePage() {
       <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
         <div className="text-center space-y-2">
           <h1 className="text-3xl font-display">Lobby</h1>
-          <div className="inline-flex items-center gap-3 bg-ink text-inkDark px-6 py-3 rounded-xl">
-            <span className="text-sm">PIN:</span>
-            <span className="text-2xl font-mono font-bold tracking-wider">{pin}</span>
+          <div className="inline-flex items-center gap-3 flex-wrap justify-center">
+            <div className="inline-flex items-center gap-3 bg-ink text-inkDark px-6 py-3 rounded-xl">
+              <span className="text-sm">PIN:</span>
+              <span className="text-2xl font-mono font-bold tracking-wider">{pin}</span>
+              <button
+                onClick={copyPin}
+                className="ml-2 hover:opacity-70 transition-opacity"
+                title="PIN kopieren"
+              >
+                📋
+              </button>
+            </div>
             <button
-              onClick={copyPin}
-              className="ml-2 hover:opacity-70 transition-opacity"
-              title="PIN kopieren"
+              onClick={shareInviteLink}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-ink/10 hover:bg-ink/20 font-semibold transition-colors"
             >
-              📋
-            </button>
-          </div>
-          <button
-            onClick={shareInviteLink}
-            className="mt-2 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-ink/10 hover:bg-ink/20 text-sm font-semibold transition-colors"
-          >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
               <polyline points="16 6 12 2 8 6"/>
