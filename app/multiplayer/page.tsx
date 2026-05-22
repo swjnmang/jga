@@ -127,10 +127,11 @@ function MultiplayerLobbyContent() {
       setMode('join');
     }
     
-    // Check for gameMode parameter
+    // Check for gameMode parameter — also auto-opens create form
     const gameModeFromUrl = searchParams.get('gameMode');
     if (gameModeFromUrl === 'timeline' || gameModeFromUrl === 'trivia') {
       setGameMode(gameModeFromUrl);
+      setMode('create');
     }
 
     // Restore mode after Spotify OAuth redirect

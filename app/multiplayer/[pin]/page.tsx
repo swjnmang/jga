@@ -1387,18 +1387,19 @@ export default function MultiplayerGamePage() {
                     <h3 className="text-lg font-semibold text-green-700">👑 Spielleitung — Schätzfrage</h3>
                     <p className="text-sm text-ink/60">{submittedCount}/{playingGroups.length} Gruppen haben geantwortet</p>
 
-                    {/* Eingaben der Gruppen */}
+                    {/* Eingaben der Gruppen – nur Status, keine Live-Werte */}
                     <div className="space-y-2">
-                      {playingGroups.map(g => (
-                        <div key={g.id} className="flex items-center justify-between rounded-lg px-4 py-3" style={{ backgroundColor: `${g.color}20` }}>
-                          <span className="font-semibold">{g.name}</span>
-                          <span className="font-mono font-bold">
-                            {g.schaetzSubmission != null && g.schaetzSubmission !== ''
-                              ? `${g.schaetzSubmission}${unit ? ` ${unit}` : ''}`
+                      {playingGroups.map(g => {
+                        const hasSubmitted = g.schaetzSubmission != null && g.schaetzSubmission !== '';
+                        return (
+                          <div key={g.id} className="flex items-center justify-between rounded-lg px-4 py-3" style={{ backgroundColor: `${g.color}20` }}>
+                            <span className="font-semibold">{g.name}</span>
+                            {hasSubmitted
+                              ? <span className="text-green-600 font-semibold">✅ Eingereicht</span>
                               : <span className="text-ink/40 italic text-sm">Noch nicht eingereicht</span>}
-                          </span>
-                        </div>
-                      ))}
+                          </div>
+                        );
+                      })}
                     </div>
 
                     {/* Korrekte Antwort */}
