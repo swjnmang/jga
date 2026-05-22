@@ -10,7 +10,6 @@ export default function HomePage() {
     timeZone: 'Europe/Berlin'
   }).format(new Date());
 
-  const [showRules, setShowRules] = useState(false);
   const [showImpressum, setShowImpressum] = useState(false);
 
   return (
@@ -52,12 +51,7 @@ export default function HomePage() {
               <span className="ml-2 text-inkDark/60 transition group-hover:translate-x-0.5">→</span>
             </Link>
             <SecondaryButton href="/app-settings" label="Einstellungen" />
-            <button
-              onClick={() => setShowRules(true)}
-              className="inline-flex items-center justify-center rounded-xl border border-ink/30 text-ink font-semibold px-5 py-4 bg-ink/10 backdrop-blur transition hover:-translate-y-0.5 hover:border-ink/60"
-            >
-              Spielregeln
-            </button>
+            <SecondaryButton href="/rules" label="Spielregeln" />
           </div>
 
           <div className="space-y-2">
@@ -75,71 +69,6 @@ export default function HomePage() {
           </div>
         </div>
       </main>
-
-      {/* Spielregeln Modal */}
-      {showRules && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={() => setShowRules(false)}>
-          <div
-            className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl bg-[#0d1424] border border-white/20 shadow-2xl p-8 text-left"
-            onClick={e => e.stopPropagation()}
-          >
-            <button onClick={() => setShowRules(false)} className="absolute top-4 right-4 text-white/50 hover:text-white text-2xl leading-none">×</button>
-            <h2 className="text-2xl font-display font-semibold text-white mb-6">📖 Spielregeln</h2>
-
-            <section className="mb-8">
-              <h3 className="text-lg font-bold text-cyan-300 mb-3">🕰️ Timeline-Modus</h3>
-              <div className="space-y-3 text-white/80 text-sm leading-relaxed">
-                <p><strong className="text-white">Ziel:</strong> Ordne Karten (Songs, Ereignisse, Fakten) korrekt in einer Zeitachse an. Wer als Erstes <strong className="text-white">7 Karten</strong> richtig platziert hat, gewinnt.</p>
-                <p><strong className="text-white">Ablauf:</strong> Die aktive Gruppe bekommt eine Karte gezeigt und muss sie an der richtigen Stelle in ihrer persönlichen Zeitreihe einordnen. Liegt die Karte falsch, kommt sie aus dem Spiel und die nächste Gruppe ist dran.</p>
-                <p><strong className="text-white">Kategorien:</strong> Songs, Schätzfragen, Geografie, Filme & Serien u.v.m. wechseln zufällig ab – jede Runde eine Überraschung.</p>
-
-                <div className="rounded-xl bg-white/5 border border-white/10 p-4 mt-2">
-                  <p className="font-bold text-yellow-300 mb-2">⚡ Flex-Tipps (für nicht aktive Gruppen)</p>
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>Während die aktive Gruppe überlegt, können alle anderen Gruppen einen <strong className="text-white">Flex-Tipp</strong> abgeben.</li>
-                    <li>Ein Flex-Tipp bedeutet: Du tippst, an welcher Position in der Zeitachse der <strong className="text-white">aktiven Gruppe</strong> die Karte eingeordnet wird.</li>
-                    <li>Liegt dein Flex-Tipp richtig, bekommst du die Karte gutgeschrieben – auch wenn die aktive Gruppe falsch lag.</li>
-                    <li>Flex-Tipps können nur abgegeben werden, <strong className="text-white">bevor</strong> der Host die Auswertung startet.</li>
-                    <li>Die eigene Platzierung der aktiven Gruppe kann nicht als Flex-Tipp gewählt werden.</li>
-                  </ul>
-                </div>
-
-                <p><strong className="text-white">Punkte / Kategorien:</strong> Oben in der Übersicht siehst du, welche Kategorien du bereits abgedeckt hast. Es gibt keine Kategoriepflicht – die Reihenfolge ist vollständig zufällig.</p>
-              </div>
-            </section>
-
-            <section>
-              <h3 className="text-lg font-bold text-violet-300 mb-3">🎮 Trivia-Modus</h3>
-              <div className="space-y-3 text-white/80 text-sm leading-relaxed">
-                <p><strong className="text-white">Ziel:</strong> Beantworte Wissensfragen aus verschiedenen Kategorien. Die Gruppe mit den meisten richtigen Antworten am Ende gewinnt.</p>
-                <p><strong className="text-white">Ablauf:</strong> Jede Gruppe ist reihum an der Reihe. Die aktive Gruppe sieht die Frage und wählt eine Antwort aus vier Optionen (Multiple Choice). Der Host deckt anschließend die Lösung auf.</p>
-                <p><strong className="text-white">Kategorien:</strong> Sport, Musik, Geografie, Film & Serien, Schätzfragen, Zitate, Religion, Natur & Technik und mehr.</p>
-
-                <div className="rounded-xl bg-white/5 border border-white/10 p-4 mt-2">
-                  <p className="font-bold text-yellow-300 mb-2">⚡ Flex-Tipps (für nicht aktive Gruppen)</p>
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>Auch im Trivia-Modus können nicht aktive Gruppen einen <strong className="text-white">Flex-Tipp</strong> abgeben.</li>
-                    <li>Du tippst, welche Antwort die aktive Gruppe wählen wird.</li>
-                    <li>Liegt dein Tipp richtig (d.h. die aktive Gruppe antwortet korrekt und du hast dasselbe gewählt), bekommst du ebenfalls einen Punkt.</li>
-                    <li>Flex-Tipps müssen vor der Auswertung durch den Host abgegeben werden.</li>
-                  </ul>
-                </div>
-
-                <div className="rounded-xl bg-white/5 border border-white/10 p-4 mt-2">
-                  <p className="font-bold text-orange-300 mb-2">🏆 Schätzfragen</p>
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>Bei Schätzfragen gibt jede Gruppe eine freie Zahl ein.</li>
-                    <li>Gewonnen hat die Gruppe, deren Schätzung <strong className="text-white">am nächsten an der richtigen Antwort</strong> liegt.</li>
-                    <li>Die Einheit ist immer in der Frage angegeben – bitte genau lesen!</li>
-                  </ul>
-                </div>
-
-                <p><strong className="text-white">Spielende:</strong> Das Spiel endet, wenn alle Fragen gespielt wurden oder der Host das Spiel beendet. Sieger ist die Gruppe mit den meisten Punkten.</p>
-              </div>
-            </section>
-          </div>
-        </div>
-      )}
 
       {/* Impressum Modal */}
       {showImpressum && (
