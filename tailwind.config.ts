@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: '#e6edf5',
-        inkDark: '#0b1021',
-        sand: '#93c5ff',
+        ink: 'rgb(var(--color-ink) / <alpha-value>)',
+        inkDark: 'rgb(var(--color-ink-dark) / <alpha-value>)',
+        sand: 'rgb(var(--color-accent) / <alpha-value>)',
         mint: '#9ae6d3',
         coral: '#ff9aa2'
       },

@@ -19,58 +19,58 @@ export default function HomePage() {
   return (
     <>
       <main className="min-h-screen bg-grid flex items-center justify-center px-6 py-16">
-        <div className="w-full max-w-4xl rounded-3xl bg-glass border border-white/20 shadow-2xl backdrop-blur-xl p-10 md:p-14 space-y-10 text-center">
+        <div className="w-full max-w-4xl rounded-3xl bg-glass border border-ink/10 shadow-2xl backdrop-blur-xl p-10 md:p-14 space-y-10 text-center">
           <div className="space-y-4">
             <div className="flex flex-col items-center gap-3">
               <LogoMark />
-              <p className="text-sm uppercase tracking-[0.3em] text-white/70">Flex Quiz</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-ink/70">Flex Quiz</p>
             </div>
             <div className="space-y-3">
-              <h1 className="text-4xl md:text-5xl font-display font-semibold text-white leading-tight">
+              <h1 className="text-4xl md:text-5xl font-display font-semibold text-ink leading-tight">
                 Dein Quiz. Deine Regeln.
               </h1>
-              <p className="text-lg text-white/80 max-w-2xl mx-auto">
+              <p className="text-lg text-ink/80 max-w-2xl mx-auto">
                 Gelangweilt bei „Wer wird Millionär"? „Hitster" zum vierten Mal durchgespielt? Du bist ein echter Quizchamp und brauchst mehr?
               </p>
-              <p className="text-base text-white/90 max-w-2xl mx-auto font-semibold">
+              <p className="text-base text-ink/90 max-w-2xl mx-auto font-semibold">
                 Dann ist Flex Quiz genau das Richtige für dich! Dein Quiz. Deine Regeln.
               </p>
-              <p className="text-sm text-white/60 tracking-wide uppercase mt-4">„Start. Flex. Win."</p>
+              <p className="text-sm text-ink/60 tracking-wide uppercase mt-4">„Start. Flex. Win."</p>
             </div>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             <button
               onClick={() => setShowCreateModal(true)}
-              className="group inline-flex items-center justify-center rounded-xl bg-white text-[#0b1021] font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20"
+              className="group inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20"
             >
               <span>Spiel erstellen</span>
-              <span className="ml-2 text-ink/60 transition group-hover:translate-x-0.5">→</span>
+              <span className="ml-2 text-inkDark/60 transition group-hover:translate-x-0.5">→</span>
             </button>
             <Link
               href="/multiplayer?open=join"
-              className="group inline-flex items-center justify-center rounded-xl bg-white text-[#0b1021] font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20"
+              className="group inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20"
             >
               <span>Spiel beitreten</span>
-              <span className="ml-2 text-ink/60 transition group-hover:translate-x-0.5">→</span>
+              <span className="ml-2 text-inkDark/60 transition group-hover:translate-x-0.5">→</span>
             </Link>
             <SecondaryButton href="/app-settings" label="Einstellungen" />
             <button
               onClick={() => setShowRules(true)}
-              className="inline-flex items-center justify-center rounded-xl border border-white/30 text-white font-semibold px-5 py-4 bg-white/10 backdrop-blur transition hover:-translate-y-0.5 hover:border-white/60"
+              className="inline-flex items-center justify-center rounded-xl border border-ink/30 text-ink font-semibold px-5 py-4 bg-ink/10 backdrop-blur transition hover:-translate-y-0.5 hover:border-ink/60"
             >
               Spielregeln
             </button>
           </div>
 
           <div className="space-y-2">
-            <div className="text-xs text-white/60">
+            <div className="text-xs text-ink/60">
               Letzte Versionsänderung: {lastUpdated}
             </div>
             <div>
               <button
                 onClick={() => setShowImpressum(true)}
-                className="text-xs text-white/30 hover:text-white/60 transition underline underline-offset-2"
+                className="text-xs text-ink/30 hover:text-ink/60 transition underline underline-offset-2"
               >
                 Impressum
               </button>
@@ -218,7 +218,7 @@ function SecondaryButton({ href, label }: { href: string; label: string }) {
   return (
     <Link
       href={href}
-      className="inline-flex items-center justify-center rounded-xl border border-white/30 text-white font-semibold px-5 py-4 bg-white/10 backdrop-blur transition hover:-translate-y-0.5 hover:border-white/60"
+      className="inline-flex items-center justify-center rounded-xl border border-ink/30 text-ink font-semibold px-5 py-4 bg-ink/10 backdrop-blur transition hover:-translate-y-0.5 hover:border-ink/60"
     >
       <span>{label}</span>
     </Link>
