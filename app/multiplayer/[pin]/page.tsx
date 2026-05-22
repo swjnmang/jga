@@ -97,6 +97,8 @@ export default function MultiplayerGamePage() {
   const [schaetzSubmitted, setSchaetzSubmitted] = useState(false);
 
   const [isBanning, setIsBanning] = useState(false);
+  const [banTimeLeft, setBanTimeLeft] = useState<number>(20);
+  const banAutoSkippedRef = useRef(false);
 
   // Lade Session-Infos
   useEffect(() => {
@@ -560,6 +562,34 @@ export default function MultiplayerGamePage() {
     return () => clearTimeout(t);
   }, [game?.currentCardId, game?.state, game?.mode, session?.isHost, game?.hostId, session?.groupId, pin]);
 
+  // Ban-Phase Timer: 20 Sekunden pro Gruppe, danach automatisch überspringen
+  useEffect(() => {
+    if (game?.state !== 'banning') {
+      setBanTimeLeft(20);
+      return;
+    }
+    const deadline = game.banPhaseDeadline;
+    if (!deadline) return;
+    banAutoSkippedRef.current = false;
+
+    const order = game.banPhaseGroupOrder ?? [];
+    const currentIndex = game.banPhaseCurrentIndex ?? 0;
+    const currentBanGroupId = order[currentIndex];
+    const isMyTurn = currentBanGroupId === session?.groupId;
+
+    const tick = () => {
+      const remaining = Math.ceil((deadline - Date.now()) / 1000);
+      setBanTimeLeft(Math.max(0, remaining));
+      if (remaining <= 0 && isMyTurn && !banAutoSkippedRef.current) {
+        banAutoSkippedRef.current = true;
+        banCategory(pin, session!.groupId, null).catch(console.error);
+      }
+    };
+    tick();
+    const id = setInterval(tick, 500);
+    return () => clearInterval(id);
+  }, [game?.state, game?.banPhaseDeadline, game?.banPhaseCurrentIndex, session?.groupId, pin]);
+
   // Würfel-Joker Animation: triggert wenn jokerDicePending false→true wird
   useEffect(() => {
     const pending = !!(game?.jokerDicePending);
@@ -682,11 +712,18 @@ export default function MultiplayerGamePage() {
 
         {/* Aktuell an der Reihe */}
         <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-amber-400/40 bg-amber-50/10">
-          <p className="text-center font-semibold text-amber-700">
-            {isMyTurn
-              ? '👉 Du bist dran — wähle eine Kategorie zum Bannen'
-              : `⏳ ${currentBanGroup?.name ?? '...'} wählt gerade...`}
-          </p>
+          <div className="flex items-center justify-between gap-4">
+            <p className="font-semibold text-amber-700">
+              {isMyTurn
+                ? '👉 Du bist dran — wähle eine Kategorie zum Bannen'
+                : `⏳ ${currentBanGroup?.name ?? '...'} wählt gerade...`}
+            </p>
+            <span className={`text-2xl font-bold tabular-nums shrink-0 ${
+              banTimeLeft <= 5 ? 'text-red-500 animate-pulse' : banTimeLeft <= 10 ? 'text-amber-500' : 'text-amber-700'
+            }`}>
+              {banTimeLeft}s
+            </span>
+          </div>
 
           {isMyTurn && (
             <>

@@ -83,6 +83,7 @@ export interface GameSession {
   bannedCategories?: string[];           // Von Gruppen gebannte Kategorien
   banPhaseGroupOrder?: string[];         // Reihenfolge der Gruppen in der Ban-Phase
   banPhaseCurrentIndex?: number;         // Index der aktuell bannenden Gruppe
+  banPhaseDeadline?: number;             // Unix-Timestamp: wann die aktuelle Ban-Runde abläuft
   // Gewinnbedingung Trivia
   triviaWinCondition?: 'categories' | 'points'; // 'categories' = alle Kats. abgehakt; 'points' = meiste Punkte
   // Kategorie-Rotation (Trivia)

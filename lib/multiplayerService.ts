@@ -231,6 +231,7 @@ export async function startGame(pin: string, hostGroupId: string): Promise<void>
       bannedCategories: [],
       banPhaseGroupOrder: nonHostGroupIds,
       banPhaseCurrentIndex: 0,
+      banPhaseDeadline: Date.now() + 20000,
     });
   } else {
     // Ban-Phase überspringen → direkt zu playing
@@ -343,6 +344,7 @@ export async function banCategory(pin: string, groupId: string, category: string
     await update(gameRef, {
       bannedCategories: newBanned,
       banPhaseCurrentIndex: newIndex,
+      banPhaseDeadline: Date.now() + 20000,
       lastActivity: Date.now(),
     });
   }

@@ -59,7 +59,7 @@ function AppSettingsContent() {
             <p className="text-xs uppercase tracking-wide text-ink/60">Design</p>
             <h2 className="text-xl font-semibold">Aussehen der App</h2>
           </div>
-          <span className="text-xs rounded-full bg-ink/10 px-3 py-1 text-ink/80">2 Themes</span>
+          <span className="text-xs rounded-full bg-ink/10 px-3 py-1 text-ink/80">3 Themes</span>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {themes.map((option) => (

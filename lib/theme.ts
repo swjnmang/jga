@@ -1,11 +1,12 @@
-﻿export type ThemeId = 'aurora' | 'dark';
+﻿export type ThemeId = 'aurora' | 'dark' | 'urban';
 
 const THEME_KEY = 'app-theme';
 const MOTION_KEY = 'app-reduce-motion';
 
 export const themes: { id: ThemeId; name: string }[] = [
   { id: 'aurora', name: 'Aurora' },
-  { id: 'dark', name: 'Dark Mode' }
+  { id: 'dark', name: 'Dark Mode' },
+  { id: 'urban', name: 'Urban' },
 ];
 
 export function applyTheme(theme: ThemeId) {

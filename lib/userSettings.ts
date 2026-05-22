@@ -55,7 +55,7 @@ export function getDefaultSettings(
   }, {} as Record<CardCategory, number>);
 
   return {
-    timerSeconds: 120,
+    timerSeconds: 60,
     categories: availableCategories,
     difficulties: ['leicht', 'mittel', 'schwer'],
     categoryWeights,
