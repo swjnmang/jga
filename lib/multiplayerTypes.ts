@@ -97,6 +97,12 @@ export interface GameSession {
   jokerDiceResult?: number | null;          // Letztes Würfelergebnis (1–6)
   jokerDiceGroupId?: string | null;         // Gruppe die zuletzt gewürfelt hat
   jokerDicePending?: boolean | null;        // Würfelergebnis angezeigt, Spielleiter muss bestätigen
+  // Gleichstand-Auflösung (Trivia – Kategorien-Modus)
+  triviaFinalRound?: boolean;          // Letzter Umlauf läuft (andere Gruppen holen noch auf)
+  triviaFinalRoundPending?: string[];  // Gruppen, die noch ihren letzten Zug haben
+  triviaLeaders?: string[];           // Gruppen, die bereits alle Kategorien gesammelt haben
+  triviaTiebreakerActive?: boolean;   // Stechen-Schätzfrage läuft
+  triviaTiebreakerGroupIds?: string[]; // Nur diese Gruppen nehmen am Stechen teil
   // Schätzfrage-Ergebnis (transient: gesetzt nach Auswertung, gelöscht beim Weiter)
   schaetzResult?: {
     answer: string;

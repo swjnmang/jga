@@ -1161,9 +1161,51 @@ export default function MultiplayerGamePage() {
             </div>
           </details>
 
+          {/* ── Finale-Runde-Banner ── */}
+          {game.triviaFinalRound && (() => {
+            const pending: string[] = Array.isArray(game.triviaFinalRoundPending)
+              ? game.triviaFinalRoundPending
+              : Object.values(game.triviaFinalRoundPending ?? {}) as string[];
+            const pendingNames = pending.map(gid => game.groups[gid]?.name).filter(Boolean);
+            return (
+              <div className="rounded-2xl border-2 border-orange-400 bg-orange-100/10 px-4 py-3 space-y-1">
+                <p className="font-bold text-orange-600">⏳ Finaler Zug läuft</p>
+                <p className="text-sm text-ink/70">
+                  Eine Gruppe hat alle Kategorien gesammelt.
+                  {pendingNames.length > 0
+                    ? ` Noch am Zug: ${pendingNames.join(', ')}`
+                    : ' Alle Gruppen haben gespielt — Auswertung folgt.'}
+                </p>
+              </div>
+            );
+          })()}
+
+          {/* ── Stechen-Banner ── */}
+          {game.triviaTiebreakerActive && (() => {
+            const ids: string[] = Array.isArray(game.triviaTiebreakerGroupIds)
+              ? game.triviaTiebreakerGroupIds
+              : Object.values(game.triviaTiebreakerGroupIds ?? {}) as string[];
+            const names = ids.map(gid => game.groups[gid]?.name).filter(Boolean);
+            return (
+              <div className="rounded-2xl border-2 border-yellow-400 bg-yellow-100/10 px-4 py-3 space-y-1">
+                <p className="font-bold text-yellow-600">🏆 Stechen — Schätzfragen-Finale</p>
+                <p className="text-sm text-ink/70">
+                  Gleichstand in Kategorien und Punkten! Das Stechen entscheidet: <strong>{names.join(' vs. ')}</strong>
+                </p>
+              </div>
+            );
+          })()}
+
           {/* ── SCHÄTZFRAGE: alle Gruppen antworten gleichzeitig ── */}
           {currentCard.category === 'schaetzfragen' ? (() => {
-            const playingGroups = groupList.filter(g => !g.isHost);
+            const isTiebreaker = game.triviaTiebreakerActive === true;
+            const tiebreakerIds: string[] = isTiebreaker
+              ? (Array.isArray(game.triviaTiebreakerGroupIds)
+                  ? game.triviaTiebreakerGroupIds
+                  : Object.values(game.triviaTiebreakerGroupIds ?? {}) as string[])
+              : [];
+            const playingGroups = groupList.filter(g => !g.isHost && (!isTiebreaker || tiebreakerIds.includes(g.id)));
+            const isSpectatorInTiebreaker = isTiebreaker && !effectiveIsHost && !tiebreakerIds.includes(session.groupId);
             const unit = extractUnitFromAnswer(currentCard.answer);
             const correctRange = extractRangeFromAnswer(currentCard.answer);
             const correctNum = correctRange ? null : extractNumericFromAnswer(currentCard.answer);
@@ -1264,7 +1306,7 @@ export default function MultiplayerGamePage() {
                     .filter(Boolean);
                   return (
                     <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-yellow-400">
-                      <h3 className="text-xl font-bold text-center">🏆 Auswertung Schätzfrage</h3>
+                      <h3 className="text-xl font-bold text-center">{isTiebreaker ? '🏆 Stechen — Schätzfragen-Finale' : '🏆 Auswertung Schätzfrage'}</h3>
 
                       {/* Korrekte Antwort */}
                       <div className="rounded-xl bg-yellow-100/20 border border-yellow-400 px-4 py-3">
@@ -1318,9 +1360,9 @@ export default function MultiplayerGamePage() {
                         <button
                           onClick={handleSchaetzWeiter}
                           disabled={isProcessing}
-                          className="w-full py-4 rounded-xl bg-green-600 text-white font-bold text-lg hover:bg-green-700 disabled:opacity-50"
+                          className={`w-full py-4 rounded-xl text-white font-bold text-lg disabled:opacity-50 ${isTiebreaker ? 'bg-yellow-600 hover:bg-yellow-700' : 'bg-green-600 hover:bg-green-700'}`}
                         >
-                          {isProcessing ? '⏳ Weiter…' : '▶️ Weiter — nächste Frage'}
+                          {isProcessing ? '⏳ Weiter…' : isTiebreaker ? '🏆 Stechen auswerten — Gewinner küren' : '▶️ Weiter — nächste Frage'}
                         </button>
                       )}
                       {!effectiveIsHost && (
@@ -1346,6 +1388,15 @@ export default function MultiplayerGamePage() {
 
                   {/* Spieler-Eingabe */}
                   {!effectiveIsHost && (() => {
+                    // Spektator beim Stechen
+                    if (isSpectatorInTiebreaker) {
+                      return (
+                        <div className="rounded-xl bg-ink/10 border border-ink/20 px-4 py-4 text-center space-y-1">
+                          <p className="font-semibold">👀 Du schaust zu</p>
+                          <p className="text-sm text-ink/60">Beim Stechen spielen nur die punktgleichen Gruppen. Deine Gruppe ist bereits ausgeschieden.</p>
+                        </div>
+                      );
+                    }
                     const mySubmission = currentGroup?.schaetzSubmission;
                     if (mySubmission) {
                       return (
@@ -1384,7 +1435,9 @@ export default function MultiplayerGamePage() {
                 {/* Host: Übersicht + Auswertung */}
                 {effectiveIsHost && (
                   <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
-                    <h3 className="text-lg font-semibold text-green-700">👑 Spielleitung — Schätzfrage</h3>
+                    <h3 className="text-lg font-semibold text-green-700">
+                      {isTiebreaker ? '👑 Spielleitung — Stechen' : '👑 Spielleitung — Schätzfrage'}
+                    </h3>
                     <p className="text-sm text-ink/60">{submittedCount}/{playingGroups.length} Gruppen haben geantwortet</p>
 
                     {/* Eingaben der Gruppen – nur Status, keine Live-Werte */}

@@ -1363,6 +1363,72 @@ function computeNextTurn(
 }
 
 // ---------------------------------------------------------------------------
+// Helper: Kategorie-Modus – Gewinner auflösen (Punkte-Tiebreaker → Schätzfragen-Stechen)
+// ---------------------------------------------------------------------------
+function applyTriviaWinResolution(
+  updates: Record<string, any>,
+  leaders: string[],             // Gruppen, die alle Kategorien gesammelt haben
+  game: GameSession,
+  updatedScores: Record<string, number>, // gid → aktueller (ggf. soeben erhöhter) Score
+  deckMeta: Record<string, string>,
+  newAvailable: string[],
+  next: NextTurnResult,
+): void {
+  // Finalen Runden-State aufräumen
+  updates.triviaFinalRound = null;
+  updates.triviaFinalRoundPending = null;
+  updates.triviaLeaders = null;
+
+  if (leaders.length === 0) {
+    updates.state = 'finished';
+    updates.finishedAt = Date.now();
+    return;
+  }
+
+  if (leaders.length === 1) {
+    updates.state = 'finished';
+    updates.finishedAt = Date.now();
+    updates.winnerGroupId = leaders[0];
+    return;
+  }
+
+  // Mehrere Sieger → Punkte als Tiebreaker
+  const maxScore = Math.max(...leaders.map(gid => updatedScores[gid] ?? (game.groups[gid]?.score ?? 0)));
+  const pointLeaders = leaders.filter(gid => (updatedScores[gid] ?? (game.groups[gid]?.score ?? 0)) === maxScore);
+
+  if (pointLeaders.length === 1) {
+    updates.state = 'finished';
+    updates.finishedAt = Date.now();
+    updates.winnerGroupId = pointLeaders[0];
+    return;
+  }
+
+  // Immer noch Gleichstand → Schätzfragen-Stechen
+  const schaetzPool = newAvailable.filter(id => deckMeta[id] === 'schaetzfragen');
+  const tiebreakerCardId = schaetzPool.length > 0
+    ? schaetzPool[Math.floor(Math.random() * schaetzPool.length)]
+    : (newAvailable.length > 0 ? newAvailable[Math.floor(Math.random() * newAvailable.length)] : null);
+
+  if (!tiebreakerCardId) {
+    // Keine Karten mehr → ersten Punktsieger nehmen (Edge-Case)
+    updates.state = 'finished';
+    updates.finishedAt = Date.now();
+    updates.winnerGroupId = pointLeaders[0];
+    return;
+  }
+
+  updates.triviaTiebreakerActive = true;
+  updates.triviaTiebreakerGroupIds = pointLeaders;
+  updates.currentCardId = tiebreakerCardId;
+  updates.currentCardIndex = (game.currentCardIndex ?? 0) + 1;
+  // Schätzungs-Eingaben für alle zurücksetzen
+  Object.keys(game.groups).forEach(gid => {
+    updates[`groups/${gid}/schaetzSubmission`] = null;
+    updates[`groups/${gid}/flexActive`] = false;
+  });
+}
+
+// ---------------------------------------------------------------------------
 /**
  * Trivia-Modus: Host bewertet Antwort der aktiven Gruppe.
  * Trivial-Pursuit-Gewinnbedingung: alle Kategorien im Deck korrekt beantwortet.
@@ -1465,11 +1531,52 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
 
   // Gewinnbedingung prüfen
   if (winCondition === 'categories') {
-    // Kategorie-Modus: die scoring-Gruppe hat alle Kategorien abgehakt?
-    if (awardPoint && triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
-      updates.state = 'finished';
-      updates.finishedAt = Date.now();
-      updates.winnerGroupId = scoringGroupId;
+    const justCompleted = awardPoint && triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length;
+    const isAlreadyFinalRound = game.triviaFinalRound === true;
+
+    // Aktualisierte Punkte-Map für Tiebreaker-Auflösung
+    const updatedScores: Record<string, number> = {};
+    Object.entries(game.groups).forEach(([gid, g]) => { updatedScores[gid] = g.score ?? 0; });
+    if (awardPoint) updatedScores[scoringGroupId] = (game.groups[scoringGroupId]?.score ?? 0) + 1;
+
+    if (justCompleted || isAlreadyFinalRound) {
+      // Anführer-Liste aktualisieren
+      const prevLeaders: string[] = Array.isArray(game.triviaLeaders)
+        ? game.triviaLeaders
+        : Object.values(game.triviaLeaders ?? {}) as string[];
+      const updatedLeaders = justCompleted && !prevLeaders.includes(scoringGroupId)
+        ? [...prevLeaders, scoringGroupId]
+        : [...prevLeaders];
+
+      // Gruppen, die noch ihren letzten Zug haben
+      const prevPending: string[] = isAlreadyFinalRound
+        ? (Array.isArray(game.triviaFinalRoundPending)
+            ? game.triviaFinalRoundPending
+            : Object.values(game.triviaFinalRoundPending ?? {}) as string[])
+        : catGroupQueue.slice(1); // Noch ausstehende Gruppen dieser Kategorie-Runde
+
+      const newPending = prevPending.filter(gid => gid !== scoringGroupId);
+
+      // Nur Gruppen, die noch aufholen können (≤ 1 Kategorie fehlend)
+      const canCatchUp = newPending.filter(gid => {
+        if (updatedLeaders.includes(gid)) return false;
+        const remaining = triviaCategories.length - (groupCompletedCategories[gid] ?? []).length;
+        return remaining <= 1;
+      });
+
+      if (canCatchUp.length === 0) {
+        applyTriviaWinResolution(updates, updatedLeaders, game, updatedScores, deckMeta, newAvailable, next);
+      } else {
+        updates.triviaFinalRound = true;
+        updates.triviaFinalRoundPending = canCatchUp;
+        updates.triviaLeaders = updatedLeaders;
+        if (!next.nextCardId) {
+          applyTriviaWinResolution(updates, updatedLeaders, game, updatedScores, deckMeta, newAvailable, next);
+        } else {
+          updates.currentCardId = next.nextCardId;
+          updates.currentCardIndex = (game.currentCardIndex ?? 0) + 1;
+        }
+      }
     } else if (!next.nextCardId) {
       updates.state = 'finished';
       updates.finishedAt = Date.now();
@@ -1562,6 +1669,29 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
   if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
 
   const game: GameSession = snapshot.val();
+
+  // ── Stechen-Schätzfrage: Spiel direkt beenden ──────────────────────────────
+  if (game.triviaTiebreakerActive) {
+    const tiebreakerWinner = winnerGroupIds[0] ?? null;
+    const tiebreakerUpdates: Record<string, any> = {
+      lastActivity: Date.now(),
+      state: 'finished',
+      finishedAt: Date.now(),
+      winnerGroupId: tiebreakerWinner,
+      triviaTiebreakerActive: null,
+      triviaTiebreakerGroupIds: null,
+      triviaFinalRound: null,
+      triviaFinalRoundPending: null,
+      triviaLeaders: null,
+      schaetzResult: null,
+    };
+    Object.keys(game.groups).forEach(gid => {
+      tiebreakerUpdates[`groups/${gid}/schaetzSubmission`] = null;
+      tiebreakerUpdates[`groups/${gid}/flexActive`] = false;
+    });
+    await update(gameRef, tiebreakerUpdates);
+    return;
+  }
   const deckMeta: Record<string, string> = game.deckMeta ?? {};
   const triviaCategories: string[] = Array.isArray(game.triviaCategories)
     ? game.triviaCategories
@@ -1657,10 +1787,24 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
 
   // Gewinnbedingung prüfen (Schätzfrage)
   if (winConditionS === 'categories') {
-    if (anyFinished) {
-      updates.state = 'finished';
-      updates.finishedAt = Date.now();
-      updates.winnerGroupId = firstWinnerId;
+    const updatedScoresS: Record<string, number> = {};
+    Object.entries(game.groups).forEach(([gid, g]) => { updatedScoresS[gid] = g.score ?? 0; });
+    winnerGroupIds.forEach(wid => { updatedScoresS[wid] = (game.groups[wid]?.score ?? 0) + 1; });
+
+    const isAlreadyFinalRound = game.triviaFinalRound === true;
+
+    if (anyFinished || isAlreadyFinalRound) {
+      // Anführer aufbauen
+      const prevLeadersS: string[] = Array.isArray(game.triviaLeaders)
+        ? game.triviaLeaders
+        : Object.values(game.triviaLeaders ?? {}) as string[];
+      const newlyFinished = winnerGroupIds.filter(wid => {
+        const wCats = groupCompletedCatsS[wid] ?? [];
+        return triviaCategories.length > 0 && wCats.length >= triviaCategories.length && !prevLeadersS.includes(wid);
+      });
+      const updatedLeadersS = [...prevLeadersS, ...newlyFinished];
+      // Schätzfragen sind simultan → alle Gruppen haben gespielt → sofort auflösen
+      applyTriviaWinResolution(updates, updatedLeadersS, game, updatedScoresS, deckMeta, newAvailable, next);
     } else if (!next.nextCardId) {
       updates.state = 'finished';
       updates.finishedAt = Date.now();
