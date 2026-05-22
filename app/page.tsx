@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 export default function HomePage() {
@@ -11,10 +10,8 @@ export default function HomePage() {
     timeZone: 'Europe/Berlin'
   }).format(new Date());
 
-  const router = useRouter();
   const [showRules, setShowRules] = useState(false);
   const [showImpressum, setShowImpressum] = useState(false);
-  const [showCreateModal, setShowCreateModal] = useState(false);
 
   return (
     <>
@@ -40,13 +37,13 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
-            <button
-              onClick={() => setShowCreateModal(true)}
+            <Link
+              href="/create"
               className="group inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20"
             >
               <span>Spiel erstellen</span>
               <span className="ml-2 text-inkDark/60 transition group-hover:translate-x-0.5">→</span>
-            </button>
+            </Link>
             <Link
               href="/multiplayer?open=join"
               className="group inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20"
@@ -78,40 +75,6 @@ export default function HomePage() {
           </div>
         </div>
       </main>
-
-      {/* Spiel erstellen Modal */}
-      {showCreateModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={() => setShowCreateModal(false)}>
-          <div
-            className="relative w-full max-w-sm rounded-2xl bg-[#0d1424] border border-white/20 shadow-2xl p-8 text-left"
-            onClick={e => e.stopPropagation()}
-          >
-            <button onClick={() => setShowCreateModal(false)} className="absolute top-4 right-4 text-white/50 hover:text-white text-2xl leading-none">×</button>
-            <h2 className="text-xl font-display font-semibold text-white mb-2">Spiel erstellen</h2>
-            <p className="text-sm text-white/60 mb-6">Wähle einen Spielmodus</p>
-            <div className="space-y-3">
-              <button
-                onClick={() => { setShowCreateModal(false); router.push('/multiplayer?gameMode=timeline'); }}
-                className="w-full flex flex-col items-start rounded-xl bg-cyan-500/10 border border-cyan-400/40 hover:border-cyan-400 px-5 py-4 transition text-left"
-              >
-                <span className="font-bold text-white">🕰️ Timeline Multiplayer</span>
-                <span className="text-xs text-white/60 mt-1">Ordne Karten auf der Zeitachse ein</span>
-              </button>
-              <button
-                onClick={() => { setShowCreateModal(false); router.push('/multiplayer?gameMode=trivia'); }}
-                className="w-full flex flex-col items-start rounded-xl bg-violet-500/10 border border-violet-400/40 hover:border-violet-400 px-5 py-4 transition text-left"
-              >
-                <span className="font-bold text-white">🎮 Trivia Multiplayer</span>
-                <span className="text-xs text-white/60 mt-1">Wissensfragen aus allen Kategorien</span>
-              </button>
-              <div className="w-full flex flex-col items-start rounded-xl bg-white/5 border border-white/10 px-5 py-4 opacity-40 cursor-not-allowed">
-                <span className="font-bold text-white">🎯 Solo Modus</span>
-                <span className="text-xs text-white/60 mt-1">Bald verfügbar</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Spielregeln Modal */}
       {showRules && (
