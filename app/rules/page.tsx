@@ -1,77 +1,178 @@
 "use client";
 
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function RulesPage() {
+  const [tab, setTab] = useState<'timeline' | 'trivia'>('timeline');
+
   return (
     <main className="min-h-screen bg-grid flex items-start justify-center px-6 py-16">
-      <div className="w-full max-w-2xl rounded-3xl bg-glass border border-ink/10 shadow-2xl backdrop-blur-xl p-10 space-y-10">
+      <div className="w-full max-w-2xl rounded-3xl bg-glass border border-ink/10 shadow-2xl backdrop-blur-xl p-10 space-y-8">
+
         {/* Back + Header */}
         <div className="space-y-1">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-1.5 text-sm text-ink/50 hover:text-ink/80 transition mb-4"
-          >
+          <Link href="/" className="inline-flex items-center gap-1.5 text-sm text-ink/50 hover:text-ink/80 transition mb-4">
             ← Zurück
           </Link>
           <h1 className="text-3xl font-display font-semibold text-ink">📖 Spielregeln</h1>
         </div>
 
-        {/* Timeline */}
-        <section className="space-y-5">
-          <h2 className="text-xl font-display font-semibold text-ink">🕰️ Timeline Multiplayer</h2>
-          <div className="space-y-3 text-ink/80 text-sm leading-relaxed">
-            <p><strong className="text-ink">Ziel:</strong> Ordne Karten (Songs, Ereignisse, Fakten) korrekt in einer Zeitachse an. Wer als Erstes <strong className="text-ink">7 Karten</strong> richtig platziert hat, gewinnt.</p>
-            <p><strong className="text-ink">Ablauf:</strong> Die aktive Gruppe bekommt eine Karte gezeigt und muss sie an der richtigen Stelle in ihrer persönlichen Zeitreihe einordnen. Liegt die Karte falsch, kommt sie aus dem Spiel und die nächste Gruppe ist dran.</p>
-            <p><strong className="text-ink">Kategorien:</strong> Songs, Schätzfragen, Geografie, Filme &amp; Serien u.v.m. wechseln zufällig ab – jede Runde eine Überraschung.</p>
+        {/* Tab-Umschalter */}
+        <div className="flex gap-2">
+          <button
+            onClick={() => setTab('timeline')}
+            className={`flex-1 rounded-xl px-4 py-3 text-sm font-semibold border transition ${
+              tab === 'timeline' ? 'bg-ink text-inkDark border-ink' : 'border-ink/20 text-ink/70 hover:border-ink/40'
+            }`}
+          >
+            🕰️ Timeline
+          </button>
+          <button
+            onClick={() => setTab('trivia')}
+            className={`flex-1 rounded-xl px-4 py-3 text-sm font-semibold border transition ${
+              tab === 'trivia' ? 'bg-ink text-inkDark border-ink' : 'border-ink/20 text-ink/70 hover:border-ink/40'
+            }`}
+          >
+            🎮 Trivia
+          </button>
+        </div>
 
-            <div className="rounded-2xl bg-ink/5 border border-ink/10 p-5 space-y-2 mt-2">
-              <p className="font-semibold text-ink">⚡ Flex-Tipps <span className="font-normal text-ink/60">(für nicht aktive Gruppen)</span></p>
-              <ul className="list-disc list-inside space-y-1 text-ink/70">
-                <li>Während die aktive Gruppe überlegt, können alle anderen Gruppen einen <strong className="text-ink">Flex-Tipp</strong> abgeben.</li>
-                <li>Ein Flex-Tipp bedeutet: Du tippst, an welcher Position in der Zeitachse der <strong className="text-ink">aktiven Gruppe</strong> die Karte eingeordnet wird.</li>
-                <li>Liegt dein Flex-Tipp richtig, bekommst du die Karte gutgeschrieben – auch wenn die aktive Gruppe falsch lag.</li>
-                <li>Flex-Tipps können nur abgegeben werden, <strong className="text-ink">bevor</strong> der Host die Auswertung startet.</li>
-                <li>Die eigene Platzierung der aktiven Gruppe kann nicht als Flex-Tipp gewählt werden.</li>
+        {/* ─── TIMELINE ─── */}
+        {tab === 'timeline' && (
+          <div className="space-y-6 text-sm leading-relaxed text-ink/80">
+
+            <section className="space-y-3">
+              <h2 className="text-lg font-display font-semibold text-ink">Ziel</h2>
+              <p>
+                Jede Gruppe baut ihre eigene Zeitreihe auf. Wer als Erste eine vorher festgelegte Anzahl
+                Karten korrekt eingeordnet hat, gewinnt (Standard: <strong className="text-ink">10 Karten</strong>).
+              </p>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-lg font-display font-semibold text-ink">Ablauf pro Runde</h2>
+              <ol className="space-y-2 list-decimal list-inside">
+                <li>Die <strong className="text-ink">aktive Gruppe</strong> sieht eine neue Karte (Song, Zitat, Flagge, …) ohne Jahresangabe.</li>
+                <li>Die Gruppe wählt eine Position in ihrer persönlichen Zeitreihe, links oder rechts von bereits liegenden Karten.</li>
+                <li>Der Host deckt das Jahr auf und bewertet: richtig oder falsch.</li>
+                <li>
+                  <strong className="text-ink">Richtig:</strong> Karte bleibt in der Zeitreihe — die Gruppe rückt der Siegbedingung näher.<br />
+                  <strong className="text-ink">Falsch:</strong> Karte verlässt die Zeitreihe (außer ein Flex-Tipp war erfolgreich — siehe unten).
+                </li>
+                <li>Danach ist die nächste Gruppe dran.</li>
+              </ol>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-lg font-display font-semibold text-ink">⚡ Flex-Buttons & Flex-Tipps</h2>
+              <div className="rounded-2xl bg-ink/5 border border-ink/10 p-5 space-y-3">
+                <p><strong className="text-ink">Flex-Button verdienen:</strong> Wer eine Karte korrekt einordnet <em>und</em> zusätzlich Titel, Interpret, Zitatgeber o.Ä. richtig nennt, bekommt einen <strong className="text-ink">Flex-Button</strong> vom Host gutgeschrieben.</p>
+                <p><strong className="text-ink">Flex-Tipp abgeben:</strong> Sobald die aktive Gruppe ihre Position gewählt hat (aber bevor der Host auswertet), können alle anderen Gruppen einen ihrer Flex-Buttons einsetzen und eine alternative Position tippen.</p>
+                <p><strong className="text-ink">First-come-first-served:</strong> Jede Position kann nur einmal getippt werden. Wer zuerst tippt, sichert sich die Position.</p>
+                <p><strong className="text-ink">Auswertung:</strong> Liegt die aktive Gruppe falsch, aber ein Flex-Tipp trifft die korrekte Position → diese Gruppe bekommt die Karte. Der eingesetzte Flex-Button ist in jedem Fall verbraucht.</p>
+              </div>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-lg font-display font-semibold text-ink">Kategorien</h2>
+              <ul className="space-y-1 list-disc list-inside">
+                <li><strong className="text-ink">Musik</strong> – Song hören, Interpret &amp; Titel nennen</li>
+                <li><strong className="text-ink">Zitat</strong> – Zitat einer Person oder aus einem Werk zuordnen</li>
+                <li><strong className="text-ink">Flagge</strong> – Land erkennen</li>
+                <li><strong className="text-ink">Länderumriss</strong> – Land anhand der Form erkennen</li>
+                <li><strong className="text-ink">Film &amp; Serien</strong> – Szene, Plakat oder Zitat zuordnen</li>
               </ul>
-            </div>
-
-            <p><strong className="text-ink">Punkte / Kategorien:</strong> Oben in der Übersicht siehst du, welche Kategorien du bereits abgedeckt hast. Es gibt keine Kategoriepflicht – die Reihenfolge ist vollständig zufällig.</p>
+            </section>
           </div>
-        </section>
+        )}
 
-        <hr className="border-ink/10" />
+        {/* ─── TRIVIA ─── */}
+        {tab === 'trivia' && (
+          <div className="space-y-6 text-sm leading-relaxed text-ink/80">
 
-        {/* Trivia */}
-        <section className="space-y-5">
-          <h2 className="text-xl font-display font-semibold text-ink">🎮 Trivia Multiplayer</h2>
-          <div className="space-y-3 text-ink/80 text-sm leading-relaxed">
-            <p><strong className="text-ink">Ziel:</strong> Beantworte Wissensfragen aus verschiedenen Kategorien. Die Gruppe mit den meisten richtigen Antworten am Ende gewinnt.</p>
-            <p><strong className="text-ink">Ablauf:</strong> Jede Gruppe ist reihum an der Reihe. Die aktive Gruppe sieht die Frage und wählt eine Antwort aus vier Optionen (Multiple Choice). Der Host deckt anschließend die Lösung auf.</p>
-            <p><strong className="text-ink">Kategorien:</strong> Sport, Musik, Geografie, Film &amp; Serien, Schätzfragen, Zitate, Religion, Natur &amp; Technik und mehr.</p>
-
-            <div className="rounded-2xl bg-ink/5 border border-ink/10 p-5 space-y-2 mt-2">
-              <p className="font-semibold text-ink">⚡ Flex-Tipps <span className="font-normal text-ink/60">(für nicht aktive Gruppen)</span></p>
-              <ul className="list-disc list-inside space-y-1 text-ink/70">
-                <li>Auch im Trivia-Modus können nicht aktive Gruppen einen <strong className="text-ink">Flex-Tipp</strong> abgeben.</li>
-                <li>Du tippst, welche Antwort die aktive Gruppe wählen wird.</li>
-                <li>Liegt dein Tipp richtig (d.h. die aktive Gruppe antwortet korrekt und du hast dasselbe gewählt), bekommst du ebenfalls einen Punkt.</li>
-                <li>Flex-Tipps müssen vor der Auswertung durch den Host abgegeben werden.</li>
+            <section className="space-y-3">
+              <h2 className="text-lg font-display font-semibold text-ink">Ziel</h2>
+              <p>
+                Es gibt zwei Gewinnmodi, die beim Erstellen des Spiels gewählt werden:
+              </p>
+              <ul className="space-y-1 list-disc list-inside">
+                <li><strong className="text-ink">Kategorien-Modus:</strong> Sammle aus jeder verfügbaren Kategorie mindestens eine richtige Antwort. Wer zuerst alle Kategorien abgehakt hat, gewinnt.</li>
+                <li><strong className="text-ink">Punkte-Modus:</strong> Meiste Punkte wenn das Deck aufgebraucht ist.</li>
               </ul>
-            </div>
+            </section>
 
-            <div className="rounded-2xl bg-ink/5 border border-ink/10 p-5 space-y-2 mt-2">
-              <p className="font-semibold text-ink">🏆 Schätzfragen</p>
-              <ul className="list-disc list-inside space-y-1 text-ink/70">
-                <li>Bei Schätzfragen gibt jede Gruppe eine freie Zahl ein.</li>
-                <li>Gewonnen hat die Gruppe, deren Schätzung <strong className="text-ink">am nächsten an der richtigen Antwort</strong> liegt.</li>
-                <li>Die Einheit ist immer in der Frage angegeben – bitte genau lesen!</li>
+            <section className="space-y-3">
+              <h2 className="text-lg font-display font-semibold text-ink">Ablauf pro Runde</h2>
+              <ol className="space-y-2 list-decimal list-inside">
+                <li>Jede Gruppe spielt reihum. Die aktive Gruppe sieht eine Frage aus der aktuellen Kategorie.</li>
+                <li>Die Gruppe berät sich und gibt dem Host ihre Antwort.</li>
+                <li>Der Host deckt die Lösung auf und bewertet: richtig oder falsch.</li>
+                <li><strong className="text-ink">Richtig:</strong> +1 Punkt, Kategorie wird als gesammelt markiert (Kategorien-Modus).</li>
+                <li><strong className="text-ink">Falsch:</strong> Kein Punkt. Die nächste Gruppe kommt dran.</li>
+              </ol>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-lg font-display font-semibold text-ink">🔢 Schätzfragen</h2>
+              <div className="rounded-2xl bg-ink/5 border border-ink/10 p-5 space-y-2">
+                <p>Bei Schätzfragen antworten <strong className="text-ink">alle Gruppen gleichzeitig</strong> — nicht nur die aktive.</p>
+                <p>Jede Gruppe gibt eine Zahl ein. Die Gruppe mit der <strong className="text-ink">nächstliegenden Schätzung</strong> gewinnt den Punkt und sammelt die Kategorie.</p>
+                <p>Gleichstand ist möglich — der Punkt wird dann geteilt.</p>
+              </div>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-lg font-display font-semibold text-ink">🃏 Joker</h2>
+              <p>Wenn Joker aktiviert sind, startet jede Gruppe mit drei einmalig einsetzbaren Jokern:</p>
+              <div className="space-y-3 mt-2">
+                <div className="rounded-2xl bg-ink/5 border border-ink/10 p-4 space-y-1">
+                  <p className="font-semibold text-ink">🔄 Neue Frage</p>
+                  <p>Die aktuelle Frage wird übersprungen und durch eine neue ersetzt. Kein Punkt, kein Verlust.</p>
+                </div>
+                <div className="rounded-2xl bg-ink/5 border border-ink/10 p-4 space-y-1">
+                  <p className="font-semibold text-ink">➡️ NEXT</p>
+                  <p>Die Frage wird an die nächste Gruppe weitergegeben. Beantwortet diese sie <strong className="text-ink">falsch</strong>, bekommt die ursprüngliche Gruppe den Punkt. Beantwortet sie sie richtig, bekommt die nächste Gruppe den Punkt.</p>
+                </div>
+                <div className="rounded-2xl bg-ink/5 border border-ink/10 p-4 space-y-1">
+                  <p className="font-semibold text-ink">🎲 Würfel</p>
+                  <p>Die Gruppe würfelt (1–6):</p>
+                  <ul className="list-disc list-inside mt-1 space-y-0.5 text-ink/70">
+                    <li><strong className="text-ink">6 — Jackpot:</strong> +1 Punkt &amp; aktuelle Kategorie gesammelt</li>
+                    <li><strong className="text-ink">1 — Pech:</strong> −1 Punkt &amp; eine Kategorie verloren</li>
+                    <li><strong className="text-ink">2–5:</strong> Kein Effekt</li>
+                  </ul>
+                </div>
+              </div>
+              <p className="text-ink/60 text-xs mt-1">Tipp: Wer eine Schätzfrage gewinnt, erhält einen zufällig gewählten bereits verbrauchten Joker zurück.</p>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-lg font-display font-semibold text-ink">🚫 Ban-Phase (optional)</h2>
+              <p>Wenn beim Erstellen des Spiels aktiviert, darf jede Gruppe vor Spielbeginn reihum eine Kategorie sperren. Gesperrte Kategorien kommen im Spiel nicht vor.</p>
+              <p>Jede Gruppe hat <strong className="text-ink">20 Sekunden</strong> Zeit — wer nicht reagiert, überspringt automatisch.</p>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-lg font-display font-semibold text-ink">🏁 Spielende &amp; Gleichstand</h2>
+              <div className="rounded-2xl bg-ink/5 border border-ink/10 p-5 space-y-2">
+                <p><strong className="text-ink">Kategorien-Modus:</strong> Sobald eine Gruppe alle Kategorien gesammelt hat, dürfen alle anderen Gruppen noch ihren letzten Zug in der aktuellen Kategorie-Runde spielen. Danach endet das Spiel.</p>
+                <p><strong className="text-ink">Gleichstand Kategorien:</strong> Mehrere Gruppen beenden gleichzeitig → Punkte entscheiden. Immer noch Gleichstand → Schätzfragen-Stechen zwischen den punktgleichen Gruppen.</p>
+                <p><strong className="text-ink">Punkte-Modus:</strong> Spiel endet wenn das Deck leer ist. Meiste Punkte gewinnt.</p>
+              </div>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-lg font-display font-semibold text-ink">Kategorien</h2>
+              <ul className="space-y-1 list-disc list-inside">
+                <li>Musik, Film &amp; Serien, Geografie, Sport &amp; Freizeit</li>
+                <li>Natur &amp; Technik, Essen &amp; Trinken, Gaming &amp; Esports</li>
+                <li>Religion &amp; Glaube, Berühmte Zitate, GZSZ</li>
+                <li>Schätzfragen (alle Gruppen gleichzeitig)</li>
               </ul>
-            </div>
-
-            <p><strong className="text-ink">Spielende:</strong> Das Spiel endet, wenn alle Fragen gespielt wurden oder der Host das Spiel beendet. Sieger ist die Gruppe mit den meisten Punkten.</p>
+            </section>
           </div>
-        </section>
+        )}
       </div>
     </main>
   );

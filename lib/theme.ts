@@ -14,7 +14,7 @@ export function applyTheme(theme: ThemeId) {
   document.body.dataset.theme = theme;
 }
 
-export function loadTheme(fallback: ThemeId = 'aurora'): ThemeId {
+export function loadTheme(fallback: ThemeId = 'urban'): ThemeId {
   if (typeof window === 'undefined') return fallback;
   const stored = window.localStorage.getItem(THEME_KEY) as ThemeId | null;
   return stored && themes.some((t) => t.id === stored) ? stored : fallback;
