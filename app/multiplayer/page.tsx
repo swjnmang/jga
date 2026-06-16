@@ -553,7 +553,7 @@ function MultiplayerLobbyContent() {
                     </span>
                     <span>
                       <span className="text-sm font-semibold block">🃏 Joker aktivieren</span>
-                      <span className="text-xs text-ink/60">Jede Gruppe erhält 3 Joker: Neue Frage, NEXT (Frage weitergeben) und Würfeln. Nicht bei Schätzfragen verfügbar.</span>
+                      <span className="text-xs text-ink/60">Jede Gruppe erhält 4 Joker: Neue Frage, NEXT, Würfeln und STEAL (Frage klauen). Nicht bei Schätzfragen verfügbar.</span>
                     </span>
                   </button>
                   {/* Gewinnbedingung */}

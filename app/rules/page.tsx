@@ -124,7 +124,7 @@ export default function RulesPage() {
 
             <section className="space-y-3">
               <h2 className="text-lg font-display font-semibold text-ink">🃏 Joker</h2>
-              <p>Wenn Joker aktiviert sind, startet jede Gruppe mit drei einmalig einsetzbaren Jokern:</p>
+              <p>Wenn Joker aktiviert sind, startet jede Gruppe mit vier einmalig einsetzbaren Jokern:</p>
               <div className="space-y-3 mt-2">
                 <div className="rounded-2xl bg-ink/5 border border-ink/10 p-4 space-y-1">
                   <p className="font-semibold text-ink">🔄 Neue Frage</p>
@@ -138,10 +138,19 @@ export default function RulesPage() {
                   <p className="font-semibold text-ink">🎲 Würfel</p>
                   <p>Die Gruppe würfelt (1–6):</p>
                   <ul className="list-disc list-inside mt-1 space-y-0.5 text-ink/70">
-                    <li><strong className="text-ink">6 — Jackpot:</strong> +1 Punkt &amp; aktuelle Kategorie gesammelt</li>
-                    <li><strong className="text-ink">1 — Pech:</strong> −1 Punkt &amp; eine Kategorie verloren</li>
-                    <li><strong className="text-ink">2–5:</strong> Kein Effekt</li>
+                    <li><strong className="text-ink">5 oder 6 — Jackpot:</strong> +1 Punkt &amp; aktuelle Kategorie gesammelt</li>
+                    <li><strong className="text-ink">1 — Pech:</strong> −1 Punkt</li>
+                    <li><strong className="text-ink">2–4:</strong> Kein Effekt</li>
                   </ul>
+                </div>
+                <div className="rounded-2xl bg-ink/5 border border-ink/10 p-4 space-y-1">
+                  <p className="font-semibold text-ink">🦝 STEAL</p>
+                  <p>Kann von jeder Gruppe genutzt werden, die <strong className="text-ink">nicht</strong> an der Reihe ist. Die Frage der aktiven Gruppe wird geklaut (first come, first served).</p>
+                  <ul className="list-disc list-inside mt-1 space-y-0.5 text-ink/70">
+                    <li><strong className="text-ink">Richtig:</strong> Stealer bekommt Punkt + Kategorie</li>
+                    <li><strong className="text-ink">Falsch:</strong> Gestohlene Gruppe bekommt Punkt + Kategorie</li>
+                  </ul>
+                  <p className="text-ink/70 mt-1">Die gestohlene Gruppe erhält danach immer eine neue Ersatzfrage.</p>
                 </div>
               </div>
               <p className="text-ink/60 text-xs mt-1">Tipp: Wer eine Schätzfrage gewinnt, erhält einen zufällig gewählten bereits verbrauchten Joker zurück.</p>

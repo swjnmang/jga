@@ -177,7 +177,7 @@ export async function joinGame(params: JoinGameParams): Promise<{ groupId: strin
     isHost: false,
     completedCategories: [],
     avatar: params.avatar ?? '',
-    jokers: game.jokersEnabled ? { newQuestion: true, next: true, dice: true } : undefined,
+    jokers: game.jokersEnabled ? { newQuestion: true, next: true, dice: true, steal: true } : undefined,
   };
 
   // Füge Gruppe hinzu
@@ -1472,8 +1472,8 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
 
   const currentCategory = game.currentCardId ? (deckMeta[game.currentCardId] ?? '') : '';
 
-  // Punkt und Kategorie nur wenn: (normal korrekt) oder (NEXT-Joker + falsch → Ursprungsgruppe gewinnt)
-  const awardPoint = isJokerNextResolution ? !correct : correct;
+  // Punkt und Kategorie nur wenn: (normal korrekt) oder (NEXT-Joker + falsch → Ursprungsgruppe gewinnt) oder (STEAL-Joker: immer jemand)
+  const awardPoint = isJokerStealResolution ? true : (isJokerNextResolution ? !correct : correct);
   const newCompleted = awardPoint && currentCategory && !prevCompleted.includes(currentCategory)
     ? [...prevCompleted, currentCategory]
     : prevCompleted;
@@ -1492,6 +1492,11 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
     ? game.categoryRoundQueue
     : Object.values(game.categoryRoundQueue ?? {});
   const currentRoundCat = game.currentRoundCategory ?? currentCategory;
+
+  // Original-Queues vor computeNextTurn speichern (für STEAL-Rückgabe-Zug-Restaurierung)
+  const origCatGroupQueue = catGroupQueue;
+  const origCatRoundQueue = catRoundQueue;
+  const origCurrentRoundCat = currentRoundCat;
 
   // Gesammelte Kategorien pro Gruppe (für Kategorie-Filterung im categories-Modus)
   const winCondition = game.triviaWinCondition ?? 'categories';
@@ -1529,6 +1534,9 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
     updates.jokerNextActive = false;
     updates.jokerNextOriginGroupId = null;
     updates.jokerNextTargetGroupId = null;
+  }
+  if (isJokerStealReturn) {
+    updates.jokerStealReturnActive = false;
   }
 
   // Gewinnbedingung prüfen
@@ -1601,6 +1609,31 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
     } else {
       updates.currentCardId = next.nextCardId;
       updates.currentCardIndex = (game.currentCardIndex ?? 0) + 1;
+    }
+  }
+
+  // ── Joker 4 "STEAL" – nach Auflösung: gestohlene Gruppe bekommt Rückgabe-Zug ─
+  // Nur wenn das Spiel NICHT gerade beendet wurde.
+  if (isJokerStealResolution) {
+    updates.jokerStealActive = false;
+    updates.jokerStealGroupId = null;
+    updates.jokerStealFromGroupId = null;
+    if (!updates.state) {
+      const returnGroupId = jokerStealFromId!;
+      const sameCatPool = newAvailable.filter(id => deckMeta[id] === currentCategory);
+      const fallbackPool = newAvailable;
+      const returnCardId = sameCatPool.length > 0
+        ? sameCatPool[Math.floor(Math.random() * sameCatPool.length)]
+        : (fallbackPool.length > 0 ? fallbackPool[Math.floor(Math.random() * fallbackPool.length)] : null);
+      if (returnCardId) {
+        updates.jokerStealReturnActive = true;
+        updates.currentTurnGroupId = returnGroupId;
+        updates.currentCardId = returnCardId;
+        updates.currentCardIndex = (game.currentCardIndex ?? 0) + 1;
+        updates.currentRoundCategory = origCurrentRoundCat;
+        updates.categoryRoundQueue = origCatRoundQueue;
+        updates.categoryGroupQueue = origCatGroupQueue;
+      }
     }
   }
 
@@ -1924,6 +1957,46 @@ export async function activateJokerNext(pin: string, groupId: string): Promise<v
 }
 
 /**
+ * Joker 4: "STEAL" – Nicht-aktive Gruppe klaut die aktuelle Frage.
+ * First come, first served: wer zuerst drückt, stiehlt.
+ * Richtig → Stealer bekommt Punkt + Kategorie.
+ * Falsch  → Gestohlene Gruppe bekommt Punkt + Kategorie.
+ * Die gestohlene Gruppe erhält anschließend immer eine neue Ersatzfrage.
+ */
+export async function activateJokerSteal(pin: string, groupId: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  if (game.mode !== 'trivia') throw new Error('Joker nur im Trivia-Modus verfügbar.');
+  if (!game.jokersEnabled) throw new Error('Joker sind deaktiviert.');
+  if (game.currentTurnGroupId === groupId) throw new Error('Eigene Frage kann nicht geklaut werden.');
+  if (game.jokerStealActive) throw new Error('Steal-Joker wurde bereits aktiviert (first come, first served).');
+  if (game.jokerNextActive) throw new Error('NEXT-Joker ist gerade aktiv.');
+  if (game.jokerStealReturnActive) throw new Error('Stehlen während des Rückgabe-Zugs nicht möglich.');
+
+  const jokers = game.groups[groupId]?.jokers;
+  if (!jokers?.steal) throw new Error('Steal-Joker bereits verwendet.');
+
+  const deckMeta: Record<string, string> = game.deckMeta ?? {};
+  const currentCat = (game.currentCardId ? deckMeta[game.currentCardId] : null) ?? game.currentRoundCategory ?? '';
+  if (currentCat === 'schaetzfragen') throw new Error('Joker bei Schätzfragen nicht verfügbar.');
+
+  const originalTurnGroupId = game.currentTurnGroupId!;
+
+  await update(gameRef, {
+    lastActivity: Date.now(),
+    jokerStealActive: true,
+    jokerStealGroupId: groupId,
+    jokerStealFromGroupId: originalTurnGroupId,
+    currentTurnGroupId: groupId,
+    [`groups/${groupId}/jokers/steal`]: false,
+  });
+}
+
+/**
  * Joker 3: "Würfeln" – Zufälliges Ergebnis 1–6.
  * 6: Punkt + aktuelle Kategorie sammeln
  * 1: Punkt verlieren (min 0) + zufällige gesammelte Kategorie verlieren
@@ -1956,17 +2029,13 @@ export async function activateJokerDice(pin: string, groupId: string): Promise<v
   let newCompleted = [...prevCompleted];
   let newScore = game.groups[groupId]?.score ?? 0;
 
-  if (roll === 6) {
+  if (roll >= 5) {
     newScore += 1;
     if (currentCat && !newCompleted.includes(currentCat)) {
       newCompleted.push(currentCat);
     }
   } else if (roll === 1) {
     newScore = Math.max(0, newScore - 1);
-    if (newCompleted.length > 0) {
-      const removeIdx = Math.floor(Math.random() * newCompleted.length);
-      newCompleted = newCompleted.filter((_, i) => i !== removeIdx);
-    }
   }
 
   // Effekte sofort anwenden, aber Zug NICHT weiterrücken – Spielleiter bestätigt erst
@@ -2064,11 +2133,11 @@ export async function confirmJokerDice(pin: string): Promise<void> {
         return sc > best.score ? { id, score: sc } : best;
       }, { id: allGroups[0]?.[0] ?? '', score: -1 });
       updates.winnerGroupId = winnerEntry.id;
-    } else if (roll === 6 && triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
+    } else if (roll >= 5 && triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
       updates.winnerGroupId = groupId;
     }
   } else {
-    if (roll === 6 && winCondition === 'categories' && triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
+    if (roll >= 5 && winCondition === 'categories' && triviaCategories.length > 0 && newCompleted.length >= triviaCategories.length) {
       updates.state = 'finished';
       updates.finishedAt = Date.now();
       updates.winnerGroupId = groupId;

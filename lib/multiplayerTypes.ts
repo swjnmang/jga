@@ -27,7 +27,7 @@ export interface GroupData {
   completedCategories?: string[]; // Trivia: bereits korrekt beantwortete Kategorien
   schaetzSubmission?: string | null; // Trivia Schätzfrage: eingereichte Schätzung
   avatar?: string; // Emoji-Avatar der Gruppe
-  jokers?: { newQuestion: boolean; next: boolean; dice: boolean; }; // Trivia: verfügbare Joker
+  jokers?: { newQuestion: boolean; next: boolean; dice: boolean; steal: boolean; }; // Trivia: verfügbare Joker
 }
 
 export interface PlacedCard {
@@ -98,6 +98,10 @@ export interface GameSession {
   jokerDiceResult?: number | null;          // Letztes Würfelergebnis (1–6)
   jokerDiceGroupId?: string | null;         // Gruppe die zuletzt gewürfelt hat
   jokerDicePending?: boolean | null;        // Würfelergebnis angezeigt, Spielleiter muss bestätigen
+  jokerStealActive?: boolean;               // Joker 4 «STEAL» ist gerade aktiv
+  jokerStealGroupId?: string | null;        // Gruppe die den STEAL-Joker genutzt hat
+  jokerStealFromGroupId?: string | null;    // Gruppe deren Frage geklaut wurde
+  jokerStealReturnActive?: boolean;         // Gestohlene Gruppe ist jetzt an der Reihe (Rückgabe-Zug)
   // Gleichstand-Auflösung (Trivia – Kategorien-Modus)
   triviaFinalRound?: boolean;          // Letzter Umlauf läuft (andere Gruppen holen noch auf)
   triviaFinalRoundPending?: string[];  // Gruppen, die noch ihren letzten Zug haben
@@ -109,7 +113,7 @@ export interface GameSession {
     answer: string;
     winnerIds: string[];
     submissions: { groupId: string; groupName: string; value: string; isWinner: boolean; color: string; }[];
-    jokerRestores?: { groupId: string; groupName: string; jokerKey: 'newQuestion' | 'next' | 'dice' }[];
+    jokerRestores?: { groupId: string; groupName: string; jokerKey: 'newQuestion' | 'next' | 'dice' | 'steal' }[];
   } | null;
 }
 
