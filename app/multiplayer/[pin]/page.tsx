@@ -158,7 +158,7 @@ export default function MultiplayerGamePage() {
     }, 1000);
     return () => clearInterval(id);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [game?.currentCardIndex, game?.state]);
+  }, [game?.currentCardIndex, game?.state, game?.currentCardId, game?.currentTurnGroupId]);
 
   // Clear local placement result whenever the card changes (new round)
   useEffect(() => {

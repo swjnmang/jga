@@ -5,7 +5,7 @@ import { applyReduceMotion, applyTheme, loadReduceMotion, loadTheme } from '@/li
 
 export function ThemeBootstrap() {
   useEffect(() => {
-    const savedTheme = loadTheme('dark');
+    const savedTheme = loadTheme('urban');
     applyTheme(savedTheme);
     const savedReduce = loadReduceMotion();
     applyReduceMotion(savedReduce);

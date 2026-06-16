@@ -13,7 +13,7 @@ function AppSettingsContent() {
   const authSuccess = searchParams.get('authSuccess');
 
   useEffect(() => {
-    const initialTheme = loadTheme('dark');
+    const initialTheme = loadTheme('urban');
     setTheme(initialTheme);
     applyTheme(initialTheme);
   }, []);
