@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useState, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
@@ -39,6 +39,7 @@ import {
   activateJokerDice,
   confirmJokerDice,
   activateJokerSteal,
+  dismissJokerNotification,
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
@@ -1047,17 +1048,82 @@ export default function MultiplayerGamePage() {
 
       const catLabel = (cat: string) => catShortLabel(cat);
 
+      // ── Joker-Benachrichtigungs-Bildschirm (Neue Frage / NEXT / STEAL) ──────
+      if (game.jokersEnabled && game.jokerNotification) {
+        const notif = game.jokerNotification;
+        const byGroup = game.groups[notif.byGroupId];
+        const targetGroup = notif.targetGroupId ? game.groups[notif.targetGroupId] : null;
+        const fromGroup = notif.fromGroupId ? game.groups[notif.fromGroupId] : null;
+
+        const config = {
+          newQuestion: {
+            icon: '🔄', label: 'Neue Frage Joker',
+            headline: 'hat die Frage getauscht!',
+            detail: `Die aktuelle Frage wurde gegen eine neue Frage aus derselben Kategorie ersetzt. ${byGroup?.name ?? '?'} bleibt am Zug.`,
+            subDetail: null as string | null,
+            border: 'border-amber-400', bg: 'bg-amber-500/10', text: 'text-amber-800',
+          },
+          next: {
+            icon: '➡️', label: 'NEXT Joker',
+            headline: 'gibt die Frage weiter!',
+            detail: `Die Frage geht an ${targetGroup?.name ?? '?'}.`,
+            subDetail: `Richtig → niemand bekommt Punkt. Falsch → ${byGroup?.name ?? '?'} bekommt Punkt.`,
+            border: 'border-orange-400', bg: 'bg-orange-500/10', text: 'text-orange-800',
+          },
+          steal: {
+            icon: '🦝', label: 'STEAL Joker',
+            headline: 'klaut die Frage!',
+            detail: `${byGroup?.name ?? '?'} klaut die Frage von ${fromGroup?.name ?? '?'}.`,
+            subDetail: `Richtig → ${byGroup?.name ?? '?'} bekommt Punkt. Falsch → ${fromGroup?.name ?? '?'} bekommt Punkt + erhält danach eine neue Frage.`,
+            border: 'border-purple-400', bg: 'bg-purple-500/10', text: 'text-purple-800',
+          },
+        }[notif.type];
+
+        return (
+          <main className="relative mx-auto max-w-lg px-4 py-12 sm:py-20 flex flex-col items-center justify-center min-h-[70vh]">
+            <div className={`w-full card-surface rounded-3xl p-8 sm:p-12 flex flex-col items-center gap-6 border-4 ${config.border} ${config.bg}`}>
+              <div className="text-center space-y-1">
+                <p className="text-xs uppercase tracking-widest font-bold text-ink/40">{config.icon} {config.label}</p>
+                <p className="text-2xl font-bold">
+                  <span style={{ color: byGroup?.color ?? undefined }}>{byGroup?.name ?? '?'}</span>
+                  {' '}{config.headline}
+                </p>
+              </div>
+              <div className="text-7xl select-none">{config.icon}</div>
+              <div className="text-center space-y-2">
+                <p className={`text-lg font-semibold ${config.text}`}>{config.detail}</p>
+                {config.subDetail && <p className="text-sm text-ink/60">{config.subDetail}</p>}
+              </div>
+              {effectiveIsHost ? (
+                <button
+                  disabled={isProcessing}
+                  onClick={async () => {
+                    setIsProcessing(true);
+                    try { await dismissJokerNotification(pin); } catch (e) { console.error(e); } finally { setIsProcessing(false); }
+                  }}
+                  className="w-full max-w-xs px-8 py-4 bg-green-600 text-white rounded-2xl font-bold text-lg hover:bg-green-700 disabled:opacity-50 transition-colors shadow-lg"
+                >
+                  ✅ Weiter
+                </button>
+              ) : (
+                <p className="text-sm text-ink/50 italic">Warte auf die Spielleitung…</p>
+              )}
+            </div>
+          </main>
+        );
+      }
+
       // ── Würfel-Joker: Vollbild-Screen für alle, bis Spielleiter bestätigt ──
       if (game.jokersEnabled && game.jokerDicePending && game.jokerDiceResult != null) {
         const diceGroup = game.groups[game.jokerDiceGroupId ?? ''];
         const roll = game.jokerDiceResult!;
         const diceEmojis = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
-        const isJackpot = roll === 6;
+        const isJackpot = roll >= 5;
         const isBad = roll === 1;
         const rollMsg = isJackpot
           ? '🎉 Jackpot! +1 Punkt und aktuelle Kategorie kassiert.'
           : isBad
-          ? '💀 Pech! 1 Punkt verloren und eine Kategorie eingebußt.'
+          ? '💀 Pech! 1 Punkt verloren.'
           : `Kein Effekt – ${diceGroup?.name ?? '?'} bleibt beim aktuellen Spielstand.`;
         const borderColor = isJackpot ? 'border-green-500' : isBad ? 'border-red-500' : 'border-amber-400';
         const bgGlow = isJackpot ? 'bg-green-500/10' : isBad ? 'bg-red-500/10' : 'bg-amber-500/10';

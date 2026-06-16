@@ -102,6 +102,14 @@ export interface GameSession {
   jokerStealGroupId?: string | null;        // Gruppe die den STEAL-Joker genutzt hat
   jokerStealFromGroupId?: string | null;    // Gruppe deren Frage geklaut wurde
   jokerStealReturnActive?: boolean;         // Gestohlene Gruppe ist jetzt an der Reihe (Rückgabe-Zug)
+  // Joker-Benachrichtigung (transient: Zwischenbildschirm für alle, bis Host bestätigt)
+  jokerNotification?: {
+    type: 'newQuestion' | 'next' | 'steal';
+    byGroupId: string;          // Gruppe die den Joker genutzt hat
+    targetGroupId?: string;     // Zielgruppe (NEXT: erhält die Frage; STEAL: wurde geklaut von)
+    fromGroupId?: string;       // Gestohlene Gruppe (STEAL only)
+    timestamp: number;
+  } | null;
   // Gleichstand-Auflösung (Trivia – Kategorien-Modus)
   triviaFinalRound?: boolean;          // Letzter Umlauf läuft (andere Gruppen holen noch auf)
   triviaFinalRoundPending?: string[];  // Gruppen, die noch ihren letzten Zug haben

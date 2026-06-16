@@ -1872,6 +1872,14 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
 // ---------------------------------------------------------------------------
 
 /**
+ * Joker-Benachrichtigung ausblenden (Spielleiter bestätigt, dass alle den Bildschirm gesehen haben).
+ */
+export async function dismissJokerNotification(pin: string): Promise<void> {
+  checkFirebase();
+  await update(ref(database!, `games/${pin}`), { jokerNotification: null });
+}
+
+/**
  * Joker 1: "Neue Frage" – Aktuelle Karte gegen eine neue Karte gleicher Kategorie tauschen.
  * Die Gruppe bleibt am Zug; der Joker wird als verwendet markiert.
  */
@@ -1911,6 +1919,7 @@ export async function activateJokerNewQuestion(pin: string, groupId: string): Pr
     availableDeck: newAvailable,
     currentCardId: nextCardId,
     [`groups/${groupId}/jokers/newQuestion`]: false,
+    jokerNotification: { type: 'newQuestion', byGroupId: groupId, timestamp: Date.now() },
   });
 }
 
@@ -1953,6 +1962,7 @@ export async function activateJokerNext(pin: string, groupId: string): Promise<v
     jokerNextTargetGroupId: nextGroupId,
     currentTurnGroupId: nextGroupId,
     [`groups/${groupId}/jokers/next`]: false,
+    jokerNotification: { type: 'next', byGroupId: groupId, targetGroupId: nextGroupId, timestamp: Date.now() },
   });
 }
 
@@ -1993,6 +2003,7 @@ export async function activateJokerSteal(pin: string, groupId: string): Promise<
     jokerStealFromGroupId: originalTurnGroupId,
     currentTurnGroupId: groupId,
     [`groups/${groupId}/jokers/steal`]: false,
+    jokerNotification: { type: 'steal', byGroupId: groupId, fromGroupId: originalTurnGroupId, timestamp: Date.now() },
   });
 }
 
