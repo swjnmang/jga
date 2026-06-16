@@ -1055,12 +1055,12 @@ export default function MultiplayerGamePage() {
         const targetGroup = notif.targetGroupId ? game.groups[notif.targetGroupId] : null;
         const fromGroup = notif.fromGroupId ? game.groups[notif.fromGroupId] : null;
 
-        const config = {
+        const notifConfigMap: Record<string, { icon: string; label: string; headline: string; detail: string; subDetail: string | null; border: string; bg: string; text: string }> = {
           newQuestion: {
             icon: '🔄', label: 'Neue Frage Joker',
             headline: 'hat die Frage getauscht!',
             detail: `Die aktuelle Frage wurde gegen eine neue Frage aus derselben Kategorie ersetzt. ${byGroup?.name ?? '?'} bleibt am Zug.`,
-            subDetail: null as string | null,
+            subDetail: null,
             border: 'border-amber-400', bg: 'bg-amber-500/10', text: 'text-amber-800',
           },
           next: {
@@ -1077,7 +1077,8 @@ export default function MultiplayerGamePage() {
             subDetail: `Richtig → ${byGroup?.name ?? '?'} bekommt Punkt. Falsch → ${fromGroup?.name ?? '?'} bekommt Punkt + erhält danach eine neue Frage.`,
             border: 'border-purple-400', bg: 'bg-purple-500/10', text: 'text-purple-800',
           },
-        }[notif.type];
+        };
+        const config = notifConfigMap[notif.type];
 
         return (
           <main className="relative mx-auto max-w-lg px-4 py-12 sm:py-20 flex flex-col items-center justify-center min-h-[70vh]">
