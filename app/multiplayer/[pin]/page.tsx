@@ -682,7 +682,7 @@ export default function MultiplayerGamePage() {
     const isMyTurn = currentBanGroupId === session?.groupId;
     const currentBanGroup = game.groups[currentBanGroupId];
     const availableCategories = (game.triviaCategories ?? []).filter(
-      c => !(game.bannedCategories ?? []).includes(c) && c !== 'image'
+      c => !(game.bannedCategories ?? []).includes(c) && c !== 'image' && c !== 'schaetzfragen'
     );
     const banned = game.bannedCategories ?? [];
 
