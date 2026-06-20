@@ -102,6 +102,20 @@ export default function MultiplayerGamePage() {
   const [banTimeLeft, setBanTimeLeft] = useState<number>(20);
   const banAutoSkippedRef = useRef(false);
 
+  // QR-Code für Einladungslink
+  const [qrCodeUrl, setQrCodeUrl] = useState<string | null>(null);
+  useEffect(() => {
+    if (!pin || typeof window === 'undefined') return;
+    const inviteUrl = `${window.location.origin}/multiplayer?pin=${pin}`;
+    import('qrcode').then(QRCode => {
+      QRCode.toDataURL(inviteUrl, {
+        width: 256,
+        margin: 1,
+        color: { dark: '#0f172a', light: '#ffffff' },
+      }).then(setQrCodeUrl).catch(console.error);
+    });
+  }, [pin]);
+
   // Lade Session-Infos
   useEffect(() => {
     const sessionStr = localStorage.getItem('multiplayer_session');
@@ -832,6 +846,18 @@ export default function MultiplayerGamePage() {
                 <p className="text-sm font-semibold">PIN zum Beitreten: <span className="font-mono text-lg">{pin}</span></p>
                 <p className="text-xs text-ink/60">Spieler können diese PIN eingeben um beizutreten</p>
               </div>
+
+              {/* QR-Code */}
+              {qrCodeUrl && (
+                <div className="flex flex-col items-center gap-2 py-2">
+                  <img
+                    src={qrCodeUrl}
+                    alt={`QR-Code zum Beitreten – PIN ${pin}`}
+                    className="w-48 h-48 rounded-xl border-4 border-ink/10"
+                  />
+                  <p className="text-xs text-ink/50 text-center">QR-Code scannen zum Beitreten</p>
+                </div>
+              )}
               <div className="space-y-2">
                 <p className="text-sm font-semibold">Spielende Gruppen ({groupList.length}):</p>
                 <div className="space-y-1 text-sm">
