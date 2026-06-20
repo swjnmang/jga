@@ -1694,7 +1694,7 @@ export async function submitSchaetzGuess(pin: string, groupId: string, guess: st
  */
 export async function showSchaetzResult(
   pin: string,
-  result: { answer: string; winnerIds: string[]; submissions: { groupId: string; groupName: string; value: string; isWinner: boolean; color: string; }[]; jokerRestores?: { groupId: string; groupName: string; jokerKey: 'newQuestion' | 'next' | 'dice' }[] }
+  result: { answer: string; winnerIds: string[]; submissions: { groupId: string; groupName: string; value: string; isWinner: boolean; color: string; }[]; jokerRestores?: { groupId: string; groupName: string; jokerKey: 'newQuestion' | 'next' | 'dice' | 'steal' }[] }
 ): Promise<void> {
   checkFirebase();
   await update(ref(database!, `games/${pin}`), { schaetzResult: result, lastActivity: Date.now() });

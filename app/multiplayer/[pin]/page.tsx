@@ -1048,6 +1048,70 @@ export default function MultiplayerGamePage() {
 
       const catLabel = (cat: string) => catShortLabel(cat);
 
+      // ── Steal-Joker: Vollbild-Notification für alle, bis Spielleiter bestätigt ──
+      if (game.jokersEnabled && game.jokerNotification?.type === 'steal') {
+        const stealerGroup = game.groups[game.jokerNotification.byGroupId ?? ''];
+        const stolenFromGroup = game.groups[game.jokerNotification.fromGroupId ?? ''];
+        const currentCatLabel = catLabelMeta(currentCard?.category ?? '');
+        return (
+          <main className="relative mx-auto max-w-lg px-4 py-12 sm:py-20 flex flex-col items-center justify-center min-h-[70vh]">
+            <div className="w-full card-surface rounded-3xl p-8 sm:p-12 flex flex-col items-center gap-6 border-4 border-purple-500 bg-purple-500/10">
+              {/* Titel */}
+              <div className="text-center space-y-1">
+                <p className="text-xs uppercase tracking-widest font-bold text-ink/40">🥷 Joker STEAL</p>
+                <p className="text-2xl font-bold">
+                  <span style={{ color: stealerGroup?.color ?? undefined }}>{stealerGroup?.name ?? '?'}</span>
+                  {' '}hat eine Frage geklaut!
+                </p>
+              </div>
+
+              {/* Großes Emoji */}
+              <div className="text-[8rem] leading-none select-none">🥷</div>
+
+              {/* Details */}
+              <div className="w-full space-y-3">
+                <div className="rounded-2xl bg-ink/5 border border-ink/10 px-5 py-3 text-center">
+                  <p className="text-xs text-ink/50 uppercase tracking-wide mb-1">Gestohlene Frage von</p>
+                  <p className="text-xl font-black" style={{ color: stolenFromGroup?.color ?? undefined }}>
+                    {stolenFromGroup?.name ?? '?'}
+                  </p>
+                </div>
+                <div className="rounded-2xl bg-ink/5 border border-ink/10 px-5 py-3 text-center">
+                  <p className="text-xs text-ink/50 uppercase tracking-wide mb-1">Kategorie</p>
+                  <p className="text-lg font-bold">{catIcon(currentCard?.category ?? '')} {currentCatLabel}</p>
+                </div>
+              </div>
+
+              {/* Regel-Hinweis */}
+              <div className="rounded-xl bg-purple-500/10 border border-purple-400 px-4 py-3 text-sm space-y-1 text-center w-full">
+                <p className="font-semibold text-purple-800">Wie geht es weiter?</p>
+                <p className="text-purple-700">
+                  <span className="font-bold" style={{ color: stealerGroup?.color ?? undefined }}>{stealerGroup?.name ?? '?'}</span> beantwortet jetzt die Frage.
+                </p>
+                <p className="text-purple-700">Richtig → <span className="font-bold" style={{ color: stealerGroup?.color ?? undefined }}>{stealerGroup?.name ?? '?'}</span> bekommt Punkt + Kategorie.</p>
+                <p className="text-purple-700">Falsch → <span className="font-bold" style={{ color: stolenFromGroup?.color ?? undefined }}>{stolenFromGroup?.name ?? '?'}</span> bekommt Punkt + Kategorie.</p>
+              </div>
+
+              {/* Bestätigung */}
+              {effectiveIsHost ? (
+                <button
+                  disabled={isProcessing}
+                  onClick={async () => {
+                    setIsProcessing(true);
+                    try { await dismissJokerNotification(pin); } catch (e) { console.error(e); } finally { setIsProcessing(false); }
+                  }}
+                  className="w-full max-w-xs px-8 py-4 bg-purple-600 text-white rounded-2xl font-bold text-lg hover:bg-purple-700 disabled:opacity-50 transition-colors shadow-lg"
+                >
+                  ✅ Verstanden – weiter
+                </button>
+              ) : (
+                <p className="text-sm text-ink/50 italic">Warte auf die Spielleitung…</p>
+              )}
+            </div>
+          </main>
+        );
+      }
+
       // ── Würfel-Joker: Vollbild-Screen für alle, bis Spielleiter bestätigt ──
       if (game.jokersEnabled && game.jokerDicePending && game.jokerDiceResult != null) {
         const diceGroup = game.groups[game.jokerDiceGroupId ?? ''];
@@ -1192,6 +1256,10 @@ export default function MultiplayerGamePage() {
                       <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${g.jokers.newQuestion ? 'bg-amber-200 text-amber-700' : 'bg-ink/10 text-ink/30 line-through'}`}>🔄</span>
                       <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${g.jokers.next ? 'bg-amber-200 text-amber-700' : 'bg-ink/10 text-ink/30 line-through'}`}>➡️</span>
                       <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${g.jokers.dice ? 'bg-amber-200 text-amber-700' : 'bg-ink/10 text-ink/30 line-through'}`}>🎲</span>
+                      {/* Steal-Badge nur sichtbar wenn Gruppe nicht die aktive Gruppe ist */}
+                      {g.id !== game.currentTurnGroupId && (
+                        <span className={`text-xs px-1.5 py-0.5 rounded font-mono ${g.jokers.steal ? 'bg-purple-200 text-purple-700' : 'bg-ink/10 text-ink/30 line-through'}`}>🥷</span>
+                      )}
                     </div>
                   )}
                 </div>
@@ -1294,9 +1362,9 @@ export default function MultiplayerGamePage() {
               setIsProcessing(true);
               try {
                 // Pre-calculate joker restores so they can be shown on the result screen
-                const jokerKeysList = ['newQuestion', 'next', 'dice'] as const;
-                const jokerLabel: Record<string, string> = { newQuestion: 'Neue Frage', next: 'NEXT', dice: 'Würfel' };
-                const jokerRestores: { groupId: string; groupName: string; jokerKey: 'newQuestion' | 'next' | 'dice' }[] = [];
+                const jokerKeysList = ['newQuestion', 'next', 'dice', 'steal'] as const;
+                const jokerLabel: Record<string, string> = { newQuestion: 'Neue Frage', next: 'NEXT', dice: 'Würfel', steal: '🥷 Steal' };
+                const jokerRestores: { groupId: string; groupName: string; jokerKey: 'newQuestion' | 'next' | 'dice' | 'steal' }[] = [];
                 if (game.jokersEnabled) {
                   for (const w of winners) {
                     const groupJokers = game.groups[w.id]?.jokers;
@@ -1381,7 +1449,7 @@ export default function MultiplayerGamePage() {
 
                       {/* Joker-Restore */}
                       {res.jokerRestores && res.jokerRestores.length > 0 && (() => {
-                        const jokerLabel: Record<string, string> = { newQuestion: '🔄 Neue Frage', next: '⚡ NEXT', dice: '🎲 Würfel' };
+                        const jokerLabel: Record<string, string> = { newQuestion: '🔄 Neue Frage', next: '⚡ NEXT', dice: '🎲 Würfel', steal: '🥷 Steal' };
                         return (
                           <div className="rounded-xl bg-amber-500/10 border border-amber-400 px-4 py-3 space-y-1">
                             <p className="text-xs font-semibold text-amber-700 uppercase tracking-wide mb-2">🃏 Joker wiederhergestellt</p>
@@ -1622,6 +1690,30 @@ export default function MultiplayerGamePage() {
                 </p>
               </div>
             ) : null}
+
+            {/* STEAL-Joker: Stealer ist jetzt am Zug */}
+            {isMyTurn && game.jokerStealActive && game.jokerStealGroupId === session?.groupId ? (
+              <div className="rounded-xl bg-purple-500/15 border-2 border-purple-500 px-4 py-3 space-y-1">
+                <p className="text-purple-700 font-bold text-base">🥷 Joker STEAL aktiv – ihr habt geklaut!</p>
+                <p className="text-sm text-purple-700">
+                  Ihr habt die Frage von <span className="font-semibold">{game.groups[game.jokerStealFromGroupId ?? '']?.name ?? 'einer Gruppe'}</span> geklaut.
+                </p>
+                <p className="text-sm text-purple-600">
+                  Richtig → ihr bekommt Punkt + Kategorie. Falsch → <span className="font-semibold">{game.groups[game.jokerStealFromGroupId ?? '']?.name ?? 'die andere Gruppe'}</span> bekommt Punkt + Kategorie.
+                </p>
+              </div>
+            ) : null}
+
+            {/* STEAL-Joker: Rückgabe-Zug für die bestohlen Gruppe */}
+            {isMyTurn && game.jokerStealReturnActive && session && game.jokerStealFromGroupId !== session.groupId ? null : null}
+            {isMyTurn && game.jokerStealReturnActive ? (
+              <div className="rounded-xl bg-blue-500/15 border-2 border-blue-400 px-4 py-3 space-y-1">
+                <p className="text-blue-700 font-bold text-base">🔄 Rückgabe-Zug – ihr seid nochmal dran!</p>
+                <p className="text-sm text-blue-600">
+                  Eure Frage wurde geklaut. Ihr erhaltet jetzt einen neuen Zug mit einer Ersatzfrage.
+                </p>
+              </div>
+            ) : null}
             {effectiveIsHost && (
               <button
                 onClick={async () => {
@@ -1718,6 +1810,42 @@ export default function MultiplayerGamePage() {
             );
           })()}
 
+          {/* Steal-Joker-Panel – nur für NICHT-aktive Gruppen, nicht für Host */}
+          {game.jokersEnabled && !isMyTurn && !effectiveIsHost && session && !game.jokerStealActive && !game.jokerNextActive && !game.jokerStealReturnActive && (() => {
+            const myJokers = game.groups[session.groupId]?.jokers;
+            if (!myJokers) return null;
+            const deckMeta: Record<string, string> = (game as any).deckMeta ?? {};
+            const currentCat = (game.currentCardId ? deckMeta[game.currentCardId] : null) ?? (game as any).currentRoundCategory ?? '';
+            const isSchaetzfrage = currentCat === 'schaetzfragen';
+            if (isSchaetzfrage) return null;
+            return (
+              <div className="card-surface rounded-2xl p-4 space-y-3 border-2 border-purple-400/60 bg-purple-500/5">
+                <h3 className="text-sm font-bold text-purple-700">🥷 Steal-Joker</h3>
+                <p className="text-xs text-ink/60">
+                  Klau die aktuelle Frage von <span className="font-semibold" style={{ color: (game.currentTurnGroupId ? game.groups[game.currentTurnGroupId]?.color : undefined) ?? undefined }}>{game.currentTurnGroupId ? (game.groups[game.currentTurnGroupId]?.name ?? '?') : '?'}</span>!
+                  First come, first served.
+                </p>
+                <button
+                  disabled={!myJokers.steal || isProcessing}
+                  title="Klau die aktuelle Frage. Richtig → du bekommst Punkt + Kategorie. Falsch → die andere Gruppe bekommt den Punkt."
+                  onClick={async () => {
+                    if (!myJokers.steal || isProcessing) return;
+                    setIsProcessing(true);
+                    try { await activateJokerSteal(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
+                  }}
+                  className={`w-full flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-center transition-colors border-2 font-semibold ${
+                    myJokers.steal
+                      ? 'border-purple-500 bg-purple-500/10 hover:bg-purple-500/20 text-purple-900 animate-pulse hover:animate-none'
+                      : 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
+                  }`}
+                >
+                  <span className="text-2xl">🥷</span>
+                  <span>{myJokers.steal ? 'Frage klauen!' : 'Verbraucht'}</span>
+                </button>
+              </div>
+            );
+          })()}
+
           {/* Host-Steuerung */}
           {effectiveIsHost && (
             <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
@@ -1729,6 +1857,31 @@ export default function MultiplayerGamePage() {
                     {game.groups[game.jokerNextOriginGroupId]?.name ?? '?'} hat die Frage an {game.groups[game.jokerNextTargetGroupId]?.name ?? '?'} weitergegeben.
                   </p>
                   <p className="text-xs text-orange-600 mt-1">Richtig → niemand bekommt Punkt. Falsch → {game.groups[game.jokerNextOriginGroupId]?.name ?? '?'} bekommt Punkt.</p>
+                </div>
+              )}
+
+              {/* STEAL-Joker-Hinweis für Host */}
+              {game.jokerStealActive && game.jokerStealGroupId && game.jokerStealFromGroupId && (
+                <div className="rounded-xl bg-purple-500/15 border-2 border-purple-400 px-4 py-3 text-sm">
+                  <p className="font-bold text-purple-700">🥷 Joker STEAL aktiv</p>
+                  <p className="text-purple-600">
+                    <span className="font-semibold">{game.groups[game.jokerStealGroupId]?.name ?? '?'}</span> hat die Frage von{' '}
+                    <span className="font-semibold">{game.groups[game.jokerStealFromGroupId]?.name ?? '?'}</span> geklaut.
+                  </p>
+                  <p className="text-xs text-purple-600 mt-1">
+                    Richtig → {game.groups[game.jokerStealGroupId]?.name ?? '?'} bekommt Punkt + Kategorie.{' '}
+                    Falsch → {game.groups[game.jokerStealFromGroupId]?.name ?? '?'} bekommt Punkt + Kategorie, dann Rückgabe-Zug.
+                  </p>
+                </div>
+              )}
+
+              {/* STEAL-Rückgabe-Zug-Hinweis für Host */}
+              {game.jokerStealReturnActive && (
+                <div className="rounded-xl bg-blue-500/15 border-2 border-blue-400 px-4 py-3 text-sm">
+                  <p className="font-bold text-blue-700">🔄 Rückgabe-Zug aktiv</p>
+                  <p className="text-blue-600">
+                    <span className="font-semibold">{game.currentTurnGroupId ? (game.groups[game.currentTurnGroupId]?.name ?? '?') : '?'}</span> erhält einen Ersatz-Zug (Frage wurde geklaut).
+                  </p>
                 </div>
               )}
 
