@@ -132,19 +132,19 @@ export default function RulesPage() {
                 </div>
                 <div className="rounded-2xl bg-ink/5 border border-ink/10 p-4 space-y-1">
                   <p className="font-semibold text-ink">➡️ NEXT</p>
-                  <p>Die Frage wird an die nächste Gruppe weitergegeben. Beantwortet diese sie <strong className="text-ink">falsch</strong>, bekommt die ursprüngliche Gruppe den Punkt. Beantwortet sie sie richtig, bekommt die nächste Gruppe den Punkt.</p>
+                  <p>Die Frage wird an die nächste Gruppe weitergegeben. Beantwortet diese sie <strong className="text-ink">falsch</strong>, bekommt die ursprüngliche Gruppe den Punkt. Beantwortet sie sie <strong className="text-ink">richtig</strong>, bekommt niemand einen Punkt.</p>
                 </div>
                 <div className="rounded-2xl bg-ink/5 border border-ink/10 p-4 space-y-1">
                   <p className="font-semibold text-ink">🎲 Würfel</p>
                   <p>Die Gruppe würfelt (1–6):</p>
                   <ul className="list-disc list-inside mt-1 space-y-0.5 text-ink/70">
                     <li><strong className="text-ink">5 oder 6 — Jackpot:</strong> +1 Punkt &amp; aktuelle Kategorie gesammelt</li>
-                    <li><strong className="text-ink">1 — Pech:</strong> −1 Punkt</li>
+                    <li><strong className="text-ink">1 — Pech:</strong> −1 Punkt &amp; eine gesammelte Kategorie verloren</li>
                     <li><strong className="text-ink">2–4:</strong> Kein Effekt</li>
                   </ul>
                 </div>
                 <div className="rounded-2xl bg-ink/5 border border-ink/10 p-4 space-y-1">
-                  <p className="font-semibold text-ink">🦝 STEAL</p>
+                  <p className="font-semibold text-ink">� STEAL</p>
                   <p>Kann von jeder Gruppe genutzt werden, die <strong className="text-ink">nicht</strong> an der Reihe ist. Die Frage der aktiven Gruppe wird geklaut (first come, first served).</p>
                   <ul className="list-disc list-inside mt-1 space-y-0.5 text-ink/70">
                     <li><strong className="text-ink">Richtig:</strong> Stealer bekommt Punkt + Kategorie</li>
@@ -153,12 +153,12 @@ export default function RulesPage() {
                   <p className="text-ink/70 mt-1">Die gestohlene Gruppe erhält danach immer eine neue Ersatzfrage.</p>
                 </div>
               </div>
-              <p className="text-ink/60 text-xs mt-1">Tipp: Wer eine Schätzfrage gewinnt, erhält einen zufällig gewählten bereits verbrauchten Joker zurück.</p>
+              <p className="text-ink/60 text-xs mt-1">Hinweis: Joker können nicht bei Schätzfragen eingesetzt werden. Wer eine Schätzfrage gewinnt, erhält einen zufällig gewählten bereits verbrauchten Joker zurück.</p>
             </section>
 
             <section className="space-y-3">
               <h2 className="text-lg font-display font-semibold text-ink">🚫 Ban-Phase (optional)</h2>
-              <p>Wenn beim Erstellen des Spiels aktiviert, darf jede Gruppe vor Spielbeginn reihum eine Kategorie sperren. Gesperrte Kategorien kommen im Spiel nicht vor.</p>
+              <p>Wenn beim Erstellen des Spiels aktiviert, darf jede Gruppe vor Spielbeginn reihum eine Kategorie sperren. Gesperrte Kategorien kommen im Spiel nicht vor. <strong className="text-ink">Schätzfragen können nicht gebannt werden</strong> — sie sind Pflichtbestandteil des Spiels.</p>
               <p>Jede Gruppe hat <strong className="text-ink">20 Sekunden</strong> Zeit — wer nicht reagiert, überspringt automatisch.</p>
             </section>
 
