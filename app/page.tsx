@@ -8,7 +8,7 @@ export default function HomePage() {
     dateStyle: 'medium',
     timeStyle: 'short',
     timeZone: 'Europe/Berlin'
-  }).format(new Date());
+  }).format(new Date(process.env.NEXT_PUBLIC_BUILD_TIME!));
 
   const [showImpressum, setShowImpressum] = useState(false);
 

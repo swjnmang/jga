@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useEffect, useState, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
@@ -1048,83 +1048,17 @@ export default function MultiplayerGamePage() {
 
       const catLabel = (cat: string) => catShortLabel(cat);
 
-      // ── Joker-Benachrichtigungs-Bildschirm (Neue Frage / NEXT / STEAL) ──────
-      if (game.jokersEnabled && game.jokerNotification) {
-        const notif = game.jokerNotification;
-        const byGroup = game.groups[notif.byGroupId];
-        const targetGroup = notif.targetGroupId ? game.groups[notif.targetGroupId] : null;
-        const fromGroup = notif.fromGroupId ? game.groups[notif.fromGroupId] : null;
-
-        const notifConfigMap: Record<string, { icon: string; label: string; headline: string; detail: string; subDetail: string | null; border: string; bg: string; text: string }> = {
-          newQuestion: {
-            icon: '🔄', label: 'Neue Frage Joker',
-            headline: 'hat die Frage getauscht!',
-            detail: `Die aktuelle Frage wurde gegen eine neue Frage aus derselben Kategorie ersetzt. ${byGroup?.name ?? '?'} bleibt am Zug.`,
-            subDetail: null,
-            border: 'border-amber-400', bg: 'bg-amber-500/10', text: 'text-amber-800',
-          },
-          next: {
-            icon: '➡️', label: 'NEXT Joker',
-            headline: 'gibt die Frage weiter!',
-            detail: `Die Frage geht an ${targetGroup?.name ?? '?'}.`,
-            subDetail: `Richtig → niemand bekommt Punkt. Falsch → ${byGroup?.name ?? '?'} bekommt Punkt.`,
-            border: 'border-orange-400', bg: 'bg-orange-500/10', text: 'text-orange-800',
-          },
-          steal: {
-            icon: '🦝', label: 'STEAL Joker',
-            headline: 'klaut die Frage!',
-            detail: `${byGroup?.name ?? '?'} klaut die Frage von ${fromGroup?.name ?? '?'}.`,
-            subDetail: `Richtig → ${byGroup?.name ?? '?'} bekommt Punkt. Falsch → ${fromGroup?.name ?? '?'} bekommt Punkt + erhält danach eine neue Frage.`,
-            border: 'border-purple-400', bg: 'bg-purple-500/10', text: 'text-purple-800',
-          },
-        };
-        const config = notifConfigMap[notif.type];
-
-        return (
-          <main className="relative mx-auto max-w-lg px-4 py-12 sm:py-20 flex flex-col items-center justify-center min-h-[70vh]">
-            <div className={`w-full card-surface rounded-3xl p-8 sm:p-12 flex flex-col items-center gap-6 border-4 ${config.border} ${config.bg}`}>
-              <div className="text-center space-y-1">
-                <p className="text-xs uppercase tracking-widest font-bold text-ink/40">{config.icon} {config.label}</p>
-                <p className="text-2xl font-bold">
-                  <span style={{ color: byGroup?.color ?? undefined }}>{byGroup?.name ?? '?'}</span>
-                  {' '}{config.headline}
-                </p>
-              </div>
-              <div className="text-7xl select-none">{config.icon}</div>
-              <div className="text-center space-y-2">
-                <p className={`text-lg font-semibold ${config.text}`}>{config.detail}</p>
-                {config.subDetail && <p className="text-sm text-ink/60">{config.subDetail}</p>}
-              </div>
-              {effectiveIsHost ? (
-                <button
-                  disabled={isProcessing}
-                  onClick={async () => {
-                    setIsProcessing(true);
-                    try { await dismissJokerNotification(pin); } catch (e) { console.error(e); } finally { setIsProcessing(false); }
-                  }}
-                  className="w-full max-w-xs px-8 py-4 bg-green-600 text-white rounded-2xl font-bold text-lg hover:bg-green-700 disabled:opacity-50 transition-colors shadow-lg"
-                >
-                  ✅ Weiter
-                </button>
-              ) : (
-                <p className="text-sm text-ink/50 italic">Warte auf die Spielleitung…</p>
-              )}
-            </div>
-          </main>
-        );
-      }
-
       // ── Würfel-Joker: Vollbild-Screen für alle, bis Spielleiter bestätigt ──
       if (game.jokersEnabled && game.jokerDicePending && game.jokerDiceResult != null) {
         const diceGroup = game.groups[game.jokerDiceGroupId ?? ''];
         const roll = game.jokerDiceResult!;
         const diceEmojis = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
-        const isJackpot = roll >= 5;
+        const isJackpot = roll === 6;
         const isBad = roll === 1;
         const rollMsg = isJackpot
           ? '🎉 Jackpot! +1 Punkt und aktuelle Kategorie kassiert.'
           : isBad
-          ? '💀 Pech! 1 Punkt verloren.'
+          ? '💀 Pech! 1 Punkt verloren und eine Kategorie eingebußt.'
           : `Kein Effekt – ${diceGroup?.name ?? '?'} bleibt beim aktuellen Spielstand.`;
         const borderColor = isJackpot ? 'border-green-500' : isBad ? 'border-red-500' : 'border-amber-400';
         const bgGlow = isJackpot ? 'bg-green-500/10' : isBad ? 'bg-red-500/10' : 'bg-amber-500/10';
@@ -1688,37 +1622,6 @@ export default function MultiplayerGamePage() {
                 </p>
               </div>
             ) : null}
-            {/* STEAL-Joker: Diese Gruppe hat geklaut und muss jetzt antworten */}
-            {isMyTurn && game.jokerStealActive && game.jokerStealGroupId === session?.groupId ? (
-              <div className="rounded-xl bg-purple-500/15 border-2 border-purple-500 px-4 py-3 space-y-1">
-                <p className="text-purple-700 font-bold text-base">🦝 Joker STEAL aktiv – ihr seid dran!</p>
-                <p className="text-sm text-purple-700">
-                  Ihr habt die Frage von {game.groups[game.jokerStealFromGroupId ?? '']?.name ?? 'der anderen Gruppe'} geklaut.
-                </p>
-                <p className="text-sm text-purple-600">
-                  Richtig → ihr bekommt den Punkt. Falsch → {game.groups[game.jokerStealFromGroupId ?? '']?.name ?? 'die andere Gruppe'} bekommt den Punkt + ihr bekommt eine neue Frage.
-                </p>
-              </div>
-            ) : null}
-            {/* STEAL-Joker: Dieser Gruppe wurde die Frage geklaut */}
-            {!isMyTurn && game.jokerStealActive && game.jokerStealFromGroupId === session?.groupId ? (
-              <div className="rounded-xl bg-red-500/15 border-2 border-red-500 px-4 py-3 space-y-1">
-                <p className="text-red-700 font-bold text-base">🚨 Eure Frage wurde geklaut!</p>
-                <p className="text-sm text-red-700">
-                  {game.groups[game.jokerStealGroupId ?? '']?.name ?? 'Eine Gruppe'} hat eure Frage geklaut und muss sie beantworten.
-                </p>
-                <p className="text-sm text-red-600">
-                  Antwortet sie falsch → ihr bekommt den Punkt. Ihr bekommt danach immer eine neue Frage!
-                </p>
-              </div>
-            ) : null}
-            {/* STEAL-Rückgabe-Zug: gestohlene Gruppe bekommt neue Frage */}
-            {isMyTurn && game.jokerStealReturnActive ? (
-              <div className="rounded-xl bg-blue-500/15 border-2 border-blue-500 px-4 py-3 space-y-1">
-                <p className="text-blue-700 font-bold text-base">🔁 Eure Frage wurde geklaut – hier ist eine neue!</p>
-                <p className="text-sm text-blue-700">Beantwortet diese neue Frage wie gewohnt. Normale Regeln gelten.</p>
-              </div>
-            ) : null}
             {effectiveIsHost && (
               <button
                 onClick={async () => {
@@ -1790,7 +1693,7 @@ export default function MultiplayerGamePage() {
                   {/* Joker 3: Würfeln */}
                   <button
                     disabled={!myJokers.dice || isProcessing}
-                    title="Würfle eine 5 oder 6: Punkt + Kategorie kassieren. Eine 1: Punkt verlieren. 2–4: kein Effekt."
+                    title="Würfle eine 6: Punkt + Kategorie kassieren. Eine 1: Punkt + Kategorie verlieren. 2–5: kein Effekt."
                     onClick={async () => {
                       if (!myJokers.dice || isProcessing) return;
                       setIsProcessing(true);
@@ -1805,51 +1708,12 @@ export default function MultiplayerGamePage() {
                     <span className="text-2xl">🎲</span>
                     <span className="text-xs font-semibold leading-tight">Würfeln</span>
                     {myJokers.dice
-                      ? <span className="text-[10px] text-amber-700/70 leading-tight">5+6=Punkt, 1=Malus</span>
+                      ? <span className="text-[10px] text-amber-700/70 leading-tight">6=Punkt, 1=Malus</span>
                       : <span className="text-[10px] text-ink/40">Verbraucht</span>
                     }
                   </button>
                 </div>
                 {!hasAnyJoker && <p className="text-xs text-ink/50 text-center">Alle Joker wurden verbraucht.</p>}
-              </div>
-            );
-          })()}
-
-          {/* Steal-Joker Panel – für NICHT-aktive Gruppen (kein Host) */}
-          {game.jokersEnabled && !isMyTurn && !effectiveIsHost && session && game.state === 'playing' &&
-           !game.jokerStealActive && !game.jokerNextActive && !game.jokerDicePending && !game.jokerStealReturnActive &&
-           game.mode === 'trivia' && (() => {
-            const myJokers = game.groups[session.groupId]?.jokers;
-            if (!myJokers) return null;
-            const deckMetaUI = game.deckMeta ?? {};
-            const currentCatUI = game.currentCardId ? deckMetaUI[game.currentCardId] : null;
-            if (currentCatUI === 'schaetzfragen') return null;
-            return (
-              <div className="card-surface rounded-2xl p-4 space-y-3 border-2 border-purple-400/40">
-                <h3 className="text-sm font-bold text-purple-700">🦝 Steal Joker</h3>
-                <button
-                  disabled={!myJokers.steal || isProcessing}
-                  title="Klaue die aktuelle Frage von der anderen Gruppe. Richtig → du bekommst den Punkt. Falsch → die andere Gruppe bekommt den Punkt + du bekommst danach eine neue Frage."
-                  onClick={async () => {
-                    if (!myJokers.steal || isProcessing) return;
-                    setIsProcessing(true);
-                    try { await activateJokerSteal(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
-                  }}
-                  className={`w-full flex items-center gap-3 rounded-xl px-3 py-3 transition-colors border-2 ${
-                    myJokers.steal
-                      ? 'border-purple-400 bg-purple-500/10 hover:bg-purple-500/20 text-purple-900'
-                      : 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
-                  }`}
-                >
-                  <span className="text-2xl">🦝</span>
-                  <span className="flex-1 text-left">
-                    <span className="text-sm font-semibold block leading-tight">STEAL</span>
-                    {myJokers.steal
-                      ? <span className="text-[10px] text-purple-700/70">Frage klauen – first come, first served</span>
-                      : <span className="text-[10px] text-ink/40">Verbraucht</span>
-                    }
-                  </span>
-                </button>
               </div>
             );
           })()}
@@ -1865,25 +1729,6 @@ export default function MultiplayerGamePage() {
                     {game.groups[game.jokerNextOriginGroupId]?.name ?? '?'} hat die Frage an {game.groups[game.jokerNextTargetGroupId]?.name ?? '?'} weitergegeben.
                   </p>
                   <p className="text-xs text-orange-600 mt-1">Richtig → niemand bekommt Punkt. Falsch → {game.groups[game.jokerNextOriginGroupId]?.name ?? '?'} bekommt Punkt.</p>
-                </div>
-              )}
-              {/* STEAL-Joker-Hinweis für Host */}
-              {game.jokerStealActive && game.jokerStealGroupId && game.jokerStealFromGroupId && (
-                <div className="rounded-xl bg-purple-500/15 border-2 border-purple-400 px-4 py-3 text-sm">
-                  <p className="font-bold text-purple-700">🦝 Joker STEAL aktiv</p>
-                  <p className="text-purple-600">
-                    {game.groups[game.jokerStealGroupId]?.name ?? '?'} hat die Frage von {game.groups[game.jokerStealFromGroupId]?.name ?? '?'} geklaut.
-                  </p>
-                  <p className="text-xs text-purple-600 mt-1">Richtig → {game.groups[game.jokerStealGroupId]?.name ?? '?'} bekommt Punkt. Falsch → {game.groups[game.jokerStealFromGroupId]?.name ?? '?'} bekommt Punkt + erhält neue Frage.</p>
-                </div>
-              )}
-              {/* STEAL-Rückgabe-Hinweis für Host */}
-              {game.jokerStealReturnActive && game.currentTurnGroupId && (
-                <div className="rounded-xl bg-blue-500/15 border-2 border-blue-400 px-4 py-3 text-sm">
-                  <p className="font-bold text-blue-700">🔁 Steal-Rückgabe-Zug</p>
-                  <p className="text-blue-600">{game.groups[game.currentTurnGroupId]?.name ?? '?'} beantwortet jetzt ihre Ersatzfrage (Frage wurde geklaut).</p>
-                </div>
-              )}
                 </div>
               )}
 
