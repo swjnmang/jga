@@ -1460,6 +1460,9 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
   // Falsch  → Ursprungsgruppe bekommt Punkt + Kategorie.
   const isJokerNextResolution = game.jokerNextActive === true;
   const jokerNextOriginId = game.jokerNextOriginGroupId ?? null;
+  const isJokerStealResolution = game.jokerStealActive === true;
+  const jokerStealFromId = game.jokerStealFromGroupId ?? null;
+  const isJokerStealReturn = game.jokerStealReturnActive === true;
 
   // completedCategories der Gruppe, die den Punkt ggf. bekommt
   const scoringGroupId = isJokerNextResolution && !correct && jokerNextOriginId
