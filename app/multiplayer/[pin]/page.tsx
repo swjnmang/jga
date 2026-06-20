@@ -121,7 +121,7 @@ export default function MultiplayerGamePage() {
   const jokerNotifDismissedRef = useRef(false);
   useEffect(() => {
     const notif = (game as GameSession | null)?.jokerNotification;
-    const isAutoTimerNotif = notif?.type === 'steal' || notif?.type === 'newQuestion';
+    const isAutoTimerNotif = notif?.type === 'steal' || notif?.type === 'newQuestion' || notif?.type === 'next';
     if (!isAutoTimerNotif) {
       setJokerNotifCountdown(5);
       jokerNotifDismissedRef.current = false;
@@ -1159,6 +1159,69 @@ export default function MultiplayerGamePage() {
                       try { await dismissJokerNotification(pin); } catch (e) { console.error(e); } finally { setIsProcessing(false); }
                     }}
                     className="mt-1 px-6 py-2 bg-amber-600 text-white rounded-xl font-semibold text-sm hover:bg-amber-700 disabled:opacity-50 transition-colors"
+                  >
+                    ⏩ Überspringen
+                  </button>
+                )}
+              </div>
+            </div>
+          </main>
+        );
+      }
+
+      // ── NEXT-Joker: Vollbild-Notification für alle, 5 Sek. Auto-Timer ──
+      if (game.jokersEnabled && game.jokerNotification?.type === 'next') {
+        const originGroup = game.groups[game.jokerNotification.byGroupId ?? ''];
+        const targetGroup = game.groups[game.jokerNotification.targetGroupId ?? ''];
+        return (
+          <main className="relative mx-auto max-w-lg px-4 py-12 sm:py-20 flex flex-col items-center justify-center min-h-[70vh]">
+            <div className="w-full card-surface rounded-3xl p-8 sm:p-12 flex flex-col items-center gap-6 border-4 border-orange-400 bg-orange-500/10">
+              {/* Titel */}
+              <div className="text-center space-y-1">
+                <p className="text-xs uppercase tracking-widest font-bold text-ink/40">⚡ Joker NEXT</p>
+                <p className="text-2xl font-bold">
+                  <span style={{ color: originGroup?.color ?? undefined }}>{originGroup?.name ?? '?'}</span>
+                  {' '}gibt die Frage weiter!
+                </p>
+              </div>
+
+              {/* Großes Emoji */}
+              <div className="text-[8rem] leading-none select-none">➡️</div>
+
+              {/* Details */}
+              <div className="w-full space-y-3">
+                <div className="rounded-2xl bg-ink/5 border border-ink/10 px-5 py-3 text-center">
+                  <p className="text-xs text-ink/50 uppercase tracking-wide mb-1">Frage geht an</p>
+                  <p className="text-xl font-black" style={{ color: targetGroup?.color ?? undefined }}>
+                    {targetGroup?.name ?? '?'}
+                  </p>
+                </div>
+              </div>
+
+              {/* Regel-Hinweis */}
+              <div className="rounded-xl bg-orange-500/10 border border-orange-400 px-4 py-3 text-sm space-y-1 text-center w-full">
+                <p className="font-semibold text-orange-800">Wie geht es weiter?</p>
+                <p className="text-orange-700">
+                  <span className="font-bold" style={{ color: targetGroup?.color ?? undefined }}>{targetGroup?.name ?? '?'}</span> beantwortet jetzt die Frage.
+                </p>
+                <p className="text-orange-700">Richtig → niemand bekommt einen Punkt.</p>
+                <p className="text-orange-700">Falsch → <span className="font-bold" style={{ color: originGroup?.color ?? undefined }}>{originGroup?.name ?? '?'}</span> bekommt Punkt + Kategorie.</p>
+              </div>
+
+              {/* Auto-Timer */}
+              <div className="flex flex-col items-center gap-2">
+                <div className={`text-5xl font-black tabular-nums ${jokerNotifCountdown <= 2 ? 'text-orange-600 animate-pulse' : 'text-orange-400'}`}>
+                  {jokerNotifCountdown}
+                </div>
+                <p className="text-xs text-ink/40">Weiter in {jokerNotifCountdown} Sek…</p>
+                {effectiveIsHost && (
+                  <button
+                    disabled={isProcessing}
+                    onClick={async () => {
+                      setIsProcessing(true);
+                      try { await dismissJokerNotification(pin); } catch (e) { console.error(e); } finally { setIsProcessing(false); }
+                    }}
+                    className="mt-1 px-6 py-2 bg-orange-600 text-white rounded-xl font-semibold text-sm hover:bg-orange-700 disabled:opacity-50 transition-colors"
                   >
                     ⏩ Überspringen
                   </button>
