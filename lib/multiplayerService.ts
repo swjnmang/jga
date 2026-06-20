@@ -1465,9 +1465,12 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
   const isJokerStealReturn = game.jokerStealReturnActive === true;
 
   // completedCategories der Gruppe, die den Punkt ggf. bekommt
-  const scoringGroupId = isJokerNextResolution && !correct && jokerNextOriginId
-    ? jokerNextOriginId
-    : activeGroupId;
+  const scoringGroupId =
+    (isJokerStealResolution && !correct && jokerStealFromId)
+      ? jokerStealFromId                                           // STEAL falsch → bestohlen Gruppe bekommt Punkt
+      : (isJokerNextResolution && !correct && jokerNextOriginId)
+      ? jokerNextOriginId                                          // NEXT falsch → Ursprungsgruppe bekommt Punkt
+      : activeGroupId;
 
   const prevCompleted: string[] = Array.isArray(game.groups[scoringGroupId]?.completedCategories)
     ? game.groups[scoringGroupId].completedCategories!
