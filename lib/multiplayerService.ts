@@ -2015,9 +2015,9 @@ export async function activateJokerSteal(pin: string, groupId: string): Promise<
 
 /**
  * Joker 3: "Würfeln" – Zufälliges Ergebnis 1–6.
- * 6: Punkt + aktuelle Kategorie sammeln
+ * 5–6: +1 Punkt + aktuelle Kategorie kassieren
+ * 2–4: Zug endet ohne Effekt
  * 1: Punkt verlieren (min 0) + zufällige gesammelte Kategorie verlieren
- * 2–5: Zug endet ohne Effekt
  */
 export async function activateJokerDice(pin: string, groupId: string): Promise<void> {
   checkFirebase();
@@ -2053,6 +2053,11 @@ export async function activateJokerDice(pin: string, groupId: string): Promise<v
     }
   } else if (roll === 1) {
     newScore = Math.max(0, newScore - 1);
+    // Zufällige gesammelte Kategorie verlieren
+    if (newCompleted.length > 0) {
+      const loseIdx = Math.floor(Math.random() * newCompleted.length);
+      newCompleted.splice(loseIdx, 1);
+    }
   }
 
   // Effekte sofort anwenden, aber Zug NICHT weiterrücken – Spielleiter bestätigt erst

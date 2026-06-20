@@ -1305,7 +1305,7 @@ export default function MultiplayerGamePage() {
         const diceGroup = game.groups[game.jokerDiceGroupId ?? ''];
         const roll = game.jokerDiceResult!;
         const diceEmojis = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
-        const isJackpot = roll === 6;
+        const isJackpot = roll >= 5;
         const isBad = roll === 1;
         const rollMsg = isJackpot
           ? '🎉 Jackpot! +1 Punkt und aktuelle Kategorie kassiert.'
