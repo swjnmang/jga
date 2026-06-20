@@ -116,6 +116,47 @@ export default function MultiplayerGamePage() {
     });
   }, [pin]);
 
+  // Joker-Notification Auto-Timer (5 Sek. → dismiss)
+  const [jokerNotifCountdown, setJokerNotifCountdown] = useState<number>(5);
+  const jokerNotifDismissedRef = useRef(false);
+  useEffect(() => {
+    const notif = (game as GameSession | null)?.jokerNotification;
+    const isAutoTimerNotif = notif?.type === 'steal' || notif?.type === 'newQuestion';
+    if (!isAutoTimerNotif) {
+      setJokerNotifCountdown(5);
+      jokerNotifDismissedRef.current = false;
+      return;
+    }
+    // Reset countdown whenever a fresh notification appears (by timestamp)
+    setJokerNotifCountdown(5);
+    jokerNotifDismissedRef.current = false;
+    const interval = setInterval(() => {
+      setJokerNotifCountdown(prev => {
+        if (prev <= 1) {
+          clearInterval(interval);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+    return () => clearInterval(interval);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [(game as GameSession | null)?.jokerNotification?.timestamp]);
+
+  // Auto-dismiss wenn Countdown bei 0 — nur Host ruft Firebase-Update auf
+  useEffect(() => {
+    if (jokerNotifCountdown !== 0) return;
+    if (jokerNotifDismissedRef.current) return;
+    const notif = (game as GameSession | null)?.jokerNotification;
+    if (!notif) return;
+    jokerNotifDismissedRef.current = true;
+    // Nur Host schreibt nach Firebase; andere Clients warten auf den reaktiven Update
+    if ((session as SessionInfo | null)?.isHost || (game as GameSession | null)?.hostId === (session as SessionInfo | null)?.groupId) {
+      dismissJokerNotification(pin).catch(console.error);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [jokerNotifCountdown]);
+
   // Lade Session-Infos
   useEffect(() => {
     const sessionStr = localStorage.getItem('multiplayer_session');
@@ -1074,7 +1115,61 @@ export default function MultiplayerGamePage() {
 
       const catLabel = (cat: string) => catShortLabel(cat);
 
-      // ── Steal-Joker: Vollbild-Notification für alle, bis Spielleiter bestätigt ──
+      // ── Neue-Frage-Joker: Vollbild-Notification für alle, 5 Sek. Auto-Timer ──
+      if (game.jokersEnabled && game.jokerNotification?.type === 'newQuestion') {
+        const byGroup = game.groups[game.jokerNotification.byGroupId ?? ''];
+        const newCatLabel = catLabelMeta(currentCard?.category ?? '');
+        return (
+          <main className="relative mx-auto max-w-lg px-4 py-12 sm:py-20 flex flex-col items-center justify-center min-h-[70vh]">
+            <div className="w-full card-surface rounded-3xl p-8 sm:p-12 flex flex-col items-center gap-6 border-4 border-amber-400 bg-amber-500/10">
+              {/* Titel */}
+              <div className="text-center space-y-1">
+                <p className="text-xs uppercase tracking-widest font-bold text-ink/40">🔄 Joker Neue Frage</p>
+                <p className="text-2xl font-bold">
+                  <span style={{ color: byGroup?.color ?? undefined }}>{byGroup?.name ?? '?'}</span>
+                  {' '}tauscht die Frage!
+                </p>
+              </div>
+
+              {/* Großes Emoji */}
+              <div className="text-[8rem] leading-none select-none">🔄</div>
+
+              {/* Details */}
+              <div className="w-full space-y-3">
+                <div className="rounded-2xl bg-ink/5 border border-ink/10 px-5 py-3 text-center">
+                  <p className="text-xs text-ink/50 uppercase tracking-wide mb-1">Neue Kategorie</p>
+                  <p className="text-lg font-bold">{catIcon(currentCard?.category ?? '')} {newCatLabel}</p>
+                </div>
+                <div className="rounded-xl bg-amber-500/10 border border-amber-400 px-4 py-3 text-sm text-center">
+                  <p className="text-amber-800">Die aktuelle Frage wurde gegen eine neue Frage gleicher Kategorie getauscht.</p>
+                </div>
+              </div>
+
+              {/* Auto-Timer */}
+              <div className="flex flex-col items-center gap-2">
+                <div className={`text-5xl font-black tabular-nums ${jokerNotifCountdown <= 2 ? 'text-amber-600 animate-pulse' : 'text-amber-500'}`}>
+                  {jokerNotifCountdown}
+                </div>
+                <p className="text-xs text-ink/40">Weiter in {jokerNotifCountdown} Sek…</p>
+                {effectiveIsHost && (
+                  <button
+                    disabled={isProcessing}
+                    onClick={async () => {
+                      setIsProcessing(true);
+                      try { await dismissJokerNotification(pin); } catch (e) { console.error(e); } finally { setIsProcessing(false); }
+                    }}
+                    className="mt-1 px-6 py-2 bg-amber-600 text-white rounded-xl font-semibold text-sm hover:bg-amber-700 disabled:opacity-50 transition-colors"
+                  >
+                    ⏩ Überspringen
+                  </button>
+                )}
+              </div>
+            </div>
+          </main>
+        );
+      }
+
+      // ── Steal-Joker: Vollbild-Notification für alle, 5 Sek. Auto-Timer ──
       if (game.jokersEnabled && game.jokerNotification?.type === 'steal') {
         const stealerGroup = game.groups[game.jokerNotification.byGroupId ?? ''];
         const stolenFromGroup = game.groups[game.jokerNotification.fromGroupId ?? ''];
@@ -1118,21 +1213,25 @@ export default function MultiplayerGamePage() {
                 <p className="text-purple-700">Falsch → <span className="font-bold" style={{ color: stolenFromGroup?.color ?? undefined }}>{stolenFromGroup?.name ?? '?'}</span> bekommt Punkt + Kategorie.</p>
               </div>
 
-              {/* Bestätigung */}
-              {effectiveIsHost ? (
-                <button
-                  disabled={isProcessing}
-                  onClick={async () => {
-                    setIsProcessing(true);
-                    try { await dismissJokerNotification(pin); } catch (e) { console.error(e); } finally { setIsProcessing(false); }
-                  }}
-                  className="w-full max-w-xs px-8 py-4 bg-purple-600 text-white rounded-2xl font-bold text-lg hover:bg-purple-700 disabled:opacity-50 transition-colors shadow-lg"
-                >
-                  ✅ Verstanden – weiter
-                </button>
-              ) : (
-                <p className="text-sm text-ink/50 italic">Warte auf die Spielleitung…</p>
-              )}
+              {/* Auto-Timer */}
+              <div className="flex flex-col items-center gap-2">
+                <div className={`text-5xl font-black tabular-nums ${jokerNotifCountdown <= 2 ? 'text-purple-600 animate-pulse' : 'text-purple-400'}`}>
+                  {jokerNotifCountdown}
+                </div>
+                <p className="text-xs text-ink/40">Weiter in {jokerNotifCountdown} Sek…</p>
+                {effectiveIsHost && (
+                  <button
+                    disabled={isProcessing}
+                    onClick={async () => {
+                      setIsProcessing(true);
+                      try { await dismissJokerNotification(pin); } catch (e) { console.error(e); } finally { setIsProcessing(false); }
+                    }}
+                    className="mt-1 px-6 py-2 bg-purple-600 text-white rounded-xl font-semibold text-sm hover:bg-purple-700 disabled:opacity-50 transition-colors"
+                  >
+                    ⏩ Überspringen
+                  </button>
+                )}
+              </div>
             </div>
           </main>
         );
