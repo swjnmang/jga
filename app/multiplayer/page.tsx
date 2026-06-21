@@ -923,9 +923,9 @@ function MultiplayerLobbyContent() {
           </div>
 
           {/* Host Info */}
-          <div className="rounded-lg bg-green-100/20 border-2 border-green-500 p-4 space-y-2">
-            <p className="text-sm font-semibold text-green-700">👑 Du bist der Spielleiter</p>
-            <p className="text-sm text-green-600">
+          <div className="rounded-lg bg-slate-900/10 border-2 border-orange-500 p-4 space-y-2">
+            <p className="text-sm font-semibold text-orange-600">👑 Du bist der Spielleiter</p>
+            <p className="text-sm text-gray-700">
               Du leitest das Spiel, bestätigst Buttons und verwaltest die Punkte. Du spielst nicht mit, kannst dich aber nachher mit einem anderen Endgerät einklinken.
             </p>
           </div>
