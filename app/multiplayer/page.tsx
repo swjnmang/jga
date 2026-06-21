@@ -221,6 +221,7 @@ function MultiplayerLobbyContent() {
     setLoading(true);
     setError(null);
 
+    try {
       // Filter und shuffle Karten basierend auf Settings
       const filteredCards = cards.filter((card: any) => {
         if (!settings.categories.includes(card.category)) return false;
@@ -844,6 +845,8 @@ function MultiplayerLobbyContent() {
       </div>
     </div>
   );
+
+  return (
     <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
       <div className="text-center space-y-2">
         <h1 className="text-3xl sm:text-4xl font-display">Multiplayer</h1>
