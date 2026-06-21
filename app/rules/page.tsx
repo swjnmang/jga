@@ -67,8 +67,8 @@ export default function RulesPage() {
             <section className="space-y-3">
               <h2 className="text-lg font-display font-semibold text-ink">⚡ Flex-Buttons & Flex-Tipps</h2>
               <div className="rounded-2xl bg-ink/5 border border-ink/10 p-5 space-y-3">
-                <p><strong className="text-ink">Flex-Button verdienen:</strong> Wer eine Karte korrekt einordnet <em>und</em> zusätzlich Titel, Interpret, Zitatgeber o.Ä. richtig nennt, bekommt einen <strong className="text-ink">Flex-Button</strong> vom Host gutgeschrieben.</p>
-                <p><strong className="text-ink">Flex-Tipp abgeben:</strong> Sobald die aktive Gruppe ihre Position gewählt hat (aber bevor der Host auswertet), können alle anderen Gruppen einen ihrer Flex-Buttons einsetzen und eine alternative Position tippen.</p>
+                <p><strong className="text-ink">Flex-Button verdienen:</strong> Wer eine Karte korrekt einordnet <em>und</em> zusätzlich Titel, Interpret, Zitatgeber o.Ä. richtig nennt, bekommt einen <strong className="text-ink">Flex-Button</strong> vom Spielleiter gutgeschrieben.</p>
+                <p><strong className="text-ink">Flex-Tipp abgeben:</strong> Sobald die aktive Gruppe ihre Position gewählt hat (aber bevor der Spielleiter auswertet), können alle anderen Gruppen einen ihrer Flex-Buttons einsetzen und eine alternative Position tippen.</p>
                 <p><strong className="text-ink">First-come-first-served:</strong> Jede Position kann nur einmal getippt werden. Wer zuerst tippt, sichert sich die Position.</p>
                 <p><strong className="text-ink">Auswertung:</strong> Liegt die aktive Gruppe falsch, aber ein Flex-Tipp trifft die korrekte Position → diese Gruppe bekommt die Karte. Der eingesetzte Flex-Button ist in jedem Fall verbraucht.</p>
               </div>
@@ -106,7 +106,7 @@ export default function RulesPage() {
               <h2 className="text-lg font-display font-semibold text-ink">Ablauf pro Runde</h2>
               <ol className="space-y-2 list-decimal list-inside">
                 <li>Jede Gruppe spielt reihum. Die aktive Gruppe sieht eine Frage aus der aktuellen Kategorie.</li>
-                <li>Die Gruppe berät sich und gibt dem Host ihre Antwort.</li>
+                <li>Die Gruppe berät sich und gibt dem Spielleiter ihre Antwort.</li>
                 <li>Der Host deckt die Lösung auf und bewertet: richtig oder falsch.</li>
                 <li><strong className="text-ink">Richtig:</strong> +1 Punkt, Kategorie wird als gesammelt markiert (Kategorien-Modus).</li>
                 <li><strong className="text-ink">Falsch:</strong> Kein Punkt. Die nächste Gruppe kommt dran.</li>

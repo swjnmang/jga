@@ -26,7 +26,8 @@ function MultiplayerLobbyContent() {
   const [error, setError] = useState<string | null>(null);
   const [rejoinSession, setRejoinSession] = useState<{ pin: string } | null>(null);
 
-  // Create Game Form
+  // Create Game Form - Wizard Step (1, 2, oder 3)
+  const [createStep, setCreateStep] = useState(1);
   const [groupName, setGroupName] = useState('');
   const [gameMode, setGameMode] = useState<'timeline' | 'trivia'>('timeline');
   const [banMode, setBanMode] = useState(true);
@@ -47,11 +48,12 @@ function MultiplayerLobbyContent() {
     if (typeof window === 'undefined') return '/multiplayer';
     const currentPath = '/multiplayer';
     const params = new URLSearchParams(searchParams.toString());
-    if (mode) params.set('open', mode); // preserve current mode so it's restored after OAuth
+    if (mode) params.set('open', mode);
+    if (createStep) params.set('step', createStep.toString());
     const query = params.toString();
     const fullUrl = query ? `${currentPath}?${query}` : currentPath;
     return encodeURIComponent(fullUrl);
-  }, [searchParams, mode]);
+  }, [searchParams, mode, createStep]);
   
   // Settings State
   const availableCategories = useMemo(() => {
@@ -140,6 +142,12 @@ function MultiplayerLobbyContent() {
       setMode(openFromUrl);
     }
 
+    // Restore step after Spotify redirect
+    const stepFromUrl = searchParams.get('step');
+    if (stepFromUrl) {
+      setCreateStep(parseInt(stepFromUrl, 10));
+    }
+
     // Restore settings saved before Spotify redirect
     if (openFromUrl === 'create') {
       try {
@@ -206,15 +214,12 @@ function MultiplayerLobbyContent() {
       return;
     }
 
+    if (!validateStep3()) {
+      return;
+    }
+
     setLoading(true);
     setError(null);
-
-    try {
-      if (settings.categories.includes('music') && !spotifyLinked) {
-        setError('Bitte zuerst Spotify Premium verbinden (Pflicht für Musik).');
-        setLoading(false);
-        return;
-      }
 
       // Filter und shuffle Karten basierend auf Settings
       const filteredCards = cards.filter((card: any) => {
@@ -410,7 +415,435 @@ function MultiplayerLobbyContent() {
     }
   };
 
-  return (
+  // ===== VALIDIERUNG FÜR WIZARD STEPS =====
+  const validateStep1 = (): boolean => {
+    // Schritt 1: Spielmodus muss gewählt sein
+    return !!gameMode;
+  };
+
+  const validateStep2 = (): boolean => {
+    // Schritt 2: Mindestens eine Kategorie muss ausgewählt sein
+    return settings.categories.length > 0;
+  };
+
+  const validateStep3 = (): boolean => {
+    // Schritt 3: Wenn Musik ausgewählt, dann muss Spotify verbunden sein
+    if (settings.categories.includes('music') && !spotifyLinked) {
+      setError('Bitte verbinde zuerst Spotify Premium (erforderlich für Musik-Kategorien)');
+      return false;
+    }
+    return true;
+  };
+
+  const handleNextStep = (): void => {
+    setError(null);
+    
+    if (createStep === 1 && !validateStep1()) {
+      setError('Bitte wähle einen Spielmodus');
+      return;
+    }
+    if (createStep === 2 && !validateStep2()) {
+      setError('Bitte wähle mindestens eine Kategorie');
+      return;
+    }
+
+    if (createStep < 3) {
+      setCreateStep(createStep + 1);
+    }
+  };
+
+  const handlePrevStep = (): void => {
+    setError(null);
+    if (createStep > 1) {
+      setCreateStep(createStep - 1);
+    }
+  };
+
+  // ===== RENDER FUNCTIONS FOR WIZARD STEPS =====
+  const renderStep1 = () => (
+    <div className="space-y-4">
+      <h2 className="text-lg font-semibold">Schritt 1 von 3: Spielmodus & Grundregeln</h2>
+      
+      <div>
+        <label className="block text-sm font-semibold mb-2">Spielmodus</label>
+        <div className="grid grid-cols-2 gap-2">
+          {(['timeline', 'trivia'] as const).map((m) => (
+            <button
+              key={m}
+              type="button"
+              onClick={() => { setGameMode(m); if (m !== 'trivia') { setBanMode(false); setTriviaWinCondition('categories'); } }}
+              className={`px-4 py-3 rounded-lg border-2 transition-colors ${
+                gameMode === m
+                  ? 'border-ink bg-ink text-inkDark'
+                  : 'border-ink/30 hover:border-ink/60'
+              }`}
+            >
+              {m === 'timeline' ? '🔢 Timeline' : '🧠 Trivia'}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Modus-Beschreibung & Spezifische Einstellungen */}
+      {gameMode === 'trivia' && (
+        <div className="space-y-3 border-t pt-4">
+          <p className="text-sm text-ink/70">
+            🧠 <strong>Trivia</strong> – Klassische Quizfragen aus verschiedenen Kategorien. Jede Gruppe muss mindestens eine Frage pro Kategorie korrekt beantworten, um zu gewinnen.
+          </p>
+          
+          {/* Ban-Modus */}
+          <button
+            type="button"
+            onClick={() => setBanMode(v => !v)}
+            className="w-full flex items-start gap-3 rounded-xl border-2 border-ink/20 bg-ink/5 hover:bg-ink/10 transition-colors px-4 py-3 text-left"
+          >
+            <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+              banMode ? 'bg-green-600 border-green-600' : 'border-ink/40 bg-transparent'
+            }`}>
+              {banMode && (
+                <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="1,5 4.5,9 11,1" />
+                </svg>
+              )}
+            </span>
+            <span>
+              <span className="text-sm font-semibold block">🚫 Ban-Modus aktivieren</span>
+              <span className="text-xs text-ink/60">Gruppen können vor Spielbeginn jeweils eine Kategorie sperren.</span>
+            </span>
+          </button>
+
+          {/* Joker-Modus */}
+          <button
+            type="button"
+            onClick={() => setJokersEnabled(v => !v)}
+            className="w-full flex items-start gap-3 rounded-xl border-2 border-ink/20 bg-ink/5 hover:bg-ink/10 transition-colors px-4 py-3 text-left"
+          >
+            <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+              jokersEnabled ? 'bg-green-600 border-green-600' : 'border-ink/40 bg-transparent'
+            }`}>
+              {jokersEnabled && (
+                <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="1,5 4.5,9 11,1" />
+                </svg>
+              )}
+            </span>
+            <span>
+              <span className="text-sm font-semibold block">🃏 Joker aktivieren</span>
+              <span className="text-xs text-ink/60">Jede Gruppe erhält 4 Joker: Neue Frage, NEXT, Würfeln und STEAL.</span>
+            </span>
+          </button>
+
+          {/* Gewinnbedingung */}
+          <div className="space-y-2">
+            <p className="text-sm font-semibold">Gewinnbedingung</p>
+            <div className="grid grid-cols-1 gap-2">
+              {(['categories', 'points'] as const).map((wc) => (
+                <button
+                  key={wc}
+                  type="button"
+                  onClick={() => setTriviaWinCondition(wc)}
+                  className={`flex items-start gap-3 rounded-xl border-2 px-4 py-3 text-left transition-colors ${
+                    triviaWinCondition === wc
+                      ? 'border-ink bg-ink/10'
+                      : 'border-ink/20 bg-ink/5 hover:bg-ink/10'
+                  }`}
+                >
+                  <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors ${
+                    triviaWinCondition === wc ? 'border-ink' : 'border-ink/40'
+                  }`}>
+                    {triviaWinCondition === wc && <span className="w-2.5 h-2.5 rounded-full bg-ink block" />}
+                  </span>
+                  <span>
+                    {wc === 'categories' ? (
+                      <>
+                        <span className="text-sm font-semibold block">🏶 Kategorien sammeln</span>
+                        <span className="text-xs text-ink/60">Eine Gruppe gewinnt, wenn sie aus jeder Kategorie mindestens eine Frage richtig beantwortet.</span>
+                      </>
+                    ) : (
+                      <>
+                        <span className="text-sm font-semibold block">🏆 Meiste Punkte gewinnen</span>
+                        <span className="text-xs text-ink/60">Pro richtige Antwort gibt es einen Punkt.</span>
+                      </>
+                    )}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {gameMode === 'timeline' && (
+        <div className="space-y-3 border-t pt-4">
+          <p className="text-sm text-ink/70">
+            🔢 <strong>Timeline</strong> – Ereignisse müssen in die richtige chronologische Reihenfolge gebracht werden.
+          </p>
+          <div>
+            <label className="block text-sm font-semibold mb-2">🏆 Karten zum Gewinnen: <span className="text-ink">{timelineWinTarget}</span></label>
+            <div className="flex items-center gap-3">
+              <button type="button" onClick={() => setTimelineWinTarget(v => Math.max(8, v - 1))} className="w-9 h-9 rounded-lg border-2 border-ink/30 text-lg font-bold hover:bg-ink/10 flex items-center justify-center">−</button>
+              <input
+                type="range" min={8} max={20} value={timelineWinTarget}
+                onChange={e => setTimelineWinTarget(Number(e.target.value))}
+                className="flex-1 accent-ink"
+              />
+              <button type="button" onClick={() => setTimelineWinTarget(v => Math.min(20, v + 1))} className="w-9 h-9 rounded-lg border-2 border-ink/30 text-lg font-bold hover:bg-ink/10 flex items-center justify-center">+</button>
+            </div>
+            <div className="flex justify-between text-xs text-ink/40 mt-1 px-1"><span>8</span><span>20</span></div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+
+  const renderStep2 = () => (
+    <div className="space-y-4">
+      <h2 className="text-lg font-semibold">Schritt 2 von 3: Inhalte auswählen</h2>
+
+      {/* Schwierigkeitsgrade */}
+      <div>
+        <label className="block text-sm font-semibold mb-2">Schwierigkeitsgrade</label>
+        <div className="grid grid-cols-3 gap-2">
+          {(['leicht', 'mittel', 'schwer'] as Difficulty[]).map((diff) => {
+            const checked = settings.difficulties.includes(diff);
+            return (
+              <button
+                key={diff}
+                onClick={() => toggleDifficulty(diff)}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg border border-ink/20 hover:bg-ink/5 transition-colors text-sm"
+              >
+                <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                  checked ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
+                }`}>
+                  {checked && (
+                    <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="1,5 4.5,9 11,1" />
+                    </svg>
+                  )}
+                </span>
+                <span>{diff.charAt(0).toUpperCase() + diff.slice(1)}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Kategorien */}
+      <div>
+        <label className="block text-sm font-semibold mb-2">
+          Kategorien auswählen
+        </label>
+        <div className="grid grid-cols-3 gap-2">
+          {availableCategories.map((cat) => {
+            const isActive = (settings.categoryWeights[cat] || 0) > 0;
+            const isDisabled = cat === 'image';
+            const isLocked = cat === 'schaetzfragen';
+            
+            if (isDisabled) {
+              return (
+                <div
+                  key={cat}
+                  className="flex items-center gap-2 py-1.5 px-2 rounded-lg text-left w-full opacity-40 cursor-not-allowed"
+                  title="Demnächst verfügbar"
+                >
+                  <span className="flex-shrink-0 w-5 h-5 rounded border-2 border-ink/20 bg-transparent flex items-center justify-center" />
+                  <span className="text-sm font-medium">{catIcon(cat)} {catLabelMeta(cat)}</span>
+                </div>
+              );
+            }
+            
+            if (isLocked) {
+              return (
+                <div
+                  key={cat}
+                  className="flex items-center gap-2 py-1.5 px-2 rounded-lg text-left w-full cursor-not-allowed"
+                  title="Schätzfragen sind immer aktiv"
+                >
+                  <span className="flex-shrink-0 w-5 h-5 rounded border-2 bg-white border-white flex items-center justify-center">
+                    <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="1,5 4.5,9 11,1" />
+                    </svg>
+                  </span>
+                  <span className="text-sm font-medium">{catIcon(cat)} {catLabelMeta(cat)}</span>
+                  <span className="text-xs font-semibold text-white/70 ml-auto">Pflicht</span>
+                </div>
+              );
+            }
+            
+            return (
+              <button
+                key={cat}
+                onClick={() => toggleCategory(cat)}
+                className="flex items-center gap-2 cursor-pointer py-1.5 px-2 rounded-lg hover:bg-ink/5 transition-colors text-left w-full"
+              >
+                <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                  isActive ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
+                }`}>
+                  {isActive && (
+                    <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="1,5 4.5,9 11,1" />
+                    </svg>
+                  )}
+                </span>
+                <span className="text-sm font-medium">{catIcon(cat)} {catLabelMeta(cat)}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Musik-Genres */}
+      {settings.categories.includes('music') && (
+        <div>
+          <label className="block text-sm font-semibold mb-2">
+            🎵 Musik-Genres
+            <span className="text-xs text-ink/60 ml-1">(nur für Musikfragen)</span>
+          </label>
+          <div className="grid grid-cols-3 gap-1">
+            {[
+              { key: 'pop', label: 'Pop' },
+              { key: 'rock', label: 'Rock' },
+              { key: 'metal', label: 'Metal' },
+              { key: 'hiphop', label: 'Hip-Hop' },
+              { key: 'rnb', label: 'R&B / Soul' },
+              { key: 'electronic', label: 'Electronic' },
+              { key: 'schlagerparty', label: 'Schlager & Party' },
+            ].map(({ key: genre, label: genreLabel }) => {
+              const checked = settings.genres.includes(genre as GenreTag);
+              return (
+                <button
+                  key={genre}
+                  onClick={() => toggleGenre(genre as GenreTag)}
+                  className="flex items-center gap-2 py-1.5 px-2 rounded-lg border border-ink/20 hover:bg-ink/5 transition-colors text-sm text-left"
+                >
+                  <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                    checked ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
+                  }`}>
+                    {checked && (
+                      <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="1,5 4.5,9 11,1" />
+                      </svg>
+                    )}
+                  </span>
+                  {genreLabel}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Jahrzehnte */}
+      {settings.categories.includes('music') && availableDecades.length > 0 && (
+        <div>
+          <label className="block text-sm font-semibold mb-2">
+            📅 Jahrzehnte
+            <span className="text-xs text-ink/60 ml-1">(welche Jahrzehnte spielen?)</span>
+          </label>
+          <div className="grid grid-cols-3 gap-1">
+            {availableDecades.map((decade) => {
+              const checked = settings.decades.includes(decade);
+              return (
+                <button
+                  key={decade}
+                  onClick={() => toggleDecade(decade)}
+                  className="flex items-center gap-2 py-1.5 px-2 rounded-lg border border-ink/20 hover:bg-ink/5 transition-colors text-sm text-left"
+                >
+                  <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                    checked ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
+                  }`}>
+                    {checked && (
+                      <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="1,5 4.5,9 11,1" />
+                      </svg>
+                    )}
+                  </span>
+                  {decadeLabel(decade)}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+
+  const renderStep3 = () => (
+    <div className="space-y-4">
+      <h2 className="text-lg font-semibold">Schritt 3 von 3: Feintuning & Bestätigung</h2>
+
+      {/* Zeit pro Frage */}
+      <div>
+        <label className="block text-sm font-semibold mb-2">
+          ⏱️ Zeit pro Frage
+          <span className="text-xs text-ink/60 ml-1">({(settings.timerSeconds / 60).toFixed(1)} min)</span>
+        </label>
+        <div className="flex items-center gap-4">
+          <input
+            type="range"
+            min="0.5"
+            max="5"
+            step="0.5"
+            defaultValue={settings.timerSeconds / 60}
+            onChange={(e) => updateTimerMinutes(e.target.value)}
+            className="flex-1 accent-ink"
+          />
+          <span className="text-sm font-semibold min-w-16 text-right">
+            {(settings.timerSeconds / 60).toFixed(1)} min
+          </span>
+        </div>
+        <div className="text-xs text-ink/60 mt-2">0:30 - 5:00</div>
+      </div>
+
+      {/* Spotify Info & Login */}
+      {settings.categories.includes('music') && (
+        <div className="rounded-lg border-2 border-blue-300 bg-blue-50/50 p-4 space-y-3">
+          <div>
+            <p className="text-xs uppercase tracking-wide text-blue-600 mb-2">🎵 Spotify Premium erforderlich</p>
+            <h3 className="text-sm font-semibold text-blue-900 mb-1">Musik-Kategorien aktiviert</h3>
+            <p className="text-sm text-blue-800">Du hast die Kategorie Musik ausgewählt. Dies erfordert eine aktive Spotify Premium Verbindung zum Abspielen von Musikausschnitten.</p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {spotifyLinked ? (
+              <div className="flex items-center gap-2 bg-green-100 text-green-700 px-3 py-2 rounded-lg text-sm font-semibold">
+                <span>✓ Spotify verbunden</span>
+              </div>
+            ) : (
+              <a
+                href={`/api/spotify/authorize?return=${spotifyReturnUrl}`}
+                className="rounded-lg bg-[#1DB954] hover:bg-[#17a74a] text-white px-4 py-2 text-sm font-semibold transition-colors"
+                onClick={() => {
+                  try {
+                    sessionStorage.setItem('jga_draft_settings', JSON.stringify({
+                      settings,
+                      gameMode,
+                      banMode,
+                      triviaWinCondition,
+                      timelineWinTarget,
+                      createStep,
+                    }));
+                  } catch { /* ignore */ }
+                }}
+              >
+                Spotify-Login starten
+              </a>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Zusammenfassung */}
+      <div className="rounded-lg border-2 border-ink/20 bg-ink/5 p-4 space-y-2">
+        <p className="text-xs uppercase tracking-wide text-ink/60 mb-2">Zusammenfassung</p>
+        <div className="text-sm space-y-1">
+          <div><span className="font-semibold">Modus:</span> {gameMode === 'timeline' ? '🔢 Timeline' : '🧠 Trivia'}</div>
+          <div><span className="font-semibold">Kategorien:</span> {settings.categories.map(c => catLabelMeta(c)).join(', ')}</div>
+          <div><span className="font-semibold">Schwierigkeit:</span> {settings.difficulties.join(', ')}</div>
+          <div><span className="font-semibold">Zeit/Frage:</span> {(settings.timerSeconds / 60).toFixed(1)} min</div>
+        </div>
+      </div>
+    </div>
+  );
     <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
       <div className="text-center space-y-2">
         <h1 className="text-3xl sm:text-4xl font-display">Multiplayer</h1>
@@ -446,7 +879,7 @@ function MultiplayerLobbyContent() {
       {!mode && (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <button
-            onClick={() => setMode('create')}
+            onClick={() => { setMode('create'); setCreateStep(1); }}
             className="card-surface rounded-2xl p-8 space-y-4 hover:bg-ink/5 transition-colors"
           >
             <div className="text-5xl">🎮</div>
@@ -469,6 +902,7 @@ function MultiplayerLobbyContent() {
         </div>
       )}
 
+      {/* CREATE GAME - 3 STEP WIZARD */}
       {mode === 'create' && (
         <div className="card-surface rounded-2xl p-6 space-y-6">
           <div className="flex items-center justify-between">
@@ -476,382 +910,75 @@ function MultiplayerLobbyContent() {
             <button
               onClick={() => {
                 setMode(null);
+                setCreateStep(1);
                 setError(null);
               }}
               className="text-ink/60 hover:text-ink"
             >
-              Zurück
+              ✕
             </button>
           </div>
 
-          {/* Host Info – direkt unter Überschrift */}
+          {/* Host Info */}
           <div className="rounded-lg bg-green-100/20 border-2 border-green-500 p-4 space-y-2">
             <p className="text-sm font-semibold text-green-700">👑 Du bist der Spielleiter</p>
             <p className="text-sm text-green-600">
-              Als Spielleiter spielst du nicht mit, sondern leitest das Spiel. Du steuerst den Ablauf, bestätigst Flex-Buttons und verwaltest die Punkte. Wenn du selbst mitspielen möchtest, kannst du dich anschließend mit einem anderen Endgerät in deine Lobby einklinken.
+              Du leitest das Spiel, bestätigst Buttons und verwaltest die Punkte. Du spielst nicht mit, kannst dich aber nachher mit einem anderen Endgerät einklinken.
             </p>
           </div>
 
+          {/* Progress Indicator */}
+          <div className="flex gap-2">
+            {[1, 2, 3].map((step) => (
+              <div
+                key={step}
+                className={`flex-1 h-2 rounded-full transition-colors ${
+                  step <= createStep ? 'bg-ink' : 'bg-ink/20'
+                }`}
+              />
+            ))}
+          </div>
+
+          {/* Step Content */}
           <div className="space-y-4">
-            <div>
-              <label className="block text-sm font-semibold mb-2">Spielmodus</label>
-              <div className="grid grid-cols-2 gap-2">
-                {(['timeline', 'trivia'] as const).map((m) => (
-                  <button
-                    key={m}
-                    type="button"
-                    onClick={() => { setGameMode(m); if (m !== 'trivia') { setBanMode(false); setTriviaWinCondition('categories'); } }}
-                    className={`px-4 py-3 rounded-lg border-2 transition-colors ${
-                      gameMode === m
-                        ? 'border-ink bg-ink text-inkDark'
-                        : 'border-ink/30 hover:border-ink/60'
-                    }`}
-                  >
-                    {m === 'timeline' ? '🔢 Timeline' : '🧠 Trivia'}
-                  </button>
-                ))}
-              </div>
-              {/* Modus-Beschreibung */}
-              {gameMode === 'trivia' && (
-                <>
-                  <p className="mt-2 text-sm text-ink/70">
-                    🧠 <strong>Trivia</strong> – Klassische Quizfragen aus verschiedenen Kategorien. Jede Gruppe muss mindestens eine Frage pro Kategorie korrekt beantworten, um zu gewinnen. Schätzfragen, Musik, Bilder und mehr warten auf euch.
-                  </p>
-                  {/* Ban-Modus */}
-                  <button
-                    type="button"
-                    onClick={() => setBanMode(v => !v)}
-                    className="mt-3 w-full flex items-start gap-3 rounded-xl border-2 border-ink/20 bg-ink/5 hover:bg-ink/10 transition-colors px-4 py-3 text-left"
-                  >
-                    <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-                      banMode ? 'bg-green-600 border-green-600' : 'border-ink/40 bg-transparent'
-                    }`}>
-                      {banMode && (
-                        <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                          <polyline points="1,5 4.5,9 11,1" />
-                        </svg>
-                      )}
-                    </span>
-                    <span>
-                      <span className="text-sm font-semibold block">🚫 Ban-Modus aktivieren</span>
-                      <span className="text-xs text-ink/60">Wenn der Ban-Modus aktiviert ist, können Gruppen vor Spielbeginn jeweils eine Kategorie sperren.</span>
-                    </span>
-                  </button>
-                  {/* Joker-Modus */}
-                  <button
-                    type="button"
-                    onClick={() => setJokersEnabled(v => !v)}
-                    className="mt-3 w-full flex items-start gap-3 rounded-xl border-2 border-ink/20 bg-ink/5 hover:bg-ink/10 transition-colors px-4 py-3 text-left"
-                  >
-                    <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-                      jokersEnabled ? 'bg-green-600 border-green-600' : 'border-ink/40 bg-transparent'
-                    }`}>
-                      {jokersEnabled && (
-                        <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                          <polyline points="1,5 4.5,9 11,1" />
-                        </svg>
-                      )}
-                    </span>
-                    <span>
-                      <span className="text-sm font-semibold block">🃏 Joker aktivieren</span>
-                      <span className="text-xs text-ink/60">Jede Gruppe erhält 4 Joker: Neue Frage, NEXT, Würfeln und STEAL (Frage klauen). Nicht bei Schätzfragen verfügbar.</span>
-                    </span>
-                  </button>
-                  {/* Gewinnbedingung */}
-                  <div className="mt-3 space-y-2">
-                    <p className="text-sm font-semibold">Gewinnbedingung</p>
-                    <div className="grid grid-cols-1 gap-2">
-                      {(['categories', 'points'] as const).map((wc) => (
-                        <button
-                          key={wc}
-                          type="button"
-                          onClick={() => setTriviaWinCondition(wc)}
-                          className={`flex items-start gap-3 rounded-xl border-2 px-4 py-3 text-left transition-colors ${
-                            triviaWinCondition === wc
-                              ? 'border-ink bg-ink/10'
-                              : 'border-ink/20 bg-ink/5 hover:bg-ink/10'
-                          }`}
-                        >
-                          <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors ${
-                            triviaWinCondition === wc ? 'border-ink' : 'border-ink/40'
-                          }`}>
-                            {triviaWinCondition === wc && <span className="w-2.5 h-2.5 rounded-full bg-ink block" />}
-                          </span>
-                          <span>
-                            {wc === 'categories' ? (
-                              <>
-                                <span className="text-sm font-semibold block">🏶 Kategorien sammeln</span>
-                                <span className="text-xs text-ink/60">Eine Gruppe gewinnt, sobald sie aus jeder Kategorie mindestens eine Frage korrekt beantwortet hat.</span>
-                              </>
-                            ) : (
-                              <>
-                                <span className="text-sm font-semibold block">🏆 Meiste Punkte gewinnen</span>
-                                <span className="text-xs text-ink/60">Pro richtige Antwort gibt es einen Punkt. Die Gruppe mit den meisten Punkten am Ende gewinnt.</span>
-                              </>
-                            )}
-                          </span>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </>
-              )}
-              {gameMode === 'timeline' && (
-                <div className="mt-2 space-y-3">
-                  <p className="text-sm text-ink/70">
-                    🔢 <strong>Timeline</strong> – Ereignisse und Fakten müssen in die richtige chronologische Reihenfolge gebracht werden. Die erste Gruppe mit <strong>{timelineWinTarget}</strong> korrekt platzierten Karten gewinnt.
-                  </p>
-                  <div>
-                    <label className="block text-sm font-semibold mb-2">🏆 Karten zum Gewinnen: <span className="text-ink">{timelineWinTarget}</span></label>
-                    <div className="flex items-center gap-3">
-                      <button type="button" onClick={() => setTimelineWinTarget(v => Math.max(8, v - 1))} className="w-9 h-9 rounded-lg border-2 border-ink/30 text-lg font-bold hover:bg-ink/10 flex items-center justify-center">−</button>
-                      <input
-                        type="range" min={8} max={20} value={timelineWinTarget}
-                        onChange={e => setTimelineWinTarget(Number(e.target.value))}
-                        className="flex-1 accent-ink"
-                      />
-                      <button type="button" onClick={() => setTimelineWinTarget(v => Math.min(20, v + 1))} className="w-9 h-9 rounded-lg border-2 border-ink/30 text-lg font-bold hover:bg-ink/10 flex items-center justify-center">+</button>
-                    </div>
-                    <div className="flex justify-between text-xs text-ink/40 mt-1 px-1"><span>8</span><span>20</span></div>
-                  </div>
-                </div>
-              )}
+            {createStep === 1 && renderStep1()}
+            {createStep === 2 && renderStep2()}
+            {createStep === 3 && renderStep3()}
+          </div>
+
+          {/* Error Message */}
+          {error && (
+            <div className="bg-red-100 border-2 border-red-400 text-red-700 px-4 py-3 rounded-lg">
+              {error}
             </div>
+          )}
 
-            {/* Schwierigkeitsgrade */}
-            <div>
-              <label className="block text-sm font-semibold mb-2">Schwierigkeitsgrade</label>
-              <div className="grid grid-cols-3 gap-2">
-                {(['leicht', 'mittel', 'schwer'] as Difficulty[]).map((diff) => {
-                  const checked = settings.difficulties.includes(diff);
-                  return (
-                    <button
-                      key={diff}
-                      onClick={() => toggleDifficulty(diff)}
-                      className="flex items-center gap-2 px-3 py-2 rounded-lg border border-ink/20 hover:bg-ink/5 transition-colors text-sm"
-                    >
-                      <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-                        checked ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
-                      }`}>
-                        {checked && (
-                          <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                            <polyline points="1,5 4.5,9 11,1" />
-                          </svg>
-                        )}
-                      </span>
-                      <span>{diff.charAt(0).toUpperCase() + diff.slice(1)}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Kategorien */}
-            <div>
-              <label className="block text-sm font-semibold mb-2">
-                Kategorien auswählen
-              </label>
-              <div className="grid grid-cols-3 gap-2">
-                {availableCategories.map((cat) => {
-                  const isActive = (settings.categoryWeights[cat] || 0) > 0;
-                  const isDisabled = cat === 'image';
-                  const isLocked = cat === 'schaetzfragen';
-                  if (isDisabled) {
-                    return (
-                      <div
-                        key={cat}
-                        className="flex items-center gap-2 py-1.5 px-2 rounded-lg text-left w-full opacity-40 cursor-not-allowed"
-                        title="Demnächst verfügbar"
-                      >
-                        <span className="flex-shrink-0 w-5 h-5 rounded border-2 border-ink/20 bg-transparent flex items-center justify-center" />
-                        <span className="text-sm font-medium">{catIcon(cat)} {catLabelMeta(cat)}</span>
-                      </div>
-                    );
-                  }
-                  if (isLocked) {
-                    return (
-                      <div
-                        key={cat}
-                        className="flex items-center gap-2 py-1.5 px-2 rounded-lg text-left w-full cursor-not-allowed"
-                        title="Schätzfragen sind immer aktiv – sie ermöglichen allen Gruppen Joker zu verdienen."
-                      >
-                        <span className="flex-shrink-0 w-5 h-5 rounded border-2 bg-white border-white flex items-center justify-center">
-                          <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                            <polyline points="1,5 4.5,9 11,1" />
-                          </svg>
-                        </span>
-                        <span className="text-sm font-medium">{catIcon(cat)} {catLabelMeta(cat)}</span>
-                        <span className="text-xs font-semibold text-white/70 ml-auto">Pflicht</span>
-                      </div>
-                    );
-                  }
-                  return (
-                    <button
-                      key={cat}
-                      onClick={() => toggleCategory(cat)}
-                      className="flex items-center gap-2 cursor-pointer py-1.5 px-2 rounded-lg hover:bg-ink/5 transition-colors text-left w-full"
-                    >
-                      <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-                        isActive ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
-                      }`}>
-                        {isActive && (
-                          <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                            <polyline points="1,5 4.5,9 11,1" />
-                          </svg>
-                        )}
-                      </span>
-                        <span className="text-sm font-medium">{catIcon(cat)} {catLabelMeta(cat)}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Musik-Genres */}
-            {settings.categories.includes('music') && (
-              <div>
-                <label className="block text-sm font-semibold mb-2">
-                  Musik-Genres
-                  <span className="text-xs text-ink/60 ml-1">Wirkt nur auf Musikfragen</span>
-                </label>
-                <div className="grid grid-cols-3 gap-1">
-                  {[
-                    { key: 'pop', label: 'Pop' },
-                    { key: 'rock', label: 'Rock' },
-                    { key: 'metal', label: 'Metal' },
-                    { key: 'hiphop', label: 'Hip-Hop' },
-                    { key: 'rnb', label: 'R&B / Soul' },
-                    { key: 'electronic', label: 'Electronic' },
-                    { key: 'schlagerparty', label: 'Schlager & Party' },
-                  ].map(({ key: genre, label: genreLabel }) => {
-                    const checked = settings.genres.includes(genre as GenreTag);
-                    return (
-                      <button
-                        key={genre}
-                        onClick={() => toggleGenre(genre as GenreTag)}
-                        className="flex items-center gap-2 py-1.5 px-2 rounded-lg border border-ink/20 hover:bg-ink/5 transition-colors text-sm text-left"
-                      >
-                        <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-                          checked ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
-                        }`}>
-                          {checked && (
-                            <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                              <polyline points="1,5 4.5,9 11,1" />
-                            </svg>
-                          )}
-                        </span>
-                        {genreLabel}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-
-            {/* Jahrzehnte */}
-            {settings.categories.includes('music') && availableDecades.length > 0 && (
-              <div>
-                <label className="block text-sm font-semibold mb-2">
-                  Jahrzehnte
-                  <span className="text-xs text-ink/60 ml-1">Welche Jahrzehnte sollen gespielt werden?</span>
-                </label>
-                <div className="grid grid-cols-3 gap-1">
-                  {availableDecades.map((decade) => {
-                    const checked = settings.decades.includes(decade);
-                    return (
-                      <button
-                        key={decade}
-                        onClick={() => toggleDecade(decade)}
-                        className="flex items-center gap-2 py-1.5 px-2 rounded-lg border border-ink/20 hover:bg-ink/5 transition-colors text-sm text-left"
-                      >
-                        <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-                          checked ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
-                        }`}>
-                          {checked && (
-                            <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                              <polyline points="1,5 4.5,9 11,1" />
-                            </svg>
-                          )}
-                        </span>
-                        {decadeLabel(decade)}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-
-            {/* Zeit pro Frage */}
-            <div>
-              <label className="block text-sm font-semibold mb-2">
-                Zeit pro Frage
-                <span className="text-xs text-ink/60 ml-1">Standard: {(settings.timerSeconds / 60).toFixed(1)} min</span>
-              </label>
-              <div className="flex items-center gap-4">
-                <input
-                  type="range"
-                  min="0.5"
-                  max="5"
-                  step="0.5"
-                  defaultValue={settings.timerSeconds / 60}
-                  onChange={(e) => updateTimerMinutes(e.target.value)}
-                  className="flex-1 accent-ink"
-                />
-                <span className="text-sm font-semibold min-w-16 text-right">
-                  {(settings.timerSeconds / 60).toFixed(1)} min
-                </span>
-              </div>
-              <div className="text-xs text-ink/60 mt-2">0:30 - 5:00</div>
-            </div>
-
-            {settings.categories.includes('music') && (
-              <div className="rounded-lg border-2 border-ink/20 bg-ink/5 p-4 space-y-3">
-                <div>
-                  <p className="text-xs uppercase tracking-wide text-ink/60 mb-2">Spotify</p>
-                  <h3 className="text-sm font-semibold mb-1">Spotify Premium erforderlich</h3>
-                  <p className="text-sm text-ink/70">Musik-Kategorien benötigen eine aktive Spotify Premium Verbindung.</p>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {spotifyLinked ? (
-                    <div className="flex items-center gap-2 bg-green-100 text-green-700 px-3 py-2 rounded-lg text-sm">
-                      <span>✓ Verbunden</span>
-                    </div>
-                  ) : (
-                    <a
-                      href={`/api/spotify/authorize?return=${spotifyReturnUrl}`}
-                      className="rounded-lg bg-[#1DB954] hover:bg-[#17a74a] text-white px-4 py-2 text-sm font-semibold transition-colors"
-                      onClick={() => {
-                        try {
-                          sessionStorage.setItem('jga_draft_settings', JSON.stringify({
-                            settings,
-                            gameMode,
-                            banMode,
-                            triviaWinCondition,
-                            timelineWinTarget,
-                          }));
-                        } catch { /* ignore */ }
-                      }}
-                    >
-                      Spotify-Login starten
-                    </a>
-                  )}
-                </div>
-              </div>
-            )}
-
-            {error && (
-              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-                {error}
-              </div>
-            )}
-
+          {/* Navigation Buttons */}
+          <div className="flex gap-3 pt-4 border-t">
             <button
-              onClick={handleCreateGame}
-              disabled={loading}
-              className="w-full bg-ink text-inkDark py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50"
+              onClick={handlePrevStep}
+              disabled={createStep === 1}
+              className="px-4 py-3 rounded-lg border-2 border-ink/30 hover:border-ink/60 disabled:opacity-40 disabled:cursor-not-allowed font-semibold transition-colors"
             >
-              {loading ? 'Erstelle Spiel...' : 'Spiel erstellen'}
+              ← Zurück
             </button>
+            
+            {createStep < 3 ? (
+              <button
+                onClick={handleNextStep}
+                className="flex-1 px-4 py-3 rounded-lg bg-ink text-inkDark font-semibold hover:opacity-90 transition-opacity"
+              >
+                Weiter →
+              </button>
+            ) : (
+              <button
+                onClick={handleCreateGame}
+                disabled={loading}
+                className="flex-1 px-4 py-3 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 disabled:opacity-50 transition-colors"
+              >
+                {loading ? '🔄 Erstelle Spiel...' : '✓ Spiel erstellen'}
+              </button>
+            )}
           </div>
         </div>
       )}
@@ -867,7 +994,7 @@ function MultiplayerLobbyContent() {
               }}
               className="text-ink/60 hover:text-ink"
             >
-              Zurück
+              ✕
             </button>
           </div>
 
