@@ -116,18 +116,25 @@ export default function MultiplayerGamePage() {
     });
   }, [pin]);
 
-  // Joker-Notification Auto-Timer (5 Sek. → dismiss)
+  // Joker-Notification Auto-Timer (5 Sek. → dismiss). Gilt auch für den
+  // Würfel-Joker, sobald die Würfel-Animation fertig ist und das Ergebnis steht.
+  const diceResultShown = !!(
+    (game as GameSession | null)?.jokerDicePending &&
+    (game as GameSession | null)?.jokerDiceResult != null &&
+    !diceAnimating
+  );
   const [jokerNotifCountdown, setJokerNotifCountdown] = useState<number>(5);
   const jokerNotifDismissedRef = useRef(false);
   useEffect(() => {
     const notif = (game as GameSession | null)?.jokerNotification;
-    const isAutoTimerNotif = notif?.type === 'steal' || notif?.type === 'newQuestion' || notif?.type === 'next';
+    const isAutoTimerNotif = notif?.type === 'steal' || notif?.type === 'newQuestion' || notif?.type === 'next' || diceResultShown;
     if (!isAutoTimerNotif) {
       setJokerNotifCountdown(5);
       jokerNotifDismissedRef.current = false;
       return;
     }
-    // Reset countdown whenever a fresh notification appears (by timestamp)
+    // Reset countdown whenever a fresh notification appears (by timestamp), or
+    // when the dice result becomes visible (animation finished)
     setJokerNotifCountdown(5);
     jokerNotifDismissedRef.current = false;
     const interval = setInterval(() => {
@@ -141,18 +148,23 @@ export default function MultiplayerGamePage() {
     }, 1000);
     return () => clearInterval(interval);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [(game as GameSession | null)?.jokerNotification?.timestamp]);
+  }, [(game as GameSession | null)?.jokerNotification?.timestamp, diceResultShown]);
 
   // Auto-dismiss wenn Countdown bei 0 — nur Host ruft Firebase-Update auf
   useEffect(() => {
     if (jokerNotifCountdown !== 0) return;
     if (jokerNotifDismissedRef.current) return;
     const notif = (game as GameSession | null)?.jokerNotification;
-    if (!notif) return;
+    if (!notif && !diceResultShown) return;
     jokerNotifDismissedRef.current = true;
     // Nur Host schreibt nach Firebase; andere Clients warten auf den reaktiven Update
-    if ((session as SessionInfo | null)?.isHost || (game as GameSession | null)?.hostId === (session as SessionInfo | null)?.groupId) {
-      dismissJokerNotification(pin).catch(console.error);
+    const isHost = (session as SessionInfo | null)?.isHost || (game as GameSession | null)?.hostId === (session as SessionInfo | null)?.groupId;
+    if (isHost) {
+      if (diceResultShown) {
+        confirmJokerDice(pin).catch(console.error);
+      } else {
+        dismissJokerNotification(pin).catch(console.error);
+      }
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [jokerNotifCountdown]);
@@ -1347,6 +1359,14 @@ export default function MultiplayerGamePage() {
                     <p className="text-3xl font-black">{diceGroup?.score ?? 0} <span className="text-base font-normal text-ink/50">Pkt.</span></p>
                   </div>
 
+                  {/* Auto-Timer */}
+                  <div className="flex flex-col items-center gap-2">
+                    <div className={`text-5xl font-black tabular-nums ${jokerNotifCountdown <= 2 ? 'text-amber-600 animate-pulse' : 'text-amber-500'}`}>
+                      {jokerNotifCountdown}
+                    </div>
+                    <p className="text-xs text-ink/40">Weiter in {jokerNotifCountdown} Sek…</p>
+                  </div>
+
                   {effectiveIsHost ? (
                     <button
                       disabled={isProcessing}
@@ -1356,7 +1376,7 @@ export default function MultiplayerGamePage() {
                       }}
                       className="w-full max-w-xs px-8 py-4 bg-green-600 text-white rounded-2xl font-bold text-lg hover:bg-green-700 disabled:opacity-50 transition-colors shadow-lg"
                     >
-                      ✅ Weiter
+                      ⏩ Überspringen
                     </button>
                   ) : (
                     <p className="text-sm text-ink/50 italic">Warte auf die Spielleitung…</p>
