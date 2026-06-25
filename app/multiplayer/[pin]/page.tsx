@@ -2464,7 +2464,7 @@ export default function MultiplayerGamePage() {
                     {/* Karte */}
                     <div className={`flex-shrink-0 rounded-lg border-2 px-3 py-2 min-w-[110px] ${
                       item.id === game.referenceCard?.id
-                        ? 'border-yellow-500 bg-yellow-100 text-inkDark'
+                        ? 'border-yellow-500 bg-yellow-100 text-yellow-900'
                         : 'border-ink/60 bg-ink/10'
                     }`}>
                       <p className="text-xs font-bold">{item.year}</p>
@@ -2676,7 +2676,7 @@ export default function MultiplayerGamePage() {
                             id={item.id === game.currentCardId ? 'obs-new-card' : undefined}
                             className={`flex-shrink-0 rounded-lg border-2 px-3 py-2 min-w-[110px] ${
                             item.id === game.referenceCard?.id
-                              ? 'border-yellow-500 bg-yellow-100 text-inkDark'
+                              ? 'border-yellow-500 bg-yellow-100 text-yellow-900'
                               : isNewCard
                                 ? 'border-green-500 bg-green-500/15 ring-2 ring-green-400/50'
                                 : 'border-ink/60 bg-ink/10'
