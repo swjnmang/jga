@@ -177,8 +177,11 @@ export async function joinGame(params: JoinGameParams): Promise<{ groupId: strin
     isHost: false,
     completedCategories: [],
     avatar: params.avatar ?? '',
-    jokers: game.jokersEnabled ? { newQuestion: true, next: true, dice: true, steal: true } : undefined,
   };
+
+  if (game.jokersEnabled) {
+    newGroup.jokers = { newQuestion: true, next: true, dice: true, steal: true };
+  }
 
   // Füge Gruppe hinzu
   await update(ref(database!, `games/${params.pin}/groups/${newGroupId}`), newGroup);
