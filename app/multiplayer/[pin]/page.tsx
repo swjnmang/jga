@@ -1389,7 +1389,7 @@ export default function MultiplayerGamePage() {
       }
 
       return (
-        <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+        <main className="relative mx-auto max-w-4xl lg:max-w-6xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
           {/* Header */}
           <div className="text-center space-y-2">
             {activeGroup && (
@@ -2207,7 +2207,7 @@ export default function MultiplayerGamePage() {
     }
 
     return (
-      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-3 sm:py-5 space-y-3">
+      <main className="relative mx-auto max-w-4xl lg:max-w-6xl px-4 sm:px-5 py-3 sm:py-5 space-y-3">
 
         {/* ═══════════════════════════════════════════════════════════
             ERGEBNISSEITE — wird angezeigt sobald Host "Auswertung"
