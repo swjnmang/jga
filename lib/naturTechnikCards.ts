@@ -6,7 +6,7 @@
 
 export const naturTechnikCards: Card[] = [
 
-  { id: 'naturtechnik-easy-001', title: 'Welches Gas atmen Menschen ein, um zu überleben', category: 'natur', year: 0, cue: 'Welches Gas atmen Menschen ein, um zu überleben?', answer: 'Sauerstoff.', difficulty: 'leicht', sources: {}, distractors: ['Stückstoff.', 'Kohlenstoffdioxid.', 'Helium.'] },
+  { id: 'naturtechnik-easy-001', title: 'Welches Gas atmen Menschen ein, um zu überleben', category: 'natur', year: 0, cue: 'Welches Gas atmen Menschen ein, um zu überleben?', answer: 'Sauerstoff.', difficulty: 'leicht', sources: {}, distractors: ['Stickstoff.', 'Kohlenstoffdioxid.', 'Helium.'] },
 
   { id: 'naturtechnik-easy-002', title: 'Wie nennt man das grüne Pigment in Pflanzen, das für die Photosynthese nötig ist', category: 'natur', year: 0, cue: 'Wie nennt man das grüne Pigment in Pflanzen, das für die Photosynthese nötig ist?', answer: 'Chlorophyll.', difficulty: 'leicht', sources: {}, distractors: ['Melanin.', 'Hämoglobin.', 'Karotin.'] },
 
@@ -48,7 +48,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-easy-021', title: 'Wie viele Zahne hat ein erwachsener Mensch normalerweise', category: 'natur', year: 0, cue: 'Wie viele Zahne hat ein erwachsener Mensch normalerweise?', answer: '32 (inklusive Weisheitszahne).', difficulty: 'leicht', sources: {}, distractors: ['28 (ohne Weisheitszähne).', '24 (Milchzähne).', '36 (mit Ersatzzähnen).'] },
 
-  { id: 'naturtechnik-easy-022', title: 'Welches Gas benötigen Pflanzen aus der Luft', category: 'natur', year: 0, cue: 'Welches Gas benötigen Pflanzen aus der Luft?', answer: 'Kohlenstoffdioxid ($CO_2$).', difficulty: 'leicht', sources: {}, distractors: ['Sauerstoff ($O_2$).', 'Stückstoff ($N_2$).', 'Methan ($CH_4$).'] },
+  { id: 'naturtechnik-easy-022', title: 'Welches Gas benötigen Pflanzen aus der Luft', category: 'natur', year: 0, cue: 'Welches Gas benötigen Pflanzen aus der Luft?', answer: 'Kohlenstoffdioxid ($CO_2$).', difficulty: 'leicht', sources: {}, distractors: ['Sauerstoff ($O_2$).', 'Stickstoff ($N_2$).', 'Methan ($CH_4$).'] },
 
   { id: 'naturtechnik-easy-023', title: 'In welcher Einheit wird die Masse meistens gemessen', category: 'natur', year: 0, cue: 'In welcher Einheit wird die Masse meistens gemessen?', answer: 'Kilogramm (kg).', difficulty: 'leicht', sources: {}, distractors: ['Newton (N).', 'Liter (L).', 'Meter (m).'] },
 
@@ -62,7 +62,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-easy-028', title: 'Wofür steht die Abkürzung "PS" bei Motoren', category: 'natur', year: 0, cue: 'Wofür steht die Abkürzung "PS" bei Motoren?', answer: 'Pferdestärke.', difficulty: 'leicht', sources: {}, distractors: ['Motorleistung.', 'Pfundstopp.', 'Power Speed.'] },
 
-  { id: 'naturtechnik-easy-029', title: 'Welches Element ist lebensnotwendig im Wasser enthalten', category: 'natur', year: 0, cue: 'Welches Element ist lebensnotwendig im Wasser enthalten?', answer: 'Wasserstoff und Sauerstoff.', difficulty: 'leicht', sources: {}, distractors: ['Kohlenstoff und Stückstoff.', 'Kalzium und Magnesium.', 'Natrium und Chlor.'] },
+  { id: 'naturtechnik-easy-029', title: 'Welches Element ist lebensnotwendig im Wasser enthalten', category: 'natur', year: 0, cue: 'Welches Element ist lebensnotwendig im Wasser enthalten?', answer: 'Wasserstoff und Sauerstoff.', difficulty: 'leicht', sources: {}, distractors: ['Kohlenstoff und Stickstoff.', 'Kalzium und Magnesium.', 'Natrium und Chlor.'] },
 
   { id: 'naturtechnik-easy-030', title: 'Wie nennt man den Vorgang, wenn flussiges Wasser zu Dampf wird', category: 'natur', year: 0, cue: 'Wie nennt man den Vorgang, wenn flussiges Wasser zu Dampf wird?', answer: 'Verdampfen.', difficulty: 'leicht', sources: {}, distractors: ['Kondensieren.', 'Schmelzen.', 'Sublimieren.'] },
 
@@ -130,7 +130,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-easy-062', title: 'Welches Haustier stammt vom Wolf ab', category: 'natur', year: 0, cue: 'Welches Haustier stammt vom Wolf ab?', answer: 'Der Hund.', difficulty: 'leicht', sources: {}, distractors: ['Die Katze.', 'Der Fuchs.', 'Der Schakal.'] },
 
-  { id: 'naturtechnik-easy-063', title: 'Welches Gas lasst Ballons steigen', category: 'natur', year: 0, cue: 'Welches Gas lasst Ballons steigen?', answer: 'Helium.', difficulty: 'leicht', sources: {}, distractors: ['Wasserstoff.', 'Sauerstoff.', 'Stückstoff.'] },
+  { id: 'naturtechnik-easy-063', title: 'Welches Gas lässt Ballons steigen', category: 'natur', year: 0, cue: 'Welches Gas lässt Ballons steigen?', answer: 'Helium.', difficulty: 'leicht', sources: {}, distractors: ['Wasserstoff.', 'Sauerstoff.', 'Stickstoff.'] },
 
   { id: 'naturtechnik-easy-064', title: 'Wie nennt man Energie aus Erdwärme', category: 'natur', year: 0, cue: 'Wie nennt man Energie aus Erdwärme?', answer: 'Geothermie.', difficulty: 'leicht', sources: {}, distractors: ['Biomasse.', 'Solarenergie.', 'Kernenergie.'] },
 
@@ -158,7 +158,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-easy-076', title: 'Rohstoff für Benzin', category: 'natur', year: 0, cue: 'Rohstoff für Benzin?', answer: 'Erdöl.', difficulty: 'leicht', sources: {}, distractors: ['Erdgas.', 'Kohle.', 'Biomasse.'] },
 
-  { id: 'naturtechnik-easy-077', title: 'Sprudelgas im Wasser', category: 'natur', year: 0, cue: 'Sprudelgas im Wasser?', answer: 'Kohlenstoffdioxid.', difficulty: 'leicht', sources: {}, distractors: ['Sauerstoff.', 'Stückstoff.', 'Wasserstoff.'] },
+  { id: 'naturtechnik-easy-077', title: 'Sprudelgas im Wasser', category: 'natur', year: 0, cue: 'Sprudelgas im Wasser?', answer: 'Kohlenstoffdioxid.', difficulty: 'leicht', sources: {}, distractors: ['Sauerstoff.', 'Stickstoff.', 'Wasserstoff.'] },
 
   { id: 'naturtechnik-easy-078', title: 'Wetterwissenschaft', category: 'natur', year: 0, cue: 'Wetterwissenschaft?', answer: 'Meteorologie.', difficulty: 'leicht', sources: {}, distractors: ['Klimatologie.', 'Geologie.', 'Hydrologie.'] },
 
@@ -188,29 +188,29 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-091', title: 'Welches Metall ist bei Raumtemperatur flüssig', category: 'natur', year: 0, cue: 'Welches Metall ist bei Raumtemperatur flüssig?', answer: 'Quecksilber.', difficulty: 'mittel', sources: {}, distractors: ['Gallium.', 'Cäsium.', 'Indium.'] },
 
-  { id: 'naturtechnik-medium-092', title: 'Wie nennt man das Auge“ eines Hurrikans', category: 'natur', year: 0, cue: 'Wie nennt man das Auge“ eines Hurrikans?', answer: 'Das Zentrum/Auge des Sturms (Bereich niedrigen Drucks).', difficulty: 'mittel', sources: {}, distractors: ['Der Kern des Wirbels.', 'Der Rand des Sturms.', 'Die Wolkenbildung.'] },
+  { id: 'naturtechnik-medium-092', title: 'Wie nennt man das „Auge“ eines Hurrikans', category: 'natur', year: 0, cue: 'Wie nennt man das „Auge“ eines Hurrikans?', answer: 'Das Zentrum/Auge des Sturms (Bereich niedrigen Drucks).', difficulty: 'mittel', sources: {}, distractors: ['Der Kern des Wirbels.', 'Der Rand des Sturms.', 'Die Wolkenbildung.'] },
 
-  { id: 'naturtechnik-medium-093', title: 'Welche Blutgruppe gilt als Universalspender“', category: 'natur', year: 0, cue: 'Welche Blutgruppe gilt als Universalspender“?', answer: 'Blutgruppe Null negativ (0-).', difficulty: 'mittel', sources: {}, distractors: ['Blutgruppe AB positiv.', 'Blutgruppe A negativ.', 'Blutgruppe B positiv.'] },
+  { id: 'naturtechnik-medium-093', title: 'Welche Blutgruppe gilt als „Universalspender“', category: 'natur', year: 0, cue: 'Welche Blutgruppe gilt als „Universalspender“?', answer: 'Blutgruppe Null negativ (0-).', difficulty: 'mittel', sources: {}, distractors: ['Blutgruppe AB positiv.', 'Blutgruppe A negativ.', 'Blutgruppe B positiv.'] },
 
-  { id: 'naturtechnik-medium-094', title: 'Was beschreibt die Einheit "Hertz“ (Hz)', category: 'natur', year: 0, cue: 'Was beschreibt die Einheit "Hertz“ (Hz)?', answer: 'Die Frequenz (Schwingungen pro Sekunde).', difficulty: 'mittel', sources: {}, distractors: ['Die Wellenlänge.', 'Die Amplitude.', 'Die Periode.'] },
+  { id: 'naturtechnik-medium-094', title: 'Was beschreibt die Einheit „Hertz“ (Hz)', category: 'natur', year: 0, cue: 'Was beschreibt die Einheit „Hertz“ (Hz)?', answer: 'Die Frequenz (Schwingungen pro Sekunde).', difficulty: 'mittel', sources: {}, distractors: ['Die Wellenlänge.', 'Die Amplitude.', 'Die Periode.'] },
 
   { id: 'naturtechnik-medium-095', title: 'Wie heißt die wissenschaftliche Lehre von den Lebewesen', category: 'natur', year: 0, cue: 'Wie heißt die wissenschaftliche Lehre von den Lebewesen?', answer: 'Biologie.', difficulty: 'mittel', sources: {}, distractors: ['Zoologie.', 'Botanik.', 'Ökologie.'] },
 
-  { id: 'naturtechnik-medium-096', title: 'Welches Gas macht den größten Teil der Erdatmosphäre aus', category: 'natur', year: 0, cue: 'Welches Gas macht den größten Teil der Erdatmosphäre aus?', answer: 'Stückstoff (ca. 78 %).', difficulty: 'mittel', sources: {}, distractors: ['Sauerstoff (ca. 21 %).', 'Kohlenstoffdioxid (ca. 0,04 %).', 'Argon (ca. 0,93 %).'] },
+  { id: 'naturtechnik-medium-096', title: 'Welches Gas macht den größten Teil der Erdatmosphäre aus', category: 'natur', year: 0, cue: 'Welches Gas macht den größten Teil der Erdatmosphäre aus?', answer: 'Stickstoff (ca. 78 %).', difficulty: 'mittel', sources: {}, distractors: ['Sauerstoff (ca. 21 %).', 'Kohlenstoffdioxid (ca. 0,04 %).', 'Argon (ca. 0,93 %).'] },
 
   { id: 'naturtechnik-medium-097', title: 'Wie nennt man die Energie, die ein Körper aufgrund seiner Bewegung besitzt', category: 'natur', year: 0, cue: 'Wie nennt man die Energie, die ein Körper aufgrund seiner Bewegung besitzt?', answer: 'Kinetische Energie.', difficulty: 'mittel', sources: {}, distractors: ['Potenzielle Energie.', 'Thermische Energie.', 'Elektromagnetische Energie.'] },
 
-  { id: 'naturtechnik-medium-098', title: 'Welches Organell wird oft als das "Kraftwerk der Zelle“ bezeichnet', category: 'natur', year: 0, cue: 'Welches Organell wird oft als das "Kraftwerk der Zelle“ bezeichnet?', answer: 'Mitochondrium.', difficulty: 'mittel', sources: {}, distractors: ['Chloroplasten.', 'Ribosomen.', 'Golgi-Apparat.'] },
+  { id: 'naturtechnik-medium-098', title: 'Welches Organell wird oft als das „Kraftwerk der Zelle“ bezeichnet', category: 'natur', year: 0, cue: 'Welches Organell wird oft als das „Kraftwerk der Zelle“ bezeichnet?', answer: 'Mitochondrium.', difficulty: 'mittel', sources: {}, distractors: ['Chloroplasten.', 'Ribosomen.', 'Golgi-Apparat.'] },
 
   { id: 'naturtechnik-medium-099', title: 'Wer erfand die erste brauchbare Gluhlampe', category: 'natur', year: 0, cue: 'Wer erfand die erste brauchbare Gluhlampe?', answer: 'Thomas Alva Edison.', difficulty: 'mittel', sources: {}, distractors: ['Nikola Tesla.', 'Humphry Davy.', 'Joseph Swan.'] },
 
   { id: 'naturtechnik-medium-100', title: 'Wie nennt man die Gesteinsschicht im Erdinneren, die direkt unter der Kruste liegt', category: 'natur', year: 0, cue: 'Wie nennt man die Gesteinsschicht im Erdinneren, die direkt unter der Kruste liegt?', answer: 'Erdmantel.', difficulty: 'mittel', sources: {}, distractors: ['Äußerer Kern.', 'Innerer Kern.', 'Lithosphäre.'] },
 
-  { id: 'naturtechnik-medium-101', title: 'Was ist ein "Lichtjahr“', category: 'natur', year: 0, cue: 'Was ist ein "Lichtjahr“?', answer: 'Eine Entfernungseinheit (Strecke, die Licht in einem Jahr zurücklegt).', difficulty: 'mittel', sources: {}, distractors: ['Die Lichtgeschwindigkeit.', 'Die Helligkeit eines Sterns.', 'Eine Maßeinheit für Temperatur.'] },
+  { id: 'naturtechnik-medium-101', title: 'Was ist ein „Lichtjahr“', category: 'natur', year: 0, cue: 'Was ist ein „Lichtjahr“?', answer: 'Eine Entfernungseinheit (Strecke, die Licht in einem Jahr zurücklegt).', difficulty: 'mittel', sources: {}, distractors: ['Die Lichtgeschwindigkeit.', 'Die Helligkeit eines Sterns.', 'Eine Maßeinheit für Temperatur.'] },
 
   { id: 'naturtechnik-medium-102', title: 'Welche Art von Linse wird in einer Lupe verwendet', category: 'natur', year: 0, cue: 'Welche Art von Linse wird in einer Lupe verwendet?', answer: 'Sammellinse (Konvexlinse).', difficulty: 'mittel', sources: {}, distractors: ['Zerstreuungslinse.', 'Zylinderlinse.', 'Prisma.'] },
 
-  { id: 'naturtechnik-medium-103', title: 'Was beschreibt die "Leitfahigkeit“ eines Materials', category: 'natur', year: 0, cue: 'Was beschreibt die "Leitfahigkeit“ eines Materials?', answer: 'Den Transport von Strom oder Wärme.', difficulty: 'mittel', sources: {}, distractors: ['Die Isolation eines Materials.', 'Die Flexibilität eines Materials.', 'Die Transparenz eines Materials.'] },
+  { id: 'naturtechnik-medium-103', title: 'Was beschreibt die „Leitfähigkeit“ eines Materials', category: 'natur', year: 0, cue: 'Was beschreibt die „Leitfähigkeit“ eines Materials?', answer: 'Den Transport von Strom oder Wärme.', difficulty: 'mittel', sources: {}, distractors: ['Die Isolation eines Materials.', 'Die Flexibilität eines Materials.', 'Die Transparenz eines Materials.'] },
 
   { id: 'naturtechnik-medium-104', title: 'Wie nennt man Tiere, die Fleisch und Pflanzen essen', category: 'natur', year: 0, cue: 'Wie nennt man Tiere, die Fleisch und Pflanzen essen?', answer: 'Allesfresser (Omnivoren).', difficulty: 'mittel', sources: {}, distractors: ['Fleischfresser.', 'Pflanzenfresser.', 'Aasfresser.'] },
 
@@ -234,7 +234,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-114', title: 'Wie nennt man die Wissenschaft von der Vererbung', category: 'natur', year: 0, cue: 'Wie nennt man die Wissenschaft von der Vererbung?', answer: 'Genetik.', difficulty: 'mittel', sources: {}, distractors: ['Evolution.', 'Ökologie.', 'Entwicklungsbiologie.'] },
 
-  { id: 'naturtechnik-medium-115', title: 'Welches chemische Element hat das Symbol Ö“', category: 'natur', year: 0, cue: 'Welches chemische Element hat das Symbol Ö“?', answer: 'Sauerstoff.', difficulty: 'mittel', sources: {}, distractors: ['N (Stückstoff).', 'H (Wasserstoff).', 'C (Kohlenstoff).'] },
+  { id: 'naturtechnik-medium-115', title: 'Welches chemische Element hat das Symbol „O“', category: 'natur', year: 0, cue: 'Welches chemische Element hat das Symbol „O“?', answer: 'Sauerstoff.', difficulty: 'mittel', sources: {}, distractors: ['N (Stickstoff).', 'H (Wasserstoff).', 'C (Kohlenstoff).'] },
 
   { id: 'naturtechnik-medium-116', title: 'Was ist die Funktion eines Transformators', category: 'natur', year: 0, cue: 'Was ist die Funktion eines Transformators?', answer: 'Umwandlung elektrischer Spannungen.', difficulty: 'mittel', sources: {}, distractors: ['Inverter.', 'Gleichrichter.', 'Regler.'] },
 
@@ -252,9 +252,9 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-123', title: 'Welches Gesetz besagt, dass Energie erhalten bleibt', category: 'natur', year: 0, cue: 'Welches Gesetz besagt, dass Energie erhalten bleibt?', answer: 'Energieerhaltungssatz.', difficulty: 'mittel', sources: {}, distractors: ['Newtonsches Bewegungsgesetz.', 'Gravitationsgesetz.', 'Erhaltungssatz des Impulses.'] },
 
-  { id: 'naturtechnik-medium-124', title: 'Was ist ein "Vakuum“', category: 'natur', year: 0, cue: 'Was ist ein "Vakuum“?', answer: 'Materiefreier Raum.', difficulty: 'mittel', sources: {}, distractors: ['Ein sehr dünnes Gas.', 'Absolute Kälte.', 'Ein Bereich ohne Partikel.'] },
+  { id: 'naturtechnik-medium-124', title: 'Was ist ein „Vakuum“', category: 'natur', year: 0, cue: 'Was ist ein „Vakuum“?', answer: 'Materiefreier Raum.', difficulty: 'mittel', sources: {}, distractors: ['Ein sehr dünnes Gas.', 'Absolute Kälte.', 'Ein Bereich ohne Partikel.'] },
 
-  { id: 'naturtechnik-medium-125', title: 'Welches Gas lasst Hefeteig aufgehen', category: 'natur', year: 0, cue: 'Welches Gas lasst Hefeteig aufgehen?', answer: 'Kohlenstoffdioxid ($CO_2$).', difficulty: 'mittel', sources: {}, distractors: ['Sauerstoff (O₂).', 'Stückstoff (N₂).', 'Methan (CH₄).'] },
+  { id: 'naturtechnik-medium-125', title: 'Welches Gas lässt Hefeteig aufgehen', category: 'natur', year: 0, cue: 'Welches Gas lässt Hefeteig aufgehen?', answer: 'Kohlenstoffdioxid ($CO_2$).', difficulty: 'mittel', sources: {}, distractors: ['Sauerstoff (O₂).', 'Stickstoff (N₂).', 'Methan (CH₄).'] },
 
   { id: 'naturtechnik-medium-126', title: 'Wie heißt die größte Trockenwuste der Erde', category: 'natur', year: 0, cue: 'Wie heißt die größte Trockenwuste der Erde?', answer: 'Sahara.', difficulty: 'mittel', sources: {}, distractors: ['Mojave-Wüste.', 'Gobi-Wüste.', 'Kalahari-Wüste.'] },
 
@@ -294,7 +294,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-144', title: 'Wie nennt man Nervenverbindungen', category: 'natur', year: 0, cue: 'Wie nennt man Nervenverbindungen?', answer: 'Synapsen.', difficulty: 'mittel', sources: {}, distractors: ['Neuronen.', 'Dendriten.', 'Axone.'] },
 
-  { id: 'naturtechnik-medium-145', title: 'Welcher Planet ist die "Schwester der Erde“', category: 'natur', year: 0, cue: 'Welcher Planet ist die "Schwester der Erde“?', answer: 'Venus.', difficulty: 'mittel', sources: {}, distractors: ['Mars.', 'Merkur.', 'Jupiter.'] },
+  { id: 'naturtechnik-medium-145', title: 'Welcher Planet ist die „Schwester der Erde“', category: 'natur', year: 0, cue: 'Welcher Planet ist die „Schwester der Erde“?', answer: 'Venus.', difficulty: 'mittel', sources: {}, distractors: ['Mars.', 'Merkur.', 'Jupiter.'] },
 
   { id: 'naturtechnik-medium-146', title: 'Was ist die kleinste Informationseinheit', category: 'natur', year: 0, cue: 'Was ist die kleinste Informationseinheit?', answer: 'Bit.', difficulty: 'mittel', sources: {}, distractors: ['Byte.', 'Megabyte.', 'Terabyte.'] },
 
@@ -314,7 +314,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-154', title: 'Wie nennt man die Kraft, die zwei Oberflachen beim Reiben bremst', category: 'natur', year: 0, cue: 'Wie nennt man die Kraft, die zwei Oberflachen beim Reiben bremst?', answer: 'Reibungskraft.', difficulty: 'mittel', sources: {}, distractors: ['Normalfraft.', 'Trägheitskraft.', 'Zentripetalkraft.'] },
 
-  { id: 'naturtechnik-medium-155', title: 'Was ist eine "Symbiose“', category: 'natur', year: 0, cue: 'Was ist eine "Symbiose“?', answer: 'Zusammenleben zum Nutzen beider.', difficulty: 'mittel', sources: {}, distractors: ['Parasitismus.', 'Kommensalismus.', 'Konkurrenz.'] },
+  { id: 'naturtechnik-medium-155', title: 'Was ist eine „Symbiose“', category: 'natur', year: 0, cue: 'Was ist eine „Symbiose“?', answer: 'Zusammenleben zum Nutzen beider.', difficulty: 'mittel', sources: {}, distractors: ['Parasitismus.', 'Kommensalismus.', 'Konkurrenz.'] },
 
   { id: 'naturtechnik-medium-156', title: 'Welches Metall wird oft als Korrosionsschutz für Eisen verwendet', category: 'natur', year: 0, cue: 'Welches Metall wird oft als Korrosionsschutz für Eisen verwendet?', answer: 'Zink.', difficulty: 'mittel', sources: {}, distractors: ['Aluminium.', 'Kupfer.', 'Blei.'] },
 
@@ -330,7 +330,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-162', title: 'Pflanzen, die Blätter im Winter behalten', category: 'natur', year: 0, cue: 'Pflanzen, die Blätter im Winter behalten?', answer: 'Immergrüne.', difficulty: 'mittel', sources: {}, distractors: ['Laubabwerfende.', 'Sommergrüne.', 'Nadelbäume.'] },
 
-  { id: 'naturtechnik-medium-163', title: 'Ozonschichtgas', category: 'natur', year: 0, cue: 'Ozonschichtgas?', answer: 'Ozon.', difficulty: 'mittel', sources: {}, distractors: ['Stückstoffoxid.', 'Kohlendioxid.', 'Methan.'] },
+  { id: 'naturtechnik-medium-163', title: 'Ozonschichtgas', category: 'natur', year: 0, cue: 'Ozonschichtgas?', answer: 'Ozon.', difficulty: 'mittel', sources: {}, distractors: ['Stickstoffoxid.', 'Kohlendioxid.', 'Methan.'] },
 
   { id: 'naturtechnik-medium-164', title: 'Energie in gespannten Federn', category: 'natur', year: 0, cue: 'Energie in gespannten Federn?', answer: 'Spannenergie.', difficulty: 'mittel', sources: {}, distractors: ['Bewegungsenergie.', 'Wärmeenergie.', 'Kernenergie.'] },
 
@@ -358,13 +358,13 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-hard-176', title: 'Wie lautet das Ohmsche Gesetz in Form einer Formel', category: 'natur', year: 0, cue: 'Wie lautet das Ohmsche Gesetz in Form einer Formel?', answer: 'U = R · I.', difficulty: 'schwer', sources: {}, distractors: ['P = U · I.', 'R = U / I².', 'I = U · R.'] },
 
-  { id: 'naturtechnik-hard-177', title: 'Was versteht man in der Biologie unter "Endosymbiose“', category: 'natur', year: 0, cue: 'Was versteht man in der Biologie unter "Endosymbiose“?', answer: 'Die Aufnahme eines Organismus durch einen anderen, der darin weiterlebt.', difficulty: 'schwer', sources: {}, distractors: ['Die Verschmelzung zweier Organismen zu einem.', 'Die Aufspaltung eines Organismus in mehrere Teile.', 'Die Symbiose zwischen verschiedenen Arten.'] },
+  { id: 'naturtechnik-hard-177', title: 'Was versteht man in der Biologie unter „Endosymbiose“', category: 'natur', year: 0, cue: 'Was versteht man in der Biologie unter „Endosymbiose“?', answer: 'Die Aufnahme eines Organismus durch einen anderen, der darin weiterlebt.', difficulty: 'schwer', sources: {}, distractors: ['Die Verschmelzung zweier Organismen zu einem.', 'Die Aufspaltung eines Organismus in mehrere Teile.', 'Die Symbiose zwischen verschiedenen Arten.'] },
 
   { id: 'naturtechnik-hard-178', title: 'Welcher physikalische Effekt sorgt für die Tonhohenänderung bei einer vorbeifahrenden Sirene', category: 'natur', year: 0, cue: 'Welcher physikalische Effekt sorgt für die Tonhohenänderung bei einer vorbeifahrenden Sirene?', answer: 'Doppler-Effekt.', difficulty: 'schwer', sources: {}, distractors: ['Compton-Effekt.', 'Photoelektrischer Effekt.', 'Zeeman-Effekt.'] },
 
   { id: 'naturtechnik-hard-179', title: 'Was ist die Ruhemasse eines Photons', category: 'natur', year: 0, cue: 'Was ist die Ruhemasse eines Photons?', answer: 'Null.', difficulty: 'schwer', sources: {}, distractors: ['Eine Planck-Konstante.', 'Die Lichtgeschwindigkeit.', 'Unendlich.'] },
 
-  { id: 'naturtechnik-hard-180', title: 'Welches chemische Element hat das Symbol "Fe“', category: 'natur', year: 0, cue: 'Welches chemische Element hat das Symbol "Fe“?', answer: 'Eisen.', difficulty: 'schwer', sources: {}, distractors: ['Fluor.', 'Fermium.', 'Francium.'] },
+  { id: 'naturtechnik-hard-180', title: 'Welches chemische Element hat das Symbol „Fe“', category: 'natur', year: 0, cue: 'Welches chemische Element hat das Symbol „Fe“?', answer: 'Eisen.', difficulty: 'schwer', sources: {}, distractors: ['Fluor.', 'Fermium.', 'Francium.'] },
 
   { id: 'naturtechnik-hard-181', title: 'Wie nennt man die kleinste Einheit eines chemischen Elements', category: 'natur', year: 0, cue: 'Wie nennt man die kleinste Einheit eines chemischen Elements?', answer: 'Atom.', difficulty: 'schwer', sources: {}, distractors: ['Molekül.', 'Proton.', 'Quark.'] },
 
@@ -376,7 +376,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-hard-185', title: 'Wie nennt man die Bindung zwischen Atomen, bei der Elektronenpaare geteilt werden', category: 'natur', year: 0, cue: 'Wie nennt man die Bindung zwischen Atomen, bei der Elektronenpaare geteilt werden?', answer: 'Atombindung (kovalente Bindung).', difficulty: 'schwer', sources: {}, distractors: ['Ionenbindung.', 'Metallbindung.', 'Van-der-Waals-Bindung.'] },
 
-  { id: 'naturtechnik-hard-186', title: 'Was ist der "Event Horizon“ bei einem Schwarzen Loch', category: 'natur', year: 0, cue: 'Was ist der "Event Horizon“ bei einem Schwarzen Loch?', answer: 'Die Grenze, ab der kein Licht mehr entkommen kann.', difficulty: 'schwer', sources: {}, distractors: ['Der innerste Kern des Schwarzen Lochs.', 'Die Rotationsachse des Schwarzen Lochs.', 'Die äußere Grenze der Gravitationswirkung.'] },
+  { id: 'naturtechnik-hard-186', title: 'Was ist der „Event Horizon“ bei einem Schwarzen Loch', category: 'natur', year: 0, cue: 'Was ist der „Event Horizon“ bei einem Schwarzen Loch?', answer: 'Die Grenze, ab der kein Licht mehr entkommen kann.', difficulty: 'schwer', sources: {}, distractors: ['Der innerste Kern des Schwarzen Lochs.', 'Die Rotationsachse des Schwarzen Lochs.', 'Die äußere Grenze der Gravitationswirkung.'] },
 
   { id: 'naturtechnik-hard-187', title: 'Welches Enzym im Speichel spaltet Kohlenhydrate', category: 'natur', year: 0, cue: 'Welches Enzym im Speichel spaltet Kohlenhydrate?', answer: 'Amylase.', difficulty: 'schwer', sources: {}, distractors: ['Lipase.', 'Pepsin.', 'Trypsin.'] },
 
@@ -410,13 +410,13 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-hard-202', title: 'Wie hoch ist der absolute Nullpunkt in Celsius', category: 'natur', year: 0, cue: 'Wie hoch ist der absolute Nullpunkt in Celsius?', answer: '-273,15 °C.', difficulty: 'schwer', sources: {}, distractors: ['-100 °C.', '-459 °C.', '0 °C.'] },
 
-  { id: 'naturtechnik-hard-203', title: 'Was ist ein "Photon“', category: 'natur', year: 0, cue: 'Was ist ein "Photon“?', answer: 'Ein Lichtquant.', difficulty: 'schwer', sources: {}, distractors: ['Ein Elektron.', 'Ein Proton.', 'Ein Neutron.'] },
+  { id: 'naturtechnik-hard-203', title: 'Was ist ein „Photon“', category: 'natur', year: 0, cue: 'Was ist ein „Photon“?', answer: 'Ein Lichtquant.', difficulty: 'schwer', sources: {}, distractors: ['Ein Elektron.', 'Ein Proton.', 'Ein Neutron.'] },
 
   { id: 'naturtechnik-hard-204', title: 'Welches Organ ist zentral für den Stoffwechsel', category: 'natur', year: 0, cue: 'Welches Organ ist zentral für den Stoffwechsel?', answer: 'Die Leber.', difficulty: 'schwer', sources: {}, distractors: ['Das Herz.', 'Die Niere.', 'Die Lunge.'] },
 
   { id: 'naturtechnik-hard-205', title: 'Wie lautet die chemische Formel für Ozon', category: 'natur', year: 0, cue: 'Wie lautet die chemische Formel für Ozon?', answer: '$O_3$.', difficulty: 'schwer', sources: {}, distractors: ['$O_2$.', '$O_4$.', '$O$.'] },
 
-  { id: 'naturtechnik-hard-206', title: 'Was ist "Entropie“', category: 'natur', year: 0, cue: 'Was ist "Entropie“?', answer: 'Ein Maß für Unordnung in einem System.', difficulty: 'schwer', sources: {}, distractors: ['Ein Maß für Energie in einem System.', 'Ein Maß für Druck in einem Gas.', 'Ein Maß für Temperatur in Flüssigkeiten.'] },
+  { id: 'naturtechnik-hard-206', title: 'Was ist „Entropie“', category: 'natur', year: 0, cue: 'Was ist „Entropie“?', answer: 'Ein Maß für Unordnung in einem System.', difficulty: 'schwer', sources: {}, distractors: ['Ein Maß für Energie in einem System.', 'Ein Maß für Druck in einem Gas.', 'Ein Maß für Temperatur in Flüssigkeiten.'] },
 
   { id: 'naturtechnik-hard-207', title: 'Wie nennt man Mikroorganismen in Extremumgebungen', category: 'natur', year: 0, cue: 'Wie nennt man Mikroorganismen in Extremumgebungen?', answer: 'Extremophile.', difficulty: 'schwer', sources: {}, distractors: ['Mesophile.', 'Saprophyten.', 'Pathogene.'] },
 
@@ -492,7 +492,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-hard-243', title: 'Was ist die erste kosmische Geschwindigkeit', category: 'natur', year: 0, cue: 'Was ist die erste kosmische Geschwindigkeit?', answer: 'Nötiges Tempo für eine stabile Umlaufbahn.', difficulty: 'schwer', sources: {}, distractors: ['Nötiges Tempo zum Verlassen des Sonnensystems.', 'Maximale Geschwindigkeit eines Satelliten.', 'Minimale Geschwindigkeit für Wiedereintritt.'] },
 
-  { id: 'naturtechnik-hard-244', title: 'Was ist der "Tyndall-Effekt“', category: 'natur', year: 0, cue: 'Was ist der "Tyndall-Effekt“?', answer: 'Lichtstreuung an mikroskopisch kleinen Teilchen.', difficulty: 'schwer', sources: {}, distractors: ['Lichtbrechung an großen Objekten.', 'Lichtabsorption durch Gase.', 'Lichtreflexion an Spiegeln.'] },
+  { id: 'naturtechnik-hard-244', title: 'Was ist der „Tyndall-Effekt“', category: 'natur', year: 0, cue: 'Was ist der „Tyndall-Effekt“?', answer: 'Lichtstreuung an mikroskopisch kleinen Teilchen.', difficulty: 'schwer', sources: {}, distractors: ['Lichtbrechung an großen Objekten.', 'Lichtabsorption durch Gase.', 'Lichtreflexion an Spiegeln.'] },
 
   { id: 'naturtechnik-hard-245', title: 'Welches Gesetz beschreibt die Kraft zwischen Punktladungen', category: 'natur', year: 0, cue: 'Welches Gesetz beschreibt die Kraft zwischen Punktladungen?', answer: 'Coulomb-Gesetz.', difficulty: 'schwer', sources: {}, distractors: ['Ohmsches Gesetz.', 'Faraday-Gesetz.', 'Kirchhoff-Gesetz.'] },
 
