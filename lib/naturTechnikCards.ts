@@ -16,7 +16,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-easy-005', title: 'Wie heißt das Gerät, mit dem man die Temperatur misst', category: 'natur', year: 0, cue: 'Wie heißt das Gerät, mit dem man die Temperatur misst?', answer: 'Thermometer.', difficulty: 'leicht', sources: {}, distractors: ['Barometer.', 'Hygrometer.', 'Anemometer.'] },
 
-  { id: 'naturtechnik-easy-006', title: 'Welches Tier ist das größte Saugetier der Welt', category: 'natur', year: 0, cue: 'Welches Tier ist das größte Saugetier der Welt?', answer: 'Der Blauwal.', difficulty: 'leicht', sources: {}, distractors: ['Der Elefant.', 'Der Hai.', 'Der Pottwal.'] },
+  { id: 'naturtechnik-easy-006', title: 'Welches Tier ist das größte Säugetier der Welt', category: 'natur', year: 0, cue: 'Welches Tier ist das größte Säugetier der Welt?', answer: 'Der Blauwal.', difficulty: 'leicht', sources: {}, distractors: ['Der Elefant.', 'Der Hai.', 'Der Pottwal.'] },
 
   { id: 'naturtechnik-easy-007', title: 'Woraus besteht die hölzerne Substanz eines Baumstammes primär', category: 'natur', year: 0, cue: 'Woraus besteht die hölzerne Substanz eines Baumstammes primär?', answer: 'Cellulose und Lignin.', difficulty: 'leicht', sources: {}, distractors: ['Keratin und Chitin.', 'Kollagen und Elastin.', 'Glukose und Stärke.'] },
 
@@ -36,13 +36,13 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-easy-015', title: 'Wie viele Beine haben Insekten üblicherweise', category: 'natur', year: 0, cue: 'Wie viele Beine haben Insekten üblicherweise?', answer: 'Sechs.', difficulty: 'leicht', sources: {}, distractors: ['Acht.', 'Vier.', 'Zehn.'] },
 
-  { id: 'naturtechnik-easy-016', title: 'Welches Tier tragt seinen Nachwuchs in einem Beutel am Bauch', category: 'natur', year: 0, cue: 'Welches Tier tragt seinen Nachwuchs in einem Beutel am Bauch?', answer: 'Das Känguru.', difficulty: 'leicht', sources: {}, distractors: ['Der Koalabär.', 'Das Opossum.', 'Der Wombat.'] },
+  { id: 'naturtechnik-easy-016', title: 'Welches Tier trägt seinen Nachwuchs in einem Beutel am Bauch', category: 'natur', year: 0, cue: 'Welches Tier trägt seinen Nachwuchs in einem Beutel am Bauch?', answer: 'Das Känguru.', difficulty: 'leicht', sources: {}, distractors: ['Der Koalabär.', 'Das Opossum.', 'Der Wombat.'] },
 
   { id: 'naturtechnik-easy-017', title: 'Wie nennt man das Gerät, das Windenergie in Strom umwandelt', category: 'natur', year: 0, cue: 'Wie nennt man das Gerät, das Windenergie in Strom umwandelt?', answer: 'Windkraftanlage.', difficulty: 'leicht', sources: {}, distractors: ['Solarpanel.', 'Wasserturbine.', 'Geothermiekraftwerk.'] },
 
   { id: 'naturtechnik-easy-018', title: 'Welcher Himmelskörper umkreist die Erde', category: 'natur', year: 0, cue: 'Welcher Himmelskörper umkreist die Erde?', answer: 'Der Mond.', difficulty: 'leicht', sources: {}, distractors: ['Die Sonne.', 'Der Mars.', 'Der Asteroid Ceres.'] },
 
-  { id: 'naturtechnik-easy-019', title: 'Was ist die Hauptaufgabe eines Kuhlschranks', category: 'natur', year: 0, cue: 'Was ist die Hauptaufgabe eines Kuhlschranks?', answer: 'Entzug von Wärme zur Haltbarkeit von Lebensmitteln.', difficulty: 'leicht', sources: {}, distractors: ['Hinzufügen von Kälte zur Lebensmittelkonservierung.', 'Abtöten von Bakterien durch Strahlung.', 'Entfernung von Feuchtigkeit aus Lebensmitteln.'] },
+  { id: 'naturtechnik-easy-019', title: 'Was ist die Hauptaufgabe eines Kühlschranks', category: 'natur', year: 0, cue: 'Was ist die Hauptaufgabe eines Kühlschranks?', answer: 'Entzug von Wärme zur Haltbarkeit von Lebensmitteln.', difficulty: 'leicht', sources: {}, distractors: ['Hinzufügen von Kälte zur Lebensmittelkonservierung.', 'Abtöten von Bakterien durch Strahlung.', 'Entfernung von Feuchtigkeit aus Lebensmitteln.'] },
 
   { id: 'naturtechnik-easy-020', title: 'Welches Material wird aus Erdöl hergestellt und ist schwer abbaubar', category: 'natur', year: 0, cue: 'Welches Material wird aus Erdöl hergestellt und ist schwer abbaubar?', answer: 'Kunststoff (Plastik).', difficulty: 'leicht', sources: {}, distractors: ['Glas.', 'Papier.', 'Metall.'] },
 
@@ -56,15 +56,15 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-easy-025', title: 'Wie nennt man ein Fahrzeug, das unter Wasser fahren kann', category: 'natur', year: 0, cue: 'Wie nennt man ein Fahrzeug, das unter Wasser fahren kann?', answer: 'U-Boot.', difficulty: 'leicht', sources: {}, distractors: ['Taucherglocke.', 'Bathysphäre.', 'Amphibienfahrzeug.'] },
 
-  { id: 'naturtechnik-easy-026', title: 'Welcher Stern ist der Erde am nachsten', category: 'natur', year: 0, cue: 'Welcher Stern ist der Erde am nachsten?', answer: 'Die Sonne.', difficulty: 'leicht', sources: {}, distractors: ['Proxima Centauri.', 'Sirius.', 'Alpha Centauri.'] },
+  { id: 'naturtechnik-easy-026', title: 'Welcher Stern ist der Erde am nächsten', category: 'natur', year: 0, cue: 'Welcher Stern ist der Erde am nächsten?', answer: 'Die Sonne.', difficulty: 'leicht', sources: {}, distractors: ['Proxima Centauri.', 'Sirius.', 'Alpha Centauri.'] },
 
-  { id: 'naturtechnik-easy-027', title: 'Wie nennt man die harte äuuere Schicht bei Insekten', category: 'natur', year: 0, cue: 'Wie nennt man die harte äuuere Schicht bei Insekten?', answer: 'Exoskelett.', difficulty: 'leicht', sources: {}, distractors: ['Endoskelett.', 'Kutikula.', 'Chitin-Panzer.'] },
+  { id: 'naturtechnik-easy-027', title: 'Wie nennt man die harte äußere Schicht bei Insekten', category: 'natur', year: 0, cue: 'Wie nennt man die harte äußere Schicht bei Insekten?', answer: 'Exoskelett.', difficulty: 'leicht', sources: {}, distractors: ['Endoskelett.', 'Kutikula.', 'Chitin-Panzer.'] },
 
   { id: 'naturtechnik-easy-028', title: 'Wofür steht die Abkürzung "PS" bei Motoren', category: 'natur', year: 0, cue: 'Wofür steht die Abkürzung "PS" bei Motoren?', answer: 'Pferdestärke.', difficulty: 'leicht', sources: {}, distractors: ['Motorleistung.', 'Pfundstopp.', 'Power Speed.'] },
 
   { id: 'naturtechnik-easy-029', title: 'Welches Element ist lebensnotwendig im Wasser enthalten', category: 'natur', year: 0, cue: 'Welches Element ist lebensnotwendig im Wasser enthalten?', answer: 'Wasserstoff und Sauerstoff.', difficulty: 'leicht', sources: {}, distractors: ['Kohlenstoff und Stickstoff.', 'Kalzium und Magnesium.', 'Natrium und Chlor.'] },
 
-  { id: 'naturtechnik-easy-030', title: 'Wie nennt man den Vorgang, wenn flussiges Wasser zu Dampf wird', category: 'natur', year: 0, cue: 'Wie nennt man den Vorgang, wenn flussiges Wasser zu Dampf wird?', answer: 'Verdampfen.', difficulty: 'leicht', sources: {}, distractors: ['Kondensieren.', 'Schmelzen.', 'Sublimieren.'] },
+  { id: 'naturtechnik-easy-030', title: 'Wie nennt man den Vorgang, wenn flüssiges Wasser zu Dampf wird', category: 'natur', year: 0, cue: 'Wie nennt man den Vorgang, wenn flüssiges Wasser zu Dampf wird?', answer: 'Verdampfen.', difficulty: 'leicht', sources: {}, distractors: ['Kondensieren.', 'Schmelzen.', 'Sublimieren.'] },
 
   { id: 'naturtechnik-easy-031', title: 'Welches Werkzeug nutzt man zum Festziehen einer Schraube', category: 'natur', year: 0, cue: 'Welches Werkzeug nutzt man zum Festziehen einer Schraube?', answer: 'Schraubendreher.', difficulty: 'leicht', sources: {}, distractors: ['Hammer.', 'Zange.', 'Schraubenschlüssel.'] },
 
@@ -86,7 +86,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-easy-040', title: 'Welches Metall wird oft für Alufolie verwendet', category: 'natur', year: 0, cue: 'Welches Metall wird oft für Alufolie verwendet?', answer: 'Aluminium.', difficulty: 'leicht', sources: {}, distractors: ['Zinn.', 'Zink.', 'Blei.'] },
 
-  { id: 'naturtechnik-easy-041', title: 'Welches Werkzeug bohrt Locher in Wände', category: 'natur', year: 0, cue: 'Welches Werkzeug bohrt Locher in Wände?', answer: 'Bohrmaschine.', difficulty: 'leicht', sources: {}, distractors: ['Säge.', 'Meißel.', 'Schlagbohrer.'] },
+  { id: 'naturtechnik-easy-041', title: 'Welches Werkzeug bohrt Löcher in Wände', category: 'natur', year: 0, cue: 'Welches Werkzeug bohrt Löcher in Wände?', answer: 'Bohrmaschine.', difficulty: 'leicht', sources: {}, distractors: ['Säge.', 'Meißel.', 'Schlagbohrer.'] },
 
   { id: 'naturtechnik-easy-042', title: 'Wie nennt man Verschiebungen der Erdkruste', category: 'natur', year: 0, cue: 'Wie nennt man Verschiebungen der Erdkruste?', answer: 'Erdbeben.', difficulty: 'leicht', sources: {}, distractors: ['Plattentektonik.', 'Erosion.', 'Vulkanismus.'] },
 
@@ -140,13 +140,13 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-easy-067', title: 'Wie nennt man einen Nicht-Leiter', category: 'natur', year: 0, cue: 'Wie nennt man einen Nicht-Leiter?', answer: 'Isolator.', difficulty: 'leicht', sources: {}, distractors: ['Kondensator.', 'Transformator.', 'Resistor.'] },
 
-  { id: 'naturtechnik-easy-068', title: 'Wie heißt die Nahrflussigkeit in Baumen', category: 'natur', year: 0, cue: 'Wie heißt die Nahrflussigkeit in Baumen?', answer: 'Pflanzensaft / Baumsaft.', difficulty: 'leicht', sources: {}, distractors: ['Chlorophyll.', 'Harz.', 'Zellulose.'] },
+  { id: 'naturtechnik-easy-068', title: 'Wie heißt die Nährflüssigkeit in Bäumen', category: 'natur', year: 0, cue: 'Wie heißt die Nährflüssigkeit in Bäumen?', answer: 'Pflanzensaft / Baumsaft.', difficulty: 'leicht', sources: {}, distractors: ['Chlorophyll.', 'Harz.', 'Zellulose.'] },
 
   { id: 'naturtechnik-easy-069', title: 'Planet mit dem "Großen Roten Fleck"', category: 'natur', year: 0, cue: 'Planet mit dem "Großen Roten Fleck"?', answer: 'Jupiter.', difficulty: 'leicht', sources: {}, distractors: ['Saturn.', 'Mars.', 'Neptun.'] },
 
   { id: 'naturtechnik-easy-070', title: 'Wofür steht IT', category: 'natur', year: 0, cue: 'Wofür steht IT?', answer: 'Informationstechnik.', difficulty: 'leicht', sources: {}, distractors: ['Internet-Technologie.', 'Industrielle Technik.', 'Interne Telekommunikation.'] },
 
-  { id: 'naturtechnik-easy-071', title: 'Welches Saugetier legt Eier', category: 'natur', year: 0, cue: 'Welches Saugetier legt Eier?', answer: 'Schnabeltier.', difficulty: 'leicht', sources: {}, distractors: ['Ameisenigel.', 'Beutelratte.', 'Känguru.'] },
+  { id: 'naturtechnik-easy-071', title: 'Welches Säugetier legt Eier', category: 'natur', year: 0, cue: 'Welches Säugetier legt Eier?', answer: 'Schnabeltier.', difficulty: 'leicht', sources: {}, distractors: ['Ameisenigel.', 'Beutelratte.', 'Känguru.'] },
 
   { id: 'naturtechnik-easy-072', title: 'Was ist die Aufgabe einer Batterie', category: 'natur', year: 0, cue: 'Was ist die Aufgabe einer Batterie?', answer: 'Energiespeicherung.', difficulty: 'leicht', sources: {}, distractors: ['Energieerzeugung.', 'Energieübertragung.', 'Energieumwandlung.'] },
 
@@ -202,7 +202,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-098', title: 'Welches Organell wird oft als das „Kraftwerk der Zelle“ bezeichnet', category: 'natur', year: 0, cue: 'Welches Organell wird oft als das „Kraftwerk der Zelle“ bezeichnet?', answer: 'Mitochondrium.', difficulty: 'mittel', sources: {}, distractors: ['Chloroplasten.', 'Ribosomen.', 'Golgi-Apparat.'] },
 
-  { id: 'naturtechnik-medium-099', title: 'Wer erfand die erste brauchbare Gluhlampe', category: 'natur', year: 0, cue: 'Wer erfand die erste brauchbare Gluhlampe?', answer: 'Thomas Alva Edison.', difficulty: 'mittel', sources: {}, distractors: ['Nikola Tesla.', 'Humphry Davy.', 'Joseph Swan.'] },
+  { id: 'naturtechnik-medium-099', title: 'Wer erfand die erste brauchbare Glühlampe', category: 'natur', year: 0, cue: 'Wer erfand die erste brauchbare Glühlampe?', answer: 'Thomas Alva Edison.', difficulty: 'mittel', sources: {}, distractors: ['Nikola Tesla.', 'Humphry Davy.', 'Joseph Swan.'] },
 
   { id: 'naturtechnik-medium-100', title: 'Wie nennt man die Gesteinsschicht im Erdinneren, die direkt unter der Kruste liegt', category: 'natur', year: 0, cue: 'Wie nennt man die Gesteinsschicht im Erdinneren, die direkt unter der Kruste liegt?', answer: 'Erdmantel.', difficulty: 'mittel', sources: {}, distractors: ['Äußerer Kern.', 'Innerer Kern.', 'Lithosphäre.'] },
 
@@ -218,7 +218,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-106', title: 'In welcher Einheit wird der Luftdruck meist angegeben', category: 'natur', year: 0, cue: 'In welcher Einheit wird der Luftdruck meist angegeben?', answer: 'Bar oder Pascal.', difficulty: 'mittel', sources: {}, distractors: ['Kilopascal (kPa).', 'Megahertz (MHz).', 'Newton (N).'] },
 
-  { id: 'naturtechnik-medium-107', title: 'Wie nennt man flussiges Gestein im Inneren eines Vulkans', category: 'natur', year: 0, cue: 'Wie nennt man flussiges Gestein im Inneren eines Vulkans?', answer: 'Magma.', difficulty: 'mittel', sources: {}, distractors: ['Lava.', 'Basalt.', 'Tuff.'] },
+  { id: 'naturtechnik-medium-107', title: 'Wie nennt man flüssiges Gestein im Inneren eines Vulkans', category: 'natur', year: 0, cue: 'Wie nennt man flüssiges Gestein im Inneren eines Vulkans?', answer: 'Magma.', difficulty: 'mittel', sources: {}, distractors: ['Lava.', 'Basalt.', 'Tuff.'] },
 
   { id: 'naturtechnik-medium-108', title: 'Was ist die Hauptfunktion der roten Blutkörperchen', category: 'natur', year: 0, cue: 'Was ist die Hauptfunktion der roten Blutkörperchen?', answer: 'Sauerstofftransport.', difficulty: 'mittel', sources: {}, distractors: ['Immunabwehr.', 'Gerinnungsfaktor.', 'Hormonverteilung.'] },
 
@@ -242,7 +242,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-118', title: 'Welches Vitamin produziert der Körper durch Sonnenlicht', category: 'natur', year: 0, cue: 'Welches Vitamin produziert der Körper durch Sonnenlicht?', answer: 'Vitamin D.', difficulty: 'mittel', sources: {}, distractors: ['Vitamin A.', 'Vitamin B.', 'Vitamin C.'] },
 
-  { id: 'naturtechnik-medium-119', title: 'Wie nennt man eine Brucke, die an Seilen hängt', category: 'natur', year: 0, cue: 'Wie nennt man eine Brucke, die an Seilen hängt?', answer: 'Hängebrucke.', difficulty: 'mittel', sources: {}, distractors: ['Bogenbrücke.', 'Schrägseilbrücke.', 'Balkenbrücke.'] },
+  { id: 'naturtechnik-medium-119', title: 'Wie nennt man eine Brücke, die an Seilen hängt', category: 'natur', year: 0, cue: 'Wie nennt man eine Brücke, die an Seilen hängt?', answer: 'Hängebrucke.', difficulty: 'mittel', sources: {}, distractors: ['Bogenbrücke.', 'Schrägseilbrücke.', 'Balkenbrücke.'] },
 
   { id: 'naturtechnik-medium-120', title: 'Was ist der Unterschied zwischen Meteoroid und Meteorit', category: 'natur', year: 0, cue: 'Was ist der Unterschied zwischen Meteoroid und Meteorit?', answer: 'Meteoroid ist im All, Meteorit auf der Erde.', difficulty: 'mittel', sources: {}, distractors: ['Meteorit ist ein Gesteinsfragment, Meteoroid ist im All.', 'Sie sind identisch.', 'Ein Meteoroid ist größer.'] },
 
@@ -256,15 +256,15 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-125', title: 'Welches Gas lässt Hefeteig aufgehen', category: 'natur', year: 0, cue: 'Welches Gas lässt Hefeteig aufgehen?', answer: 'Kohlenstoffdioxid ($CO_2$).', difficulty: 'mittel', sources: {}, distractors: ['Sauerstoff (O₂).', 'Stickstoff (N₂).', 'Methan (CH₄).'] },
 
-  { id: 'naturtechnik-medium-126', title: 'Wie heißt die größte Trockenwuste der Erde', category: 'natur', year: 0, cue: 'Wie heißt die größte Trockenwuste der Erde?', answer: 'Sahara.', difficulty: 'mittel', sources: {}, distractors: ['Mojave-Wüste.', 'Gobi-Wüste.', 'Kalahari-Wüste.'] },
+  { id: 'naturtechnik-medium-126', title: 'Wie heißt die größte Trockenwüste der Erde', category: 'natur', year: 0, cue: 'Wie heißt die größte Trockenwüste der Erde?', answer: 'Sahara.', difficulty: 'mittel', sources: {}, distractors: ['Mojave-Wüste.', 'Gobi-Wüste.', 'Kalahari-Wüste.'] },
 
   { id: 'naturtechnik-medium-127', title: 'Was ist die Hauptaufgabe eines Kameraobjektivs', category: 'natur', year: 0, cue: 'Was ist die Hauptaufgabe eines Kameraobjektivs?', answer: 'Lichtbündelung für ein scharfes Bild.', difficulty: 'mittel', sources: {}, distractors: ['Fokussierung von Licht.', 'Lichtstabilisierung.', 'Farbausgleich.'] },
 
   { id: 'naturtechnik-medium-128', title: 'Womit misst man die Windgeschwindigkeit', category: 'natur', year: 0, cue: 'Womit misst man die Windgeschwindigkeit?', answer: 'Anemometer.', difficulty: 'mittel', sources: {}, distractors: ['Barometer.', 'Hygrometer.', 'Pyranometer.'] },
 
-  { id: 'naturtechnik-medium-129', title: 'Wie nennt man das Zuruckwerfen von Licht', category: 'natur', year: 0, cue: 'Wie nennt man das Zuruckwerfen von Licht?', answer: 'Reflexion.', difficulty: 'mittel', sources: {}, distractors: ['Brechung.', 'Absorption.', 'Transmission.'] },
+  { id: 'naturtechnik-medium-129', title: 'Wie nennt man das Zurückwerfen von Licht', category: 'natur', year: 0, cue: 'Wie nennt man das Zurückwerfen von Licht?', answer: 'Reflexion.', difficulty: 'mittel', sources: {}, distractors: ['Brechung.', 'Absorption.', 'Transmission.'] },
 
-  { id: 'naturtechnik-medium-130', title: 'Welches Saugetier kann aktiv fliegen', category: 'natur', year: 0, cue: 'Welches Saugetier kann aktiv fliegen?', answer: 'Fledermaus.', difficulty: 'mittel', sources: {}, distractors: ['Eichhörnchen.', 'Flugfisch.', 'Gleitotter.'] },
+  { id: 'naturtechnik-medium-130', title: 'Welches Säugetier kann aktiv fliegen', category: 'natur', year: 0, cue: 'Welches Säugetier kann aktiv fliegen?', answer: 'Fledermaus.', difficulty: 'mittel', sources: {}, distractors: ['Eichhörnchen.', 'Flugfisch.', 'Gleitotter.'] },
 
   { id: 'naturtechnik-medium-131', title: 'Wie nennt man Metallmischungen wie Bronze', category: 'natur', year: 0, cue: 'Wie nennt man Metallmischungen wie Bronze?', answer: 'Legierung.', difficulty: 'mittel', sources: {}, distractors: ['Polymer.', 'Verbundstoff.', 'Komposit.'] },
 
@@ -276,11 +276,11 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-135', title: 'Was schützt Kabel vor Überlastung', category: 'natur', year: 0, cue: 'Was schützt Kabel vor Überlastung?', answer: 'Sicherung.', difficulty: 'mittel', sources: {}, distractors: ['Widerstand.', 'Transformator.', 'Schutzschalter.'] },
 
-  { id: 'naturtechnik-medium-136', title: 'Welches Gas schadigte die Ozonschicht', category: 'natur', year: 0, cue: 'Welches Gas schadigte die Ozonschicht?', answer: 'FCKW.', difficulty: 'mittel', sources: {}, distractors: ['Dioxid.', 'Methan.', 'Stückoxid.'] },
+  { id: 'naturtechnik-medium-136', title: 'Welches Gas schädigte die Ozonschicht', category: 'natur', year: 0, cue: 'Welches Gas schädigte die Ozonschicht?', answer: 'FCKW.', difficulty: 'mittel', sources: {}, distractors: ['Dioxid.', 'Methan.', 'Stückoxid.'] },
 
   { id: 'naturtechnik-medium-137', title: 'Wie nennt man die Pilzkunde', category: 'natur', year: 0, cue: 'Wie nennt man die Pilzkunde?', answer: 'Mykologie.', difficulty: 'mittel', sources: {}, distractors: ['Botanik.', 'Zoologie.', 'Mikrobiologie.'] },
 
-  { id: 'naturtechnik-medium-138', title: 'Welcher Effekt erhitzt Topfe auf Induktionsherden', category: 'natur', year: 0, cue: 'Welcher Effekt erhitzt Topfe auf Induktionsherden?', answer: 'Elektromagnetische Induktion.', difficulty: 'mittel', sources: {}, distractors: ['Faraday-Effekt.', 'Joule-Effekt.', 'Lenz-Effekt.'] },
+  { id: 'naturtechnik-medium-138', title: 'Welcher Effekt erhitzt Töpfe auf Induktionsherden', category: 'natur', year: 0, cue: 'Welcher Effekt erhitzt Töpfe auf Induktionsherden?', answer: 'Elektromagnetische Induktion.', difficulty: 'mittel', sources: {}, distractors: ['Faraday-Effekt.', 'Joule-Effekt.', 'Lenz-Effekt.'] },
 
   { id: 'naturtechnik-medium-139', title: 'Wie nennt man die Gashülle von Planeten', category: 'natur', year: 0, cue: 'Wie nennt man die Gashülle von Planeten?', answer: 'Atmosphäre.', difficulty: 'mittel', sources: {}, distractors: ['Hydrosphäre.', 'Lithosphäre.', 'Biosphäre.'] },
 
@@ -312,7 +312,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-153', title: 'Welches Bauteil im Computer speichert Daten langfristig', category: 'natur', year: 0, cue: 'Welches Bauteil im Computer speichert Daten langfristig?', answer: 'Festplatte / SSD.', difficulty: 'mittel', sources: {}, distractors: ['RAM.', 'CPU.', 'Grafikkarte.'] },
 
-  { id: 'naturtechnik-medium-154', title: 'Wie nennt man die Kraft, die zwei Oberflachen beim Reiben bremst', category: 'natur', year: 0, cue: 'Wie nennt man die Kraft, die zwei Oberflachen beim Reiben bremst?', answer: 'Reibungskraft.', difficulty: 'mittel', sources: {}, distractors: ['Normalfraft.', 'Trägheitskraft.', 'Zentripetalkraft.'] },
+  { id: 'naturtechnik-medium-154', title: 'Wie nennt man die Kraft, die zwei Oberflächen beim Reiben bremst', category: 'natur', year: 0, cue: 'Wie nennt man die Kraft, die zwei Oberflächen beim Reiben bremst?', answer: 'Reibungskraft.', difficulty: 'mittel', sources: {}, distractors: ['Normalfraft.', 'Trägheitskraft.', 'Zentripetalkraft.'] },
 
   { id: 'naturtechnik-medium-155', title: 'Was ist eine „Symbiose“', category: 'natur', year: 0, cue: 'Was ist eine „Symbiose“?', answer: 'Zusammenleben zum Nutzen beider.', difficulty: 'mittel', sources: {}, distractors: ['Parasitismus.', 'Kommensalismus.', 'Konkurrenz.'] },
 
@@ -340,7 +340,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-167', title: 'Erstarren von Magma', category: 'natur', year: 0, cue: 'Erstarren von Magma?', answer: 'Kristallisation.', difficulty: 'mittel', sources: {}, distractors: ['Schmelzen.', 'Sublimation.', 'Erweichung.'] },
 
-  { id: 'naturtechnik-medium-168', title: 'Welches Stresshormon macht leistungsfahig', category: 'natur', year: 0, cue: 'Welches Stresshormon macht leistungsfahig?', answer: 'Adrenalin.', difficulty: 'mittel', sources: {}, distractors: ['Cortisol.', 'Insulin.', 'Testosteron.'] },
+  { id: 'naturtechnik-medium-168', title: 'Welches Stresshormon macht leistungsfähig', category: 'natur', year: 0, cue: 'Welches Stresshormon macht leistungsfähig?', answer: 'Adrenalin.', difficulty: 'mittel', sources: {}, distractors: ['Cortisol.', 'Insulin.', 'Testosteron.'] },
 
   { id: 'naturtechnik-medium-169', title: 'Naturphänomene für Technik nutzen', category: 'natur', year: 0, cue: 'Naturphänomene für Technik nutzen?', answer: 'Bionik.', difficulty: 'mittel', sources: {}, distractors: ['Biomechanik.', 'Biologie.', 'Technologie.'] },
 
@@ -348,7 +348,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-171', title: 'Teil des Hirns für Herzschlag', category: 'natur', year: 0, cue: 'Teil des Hirns für Herzschlag?', answer: 'Nachhirn.', difficulty: 'mittel', sources: {}, distractors: ['Mittelhirn.', 'Vorderhirn.', 'Kleinhirn.'] },
 
-  { id: 'naturtechnik-medium-172', title: 'Wie nennt man die Energie, die ein Körper durch seine Lagehohe besitzt', category: 'natur', year: 0, cue: 'Wie nennt man die Energie, die ein Körper durch seine Lagehohe besitzt?', answer: 'Potentielle Energie.', difficulty: 'mittel', sources: {}, distractors: ['Kinetische Energie.', 'Wärmeenergie.', 'Strahlungsenergie.'] },
+  { id: 'naturtechnik-medium-172', title: 'Wie nennt man die Energie, die ein Körper durch seine Lagehöhe besitzt', category: 'natur', year: 0, cue: 'Wie nennt man die Energie, die ein Körper durch seine Lagehöhe besitzt?', answer: 'Potentielle Energie.', difficulty: 'mittel', sources: {}, distractors: ['Kinetische Energie.', 'Wärmeenergie.', 'Strahlungsenergie.'] },
 
   { id: 'naturtechnik-medium-173', title: 'Welcher Stoff dient im Auto als Frostschutzmittel', category: 'natur', year: 0, cue: 'Welcher Stoff dient im Auto als Frostschutzmittel?', answer: 'Glykol.', difficulty: 'mittel', sources: {}, distractors: ['Alkohol.', 'Harnstoff.', 'Salz.'] },
 
@@ -360,7 +360,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-hard-177', title: 'Was versteht man in der Biologie unter „Endosymbiose“', category: 'natur', year: 0, cue: 'Was versteht man in der Biologie unter „Endosymbiose“?', answer: 'Die Aufnahme eines Organismus durch einen anderen, der darin weiterlebt.', difficulty: 'schwer', sources: {}, distractors: ['Die Verschmelzung zweier Organismen zu einem.', 'Die Aufspaltung eines Organismus in mehrere Teile.', 'Die Symbiose zwischen verschiedenen Arten.'] },
 
-  { id: 'naturtechnik-hard-178', title: 'Welcher physikalische Effekt sorgt für die Tonhohenänderung bei einer vorbeifahrenden Sirene', category: 'natur', year: 0, cue: 'Welcher physikalische Effekt sorgt für die Tonhohenänderung bei einer vorbeifahrenden Sirene?', answer: 'Doppler-Effekt.', difficulty: 'schwer', sources: {}, distractors: ['Compton-Effekt.', 'Photoelektrischer Effekt.', 'Zeeman-Effekt.'] },
+  { id: 'naturtechnik-hard-178', title: 'Welcher physikalische Effekt sorgt für die Tonhöhenänderung bei einer vorbeifahrenden Sirene', category: 'natur', year: 0, cue: 'Welcher physikalische Effekt sorgt für die Tonhöhenänderung bei einer vorbeifahrenden Sirene?', answer: 'Doppler-Effekt.', difficulty: 'schwer', sources: {}, distractors: ['Compton-Effekt.', 'Photoelektrischer Effekt.', 'Zeeman-Effekt.'] },
 
   { id: 'naturtechnik-hard-179', title: 'Was ist die Ruhemasse eines Photons', category: 'natur', year: 0, cue: 'Was ist die Ruhemasse eines Photons?', answer: 'Null.', difficulty: 'schwer', sources: {}, distractors: ['Eine Planck-Konstante.', 'Die Lichtgeschwindigkeit.', 'Unendlich.'] },
 
@@ -424,7 +424,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-hard-209', title: 'Was ist der Halleffekt', category: 'natur', year: 0, cue: 'Was ist der Halleffekt?', answer: 'Spannung in Leitern durch Magnetfelder.', difficulty: 'schwer', sources: {}, distractors: ['Spannung in Halbleitern durch Licht.', 'Stromfluss durch Temperaturunterschiede.', 'Widerstand in Metallen bei Kälte.'] },
 
-  { id: 'naturtechnik-hard-210', title: 'Wie nennt man den Ubergang von fest zu gasförmig', category: 'natur', year: 0, cue: 'Wie nennt man den Ubergang von fest zu gasförmig?', answer: 'Sublimation.', difficulty: 'schwer', sources: {}, distractors: ['Kondensation.', 'Verdampfung.', 'Schmelzen.'] },
+  { id: 'naturtechnik-hard-210', title: 'Wie nennt man den Übergang von fest zu gasförmig', category: 'natur', year: 0, cue: 'Wie nennt man den Übergang von fest zu gasförmig?', answer: 'Sublimation.', difficulty: 'schwer', sources: {}, distractors: ['Kondensation.', 'Verdampfung.', 'Schmelzen.'] },
 
   { id: 'naturtechnik-hard-211', title: 'Welches Hormon reguliert den Blutzucker', category: 'natur', year: 0, cue: 'Welches Hormon reguliert den Blutzucker?', answer: 'Insulin.', difficulty: 'schwer', sources: {}, distractors: ['Glukagon.', 'Adrenalin.', 'Thyroxin.'] },
 
@@ -432,7 +432,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-hard-213', title: 'Was ist die Corioliskraft', category: 'natur', year: 0, cue: 'Was ist die Corioliskraft?', answer: 'Ablenkung durch die Erdrotation.', difficulty: 'schwer', sources: {}, distractors: ['Fliehkraft durch Rotation.', 'Anziehung zwischen Massen.', 'Reibung in der Atmosphäre.'] },
 
-  { id: 'naturtechnik-hard-214', title: 'Welche Bindung erzeugt die Oberflachenspannung von Wasser', category: 'natur', year: 0, cue: 'Welche Bindung erzeugt die Oberflachenspannung von Wasser?', answer: 'Wasserstoffbruckenbindung.', difficulty: 'schwer', sources: {}, distractors: ['Ionenbindung.', 'Kovalente Bindung.', 'Metallbindung.'] },
+  { id: 'naturtechnik-hard-214', title: 'Welche Bindung erzeugt die Oberflächenspannung von Wasser', category: 'natur', year: 0, cue: 'Welche Bindung erzeugt die Oberflächenspannung von Wasser?', answer: 'Wasserstoffbruckenbindung.', difficulty: 'schwer', sources: {}, distractors: ['Ionenbindung.', 'Kovalente Bindung.', 'Metallbindung.'] },
 
   { id: 'naturtechnik-hard-215', title: 'Welcher Prozess findet in Brennstoffzellen statt', category: 'natur', year: 0, cue: 'Welcher Prozess findet in Brennstoffzellen statt?', answer: 'Kalte Verbrennung.', difficulty: 'schwer', sources: {}, distractors: ['Heiße Verbrennung.', 'Kernfusion.', 'Elektrolyse.'] },
 
@@ -452,7 +452,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-hard-223', title: 'Wie nennt man die Startenergie für Reaktionen', category: 'natur', year: 0, cue: 'Wie nennt man die Startenergie für Reaktionen?', answer: 'Aktivierungsenergie.', difficulty: 'schwer', sources: {}, distractors: ['Reaktionsenergie.', 'Bindungsenergie.', 'Ionisierungsenergie.'] },
 
-  { id: 'naturtechnik-hard-224', title: 'Was ist der Meiüner-Ochsenfeld-Effekt', category: 'natur', year: 0, cue: 'Was ist der Meiüner-Ochsenfeld-Effekt?', answer: 'Magnetfeldverdrängung aus Supraleitern.', difficulty: 'schwer', sources: {}, distractors: ['Magnetfeldverstärkung in Supraleitern.', 'Temperaturanstieg in Supraleitern.', 'Widerstandsanstieg in Metallen.'] },
+  { id: 'naturtechnik-hard-224', title: 'Was ist der Meißner-Ochsenfeld-Effekt', category: 'natur', year: 0, cue: 'Was ist der Meißner-Ochsenfeld-Effekt?', answer: 'Magnetfeldverdrängung aus Supraleitern.', difficulty: 'schwer', sources: {}, distractors: ['Magnetfeldverstärkung in Supraleitern.', 'Temperaturanstieg in Supraleitern.', 'Widerstandsanstieg in Metallen.'] },
 
   { id: 'naturtechnik-hard-225', title: 'Wo findet die Proteinsynthese statt', category: 'natur', year: 0, cue: 'Wo findet die Proteinsynthese statt?', answer: 'Ribosomen.', difficulty: 'schwer', sources: {}, distractors: ['Mitochondrien.', 'Zellkern.', 'Golgi-Apparat.'] },
 
@@ -466,7 +466,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-hard-230', title: 'Wie nennt man die thermische Teilchenbewegung', category: 'natur', year: 0, cue: 'Wie nennt man die thermische Teilchenbewegung?', answer: 'Diffusion.', difficulty: 'schwer', sources: {}, distractors: ['Konvektion.', 'Osmose.', 'Sedimentation.'] },
 
-  { id: 'naturtechnik-hard-231', title: 'Was beschreibt Selbstahnlichkeit in der Natur', category: 'natur', year: 0, cue: 'Was beschreibt Selbstahnlichkeit in der Natur?', answer: 'Fraktale.', difficulty: 'schwer', sources: {}, distractors: ['Symmetrie.', 'Chaos.', 'Periodizität.'] },
+  { id: 'naturtechnik-hard-231', title: 'Was beschreibt Selbstähnlichkeit in der Natur', category: 'natur', year: 0, cue: 'Was beschreibt Selbstähnlichkeit in der Natur?', answer: 'Fraktale.', difficulty: 'schwer', sources: {}, distractors: ['Symmetrie.', 'Chaos.', 'Periodizität.'] },
 
   { id: 'naturtechnik-hard-232', title: 'Was ist die Kardaschow-Skala', category: 'natur', year: 0, cue: 'Was ist die Kardaschow-Skala?', answer: 'Maß für technologischen Energieverbrauch.', difficulty: 'schwer', sources: {}, distractors: ['Maß für biologische Vielfalt.', 'Skala für Erdbebenstärke.', 'Temperatureinheit.'] },
 
@@ -500,7 +500,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-hard-247', title: 'Prozess ohne Wärmeaustausch', category: 'natur', year: 0, cue: 'Prozess ohne Wärmeaustausch?', answer: 'Adiabatisch.', difficulty: 'schwer', sources: {}, distractors: ['Isotherm.', 'Isobar.', 'Isochor.'] },
 
-  { id: 'naturtechnik-hard-248', title: 'Tragerteilchen elektromagnetischer Kraft', category: 'natur', year: 0, cue: 'Tragerteilchen elektromagnetischer Kraft?', answer: 'Photon.', difficulty: 'schwer', sources: {}, distractors: ['Gluon.', 'W-Boson.', 'Graviton.'] },
+  { id: 'naturtechnik-hard-248', title: 'Trägerteilchen elektromagnetischer Kraft', category: 'natur', year: 0, cue: 'Trägerteilchen elektromagnetischer Kraft?', answer: 'Photon.', difficulty: 'schwer', sources: {}, distractors: ['Gluon.', 'W-Boson.', 'Graviton.'] },
 
   { id: 'naturtechnik-hard-249', title: 'Triebkraft chemischer Reaktionen', category: 'natur', year: 0, cue: 'Triebkraft chemischer Reaktionen?', answer: 'Gibbs-Energie.', difficulty: 'schwer', sources: {}, distractors: ['Entropie.', 'Enthalpie.', 'Aktivierungsenergie.'] },
 
