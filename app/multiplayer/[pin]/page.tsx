@@ -1689,6 +1689,8 @@ export default function MultiplayerGamePage() {
 
                 {/* Normale Anzeige nur wenn kein Ergebnis läuft */}
                 {!game.schaetzResult && <>
+                <div className="lg:grid lg:grid-cols-[1fr_360px] lg:gap-6 lg:items-start space-y-3 lg:space-y-0">
+                <div className="space-y-3">
                 {/* Frage-Karte */}
                 <div className="card-surface rounded-2xl p-6 space-y-4">
                   <div className="flex items-center justify-between">
@@ -1746,7 +1748,9 @@ export default function MultiplayerGamePage() {
                     );
                   })()}
                 </div>
+                </div>
 
+                <div className="space-y-3">
                 {/* Host: Übersicht + Auswertung */}
                 {effectiveIsHost && (
                   <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
@@ -1822,12 +1826,16 @@ export default function MultiplayerGamePage() {
                     </details>
                   </div>
                 )}
+                </div>
+                </div>
               </>}
             </>
             );
           })() : (
           <>
           {/* ── STANDARD TRIVIA FRAGE ── */}
+          <div className="lg:grid lg:grid-cols-[1fr_360px] lg:gap-6 lg:items-start space-y-3 lg:space-y-0">
+          <div className="space-y-3">
           {!isMyTurn && !effectiveIsHost && (
             <div className="w-full px-4 py-3 rounded-xl bg-red-600 text-white font-semibold text-sm text-center">
               Gruppe {activeGroup?.name ?? 'dem aktiven Team'} ist am Zug – ihr seid nicht dran
@@ -1936,7 +1944,9 @@ export default function MultiplayerGamePage() {
               </button>
             )}
           </div>
+          </div>
 
+          <div className="space-y-3">
           {/* Joker-Panel – nur für aktive Gruppe, nicht für Host, nicht wenn NEXT-Joker aktiv */}
           {game.jokersEnabled && isMyTurn && session && !game.jokerNextActive && (() => {
             const myJokers = game.groups[session.groupId]?.jokers;
@@ -2171,6 +2181,8 @@ export default function MultiplayerGamePage() {
               </details>
             </div>
           )}
+          </div>
+          </div>
           </>
           )}
         </main>
@@ -2336,6 +2348,8 @@ export default function MultiplayerGamePage() {
           )}
         </div>
 
+        <div className="lg:grid lg:grid-cols-[1fr_360px] lg:gap-6 lg:items-start space-y-3 lg:space-y-0">
+        <div className="space-y-3">
         {/* Aktuelle Karte */}
         {currentCard && (() => {
           const categoryLabel = catLabelMeta(currentCard.category);
@@ -2805,7 +2819,9 @@ export default function MultiplayerGamePage() {
             )}
           </div>
         )}
+        </div>
 
+        <div className="space-y-3">
         {/* Host-Ansicht: Ergebnis der Platzierung + Flex-Frage + "Weiter"-Button */}
         {isHostSession && game.pendingResult && currentCard && (
           <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-ink/20">
@@ -2940,6 +2956,8 @@ export default function MultiplayerGamePage() {
             )}
           </div>
         )}
+        </div>
+        </div>
 
         {/* Live Scoreboard */}
         <details className="card-surface rounded-2xl group">
