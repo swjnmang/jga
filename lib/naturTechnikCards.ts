@@ -308,7 +308,7 @@ export const naturTechnikCards: Card[] = [
 
   { id: 'naturtechnik-medium-151', title: 'Was beschreibt Viskosität', category: 'natur', year: 0, cue: 'Was beschreibt Viskosität?', answer: 'Zahflussigkeit.', difficulty: 'mittel', sources: {}, distractors: ['Dichte.', 'Viskosität.', 'Oberflächenspannung.'] },
 
-  { id: 'naturtechnik-medium-152', title: 'Welches giftige Metall war fruher in Thermometern', category: 'natur', year: 0, cue: 'Welches giftige Metall war fruher in Thermometern?', answer: 'Quecksilber.', difficulty: 'mittel', sources: {}, distractors: ['Blei.', 'Arsen.', 'Cadmium.'] },
+  { id: 'naturtechnik-medium-152', title: 'Welches giftige Metall war früher in Thermometern', category: 'natur', year: 0, cue: 'Welches giftige Metall war früher in Thermometern?', answer: 'Quecksilber.', difficulty: 'mittel', sources: {}, distractors: ['Blei.', 'Arsen.', 'Cadmium.'] },
 
   { id: 'naturtechnik-medium-153', title: 'Welches Bauteil im Computer speichert Daten langfristig', category: 'natur', year: 0, cue: 'Welches Bauteil im Computer speichert Daten langfristig?', answer: 'Festplatte / SSD.', difficulty: 'mittel', sources: {}, distractors: ['RAM.', 'CPU.', 'Grafikkarte.'] },
 

@@ -102,7 +102,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'sportfreizeit-bouldern-olympia', title: 'Bouldern Olympiaformat', category: 'sportfreizeit', year: 0, cue: 'Aus welchen Disziplinen bestand das kombinierte Kletter-Event bei Olympia 2021?', answer: 'Bouldern, Lead und Speed im Kombinationsformat.', difficulty: 'schwer', sources: {}, distractors: ['Nur Speed und Lead ohne Bouldern.', 'Nur Bouldern und Speed ohne Lead.', 'Nur Bouldern und Lead ohne Speed.'], genres: [] },
 
-  { id: 'sportfreizeit-fussball-abseits', title: 'Abseitsregel', category: 'sportfreizeit', year: 0, cue: 'Wann liegt im Fußball Abseits vor?', answer: 'Wenn ein Angreifer beim Zuspiel naher zur Torlinie steht als Ball und vorletzter Verteidiger (mit aktiver Beteiligung).', difficulty: 'mittel', sources: {}, distractors: ['Wenn der Ball ins Seitenaus geht.', 'Nach jedem Handspiel der Verteidigung.', 'Wenn der Torwart den Ball in der Hand hat.'], genres: [] },
+  { id: 'sportfreizeit-fussball-abseits', title: 'Abseitsregel', category: 'sportfreizeit', year: 0, cue: 'Wann liegt im Fußball Abseits vor?', answer: 'Wenn ein Angreifer beim Zuspiel näher zur Torlinie steht als Ball und vorletzter Verteidiger (mit aktiver Beteiligung).', difficulty: 'mittel', sources: {}, distractors: ['Wenn der Ball ins Seitenaus geht.', 'Nach jedem Handspiel der Verteidigung.', 'Wenn der Torwart den Ball in der Hand hat.'], genres: [] },
 
   { id: 'sportfreizeit-rugby-varianten', title: 'Rugby Varianten', category: 'sportfreizeit', year: 0, cue: 'Nenne zwei gängige Rugby-Varianten.', answer: 'Rugby Union (15er), Rugby League (13er), Rugby Sevens (7er) – zwei davon.', difficulty: 'mittel', sources: {}, distractors: ['Rugby Union (14er), Rugby League (13er), Rugby Sevens (7er) – zwei davon.', 'Rugby Union (16er), Rugby League (13er), Rugby Sevens (7er) – zwei davon.'], genres: [] },
 
@@ -198,7 +198,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'sportfreizeit-mueller-bundesliga', title: 'Gerd Müller Bundesliga-Tore', category: 'sportfreizeit', year: 0, cue: 'Wie viele Tore erzielte Gerd Müller in seiner Rekord-Bundesliga-Saison 1971/72?', answer: '40 Tore. (Toleranz: 38–42)', difficulty: 'mittel', sources: {}, distractors: ['37 Tore. (Toleranz: 38–42)', '41 Tore. (Toleranz: 38–42)', '43 Tore. (Toleranz: 38–42)'], genres: [] },
 
-  { id: 'sportfreizeit-beamon-weitsprung', title: 'Bob Beamon Weitsprung 1968', category: 'sportfreizeit', year: 0, cue: 'Wie viele Meter weit sprang Bob Beamon bei seinem "Sprung ins nachste Jahrhundert" 1968?', answer: '8,90 Meter. (Toleranz: 8,455–9,345)', difficulty: 'mittel', sources: {}, distractors: ['8,01 Meter. (Toleranz: 8,455–9,345)', '9,35 Meter. (Toleranz: 8,455–9,345)', '9,97 Meter. (Toleranz: 8,455–9,345)'], genres: [] },
+  { id: 'sportfreizeit-beamon-weitsprung', title: 'Bob Beamon Weitsprung 1968', category: 'sportfreizeit', year: 0, cue: 'Wie viele Meter weit sprang Bob Beamon bei seinem "Sprung ins nächste Jahrhundert" 1968?', answer: '8,90 Meter. (Toleranz: 8,455–9,345)', difficulty: 'mittel', sources: {}, distractors: ['8,01 Meter. (Toleranz: 8,455–9,345)', '9,35 Meter. (Toleranz: 8,455–9,345)', '9,97 Meter. (Toleranz: 8,455–9,345)'], genres: [] },
 
   { id: 'sportfreizeit-navratilova-siege', title: 'Navratilova Siegesserie', category: 'sportfreizeit', year: 0, cue: 'Wie viele Siege in Folge erzielte die Tennisspielerin Martina Navratilova (Rekord)?', answer: '74 Siege. (Toleranz: 70,3–77,7)', difficulty: 'mittel', sources: {}, distractors: ['67 Siege. (Toleranz: 70,3–77,7)', '72 Siege. (Toleranz: 70,3–77,7)', '78 Siege. (Toleranz: 70,3–77,7)'], genres: [] },
 
@@ -206,7 +206,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'sportfreizeit-basketball-durchmesser', title: 'Basketball Durchmesser', category: 'sportfreizeit', year: 0, cue: 'Wie viele Millimeter Durchmesser hat ein Basketball der Größe 7 exakt?', answer: '238,7 Millimeter. (Toleranz: 226,765–250,635)', difficulty: 'schwer', sources: {}, distractors: ['222,0 Millimeter. (Toleranz: 226,765–250,635)', '248,2 Millimeter. (Toleranz: 226,765–250,635)', '257,8 Millimeter. (Toleranz: 226,765–250,635)'], genres: [] },
 
-  { id: 'sportfreizeit-verstappen-runden', title: 'Verstappen Runden gefuhrt 2023', category: 'sportfreizeit', year: 0, cue: 'Wie viele Runden fuhrte Max Verstappen in der F1-Saison 2023 insgesamt (Rekord)?', answer: '1.003 Runden. (Toleranz: 952,85–1.053,15)', difficulty: 'schwer', sources: {}, distractors: ['953 Runden. (Toleranz: 952,85–1.053,15)', '1.033 Runden. (Toleranz: 952,85–1.053,15)', '1.073 Runden. (Toleranz: 952,85–1.053,15)'], genres: [] },
+  { id: 'sportfreizeit-verstappen-runden', title: 'Verstappen Runden geführt 2023', category: 'sportfreizeit', year: 0, cue: 'Wie viele Runden führte Max Verstappen in der F1-Saison 2023 insgesamt (Rekord)?', answer: '1.003 Runden. (Toleranz: 952,85–1.053,15)', difficulty: 'schwer', sources: {}, distractors: ['953 Runden. (Toleranz: 952,85–1.053,15)', '1.033 Runden. (Toleranz: 952,85–1.053,15)', '1.073 Runden. (Toleranz: 952,85–1.053,15)'], genres: [] },
 
   { id: 'sportfreizeit-ufc-ko-rekord', title: 'Schnellster UFC K.o.', category: 'sportfreizeit', year: 0, cue: 'Wie viele Sekunden dauerte der schnellste K.o. der UFC-Geschichte (Jorge Masvidal)?', answer: '5 Sekunden. (Toleranz: 4,75–5,25)', difficulty: 'leicht', sources: {}, distractors: ['4 Sekunden. (Toleranz: 4,75–5,25)', '6 Sekunden. (Toleranz: 4,75–5,25)'], genres: [] },
 
@@ -328,7 +328,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'religion-008', title: 'Garten Eden', category: 'religionglaube', year: 0, cue: 'Wie heißt der Ort, an dem Adam und Eva lebten?', answer: 'Garten Eden (Paradies).', difficulty: 'leicht', sources: {}, distractors: ['Der Berg Sinai.', 'Das Gelobte Land.', 'Das Rote Meer.'], genres: [] },
 
-  { id: 'religion-009', title: 'Schlange', category: 'religionglaube', year: 0, cue: 'Welches Tier verfuhrte Eva dazu, die verbotene Frucht zu essen?', answer: 'Eine Schlange.', difficulty: 'leicht', sources: {}, distractors: ['Ein Apfel.', 'Ein Engel.', 'Ein Dämon.'], genres: [] },
+  { id: 'religion-009', title: 'Schlange', category: 'religionglaube', year: 0, cue: 'Welches Tier verführte Eva dazu, die verbotene Frucht zu essen?', answer: 'Eine Schlange.', difficulty: 'leicht', sources: {}, distractors: ['Ein Apfel.', 'Ein Engel.', 'Ein Dämon.'], genres: [] },
 
   { id: 'religion-010', title: 'Noah', category: 'religionglaube', year: 0, cue: 'Wer baute laut Bibel eine Arche, um die Tiere vor der Flut zu retten?', answer: 'Noah.', difficulty: 'leicht', sources: {}, distractors: ['Abraham.', 'Moses.', 'Lot.'], genres: [] },
 
@@ -660,7 +660,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'religion-172', title: 'Qumran Schriftrollen', category: 'religionglaube', year: 0, cue: 'Was sind die Qumran Schriftrollen (Dead Sea Scrolls)?', answer: 'Antike hebraische und aramaische Texte, u.a. biblische Manuskripte, 1. Jh. v.Chr.', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'religion-173', title: 'Ebioniten', category: 'religionglaube', year: 0, cue: 'Wer waren die Ebioniten?', answer: 'Eine fruhe judenchristliche Sekte, die die Gottsohnschaft Jesu leugnete.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'religion-173', title: 'Ebioniten', category: 'religionglaube', year: 0, cue: 'Wer waren die Ebioniten?', answer: 'Eine frühe judenchristliche Sekte, die die Gottsohnschaft Jesu leugnete.', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'religion-174', title: 'Arianer', category: 'religionglaube', year: 0, cue: 'Was waren Arianer?', answer: 'Anhänger des Arius, die die Untergottheit Christi lehrten (4. Jh.).', difficulty: 'schwer', sources: {}, genres: [] },
 
