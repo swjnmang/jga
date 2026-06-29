@@ -840,11 +840,11 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'geo-deutschland-bundeslaender', title: 'Bundesländer Deutschland', category: 'geogeschichte', year: 0, cue: 'Wie viele Bundesländer hat Deutschland?', answer: '16.', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'geo-deutschland-nachbarlaender', title: 'Nachbarn Deutschlands', category: 'geogeschichte', year: 0, cue: 'Nenne drei Nachbarländer Deutschlands.', answer: 'z.B. Frankreich, Polen, Schweiz, Osterreich, Niederlande, Dänemark, Belgien, Luxemburg, Tschechien (drei beliebige).', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-deutschland-nachbarlaender', title: 'Nachbarn Deutschlands', category: 'geogeschichte', year: 0, cue: 'Nenne drei Nachbarländer Deutschlands.', answer: 'z.B. Frankreich, Polen, Schweiz, Österreich, Niederlande, Dänemark, Belgien, Luxemburg, Tschechien (drei beliebige).', difficulty: 'leicht', sources: {}, genres: [] },
 
   { id: 'geo-afrika-flaeche', title: 'Zweitgrößter Kontinent', category: 'geogeschichte', year: 0, cue: 'Welcher Kontinent ist flächenmäßig der zweitgrößte?', answer: 'Afrika.', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'geo-sueden-erde', title: 'Sudlichster Kontinent', category: 'geogeschichte', year: 0, cue: 'Welcher Kontinent liegt ganz im Suden?', answer: 'Antarktika.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-sueden-erde', title: 'Südlichster Kontinent', category: 'geogeschichte', year: 0, cue: 'Welcher Kontinent liegt ganz im Süden?', answer: 'Antarktika.', difficulty: 'leicht', sources: {}, genres: [] },
 
   { id: 'geo-zeitzonen', title: 'Zeitzonen', category: 'geogeschichte', year: 0, cue: 'Wie viele Zeitzonen hat die Erde theoretisch?', answer: '24 Zeitzonen.', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -858,9 +858,9 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'geo-hauptstadt-brasilien', title: 'Hauptstadt Brasilien', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Brasiliens?', answer: 'Brasília.', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'geo-hauptstadt-suedafrika', title: 'Hauptstadt Sudafrika', category: 'geogeschichte', year: 0, cue: 'Welche drei Hauptstadte hat Sudafrika (Funktionen)?', answer: 'Pretoria (Exekutive), Kapstadt (Legislative), Bloemfontein (Judikative).', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-suedafrika', title: 'Hauptstadt Südafrika', category: 'geogeschichte', year: 0, cue: 'Welche drei Hauptstädte hat Südafrika (Funktionen)?', answer: 'Pretoria (Exekutive), Kapstadt (Legislative), Bloemfontein (Judikative).', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'geo-aegypten-fluss', title: 'Fluss "Agypten', category: 'geogeschichte', year: 0, cue: 'Welcher Fluss pragt "Agypten?', answer: 'Der Nil.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-aegypten-fluss', title: 'Fluss Ägyptens', category: 'geogeschichte', year: 0, cue: 'Welcher Fluss prägt Ägypten?', answer: 'Der Nil.', difficulty: 'leicht', sources: {}, genres: [] },
 
   { id: 'geo-indien-hauptstadt', title: 'Hauptstadt Indien', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Indiens?', answer: 'Neu-Delhi.', difficulty: 'leicht', sources: {}, genres: [] },
 
@@ -890,13 +890,13 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'geo-mittelalter-feudalismus', title: 'Feudalismus', category: 'geogeschichte', year: 0, cue: 'Was kennzeichnet Feudalismus?', answer: 'Lehnswesen: Land gegen Dienst/Treue.', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'geo-industrialisierung', title: 'Industrialisierung', category: 'geogeschichte', year: 0, cue: 'Welcher Energietrager trieb die erste Industrialisierung?', answer: 'Kohle (Dampfmaschinen).', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-industrialisierung', title: 'Industrialisierung', category: 'geogeschichte', year: 0, cue: 'Welcher Energieträger trieb die erste Industrialisierung?', answer: 'Kohle (Dampfmaschinen).', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'geo-kalter-krieg', title: 'Kalter Krieg', category: 'geogeschichte', year: 0, cue: 'Welche zwei Blocke standen sich im Kalten Krieg gegenuber?', answer: 'USA/NATO vs. UdSSR/Warschauer Pakt.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-kalter-krieg', title: 'Kalter Krieg', category: 'geogeschichte', year: 0, cue: 'Welche zwei Blöcke standen sich im Kalten Krieg gegenüber?', answer: 'USA/NATO vs. UdSSR/Warschauer Pakt.', difficulty: 'leicht', sources: {}, genres: [] },
 
   { id: 'geo-entkolonialisierung', title: 'Entkolonialisierung', category: 'geogeschichte', year: 0, cue: 'In welchem Zeitraum entkolonialisierten sich viele afrikanische Staaten?', answer: 'Vor allem 1950er–1970er.', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'geo-franzoesische-revolution', title: 'Franzosische Revolution', category: 'geogeschichte', year: 0, cue: 'Nenne ein Schlagwort der Franzosischen Revolution.', answer: 'Freiheit, Gleichheit, Bruderlichkeit (Liberté, Égalité, Fraternité).', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-franzoesische-revolution', title: 'Französische Revolution', category: 'geogeschichte', year: 0, cue: 'Nenne ein Schlagwort der Französischen Revolution.', answer: 'Freiheit, Gleichheit, Brüderlichkeit (Liberté, Égalité, Fraternité).', difficulty: 'leicht', sources: {}, genres: [] },
 
   { id: 'geo-welthandel-seidenstrasse', title: 'Seidenstraße', category: 'geogeschichte', year: 0, cue: 'Was war die historische Seidenstraße?', answer: 'Ein Netzwerk von Handelsrouten zwischen China, Zentralasien, Nahost, Europa.', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -906,15 +906,119 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'geo-reformation', title: 'Reformation Wirkung', category: 'geogeschichte', year: 0, cue: 'Welche Auswirkung hatte die Reformation auf Europa?', answer: 'Spaltung der Kirche, Konfessionskonflikte, Machtverschiebungen.', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'geo-aufklaerung', title: 'Aufklärung', category: 'geogeschichte', year: 0, cue: 'Was betonte die Aufklärung?', answer: 'Vernunft, Wissenschaft, Menschenrechte, Sakularisierung.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-aufklaerung', title: 'Aufklärung', category: 'geogeschichte', year: 0, cue: 'Was betonte die Aufklärung?', answer: 'Vernunft, Wissenschaft, Menschenrechte, Säkularisierung.', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'geo-weltkriege', title: 'Zweiter Weltkrieg Allierte', category: 'geogeschichte', year: 0, cue: 'Nenne drei Hauptalliierten im Zweiten Weltkrieg.', answer: 'USA, Sowjetunion, Groubritannien (plus Frankreich/China).', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-weltkriege', title: 'Zweiter Weltkrieg Allierte', category: 'geogeschichte', year: 0, cue: 'Nenne drei Hauptalliierten im Zweiten Weltkrieg.', answer: 'USA, Sowjetunion, Großbritannien (plus Frankreich/China).', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'geo-eu-geschichte', title: 'EGKS Gründung', category: 'geogeschichte', year: 0, cue: 'Welcher Vorlaufer der EU wurde 1951 gegründet?', answer: 'EGKS (Europaische Gemeinschaft für Kohle und Stahl).', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-eu-geschichte', title: 'EGKS Gründung', category: 'geogeschichte', year: 0, cue: 'Welcher Vorläufer der EU wurde 1951 gegründet?', answer: 'EGKS (Europäische Gemeinschaft für Kohle und Stahl).', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'geo-globalisierung', title: 'Globalisierung Merkmal', category: 'geogeschichte', year: 0, cue: 'Nenne ein Merkmal der Globalisierung.', answer: 'Weltweite Vernetzung von Handel, Kultur, Kommunikation.', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'geo-panama-kanal', title: 'Panamakanal', category: 'geogeschichte', year: 0, cue: 'Welchen Vorteil brachte der Panamakanal dem Schiffsverkehr?', answer: 'Er verkürzte die Route zwischen Atlantik und Pazifik, erspart die Umfahrung Kap Hoorns.', difficulty: 'mittel', sources: {}, genres: [] }
+  { id: 'geo-panama-kanal', title: 'Panamakanal', category: 'geogeschichte', year: 0, cue: 'Welchen Vorteil brachte der Panamakanal dem Schiffsverkehr?', answer: 'Er verkürzte die Route zwischen Atlantik und Pazifik, erspart die Umfahrung Kap Hoorns.', difficulty: 'mittel', sources: {}, genres: [] },
+
+  // ── Erweiterung: 100 neue Geschichte & Geografie Fragen ──
+  { id: 'geo-hauptstadt-japan', title: 'Hauptstadt Japan', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Japans?', answer: 'Tokio.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-russland', title: 'Hauptstadt Russland', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Russlands?', answer: 'Moskau.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-italien', title: 'Hauptstadt Italien', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Italiens?', answer: 'Rom.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-spanien', title: 'Hauptstadt Spanien', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Spaniens?', answer: 'Madrid.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-grossbritannien', title: 'Hauptstadt Großbritannien', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Großbritanniens?', answer: 'London.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-aegypten', title: 'Hauptstadt Ägypten', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Ägyptens?', answer: 'Kairo.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-mexiko', title: 'Hauptstadt Mexiko', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Mexikos?', answer: 'Mexiko-Stadt.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-argentinien', title: 'Hauptstadt Argentinien', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Argentiniens?', answer: 'Buenos Aires.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-tuerkei', title: 'Hauptstadt Türkei', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt der Türkei?', answer: 'Ankara.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-griechenland', title: 'Hauptstadt Griechenland', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Griechenlands?', answer: 'Athen.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-polen', title: 'Hauptstadt Polen', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Polens?', answer: 'Warschau.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-schweden', title: 'Hauptstadt Schweden', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Schwedens?', answer: 'Stockholm.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-norwegen', title: 'Hauptstadt Norwegen', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Norwegens?', answer: 'Oslo.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-schweiz', title: 'Hauptstadt Schweiz', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt der Schweiz?', answer: 'Bern.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-niederlande', title: 'Hauptstadt Niederlande', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt der Niederlande?', answer: 'Amsterdam.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-portugal', title: 'Hauptstadt Portugal', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Portugals?', answer: 'Lissabon.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-vietnam', title: 'Hauptstadt Vietnam', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Vietnams?', answer: 'Hanoi.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-thailand', title: 'Hauptstadt Thailand', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Thailands?', answer: 'Bangkok.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-indonesien', title: 'Hauptstadt Indonesien', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Indonesiens?', answer: 'Jakarta.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-suedkorea', title: 'Hauptstadt Südkorea', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Südkoreas?', answer: 'Seoul.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-neuseeland', title: 'Hauptstadt Neuseeland', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Neuseelands?', answer: 'Wellington.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-kenia', title: 'Hauptstadt Kenia', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Kenias?', answer: 'Nairobi.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-nigeria', title: 'Hauptstadt Nigeria', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Nigerias?', answer: 'Abuja.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-iran', title: 'Hauptstadt Iran', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Irans?', answer: 'Teheran.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-pakistan', title: 'Hauptstadt Pakistan', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Pakistans?', answer: 'Islamabad.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-hauptstadt-oesterreich', title: 'Hauptstadt Österreich', category: 'geogeschichte', year: 0, cue: 'Wie heißt die Hauptstadt Österreichs?', answer: 'Wien.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-grenze-europa-asien', title: 'Grenze Europa/Asien', category: 'geogeschichte', year: 0, cue: 'Welches Gebirge bildet die geografische Grenze zwischen Europa und Asien?', answer: 'Der Ural.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-groesster-see', title: 'Größter See', category: 'geogeschichte', year: 0, cue: 'Wie heißt der größte See der Welt?', answer: 'Der Kaspische See.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-wenigste-einwohner-kontinent', title: 'Kontinent mit wenigsten Einwohnern', category: 'geogeschichte', year: 0, cue: 'Welcher Kontinent hat anteilig die wenigsten dauerhaften Einwohner?', answer: 'Antarktika.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-anzahl-ozeane', title: 'Anzahl Ozeane', category: 'geogeschichte', year: 0, cue: 'Wie viele Weltmeere/Ozeane werden üblicherweise unterschieden?', answer: 'Fünf (Pazifik, Atlantik, Indischer, Südlicher, Arktischer Ozean).', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-aequator', title: 'Äquator', category: 'geogeschichte', year: 0, cue: 'Welche gedachte Linie teilt die Erde in Nord- und Südhalbkugel?', answer: 'Der Äquator.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-deutsche-wiedervereinigung', title: 'Deutsche Wiedervereinigung', category: 'geogeschichte', year: 1990, cue: 'In welchem Jahr wurde Deutschland wiedervereinigt?', answer: '1990.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-beginn-2wk', title: 'Beginn Zweiter Weltkrieg', category: 'geogeschichte', year: 1939, cue: 'In welchem Jahr begann der Zweite Weltkrieg?', answer: '1939.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-ende-2wk', title: 'Ende Zweiter Weltkrieg', category: 'geogeschichte', year: 1945, cue: 'In welchem Jahr endete der Zweite Weltkrieg?', answer: '1945.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-beginn-1wk', title: 'Beginn Erster Weltkrieg', category: 'geogeschichte', year: 1914, cue: 'In welchem Jahr begann der Erste Weltkrieg?', answer: '1914.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-ende-1wk', title: 'Ende Erster Weltkrieg', category: 'geogeschichte', year: 1918, cue: 'In welchem Jahr endete der Erste Weltkrieg?', answer: '1918.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-kolumbus-amerika', title: 'Kolumbus erreicht Amerika', category: 'geogeschichte', year: 1492, cue: 'In welchem Jahr erreichte Kolumbus erstmals Amerika?', answer: '1492.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-us-unabhaengigkeit', title: 'US-Unabhängigkeit', category: 'geogeschichte', year: 1776, cue: 'In welchem Jahr erklärten die USA ihre Unabhängigkeit?', answer: '1776.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-fluss-paris', title: 'Fluss durch Paris', category: 'geogeschichte', year: 0, cue: 'Welcher Fluss fließt durch Paris?', answer: 'Die Seine.', difficulty: 'leicht', sources: {}, genres: [] },
+  { id: 'geo-fluss-london', title: 'Fluss durch London', category: 'geogeschichte', year: 0, cue: 'Welcher Fluss fließt durch London?', answer: 'Die Themse.', difficulty: 'leicht', sources: {}, genres: [] },
+
+  { id: 'geo-laengster-fluss-europa', title: 'Längster Fluss Europas', category: 'geogeschichte', year: 0, cue: 'Welcher Fluss ist der längste Fluss Europas?', answer: 'Die Wolga.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-tiefster-see', title: 'Tiefster See', category: 'geogeschichte', year: 0, cue: 'Welches ist der tiefste See der Welt?', answer: 'Der Baikalsee.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-groesste-kaltwueste', title: 'Größte Kaltwüste', category: 'geogeschichte', year: 0, cue: 'Welche Wüste ist die größte kalte Wüste der Erde?', answer: 'Die Antarktis.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-franzoesische-revolution-jahr', title: 'Beginn Französische Revolution', category: 'geogeschichte', year: 1789, cue: 'In welchem Jahr begann die Französische Revolution?', answer: '1789.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-deutsches-kaiserreich-gruendung', title: 'Gründung Deutsches Kaiserreich', category: 'geogeschichte', year: 1871, cue: 'In welchem Jahr wurde das Deutsche Kaiserreich gegründet?', answer: '1871.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-caesar-ermordet', title: 'Cäsars Ermordung', category: 'geogeschichte', year: -44, cue: 'Wer war römischer Diktator und wurde 44 v. Chr. ermordet?', answer: 'Julius Cäsar.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-mongolen-dschingis-khan', title: 'Mongolenreich', category: 'geogeschichte', year: 0, cue: 'Welches Volk eroberte unter Dschingis Khan im 13. Jh. weite Teile Asiens?', answer: 'Die Mongolen.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-zerfall-sowjetunion', title: 'Zerfall der Sowjetunion', category: 'geogeschichte', year: 1991, cue: 'In welchem Jahr endete der Kalte Krieg mit dem Zerfall der Sowjetunion?', answer: '1991.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-nato-buendnis', title: 'NATO-Bündnis', category: 'geogeschichte', year: 0, cue: 'Wie hieß das Bündnis der westlichen Staaten im Kalten Krieg gegen den Warschauer Pakt?', answer: 'Die NATO.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-vertrag-maastricht', title: 'Vertrag von Maastricht', category: 'geogeschichte', year: 1993, cue: 'In welchem Jahr trat der Vertrag von Maastricht in Kraft (Gründung der EU)?', answer: '1993.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-euro-buchgeld', title: 'Euro als Buchgeld', category: 'geogeschichte', year: 1999, cue: 'In welchem Jahr wurde der Euro als Buchgeld eingeführt?', answer: '1999.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-euro-bargeld', title: 'Euro als Bargeld', category: 'geogeschichte', year: 2002, cue: 'In welchem Jahr wurde der Euro als Bargeld eingeführt?', answer: '2002.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-inka-machu-picchu', title: 'Machu Picchu', category: 'geogeschichte', year: 0, cue: 'Welches Volk baute Machu Picchu in Peru?', answer: 'Die Inka.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-mesopotamien', title: 'Mesopotamien', category: 'geogeschichte', year: 0, cue: 'Welche antike Hochkultur entstand zwischen Euphrat und Tigris?', answer: 'Mesopotamien.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-pyrenaeen', title: 'Pyrenäen', category: 'geogeschichte', year: 0, cue: 'Welches Gebirge ist die Grenze zwischen Frankreich und Spanien?', answer: 'Die Pyrenäen.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-strasse-von-gibraltar', title: 'Straße von Gibraltar', category: 'geogeschichte', year: 0, cue: 'Welche Meerenge trennt Europa und Afrika an ihrer engsten Stelle?', answer: 'Die Straße von Gibraltar.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-sueskanal', title: 'Sueskanal Verbindung', category: 'geogeschichte', year: 0, cue: 'Welcher Kanal verbindet Mittelmeer und Rotes Meer?', answer: 'Der Sueskanal.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-sueskanal-eroeffnung', title: 'Eröffnung Sueskanal', category: 'geogeschichte', year: 1869, cue: 'In welchem Jahr wurde der Sueskanal eröffnet?', answer: '1869.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-bevoelkerungsreichstes-land', title: 'Bevölkerungsreichstes Land', category: 'geogeschichte', year: 0, cue: 'Welches Land hat die meisten Einwohner der Welt (Stand Mitte 2020er)?', answer: 'Indien.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-flaechengroesstes-land', title: 'Flächengrößtes Land', category: 'geogeschichte', year: 0, cue: 'Welches Land hat die größte Fläche der Welt?', answer: 'Russland.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-kleinstes-land', title: 'Kleinstes Land', category: 'geogeschichte', year: 0, cue: 'Welches ist das flächenmäßig kleinste Land der Welt?', answer: 'Vatikanstadt.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-hanse', title: 'Die Hanse', category: 'geogeschichte', year: 0, cue: 'Wie hieß das mittelalterliche Handelsbündnis norddeutscher Städte?', answer: 'Die Hanse.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-reformation-beginn', title: 'Beginn Reformation', category: 'geogeschichte', year: 1517, cue: 'In welchem Jahr begann die Reformation durch Luthers Thesenanschlag?', answer: '1517.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-ende-30jaehriger-krieg', title: 'Ende Dreißigjähriger Krieg', category: 'geogeschichte', year: 1648, cue: 'In welchem Jahr endete der Dreißigjährige Krieg?', answer: '1648.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-westfaelischer-friede', title: 'Westfälischer Friede', category: 'geogeschichte', year: 1648, cue: 'Welcher Friedensvertrag beendete 1648 den Dreißigjährigen Krieg?', answer: 'Der Westfälische Friede.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-oktoberrevolution', title: 'Oktoberrevolution', category: 'geogeschichte', year: 1917, cue: 'In welchem Jahr begann die Oktoberrevolution in Russland?', answer: '1917.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-erster-kaiser-1871', title: 'Erster deutscher Kaiser 1871', category: 'geogeschichte', year: 1871, cue: 'Wer war der erste Kaiser des wiedervereinigten Deutschen Kaiserreichs 1871?', answer: 'Wilhelm I.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-vertrag-von-versailles', title: 'Vertrag von Versailles', category: 'geogeschichte', year: 1919, cue: 'In welchem Jahr wurde der Vertrag von Versailles unterzeichnet?', answer: '1919.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-laengstes-gebirge', title: 'Längstes Gebirge', category: 'geogeschichte', year: 0, cue: 'Welches Gebirge ist das längste Gebirge der Welt (an Land)?', answer: 'Die Anden.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-wasserreichster-fluss', title: 'Wasserreichster Fluss', category: 'geogeschichte', year: 0, cue: 'Welcher Fluss ist der wasserreichste Fluss der Welt?', answer: 'Der Amazonas.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-sinai-halbinsel', title: 'Sinai-Halbinsel', category: 'geogeschichte', year: 0, cue: 'Welche Halbinsel verbindet Asien und Afrika über den Sinai?', answer: 'Die Sinai-Halbinsel.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-uk-eu-beitritt', title: 'UK EU-Beitritt', category: 'geogeschichte', year: 1973, cue: 'In welchem Jahr trat Großbritannien der EU bei?', answer: '1973.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-brexit-referendum', title: 'Brexit-Referendum', category: 'geogeschichte', year: 2016, cue: 'In welchem Jahr stimmte Großbritannien für den Brexit (Referendum)?', answer: '2016.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-brexit-vollzug', title: 'Brexit-Vollzug', category: 'geogeschichte', year: 2020, cue: 'In welchem Jahr verließ Großbritannien die EU offiziell?', answer: '2020.', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'geo-westroemisches-reich', title: 'Weströmisches Reich', category: 'geogeschichte', year: 476, cue: 'Welches Imperium hatte mit Rom seine Hauptstadt und zerfiel 476 n. Chr. im Westen?', answer: 'Das Weströmische Reich.', difficulty: 'mittel', sources: {}, genres: [] },
+
+  { id: 'geo-fall-konstantinopel', title: 'Fall von Konstantinopel', category: 'geogeschichte', year: 1453, cue: 'In welchem Jahr fiel Konstantinopel an die Osmanen?', answer: '1453.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-magna-carta', title: 'Magna Carta', category: 'geogeschichte', year: 1215, cue: 'In welchem Jahr wurde die Magna Carta in England unterzeichnet?', answer: '1215.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-hundertjaehriger-krieg', title: 'Hundertjähriger Krieg', category: 'geogeschichte', year: 1337, cue: 'Welcher Krieg zwischen England und Frankreich dauerte von 1337 bis 1453?', answer: 'Der Hundertjährige Krieg.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-schwarzer-tod', title: 'Schwarzer Tod', category: 'geogeschichte', year: 0, cue: 'In welchem Jahrhundert wütete die Pest ("Schwarzer Tod") am stärksten in Europa?', answer: 'Im 14. Jahrhundert.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-spanische-armada', title: 'Spanische Armada', category: 'geogeschichte', year: 1588, cue: 'Welche spanische Flotte wurde 1588 von England vernichtend geschlagen?', answer: 'Die Armada.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-wiener-kongress', title: 'Wiener Kongress', category: 'geogeschichte', year: 1814, cue: 'In welchem Jahr fand der Wiener Kongress statt?', answer: '1814/1815.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-napoleon-waterloo', title: 'Napoleon bei Waterloo', category: 'geogeschichte', year: 1815, cue: 'Wer war französischer Kaiser und wurde 1815 bei Waterloo geschlagen?', answer: 'Napoleon Bonaparte.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-ende-sklaverei-usa', title: 'Ende der Sklaverei in den USA', category: 'geogeschichte', year: 1865, cue: 'In welchem Jahr endete die Sklaverei in den USA offiziell (13. Verfassungszusatz)?', answer: '1865.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-kubakrise', title: 'Kubakrise', category: 'geogeschichte', year: 1962, cue: 'Welche Krise 1962 brachte die USA und die UdSSR an den Rand eines Atomkriegs?', answer: 'Die Kubakrise.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-bau-berliner-mauer', title: 'Bau der Berliner Mauer', category: 'geogeschichte', year: 1961, cue: 'In welchem Jahr wurde die Berliner Mauer errichtet?', answer: '1961.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-roemische-vertraege', title: 'Römische Verträge', category: 'geogeschichte', year: 1957, cue: 'Welcher Vertrag von 1957 gründete die Europäische Wirtschaftsgemeinschaft?', answer: 'Die Römischen Verträge.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-schengener-abkommen', title: 'Schengener Abkommen', category: 'geogeschichte', year: 1995, cue: 'In welchem Jahr trat das Schengener Abkommen in Kraft?', answer: '1995 (unterschrieben bereits 1985).', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-azteken-tenochtitlan', title: 'Azteken Tenochtitlán', category: 'geogeschichte', year: 0, cue: 'Welches Volk errichtete im präkolumbianischen Mexiko die Stadt Tenochtitlán?', answer: 'Die Azteken.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-induskultur', title: 'Induskultur', category: 'geogeschichte', year: 0, cue: 'Welche Hochkultur entwickelte sich im Industal (heutiges Pakistan)?', answer: 'Die Induskultur.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-gruendung-vr-china', title: 'Gründung Volksrepublik China', category: 'geogeschichte', year: 1949, cue: 'In welchem Jahr wurde die Volksrepublik China gegründet?', answer: '1949.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-bismarck-einung', title: 'Bismarck und die Reichsgründung', category: 'geogeschichte', year: 1871, cue: 'Wer einte als Kanzler 1871 die deutschen Staaten zum Deutschen Kaiserreich?', answer: 'Otto von Bismarck.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-vietnamkrieg-beginn', title: 'Beginn Vietnamkrieg', category: 'geogeschichte', year: 1965, cue: 'In welchem Jahr begann der Vietnamkrieg (US-Beteiligung, ungefähr)?', answer: '1965.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-vietnamkrieg-ende', title: 'Ende Vietnamkrieg', category: 'geogeschichte', year: 1975, cue: 'In welchem Jahr endete der Vietnamkrieg?', answer: '1975.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-rio-grande', title: 'Rio Grande', category: 'geogeschichte', year: 0, cue: 'Welcher Fluss bildet einen Teil der Grenze zwischen den USA und Mexiko?', answer: 'Der Rio Grande.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-tuerkische-republik', title: 'Gründung Türkische Republik', category: 'geogeschichte', year: 1923, cue: 'In welchem Jahr wurde die Türkische Republik gegründet?', answer: '1923.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-atatuerk', title: 'Atatürk', category: 'geogeschichte', year: 1923, cue: 'Wer gründete die Türkische Republik als erster Präsident?', answer: 'Mustafa Kemal Atatürk.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-alpen-italien', title: 'Alpen', category: 'geogeschichte', year: 0, cue: 'Welches Gebirgsmassiv trennt Italien vom übrigen Europa?', answer: 'Die Alpen.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-spanischer-buergerkrieg-beginn', title: 'Beginn Spanischer Bürgerkrieg', category: 'geogeschichte', year: 1936, cue: 'In welchem Jahr begann der Spanische Bürgerkrieg?', answer: '1936.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-spanischer-buergerkrieg-ende', title: 'Ende Spanischer Bürgerkrieg', category: 'geogeschichte', year: 1939, cue: 'In welchem Jahr endete der Spanische Bürgerkrieg?', answer: '1939.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'geo-konferenz-von-jalta', title: 'Konferenz von Jalta', category: 'geogeschichte', year: 1945, cue: 'Welche Konferenz 1945 teilte Deutschland nach Kriegsende in Besatzungszonen?', answer: 'Die Konferenz von Jalta (gefolgt von Potsdam).', difficulty: 'schwer', sources: {}, genres: [] }
 
 ];
 
