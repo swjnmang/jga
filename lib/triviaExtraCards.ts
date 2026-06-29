@@ -56,7 +56,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'sportfreizeit-fahrrad-rahmen', title: 'Fahrrad Rahmengroesse', category: 'sportfreizeit', year: 0, cue: 'Wovon hängt die passende Rahmengroesse eines Fahrrads vor allem ab?', answer: 'Von der Innenbeinlaenge/Koerpergroesse und Einsatzart.', difficulty: 'mittel', sources: {}, distractors: ['Anzahl der Gaenge.', 'Breite der Reifen.', 'Form des Lenkers.'], genres: [] },
 
-  { id: 'sportfreizeit-wandern-hoehenmeter', title: 'Wandern Hoehenmeter', category: 'sportfreizeit', year: 0, cue: 'Was sind "Hm" auf Wanderkarten?', answer: 'Hoehenmeter, die zu ueberwinden sind.', difficulty: 'leicht', sources: {}, distractors: ['Horizontale Streckenkilometer.', 'Durchschnittliche Steigung in Prozent.', 'Geschaetzte Gehzeit pro Etappe.'], genres: [] },
+  { id: 'sportfreizeit-wandern-hoehenmeter', title: 'Wandern Höhenmeter', category: 'sportfreizeit', year: 0, cue: 'Was sind "Hm" auf Wanderkarten?', answer: 'Höhenmeter, die zu überwinden sind.', difficulty: 'leicht', sources: {}, distractors: ['Horizontale Streckenkilometer.', 'Durchschnittliche Steigung in Prozent.', 'Geschätzte Gehzeit pro Etappe.'], genres: [] },
 
   { id: 'sportfreizeit-surfen-welle', title: 'Surfen Wellenart', category: 'sportfreizeit', year: 0, cue: 'Wie nennt man eine lange, rollende Welle zum Surfen?', answer: 'Point Break (oder Beach Break, Reef Break je nach Spot).', difficulty: 'mittel', sources: {}, distractors: ['Shorebreak.', 'Windchop.', 'Close-out Welle.'], genres: [] },
 
@@ -114,7 +114,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'sportfreizeit-kipchoge-marathon', title: 'Kipchoge Marathon Berlin 2022', category: 'sportfreizeit', year: 0, cue: 'Wie viele Stunden benötigte Eliud Kipchoge bei seinem Rekordlauf in Berlin 2022 für die Marathonstrecke?', answer: '2,0191 Stunden (2:01:09 h). (Toleranz: 1,9181–2,1201)', difficulty: 'mittel', sources: {}, distractors: ['1,8172 Stunden (2:01:09 h). (Toleranz: 1,9181–2,1201)', '2,1201 Stunden (2:01:09 h). (Toleranz: 1,9181–2,1201)', '2,2614 Stunden (2:01:09 h). (Toleranz: 1,9181–2,1201)'], genres: [] },
 
-  { id: 'sportfreizeit-li-wenwen-stossen', title: 'Weltrekord Stouen Frauen', category: 'sportfreizeit', year: 0, cue: 'Wie viele Kilogramm hob Li Wenwen beim Weltrekord der Frauen im Stouen (Superschwergewicht)?', answer: '187 Kilogramm. (Toleranz: 177,65–196,35)', difficulty: 'mittel', sources: {}, distractors: ['168 Kilogramm. (Toleranz: 177,65–196,35)', '181 Kilogramm. (Toleranz: 177,65–196,35)', '198 Kilogramm. (Toleranz: 177,65–196,35)'], genres: [] },
+  { id: 'sportfreizeit-li-wenwen-stossen', title: 'Weltrekord Stoßen Frauen', category: 'sportfreizeit', year: 0, cue: 'Wie viele Kilogramm hob Li Wenwen beim Weltrekord der Frauen im Stoßen (Superschwergewicht)?', answer: '187 Kilogramm. (Toleranz: 177,65–196,35)', difficulty: 'mittel', sources: {}, distractors: ['168 Kilogramm. (Toleranz: 177,65–196,35)', '181 Kilogramm. (Toleranz: 177,65–196,35)', '198 Kilogramm. (Toleranz: 177,65–196,35)'], genres: [] },
 
   { id: 'sportfreizeit-pan-zhanle-100m-freistil', title: 'Weltrekord 100m Freistil 2024', category: 'sportfreizeit', year: 0, cue: 'Wie viele Sekunden benötigte Pan Zhanle für seinen 100m-Freistil-Weltrekord in Paris 2024?', answer: '46,40 Sekunden. (Toleranz: 44,08–48,72)', difficulty: 'mittel', sources: {}, distractors: ['42,69 Sekunden. (Toleranz: 44,08–48,72)', '47,79 Sekunden. (Toleranz: 44,08–48,72)', '50,11 Sekunden. (Toleranz: 44,08–48,72)'], genres: [] },
 
@@ -130,7 +130,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'sportfreizeit-bolt-hoechstgeschwindigkeit', title: 'Bolt Hochstgeschwindigkeit', category: 'sportfreizeit', year: 0, cue: 'Wie viele Kilometer pro Stunde erreichte Usain Bolt bei seinem 100m-Weltrekord als Hochstgeschwindigkeit?', answer: '44,72 km/h. (Toleranz: 42,484–46,956)', difficulty: 'mittel', sources: {}, distractors: ['41,14 km/h. (Toleranz: 42,484–46,956)', '46,06 km/h. (Toleranz: 42,484–46,956)', '48,30 km/h. (Toleranz: 42,484–46,956)'], genres: [] },
 
-  { id: 'sportfreizeit-crouser-kugel', title: 'Weltrekord Kugelstouen Crouser', category: 'sportfreizeit', year: 0, cue: 'Wie viele Meter weit stieü Ryan Crouser die Kugel bei seinem aktuellen Weltrekord?', answer: '23,56 Meter. (Toleranz: 22,382–24,738)', difficulty: 'mittel', sources: {}, distractors: ['21,68 Meter. (Toleranz: 22,382–24,738)', '24,27 Meter. (Toleranz: 22,382–24,738)', '25,44 Meter. (Toleranz: 22,382–24,738)'], genres: [] },
+  { id: 'sportfreizeit-crouser-kugel', title: 'Weltrekord Kugelstoßen Crouser', category: 'sportfreizeit', year: 0, cue: 'Wie viele Meter weit stieß Ryan Crouser die Kugel bei seinem aktuellen Weltrekord?', answer: '23,56 Meter. (Toleranz: 22,382–24,738)', difficulty: 'mittel', sources: {}, distractors: ['21,68 Meter. (Toleranz: 22,382–24,738)', '24,27 Meter. (Toleranz: 22,382–24,738)', '25,44 Meter. (Toleranz: 22,382–24,738)'], genres: [] },
 
   { id: 'sportfreizeit-warholm-400m-huerden', title: 'Weltrekord 400m Hürden Warholm', category: 'sportfreizeit', year: 0, cue: 'Wie viele Sekunden betrug der Weltrekord von Karsten Warholm über 400m Hürden (Tokio 2021)?', answer: '45,94 Sekunden. (Toleranz: 43,643–48,237)', difficulty: 'mittel', sources: {}, distractors: ['42,26 Sekunden. (Toleranz: 43,643–48,237)', '47,32 Sekunden. (Toleranz: 43,643–48,237)', '49,62 Sekunden. (Toleranz: 43,643–48,237)'], genres: [] },
 
@@ -150,7 +150,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'sportfreizeit-mclaughlin-400m-huerden', title: 'Weltrekord 400m Hürden McLaughlin', category: 'sportfreizeit', year: 0, cue: 'Wie viele Sekunden benötigte Sydney McLaughlin-Levrone für ihren 400m Hürden Weltrekord in Paris 2024?', answer: '50,37 Sekunden. (Toleranz: 47,8515–52,8885)', difficulty: 'mittel', sources: {}, distractors: ['45,33 Sekunden. (Toleranz: 47,8515–52,8885)', '48,86 Sekunden. (Toleranz: 47,8515–52,8885)', '53,39 Sekunden. (Toleranz: 47,8515–52,8885)'], genres: [] },
 
-  { id: 'sportfreizeit-talachadse-gewichtheben', title: 'Weltrekord Gewichtheben Talachadse', category: 'sportfreizeit', year: 0, cue: 'Wie viele Kilogramm betrug das Gesamtergebnis (Reiuen + Stouen) von Lascha Talachadse bei seinem Weltrekord?', answer: '488 Kilogramm. (Toleranz: 463,6–512,4)', difficulty: 'mittel', sources: {}, distractors: ['454 Kilogramm. (Toleranz: 463,6–512,4)', '508 Kilogramm. (Toleranz: 463,6–512,4)', '527 Kilogramm. (Toleranz: 463,6–512,4)'], genres: [] },
+  { id: 'sportfreizeit-talachadse-gewichtheben', title: 'Weltrekord Gewichtheben Talachadse', category: 'sportfreizeit', year: 0, cue: 'Wie viele Kilogramm betrug das Gesamtergebnis (Reißen + Stoßen) von Lascha Talachadse bei seinem Weltrekord?', answer: '488 Kilogramm. (Toleranz: 463,6–512,4)', difficulty: 'mittel', sources: {}, distractors: ['454 Kilogramm. (Toleranz: 463,6–512,4)', '508 Kilogramm. (Toleranz: 463,6–512,4)', '527 Kilogramm. (Toleranz: 463,6–512,4)'], genres: [] },
 
   { id: 'sportfreizeit-sinclair-tore', title: 'Weltrekord Länderspieltore Sinclair', category: 'sportfreizeit', year: 0, cue: 'Wie viele Länderspieltore erzielte Christine Sinclair (Weltrekord über alle Geschlechter hinweg)?', answer: '190 Tore. (Toleranz: 180,5–199,5)', difficulty: 'mittel', sources: {}, distractors: ['171 Tore. (Toleranz: 180,5–199,5)', '184 Tore. (Toleranz: 180,5–199,5)', '201 Tore. (Toleranz: 180,5–199,5)'], genres: [] },
 
@@ -244,7 +244,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'sportfreizeit-hicks-kitesurf', title: 'Kitesurf Weitenrekord', category: 'sportfreizeit', year: 0, cue: 'Wie viele Meter weit sprang der Brite Tom Hicks beim inoffiziellen Weltrekord im "Ski-Jumping" auf Wasser (Kitesurf)?', answer: '25 Meter. (Toleranz: 23,75–26,25)', difficulty: 'schwer', sources: {}, distractors: ['23 Meter. (Toleranz: 23,75–26,25)', '26 Meter. (Toleranz: 23,75–26,25)', '27 Meter. (Toleranz: 23,75–26,25)'], genres: [] },
 
-  { id: 'sportfreizeit-kolb-bankdruecken', title: 'Bankdrucken-Weltrekord', category: 'sportfreizeit', year: 0, cue: 'Wie viele Kilogramm wiegt die schwerste jemals im Bankdrucken gestemmte Last (Jimmy Kolb, mit Equipment)?', answer: '612,35 Kilogramm. (Toleranz: 581,73–642,97)', difficulty: 'schwer', sources: {}, distractors: ['569,49 Kilogramm. (Toleranz: 581,73–642,97)', '636,84 Kilogramm. (Toleranz: 581,73–642,97)', '661,34 Kilogramm. (Toleranz: 581,73–642,97)'], genres: [] },
+  { id: 'sportfreizeit-kolb-bankdruecken', title: 'Bankdrücken-Weltrekord', category: 'sportfreizeit', year: 0, cue: 'Wie viele Kilogramm wiegt die schwerste jemals im Bankdrücken gestemmte Last (Jimmy Kolb, mit Equipment)?', answer: '612,35 Kilogramm. (Toleranz: 581,73–642,97)', difficulty: 'schwer', sources: {}, distractors: ['569,49 Kilogramm. (Toleranz: 581,73–642,97)', '636,84 Kilogramm. (Toleranz: 581,73–642,97)', '661,34 Kilogramm. (Toleranz: 581,73–642,97)'], genres: [] },
 
   { id: 'sportfreizeit-cheptegei-5000m', title: 'Weltrekord 5000m Cheptegei', category: 'sportfreizeit', year: 0, cue: 'Wie viele Sekunden benötigte Joshua Cheptegei für seinen 5000m-Weltrekord?', answer: '773,53 Sekunden (12:35,35 min). (Toleranz: 734,85–812,21)', difficulty: 'mittel', sources: {}, distractors: ['719,38 Sekunden (12:35,35 min). (Toleranz: 734,85–812,21)', '804,47 Sekunden (12:35,35 min). (Toleranz: 734,85–812,21)', '835,41 Sekunden (12:35,35 min). (Toleranz: 734,85–812,21)'], genres: [] },
 
@@ -270,13 +270,13 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'sportfreizeit-jamaica-4x100m', title: 'Weltrekord 4x100m Staffel', category: 'sportfreizeit', year: 0, cue: 'Wie viele Sekunden benötigte die jamaikanische 4x100m Staffel für ihren Weltrekord?', answer: '36,84 Sekunden. (Toleranz: 34,998–38,682)', difficulty: 'mittel', sources: {}, distractors: ['37,10 Sekunden.', '37,50 Sekunden.', '36,40 Sekunden.'], genres: [] },
 
-  { id: 'sportfreizeit-lissowskaja-kugel', title: 'Weltrekord Kugelstouen Frauen', category: 'sportfreizeit', year: 0, cue: 'Wie viele Meter weit war der Weltrekord im Kugelstouen der Frauen (Natalja Lissowskaja)?', answer: '22,63 Meter. (Toleranz: 21,4985–23,7615)', difficulty: 'mittel', sources: {}, distractors: ['21,90 Meter.', '22,10 Meter.', '23,00 Meter.'], genres: [] },
+  { id: 'sportfreizeit-lissowskaja-kugel', title: 'Weltrekord Kugelstoßen Frauen', category: 'sportfreizeit', year: 0, cue: 'Wie viele Meter weit war der Weltrekord im Kugelstoßen der Frauen (Natalja Lissowskaja)?', answer: '22,63 Meter. (Toleranz: 21,4985–23,7615)', difficulty: 'mittel', sources: {}, distractors: ['21,90 Meter.', '22,10 Meter.', '23,00 Meter.'], genres: [] },
 
   { id: 'sportfreizeit-fontaine-wm-tore', title: 'Fontaine WM-Tore', category: 'sportfreizeit', year: 0, cue: 'Wie viele Tore erzielte der Spieler mit den meisten Toren in einer einzigen Fußball-WM (Just Fontaine)?', answer: '13 Tore. (Toleranz: 12,35–13,65)', difficulty: 'mittel', sources: {}, distractors: ['12 Tore.', '14 Tore.', '11 Tore.'], genres: [] },
 
   { id: 'sportfreizeit-sjostrom-50m-freistil', title: 'Weltrekord 50m Freistil Frauen', category: 'sportfreizeit', year: 0, cue: 'Wie viele Sekunden betrug der 50m-Freistil-Weltrekord der Frauen (Sarah Sjoström)?', answer: '23,61 Sekunden. (Toleranz: 22,4295–24,7905)', difficulty: 'mittel', sources: {}, distractors: ['23,90 Sekunden.', '23,20 Sekunden.', '24,10 Sekunden.'], genres: [] },
 
-  { id: 'sportfreizeit-garmisch-schanze', title: 'Hohe Grouschanze Garmisch', category: 'sportfreizeit', year: 0, cue: 'Wie viele Meter hoch ist die olympische Skisprung-Grouschanze in Garmisch-Partenkirchen (Hillsize)?', answer: '142 Meter. (Toleranz: 134,9–149,1)', difficulty: 'schwer', sources: {}, distractors: ['140 Meter.', '135 Meter.', '145 Meter.'], genres: [] },
+  { id: 'sportfreizeit-garmisch-schanze', title: 'Hohe Großschanze Garmisch', category: 'sportfreizeit', year: 0, cue: 'Wie viele Meter hoch ist die olympische Skisprung-Großschanze in Garmisch-Partenkirchen (Hillsize)?', answer: '142 Meter. (Toleranz: 134,9–149,1)', difficulty: 'schwer', sources: {}, distractors: ['140 Meter.', '135 Meter.', '145 Meter.'], genres: [] },
 
   { id: 'sportfreizeit-thiam-siebenkampf', title: 'Thiam Siebenkampf Olympiarekord', category: 'sportfreizeit', year: 0, cue: 'Wie viele Punkte erreichte Nafissatou Thiam bei ihrem Siebenkampf-Olympiarekord?', answer: '7.101 Punkte. (Toleranz: 6.745,95–7.456,05)', difficulty: 'schwer', sources: {}, distractors: ['6.850 Punkte.', '7.000 Punkte.', '7.300 Punkte.'], genres: [] },
 
@@ -680,7 +680,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'religion-182', title: 'Waldenser', category: 'religionglaube', year: 0, cue: 'Wer waren die Waldenser?', answer: 'Eine mittelalterliche Reformbewegung, die Armut und Bibelstudium betonte.', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'religion-183', title: 'Wycliffe Lollards', category: 'religionglaube', year: 0, cue: 'Was waren die Lollarden?', answer: 'Eine reformatorische Bewegung im 14. Jh. England, angefuhrt von John Wycliffe.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'religion-183', title: 'Wycliffe Lollards', category: 'religionglaube', year: 0, cue: 'Was waren die Lollarden?', answer: 'Eine reformatorische Bewegung im 14. Jh. England, angeführt von John Wycliffe.', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'religion-184', title: 'Huss Hussitten', category: 'religionglaube', year: 0, cue: 'Wer waren die Hussitten?', answer: 'Eine Reformbewegung unter Jan Hus im 15. Jh. Bohmen.', difficulty: 'schwer', sources: {}, genres: [] },
 
@@ -800,7 +800,7 @@ export const triviaExtraCards: Card[] = [
 
   { id: 'religion-242', title: 'Digambara', category: 'religionglaube', year: 0, cue: 'Was sind Digambaras?', answer: 'Eine Sekte des Jainismus mit asketischer Tradition (unbekleidete Mönche).', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'religion-243', title: 'Shvetambara', category: 'religionglaube', year: 0, cue: 'Was sind Shvetambaras?', answer: 'Eine Sekte des Jainismus mit weiugekleideter, weniger strikter Tradition.', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'religion-243', title: 'Shvetambara', category: 'religionglaube', year: 0, cue: 'Was sind Shvetambaras?', answer: 'Eine Sekte des Jainismus mit weißgekleideter, weniger strikter Tradition.', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'religion-244', title: 'Ahimsa Jainismus', category: 'religionglaube', year: 0, cue: 'Wie praktizieren Jainas Ahimsa (Gewaltlosigkeit)?', answer: 'Mit extremer Vorsicht: Vermeiden von Tötung, sogar von Insekten.', difficulty: 'schwer', sources: {}, genres: [] },
 
