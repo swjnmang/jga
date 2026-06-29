@@ -43,6 +43,7 @@ import {
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
+import type { Card } from '@/lib/types';
 import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
 import { catIcon, catLabel as catLabelMeta, catLabelWithIcon, catShortLabel } from '@/lib/categoryMeta';
 
@@ -53,6 +54,22 @@ interface SessionInfo {
   groupName: string;
   playerName: string;
   isHost: boolean;
+}
+
+// Badge für Zitate-Fragen: zeigt an, ob das Zitat aus einem Film, Lied oder von einer Person stammt
+function quoteSourceBadge(card: Card | null | undefined) {
+  if (!card || card.category !== 'quote' || !card.quoteSourceType) return null;
+  const meta = ({
+    film: { label: 'Film', icon: '🎬' },
+    lied: { label: 'Lied', icon: '🎵' },
+    person: { label: 'Person', icon: '🗣️' },
+  } as Record<string, { label: string; icon: string }>)[card.quoteSourceType];
+  if (!meta) return null;
+  return (
+    <span className="text-sm px-3 py-1 rounded-full bg-purple-500/10 text-purple-600 font-semibold">
+      {meta.icon} {meta.label}
+    </span>
+  );
 }
 
 export default function MultiplayerGamePage() {
@@ -1842,8 +1859,11 @@ export default function MultiplayerGamePage() {
             </div>
           )}
           <div className={`card-surface rounded-2xl p-6 space-y-4 transition-opacity duration-300 ${!isMyTurn && !effectiveIsHost ? 'opacity-40 grayscale pointer-events-none' : ''}`}>
-            <div className="flex items-center justify-between">
-              <span className="text-sm px-3 py-1 rounded-full bg-ink/10 font-semibold">{categoryIcon} {categoryLabel}</span>
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <span className="text-sm px-3 py-1 rounded-full bg-ink/10 font-semibold">{categoryIcon} {categoryLabel}</span>
+                {quoteSourceBadge(currentCard)}
+              </div>
               {timeLeft !== null && (
                 <span className={`text-sm font-mono font-bold px-3 py-1 rounded-full ${
                   timeLeft <= 10 ? 'bg-red-500/20 text-red-600 animate-pulse' : 'bg-ink/10'
@@ -2357,7 +2377,10 @@ export default function MultiplayerGamePage() {
           return (
           <div className={`card-surface rounded-2xl p-3 sm:p-4 space-y-2 ${(!isActiveTurn && !isHostSession) ? 'opacity-70 pointer-events-none select-none' : ''}`}>
             <div className="flex items-center justify-between">
-              <h2 className="text-sm font-semibold">{categoryIcon} {categoryLabel}</h2>
+              <h2 className="text-sm font-semibold flex items-center gap-2">
+                <span>{categoryIcon} {categoryLabel}</span>
+                {quoteSourceBadge(currentCard)}
+              </h2>
               <div className="flex items-center gap-2">
                 {timeLeft !== null && (
                   <span className={`text-sm font-mono font-bold px-3 py-1 rounded-full ${

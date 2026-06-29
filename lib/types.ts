@@ -45,6 +45,8 @@ export type Card = {
   background?: string;
   color?: string;
   distractors?: string[];
+  /** Nur für category 'quote': woher das Zitat stammt. */
+  quoteSourceType?: 'film' | 'lied' | 'person';
 };
 
 export type MediaPreference = 'auto' | 'youtube' | 'spotify';

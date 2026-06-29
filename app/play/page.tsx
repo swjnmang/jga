@@ -1117,9 +1117,16 @@ function QuizContent() {
               <p className="text-sm font-semibold text-ink">{CATEGORY_META[card.category]?.label ?? card.category}</p>
             </div>
           </div>
-          <span className="rounded-full border border-ink/20 px-3 py-1 text-xs font-semibold text-ink/80">
-            {difficultyLabel(card.difficulty)}
-          </span>
+          <div className="flex items-center gap-2">
+            {card.category === 'quote' && card.quoteSourceType && (
+              <span className="rounded-full bg-purple-500/10 text-purple-600 px-3 py-1 text-xs font-semibold">
+                {{ film: '🎬 Film', lied: '🎵 Lied', person: '🗣️ Person' }[card.quoteSourceType]}
+              </span>
+            )}
+            <span className="rounded-full border border-ink/20 px-3 py-1 text-xs font-semibold text-ink/80">
+              {difficultyLabel(card.difficulty)}
+            </span>
+          </div>
         </div>
         {card.category === 'filmserien' && (
           <p className="text-sm text-ink/70">

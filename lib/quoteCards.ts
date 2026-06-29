@@ -10,6 +10,7 @@ export const quoteCards: Card[] = [
     answer: 'William Shakespeare (1603)',
     hint: 'Von William Shakespeare.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Sein oder Nichtsein, das ist hier die Frage."' },
     distractors: ['Pierre de Coubertin (1908)', 'Apple (Werbeslogan) (1997)', 'Francis Bacon (1620)']
   },
@@ -22,6 +23,7 @@ export const quoteCards: Card[] = [
     answer: 'René Descartes (1637)',
     hint: 'Von René Descartes.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Ich denke, also bin ich."' },
     distractors: ['Theodor W. Adorno (1991)', 'Konfuzius (zugeschrieben) (1900)', 'George Orwell (1984) (1949)']
   },
@@ -34,6 +36,7 @@ export const quoteCards: Card[] = [
     answer: 'Johann Wolfgang von Goethe (1783)',
     hint: 'Von Johann Wolfgang von Goethe.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Edel sei der Mensch, hilfreich und gut."' },
     distractors: ['Arnold Schwarzenegger (Terminator) (1984)', 'Walt Disney (~1980)', 'Kurt Tucholsky (1920)']
   },
@@ -46,6 +49,7 @@ export const quoteCards: Card[] = [
     answer: 'Immanuel Kant (1781)',
     hint: 'Von Immanuel Kant.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Habe Mut, dich deines eigenen Verstandes zu bedienen!"' },
     distractors: ['E.T. (E.T. – Der Außerirdische) (1982)', 'Grundgesetz für die Bundesrepublik Deutschland (1949)', 'Franz Kafka (1915)']
   },
@@ -58,6 +62,7 @@ export const quoteCards: Card[] = [
     answer: 'Benjamin Franklin (1757)',
     hint: 'Von Benjamin Franklin.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Was du heute kannst besorgen, das verschiebe nicht auf morgen."' },
     distractors: ['Marie von Ebner-Eschenbach (~1890)', 'Angela Merkel (2015)', 'Konfuzius (zugeschrieben) (~1300)']
   },
@@ -70,6 +75,7 @@ export const quoteCards: Card[] = [
     answer: 'Johann Wolfgang von Goethe (1808)',
     hint: 'Von Johann Wolfgang von Goethe.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Da steh ich nun, ich armer Tor! Und bin so klug als wie zuvor."' },
     distractors: ['Humphrey Bogart (Casablanca) (1942)', 'The Matrix (Morpheus) (1999)', 'Friedrich Schiller (Die Jungfrau von Orleans) (1801)']
   },
@@ -82,6 +88,7 @@ export const quoteCards: Card[] = [
     answer: 'Karl Marx & Friedrich Engels (1848)',
     hint: 'Von Karl Marx & Friedrich Engels.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ein Gespenst geht um in Europa – das Gespenst des Kommunismus."' },
     distractors: ['Uschi Glas (Zwei Nasen tanken Super) (1982)', 'Volksmund (1943)', 'Filmtitel (James Dean) / Bibel (Lukas 23,34) (1955)']
   },
@@ -94,6 +101,7 @@ export const quoteCards: Card[] = [
     answer: 'Friedrich Nietzsche (1882)',
     hint: 'Von Friedrich Nietzsche.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Gott ist tot."' },
     distractors: ['Gary Lineker (1966)', 'Franklin D. Roosevelt (1933)', 'Fidel Castro (1943)']
   },
@@ -106,6 +114,7 @@ export const quoteCards: Card[] = [
     answer: 'Sherlock Holmes (Arthur Conan Doyle) (1892)',
     hint: 'Von Sherlock Holmes (Arthur Conan Doyle).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Elementar, mein lieber Watson."' },
     distractors: ['Ronald Reagan (1987)', 'Che Guevara (~1960)', 'Franklin D. Roosevelt (1933)']
   },
@@ -118,6 +127,7 @@ export const quoteCards: Card[] = [
     answer: 'Bertolt Brecht (um 1930)',
     hint: 'Von Bertolt Brecht.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Wer kämpft, kann verlieren. Wer nicht kämpft, hat schon verloren."' },
     distractors: ['Apple (Werbeslogan) (1997)', 'Walter Ulbricht (1952)', 'Jennifer Grey (Dirty Dancing) (1987)']
   },
@@ -130,6 +140,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (1929)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Phantasie ist wichtiger als Wissen, denn Wissen ist begrenzt."' },
     distractors: ['Bertolt Brecht (zugeschrieben) (1930)', 'Apple (Werbeslogan) (1997)', 'Joachim Ringelnatz (1920)']
   },
@@ -142,6 +153,7 @@ export const quoteCards: Card[] = [
     answer: 'Blaise Pascal (Pensées) (1670)',
     hint: 'Von Blaise Pascal (Pensées).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Das Herz hat seine Gründe, die die Vernunft nicht kennt."' },
     distractors: ['Immanuel Kant (zugeschrieben) (1790)', 'William Shakespeare (Julius Caesar) (1599)', 'Marie von Ebner-Eschenbach (1893)']
   },
@@ -154,6 +166,7 @@ export const quoteCards: Card[] = [
     answer: 'Rhett Butler (Vom Winde verweht) (1939)',
     hint: 'Von Rhett Butler (Vom Winde verweht).',
     difficulty: 'mittel',
+    quoteSourceType: 'film',
     sources: { text: '"Frankly, my dear, I don\'t give a damn."' },
     distractors: ['Julius Caesar (49 v. Chr.)', 'Friedrich Nietzsche (1888)', 'Martin Luther King Jr. (1965)']
   },
@@ -166,6 +179,7 @@ export const quoteCards: Card[] = [
     answer: 'Winston Churchill (1940)',
     hint: 'Von Winston Churchill.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ich habe nichts zu bieten außer Blut, Mühsal, Tränen und Schweiß."' },
     distractors: ['Oscar Wilde (1891)', 'Mark Twain (~1900)', 'Ludwig Wittgenstein (1921)']
   },
@@ -178,6 +192,7 @@ export const quoteCards: Card[] = [
     answer: 'Antoine de Saint-Exupéry (1943)',
     hint: 'Von Antoine de Saint-Exupéry.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Man sieht nur mit dem Herzen gut. Das Wesentliche ist für die Augen unsichtbar."' },
     distractors: ['Clark Gable (Vom Winde verweht) (1939)', 'Johann Wolfgang von Goethe (1808)', 'Winston Churchill (zugeschrieben) (1940)']
   },
@@ -190,6 +205,7 @@ export const quoteCards: Card[] = [
     answer: 'Rosa Luxemburg (1918)',
     hint: 'Von Rosa Luxemburg.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Die Freiheit ist immer Freiheit der Andersdenkenden."' },
     distractors: ['Oscar Wilde (1891)', 'Friedrich Nietzsche (1889)', 'Humphrey Bogart (Casablanca) (1942)']
   },
@@ -202,6 +218,7 @@ export const quoteCards: Card[] = [
     answer: 'Mahatma Gandhi (1948)',
     hint: 'Von Mahatma Gandhi.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Auge um Auge – und die ganze Welt wird blind sein."' },
     distractors: ['Winston Churchill (1943)', 'Alec Guinness (Star Wars) (1977)', 'Ernst Reuter (1948)']
   },
@@ -214,6 +231,7 @@ export const quoteCards: Card[] = [
     answer: 'Walter Ulbricht (1961)',
     hint: 'Von Walter Ulbricht.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Niemand hat die Absicht, eine Mauer zu errichten!"' },
     distractors: ['The Police (1983)', 'Heraklit (1922)', 'Homer Simpson (1993)']
   },
@@ -226,6 +244,7 @@ export const quoteCards: Card[] = [
     answer: 'John F. Kennedy (1961)',
     hint: 'Von John F. Kennedy.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Fragt nicht, was euer Land für euch tun kann – fragt, was ihr für euer Land tun könnt."' },
     distractors: ['Martin Luther King Jr. (1965)', 'Star Wars (Darth Vader) (1980)', 'Winston Churchill (1943)']
   },
@@ -238,6 +257,7 @@ export const quoteCards: Card[] = [
     answer: 'Martin Luther King (1963)',
     hint: 'Von Martin Luther King.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"I have a dream."' },
     distractors: ['Bibel (2. Thessalonicher 3,10) (~50 n. Chr.)', 'Barack Obama (2008)', 'Winston Churchill (~1940)']
   },
@@ -250,6 +270,7 @@ export const quoteCards: Card[] = [
     answer: 'Gary Lineker (1990)',
     hint: 'Von Gary Lineker.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Fußball ist ein Spiel von elf gegen elf, und am Ende gewinnen die Deutschen."' },
     distractors: ['John Donne (1981)', 'Margaret Thatcher (1983)', 'Loriot (Ödipussi) (1988)']
   },
@@ -262,6 +283,7 @@ export const quoteCards: Card[] = [
     answer: 'Neil Armstrong (1969)',
     hint: 'Von Neil Armstrong.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Das ist ein kleiner Schritt für einen Menschen, aber ein gewaltiger Sprung für die Menschheit."' },
     distractors: ['Ludwig XIV (zugeschrieben) (1936)', 'Tom Hanks (Forrest Gump) (1994)', 'Rhett Butler (Vom Winde verweht) (1939)']
   },
@@ -274,6 +296,7 @@ export const quoteCards: Card[] = [
     answer: 'Star Wars (Obi-Wan Kenobi) (1977)',
     hint: 'Von Star Wars (Obi-Wan Kenobi).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Möge die Macht mit dir sein."' },
     distractors: ['Volksmund (Traditionell)', 'Friedrich Nietzsche (1888)', 'The Matrix (Morpheus) (1999)']
   },
@@ -286,6 +309,7 @@ export const quoteCards: Card[] = [
     answer: 'Star Wars (Darth Vader) (1980)',
     hint: 'Von Star Wars (Darth Vader).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Ich bin dein Vater."' },
     distractors: ['Ludwig Wittgenstein (1921)', 'Harry S. Truman (1945)', 'Johann Wolfgang von Goethe (1795)']
   },
@@ -298,6 +322,7 @@ export const quoteCards: Card[] = [
     answer: 'E.T. - Der Außerirdische (1982)',
     hint: 'Von E.T. - Der Außerirdische.',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"E.T. nach Hause telefonieren."' },
     distractors: ['Winston Churchill (1940)', 'Francis Bacon (1620)', 'Friedrich Nietzsche (1883)']
   },
@@ -310,6 +335,7 @@ export const quoteCards: Card[] = [
     answer: 'Terminator (Arnold Schwarzenegger) (1984)',
     hint: 'Von Terminator (Arnold Schwarzenegger).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Ich komme wieder."' },
     distractors: ['Albert Einstein (~1933)', 'René Descartes (1637)', 'Marie von Ebner-Eschenbach (1893)']
   },
@@ -322,6 +348,7 @@ export const quoteCards: Card[] = [
     answer: 'Forrest Gump (1994)',
     hint: 'Von Forrest Gump.',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Das Leben ist wie eine Schachtel Pralinen, man weiß nie, was man bekommt."' },
     distractors: ['Yoda (Das Imperium schlägt zurück) (1980)', 'George H.W. Bush (1988)', 'Leo Tolstoi (Anna Karenina) (1877)']
   },
@@ -334,6 +361,7 @@ export const quoteCards: Card[] = [
     answer: 'Ronald Reagan (1987)',
     hint: 'Von Ronald Reagan.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Tear down this wall!"' },
     distractors: ['Douglas Adams (Per Anhalter durch die Galaxis) (1979)', 'Konfuzius (zugeschrieben) (~1300)', 'Karl Marx (1930)']
   },
@@ -346,6 +374,7 @@ export const quoteCards: Card[] = [
     answer: 'Montagsdemonstrationen DDR (1989)',
     hint: 'Von Montagsdemonstrationen DDR.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Wir sind das Volk!"' },
     distractors: ['Arthur Schopenhauer (oft in diesem Kontext zitiert) (1980)', 'Casablanca (Rick Blaine) (1942)', 'Giovanni Trapattoni (1998)']
   },
@@ -358,6 +387,7 @@ export const quoteCards: Card[] = [
     answer: 'Theodor W. Adorno (Minima Moralia) (1951)',
     hint: 'Von Theodor W. Adorno (Minima Moralia).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Es gibt kein richtiges Leben im falschen."' },
     distractors: ['Karl Valentin (1970)', 'Friedrich Nietzsche (1888)', 'John Wayne (Ringo) (1939)']
   },
@@ -370,6 +400,7 @@ export const quoteCards: Card[] = [
     answer: 'Terminator 2 (1991)',
     hint: 'Von Terminator 2.',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Hasta la vista, baby."' },
     distractors: ['Karl Marx & Friedrich Engels (1848)', 'Johann Wolfgang von Goethe (Mephisto in Faust I) (1808)', 'Douglas Adams (Per Anhalter durch die Galaxis) (1979)']
   },
@@ -382,6 +413,7 @@ export const quoteCards: Card[] = [
     answer: 'Titanic (Jack Dawson) (1997)',
     hint: 'Von Titanic (Jack Dawson).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Ich bin der König der Welt!"' },
     distractors: ['Star Trek (Captain Kirk) (1966)', 'Albert Einstein (1953)', 'Marlon Brando (1972)']
   },
@@ -394,6 +426,7 @@ export const quoteCards: Card[] = [
     answer: 'BILD-Zeitung (2005)',
     hint: 'Von BILD-Zeitung.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Wir sind Papst."' },
     distractors: ['Steve Jobs (2005)', 'Dalai Lama (1904)', 'Sprichwort (Frankreich/Italien) (~1500)']
   },
@@ -406,6 +439,7 @@ export const quoteCards: Card[] = [
     answer: 'Angela Merkel (2015)',
     hint: 'Von Angela Merkel.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Wir schaffen das."' },
     distractors: ['Sprichwort / Volksmund (1900)', 'Edgar Allan Poe (1865)', 'Judy Garland (Der Zauberer von Oz) (1939)']
   },
@@ -418,6 +452,7 @@ export const quoteCards: Card[] = [
     answer: 'Sokrates (400 v. Chr.)',
     hint: 'Von Sokrates.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Ich weiß, dass ich nichts weiß."' },
     distractors: ['Heraklit (~500 v. Chr.)', 'Arnold Schwarzenegger (Terminator 2) (1991)', 'Giacomo Leopardi (1852)']
   },
@@ -430,6 +465,7 @@ export const quoteCards: Card[] = [
     answer: 'Julius Cäsar (49 v. Chr.)',
     hint: 'Von Julius Cäsar.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Die Würfel sind gefallen."' },
     distractors: ['Patrick Swayze (Dirty Dancing) (1987)', 'Theodor W. Adorno (1991)', 'Albert Einstein (1905)']
   },
@@ -442,6 +478,7 @@ export const quoteCards: Card[] = [
     answer: 'Andy Warhol (1968)',
     hint: 'Von Andy Warhol.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"In Zukunft wird jeder für 15 Minuten weltberühmt sein."' },
     distractors: ['Martin Luther King Jr. (1965)', 'John Wayne (Ringo) (1939)', 'Konfuzius (zugeschrieben) (1900)']
   },
@@ -454,6 +491,7 @@ export const quoteCards: Card[] = [
     answer: 'Franz Beckenbauer (1974)',
     hint: 'Von Franz Beckenbauer.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Es gibt nur ein Tempo: Vorwärts!"' },
     distractors: ['Sprichwort (~1800)', 'John Lennon (1980)', 'Tom Cruise (Top Gun) (1986)']
   },
@@ -466,6 +504,7 @@ export const quoteCards: Card[] = [
     answer: 'Charles Darwin (1859)',
     hint: 'Von Charles Darwin.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Es ist nicht die stärkste Spezies die überlebt, sondern diejenige, die sich am ehesten dem Wandel anpasst."' },
     distractors: ['Winston Churchill (1940)', 'Julius Caesar (49 v. Chr.)', 'Anne Frank (1947)']
   },
@@ -478,6 +517,7 @@ export const quoteCards: Card[] = [
     answer: 'Casablanca (Rick Blaine) (1942)',
     hint: 'Von Casablanca (Rick Blaine).',
     difficulty: 'mittel',
+    quoteSourceType: 'film',
     sources: { text: '"Schau mir in die Augen, Kleines."' },
     distractors: ['Ludwig Wittgenstein (1921)', 'François de La Rochefoucauld (1665)', 'Winston Churchill (1943)']
   },
@@ -490,6 +530,7 @@ export const quoteCards: Card[] = [
     answer: 'Star Trek (Captain Kirk) (1966)',
     hint: 'Von Star Trek (Captain Kirk).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Warp-Geschwindigkeit, Mr. Sulu."' },
     distractors: ['George Orwell (Farm der Tiere) (1945)', 'Michail Gorbatschow (zugeschrieben) (1989)', 'Marlon Brando (Der Pate) (1972)']
   },
@@ -502,6 +543,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (1919)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Zwei Dinge sind unendlich, das Universum und die menschliche Dummheit."' },
     distractors: ['Marie von Ebner-Eschenbach (1893)', 'Bertolt Brecht (1928)', 'Winston Churchill (1940)']
   },
@@ -514,6 +556,7 @@ export const quoteCards: Card[] = [
     answer: 'The Dark Knight (Alfred) (2008)',
     hint: 'Von The Dark Knight (Alfred).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Manche Menschen wollen die Welt einfach nur brennen sehen."' },
     distractors: ['Martin Luther King (1963)', 'Otto von Bismarck (1862)', 'Loriot (Das Frühstücksei) (1977)']
   },
@@ -526,6 +569,7 @@ export const quoteCards: Card[] = [
     answer: 'The Matrix (Morpheus) (1999)',
     hint: 'Von The Matrix (Morpheus).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Willkommen in der Wüste der Realität."' },
     distractors: ['The Beatles (1967)', 'Konfuzius (zugeschrieben) (500 v. Chr.)', 'Kaiser Wilhelm II. (1914)']
   },
@@ -538,6 +582,7 @@ export const quoteCards: Card[] = [
     answer: 'George Orwell (1984) (1949)',
     hint: 'Von George Orwell (1984).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Big Brother is watching you."' },
     distractors: ['Friedrich Schiller (Die Verschwörung des Fiesco zu Genua) (1783)', 'Slogan (Alien – Das unheimliche Wesen aus einer fremden Welt) (1979)', 'William Shakespeare (Der Kaufmann von Venedig) (1596)']
   },
@@ -550,6 +595,7 @@ export const quoteCards: Card[] = [
     answer: 'Niels Bohr (1920)',
     hint: 'Von Niels Bohr.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ein Experten ist ein Mann, der alle Fehler gemacht hat, die man in einem sehr schmalen Fachgebiet machen kann."' },
     distractors: ['Casablanca (Rick Blaine) (1942)', 'Unbekannt (oft fälschlich Einstein) (1958)', 'Gary Lineker (1966)']
   },
@@ -562,6 +608,7 @@ export const quoteCards: Card[] = [
     answer: 'Federico Fellini (1954)',
     hint: 'Von Federico Fellini.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Es gibt kein Ende. Es gibt keinen Anfang. Es gibt nur die unendliche Leidenschaft des Lebens."' },
     distractors: ['Barack Obama (2008)', 'BILD-Zeitung (2005)', 'Jennifer Grey (Dirty Dancing) (1987)']
   },
@@ -574,6 +621,7 @@ export const quoteCards: Card[] = [
     answer: 'Konfuzius (zugeschrieben) (1900)',
     hint: 'Von Konfuzius (zugeschrieben).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Der Weg ist das Ziel."' },
     distractors: ['William Shakespeare (1599)', 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populär) (1970)', 'Apollo 13 (Film) (1995)']
   },
@@ -586,6 +634,7 @@ export const quoteCards: Card[] = [
     answer: 'Perikles (~431 v. Chr.)',
     hint: 'Von Perikles.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Das Geheimnis des Glücks ist die Freiheit, und das Geheimnis der Freiheit ist der Mut."' },
     distractors: ['Sokrates (400 v. Chr.)', 'Giovanni Trapattoni (1998)', 'Clint Eastwood (Dirty Harry) (1971)']
   },
@@ -598,6 +647,7 @@ export const quoteCards: Card[] = [
     answer: 'Pablo Picasso (1931)',
     hint: 'Von Pablo Picasso.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Alles, was man sich vorstellen kann, ist real."' },
     distractors: ['Angela Merkel (2013)', 'Francis Bacon (1597)', 'Albert Schweitzer (1900)']
   },
@@ -610,6 +660,7 @@ export const quoteCards: Card[] = [
     answer: 'John Lennon (1971)',
     hint: 'Von John Lennon.',
     difficulty: 'leicht',
+    quoteSourceType: 'lied',
     sources: { text: '"Imagine all the people living life in peace."' },
     distractors: ['Montagsdemonstranten (DDR) (1989)', 'Georg Büchner (Dantons Tod) (1835)', 'William Shakespeare (1599)']
   },
@@ -622,6 +673,7 @@ export const quoteCards: Card[] = [
     answer: 'Yoda (Star Wars) (1980)',
     hint: 'Von Yoda (Star Wars).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Do or do not. There is no try."' },
     distractors: ['William Shakespeare (Julius Caesar) (1599)', 'Ronald Reagan (1987)', 'Winston Churchill (1947)']
   },
@@ -634,6 +686,7 @@ export const quoteCards: Card[] = [
     answer: 'Walt Disney (~1957)',
     hint: 'Von Walt Disney.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Das Unmögliche möglich machen."' },
     distractors: ['Albert Einstein (~1940)', 'Joe E. Brown (Manche mögen’s heiß) (1959)', 'Albert Einstein (1926)']
   },
@@ -646,6 +699,7 @@ export const quoteCards: Card[] = [
     answer: 'Franz Kafka (1915)',
     hint: 'Von Franz Kafka.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Die Metamorphose: Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte..."' },
     distractors: ['Immanuel Kant (1790)', 'Buzz Lightyear (Toy Story) (1995)', 'François de La Rochefoucauld (~1665)']
   },
@@ -658,6 +712,7 @@ export const quoteCards: Card[] = [
     answer: 'Cicero (zugeschrieben) (~50 v. Chr.)',
     hint: 'Von Cicero (zugeschrieben).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ein Raum ohne Bücher ist wie ein Körper ohne Seele."' },
     distractors: ['Federico Fellini (1954)', 'The Wizard of Oz (1939)', 'Norman Bates (1960)']
   },
@@ -670,6 +725,7 @@ export const quoteCards: Card[] = [
     answer: 'Oscar Wilde (1891)',
     hint: 'Von Oscar Wilde.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ich habe einen ganz einfachen Geschmack: Ich bin immer mit dem Besten zufrieden."' },
     distractors: ['Konfuzius (zugeschrieben) (~500 v. Chr.)', 'Johann Wolfgang von Goethe (1808)', 'Joachim Ringelnatz (1920)']
   },
@@ -682,6 +738,7 @@ export const quoteCards: Card[] = [
     answer: 'The Rolling Stones (1965)',
     hint: 'Von The Rolling Stones.',
     difficulty: 'leicht',
+    quoteSourceType: 'lied',
     sources: { text: '"I can\'t get no satisfaction."' },
     distractors: ['Neil Armstrong (1969)', 'Albert Einstein (1921)', 'Judy Garland (Der Zauberer von Oz) (1939)']
   },
@@ -694,6 +751,7 @@ export const quoteCards: Card[] = [
     answer: 'Aldous Huxley (1932)',
     hint: 'Von Aldous Huxley.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Schöne neue Welt."' },
     distractors: ['Heinrich Heine (~1830)', 'The Wizard of Oz (1939)', 'Johann Wolfgang von Goethe (Faust I) (1808)']
   },
@@ -706,6 +764,7 @@ export const quoteCards: Card[] = [
     answer: 'Douglas Adams (Per Anhalter durch die Galaxis) (1979)',
     hint: 'Von Douglas Adams (Per Anhalter durch die Galaxis).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Don\'t Panic."' },
     distractors: ['John F. Kennedy (1963)', 'The Matrix (Morpheus) (1999)', 'Friedemann Schulz von Thun (1981)']
   },
@@ -718,6 +777,7 @@ export const quoteCards: Card[] = [
     answer: 'Bertolt Brecht (1928)',
     hint: 'Von Bertolt Brecht.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Erst kommt das Fressen, dann kommt die Moral."' },
     distractors: ['Erich Kästner (1950)', 'Otto von Bismarck (1862)', 'François de La Rochefoucauld (1665)']
   },
@@ -730,6 +790,7 @@ export const quoteCards: Card[] = [
     answer: 'Thomas Edison (1903)',
     hint: 'Von Thomas Edison.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Das Genie ist ein Prozent Inspiration und neunundneunzig Prozent Transpiration."' },
     distractors: ['Albert Einstein (1929)', 'Protagoras (1957)', 'Katja Ebstein (1970)']
   },
@@ -742,6 +803,7 @@ export const quoteCards: Card[] = [
     answer: 'Samuel Beckett (1953)',
     hint: 'Von Samuel Beckett.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Warten auf Godot."' },
     distractors: ['Al Pacino (Der Pate II) (1974)', 'Timothy Leary (1965)', 'Angela Merkel (2015)']
   },
@@ -754,6 +816,7 @@ export const quoteCards: Card[] = [
     answer: 'Seneca (~49 n. Chr.)',
     hint: 'Von Seneca.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Es ist nicht wenig Zeit, die wir haben, sondern es ist viel Zeit, die wir nicht nutzen."' },
     distractors: ['Albus Dumbledore (Harry Potter) (2001)', 'Ludwig Thoma (Ein Münchner im Himmel) (1911)', 'Format-Titel (Reality TV) (2005)']
   },
@@ -766,6 +829,7 @@ export const quoteCards: Card[] = [
     answer: 'Heraklit (~500 v. Chr.)',
     hint: 'Von Heraklit.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Alles Fließt."' },
     distractors: ['George H.W. Bush (1988)', 'J.D. Salinger (1951)', 'Alan Kay (1971)']
   },
@@ -778,6 +842,7 @@ export const quoteCards: Card[] = [
     answer: 'Heraklit (~500 v. Chr.)',
     hint: 'Von Heraklit.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Der Krieg ist der Vater aller Dinge."' },
     distractors: ['Slogan (Alien – Das unheimliche Wesen aus einer fremden Welt) (1979)', 'Thomas Alva Edison (1903)', 'Jonathan Swift (1738)']
   },
@@ -790,6 +855,7 @@ export const quoteCards: Card[] = [
     answer: 'J.D. Salinger (1951)',
     hint: 'Von J.D. Salinger.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Der Fänger im Roggen."' },
     distractors: ['Andy Warhol (1968)', 'Sepp Herberger (1954)', 'Jack Nicholson (Eine Frage der Ehre) (1992)']
   },
@@ -802,6 +868,7 @@ export const quoteCards: Card[] = [
     answer: 'Chief Brody (1975)',
     hint: 'Von Chief Brody.',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Der Weiße Hai: Wir brauchen ein größeres Boot."' },
     distractors: ['Charles Darwin (1859)', 'Bertolt Brecht (1928)', 'Winston Churchill (~1940)']
   },
@@ -814,6 +881,7 @@ export const quoteCards: Card[] = [
     answer: 'Karl Marx (1859)',
     hint: 'Von Karl Marx.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Das Sein bestimmt das Bewusstsein."' },
     distractors: ['Ton Steine Scherben (1970)', 'Karl Valentin (1940)', 'Hape Kerkeling (2006)']
   },
@@ -826,6 +894,7 @@ export const quoteCards: Card[] = [
     answer: 'Apollo 13 (Film) (1995)',
     hint: 'Von Apollo 13 (Film).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Houston, wir haben ein Problem."' },
     distractors: ['Martin Luther King Jr. (1965)', 'Martin Luther King (1963)', 'Pablo Picasso (1931)']
   },
@@ -838,6 +907,7 @@ export const quoteCards: Card[] = [
     answer: 'Unbekannt (1947)',
     hint: 'Entstanden ca. 1947.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Freiheit bedeutet Verantwortlichkeit. Das ist der Grund, warum die meisten Menschen sich vor ihr fürchten."' },
     distractors: ['Thomas Edison (1895)', 'Thomas Alva Edison (1903)', 'Ernest Hemingway (~1950)']
   },
@@ -850,6 +920,7 @@ export const quoteCards: Card[] = [
     answer: 'Pierre de Coubertin (1908)',
     hint: 'Von Pierre de Coubertin.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Wichtig ist nicht der Sieg, sondern die Teilnahme."' },
     distractors: ['Robert Lembke (1980)', 'Albert Einstein (1949)', 'ABBA (Songtitel) (1980)']
   },
@@ -862,6 +933,7 @@ export const quoteCards: Card[] = [
     answer: 'August Heinrich Hoffmann von Fallersleben (1841)',
     hint: 'Von August Heinrich Hoffmann von Fallersleben.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Einigkeit und Recht und Freiheit."' },
     distractors: ['Franz Beckenbauer (1974)', 'Jesus von Nazaret (Johannes 19,30) (~30 n. Chr.)', 'George Orwell (1984) (1949)']
   },
@@ -874,6 +946,7 @@ export const quoteCards: Card[] = [
     answer: 'Immanuel Kant (1784)',
     hint: 'Von Immanuel Kant.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Was ist Aufklärung?"' },
     distractors: ['Karl Marx & Friedrich Engels (1848)', 'Heraklit (1922)', 'Friedrich Schiller (Wallensteins Lager) (1799)']
   },
@@ -886,6 +959,7 @@ export const quoteCards: Card[] = [
     answer: 'Ludwig XIV (zugeschrieben) (1651)',
     hint: 'Von Ludwig XIV (zugeschrieben).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"L\'état c\'est moi (Der Staat bin ich)."' },
     distractors: ['John Wayne (Ringo) (1939)', 'Ralph Waldo Emerson (1841)', 'Douglas Adams (Per Anhalter durch die Galaxis) (1979)']
   },
@@ -898,6 +972,7 @@ export const quoteCards: Card[] = [
     answer: 'René Magritte (1929)',
     hint: 'Von René Magritte.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Pfeife: Dies ist keine Pfeife."' },
     distractors: ['Rose Leslie (Game of Thrones) (2011)', 'Volksmund (~1900)', 'Nathan Lane & Ernie Sabella (Timon & Pumbaa) (1994)']
   },
@@ -910,6 +985,7 @@ export const quoteCards: Card[] = [
     answer: 'UN-Menschenrechtscharta (1948)',
     hint: 'Von UN-Menschenrechtscharta.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Alle Menschen sind frei und gleich an Würde und Rechten geboren."' },
     distractors: ['Konfuzius (zugeschrieben) (1925)', 'Ronald Reagan (1987)', 'Mark Twain (1950)']
   },
@@ -922,6 +998,7 @@ export const quoteCards: Card[] = [
     answer: 'Marlon Brando (1972)',
     hint: 'Von Marlon Brando.',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Der Pate: Ich mache ihm ein Angebot, das er nicht ablehnen kann."' },
     distractors: ['Format-Titel (Reality TV) (2005)', 'Uschi Glas (Zwei Nasen tanken Super) (1982)', 'Julius Caesar (47 v. Chr.)']
   },
@@ -934,6 +1011,7 @@ export const quoteCards: Card[] = [
     answer: 'Apple (Werbeslogan) (1997)',
     hint: 'Von Apple (Werbeslogan).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Think Different."' },
     distractors: ['Neil Armstrong (1969)', 'Pablo Picasso (1931)', 'Humphrey Bogart (Casablanca) (1942)']
   },
@@ -946,6 +1024,7 @@ export const quoteCards: Card[] = [
     answer: 'Norman Bates (1960)',
     hint: 'Von Norman Bates.',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Psycho: Wir alle drehen manchmal ein bisschen durch."' },
     distractors: ['UN-Menschenrechtscharta (1950)', 'Buzz Lightyear (Toy Story) (1995)', 'Brad Pitt (Fight Club) (1999)']
   },
@@ -958,6 +1037,7 @@ export const quoteCards: Card[] = [
     answer: 'Volksmund (1943)',
     hint: 'Von Volksmund.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Das Glas ist halb voll oder halb leer."' },
     distractors: ['Friedrich Schiller (Die Verschwörung des Fiesco zu Genua) (1783)', 'Samuel Beckett (1952)', 'Kaiser Wilhelm II. (1914)']
   },
@@ -970,6 +1050,7 @@ export const quoteCards: Card[] = [
     answer: 'Filmtitel (1959)',
     hint: 'Von Filmtitel.',
     difficulty: 'mittel',
+    quoteSourceType: 'film',
     sources: { text: '"Manche mögen\'s heiß."' },
     distractors: ['Friedrich Schiller (Wallensteins Lager) (1799)', 'Appius Claudius Caecus (300 v. Chr.)', 'Mandy Patinkin (Die Braut des Prinzen) (1991)']
   },
@@ -982,6 +1063,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (1926)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Gott würfelt nicht."' },
     distractors: ['Apple (Slogan) (1984)', 'Voltaire (1750)', 'Jonathan Swift (1738)']
   },
@@ -994,6 +1076,7 @@ export const quoteCards: Card[] = [
     answer: 'Ernest Hemingway (1941)',
     hint: 'Von Ernest Hemingway.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Man braucht zwei Jahre, um sprechen zu lernen, und fünfzig, um schweigen zu lernen."' },
     distractors: ['Angela Merkel (2013)', 'Otto von Bismarck (1880)', 'Niels Bohr (1920)']
   },
@@ -1006,6 +1089,7 @@ export const quoteCards: Card[] = [
     answer: 'Die drei Musketiere (Alexandre Dumas) (1844)',
     hint: 'Von Die drei Musketiere (Alexandre Dumas).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Einer für alle, alle für einen."' },
     distractors: ['Walter Moers (Professor Nachtigaller) (1999)', 'Karl Marx & Friedrich Engels (1848)', 'Pablo Picasso (~1950)']
   },
@@ -1018,6 +1102,7 @@ export const quoteCards: Card[] = [
     answer: 'George Santayana (1905)',
     hint: 'Von George Santayana.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ein Volk, das seine Geschichte nicht kennt, ist dazu verdammt, sie zu wiederholen."' },
     distractors: ['William Shakespeare (Hamlet) (1603)', 'Leo Tolstoi (Anna Karenina) (1877)', 'Albert Einstein (~1940)']
   },
@@ -1030,6 +1115,7 @@ export const quoteCards: Card[] = [
     answer: 'Franklin D. Roosevelt (1933)',
     hint: 'Von Franklin D. Roosevelt.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Die einzige Sache, die wir zu fürchten haben, ist die Furcht selbst."' },
     distractors: ['Volksmund (Traditionell)', 'Rosa Luxemburg (1944)', 'Katja Ebstein (1970)']
   },
@@ -1042,6 +1128,7 @@ export const quoteCards: Card[] = [
     answer: 'John Donne (1624)',
     hint: 'Von John Donne.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Niemand ist eine Insel, in sich ganz."' },
     distractors: ['UN-Menschenrechtscharta (1950)', 'Henry Ford (~1920)', 'Neil Armstrong (1969)']
   },
@@ -1054,6 +1141,7 @@ export const quoteCards: Card[] = [
     answer: 'Dalai Lama (zugeschrieben) (~1993)',
     hint: 'Von Dalai Lama (zugeschrieben).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"The purpose of our lives is to be happy."' },
     distractors: ['Filmtitel (James Dean) / Bibel (Lukas 23,34) (1955)', 'Georg Christoph Lichtenberg (1921)', 'Michail Gorbatschow (zugeschrieben) (1989)']
   },
@@ -1066,6 +1154,7 @@ export const quoteCards: Card[] = [
     answer: 'Arnold Schwarzenegger (Terminator) (1984)',
     hint: 'Von Arnold Schwarzenegger (Terminator).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"I\'ll be back."' },
     distractors: ['Albert Einstein (1919)', 'Francis Bacon (1620)', 'Apicius (zugeschrieben) (1. Jhd. n. Chr.)']
   },
@@ -1078,6 +1167,7 @@ export const quoteCards: Card[] = [
     answer: 'Steve Jobs (zitiert Stewart Brand) (2005)',
     hint: 'Von Steve Jobs (zitiert Stewart Brand).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Stay hungry, stay foolish."' },
     distractors: ['Christian F. Gellert (1791)', 'Konfuzius / Bibel (Goldene Regel) (~500 v. Chr.)', 'Konfuzius (zugeschrieben) (1900)']
   },
@@ -1090,6 +1180,7 @@ export const quoteCards: Card[] = [
     answer: 'Timothy Leary (1966)',
     hint: 'Von Timothy Leary.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Turn on tune in drop out."' },
     distractors: ['The Dark Knight (Alfred) (2008)', 'Samuel Johnson (1775)', 'Steve Jobs (zitiert Stewart Brand) (1922)']
   },
@@ -1102,6 +1193,7 @@ export const quoteCards: Card[] = [
     answer: 'Konfuzius (zugeschrieben) (1931)',
     hint: 'Von Konfuzius (zugeschrieben).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"In der Ruhe liegt die Kraft."' },
     distractors: ['George Orwell (1984) (1984)', 'Winston Churchill (zugeschrieben) (1940)', 'Apple (Werbeslogan) (1997)']
   },
@@ -1114,6 +1206,7 @@ export const quoteCards: Card[] = [
     answer: 'Otto von Bismarck (1862)',
     hint: 'Von Otto von Bismarck.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Blut und Eisen."' },
     distractors: ['Schlagzeile der Bild-Zeitung (2005)', 'Bruce Willis (Stirb Langsam) (1988)', 'Sprichwort (Traditionell)']
   },
@@ -1126,6 +1219,7 @@ export const quoteCards: Card[] = [
     answer: 'George Orwell (1984) (1949)',
     hint: 'Von George Orwell (1984).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Krieg ist Frieden, Freiheit ist Sklaverei, Unwissenheit ist Stärke."' },
     distractors: ['Kurt Tucholsky (1920)', 'Protagoras (1957)', 'Heraklit (1922)']
   },
@@ -1138,6 +1232,7 @@ export const quoteCards: Card[] = [
     answer: 'The Police (1983)',
     hint: 'Von The Police.',
     difficulty: 'leicht',
+    quoteSourceType: 'lied',
     sources: { text: '"Every breath you take."' },
     distractors: ['Albert Einstein (zugeschrieben) (~1900)', 'Sprichwort / Volksmund (1900)', 'Ralph Waldo Emerson (1841)']
   },
@@ -1150,6 +1245,7 @@ export const quoteCards: Card[] = [
     answer: 'Protagoras (~450 v. Chr.)',
     hint: 'Von Protagoras.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Der Mensch ist das Maß aller Dinge."' },
     distractors: ['Konfuzius (zugeschrieben) (1925)', 'Timothy Leary (1966)', 'William Shakespeare (Der Sturm) (1611)']
   },
@@ -1162,6 +1258,7 @@ export const quoteCards: Card[] = [
     answer: 'Winston Churchill (1941)',
     hint: 'Von Winston Churchill.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Der Weg zum Erfolg ist gepflastert mit Misserfolgen."' },
     distractors: ['The Wizard of Oz (1939)', 'Jack Nicholson (Eine Frage der Ehre) (1992)', 'J.R.R. Tolkien (Der Herr der Ringe) (1937)']
   },
@@ -1174,6 +1271,7 @@ export const quoteCards: Card[] = [
     answer: 'Thomas Hobbes (Leviathan) (1651)',
     hint: 'Von Thomas Hobbes (Leviathan).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Der Mensch ist dem Menschen ein Wolf."' },
     distractors: ['Abraham Lincoln (1863)', 'Humphrey Bogart (Casablanca) (1942)', 'Star Wars (Obi-Wan Kenobi) (1977)']
   },
@@ -1186,6 +1284,7 @@ export const quoteCards: Card[] = [
     answer: 'Neil Armstrong (1969)',
     hint: 'Von Neil Armstrong.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"One small step for man."' },
     distractors: ['Gary Lineker (1966)', 'Harry S. Truman (1945)', 'René Descartes (1637)']
   },
@@ -1198,6 +1297,7 @@ export const quoteCards: Card[] = [
     answer: 'Georg Christoph Lichtenberg (1799)',
     hint: 'Von Georg Christoph Lichtenberg.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ich weiß nicht, ob es besser wird, wenn es anders wird. Aber es muss anders werden, wenn es besser werden soll."' },
     distractors: ['UN-Menschenrechtscharta (1950)', 'Otto von Bismarck (1880)', 'Appius Claudius Caecus (300 v. Chr.)']
   },
@@ -1210,6 +1310,7 @@ export const quoteCards: Card[] = [
     answer: 'William Shakespeare (Der Kaufmann von Venedig) (1596)',
     hint: 'Von William Shakespeare (Der Kaufmann von Venedig).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"The quality of mercy is not strained."' },
     distractors: ['Volksmund (~1900)', 'The Wizard of Oz (1939)', 'Kaiser Wilhelm II. (1914)']
   },
@@ -1222,6 +1323,7 @@ export const quoteCards: Card[] = [
     answer: 'The Godfather (1972)',
     hint: 'Von The Godfather.',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"I\'m gonna make him an offer he can\'t refuse."' },
     distractors: ['Marlon Brando (1972)', 'Al Pacino (Scarface) (1983)', 'Isaac Newton (~1700)']
   },
@@ -1234,6 +1336,7 @@ export const quoteCards: Card[] = [
     answer: 'The Wizard of Oz (1939)',
     hint: 'Von The Wizard of Oz.',
     difficulty: 'mittel',
+    quoteSourceType: 'film',
     sources: { text: '"There\'s no place like home."' },
     distractors: ['Konfuzius / Bibel (Goldene Regel) (~500 v. Chr.)', 'Albert Einstein (1926)', 'Irischer Segenswunsch (Traditionell)']
   },
@@ -1246,6 +1349,7 @@ export const quoteCards: Card[] = [
     answer: 'Julius Caesar (47 v. Chr.)',
     hint: 'Von Julius Caesar.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Veni, vidi, vici. (Ich kam, ich sah, ich siegte.)"' },
     distractors: ['Albert Einstein (1905)', 'The Wizard of Oz (1939)', 'Friedrich der Große (1757)']
   },
@@ -1258,6 +1362,7 @@ export const quoteCards: Card[] = [
     answer: 'William Shakespeare (Hamlet) (1603)',
     hint: 'Von William Shakespeare (Hamlet).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Sein oder Nichtsein, das ist hier die Frage."' },
     distractors: ['Voltaire (~1760)', 'Brad Pitt (Fight Club) (1999)', 'Heinrich Heine (~1830)']
   },
@@ -1270,6 +1375,7 @@ export const quoteCards: Card[] = [
     answer: 'René Descartes (1637)',
     hint: 'Von René Descartes.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Cogito, ergo sum. (Ich denke, also bin ich.)"' },
     distractors: ['Ludwig Wittgenstein (1921)', 'Bill Clinton (1998)', 'Bertolt Brecht (1897)']
   },
@@ -1282,6 +1388,7 @@ export const quoteCards: Card[] = [
     answer: 'Christian F. Gellert (1748)',
     hint: 'Von Christian F. Gellert.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Was du heute kannst besorgen, das verschiebe nicht auf morgen."' },
     distractors: ['Tom Hanks (Forrest Gump) (1994)', 'ABBA (Songtitel) (1980)', 'Heinrich Heine (~1830)']
   },
@@ -1294,6 +1401,7 @@ export const quoteCards: Card[] = [
     answer: 'Johann Wolfgang von Goethe (Faust I) (1808)',
     hint: 'Von Johann Wolfgang von Goethe (Faust I).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Hier bin ich Mensch, hier darf ich’s sein!"' },
     distractors: ['Chief Brody (1975)', 'Sokrates (zugeschrieben) (~400 v. Chr.)', 'The Matrix (Morpheus) (1999)']
   },
@@ -1306,6 +1414,7 @@ export const quoteCards: Card[] = [
     answer: 'Clark Gable (Vom Winde verweht) (1939)',
     hint: 'Von Clark Gable (Vom Winde verweht).',
     difficulty: 'mittel',
+    quoteSourceType: 'film',
     sources: { text: '"Frankly, my dear, I don\'t give a damn."' },
     distractors: ['Johann Wolfgang von Goethe (Faust I) (1808)', 'Neil Armstrong (1969)', 'Otto von Bismarck (1880)']
   },
@@ -1318,6 +1427,7 @@ export const quoteCards: Card[] = [
     answer: 'Winston Churchill (1940)',
     hint: 'Von Winston Churchill.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ich habe nichts zu bieten außer Blut, Mühsal, Tränen und Schweiß."' },
     distractors: ['Samuel Beckett (1952)', 'John Wayne (Ringo) (1939)', 'Andy Serkis (Der Herr der Ringe) (2001)']
   },
@@ -1330,6 +1440,7 @@ export const quoteCards: Card[] = [
     answer: 'Mahatma Gandhi (1948)',
     hint: 'Von Mahatma Gandhi.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Die Welt hat genug für jedermanns Bedürfnisse, aber nicht für jedermanns Gier."' },
     distractors: ['Albert Einstein (1953)', 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populär) (1970)', 'Albert Einstein (1929)']
   },
@@ -1342,6 +1453,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (1953)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Zwei Dinge sind unendlich, das Universum und die menschliche Dummheit, aber bei dem Universum bin ich mir noch nicht ganz sicher."' },
     distractors: ['William Shakespeare (Der Kaufmann von Venedig) (1596)', 'Barack Obama (2008)', 'George Orwell (1984) (1949)']
   },
@@ -1354,6 +1466,7 @@ export const quoteCards: Card[] = [
     answer: 'Joe E. Brown (Manche mögen’s heiß) (1959)',
     hint: 'Von Joe E. Brown (Manche mögen’s heiß).',
     difficulty: 'mittel',
+    quoteSourceType: 'film',
     sources: { text: '"Nobody’s perfect. (Niemand ist vollkommen.)"' },
     distractors: ['Rosa Luxemburg (1944)', 'Perikles (~431 v. Chr.)', 'Sokrates (zugeschrieben) (~400 v. Chr.)']
   },
@@ -1366,6 +1479,7 @@ export const quoteCards: Card[] = [
     answer: 'Walter Ulbricht (1961)',
     hint: 'Von Walter Ulbricht.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Niemand hat die Absicht, eine Mauer zu errichten!"' },
     distractors: ['Montagsdemonstranten (DDR) (1989)', 'Marcel Reich-Ranicki (~2000)', 'Yoda (Star Wars) (1980)']
   },
@@ -1378,6 +1492,7 @@ export const quoteCards: Card[] = [
     answer: 'John F. Kennedy (1961)',
     hint: 'Von John F. Kennedy.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Frage nicht, was dein Land für dich tun kann – frage, was du für dein Land tun kannst."' },
     distractors: ['Friedrich Nietzsche (1882)', 'The Wizard of Oz (1939)', 'Bertolt Brecht (1928)']
   },
@@ -1390,6 +1505,7 @@ export const quoteCards: Card[] = [
     answer: 'Sean Connery (James Bond – 007 jagt Dr. No) (1962)',
     hint: 'Von Sean Connery (James Bond – 007 jagt Dr. No).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Bond. James Bond."' },
     distractors: ['Konfuzius (zugeschrieben) (~1300)', 'Sportler-Floskel (populär durch L. Matthäus) (~1990)', 'Kurt Tucholsky (1920)']
   },
@@ -1402,6 +1518,7 @@ export const quoteCards: Card[] = [
     answer: 'John F. Kennedy (1963)',
     hint: 'Von John F. Kennedy.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Ich bin ein Berliner."' },
     distractors: ['Montagsdemonstranten (DDR) (1989)', 'The Police (1983)', 'John Donne (1981)']
   },
@@ -1414,6 +1531,7 @@ export const quoteCards: Card[] = [
     answer: 'Martin Luther King Jr. (1963)',
     hint: 'Von Martin Luther King Jr..',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"I have a dream."' },
     distractors: ['Konfuzius / Bibel (Goldene Regel) (~500 v. Chr.)', 'Sprichwort (Frankreich/Italien) (~1500)', 'The Police (1983)']
   },
@@ -1426,6 +1544,7 @@ export const quoteCards: Card[] = [
     answer: 'Gary Lineker (1990)',
     hint: 'Von Gary Lineker.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Fußball ist ein Spiel von 22 Leuten, die rumlaufen, und am Ende gewinnt immer Deutschland."' },
     distractors: ['Friedrich Nietzsche (1882)', 'The Police (1983)', 'Gerard Butler (Film: 300) (2006)']
   },
@@ -1438,6 +1557,7 @@ export const quoteCards: Card[] = [
     answer: 'Neil Armstrong (1969)',
     hint: 'Von Neil Armstrong.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Das ist ein kleiner Schritt für einen Menschen, aber ein gewaltiger Sprung für die Menschheit."' },
     distractors: ['Jonathan Swift (1738)', 'Andy Serkis (Der Herr der Ringe) (2001)', 'Georg Christoph Lichtenberg (1921)']
   },
@@ -1450,6 +1570,7 @@ export const quoteCards: Card[] = [
     answer: 'Marlon Brando (Der Pate) (1972)',
     hint: 'Von Marlon Brando (Der Pate).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Ich mache ihm ein Angebot, das er nicht ablehnen kann."' },
     distractors: ['George Orwell (1984) (1949)', 'Joe E. Brown (Manche mögen’s heiß) (1959)', 'Johann Wolfgang von Goethe (1795)']
   },
@@ -1462,6 +1583,7 @@ export const quoteCards: Card[] = [
     answer: 'Alec Guinness (Star Wars) (1977)',
     hint: 'Von Alec Guinness (Star Wars).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Möge die Macht mit dir sein."' },
     distractors: ['Benjamin Franklin (1755)', 'Mahatma Gandhi (1948)', 'Sepp Herberger (1954)']
   },
@@ -1474,6 +1596,7 @@ export const quoteCards: Card[] = [
     answer: 'David Prowse / James Earl Jones (Das Imperium schlägt zurück) (1980)',
     hint: 'Von David Prowse / James Earl Jones (Das Imperium schlägt zurück).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Ich bin dein Vater."' },
     distractors: ['Forrest Gump (1985)', 'William Shakespeare (Julius Caesar) (1599)', 'George Orwell (1984) (1949)']
   },
@@ -1486,6 +1609,7 @@ export const quoteCards: Card[] = [
     answer: 'E.T. (E.T. – Der Außerirdische) (1982)',
     hint: 'Von E.T. (E.T. – Der Außerirdische).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"E.T. nach Hause telefonieren."' },
     distractors: ['Johann Wolfgang von Goethe (Faust I) (1808)', 'Arthur Schopenhauer (oft in diesem Kontext zitiert) (1980)', 'Johann Wolfgang von Goethe (1774)']
   },
@@ -1498,6 +1622,7 @@ export const quoteCards: Card[] = [
     answer: 'Arnold Schwarzenegger (Terminator) (1984)',
     hint: 'Von Arnold Schwarzenegger (Terminator).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"I\'ll be back."' },
     distractors: ['Montagsdemonstranten (DDR) (1989)', 'John F. Kennedy (1961)', 'Sepp Herberger (1954)']
   },
@@ -1510,6 +1635,7 @@ export const quoteCards: Card[] = [
     answer: 'Christopher Lloyd (Zurück in die Zukunft) (1985)',
     hint: 'Von Christopher Lloyd (Zurück in die Zukunft).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Wo wir hinfahren, brauchen wir keine Straßen."' },
     distractors: ['Apple (Werbeslogan) (1997)', 'Terminator 2 (1994)', 'Al Pacino (Der Pate II) (1974)']
   },
@@ -1522,6 +1648,7 @@ export const quoteCards: Card[] = [
     answer: 'Montagsdemonstranten (DDR) (1989)',
     hint: 'Von Montagsdemonstranten (DDR).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Wir sind das Volk!"' },
     distractors: ['Star Wars (Obi-Wan Kenobi) (1977)', 'Marie von Ebner-Eschenbach (~1890)', 'Heinrich Heine (~1830)']
   },
@@ -1534,6 +1661,7 @@ export const quoteCards: Card[] = [
     answer: 'Diverse (Volksmund/Fußball) (1991)',
     hint: 'Von Diverse (Volksmund/Fußball).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Hast du Verspätung, ist die Bahn nicht pünktlich. (Legendärer Versprecher)"' },
     distractors: ['David Prowse / James Earl Jones (Das Imperium schlägt zurück) (1980)', 'Sean Connery (James Bond – Goldfinger) (1964)', 'Winston Churchill (1945)']
   },
@@ -1546,6 +1674,7 @@ export const quoteCards: Card[] = [
     answer: 'Tom Hanks (Forrest Gump) (1994)',
     hint: 'Von Tom Hanks (Forrest Gump).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Das Leben ist wie eine Schachtel Pralinen. Man weiß nie, was man kriegt."' },
     distractors: ['Judy Garland (Der Zauberer von Oz) (1939)', 'Konfuzius (zugeschrieben) (500 v. Chr.)', 'Friedrich Schiller (Die Verschwörung des Fiesco zu Genua) (1783)']
   },
@@ -1558,6 +1687,7 @@ export const quoteCards: Card[] = [
     answer: 'Leonardo DiCaprio (Titanic) (1997)',
     hint: 'Von Leonardo DiCaprio (Titanic).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Ich bin der König der Welt!"' },
     distractors: ['Konfuzius (zugeschrieben) (500 v. Chr.)', 'George Orwell (1984) (1984)', 'Friedrich Schiller (Die Verschwörung des Fiesco zu Genua) (1783)']
   },
@@ -1570,6 +1700,7 @@ export const quoteCards: Card[] = [
     answer: 'Andy Serkis (Der Herr der Ringe) (2001)',
     hint: 'Von Andy Serkis (Der Herr der Ringe).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Mein Schatzzz!"' },
     distractors: ['Timothy Leary (1966)', 'Heinrich Heine (oft zitiert) (1931)', 'John Lyly (1579)']
   },
@@ -1582,6 +1713,7 @@ export const quoteCards: Card[] = [
     answer: 'Format-Titel (Reality TV) (2005)',
     hint: 'Von Format-Titel (Reality TV).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Ich bin ein Star – Holt mich hier raus!"' },
     distractors: ['Clint Eastwood (Dirty Harry) (1971)', 'Filmtitel (1959)', 'Gary Lineker (1966)']
   },
@@ -1594,6 +1726,7 @@ export const quoteCards: Card[] = [
     answer: 'Angela Merkel (2015)',
     hint: 'Von Angela Merkel.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Wir schaffen das."' },
     distractors: ['Albert Einstein (1929)', 'Abraham Lincoln (1863)', 'Humphrey Bogart (Casablanca) (1942)']
   },
@@ -1606,6 +1739,7 @@ export const quoteCards: Card[] = [
     answer: 'Sokrates (399 v. Chr.)',
     hint: 'Von Sokrates.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Ich weiß, dass ich nichts weiß."' },
     distractors: ['Muhammad Ali (1964)', 'Winston Churchill (1943)', 'Julius Caesar (47 v. Chr.)']
   },
@@ -1618,6 +1752,7 @@ export const quoteCards: Card[] = [
     answer: 'Julius Caesar (49 v. Chr.)',
     hint: 'Von Julius Caesar.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Alea iacta est. (Der Würfel ist gefallen.)"' },
     distractors: ['John Donne (1624)', 'J.R.R. Tolkien (Der Herr der Ringe) (1937)', 'John F. Kennedy (1961)']
   },
@@ -1630,6 +1765,7 @@ export const quoteCards: Card[] = [
     answer: 'Horaz (23 v. Chr.)',
     hint: 'Von Horaz.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Carpe diem. (Nutze den Tag.)"' },
     distractors: ['Humphrey Bogart (Casablanca) (1942)', 'Tom Cruise (Top Gun) (1986)', 'Charlie Chaplin (1930)']
   },
@@ -1642,6 +1778,7 @@ export const quoteCards: Card[] = [
     answer: 'Heraklit (500 v. Chr.)',
     hint: 'Von Heraklit.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Alles fließt. (Panta rhei.)"' },
     distractors: ['Franz Beckenbauer (1974)', 'Protagoras (1957)', 'Clint Eastwood (Dirty Harry) (1971)']
   },
@@ -1654,6 +1791,7 @@ export const quoteCards: Card[] = [
     answer: 'Martin Luther (1521)',
     hint: 'Von Martin Luther.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Hier stehe ich, ich kann nicht anders. Gott helfe mir, Amen!"' },
     distractors: ['William Shakespeare (1950)', 'George Orwell (Farm der Tiere) (1945)', 'Rose Leslie (Game of Thrones) (2011)']
   },
@@ -1666,6 +1804,7 @@ export const quoteCards: Card[] = [
     answer: 'Francis Bacon (1597)',
     hint: 'Von Francis Bacon.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Wissen ist Macht."' },
     distractors: ['William Shakespeare (1603)', 'Loriot (Ödipussi) (1988)', 'Isaac Newton (~1700)']
   },
@@ -1678,6 +1817,7 @@ export const quoteCards: Card[] = [
     answer: 'William Shakespeare (Julius Caesar) (1599)',
     hint: 'Von William Shakespeare (Julius Caesar).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Et tu, Brute? (Auch du, Brutus?)"' },
     distractors: ['Victor Hugo (1852)', 'Perikles (1854)', 'Rosa Luxemburg (1944)']
   },
@@ -1690,6 +1830,7 @@ export const quoteCards: Card[] = [
     answer: 'Ludwig XIV. (zugeschrieben) (1655)',
     hint: 'Von Ludwig XIV. (zugeschrieben).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"L\'État, c\'est moi. (Der Staat bin ich.)"' },
     distractors: ['Edward Kennedy (1960)', 'William Shakespeare (Cymbeline) (1609)', 'Rosa Luxemburg (1944)']
   },
@@ -1702,6 +1843,7 @@ export const quoteCards: Card[] = [
     answer: 'Friedrich Schiller (Die Verschwörung des Fiesco zu Genua) (1783)',
     hint: 'Von Friedrich Schiller (Die Verschwörung des Fiesco zu Genua).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Der Mohr hat seine Arbeit getan, der Mohr kann gehen."' },
     distractors: ['Johann Wolfgang von Goethe (1795)', 'Loriot (Weihnachten bei Hoppenstedts) (1978)', 'Albert Einstein (zugeschrieben) (~1950)']
   },
@@ -1714,6 +1856,7 @@ export const quoteCards: Card[] = [
     answer: 'Immanuel Kant (1784)',
     hint: 'Von Immanuel Kant.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Habe Mut, dich deines eigenen Verstandes zu bedienen!"' },
     distractors: ['Thomas Hobbes (1927)', 'E.T. - Der Außerirdische (1982)', 'Bertolt Brecht (1897)']
   },
@@ -1726,6 +1869,7 @@ export const quoteCards: Card[] = [
     answer: 'Friedrich Schiller (Wilhelm Tell) (1804)',
     hint: 'Von Friedrich Schiller (Wilhelm Tell).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Die Axt im Haus erspart den Zimmermann."' },
     distractors: ['Heath Ledger (The Dark Knight) (2008)', 'John F. Kennedy (1961)', 'Appius Claudius Caecus (300 v. Chr.)']
   },
@@ -1738,6 +1882,7 @@ export const quoteCards: Card[] = [
     answer: 'Johann Wolfgang von Goethe (Faust I) (1808)',
     hint: 'Von Johann Wolfgang von Goethe (Faust I).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Das also war des Pudels Kern!"' },
     distractors: ['Helmut Schmidt (1980)', 'George Peppard (A-Team) (1985)', 'Charlie Chaplin (1930)']
   },
@@ -1750,6 +1895,7 @@ export const quoteCards: Card[] = [
     answer: 'Johann Wolfgang von Goethe (Faust I) (1808)',
     hint: 'Von Johann Wolfgang von Goethe (Faust I).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Zwei Seelen wohnen, ach! in meiner Brust."' },
     distractors: ['Apollo 13 (Film) (1995)', 'Immanuel Kant (1790)', 'Adlai Stevenson (1952)']
   },
@@ -1762,6 +1908,7 @@ export const quoteCards: Card[] = [
     answer: 'Johann Wolfgang von Goethe (zugeschriebene letzte Worte) (1832)',
     hint: 'Von Johann Wolfgang von Goethe (zugeschriebene letzte Worte).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Mehr Licht!"' },
     distractors: ['Abraham Lincoln (~1860)', 'Buddha (~500 v. Chr.)', 'Apple (Slogan) (1984)']
   },
@@ -1774,6 +1921,7 @@ export const quoteCards: Card[] = [
     answer: 'Karl Marx & Friedrich Engels (1848)',
     hint: 'Von Karl Marx & Friedrich Engels.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ein Gespenst geht um in Europa – das Gespenst des Kommunismus."' },
     distractors: ['Sean Connery (James Bond – Goldfinger) (1964)', 'Seneca (zugeschrieben) (~50 n. Chr.)', 'Ingeborg Bachmann (~1960)']
   },
@@ -1786,6 +1934,7 @@ export const quoteCards: Card[] = [
     answer: 'Otto von Bismarck (1862)',
     hint: 'Von Otto von Bismarck.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Nicht durch Reden und Majoritätsbeschlüsse werden die großen Fragen der Zeit entschieden, sondern durch Eisen und Blut."' },
     distractors: ['Andy Warhol (1968)', 'John Lennon (1971)', 'Andy Serkis (Der Herr der Ringe) (2001)']
   },
@@ -1798,6 +1947,7 @@ export const quoteCards: Card[] = [
     answer: 'Friedrich Nietzsche (1882)',
     hint: 'Von Friedrich Nietzsche.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Gott ist tot."' },
     distractors: ['Nike (Werbeslogan) (1988)', '(Parodie auf Armstrong / Volksmund) (1963)', 'Neil Armstrong (1969)']
   },
@@ -1810,6 +1960,7 @@ export const quoteCards: Card[] = [
     answer: 'Friedrich Nietzsche (1888)',
     hint: 'Von Friedrich Nietzsche.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Was mich nicht umbringt, macht mich stärker."' },
     distractors: ['Ludwig Wittgenstein (1921)', 'Clint Eastwood (Dirty Harry) (1971)', 'Seneca (~50 n. Chr.)']
   },
@@ -1822,6 +1973,7 @@ export const quoteCards: Card[] = [
     answer: 'Thomas Alva Edison (1903)',
     hint: 'Von Thomas Alva Edison.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Genie ist 1 % Inspiration und 99 % Transpiration."' },
     distractors: ['Bertolt Brecht (Leben des Galilei) (1939)', 'Patrick Meagher (oft Bob Marley zugeschrieben) (1951)', 'John F. Kennedy (1961)']
   },
@@ -1834,6 +1986,7 @@ export const quoteCards: Card[] = [
     answer: 'Ludwig Thoma (Ein Münchner im Himmel) (1911)',
     hint: 'Von Ludwig Thoma (Ein Münchner im Himmel).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Halleluja! – Sog i."' },
     distractors: ['William Shakespeare (Der Kaufmann von Venedig) (1596)', 'Charles Darwin (1859)', 'Martin Luther King (1963)']
   },
@@ -1846,6 +1999,7 @@ export const quoteCards: Card[] = [
     answer: 'Sherlock Holmes (Filmzitat, nicht im Buch) (1929)',
     hint: 'Von Sherlock Holmes (Filmzitat, nicht im Buch).',
     difficulty: 'mittel',
+    quoteSourceType: 'film',
     sources: { text: '"Elementar, mein lieber Watson."' },
     distractors: ['René Descartes (1637)', 'J.R.R. Tolkien (Der Herr der Ringe) (1937)', 'Friedrich Schiller (Die Jungfrau von Orleans) (1801)']
   },
@@ -1858,6 +2012,7 @@ export const quoteCards: Card[] = [
     answer: 'Judy Garland (Der Zauberer von Oz) (1939)',
     hint: 'Von Judy Garland (Der Zauberer von Oz).',
     difficulty: 'mittel',
+    quoteSourceType: 'film',
     sources: { text: '"Wir sind nicht mehr in Kansas, Toto."' },
     distractors: ['Heinrich Heine (~1830)', 'Blaise Pascal (1669)', 'Karl Valentin (1970)']
   },
@@ -1870,6 +2025,7 @@ export const quoteCards: Card[] = [
     answer: 'Humphrey Bogart (Casablanca) (1942)',
     hint: 'Von Humphrey Bogart (Casablanca).',
     difficulty: 'mittel',
+    quoteSourceType: 'film',
     sources: { text: '"Ich seh’ dir in die Augen, Kleines."' },
     distractors: ['Jean Paul (1796)', 'Alec Guinness (Star Wars) (1977)', 'Konfuzius (zugeschrieben) (~1300)']
   },
@@ -1882,6 +2038,7 @@ export const quoteCards: Card[] = [
     answer: 'Ingrid Bergman (Casablanca - oft falsch zitiert) (1942)',
     hint: 'Von Ingrid Bergman (Casablanca - oft falsch zitiert).',
     difficulty: 'mittel',
+    quoteSourceType: 'film',
     sources: { text: '"Spiel es noch einmal, Sam."' },
     distractors: ['Che Guevara (~1960)', 'William Shakespeare (Der Kaufmann von Venedig) (1596)', 'John F. Kennedy (1963)']
   },
@@ -1894,6 +2051,7 @@ export const quoteCards: Card[] = [
     answer: 'Antoine de Saint-Exupéry (1943)',
     hint: 'Von Antoine de Saint-Exupéry.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Man sieht nur mit dem Herzen gut. Das Wesentliche ist für die Augen unsichtbar."' },
     distractors: ['Barack Obama (2008)', 'John F. Kennedy (1961)', 'Franz Kafka (1915)']
   },
@@ -1906,6 +2064,7 @@ export const quoteCards: Card[] = [
     answer: 'Ernst Reuter (1948)',
     hint: 'Von Ernst Reuter.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Völker der Welt, schaut auf diese Stadt!"' },
     distractors: ['Samuel Beckett (1952)', 'Terminator (1993)', 'William Shakespeare (Der Sturm) (1611)']
   },
@@ -1918,6 +2077,7 @@ export const quoteCards: Card[] = [
     answer: 'Grundgesetz für die Bundesrepublik Deutschland (1949)',
     hint: 'Von Grundgesetz für die Bundesrepublik Deutschland.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Die Würde des Menschen ist unantastbar."' },
     distractors: ['Seneca (1902)', 'Georg Büchner (Dantons Tod) (1835)', 'George R. R. Martin (Game of Thrones) (1996)']
   },
@@ -1930,6 +2090,7 @@ export const quoteCards: Card[] = [
     answer: 'Erich Kästner (1950)',
     hint: 'Von Erich Kästner.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Es gibt nichts Gutes, außer man tut es."' },
     distractors: ['Jonathan Swift (1738)', 'René Descartes (1637)', 'Heraklit (~500 v. Chr.)']
   },
@@ -1942,6 +2103,7 @@ export const quoteCards: Card[] = [
     answer: 'Sepp Herberger (1954)',
     hint: 'Von Sepp Herberger.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Der Ball ist rund und ein Spiel dauert 90 Minuten."' },
     distractors: ['Ronald Reagan (1987)', 'Loriot (Ödipussi) (1988)', 'Sprichwort (Frankreich/Italien) (~1500)']
   },
@@ -1954,6 +2116,7 @@ export const quoteCards: Card[] = [
     answer: 'Sepp Herberger (1954)',
     hint: 'Von Sepp Herberger.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Nach dem Spiel ist vor dem Spiel."' },
     distractors: ['Napoleon Bonaparte (1805)', 'Mark Twain (~1900)', 'Otto von Bismarck (1880)']
   },
@@ -1966,6 +2129,7 @@ export const quoteCards: Card[] = [
     answer: 'Timothy Leary (1966)',
     hint: 'Von Timothy Leary.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Turn on, tune in, drop out."' },
     distractors: ['Perikles (1854)', 'Gerard Butler (Film: 300) (2006)', 'Ingrid Bergman (Casablanca - oft falsch zitiert) (1942)']
   },
@@ -1978,6 +2142,7 @@ export const quoteCards: Card[] = [
     answer: 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populär) (1970)',
     hint: 'Von Jack Swigert (Apollo 13 - im Film durch Tom Hanks populär).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Houston, wir haben ein Problem."' },
     distractors: ['Sherlock Holmes (Arthur Conan Doyle) (1892)', 'Titanic (Jack Dawson) (1997)', 'Seneca (~50 n. Chr.)']
   },
@@ -1990,6 +2155,7 @@ export const quoteCards: Card[] = [
     answer: 'Robert De Niro (Taxi Driver) (1976)',
     hint: 'Von Robert De Niro (Taxi Driver).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Du redest mit mir? (You talkin\' to me?)"' },
     distractors: ['Otto von Bismarck (1862)', 'Sprichwort (Frankreich/Italien) (~1500)', 'Ralph Waldo Emerson (~1850)']
   },
@@ -2002,6 +2168,7 @@ export const quoteCards: Card[] = [
     answer: 'Robert Duvall (Apocalypse Now) (1979)',
     hint: 'Von Robert Duvall (Apocalypse Now).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Ich liebe den Geruch von Napalm am Morgen."' },
     distractors: ['Gary Lineker (1966)', 'George Orwell (1984) (1949)', 'Patrick Swayze (Dirty Dancing) (1987)']
   },
@@ -2014,6 +2181,7 @@ export const quoteCards: Card[] = [
     answer: 'Robert Lembke (1980)',
     hint: 'Von Robert Lembke.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Mitleid bekommt man geschenkt, Neid muss man sich verdienen."' },
     distractors: ['Konfuzius (zugeschrieben) (~1300)', 'Douglas Adams (Per Anhalter durch die Galaxis) (1979)', 'Edward Kennedy (1960)']
   },
@@ -2026,6 +2194,7 @@ export const quoteCards: Card[] = [
     answer: 'Uschi Glas (Zwei Nasen tanken Super) (1982)',
     hint: 'Von Uschi Glas (Zwei Nasen tanken Super).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Ich will ein Rindvieh von dir!"' },
     distractors: ['Format-Titel (Reality TV) (2005)', 'Konfuzius (zugeschrieben) (500 v. Chr.)', 'Marie von Ebner-Eschenbach (~1890)']
   },
@@ -2038,6 +2207,7 @@ export const quoteCards: Card[] = [
     answer: 'Michael Douglas (Wall Street) (1987)',
     hint: 'Von Michael Douglas (Wall Street).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Gier ist gut. (Greed is good.)"' },
     distractors: ['Giovanni Trapattoni (1998)', 'Albert Einstein (1930)', 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populär) (1970)']
   },
@@ -2050,6 +2220,7 @@ export const quoteCards: Card[] = [
     answer: 'Patrick Swayze (Dirty Dancing) (1987)',
     hint: 'Von Patrick Swayze (Dirty Dancing).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Niemand lässt Baby in der Ecke stehen."' },
     distractors: ['Jesus von Nazaret (Johannes 19,30) (~30 n. Chr.)', 'Konfuzius (zugeschrieben) (~500 v. Chr.)', 'George Orwell (1984) (1949)']
   },
@@ -2062,6 +2233,7 @@ export const quoteCards: Card[] = [
     answer: 'Nike (Werbeslogan) (1988)',
     hint: 'Von Nike (Werbeslogan).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Just do it."' },
     distractors: ['Barack Obama (2008)', 'William Shakespeare (1950)', 'Mahatma Gandhi (1948)']
   },
@@ -2074,6 +2246,7 @@ export const quoteCards: Card[] = [
     answer: 'Michail Gorbatschow (zugeschrieben) (1989)',
     hint: 'Von Michail Gorbatschow (zugeschrieben).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Wer zu spät kommt, den bestraft das Leben."' },
     distractors: ['Robert Duvall (Apocalypse Now) (1979)', 'Friedrich Schiller (Die Jungfrau von Orleans) (1801)', 'Hippokrates (~400 v. Chr.)']
   },
@@ -2086,6 +2259,7 @@ export const quoteCards: Card[] = [
     answer: 'Willy Brandt (1989)',
     hint: 'Von Willy Brandt.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Jetzt wächst zusammen, was zusammengehört."' },
     distractors: ['Johann Wolfgang von Goethe (1774)', 'Laurence Fishburne (Matrix) (1999)', 'Rhett Butler (Vom Winde verweht) (1939)']
   },
@@ -2098,6 +2272,7 @@ export const quoteCards: Card[] = [
     answer: 'Arnold Schwarzenegger (Terminator 2) (1991)',
     hint: 'Von Arnold Schwarzenegger (Terminator 2).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Hasta la vista, baby."' },
     distractors: ['Albus Dumbledore (Harry Potter) (2001)', 'Alec Guinness (Star Wars) (1977)', 'Forrest Gump (1985)']
   },
@@ -2110,6 +2285,7 @@ export const quoteCards: Card[] = [
     answer: 'Mandy Patinkin (Die Braut des Prinzen) (1987)',
     hint: 'Von Mandy Patinkin (Die Braut des Prinzen).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Hello. I\'m Inigo Montoya. You killed my father. Prepare to die."' },
     distractors: ['Rosa Luxemburg (1944)', 'Montagsdemonstrationen DDR (1989)', 'Winston Churchill (~1940)']
   },
@@ -2122,6 +2298,7 @@ export const quoteCards: Card[] = [
     answer: 'Cuba Gooding Jr. (Jerry Maguire) (1996)',
     hint: 'Von Cuba Gooding Jr. (Jerry Maguire).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Show me the money! (Führ mich zum Schotter!)"' },
     distractors: ['Albert Einstein (1953)', 'Schlagzeile der Bild-Zeitung (2005)', 'John Lennon (1980)']
   },
@@ -2134,6 +2311,7 @@ export const quoteCards: Card[] = [
     answer: 'George R. R. Martin (Game of Thrones) (1996)',
     hint: 'Von George R. R. Martin (Game of Thrones).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Winter is coming."' },
     distractors: ['Aldous Huxley (1932)', 'Katja Ebstein (1970)', 'Andreas Möller (1992)']
   },
@@ -2146,6 +2324,7 @@ export const quoteCards: Card[] = [
     answer: 'Giovanni Trapattoni (1998)',
     hint: 'Von Giovanni Trapattoni.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Ich habe fertig!"' },
     distractors: ['The Wizard of Oz (1939)', 'Heraklit (1922)', 'Angela Merkel (2015)']
   },
@@ -2158,6 +2337,7 @@ export const quoteCards: Card[] = [
     answer: 'Giovanni Trapattoni (1998)',
     hint: 'Von Giovanni Trapattoni.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Was erlauben Strunz?!"' },
     distractors: ['René Magritte (1929)', 'Star Trek (Captain Kirk) (1966)', 'Al Pacino (Scarface) (1983)']
   },
@@ -2170,6 +2350,7 @@ export const quoteCards: Card[] = [
     answer: 'Brad Pitt (Fight Club) (1999)',
     hint: 'Von Brad Pitt (Fight Club).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Die erste Regel des Fight Club lautet: Ihr verliert kein Wort über den Fight Club."' },
     distractors: ['Heinrich Heine (~1830)', 'Willy Brandt (1969)', 'Franz Kafka (1915)']
   },
@@ -2182,6 +2363,7 @@ export const quoteCards: Card[] = [
     answer: 'Steve Jobs (2005)',
     hint: 'Von Steve Jobs.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Stay hungry, stay foolish."' },
     distractors: ['Johann Wolfgang von Goethe (Faust I) (1808)', 'Barack Obama (2008)', 'Marlon Brando (Der Pate) (1972)']
   },
@@ -2194,6 +2376,7 @@ export const quoteCards: Card[] = [
     answer: 'Barack Obama (2008)',
     hint: 'Von Barack Obama.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Yes, we can."' },
     distractors: ['Oscar Wilde (1891)', 'Federico Fellini (1954)', 'Redewendung (Traditionell)']
   },
@@ -2206,6 +2389,7 @@ export const quoteCards: Card[] = [
     answer: 'Thomas Jefferson (Unabhängigkeitserklärung) (1776)',
     hint: 'Von Thomas Jefferson (Unabhängigkeitserklärung).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"All men are created equal."' },
     distractors: ['Immanuel Kant (1784)', 'Immanuel Kant (1781)', 'Arnold Schwarzenegger (Terminator) (1984)']
   },
@@ -2218,6 +2402,7 @@ export const quoteCards: Card[] = [
     answer: 'Abraham Lincoln (1863)',
     hint: 'Von Abraham Lincoln.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Regierung des Volkes durch das Volk für das Volk."' },
     distractors: ['Aldous Huxley (1932)', 'Norman Bates (1960)', 'Filmtitel (1959)']
   },
@@ -2230,6 +2415,7 @@ export const quoteCards: Card[] = [
     answer: 'Edgar Allan Poe (1865)',
     hint: 'Von Edgar Allan Poe.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Alles, was wir sehen oder scheinen, ist nur ein Traum in einem Traum."' },
     distractors: ['Cuba Gooding Jr. (Jerry Maguire) (1996)', 'Mahatma Gandhi (zugeschrieben) (~1948)', 'Roy Scheider (Der weiße Hai) (1975)']
   },
@@ -2242,6 +2428,7 @@ export const quoteCards: Card[] = [
     answer: 'Bertolt Brecht (Die Dreigroschenoper) (1890)',
     hint: 'Von Bertolt Brecht (Die Dreigroschenoper).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Bankraub ist eine Initiative von Dilettanten. Wahre Profis gründen eine Bank."' },
     distractors: ['Brad Pitt (Fight Club) (1999)', 'Joachim Ringelnatz (1920)', 'Samuel Johnson (1775)']
   },
@@ -2254,6 +2441,7 @@ export const quoteCards: Card[] = [
     answer: 'Oscar Wilde (1891)',
     hint: 'Von Oscar Wilde.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Versuchungen sollte man nachgeben. Wer weiß, ob sie wiederkommen!"' },
     distractors: ['Ludwig Wittgenstein (1921)', 'Sean Connery (James Bond – 007 jagt Dr. No) (1962)', 'Martin Luther (1521)']
   },
@@ -2266,6 +2454,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Schweitzer (1900)',
     hint: 'Von Albert Schweitzer.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Was ein Mensch an Gutem in die Welt hinausgibt, geht nicht verloren."' },
     distractors: ['Humphrey Bogart (Casablanca) (1942)', 'Gerard Butler (Film: 300) (2006)', 'Friedrich Schiller (Die Verschwörung des Fiesco zu Genua) (1783)']
   },
@@ -2278,6 +2467,7 @@ export const quoteCards: Card[] = [
     answer: 'Rosa Luxemburg (1918)',
     hint: 'Von Rosa Luxemburg.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Freiheit ist immer Freiheit der Andersdenkenden."' },
     distractors: ['Casablanca (Rick Blaine) (1942)', 'Terminator (1993)', 'Theodor Heuss (~1950)']
   },
@@ -2290,6 +2480,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (1921)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Logik bringt dich von A nach B. Fantasie bringt dich überall hin."' },
     distractors: ['Kaiser Wilhelm II. (1914)', 'Igor Strawinsky (~1940)', 'John F. Kennedy (1961)']
   },
@@ -2302,6 +2493,7 @@ export const quoteCards: Card[] = [
     answer: 'Konfuzius (zugeschrieben) (1925)',
     hint: 'Von Konfuzius (zugeschrieben).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Der Weg ist das Ziel."' },
     distractors: ['Winston Churchill (1940)', 'Ingrid Bergman (Casablanca - oft falsch zitiert) (1942)', 'George Orwell (1984) (1949)']
   },
@@ -2314,6 +2506,7 @@ export const quoteCards: Card[] = [
     answer: 'Heinrich Heine (oft zitiert) (1931)',
     hint: 'Von Heinrich Heine (oft zitiert).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Es gibt kein gutmütigeres, aber auch kein leichtgläubigeres Volk als das deutsche."' },
     distractors: ['Konfuzius (zugeschrieben) (~500 v. Chr.)', 'Bertolt Brecht (zugeschrieben) (1930)', 'Helmut Schmidt (1980)']
   },
@@ -2326,6 +2519,7 @@ export const quoteCards: Card[] = [
     answer: 'Franklin D. Roosevelt (1933)',
     hint: 'Von Franklin D. Roosevelt.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Das Einzige, was wir zu fürchten haben, ist die Furcht selbst."' },
     distractors: ['Abraham Lincoln (~1860)', 'Sokrates (400 v. Chr.)', 'Johann Wolfgang von Goethe (1795)']
   },
@@ -2338,6 +2532,7 @@ export const quoteCards: Card[] = [
     answer: 'J.R.R. Tolkien (Der Herr der Ringe) (1937)',
     hint: 'Von J.R.R. Tolkien (Der Herr der Ringe).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Nicht alle, die umherwandern, sind verloren."' },
     distractors: ['George Orwell (1984) (1949)', 'Herbert Zimmermann (Radiokommentar) (1954)', 'Neil Armstrong (1969)']
   },
@@ -2350,6 +2545,7 @@ export const quoteCards: Card[] = [
     answer: 'Winston Churchill (1940)',
     hint: 'Von Winston Churchill.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Wir werden auf den Stränden kämpfen... wir werden uns niemals ergeben."' },
     distractors: ['Marie von Ebner-Eschenbach (1893)', 'Ralph Waldo Emerson (1841)', 'Sokrates (zugeschrieben) (~400 v. Chr.)']
   },
@@ -2362,6 +2558,7 @@ export const quoteCards: Card[] = [
     answer: 'Fidel Castro (1943)',
     hint: 'Von Fidel Castro.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Die Geschichte wird mich freisprechen."' },
     distractors: ['Karl Valentin (1970)', 'Friedrich Nietzsche (1883)', 'Karl Marx (1930)']
   },
@@ -2374,6 +2571,7 @@ export const quoteCards: Card[] = [
     answer: 'George Orwell (Farm der Tiere) (1945)',
     hint: 'Von George Orwell (Farm der Tiere).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Alle Tiere sind gleich, aber manche sind gleicher."' },
     distractors: ['Ronald Reagan (1987)', 'Apple (Werbeslogan) (1997)', 'Ludwig Wittgenstein (1921)']
   },
@@ -2386,6 +2584,7 @@ export const quoteCards: Card[] = [
     answer: 'Harry S. Truman (1945)',
     hint: 'Von Harry S. Truman.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Hier wird die Verantwortung übernommen. (The buck stops here)"' },
     distractors: ['George R. R. Martin (Game of Thrones) (1996)', 'Konfuzius (zugeschrieben) (~1300)', 'Samuel Beckett (1952)']
   },
@@ -2398,6 +2597,7 @@ export const quoteCards: Card[] = [
     answer: 'Anne Frank (1947)',
     hint: 'Von Anne Frank.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Trotz allem glaube ich an das Gute im Menschen."' },
     distractors: ['Star Wars (Darth Vader) (1980)', 'René Descartes (1637)', 'Heinrich IV. (1593)']
   },
@@ -2410,6 +2610,7 @@ export const quoteCards: Card[] = [
     answer: 'George Orwell (1984) (1949)',
     hint: 'Von George Orwell (1984).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Big Brother is watching you."' },
     distractors: ['Sokrates (400 v. Chr.)', 'Irischer Segenswunsch (Traditionell)', 'Uschi Glas (Zwei Nasen tanken Super) (1982)']
   },
@@ -2422,6 +2623,7 @@ export const quoteCards: Card[] = [
     answer: 'Mark Twain (1950)',
     hint: 'Von Mark Twain.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Wer nicht liest, hat keinen Vorteil gegenüber dem, der nicht lesen kann."' },
     distractors: ['Winston Churchill (~1940)', 'Harry S. Truman (1945)', 'Paul Watzlawick (1967)']
   },
@@ -2434,6 +2636,7 @@ export const quoteCards: Card[] = [
     answer: 'Patrick Meagher (oft Bob Marley zugeschrieben) (1951)',
     hint: 'Von Patrick Meagher (oft Bob Marley zugeschrieben).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Manche Menschen sind so arm, das Einzige, was sie haben, ist Geld."' },
     distractors: ['Federico Fellini (1954)', 'Neil Armstrong (1969)', 'William Shakespeare (Der Kaufmann von Venedig) (1596)']
   },
@@ -2446,6 +2649,7 @@ export const quoteCards: Card[] = [
     answer: 'Samuel Beckett (1952)',
     hint: 'Von Samuel Beckett.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Warten wir auf Godot."' },
     distractors: ['Unbekannt (oft fälschlich Einstein) (1958)', 'The Matrix (Morpheus) (1999)', 'Volksmund (~1900)']
   },
@@ -2458,6 +2662,7 @@ export const quoteCards: Card[] = [
     answer: 'Herbert Zimmermann (Radiokommentar) (1954)',
     hint: 'Von Herbert Zimmermann (Radiokommentar).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Das Wunder von Bern. (Bezug auf das WM-Finale)"' },
     distractors: ['Jack Nicholson (Eine Frage der Ehre) (1992)', 'Bill Clinton (1998)', 'Bibel (2. Thessalonicher 3,10) (~50 n. Chr.)']
   },
@@ -2470,6 +2675,7 @@ export const quoteCards: Card[] = [
     answer: 'Filmtitel (James Dean) / Bibel (Lukas 23,34) (1955)',
     hint: 'Von Filmtitel (James Dean) / Bibel (Lukas 23,34).',
     difficulty: 'mittel',
+    quoteSourceType: 'film',
     sources: { text: '"Denn sie wissen nicht, was sie tun."' },
     distractors: ['Benjamin Franklin (1791)', 'Star Trek (Captain Kirk) (1966)', 'Antoine de Saint-Exupéry (1943)']
   },
@@ -2482,6 +2688,7 @@ export const quoteCards: Card[] = [
     answer: 'Unbekannt (oft fälschlich Einstein) (1958)',
     hint: 'Von Unbekannt (oft fälschlich Einstein).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Lerne aus der Vergangenheit, träume von der Zukunft, lebe in der Gegenwart."' },
     distractors: ['Friedrich Schiller (Wallensteins Lager) (1799)', 'Marie von Ebner-Eschenbach (1893)', 'Hippokrates (~400 v. Chr.)']
   },
@@ -2494,6 +2701,7 @@ export const quoteCards: Card[] = [
     answer: 'Anthony Perkins (Psycho) (1960)',
     hint: 'Von Anthony Perkins (Psycho).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Die beste Freundin eines Sohnes ist seine Mutter."' },
     distractors: ['Friedrich Schiller (Wilhelm Tell) (1804)', 'John F. Kennedy (1961)', 'Volksmund (Traditionell)']
   },
@@ -2506,6 +2714,7 @@ export const quoteCards: Card[] = [
     answer: '(Parodie auf Armstrong / Volksmund) (1963)',
     hint: 'Von (Parodie auf Armstrong / Volksmund).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Ein kleiner Schritt für mich, ein großer für die Schwiegermutter."' },
     distractors: ['Katja Ebstein (1970)', 'Bertolt Brecht (1930)', 'Blaise Pascal (1910)']
   },
@@ -2518,6 +2727,7 @@ export const quoteCards: Card[] = [
     answer: 'Sean Connery (James Bond – Goldfinger) (1964)',
     hint: 'Von Sean Connery (James Bond – Goldfinger).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Schütteln, nicht rühren."' },
     distractors: ['George Orwell (Farm der Tiere) (1945)', 'Immanuel Kant (1781)', 'Albert Einstein (zugeschrieben) (~1950)']
   },
@@ -2530,6 +2740,7 @@ export const quoteCards: Card[] = [
     answer: 'Gary Lineker (1966)',
     hint: 'Von Gary Lineker.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Fußball ist ein einfaches Spiel: 22 Männer jagen 90 Minuten lang einem Ball nach."' },
     distractors: ['Bruce Willis (Stirb Langsam) (1988)', 'Edgar Allan Poe (1865)', 'Konfuzius (zugeschrieben) (~1300)']
   },
@@ -2542,6 +2753,7 @@ export const quoteCards: Card[] = [
     answer: 'The Beatles (1967)',
     hint: 'Von The Beatles.',
     difficulty: 'leicht',
+    quoteSourceType: 'lied',
     sources: { text: '"All you need is love."' },
     distractors: ['Samuel Beckett (1952)', 'Marlene Dietrich (1930)', 'Neil Armstrong (1969)']
   },
@@ -2554,6 +2766,7 @@ export const quoteCards: Card[] = [
     answer: 'Andy Warhol (1968)',
     hint: 'Von Andy Warhol.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"In der Zukunft wird jeder für 15 Minuten weltberühmt sein."' },
     distractors: ['Volksmund (1943)', 'Gary Lineker (1966)', 'John F. Kennedy (1961)']
   },
@@ -2566,6 +2779,7 @@ export const quoteCards: Card[] = [
     answer: 'Clint Eastwood (Dirty Harry) (1971)',
     hint: 'Von Clint Eastwood (Dirty Harry).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Fragst du dich, ob ich sechs Schuss abgefeuert habe oder nur fünf?"' },
     distractors: ['Edward Kennedy (1960)', 'Niccolò Machiavelli (zugeschrieben) (1532)', 'Barack Obama (2008)']
   },
@@ -2578,6 +2792,7 @@ export const quoteCards: Card[] = [
     answer: 'Roy Scheider (Der weiße Hai) (1975)',
     hint: 'Von Roy Scheider (Der weiße Hai).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Sie werden ein größeres Boot brauchen."' },
     distractors: ['Star Wars (Obi-Wan Kenobi) (1977)', 'Sprichwort (Frankreich/Italien) (~1500)', 'Michael Douglas (Wall Street) (1987)']
   },
@@ -2590,6 +2805,7 @@ export const quoteCards: Card[] = [
     answer: 'Alec Guinness (Star Wars) (1977)',
     hint: 'Von Alec Guinness (Star Wars).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Das ist kein Mond. Das ist eine Raumstation."' },
     distractors: ['Johann Wolfgang von Goethe (Faust I) (1808)', 'Oscar Wilde (1892)', 'Protagoras (1957)']
   },
@@ -2602,6 +2818,7 @@ export const quoteCards: Card[] = [
     answer: 'Slogan (Alien – Das unheimliche Wesen aus einer fremden Welt) (1979)',
     hint: 'Von Slogan (Alien – Das unheimliche Wesen aus einer fremden Welt).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Im Weltraum hört dich niemand schreien."' },
     distractors: ['Karl Marx & Friedrich Engels (1848)', 'Alec Guinness (Star Wars) (1977)', 'Protagoras (1957)']
   },
@@ -2614,6 +2831,7 @@ export const quoteCards: Card[] = [
     answer: 'John Lennon (1980)',
     hint: 'Von John Lennon.',
     difficulty: 'leicht',
+    quoteSourceType: 'lied',
     sources: { text: '"Das Leben ist das, was passiert, während du eifrig dabei bist, andere Pläne zu machen."' },
     distractors: ['Humphrey Bogart (Casablanca) (1942)', 'Thomas Hobbes (1927)', 'The Rolling Stones (1964)']
   },
@@ -2626,6 +2844,7 @@ export const quoteCards: Card[] = [
     answer: 'Margaret Thatcher (1983)',
     hint: 'Von Margaret Thatcher.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Das Problem am Sozialismus ist, dass einem irgendwann das Geld anderer Leute ausgeht."' },
     distractors: ['Willy Brandt (1969)', 'Ingeborg Bachmann (~1960)', 'Mandy Patinkin (Die Braut des Prinzen) (1991)']
   },
@@ -2638,6 +2857,7 @@ export const quoteCards: Card[] = [
     answer: 'George Orwell (1984) (1984)',
     hint: 'Von George Orwell (1984).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Ozeanien war schon immer im Krieg mit Ostasien."' },
     distractors: ['Giacomo Leopardi (1852)', 'John Lyly (1579)', 'Alec Guinness (Star Wars) (1977)']
   },
@@ -2650,6 +2870,7 @@ export const quoteCards: Card[] = [
     answer: 'George Peppard (A-Team) (1985)',
     hint: 'Von George Peppard (A-Team).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Ich liebe es, wenn ein Plan funktioniert."' },
     distractors: ['Montagsdemonstranten (DDR) (1989)', 'Margaret Thatcher (1983)', 'Konfuzius (zugeschrieben) (1900)']
   },
@@ -2662,6 +2883,7 @@ export const quoteCards: Card[] = [
     answer: 'Tom Cruise (Top Gun) (1986)',
     hint: 'Von Tom Cruise (Top Gun).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Ich spüre die Gier... die Gier nach Tempo!"' },
     distractors: ['William Shakespeare (Cymbeline) (1609)', 'Oscar Wilde (1891)', 'Alec Guinness (Star Wars) (1977)']
   },
@@ -2674,6 +2896,7 @@ export const quoteCards: Card[] = [
     answer: 'Jennifer Grey (Dirty Dancing) (1987)',
     hint: 'Von Jennifer Grey (Dirty Dancing).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Ich habe eine Wassermelone getragen."' },
     distractors: ['Nike (Werbeslogan) (1988)', 'Abraham Lincoln (1863)', 'Eric Malpass (Buchtitel/Redewendung) (1997)']
   },
@@ -2686,6 +2909,7 @@ export const quoteCards: Card[] = [
     answer: 'Nelson Mandela (1990)',
     hint: 'Von Nelson Mandela.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Es scheint immer unmöglich, bis es getan ist."' },
     distractors: ['BILD-Zeitung (2005)', 'Neil Armstrong (1969)', 'Ronald Reagan (1987)']
   },
@@ -2698,6 +2922,7 @@ export const quoteCards: Card[] = [
     answer: 'Jack Nicholson (Eine Frage der Ehre) (1992)',
     hint: 'Von Jack Nicholson (Eine Frage der Ehre).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Sie können die Wahrheit doch gar nicht vertragen!"' },
     distractors: ['Ernest Hemingway (~1950)', 'E.T. (E.T. – Der Außerirdische) (1982)', 'Otto von Bismarck (1862)']
   },
@@ -2710,6 +2935,7 @@ export const quoteCards: Card[] = [
     answer: 'Nathan Lane & Ernie Sabella (Timon & Pumbaa) (1994)',
     hint: 'Von Nathan Lane & Ernie Sabella (Timon & Pumbaa).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"König der Löwen: Hakuna Matata!"' },
     distractors: ['Humphrey Bogart (Casablanca) (1942)', 'Mahatma Gandhi (1948)', 'Buddha (~500 v. Chr.)']
   },
@@ -2722,6 +2948,7 @@ export const quoteCards: Card[] = [
     answer: 'Buzz Lightyear (Toy Story) (1995)',
     hint: 'Von Buzz Lightyear (Toy Story).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Bis zur Unendlichkeit und noch viel weiter!"' },
     distractors: ['Filmtitel (James Dean) / Bibel (Lukas 23,34) (1955)', 'Barack Obama (2008)', 'Albert Einstein (1921)']
   },
@@ -2734,6 +2961,7 @@ export const quoteCards: Card[] = [
     answer: 'Eric Malpass (Buchtitel/Redewendung) (1997)',
     hint: 'Von Eric Malpass (Buchtitel/Redewendung).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Morgens um sieben ist die Welt noch in Ordnung."' },
     distractors: ['Theodor Heuss (~1950)', 'Loriot (Das Frühstücksei) (1977)', 'Bertolt Brecht (1930)']
   },
@@ -2746,6 +2974,7 @@ export const quoteCards: Card[] = [
     answer: 'Laurence Fishburne (Matrix) (1999)',
     hint: 'Von Laurence Fishburne (Matrix).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Nimmst du die blaue Kapsel... nimmst du die rote Kapsel."' },
     distractors: ['Charlie Chaplin (1930)', 'Immanuel Kant (1790)', 'John F. Kennedy (1963)']
   },
@@ -2758,6 +2987,7 @@ export const quoteCards: Card[] = [
     answer: 'Albus Dumbledore (Harry Potter) (2001)',
     hint: 'Von Albus Dumbledore (Harry Potter).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Viel mehr als unsere Fähigkeiten sind es unsere Entscheidungen, die zeigen, wer wir wirklich sind."' },
     distractors: ['Seneca (zugeschrieben) (~50 n. Chr.)', 'Die drei Musketiere (Alexandre Dumas) (2001)', 'Humphrey Bogart (Casablanca) (1942)']
   },
@@ -2770,6 +3000,7 @@ export const quoteCards: Card[] = [
     answer: 'Dorie (Findet Nemo) (2003)',
     hint: 'Von Dorie (Findet Nemo).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Einfach schwimmen, einfach schwimmen."' },
     distractors: ['Blaise Pascal (1910)', 'Heraklit (1918)', 'Winston Churchill (1940)']
   },
@@ -2782,6 +3013,7 @@ export const quoteCards: Card[] = [
     answer: 'Heath Ledger (The Dark Knight) (2008)',
     hint: 'Von Heath Ledger (The Dark Knight).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Warum denn so ernst? (Why so serious?)"' },
     distractors: ['Johann Wolfgang von Goethe (Faust I) (1808)', 'Heraklit (1922)', 'Marlon Brando (Der Pate) (1972)']
   },
@@ -2794,6 +3026,7 @@ export const quoteCards: Card[] = [
     answer: 'Rose Leslie (Game of Thrones) (2011)',
     hint: 'Von Rose Leslie (Game of Thrones).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Du weißt gar nichts, Jon Schnee."' },
     distractors: ['Philip Rosenthal (~1960)', 'John F. Kennedy (1961)', 'Timothy Leary (1965)']
   },
@@ -2806,6 +3039,7 @@ export const quoteCards: Card[] = [
     answer: 'Johann Wolfgang von Goethe (Faust I) (1808)',
     hint: 'Von Johann Wolfgang von Goethe (Faust I).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Die Botschaft hör ich wohl, allein mir fehlt der Glaube."' },
     distractors: ['Giovanni Trapattoni (1998)', 'Martin Luther (1521)', 'Theodor W. Adorno (1991)']
   },
@@ -2818,6 +3052,7 @@ export const quoteCards: Card[] = [
     answer: 'Appius Claudius Caecus (300 v. Chr.)',
     hint: 'Von Appius Claudius Caecus.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Jeder ist seines Glückes Schmied."' },
     distractors: ['Giovanni Trapattoni (1998)', 'Winston Churchill (1947)', 'Ralph Waldo Emerson (1841)']
   },
@@ -2830,6 +3065,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (1926)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Gott würfelt nicht."' },
     distractors: ['Loriot (Weihnachten bei Hoppenstedts) (1978)', 'Winston Churchill (1940)', 'Friedrich Schiller (Wallensteins Lager) (1799)']
   },
@@ -2842,6 +3078,7 @@ export const quoteCards: Card[] = [
     answer: 'Ludwig Wittgenstein (1921)',
     hint: 'Von Ludwig Wittgenstein.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Wovon man nicht sprechen kann, darüber muss man schweigen."' },
     distractors: ['Oscar Wilde (~1890)', 'Albert Einstein (1929)', 'Dalai Lama (1904)']
   },
@@ -2854,6 +3091,7 @@ export const quoteCards: Card[] = [
     answer: 'Otto von Bismarck (1880)',
     hint: 'Von Otto von Bismarck.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Einen Staat, der mit der Presse im Kriege liegt, kann man auf die Dauer nicht regieren."' },
     distractors: ['Franklin D. Roosevelt (1933)', 'Federico Fellini (1954)', 'Nathan Lane & Ernie Sabella (Timon & Pumbaa) (1994)']
   },
@@ -2866,6 +3104,7 @@ export const quoteCards: Card[] = [
     answer: 'Bertolt Brecht (zugeschrieben) (1930)',
     hint: 'Von Bertolt Brecht (zugeschrieben).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Wer kämpft, kann verlieren. Wer nicht kämpft, hat schon verloren."' },
     distractors: ['Thomas Edison (1895)', 'Georg Christoph Lichtenberg (1921)', 'Pablo Picasso (~1950)']
   },
@@ -2878,6 +3117,7 @@ export const quoteCards: Card[] = [
     answer: 'Ronald Reagan (1987)',
     hint: 'Von Ronald Reagan.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Tear down this wall! (Reißen Sie diese Mauer nieder!)"' },
     distractors: ['Albert Einstein (~1940)', 'Titanic (Jack Dawson) (1997)', 'John F. Kennedy (1961)']
   },
@@ -2890,6 +3130,7 @@ export const quoteCards: Card[] = [
     answer: 'Karl Valentin (1940)',
     hint: 'Von Karl Valentin.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ich denke, also spinn ich."' },
     distractors: ['Hape Kerkeling (2006)', 'Mahatma Gandhi (1930)', 'Theodor Heuss (~1950)']
   },
@@ -2902,6 +3143,7 @@ export const quoteCards: Card[] = [
     answer: 'Andreas Möller (1992)',
     hint: 'Von Andreas Möller.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Mailand oder Madrid – Hauptsache Italien!"' },
     distractors: ['Michail Gorbatschow (zugeschrieben) (1989)', 'Antoine de Saint-Exupéry (1943)', 'Angela Merkel (2013)']
   },
@@ -2914,6 +3156,7 @@ export const quoteCards: Card[] = [
     answer: 'Johann Wolfgang von Goethe (Mephisto in Faust I) (1808)',
     hint: 'Von Johann Wolfgang von Goethe (Mephisto in Faust I).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ein Teil von jener Kraft, die stets das Böse will und stets das Gute schafft."' },
     distractors: ['John F. Kennedy (1961)', 'Sepp Herberger (1954)', 'Margaret Thatcher (1983)']
   },
@@ -2926,6 +3169,7 @@ export const quoteCards: Card[] = [
     answer: 'Friedrich Nietzsche (1889)',
     hint: 'Von Friedrich Nietzsche.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ohne Musik wäre das Leben ein Irrtum."' },
     distractors: ['Bertolt Brecht (Leben des Galilei) (1939)', 'Barack Obama (2008)', 'Clint Eastwood (Dirty Harry) (1971)']
   },
@@ -2938,6 +3182,7 @@ export const quoteCards: Card[] = [
     answer: 'Immanuel Kant (zugeschrieben) (1790)',
     hint: 'Von Immanuel Kant (zugeschrieben).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Die Freiheit des Einzelnen endet dort, wo die Freiheit des Anderen beginnt."' },
     distractors: ['Heraklit (1918)', 'Otto von Bismarck (1862)', 'Johann Wolfgang von Goethe (Mephisto in Faust I) (1808)']
   },
@@ -2950,6 +3195,7 @@ export const quoteCards: Card[] = [
     answer: 'Joachim Ringelnatz (1920)',
     hint: 'Von Joachim Ringelnatz.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ich bin so knallvergnügt erwacht."' },
     distractors: ['Terminator 2 (1994)', 'Edward Kennedy (1960)', 'Anne Frank (1947)']
   },
@@ -2962,6 +3208,7 @@ export const quoteCards: Card[] = [
     answer: 'Gottlieb Daimler (1900)',
     hint: 'Von Gottlieb Daimler.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Das Beste oder nichts."' },
     distractors: ['Albert Einstein (1926)', 'Arnold Schwarzenegger (Terminator 2) (1991)', 'Albert Einstein (1905)']
   },
@@ -2974,6 +3221,7 @@ export const quoteCards: Card[] = [
     answer: 'George H.W. Bush (1988)',
     hint: 'Von George H.W. Bush.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Read my lips: No new taxes."' },
     distractors: ['Clint Eastwood (Dirty Harry) (1971)', 'Bibel (2. Thessalonicher 3,10) (~50 n. Chr.)', 'Joachim Ringelnatz (1920)']
   },
@@ -2986,6 +3234,7 @@ export const quoteCards: Card[] = [
     answer: 'Bill Clinton (1998)',
     hint: 'Von Bill Clinton.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"I did not have sexual relations with that woman."' },
     distractors: ['William Shakespeare (Julius Caesar) (1599)', 'Johann Wolfgang von Goethe (1795)', 'Abraham Lincoln (~1860)']
   },
@@ -2998,6 +3247,7 @@ export const quoteCards: Card[] = [
     answer: 'Humphrey Bogart (Casablanca) (1942)',
     hint: 'Von Humphrey Bogart (Casablanca).',
     difficulty: 'mittel',
+    quoteSourceType: 'film',
     sources: { text: '"Louis, ich glaube, das ist der Beginn einer wunderbaren Freundschaft."' },
     distractors: ['George Orwell (1984) (1949)', 'Anthony Perkins (Psycho) (1960)', 'Albert Einstein (1926)']
   },
@@ -3010,6 +3260,7 @@ export const quoteCards: Card[] = [
     answer: 'Muhammad Ali (1964)',
     hint: 'Von Muhammad Ali.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Float like a butterfly, sting like a bee."' },
     distractors: ['Laurence Fishburne (Matrix) (1999)', 'Marie von Ebner-Eschenbach (1893)', 'Fidel Castro (1943)']
   },
@@ -3022,6 +3273,7 @@ export const quoteCards: Card[] = [
     answer: 'Friedrich Schiller (Die Jungfrau von Orleans) (1801)',
     hint: 'Von Friedrich Schiller (Die Jungfrau von Orleans).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Gegen Dummheit kämpfen Götter selbst vergebens."' },
     distractors: ['John W. Gardner (~1900)', 'Oscar Wilde (~1890)', 'Sherlock Holmes (Arthur Conan Doyle) (1892)']
   },
@@ -3034,6 +3286,7 @@ export const quoteCards: Card[] = [
     answer: 'Jean Paul (1796)',
     hint: 'Von Jean Paul.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Die Kunst ist zwar nicht das Brot, aber der Wein des Lebens."' },
     distractors: ['Stephan Remmler (1986)', 'Sprichwort / Volksmund (1900)', 'Fidel Castro (1943)']
   },
@@ -3046,6 +3299,7 @@ export const quoteCards: Card[] = [
     answer: 'William Shakespeare (Der Kaufmann von Venedig) (1596)',
     hint: 'Von William Shakespeare (Der Kaufmann von Venedig).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Es ist nicht alles Gold, was glänzt."' },
     distractors: ['Heinrich Heine (oft zitiert) (1931)', 'Voltaire (1750)', 'Leonardo DiCaprio (Titanic) (1997)']
   },
@@ -3058,6 +3312,7 @@ export const quoteCards: Card[] = [
     answer: 'Marie von Ebner-Eschenbach (1880)',
     hint: 'Von Marie von Ebner-Eschenbach.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Der Klügere gibt nach."' },
     distractors: ['Montagsdemonstrationen DDR (1989)', 'Robert Lembke (1980)', 'Buddha (~500 v. Chr.)']
   },
@@ -3070,6 +3325,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (1929)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Phantasie ist wichtiger als Wissen."' },
     distractors: ['Voltaire (1750)', 'Timothy Leary (1966)', 'Eric Malpass (Buchtitel/Redewendung) (1997)']
   },
@@ -3082,6 +3338,7 @@ export const quoteCards: Card[] = [
     answer: 'Angela Merkel (2013)',
     hint: 'Von Angela Merkel.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Das Internet ist für uns alle Neuland."' },
     distractors: ['Robert De Niro (Taxi Driver) (1976)', 'Clint Eastwood (Dirty Harry) (1971)', 'Walt Disney (1920)']
   },
@@ -3094,6 +3351,7 @@ export const quoteCards: Card[] = [
     answer: 'Schlagzeile der Bild-Zeitung (2005)',
     hint: 'Von Schlagzeile der Bild-Zeitung.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Wir sind Papst."' },
     distractors: ['Perikles (~431 v. Chr.)', 'Franz Beckenbauer (1974)', 'Filmtitel (1959)']
   },
@@ -3106,6 +3364,7 @@ export const quoteCards: Card[] = [
     answer: 'Voltaire (1750)',
     hint: 'Von Voltaire.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Je öfter eine Dummheit wiederholt wird, desto mehr bekommt sie den Anschein von Klugheit."' },
     distractors: ['Gary Lineker (1966)', 'Heraklit (~500 v. Chr.)', 'Federico Fellini (1954)']
   },
@@ -3118,6 +3377,7 @@ export const quoteCards: Card[] = [
     answer: 'Blaise Pascal (1669)',
     hint: 'Von Blaise Pascal.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Das Herz hat seine Gründe, die die Vernunft nicht kennt."' },
     distractors: ['Winston Churchill (1940)', 'Franz Beckenbauer (1974)', 'Gary Lineker (1966)']
   },
@@ -3130,6 +3390,7 @@ export const quoteCards: Card[] = [
     answer: 'Georg Büchner (Dantons Tod) (1835)',
     hint: 'Von Georg Büchner (Dantons Tod).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Die Revolution frisst ihre eigenen Kinder."' },
     distractors: ['Jennifer Grey (Dirty Dancing) (1987)', 'Rosa Luxemburg (1944)', 'Timothy Leary (1965)']
   },
@@ -3142,6 +3403,7 @@ export const quoteCards: Card[] = [
     answer: 'Friedrich Schiller (Wallensteins Lager) (1799)',
     hint: 'Von Friedrich Schiller (Wallensteins Lager).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Leben und leben lassen."' },
     distractors: ['Sepp Herberger (1954)', 'Theodor Heuss (~1950)', 'Mahatma Gandhi (1930)']
   },
@@ -3154,6 +3416,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (1949)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ich weiß nicht, mit welchen Waffen der dritte Weltkrieg ausgefochten wird, aber der vierte wird mit Stöcken und Steinen ausgefochten."' },
     distractors: ['Winston Churchill (~1940)', 'Volksmund (Traditionell)', 'Jack Nicholson (Eine Frage der Ehre) (1992)']
   },
@@ -3166,6 +3429,7 @@ export const quoteCards: Card[] = [
     answer: 'Winston Churchill (1945)',
     hint: 'Von Winston Churchill.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ein Experte ist ein Mann, der hinterher genau sagen kann, warum seine Prognose nicht eingetroffen ist."' },
     distractors: ['Sprichwort (Frankreich/Italien) (~1500)', 'Philip Rosenthal (~1960)', 'Sherlock Holmes (Filmzitat, nicht im Buch) (1929)']
   },
@@ -3178,6 +3442,7 @@ export const quoteCards: Card[] = [
     answer: 'Benjamin Franklin (1755)',
     hint: 'Von Benjamin Franklin.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Wer die Freiheit aufgibt, um Sicherheit zu gewinnen, wird am Ende beides verlieren."' },
     distractors: ['Patrick Meagher (oft Bob Marley zugeschrieben) (1951)', 'Gottlieb Daimler (1900)', 'Sepp Herberger (1954)']
   },
@@ -3190,6 +3455,7 @@ export const quoteCards: Card[] = [
     answer: 'Ralph Waldo Emerson (1841)',
     hint: 'Von Ralph Waldo Emerson.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Die einzige Art, einen Freund zu haben, ist die, selbst einer zu sein."' },
     distractors: ['Julius Cäsar (49 v. Chr.)', 'Kaiser Wilhelm II. (1914)', 'Martin Luther King Jr. (1965)']
   },
@@ -3202,6 +3468,7 @@ export const quoteCards: Card[] = [
     answer: 'Edward Kennedy (1960)',
     hint: 'Von Edward Kennedy.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"In der Politik ist es wie in der Mathematik: Alles, was nicht ganz richtig ist, ist ganz falsch."' },
     distractors: ['The Wizard of Oz (1939)', 'Blaise Pascal (1910)', 'Laurence Fishburne (Matrix) (1999)']
   },
@@ -3214,6 +3481,7 @@ export const quoteCards: Card[] = [
     answer: 'Jonathan Swift (1738)',
     hint: 'Von Jonathan Swift.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Niemand ist so blind wie der, der nicht sehen will."' },
     distractors: ['Theodor Heuss (~1950)', 'Mahatma Gandhi (1930)', 'Konfuzius (zugeschrieben) (~500 v. Chr.)']
   },
@@ -3226,6 +3494,7 @@ export const quoteCards: Card[] = [
     answer: 'Konfuzius (zugeschrieben) (500 v. Chr.)',
     hint: 'Von Konfuzius (zugeschrieben).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Wähle einen Beruf, den du liebst, und du brauchst keinen Tag in deinem Leben mehr zu arbeiten."' },
     distractors: ['Gary Lineker (1966)', 'Winston Churchill (1940)', 'Angela Merkel (2015)']
   },
@@ -3238,6 +3507,7 @@ export const quoteCards: Card[] = [
     answer: 'Winston Churchill (zugeschrieben) (1940)',
     hint: 'Von Winston Churchill (zugeschrieben).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Wenn du durch die Hölle gehst, geh weiter."' },
     distractors: ['Otto von Bismarck (1862)', 'Abraham Lincoln (1863)', 'Star Trek (Captain Kirk) (1966)']
   },
@@ -3250,6 +3520,7 @@ export const quoteCards: Card[] = [
     answer: 'Winston Churchill (1943)',
     hint: 'Von Winston Churchill.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Der Preis der Größe ist Verantwortung."' },
     distractors: ['Jean Paul (1796)', 'Georg Christoph Lichtenberg (~1770)', 'Bertolt Brecht (Die Dreigroschenoper) (1890)']
   },
@@ -3262,6 +3533,7 @@ export const quoteCards: Card[] = [
     answer: 'John F. Kennedy (1961)',
     hint: 'Von John F. Kennedy.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Es gibt nur eine Sache, die teurer ist als Bildung – keine Bildung."' },
     distractors: ['Bill Clinton (1998)', 'Oscar Wilde (1891)', 'Angela Merkel (2015)']
   },
@@ -3274,6 +3546,7 @@ export const quoteCards: Card[] = [
     answer: 'Charlie Chaplin (1930)',
     hint: 'Von Charlie Chaplin.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ein Tag ohne Lächeln ist ein verlorener Tag."' },
     distractors: ['Georg Christoph Lichtenberg (1921)', 'Georg Christoph Lichtenberg (~1770)', 'Rudyard Kipling (1923)']
   },
@@ -3286,6 +3559,7 @@ export const quoteCards: Card[] = [
     answer: 'Friedrich Schiller (zugeschrieben / Friedrich Nietzsche) (1850)',
     hint: 'Von Friedrich Schiller (zugeschrieben / Friedrich Nietzsche).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Wer nicht mit der Zeit geht, geht mit der Zeit."' },
     distractors: ['René Magritte (1929)', 'Albert Einstein (1926)', 'Albert Einstein (1921)']
   },
@@ -3298,6 +3572,7 @@ export const quoteCards: Card[] = [
     answer: 'Sprichwort / Volksmund (1900)',
     hint: 'Von Sprichwort / Volksmund.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ordnung ist das halbe Leben."' },
     distractors: ['Hermann Gmeiner (~1960)', 'Heraklit (1922)', 'Steve Jobs (2005)']
   },
@@ -3310,6 +3585,7 @@ export const quoteCards: Card[] = [
     answer: 'Mahatma Gandhi (1930)',
     hint: 'Von Mahatma Gandhi.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Lerne, als würdest du ewig leben. Lebe, als würdest du morgen sterben."' },
     distractors: ['Franklin D. Roosevelt (1933)', 'Andy Warhol (1968)', 'Julius Caesar (47 v. Chr.)']
   },
@@ -3322,6 +3598,7 @@ export const quoteCards: Card[] = [
     answer: 'Tom Hanks (Forrest Gump) (1994)',
     hint: 'Von Tom Hanks (Forrest Gump).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Dumm ist der, der Dummes tut."' },
     distractors: ['Niels Bohr (1920)', 'Winston Churchill (1941)', 'Joe E. Brown (Manche mögen’s heiß) (1959)']
   },
@@ -3334,6 +3611,7 @@ export const quoteCards: Card[] = [
     answer: 'Stephan Remmler (1986)',
     hint: 'Von Stephan Remmler.',
     difficulty: 'leicht',
+    quoteSourceType: 'lied',
     sources: { text: '"Alles hat ein Ende, nur die Wurst hat zwei."' },
     distractors: ['Thomas Alva Edison (1903)', 'Albert Einstein (1929)', 'Friedrich Schiller (Wilhelm Tell) (1804)']
   },
@@ -3346,6 +3624,7 @@ export const quoteCards: Card[] = [
     answer: 'Karl Valentin (1970)',
     hint: 'Von Karl Valentin.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Die Zukunft war früher auch besser."' },
     distractors: ['The Beatles (1967)', 'Barack Obama (2008)', 'Forrest Gump (1985)']
   },
@@ -3358,6 +3637,7 @@ export const quoteCards: Card[] = [
     answer: 'Kaiser Wilhelm II. (1914)',
     hint: 'Von Kaiser Wilhelm II..',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ich kenne keine Parteien mehr, ich kenne nur noch Deutsche."' },
     distractors: ['Grundgesetz für die Bundesrepublik Deutschland (1949)', 'Dorie (Findet Nemo) (2003)', 'Queen / Freddie Mercury (1984)']
   },
@@ -3370,6 +3650,7 @@ export const quoteCards: Card[] = [
     answer: 'Napoleon Bonaparte (1805)',
     hint: 'Von Napoleon Bonaparte.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Es gibt keine schlechten Soldaten, nur schlechte Offiziere."' },
     distractors: ['Albert Einstein (1905)', 'Antoine de Saint-Exupéry (1943)', 'Andy Serkis (Der Herr der Ringe) (2001)']
   },
@@ -3382,6 +3663,7 @@ export const quoteCards: Card[] = [
     answer: 'Kurt Tucholsky (1920)',
     hint: 'Von Kurt Tucholsky.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Die Basis einer gesunden Ordnung ist ein großer Mülleimer."' },
     distractors: ['John Donne (1624)', 'Gary Lineker (1966)', 'Georg Christoph Lichtenberg (~1770)']
   },
@@ -3394,6 +3676,7 @@ export const quoteCards: Card[] = [
     answer: 'Arthur Schopenhauer (oft in diesem Kontext zitiert) (1980)',
     hint: 'Von Arthur Schopenhauer (oft in diesem Kontext zitiert).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"In Deutschland ist die höchste Form der Anerkennung der Neid."' },
     distractors: ['Winston Churchill (1947)', 'Albert Einstein (1905)', 'Pierre de Coubertin (1908)']
   },
@@ -3406,6 +3689,7 @@ export const quoteCards: Card[] = [
     answer: 'Heraklit (~500 v. Chr.)',
     hint: 'Von Heraklit.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Nichts ist so beständig wie der Wandel."' },
     distractors: ['Mahatma Gandhi (1948)', 'Johann Wolfgang von Goethe (zugeschriebene letzte Worte) (1832)', 'Franklin D. Roosevelt (1933)']
   },
@@ -3418,6 +3702,7 @@ export const quoteCards: Card[] = [
     answer: 'Kurt Tucholsky / Fred Barnard (1921)',
     hint: 'Von Kurt Tucholsky / Fred Barnard.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ein Bild sagt mehr als tausend Worte."' },
     distractors: ['Heinrich Heine (~1830)', 'Johann Wolfgang von Goethe (Faust I) (1808)', 'Anne Frank (1947)']
   },
@@ -3430,6 +3715,7 @@ export const quoteCards: Card[] = [
     answer: 'William Shakespeare (1599)',
     hint: 'Von William Shakespeare.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Die Welt ist eine Bühne, und alle Männer und Frauen sind bloße Spieler."' },
     distractors: ['Marie von Ebner-Eschenbach (1880)', 'Charles Darwin (1859)', 'Robert De Niro (Taxi Driver) (1976)']
   },
@@ -3442,6 +3728,7 @@ export const quoteCards: Card[] = [
     answer: 'François de La Rochefoucauld (~1665)',
     hint: 'Von François de La Rochefoucauld.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Essen ist ein Bedürfnis, Genießen eine Kunst."' },
     distractors: ['William Shakespeare (1599)', 'Rhett Butler (Vom Winde verweht) (1939)', 'Sepp Herberger (1954)']
   },
@@ -3454,6 +3741,7 @@ export const quoteCards: Card[] = [
     answer: 'Katja Ebstein (1970)',
     hint: 'Von Katja Ebstein.',
     difficulty: 'leicht',
+    quoteSourceType: 'lied',
     sources: { text: '"Wunder gibt es immer wieder."' },
     distractors: ['Johann Wolfgang von Goethe (Faust I) (1808)', 'William Shakespeare (Der Kaufmann von Venedig) (1596)', 'Heinrich IV. (1593)']
   },
@@ -3466,6 +3754,7 @@ export const quoteCards: Card[] = [
     answer: 'Konfuzius (~500 v. Chr.)',
     hint: 'Von Konfuzius.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Es ist nicht von Bedeutung, wie langsam du gehst, solange du nicht stehen bleibst."' },
     distractors: ['Christian Morgenstern (~1900)', 'Ludwig XIV. (zugeschrieben) (1655)', 'Barack Obama (2008)']
   },
@@ -3478,6 +3767,7 @@ export const quoteCards: Card[] = [
     answer: 'Konfuzius (zugeschrieben) (~500 v. Chr.)',
     hint: 'Von Konfuzius (zugeschrieben).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"In der Ruhe liegt die Kraft."' },
     distractors: ['Arthur Schopenhauer (oft in diesem Kontext zitiert) (1980)', 'Cuba Gooding Jr. (Jerry Maguire) (1996)', 'Albert Einstein (1929)']
   },
@@ -3490,6 +3780,7 @@ export const quoteCards: Card[] = [
     answer: 'Lothar Matthäus (2002)',
     hint: 'Von Lothar Matthäus.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Wir dürfen jetzt nur nicht den Sand in den Kopf stecken."' },
     distractors: ['Marie von Ebner-Eschenbach (1893)', 'Friedrich Nietzsche (1889)', 'Friedrich der Große (1757)']
   },
@@ -3502,6 +3793,7 @@ export const quoteCards: Card[] = [
     answer: 'Marcel Reich-Ranicki (~2000)',
     hint: 'Von Marcel Reich-Ranicki.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Geld allein macht nicht glücklich, aber es ist besser, in einem Taxi zu weinen als in der Straßenbahn."' },
     distractors: ['Francis Bacon (1620)', 'UN-Menschenrechtscharta (1950)', 'Hermann Tietz (~1980)']
   },
@@ -3514,6 +3806,7 @@ export const quoteCards: Card[] = [
     answer: 'Igor Strawinsky (~1940)',
     hint: 'Von Igor Strawinsky.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Ich habe keine Zeit, mich zu beeilen."' },
     distractors: ['Joachim Ringelnatz (1920)', 'Andreas Möller (1992)', 'Douglas Adams (Per Anhalter durch die Galaxis) (1979)']
   },
@@ -3526,6 +3819,7 @@ export const quoteCards: Card[] = [
     answer: 'Bruce Willis (Stirb Langsam) (1988)',
     hint: 'Von Bruce Willis (Stirb Langsam).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Yippie-ya-yay, Schweinebacke!"' },
     distractors: ['Konfuzius (zugeschrieben) (1931)', 'Walter Ulbricht (1952)', 'Bill Clinton (1998)']
   },
@@ -3538,6 +3832,7 @@ export const quoteCards: Card[] = [
     answer: 'Steve Jobs (2005)',
     hint: 'Von Steve Jobs.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"The only way to do great work is to love what you do."' },
     distractors: ['Johann Wolfgang von Goethe (Faust I) (1808)', 'Ludwig Wittgenstein (1921)', 'Johann Wolfgang von Goethe (Mephisto in Faust I) (1808)']
   },
@@ -3550,6 +3845,7 @@ export const quoteCards: Card[] = [
     answer: 'Apple (Werbeslogan) (1997)',
     hint: 'Von Apple (Werbeslogan).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Think different."' },
     distractors: ['Franz Beckenbauer (1974)', 'Andy Serkis (Der Herr der Ringe) (2001)', 'Konfuzius (zugeschrieben) (1925)']
   },
@@ -3562,6 +3858,7 @@ export const quoteCards: Card[] = [
     answer: 'Humphrey Bogart (Casablanca) (1942)',
     hint: 'Von Humphrey Bogart (Casablanca).',
     difficulty: 'mittel',
+    quoteSourceType: 'film',
     sources: { text: '"Uns bleibt immer noch Paris."' },
     distractors: ['Charlie Chaplin (1930)', 'Albert Einstein (1921)', 'Giacomo Leopardi (1852)']
   },
@@ -3574,6 +3871,7 @@ export const quoteCards: Card[] = [
     answer: 'Al Pacino (Der Pate II) (1974)',
     hint: 'Von Al Pacino (Der Pate II).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Halte deine Freunde nahe bei dir, aber deine Feinde noch näher."' },
     distractors: ['Christian F. Gellert (1791)', 'Kurt Tucholsky / Fred Barnard (1921)', 'Paul Watzlawick (1967)']
   },
@@ -3586,6 +3884,7 @@ export const quoteCards: Card[] = [
     answer: 'François de La Rochefoucauld (1665)',
     hint: 'Von François de La Rochefoucauld.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Wahre Liebe ist wie eine Geistererscheinung: alle reden davon, aber wenige haben sie gesehen."' },
     distractors: ['Oscar Wilde (1891)', 'Samuel Johnson (1775)', 'Sokrates (zugeschrieben) (~400 v. Chr.)']
   },
@@ -3598,6 +3897,7 @@ export const quoteCards: Card[] = [
     answer: 'Heinrich Heine (~1830)',
     hint: 'Von Heinrich Heine.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Ein Kluger bemerkt alles, ein Dummer macht zu allem eine Bemerkung."' },
     distractors: ['Sepp Herberger (1954)', 'Thomas Jefferson (Unabhängigkeitserklärung) (1776)', 'George R. R. Martin (Game of Thrones) (1996)']
   },
@@ -3610,6 +3910,7 @@ export const quoteCards: Card[] = [
     answer: 'Johann Wolfgang von Goethe (1795)',
     hint: 'Von Johann Wolfgang von Goethe.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Aller Anfang ist schwer."' },
     distractors: ['Anthony Perkins (Psycho) (1960)', 'Adlai Stevenson (1952)', 'Albert Einstein (1929)']
   },
@@ -3622,6 +3923,7 @@ export const quoteCards: Card[] = [
     answer: 'Volksmund (~1900)',
     hint: 'Von Volksmund.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Man ist so jung, wie man sich fühlt."' },
     distractors: ['Katja Ebstein (1970)', 'Stephan Remmler (1986)', 'William Shakespeare (1599)']
   },
@@ -3634,6 +3936,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (1930)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ich denke nicht an die Zukunft. Sie kommt früh genug."' },
     distractors: ['Walter Ulbricht (1952)', 'Diverse (Volksmund/Fußball) (1991)', 'Winston Churchill (~1940)']
   },
@@ -3646,6 +3949,7 @@ export const quoteCards: Card[] = [
     answer: 'Judy Garland (Der Zauberer von Oz) (1939)',
     hint: 'Von Judy Garland (Der Zauberer von Oz).',
     difficulty: 'mittel',
+    quoteSourceType: 'film',
     sources: { text: '"There\'s no place like home."' },
     distractors: ['Apollo 13 (Film) (1995)', 'Johann Wolfgang von Goethe (Faust I) (1808)', 'George Peppard (A-Team) (1985)']
   },
@@ -3658,6 +3962,7 @@ export const quoteCards: Card[] = [
     answer: 'Voltaire (~1760)',
     hint: 'Von Voltaire.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Alle Menschen sind klug – die einen vorher, die anderen nachher."' },
     distractors: ['The Police (1983)', 'Humphrey Bogart (Casablanca) (1942)', 'Igor Strawinsky (~1940)']
   },
@@ -3670,6 +3975,7 @@ export const quoteCards: Card[] = [
     answer: 'Samuel Johnson (1775)',
     hint: 'Von Samuel Johnson.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Der Weg zur Hölle ist mit guten Vorsätzen gepflastert."' },
     distractors: ['Tom Cruise (Top Gun) (1986)', 'Winston Churchill (zugeschrieben) (1940)', 'Neil Armstrong (1969)']
   },
@@ -3682,6 +3988,7 @@ export const quoteCards: Card[] = [
     answer: 'George Orwell (1984) (1949)',
     hint: 'Von George Orwell (1984).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Freiheit ist die Freiheit, zu sagen, dass zwei und zwei vier ist."' },
     distractors: ['Oscar Wilde (1892)', 'Ralph Waldo Emerson (1841)', 'Humphrey Bogart (Casablanca) (1942)']
   },
@@ -3694,6 +4001,7 @@ export const quoteCards: Card[] = [
     answer: 'Walt Disney (~1980)',
     hint: 'Von Walt Disney.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"If you can dream it, you can do it."' },
     distractors: ['Thomas Hobbes (1927)', 'Apple (Slogan) (1984)', 'Unbekannt (oft fälschlich Einstein) (1958)']
   },
@@ -3706,6 +4014,7 @@ export const quoteCards: Card[] = [
     answer: 'Sepp Herberger (1954)',
     hint: 'Von Sepp Herberger.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Das Runde muss ins Eckige."' },
     distractors: ['BILD-Zeitung (2005)', 'Sherlock Holmes (Filmzitat, nicht im Buch) (1929)', 'William Shakespeare (1603)']
   },
@@ -3718,6 +4027,7 @@ export const quoteCards: Card[] = [
     answer: 'Sportler-Floskel (populär durch L. Matthäus) (~1990)',
     hint: 'Von Sportler-Floskel (populär durch L. Matthäus).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Wir müssen das Spiel jetzt erst einmal sacken lassen."' },
     distractors: ['Heraklit (~500 v. Chr.)', 'Sokrates (400 v. Chr.)', 'Thomas Hobbes (1927)']
   },
@@ -3730,6 +4040,7 @@ export const quoteCards: Card[] = [
     answer: 'Ralph Waldo Emerson (~1850)',
     hint: 'Von Ralph Waldo Emerson.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Das Leben ist eine Reise, kein Ziel."' },
     distractors: ['Heraklit (500 v. Chr.)', 'Angela Merkel (2015)', 'Sprichwort (Traditionell)']
   },
@@ -3742,6 +4053,7 @@ export const quoteCards: Card[] = [
     answer: 'Abraham Lincoln (~1860)',
     hint: 'Von Abraham Lincoln.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Was immer du bist, sei ein guter."' },
     distractors: ['Friedemann Schulz von Thun (1981)', 'UN-Menschenrechtscharta (1950)', 'Marie von Ebner-Eschenbach (1893)']
   },
@@ -3754,6 +4066,7 @@ export const quoteCards: Card[] = [
     answer: 'Apicius (zugeschrieben) (1. Jhd. n. Chr.)',
     hint: 'Von Apicius (zugeschrieben).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Das Auge isst mit."' },
     distractors: ['Lothar Matthäus (2002)', 'George Santayana (1919)', 'Johann Wolfgang von Goethe (zugeschrieben) (~1800)']
   },
@@ -3766,6 +4079,7 @@ export const quoteCards: Card[] = [
     answer: 'Marlene Dietrich (1930)',
     hint: 'Von Marlene Dietrich.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ich bin von Kopf bis Fuß auf Liebe eingestellt."' },
     distractors: ['The Godfather (1972)', 'Appius Claudius Caecus (300 v. Chr.)', 'Aldous Huxley (1932)']
   },
@@ -3778,6 +4092,7 @@ export const quoteCards: Card[] = [
     answer: 'John Wayne (Ringo) (1939)',
     hint: 'Von John Wayne (Ringo).',
     difficulty: 'mittel',
+    quoteSourceType: 'film',
     sources: { text: '"Ein Mann muss tun, was ein Mann tun muss."' },
     distractors: ['Gary Lineker (1966)', 'Loriot (Weihnachten bei Hoppenstedts) (1978)', 'Andy Warhol (1968)']
   },
@@ -3790,6 +4105,7 @@ export const quoteCards: Card[] = [
     answer: 'Che Guevara (~1960)',
     hint: 'Von Che Guevara.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Sollten wir nicht lieber die Welt verändern, bevor sie uns verändert?"' },
     distractors: ['Winston Churchill (1940)', 'Karl Marx & Friedrich Engels (1848)', 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populär) (1970)']
   },
@@ -3802,6 +4118,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (~1940)',
     hint: 'Von Albert Einstein.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Der Horizont vieler Menschen ist ein Kreis mit dem Radius Null – und das nennen sie ihren Standpunkt."' },
     distractors: ['Friedrich Nietzsche (1889)', 'Blaise Pascal (1910)', 'Sprichwort (Traditionell)']
   },
@@ -3814,6 +4131,7 @@ export const quoteCards: Card[] = [
     answer: 'Isaac Newton (~1700)',
     hint: 'Von Isaac Newton.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Es gibt keine großen Entdeckungen ohne kühne Vermutungen."' },
     distractors: ['Willy Brandt (1969)', 'Perikles (~431 v. Chr.)', 'E.T. - Der Außerirdische (1982)']
   },
@@ -3826,6 +4144,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (~1940)',
     hint: 'Von Albert Einstein.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Bildung ist das, was übrig bleibt, wenn man alles vergessen hat, was man in der Schule gelernt hat."' },
     distractors: ['Protagoras (1957)', 'Neil Armstrong (1969)', 'Sokrates (zugeschrieben) (~400 v. Chr.)']
   },
@@ -3838,6 +4157,7 @@ export const quoteCards: Card[] = [
     answer: 'ABBA (Songtitel) (1980)',
     hint: 'Von ABBA (Songtitel).',
     difficulty: 'leicht',
+    quoteSourceType: 'lied',
     sources: { text: '"The winner takes it all."' },
     distractors: ['Albus Dumbledore (Harry Potter) (2001)', 'Albert Einstein (1949)', 'Adlai Stevenson (1952)']
   },
@@ -3850,6 +4170,7 @@ export const quoteCards: Card[] = [
     answer: 'Oscar Wilde (~1890)',
     hint: 'Von Oscar Wilde.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Ich habe einen ganz einfachen Geschmack: Ich bin immer mit dem Besten zufrieden."' },
     distractors: ['Friedrich Schiller (Wilhelm Tell) (1804)', 'Samuel Beckett (1952)', 'J.D. Salinger (1951)']
   },
@@ -3862,6 +4183,7 @@ export const quoteCards: Card[] = [
     answer: 'Marie von Ebner-Eschenbach (~1890)',
     hint: 'Von Marie von Ebner-Eschenbach.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Was wir heute tun, entscheidet darüber, wie die Welt morgen aussieht."' },
     distractors: ['Konfuzius / Bibel (Goldene Regel) (~500 v. Chr.)', 'Volksmund (Traditionell)', 'Alec Guinness (Star Wars) (1977)']
   },
@@ -3874,6 +4196,7 @@ export const quoteCards: Card[] = [
     answer: 'Mark Twain (~1900)',
     hint: 'Von Mark Twain.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Wer nicht weiß, wohin er will, der darf sich nicht wundern, wenn er ganz woanders ankommt."' },
     distractors: ['Heinrich IV. (1593)', 'Sprichwort (Traditionell)', 'Aldous Huxley (1932)']
   },
@@ -3886,6 +4209,7 @@ export const quoteCards: Card[] = [
     answer: 'John F. Kennedy (1961)',
     hint: 'Von John F. Kennedy.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Der Sieg hat hundert Väter, die Niederlage ist ein Waisenkind."' },
     distractors: ['Walt Disney (~1980)', 'Terminator (1993)', 'Bibel (2. Thessalonicher 3,10) (~50 n. Chr.)']
   },
@@ -3898,6 +4222,7 @@ export const quoteCards: Card[] = [
     answer: 'Adlai Stevenson (1952)',
     hint: 'Von Adlai Stevenson.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Am Ende sind es nicht die Jahre im Leben, die zählen, sondern das Leben in den Jahren."' },
     distractors: ['Arthur Schopenhauer (oft in diesem Kontext zitiert) (1980)', 'Heraklit (1918)', 'Konfuzius (zugeschrieben) (~500 v. Chr.)']
   },
@@ -3910,6 +4235,7 @@ export const quoteCards: Card[] = [
     answer: 'Sprichwort (Frankreich/Italien) (~1500)',
     hint: 'Von Sprichwort (Frankreich/Italien).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Ein Tag ohne Wein ist wie ein Tag ohne Sonne."' },
     distractors: ['Franz Kafka (1915)', 'Friedrich Nietzsche (1889)', 'Grundgesetz für die Bundesrepublik Deutschland (1949)']
   },
@@ -3922,6 +4248,7 @@ export const quoteCards: Card[] = [
     answer: 'Rudyard Kipling (1923)',
     hint: 'Von Rudyard Kipling.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Worte sind die mächtigste Droge, welche die Menschheit benutzt."' },
     distractors: ['Terminator 2 (1994)', 'Ralph Waldo Emerson (1841)', 'Laurence Fishburne (Matrix) (1999)']
   },
@@ -3934,6 +4261,7 @@ export const quoteCards: Card[] = [
     answer: 'Alan Kay (1971)',
     hint: 'Von Alan Kay.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Die beste Art, die Zukunft vorherzusagen, ist, sie zu erfinden."' },
     distractors: ['Buddha (~500 v. Chr.)', 'Voltaire (1750)', 'Giacomo Leopardi (1852)']
   },
@@ -3946,6 +4274,7 @@ export const quoteCards: Card[] = [
     answer: 'Ingeborg Bachmann (~1960)',
     hint: 'Von Ingeborg Bachmann.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Ich kenne keine bessere Definition für Glück als: Keine Angst zu haben."' },
     distractors: ['Immanuel Kant (zugeschrieben) (1790)', 'Grundgesetz für die Bundesrepublik Deutschland (1949)', 'Albert Einstein (1949)']
   },
@@ -3958,6 +4287,7 @@ export const quoteCards: Card[] = [
     answer: 'Sprichwort (~1800)',
     hint: 'Von Sprichwort.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Wer die Musik bestellt, muss sie auch bezahlen."' },
     distractors: ['Isaac Newton (~1700)', 'Andy Warhol (1968)', 'Terminator (Arnold Schwarzenegger) (1984)']
   },
@@ -3970,6 +4300,7 @@ export const quoteCards: Card[] = [
     answer: 'Buddha (~500 v. Chr.)',
     hint: 'Von Buddha.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Alles, was wir sind, ist das Ergebnis dessen, was wir gedacht haben."' },
     distractors: ['Walter Moers (Professor Nachtigaller) (1999)', 'Robert De Niro (Taxi Driver) (1976)', 'Terminator (1993)']
   },
@@ -3982,6 +4313,7 @@ export const quoteCards: Card[] = [
     answer: 'Oscar Wilde (1892)',
     hint: 'Von Oscar Wilde.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Erfahrung ist der Name, den jeder seinen Irrtümern gibt."' },
     distractors: ['Leonardo DiCaprio (Titanic) (1997)', 'Winston Churchill (zugeschrieben) (1940)', 'Friedrich Schiller (zugeschrieben / Friedrich Nietzsche) (1850)']
   },
@@ -3994,6 +4326,7 @@ export const quoteCards: Card[] = [
     answer: 'Heinrich Heine (1823)',
     hint: 'Von Heinrich Heine.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Dort, wo man Bücher verbrennt, verbrennt man am Ende auch Menschen."' },
     distractors: ['William Shakespeare (1599)', 'Brad Pitt (Fight Club) (1999)', 'Steve Jobs (2005)']
   },
@@ -4006,6 +4339,7 @@ export const quoteCards: Card[] = [
     answer: 'Paul Watzlawick (1967)',
     hint: 'Von Paul Watzlawick.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Man kann nicht nicht kommunizieren."' },
     distractors: ['Diverse (Volksmund/Fußball) (1991)', 'William Shakespeare (1599)', 'Fidel Castro (1943)']
   },
@@ -4018,6 +4352,7 @@ export const quoteCards: Card[] = [
     answer: 'Yoda (Das Imperium schlägt zurück) (1980)',
     hint: 'Von Yoda (Das Imperium schlägt zurück).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Tu es oder tu es nicht. Es gibt kein Versuchen."' },
     distractors: ['UN-Menschenrechtscharta (1950)', 'William Shakespeare (1603)', 'Victor Hugo (1852)']
   },
@@ -4030,6 +4365,7 @@ export const quoteCards: Card[] = [
     answer: 'Friedemann Schulz von Thun (1981)',
     hint: 'Von Friedemann Schulz von Thun.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Wahr ist nicht, was A sagt, sondern was B versteht."' },
     distractors: ['Immanuel Kant (1781)', 'Pablo Picasso (~1950)', 'Redewendung (Traditionell)']
   },
@@ -4042,6 +4378,7 @@ export const quoteCards: Card[] = [
     answer: 'Perikles (~431 v. Chr.)',
     hint: 'Von Perikles.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Das Geheimnis des Glücks ist die Freiheit, und das Geheimnis der Freiheit ist der Mut."' },
     distractors: ['René Descartes (1637)', 'Schlagzeile der Bild-Zeitung (2005)', 'Konfuzius (zugeschrieben) (500 v. Chr.)']
   },
@@ -4054,6 +4391,7 @@ export const quoteCards: Card[] = [
     answer: 'Queen / Freddie Mercury (1984)',
     hint: 'Von Queen / Freddie Mercury.',
     difficulty: 'leicht',
+    quoteSourceType: 'lied',
     sources: { text: '"I want to break free."' },
     distractors: ['The Rolling Stones (1964)', 'Andy Warhol (1968)', 'Johann Wolfgang von Goethe (Faust I) (1808)']
   },
@@ -4066,6 +4404,7 @@ export const quoteCards: Card[] = [
     answer: 'Bertolt Brecht (1930)',
     hint: 'Von Bertolt Brecht.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Wer A sagt, muss nicht B sagen. Er kann auch erkennen, dass A falsch war."' },
     distractors: ['UN-Menschenrechtscharta (1950)', 'Buddha (~500 v. Chr.)', 'Chief Brody (1975)']
   },
@@ -4078,6 +4417,7 @@ export const quoteCards: Card[] = [
     answer: 'Marie von Ebner-Eschenbach (1893)',
     hint: 'Von Marie von Ebner-Eschenbach.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Wer nichts weiß, muss alles glauben."' },
     distractors: ['Filmtitel (James Dean) / Bibel (Lukas 23,34) (1955)', 'Humphrey Bogart (Casablanca) (1942)', 'Perikles (1854)']
   },
@@ -4090,6 +4430,7 @@ export const quoteCards: Card[] = [
     answer: 'Mahatma Gandhi (zugeschrieben) (~1948)',
     hint: 'Von Mahatma Gandhi (zugeschrieben).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Auge um Auge – und die ganze Welt wird blind sein."' },
     distractors: ['Heinrich Heine (~1830)', 'Sherlock Holmes (Filmzitat, nicht im Buch) (1929)', 'Marcel Reich-Ranicki (~2000)']
   },
@@ -4102,6 +4443,7 @@ export const quoteCards: Card[] = [
     answer: 'Homer Simpson (1993)',
     hint: 'Von Homer Simpson.',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Ich bin so klug, K-L-U-K."' },
     distractors: ['Samuel Beckett (1953)', 'Clark Gable (Vom Winde verweht) (1939)', 'Heinrich Heine (~1830)']
   },
@@ -4114,6 +4456,7 @@ export const quoteCards: Card[] = [
     answer: 'Georg Christoph Lichtenberg (~1770)',
     hint: 'Von Georg Christoph Lichtenberg.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Ich weiß nicht, ob es besser wird, wenn es anders wird. Aber es muss anders werden, wenn es besser werden soll."' },
     distractors: ['Thomas Hobbes (1927)', 'Schlagzeile der Bild-Zeitung (2005)', 'Helmut Schmidt (1980)']
   },
@@ -4126,6 +4469,7 @@ export const quoteCards: Card[] = [
     answer: 'Johann Wolfgang von Goethe (zugeschrieben) (~1800)',
     hint: 'Von Johann Wolfgang von Goethe (zugeschrieben).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Das Leben ist zu kurz, um schlechten Wein zu trinken."' },
     distractors: ['Franklin D. Roosevelt (1933)', 'George Orwell (Farm der Tiere) (1945)', 'Walt Disney (1920)']
   },
@@ -4138,6 +4482,7 @@ export const quoteCards: Card[] = [
     answer: 'Hippokrates (~400 v. Chr.)',
     hint: 'Von Hippokrates.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Eure Nahrungsmittel sollen eure Heilmittel sein."' },
     distractors: ['John Lyly (1579)', 'Johann Wolfgang von Goethe (zugeschriebene letzte Worte) (1832)', 'Johann Wolfgang von Goethe (1774)']
   },
@@ -4150,6 +4495,7 @@ export const quoteCards: Card[] = [
     answer: 'John Donne (1624)',
     hint: 'Von John Donne.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Kein Mensch ist eine Insel."' },
     distractors: ['Konfuzius (~500 v. Chr.)', 'William Shakespeare (1950)', 'Marlene Dietrich (1930)']
   },
@@ -4162,6 +4508,7 @@ export const quoteCards: Card[] = [
     answer: 'William Shakespeare (Der Sturm) (1611)',
     hint: 'Von William Shakespeare (Der Sturm).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Wir sind vom gleichen Stoff, aus dem die Träume sind."' },
     distractors: ['Brad Pitt (Fight Club) (1999)', 'Walt Disney (~1980)', 'Andreas Möller (1992)']
   },
@@ -4174,6 +4521,7 @@ export const quoteCards: Card[] = [
     answer: 'Rosa Luxemburg (~1910)',
     hint: 'Von Rosa Luxemburg.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Wer sich nicht bewegt, spürt seine Fesseln nicht."' },
     distractors: ['Robert De Niro (Taxi Driver) (1976)', 'Victor Hugo (1852)', 'Protagoras (1957)']
   },
@@ -4186,6 +4534,7 @@ export const quoteCards: Card[] = [
     answer: 'Al Pacino (Scarface) (1983)',
     hint: 'Von Al Pacino (Scarface).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Say hello to my little friend!"' },
     distractors: ['Gary Lineker (1966)', 'Voltaire (1750)', 'George Peppard (A-Team) (1985)']
   },
@@ -4198,6 +4547,7 @@ export const quoteCards: Card[] = [
     answer: 'Horace Walpole (1776)',
     hint: 'Von Horace Walpole.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Das Leben ist eine Komödie für den, der denkt, und eine Tragödie für den, der fühlt."' },
     distractors: ['Bertolt Brecht (Die Dreigroschenoper) (1890)', 'George Orwell (1945)', 'Unbekannt (oft fälschlich Einstein) (1958)']
   },
@@ -4210,6 +4560,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (zugeschrieben) (~1950)',
     hint: 'Von Albert Einstein (zugeschrieben).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Die reinste Form des Wahnsinns ist es, alles beim Alten zu lassen und gleichzeitig zu hoffen, dass sich was ändert."' },
     distractors: ['Marlene Dietrich (1930)', 'Apple (Werbeslogan) (1997)', 'Giovanni Trapattoni (1998)']
   },
@@ -4222,6 +4573,7 @@ export const quoteCards: Card[] = [
     answer: 'Philip Rosenthal (~1960)',
     hint: 'Von Philip Rosenthal.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Wer aufhört, besser zu werden, hat aufgehört, gut zu sein."' },
     distractors: ['Johann Wolfgang von Goethe (zugeschriebene letzte Worte) (1832)', 'René Magritte (1929)', 'Ton Steine Scherben (1970)']
   },
@@ -4234,6 +4586,7 @@ export const quoteCards: Card[] = [
     answer: 'Martin Luther King Jr. (1965)',
     hint: 'Von Martin Luther King Jr..',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Am Ende werden wir uns nicht an die Worte unserer Feinde erinnern, sondern an das Schweigen unserer Freunde."' },
     distractors: ['Pablo Picasso (1931)', 'Niels Bohr (1920)', 'Winston Churchill (1940)']
   },
@@ -4246,6 +4599,7 @@ export const quoteCards: Card[] = [
     answer: 'Barack Obama (2008)',
     hint: 'Von Barack Obama.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Wir sind die, auf die wir gewartet haben."' },
     distractors: ['Mahatma Gandhi (1948)', 'The Wizard of Oz (1939)', 'George Orwell (1984) (1949)']
   },
@@ -4258,6 +4612,7 @@ export const quoteCards: Card[] = [
     answer: 'Theodor W. Adorno (1951)',
     hint: 'Von Theodor W. Adorno.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Es gibt kein richtiges Leben im falschen."' },
     distractors: ['Die drei Musketiere (Alexandre Dumas) (2001)', 'Aldous Huxley (1932)', 'Isaac Newton (~1700)']
   },
@@ -4270,6 +4625,7 @@ export const quoteCards: Card[] = [
     answer: 'Hape Kerkeling (2006)',
     hint: 'Von Hape Kerkeling.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Ich bin dann mal weg."' },
     distractors: ['Paul Watzlawick (1967)', 'Neil Armstrong (1969)', 'Johann Wolfgang von Goethe (Mephisto in Faust I) (1808)']
   },
@@ -4282,6 +4638,7 @@ export const quoteCards: Card[] = [
     answer: 'Loriot (Weihnachten bei Hoppenstedts) (1978)',
     hint: 'Von Loriot (Weihnachten bei Hoppenstedts).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Früher war mehr Lametta."' },
     distractors: ['Protagoras (1957)', 'Heinrich Heine (oft zitiert) (1931)', 'Ernest Hemingway (~1950)']
   },
@@ -4294,6 +4651,7 @@ export const quoteCards: Card[] = [
     answer: 'Loriot (Ödipussi) (1988)',
     hint: 'Von Loriot (Ödipussi).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Mein Name ist Lohse, ich kaufe hier ein."' },
     distractors: ['Hermann Tietz (~1980)', 'E.T. (E.T. – Der Außerirdische) (1982)', 'Johann Wolfgang von Goethe (Faust I) (1808)']
   },
@@ -4306,6 +4664,7 @@ export const quoteCards: Card[] = [
     answer: 'Loriot (Das Frühstücksei) (1977)',
     hint: 'Von Loriot (Das Frühstücksei).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Das Ei ist hart!"' },
     distractors: ['Konfuzius (zugeschrieben) (1900)', 'Blaise Pascal (1669)', 'Anthony Perkins (Psycho) (1960)']
   },
@@ -4318,6 +4677,7 @@ export const quoteCards: Card[] = [
     answer: 'Willy Brandt (1969)',
     hint: 'Von Willy Brandt.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Mehr Demokratie wagen."' },
     distractors: ['Neil Armstrong (1969)', 'Antoine de Saint-Exupéry (1943)', 'Christopher Lloyd (Zurück in die Zukunft) (1985)']
   },
@@ -4330,6 +4690,7 @@ export const quoteCards: Card[] = [
     answer: 'Ernest Hemingway (~1950)',
     hint: 'Von Ernest Hemingway.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Man braucht zwei Jahre, um sprechen zu lernen, und fünfzig, um schweigen zu lernen."' },
     distractors: ['Isaac Newton (~1700)', 'Chief Brody (1975)', 'Christian Morgenstern (~1900)']
   },
@@ -4342,6 +4703,7 @@ export const quoteCards: Card[] = [
     answer: 'Leo Tolstoi (Anna Karenina) (1877)',
     hint: 'Von Leo Tolstoi (Anna Karenina).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Alle glücklichen Familien gleichen einander, jede unglückliche Familie ist auf ihre eigene Weise unglücklich."' },
     distractors: ['Winston Churchill (~1940)', 'Winston Churchill (zugeschrieben) (1940)', 'Jonathan Swift (1738)']
   },
@@ -4354,6 +4716,7 @@ export const quoteCards: Card[] = [
     answer: 'Seneca (zugeschrieben) (~50 n. Chr.)',
     hint: 'Von Seneca (zugeschrieben).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Die Kunst zu leben besteht darin, zu lernen, wie man im Regen tanzt, anstatt auf die Sonne zu warten."' },
     distractors: ['Volksmund (Traditionell)', 'Terminator (1993)', 'John F. Kennedy (1961)']
   },
@@ -4366,6 +4729,7 @@ export const quoteCards: Card[] = [
     answer: 'Malala Yousafzai (2013)',
     hint: 'Von Malala Yousafzai.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Ein Kind, ein Lehrer, ein Buch und ein Stift können die Welt verändern."' },
     distractors: ['René Descartes (1637)', 'Konfuzius (zugeschrieben) (1900)', 'Albert Einstein (1929)']
   },
@@ -4378,6 +4742,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (1930)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Das Schönste, was wir erleben können, ist das Geheimnisvolle."' },
     distractors: ['Loriot (Das Frühstücksei) (1977)', 'Friedrich Nietzsche (1882)', 'Friedrich der Große (1757)']
   },
@@ -4390,6 +4755,7 @@ export const quoteCards: Card[] = [
     answer: 'Pablo Picasso (~1950)',
     hint: 'Von Pablo Picasso.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Alles, was du dir vorstellen kannst, ist echt."' },
     distractors: ['Julius Cäsar (49 v. Chr.)', 'Friedrich Schiller (Die Jungfrau von Orleans) (1801)', 'Winston Churchill (1947)']
   },
@@ -4402,6 +4768,7 @@ export const quoteCards: Card[] = [
     answer: 'Ludwig Wittgenstein (1921)',
     hint: 'Von Ludwig Wittgenstein.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Die Grenzen meiner Sprache bedeuten die Grenzen meiner Welt."' },
     distractors: ['Walter Ulbricht (1952)', 'Friedrich Schiller (zugeschrieben / Friedrich Nietzsche) (1850)', 'Loriot (Weihnachten bei Hoppenstedts) (1978)']
   },
@@ -4414,6 +4781,7 @@ export const quoteCards: Card[] = [
     answer: 'Konfuzius / Bibel (Goldene Regel) (~500 v. Chr.)',
     hint: 'Von Konfuzius / Bibel (Goldene Regel).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Was du nicht willst, dass man dir tu, das füg auch keinem andern zu."' },
     distractors: ['Joachim Ringelnatz (1920)', 'François de La Rochefoucauld (1665)', 'Forrest Gump (1985)']
   },
@@ -4426,6 +4794,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (1952)',
     hint: 'Von Albert Einstein.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Ich habe keine besondere Begabung, ich bin nur leidenschaftlich neugierig."' },
     distractors: ['Franklin D. Roosevelt (1933)', 'Jack Swigert (Apollo 13 - im Film durch Tom Hanks populär) (1970)', 'Henry Ford (~1920)']
   },
@@ -4438,6 +4807,7 @@ export const quoteCards: Card[] = [
     answer: 'Seneca (~50 n. Chr.)',
     hint: 'Von Seneca.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Nicht das Leben ist kurz, sondern wir machen es dazu."' },
     distractors: ['Heraklit (1918)', 'Mark Twain (~1900)', 'Victor Hugo (1852)']
   },
@@ -4450,6 +4820,7 @@ export const quoteCards: Card[] = [
     answer: 'Irischer Segenswunsch (Traditionell)',
     hint: 'Von Irischer Segenswunsch.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Möge die Straße dir entgegeneilen."' },
     distractors: ['Erich Kästner (1950)', 'Walt Disney (~1980)', 'Clint Eastwood (Dirty Harry) (1971)']
   },
@@ -4462,6 +4833,7 @@ export const quoteCards: Card[] = [
     answer: 'Sokrates (zugeschrieben) (~400 v. Chr.)',
     hint: 'Von Sokrates (zugeschrieben).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Es ist keine Schande, nichts zu wissen, wohl aber, nichts lernen zu wollen."' },
     distractors: ['Thomas Edison (1895)', 'Malala Yousafzai (2013)', 'Konfuzius (zugeschrieben) (~1300)']
   },
@@ -4474,6 +4846,7 @@ export const quoteCards: Card[] = [
     answer: 'Bibel (2. Thessalonicher 3,10) (~50 n. Chr.)',
     hint: 'Von Bibel (2. Thessalonicher 3,10).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Wer nicht arbeitet, soll auch nicht essen."' },
     distractors: ['Walter Ulbricht (1952)', 'Bertolt Brecht (1928)', 'Marie von Ebner-Eschenbach (1893)']
   },
@@ -4486,6 +4859,7 @@ export const quoteCards: Card[] = [
     answer: 'Winston Churchill (1947)',
     hint: 'Von Winston Churchill.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Demokratie ist die schlechteste aller Staatsformen, ausgenommen alle anderen."' },
     distractors: ['Willy Brandt (1989)', 'Albert Einstein (1926)', 'Niccolò Machiavelli (zugeschrieben) (1532)']
   },
@@ -4498,6 +4872,7 @@ export const quoteCards: Card[] = [
     answer: 'Sprichwort (Traditionell)',
     hint: 'Von Sprichwort.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Wer im Glashaus sitzt, soll nicht mit Steinen werfen."' },
     distractors: ['Marlon Brando (Der Pate) (1972)', 'Oscar Wilde (1891)', 'Tom Hanks (Forrest Gump) (1994)']
   },
@@ -4510,6 +4885,7 @@ export const quoteCards: Card[] = [
     answer: 'Niccolò Machiavelli (zugeschrieben) (1532)',
     hint: 'Von Niccolò Machiavelli (zugeschrieben).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Der Zweck heiligt die Mittel."' },
     distractors: ['John Donne (1624)', 'Walter Moers (Professor Nachtigaller) (1999)', 'Seneca (~50 n. Chr.)']
   },
@@ -4522,6 +4898,7 @@ export const quoteCards: Card[] = [
     answer: 'Walter Moers (Professor Nachtigaller) (1999)',
     hint: 'Von Walter Moers (Professor Nachtigaller).',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Wissen ist Nacht."' },
     distractors: ['Arnold Schwarzenegger (Terminator) (1984)', 'Voltaire (1750)', 'Perikles (1854)']
   },
@@ -4534,6 +4911,7 @@ export const quoteCards: Card[] = [
     answer: 'Friedrich der Große (1757)',
     hint: 'Von Friedrich der Große.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Hunde, wollt ihr ewig leben?"' },
     distractors: ['Blaise Pascal (1910)', 'Friedrich Nietzsche (1882)', 'Malala Yousafzai (2013)']
   },
@@ -4546,6 +4924,7 @@ export const quoteCards: Card[] = [
     answer: 'Heinrich IV. (1593)',
     hint: 'Von Heinrich IV..',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Paris ist immer eine Messe wert."' },
     distractors: ['Rosa Luxemburg (1944)', 'The Godfather (1972)', 'Tom Hanks (Forrest Gump) (1994)']
   },
@@ -4558,6 +4937,7 @@ export const quoteCards: Card[] = [
     answer: 'Benjamin Franklin (1789)',
     hint: 'Von Benjamin Franklin.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"In dieser Welt ist nichts sicher, außer dem Tod und den Steuern."' },
     distractors: ['Apollo 13 (Film) (1995)', 'Patrick Swayze (Dirty Dancing) (1987)', 'Igor Strawinsky (~1940)']
   },
@@ -4570,6 +4950,7 @@ export const quoteCards: Card[] = [
     answer: 'Henry Ford (~1920)',
     hint: 'Von Henry Ford.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Zusammenkunft ist ein Anfang. Zusammenhalt ist ein Fortschritt. Zusammenarbeit ist der Erfolg."' },
     distractors: ['Gottlieb Daimler (1900)', 'Johann Wolfgang von Goethe (Mephisto in Faust I) (1808)', 'Humphrey Bogart (Casablanca) (1942)']
   },
@@ -4582,6 +4963,7 @@ export const quoteCards: Card[] = [
     answer: 'Ton Steine Scherben (1970)',
     hint: 'Von Ton Steine Scherben.',
     difficulty: 'leicht',
+    quoteSourceType: 'lied',
     sources: { text: '"Macht kaputt, was euch kaputt macht."' },
     distractors: ['Theodor W. Adorno (1991)', 'Heraklit (500 v. Chr.)', 'August Heinrich Hoffmann von Fallersleben (1841)']
   },
@@ -4594,6 +4976,7 @@ export const quoteCards: Card[] = [
     answer: 'Gerard Butler (Film: 300) (2006)',
     hint: 'Von Gerard Butler (Film: 300).',
     difficulty: 'leicht',
+    quoteSourceType: 'film',
     sources: { text: '"Das ist Sparta!"' },
     distractors: ['Ralph Waldo Emerson (1841)', 'Charlie Chaplin (1930)', 'Anthony Perkins (Psycho) (1960)']
   },
@@ -4606,6 +4989,7 @@ export const quoteCards: Card[] = [
     answer: 'Konfuzius (zugeschrieben) (~1300)',
     hint: 'Von Konfuzius (zugeschrieben).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Es ist besser, ein Licht zu entzünden, als über die Dunkelheit zu klagen."' },
     distractors: ['Friedemann Schulz von Thun (1981)', 'George Orwell (1984) (1949)', 'E.T. - Der Außerirdische (1982)']
   },
@@ -4618,6 +5002,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (~1933)',
     hint: 'Von Albert Einstein.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Alles sollte so einfach wie möglich gemacht werden, aber nicht einfacher."' },
     distractors: ['Sokrates (400 v. Chr.)', 'Winston Churchill (1945)', '(Parodie auf Armstrong / Volksmund) (1963)']
   },
@@ -4630,6 +5015,7 @@ export const quoteCards: Card[] = [
     answer: 'Redewendung (Traditionell)',
     hint: 'Von Redewendung.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Der Teufel steckt im Detail."' },
     distractors: ['ABBA (Songtitel) (1980)', 'Sherlock Holmes (Filmzitat, nicht im Buch) (1929)', 'Barack Obama (2008)']
   },
@@ -4642,6 +5028,7 @@ export const quoteCards: Card[] = [
     answer: 'Christian Morgenstern (~1900)',
     hint: 'Von Christian Morgenstern.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Überall ist man nur dort richtig, wo man mit dem Herzen ist."' },
     distractors: ['Buzz Lightyear (Toy Story) (1995)', 'René Descartes (1637)', 'Gary Lineker (1966)']
   },
@@ -4654,6 +5041,7 @@ export const quoteCards: Card[] = [
     answer: 'Giacomo Leopardi (1852)',
     hint: 'Von Giacomo Leopardi.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Die Welt gehört dem, der sie genießt."' },
     distractors: ['Rosa Luxemburg (1918)', 'Giovanni Trapattoni (1998)', 'Oscar Wilde (1891)']
   },
@@ -4666,6 +5054,7 @@ export const quoteCards: Card[] = [
     answer: 'Theodor Heuss (~1950)',
     hint: 'Von Theodor Heuss.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Bange machen gilt nicht."' },
     distractors: ['Johann Wolfgang von Goethe (zugeschrieben) (~1800)', 'Alan Kay (1971)', 'Steve Jobs (2005)']
   },
@@ -4678,6 +5067,7 @@ export const quoteCards: Card[] = [
     answer: 'Bertolt Brecht (Leben des Galilei) (1939)',
     hint: 'Von Bertolt Brecht (Leben des Galilei).',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Wer die Wahrheit nicht weiß, der ist bloß ein Dummkopf. Aber wer sie weiß und sie eine Lüge nennt, der ist ein Verbrecher!"' },
     distractors: ['Marcel Reich-Ranicki (~2000)', 'Johann Wolfgang von Goethe (1795)', 'Niels Bohr (1920)']
   },
@@ -4690,6 +5080,7 @@ export const quoteCards: Card[] = [
     answer: 'Hermann Gmeiner (~1960)',
     hint: 'Von Hermann Gmeiner.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Alles Große in unserer Welt geschieht nur, weil jemand mehr tut, als er muss."' },
     distractors: ['William Shakespeare (Der Kaufmann von Venedig) (1596)', 'Dalai Lama (1904)', 'Ludwig Wittgenstein (1921)']
   },
@@ -4702,6 +5093,7 @@ export const quoteCards: Card[] = [
     answer: 'Albert Einstein (zugeschrieben) (~1900)',
     hint: 'Von Albert Einstein (zugeschrieben).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Das Genie beherrscht das Chaos."' },
     distractors: ['Albert Einstein (~1940)', 'Johann Wolfgang von Goethe (Faust I) (1808)', 'Ludwig Wittgenstein (1921)']
   },
@@ -4714,6 +5106,7 @@ export const quoteCards: Card[] = [
     answer: 'Helmut Schmidt (1980)',
     hint: 'Von Helmut Schmidt.',
     difficulty: 'leicht',
+    quoteSourceType: 'person',
     sources: { text: '"Wer Visionen hat, sollte zum Arzt gehen."' },
     distractors: ['Heinrich Heine (oft zitiert) (1931)', 'Sepp Herberger (1954)', 'Dalai Lama (1904)']
   },
@@ -4726,6 +5119,7 @@ export const quoteCards: Card[] = [
     answer: 'Hermann Tietz (~1980)',
     hint: 'Von Hermann Tietz.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Qualität ist, wenn der Kunde zurückkommt und nicht die Ware."' },
     distractors: ['E.T. (E.T. – Der Außerirdische) (1982)', 'Diverse (Volksmund/Fußball) (1991)', 'Brad Pitt (Fight Club) (1999)']
   },
@@ -4738,6 +5132,7 @@ export const quoteCards: Card[] = [
     answer: 'Winston Churchill (~1940)',
     hint: 'Von Winston Churchill.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Ein kluger Mann macht nicht alle Fehler selbst. Er gibt auch anderen eine Chance."' },
     distractors: ['Franklin D. Roosevelt (1933)', 'Cuba Gooding Jr. (Jerry Maguire) (1996)', 'Albert Einstein (1905)']
   },
@@ -4750,6 +5145,7 @@ export const quoteCards: Card[] = [
     answer: 'Francis Bacon (1620)',
     hint: 'Von Francis Bacon.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Wahrheit ist eine Tochter der Zeit."' },
     distractors: ['Terminator (Arnold Schwarzenegger) (1984)', 'Johann Wolfgang von Goethe (Faust I) (1808)', 'Queen / Freddie Mercury (1984)']
   },
@@ -4762,6 +5158,7 @@ export const quoteCards: Card[] = [
     answer: 'John Lyly (1579)',
     hint: 'Von John Lyly.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"In der Liebe und im Krieg ist alles erlaubt."' },
     distractors: ['Samuel Beckett (1953)', 'Federico Fellini (1954)', 'Samuel Beckett (1952)']
   },
@@ -4774,6 +5171,7 @@ export const quoteCards: Card[] = [
     answer: 'Victor Hugo (1852)',
     hint: 'Von Victor Hugo.',
     difficulty: 'mittel',
+    quoteSourceType: 'person',
     sources: { text: '"Es gibt nichts Stärkeres als eine Idee, deren Zeit gekommen ist."' },
     distractors: ['(Parodie auf Armstrong / Volksmund) (1963)', 'George Peppard (A-Team) (1985)', 'Alec Guinness (Star Wars) (1977)']
   },
@@ -4786,6 +5184,7 @@ export const quoteCards: Card[] = [
     answer: 'Pablo Picasso (~1950)',
     hint: 'Von Pablo Picasso.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Jedes Kind ist ein Künstler. Das Problem ist nur, wie man ein Künstler bleibt, wenn man erwächst."' },
     distractors: ['John F. Kennedy (1961)', 'Ernest Hemingway (1941)', 'Konfuzius / Bibel (Goldene Regel) (~500 v. Chr.)']
   },
@@ -4798,6 +5197,7 @@ export const quoteCards: Card[] = [
     answer: 'John W. Gardner (~1900)',
     hint: 'Von John W. Gardner.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Das Leben ist das Zeichnen ohne Radiergummi."' },
     distractors: ['Ernst Reuter (1948)', 'Konfuzius (~500 v. Chr.)', 'Andy Serkis (Der Herr der Ringe) (2001)']
   },
@@ -4810,6 +5210,7 @@ export const quoteCards: Card[] = [
     answer: 'William Shakespeare (Cymbeline) (1609)',
     hint: 'Von William Shakespeare (Cymbeline).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Ein tiefer Fall führt oft zu höherem Glück."' },
     distractors: ['Albert Einstein (1929)', 'Yoda (Star Wars) (1980)', 'George Orwell (1984) (1984)']
   },
@@ -4822,6 +5223,7 @@ export const quoteCards: Card[] = [
     answer: 'Volksmund (Traditionell)',
     hint: 'Von Volksmund.',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Gute Freunde sind wie Sterne. Du kannst sie nicht immer sehen, aber du weißt, sie sind immer da."' },
     distractors: ['Jean Paul (1796)', 'Pablo Picasso (1931)', 'Loriot (Das Frühstücksei) (1977)']
   },
@@ -4834,6 +5236,7 @@ export const quoteCards: Card[] = [
     answer: 'Jesus von Nazaret (Johannes 19,30) (~30 n. Chr.)',
     hint: 'Von Jesus von Nazaret (Johannes 19,30).',
     difficulty: 'schwer',
+    quoteSourceType: 'person',
     sources: { text: '"Es ist vollbracht."' },
     distractors: ['Tom Hanks (Forrest Gump) (1994)', 'Oscar Wilde (~1890)', 'Cuba Gooding Jr. (Jerry Maguire) (1996)']
   },

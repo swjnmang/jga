@@ -999,8 +999,8 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
-    "answer": "Massive TÂne — 2002, Cruisen.",
-    "hint": "Massive TÂne",
+    "answer": "Massive Töne — 2002, Cruisen.",
+    "hint": "Massive Töne",
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/6e5kuZssmkwWL3Yt4jwTRy"
@@ -1018,8 +1018,8 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
-    "answer": "Massive TÂne — 2002, Traumreise.",
-    "hint": "Massive TÂne",
+    "answer": "Massive Töne — 2002, Traumreise.",
+    "hint": "Massive Töne",
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/1tVhmi6ltumhZtd1pM8Tya"
@@ -8018,8 +8018,8 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 1974,
     "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
-    "answer": "Blue Swede, BjÂrn Skifs — 1974, Hooked On A Feeling.",
-    "hint": "Blue Swede, BjÂrn Skifs",
+    "answer": "Blue Swede, Björn Skifs — 1974, Hooked On A Feeling.",
+    "hint": "Blue Swede, Björn Skifs",
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/6Ac4NVYYl2U73QiTt11ZKd"
@@ -10481,8 +10481,8 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2002,
     "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
-    "answer": "Herbert GrÂnemeyer — 2002, Der Weg - Remastered 2016.",
-    "hint": "Herbert GrÂnemeyer",
+    "answer": "Herbert Grönemeyer — 2002, Der Weg - Remastered 2016.",
+    "hint": "Herbert Grönemeyer",
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/7py0pONdy9D0DxNnT3elik"
@@ -10677,8 +10677,8 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2007,
     "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
-    "answer": "Herbert GrÂnemeyer — 2007, Lied 1 - Stück vom Himmel.",
-    "hint": "Herbert GrÂnemeyer",
+    "answer": "Herbert Grönemeyer — 2007, Lied 1 - Stück vom Himmel.",
+    "hint": "Herbert Grönemeyer",
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/5MDgIJMfN3VsxVBLjpDPIP"
@@ -17608,8 +17608,8 @@ export const playlistCards: Card[] = [
     "category": "music",
     "year": 2023,
     "cue": "Aus welchem Jahr stammt dieser Titel? Wie heißt er und von wem ist er?",
-    "answer": "cassÂ, RAYE, D-Block Europe — 2023, Prada.",
-    "hint": "cassÂ, RAYE, D-Block Europe",
+    "answer": "cassö, RAYE, D-Block Europe — 2023, Prada.",
+    "hint": "cassö, RAYE, D-Block Europe",
     "difficulty": "mittel",
     "sources": {
       "spotify": "https://open.spotify.com/track/59NraMJsLaMCVtwXTSia8i"
