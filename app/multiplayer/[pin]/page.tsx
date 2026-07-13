@@ -44,6 +44,7 @@ import {
   submitTextAnswer,
   castAnswerVote,
   resolveTextAnswerVote,
+  applyTextAnswerResult,
   isAnswerVoteComplete,
   timeoutTriviaAnswer,
 } from '@/lib/multiplayerService';
@@ -760,7 +761,8 @@ export default function MultiplayerGamePage() {
   }, [timeLeft, game?.pendingTextAnswer, game?.hostless, game?.mode, game?.state, game?.currentTurnGroupId, game?.currentCardId, session, answerTimedOut, pin]);
 
   // Spielleitungsloser Modus (Trivia): sobald alle verbundenen Gruppen abgestimmt
-  // haben, kurze Reveal-Pause, dann löst die aktive Gruppe die Abstimmung auf.
+  // haben, löst die aktive Gruppe die Abstimmung sofort auf (schreibt textAnswerResult
+  // für den Reveal-Bildschirm — die eigentliche Punktevergabe folgt erst danach).
   useEffect(() => {
     if (!game || !session) return;
     if (!game.hostless || !game.pendingTextAnswer || voteResolving) return;
@@ -768,12 +770,22 @@ export default function MultiplayerGamePage() {
     if (!isActiveGroup) return;
     if (!isAnswerVoteComplete(game)) return;
     setVoteResolving(true);
-    const t = setTimeout(() => {
-      resolveTextAnswerVote(pin).catch(console.error);
-    }, 3000);
-    return () => clearTimeout(t);
+    resolveTextAnswerVote(pin).catch(console.error);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [game?.answerVotes, game?.pendingTextAnswer, game?.hostless]);
+
+  // Spielleitungsloser Modus (Trivia): Reveal-Bildschirm ("Antwort akzeptiert/abgelehnt")
+  // bleibt kurz stehen, dann wendet die antwortende Gruppe das Ergebnis an und es geht weiter.
+  useEffect(() => {
+    if (!game || !session) return;
+    if (!game.hostless || !game.textAnswerResult) return;
+    const isActiveGroup = game.textAnswerResult.groupId === session.groupId;
+    if (!isActiveGroup) return;
+    const t = setTimeout(() => {
+      applyTextAnswerResult(pin).catch(console.error);
+    }, 3000);
+    return () => clearTimeout(t);
+  }, [game?.textAnswerResult, game?.hostless, session, pin]);
 
   // Spielleitungsloser Modus (Timeline): nach Ergebnis-Reveal automatisch weiter
   // (4 Sekunden Pause), ausgelöst von der aktiven Gruppe statt vom Host.
@@ -2490,8 +2502,27 @@ export default function MultiplayerGamePage() {
                   </div>
                 )}
 
+                {/* Reveal: Antwort wurde ausgewertet — akzeptiert oder abgelehnt */}
+                {game.textAnswerResult && (() => {
+                  const result = game.textAnswerResult;
+                  const isResultForMe = !!session && result.groupId === session.groupId;
+                  return (
+                    <div className={`card-surface rounded-2xl p-8 space-y-3 border-4 text-center ${
+                      result.correct ? 'border-green-500 bg-green-500/10' : 'border-red-500 bg-red-500/10'
+                    }`}>
+                      <div className="text-5xl">{result.correct ? '✅' : '❌'}</div>
+                      <p className="text-xl font-bold">
+                        {isResultForMe
+                          ? (result.correct ? 'Eure Antwort wurde akzeptiert!' : 'Eure Antwort wurde nicht akzeptiert')
+                          : `${game.groups[result.groupId]?.name ?? 'Die Gruppe'}s Antwort wurde ${result.correct ? 'akzeptiert' : 'nicht akzeptiert'}`}
+                      </p>
+                      <p className="text-sm text-ink/60">„{result.text}&ldquo; — {result.correctVotes}/{result.totalVotes} Stimmen für richtig</p>
+                    </div>
+                  );
+                })()}
+
                 {/* Aktive Gruppe: Antwort eingeben */}
-                {isMyTurn && !pending && (
+                {isMyTurn && !pending && !game.textAnswerResult && (
                   <div className="card-surface rounded-2xl p-6 space-y-3 border-2 border-green-500/30">
                     <p className="text-base font-semibold text-center text-ink/80">Eure Antwort:</p>
                     <input
@@ -2559,7 +2590,7 @@ export default function MultiplayerGamePage() {
                   </div>
                 )}
 
-                {!isMyTurn && !pending && (
+                {!isMyTurn && !pending && !game.textAnswerResult && (
                   <p className="text-center text-sm text-ink/60">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der aktiven Gruppe'}…</p>
                 )}
               </div>

@@ -132,6 +132,13 @@ export interface GameSession {
     submittedAt: number;
   } | null;
   answerVotes?: Record<string, boolean> | null; // Trivia (hostless): groupId -> Stimme (true = für "richtig")
+  textAnswerResult?: {                   // Trivia (hostless): Auswertungs-Reveal, bevor zur nächsten Frage gewechselt wird
+    groupId: string;
+    text: string;
+    correct: boolean;
+    correctVotes: number;
+    totalVotes: number;
+  } | null;
 }
 
 export interface CreateGameParams {

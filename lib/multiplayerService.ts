@@ -1754,9 +1754,10 @@ export function isAnswerVoteComplete(game: GameSession): boolean {
 }
 
 /**
- * Wertet die Abstimmung aus (≥50% "richtig" zählt als richtig) und wendet die
- * bestehende Trivia-Bewertungslogik an (inkl. Joker-Auflösung). Wird von der
- * aktiven Gruppe aufgerufen, sobald alle verbundenen Gruppen abgestimmt haben.
+ * Wertet die Abstimmung aus (≥50% "richtig" zählt als richtig) und schreibt das
+ * Ergebnis als Reveal (`textAnswerResult`), damit die antwortende Gruppe (und alle
+ * anderen) eine klare Rückmeldung sehen, bevor zur nächsten Frage gewechselt wird.
+ * Wendet noch KEINE Punkte an — das übernimmt `applyTextAnswerResult`.
  */
 export async function resolveTextAnswerVote(pin: string): Promise<void> {
   checkFirebase();
@@ -1768,13 +1769,40 @@ export async function resolveTextAnswerVote(pin: string): Promise<void> {
   if (!game.pendingTextAnswer) return; // bereits aufgelöst (Race-Schutz)
 
   const activeGroupId = game.pendingTextAnswer.groupId;
+  const answerText = game.pendingTextAnswer.text;
   const votes: Record<string, boolean> = game.answerVotes ?? {};
   const eligible = getEligibleVoterIds(game, activeGroupId);
   const correctVotes = eligible.filter(gid => votes[gid] === true).length;
   const isCorrect = eligible.length === 0 ? false : (correctVotes / eligible.length) >= 0.5;
 
-  // Antwort-Felder zuerst löschen (Race-Schutz gegen doppelte Auflösung), dann Punkte vergeben.
-  await update(gameRef, { pendingTextAnswer: null, answerVotes: null });
+  await update(gameRef, {
+    pendingTextAnswer: null,
+    answerVotes: null,
+    textAnswerResult: {
+      groupId: activeGroupId,
+      text: answerText,
+      correct: isCorrect,
+      correctVotes,
+      totalVotes: eligible.length,
+    },
+  });
+}
+
+/**
+ * Wendet die bestehende Trivia-Bewertungslogik an (inkl. Joker-Auflösung), nachdem
+ * der Reveal-Bildschirm kurz sichtbar war, und schaltet zur nächsten Frage/Gruppe.
+ */
+export async function applyTextAnswerResult(pin: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  if (!game.textAnswerResult) return; // bereits angewendet (Race-Schutz)
+
+  const isCorrect = game.textAnswerResult.correct;
+  await update(gameRef, { textAnswerResult: null });
   await submitTriviaAnswer(pin, isCorrect);
 }
 
