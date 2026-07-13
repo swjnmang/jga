@@ -190,9 +190,9 @@ export default function MultiplayerGamePage() {
     // gerade aktive Gruppe (es gibt niemand sonst, der zuverlässig verbunden ist).
     const g = game as GameSession | null;
     const s = session as SessionInfo | null;
-    const isHost = s?.isHost || g?.hostId === s?.groupId;
-    const isActiveGroup = !!s && g?.currentTurnGroupId === s.groupId && !isHost;
-    if (isHost || (g?.hostless && isActiveGroup)) {
+    const isEffectiveHost = !!(s?.isHost || g?.hostId === s?.groupId) && !g?.hostless;
+    const isActiveGroup = !!s && g?.currentTurnGroupId === s.groupId;
+    if (isEffectiveHost || (g?.hostless && isActiveGroup)) {
       if (diceResultShown) {
         confirmJokerDice(pin).catch(console.error);
       } else {
@@ -557,9 +557,9 @@ export default function MultiplayerGamePage() {
   // Host listens for playback control commands
   useEffect(() => {
     if (!game || !session) return;
-    const isHost = session.isHost || game.hostId === session.groupId;
-    const isActiveGroup = game.currentTurnGroupId === session.groupId && !isHost;
-    const controlsMedia = isHost || (game.hostless && isActiveGroup);
+    const isEffectiveHost = (session.isHost || game.hostId === session.groupId) && !game.hostless;
+    const isActiveGroup = game.currentTurnGroupId === session.groupId;
+    const controlsMedia = isEffectiveHost || (game.hostless && isActiveGroup);
     if (!controlsMedia || !game.playbackControl) return;
 
     const control = game.playbackControl;
@@ -626,7 +626,10 @@ export default function MultiplayerGamePage() {
   // Warn host before accidental browser refresh / back navigation
   useEffect(() => {
     if (!game || !session) return;
-    const isHost = session.isHost || game.hostId === session.groupId;
+    // Im spielleitungslosen Modus hat niemand während des Spiels eine unersetzliche
+    // Sonderrolle mehr (nur der Start-Button in der Lobby) — daher gilt diese Warnung
+    // dort nicht speziell für den Ersteller.
+    const isHost = (session.isHost || game.hostId === session.groupId) && !game.hostless;
     const activeGame = game.state === 'playing' || game.state === 'banning';
     if (!isHost || !activeGame) {
       backGuardPushed.current = false; // reset so guard re-arms for a new game
@@ -670,9 +673,9 @@ export default function MultiplayerGamePage() {
     if (!game || !session) return;
     if (game.state !== 'playing' || game.mode !== 'trivia') return;
     if (!game.currentCardId) return;
-    const isHost = session.isHost || game.hostId === session.groupId;
-    const isActiveGroup = game.currentTurnGroupId === session.groupId && !isHost;
-    if (!isHost && !(game.hostless && isActiveGroup)) return;
+    const isEffectiveHost = (session.isHost || game.hostId === session.groupId) && !game.hostless;
+    const isActiveGroup = game.currentTurnGroupId === session.groupId;
+    if (!isEffectiveHost && !(game.hostless && isActiveGroup)) return;
     if (getCardById(game.currentCardId)) return; // card found – nothing to do
     const t = setTimeout(async () => {
       try { await skipCard(pin); } catch (e) { console.error('auto-skip failed', e); }
@@ -747,7 +750,7 @@ export default function MultiplayerGamePage() {
     if (!game || !session) return;
     if (!game.hostless || game.mode !== 'trivia' || game.state !== 'playing') return;
     if (game.pendingTextAnswer) return;
-    const isActiveGroup = game.currentTurnGroupId === session.groupId && !(session.isHost || game.hostId === session.groupId);
+    const isActiveGroup = game.currentTurnGroupId === session.groupId;
     if (!isActiveGroup) return;
     const currentCat = game.currentCardId ? (game.deckMeta ?? {})[game.currentCardId] : '';
     if (currentCat === 'schaetzfragen') return;
@@ -761,7 +764,7 @@ export default function MultiplayerGamePage() {
   useEffect(() => {
     if (!game || !session) return;
     if (!game.hostless || !game.pendingTextAnswer || voteResolving) return;
-    const isActiveGroup = game.pendingTextAnswer.groupId === session.groupId && !(session.isHost || game.hostId === session.groupId);
+    const isActiveGroup = game.pendingTextAnswer.groupId === session.groupId;
     if (!isActiveGroup) return;
     if (!isAnswerVoteComplete(game)) return;
     setVoteResolving(true);
@@ -780,7 +783,7 @@ export default function MultiplayerGamePage() {
       setAutoAdvanceCountdown(null);
       return;
     }
-    const isActiveGroup = game.currentTurnGroupId === session.groupId && !(session.isHost || game.hostId === session.groupId);
+    const isActiveGroup = game.currentTurnGroupId === session.groupId;
     if (!isActiveGroup) return;
     setAutoAdvanceCountdown(4);
     const id = window.setInterval(() => {
@@ -798,6 +801,97 @@ export default function MultiplayerGamePage() {
     resolveFlexPhaseAndNext(pin).catch(console.error);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [autoAdvanceCountdown]);
+
+  // Spielleitungsloser Modus: Schätzfragen werden automatisch ausgewertet, sobald
+  // alle spielenden Gruppen (bzw. beim Stechen: alle Stechen-Teilnehmer) eingereicht
+  // haben. Die "kleinste Gruppen-ID" löst deterministisch aus, damit nicht mehrere
+  // Clients gleichzeitig auswerten.
+  useEffect(() => {
+    if (!game || !session) return;
+    if (!game.hostless || game.mode !== 'trivia' || !game.currentCardId) return;
+    if ((game.deckMeta ?? {})[game.currentCardId] !== 'schaetzfragen') return;
+    if (game.schaetzResult) return;
+
+    const isTiebreaker = game.triviaTiebreakerActive === true;
+    const tiebreakerIds: string[] = isTiebreaker
+      ? (Array.isArray(game.triviaTiebreakerGroupIds) ? game.triviaTiebreakerGroupIds : Object.values(game.triviaTiebreakerGroupIds ?? {}) as string[])
+      : [];
+    const playingGroups = Object.values(game.groups).filter(g => !g.isHost && (!isTiebreaker || tiebreakerIds.includes(g.id)));
+    if (playingGroups.length === 0) return;
+    const allSubmitted = playingGroups.every(g => g.schaetzSubmission != null && g.schaetzSubmission !== '');
+    if (!allSubmitted) return;
+
+    const resolverGroupId = [...playingGroups].sort((a, b) => a.id.localeCompare(b.id))[0].id;
+    if (session.groupId !== resolverGroupId) return;
+
+    const currentCard = getCardById(game.currentCardId);
+    if (!currentCard) return;
+
+    const unit = extractUnitFromAnswer(currentCard.answer);
+    const correctRange = extractRangeFromAnswer(currentCard.answer);
+    const correctNum = correctRange ? null : extractNumericFromAnswer(currentCard.answer);
+    const distToCorrect = (val: number) =>
+      correctRange
+        ? (val >= correctRange.low && val <= correctRange.high
+            ? 0
+            : Math.min(Math.abs(val - correctRange.low), Math.abs(val - correctRange.high)))
+        : Math.abs(val - (correctNum ?? NaN));
+
+    const withSubmissions = playingGroups
+      .filter(g => g.schaetzSubmission != null && g.schaetzSubmission !== '')
+      .map(g => ({ id: g.id, name: g.name, color: g.color, val: parseGermanNumber(g.schaetzSubmission ?? ''), raw: g.schaetzSubmission ?? '' }))
+      .filter(s => isFinite(s.val));
+    if (withSubmissions.length === 0) return;
+    const distances = withSubmissions.map(s => distToCorrect(s.val));
+    if (distances.some(d => isNaN(d))) return;
+    const minDist = Math.min(...distances);
+    const EPS = 0.001;
+    const winners = withSubmissions.filter((s, i) => Math.abs(distances[i] - minDist) < EPS);
+
+    const jokerKeysList = ['newQuestion', 'next', 'dice', 'steal'] as const;
+    const jokerRestores: { groupId: string; groupName: string; jokerKey: 'newQuestion' | 'next' | 'dice' | 'steal' }[] = [];
+    if (game.jokersEnabled) {
+      for (const w of winners) {
+        const groupJokers = game.groups[w.id]?.jokers;
+        if (groupJokers) {
+          const used = jokerKeysList.filter(k => groupJokers[k] === false);
+          if (used.length > 0) {
+            const restored = used[Math.floor(Math.random() * used.length)];
+            jokerRestores.push({ groupId: w.id, groupName: w.name, jokerKey: restored });
+          }
+        }
+      }
+    }
+
+    showSchaetzResult(pin, {
+      answer: currentCard.answer,
+      winnerIds: winners.map(w => w.id),
+      submissions: withSubmissions.map((s, i) => ({
+        groupId: s.id,
+        groupName: s.name,
+        value: `${s.raw}${unit ? ` ${unit}` : ''}`,
+        isWinner: Math.abs(distances[i] - minDist) < EPS,
+        color: s.color,
+      })),
+      jokerRestores,
+    }).catch(console.error);
+  }, [game?.hostless, game?.mode, game?.currentCardId, game?.groups, game?.schaetzResult, game?.triviaTiebreakerActive, game?.triviaTiebreakerGroupIds, game?.deckMeta, game?.jokersEnabled, session, pin]);
+
+  // Spielleitungsloser Modus: nach kurzer Reveal-Pause automatisch weiter (entspricht
+  // dem bisherigen host-only "Weiter"-Klick nach der Schätzfrage-Auswertung).
+  useEffect(() => {
+    if (!game || !session) return;
+    if (!game.hostless || !game.schaetzResult) return;
+    const playingGroups = Object.values(game.groups).filter(g => !g.isHost);
+    if (playingGroups.length === 0) return;
+    const resolverGroupId = [...playingGroups].sort((a, b) => a.id.localeCompare(b.id))[0].id;
+    if (session.groupId !== resolverGroupId) return;
+    const winnerIds = game.schaetzResult.winnerIds;
+    const t = setTimeout(() => {
+      evaluateSchaetzfrage(pin, winnerIds).catch(console.error);
+    }, 4000);
+    return () => clearTimeout(t);
+  }, [game?.hostless, game?.schaetzResult, game?.groups, session, pin]);
 
   if (loading) {
     return (
@@ -828,7 +922,12 @@ export default function MultiplayerGamePage() {
   const currentGroup = game.groups[session.groupId];
   // Derive host status robustly: cross-check localStorage with Firebase game.hostId
   // so a stale/refreshed session still identifies the host correctly
-  const effectiveIsHost = session.isHost || game.hostId === session.groupId;
+  // isCreator: hat das Spiel erstellt (PIN-Inhaber) — gilt in beiden Modi.
+  // effectiveIsHost: ist die NICHT spielende Spielleitung — gibt es nur im Modus "mit Spielleitung".
+  // Im spielleitungslosen Modus ist die erstellende Gruppe selbst eine ganz normale spielende Gruppe;
+  // sie behält lediglich über isCreator den "Spiel starten"-Button.
+  const isCreator = session.isHost || game.hostId === session.groupId;
+  const effectiveIsHost = isCreator && !game.hostless;
   const groupList = Object.values(game.groups).filter(g => !g.isHost); // Spielleiter aus Liste entfernen
   const allReady = groupList.every(g => g.isReady);
 
@@ -1060,6 +1159,31 @@ export default function MultiplayerGamePage() {
         {/* Gruppen-Liste - Nur für nicht-Host */}
         {!effectiveIsHost && (
           <>
+            {/* Ersteller im spielleitungslosen Modus: PIN/QR teilen + Spiel starten (spielt selbst mit) */}
+            {game.hostless && isCreator && (
+              <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30 bg-green-50/10">
+                <h2 className="text-xl font-semibold text-green-700">🎮 Ihr habt das Spiel erstellt</h2>
+                <p className="text-sm text-ink/60">Teilt die PIN mit den anderen Gruppen. Sobald alle bereit sind, könnt ihr starten — ihr spielt selbst mit.</p>
+                {qrCodeUrl && (
+                  <div className="flex flex-col items-center gap-2 py-2">
+                    <img
+                      src={qrCodeUrl}
+                      alt={`QR-Code zum Beitreten – PIN ${pin}`}
+                      className="w-40 h-40 rounded-xl border-4 border-ink/10"
+                    />
+                    <p className="text-xs text-ink/50 text-center">QR-Code scannen zum Beitreten</p>
+                  </div>
+                )}
+                <button
+                  onClick={handleStartGame}
+                  disabled={!allReady || groupList.length < 2}
+                  className="w-full px-4 py-3 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                >
+                  Spiel starten
+                </button>
+              </div>
+            )}
+
             {/* Andere Gruppen */}
             <div className="card-surface rounded-2xl p-6 space-y-4">
               <h2 className="text-xl font-semibold">
@@ -1131,9 +1255,11 @@ export default function MultiplayerGamePage() {
               )}
             </div>
 
-            {!allReady && groupList.length >= 2 && (
+            {!allReady && groupList.length >= 2 && !(game.hostless && isCreator) && (
               <p className="text-center text-sm text-ink/60">
-                Warte darauf, dass der Spielleiter das Spiel startet...
+                {game.hostless
+                  ? `Warte darauf, dass ${game.groups[game.hostId]?.name ?? 'die erstellende Gruppe'} das Spiel startet...`
+                  : 'Warte darauf, dass der Spielleiter das Spiel startet...'}
               </p>
             )}
 
@@ -1553,7 +1679,7 @@ export default function MultiplayerGamePage() {
                       ⏩ Überspringen
                     </button>
                   ) : (
-                    <p className="text-sm text-ink/50 italic">Warte auf die Spielleitung…</p>
+                    <p className="text-sm text-ink/50 italic">{game.hostless ? 'Weiter in Kürze…' : 'Warte auf die Spielleitung…'}</p>
                   )}
                 </>
               )}
@@ -1854,8 +1980,11 @@ export default function MultiplayerGamePage() {
                           {isProcessing ? '⏳ Weiter…' : isTiebreaker ? '🏆 Stechen auswerten — Gewinner küren' : '▶️ Weiter — nächste Frage'}
                         </button>
                       )}
-                      {!effectiveIsHost && (
+                      {!effectiveIsHost && !game.hostless && (
                         <p className="text-center text-sm text-ink/60 animate-pulse">Warte auf Spielleiter…</p>
+                      )}
+                      {game.hostless && (
+                        <p className="text-center text-sm text-ink/60 animate-pulse">⏳ Automatische Auswertung läuft…</p>
                       )}
                     </div>
                   );
@@ -2398,8 +2527,6 @@ export default function MultiplayerGamePage() {
 
                     {isAnswerer ? (
                       <p className="text-center text-sm text-ink/60">⏳ Warte auf die Abstimmung der anderen Gruppen… ({votesIn}/{eligibleVoters.length})</p>
-                    ) : effectiveIsHost ? (
-                      <p className="text-center text-sm text-ink/60">👑 Abstimmung läuft ({votesIn}/{eligibleVoters.length})</p>
                     ) : myVote !== undefined ? (
                       <p className="text-center text-sm text-ink/60">✅ Ihr habt abgestimmt: {myVote ? 'Richtig' : 'Falsch'}. Warte auf die anderen… ({votesIn}/{eligibleVoters.length})</p>
                     ) : (
@@ -2432,15 +2559,8 @@ export default function MultiplayerGamePage() {
                   </div>
                 )}
 
-                {!isMyTurn && !pending && !effectiveIsHost && (
+                {!isMyTurn && !pending && (
                   <p className="text-center text-sm text-ink/60">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der aktiven Gruppe'}…</p>
-                )}
-
-                {effectiveIsHost && (
-                  <div className="card-surface rounded-2xl p-6 space-y-2 border-2 border-green-500/30">
-                    <p className="text-xs text-ink/50 text-center">Spielleitungsloser Modus — Bewertung läuft über die Abstimmung der Gruppen.</p>
-                    {renderAdminSettingsPanel()}
-                  </div>
                 )}
               </div>
             );

@@ -28,13 +28,14 @@ function MultiplayerLobbyContent() {
 
   // Create Game Form - Wizard Step (1, 2, oder 3)
   const [createStep, setCreateStep] = useState(1);
-  const [groupName, setGroupName] = useState('');
   const [gameMode, setGameMode] = useState<'timeline' | 'trivia'>('timeline');
   const [banMode, setBanMode] = useState(true);
   const [triviaWinCondition, setTriviaWinCondition] = useState<'categories' | 'points'>('categories');
   const [jokersEnabled, setJokersEnabled] = useState(true);
   const [timelineWinTarget, setTimelineWinTarget] = useState(10); // range 8–20
   const [hostless, setHostless] = useState(false);
+  const [creatorGroupName, setCreatorGroupName] = useState('');
+  const [creatorAvatar, setCreatorAvatar] = useState('🦁');
 
   // Join Game Form
   const [pin, setPin] = useState('');
@@ -248,8 +249,9 @@ function MultiplayerLobbyContent() {
         return;
       }
 
-      // Host hat keinen Gruppennamen, nur Spielleiter-Status
-      const hostName = 'Spielleiter';
+      // Mit Spielleitung: der Ersteller spielt nicht mit, nur Spielleiter-Status.
+      // Ohne Spielleitung: der Ersteller ist eine ganz normale spielende Gruppe.
+      const hostName = hostless ? (creatorGroupName.trim() || 'Team 1') : 'Spielleiter';
 
       const { pin, groupId, playerId } = await createGame({
         mode: gameMode,
@@ -262,6 +264,7 @@ function MultiplayerLobbyContent() {
         jokersEnabled: gameMode === 'trivia' ? jokersEnabled : false,
         timelineWinTarget: gameMode === 'timeline' ? timelineWinTarget : undefined,
         hostless,
+        hostAvatar: hostless ? creatorAvatar : undefined,
       });
 
       // Speichere Session-Infos im localStorage
@@ -271,6 +274,7 @@ function MultiplayerLobbyContent() {
         playerId,
         groupName: hostName,
         playerName: hostName,
+        avatar: hostless ? creatorAvatar : undefined,
         isHost: true
       }));
 
@@ -420,8 +424,10 @@ function MultiplayerLobbyContent() {
 
   // ===== VALIDIERUNG FÜR WIZARD STEPS =====
   const validateStep1 = (): boolean => {
-    // Schritt 1: Spielmodus muss gewählt sein
-    return !!gameMode;
+    // Schritt 1: Spielmodus muss gewählt sein; ohne Spielleitung zusätzlich ein Gruppenname für den Ersteller
+    if (!gameMode) return false;
+    if (hostless && !creatorGroupName.trim()) return false;
+    return true;
   };
 
   const validateStep2 = (): boolean => {
@@ -442,7 +448,7 @@ function MultiplayerLobbyContent() {
     setError(null);
     
     if (createStep === 1 && !validateStep1()) {
-      setError('Bitte wähle einen Spielmodus');
+      setError(hostless && !creatorGroupName.trim() ? 'Bitte gib einen Gruppennamen für dein Team ein' : 'Bitte wähle einen Spielmodus');
       return;
     }
     if (createStep === 2 && !validateStep2()) {
@@ -529,6 +535,42 @@ function MultiplayerLobbyContent() {
           </button>
         </div>
       </div>
+
+      {/* Ohne Spielleitung: Ersteller spielt mit und braucht einen Gruppennamen + Avatar */}
+      {hostless && (
+        <div className="space-y-3 border-t pt-4">
+          <div>
+            <label className="block text-sm font-semibold mb-2">Euer Gruppenname (ihr spielt selbst mit)</label>
+            <input
+              type="text"
+              value={creatorGroupName}
+              onChange={(e) => setCreatorGroupName(e.target.value)}
+              placeholder="z.B. Team Rot"
+              className="w-full px-4 py-3 rounded-lg border-2 border-ink/30 focus:border-ink outline-none text-gray-900 bg-white placeholder:text-gray-400"
+              maxLength={20}
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-semibold mb-2">Euer Avatar</label>
+            <div className="grid grid-cols-8 gap-2">
+              {GROUP_AVATARS.map((emoji) => (
+                <button
+                  key={emoji}
+                  type="button"
+                  onClick={() => setCreatorAvatar(emoji)}
+                  className={`text-2xl rounded-xl p-2 border-2 transition-all ${
+                    creatorAvatar === emoji
+                      ? 'border-ink bg-ink/10 scale-110 shadow-md'
+                      : 'border-ink/20 hover:border-ink/50 hover:bg-ink/5'
+                  }`}
+                >
+                  {emoji}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Modus-Beschreibung & Spezifische Einstellungen */}
       {gameMode === 'trivia' && (
@@ -884,6 +926,9 @@ function MultiplayerLobbyContent() {
         <div className="text-sm space-y-1">
           <div><span className="font-semibold">Modus:</span> {gameMode === 'timeline' ? '🔢 Timeline' : '🧠 Trivia'}</div>
           <div><span className="font-semibold">Spielleitung:</span> {hostless ? '🗳️ Ohne Spielleitung' : '👑 Mit Spielleitung'}</div>
+          {hostless && (
+            <div><span className="font-semibold">Eure Gruppe:</span> {creatorAvatar} {creatorGroupName.trim() || 'Team 1'}</div>
+          )}
           <div><span className="font-semibold">Kategorien:</span> {settings.categories.map(c => catLabelMeta(c)).join(', ')}</div>
           <div><span className="font-semibold">Schwierigkeit:</span> {settings.difficulties.join(', ')}</div>
           <div><span className="font-semibold">Zeit/Frage:</span> {(settings.timerSeconds / 60).toFixed(1)} min</div>
@@ -970,10 +1015,12 @@ function MultiplayerLobbyContent() {
 
           {/* Host Info */}
           <div className="rounded-lg bg-slate-900/10 border-2 border-orange-500 p-4 space-y-2">
-            <p className="text-sm font-semibold text-orange-600">👑 Du bist der Spielleiter</p>
+            <p className="text-sm font-semibold text-orange-600">
+              {hostless ? '🎮 Du spielst mit' : '👑 Du bist der Spielleiter'}
+            </p>
             <p className="text-sm text-gray-700">
               {hostless
-                ? 'Im spielleitungslosen Modus startest du das Spiel, korrigierst bei Bedarf Punkte und kannst es beenden. Die Bewertung der Antworten übernehmen die Gruppen selbst per Abstimmung. Du spielst nicht mit.'
+                ? 'Im spielleitungslosen Modus bist du eine ganz normale spielende Gruppe. Du startest nur zusätzlich das Spiel, sobald alle bereit sind — die Bewertung der Antworten übernehmen die Gruppen per Abstimmung.'
                 : 'Du leitest das Spiel, bestätigst Buttons und verwaltest die Punkte. Du spielst nicht mit, kannst dich aber nachher mit einem anderen Endgerät einklinken.'}
             </p>
           </div>

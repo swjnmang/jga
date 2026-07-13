@@ -146,6 +146,7 @@ export interface CreateGameParams {
   timelineWinTarget?: number | null;
   jokersEnabled?: boolean;
   hostless?: boolean;
+  hostAvatar?: string;
 }
 
 export interface JoinGameParams {

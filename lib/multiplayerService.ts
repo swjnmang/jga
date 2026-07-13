@@ -46,6 +46,9 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     lastSeen: Date.now()
   };
 
+  // Im spielleitungslosen Modus ist die erstellende Gruppe eine ganz normale
+  // spielende Gruppe (kein separates, nicht-spielendes Spielleiter-Konto).
+  // game.hostId identifiziert sie weiterhin — nur noch für den "Spiel starten"-Button.
   const hostGroup: GroupData = {
     id: hostGroupId,
     name: params.hostGroupName,
@@ -54,9 +57,10 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     timeline: [],
     flexButtons: 1,
     score: 0,
-    isReady: true,
+    isReady: !params.hostless,
     flexActive: false,
-    isHost: true
+    isHost: !params.hostless,
+    ...(params.hostless ? { avatar: params.hostAvatar ?? '' } : {}),
   };
 
   // Erzeuge eine feste Referenzkarte (1990)
@@ -105,7 +109,13 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     jokersEnabled: params.mode === 'trivia' ? (params.jokersEnabled ?? true) : false,
     hostless: params.hostless ?? false,
     groups: {
-      [hostGroupId]: { ...hostGroup, completedCategories: [] }
+      [hostGroupId]: {
+        ...hostGroup,
+        completedCategories: [],
+        ...(params.hostless && params.mode === 'trivia' && (params.jokersEnabled ?? true)
+          ? { jokers: { newQuestion: true, next: true, dice: true, steal: true } }
+          : {}),
+      }
     },
     createdAt: Date.now(),
     lastActivity: Date.now(),
