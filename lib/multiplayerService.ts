@@ -1224,6 +1224,90 @@ export async function endGame(pin: string, hostGroupId: string): Promise<void> {
   });
 }
 
+// ---------------------------------------------------------------------------
+// Spielleitungsloser Modus: Abstimmung "Spiel jetzt beenden?"
+// Da es keine Spielleitung gibt, kann jede Gruppe eine Abstimmung starten;
+// bei mehr als der Hälfte der spielenden Gruppen dafür wird das Spiel beendet.
+// ---------------------------------------------------------------------------
+
+/**
+ * Startet eine Abstimmung, ob das Spiel jetzt beendet werden soll. Die
+ * startende Gruppe stimmt automatisch mit "Ja".
+ */
+export async function startEndGameVote(pin: string, groupId: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  if (!game.hostless) throw new Error('Nur im spielleitungslosen Modus verfügbar.');
+  if (game.endGameVote) throw new Error('Es läuft bereits eine Abstimmung.');
+  if (!game.groups[groupId] || game.groups[groupId].isHost) throw new Error('Nicht stimmberechtigt.');
+
+  await update(gameRef, {
+    endGameVote: { initiatedBy: groupId, votes: { [groupId]: true } },
+    lastActivity: Date.now(),
+  });
+}
+
+/**
+ * Gibt eine Stimme in der laufenden "Spiel beenden?"-Abstimmung ab.
+ */
+export async function castEndGameVote(pin: string, groupId: string, voteToEnd: boolean): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  if (!game.endGameVote) throw new Error('Keine Abstimmung aktiv.');
+  if (!game.groups[groupId] || game.groups[groupId].isHost) throw new Error('Nicht stimmberechtigt.');
+
+  await update(ref(database!, `games/${pin}/endGameVote/votes`), { [groupId]: voteToEnd });
+}
+
+/**
+ * Bricht die laufende "Spiel beenden?"-Abstimmung ab (keine Mehrheit möglich
+ * oder alle haben abgestimmt, ohne dass die Mehrheit erreicht wurde).
+ */
+export async function cancelEndGameVote(pin: string): Promise<void> {
+  checkFirebase();
+  await update(ref(database!, `games/${pin}`), { endGameVote: null });
+}
+
+/**
+ * Beendet das Spiel per Mehrheitsentscheid (kein Host-Check, da im
+ * spielleitungslosen Modus jede Gruppe dazu berechtigt ist, sobald die
+ * Abstimmung eine Mehrheit ergeben hat).
+ */
+export async function endGameByVote(pin: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  if (game.state === 'finished') return; // bereits beendet (Race-Schutz)
+
+  const groups = Object.values(game.groups);
+  let winner: GroupData | null = null;
+  let maxScore = -1;
+  for (const group of groups) {
+    if (group.score > maxScore) {
+      maxScore = group.score;
+      winner = group;
+    }
+  }
+
+  await update(gameRef, {
+    state: 'finished',
+    finishedAt: Date.now(),
+    winnerGroupId: winner ? winner.id : null,
+    endGameVote: null,
+  });
+}
+
 /**
  * Prüft Auto-Win Bedingung für Timeline (erste Gruppe mit 10 Karten)
  */

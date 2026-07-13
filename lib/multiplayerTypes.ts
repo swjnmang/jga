@@ -139,6 +139,11 @@ export interface GameSession {
     correctVotes: number;
     totalVotes: number;
   } | null;
+  // Spielleitungsloser Modus: Abstimmung "Spiel jetzt beenden?" — jede Gruppe kann sie starten
+  endGameVote?: {
+    initiatedBy: string;               // groupId, die die Abstimmung gestartet hat
+    votes: Record<string, boolean>;    // groupId -> Stimme (true = beenden)
+  } | null;
 }
 
 export interface CreateGameParams {

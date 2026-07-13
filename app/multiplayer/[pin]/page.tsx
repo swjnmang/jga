@@ -47,6 +47,10 @@ import {
   applyTextAnswerResult,
   isAnswerVoteComplete,
   timeoutTriviaAnswer,
+  startEndGameVote,
+  castEndGameVote,
+  endGameByVote,
+  cancelEndGameVote,
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
@@ -905,6 +909,31 @@ export default function MultiplayerGamePage() {
     return () => clearTimeout(t);
   }, [game?.hostless, game?.schaetzResult, game?.groups, session, pin]);
 
+  // Spielleitungsloser Modus: "Spiel jetzt beenden?"-Abstimmung automatisch auswerten.
+  // Mehr als die Hälfte der spielenden Gruppen dafür → Spiel beenden. Mehr als die
+  // Hälfte dagegen (Mehrheit für "Ja" unmöglich) → Abstimmung abbrechen. Ein
+  // deterministischer Resolver (kleinste Gruppen-ID) verhindert doppeltes Auflösen.
+  useEffect(() => {
+    if (!game || !session) return;
+    if (!game.hostless || !game.endGameVote) return;
+    const playingGroups = Object.values(game.groups).filter(g => !g.isHost);
+    if (playingGroups.length === 0) return;
+    const resolverGroupId = [...playingGroups].sort((a, b) => a.id.localeCompare(b.id))[0].id;
+    if (session.groupId !== resolverGroupId) return;
+
+    const total = playingGroups.length;
+    const needed = Math.floor(total / 2) + 1;
+    const votes = game.endGameVote.votes ?? {};
+    const yesVotes = Object.values(votes).filter(v => v === true).length;
+    const noVotes = Object.values(votes).filter(v => v === false).length;
+
+    if (yesVotes >= needed) {
+      endGameByVote(pin).catch(console.error);
+    } else if (total - noVotes < needed) {
+      cancelEndGameVote(pin).catch(console.error);
+    }
+  }, [game?.hostless, game?.endGameVote, game?.groups, session, pin]);
+
   if (loading) {
     return (
       <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10">
@@ -1313,6 +1342,83 @@ export default function MultiplayerGamePage() {
     const canControlMedia = isActiveTurn || isHostSession;
     // Volle Medien-Kontrolle (Player + Play/Pause): normal nur Host, spielleitungslos die aktive Gruppe.
     const showFullMedia = effectiveIsHost || (game.hostless === true && isActiveTurn);
+
+    // ── Spielleitungsloser Modus: "Spiel jetzt beenden?"-Abstimmung ──────────
+    const handleStartEndGameVote = async () => {
+      if (!session || isProcessing) return;
+      setIsProcessing(true);
+      try {
+        await startEndGameVote(pin, session.groupId);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Fehler beim Starten der Abstimmung');
+      } finally {
+        setIsProcessing(false);
+      }
+    };
+
+    const handleCastEndGameVote = async (voteToEnd: boolean) => {
+      if (!session || isProcessing) return;
+      setIsProcessing(true);
+      try {
+        await castEndGameVote(pin, session.groupId, voteToEnd);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Fehler bei der Abstimmung');
+      } finally {
+        setIsProcessing(false);
+      }
+    };
+
+    const renderEndGameVotePanel = () => {
+      if (!game.hostless) return null;
+      const vote = game.endGameVote;
+      if (!vote) {
+        return (
+          <button
+            onClick={handleStartEndGameVote}
+            disabled={isProcessing}
+            className="w-full px-4 py-2.5 rounded-xl border-2 border-red-400 text-red-600 font-semibold text-sm hover:bg-red-500/10 disabled:opacity-50"
+          >
+            🗳️ Abstimmung: Spiel beenden starten
+          </button>
+        );
+      }
+      const playingGroups = groupList; // schließt Host bereits aus
+      const votes = vote.votes ?? {};
+      const yesVotes = Object.values(votes).filter(v => v === true).length;
+      const votedCount = Object.keys(votes).length;
+      const myVote = session ? votes[session.groupId] : undefined;
+      const initiatorName = game.groups[vote.initiatedBy]?.name ?? 'Eine Gruppe';
+      return (
+        <div className="card-surface rounded-2xl p-4 space-y-3 border-2 border-red-400/60 bg-red-500/5">
+          <p className="text-sm font-semibold text-center text-red-700">
+            🗳️ {initiatorName} möchte das Spiel beenden
+          </p>
+          <p className="text-xs text-center text-ink/60">
+            {yesVotes}/{playingGroups.length} für Beenden ({votedCount}/{playingGroups.length} abgestimmt) — mehr als die Hälfte entscheidet
+          </p>
+          {myVote !== undefined ? (
+            <p className="text-center text-sm text-ink/60">✅ Ihr habt abgestimmt: {myVote ? 'Beenden' : 'Weiterspielen'}. Warte auf die anderen…</p>
+          ) : (
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                onClick={() => handleCastEndGameVote(true)}
+                disabled={isProcessing}
+                className="px-2 py-2.5 bg-red-600 text-white rounded-xl font-bold text-sm hover:bg-red-700 disabled:opacity-50"
+              >
+                Spiel beenden
+              </button>
+              <button
+                onClick={() => handleCastEndGameVote(false)}
+                disabled={isProcessing}
+                className="px-2 py-2.5 bg-ink/10 text-ink rounded-xl font-bold text-sm hover:bg-ink/20 disabled:opacity-50"
+              >
+                Weiterspielen
+              </button>
+            </div>
+          )}
+        </div>
+      );
+    };
 
     // ──────────────────────────────────────────────────
     // TRIVIA MODUS — Guard ohne currentCard damit Host nie "durchfällt"
@@ -1787,6 +1893,8 @@ export default function MultiplayerGamePage() {
             })}
             </div>
           </details>
+
+          {renderEndGameVotePanel()}
 
           {/* ── Finale-Runde-Banner ── */}
           {game.triviaFinalRound && (() => {
@@ -3437,6 +3545,8 @@ export default function MultiplayerGamePage() {
             ))}
           </div>
         </details>
+
+        {renderEndGameVotePanel()}
 
         {/* Host-Panel: Flex-Bestätigung und Score-Editing */}
         {effectiveIsHost && (
