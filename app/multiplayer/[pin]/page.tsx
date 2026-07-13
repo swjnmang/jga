@@ -40,6 +40,12 @@ import {
   confirmJokerDice,
   activateJokerSteal,
   dismissJokerNotification,
+  trackPresence,
+  submitTextAnswer,
+  castAnswerVote,
+  resolveTextAnswerVote,
+  isAnswerVoteComplete,
+  timeoutTriviaAnswer,
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
@@ -99,6 +105,12 @@ export default function MultiplayerGamePage() {
   const prevTurnGroupRef = useRef<string | null>(null);
   const [timeLeft, setTimeLeft] = useState<number | null>(null);
   const [flexTimer, setFlexTimer] = useState<number | null>(null);
+
+  // Spielleitungsloser Modus: Textantwort + Abstimmung
+  const [textAnswerInput, setTextAnswerInput] = useState('');
+  const [answerTimedOut, setAnswerTimedOut] = useState(false);
+  const [voteResolving, setVoteResolving] = useState(false);
+  const [autoAdvanceCountdown, setAutoAdvanceCountdown] = useState<number | null>(null);
 
   // Würfel-Joker Animation
   const [diceAnimating, setDiceAnimating] = useState(false);
@@ -174,9 +186,13 @@ export default function MultiplayerGamePage() {
     const notif = (game as GameSession | null)?.jokerNotification;
     if (!notif && !diceResultShown) return;
     jokerNotifDismissedRef.current = true;
-    // Nur Host schreibt nach Firebase; andere Clients warten auf den reaktiven Update
-    const isHost = (session as SessionInfo | null)?.isHost || (game as GameSession | null)?.hostId === (session as SessionInfo | null)?.groupId;
-    if (isHost) {
+    // Nur Host schreibt nach Firebase; im spielleitungslosen Modus übernimmt das die
+    // gerade aktive Gruppe (es gibt niemand sonst, der zuverlässig verbunden ist).
+    const g = game as GameSession | null;
+    const s = session as SessionInfo | null;
+    const isHost = s?.isHost || g?.hostId === s?.groupId;
+    const isActiveGroup = !!s && g?.currentTurnGroupId === s.groupId && !isHost;
+    if (isHost || (g?.hostless && isActiveGroup)) {
       if (diceResultShown) {
         confirmJokerDice(pin).catch(console.error);
       } else {
@@ -227,6 +243,13 @@ export default function MultiplayerGamePage() {
     return () => unsubscribe();
   }, [pin]);
 
+  // Online-Präsenz tracken (für spielleitungslosen Modus: stimmberechtigte Gruppen ermitteln)
+  useEffect(() => {
+    if (!pin || !session) return;
+    const cleanup = trackPresence(pin, session.groupId, session.playerId);
+    return cleanup;
+  }, [pin, session?.groupId, session?.playerId]);
+
   // Timer: Countdown pro Karte
   useEffect(() => {
     if (!game || game.state !== 'playing') return;
@@ -256,6 +279,10 @@ export default function MultiplayerGamePage() {
     setFlexJudgmentDone(false);
     setFlexPhaseEvaluated(false);
     setFlexTimer(null);
+    setTextAnswerInput('');
+    setAnswerTimedOut(false);
+    setVoteResolving(false);
+    setAutoAdvanceCountdown(null);
   }, [game?.currentCardId]);
 
   // Flex-Phase: 15-Sekunden-Countdown → automatische Auswertung
@@ -275,10 +302,12 @@ export default function MultiplayerGamePage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [game?.flexPhaseActive, game?.pendingResult, flexPhaseEvaluated, game?.resultRevealed]);
 
-  // Auto-Auswertung wenn Flex-Timer abläuft (nur Host führt revealResult aus)
+  // Auto-Auswertung wenn Flex-Timer abläuft (Host führt revealResult aus; im
+  // spielleitungslosen Modus übernimmt das die aktive Gruppe)
   useEffect(() => {
     if (flexTimer !== 0 || flexPhaseEvaluated) return;
-    if (!effectiveIsHost) return;
+    const isActiveGroup = !!session && !!game && game.currentTurnGroupId === session.groupId && !effectiveIsHost;
+    if (!effectiveIsHost && !(game?.hostless && isActiveGroup)) return;
     revealResult(pin).catch(console.error);
     setFlexPhaseEvaluated(true);
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -529,7 +558,9 @@ export default function MultiplayerGamePage() {
   useEffect(() => {
     if (!game || !session) return;
     const isHost = session.isHost || game.hostId === session.groupId;
-    if (!isHost || !game.playbackControl) return;
+    const isActiveGroup = game.currentTurnGroupId === session.groupId && !isHost;
+    const controlsMedia = isHost || (game.hostless && isActiveGroup);
+    if (!controlsMedia || !game.playbackControl) return;
 
     const control = game.playbackControl;
     const currentCardId = game.currentCardId;
@@ -640,7 +671,8 @@ export default function MultiplayerGamePage() {
     if (game.state !== 'playing' || game.mode !== 'trivia') return;
     if (!game.currentCardId) return;
     const isHost = session.isHost || game.hostId === session.groupId;
-    if (!isHost) return;
+    const isActiveGroup = game.currentTurnGroupId === session.groupId && !isHost;
+    if (!isHost && !(game.hostless && isActiveGroup)) return;
     if (getCardById(game.currentCardId)) return; // card found – nothing to do
     const t = setTimeout(async () => {
       try { await skipCard(pin); } catch (e) { console.error('auto-skip failed', e); }
@@ -708,6 +740,64 @@ export default function MultiplayerGamePage() {
       setDiceAnimating(false);
     }
   }, [game?.jokerDicePending, game?.jokerDiceResult]);
+
+  // Spielleitungsloser Modus (Trivia): Antwortzeit abgelaufen, ohne dass die aktive
+  // Gruppe eingereicht hat → automatisch als falsch werten.
+  useEffect(() => {
+    if (!game || !session) return;
+    if (!game.hostless || game.mode !== 'trivia' || game.state !== 'playing') return;
+    if (game.pendingTextAnswer) return;
+    const isActiveGroup = game.currentTurnGroupId === session.groupId && !(session.isHost || game.hostId === session.groupId);
+    if (!isActiveGroup) return;
+    const currentCat = game.currentCardId ? (game.deckMeta ?? {})[game.currentCardId] : '';
+    if (currentCat === 'schaetzfragen') return;
+    if (timeLeft !== 0 || answerTimedOut) return;
+    setAnswerTimedOut(true);
+    timeoutTriviaAnswer(pin, session.groupId).catch(console.error);
+  }, [timeLeft, game?.pendingTextAnswer, game?.hostless, game?.mode, game?.state, game?.currentTurnGroupId, game?.currentCardId, session, answerTimedOut, pin]);
+
+  // Spielleitungsloser Modus (Trivia): sobald alle verbundenen Gruppen abgestimmt
+  // haben, kurze Reveal-Pause, dann löst die aktive Gruppe die Abstimmung auf.
+  useEffect(() => {
+    if (!game || !session) return;
+    if (!game.hostless || !game.pendingTextAnswer || voteResolving) return;
+    const isActiveGroup = game.pendingTextAnswer.groupId === session.groupId && !(session.isHost || game.hostId === session.groupId);
+    if (!isActiveGroup) return;
+    if (!isAnswerVoteComplete(game)) return;
+    setVoteResolving(true);
+    const t = setTimeout(() => {
+      resolveTextAnswerVote(pin).catch(console.error);
+    }, 3000);
+    return () => clearTimeout(t);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [game?.answerVotes, game?.pendingTextAnswer, game?.hostless]);
+
+  // Spielleitungsloser Modus (Timeline): nach Ergebnis-Reveal automatisch weiter
+  // (4 Sekunden Pause), ausgelöst von der aktiven Gruppe statt vom Host.
+  useEffect(() => {
+    if (!game || !session) return;
+    if (!game.hostless || game.mode !== 'timeline' || !game.resultRevealed) {
+      setAutoAdvanceCountdown(null);
+      return;
+    }
+    const isActiveGroup = game.currentTurnGroupId === session.groupId && !(session.isHost || game.hostId === session.groupId);
+    if (!isActiveGroup) return;
+    setAutoAdvanceCountdown(4);
+    const id = window.setInterval(() => {
+      setAutoAdvanceCountdown(prev => {
+        if (prev === null || prev <= 1) { clearInterval(id); return 0; }
+        return prev - 1;
+      });
+    }, 1000);
+    return () => clearInterval(id);
+  }, [game?.resultRevealed, game?.hostless, game?.mode, game?.currentTurnGroupId, session]);
+
+  useEffect(() => {
+    if (autoAdvanceCountdown !== 0 || !game || !session) return;
+    setAutoAdvanceCountdown(null);
+    resolveFlexPhaseAndNext(pin).catch(console.error);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoAdvanceCountdown]);
 
   if (loading) {
     return (
@@ -1083,6 +1173,8 @@ export default function MultiplayerGamePage() {
     const isActiveTurn = game.currentTurnGroupId === session.groupId && !effectiveIsHost; // Host kann nicht spielen
     const isHostSession = effectiveIsHost;
     const canControlMedia = isActiveTurn || isHostSession;
+    // Volle Medien-Kontrolle (Player + Play/Pause): normal nur Host, spielleitungslos die aktive Gruppe.
+    const showFullMedia = effectiveIsHost || (game.hostless === true && isActiveTurn);
 
     // ──────────────────────────────────────────────────
     // TRIVIA MODUS — Guard ohne currentCard damit Host nie "durchfällt"
@@ -1127,6 +1219,71 @@ export default function MultiplayerGamePage() {
           setIsProcessing(false);
         }
       };
+
+      // ── Spielleitungsloser Modus: Textantwort einreichen / abstimmen ──────────
+      const handleSubmitTextAnswer = async () => {
+        if (!session || !game || isProcessing || !textAnswerInput.trim()) return;
+        setIsProcessing(true);
+        try {
+          await submitTextAnswer(pin, session.groupId, textAnswerInput.trim());
+        } catch (err) {
+          setError(err instanceof Error ? err.message : 'Fehler beim Einreichen der Antwort');
+        } finally {
+          setIsProcessing(false);
+        }
+      };
+
+      const handleCastVote = async (vote: boolean) => {
+        if (!session || !game || isProcessing) return;
+        setIsProcessing(true);
+        try {
+          await castAnswerVote(pin, session.groupId, vote);
+        } catch (err) {
+          setError(err instanceof Error ? err.message : 'Fehler bei der Abstimmung');
+        } finally {
+          setIsProcessing(false);
+        }
+      };
+
+      // Score-Editing + Spiel beenden — Admin-Panel des (leichten) Spielleiters,
+      // in beiden Modi (mit/ohne Spielleitung) identisch verfügbar.
+      const renderAdminSettingsPanel = () => (
+        <details className="border-t border-ink/10 pt-4">
+          <summary className="cursor-pointer text-sm text-ink/60 select-none">⚙️ Weitere Einstellungen</summary>
+          <div className="mt-3 space-y-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              {groupList.map(group => (
+                <div key={group.id}>
+                  {editingGroupId === group.id ? (
+                    <div className="flex gap-1">
+                      <input type="number" value={editingScore ?? group.score}
+                        onChange={e => setEditingScore(Number(e.target.value))}
+                        className="w-16 rounded border border-ink/30 px-2 py-1 text-sm"
+                      />
+                      <button onClick={async () => {
+                        if (editingScore !== null && session) {
+                          await editGroupScore(pin, session.groupId, group.id, editingScore);
+                        }
+                        setEditingGroupId(null);
+                      }} className="text-green-600 font-bold px-1">✓</button>
+                      <button onClick={() => setEditingGroupId(null)} className="text-red-600 font-bold px-1">✗</button>
+                    </div>
+                  ) : (
+                    <button onClick={() => { setEditingGroupId(group.id); setEditingScore(group.score); }}
+                      className="w-full px-2 py-1 rounded border-2 border-ink/20 hover:border-ink/60 text-left text-xs">
+                      {group.name}: {group.score}
+                    </button>
+                  )}
+                </div>
+              ))}
+            </div>
+            <button onClick={handleEndGame}
+              className="w-full px-4 py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700">
+              Spiel beenden
+            </button>
+          </div>
+        </details>
+      );
 
       // Cue für Trivia anpassen: Outline immer nur Land-Frage, kein Jahr
       const triviaDisplayCue = (card: typeof currentCard) => {
@@ -1853,12 +2010,12 @@ export default function MultiplayerGamePage() {
           {/* ── STANDARD TRIVIA FRAGE ── */}
           <div className="lg:grid lg:grid-cols-[1fr_360px] lg:gap-6 lg:items-start space-y-3 lg:space-y-0">
           <div className="space-y-3">
-          {!isMyTurn && !effectiveIsHost && (
+          {!isMyTurn && !effectiveIsHost && !game.hostless && (
             <div className="w-full px-4 py-3 rounded-xl bg-red-600 text-white font-semibold text-sm text-center">
               Gruppe {activeGroup?.name ?? 'dem aktiven Team'} ist am Zug – ihr seid nicht dran
             </div>
           )}
-          <div className={`card-surface rounded-2xl p-6 space-y-4 transition-opacity duration-300 ${!isMyTurn && !effectiveIsHost ? 'opacity-40 grayscale pointer-events-none' : ''}`}>
+          <div className={`card-surface rounded-2xl p-6 space-y-4 transition-opacity duration-300 ${!isMyTurn && !effectiveIsHost && !game.hostless ? 'opacity-40 grayscale pointer-events-none' : ''}`}>
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-2">
                 <span className="text-sm px-3 py-1 rounded-full bg-ink/10 font-semibold">{categoryIcon} {categoryLabel}</span>
@@ -1876,7 +2033,7 @@ export default function MultiplayerGamePage() {
 
             {/* Medien-Einbettung */}
             {currentCard.sources && (
-              effectiveIsHost ? (
+              showFullMedia ? (
                 <MediaEmbed
                   key={`trivia-host-media-${currentCard.id}`}
                   ref={mediaEmbedRef}
@@ -2084,8 +2241,8 @@ export default function MultiplayerGamePage() {
             );
           })()}
 
-          {/* Host-Steuerung */}
-          {effectiveIsHost && (
+          {/* Host-Steuerung (nur mit Spielleitung) */}
+          {effectiveIsHost && !game.hostless && (
             <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
               {/* NEXT-Joker-Hinweis für Host */}
               {game.jokerNextActive && game.jokerNextOriginGroupId && game.jokerNextTargetGroupId && (
@@ -2163,44 +2320,131 @@ export default function MultiplayerGamePage() {
                 </div>
               )}
 
-              {/* Host-Panel (Score-Editing + Spiel beenden) */}
-              <details className="border-t border-ink/10 pt-4">
-                <summary className="cursor-pointer text-sm text-ink/60 select-none">⚙️ Weitere Einstellungen</summary>
-                <div className="mt-3 space-y-3">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                    {groupList.map(group => (
-                      <div key={group.id}>
-                        {editingGroupId === group.id ? (
-                          <div className="flex gap-1">
-                            <input type="number" value={editingScore ?? group.score}
-                              onChange={e => setEditingScore(Number(e.target.value))}
-                              className="w-16 rounded border border-ink/30 px-2 py-1 text-sm"
-                            />
-                            <button onClick={async () => {
-                              if (editingScore !== null && session) {
-                                await editGroupScore(pin, session.groupId, group.id, editingScore);
-                              }
-                              setEditingGroupId(null);
-                            }} className="text-green-600 font-bold px-1">✓</button>
-                            <button onClick={() => setEditingGroupId(null)} className="text-red-600 font-bold px-1">✗</button>
-                          </div>
-                        ) : (
-                          <button onClick={() => { setEditingGroupId(group.id); setEditingScore(group.score); }}
-                            className="w-full px-2 py-1 rounded border-2 border-ink/20 hover:border-ink/60 text-left text-xs">
-                            {group.name}: {group.score}
-                          </button>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                  <button onClick={handleEndGame}
-                    className="w-full px-4 py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700">
-                    Spiel beenden
-                  </button>
-                </div>
-              </details>
+              {renderAdminSettingsPanel()}
             </div>
           )}
+
+          {/* ── Spielleitungsloser Modus: Textantwort + Abstimmung ── */}
+          {game.hostless && (() => {
+            const pending = game.pendingTextAnswer;
+            const isAnswerer = !!session && pending?.groupId === session.groupId;
+            const myVote = pending && session ? (game.answerVotes ?? {})[session.groupId] : undefined;
+            const eligibleVoters = pending
+              ? groupList.filter(g => g.id !== pending.groupId && (game.presence?.[g.id] ? Object.values(game.presence[g.id]).some(Boolean) : false))
+              : [];
+            const votesIn = pending ? Object.keys(game.answerVotes ?? {}).length : 0;
+            const correctSoFar = pending ? Object.values(game.answerVotes ?? {}).filter(Boolean).length : 0;
+
+            return (
+              <div className="space-y-3">
+                {/* Joker-Kontext-Hinweise (informativ, für alle sichtbar) */}
+                {game.jokerNextActive && game.jokerNextOriginGroupId && game.jokerNextTargetGroupId && (
+                  <div className="rounded-xl bg-orange-500/15 border-2 border-orange-400 px-4 py-3 text-sm">
+                    <p className="font-bold text-orange-700">⚡ Joker NEXT aktiv</p>
+                    <p className="text-orange-600">
+                      {game.groups[game.jokerNextOriginGroupId]?.name ?? '?'} hat die Frage an {game.groups[game.jokerNextTargetGroupId]?.name ?? '?'} weitergegeben.
+                    </p>
+                  </div>
+                )}
+                {game.jokerStealActive && game.jokerStealGroupId && game.jokerStealFromGroupId && (
+                  <div className="rounded-xl bg-purple-500/15 border-2 border-purple-400 px-4 py-3 text-sm">
+                    <p className="font-bold text-purple-700">🥷 Joker STEAL aktiv</p>
+                    <p className="text-purple-600">
+                      <span className="font-semibold">{game.groups[game.jokerStealGroupId]?.name ?? '?'}</span> hat die Frage von{' '}
+                      <span className="font-semibold">{game.groups[game.jokerStealFromGroupId]?.name ?? '?'}</span> geklaut.
+                    </p>
+                  </div>
+                )}
+                {game.jokerStealReturnActive && (
+                  <div className="rounded-xl bg-blue-500/15 border-2 border-blue-400 px-4 py-3 text-sm">
+                    <p className="font-bold text-blue-700">🔄 Rückgabe-Zug aktiv</p>
+                  </div>
+                )}
+
+                {/* Aktive Gruppe: Antwort eingeben */}
+                {isMyTurn && !pending && (
+                  <div className="card-surface rounded-2xl p-6 space-y-3 border-2 border-green-500/30">
+                    <p className="text-base font-semibold text-center text-ink/80">Eure Antwort:</p>
+                    <input
+                      type="text"
+                      value={textAnswerInput}
+                      onChange={e => setTextAnswerInput(e.target.value)}
+                      onKeyDown={e => e.key === 'Enter' && handleSubmitTextAnswer()}
+                      placeholder="Antwort eingeben…"
+                      className="w-full rounded-xl border-2 border-ink/20 px-4 py-3 text-lg font-semibold text-gray-900 focus:border-ink/60 outline-none"
+                      autoFocus
+                    />
+                    <button
+                      onClick={handleSubmitTextAnswer}
+                      disabled={!textAnswerInput.trim() || isProcessing}
+                      className="w-full py-3 rounded-xl bg-ink text-inkDark font-bold text-lg hover:opacity-90 disabled:opacity-40"
+                    >
+                      📤 Antwort einreichen
+                    </button>
+                  </div>
+                )}
+
+                {/* Antwort liegt vor: Anzeige + Abstimmung / Warten */}
+                {pending && (
+                  <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-blue-400/40">
+                    <div className="text-center space-y-1">
+                      <p className="text-xs uppercase tracking-wide text-ink/50">Antwort von {game.groups[pending.groupId]?.name ?? '?'}</p>
+                      <p className="text-2xl font-bold">{pending.text}</p>
+                    </div>
+                    <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-400 px-4 py-3 text-center">
+                      <p className="text-xs font-semibold text-yellow-700 mb-1">Korrekte Antwort:</p>
+                      <p className="text-lg font-bold">{currentCard.category === 'music' ? currentCard.answer.replace(/ [–—] -?\d+, /, ' — ') : currentCard.answer}</p>
+                    </div>
+
+                    {isAnswerer ? (
+                      <p className="text-center text-sm text-ink/60">⏳ Warte auf die Abstimmung der anderen Gruppen… ({votesIn}/{eligibleVoters.length})</p>
+                    ) : effectiveIsHost ? (
+                      <p className="text-center text-sm text-ink/60">👑 Abstimmung läuft ({votesIn}/{eligibleVoters.length})</p>
+                    ) : myVote !== undefined ? (
+                      <p className="text-center text-sm text-ink/60">✅ Ihr habt abgestimmt: {myVote ? 'Richtig' : 'Falsch'}. Warte auf die anderen… ({votesIn}/{eligibleVoters.length})</p>
+                    ) : (
+                      <div className="space-y-2">
+                        <p className="text-sm font-semibold text-center text-ink/80">War die Antwort richtig?</p>
+                        <div className="grid grid-cols-2 gap-2">
+                          <button
+                            onClick={() => handleCastVote(true)}
+                            disabled={isProcessing}
+                            className="px-2 py-3 bg-green-600 text-white rounded-xl font-bold text-base hover:bg-green-700 disabled:opacity-50"
+                          >
+                            ✅ Richtig
+                          </button>
+                          <button
+                            onClick={() => handleCastVote(false)}
+                            disabled={isProcessing}
+                            className="px-2 py-3 bg-red-600 text-white rounded-xl font-bold text-base hover:bg-red-700 disabled:opacity-50"
+                          >
+                            ❌ Falsch
+                          </button>
+                        </div>
+                      </div>
+                    )}
+
+                    {votesIn === eligibleVoters.length && eligibleVoters.length > 0 && (
+                      <p className="text-center text-xs text-ink/50">
+                        {correctSoFar}/{eligibleVoters.length} für &bdquo;richtig&ldquo; ({correctSoFar / eligibleVoters.length >= 0.5 ? 'gilt als richtig' : 'gilt als falsch'}) → wird gleich ausgewertet…
+                      </p>
+                    )}
+                  </div>
+                )}
+
+                {!isMyTurn && !pending && !effectiveIsHost && (
+                  <p className="text-center text-sm text-ink/60">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der aktiven Gruppe'}…</p>
+                )}
+
+                {effectiveIsHost && (
+                  <div className="card-surface rounded-2xl p-6 space-y-2 border-2 border-green-500/30">
+                    <p className="text-xs text-ink/50 text-center">Spielleitungsloser Modus — Bewertung läuft über die Abstimmung der Gruppen.</p>
+                    {renderAdminSettingsPanel()}
+                  </div>
+                )}
+              </div>
+            );
+          })()}
           </div>
           </div>
           </>
@@ -2271,8 +2515,8 @@ export default function MultiplayerGamePage() {
                 </div>
               )}
 
-              {/* Host: Flex-Button Vergabe */}
-              {isHostSession && (
+              {/* Host: Flex-Button Vergabe (im spielleitungslosen Modus nicht verfügbar) */}
+              {isHostSession && !game.hostless && (
                 !flexJudgmentDone ? (
                   <div className="card-surface rounded-2xl border-2 border-blue-400/50 p-4 space-y-3">
                     <p className="font-semibold text-center text-sm">
@@ -2313,8 +2557,8 @@ export default function MultiplayerGamePage() {
                 )}
               </div>
 
-              {/* Host: Weiter-Button */}
-              {isHostSession && (
+              {/* Host: Weiter-Button (im spielleitungslosen Modus automatisch) */}
+              {isHostSession && !game.hostless && (
                 <button
                   onClick={handleNextCard}
                   disabled={isProcessing}
@@ -2325,9 +2569,18 @@ export default function MultiplayerGamePage() {
               )}
 
               {/* Nicht-Host: Warte-Meldung */}
-              {!isHostSession && (
+              {!isHostSession && !game.hostless && (
                 <div className="text-center py-3">
                   <p className="text-sm text-ink/60">⏳ Warte auf den Spielleiter…</p>
+                </div>
+              )}
+
+              {/* Spielleitungsloser Modus: automatischer Weiter-Countdown */}
+              {game.hostless && (
+                <div className="text-center py-3">
+                  <p className="text-sm text-ink/60">
+                    ⏳ Automatisch weiter{autoAdvanceCountdown !== null ? ` in ${autoAdvanceCountdown}s` : '…'}
+                  </p>
                 </div>
               )}
             </div>
@@ -2399,9 +2652,9 @@ export default function MultiplayerGamePage() {
 
             {currentCard.sources && (
               <div className="relative">
-                {/* Host sieht volle Kontrolle */}
-                {isHostSession ? (
-                  <MediaEmbed 
+                {/* Host (bzw. im spielleitungslosen Modus die aktive Gruppe) sieht volle Kontrolle */}
+                {showFullMedia ? (
+                  <MediaEmbed
                     key={`timeline-host-media-${currentCard.id}`}
                     ref={mediaEmbedRef}
                     card={currentCard}
@@ -2800,7 +3053,9 @@ export default function MultiplayerGamePage() {
                 <p className="text-center text-xs text-ink/50">Kein Flex-Button verfügbar</p>
               )}
               {isFlexPhase && flexTipSubmitted && (
-                <p className="text-center text-sm text-green-400 font-semibold">✓ Flex-Tipp eingereicht — warte auf Spielleiter</p>
+                <p className="text-center text-sm text-green-400 font-semibold">
+                  ✓ Flex-Tipp eingereicht — {game.hostless ? 'warte auf Auswertung' : 'warte auf Spielleiter'}
+                </p>
               )}
 
             </div>
@@ -2815,7 +3070,9 @@ export default function MultiplayerGamePage() {
               <div className="text-center space-y-3">
                 <div className="text-5xl">⏳</div>
                 <p className="text-lg font-semibold">Ergebnis eingereicht!</p>
-                <p className="text-sm text-ink/60">Warte auf die Auswertung durch den Spielleiter…</p>
+                <p className="text-sm text-ink/60">
+                  {game.hostless ? 'Automatische Auswertung läuft…' : 'Warte auf die Auswertung durch den Spielleiter…'}
+                </p>
               </div>
             ) : (
               <div className="space-y-3">
@@ -2845,8 +3102,19 @@ export default function MultiplayerGamePage() {
         </div>
 
         <div className="space-y-3">
+        {/* Spielleitungsloser Modus: Auswertung läuft automatisch (Flex-Timer-Effekt) */}
+        {game.hostless && game.pendingResult && !flexPhaseEvaluated && currentCard && (
+          <div className="card-surface rounded-2xl p-6 space-y-2 border-2 border-ink/20 text-center">
+            <div className="text-4xl">⏳</div>
+            <p className="text-lg font-semibold">Warte auf Flex-Tipps…</p>
+            <p className="text-sm text-ink/60">
+              {flexTimer !== null && flexTimer > 0 ? `Automatische Auswertung in ${flexTimer}s` : 'Automatische Auswertung…'}
+            </p>
+          </div>
+        )}
+
         {/* Host-Ansicht: Ergebnis der Platzierung + Flex-Frage + "Weiter"-Button */}
-        {isHostSession && game.pendingResult && currentCard && (
+        {isHostSession && !game.hostless && game.pendingResult && currentCard && (
           <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-ink/20">
             {!flexPhaseEvaluated ? (
               /* Phase 1: Warte auf Flex-Tipps der anderen Gruppen */

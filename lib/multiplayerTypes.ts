@@ -123,6 +123,15 @@ export interface GameSession {
     submissions: { groupId: string; groupName: string; value: string; isWinner: boolean; color: string; }[];
     jokerRestores?: { groupId: string; groupName: string; jokerKey: 'newQuestion' | 'next' | 'dice' | 'steal' }[];
   } | null;
+  // ── Spielleitungsloser Modus ──────────────────────────────────────────────
+  hostless?: boolean;                    // Spiel läuft ohne aktive Spielleitung (Trivia: Text+Abstimmung, Timeline: Auto-Advance)
+  presence?: Record<string, Record<string, boolean>>; // groupId -> playerId -> online (RTDB onDisconnect-Tracking)
+  pendingTextAnswer?: {                  // Trivia (hostless): eingereichte Textantwort der aktiven Gruppe, wartet auf Abstimmung
+    groupId: string;
+    text: string;
+    submittedAt: number;
+  } | null;
+  answerVotes?: Record<string, boolean> | null; // Trivia (hostless): groupId -> Stimme (true = für "richtig")
 }
 
 export interface CreateGameParams {
@@ -136,6 +145,7 @@ export interface CreateGameParams {
   triviaWinCondition?: 'categories' | 'points';
   timelineWinTarget?: number | null;
   jokersEnabled?: boolean;
+  hostless?: boolean;
 }
 
 export interface JoinGameParams {

@@ -1,5 +1,5 @@
 import { database } from './firebase';
-import { ref, set, get, update, onValue, off, push, serverTimestamp, remove } from 'firebase/database';
+import { ref, set, get, update, onValue, off, push, serverTimestamp, remove, onDisconnect } from 'firebase/database';
 import { Card } from './types';
 import {
   GameSession,
@@ -103,6 +103,7 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     triviaWinCondition: params.mode === 'trivia' ? (params.triviaWinCondition ?? 'categories') : 'categories',
     timelineWinTarget: params.mode === 'timeline' ? (params.timelineWinTarget ?? 10) : null,
     jokersEnabled: params.mode === 'trivia' ? (params.jokersEnabled ?? true) : false,
+    hostless: params.hostless ?? false,
     groups: {
       [hostGroupId]: { ...hostGroup, completedCategories: [] }
     },
@@ -747,6 +748,36 @@ export async function updatePlayerPresence(pin: string, groupId: string, playerI
       await set(playerRef, players);
     }
   }
+}
+
+/**
+ * Trackt die Online-Präsenz eines Spielers über RTDB onDisconnect.
+ * Wird unabhängig vom Host-Status verwendet, u.a. um im spielleitungslosen
+ * Modus stimmberechtigte (verbundene) Gruppen zu ermitteln.
+ * Gibt eine Cleanup-Funktion zurück.
+ */
+export function trackPresence(pin: string, groupId: string, playerId: string): () => void {
+  if (!database) return () => {};
+  const presenceRef = ref(database, `games/${pin}/presence/${groupId}/${playerId}`);
+  const connectedRef = ref(database, '.info/connected');
+
+  const unsubscribe = onValue(connectedRef, (snapshot) => {
+    if (snapshot.val() !== true) return;
+    onDisconnect(presenceRef).remove();
+    set(presenceRef, true).catch(() => {});
+  });
+
+  return () => {
+    unsubscribe();
+    set(presenceRef, null).catch(() => {});
+  };
+}
+
+/** Ist mindestens ein Spieler der Gruppe laut Presence-Tracking online? */
+function isGroupOnline(game: GameSession, groupId: string): boolean {
+  const playerPresence = game.presence?.[groupId];
+  if (!playerPresence) return false;
+  return Object.values(playerPresence).some(Boolean);
 }
 
 /**
@@ -1647,6 +1678,109 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
   }
 
   await update(gameRef, updates);
+}
+
+// ---------------------------------------------------------------------------
+// Spielleitungsloser Modus (Trivia): Textantwort + Abstimmung der Gruppen
+// ---------------------------------------------------------------------------
+
+/**
+ * Aktive Gruppe reicht ihre Textantwort ein (spielleitungsloser Modus, keine
+ * Schätzfrage). Öffnet die Abstimmungsphase für alle anderen Gruppen.
+ */
+export async function submitTextAnswer(pin: string, groupId: string, text: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  if (!game.hostless) throw new Error('Nur im spielleitungslosen Modus verfügbar.');
+  if (game.currentTurnGroupId !== groupId) throw new Error('Nur die aktive Gruppe kann antworten.');
+  if (game.pendingTextAnswer) throw new Error('Es liegt bereits eine Antwort vor.');
+
+  await update(gameRef, {
+    lastActivity: Date.now(),
+    pendingTextAnswer: { groupId, text: text.trim(), submittedAt: Date.now() },
+    answerVotes: {},
+  });
+}
+
+/**
+ * Eine nicht-aktive, verbundene Gruppe stimmt über die eingereichte Antwort ab.
+ */
+export async function castAnswerVote(pin: string, groupId: string, correct: boolean): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  if (!game.pendingTextAnswer) throw new Error('Keine Antwort zum Abstimmen vorhanden.');
+  if (groupId === game.pendingTextAnswer.groupId) throw new Error('Die antwortende Gruppe stimmt nicht ab.');
+  const group = game.groups[groupId];
+  if (!group || group.isHost) throw new Error('Nicht stimmberechtigt.');
+
+  await update(ref(database!, `games/${pin}/answerVotes`), { [groupId]: correct });
+}
+
+/** Alle Gruppen, die über die aktuelle Antwort abstimmen dürfen (verbunden, nicht Host, nicht die antwortende Gruppe). */
+function getEligibleVoterIds(game: GameSession, activeGroupId: string): string[] {
+  return Object.values(game.groups)
+    .filter(g => !g.isHost && g.id !== activeGroupId && isGroupOnline(game, g.id))
+    .map(g => g.id);
+}
+
+/**
+ * Prüft, ob alle stimmberechtigten (verbundenen) Gruppen abgestimmt haben.
+ * Rein lesend — für die UI, um den Auflösungs-Zeitpunkt zu bestimmen.
+ */
+export function isAnswerVoteComplete(game: GameSession): boolean {
+  if (!game.pendingTextAnswer) return false;
+  const votes = game.answerVotes ?? {};
+  const eligible = getEligibleVoterIds(game, game.pendingTextAnswer.groupId);
+  if (eligible.length === 0) return true;
+  return eligible.every(gid => votes[gid] !== undefined);
+}
+
+/**
+ * Wertet die Abstimmung aus (≥50% "richtig" zählt als richtig) und wendet die
+ * bestehende Trivia-Bewertungslogik an (inkl. Joker-Auflösung). Wird von der
+ * aktiven Gruppe aufgerufen, sobald alle verbundenen Gruppen abgestimmt haben.
+ */
+export async function resolveTextAnswerVote(pin: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  if (!game.pendingTextAnswer) return; // bereits aufgelöst (Race-Schutz)
+
+  const activeGroupId = game.pendingTextAnswer.groupId;
+  const votes: Record<string, boolean> = game.answerVotes ?? {};
+  const eligible = getEligibleVoterIds(game, activeGroupId);
+  const correctVotes = eligible.filter(gid => votes[gid] === true).length;
+  const isCorrect = eligible.length === 0 ? false : (correctVotes / eligible.length) >= 0.5;
+
+  // Antwort-Felder zuerst löschen (Race-Schutz gegen doppelte Auflösung), dann Punkte vergeben.
+  await update(gameRef, { pendingTextAnswer: null, answerVotes: null });
+  await submitTriviaAnswer(pin, isCorrect);
+}
+
+/**
+ * Zeitlimit für die Antwort ist abgelaufen, ohne dass eingereicht wurde →
+ * automatisch als falsch werten (spielleitungsloser Modus).
+ */
+export async function timeoutTriviaAnswer(pin: string, groupId: string): Promise<void> {
+  checkFirebase();
+  const gameRef = ref(database!, `games/${pin}`);
+  const snapshot = await get(gameRef);
+  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
+
+  const game: GameSession = snapshot.val();
+  if (game.currentTurnGroupId !== groupId || game.pendingTextAnswer) return; // bereits weiter / Antwort liegt vor
+  await submitTriviaAnswer(pin, false);
 }
 
 // ---------------------------------------------------------------------------

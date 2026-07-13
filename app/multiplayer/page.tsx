@@ -34,6 +34,7 @@ function MultiplayerLobbyContent() {
   const [triviaWinCondition, setTriviaWinCondition] = useState<'categories' | 'points'>('categories');
   const [jokersEnabled, setJokersEnabled] = useState(true);
   const [timelineWinTarget, setTimelineWinTarget] = useState(10); // range 8–20
+  const [hostless, setHostless] = useState(false);
 
   // Join Game Form
   const [pin, setPin] = useState('');
@@ -260,6 +261,7 @@ function MultiplayerLobbyContent() {
         triviaWinCondition: gameMode === 'trivia' ? triviaWinCondition : 'categories',
         jokersEnabled: gameMode === 'trivia' ? jokersEnabled : false,
         timelineWinTarget: gameMode === 'timeline' ? timelineWinTarget : undefined,
+        hostless,
       });
 
       // Speichere Session-Infos im localStorage
@@ -482,6 +484,49 @@ function MultiplayerLobbyContent() {
               {m === 'timeline' ? '🔢 Timeline' : '🧠 Trivia'}
             </button>
           ))}
+        </div>
+      </div>
+
+      {/* Spielleitung */}
+      <div>
+        <label className="block text-sm font-semibold mb-2">Spielleitung</label>
+        <div className="grid grid-cols-1 gap-2">
+          <button
+            type="button"
+            onClick={() => setHostless(false)}
+            className={`flex items-start gap-3 rounded-xl border-2 px-4 py-3 text-left transition-colors ${
+              !hostless ? 'border-ink bg-ink/10' : 'border-ink/20 bg-ink/5 hover:bg-ink/10'
+            }`}
+          >
+            <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
+              !hostless ? 'border-ink' : 'border-ink/40'
+            }`}>
+              {!hostless && <span className="w-2.5 h-2.5 rounded-full bg-ink block" />}
+            </span>
+            <span>
+              <span className="text-sm font-semibold block">👑 Mit Spielleitung</span>
+              <span className="text-xs text-ink/60">Du (oder ein Gerät) leitet das Spiel, bewertest Antworten und steuerst das Tempo.</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            onClick={() => setHostless(true)}
+            className={`flex items-start gap-3 rounded-xl border-2 px-4 py-3 text-left transition-colors ${
+              hostless ? 'border-ink bg-ink/10' : 'border-ink/20 bg-ink/5 hover:bg-ink/10'
+            }`}
+          >
+            <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
+              hostless ? 'border-ink' : 'border-ink/40'
+            }`}>
+              {hostless && <span className="w-2.5 h-2.5 rounded-full bg-ink block" />}
+            </span>
+            <span>
+              <span className="text-sm font-semibold block">🗳️ Ohne Spielleitung</span>
+              <span className="text-xs text-ink/60">
+                Bei Trivia-Fragen tippt die antwortende Gruppe ihre Antwort ein, die anderen Gruppen stimmen ab (≥50% = richtig). Timeline läuft automatisch weiter. Schätzfragen bleiben wie gewohnt.
+              </span>
+            </span>
+          </button>
         </div>
       </div>
 
@@ -838,6 +883,7 @@ function MultiplayerLobbyContent() {
         <p className="text-xs uppercase tracking-wide text-ink/60 mb-2">Zusammenfassung</p>
         <div className="text-sm space-y-1">
           <div><span className="font-semibold">Modus:</span> {gameMode === 'timeline' ? '🔢 Timeline' : '🧠 Trivia'}</div>
+          <div><span className="font-semibold">Spielleitung:</span> {hostless ? '🗳️ Ohne Spielleitung' : '👑 Mit Spielleitung'}</div>
           <div><span className="font-semibold">Kategorien:</span> {settings.categories.map(c => catLabelMeta(c)).join(', ')}</div>
           <div><span className="font-semibold">Schwierigkeit:</span> {settings.difficulties.join(', ')}</div>
           <div><span className="font-semibold">Zeit/Frage:</span> {(settings.timerSeconds / 60).toFixed(1)} min</div>
@@ -926,7 +972,9 @@ function MultiplayerLobbyContent() {
           <div className="rounded-lg bg-slate-900/10 border-2 border-orange-500 p-4 space-y-2">
             <p className="text-sm font-semibold text-orange-600">👑 Du bist der Spielleiter</p>
             <p className="text-sm text-gray-700">
-              Du leitest das Spiel, bestätigst Buttons und verwaltest die Punkte. Du spielst nicht mit, kannst dich aber nachher mit einem anderen Endgerät einklinken.
+              {hostless
+                ? 'Im spielleitungslosen Modus startest du das Spiel, korrigierst bei Bedarf Punkte und kannst es beenden. Die Bewertung der Antworten übernehmen die Gruppen selbst per Abstimmung. Du spielst nicht mit.'
+                : 'Du leitest das Spiel, bestätigst Buttons und verwaltest die Punkte. Du spielst nicht mit, kannst dich aber nachher mit einem anderen Endgerät einklinken.'}
             </p>
           </div>
 
