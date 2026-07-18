@@ -117,6 +117,18 @@ export default function MultiplayerGamePage() {
   const [voteResolving, setVoteResolving] = useState(false);
   const [autoAdvanceCountdown, setAutoAdvanceCountdown] = useState<number | null>(null);
 
+  // Steal-Joker 20s-Cooldown: Button erst nach 20 Sekunden pro neuer Frage aktiv
+  const [stealUnlocked, setStealUnlocked] = useState(false);
+  const stealCooldownRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => {
+    const cardId = (game as GameSession | null)?.currentCardId;
+    if (!cardId) return;
+    setStealUnlocked(false);
+    if (stealCooldownRef.current) clearTimeout(stealCooldownRef.current);
+    stealCooldownRef.current = setTimeout(() => setStealUnlocked(true), 20000);
+    return () => { if (stealCooldownRef.current) clearTimeout(stealCooldownRef.current); };
+  }, [(game as GameSession | null)?.currentCardId]);
+
   // Würfel-Joker Animation
   const [diceAnimating, setDiceAnimating] = useState(false);
   const [diceDisplayFace, setDiceDisplayFace] = useState(1);
@@ -2470,21 +2482,23 @@ export default function MultiplayerGamePage() {
                   First come, first served.
                 </p>
                 <button
-                  disabled={!myJokers.steal || isProcessing}
+                  disabled={!myJokers.steal || isProcessing || !stealUnlocked}
                   title="Klau die aktuelle Frage. Richtig → du bekommst Punkt + Kategorie. Falsch → die andere Gruppe bekommt den Punkt."
                   onClick={async () => {
-                    if (!myJokers.steal || isProcessing) return;
+                    if (!myJokers.steal || isProcessing || !stealUnlocked) return;
                     setIsProcessing(true);
                     try { await activateJokerSteal(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
                   }}
                   className={`w-full flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-center transition-colors border-2 font-semibold ${
-                    myJokers.steal
-                      ? 'border-purple-500 bg-purple-500/10 hover:bg-purple-500/20 text-purple-900 animate-pulse hover:animate-none'
-                      : 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
+                    !myJokers.steal
+                      ? 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
+                      : !stealUnlocked
+                      ? 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
+                      : 'border-purple-500 bg-purple-500/10 hover:bg-purple-500/20 text-purple-900 animate-pulse hover:animate-none'
                   }`}
                 >
                   <span className="text-2xl">🥷</span>
-                  <span>{myJokers.steal ? 'Frage klauen!' : 'Verbraucht'}</span>
+                  <span>{!myJokers.steal ? 'Verbraucht' : !stealUnlocked ? 'Frage klauen!' : 'Frage klauen!'}</span>
                 </button>
               </div>
             );
