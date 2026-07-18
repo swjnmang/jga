@@ -116,6 +116,16 @@ export interface GameSession {
   triviaLeaders?: string[];           // Gruppen, die bereits alle Kategorien gesammelt haben
   triviaTiebreakerActive?: boolean;   // Stechen-Schätzfrage läuft
   triviaTiebreakerGroupIds?: string[]; // Nur diese Gruppen nehmen am Stechen teil
+  // Schätzfragen-Injektion: spätestens alle N normale Fragen (N = Gruppenanzahl)
+  triviaSchaetzCounter?: number;          // nicht-Schätzfragen seit letzter Injektion
+  schaetzInjected?: boolean;             // true wenn aktuelle Karte eingefügte Schätzfrage ist
+  schaetzInjectedNext?: {               // gespeicherter nächster Zug, wird nach Schätzfrage wiederhergestellt
+    nextCardId: string | null;
+    nextGroupId: string | null;
+    currentRoundCategory: string;
+    categoryRoundQueue: string[];
+    categoryGroupQueue: string[];
+  } | null;
   // Schätzfrage-Ergebnis (transient: gesetzt nach Auswertung, gelöscht beim Weiter)
   schaetzResult?: {
     answer: string;

@@ -1771,6 +1771,39 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
     }
   }
 
+  // ── Schätzfragen-Injektion: spätestens alle N normale Fragen ─────────────
+  // Nur wenn das Spiel nicht gerade endet, kein STEAL läuft und kein Tiebreaker aktiv.
+  if (!updates.state && !isJokerStealResolution && !game.triviaTiebreakerActive) {
+    const isCurrentSchaetz = currentCategory === 'schaetzfragen';
+    const currentCounter = game.triviaSchaetzCounter ?? 0;
+    const newCounter = isCurrentSchaetz ? 0 : currentCounter + 1;
+    const schaetzInterval = playingGroupIds.length; // N = Anzahl spielender Gruppen
+    const schaetzPool = newAvailable.filter(id => deckMeta[id] === 'schaetzfragen');
+    const firstQuestion = (game.currentCardIndex ?? 0) === 0;
+
+    if (!firstQuestion && newCounter >= schaetzInterval && schaetzPool.length > 0) {
+      // Schätzfrage einschleusen: echten nächsten Zug speichern, Schätzfrage setzen
+      const injectedCardId = schaetzPool[Math.floor(Math.random() * schaetzPool.length)];
+      updates.triviaSchaetzCounter = 0;
+      updates.schaetzInjected = true;
+      updates.schaetzInjectedNext = {
+        nextCardId: updates.currentCardId ?? null,
+        nextGroupId: next.nextGroupId,
+        currentRoundCategory: next.currentRoundCategory,
+        categoryRoundQueue: next.categoryRoundQueue ?? [],
+        categoryGroupQueue: next.categoryGroupQueue ?? [],
+      };
+      updates.currentCardId = injectedCardId;
+      updates.currentTurnGroupId = next.nextGroupId;
+      updates.currentRoundCategory = next.currentRoundCategory;
+      updates.categoryRoundQueue = next.categoryRoundQueue;
+      updates.categoryGroupQueue = next.categoryGroupQueue;
+    } else {
+      // Kein Schätzfragen verfügbar oder Intervall noch nicht erreicht
+      updates.triviaSchaetzCounter = newCounter >= schaetzInterval ? 0 : newCounter;
+    }
+  }
+
   await update(gameRef, updates);
 }
 
@@ -2040,11 +2073,24 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
     }
   });
 
-  // Simulate all groups consumed → pass empty group queue to force category advance
-  const next = computeNextTurn(
-    playingGroupIds, currentRoundCat, [], catRoundQueue, triviaCategories, newAvailable, deckMeta,
-    groupCompletedCatsS, winConditionS
-  );
+  // Bei injizierter Schätzfrage: gespeicherten Zug wiederherstellen statt computeNextTurn
+  const savedNext = game.schaetzInjected && game.schaetzInjectedNext ? game.schaetzInjectedNext : null;
+  const next: NextTurnResult = savedNext
+    ? {
+        nextCardId: savedNext.nextCardId,
+        nextGroupId: savedNext.nextGroupId ?? playingGroupIds[0],
+        currentRoundCategory: savedNext.currentRoundCategory,
+        categoryRoundQueue: Array.isArray(savedNext.categoryRoundQueue)
+          ? savedNext.categoryRoundQueue
+          : Object.values((savedNext as any).categoryRoundQueue ?? []),
+        categoryGroupQueue: Array.isArray(savedNext.categoryGroupQueue)
+          ? savedNext.categoryGroupQueue
+          : Object.values((savedNext as any).categoryGroupQueue ?? []),
+      }
+    : computeNextTurn(
+        playingGroupIds, currentRoundCat, [], catRoundQueue, triviaCategories, newAvailable, deckMeta,
+        groupCompletedCatsS, winConditionS
+      );
 
   // Punkte + completedCategories für ALLE Gewinnergruppen (Unentschieden)
   let anyFinished = false;
@@ -2080,6 +2126,11 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
 
   // Schätzungen + Flex-State + Ergebnis-Anzeige zurücksetzen
   updates.schaetzResult = null;
+  updates.triviaSchaetzCounter = 0; // Schätzfrage gespielt → Counter zurücksetzen
+  if (game.schaetzInjected) {
+    updates.schaetzInjected = null;
+    updates.schaetzInjectedNext = null;
+  }
   Object.keys(game.groups).forEach(gid => {
     updates[`groups/${gid}/schaetzSubmission`] = null;
     updates[`groups/${gid}/flexActive`] = false;
