@@ -20,20 +20,27 @@ const GROUP_AVATARS = [
   '🎸', '🏆', '🚀', '🎉', '⚽', '🦸',
 ];
 
-// Kachel zum Aufnehmen/Auswählen eines eigenen Fotos als Avatar.
-// Das Bild wird clientseitig komprimiert und als Data-URL im avatar-Feld gespeichert.
-function PhotoAvatarTile({
-  current,
-  onSelect,
+// Avatar-Auswahl mit Umschalter: entweder ein Foto aufnehmen (Kamera öffnet direkt)
+// oder ein Emoji wählen. Fotos werden clientseitig komprimiert und als Data-URL
+// im avatar-Feld gespeichert.
+function AvatarPicker({
+  value,
+  onChange,
+  takenAvatars = [],
+  error,
   onError,
 }: {
-  current: string;
-  onSelect: (dataUrl: string) => void;
+  value: string;
+  onChange: (v: string) => void;
+  takenAvatars?: string[];
+  error: string | null;
   onError: (msg: string | null) => void;
 }) {
-  const inputRef = useRef<HTMLInputElement>(null);
+  const cameraRef = useRef<HTMLInputElement>(null);
+  const galleryRef = useRef<HTMLInputElement>(null);
   const [busy, setBusy] = useState(false);
-  const hasPhoto = isImageAvatar(current);
+  const [tab, setTab] = useState<'foto' | 'emoji'>(isImageAvatar(value) ? 'foto' : 'emoji');
+  const hasPhoto = isImageAvatar(value);
 
   const handleFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -43,7 +50,7 @@ function PhotoAvatarTile({
     onError(null);
     try {
       const dataUrl = await compressImageToAvatar(file);
-      onSelect(dataUrl);
+      onChange(dataUrl);
     } catch {
       onError('Das Bild konnte nicht verarbeitet werden. Bitte versucht ein anderes Foto.');
     } finally {
@@ -52,35 +59,88 @@ function PhotoAvatarTile({
   };
 
   return (
-    <>
-      <input
-        ref={inputRef}
-        type="file"
-        accept="image/*"
-        className="hidden"
-        onChange={handleFile}
-      />
-      <button
-        type="button"
-        onClick={() => inputRef.current?.click()}
-        disabled={busy}
-        title="Eigenes Foto aufnehmen oder auswählen"
-        className={`rounded-xl p-2 border-2 transition-all flex items-center justify-center ${
-          hasPhoto
-            ? 'border-ink bg-ink/10 scale-110 shadow-md'
-            : 'border-dashed border-ink/40 hover:border-ink/70 hover:bg-ink/5'
-        }`}
-      >
-        {busy ? (
-          <span className="text-2xl animate-pulse">⏳</span>
-        ) : hasPhoto ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={current} alt="Euer Foto-Avatar" className="w-8 h-8 rounded-full object-cover" />
-        ) : (
-          <span className="text-2xl">📷</span>
-        )}
-      </button>
-    </>
+    <div>
+      {/* Umschalter Foto / Avatar */}
+      <div className="flex rounded-xl border-2 border-ink/30 overflow-hidden mb-3">
+        <button
+          type="button"
+          onClick={() => setTab('foto')}
+          className={`flex-1 py-2 text-sm font-semibold transition-colors ${
+            tab === 'foto' ? 'bg-ink text-inkDark' : 'bg-transparent hover:bg-ink/5'
+          }`}
+        >
+          📷 Foto
+        </button>
+        <button
+          type="button"
+          onClick={() => setTab('emoji')}
+          className={`flex-1 py-2 text-sm font-semibold transition-colors ${
+            tab === 'emoji' ? 'bg-ink text-inkDark' : 'bg-transparent hover:bg-ink/5'
+          }`}
+        >
+          😀 Avatar
+        </button>
+      </div>
+
+      {tab === 'foto' ? (
+        <div className="space-y-2">
+          {/* capture="user" oeffnet auf dem Handy direkt die (Selfie-)Kamera statt der Galerie */}
+          <input ref={cameraRef} type="file" accept="image/*" capture="user" className="hidden" onChange={handleFile} />
+          <input ref={galleryRef} type="file" accept="image/*" className="hidden" onChange={handleFile} />
+          <button
+            type="button"
+            onClick={() => cameraRef.current?.click()}
+            disabled={busy}
+            className="w-full flex items-center justify-center gap-3 rounded-xl border-2 border-dashed border-ink/40 hover:border-ink/70 hover:bg-ink/5 px-4 py-4 transition-all disabled:opacity-50"
+          >
+            {busy ? (
+              <span className="text-3xl animate-pulse">⏳</span>
+            ) : hasPhoto ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={value} alt="Euer Foto-Avatar" className="w-12 h-12 rounded-full object-cover border border-ink/20" />
+            ) : (
+              <span className="text-3xl">📷</span>
+            )}
+            <span className="text-sm font-semibold">
+              {busy ? 'Wird verarbeitet…' : hasPhoto ? 'Neues Foto aufnehmen' : 'Foto aufnehmen'}
+            </span>
+          </button>
+          <button
+            type="button"
+            onClick={() => galleryRef.current?.click()}
+            disabled={busy}
+            className="w-full text-xs text-ink/60 underline hover:text-ink transition-colors"
+          >
+            oder Bild aus der Galerie wählen
+          </button>
+        </div>
+      ) : (
+        <div className="grid grid-cols-8 gap-2">
+          {GROUP_AVATARS.map((emoji) => {
+            const isTaken = takenAvatars.includes(emoji) && emoji !== value;
+            return (
+              <button
+                key={emoji}
+                type="button"
+                onClick={() => !isTaken && onChange(emoji)}
+                disabled={isTaken}
+                className={`text-2xl rounded-xl p-2 border-2 transition-all ${
+                  value === emoji
+                    ? 'border-ink bg-ink/10 scale-110 shadow-md'
+                    : isTaken
+                    ? 'border-red-400/40 opacity-30 cursor-not-allowed'
+                    : 'border-ink/20 hover:border-ink/50 hover:bg-ink/5'
+                }`}
+                title={isTaken ? 'Bereits vergeben' : emoji}
+              >
+                {emoji}
+              </button>
+            );
+          })}
+        </div>
+      )}
+      {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
+    </div>
   );
 }
 
@@ -619,25 +679,12 @@ function MultiplayerLobbyContent() {
           </div>
           <div>
             <label className="block text-sm font-semibold mb-2">Euer Avatar</label>
-            <div className="grid grid-cols-8 gap-2">
-              <PhotoAvatarTile current={creatorAvatar} onSelect={setCreatorAvatar} onError={setAvatarError} />
-              {GROUP_AVATARS.map((emoji) => (
-                <button
-                  key={emoji}
-                  type="button"
-                  onClick={() => setCreatorAvatar(emoji)}
-                  className={`text-2xl rounded-xl p-2 border-2 transition-all ${
-                    creatorAvatar === emoji
-                      ? 'border-ink bg-ink/10 scale-110 shadow-md'
-                      : 'border-ink/20 hover:border-ink/50 hover:bg-ink/5'
-                  }`}
-                >
-                  {emoji}
-                </button>
-              ))}
-            </div>
-            <p className="mt-2 text-xs text-ink/50">📷 = eigenes Foto aufnehmen oder aus der Galerie wählen</p>
-            {avatarError && <p className="mt-1 text-sm text-red-600">{avatarError}</p>}
+            <AvatarPicker
+              value={creatorAvatar}
+              onChange={setCreatorAvatar}
+              error={avatarError}
+              onError={setAvatarError}
+            />
           </div>
         </div>
       )}
@@ -1193,32 +1240,13 @@ function MultiplayerLobbyContent() {
 
             <div>
               <label className="block text-sm font-semibold mb-2">Gruppen-Avatar wählen</label>
-              <div className="grid grid-cols-8 gap-2">
-                <PhotoAvatarTile current={joinGroupAvatar} onSelect={setJoinGroupAvatar} onError={setAvatarError} />
-                {GROUP_AVATARS.map((emoji) => {
-                  const isTaken = takenAvatars.includes(emoji) && emoji !== joinGroupAvatar;
-                  return (
-                    <button
-                      key={emoji}
-                      type="button"
-                      onClick={() => !isTaken && setJoinGroupAvatar(emoji)}
-                      disabled={isTaken}
-                      className={`text-2xl rounded-xl p-2 border-2 transition-all ${
-                        joinGroupAvatar === emoji
-                          ? 'border-ink bg-ink/10 scale-110 shadow-md'
-                          : isTaken
-                          ? 'border-red-400/40 opacity-30 cursor-not-allowed'
-                          : 'border-ink/20 hover:border-ink/50 hover:bg-ink/5'
-                      }`}
-                      title={isTaken ? 'Bereits vergeben' : emoji}
-                    >
-                      {emoji}
-                    </button>
-                  );
-                })}
-              </div>
-              <p className="mt-2 text-xs text-ink/50">📷 = eigenes Foto aufnehmen oder aus der Galerie wählen</p>
-              {avatarError && <p className="mt-1 text-sm text-red-600">{avatarError}</p>}
+              <AvatarPicker
+                value={joinGroupAvatar}
+                onChange={setJoinGroupAvatar}
+                takenAvatars={takenAvatars}
+                error={avatarError}
+                onError={setAvatarError}
+              />
               {joinGroupAvatar && (
                 <p className="mt-2 text-sm text-ink/60 flex items-center gap-1.5">Gewählt: <GroupAvatar avatar={joinGroupAvatar} size="sm" /> {joinGroupName || '...'}</p>
               )}
