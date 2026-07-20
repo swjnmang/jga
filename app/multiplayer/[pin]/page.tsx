@@ -57,6 +57,7 @@ import { getCardById } from '@/lib/cards';
 import type { Card } from '@/lib/types';
 import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
 import { catIcon, catLabel as catLabelMeta, catLabelWithIcon, catShortLabel } from '@/lib/categoryMeta';
+import GroupAvatar from '@/components/GroupAvatar';
 
 interface SessionInfo {
   pin: string;
@@ -1092,7 +1093,7 @@ export default function MultiplayerGamePage() {
                 <div key={gid} className={`flex items-center gap-2 text-sm py-1 ${
                   active ? 'font-bold text-amber-700' : done ? 'text-ink/40 line-through' : 'text-ink/70'
                 }`}>
-                  {g?.avatar && <span className="text-base">{g.avatar}</span>}
+                  <GroupAvatar avatar={g?.avatar} size="sm" />
                   <div className="w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: g?.color }} />
                   <span>{g?.name ?? gid}</span>
                   {done && (
@@ -1175,7 +1176,7 @@ export default function MultiplayerGamePage() {
                 <div className="space-y-1 text-sm">
                   {groupList.map(g => (
                     <div key={g.id} className="flex items-center gap-2">
-                      {g.avatar && <span className="text-lg">{g.avatar}</span>}
+                      <GroupAvatar avatar={g.avatar} size="md" />
                       <div 
                         className="w-2 h-2 rounded-full" 
                         style={{ backgroundColor: g.color }}
@@ -1250,7 +1251,7 @@ export default function MultiplayerGamePage() {
                     style={{ borderColor: group.color }}
                   >
                     <div className="flex items-center gap-3">
-                      {group.avatar && <span className="text-2xl">{group.avatar}</span>}
+                      <GroupAvatar avatar={group.avatar} size="lg" />
                       <div
                         className="w-4 h-4 rounded-full"
                         style={{ backgroundColor: group.color }}

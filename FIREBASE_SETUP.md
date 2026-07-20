@@ -47,12 +47,21 @@ Gehe in der Firebase Console zu "Realtime Database" → "Regeln" und ersetze die
       "$gameId": {
         ".read": true,
         ".write": true,
-        ".indexOn": ["createdAt", "state"]
+        ".indexOn": ["createdAt", "state"],
+        "groups": {
+          "$groupId": {
+            "avatar": {
+              ".validate": "newData.isString() && newData.val().length <= 51200"
+            }
+          }
+        }
       }
     }
   }
 }
 ```
+
+Die `avatar`-Validierung begrenzt Foto-Avatare (Base64-Data-URLs) auf max. ~50 KB, damit keine unkomprimierten Bilder in die Datenbank geschrieben werden können.
 
 **⚠️ Wichtig:** Diese Regeln sind für die Entwicklung. Für Produktion sollten sie verschärft werden!
 

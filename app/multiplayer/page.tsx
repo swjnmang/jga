@@ -8,6 +8,8 @@ import { getDefaultSettings, TIMELINE_CATEGORIES, toDecadeTag } from '@/lib/user
 import { isFirebaseEnabled } from '@/lib/firebase';
 import { CardCategory, DecadeTag, Difficulty, GenreTag } from '@/lib/types';
 import { catIcon, catLabel as catLabelMeta } from '@/lib/categoryMeta';
+import { compressImageToAvatar, isImageAvatar } from '@/lib/imageAvatar';
+import GroupAvatar from '@/components/GroupAvatar';
 
 const GROUP_AVATARS = [
   // Einzeltiere
@@ -17,6 +19,70 @@ const GROUP_AVATARS = [
   // Fun / Sonstiges
   '🎸', '🏆', '🚀', '🎉', '⚽', '🦸',
 ];
+
+// Kachel zum Aufnehmen/Auswählen eines eigenen Fotos als Avatar.
+// Das Bild wird clientseitig komprimiert und als Data-URL im avatar-Feld gespeichert.
+function PhotoAvatarTile({
+  current,
+  onSelect,
+  onError,
+}: {
+  current: string;
+  onSelect: (dataUrl: string) => void;
+  onError: (msg: string | null) => void;
+}) {
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [busy, setBusy] = useState(false);
+  const hasPhoto = isImageAvatar(current);
+
+  const handleFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    e.target.value = '';
+    if (!file) return;
+    setBusy(true);
+    onError(null);
+    try {
+      const dataUrl = await compressImageToAvatar(file);
+      onSelect(dataUrl);
+    } catch {
+      onError('Das Bild konnte nicht verarbeitet werden. Bitte versucht ein anderes Foto.');
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <>
+      <input
+        ref={inputRef}
+        type="file"
+        accept="image/*"
+        className="hidden"
+        onChange={handleFile}
+      />
+      <button
+        type="button"
+        onClick={() => inputRef.current?.click()}
+        disabled={busy}
+        title="Eigenes Foto aufnehmen oder auswählen"
+        className={`rounded-xl p-2 border-2 transition-all flex items-center justify-center ${
+          hasPhoto
+            ? 'border-ink bg-ink/10 scale-110 shadow-md'
+            : 'border-dashed border-ink/40 hover:border-ink/70 hover:bg-ink/5'
+        }`}
+      >
+        {busy ? (
+          <span className="text-2xl animate-pulse">⏳</span>
+        ) : hasPhoto ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={current} alt="Euer Foto-Avatar" className="w-8 h-8 rounded-full object-cover" />
+        ) : (
+          <span className="text-2xl">📷</span>
+        )}
+      </button>
+    </>
+  );
+}
 
 function MultiplayerLobbyContent() {
   const router = useRouter();
@@ -42,6 +108,7 @@ function MultiplayerLobbyContent() {
   const [joinGroupName, setJoinGroupName] = useState('');
   const [joinGroupAvatar, setJoinGroupAvatar] = useState('🦁');
   const [takenAvatars, setTakenAvatars] = useState<string[]>([]);
+  const [avatarError, setAvatarError] = useState<string | null>(null);
   const [firebaseAvailable, setFirebaseAvailable] = useState(true);
   const [spotifyLinked, setSpotifyLinked] = useState(false);
   
@@ -178,7 +245,7 @@ function MultiplayerLobbyContent() {
     const unsub = subscribeToGame(pin, (game) => {
       if (!game) { setTakenAvatars([]); return; }
       const taken = Object.values(game.groups)
-        .filter(g => !g.isHost && g.avatar)
+        .filter(g => !g.isHost && g.avatar && !isImageAvatar(g.avatar))
         .map(g => g.avatar as string);
       setTakenAvatars(taken);
     });
@@ -553,6 +620,7 @@ function MultiplayerLobbyContent() {
           <div>
             <label className="block text-sm font-semibold mb-2">Euer Avatar</label>
             <div className="grid grid-cols-8 gap-2">
+              <PhotoAvatarTile current={creatorAvatar} onSelect={setCreatorAvatar} onError={setAvatarError} />
               {GROUP_AVATARS.map((emoji) => (
                 <button
                   key={emoji}
@@ -568,6 +636,8 @@ function MultiplayerLobbyContent() {
                 </button>
               ))}
             </div>
+            <p className="mt-2 text-xs text-ink/50">📷 = eigenes Foto aufnehmen oder aus der Galerie wählen</p>
+            {avatarError && <p className="mt-1 text-sm text-red-600">{avatarError}</p>}
           </div>
         </div>
       )}
@@ -927,7 +997,7 @@ function MultiplayerLobbyContent() {
           <div><span className="font-semibold">Modus:</span> {gameMode === 'timeline' ? '🔢 Timeline' : '🧠 Trivia'}</div>
           <div><span className="font-semibold">Spielleitung:</span> {hostless ? '🗳️ Ohne Spielleitung' : '👑 Mit Spielleitung'}</div>
           {hostless && (
-            <div><span className="font-semibold">Eure Gruppe:</span> {creatorAvatar} {creatorGroupName.trim() || 'Team 1'}</div>
+            <div className="flex items-center gap-1.5"><span className="font-semibold">Eure Gruppe:</span> <GroupAvatar avatar={creatorAvatar} size="sm" /> {creatorGroupName.trim() || 'Team 1'}</div>
           )}
           <div><span className="font-semibold">Kategorien:</span> {settings.categories.map(c => catLabelMeta(c)).join(', ')}</div>
           <div><span className="font-semibold">Schwierigkeit:</span> {settings.difficulties.join(', ')}</div>
@@ -1124,6 +1194,7 @@ function MultiplayerLobbyContent() {
             <div>
               <label className="block text-sm font-semibold mb-2">Gruppen-Avatar wählen</label>
               <div className="grid grid-cols-8 gap-2">
+                <PhotoAvatarTile current={joinGroupAvatar} onSelect={setJoinGroupAvatar} onError={setAvatarError} />
                 {GROUP_AVATARS.map((emoji) => {
                   const isTaken = takenAvatars.includes(emoji) && emoji !== joinGroupAvatar;
                   return (
@@ -1146,8 +1217,10 @@ function MultiplayerLobbyContent() {
                   );
                 })}
               </div>
+              <p className="mt-2 text-xs text-ink/50">📷 = eigenes Foto aufnehmen oder aus der Galerie wählen</p>
+              {avatarError && <p className="mt-1 text-sm text-red-600">{avatarError}</p>}
               {joinGroupAvatar && (
-                <p className="mt-2 text-sm text-ink/60">Gewählt: <span className="text-base">{joinGroupAvatar}</span> {joinGroupName || '...'}</p>
+                <p className="mt-2 text-sm text-ink/60 flex items-center gap-1.5">Gewählt: <GroupAvatar avatar={joinGroupAvatar} size="sm" /> {joinGroupName || '...'}</p>
               )}
             </div>
 

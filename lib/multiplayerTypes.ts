@@ -26,7 +26,7 @@ export interface GroupData {
   pendingPosition?: number | null; // Live-Vorschau: gewählte Position (noch nicht eingereicht)
   completedCategories?: string[]; // Trivia: bereits korrekt beantwortete Kategorien
   schaetzSubmission?: string | null; // Trivia Schätzfrage: eingereichte Schätzung
-  avatar?: string; // Emoji-Avatar der Gruppe
+  avatar?: string; // Avatar der Gruppe: Emoji oder Foto als Base64-Data-URL (data:image/...)
   jokers?: { newQuestion: boolean; next: boolean; dice: boolean; steal: boolean; }; // Trivia: verfügbare Joker
 }
 
