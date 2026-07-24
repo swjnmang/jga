@@ -1,5 +1,5 @@
 import { database } from './firebase';
-import { ref, set, get, update, onValue, off, push, serverTimestamp, remove, onDisconnect } from 'firebase/database';
+import { ref, set, get, update, onValue, off, push, serverTimestamp, remove, onDisconnect, runTransaction } from 'firebase/database';
 import { Card } from './types';
 import {
   GameSession,
@@ -2292,35 +2292,44 @@ export async function activateJokerNext(pin: string, groupId: string): Promise<v
 export async function activateJokerSteal(pin: string, groupId: string): Promise<void> {
   checkFirebase();
   const gameRef = ref(database!, `games/${pin}`);
-  const snapshot = await get(gameRef);
-  if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
 
-  const game: GameSession = snapshot.val();
-  if (game.mode !== 'trivia') throw new Error('Joker nur im Trivia-Modus verfügbar.');
-  if (!game.jokersEnabled) throw new Error('Joker sind deaktiviert.');
-  if (game.currentTurnGroupId === groupId) throw new Error('Eigene Frage kann nicht geklaut werden.');
-  if (game.jokerStealActive) throw new Error('Steal-Joker wurde bereits aktiviert (first come, first served).');
-  if (game.jokerNextActive) throw new Error('NEXT-Joker ist gerade aktiv.');
-  if (game.jokerStealReturnActive) throw new Error('Stehlen während des Rückgabe-Zugs nicht möglich.');
+  // Atomare Transaktion statt get()+update(): verhindert, dass bei zeitgleichem
+  // Klick zweier Gruppen beide die Prüfung bestehen und der Joker der
+  // "verlierenden" Gruppe verbraucht wird, ohne dass sie stehlen konnte.
+  let abortReason: string | null = null;
 
-  const jokers = game.groups[groupId]?.jokers;
-  if (!jokers?.steal) throw new Error('Steal-Joker bereits verwendet.');
+  const { committed } = await runTransaction(gameRef, (game: GameSession | null) => {
+    if (!game) { abortReason = 'Spiel nicht gefunden.'; return game; }
+    if (game.mode !== 'trivia') { abortReason = 'Joker nur im Trivia-Modus verfügbar.'; return; }
+    if (!game.jokersEnabled) { abortReason = 'Joker sind deaktiviert.'; return; }
+    if (game.currentTurnGroupId === groupId) { abortReason = 'Eigene Frage kann nicht geklaut werden.'; return; }
+    if (game.jokerStealActive) { abortReason = 'Steal-Joker wurde bereits aktiviert (first come, first served).'; return; }
+    if (game.jokerNextActive) { abortReason = 'NEXT-Joker ist gerade aktiv.'; return; }
+    if (game.jokerStealReturnActive) { abortReason = 'Stehlen während des Rückgabe-Zugs nicht möglich.'; return; }
 
-  const deckMeta: Record<string, string> = game.deckMeta ?? {};
-  const currentCat = (game.currentCardId ? deckMeta[game.currentCardId] : null) ?? game.currentRoundCategory ?? '';
-  if (currentCat === 'schaetzfragen') throw new Error('Joker bei Schätzfragen nicht verfügbar.');
+    const jokers = game.groups?.[groupId]?.jokers;
+    if (!jokers?.steal) { abortReason = 'Steal-Joker bereits verwendet.'; return; }
 
-  const originalTurnGroupId = game.currentTurnGroupId!;
+    const deckMeta: Record<string, string> = game.deckMeta ?? {};
+    const currentCat = (game.currentCardId ? deckMeta[game.currentCardId] : null) ?? game.currentRoundCategory ?? '';
+    if (currentCat === 'schaetzfragen') { abortReason = 'Joker bei Schätzfragen nicht verfügbar.'; return; }
 
-  await update(gameRef, {
-    lastActivity: Date.now(),
-    jokerStealActive: true,
-    jokerStealGroupId: groupId,
-    jokerStealFromGroupId: originalTurnGroupId,
-    currentTurnGroupId: groupId,
-    [`groups/${groupId}/jokers/steal`]: false,
-    jokerNotification: { type: 'steal', byGroupId: groupId, fromGroupId: originalTurnGroupId, timestamp: Date.now() },
+    const originalTurnGroupId = game.currentTurnGroupId!;
+
+    game.lastActivity = Date.now();
+    game.jokerStealActive = true;
+    game.jokerStealGroupId = groupId;
+    game.jokerStealFromGroupId = originalTurnGroupId;
+    game.currentTurnGroupId = groupId;
+    jokers.steal = false;
+    game.jokerNotification = { type: 'steal', byGroupId: groupId, fromGroupId: originalTurnGroupId, timestamp: Date.now() };
+
+    return game;
   });
+
+  if (!committed) {
+    throw new Error(abortReason ?? 'Steal-Joker konnte nicht aktiviert werden.');
+  }
 }
 
 /**
