@@ -44,6 +44,13 @@ export interface PlaybackControl {
   requestedBy: string; // groupId
 }
 
+export interface MusicProgress {
+  cardId: string;
+  positionMs: number; // Position (ms) zum Zeitpunkt von updatedAt
+  durationMs: number; // Track-Gesamtdauer in ms, 0 solange unbekannt
+  updatedAt: number;
+}
+
 export interface GameSession {
   id: string; // PIN
   hostId: string;
@@ -62,6 +69,7 @@ export interface GameSession {
   maxGroups: number;
   referenceCard: Card | null; // Die Startkarte für alle Gruppen
   playbackControl?: PlaybackControl; // Remote-Steuerung für Medien (Host führt aus)
+  musicProgress?: MusicProgress; // Echte Position/Dauer der laufenden Musik, für Fortschrittsanzeige bei allen Spielern
   flexPendingGroupId?: string | null; // Welche Gruppe wartet auf Flex-Bestätigung
   winnerGroupId?: string | null; // Erste Gruppe mit X Karten (Timeline) oder erste mit X Punkte (Trivia)
   timelineWinTarget?: number | null;    // Anzahl korrekt platzierter Karten zum Gewinnen (Timeline, Default 10)

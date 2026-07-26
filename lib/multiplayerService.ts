@@ -869,6 +869,27 @@ export async function sendPlaybackControl(
 }
 
 /**
+ * Aktualisiert Position/Dauer der laufenden Musikwiedergabe, damit alle Mitspieler
+ * (nicht nur der Spielleiter) eine echte Fortschrittsanzeige sehen.
+ */
+export async function updateMusicProgress(
+  pin: string,
+  cardId: string,
+  positionMs: number,
+  durationMs: number
+): Promise<void> {
+  checkFirebase();
+  await update(ref(database!, `games/${pin}`), {
+    musicProgress: {
+      cardId,
+      positionMs,
+      durationMs,
+      updatedAt: Date.now()
+    }
+  });
+}
+
+/**
  * Fordert einen Flex-Button an (von aktiver Gruppe)
  */
 export async function requestFlexButton(pin: string, groupId: string): Promise<void> {
@@ -1960,9 +1981,13 @@ export function extractNumericFromAnswer(answer: string): number {
  * und gibt untere/obere Grenze zurück. Sonst null (= konkreter Einzelwert).
  */
 export function extractRangeFromAnswer(answer: string): { low: number; high: number } | null {
+  // Klammer-Inhalte ignorieren: oft nur ein erklärender Zusatz (z.B. "28 Jahre
+  // (1961 bis 1989)"), dessen Jahreszahlen sonst fälschlich als die eigentliche
+  // Antwort-Spanne erkannt würden statt des führenden Einzelwerts "28".
+  const withoutParens = answer.replace(/\([^)]*\)/g, '');
   // Muster: (von)? Zahl (bis|–|-|und) Zahl, z.B. "von 1.000 bis 2.000" oder "500–1.500"
   const rangeRe = /(?:von\s+)?([\d.,]+)\s*(?:bis|–|-|und)\s*([\d.,]+)/i;
-  const m = answer.match(rangeRe);
+  const m = withoutParens.match(rangeRe);
   if (!m) return null;
   const low = parseGermanNumber(m[1]);
   const high = parseGermanNumber(m[2]);

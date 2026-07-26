@@ -55,6 +55,13 @@ function toSpotifyTrackUri(url: string): string | null {
   return idMatch ? `spotify:track:${idMatch[1]}` : null;
 }
 
+function formatTime(ms: number): string {
+  const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+}
+
 type MediaChoice =
   | { type: 'youtube'; url: string }
   | { type: 'spotify'; url: string }
@@ -94,6 +101,12 @@ function resolveSource(
   return null;
 }
 
+export type MediaProgressInfo = {
+  positionMs: number;
+  durationMs: number;
+  isPlaying: boolean;
+};
+
 type Props = {
   card: Card;
   preference: MediaPreference;
@@ -101,6 +114,7 @@ type Props = {
   onPlay?: () => void;
   onPause?: () => void;
   onPlaybackError?: (id: string, reason?: string) => void;
+  onProgress?: (info: MediaProgressInfo) => void;
 };
 
 export type MediaEmbedHandle = {
@@ -110,7 +124,7 @@ export type MediaEmbedHandle = {
 };
 
 export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbed(
-  { card, preference, concealMetadata = false, onPlay, onPause, onPlaybackError }: Props,
+  { card, preference, concealMetadata = false, onPlay, onPause, onPlaybackError, onProgress }: Props,
   ref
 ) {
   const [youtubeUnavailable, setYouTubeUnavailable] = useState(false);
@@ -124,7 +138,14 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const spotifyContainerRef = useRef<HTMLDivElement | null>(null);
   const spotifyControllerRef = useRef<SpotifyEmbedController | null>(null);
   const spotifyPositionRef = useRef<number>(0); // Aktuelle Position in ms für Resume
+  const spotifyDurationRef = useRef<number>(0); // Track-Dauer in ms, sobald bekannt
+  const pendingSeekRef = useRef<number | null>(null); // Ziel-Position, die nach dem nächsten Play-Start angesprungen wird
+  const isSeekingRef = useRef(false); // true während der Nutzer die Zeitleiste zieht
+  const onProgressRef = useRef(onProgress);
+  useEffect(() => { onProgressRef.current = onProgress; }, [onProgress]);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [positionMs, setPositionMs] = useState(0);
+  const [durationMs, setDurationMs] = useState(0);
   const [spotifyFallback, setSpotifyFallback] = useState(false); // Fallback wenn API nicht lädt
   const [showYouTube, setShowYouTube] = useState(false);
   const [embedError, setEmbedError] = useState<string | null>(null);
@@ -151,6 +172,9 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     setShowYouTube(false);
     setEmbedError(null);
     setSpotifyFallback(false);
+    setPositionMs(0);
+    setDurationMs(0);
+    pendingSeekRef.current = null;
     reportedErrorRef.current = false;
   }, [choiceSignature]);
 
@@ -199,6 +223,40 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     return () => { cancelled = true; };
   }, [card.sources.youtube, card.id]);
 
+  // Startet/setzt die Spotify-Wiedergabe fort. Reihenfolge play()-dann-seek() führte dazu, dass
+  // der Song beim Fortsetzen von vorne begann (Spotify meldet die Position erst nach dem
+  // tatsächlichen Wiedereinsetzen der Wiedergabe zuverlässig) – deshalb wird die Ziel-Position
+  // gemerkt und erst gesprungen, sobald das nächste "playing"-Update vom Controller eintrifft.
+  const resumeSpotify = (opts?: { silent?: boolean }) => {
+    if (spotifyControllerRef.current) {
+      const pos = spotifyPositionRef.current;
+      if (pos > 0) pendingSeekRef.current = pos;
+      spotifyControllerRef.current.play();
+      setIsPlaying(true);
+      onProgressRef.current?.({ positionMs: pos, durationMs: spotifyDurationRef.current, isPlaying: true });
+    } else {
+      // API not loaded — switch to iframe fallback
+      setSpotifyFallback(true);
+      setIsPlaying(true);
+    }
+    if (!opts?.silent) onPlay?.();
+  };
+
+  const pauseSpotify = (opts?: { silent?: boolean }) => {
+    spotifyControllerRef.current?.pause();
+    setIsPlaying(false);
+    onProgressRef.current?.({ positionMs: spotifyPositionRef.current, durationMs: spotifyDurationRef.current, isPlaying: false });
+    if (!opts?.silent) onPause?.();
+  };
+
+  const seekSpotify = (targetMs: number) => {
+    if (!spotifyControllerRef.current) return;
+    spotifyControllerRef.current.seek(targetMs);
+    spotifyPositionRef.current = targetMs;
+    setPositionMs(targetMs);
+    onProgressRef.current?.({ positionMs: targetMs, durationMs: spotifyDurationRef.current, isPlaying });
+  };
+
   useImperativeHandle(ref, () => ({
     stop: () => {
       if (choice?.type === 'youtube') {
@@ -208,6 +266,9 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       if (choice?.type === 'spotify') {
         spotifyControllerRef.current?.pause();
         spotifyControllerRef.current?.seek(0);
+        spotifyPositionRef.current = 0;
+        pendingSeekRef.current = null;
+        setPositionMs(0);
       }
       setIsPlaying(false);
     },
@@ -218,16 +279,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         setIsPlaying(true);
       }
       if (choice?.type === 'spotify') {
-        if (spotifyControllerRef.current) {
-          const pos = spotifyPositionRef.current;
-          spotifyControllerRef.current.play();
-          if (pos > 0) spotifyControllerRef.current.seek(pos);
-          setIsPlaying(true);
-        } else {
-          // API not loaded — switch to iframe fallback
-          setSpotifyFallback(true);
-          setIsPlaying(true);
-        }
+        resumeSpotify({ silent: true });
       }
     },
     pause: () => {
@@ -237,9 +289,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         onPause?.();
       }
       if (choice?.type === 'spotify') {
-        spotifyControllerRef.current?.pause();
-        setIsPlaying(false);
-        onPause?.();
+        pauseSpotify();
       }
     },
   }));
@@ -280,14 +330,40 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
           if (destroyed) { controller.destroy(); return; }
           spotifyControllerRef.current = controller;
           spotifyPositionRef.current = 0;
+          spotifyDurationRef.current = 0;
+          pendingSeekRef.current = null;
           setSpotifyFallback(false); // API loaded successfully
           // Position kontinuierlich tracken für Resume-Funktion
           controller.addListener('playback_update', (data: unknown) => {
-            const d = data as { data?: { position?: number; isPaused?: boolean } };
+            const d = data as { data?: { position?: number; duration?: number; isPaused?: boolean } };
+            const pos = d?.data?.position;
+            const dur = d?.data?.duration;
+            const paused = d?.data?.isPaused;
+
+            if (dur !== undefined && dur > 0 && dur !== spotifyDurationRef.current) {
+              spotifyDurationRef.current = dur;
+              setDurationMs(dur);
+            }
+
+            // Ein Resume wurde angestoßen und wartet darauf, dass die Wiedergabe wirklich
+            // wieder läuft, bevor an die gemerkte Position gesprungen wird.
+            if (pendingSeekRef.current != null) {
+              if (paused === false) {
+                const target = pendingSeekRef.current;
+                pendingSeekRef.current = null;
+                controller.seek(target);
+                spotifyPositionRef.current = target;
+                if (!isSeekingRef.current) setPositionMs(target);
+              }
+              return;
+            }
+
             // Only update position while actually playing – Spotify can reset position to 0
             // internally after pausing, which would cause resume to restart from beginning.
-            if (d?.data?.position !== undefined && !d?.data?.isPaused) {
-              spotifyPositionRef.current = d.data.position;
+            if (pos !== undefined && !paused) {
+              spotifyPositionRef.current = pos;
+              if (!isSeekingRef.current) setPositionMs(pos);
+              onProgressRef.current?.({ positionMs: pos, durationMs: spotifyDurationRef.current, isPlaying: true });
             }
           });
         }
@@ -516,32 +592,31 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
                 />
               </div>
             ) : (
-            <div className="rounded-2xl card-surface flex items-center justify-center px-5 py-4" style={{ minHeight: 80 }}>
+            <div className="rounded-2xl card-surface flex items-center gap-3 px-5 py-4" style={{ minHeight: 80 }}>
               <button
                 type="button"
                 onClick={() => {
-                  if (isPlaying) {
-                    spotifyControllerRef.current?.pause();
-                    setIsPlaying(false);
-                    onPause?.();
-                  } else {
-                    if (spotifyControllerRef.current) {
-                      const pos = spotifyPositionRef.current;
-                      spotifyControllerRef.current.play();
-                      if (pos > 0) spotifyControllerRef.current.seek(pos);
-                    } else {
-                      // API not ready yet — fallback to iframe
-                      setSpotifyFallback(true);
-                    }
-                    setIsPlaying(true);
-                    onPlay?.();
-                  }
+                  if (isPlaying) pauseSpotify();
+                  else resumeSpotify();
                 }}
                 className="flex-shrink-0 w-12 h-12 rounded-full bg-green-500 hover:bg-green-400 text-black flex items-center justify-center text-xl font-bold shadow transition-colors"
                 aria-label={isPlaying ? 'Pause' : 'Play'}
               >
                 {isPlaying ? '⏸' : '▶'}
               </button>
+              <span className="text-xs font-mono tabular-nums text-ink/60 w-9 text-right">{formatTime(positionMs)}</span>
+              <input
+                type="range"
+                min={0}
+                max={Math.max(durationMs, 1)}
+                value={Math.min(positionMs, Math.max(durationMs, 1))}
+                onChange={(e) => seekSpotify(Number(e.target.value))}
+                onPointerDown={() => { isSeekingRef.current = true; }}
+                onPointerUp={() => { isSeekingRef.current = false; }}
+                className="flex-1 accent-green-500"
+                aria-label="Titel-Fortschritt"
+              />
+              <span className="text-xs font-mono tabular-nums text-ink/60 w-9">{formatTime(durationMs)}</span>
             </div>
             )
           ) : (

@@ -13,6 +13,7 @@ import {
   nextCard,
   nextTurn,
   sendPlaybackControl,
+  updateMusicProgress,
   broadcastPendingPosition,
   broadcastPlacementResult,
   requestFlexButton,
@@ -55,7 +56,7 @@ import {
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
 import type { Card } from '@/lib/types';
-import { MediaEmbed, MediaEmbedHandle } from '@/components/MediaEmbed';
+import { MediaEmbed, MediaEmbedHandle, MediaProgressInfo } from '@/components/MediaEmbed';
 import { catIcon, catLabel as catLabelMeta, catLabelWithIcon, catShortLabel } from '@/lib/categoryMeta';
 import GroupAvatar from '@/components/GroupAvatar';
 
@@ -108,6 +109,7 @@ export default function MultiplayerGamePage() {
   const mediaEmbedRef = useRef<MediaEmbedHandle>(null);
   const [isMediaPlaying, setIsMediaPlaying] = useState(false);
   const [musicElapsed, setMusicElapsed] = useState(0);
+  const [musicDurationMs, setMusicDurationMs] = useState(0);
   const prevTurnGroupRef = useRef<string | null>(null);
   const [timeLeft, setTimeLeft] = useState<number | null>(null);
   const [flexTimer, setFlexTimer] = useState<number | null>(null);
@@ -469,6 +471,18 @@ export default function MultiplayerGamePage() {
     await sendPlaybackControl(pin, session.groupId, 'pause', game.currentCardId);
   };
 
+  // Sendet echte Position/Dauer der Musik an alle Mitspieler, damit deren Fortschrittsanzeige
+  // stimmt (statt einer Schätzung). Play/Pause/Seek-Ereignisse werden sofort gesendet,
+  // laufende Wiedergabe nur alle 2s (um Firebase-Schreibvorgänge gering zu halten).
+  const lastMusicProgressSendRef = useRef<number>(0);
+  const handleMediaProgress = (info: MediaProgressInfo) => {
+    if (!game?.currentCardId) return;
+    const now = Date.now();
+    if (info.isPlaying && now - lastMusicProgressSendRef.current < 2000) return;
+    lastMusicProgressSendRef.current = now;
+    updateMusicProgress(pin, game.currentCardId, info.positionMs, info.durationMs).catch(console.error);
+  };
+
   // Host-Funktionen
   const handleConfirmFlex = async () => {
     if (!session || !game?.flexPendingGroupId) return;
@@ -621,25 +635,33 @@ export default function MultiplayerGamePage() {
     return () => clearTimeout(t);
   }, [game?.resultRevealed, game?.currentCardId]);
 
-  // Track elapsed music time for players
+  // Track elapsed music time for players — basiert auf der vom Spielleiter-Client
+  // synchronisierten echten Position (musicProgress), nicht mehr auf einer Schätzung
+  // ab dem Play-Timestamp. Fällt auf die alte Schätzung zurück, solange noch kein
+  // musicProgress-Update für die aktuelle Karte eingetroffen ist.
   useEffect(() => {
     const control = game?.playbackControl;
     if (!control || control.cardId !== game?.currentCardId) {
       setMusicElapsed(0);
+      setMusicDurationMs(0);
       return;
     }
+    const progress = game?.musicProgress;
+    const hasProgress = progress && progress.cardId === control.cardId;
+    const basePositionMs = hasProgress ? progress!.positionMs : 0;
+    const baseTs = hasProgress ? progress!.updatedAt : control.timestamp;
+    setMusicDurationMs(hasProgress ? progress!.durationMs : 0);
+
     if (control.action === 'play') {
-      const startTs = control.timestamp;
-      setMusicElapsed(Math.floor((Date.now() - startTs) / 1000));
-      const id = setInterval(() => {
-        setMusicElapsed(Math.floor((Date.now() - startTs) / 1000));
-      }, 1000);
+      const compute = () => Math.floor((basePositionMs + (Date.now() - baseTs)) / 1000);
+      setMusicElapsed(compute());
+      const id = setInterval(() => setMusicElapsed(compute()), 1000);
       return () => clearInterval(id);
     } else {
-      // paused or stopped – freeze at pause time
-      setMusicElapsed(prev => prev);
+      // paused or stopped – freeze at last known position
+      setMusicElapsed(Math.floor(basePositionMs / 1000));
     }
-  }, [game?.playbackControl, game?.currentCardId]);
+  }, [game?.playbackControl, game?.musicProgress, game?.currentCardId]);
 
   // Warn host before accidental browser refresh / back navigation
   useEffect(() => {
@@ -1563,34 +1585,34 @@ export default function MultiplayerGamePage() {
         const byGroup = game.groups[game.jokerNotification.byGroupId ?? ''];
         const newCatLabel = catLabelMeta(currentCard?.category ?? '');
         return (
-          <main className="relative mx-auto max-w-lg px-4 py-12 sm:py-20 flex flex-col items-center justify-center min-h-[70vh]">
-            <div className="w-full card-surface rounded-3xl p-8 sm:p-12 flex flex-col items-center gap-6 border-4 border-amber-400 bg-amber-500/10">
+          <main className="relative mx-auto max-w-sm sm:max-w-md px-4 py-6 sm:py-10 flex flex-col items-center justify-center">
+            <div className="w-full card-surface rounded-2xl sm:rounded-3xl p-5 sm:p-7 flex flex-col items-center gap-3 sm:gap-4 border-4 border-amber-400 bg-amber-500/10">
               {/* Titel */}
               <div className="text-center space-y-1">
                 <p className="text-xs uppercase tracking-widest font-bold text-ink/40">🔄 Joker Neue Frage</p>
-                <p className="text-2xl font-bold">
+                <p className="text-lg sm:text-xl font-bold">
                   <span style={{ color: byGroup?.color ?? undefined }}>{byGroup?.name ?? '?'}</span>
                   {' '}tauscht die Frage!
                 </p>
               </div>
 
               {/* Großes Emoji */}
-              <div className="text-[8rem] leading-none select-none">🔄</div>
+              <div className="text-5xl sm:text-6xl leading-none select-none">🔄</div>
 
               {/* Details */}
-              <div className="w-full space-y-3">
-                <div className="rounded-2xl bg-ink/5 border border-ink/10 px-5 py-3 text-center">
-                  <p className="text-xs text-ink/50 uppercase tracking-wide mb-1">Neue Kategorie</p>
-                  <p className="text-lg font-bold">{catIcon(currentCard?.category ?? '')} {newCatLabel}</p>
+              <div className="w-full space-y-2">
+                <div className="rounded-xl bg-ink/5 border border-ink/10 px-4 py-2 text-center">
+                  <p className="text-xs text-ink/50 uppercase tracking-wide mb-0.5">Neue Kategorie</p>
+                  <p className="text-base font-bold">{catIcon(currentCard?.category ?? '')} {newCatLabel}</p>
                 </div>
-                <div className="rounded-xl bg-amber-500/10 border border-amber-400 px-4 py-3 text-sm text-center">
+                <div className="rounded-xl bg-amber-500/10 border border-amber-400 px-3 py-2 text-xs text-center">
                   <p className="text-amber-800">Die aktuelle Frage wurde gegen eine neue Frage gleicher Kategorie getauscht.</p>
                 </div>
               </div>
 
               {/* Auto-Timer */}
-              <div className="flex flex-col items-center gap-2">
-                <div className={`text-5xl font-black tabular-nums ${jokerNotifCountdown <= 2 ? 'text-amber-600 animate-pulse' : 'text-amber-500'}`}>
+              <div className="flex flex-col items-center gap-1">
+                <div className={`text-3xl sm:text-4xl font-black tabular-nums ${jokerNotifCountdown <= 2 ? 'text-amber-600 animate-pulse' : 'text-amber-500'}`}>
                   {jokerNotifCountdown}
                 </div>
                 <p className="text-xs text-ink/40">Weiter in {jokerNotifCountdown} Sek…</p>
@@ -1601,7 +1623,7 @@ export default function MultiplayerGamePage() {
                       setIsProcessing(true);
                       try { await dismissJokerNotification(pin); } catch (e) { console.error(e); } finally { setIsProcessing(false); }
                     }}
-                    className="mt-1 px-6 py-2 bg-amber-600 text-white rounded-xl font-semibold text-sm hover:bg-amber-700 disabled:opacity-50 transition-colors"
+                    className="mt-1 px-5 py-1.5 bg-amber-600 text-white rounded-xl font-semibold text-sm hover:bg-amber-700 disabled:opacity-50 transition-colors"
                   >
                     ⏩ Überspringen
                   </button>
@@ -1617,32 +1639,32 @@ export default function MultiplayerGamePage() {
         const originGroup = game.groups[game.jokerNotification.byGroupId ?? ''];
         const targetGroup = game.groups[game.jokerNotification.targetGroupId ?? ''];
         return (
-          <main className="relative mx-auto max-w-lg px-4 py-12 sm:py-20 flex flex-col items-center justify-center min-h-[70vh]">
-            <div className="w-full card-surface rounded-3xl p-8 sm:p-12 flex flex-col items-center gap-6 border-4 border-orange-400 bg-orange-500/10">
+          <main className="relative mx-auto max-w-sm sm:max-w-md px-4 py-6 sm:py-10 flex flex-col items-center justify-center">
+            <div className="w-full card-surface rounded-2xl sm:rounded-3xl p-5 sm:p-7 flex flex-col items-center gap-3 sm:gap-4 border-4 border-orange-400 bg-orange-500/10">
               {/* Titel */}
               <div className="text-center space-y-1">
                 <p className="text-xs uppercase tracking-widest font-bold text-ink/40">⚡ Joker NEXT</p>
-                <p className="text-2xl font-bold">
+                <p className="text-lg sm:text-xl font-bold">
                   <span style={{ color: originGroup?.color ?? undefined }}>{originGroup?.name ?? '?'}</span>
                   {' '}gibt die Frage weiter!
                 </p>
               </div>
 
               {/* Großes Emoji */}
-              <div className="text-[8rem] leading-none select-none">➡️</div>
+              <div className="text-5xl sm:text-6xl leading-none select-none">➡️</div>
 
               {/* Details */}
-              <div className="w-full space-y-3">
-                <div className="rounded-2xl bg-ink/5 border border-ink/10 px-5 py-3 text-center">
-                  <p className="text-xs text-ink/50 uppercase tracking-wide mb-1">Frage geht an</p>
-                  <p className="text-xl font-black" style={{ color: targetGroup?.color ?? undefined }}>
+              <div className="w-full space-y-2">
+                <div className="rounded-xl bg-ink/5 border border-ink/10 px-4 py-2 text-center">
+                  <p className="text-xs text-ink/50 uppercase tracking-wide mb-0.5">Frage geht an</p>
+                  <p className="text-lg font-black" style={{ color: targetGroup?.color ?? undefined }}>
                     {targetGroup?.name ?? '?'}
                   </p>
                 </div>
               </div>
 
               {/* Regel-Hinweis */}
-              <div className="rounded-xl bg-orange-500/10 border border-orange-400 px-4 py-3 text-sm space-y-1 text-center w-full">
+              <div className="rounded-xl bg-orange-500/10 border border-orange-400 px-3 py-2 text-xs space-y-1 text-center w-full">
                 <p className="font-semibold text-orange-800">Wie geht es weiter?</p>
                 <p className="text-orange-700">
                   <span className="font-bold" style={{ color: targetGroup?.color ?? undefined }}>{targetGroup?.name ?? '?'}</span> beantwortet jetzt die Frage.
@@ -1652,8 +1674,8 @@ export default function MultiplayerGamePage() {
               </div>
 
               {/* Auto-Timer */}
-              <div className="flex flex-col items-center gap-2">
-                <div className={`text-5xl font-black tabular-nums ${jokerNotifCountdown <= 2 ? 'text-orange-600 animate-pulse' : 'text-orange-400'}`}>
+              <div className="flex flex-col items-center gap-1">
+                <div className={`text-3xl sm:text-4xl font-black tabular-nums ${jokerNotifCountdown <= 2 ? 'text-orange-600 animate-pulse' : 'text-orange-400'}`}>
                   {jokerNotifCountdown}
                 </div>
                 <p className="text-xs text-ink/40">Weiter in {jokerNotifCountdown} Sek…</p>
@@ -1664,7 +1686,7 @@ export default function MultiplayerGamePage() {
                       setIsProcessing(true);
                       try { await dismissJokerNotification(pin); } catch (e) { console.error(e); } finally { setIsProcessing(false); }
                     }}
-                    className="mt-1 px-6 py-2 bg-orange-600 text-white rounded-xl font-semibold text-sm hover:bg-orange-700 disabled:opacity-50 transition-colors"
+                    className="mt-1 px-5 py-1.5 bg-orange-600 text-white rounded-xl font-semibold text-sm hover:bg-orange-700 disabled:opacity-50 transition-colors"
                   >
                     ⏩ Überspringen
                   </button>
@@ -1681,36 +1703,36 @@ export default function MultiplayerGamePage() {
         const stolenFromGroup = game.groups[game.jokerNotification.fromGroupId ?? ''];
         const currentCatLabel = catLabelMeta(currentCard?.category ?? '');
         return (
-          <main className="relative mx-auto max-w-lg px-4 py-12 sm:py-20 flex flex-col items-center justify-center min-h-[70vh]">
-            <div className="w-full card-surface rounded-3xl p-8 sm:p-12 flex flex-col items-center gap-6 border-4 border-purple-500 bg-purple-500/10">
+          <main className="relative mx-auto max-w-sm sm:max-w-md px-4 py-6 sm:py-10 flex flex-col items-center justify-center">
+            <div className="w-full card-surface rounded-2xl sm:rounded-3xl p-5 sm:p-7 flex flex-col items-center gap-3 sm:gap-4 border-4 border-purple-500 bg-purple-500/10">
               {/* Titel */}
               <div className="text-center space-y-1">
                 <p className="text-xs uppercase tracking-widest font-bold text-ink/40">🥷 Joker STEAL</p>
-                <p className="text-2xl font-bold">
+                <p className="text-lg sm:text-xl font-bold">
                   <span style={{ color: stealerGroup?.color ?? undefined }}>{stealerGroup?.name ?? '?'}</span>
                   {' '}hat eine Frage geklaut!
                 </p>
               </div>
 
               {/* Großes Emoji */}
-              <div className="text-[8rem] leading-none select-none">🥷</div>
+              <div className="text-5xl sm:text-6xl leading-none select-none">🥷</div>
 
               {/* Details */}
-              <div className="w-full space-y-3">
-                <div className="rounded-2xl bg-ink/5 border border-ink/10 px-5 py-3 text-center">
-                  <p className="text-xs text-ink/50 uppercase tracking-wide mb-1">Gestohlene Frage von</p>
-                  <p className="text-xl font-black" style={{ color: stolenFromGroup?.color ?? undefined }}>
+              <div className="w-full space-y-2">
+                <div className="rounded-xl bg-ink/5 border border-ink/10 px-4 py-2 text-center">
+                  <p className="text-xs text-ink/50 uppercase tracking-wide mb-0.5">Gestohlene Frage von</p>
+                  <p className="text-lg font-black" style={{ color: stolenFromGroup?.color ?? undefined }}>
                     {stolenFromGroup?.name ?? '?'}
                   </p>
                 </div>
-                <div className="rounded-2xl bg-ink/5 border border-ink/10 px-5 py-3 text-center">
-                  <p className="text-xs text-ink/50 uppercase tracking-wide mb-1">Kategorie</p>
-                  <p className="text-lg font-bold">{catIcon(currentCard?.category ?? '')} {currentCatLabel}</p>
+                <div className="rounded-xl bg-ink/5 border border-ink/10 px-4 py-2 text-center">
+                  <p className="text-xs text-ink/50 uppercase tracking-wide mb-0.5">Kategorie</p>
+                  <p className="text-base font-bold">{catIcon(currentCard?.category ?? '')} {currentCatLabel}</p>
                 </div>
               </div>
 
               {/* Regel-Hinweis */}
-              <div className="rounded-xl bg-purple-500/10 border border-purple-400 px-4 py-3 text-sm space-y-1 text-center w-full">
+              <div className="rounded-xl bg-purple-500/10 border border-purple-400 px-3 py-2 text-xs space-y-1 text-center w-full">
                 <p className="font-semibold text-purple-800">Wie geht es weiter?</p>
                 <p className="text-purple-700">
                   <span className="font-bold" style={{ color: stealerGroup?.color ?? undefined }}>{stealerGroup?.name ?? '?'}</span> beantwortet jetzt die Frage.
@@ -1720,8 +1742,8 @@ export default function MultiplayerGamePage() {
               </div>
 
               {/* Auto-Timer */}
-              <div className="flex flex-col items-center gap-2">
-                <div className={`text-5xl font-black tabular-nums ${jokerNotifCountdown <= 2 ? 'text-purple-600 animate-pulse' : 'text-purple-400'}`}>
+              <div className="flex flex-col items-center gap-1">
+                <div className={`text-3xl sm:text-4xl font-black tabular-nums ${jokerNotifCountdown <= 2 ? 'text-purple-600 animate-pulse' : 'text-purple-400'}`}>
                   {jokerNotifCountdown}
                 </div>
                 <p className="text-xs text-ink/40">Weiter in {jokerNotifCountdown} Sek…</p>
@@ -1732,7 +1754,7 @@ export default function MultiplayerGamePage() {
                       setIsProcessing(true);
                       try { await dismissJokerNotification(pin); } catch (e) { console.error(e); } finally { setIsProcessing(false); }
                     }}
-                    className="mt-1 px-6 py-2 bg-purple-600 text-white rounded-xl font-semibold text-sm hover:bg-purple-700 disabled:opacity-50 transition-colors"
+                    className="mt-1 px-5 py-1.5 bg-purple-600 text-white rounded-xl font-semibold text-sm hover:bg-purple-700 disabled:opacity-50 transition-colors"
                   >
                     ⏩ Überspringen
                   </button>
@@ -1760,39 +1782,39 @@ export default function MultiplayerGamePage() {
         const textColor = isJackpot ? 'text-green-700' : isBad ? 'text-red-700' : 'text-amber-800';
 
         return (
-          <main className="relative mx-auto max-w-lg px-4 py-12 sm:py-20 flex flex-col items-center justify-center min-h-[70vh]">
-            <div className={`w-full card-surface rounded-3xl p-8 sm:p-12 flex flex-col items-center gap-6 border-4 ${borderColor} ${bgGlow}`}>
+          <main className="relative mx-auto max-w-sm sm:max-w-md px-4 py-6 sm:py-10 flex flex-col items-center justify-center">
+            <div className={`w-full card-surface rounded-2xl sm:rounded-3xl p-5 sm:p-7 flex flex-col items-center gap-3 sm:gap-4 border-4 ${borderColor} ${bgGlow}`}>
               {/* Gruppe */}
               <div className="text-center space-y-1">
                 <p className="text-xs uppercase tracking-widest font-bold text-ink/40">🎲 Würfel-Joker</p>
-                <p className="text-2xl font-bold">
+                <p className="text-lg sm:text-xl font-bold">
                   <span style={{ color: diceGroup?.color ?? undefined }}>{diceGroup?.name ?? '?'}</span>
                   {' '}hat gewürfelt!
                 </p>
               </div>
 
               {/* Würfelsymbol + Animation */}
-              <div className={`text-[9rem] leading-none select-none transition-transform duration-75 ${diceAnimating ? 'animate-bounce scale-110' : 'scale-100'}`}>
+              <div className={`text-6xl sm:text-7xl leading-none select-none transition-transform duration-75 ${diceAnimating ? 'animate-bounce scale-110' : 'scale-100'}`}>
                 {diceEmojis[diceAnimating ? diceDisplayFace : roll] ?? '🎲'}
               </div>
 
               {/* Ergebnis */}
               {!diceAnimating && (
                 <>
-                  <div className="text-center space-y-2">
-                    <p className={`text-6xl font-black ${textColor}`}>{roll}</p>
-                    <p className={`text-lg font-semibold ${textColor}`}>{rollMsg}</p>
+                  <div className="text-center space-y-1">
+                    <p className={`text-4xl sm:text-5xl font-black ${textColor}`}>{roll}</p>
+                    <p className={`text-sm sm:text-base font-semibold ${textColor}`}>{rollMsg}</p>
                   </div>
 
                   {/* Neuer Punktestand für die Gruppe */}
-                  <div className="rounded-2xl bg-ink/5 border border-ink/10 px-6 py-3 text-center">
-                    <p className="text-xs text-ink/50 uppercase tracking-wide mb-1">Punktestand {diceGroup?.name ?? '?'}</p>
-                    <p className="text-3xl font-black">{diceGroup?.score ?? 0} <span className="text-base font-normal text-ink/50">Pkt.</span></p>
+                  <div className="rounded-xl bg-ink/5 border border-ink/10 px-5 py-2 text-center">
+                    <p className="text-xs text-ink/50 uppercase tracking-wide mb-0.5">Punktestand {diceGroup?.name ?? '?'}</p>
+                    <p className="text-2xl font-black">{diceGroup?.score ?? 0} <span className="text-sm font-normal text-ink/50">Pkt.</span></p>
                   </div>
 
                   {/* Auto-Timer */}
-                  <div className="flex flex-col items-center gap-2">
-                    <div className={`text-5xl font-black tabular-nums ${jokerNotifCountdown <= 2 ? 'text-amber-600 animate-pulse' : 'text-amber-500'}`}>
+                  <div className="flex flex-col items-center gap-1">
+                    <div className={`text-3xl sm:text-4xl font-black tabular-nums ${jokerNotifCountdown <= 2 ? 'text-amber-600 animate-pulse' : 'text-amber-500'}`}>
                       {jokerNotifCountdown}
                     </div>
                     <p className="text-xs text-ink/40">Weiter in {jokerNotifCountdown} Sek…</p>
@@ -1805,7 +1827,7 @@ export default function MultiplayerGamePage() {
                         setIsProcessing(true);
                         try { await confirmJokerDice(pin); } catch (e) { console.error(e); } finally { setIsProcessing(false); }
                       }}
-                      className="w-full max-w-xs px-8 py-4 bg-green-600 text-white rounded-2xl font-bold text-lg hover:bg-green-700 disabled:opacity-50 transition-colors shadow-lg"
+                      className="w-full max-w-xs px-6 py-2.5 bg-green-600 text-white rounded-xl font-bold text-base hover:bg-green-700 disabled:opacity-50 transition-colors shadow-lg"
                     >
                       ⏩ Überspringen
                     </button>
@@ -2304,18 +2326,22 @@ export default function MultiplayerGamePage() {
                   concealMetadata={currentCard.category === 'music'}
                   onPlay={handleRemotePlay}
                   onPause={handleRemotePause}
+                  onProgress={handleMediaProgress}
                 />
               ) : currentCard.category === 'music' ? (
                 <div className="rounded-2xl card-surface bg-ink/5 p-6 text-center space-y-3">
                   <div className="text-5xl">{game?.playbackControl?.action === 'play' && game.playbackControl.cardId === currentCard.id ? '🎵' : '🎵'}</div>
                   <div className="text-2xl font-mono font-bold text-green-600 tabular-nums">
                     {String(Math.floor(musicElapsed / 60)).padStart(2, '0')}:{String(musicElapsed % 60).padStart(2, '0')}
+                    {musicDurationMs > 0 && (
+                      <span className="text-ink/40 font-normal"> / {String(Math.floor(musicDurationMs / 60000)).padStart(2, '0')}:{String(Math.floor(musicDurationMs / 1000) % 60).padStart(2, '0')}</span>
+                    )}
                   </div>
                   <div className="h-2 bg-ink/10 rounded-full overflow-hidden">
                     <div
                       className="h-full rounded-full transition-all duration-1000"
                       style={{
-                        width: `${Math.min((musicElapsed / 240) * 100, 100)}%`,
+                        width: `${Math.min((musicElapsed / (musicDurationMs > 0 ? musicDurationMs / 1000 : 240)) * 100, 100)}%`,
                         background: game?.playbackControl?.action === 'play' && game.playbackControl.cardId === currentCard.id
                           ? '#22c55e'
                           : '#6b7280',
@@ -2936,6 +2962,7 @@ export default function MultiplayerGamePage() {
                     concealMetadata={currentCard.category === 'music'}
                     onPlay={handleRemotePlay}
                     onPause={handleRemotePause}
+                    onProgress={handleMediaProgress}
                   />
                 ) : (
                   /* Mitspieler: Musik nur Symbol, andere Medien vollständig */
@@ -2945,6 +2972,9 @@ export default function MultiplayerGamePage() {
                         <div className="text-2xl">🎵</div>
                         <div className="font-mono font-bold text-green-600 tabular-nums text-lg">
                           {String(Math.floor(musicElapsed / 60)).padStart(2, '0')}:{String(musicElapsed % 60).padStart(2, '0')}
+                          {musicDurationMs > 0 && (
+                            <span className="text-ink/40 font-normal text-sm"> / {String(Math.floor(musicDurationMs / 60000)).padStart(2, '0')}:{String(Math.floor(musicDurationMs / 1000) % 60).padStart(2, '0')}</span>
+                          )}
                         </div>
                         <div className="text-xs text-ink/50 ml-auto">
                           {game?.playbackControl?.action === 'play' && game.playbackControl.cardId === currentCard.id
@@ -2956,7 +2986,7 @@ export default function MultiplayerGamePage() {
                         <div
                           className="h-full rounded-full transition-all duration-1000"
                           style={{
-                            width: `${Math.min((musicElapsed / 240) * 100, 100)}%`,
+                            width: `${Math.min((musicElapsed / (musicDurationMs > 0 ? musicDurationMs / 1000 : 240)) * 100, 100)}%`,
                             background: game?.playbackControl?.action === 'play' && game.playbackControl.cardId === currentCard.id
                               ? '#22c55e'
                               : '#6b7280',
