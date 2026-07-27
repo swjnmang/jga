@@ -16,10 +16,9 @@ import { Card, MediaPreference } from '@/lib/types';
 
 // Spotify Embed Controller type (minimal, not shipped in @types)
 interface SpotifyEmbedController {
-  play: () => void; // Startet den geladenen Track von vorne (nicht zum Fortsetzen nach pause() geeignet!)
+  play: () => void;
   pause: () => void;
-  resume: () => void; // Setzt nach pause() an der zuletzt erreichten Position fort
-  seek: (positionMs: number) => void;
+  seek: (positionSeconds: number) => void;
   loadUri: (uri: string) => void;
   destroy: () => void;
   addListener: (event: string, callback: (data?: unknown) => void) => void;
@@ -142,7 +141,6 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const spotifyDurationRef = useRef<number>(0); // Track-Dauer in ms, sobald bekannt
   const seekRetryTimersRef = useRef<ReturnType<typeof setTimeout>[]>([]); // laufende Wiederholungs-Seeks
   const suppressPositionUpdatesUntilRef = useRef<number>(0); // Timestamp, bis zu dem eingehende Positions-Updates ignoriert werden
-  const hasStartedRef = useRef(false); // true nach dem ersten play() – steuert ob resume() statt play() genutzt wird
   const isSeekingRef = useRef(false); // true während der Nutzer die Zeitleiste zieht
   const onProgressRef = useRef(onProgress);
   useEffect(() => { onProgressRef.current = onProgress; }, [onProgress]);
@@ -232,17 +230,17 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     return () => { cancelled = true; };
   }, [card.sources.youtube, card.id]);
 
-  // Springt mehrfach hintereinander an die Ziel-Position (statt einmalig direkt nach play()).
-  // Ein einzelner seek()-Aufruf direkt nach play() wurde vom Spotify-Player teils verworfen –
-  // vermutlich weil der Player nach dem (Re-)Start kurz noch nicht "seek-bereit" ist. Durch
-  // mehrere Versuche über ~1,5s wird garantiert, dass mindestens einer greift, unabhängig davon,
-  // wie lange der Player intern zum Aufwärmen braucht.
+  // WICHTIG: seek() der Spotify-Iframe-API erwartet Sekunden, nicht Millisekunden – das war die
+  // eigentliche Ursache dafür, dass ein Resume nach pause() immer von vorne begann (der seek()-Aufruf
+  // mit einem Millisekunden-Wert landete weit außerhalb des Tracks und wurde stillschweigend ignoriert).
+  // Zusätzlich wird mehrfach über ~1,5s wiederholt, als Absicherung gegen kurze Verzögerungen direkt
+  // nach dem (Re-)Start, bis der Player wieder "seek-bereit" ist.
   const forceSeek = (targetMs: number) => {
     clearSeekRetries();
     const retryDelays = [150, 350, 700, 1200, 2000];
     suppressPositionUpdatesUntilRef.current = Date.now() + retryDelays[retryDelays.length - 1] + 300;
     const attempt = () => {
-      spotifyControllerRef.current?.seek(targetMs);
+      spotifyControllerRef.current?.seek(targetMs / 1000);
       spotifyPositionRef.current = targetMs;
       if (!isSeekingRef.current) setPositionMs(targetMs);
     };
@@ -255,15 +253,7 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const resumeSpotify = (opts?: { silent?: boolean }) => {
     if (spotifyControllerRef.current) {
       const pos = spotifyPositionRef.current;
-      // play() startet den Track immer von vorne – zum Fortsetzen nach pause() muss resume()
-      // verwendet werden, sonst beginnt die Wiedergabe unabhängig vom seek()-Aufruf bei 0.
-      // Absicherung per typeof-Check, falls resume() in einer API-Version doch fehlen sollte.
-      if (hasStartedRef.current && typeof spotifyControllerRef.current.resume === 'function') {
-        spotifyControllerRef.current.resume();
-      } else {
-        hasStartedRef.current = true;
-        spotifyControllerRef.current.play();
-      }
+      spotifyControllerRef.current.play();
       setIsPlaying(true);
       if (pos > 0) forceSeek(pos);
       onProgressRef.current?.({ positionMs: pos, durationMs: spotifyDurationRef.current, isPlaying: true });
@@ -301,7 +291,6 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         spotifyControllerRef.current?.pause();
         spotifyControllerRef.current?.seek(0);
         spotifyPositionRef.current = 0;
-        hasStartedRef.current = false;
         setPositionMs(0);
       }
       setIsPlaying(false);
@@ -365,7 +354,6 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
           spotifyControllerRef.current = controller;
           spotifyPositionRef.current = 0;
           spotifyDurationRef.current = 0;
-          hasStartedRef.current = false;
           clearSeekRetries();
           setSpotifyFallback(false); // API loaded successfully
           // Position kontinuierlich tracken für Resume-Funktion
