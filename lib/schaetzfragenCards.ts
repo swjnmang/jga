@@ -128,13 +128,9 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-gepard-geschwindigkeit', title: 'Geschwindigkeit Gepard', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer pro Stunde erreicht ein Gepard im Sprint?', answer: 'bis zu 110–120 km/h', difficulty: 'leicht', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-planeten-ringe', title: 'Planeten mit Ringen', category: 'schaetzfragen', year: 0, cue: 'Wie viele Planeten unseres Sonnensystems haben Ringe?', answer: '4 (Saturn, Jupiter, Uranus, Neptun)', difficulty: 'mittel', sources: {}, genres: [] },
-
   { id: 'schaetzfragen-katze-knochen', title: 'Knochen Katze', category: 'schaetzfragen', year: 0, cue: 'Wie viele Knochen hat eine Katze?', answer: 'ca. 244 Knochen', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-hund-temperatur', title: 'Körpertemperatur Hund', category: 'schaetzfragen', year: 0, cue: 'Wie hoch ist die durchschnittliche Körpertemperatur eines Hundes?', answer: '37,5 bis 39,0 Grad Celsius', difficulty: 'leicht', sources: {}, genres: [] },
-
-  { id: 'schaetzfragen-schachbrett-felder', title: 'Felder Schachbrett', category: 'schaetzfragen', year: 0, cue: 'Wie viele Felder hat ein klassisches Schachbrett?', answer: '64 Felder', difficulty: 'leicht', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-niere-blut', title: 'Blutfluss durch Niere', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Blut fließen pro Minute durch die Niere eines Erwachsenen?', answer: 'ca. 1,2 Liter', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -178,8 +174,6 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-kola-bohrung', title: 'Tiefe Kola-Bohrung', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer tief ist das tiefste jemals gebohrte Loch (Kola-Bohrung)?', answer: '12,26 Kilometer', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-nationalhymne-strophen', title: 'Strophen Deutsche Nationalhymne', category: 'schaetzfragen', year: 0, cue: 'Wie viele Strophen hat die deutsche Nationalhymne (insgesamt, nicht nur die gesungene)?', answer: '3 Strophen', difficulty: 'leicht', sources: {}, genres: [] },
-
   { id: 'schaetzfragen-tee-konsum-weltweit', title: 'Teekonsum weltweit pro Sekunde', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tassen Tee werden weltweit pro Sekunde getrunken?', answer: 'ca. 70.000 Tassen', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-hunderassen', title: 'Anerkannte Hunderassen', category: 'schaetzfragen', year: 0, cue: 'Wie viele verschiedene Hunderassen sind weltweit offiziell anerkannt?', answer: 'ca. 350 bis 400 (FCI-Standard)', difficulty: 'mittel', sources: {}, genres: [] },
@@ -191,8 +185,6 @@ export const schaetzfragenCards: Card[] = [
   { id: 'schaetzfragen-empire-state-building', title: 'Stockwerke Empire State Building', category: 'schaetzfragen', year: 0, cue: 'Wie viele Stockwerke hat das Empire State Building?', answer: '102 Stockwerke', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-kuh-milch-jahr', title: 'Milchproduktion Kuh', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Milch gibt eine Kuh in Deutschland durchschnittlich pro Jahr?', answer: 'ca. 8.500 Liter', difficulty: 'mittel', sources: {}, genres: [] },
-
-  { id: 'schaetzfragen-hai-knochen', title: 'Knochen Hai', category: 'schaetzfragen', year: 0, cue: 'Wie viele Knochen hat ein Hai?', answer: '0 (Haie haben ein Skelett aus Knorpel)', difficulty: 'mittel', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-speerwurf-rekord', title: 'Speerwurf Weltrekord', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter weit war der weiteste jemals gemessene Speerwurf (Männer)?', answer: '98,48 Meter (Jan Železný)', difficulty: 'schwer', sources: {}, genres: [] },
 
@@ -420,7 +412,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-kabeljau-eier', title: 'Eier Kabeljau', category: 'schaetzfragen', year: 0, cue: 'Wie viele Eier legt ein weiblicher Kabeljau pro Laichvorgang?', answer: 'bis zu 9 Millionen Eier', difficulty: 'schwer', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-igel-winterschlaf', title: 'Winterschlaf Igel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Stunden braucht ein Igel für seinen Winterschlaf (am Stück, ohne kurze Wachphasen)?', answer: 'Ein Igel schläft nicht durch; er wacht alle 1-3 Wochen kurz auf (die gesamte Phase dauert ca. 5-6 Monate).', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-igel-winterschlaf', title: 'Winterschlaf Igel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tage dauert der Winterschlaf eines Igels insgesamt (inkl. kurzer Wachphasen)?', answer: 'ca. 150 bis 180 Tage (5 bis 6 Monate)', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-transsibirische-eisenbahn', title: 'Länge Transsibirische Eisenbahn', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer misst die längste Eisenbahnstrecke der Welt (Transsibirische Eisenbahn)?', answer: '9.288 Kilometer', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -440,7 +432,7 @@ export const schaetzfragenCards: Card[] = [
 
   { id: 'schaetzfragen-wasser-ausatmen', title: 'Wasser durch Atmung', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Wasser atmet ein Mensch pro Jahr über die Atemluft aus?', answer: 'ca. 150 bis 200 Liter', difficulty: 'mittel', sources: {}, genres: [] },
 
-  { id: 'schaetzfragen-erde-gewicht', title: 'Gewicht Erdkugel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm wiegt die Erdkugel insgesamt?', answer: 'ca. 6 · 10²¹ Tonnen (6 Trilliarden Tonnen)', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-erde-gewicht', title: 'Gewicht Erdkugel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Trilliarden Tonnen wiegt die Erdkugel insgesamt?', answer: 'ca. 6 Trilliarden Tonnen', difficulty: 'schwer', sources: {}, genres: [] },
 
   { id: 'schaetzfragen-salto-angel', title: 'Höhe Salto Ángel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter hoch ist der höchste Wasserfall der Welt (Salto Ángel)?', answer: '979 Meter', difficulty: 'mittel', sources: {}, genres: [] },
 
@@ -541,7 +533,6 @@ export const schaetzfragenCards: Card[] = [
   { id: 'schaetzfragen-norwegen-kuestenlinie', title: 'Küstenlinie Norwegen', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer lang ist die gesamte Küstenlinie Norwegens (inkl. Fjorde)?', answer: 'ca. 100.000 Kilometer', difficulty: 'mittel', sources: {}, genres: [] },
   { id: 'schaetzfragen-schweiss-pro-stunde-sport', title: 'Schweißproduktion pro Stunde Sport', category: 'schaetzfragen', year: 0, cue: 'Wie viele Liter Schweiß produziert ein Mensch bei intensivem Sport pro Stunde etwa?', answer: 'ca. 1 bis 2 Liter', difficulty: 'mittel', sources: {}, genres: [] },
   { id: 'schaetzfragen-skelett-gewicht', title: 'Gewicht Skelett', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm wiegt ein durchschnittliches menschliches Skelett?', answer: 'ca. 10 bis 15 Kilogramm', difficulty: 'mittel', sources: {}, genres: [] },
-  { id: 'schaetzfragen-transsib-zeitzonen', title: 'Zeitzonen Transsibirische Eisenbahn', category: 'schaetzfragen', year: 0, cue: 'Wie viele Zeitzonen durchquert die Transsibirische Eisenbahn auf ihrer gesamten Strecke?', answer: '7 Zeitzonen', difficulty: 'mittel', sources: {}, genres: [] },
   { id: 'schaetzfragen-bernstein-groesstes-stueck', title: 'Größtes Bernstein-Stück', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm wiegt das größte je gefundene Bernstein-Stück?', answer: 'ca. 50 Kilogramm', difficulty: 'mittel', sources: {}, genres: [] },
   { id: 'schaetzfragen-sueskanal-laenge', title: 'Länge Sueskanal', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer lang ist der Sueskanal?', answer: 'ca. 193 Kilometer', difficulty: 'mittel', sources: {}, genres: [] },
   { id: 'schaetzfragen-panamakanal-laenge', title: 'Länge Panamakanal', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer lang ist der Panamakanal?', answer: 'ca. 82 Kilometer', difficulty: 'mittel', sources: {}, genres: [] },
@@ -573,7 +564,6 @@ export const schaetzfragenCards: Card[] = [
   { id: 'schaetzfragen-hagelstein-schwerster', title: 'Schwerster Hagelstein', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm wiegt der schwerste je dokumentierte Hagelstein?', answer: 'ca. 1 Kilogramm', difficulty: 'schwer', sources: {}, genres: [] },
   { id: 'schaetzfragen-erde-umlaufgeschwindigkeit', title: 'Umlaufgeschwindigkeit Erde um Sonne (2)', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer pro Sekunde rast die Erde durchs All um die Sonne?', answer: 'ca. 30 km/s', difficulty: 'schwer', sources: {}, genres: [] },
   { id: 'schaetzfragen-saturn-v-treibstoff', title: 'Treibstoffverbrauch Saturn V', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tonnen Treibstoff verbraucht eine Saturn-V-Rakete in ihrer ersten Stufe beim Start?', answer: 'ca. 2.000 Tonnen', difficulty: 'schwer', sources: {}, genres: [] },
-  { id: 'schaetzfragen-intel-4004-bit', title: 'Bitbreite Intel 4004', category: 'schaetzfragen', year: 1971, cue: 'Wie viele Bit konnte der erste kommerzielle Mikroprozessor (Intel 4004, 1971) gleichzeitig verarbeiten?', answer: '4 Bit', difficulty: 'schwer', sources: {}, genres: [] },
   { id: 'schaetzfragen-seawise-giant-tragfaehigkeit', title: 'Tragfähigkeit größter Öltanker', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tonnen Tragfähigkeit hatte der größte je gebaute Öltanker (Seawise Giant)?', answer: 'ca. 260.000 Tonnen', difficulty: 'schwer', sources: {}, genres: [] },
   { id: 'schaetzfragen-sonne-milchstrasse-umlauf', title: 'Umlaufzeit Sonne um Milchstraßenzentrum', category: 'schaetzfragen', year: 0, cue: 'Wie viele Millionen Jahre dauert ein vollständiger Umlauf der Sonne um das Zentrum der Milchstraße?', answer: 'ca. 225 bis 250 Millionen Jahre', difficulty: 'schwer', sources: {}, genres: [] },
   { id: 'schaetzfragen-fluchtgeschwindigkeit-erde', title: 'Fluchtgeschwindigkeit Erde', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer pro Stunde beträgt die Fluchtgeschwindigkeit von der Erde (Escape Velocity)?', answer: 'ca. 40.270 km/h', difficulty: 'schwer', sources: {}, genres: [] },
@@ -581,6 +571,21 @@ export const schaetzfragenCards: Card[] = [
   { id: 'schaetzfragen-entfernteste-galaxie-licht', title: 'Lichtlaufzeit entfernteste Galaxie', category: 'schaetzfragen', year: 0, cue: 'Wie viele Milliarden Jahre war das Licht der am weitesten entfernten bisher beobachteten Galaxien unterwegs?', answer: 'über 13 Milliarden Jahre', difficulty: 'schwer', sources: {}, genres: [] },
   { id: 'schaetzfragen-mammoth-cave-laenge', title: 'Länge Mammoth Cave', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer Gänge des größten bekannten Höhlensystems der Welt (Mammoth Cave, USA) sind bisher erforscht?', answer: 'über 680 Kilometer', difficulty: 'schwer', sources: {}, genres: [] },
   { id: 'schaetzfragen-blauwal-gewicht-schwerstes-tier', title: 'Gewicht schwerstes Tier (Blauwal)', category: 'schaetzfragen', year: 0, cue: 'Wie viele Tonnen wiegt das schwerste Tier der Erde, der Blauwal?', answer: 'ca. 180 bis 200 Tonnen', difficulty: 'schwer', sources: {}, genres: [] },
+
+  // ── Erweiterung: neue echte Schätzfragen (Ersatz für entfernte reine Wissensfragen) ──
+  { id: 'schaetzfragen-mensch-fusswege-leben', title: 'Fußstrecke im Leben', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilometer legt ein Mensch durchschnittlich im Laufe seines Lebens zu Fuß zurück?', answer: 'ca. 100.000 bis 150.000 Kilometer', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-baeume-weltweit', title: 'Bäume weltweit', category: 'schaetzfragen', year: 0, cue: 'Wie viele Billionen Bäume gibt es schätzungsweise insgesamt auf der Erde?', answer: 'ca. 3 Billionen Bäume', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-herz-gewicht', title: 'Gewicht menschliches Herz', category: 'schaetzfragen', year: 0, cue: 'Wie viele Gramm wiegt ein durchschnittliches menschliches Herz?', answer: 'ca. 300 Gramm', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-bartstoppeln-anzahl', title: 'Barthaare Mann', category: 'schaetzfragen', year: 0, cue: 'Wie viele Barthaar-Follikel hat ein erwachsener Mann durchschnittlich im Gesicht?', answer: 'ca. 25.000 bis 30.000 Barthaare', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-zebra-gewicht', title: 'Gewicht Zebra', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm wiegt ein ausgewachsenes Steppenzebra durchschnittlich?', answer: 'ca. 300 bis 340 Kilogramm', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-konzertfluegel-gewicht', title: 'Gewicht Konzertflügel', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm wiegt ein großer Konzertflügel (z.B. Steinway D)?', answer: 'ca. 480 Kilogramm', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-pottwal-tauchtiefe', title: 'Tauchtiefe Pottwal', category: 'schaetzfragen', year: 0, cue: 'Wie viele Meter tief kann ein Pottwal bei der Jagd nach Riesenkalmaren maximal abtauchen?', answer: 'bis zu 2.000 Meter', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-espresso-bohnen', title: 'Bohnen pro Espresso', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kaffeebohnen stecken ungefähr in einer einzigen Tasse Espresso?', answer: 'ca. 60 Bohnen', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-flughafen-frankfurt-passagiere', title: 'Passagiere Flughafen Frankfurt', category: 'schaetzfragen', year: 0, cue: 'Wie viele Millionen Passagiere fertigte der Flughafen Frankfurt in einem starken Jahr vor Corona (2019) ab?', answer: 'ca. 70 Millionen', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-hund-riechzellen', title: 'Riechzellen Hund', category: 'schaetzfragen', year: 0, cue: 'Wie viele Millionen Riechzellen hat die Nase eines Hundes ungefähr?', answer: 'ca. 220 Millionen', difficulty: 'schwer', sources: {}, genres: [] },
+  { id: 'schaetzfragen-oktoberfest-bier', title: 'Bierausschank Oktoberfest', category: 'schaetzfragen', year: 0, cue: 'Wie viele Millionen Liter Bier werden auf dem Münchner Oktoberfest durchschnittlich pro Jahr ausgeschenkt?', answer: 'ca. 6 bis 7 Millionen Liter', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-flusspferd-gewicht', title: 'Gewicht Flusspferd', category: 'schaetzfragen', year: 0, cue: 'Wie viele Kilogramm wiegt ein ausgewachsenes männliches Flusspferd durchschnittlich?', answer: 'ca. 1.500 bis 1.800 Kilogramm', difficulty: 'mittel', sources: {}, genres: [] },
+  { id: 'schaetzfragen-koenigspinguin-tauchzeit', title: 'Tauchzeit Königspinguin', category: 'schaetzfragen', year: 0, cue: 'Wie viele Minuten kann ein Königspinguin bei der Jagd am Stück unter Wasser bleiben?', answer: 'bis zu 9 Minuten', difficulty: 'schwer', sources: {}, genres: [] },
 
 ];
 

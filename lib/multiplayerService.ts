@@ -1996,8 +1996,15 @@ export function extractRangeFromAnswer(answer: string): { low: number; high: num
 }
 
 export function extractUnitFromAnswer(answer: string): string {
-  const match = answer.match(/[\d.,]+\s+([A-Za-zÄÖÜäöüß]+(?:\s+[A-Za-zÄÖÜäöüß]+)?)/);
-  return match ? match[1] : '';
+  // Optionale Spanne ("X bis Y"/"X–Y"/"X und Y") vor der Einheit mit-überspringen,
+  // sonst wird bei Bereichs-Antworten wie "80 bis 100 Milligramm" fälschlich das
+  // Wort "bis" als Einheit erkannt statt "Milligramm".
+  const match = answer.match(/[\d.,]+(?:\s*(?:bis|–|-|und)\s*[\d.,]+)?\s+([A-Za-zÄÖÜäöüß]+(?:\s+[A-Za-zÄÖÜäöüß]+)?)/i);
+  if (!match) return '';
+  const unit = match[1];
+  // Fällt die Spanne mangels folgendem Einheitswort auf das Bindewort selbst
+  // zurück (z.B. "300 bis 500 (meist 336 oder 392)"), lieber keine Einheit zeigen.
+  return /^(?:bis|und|von)$/i.test(unit) ? '' : unit;
 }
 
 /**
