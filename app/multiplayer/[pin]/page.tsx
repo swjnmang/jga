@@ -1842,17 +1842,17 @@ export default function MultiplayerGamePage() {
       }
 
       return (
-        <main className="relative mx-auto max-w-4xl lg:max-w-6xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+        <main className="relative mx-auto max-w-4xl lg:max-w-6xl px-3 sm:px-5 py-2 sm:py-4 space-y-2">
           {/* Header */}
-          <div className="text-center space-y-2">
+          <div className="text-center">
             {activeGroup && (
               isActiveTurn ? (
-                <div className="mt-3 w-full px-4 py-3 rounded-xl bg-green-500 text-white font-bold text-xl animate-pulse shadow-lg shadow-green-500/30">
+                <div className="w-full px-3 py-1.5 rounded-xl bg-green-500 text-white font-bold text-sm animate-pulse shadow-lg shadow-green-500/30">
                   ⚡ Eure Gruppe ist am Zug!
                 </div>
               ) : (
-                <div className="mt-3 w-full px-4 py-3 rounded-xl bg-ink/15">
-                  <div className="flex flex-wrap items-center justify-center gap-1 text-sm font-semibold">
+                <div className="w-full px-3 py-1.5 rounded-xl bg-ink/15">
+                  <div className="flex flex-wrap items-center justify-center gap-1 text-xs font-semibold">
                     {groupList.map((g, i) => (
                       <span key={g.id} className="flex items-center gap-1">
                         {i > 0 && <span className="text-ink/40 text-xs">→</span>}
@@ -1874,8 +1874,8 @@ export default function MultiplayerGamePage() {
 
           {/* Scoreboard mit Kategorien-Fortschritt */}
           <details className="card-surface rounded-2xl group">
-            <summary className="px-4 py-3 cursor-pointer list-none flex items-center justify-between select-none">
-              <span className="font-semibold">🏆 Scoreboard</span>
+            <summary className="px-3 py-2 cursor-pointer list-none flex items-center justify-between select-none">
+              <span className="font-semibold text-sm">🏆 Scoreboard</span>
               <span className="text-ink/50 text-sm transition-transform group-open:rotate-180">▼</span>
             </summary>
             <div className="px-4 pb-4 space-y-3">
@@ -2147,7 +2147,7 @@ export default function MultiplayerGamePage() {
 
                 {/* Normale Anzeige nur wenn kein Ergebnis läuft */}
                 {!game.schaetzResult && <>
-                <div className="lg:grid lg:grid-cols-[1fr_360px] lg:gap-6 lg:items-start space-y-3 lg:space-y-0">
+                <div className="md:grid md:grid-cols-[1fr_300px] md:gap-4 md:items-start space-y-2 md:space-y-0">
                 <div className="space-y-3">
                 {/* Frage-Karte */}
                 <div className="card-surface rounded-2xl p-6 space-y-4">
@@ -2292,28 +2292,28 @@ export default function MultiplayerGamePage() {
           })() : (
           <>
           {/* ── STANDARD TRIVIA FRAGE ── */}
-          <div className="lg:grid lg:grid-cols-[1fr_360px] lg:gap-6 lg:items-start space-y-3 lg:space-y-0">
-          <div className="space-y-3">
+          <div className="md:grid md:grid-cols-[1fr_300px] md:gap-3 md:items-start space-y-2 md:space-y-0">
+          <div className="space-y-2">
           {!isMyTurn && !effectiveIsHost && !game.hostless && (
-            <div className="w-full px-4 py-3 rounded-xl bg-red-600 text-white font-semibold text-sm text-center">
+            <div className="w-full px-3 py-1.5 rounded-xl bg-red-600 text-white font-semibold text-xs text-center">
               Gruppe {activeGroup?.name ?? 'dem aktiven Team'} ist am Zug – ihr seid nicht dran
             </div>
           )}
-          <div className={`card-surface rounded-2xl p-6 space-y-4 transition-opacity duration-300 ${!isMyTurn && !effectiveIsHost && !game.hostless ? 'opacity-40 grayscale pointer-events-none' : ''}`}>
+          <div className={`card-surface rounded-2xl p-3 sm:p-4 space-y-2 transition-opacity duration-300 ${!isMyTurn && !effectiveIsHost && !game.hostless ? 'opacity-40 grayscale pointer-events-none' : ''}`}>
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-2">
-                <span className="text-sm px-3 py-1 rounded-full bg-ink/10 font-semibold">{categoryIcon} {categoryLabel}</span>
+                <span className="text-xs px-2 py-0.5 rounded-full bg-ink/10 font-semibold">{categoryIcon} {categoryLabel}</span>
                 {quoteSourceBadge(currentCard)}
               </div>
               {timeLeft !== null && (
-                <span className={`text-sm font-mono font-bold px-3 py-1 rounded-full ${
+                <span className={`text-xs font-mono font-bold px-2 py-0.5 rounded-full ${
                   timeLeft <= 10 ? 'bg-red-500/20 text-red-600 animate-pulse' : 'bg-ink/10'
                 }`}>
                   ⏱ {Math.floor(timeLeft / 60).toString().padStart(2, '0')}:{(timeLeft % 60).toString().padStart(2, '0')}
                 </span>
               )}
             </div>
-            <p className="text-2xl font-semibold">{triviaDisplayCue(currentCard)}</p>
+            <p className="text-base sm:text-lg font-semibold">{triviaDisplayCue(currentCard)}</p>
 
             {/* Medien-Einbettung */}
             {currentCard.sources && (
@@ -2329,15 +2329,17 @@ export default function MultiplayerGamePage() {
                   onProgress={handleMediaProgress}
                 />
               ) : currentCard.category === 'music' ? (
-                <div className="rounded-2xl card-surface bg-ink/5 p-6 text-center space-y-3">
-                  <div className="text-5xl">{game?.playbackControl?.action === 'play' && game.playbackControl.cardId === currentCard.id ? '🎵' : '🎵'}</div>
-                  <div className="text-2xl font-mono font-bold text-green-600 tabular-nums">
-                    {String(Math.floor(musicElapsed / 60)).padStart(2, '0')}:{String(musicElapsed % 60).padStart(2, '0')}
-                    {musicDurationMs > 0 && (
-                      <span className="text-ink/40 font-normal"> / {String(Math.floor(musicDurationMs / 60000)).padStart(2, '0')}:{String(Math.floor(musicDurationMs / 1000) % 60).padStart(2, '0')}</span>
-                    )}
+                <div className="rounded-2xl card-surface bg-ink/5 p-3 text-center space-y-1.5">
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="text-xl">🎵</span>
+                    <span className="text-base font-mono font-bold text-green-600 tabular-nums">
+                      {String(Math.floor(musicElapsed / 60)).padStart(2, '0')}:{String(musicElapsed % 60).padStart(2, '0')}
+                      {musicDurationMs > 0 && (
+                        <span className="text-ink/40 font-normal"> / {String(Math.floor(musicDurationMs / 60000)).padStart(2, '0')}:{String(Math.floor(musicDurationMs / 1000) % 60).padStart(2, '0')}</span>
+                      )}
+                    </span>
                   </div>
-                  <div className="h-2 bg-ink/10 rounded-full overflow-hidden">
+                  <div className="h-1.5 bg-ink/10 rounded-full overflow-hidden">
                     <div
                       className="h-full rounded-full transition-all duration-1000"
                       style={{
@@ -2348,7 +2350,7 @@ export default function MultiplayerGamePage() {
                       }}
                     />
                   </div>
-                  <p className="text-xs text-ink/50">
+                  <p className="text-[11px] text-ink/50">
                     {game?.playbackControl?.action === 'play' && game.playbackControl.cardId === currentCard.id
                       ? 'Musik läuft'
                       : 'Wartet auf Spielleiter…'}
@@ -2361,12 +2363,12 @@ export default function MultiplayerGamePage() {
 
             {/* NEXT-Joker: Zielgruppe ist jetzt am Zug */}
             {isMyTurn && game.jokerNextActive && game.jokerNextTargetGroupId === session?.groupId ? (
-              <div className="rounded-xl bg-orange-500/15 border-2 border-orange-500 px-4 py-3 space-y-1">
-                <p className="text-orange-700 font-bold text-base">⚡ Joker NEXT aktiv – ihr seid dran!</p>
-                <p className="text-sm text-orange-700">
+              <div className="rounded-xl bg-orange-500/15 border-2 border-orange-500 px-3 py-2 space-y-0.5">
+                <p className="text-orange-700 font-bold text-sm">⚡ Joker NEXT aktiv – ihr seid dran!</p>
+                <p className="text-xs text-orange-700">
                   {game.groups[game.jokerNextOriginGroupId ?? '']?.name ?? 'Eine Gruppe'} hat die Frage an euch weitergegeben.
                 </p>
-                <p className="text-sm text-orange-600">
+                <p className="text-xs text-orange-600">
                   Richtig → niemand bekommt einen Punkt. Falsch → {game.groups[game.jokerNextOriginGroupId ?? '']?.name ?? 'die andere Gruppe'} bekommt den Punkt.
                 </p>
               </div>
@@ -2374,12 +2376,12 @@ export default function MultiplayerGamePage() {
 
             {/* STEAL-Joker: Stealer ist jetzt am Zug */}
             {isMyTurn && game.jokerStealActive && game.jokerStealGroupId === session?.groupId ? (
-              <div className="rounded-xl bg-purple-500/15 border-2 border-purple-500 px-4 py-3 space-y-1">
-                <p className="text-purple-700 font-bold text-base">🥷 Joker STEAL aktiv – ihr habt geklaut!</p>
-                <p className="text-sm text-purple-700">
+              <div className="rounded-xl bg-purple-500/15 border-2 border-purple-500 px-3 py-2 space-y-0.5">
+                <p className="text-purple-700 font-bold text-sm">🥷 Joker STEAL aktiv – ihr habt geklaut!</p>
+                <p className="text-xs text-purple-700">
                   Ihr habt die Frage von <span className="font-semibold">{game.groups[game.jokerStealFromGroupId ?? '']?.name ?? 'einer Gruppe'}</span> geklaut.
                 </p>
-                <p className="text-sm text-purple-600">
+                <p className="text-xs text-purple-600">
                   Richtig → ihr bekommt Punkt + Kategorie. Falsch → <span className="font-semibold">{game.groups[game.jokerStealFromGroupId ?? '']?.name ?? 'die andere Gruppe'}</span> bekommt Punkt + Kategorie.
                 </p>
               </div>
@@ -2388,9 +2390,9 @@ export default function MultiplayerGamePage() {
             {/* STEAL-Joker: Rückgabe-Zug für die bestohlen Gruppe */}
             {isMyTurn && game.jokerStealReturnActive && session && game.jokerStealFromGroupId !== session.groupId ? null : null}
             {isMyTurn && game.jokerStealReturnActive ? (
-              <div className="rounded-xl bg-blue-500/15 border-2 border-blue-400 px-4 py-3 space-y-1">
-                <p className="text-blue-700 font-bold text-base">🔄 Rückgabe-Zug – ihr seid nochmal dran!</p>
-                <p className="text-sm text-blue-600">
+              <div className="rounded-xl bg-blue-500/15 border-2 border-blue-400 px-3 py-2 space-y-0.5">
+                <p className="text-blue-700 font-bold text-sm">🔄 Rückgabe-Zug – ihr seid nochmal dran!</p>
+                <p className="text-xs text-blue-600">
                   Eure Frage wurde geklaut. Ihr erhaltet jetzt einen neuen Zug mit einer Ersatzfrage.
                 </p>
               </div>
@@ -2403,7 +2405,7 @@ export default function MultiplayerGamePage() {
                   try { await skipCard(pin); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
                 }}
                 disabled={isProcessing}
-                className="w-full px-4 py-2 bg-ink/10 text-ink rounded-xl font-semibold text-sm hover:bg-ink/20 disabled:opacity-50"
+                className="w-full px-3 py-1.5 bg-ink/10 text-ink rounded-xl font-semibold text-xs hover:bg-ink/20 disabled:opacity-50"
               >
                 ⏭ Frage überspringen (gleiche Gruppe bleibt dran)
               </button>
@@ -2411,16 +2413,16 @@ export default function MultiplayerGamePage() {
           </div>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-2">
           {/* Joker-Panel – nur für aktive Gruppe, nicht für Host, nicht wenn NEXT-Joker aktiv */}
           {game.jokersEnabled && isMyTurn && session && !game.jokerNextActive && (() => {
             const myJokers = game.groups[session.groupId]?.jokers;
             if (!myJokers) return null;
             const hasAnyJoker = myJokers.newQuestion || myJokers.next || myJokers.dice;
             return (
-              <div className="card-surface rounded-2xl p-4 space-y-3 border-2 border-amber-400/40">
-                <h3 className="text-sm font-bold text-amber-700">🃏 Joker</h3>
-                <div className="grid grid-cols-3 gap-2">
+              <div className="card-surface rounded-2xl p-2 space-y-1.5 border-2 border-amber-400/40">
+                <h3 className="text-xs font-bold text-amber-700">🃏 Joker</h3>
+                <div className="grid grid-cols-3 gap-1.5">
                   {/* Joker 1: Neue Frage */}
                   <button
                     disabled={!myJokers.newQuestion || isProcessing}
@@ -2430,18 +2432,14 @@ export default function MultiplayerGamePage() {
                       setIsProcessing(true);
                       try { await activateJokerNewQuestion(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
                     }}
-                    className={`flex flex-col items-center gap-1 rounded-xl px-2 py-3 text-center transition-colors border-2 ${
+                    className={`flex flex-col items-center gap-0.5 rounded-lg px-1 py-1.5 text-center transition-colors border-2 ${
                       myJokers.newQuestion
                         ? 'border-amber-400 bg-amber-500/10 hover:bg-amber-500/20 text-amber-900'
                         : 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
                     }`}
                   >
-                    <span className="text-2xl">🔄</span>
-                    <span className="text-xs font-semibold leading-tight">Neue Frage</span>
-                    {myJokers.newQuestion
-                      ? <span className="text-[10px] text-amber-700/70 leading-tight">Gleiche Kategorie</span>
-                      : <span className="text-[10px] text-ink/40">Verbraucht</span>
-                    }
+                    <span className="text-lg">🔄</span>
+                    <span className="text-[10px] font-semibold leading-tight">Neue Frage</span>
                   </button>
                   {/* Joker 2: NEXT */}
                   <button
@@ -2452,18 +2450,14 @@ export default function MultiplayerGamePage() {
                       setIsProcessing(true);
                       try { await activateJokerNext(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
                     }}
-                    className={`flex flex-col items-center gap-1 rounded-xl px-2 py-3 text-center transition-colors border-2 ${
+                    className={`flex flex-col items-center gap-0.5 rounded-lg px-1 py-1.5 text-center transition-colors border-2 ${
                       myJokers.next
                         ? 'border-amber-400 bg-amber-500/10 hover:bg-amber-500/20 text-amber-900'
                         : 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
                     }`}
                   >
-                    <span className="text-2xl">➡️</span>
-                    <span className="text-xs font-semibold leading-tight">NEXT</span>
-                    {myJokers.next
-                      ? <span className="text-[10px] text-amber-700/70 leading-tight">Frage weitergeben</span>
-                      : <span className="text-[10px] text-ink/40">Verbraucht</span>
-                    }
+                    <span className="text-lg">➡️</span>
+                    <span className="text-[10px] font-semibold leading-tight">NEXT</span>
                   </button>
                   {/* Joker 3: Würfeln */}
                   <button
@@ -2474,21 +2468,17 @@ export default function MultiplayerGamePage() {
                       setIsProcessing(true);
                       try { await activateJokerDice(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
                     }}
-                    className={`flex flex-col items-center gap-1 rounded-xl px-2 py-3 text-center transition-colors border-2 ${
+                    className={`flex flex-col items-center gap-0.5 rounded-lg px-1 py-1.5 text-center transition-colors border-2 ${
                       myJokers.dice
                         ? 'border-amber-400 bg-amber-500/10 hover:bg-amber-500/20 text-amber-900'
                         : 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
                     }`}
                   >
-                    <span className="text-2xl">🎲</span>
-                    <span className="text-xs font-semibold leading-tight">Würfeln</span>
-                    {myJokers.dice
-                      ? <span className="text-[10px] text-amber-700/70 leading-tight">6=Punkt, 1=Malus</span>
-                      : <span className="text-[10px] text-ink/40">Verbraucht</span>
-                    }
+                    <span className="text-lg">🎲</span>
+                    <span className="text-[10px] font-semibold leading-tight">Würfeln</span>
                   </button>
                 </div>
-                {!hasAnyJoker && <p className="text-xs text-ink/50 text-center">Alle Joker wurden verbraucht.</p>}
+                {!hasAnyJoker && <p className="text-[11px] text-ink/50 text-center">Alle Joker wurden verbraucht.</p>}
               </div>
             );
           })()}
@@ -2502,11 +2492,10 @@ export default function MultiplayerGamePage() {
             const isSchaetzfrage = currentCat === 'schaetzfragen';
             if (isSchaetzfrage) return null;
             return (
-              <div className="card-surface rounded-2xl p-4 space-y-3 border-2 border-purple-400/60 bg-purple-500/5">
-                <h3 className="text-sm font-bold text-purple-700">🥷 Steal-Joker</h3>
-                <p className="text-xs text-ink/60">
-                  Klau die aktuelle Frage von <span className="font-semibold" style={{ color: (game.currentTurnGroupId ? game.groups[game.currentTurnGroupId]?.color : undefined) ?? undefined }}>{game.currentTurnGroupId ? (game.groups[game.currentTurnGroupId]?.name ?? '?') : '?'}</span>!
-                  First come, first served.
+              <div className="card-surface rounded-2xl p-2 space-y-1.5 border-2 border-purple-400/60 bg-purple-500/5">
+                <h3 className="text-xs font-bold text-purple-700">🥷 Steal-Joker</h3>
+                <p className="text-[11px] text-ink/60">
+                  Klau die aktuelle Frage von <span className="font-semibold" style={{ color: (game.currentTurnGroupId ? game.groups[game.currentTurnGroupId]?.color : undefined) ?? undefined }}>{game.currentTurnGroupId ? (game.groups[game.currentTurnGroupId]?.name ?? '?') : '?'}</span>! First come, first served.
                 </p>
                 <button
                   disabled={!myJokers.steal || isProcessing || !stealUnlocked}
@@ -2516,7 +2505,7 @@ export default function MultiplayerGamePage() {
                     setIsProcessing(true);
                     try { await activateJokerSteal(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
                   }}
-                  className={`w-full flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-center transition-colors border-2 font-semibold ${
+                  className={`w-full flex items-center justify-center gap-2 rounded-xl px-3 py-1.5 text-center transition-colors border-2 font-semibold text-sm ${
                     !myJokers.steal
                       ? 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
                       : !stealUnlocked
@@ -2524,7 +2513,7 @@ export default function MultiplayerGamePage() {
                       : 'border-purple-500 bg-purple-500/10 hover:bg-purple-500/20 text-purple-900 animate-pulse hover:animate-none'
                   }`}
                 >
-                  <span className="text-2xl">🥷</span>
+                  <span className="text-lg">🥷</span>
                   <span>{!myJokers.steal ? 'Verbraucht' : !stealUnlocked ? 'Frage klauen!' : 'Frage klauen!'}</span>
                 </button>
               </div>
@@ -2537,39 +2526,39 @@ export default function MultiplayerGamePage() {
             const pending = game.pendingTextAnswer;
             const isAnswerer = !!session && pending?.groupId === session.groupId;
             return (
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {isMyTurn && !pending && (
-                  <div className="card-surface rounded-2xl p-6 space-y-3 border-2 border-green-500/30">
-                    <p className="text-base font-semibold text-center text-ink/80">Eure Antwort:</p>
+                  <div className="card-surface rounded-2xl p-3 space-y-2 border-2 border-green-500/30">
+                    <p className="text-sm font-semibold text-center text-ink/80">Eure Antwort:</p>
                     <input
                       type="text"
                       value={textAnswerInput}
                       onChange={e => setTextAnswerInput(e.target.value)}
                       onKeyDown={e => e.key === 'Enter' && handleSubmitTextAnswer()}
                       placeholder="Antwort eingeben…"
-                      className="w-full rounded-xl border-2 border-ink/20 px-4 py-3 text-lg font-semibold text-gray-900 focus:border-ink/60 outline-none"
+                      className="w-full rounded-xl border-2 border-ink/20 px-3 py-2 text-base font-semibold text-gray-900 focus:border-ink/60 outline-none"
                       autoFocus
                     />
                     <button
                       onClick={handleSubmitTextAnswer}
                       disabled={!textAnswerInput.trim() || isProcessing}
-                      className="w-full py-3 rounded-xl bg-ink text-inkDark font-bold text-lg hover:opacity-90 disabled:opacity-40"
+                      className="w-full py-2 rounded-xl bg-ink text-inkDark font-bold text-base hover:opacity-90 disabled:opacity-40"
                     >
                       📤 Antwort einreichen
                     </button>
                   </div>
                 )}
                 {pending && (
-                  <div className="card-surface rounded-2xl p-6 space-y-2 border-2 border-blue-400/40 text-center">
-                    <p className="text-xs uppercase tracking-wide text-ink/50">
+                  <div className="card-surface rounded-2xl p-3 space-y-1 border-2 border-blue-400/40 text-center">
+                    <p className="text-[11px] uppercase tracking-wide text-ink/50">
                       {isAnswerer ? 'Eure Antwort' : `Antwort von ${game.groups[pending.groupId]?.name ?? '?'}`}
                     </p>
-                    <p className="text-xl font-bold">{pending.text}</p>
-                    <p className="text-sm text-ink/60">⏳ Die Spielleitung wertet jetzt aus…</p>
+                    <p className="text-base font-bold">{pending.text}</p>
+                    <p className="text-xs text-ink/60">⏳ Die Spielleitung wertet jetzt aus…</p>
                   </div>
                 )}
                 {!isMyTurn && !pending && (
-                  <p className="text-center text-sm text-ink/60">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der aktiven Gruppe'}…</p>
+                  <p className="text-center text-xs text-ink/60">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der aktiven Gruppe'}…</p>
                 )}
               </div>
             );
@@ -2577,27 +2566,27 @@ export default function MultiplayerGamePage() {
 
           {/* Host-Steuerung (nur mit Spielleitung) */}
           {effectiveIsHost && !game.hostless && (
-            <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
+            <div className="card-surface rounded-2xl p-3 space-y-2 border-2 border-green-500/30">
               {/* NEXT-Joker-Hinweis für Host */}
               {game.jokerNextActive && game.jokerNextOriginGroupId && game.jokerNextTargetGroupId && (
-                <div className="rounded-xl bg-orange-500/15 border-2 border-orange-400 px-4 py-3 text-sm">
+                <div className="rounded-xl bg-orange-500/15 border-2 border-orange-400 px-3 py-2 text-xs">
                   <p className="font-bold text-orange-700">⚡ Joker NEXT aktiv</p>
                   <p className="text-orange-600">
                     {game.groups[game.jokerNextOriginGroupId]?.name ?? '?'} hat die Frage an {game.groups[game.jokerNextTargetGroupId]?.name ?? '?'} weitergegeben.
                   </p>
-                  <p className="text-xs text-orange-600 mt-1">Richtig → niemand bekommt Punkt. Falsch → {game.groups[game.jokerNextOriginGroupId]?.name ?? '?'} bekommt Punkt.</p>
+                  <p className="text-orange-600 mt-1">Richtig → niemand bekommt Punkt. Falsch → {game.groups[game.jokerNextOriginGroupId]?.name ?? '?'} bekommt Punkt.</p>
                 </div>
               )}
 
               {/* STEAL-Joker-Hinweis für Host */}
               {game.jokerStealActive && game.jokerStealGroupId && game.jokerStealFromGroupId && (
-                <div className="rounded-xl bg-purple-500/15 border-2 border-purple-400 px-4 py-3 text-sm">
+                <div className="rounded-xl bg-purple-500/15 border-2 border-purple-400 px-3 py-2 text-xs">
                   <p className="font-bold text-purple-700">🥷 Joker STEAL aktiv</p>
                   <p className="text-purple-600">
                     <span className="font-semibold">{game.groups[game.jokerStealGroupId]?.name ?? '?'}</span> hat die Frage von{' '}
                     <span className="font-semibold">{game.groups[game.jokerStealFromGroupId]?.name ?? '?'}</span> geklaut.
                   </p>
-                  <p className="text-xs text-purple-600 mt-1">
+                  <p className="text-purple-600 mt-1">
                     Richtig → {game.groups[game.jokerStealGroupId]?.name ?? '?'} bekommt Punkt + Kategorie.{' '}
                     Falsch → {game.groups[game.jokerStealFromGroupId]?.name ?? '?'} bekommt Punkt + Kategorie, dann Rückgabe-Zug.
                   </p>
@@ -2606,7 +2595,7 @@ export default function MultiplayerGamePage() {
 
               {/* STEAL-Rückgabe-Zug-Hinweis für Host */}
               {game.jokerStealReturnActive && (
-                <div className="rounded-xl bg-blue-500/15 border-2 border-blue-400 px-4 py-3 text-sm">
+                <div className="rounded-xl bg-blue-500/15 border-2 border-blue-400 px-3 py-2 text-xs">
                   <p className="font-bold text-blue-700">🔄 Rückgabe-Zug aktiv</p>
                   <p className="text-blue-600">
                     <span className="font-semibold">{game.currentTurnGroupId ? (game.groups[game.currentTurnGroupId]?.name ?? '?') : '?'}</span> erhält einen Ersatz-Zug (Frage wurde geklaut).
@@ -2617,37 +2606,37 @@ export default function MultiplayerGamePage() {
               {/* Eingereichte Textantwort (falls Antwort-Eingabe für Gruppen aktiviert ist) */}
               {game.hostTextAnswersEnabled && (
                 game.pendingTextAnswer ? (
-                  <div className="rounded-xl bg-blue-500/10 border-2 border-blue-400/40 px-4 py-3 text-center">
-                    <p className="text-xs uppercase tracking-wide text-ink/50 mb-1">Eingereichte Antwort von {activeGroup?.name ?? '?'}</p>
-                    <p className="text-xl font-bold">{game.pendingTextAnswer.text}</p>
+                  <div className="rounded-xl bg-blue-500/10 border-2 border-blue-400/40 px-3 py-2 text-center">
+                    <p className="text-[11px] uppercase tracking-wide text-ink/50">Eingereichte Antwort von {activeGroup?.name ?? '?'}</p>
+                    <p className="text-base font-bold">{game.pendingTextAnswer.text}</p>
                   </div>
                 ) : (
-                  <p className="text-center text-sm text-ink/60">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der Gruppe'}…</p>
+                  <p className="text-center text-xs text-ink/60">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der Gruppe'}…</p>
                 )
               )}
 
               {/* Bewertungs-Buttons */}
-              <p className="text-base font-semibold text-center text-ink/80">
+              <p className="text-sm font-semibold text-center text-ink/80">
                 Hat Gruppe <span className="font-bold">&bdquo;{activeGroup?.name ?? '…'}&ldquo;</span> die Frage korrekt beantwortet?
               </p>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-3 gap-1.5">
                 <button
                   onClick={() => handleTriviaAnswer(true)}
                   disabled={isProcessing || (game.hostTextAnswersEnabled && !game.pendingTextAnswer)}
-                  className="px-2 py-3 bg-green-600 text-white rounded-xl font-bold text-base hover:bg-green-700 disabled:opacity-50"
+                  className="px-2 py-2 bg-green-600 text-white rounded-xl font-bold text-sm hover:bg-green-700 disabled:opacity-50"
                 >
                   ✅ Richtig
                 </button>
                 <button
                   onClick={() => handleTriviaAnswer(false)}
                   disabled={isProcessing || (game.hostTextAnswersEnabled && !game.pendingTextAnswer)}
-                  className="px-2 py-3 bg-red-600 text-white rounded-xl font-bold text-base hover:bg-red-700 disabled:opacity-50"
+                  className="px-2 py-2 bg-red-600 text-white rounded-xl font-bold text-sm hover:bg-red-700 disabled:opacity-50"
                 >
                   ❌ Falsch
                 </button>
                 <button
                   onClick={() => setShowTriviaAnswer(v => !v)}
-                  className={`px-2 py-3 rounded-xl font-bold text-base transition-colors ${
+                  className={`px-2 py-2 rounded-xl font-bold text-sm transition-colors ${
                     showTriviaAnswer
                       ? 'bg-sky-900 text-sky-200 hover:bg-sky-800'
                       : 'bg-sky-700 text-white hover:bg-sky-600'
@@ -2657,11 +2646,11 @@ export default function MultiplayerGamePage() {
                 </button>
               </div>
               {showTriviaAnswer && (
-                <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-400 px-4 py-3">
-                  <p className="text-sm font-semibold text-yellow-700 mb-1">Korrekte Antwort:</p>
-                  <p className="text-xl font-bold">{currentCard.category === 'music' ? currentCard.answer.replace(/ [–—] -?\d+, /, ' — ') : currentCard.answer}</p>
+                <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-400 px-3 py-2">
+                  <p className="text-xs font-semibold text-yellow-700 mb-0.5">Korrekte Antwort:</p>
+                  <p className="text-base font-bold">{currentCard.category === 'music' ? currentCard.answer.replace(/ [–—] -?\d+, /, ' — ') : currentCard.answer}</p>
                   {currentCard.year && (
-                    <p className="text-sm text-ink/60 mt-1">Jahr: {currentCard.year}</p>
+                    <p className="text-xs text-ink/60 mt-0.5">Jahr: {currentCard.year}</p>
                   )}
                 </div>
               )}
@@ -2682,10 +2671,10 @@ export default function MultiplayerGamePage() {
             const correctSoFar = pending ? Object.values(game.answerVotes ?? {}).filter(Boolean).length : 0;
 
             return (
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {/* Joker-Kontext-Hinweise (informativ, für alle sichtbar) */}
                 {game.jokerNextActive && game.jokerNextOriginGroupId && game.jokerNextTargetGroupId && (
-                  <div className="rounded-xl bg-orange-500/15 border-2 border-orange-400 px-4 py-3 text-sm">
+                  <div className="rounded-xl bg-orange-500/15 border-2 border-orange-400 px-3 py-2 text-xs">
                     <p className="font-bold text-orange-700">⚡ Joker NEXT aktiv</p>
                     <p className="text-orange-600">
                       {game.groups[game.jokerNextOriginGroupId]?.name ?? '?'} hat die Frage an {game.groups[game.jokerNextTargetGroupId]?.name ?? '?'} weitergegeben.
@@ -2693,7 +2682,7 @@ export default function MultiplayerGamePage() {
                   </div>
                 )}
                 {game.jokerStealActive && game.jokerStealGroupId && game.jokerStealFromGroupId && (
-                  <div className="rounded-xl bg-purple-500/15 border-2 border-purple-400 px-4 py-3 text-sm">
+                  <div className="rounded-xl bg-purple-500/15 border-2 border-purple-400 px-3 py-2 text-xs">
                     <p className="font-bold text-purple-700">🥷 Joker STEAL aktiv</p>
                     <p className="text-purple-600">
                       <span className="font-semibold">{game.groups[game.jokerStealGroupId]?.name ?? '?'}</span> hat die Frage von{' '}
@@ -2702,7 +2691,7 @@ export default function MultiplayerGamePage() {
                   </div>
                 )}
                 {game.jokerStealReturnActive && (
-                  <div className="rounded-xl bg-blue-500/15 border-2 border-blue-400 px-4 py-3 text-sm">
+                  <div className="rounded-xl bg-blue-500/15 border-2 border-blue-400 px-3 py-2 text-xs">
                     <p className="font-bold text-blue-700">🔄 Rückgabe-Zug aktiv</p>
                   </div>
                 )}
@@ -2712,37 +2701,37 @@ export default function MultiplayerGamePage() {
                   const result = game.textAnswerResult;
                   const isResultForMe = !!session && result.groupId === session.groupId;
                   return (
-                    <div className={`card-surface rounded-2xl p-8 space-y-3 border-4 text-center ${
+                    <div className={`card-surface rounded-2xl p-4 space-y-1.5 border-4 text-center ${
                       result.correct ? 'border-green-500 bg-green-500/10' : 'border-red-500 bg-red-500/10'
                     }`}>
-                      <div className="text-5xl">{result.correct ? '✅' : '❌'}</div>
-                      <p className="text-xl font-bold">
+                      <div className="text-3xl">{result.correct ? '✅' : '❌'}</div>
+                      <p className="text-base font-bold">
                         {isResultForMe
                           ? (result.correct ? 'Eure Antwort wurde akzeptiert!' : 'Eure Antwort wurde nicht akzeptiert')
                           : `${game.groups[result.groupId]?.name ?? 'Die Gruppe'}s Antwort wurde ${result.correct ? 'akzeptiert' : 'nicht akzeptiert'}`}
                       </p>
-                      <p className="text-sm text-ink/60">„{result.text}&ldquo; — {result.correctVotes}/{result.totalVotes} Stimmen für richtig</p>
+                      <p className="text-xs text-ink/60">„{result.text}&ldquo; — {result.correctVotes}/{result.totalVotes} Stimmen für richtig</p>
                     </div>
                   );
                 })()}
 
                 {/* Aktive Gruppe: Antwort eingeben */}
                 {isMyTurn && !pending && !game.textAnswerResult && (
-                  <div className="card-surface rounded-2xl p-6 space-y-3 border-2 border-green-500/30">
-                    <p className="text-base font-semibold text-center text-ink/80">Eure Antwort:</p>
+                  <div className="card-surface rounded-2xl p-3 space-y-2 border-2 border-green-500/30">
+                    <p className="text-sm font-semibold text-center text-ink/80">Eure Antwort:</p>
                     <input
                       type="text"
                       value={textAnswerInput}
                       onChange={e => setTextAnswerInput(e.target.value)}
                       onKeyDown={e => e.key === 'Enter' && handleSubmitTextAnswer()}
                       placeholder="Antwort eingeben…"
-                      className="w-full rounded-xl border-2 border-ink/20 px-4 py-3 text-lg font-semibold text-gray-900 focus:border-ink/60 outline-none"
+                      className="w-full rounded-xl border-2 border-ink/20 px-3 py-2 text-base font-semibold text-gray-900 focus:border-ink/60 outline-none"
                       autoFocus
                     />
                     <button
                       onClick={handleSubmitTextAnswer}
                       disabled={!textAnswerInput.trim() || isProcessing}
-                      className="w-full py-3 rounded-xl bg-ink text-inkDark font-bold text-lg hover:opacity-90 disabled:opacity-40"
+                      className="w-full py-2 rounded-xl bg-ink text-inkDark font-bold text-base hover:opacity-90 disabled:opacity-40"
                     >
                       📤 Antwort einreichen
                     </button>
@@ -2751,35 +2740,35 @@ export default function MultiplayerGamePage() {
 
                 {/* Antwort liegt vor: Anzeige + Abstimmung / Warten */}
                 {pending && (
-                  <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-blue-400/40">
-                    <div className="text-center space-y-1">
-                      <p className="text-xs uppercase tracking-wide text-ink/50">Antwort von {game.groups[pending.groupId]?.name ?? '?'}</p>
-                      <p className="text-2xl font-bold">{pending.text}</p>
+                  <div className="card-surface rounded-2xl p-3 space-y-2 border-2 border-blue-400/40">
+                    <div className="text-center space-y-0.5">
+                      <p className="text-[11px] uppercase tracking-wide text-ink/50">Antwort von {game.groups[pending.groupId]?.name ?? '?'}</p>
+                      <p className="text-lg font-bold">{pending.text}</p>
                     </div>
-                    <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-400 px-4 py-3 text-center">
-                      <p className="text-xs font-semibold text-yellow-700 mb-1">Korrekte Antwort:</p>
-                      <p className="text-lg font-bold">{currentCard.category === 'music' ? currentCard.answer.replace(/ [–—] -?\d+, /, ' — ') : currentCard.answer}</p>
+                    <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-400 px-3 py-2 text-center">
+                      <p className="text-xs font-semibold text-yellow-700 mb-0.5">Korrekte Antwort:</p>
+                      <p className="text-base font-bold">{currentCard.category === 'music' ? currentCard.answer.replace(/ [–—] -?\d+, /, ' — ') : currentCard.answer}</p>
                     </div>
 
                     {isAnswerer ? (
-                      <p className="text-center text-sm text-ink/60">⏳ Warte auf die Abstimmung der anderen Gruppen… ({votesIn}/{eligibleVoters.length})</p>
+                      <p className="text-center text-xs text-ink/60">⏳ Warte auf die Abstimmung der anderen Gruppen… ({votesIn}/{eligibleVoters.length})</p>
                     ) : myVote !== undefined ? (
-                      <p className="text-center text-sm text-ink/60">✅ Ihr habt abgestimmt: {myVote ? 'Richtig' : 'Falsch'}. Warte auf die anderen… ({votesIn}/{eligibleVoters.length})</p>
+                      <p className="text-center text-xs text-ink/60">✅ Ihr habt abgestimmt: {myVote ? 'Richtig' : 'Falsch'}. Warte auf die anderen… ({votesIn}/{eligibleVoters.length})</p>
                     ) : (
-                      <div className="space-y-2">
-                        <p className="text-sm font-semibold text-center text-ink/80">War die Antwort richtig?</p>
-                        <div className="grid grid-cols-2 gap-2">
+                      <div className="space-y-1.5">
+                        <p className="text-xs font-semibold text-center text-ink/80">War die Antwort richtig?</p>
+                        <div className="grid grid-cols-2 gap-1.5">
                           <button
                             onClick={() => handleCastVote(true)}
                             disabled={isProcessing}
-                            className="px-2 py-3 bg-green-600 text-white rounded-xl font-bold text-base hover:bg-green-700 disabled:opacity-50"
+                            className="px-2 py-2 bg-green-600 text-white rounded-xl font-bold text-sm hover:bg-green-700 disabled:opacity-50"
                           >
                             ✅ Richtig
                           </button>
                           <button
                             onClick={() => handleCastVote(false)}
                             disabled={isProcessing}
-                            className="px-2 py-3 bg-red-600 text-white rounded-xl font-bold text-base hover:bg-red-700 disabled:opacity-50"
+                            className="px-2 py-2 bg-red-600 text-white rounded-xl font-bold text-sm hover:bg-red-700 disabled:opacity-50"
                           >
                             ❌ Falsch
                           </button>
@@ -2788,7 +2777,7 @@ export default function MultiplayerGamePage() {
                     )}
 
                     {votesIn === eligibleVoters.length && eligibleVoters.length > 0 && (
-                      <p className="text-center text-xs text-ink/50">
+                      <p className="text-center text-[11px] text-ink/50">
                         {correctSoFar}/{eligibleVoters.length} für &bdquo;richtig&ldquo; ({correctSoFar / eligibleVoters.length >= 0.5 ? 'gilt als richtig' : 'gilt als falsch'}) → wird gleich ausgewertet…
                       </p>
                     )}
@@ -2796,7 +2785,7 @@ export default function MultiplayerGamePage() {
                 )}
 
                 {!isMyTurn && !pending && !game.textAnswerResult && (
-                  <p className="text-center text-sm text-ink/60">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der aktiven Gruppe'}…</p>
+                  <p className="text-center text-xs text-ink/60">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der aktiven Gruppe'}…</p>
                 )}
               </div>
             );
@@ -2977,7 +2966,7 @@ export default function MultiplayerGamePage() {
           )}
         </div>
 
-        <div className="lg:grid lg:grid-cols-[1fr_360px] lg:gap-6 lg:items-start space-y-3 lg:space-y-0">
+        <div className="md:grid md:grid-cols-[1fr_300px] md:gap-4 md:items-start space-y-2 md:space-y-0">
         <div className="space-y-3">
         {/* Aktuelle Karte */}
         {currentCard && (() => {
