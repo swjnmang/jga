@@ -108,6 +108,7 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     timelineWinTarget: params.mode === 'timeline' ? (params.timelineWinTarget ?? 10) : null,
     jokersEnabled: params.mode === 'trivia' ? (params.jokersEnabled ?? true) : false,
     hostless: params.hostless ?? false,
+    hostTextAnswersEnabled: params.mode === 'trivia' ? (params.hostTextAnswersEnabled ?? true) : false,
     groups: {
       [hostGroupId]: {
         ...hostGroup,
@@ -1679,6 +1680,8 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
     currentRoundCategory: next.currentRoundCategory,
     categoryRoundQueue: next.categoryRoundQueue,
     categoryGroupQueue: next.categoryGroupQueue,
+    // Mit-Spielleitung-Textantwort (falls aktiv) ist jetzt bewertet — für die nächste Frage zurücksetzen.
+    pendingTextAnswer: null,
   };
 
   // Reset flex-active; NEXT-Joker-Zustand aufräumen
@@ -1843,7 +1846,7 @@ export async function submitTextAnswer(pin: string, groupId: string, text: strin
   if (!snapshot.exists()) throw new Error('Spiel nicht gefunden.');
 
   const game: GameSession = snapshot.val();
-  if (!game.hostless) throw new Error('Nur im spielleitungslosen Modus verfügbar.');
+  if (!game.hostless && !game.hostTextAnswersEnabled) throw new Error('Textantwort-Eingabe ist in diesem Spiel nicht aktiviert.');
   if (game.currentTurnGroupId !== groupId) throw new Error('Nur die aktive Gruppe kann antworten.');
   if (game.pendingTextAnswer) throw new Error('Es liegt bereits eine Antwort vor.');
 

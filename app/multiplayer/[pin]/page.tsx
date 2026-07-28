@@ -2531,6 +2531,50 @@ export default function MultiplayerGamePage() {
             );
           })()}
 
+          {/* Textantwort-Eingabe (mit Spielleitung, optional aktiviert): Gruppen tippen ihre
+              Antwort ein, die Spielleitung sieht sie und entscheidet richtig/falsch. */}
+          {!game.hostless && game.hostTextAnswersEnabled && !effectiveIsHost && (() => {
+            const pending = game.pendingTextAnswer;
+            const isAnswerer = !!session && pending?.groupId === session.groupId;
+            return (
+              <div className="space-y-3">
+                {isMyTurn && !pending && (
+                  <div className="card-surface rounded-2xl p-6 space-y-3 border-2 border-green-500/30">
+                    <p className="text-base font-semibold text-center text-ink/80">Eure Antwort:</p>
+                    <input
+                      type="text"
+                      value={textAnswerInput}
+                      onChange={e => setTextAnswerInput(e.target.value)}
+                      onKeyDown={e => e.key === 'Enter' && handleSubmitTextAnswer()}
+                      placeholder="Antwort eingeben…"
+                      className="w-full rounded-xl border-2 border-ink/20 px-4 py-3 text-lg font-semibold text-gray-900 focus:border-ink/60 outline-none"
+                      autoFocus
+                    />
+                    <button
+                      onClick={handleSubmitTextAnswer}
+                      disabled={!textAnswerInput.trim() || isProcessing}
+                      className="w-full py-3 rounded-xl bg-ink text-inkDark font-bold text-lg hover:opacity-90 disabled:opacity-40"
+                    >
+                      📤 Antwort einreichen
+                    </button>
+                  </div>
+                )}
+                {pending && (
+                  <div className="card-surface rounded-2xl p-6 space-y-2 border-2 border-blue-400/40 text-center">
+                    <p className="text-xs uppercase tracking-wide text-ink/50">
+                      {isAnswerer ? 'Eure Antwort' : `Antwort von ${game.groups[pending.groupId]?.name ?? '?'}`}
+                    </p>
+                    <p className="text-xl font-bold">{pending.text}</p>
+                    <p className="text-sm text-ink/60">⏳ Die Spielleitung wertet jetzt aus…</p>
+                  </div>
+                )}
+                {!isMyTurn && !pending && (
+                  <p className="text-center text-sm text-ink/60">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der aktiven Gruppe'}…</p>
+                )}
+              </div>
+            );
+          })()}
+
           {/* Host-Steuerung (nur mit Spielleitung) */}
           {effectiveIsHost && !game.hostless && (
             <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30">
@@ -2570,6 +2614,18 @@ export default function MultiplayerGamePage() {
                 </div>
               )}
 
+              {/* Eingereichte Textantwort (falls Antwort-Eingabe für Gruppen aktiviert ist) */}
+              {game.hostTextAnswersEnabled && (
+                game.pendingTextAnswer ? (
+                  <div className="rounded-xl bg-blue-500/10 border-2 border-blue-400/40 px-4 py-3 text-center">
+                    <p className="text-xs uppercase tracking-wide text-ink/50 mb-1">Eingereichte Antwort von {activeGroup?.name ?? '?'}</p>
+                    <p className="text-xl font-bold">{game.pendingTextAnswer.text}</p>
+                  </div>
+                ) : (
+                  <p className="text-center text-sm text-ink/60">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der Gruppe'}…</p>
+                )
+              )}
+
               {/* Bewertungs-Buttons */}
               <p className="text-base font-semibold text-center text-ink/80">
                 Hat Gruppe <span className="font-bold">&bdquo;{activeGroup?.name ?? '…'}&ldquo;</span> die Frage korrekt beantwortet?
@@ -2577,14 +2633,14 @@ export default function MultiplayerGamePage() {
               <div className="grid grid-cols-3 gap-2">
                 <button
                   onClick={() => handleTriviaAnswer(true)}
-                  disabled={isProcessing}
+                  disabled={isProcessing || (game.hostTextAnswersEnabled && !game.pendingTextAnswer)}
                   className="px-2 py-3 bg-green-600 text-white rounded-xl font-bold text-base hover:bg-green-700 disabled:opacity-50"
                 >
                   ✅ Richtig
                 </button>
                 <button
                   onClick={() => handleTriviaAnswer(false)}
-                  disabled={isProcessing}
+                  disabled={isProcessing || (game.hostTextAnswersEnabled && !game.pendingTextAnswer)}
                   className="px-2 py-3 bg-red-600 text-white rounded-xl font-bold text-base hover:bg-red-700 disabled:opacity-50"
                 >
                   ❌ Falsch

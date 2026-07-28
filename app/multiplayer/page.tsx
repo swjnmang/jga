@@ -160,6 +160,7 @@ function MultiplayerLobbyContent() {
   const [jokersEnabled, setJokersEnabled] = useState(true);
   const [timelineWinTarget, setTimelineWinTarget] = useState(10); // range 8–20
   const [hostless, setHostless] = useState(false);
+  const [hostTextAnswersEnabled, setHostTextAnswersEnabled] = useState(true);
   const [creatorGroupName, setCreatorGroupName] = useState('');
   const [creatorAvatar, setCreatorAvatar] = useState('🦁');
 
@@ -392,6 +393,7 @@ function MultiplayerLobbyContent() {
         timelineWinTarget: gameMode === 'timeline' ? timelineWinTarget : undefined,
         hostless,
         hostAvatar: hostless ? creatorAvatar : undefined,
+        hostTextAnswersEnabled: gameMode === 'trivia' ? hostTextAnswersEnabled : false,
       });
 
       // Speichere Session-Infos im localStorage
@@ -737,6 +739,29 @@ function MultiplayerLobbyContent() {
               <span className="text-xs text-ink/60">Jede Gruppe erhält 4 Joker: Neue Frage, NEXT, Würfeln und STEAL.</span>
             </span>
           </button>
+
+          {/* Textantwort-Eingabe (nur relevant mit Spielleitung; ohne Spielleitung tippt die Gruppe ohnehin immer) */}
+          {!hostless && (
+            <button
+              type="button"
+              onClick={() => setHostTextAnswersEnabled(v => !v)}
+              className="w-full flex items-start gap-3 rounded-xl border-2 border-ink/20 bg-ink/5 hover:bg-ink/10 transition-colors px-4 py-3 text-left"
+            >
+              <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                hostTextAnswersEnabled ? 'bg-green-600 border-green-600' : 'border-ink/40 bg-transparent'
+              }`}>
+                {hostTextAnswersEnabled && (
+                  <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="1,5 4.5,9 11,1" />
+                  </svg>
+                )}
+              </span>
+              <span>
+                <span className="text-sm font-semibold block">✍️ Antwort-Eingabe für Gruppen</span>
+                <span className="text-xs text-ink/60">Die antwortende Gruppe tippt ihre Antwort in ein Feld ein. Die Spielleitung sieht die Antwort und entscheidet richtig/falsch.</span>
+              </span>
+            </button>
+          )}
 
           {/* Gewinnbedingung */}
           <div className="space-y-2">

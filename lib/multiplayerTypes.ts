@@ -98,6 +98,11 @@ export interface GameSession {
   currentRoundCategory?: string;       // Aktuelle Kategorie, aus der alle Gruppen spielen
   categoryRoundQueue?: string[];       // Noch ausstehende Kategorien in dieser Runde (gemischt)
   categoryGroupQueue?: string[];       // Gruppen, die in der aktuellen Kategorie noch spielen müssen
+  // Textantwort-Eingabe (Trivia, mit Spielleitung): Gruppen tippen ihre Antwort ein,
+  // die Spielleitung sieht die eingereichte Antwort und entscheidet richtig/falsch.
+  // Standardmäßig aktiviert, in den Grundeinstellungen abschaltbar. Im spielleitungslosen
+  // Modus (hostless) ist Textantwort ohnehin immer aktiv, unabhängig von diesem Feld.
+  hostTextAnswersEnabled?: boolean;
   // Joker-System (Trivia)
   jokersEnabled?: boolean;                  // Ob Joker aktiviert sind
   jokerNextActive?: boolean;                // Joker 2 «NEXT» ist gerade aktiv
@@ -177,6 +182,7 @@ export interface CreateGameParams {
   jokersEnabled?: boolean;
   hostless?: boolean;
   hostAvatar?: string;
+  hostTextAnswersEnabled?: boolean;
 }
 
 export interface JoinGameParams {
