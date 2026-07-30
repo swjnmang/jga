@@ -13,7 +13,8 @@
   | 'schaetzfragen'
   | 'essentrinken'
   | 'gaming'
-  | 'gzsz';
+  | 'gzsz'
+  | 'fussball';
 
 export type Difficulty = 'leicht' | 'mittel' | 'schwer';
 

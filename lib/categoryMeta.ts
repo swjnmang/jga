@@ -20,6 +20,7 @@ export const CATEGORY_META: Record<string, { label: string; icon: string }> = {
   essentrinken:   { label: 'Essen & Trinken',           icon: '🍽️' },
   gaming:         { label: 'Gaming & eSports',          icon: '🎮' },
   gzsz:           { label: 'GZSZ',                      icon: '📺' },
+  fussball:       { label: 'Fußball',                   icon: '⚽' },
   triviaextra:    { label: 'Trivia Extra',              icon: '🧠' },
   popkultur:      { label: 'Popkultur',                 icon: '🎭' },
 };
@@ -47,7 +48,7 @@ export const CAT_SHORT: Record<string, string> = {
   flag: 'Flagge', outline: 'Umriss', natur: 'Natur', naturtechnik: 'Natur',
   triviaextra: 'Trivia', schaetzfragen: 'Schätzfr.', geogeschichte: 'Geo',
   religionglaube: 'Religion', sportfreizeit: 'Sport', popkultur: 'Popkultur',
-  essentrinken: 'Essen', gaming: 'Gaming', gzsz: 'GZSZ',
+  essentrinken: 'Essen', gaming: 'Gaming', gzsz: 'GZSZ', fussball: 'Fußball',
 };
 
 export function catShortLabel(cat: string): string {

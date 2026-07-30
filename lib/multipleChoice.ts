@@ -9,6 +9,7 @@ import { triviaExtraCards } from './triviaExtraCards';
 import { gamingEsportsCards } from './gamingEsportsCards';
 import { gzszCards } from './gzszCards';
 import { schaetzfragenCards } from './schaetzfragenCards';
+import { fussballCards } from './fussballCards';
 
 const allCards = [
   ...cards,
@@ -20,7 +21,8 @@ const allCards = [
   ...triviaExtraCards,
   ...gamingEsportsCards,
   ...gzszCards,
-  ...schaetzfragenCards
+  ...schaetzfragenCards,
+  ...fussballCards
 ];
 
 // Keep the original order index for religion cards so we can pick nearby, thematically similar entries
@@ -262,7 +264,7 @@ export function generateDistractors(currentCard: Card): string[] {
   }
   
   // OTHER CATEGORIES: Filter by difficulty
-  if (['naturtechnik', 'religionglaube', 'geogeschichte', 'sportfreizeit', 'image', 'video', 'quote', 'filmeserien'].includes(currentCard.category)) {
+  if (['naturtechnik', 'religionglaube', 'geogeschichte', 'sportfreizeit', 'image', 'video', 'quote', 'filmeserien', 'fussball'].includes(currentCard.category)) {
     const difficultyOrder = { leicht: 0, mittel: 1, schwer: 2 };
     const currentLevel = difficultyOrder[currentCard.difficulty] ?? 1;
     const difficultyLevels = Object.keys(difficultyOrder) as Array<keyof typeof difficultyOrder>;

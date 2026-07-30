@@ -10,6 +10,7 @@ import { quoteCards } from './quoteCards';
 import { essentrinkenCards } from './essentrinkenCards';
 import { gamingEsportsCards } from './gamingEsportsCards';
 import { gzszCards } from './gzszCards';
+import { fussballCards } from './fussballCards';
 
 const baseCards: Card[] = [
   {
@@ -698,6 +699,7 @@ const baseNonMusicCards = [
   ...essentrinkenCards,
   ...gamingEsportsCards,
   ...gzszCards,
+  ...fussballCards,
 ];
 
 const playlistTaggedCards = playlistCards.map((card) => {
