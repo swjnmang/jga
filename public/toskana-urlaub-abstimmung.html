@@ -191,6 +191,8 @@ const HOUSES = [
     villa: "Villa Marraccini 8",
     location: "Lucca",
     facts: "4 Schlafzimmer · 4 Bäder · schläft 8 · historisches Landhaus mit Panoramapool",
+    beach: "🚗 ca. 37 Min. zum Strand (Viareggio/Torre del Lago)",
+    cost: "💶 ca. 4.614 € Gesamtkosten für 7 Nächte, 8 Erw. (inkl. Gebühren, Stand emmavillas.com)",
     link: "https://emmavillas.com/en/tuscany/villa-marraccini-8/2026-08-29/2026-09-05?Adults=8",
     photo: "https://www.villamarraccini.com/wp-content/uploads/2023/03/WEB-VILLA-MARRACINI-Lucca-2022-5439-Edit-1.jpg",
     lat: 43.8194763,
@@ -202,6 +204,8 @@ const HOUSES = [
     villa: "Villa Prana",
     location: "Massarosa",
     facts: "5 Schlafzimmer · 5 Bäder · bis 10 Gäste · privater Pool, komplett eingezäunt",
+    beach: "🚗 ca. 17 Min. zum Strand (Viareggio/Lido di Camaiore)",
+    cost: "⚠️ Für 29.08.–05.09.2026 aktuell nicht buchbar auf Airbnb (aller Voraussicht nach schon vergeben – bitte vor der Stimme abklären!)",
     link: "https://www.airbnb.de/rooms/1462324297628032590",
     photo: "https://a0.muscache.com/im/pictures/miso/Hosting-1462324297628032590/original/08b6d533-4bd4-4e0c-a9b1-7d84c09906c1.jpeg",
     lat: 43.8721475,
@@ -213,10 +217,12 @@ const HOUSES = [
     villa: "Villa La Cava",
     location: "Riparbella",
     facts: "4 Bäder · Infinity-Pool · Meerblick · ruhige Hügellage",
+    beach: "🚗 ca. 23 Min. zum Strand (Marina di Cecina)",
+    cost: "💶 ca. 4.759 € Gesamtkosten für 7 Nächte, 8 Erw. (inkl. Steuern/Gebühren, Stand booking.com)",
     link: "https://www.booking.com/hotel/it/villa-la-cava-provincia-di-pisa.html",
     photo: "https://imgservice.casai.com/jpg/680x408/AzRT8xsWDLcQL9frPSuXFfBPP68gnzkfmgGPsxCmnowuVp_VK83QtIkP7Bd-6IIMwiROpxDWkmXnrfsH6G3uzNS7ntBHZleqM_rIKv3pj6OFSBsyQZVyXiwWvfcfo8exPHS5Q7qPmL0PtZBo1Gf50H7puM0hSe6FHRVfOuS9KSxUb5rR1MiId8eCNwd653Qr",
-    lat: 43.3640243,
-    lon: 10.5975673
+    lat: 43.3558712,
+    lon: 10.6105722
   },
   {
     id: "collegalli",
@@ -224,6 +230,8 @@ const HOUSES = [
     villa: "Colle Galli",
     location: "Acquapendente (an der Toskana-Grenze)",
     facts: "5 Doppelzimmer · Spa · Pool · Kamin · 5,0★ Bewertung",
+    beach: "🚗 ca. 1 Std. 17 Min. zum Meer (Montalto di Castro) · Bolsenasee in ca. 29 Min.",
+    cost: "💶 ca. 5.702 € Gesamtkosten für 7 Nächte, 8 Erw. (inkl. Verbrauch/Endreinigung, Stand casamundo.de)",
     link: "https://www.casamundo.de/go/y14vkfiba",
     photo: "https://cdn.hometogo.net/large/v1/ab8/63e/33cd9c8eb75c35432ab9fc5cd3.jpg",
     lat: 42.8186222,
@@ -271,6 +279,8 @@ HOUSES.forEach(h => {
         <div class="checkbox"></div>
       </div>
       <div class="facts">${h.facts}</div>
+      <div class="facts">${h.beach}</div>
+      <div class="facts">${h.cost}</div>
       <iframe class="map-frame" loading="lazy"
         src="https://www.google.com/maps?q=${h.lat},${h.lon}&z=13&output=embed">
       </iframe>
