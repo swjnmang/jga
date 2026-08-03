@@ -172,12 +172,14 @@
   </div>
 
   <footer>
-    Erstellt für die Toskana-Urlaubsplanung 2026 · Ergebnisse werden geräteübergreifend über einen
-    öffentlichen Zähler-Dienst (<a href="https://counterapi.dev" target="_blank" rel="noopener">counterapi.dev</a>) synchronisiert.
-    Ist der Dienst nicht erreichbar, wird lokal auf diesem Gerät weitergezählt.
+    Erstellt für die Toskana-Urlaubsplanung 2026 · Ergebnisse werden geräteübergreifend über eine
+    Firebase-Datenbank synchronisiert und dauerhaft gespeichert.
+    Ist die Verbindung nicht verfügbar, wird lokal auf diesem Gerät weitergezählt.
   </footer>
 </div>
 
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
 <script>
 /* ------------------------------------------------------------------
    Konfiguration: die vier Häuser
@@ -229,9 +231,22 @@ const HOUSES = [
   }
 ];
 
-const WORKSPACE = "toskana-urlaub-2026-jona-anna-fabi-kaddl";
 const MAX_VOTES = 2;
 const VOTE_KEY = "toskana_voted_houses_v1";
+const VOTER_ID_KEY = "toskana_voter_id_v1";
+const VOTE_PATH = "votes/toskana-urlaub-2026-jona-anna-fabi-kaddl";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCrrGn7YK7AGwyX-RrCgDpK3r4FMGMgVhg",
+  authDomain: "flex-quiz-5f841.firebaseapp.com",
+  databaseURL: "https://flex-quiz-5f841-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "flex-quiz-5f841",
+  storageBucket: "flex-quiz-5f841.firebasestorage.app",
+  messagingSenderId: "302969486618",
+  appId: "1:302969486618:web:695bd5ac9c209e4b1580a3"
+};
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
 
 let selected = new Set();
 let remoteAvailable = false;
@@ -295,7 +310,7 @@ function hasVoted() {
 }
 
 /* ------------------------------------------------------------------
-   Zähler-Backend (counterapi.dev) mit lokalem Fallback
+   Zähler-Backend (Firebase Realtime Database) mit lokalem Fallback
 ------------------------------------------------------------------- */
 function localCountKey(id) { return `toskana_local_count_${id}`; }
 
@@ -308,25 +323,29 @@ function bumpLocalCount(id) {
   return v;
 }
 
+function getVoterId() {
+  let id = localStorage.getItem(VOTER_ID_KEY);
+  if (!id) {
+    id = (crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`);
+    localStorage.setItem(VOTER_ID_KEY, id);
+  }
+  return id;
+}
+
 async function fetchCount(id) {
-  const url = `https://api.counterapi.dev/v1/${WORKSPACE}/${id}`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error("counter fetch failed");
-  const data = await res.json();
-  return data.count ?? 0;
+  const snap = await db.ref(`${VOTE_PATH}/counts/${id}`).get();
+  return snap.val() || 0;
 }
 
 async function incrementCount(id) {
-  const url = `https://api.counterapi.dev/v1/${WORKSPACE}/${id}/up`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error("counter increment failed");
-  const data = await res.json();
-  return data.count ?? 0;
+  const ref = db.ref(`${VOTE_PATH}/counts/${id}`);
+  const { snapshot } = await ref.transaction(current => (current || 0) + 1);
+  return snapshot.val() || 0;
 }
 
 async function checkRemoteAvailability() {
   try {
-    await fetchCount(HOUSES[0].id);
+    await db.ref(`${VOTE_PATH}/counts`).get();
     remoteAvailable = true;
   } catch (e) {
     remoteAvailable = false;
@@ -353,17 +372,33 @@ async function getCount(id) {
 }
 
 async function vote(ids) {
-  for (const id of ids) {
-    if (remoteAvailable) {
-      try {
-        await incrementCount(id);
-        continue;
-      } catch (e) {
-        // fall through to local
+  if (remoteAvailable) {
+    try {
+      const voterId = getVoterId();
+      const voterRef = db.ref(`${VOTE_PATH}/voters/${voterId}`);
+      const existing = await voterRef.get();
+      if (!existing.exists()) {
+        for (const id of ids) {
+          await incrementCount(id);
+        }
+        await voterRef.set({ houses: ids, timestamp: firebase.database.ServerValue.TIMESTAMP });
       }
+      return;
+    } catch (e) {
+      // fall through to local
     }
+  }
+  for (const id of ids) {
     bumpLocalCount(id);
   }
+}
+
+function listenForLiveResults() {
+  db.ref(`${VOTE_PATH}/counts`).on("value", () => {
+    if (document.getElementById("resultsSection").style.display === "block") {
+      renderResults();
+    }
+  });
 }
 
 /* ------------------------------------------------------------------
@@ -438,6 +473,7 @@ document.getElementById("resetBtn").addEventListener("click", () => {
 (async function init() {
   await checkRemoteAvailability();
   updateHint();
+  if (remoteAvailable) listenForLiveResults();
   if (hasVoted()) {
     document.getElementById("voteBtn").textContent = "✅ Du hast bereits abgestimmt";
     document.getElementById("voteBtn").disabled = true;
