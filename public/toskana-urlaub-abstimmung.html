@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toskana-Urlaub 2026 – Villen-Abstimmung</title>
+<style>
+  :root {
+    --red: #c0392b;
+    --blue: #2471a3;
+    --green: #1e8449;
+    --purple: #8e44ad;
+    --bg: #faf7f0;
+    --card-bg: #ffffff;
+    --text: #2c2c2c;
+    --muted: #777777;
+    --border: #e2ddd2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 24px 16px 60px;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 8px; }
+  header h1 { font-size: 1.7rem; margin: 0 0 4px; }
+  header p { color: var(--muted); margin: 0; font-size: 0.95rem; }
+
+  .info-box {
+    background: #fff8e6;
+    border: 1px solid #f0dfa8;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin: 20px 0;
+    font-size: 0.9rem;
+    color: #6b5a1e;
+  }
+
+  .status-pill {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .status-live { background: #e2f4e8; color: #1e6b3c; }
+  .status-local { background: #fde8e4; color: #a43a2c; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    padding: 0 0 16px;
+    position: relative;
+    transition: border-color 0.15s, transform 0.1s;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .card-inner { padding: 16px; }
+  .house-photo {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    background: #eee7d8;
+  }
+  .card:hover { border-color: #cfc7b3; }
+  .card.selected { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
+
+  .card[data-house="marraccini"] { --accent: var(--red); }
+  .card[data-house="prana"]      { --accent: var(--blue); }
+  .card[data-house="lacava"]     { --accent: var(--green); }
+  .card[data-house="collegalli"] { --accent: var(--purple); }
+
+  .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+  .couple { font-weight: 700; font-size: 1.05rem; }
+  .villa-name { color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
+
+  .checkbox {
+    width: 26px; height: 26px; border-radius: 50%;
+    border: 2px solid #d5cfc0; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem; color: white; font-weight: bold;
+  }
+  .card.selected .checkbox { background: var(--accent); border-color: var(--accent); }
+
+  .facts { font-size: 0.85rem; color: #555; margin: 10px 0; line-height: 1.5; }
+
+  .map-frame {
+    width: 100%; height: 160px; border: 0; border-radius: 8px;
+    margin-top: 10px; display: block;
+  }
+
+  .links { margin-top: 10px; font-size: 0.85rem; }
+  .links a {
+    color: var(--accent); text-decoration: none; font-weight: 600;
+  }
+  .links a:hover { text-decoration: underline; }
+
+  .vote-bar-outer {
+    margin-top: 10px; background: #eee7d8; border-radius: 6px; height: 10px; overflow: hidden;
+  }
+  .vote-bar-inner { height: 100%; background: var(--accent); width: 0%; transition: width 0.4s; }
+  .vote-count { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+
+  .actions {
+    display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; justify-content: center;
+  }
+  button {
+    font-size: 1rem; padding: 12px 22px; border-radius: 10px; border: none;
+    cursor: pointer; font-weight: 600; transition: opacity 0.15s;
+  }
+  button:disabled { opacity: 0.45; cursor: not-allowed; }
+  #voteBtn { background: #2c2c2c; color: white; }
+  #resultsBtn { background: transparent; color: #2c2c2c; border: 2px solid #2c2c2c; }
+  #resetBtn { background: transparent; color: var(--muted); border: 1px solid var(--border); font-weight: 400; font-size: 0.85rem; padding: 8px 14px; }
+
+  .selection-hint {
+    text-align: center; margin-top: 14px; font-size: 0.9rem; color: var(--muted);
+  }
+
+  #resultsSection { margin-top: 34px; display: none; }
+  #resultsSection h2 { font-size: 1.2rem; margin-bottom: 4px; }
+  #resultsSection .sub { color: var(--muted); font-size: 0.85rem; margin-bottom: 16px; }
+  .result-row { margin-bottom: 14px; }
+  .result-row .label { display: flex; justify-content: space-between; font-size: 0.95rem; margin-bottom: 4px; }
+  .result-row .label b { font-weight: 700; }
+
+  footer { text-align: center; margin-top: 40px; font-size: 0.78rem; color: #aaa; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>🏡 Toskana-Urlaub 2026 – Welche Villa wird's?</h1>
+    <p>29.08. – 05.09.2026 · Jede Person hat <b>2 Stimmen</b> für zwei verschiedene Häuser</p>
+  </header>
+
+  <div class="info-box">
+    Wählt <b>genau zwei</b> Häuser aus und klickt auf „Abstimmen". Ihr könnt euch die aktuellen Ergebnisse
+    jederzeit ansehen – auch ohne selbst abzustimmen. <span id="statusPill" class="status-pill status-local">wird geprüft…</span>
+  </div>
+
+  <div class="grid" id="houseGrid"></div>
+
+  <div class="selection-hint" id="selectionHint">0 von 2 Häusern ausgewählt</div>
+
+  <div class="actions">
+    <button id="voteBtn" disabled>✅ Abstimmen</button>
+    <button id="resultsBtn">📊 Ergebnisse ansehen</button>
+  </div>
+  <div class="actions">
+    <button id="resetBtn">Meine Abstimmung zurücksetzen (nur dieses Gerät)</button>
+  </div>
+
+  <div id="resultsSection">
+    <h2>📊 Aktuelle Ergebnisse</h2>
+    <div class="sub" id="resultsSub">Lade Ergebnisse…</div>
+    <div id="resultsList"></div>
+  </div>
+
+  <footer>
+    Erstellt für die Toskana-Urlaubsplanung 2026 · Ergebnisse werden geräteübergreifend über einen
+    öffentlichen Zähler-Dienst (<a href="https://counterapi.dev" target="_blank" rel="noopener">counterapi.dev</a>) synchronisiert.
+    Ist der Dienst nicht erreichbar, wird lokal auf diesem Gerät weitergezählt.
+  </footer>
+</div>
+
+<script>
+/* ------------------------------------------------------------------
+   Konfiguration: die vier Häuser
+------------------------------------------------------------------- */
+const HOUSES = [
+  {
+    id: "marraccini",
+    couple: "Jona & Jaci",
+    villa: "Villa Marraccini 8",
+    location: "Lucca",
+    facts: "4 Schlafzimmer · 4 Bäder · schläft 8 · historisches Landhaus mit Panoramapool",
+    link: "https://emmavillas.com/en/tuscany/villa-marraccini-8/2026-08-29/2026-09-05?Adults=8",
+    photo: "https://www.villamarraccini.com/wp-content/uploads/2023/03/WEB-VILLA-MARRACINI-Lucca-2022-5439-Edit-1.jpg",
+    lat: 43.8194763,
+    lon: 10.4661999
+  },
+  {
+    id: "prana",
+    couple: "Kaddl & Kilian",
+    villa: "Villa Prana",
+    location: "Massarosa",
+    facts: "5 Schlafzimmer · 5 Bäder · bis 10 Gäste · privater Pool, komplett eingezäunt",
+    link: "https://www.airbnb.de/rooms/1462324297628032590",
+    photo: "https://a0.muscache.com/im/pictures/miso/Hosting-1462324297628032590/original/08b6d533-4bd4-4e0c-a9b1-7d84c09906c1.jpeg",
+    lat: 43.8721475,
+    lon: 10.3376077
+  },
+  {
+    id: "lacava",
+    couple: "Fabi & Lisa",
+    villa: "Villa La Cava",
+    location: "Riparbella",
+    facts: "4 Bäder · Infinity-Pool · Meerblick · ruhige Hügellage",
+    link: "https://www.booking.com/hotel/it/villa-la-cava-provincia-di-pisa.html",
+    photo: "https://imgservice.casai.com/jpg/680x408/AzRT8xsWDLcQL9frPSuXFfBPP68gnzkfmgGPsxCmnowuVp_VK83QtIkP7Bd-6IIMwiROpxDWkmXnrfsH6G3uzNS7ntBHZleqM_rIKv3pj6OFSBsyQZVyXiwWvfcfo8exPHS5Q7qPmL0PtZBo1Gf50H7puM0hSe6FHRVfOuS9KSxUb5rR1MiId8eCNwd653Qr",
+    lat: 43.3640243,
+    lon: 10.5975673
+  },
+  {
+    id: "collegalli",
+    couple: "Anna & Michi",
+    villa: "Colle Galli",
+    location: "Acquapendente (an der Toskana-Grenze)",
+    facts: "5 Doppelzimmer · Spa · Pool · Kamin · 5,0★ Bewertung",
+    link: "https://www.casamundo.de/go/y14vkfiba",
+    photo: "https://cdn.hometogo.net/large/v1/ab8/63e/33cd9c8eb75c35432ab9fc5cd3.jpg",
+    lat: 42.8186222,
+    lon: 11.844513
+  }
+];
+
+const WORKSPACE = "toskana-urlaub-2026-jona-anna-fabi-kaddl";
+const MAX_VOTES = 2;
+const VOTE_KEY = "toskana_voted_houses_v1";
+
+let selected = new Set();
+let remoteAvailable = false;
+
+/* ------------------------------------------------------------------
+   Rendering der Karten
+------------------------------------------------------------------- */
+const grid = document.getElementById("houseGrid");
+
+HOUSES.forEach(h => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.dataset.house = h.id;
+  card.innerHTML = `
+    <img class="house-photo" src="${h.photo}" alt="${h.villa}" loading="lazy">
+    <div class="card-inner">
+      <div class="card-top">
+        <div>
+          <div class="couple">${h.couple}</div>
+          <div class="villa-name">${h.villa} · ${h.location}</div>
+        </div>
+        <div class="checkbox"></div>
+      </div>
+      <div class="facts">${h.facts}</div>
+      <iframe class="map-frame" loading="lazy"
+        src="https://www.google.com/maps?q=${h.lat},${h.lon}&z=13&output=embed">
+      </iframe>
+      <div class="links">🔗 <a href="${h.link}" target="_blank" rel="noopener">Haus noch einmal ansehen</a></div>
+      <div class="vote-bar-outer"><div class="vote-bar-inner" id="bar-${h.id}"></div></div>
+      <div class="vote-count" id="count-${h.id}">–</div>
+    </div>
+  `;
+  card.addEventListener("click", (e) => {
+    // don't toggle when clicking a link or the map iframe
+    if (e.target.tagName === "A" || e.target.tagName === "IFRAME") return;
+    toggleSelect(h.id, card);
+  });
+  grid.appendChild(card);
+});
+
+function toggleSelect(id, card) {
+  if (selected.has(id)) {
+    selected.delete(id);
+    card.classList.remove("selected");
+  } else {
+    if (selected.size >= MAX_VOTES) return;
+    selected.add(id);
+    card.classList.add("selected");
+  }
+  updateHint();
+}
+
+function updateHint() {
+  document.getElementById("selectionHint").textContent =
+    `${selected.size} von ${MAX_VOTES} Häusern ausgewählt`;
+  document.getElementById("voteBtn").disabled = selected.size !== MAX_VOTES || hasVoted();
+}
+
+function hasVoted() {
+  return !!localStorage.getItem(VOTE_KEY);
+}
+
+/* ------------------------------------------------------------------
+   Zähler-Backend (counterapi.dev) mit lokalem Fallback
+------------------------------------------------------------------- */
+function localCountKey(id) { return `toskana_local_count_${id}`; }
+
+function getLocalCount(id) {
+  return parseInt(localStorage.getItem(localCountKey(id)) || "0", 10);
+}
+function bumpLocalCount(id) {
+  const v = getLocalCount(id) + 1;
+  localStorage.setItem(localCountKey(id), String(v));
+  return v;
+}
+
+async function fetchCount(id) {
+  const url = `https://api.counterapi.dev/v1/${WORKSPACE}/${id}`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("counter fetch failed");
+  const data = await res.json();
+  return data.count ?? 0;
+}
+
+async function incrementCount(id) {
+  const url = `https://api.counterapi.dev/v1/${WORKSPACE}/${id}/up`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("counter increment failed");
+  const data = await res.json();
+  return data.count ?? 0;
+}
+
+async function checkRemoteAvailability() {
+  try {
+    await fetchCount(HOUSES[0].id);
+    remoteAvailable = true;
+  } catch (e) {
+    remoteAvailable = false;
+  }
+  const pill = document.getElementById("statusPill");
+  if (remoteAvailable) {
+    pill.textContent = "🌐 Live-Ergebnisse (geräteübergreifend)";
+    pill.className = "status-pill status-live";
+  } else {
+    pill.textContent = "📍 Nur lokal auf diesem Gerät";
+    pill.className = "status-pill status-local";
+  }
+}
+
+async function getCount(id) {
+  if (remoteAvailable) {
+    try {
+      return await fetchCount(id);
+    } catch (e) {
+      return getLocalCount(id);
+    }
+  }
+  return getLocalCount(id);
+}
+
+async function vote(ids) {
+  for (const id of ids) {
+    if (remoteAvailable) {
+      try {
+        await incrementCount(id);
+        continue;
+      } catch (e) {
+        // fall through to local
+      }
+    }
+    bumpLocalCount(id);
+  }
+}
+
+/* ------------------------------------------------------------------
+   Ergebnisse anzeigen
+------------------------------------------------------------------- */
+async function renderResults() {
+  const section = document.getElementById("resultsSection");
+  section.style.display = "block";
+  document.getElementById("resultsSub").textContent = "Lade Ergebnisse…";
+
+  const counts = {};
+  for (const h of HOUSES) {
+    counts[h.id] = await getCount(h.id);
+  }
+  const total = Object.values(counts).reduce((a, b) => a + b, 0) || 1;
+
+  const list = document.getElementById("resultsList");
+  list.innerHTML = "";
+  const sorted = [...HOUSES].sort((a, b) => counts[b.id] - counts[a.id]);
+
+  sorted.forEach(h => {
+    const c = counts[h.id];
+    const pct = Math.round((c / total) * 100);
+    const row = document.createElement("div");
+    row.className = "result-row";
+    row.innerHTML = `
+      <div class="label"><span>${h.couple} – ${h.villa}</span><b>${c} Stimme${c === 1 ? "" : "n"} (${pct}%)</b></div>
+      <div class="vote-bar-outer"><div class="vote-bar-inner" style="width:${pct}%; background:var(--accent, #999)"></div></div>
+    `;
+    row.querySelector(".vote-bar-inner").style.setProperty("--accent",
+      {marraccini: "#c0392b", prana: "#2471a3", lacava: "#1e8449", collegalli: "#8e44ad"}[h.id]);
+    list.appendChild(row);
+
+    // also update the mini-bars on the cards themselves
+    const bar = document.getElementById(`bar-${h.id}`);
+    const countEl = document.getElementById(`count-${h.id}`);
+    if (bar) bar.style.width = pct + "%";
+    if (countEl) countEl.textContent = `${c} Stimme${c === 1 ? "" : "n"}`;
+  });
+
+  document.getElementById("resultsSub").textContent =
+    `Insgesamt ${total} abgegebene Stimme${total === 1 ? "" : "n"}${remoteAvailable ? "" : " (nur lokal auf diesem Gerät)"}`;
+}
+
+/* ------------------------------------------------------------------
+   Events
+------------------------------------------------------------------- */
+document.getElementById("voteBtn").addEventListener("click", async () => {
+  if (selected.size !== MAX_VOTES || hasVoted()) return;
+  const ids = [...selected];
+  document.getElementById("voteBtn").disabled = true;
+  document.getElementById("voteBtn").textContent = "Wird gesendet…";
+  await vote(ids);
+  localStorage.setItem(VOTE_KEY, JSON.stringify(ids));
+  document.getElementById("voteBtn").textContent = "✅ Danke für deine Stimme!";
+  await renderResults();
+});
+
+document.getElementById("resultsBtn").addEventListener("click", renderResults);
+
+document.getElementById("resetBtn").addEventListener("click", () => {
+  localStorage.removeItem(VOTE_KEY);
+  selected.clear();
+  document.querySelectorAll(".card").forEach(c => c.classList.remove("selected"));
+  updateHint();
+  alert("Deine Auswahl auf diesem Gerät wurde zurückgesetzt. Bereits gezählte Stimmen bleiben im Ergebnis erhalten.");
+});
+
+/* ------------------------------------------------------------------
+   Init
+------------------------------------------------------------------- */
+(async function init() {
+  await checkRemoteAvailability();
+  updateHint();
+  if (hasVoted()) {
+    document.getElementById("voteBtn").textContent = "✅ Du hast bereits abgestimmt";
+    document.getElementById("voteBtn").disabled = true;
+    renderResults();
+  }
+})();
+</script>
+</body>
+</html>
