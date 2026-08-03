@@ -344,8 +344,9 @@ function updateCountdown() {
   const pad = n => String(n).padStart(2, "0");
   countdownEl.textContent = `⏳ Bitte bis 20:00 Uhr abstimmen – noch ${pad(h)}:${pad(m)}:${pad(s)}`;
 }
+let countdownInterval;
 updateCountdown();
-const countdownInterval = setInterval(updateCountdown, 1000);
+countdownInterval = setInterval(updateCountdown, 1000);
 
 function hasVoted() {
   return !!localStorage.getItem(VOTE_KEY);
