@@ -264,8 +264,6 @@ const VOTER_ID_KEY = "toskana_voter_id_v1";
 const VOTE_PATH = "votes/toskana-urlaub-2026-jona-anna-fabi-kaddl";
 const VOTE_DEADLINE = new Date("2026-08-03T20:00:00+02:00");
 
-let votingClosed = false;
-
 const firebaseConfig = {
   apiKey: "AIzaSyCrrGn7YK7AGwyX-RrCgDpK3r4FMGMgVhg",
   authDomain: "flex-quiz-5f841.firebaseapp.com",
@@ -320,7 +318,6 @@ HOUSES.forEach(h => {
 });
 
 function toggleSelect(id, card) {
-  if (votingClosed) return;
   if (selected.has(id)) {
     selected.delete(id);
     card.classList.remove("selected");
@@ -335,23 +332,19 @@ function toggleSelect(id, card) {
 function updateHint() {
   document.getElementById("selectionHint").textContent =
     `${selected.size} von ${MAX_VOTES} Häusern ausgewählt`;
-  document.getElementById("voteBtn").disabled = votingClosed || selected.size !== MAX_VOTES || hasVoted();
+  document.getElementById("voteBtn").disabled = selected.size !== MAX_VOTES || hasVoted();
 }
 
 /* ------------------------------------------------------------------
-   Countdown bis zum Abstimmungsschluss
+   Countdown bis 20:00 Uhr (nur Motivation, blockiert die Abstimmung nicht)
 ------------------------------------------------------------------- */
 function updateCountdown() {
   const countdownEl = document.getElementById("countdown");
   const diff = VOTE_DEADLINE - new Date();
 
   if (diff <= 0) {
-    votingClosed = true;
-    countdownEl.textContent = "⏰ Die Abstimmung ist beendet (Frist war 20:00 Uhr).";
+    countdownEl.textContent = "⏰ Die 20-Uhr-Frist ist um – ihr könnt trotzdem noch abstimmen!";
     countdownEl.classList.add("countdown-ended");
-    const voteBtn = document.getElementById("voteBtn");
-    voteBtn.disabled = true;
-    if (!hasVoted()) voteBtn.textContent = "⏰ Abstimmung beendet";
     clearInterval(countdownInterval);
     return;
   }
@@ -360,7 +353,7 @@ function updateCountdown() {
   const m = Math.floor((diff % 3600000) / 60000);
   const s = Math.floor((diff % 60000) / 1000);
   const pad = n => String(n).padStart(2, "0");
-  countdownEl.textContent = `⏳ Abstimmung endet um 20:00 Uhr – noch ${pad(h)}:${pad(m)}:${pad(s)}`;
+  countdownEl.textContent = `⏳ Bitte bis 20:00 Uhr abstimmen – noch ${pad(h)}:${pad(m)}:${pad(s)}`;
 }
 updateCountdown();
 const countdownInterval = setInterval(updateCountdown, 1000);
@@ -507,7 +500,7 @@ async function renderResults() {
    Events
 ------------------------------------------------------------------- */
 document.getElementById("voteBtn").addEventListener("click", async () => {
-  if (votingClosed || selected.size !== MAX_VOTES || hasVoted()) return;
+  if (selected.size !== MAX_VOTES || hasVoted()) return;
   const ids = [...selected];
   document.getElementById("voteBtn").disabled = true;
   document.getElementById("voteBtn").textContent = "Wird gesendet…";
