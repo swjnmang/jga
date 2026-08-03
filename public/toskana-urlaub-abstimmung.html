@@ -50,6 +50,23 @@
   .status-live { background: #e2f4e8; color: #1e6b3c; }
   .status-local { background: #fde8e4; color: #a43a2c; }
 
+  .countdown {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 0 20px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: #eef2ff;
+    color: #33415c;
+    border: 1px solid #c9d3f0;
+  }
+  .countdown.countdown-ended {
+    background: #fde8e4;
+    color: #a43a2c;
+    border-color: #f0c4ba;
+  }
+
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -153,6 +170,8 @@
     jederzeit ansehen – auch ohne selbst abzustimmen. <span id="statusPill" class="status-pill status-local">wird geprüft…</span>
   </div>
 
+  <div class="countdown" id="countdown"></div>
+
   <div class="grid" id="houseGrid"></div>
 
   <div class="selection-hint" id="selectionHint">0 von 2 Häusern ausgewählt</div>
@@ -243,6 +262,9 @@ const MAX_VOTES = 2;
 const VOTE_KEY = "toskana_voted_houses_v1";
 const VOTER_ID_KEY = "toskana_voter_id_v1";
 const VOTE_PATH = "votes/toskana-urlaub-2026-jona-anna-fabi-kaddl";
+const VOTE_DEADLINE = new Date("2026-08-03T20:00:00+02:00");
+
+let votingClosed = false;
 
 const firebaseConfig = {
   apiKey: "AIzaSyCrrGn7YK7AGwyX-RrCgDpK3r4FMGMgVhg",
@@ -298,6 +320,7 @@ HOUSES.forEach(h => {
 });
 
 function toggleSelect(id, card) {
+  if (votingClosed) return;
   if (selected.has(id)) {
     selected.delete(id);
     card.classList.remove("selected");
@@ -312,8 +335,35 @@ function toggleSelect(id, card) {
 function updateHint() {
   document.getElementById("selectionHint").textContent =
     `${selected.size} von ${MAX_VOTES} Häusern ausgewählt`;
-  document.getElementById("voteBtn").disabled = selected.size !== MAX_VOTES || hasVoted();
+  document.getElementById("voteBtn").disabled = votingClosed || selected.size !== MAX_VOTES || hasVoted();
 }
+
+/* ------------------------------------------------------------------
+   Countdown bis zum Abstimmungsschluss
+------------------------------------------------------------------- */
+function updateCountdown() {
+  const countdownEl = document.getElementById("countdown");
+  const diff = VOTE_DEADLINE - new Date();
+
+  if (diff <= 0) {
+    votingClosed = true;
+    countdownEl.textContent = "⏰ Die Abstimmung ist beendet (Frist war 20:00 Uhr).";
+    countdownEl.classList.add("countdown-ended");
+    const voteBtn = document.getElementById("voteBtn");
+    voteBtn.disabled = true;
+    if (!hasVoted()) voteBtn.textContent = "⏰ Abstimmung beendet";
+    clearInterval(countdownInterval);
+    return;
+  }
+
+  const h = Math.floor(diff / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+  const pad = n => String(n).padStart(2, "0");
+  countdownEl.textContent = `⏳ Abstimmung endet um 20:00 Uhr – noch ${pad(h)}:${pad(m)}:${pad(s)}`;
+}
+updateCountdown();
+const countdownInterval = setInterval(updateCountdown, 1000);
 
 function hasVoted() {
   return !!localStorage.getItem(VOTE_KEY);
@@ -457,7 +507,7 @@ async function renderResults() {
    Events
 ------------------------------------------------------------------- */
 document.getElementById("voteBtn").addEventListener("click", async () => {
-  if (selected.size !== MAX_VOTES || hasVoted()) return;
+  if (votingClosed || selected.size !== MAX_VOTES || hasVoted()) return;
   const ids = [...selected];
   document.getElementById("voteBtn").disabled = true;
   document.getElementById("voteBtn").textContent = "Wird gesendet…";
