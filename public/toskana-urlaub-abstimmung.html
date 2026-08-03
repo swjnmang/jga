@@ -39,17 +39,6 @@
     color: #6b5a1e;
   }
 
-  .status-pill {
-    display: inline-block;
-    font-size: 0.75rem;
-    padding: 3px 10px;
-    border-radius: 999px;
-    margin-left: 8px;
-    vertical-align: middle;
-  }
-  .status-live { background: #e2f4e8; color: #1e6b3c; }
-  .status-local { background: #fde8e4; color: #a43a2c; }
-
   .countdown {
     text-align: center;
     font-weight: 700;
@@ -167,7 +156,7 @@
 
   <div class="info-box">
     Wählt <b>genau zwei</b> Häuser aus und klickt auf „Abstimmen". Ihr könnt euch die aktuellen Ergebnisse
-    jederzeit ansehen – auch ohne selbst abzustimmen. <span id="statusPill" class="status-pill status-local">wird geprüft…</span>
+    jederzeit ansehen – auch ohne selbst abzustimmen.
   </div>
 
   <div class="countdown" id="countdown"></div>
@@ -402,14 +391,6 @@ async function checkRemoteAvailability() {
     remoteAvailable = true;
   } catch (e) {
     remoteAvailable = false;
-  }
-  const pill = document.getElementById("statusPill");
-  if (remoteAvailable) {
-    pill.textContent = "🌐 Live-Ergebnisse (geräteübergreifend)";
-    pill.className = "status-pill status-live";
-  } else {
-    pill.textContent = "📍 Nur lokal auf diesem Gerät";
-    pill.className = "status-pill status-local";
   }
 }
 
