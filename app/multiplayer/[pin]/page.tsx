@@ -1356,6 +1356,46 @@ export default function MultiplayerGamePage() {
             )}
           </>
         )}
+
+        {/* Joker-Übersicht: gleiche Icons wie im Spiel, für alle in der Lobby sichtbar */}
+        {game.mode === 'trivia' && game.jokersEnabled && (
+          <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-amber-400/40">
+            <h2 className="text-xl font-semibold text-amber-700">🃏 Eure Joker</h2>
+            <p className="text-sm text-ink/60">
+              Jede Gruppe hat pro Spiel je einen dieser vier Joker. Sie sind während der Fragerunden nutzbar.
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <div className="flex items-start gap-3 rounded-xl border-2 border-amber-400/40 bg-amber-500/10 p-3">
+                <span className="text-2xl flex-shrink-0">🔄</span>
+                <div>
+                  <p className="font-semibold text-amber-900">Neue Frage</p>
+                  <p className="text-sm text-ink/70">Tauscht die aktuelle Frage gegen eine neue Frage aus derselben Kategorie.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 rounded-xl border-2 border-amber-400/40 bg-amber-500/10 p-3">
+                <span className="text-2xl flex-shrink-0">➡️</span>
+                <div>
+                  <p className="font-semibold text-amber-900">NEXT</p>
+                  <p className="text-sm text-ink/70">Gibt die Frage an die nächste Gruppe weiter. Antwortet diese falsch, bekommt ihr den Punkt.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 rounded-xl border-2 border-amber-400/40 bg-amber-500/10 p-3">
+                <span className="text-2xl flex-shrink-0">🎲</span>
+                <div>
+                  <p className="font-semibold text-amber-900">Würfeln</p>
+                  <p className="text-sm text-ink/70">5 oder 6: Punkt + Kategorie kassieren. 1: Punkt + Kategorie verlieren. 2–4: kein Effekt.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 rounded-xl border-2 border-purple-400/60 bg-purple-500/10 p-3">
+                <span className="text-2xl flex-shrink-0">🥷</span>
+                <div>
+                  <p className="font-semibold text-purple-900">Steal</p>
+                  <p className="text-sm text-ink/70">Klaut die Frage der aktiven Gruppe. Richtig → ihr bekommt Punkt + Kategorie. Falsch → die andere Gruppe bekommt den Punkt. First come, first served.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
     );
   }
