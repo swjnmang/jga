@@ -56,12 +56,25 @@ Gehe in der Firebase Console zu "Realtime Database" → "Regeln" und ersetze die
           }
         }
       }
+    },
+    "highscores": {
+      ".read": true,
+      ".indexOn": ["points", "completedCategories", "finishedAt"],
+      "$entryId": {
+        ".write": "!data.exists()",
+        ".validate": "newData.hasChildren(['pin', 'groupName', 'groupColor', 'mode', 'points', 'completedCategories', 'finishedAt'])",
+        "avatar": {
+          ".validate": "newData.isString() && newData.val().length <= 51200"
+        }
+      }
     }
   }
 }
 ```
 
 Die `avatar`-Validierung begrenzt Foto-Avatare (Base64-Data-URLs) auf max. ~50 KB, damit keine unkomprimierten Bilder in die Datenbank geschrieben werden können.
+
+**Highscores:** Der Pfad `highscores/` speichert dauerhaft, welche Gruppe eine Runde gewonnen hat (unabhängig vom Live-Spiel unter `games/{pin}`, das nach Spielende automatisch aufgeräumt wird). `".write": "!data.exists()"` erlaubt nur das Anlegen neuer Einträge, kein Verändern oder Löschen bestehender. **Diese Regeln müssen manuell in der Firebase Console nachgetragen werden** (Realtime Database → Regeln) — ohne sie schlägt jeder Schreibversuch auf `highscores/` fehl.
 
 **⚠️ Wichtig:** Diese Regeln sind für die Entwicklung. Für Produktion sollten sie verschärft werden!
 

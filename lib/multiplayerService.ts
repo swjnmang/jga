@@ -8,7 +8,8 @@ import {
   CreateGameParams,
   JoinGameParams,
   GROUP_COLORS,
-  GameState
+  GameState,
+  HighscoreEntry
 } from './multiplayerTypes';
 
 // Überprüfe ob Firebase verfügbar ist
@@ -2524,4 +2525,56 @@ export async function confirmJokerDice(pin: string): Promise<void> {
   }
 
   await update(gameRef, updates);
+}
+
+/**
+ * Highscores: wird aufgerufen, sobald ein Client ein beendetes Spiel mit Sieger
+ * sieht. Da games/{pin} nach Spielende automatisch aufgeräumt wird (siehe
+ * subscribeToGame/STALE_GAME_MS), muss der Sieg separat unter highscores/
+ * gespeichert werden. Eine Transaktion auf games/{pin}/highscoreRecorded sorgt
+ * dafür, dass bei mehreren gleichzeitig reagierenden Geräten nur einer schreibt
+ * (gleiches Muster wie beim Steal-Joker).
+ */
+export async function recordHighscoreIfNeeded(pin: string): Promise<void> {
+  checkFirebase();
+  const flagRef = ref(database!, `games/${pin}/highscoreRecorded`);
+  const { committed } = await runTransaction(flagRef, (recorded: boolean | null) => (recorded ? undefined : true));
+  if (!committed) return;
+
+  const snapshot = await get(ref(database!, `games/${pin}`));
+  if (!snapshot.exists()) return;
+  const game: GameSession = snapshot.val();
+  // Solo-Runden haben keinen Gegner und zählen nicht als "gewonnene Runde".
+  if (game.mode === 'solo' || game.state !== 'finished' || !game.winnerGroupId) return;
+
+  const winner = game.groups?.[game.winnerGroupId];
+  if (!winner) return;
+
+  const completedCategories = Array.isArray(winner.completedCategories)
+    ? winner.completedCategories.length
+    : Object.values(winner.completedCategories ?? {}).length;
+
+  const entry: Omit<HighscoreEntry, 'id'> = {
+    pin,
+    groupName: winner.name,
+    groupColor: winner.color,
+    avatar: winner.avatar ?? null,
+    mode: game.mode,
+    points: winner.score ?? 0,
+    completedCategories,
+    finishedAt: game.finishedAt ?? Date.now(),
+  };
+
+  await set(push(ref(database!, 'highscores')), entry);
+}
+
+/**
+ * Liest alle bisher aufgezeichneten Highscore-Einträge (unsortiert).
+ */
+export async function getHighscores(): Promise<HighscoreEntry[]> {
+  checkFirebase();
+  const snapshot = await get(ref(database!, 'highscores'));
+  if (!snapshot.exists()) return [];
+  const val = snapshot.val() as Record<string, Omit<HighscoreEntry, 'id'>>;
+  return Object.entries(val).map(([id, entry]) => ({ id, ...entry }));
 }

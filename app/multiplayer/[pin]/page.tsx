@@ -52,6 +52,7 @@ import {
   castEndGameVote,
   endGameByVote,
   cancelEndGameVote,
+  recordHighscoreIfNeeded,
 } from '@/lib/multiplayerService';
 import { GameSession, GroupData } from '@/lib/multiplayerTypes';
 import { getCardById } from '@/lib/cards';
@@ -968,6 +969,15 @@ export default function MultiplayerGamePage() {
       cancelEndGameVote(pin).catch(console.error);
     }
   }, [game?.hostless, game?.endGameVote, game?.groups, session, pin]);
+
+  // Highscores: einmalig aufzeichnen, sobald das Spiel einen Sieger hat. Eine
+  // Firebase-Transaktion auf games/{pin}/highscoreRecorded verhindert doppelte
+  // Einträge, falls mehrere Geräte gleichzeitig reagieren.
+  useEffect(() => {
+    if (!game || !session) return;
+    if (game.state !== 'finished' || !game.winnerGroupId || game.highscoreRecorded) return;
+    recordHighscoreIfNeeded(pin).catch(console.error);
+  }, [game?.state, game?.winnerGroupId, game?.highscoreRecorded, session, pin]);
 
   if (loading) {
     return (

@@ -167,6 +167,24 @@ export interface GameSession {
     initiatedBy: string;               // groupId, die die Abstimmung gestartet hat
     votes: Record<string, boolean>;    // groupId -> Stimme (true = beenden)
   } | null;
+  // Highscores: true, sobald der Sieg dieser Runde in highscores/ aufgezeichnet wurde
+  // (oder feststeht, dass keine Aufzeichnung nötig ist, z.B. Solo-Modus).
+  highscoreRecorded?: boolean;
+}
+
+// Ein Eintrag in der globalen Highscore-Liste (Firebase-Pfad "highscores/"),
+// unabhängig vom Live-Spiel gespeichert, da games/{pin} nach Spielende
+// automatisch aufgeräumt wird (siehe subscribeToGame/STALE_GAME_MS).
+export interface HighscoreEntry {
+  id: string;                    // Firebase Push-Key
+  pin: string;                   // PIN des Spiels, zur Referenz
+  groupName: string;
+  groupColor: string;
+  avatar?: string | null;
+  mode: 'timeline' | 'trivia' | 'solo';
+  points: number;                 // group.score zum Zeitpunkt des Siegs (Timeline: korrekt platzierte Karten, Trivia: Punkte)
+  completedCategories: number;    // Trivia (Kategorien-Modus): Anzahl gesammelter Kategorien
+  finishedAt: number;
 }
 
 export interface CreateGameParams {

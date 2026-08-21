@@ -54,6 +54,10 @@ export default function HomePage() {
             <SecondaryButton href="/rules" label="Spielregeln" />
           </div>
 
+          <div className="flex justify-center">
+            <SecondaryButton href="/highscores" label="🏆 Highscores" className="w-full sm:w-auto sm:px-10" />
+          </div>
+
           <div className="space-y-2">
             <div className="text-xs text-ink/60">
               Letzte Versionsänderung: {lastUpdated}
@@ -106,11 +110,11 @@ export default function HomePage() {
   );
 }
 
-function SecondaryButton({ href, label }: { href: string; label: string }) {
+function SecondaryButton({ href, label, className = '' }: { href: string; label: string; className?: string }) {
   return (
     <Link
       href={href}
-      className="inline-flex items-center justify-center rounded-xl border border-ink/30 text-ink font-semibold px-5 py-4 bg-ink/10 backdrop-blur transition hover:-translate-y-0.5 hover:border-ink/60"
+      className={`inline-flex items-center justify-center rounded-xl border border-ink/30 text-ink font-semibold px-5 py-4 bg-ink/10 backdrop-blur transition hover:-translate-y-0.5 hover:border-ink/60 ${className}`}
     >
       <span>{label}</span>
     </Link>
