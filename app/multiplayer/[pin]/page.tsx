@@ -2541,6 +2541,11 @@ export default function MultiplayerGamePage() {
             const currentCat = (game.currentCardId ? deckMeta[game.currentCardId] : null) ?? (game as any).currentRoundCategory ?? '';
             const isSchaetzfrage = currentCat === 'schaetzfragen';
             if (isSchaetzfrage) return null;
+            // Sobald die aktive Gruppe eine Antwort eingereicht hat (Bewertung steht aus),
+            // muss Steal sofort gesperrt werden – sonst könnte die stehlende Gruppe sich den
+            // Punkt für eine bereits abgegebene, richtige Antwort aneignen (siehe activateJokerSteal).
+            const answerPending = Boolean(game.pendingTextAnswer);
+            const stealBlocked = !myJokers.steal || isProcessing || !stealUnlocked || answerPending;
             return (
               <div className="card-surface rounded-2xl p-2 space-y-1.5 border-2 border-purple-400/60 bg-purple-500/5">
                 <h3 className="text-xs font-bold text-purple-700">🥷 Steal-Joker</h3>
@@ -2548,23 +2553,25 @@ export default function MultiplayerGamePage() {
                   Klau die aktuelle Frage von <span className="font-semibold" style={{ color: (game.currentTurnGroupId ? game.groups[game.currentTurnGroupId]?.color : undefined) ?? undefined }}>{game.currentTurnGroupId ? (game.groups[game.currentTurnGroupId]?.name ?? '?') : '?'}</span>! First come, first served.
                 </p>
                 <button
-                  disabled={!myJokers.steal || isProcessing || !stealUnlocked}
-                  title="Klau die aktuelle Frage. Richtig → du bekommst Punkt + Kategorie. Falsch → die andere Gruppe bekommt den Punkt."
+                  disabled={stealBlocked}
+                  title={
+                    answerPending
+                      ? 'Antwort liegt bereits vor – Steal ist jetzt gesperrt.'
+                      : 'Klau die aktuelle Frage. Richtig → du bekommst Punkt + Kategorie. Falsch → die andere Gruppe bekommt den Punkt.'
+                  }
                   onClick={async () => {
-                    if (!myJokers.steal || isProcessing || !stealUnlocked) return;
+                    if (stealBlocked) return;
                     setIsProcessing(true);
                     try { await activateJokerSteal(pin, session.groupId); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
                   }}
                   className={`w-full flex items-center justify-center gap-2 rounded-xl px-3 py-1.5 text-center transition-colors border-2 font-semibold text-sm ${
-                    !myJokers.steal
-                      ? 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
-                      : !stealUnlocked
+                    stealBlocked
                       ? 'border-ink/10 bg-ink/5 opacity-40 cursor-not-allowed text-ink/40'
                       : 'border-purple-500 bg-purple-500/10 hover:bg-purple-500/20 text-purple-900 animate-pulse hover:animate-none'
                   }`}
                 >
                   <span className="text-lg">🥷</span>
-                  <span>{!myJokers.steal ? 'Verbraucht' : !stealUnlocked ? 'Frage klauen!' : 'Frage klauen!'}</span>
+                  <span>{!myJokers.steal ? 'Verbraucht' : answerPending ? 'Antwort liegt vor' : 'Frage klauen!'}</span>
                 </button>
               </div>
             );

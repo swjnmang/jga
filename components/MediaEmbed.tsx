@@ -42,7 +42,133 @@ declare global {
     onSpotifyIframeApiReady?: (api: SpotifyIFrameAPI) => void;
     SpotifyIframeApiReadyCallbacks?: Array<(api: SpotifyIFrameAPI) => void>;
     _spotifyIframeApiInstance?: SpotifyIFrameAPI;
+    // Web Playback SDK singleton – kept on window so it survives the per-card
+    // remount of MediaEmbed (parent gives it a `key` per card id) instead of
+    // reconnecting a fresh Spotify Connect device for every single track.
+    _spotifyWebPlayer?: Spotify.Player;
+    _spotifyWebPlayerDeviceId?: string;
+    _spotifyWebPlaybackUnavailable?: boolean;
+    _spotifyWebPlayerInitPromise?: Promise<{ player: Spotify.Player; deviceId: string } | null>;
   }
+}
+
+// =============================================================================
+// SPOTIFY WEB PLAYBACK SDK – volle Songs statt 30-Sekunden-Vorschau
+// =============================================================================
+// Die reine Embed-iFrame-API oben liefert für Zuhörer ohne verbundenes
+// Spotify-Premium-Konto nur einen kurzen Preview-Ausschnitt (häufig deutlich
+// unter 30s) und bricht danach ab. Ist der Nutzer über /app-settings bzw. die
+// Multiplayer-Lobby mit Spotify Premium verbunden (siehe app/api/spotify/*),
+// wird stattdessen die Web Playback SDK genutzt: sie meldet ein echtes
+// Spotify-Connect-Gerät im Browser an, über das komplette Titel abgespielt
+// werden können. Schlägt das fehl (kein Premium, SDK blockiert, o.ä.), fällt
+// die Komponente automatisch auf die Embed-API zurück.
+// =============================================================================
+
+function loadSpotifyWebPlaybackSdk(): Promise<void> {
+  return new Promise((resolve) => {
+    if (window.Spotify) {
+      resolve();
+      return;
+    }
+    const previousReady = window.onSpotifyWebPlaybackSDKReady;
+    window.onSpotifyWebPlaybackSDKReady = () => {
+      previousReady?.();
+      resolve();
+    };
+    if (document.getElementById('spotify-web-playback-sdk')) return;
+    const script = document.createElement('script');
+    script.id = 'spotify-web-playback-sdk';
+    script.src = 'https://sdk.scdn.co/spotify-player.js';
+    script.async = true;
+    document.head.appendChild(script);
+  });
+}
+
+async function fetchSpotifyAccessToken(): Promise<string | null> {
+  try {
+    const res = await fetch('/api/spotify/token');
+    if (!res.ok) return null;
+    const data = (await res.json()) as { accessToken?: string };
+    return data.accessToken ?? null;
+  } catch {
+    return null;
+  }
+}
+
+function ensureSpotifyWebPlayer(): Promise<{ player: Spotify.Player; deviceId: string } | null> {
+  if (typeof window === 'undefined') return Promise.resolve(null);
+  if (window._spotifyWebPlaybackUnavailable) return Promise.resolve(null);
+  if (window._spotifyWebPlayer && window._spotifyWebPlayerDeviceId) {
+    return Promise.resolve({ player: window._spotifyWebPlayer, deviceId: window._spotifyWebPlayerDeviceId });
+  }
+  if (window._spotifyWebPlayerInitPromise) return window._spotifyWebPlayerInitPromise;
+
+  const initPromise = (async (): Promise<{ player: Spotify.Player; deviceId: string } | null> => {
+    const initialToken = await fetchSpotifyAccessToken();
+    if (!initialToken) {
+      window._spotifyWebPlaybackUnavailable = true;
+      return null;
+    }
+
+    await loadSpotifyWebPlaybackSdk();
+    if (!window.Spotify) {
+      window._spotifyWebPlaybackUnavailable = true;
+      return null;
+    }
+
+    return new Promise((resolve) => {
+      let settled = false;
+      const finish = (result: { player: Spotify.Player; deviceId: string } | null) => {
+        if (settled) return;
+        settled = true;
+        resolve(result);
+      };
+
+      const player = new window.Spotify!.Player({
+        name: 'JGA Trivia Player',
+        getOAuthToken: (cb) => {
+          fetchSpotifyAccessToken().then((token) => {
+            if (token) cb(token);
+          });
+        },
+        volume: 1
+      });
+
+      player.addListener('ready', ({ device_id }) => {
+        window._spotifyWebPlayer = player;
+        window._spotifyWebPlayerDeviceId = device_id;
+        finish({ player, deviceId: device_id });
+      });
+      player.addListener('not_ready', () => {
+        window._spotifyWebPlayerDeviceId = undefined;
+      });
+      player.addListener('initialization_error', () => {
+        window._spotifyWebPlaybackUnavailable = true;
+        finish(null);
+      });
+      player.addListener('authentication_error', () => {
+        window._spotifyWebPlaybackUnavailable = true;
+        finish(null);
+      });
+      player.addListener('account_error', () => {
+        // Kein Spotify Premium auf dem verbundenen Konto – stiller Fallback auf die Vorschau.
+        window._spotifyWebPlaybackUnavailable = true;
+        finish(null);
+      });
+
+      player.connect();
+      setTimeout(() => finish(null), 8000);
+    });
+  })();
+
+  window._spotifyWebPlayerInitPromise = initPromise;
+  initPromise.finally(() => {
+    if (window._spotifyWebPlayerInitPromise === initPromise) {
+      window._spotifyWebPlayerInitPromise = undefined;
+    }
+  });
+  return initPromise;
 }
 
 function toYouTubeEmbed(url: string) {
@@ -144,12 +270,18 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   const isSeekingRef = useRef(false); // true während der Nutzer die Zeitleiste zieht
   const onProgressRef = useRef(onProgress);
   useEffect(() => { onProgressRef.current = onProgress; }, [onProgress]);
+  const onPlayRef = useRef(onPlay);
+  useEffect(() => { onPlayRef.current = onPlay; }, [onPlay]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [positionMs, setPositionMs] = useState(0);
   const [durationMs, setDurationMs] = useState(0);
   const [spotifyFallback, setSpotifyFallback] = useState(false); // Fallback wenn API nicht lädt
   const [showYouTube, setShowYouTube] = useState(false);
   const [embedError, setEmbedError] = useState<string | null>(null);
+  // 'checking' bis geklärt ist, ob die Web Playback SDK (voller Song) genutzt werden kann,
+  // sonst 'embed' (Vorschau-iFrame) als Fallback.
+  const [spotifyPlaybackMode, setSpotifyPlaybackMode] = useState<'checking' | 'webPlayback' | 'embed'>('checking');
+  const webPlayerRef = useRef<{ player: Spotify.Player; deviceId: string } | null>(null);
   const origin = useMemo(() => (typeof window !== 'undefined' ? window.location.origin : ''), []);
   const reportedErrorRef = useRef(false);
   const choiceSignature = useMemo(() => {
@@ -181,9 +313,27 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     setSpotifyFallback(false);
     setPositionMs(0);
     setDurationMs(0);
+    setSpotifyPlaybackMode('checking');
     clearSeekRetries();
     reportedErrorRef.current = false;
   }, [choiceSignature]);
+
+  // Klärt einmal pro Karte, ob ein volles Spotify-Playback-Gerät (Premium) zur Verfügung steht.
+  useEffect(() => {
+    if (choice?.type !== 'spotify') return undefined;
+    let cancelled = false;
+    ensureSpotifyWebPlayer().then((result) => {
+      if (cancelled) return;
+      if (result) {
+        webPlayerRef.current = result;
+        setSpotifyPlaybackMode('webPlayback');
+      } else {
+        webPlayerRef.current = null;
+        setSpotifyPlaybackMode('embed');
+      }
+    });
+    return () => { cancelled = true; };
+  }, [choiceSignature, choice?.type]);
 
   const sendYouTubeCommand = (command: 'playVideo' | 'pauseVideo') => {
     if (!youtubeIframeRef.current?.contentWindow) return;
@@ -251,6 +401,12 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   };
 
   const resumeSpotify = (opts?: { silent?: boolean }) => {
+    if (spotifyPlaybackMode === 'webPlayback' && webPlayerRef.current) {
+      webPlayerRef.current.player.resume().catch(() => {});
+      setIsPlaying(true);
+      if (!opts?.silent) onPlay?.();
+      return;
+    }
     if (spotifyControllerRef.current) {
       const pos = spotifyPositionRef.current;
       spotifyControllerRef.current.play();
@@ -266,6 +422,12 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   };
 
   const pauseSpotify = (opts?: { silent?: boolean }) => {
+    if (spotifyPlaybackMode === 'webPlayback' && webPlayerRef.current) {
+      webPlayerRef.current.player.pause().catch(() => {});
+      setIsPlaying(false);
+      if (!opts?.silent) onPause?.();
+      return;
+    }
     clearSeekRetries();
     spotifyControllerRef.current?.pause();
     setIsPlaying(false);
@@ -274,6 +436,12 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   };
 
   const seekSpotify = (targetMs: number) => {
+    if (spotifyPlaybackMode === 'webPlayback' && webPlayerRef.current) {
+      setPositionMs(targetMs);
+      onProgressRef.current?.({ positionMs: targetMs, durationMs, isPlaying });
+      webPlayerRef.current.player.seek(targetMs).catch(() => {});
+      return;
+    }
     if (!spotifyControllerRef.current) return;
     setPositionMs(targetMs);
     onProgressRef.current?.({ positionMs: targetMs, durationMs: spotifyDurationRef.current, isPlaying });
@@ -288,8 +456,13 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       }
       if (choice?.type === 'spotify') {
         clearSeekRetries();
-        spotifyControllerRef.current?.pause();
-        spotifyControllerRef.current?.seek(0);
+        if (spotifyPlaybackMode === 'webPlayback' && webPlayerRef.current) {
+          webPlayerRef.current.player.pause().catch(() => {});
+          webPlayerRef.current.player.seek(0).catch(() => {});
+        } else {
+          spotifyControllerRef.current?.pause();
+          spotifyControllerRef.current?.seek(0);
+        }
         spotifyPositionRef.current = 0;
         setPositionMs(0);
       }
@@ -325,9 +498,10 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
     }
   }, [card.id, embedError, onPlaybackError]);
 
-  // Spotify Embed API: Script laden und Controller erstellen / ersetzen wenn sich der Track ändert
+  // Spotify Embed API (Vorschau-Fallback): Script laden und Controller erstellen / ersetzen wenn sich der Track ändert.
+  // Läuft nur, wenn kein volles Web-Playback-Gerät verfügbar ist (siehe ensureSpotifyWebPlayer oben).
   useEffect(() => {
-    if (choice?.type !== 'spotify') return;
+    if (choice?.type !== 'spotify' || spotifyPlaybackMode !== 'embed') return;
     const uri = toSpotifyTrackUri(choice.url);
     if (!uri) return;
 
@@ -435,7 +609,67 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       spotifyContainerRef.current = null;
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [choiceSignature]);
+  }, [choiceSignature, spotifyPlaybackMode]);
+
+  // Web Playback SDK: kompletten Titel auf dem angemeldeten Gerät starten und
+  // Position/Dauer laufend abfragen (die SDK meldet Fortschritt nicht von sich aus im Sekundentakt).
+  useEffect(() => {
+    if (choice?.type !== 'spotify' || spotifyPlaybackMode !== 'webPlayback') return undefined;
+    const uri = toSpotifyTrackUri(choice.url);
+    const wp = webPlayerRef.current;
+    if (!uri || !wp) return undefined;
+
+    let cancelled = false;
+
+    const applyState = (state: { paused: boolean; position: number; duration: number } | null) => {
+      if (!state || isSeekingRef.current) return;
+      spotifyPositionRef.current = state.position;
+      spotifyDurationRef.current = state.duration;
+      setPositionMs(state.position);
+      setDurationMs(state.duration);
+      setIsPlaying(!state.paused);
+      onProgressRef.current?.({ positionMs: state.position, durationMs: state.duration, isPlaying: !state.paused });
+    };
+
+    const startPlayback = async () => {
+      const token = await fetchSpotifyAccessToken();
+      if (!token) {
+        if (!cancelled) setSpotifyPlaybackMode('embed');
+        return;
+      }
+      try {
+        const res = await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${wp.deviceId}`, {
+          method: 'PUT',
+          headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ uris: [uri], position_ms: 0 })
+        });
+        if (!res.ok && res.status !== 204) throw new Error(`play-failed-${res.status}`);
+        if (cancelled) return;
+        setIsPlaying(true);
+        onPlayRef.current?.();
+      } catch {
+        if (!cancelled) setSpotifyPlaybackMode('embed');
+      }
+    };
+
+    startPlayback();
+
+    const stateListener = (state: Spotify.PlayerState) => applyState(state);
+    wp.player.addListener('player_state_changed', stateListener);
+
+    const pollId = setInterval(() => {
+      wp.player.getCurrentState().then(applyState);
+    }, 1000);
+
+    return () => {
+      cancelled = true;
+      clearInterval(pollId);
+      wp.player.removeListener('player_state_changed', stateListener);
+    };
+    // choice/onPlay are intentionally excluded: choice is covered by choiceSignature, and onPlay/onProgress
+    // are read via refs so an unstable prop identity from the parent doesn't restart playback every render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [choiceSignature, spotifyPlaybackMode]);
 
   // Overlay das sich dynamisch über den Spotify Mini-Player legt.
   // Ein MutationObserver erkennt das vom Embed injizierte iframe und positioniert
@@ -589,9 +823,22 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
               YouTube-Quelle nicht erreichbar, Spotify wird verwendet.
             </p>
           )}
+          {concealMetadata && spotifyPlaybackMode === 'embed' && (
+            <p className="text-xs text-amber-300">
+              Nur Vorschau (ca. 30s) – für vollständige Songs Spotify Premium in den{' '}
+              <a href="/app-settings" target="_blank" rel="noreferrer" className="underline">
+                App-Einstellungen
+              </a>{' '}
+              verbinden.
+            </p>
+          )}
           {concealMetadata ? (
             // Während des Spiels: nur grüner Play/Pause-Button, keine Metadaten sichtbar
-            spotifyFallback ? (
+            spotifyPlaybackMode === 'checking' ? (
+              <div className="rounded-2xl card-surface flex items-center justify-center px-5 py-4 text-sm text-ink/60" style={{ minHeight: 80 }}>
+                <span className="animate-pulse">Verbinde mit Spotify…</span>
+              </div>
+            ) : spotifyFallback ? (
               // Fallback: Embed API nicht verfügbar — normales iframe mit autoplay
               <div className="space-y-2">
                 <p className="text-xs text-amber-500 text-center">⚠ Spotify API nicht erreichbar – Fallback-Player</p>
