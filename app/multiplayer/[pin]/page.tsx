@@ -34,7 +34,7 @@ import {
   extractNumericFromAnswer,
   extractRangeFromAnswer,
   extractUnitFromAnswer,
-  parseGermanNumber,
+  parseGuessNumber,
   activateJokerNewQuestion,
   activateJokerNext,
   activateJokerDice,
@@ -891,7 +891,7 @@ export default function MultiplayerGamePage() {
 
     const withSubmissions = playingGroups
       .filter(g => g.schaetzSubmission != null && g.schaetzSubmission !== '')
-      .map(g => ({ id: g.id, name: g.name, color: g.color, val: parseGermanNumber(g.schaetzSubmission ?? ''), raw: g.schaetzSubmission ?? '' }))
+      .map(g => ({ id: g.id, name: g.name, color: g.color, val: parseGuessNumber(g.schaetzSubmission ?? ''), raw: g.schaetzSubmission ?? '' }))
       .filter(s => isFinite(s.val));
     if (withSubmissions.length === 0) return;
     const distances = withSubmissions.map(s => distToCorrect(s.val));
@@ -2059,7 +2059,7 @@ export default function MultiplayerGamePage() {
                   id: g.id,
                   name: g.name,
                   color: g.color,
-                  val: parseGermanNumber(g.schaetzSubmission ?? ''),
+                  val: parseGuessNumber(g.schaetzSubmission ?? ''),
                   raw: g.schaetzSubmission ?? '',
                 }))
                 .filter(s => isFinite(s.val));

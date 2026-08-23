@@ -1973,6 +1973,18 @@ export function parseGermanNumber(str: string): number {
   return parseFloat(cleaned);
 }
 
+/**
+ * Parst die von einer Gruppe eingereichte Schätzung (schaetzSubmission).
+ * Die Eingabe kommt aus einem nativen <input type="number">, dessen value laut
+ * HTML-Standard IMMER einen Punkt als Dezimaltrennzeichen verwendet (nie Komma,
+ * nie Tausenderpunkte) – unabhängig von Gerät oder Spracheinstellung.
+ * parseGermanNumber ist hier falsch: sie würde den Dezimalpunkt als
+ * Tausendertrennzeichen entfernen und z.B. "3.5" zu 35 machen.
+ */
+export function parseGuessNumber(str: string): number {
+  return parseFloat(str.trim());
+}
+
 export function extractNumericFromAnswer(answer: string): number {
   // Match German numbers: digits with optional thousand-dots and/or decimal-comma
   const match = answer.match(/[\d]+(?:[.,][\d]+)*/);
