@@ -2342,6 +2342,11 @@ export async function activateJokerSteal(pin: string, groupId: string): Promise<
     if (game.jokerStealActive) { abortReason = 'Steal-Joker wurde bereits aktiviert (first come, first served).'; return; }
     if (game.jokerNextActive) { abortReason = 'NEXT-Joker ist gerade aktiv.'; return; }
     if (game.jokerStealReturnActive) { abortReason = 'Stehlen während des Rückgabe-Zugs nicht möglich.'; return; }
+    // Sobald eine Antwort eingereicht wurde (Bewertung durch Host oder Abstimmung im
+    // hostless-Modus steht aus), darf nicht mehr gestohlen werden — sonst würde der
+    // Punkt für die bereits abgegebene Antwort der stehlenden Gruppe zugeschrieben
+    // (die Auswertung liest currentTurnGroupId aus, das Steal sofort umbiegt).
+    if (game.pendingTextAnswer) { abortReason = 'Antwort liegt bereits vor – Steal ist jetzt gesperrt.'; return; }
 
     const jokers = game.groups?.[groupId]?.jokers;
     if (!jokers?.steal) { abortReason = 'Steal-Joker bereits verwendet.'; return; }
