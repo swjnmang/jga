@@ -306,13 +306,13 @@ export default function MultiplayerGamePage() {
     setAutoAdvanceCountdown(null);
   }, [game?.currentCardId]);
 
-  // Flex-Phase: 15-Sekunden-Countdown → automatische Auswertung
+  // Flex-Phase: 25-Sekunden-Countdown → automatische Auswertung
   useEffect(() => {
     if (!game?.flexPhaseActive || !game?.pendingResult || flexPhaseEvaluated || game?.resultRevealed) {
       setFlexTimer(null);
       return;
     }
-    setFlexTimer(15);
+    setFlexTimer(25);
     const id = window.setInterval(() => {
       setFlexTimer(prev => {
         if (prev === null || prev <= 1) { clearInterval(id); return 0; }
