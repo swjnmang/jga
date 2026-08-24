@@ -609,5 +609,205 @@ export const naturTechnikCards: Card[] = [
   { id: 'naturtechnik-neu-iter-fusion', title: 'Kernfusion-Großforschungsprojekt', category: 'natur', year: 0, cue: 'Welches internationale Großforschungsprojekt soll durch Kernfusion langfristig saubere Energie liefern (im Bau in Frankreich)?', answer: 'ITER.', difficulty: 'schwer', sources: {}, distractors: ['CERN.', 'JET.', 'NIF.'] },
   { id: 'naturtechnik-neu-flops-rechenleistung', title: 'Einheit Rechenleistung KI-Chips', category: 'natur', year: 0, cue: 'Wie nennt man die Einheit, mit der Rechenleistung von KI-Chips/Supercomputern oft angegeben wird (Rechenoperationen pro Sekunde)?', answer: 'FLOPS.', difficulty: 'schwer', sources: {}, distractors: ['Hertz.', 'Bit/s.', 'Watt.'] },
 
-];
+  // ── Erweiterung 2026: 100 neue Natur & Technik Fragen ──
+  { id: 'naturtechnik-neu2026-001', title: 'Nachtaktive Tiere', category: 'natur', year: 0, cue: 'Wie nennt man Tiere, die vor allem nachts aktiv sind?', answer: 'Nachtaktive Tiere (nokturnal).', difficulty: 'leicht', sources: {}, distractors: ['Tagaktive Tiere.', 'Dämmerungsaktive Tiere.', 'Winterschläfer.'] },
 
+  { id: 'naturtechnik-neu2026-002', title: 'Gallenproduktion', category: 'natur', year: 0, cue: 'Welches Organ produziert die Gallenflüssigkeit?', answer: 'Die Leber.', difficulty: 'leicht', sources: {}, distractors: ['Die Bauchspeicheldrüse.', 'Die Gallenblase.', 'Der Magen.'] },
+
+  { id: 'naturtechnik-neu2026-003', title: 'Kleinster Knochen', category: 'natur', year: 0, cue: 'Wie heißt der kleinste Knochen im menschlichen Körper, der sich im Ohr befindet?', answer: 'Der Steigbügel.', difficulty: 'leicht', sources: {}, distractors: ['Der Amboss.', 'Der Hammer.', 'Das Schlüsselbein.'] },
+
+  { id: 'naturtechnik-neu2026-004', title: 'Tintenfisch Herzen', category: 'natur', year: 0, cue: 'Wie viele Herzen hat ein Tintenfisch (Krake)?', answer: 'Drei.', difficulty: 'leicht', sources: {}, distractors: ['Eins.', 'Zwei.', 'Vier.'] },
+
+  { id: 'naturtechnik-neu2026-005', title: 'Blaues Blut', category: 'natur', year: 0, cue: 'Welches Tier ist bekannt für sein blaues Blut?', answer: 'Der Pfeilschwanzkrebs.', difficulty: 'leicht', sources: {}, distractors: ['Der Hummer.', 'Der Blauwal.', 'Die Languste.'] },
+
+  { id: 'naturtechnik-neu2026-006', title: 'Schnecke Zähne', category: 'natur', year: 0, cue: 'Welches Tier hat auf seiner Zunge (Radula) die meisten Zähne von allen Tieren?', answer: 'Die Schnecke.', difficulty: 'leicht', sources: {}, distractors: ['Der Hai.', 'Der Wels.', 'Das Krokodil.'] },
+
+  { id: 'naturtechnik-neu2026-007', title: 'Größtes Tiergehirn', category: 'natur', year: 0, cue: 'Welches Tier besitzt das größte Gehirn (absolute Größe) im gesamten Tierreich?', answer: 'Der Pottwal.', difficulty: 'leicht', sources: {}, distractors: ['Der Blauwal.', 'Der Elefant.', 'Der Mensch.'] },
+
+  { id: 'naturtechnik-neu2026-008', title: 'Amphibien Definition', category: 'natur', year: 0, cue: 'Wie nennt man Tiere wie Frösche, die sowohl im Wasser als auch an Land leben können?', answer: 'Amphibien.', difficulty: 'leicht', sources: {}, distractors: ['Reptilien.', 'Fische.', 'Wirbellose.'] },
+
+  { id: 'naturtechnik-neu2026-009', title: 'Winterschlaf', category: 'natur', year: 0, cue: 'Wie nennt man den Ruhezustand, in dem manche Tiere den Winter verschlafen?', answer: 'Winterschlaf (Hibernation).', difficulty: 'leicht', sources: {}, distractors: ['Winterstarre.', 'Winterruhe.', 'Torpor.'] },
+
+  { id: 'naturtechnik-neu2026-010', title: 'Zugvögel', category: 'natur', year: 0, cue: 'Wie nennt man Vögel, die im Winter in wärmere Regionen fliegen?', answer: 'Zugvögel.', difficulty: 'leicht', sources: {}, distractors: ['Standvögel.', 'Wandervögel.', 'Wintervögel.'] },
+
+  { id: 'naturtechnik-neu2026-011', title: 'Ornithologie', category: 'natur', year: 0, cue: 'Wie nennt man die Wissenschaft, die sich mit Vögeln beschäftigt?', answer: 'Ornithologie.', difficulty: 'leicht', sources: {}, distractors: ['Entomologie.', 'Herpetologie.', 'Ichthyologie.'] },
+
+  { id: 'naturtechnik-neu2026-012', title: 'Entomologie', category: 'natur', year: 0, cue: 'Wie nennt man die Wissenschaft, die sich mit Insekten beschäftigt?', answer: 'Entomologie.', difficulty: 'leicht', sources: {}, distractors: ['Ornithologie.', 'Botanik.', 'Mykologie.'] },
+
+  { id: 'naturtechnik-neu2026-013', title: 'Venen zum Herzen', category: 'natur', year: 0, cue: 'Welche Blutgefäße transportieren das Blut zurück zum Herzen?', answer: 'Venen.', difficulty: 'leicht', sources: {}, distractors: ['Arterien.', 'Kapillaren.', 'Aorten.'] },
+
+  { id: 'naturtechnik-neu2026-014', title: 'Chromosomenzahl Mensch', category: 'natur', year: 0, cue: 'Wie viele Chromosomen hat eine menschliche Körperzelle normalerweise?', answer: '46 (23 Paare).', difficulty: 'leicht', sources: {}, distractors: ['23.', '44.', '48.'] },
+
+  { id: 'naturtechnik-neu2026-015', title: 'Größte Einzelblüte', category: 'natur', year: 0, cue: 'Welche Pflanze trägt die größte Einzelblüte der Welt?', answer: 'Die Rafflesia (Leichenblume).', difficulty: 'leicht', sources: {}, distractors: ['Die Sonnenblume.', 'Die Titanwurz.', 'Die Orchidee.'] },
+
+  { id: 'naturtechnik-neu2026-016', title: 'Symbol Natrium', category: 'natur', year: 0, cue: 'Welches chemische Element hat das Symbol „Na“?', answer: 'Natrium.', difficulty: 'leicht', sources: {}, distractors: ['Nickel.', 'Neon.', 'Niob.'] },
+
+  { id: 'naturtechnik-neu2026-017', title: 'Symbol Kalium', category: 'natur', year: 0, cue: 'Welches chemische Element hat das Symbol „K“?', answer: 'Kalium.', difficulty: 'leicht', sources: {}, distractors: ['Kohlenstoff.', 'Kalzium.', 'Krypton.'] },
+
+  { id: 'naturtechnik-neu2026-018', title: 'Kochsalz chemisch', category: 'natur', year: 0, cue: 'Wie lautet der chemische Name für gewöhnliches Kochsalz?', answer: 'Natriumchlorid.', difficulty: 'leicht', sources: {}, distractors: ['Natriumcarbonat.', 'Kaliumchlorid.', 'Calciumchlorid.'] },
+
+  { id: 'naturtechnik-neu2026-019', title: 'Essigsäure', category: 'natur', year: 0, cue: 'Welche Säure ist der Hauptbestandteil von Speiseessig?', answer: 'Essigsäure.', difficulty: 'leicht', sources: {}, distractors: ['Zitronensäure.', 'Milchsäure.', 'Salzsäure.'] },
+
+  { id: 'naturtechnik-neu2026-020', title: 'Trockeneis', category: 'natur', year: 0, cue: 'Woraus besteht Trockeneis?', answer: 'Gefrorenes Kohlenstoffdioxid ($CO_2$).', difficulty: 'leicht', sources: {}, distractors: ['Gefrorenes Wasser.', 'Gefrorener Stickstoff.', 'Gefrorener Sauerstoff.'] },
+
+  { id: 'naturtechnik-neu2026-021', title: 'Einheit Kraft', category: 'natur', year: 0, cue: 'In welcher Einheit wird die Kraft gemessen?', answer: 'Newton (N).', difficulty: 'leicht', sources: {}, distractors: ['Joule (J).', 'Watt (W).', 'Pascal (Pa).'] },
+
+  { id: 'naturtechnik-neu2026-022', title: 'Einheit Energie', category: 'natur', year: 0, cue: 'In welcher Einheit wird Energie gemessen?', answer: 'Joule (J).', difficulty: 'leicht', sources: {}, distractors: ['Newton (N).', 'Ampere (A).', 'Ohm (Ω).'] },
+
+  { id: 'naturtechnik-neu2026-023', title: 'Einheit Spannung', category: 'natur', year: 0, cue: 'In welcher Einheit wird die elektrische Spannung gemessen?', answer: 'Volt (V).', difficulty: 'leicht', sources: {}, distractors: ['Ampere (A).', 'Ohm (Ω).', 'Watt (W).'] },
+
+  { id: 'naturtechnik-neu2026-024', title: 'Vierter Aggregatzustand', category: 'natur', year: 0, cue: 'Wie nennt man den vierten Aggregatzustand neben fest, flüssig und gasförmig?', answer: 'Plasma.', difficulty: 'leicht', sources: {}, distractors: ['Kondensat.', 'Ionisat.', 'Äther.'] },
+
+  { id: 'naturtechnik-neu2026-025', title: 'Luftfeuchtigkeit messen', category: 'natur', year: 0, cue: 'Womit misst man die Luftfeuchtigkeit?', answer: 'Hygrometer.', difficulty: 'leicht', sources: {}, distractors: ['Barometer.', 'Thermometer.', 'Anemometer.'] },
+
+  { id: 'naturtechnik-neu2026-026', title: 'Größter Planet', category: 'natur', year: 0, cue: 'Welcher ist der größte Planet in unserem Sonnensystem?', answer: 'Jupiter.', difficulty: 'leicht', sources: {}, distractors: ['Saturn.', 'Neptun.', 'Uranus.'] },
+
+  { id: 'naturtechnik-neu2026-027', title: 'Marsmonde', category: 'natur', year: 0, cue: 'Wie viele Monde hat der Mars?', answer: 'Zwei (Phobos und Deimos).', difficulty: 'leicht', sources: {}, distractors: ['Einen.', 'Keinen.', 'Vier.'] },
+
+  { id: 'naturtechnik-neu2026-028', title: 'Unsere Galaxie', category: 'natur', year: 0, cue: 'Wie heißt unsere Galaxie?', answer: 'Die Milchstraße.', difficulty: 'leicht', sources: {}, distractors: ['Andromeda.', 'Der Große Wagen.', 'Orion.'] },
+
+  { id: 'naturtechnik-neu2026-029', title: 'Nachbargalaxie', category: 'natur', year: 0, cue: 'Wie heißt die der Milchstraße am nächsten gelegene große Galaxie?', answer: 'Die Andromeda-Galaxie.', difficulty: 'leicht', sources: {}, distractors: ['Die Triangulum-Galaxie.', 'Die Sombrero-Galaxie.', 'Die Whirlpool-Galaxie.'] },
+
+  { id: 'naturtechnik-neu2026-030', title: 'WLAN Abkürzung', category: 'natur', year: 0, cue: 'Wofür steht die Abkürzung WLAN?', answer: 'Drahtloses lokales Netzwerk (Wireless LAN).', difficulty: 'leicht', sources: {}, distractors: ['World Local Area Network.', 'Wired Local Access Node.', 'Wide Line Area Network.'] },
+
+  { id: 'naturtechnik-neu2026-031', title: 'USB Abkürzung', category: 'natur', year: 0, cue: 'Wofür steht die Abkürzung USB?', answer: 'Universal Serial Bus.', difficulty: 'leicht', sources: {}, distractors: ['Universal System Board.', 'United Serial Board.', 'Universal Storage Bus.'] },
+
+  { id: 'naturtechnik-neu2026-032', title: 'Blutdruckmessgerät', category: 'natur', year: 0, cue: 'Wie nennt man das Gerät zur Messung des Blutdrucks?', answer: 'Blutdruckmessgerät.', difficulty: 'leicht', sources: {}, distractors: ['Stethoskop.', 'Pulsoxymeter.', 'Thermometer.'] },
+
+  { id: 'naturtechnik-neu2026-033', title: 'Erdbeschleunigung', category: 'natur', year: 0, cue: 'Wie groß ist die Erdbeschleunigung (freier Fall) auf der Erde ungefähr?', answer: 'Ca. 9,8 m/s².', difficulty: 'leicht', sources: {}, distractors: ['Ca. 5 m/s².', 'Ca. 15 m/s².', 'Ca. 20 m/s².'] },
+
+  { id: 'naturtechnik-neu2026-034', title: 'Fallschirm Bremsung', category: 'natur', year: 0, cue: 'Was nutzt ein Fallschirm, um die Fallgeschwindigkeit zu bremsen?', answer: 'Luftwiderstand.', difficulty: 'leicht', sources: {}, distractors: ['Magnetkraft.', 'Auftrieb.', 'Reibungswärme.'] },
+
+  { id: 'naturtechnik-neu2026-035', title: 'Bronze Zusammensetzung', category: 'natur', year: 0, cue: 'Aus welchen zwei Metallen besteht die Legierung Bronze hauptsächlich?', answer: 'Kupfer und Zinn.', difficulty: 'mittel', sources: {}, distractors: ['Kupfer und Zink.', 'Eisen und Kohlenstoff.', 'Aluminium und Magnesium.'] },
+
+  { id: 'naturtechnik-neu2026-036', title: 'Messing Zusammensetzung', category: 'natur', year: 0, cue: 'Aus welchen zwei Metallen besteht Messing hauptsächlich?', answer: 'Kupfer und Zink.', difficulty: 'mittel', sources: {}, distractors: ['Kupfer und Zinn.', 'Eisen und Nickel.', 'Silber und Kupfer.'] },
+
+  { id: 'naturtechnik-neu2026-037', title: 'Dynamit Erfindung', category: 'natur', year: 0, cue: 'Welcher Sprengstoff wurde von Alfred Nobel erfunden und machte ihn reich?', answer: 'Dynamit.', difficulty: 'mittel', sources: {}, distractors: ['Schießpulver.', 'TNT.', 'Reines Nitroglyzerin.'] },
+
+  { id: 'naturtechnik-neu2026-038', title: 'Allotrope Kohlenstoff', category: 'natur', year: 0, cue: 'Diamant und Graphit bestehen beide aus reinem Kohlenstoff. Wie nennt man solche unterschiedlichen Erscheinungsformen desselben Elements?', answer: 'Allotrope.', difficulty: 'mittel', sources: {}, distractors: ['Isotope.', 'Isomere.', 'Legierungen.'] },
+
+  { id: 'naturtechnik-neu2026-039', title: 'Katalysator im Auto', category: 'natur', year: 0, cue: 'Was ist die Aufgabe des Katalysators im Auto?', answer: 'Er reduziert Schadstoffe im Abgas.', difficulty: 'mittel', sources: {}, distractors: ['Er erhöht die Motorleistung.', 'Er kühlt den Motor.', 'Er spart durch Verbrennungsstopp Kraftstoff.'] },
+
+  { id: 'naturtechnik-neu2026-040', title: 'Entdecker Röntgenstrahlen', category: 'natur', year: 0, cue: 'Wer entdeckte die Röntgenstrahlen?', answer: 'Wilhelm Conrad Röntgen.', difficulty: 'mittel', sources: {}, distractors: ['Marie Curie.', 'Albert Einstein.', 'Max Planck.'] },
+
+  { id: 'naturtechnik-neu2026-041', title: 'Marie Curie Forschung', category: 'natur', year: 0, cue: 'Wofür wurde Marie Curie mit zwei Nobelpreisen ausgezeichnet?', answer: 'Für ihre Forschung zur Radioaktivität.', difficulty: 'mittel', sources: {}, distractors: ['Für die Entdeckung der Röntgenstrahlen.', 'Für die Relativitätstheorie.', 'Für die Entdeckung der DNA-Struktur.'] },
+
+  { id: 'naturtechnik-neu2026-042', title: 'Zentripetalkraft', category: 'natur', year: 0, cue: 'Wie nennt man die Kraft, die einen Körper bei einer Kreisbewegung nach innen zum Mittelpunkt zieht?', answer: 'Zentripetalkraft.', difficulty: 'mittel', sources: {}, distractors: ['Zentrifugalkraft.', 'Corioliskraft.', 'Gravitationskraft.'] },
+
+  { id: 'naturtechnik-neu2026-043', title: 'Richterskala', category: 'natur', year: 0, cue: 'Wie heißt die klassische Skala zur Angabe der Stärke von Erdbeben?', answer: 'Richterskala.', difficulty: 'mittel', sources: {}, distractors: ['Beaufortskala.', 'Celsiusskala.', 'Mercalliskala.'] },
+
+  { id: 'naturtechnik-neu2026-044', title: 'UV vs Infrarot', category: 'natur', year: 0, cue: 'Welche Strahlung hat die kürzere Wellenlänge: Infrarotstrahlung oder Ultraviolettstrahlung?', answer: 'Ultraviolettstrahlung.', difficulty: 'mittel', sources: {}, distractors: ['Infrarotstrahlung.', 'Beide sind gleich lang.', 'Radiowellen.'] },
+
+  { id: 'naturtechnik-neu2026-045', title: 'Regenbogen Entstehung', category: 'natur', year: 0, cue: 'Wodurch entsteht ein Regenbogen am Himmel?', answer: 'Durch Brechung und Reflexion von Licht in Regentropfen.', difficulty: 'mittel', sources: {}, distractors: ['Durch Streuung von Licht an Staubpartikeln.', 'Durch Reflexion an Wolken.', 'Durch Beugung an Luftmolekülen.'] },
+
+  { id: 'naturtechnik-neu2026-046', title: 'Trägheitsprinzip', category: 'natur', year: 0, cue: 'Wie nennt man das physikalische Prinzip, dass ein Körper in Ruhe oder gleichförmiger Bewegung verharrt, solange keine Kraft auf ihn wirkt?', answer: 'Trägheitsprinzip (1. Newtonsches Gesetz).', difficulty: 'mittel', sources: {}, distractors: ['Aktionsprinzip.', 'Wechselwirkungsprinzip.', 'Erhaltungssatz.'] },
+
+  { id: 'naturtechnik-neu2026-047', title: 'Elektromagnet Prinzip', category: 'natur', year: 0, cue: 'Wie funktioniert ein Elektromagnet grundsätzlich?', answer: 'Eine stromdurchflossene Spule erzeugt ein Magnetfeld.', difficulty: 'mittel', sources: {}, distractors: ['Ein Permanentmagnet wird erhitzt.', 'Zwei Metalle werden aneinandergerieben.', 'Ein Kristall wird unter Druck gesetzt.'] },
+
+  { id: 'naturtechnik-neu2026-048', title: 'Habitable Zone', category: 'natur', year: 0, cue: 'Wie nennt man die Zone um einen Stern, in der auf einem Planeten flüssiges Wasser existieren könnte?', answer: 'Habitable Zone (Goldilocks-Zone).', difficulty: 'mittel', sources: {}, distractors: ['Roche-Grenze.', 'Lagrange-Punkt.', 'Ereignishorizont.'] },
+
+  { id: 'naturtechnik-neu2026-049', title: 'Sonnenfinsternis Definition', category: 'natur', year: 0, cue: 'Wann entsteht eine Sonnenfinsternis?', answer: 'Wenn der Mond zwischen Sonne und Erde steht.', difficulty: 'mittel', sources: {}, distractors: ['Wenn die Erde zwischen Sonne und Mond steht.', 'Wenn die Sonne hinter Wolken verschwindet.', 'Wenn der Mond weit von der Erde entfernt ist.'] },
+
+  { id: 'naturtechnik-neu2026-050', title: 'Größter Vulkan im All', category: 'natur', year: 0, cue: 'Wie heißt der größte bekannte Vulkan im Sonnensystem, gelegen auf dem Mars?', answer: 'Olympus Mons.', difficulty: 'mittel', sources: {}, distractors: ['Mauna Loa.', 'Mount Everest.', 'Vesuv.'] },
+
+  { id: 'naturtechnik-neu2026-051', title: 'Venus Rotation', category: 'natur', year: 0, cue: 'Welcher Planet hat den längsten Tag (die langsamste Rotation) im Sonnensystem?', answer: 'Venus.', difficulty: 'mittel', sources: {}, distractors: ['Merkur.', 'Mars.', 'Uranus.'] },
+
+  { id: 'naturtechnik-neu2026-052', title: 'Jupiter Rotation', category: 'natur', year: 0, cue: 'Welcher Planet hat den kürzesten Tag (die schnellste Rotation) im Sonnensystem?', answer: 'Jupiter.', difficulty: 'mittel', sources: {}, distractors: ['Saturn.', 'Erde.', 'Neptun.'] },
+
+  { id: 'naturtechnik-neu2026-053', title: 'Großer Wagen', category: 'natur', year: 0, cue: 'Zu welchem Sternbild gehört der „Große Wagen“?', answer: 'Großer Bär (Ursa Major).', difficulty: 'mittel', sources: {}, distractors: ['Kleiner Bär.', 'Orion.', 'Kassiopeia.'] },
+
+  { id: 'naturtechnik-neu2026-054', title: 'ISS Abkürzung', category: 'natur', year: 0, cue: 'Wofür steht die Abkürzung ISS in der Raumfahrt?', answer: 'Internationale Raumstation.', difficulty: 'mittel', sources: {}, distractors: ['Interstellare Sonde.', 'Internationales Satellitensystem.', 'Internationale Sternwarte.'] },
+
+  { id: 'naturtechnik-neu2026-055', title: 'Erfinder World Wide Web', category: 'natur', year: 0, cue: 'Wer erfand das World Wide Web?', answer: 'Tim Berners-Lee.', difficulty: 'mittel', sources: {}, distractors: ['Bill Gates.', 'Steve Jobs.', 'Mark Zuckerberg.'] },
+
+  { id: 'naturtechnik-neu2026-056', title: 'Erster Motorflug', category: 'natur', year: 0, cue: 'Wer unternahm 1903 den ersten motorisierten Flug der Geschichte?', answer: 'Die Gebrüder Wright.', difficulty: 'mittel', sources: {}, distractors: ['Otto Lilienthal.', 'Ferdinand von Zeppelin.', 'Charles Lindbergh.'] },
+
+  { id: 'naturtechnik-neu2026-057', title: 'Erfinder Telefon', category: 'natur', year: 0, cue: 'Wer gilt als Erfinder des Telefons?', answer: 'Alexander Graham Bell.', difficulty: 'mittel', sources: {}, distractors: ['Thomas Edison.', 'Guglielmo Marconi.', 'Nikola Tesla.'] },
+
+  { id: 'naturtechnik-neu2026-058', title: 'Dampfmaschine James Watt', category: 'natur', year: 0, cue: 'Wessen entscheidende Verbesserungen an der Dampfmaschine trieben die Industrielle Revolution voran?', answer: 'James Watt.', difficulty: 'mittel', sources: {}, distractors: ['George Stephenson.', 'Thomas Newcomen.', 'Rudolf Diesel.'] },
+
+  { id: 'naturtechnik-neu2026-059', title: 'Turing-Test', category: 'natur', year: 0, cue: 'Wie nennt man den von Alan Turing vorgeschlagenen Test, ob eine Maschine menschenähnlich „denken“ kann?', answer: 'Turing-Test.', difficulty: 'mittel', sources: {}, distractors: ['Lovelace-Test.', 'Hinton-Test.', 'Bletchley-Test.'] },
+
+  { id: 'naturtechnik-neu2026-060', title: 'GPS Satellitennavigation', category: 'natur', year: 0, cue: 'Wie nennt man das satellitengestützte Navigationssystem, das z. B. im Auto zur Standortbestimmung genutzt wird?', answer: 'GPS (Satellitennavigation).', difficulty: 'mittel', sources: {}, distractors: ['Radar.', 'Sonar.', 'WLAN-Ortung.'] },
+
+  { id: 'naturtechnik-neu2026-061', title: '3D-Drucker Prinzip', category: 'natur', year: 0, cue: 'Nach welchem Grundprinzip arbeitet ein 3D-Drucker?', answer: 'Schichtweiser Materialauftrag (additive Fertigung).', difficulty: 'mittel', sources: {}, distractors: ['Herausfräsen aus einem Block.', 'Gießen in eine Form.', 'Pressen unter hoher Hitze.'] },
+
+  { id: 'naturtechnik-neu2026-062', title: 'Blockchain Definition', category: 'natur', year: 0, cue: 'Wie nennt man ein dezentrales, fälschungssicheres digitales Register, das u. a. Kryptowährungen zugrunde liegt?', answer: 'Blockchain.', difficulty: 'mittel', sources: {}, distractors: ['Cloud-Speicher.', 'Datenbank-Server.', 'Peer-to-Peer-Netzwerk (allgemein).'] },
+
+  { id: 'naturtechnik-neu2026-063', title: 'Roboter Wortherkunft', category: 'natur', year: 0, cue: 'Von welchem tschechischen Wort für „Arbeit“ leitet sich der Begriff „Roboter“ ab?', answer: 'Robota.', difficulty: 'mittel', sources: {}, distractors: ['Rabota.', 'Robotnik.', 'Rotace.'] },
+
+  { id: 'naturtechnik-neu2026-064', title: 'Erste Programmiererin', category: 'natur', year: 0, cue: 'Wer gilt als eine der ersten Computer-Programmiererinnen der Geschichte (19. Jahrhundert)?', answer: 'Ada Lovelace.', difficulty: 'mittel', sources: {}, distractors: ['Marie Curie.', 'Grace Hopper.', 'Hedy Lamarr.'] },
+
+  { id: 'naturtechnik-neu2026-065', title: 'Treibhauseffekt Definition', category: 'natur', year: 0, cue: 'Wie nennt man den Effekt, bei dem Gase in der Atmosphäre Wärmestrahlung zurückhalten und die Erde erwärmen?', answer: 'Treibhauseffekt.', difficulty: 'mittel', sources: {}, distractors: ['Ozonabbau.', 'Albedo-Effekt.', 'Polarwirbel.'] },
+
+  { id: 'naturtechnik-neu2026-066', title: 'Haupttreibhausgas', category: 'natur', year: 0, cue: 'Welches Gas trägt am stärksten zum vom Menschen verursachten Treibhauseffekt bei?', answer: 'Kohlenstoffdioxid ($CO_2$).', difficulty: 'mittel', sources: {}, distractors: ['Sauerstoff.', 'Stickstoff.', 'Wasserdampf (allein).'] },
+
+  { id: 'naturtechnik-neu2026-067', title: 'Permafrost Definition', category: 'natur', year: 0, cue: 'Wie nennt man Böden, die dauerhaft (mindestens zwei Jahre) gefroren sind?', answer: 'Permafrost.', difficulty: 'mittel', sources: {}, distractors: ['Tundra.', 'Gletschereis.', 'Frostboden (einmalig).'] },
+
+  { id: 'naturtechnik-neu2026-068', title: 'Ozonloch Kontinent', category: 'natur', year: 0, cue: 'Über welchem Kontinent wurde das bekannteste Ozonloch entdeckt?', answer: 'Antarktis.', difficulty: 'schwer', sources: {}, distractors: ['Arktis.', 'Australien.', 'Südamerika.'] },
+
+  { id: 'naturtechnik-neu2026-069', title: 'Montreal-Protokoll', category: 'natur', year: 0, cue: 'Wie heißt das internationale Abkommen zum Schutz der Ozonschicht?', answer: 'Montreal-Protokoll.', difficulty: 'schwer', sources: {}, distractors: ['Kyoto-Protokoll.', 'Pariser Abkommen.', 'Wiener Übereinkommen.'] },
+
+  { id: 'naturtechnik-neu2026-070', title: 'Mikroplastik Definition', category: 'natur', year: 0, cue: 'Wie nennt man winzige Kunststoffpartikel unter 5 mm, die zunehmend Umwelt und Gewässer belasten?', answer: 'Mikroplastik.', difficulty: 'schwer', sources: {}, distractors: ['Nanoplastik.', 'Bioplastik.', 'Feinstaub.'] },
+
+  { id: 'naturtechnik-neu2026-071', title: 'CO2-Fußabdruck', category: 'natur', year: 0, cue: 'Wie nennt man das Maß für die Menge an Treibhausgasen, die eine Person oder Aktivität verursacht?', answer: 'CO2-Fußabdruck (ökologischer Fußabdruck).', difficulty: 'schwer', sources: {}, distractors: ['Energiebilanz.', 'Emissionsindex.', 'Klimaquote.'] },
+
+  { id: 'naturtechnik-neu2026-072', title: 'Penicillin Entdeckung', category: 'natur', year: 0, cue: 'Wer entdeckte eher zufällig das Antibiotikum Penicillin?', answer: 'Alexander Fleming.', difficulty: 'schwer', sources: {}, distractors: ['Louis Pasteur.', 'Robert Koch.', 'Paul Ehrlich.'] },
+
+  { id: 'naturtechnik-neu2026-073', title: 'Erste Impfung', category: 'natur', year: 0, cue: 'Wer entwickelte Ende des 18. Jahrhunderts die erste Impfung der Geschichte, gegen Pocken?', answer: 'Edward Jenner.', difficulty: 'schwer', sources: {}, distractors: ['Louis Pasteur.', 'Robert Koch.', 'Alexander Fleming.'] },
+
+  { id: 'naturtechnik-neu2026-074', title: 'mRNA-Impfstoffe', category: 'natur', year: 2020, cue: 'Gegen welche Krankheit kamen ab 2020/2021 erstmals in großem Maßstab mRNA-Impfstoffe zum Einsatz?', answer: 'COVID-19.', difficulty: 'schwer', sources: {}, distractors: ['Grippe (Influenza).', 'Masern.', 'Malaria.'] },
+
+  { id: 'naturtechnik-neu2026-075', title: 'Placebo Definition', category: 'natur', year: 0, cue: 'Wie nennt man ein Scheinmedikament ohne Wirkstoff, das in Studien zum Vergleich eingesetzt wird?', answer: 'Placebo.', difficulty: 'schwer', sources: {}, distractors: ['Generikum.', 'Antidot.', 'Adjuvans.'] },
+
+  { id: 'naturtechnik-neu2026-076', title: 'Herzschrittmacher Funktion', category: 'natur', year: 0, cue: 'Was ist die Aufgabe eines Herzschrittmachers?', answer: 'Er reguliert den Herzschlag elektrisch bei Rhythmusstörungen.', difficulty: 'schwer', sources: {}, distractors: ['Er filtert das Blut.', 'Er misst dauerhaft den Blutdruck.', 'Er ersetzt eine Herzklappe.'] },
+
+  { id: 'naturtechnik-neu2026-077', title: 'Antibiotika Wirkung', category: 'natur', year: 0, cue: 'Wirken Antibiotika gegen Bakterien oder gegen Viren?', answer: 'Gegen Bakterien.', difficulty: 'schwer', sources: {}, distractors: ['Gegen Viren.', 'Gegen beides gleich gut.', 'Ausschließlich gegen Pilze.'] },
+
+  { id: 'naturtechnik-neu2026-078', title: 'Erste Organtransplantation', category: 'natur', year: 0, cue: 'Welches Organ wurde als erstes erfolgreich zwischen zwei Menschen transplantiert?', answer: 'Die Niere.', difficulty: 'schwer', sources: {}, distractors: ['Das Herz.', 'Die Leber.', 'Die Lunge.'] },
+
+  { id: 'naturtechnik-neu2026-079', title: 'Entdecker DNA-Doppelhelix', category: 'natur', year: 0, cue: 'Wer entdeckte, mithilfe von Rosalind Franklins Daten, die Doppelhelix-Struktur der DNA?', answer: 'James Watson und Francis Crick.', difficulty: 'schwer', sources: {}, distractors: ['Gregor Mendel und Charles Darwin.', 'Alexander Fleming und Marie Curie.', 'Louis Pasteur und Robert Koch.'] },
+
+  { id: 'naturtechnik-neu2026-080', title: 'Entdecker Blutgruppen', category: 'natur', year: 0, cue: 'Wer entdeckte die menschlichen Blutgruppen (AB0-System)?', answer: 'Karl Landsteiner.', difficulty: 'schwer', sources: {}, distractors: ['Alexander Fleming.', 'Robert Koch.', 'Louis Pasteur.'] },
+
+  { id: 'naturtechnik-neu2026-081', title: 'Parthenogenese', category: 'natur', year: 0, cue: 'Wie nennt man die Fortpflanzung ohne Befruchtung, bei der sich z. B. manche Insekten oder Reptilien ungeschlechtlich vermehren?', answer: 'Parthenogenese (Jungfernzeugung).', difficulty: 'schwer', sources: {}, distractors: ['Mitose.', 'Meiose.', 'Metamorphose.'] },
+
+  { id: 'naturtechnik-neu2026-082', title: 'Antikörper Zellen', category: 'natur', year: 0, cue: 'Welche Zellen des Immunsystems produzieren Antikörper?', answer: 'B-Zellen (B-Lymphozyten).', difficulty: 'schwer', sources: {}, distractors: ['T-Zellen.', 'Rote Blutkörperchen.', 'Thrombozyten.'] },
+
+  { id: 'naturtechnik-neu2026-083', title: 'Nobelpreis Physik 2024', category: 'natur', year: 2024, cue: 'Wofür erhielten John Hopfield und Geoffrey Hinton 2024 den Nobelpreis für Physik?', answer: 'Für grundlegende Entdeckungen zu künstlichen neuronalen Netzen (maschinelles Lernen).', difficulty: 'schwer', sources: {}, distractors: ['Für die Entdeckung des Higgs-Teilchens.', 'Für die Erforschung von Exoplaneten.', 'Für Fortschritte in der Quantenverschränkung.'] },
+
+  { id: 'naturtechnik-neu2026-084', title: 'Nobelpreis Chemie 2024', category: 'natur', year: 2024, cue: 'Welches KI-Programm zur Vorhersage von Proteinstrukturen brachte seinen Entwicklern 2024 den Chemie-Nobelpreis ein?', answer: 'AlphaFold.', difficulty: 'schwer', sources: {}, distractors: ['ChatGPT.', 'Watson.', 'DeepBlue.'] },
+
+  { id: 'naturtechnik-neu2026-085', title: 'Schnellster Supercomputer', category: 'natur', year: 2025, cue: 'Wie heißt der (Stand 2025) schnellste Supercomputer der Welt, betrieben vom Lawrence Livermore National Laboratory in den USA?', answer: 'El Capitan.', difficulty: 'schwer', sources: {}, distractors: ['Frontier.', 'Fugaku.', 'Summit.'] },
+
+  { id: 'naturtechnik-neu2026-086', title: 'Anzahl Exoplaneten', category: 'natur', year: 2025, cue: 'Wie viele Exoplaneten hatte die NASA im Jahr 2025 offiziell bestätigt (ungefähr)?', answer: 'Über 6.000.', difficulty: 'schwer', sources: {}, distractors: ['Über 1.000.', 'Über 60.000.', 'Über 600.'] },
+
+  { id: 'naturtechnik-neu2026-087', title: 'Voyager 1', category: 'natur', year: 0, cue: 'Welche von Menschen gebaute Sonde ist das am weitesten von der Erde entfernte Objekt im All?', answer: 'Voyager 1.', difficulty: 'schwer', sources: {}, distractors: ['Voyager 2.', 'New Horizons.', 'Pioneer 10.'] },
+
+  { id: 'naturtechnik-neu2026-088', title: 'Mersenne-Primzahl', category: 'natur', year: 0, cue: 'Primzahlen der Form 2 hoch n minus 1 – wie nennt man diese besondere Art von Primzahlen?', answer: 'Mersenne-Primzahlen.', difficulty: 'schwer', sources: {}, distractors: ['Fibonacci-Primzahlen.', 'Fermat-Primzahlen.', 'Sophie-Germain-Primzahlen.'] },
+
+  { id: 'naturtechnik-neu2026-089', title: 'James-Webb-Teleskop', category: 'natur', year: 2021, cue: 'Wie heißt das 2021 gestartete Weltraumteleskop, das als Nachfolger des Hubble-Teleskops gilt?', answer: 'James-Webb-Weltraumteleskop.', difficulty: 'schwer', sources: {}, distractors: ['Kepler-Weltraumteleskop.', 'Spitzer-Weltraumteleskop.', 'Chandra-Röntgenobservatorium.'] },
+
+  { id: 'naturtechnik-neu2026-090', title: 'Schallgeschwindigkeit', category: 'natur', year: 0, cue: 'Wie hoch ist die Schallgeschwindigkeit in Luft bei Zimmertemperatur ungefähr?', answer: 'Ca. 340 m/s.', difficulty: 'schwer', sources: {}, distractors: ['Ca. 34 m/s.', 'Ca. 3.400 m/s.', 'Ca. 1.000 m/s.'] },
+
+  { id: 'naturtechnik-neu2026-091', title: 'Schwerstes natürliches Element', category: 'natur', year: 0, cue: 'Welches natürlich in nennenswerten Mengen vorkommende Element ist das schwerste im Periodensystem?', answer: 'Uran.', difficulty: 'schwer', sources: {}, distractors: ['Plutonium.', 'Blei.', 'Gold.'] },
+
+  { id: 'naturtechnik-neu2026-092', title: 'Universallösungsmittel', category: 'natur', year: 0, cue: 'Welcher Stoff wird aufgrund seiner Lösungseigenschaften oft als „universelles Lösungsmittel“ bezeichnet?', answer: 'Wasser.', difficulty: 'schwer', sources: {}, distractors: ['Ethanol.', 'Aceton.', 'Öl.'] },
+
+  { id: 'naturtechnik-neu2026-093', title: 'pH-Wert Definition', category: 'natur', year: 0, cue: 'Was gibt der pH-Wert einer Lösung an?', answer: 'Wie sauer oder basisch (alkalisch) sie ist.', difficulty: 'schwer', sources: {}, distractors: ['Wie salzig sie ist.', 'Wie leitfähig sie ist.', 'Wie dicht sie ist.'] },
+
+  { id: 'naturtechnik-neu2026-094', title: 'Rost chemisch', category: 'natur', year: 0, cue: 'Wie nennt man chemisch die rötlich-braune Substanz, die beim Rosten von Eisen entsteht?', answer: 'Eisenoxid.', difficulty: 'schwer', sources: {}, distractors: ['Eisenkarbonat.', 'Eisensulfat.', 'Eisenchlorid.'] },
+
+  { id: 'naturtechnik-neu2026-095', title: 'Exotherme Reaktion', category: 'natur', year: 0, cue: 'Wie nennt man chemische Reaktionen, die Wärme freisetzen?', answer: 'Exotherme Reaktionen.', difficulty: 'schwer', sources: {}, distractors: ['Endotherme Reaktionen.', 'Katalytische Reaktionen.', 'Reversible Reaktionen.'] },
+
+  { id: 'naturtechnik-neu2026-096', title: 'Redoxreaktion', category: 'natur', year: 0, cue: 'Wie nennt man eine chemische Reaktion, bei der Elektronen von einem Stoff auf einen anderen übertragen werden?', answer: 'Redoxreaktion (Reduktion-Oxidation).', difficulty: 'schwer', sources: {}, distractors: ['Neutralisation.', 'Kondensation.', 'Hydrolyse.'] },
+
+  { id: 'naturtechnik-neu2026-097', title: 'Nephrone Niere', category: 'natur', year: 0, cue: 'Wie heißen die kleinen Filtereinheiten in der Niere, die das Blut reinigen?', answer: 'Nephrone.', difficulty: 'schwer', sources: {}, distractors: ['Alveolen.', 'Neuronen.', 'Follikel.'] },
+
+  { id: 'naturtechnik-neu2026-098', title: 'Halbwertszeit', category: 'natur', year: 0, cue: 'Wie nennt man die Zeit, in der die Hälfte der Atome eines radioaktiven Stoffes zerfallen ist?', answer: 'Halbwertszeit.', difficulty: 'schwer', sources: {}, distractors: ['Zerfallszeit.', 'Strahlungsperiode.', 'Isotopenzeit.'] },
+
+  { id: 'naturtechnik-neu2026-099', title: 'Alphastrahlung', category: 'natur', year: 0, cue: 'Welche Art radioaktiver Strahlung besteht aus Heliumkernen (2 Protonen und 2 Neutronen)?', answer: 'Alphastrahlung.', difficulty: 'schwer', sources: {}, distractors: ['Betastrahlung.', 'Gammastrahlung.', 'Röntgenstrahlung.'] },
+
+  { id: 'naturtechnik-neu2026-100', title: 'CERN Higgs-Boson', category: 'natur', year: 2012, cue: 'Wie heißt das große Teilchenphysik-Forschungszentrum bei Genf, in dem 2012 das Higgs-Boson nachgewiesen wurde?', answer: 'CERN.', difficulty: 'schwer', sources: {}, distractors: ['NASA.', 'ESA.', 'Fermilab.'] },
+
+];
