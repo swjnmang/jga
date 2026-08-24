@@ -158,7 +158,7 @@ export default function RulesPage() {
 
             <section className="space-y-3">
               <h2 className="text-lg font-display font-semibold text-ink">🚫 Ban-Phase (optional)</h2>
-              <p>Wenn beim Erstellen des Spiels aktiviert, darf jede Gruppe vor Spielbeginn reihum eine Kategorie sperren. Gesperrte Kategorien kommen im Spiel nicht vor. <strong className="text-ink">Schätzfragen können nicht gebannt werden</strong> — sie sind Pflichtbestandteil des Spiels.</p>
+              <p>Wenn beim Erstellen des Spiels aktiviert, darf jede Gruppe vor Spielbeginn reihum eine Kategorie sperren. Gesperrte Kategorien kommen im Spiel nicht vor.</p>
               <p>Jede Gruppe hat <strong className="text-ink">20 Sekunden</strong> Zeit — wer nicht reagiert, überspringt automatisch.</p>
             </section>
 

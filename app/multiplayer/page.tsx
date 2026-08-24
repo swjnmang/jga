@@ -427,7 +427,6 @@ function MultiplayerLobbyContent() {
   };
   
   const toggleCategory = (category: CardCategory) => {
-    if (category === 'schaetzfragen') return; // always locked
     setSettings((prev) => {
       const isCurrentlyActive = prev.categoryWeights[category] > 0;
       const nextWeights = { ...prev.categoryWeights };
@@ -867,8 +866,7 @@ function MultiplayerLobbyContent() {
           {availableCategories.map((cat) => {
             const isActive = (settings.categoryWeights[cat] || 0) > 0;
             const isDisabled = cat === 'image';
-            const isLocked = cat === 'schaetzfragen';
-            
+
             if (isDisabled) {
               return (
                 <div
@@ -878,24 +876,6 @@ function MultiplayerLobbyContent() {
                 >
                   <span className="flex-shrink-0 w-5 h-5 rounded border-2 border-ink/20 bg-transparent flex items-center justify-center" />
                   <span className="text-sm font-medium">{catIcon(cat)} {catLabelMeta(cat)}</span>
-                </div>
-              );
-            }
-            
-            if (isLocked) {
-              return (
-                <div
-                  key={cat}
-                  className="flex items-center gap-2 py-1.5 px-2 rounded-lg text-left w-full cursor-not-allowed"
-                  title="Schätzfragen sind immer aktiv"
-                >
-                  <span className="flex-shrink-0 w-5 h-5 rounded border-2 bg-white border-white flex items-center justify-center">
-                    <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="1,5 4.5,9 11,1" />
-                    </svg>
-                  </span>
-                  <span className="text-sm font-medium">{catIcon(cat)} {catLabelMeta(cat)}</span>
-                  <span className="text-xs font-semibold text-white/70 ml-auto">Pflicht</span>
                 </div>
               );
             }

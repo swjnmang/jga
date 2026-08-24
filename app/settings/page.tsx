@@ -154,7 +154,6 @@ function SettingsPageContent() {
   };
 
   const toggleCategory = (category: CardCategory) => {
-    if (category === 'schaetzfragen') return; // always locked
     setSettings((prev) => {
       const isCurrentlyActive = prev.categoryWeights[category] > 0;
       const nextWeights = { ...prev.categoryWeights };
@@ -188,11 +187,10 @@ function SettingsPageContent() {
   };
 
   const toggleAllCategories = () => {
-    const allActive = availableCategories.every(cat => cat === 'schaetzfragen' || settings.categoryWeights[cat] > 0);
+    const allActive = availableCategories.every(cat => settings.categoryWeights[cat] > 0);
     const nextWeights = { ...settings.categoryWeights };
-    
+
     availableCategories.forEach(cat => {
-      if (cat === 'schaetzfragen') return; // always keep active
       nextWeights[cat] = allActive ? 0 : 10;
     });
 
@@ -265,7 +263,6 @@ function SettingsPageContent() {
             {availableCategories.map((category) => {
               const isActive = settings.categoryWeights[category] > 0;
               const isDisabled = category === 'image';
-              const isLocked = category === 'schaetzfragen';
               if (isDisabled) {
                 return (
                   <div key={category} className="flex items-center gap-2 rounded-xl border px-3 py-2 border-ink/20 text-ink opacity-40 cursor-not-allowed" title="Demnächst verfügbar">
@@ -278,25 +275,6 @@ function SettingsPageContent() {
                     />
                     <span className="flex-1">{catIcon(category)} {catLabelMeta(category)}</span>
                     <span className="text-xs italic">Demnächst</span>
-                  </div>
-                );
-              }
-              if (isLocked) {
-                return (
-                  <div
-                    key={category}
-                    className="flex items-center gap-2 rounded-xl border px-3 py-2 border-sky-700 bg-sky-50 text-sky-900 cursor-not-allowed"
-                    title="Schätzfragen sind immer aktiv – sie ermöglichen allen Gruppen Joker zu verdienen."
-                  >
-                    <input
-                      type="checkbox"
-                      checked={true}
-                      disabled
-                      className="h-4 w-4 accent-sky-700 cursor-not-allowed"
-                      readOnly
-                    />
-                    <span className="flex-1">{catIcon(category)} {catLabelMeta(category)}</span>
-                    <span className="text-xs font-semibold text-sky-600">Pflicht</span>
                   </div>
                 );
               }
