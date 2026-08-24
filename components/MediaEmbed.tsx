@@ -96,24 +96,57 @@ async function fetchSpotifyAccessToken(): Promise<string | null> {
   }
 }
 
+// Wartet darauf, dass ein BEREITS existierender Player wieder ein 'ready'-Event
+// liefert (z.B. nach einem kurzen Spotify-Connect-Reconnect zwischen zwei
+// Songs), statt fälschlich einen zweiten, konkurrierenden Player/Gerät
+// anzulegen. War früher der eigentliche Bug: not_ready löschte nur die
+// deviceId, wodurch der nächste Aufruf einen komplett neuen Spotify.Player
+// erzeugt hat – zwei Geräte gleichzeitig, der zweite Song "startete nicht
+// richtig".
+function waitForExistingPlayerReady(): Promise<{ player: Spotify.Player; deviceId: string } | null> {
+  return new Promise((resolve) => {
+    let settled = false;
+    const finish = (result: { player: Spotify.Player; deviceId: string } | null) => {
+      if (settled) return;
+      settled = true;
+      clearInterval(pollId);
+      resolve(result);
+    };
+    const check = () => {
+      if (window._spotifyWebPlayer && window._spotifyWebPlayerDeviceId) {
+        finish({ player: window._spotifyWebPlayer, deviceId: window._spotifyWebPlayerDeviceId });
+      }
+    };
+    const pollId = setInterval(check, 200);
+    setTimeout(() => finish(null), 8000);
+    check();
+  });
+}
+
 function ensureSpotifyWebPlayer(): Promise<{ player: Spotify.Player; deviceId: string } | null> {
   if (typeof window === 'undefined') return Promise.resolve(null);
   if (window._spotifyWebPlaybackUnavailable) return Promise.resolve(null);
   if (window._spotifyWebPlayer && window._spotifyWebPlayerDeviceId) {
     return Promise.resolve({ player: window._spotifyWebPlayer, deviceId: window._spotifyWebPlayerDeviceId });
   }
+  // Player existiert schon, ist aber gerade zwischen zwei 'ready'-Events (kurzer
+  // Reconnect) – abwarten statt einen zweiten Player anzulegen.
+  if (window._spotifyWebPlayer) return waitForExistingPlayerReady();
   if (window._spotifyWebPlayerInitPromise) return window._spotifyWebPlayerInitPromise;
 
   const initPromise = (async (): Promise<{ player: Spotify.Player; deviceId: string } | null> => {
     const initialToken = await fetchSpotifyAccessToken();
     if (!initialToken) {
-      window._spotifyWebPlaybackUnavailable = true;
+      // Kein Login (noch) vorhanden – für DIESE Karte auf die Vorschau zurückfallen,
+      // aber nichts dauerhaft sperren: ein späterer Login sollte die nächste Karte
+      // wieder mit vollem Playback versuchen lassen.
       return null;
     }
 
     await loadSpotifyWebPlaybackSdk();
     if (!window.Spotify) {
-      window._spotifyWebPlaybackUnavailable = true;
+      // SDK-Skript konnte nicht geladen werden (z.B. Netzwerk/Adblocker) – auch das
+      // kann sich beim nächsten Kartenwechsel wieder ändern, also nicht dauerhaft sperren.
       return null;
     }
 
@@ -129,7 +162,12 @@ function ensureSpotifyWebPlayer(): Promise<{ player: Spotify.Player; deviceId: s
         name: 'JGA Trivia Player',
         getOAuthToken: (cb) => {
           fetchSpotifyAccessToken().then((token) => {
-            if (token) cb(token);
+            // Der SDK-Contract erwartet, dass cb IMMER aufgerufen wird – bleibt der
+            // Aufruf bei einem Token-Fehler aus, wertet die SDK das intern oft als
+            // authentication_error, was früher das Feature für den Rest der Session
+            // lahmgelegt hat. Bei Fehlschlag daher leeren String übergeben statt cb
+            // gar nicht aufzurufen.
+            cb(token ?? '');
           });
         },
         volume: 1
@@ -144,15 +182,30 @@ function ensureSpotifyWebPlayer(): Promise<{ player: Spotify.Player; deviceId: s
         window._spotifyWebPlayerDeviceId = undefined;
       });
       player.addListener('initialization_error', () => {
-        window._spotifyWebPlaybackUnavailable = true;
+        // Kann transient sein (z.B. kurzzeitiges Browser-/DRM-Problem). NICHT
+        // dauerhaft sperren – nur diesen Player verwerfen, der nächste Aufruf von
+        // ensureSpotifyWebPlayer() baut bei Bedarf einen neuen auf.
+        player.disconnect();
+        if (window._spotifyWebPlayer === player) {
+          window._spotifyWebPlayer = undefined;
+          window._spotifyWebPlayerDeviceId = undefined;
+        }
         finish(null);
       });
       player.addListener('authentication_error', () => {
-        window._spotifyWebPlaybackUnavailable = true;
+        // Token-Problem – ebenfalls transient (abgelaufener/ungültiger Token für
+        // DIESEN Verbindungsversuch). Nicht dauerhaft sperren, siehe oben.
+        player.disconnect();
+        if (window._spotifyWebPlayer === player) {
+          window._spotifyWebPlayer = undefined;
+          window._spotifyWebPlayerDeviceId = undefined;
+        }
         finish(null);
       });
       player.addListener('account_error', () => {
-        // Kein Spotify Premium auf dem verbundenen Konto – stiller Fallback auf die Vorschau.
+        // Kein Spotify Premium auf dem verbundenen Konto – das ändert sich nicht von
+        // Song zu Song, deshalb HIER dauerhaft (für die restliche Session) sperren
+        // und still auf die Vorschau zurückfallen.
         window._spotifyWebPlaybackUnavailable = true;
         finish(null);
       });
@@ -631,6 +684,13 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       onProgressRef.current?.({ positionMs: state.position, durationMs: state.duration, isPlaying: !state.paused });
     };
 
+    const requestPlay = async (deviceId: string, token: string) =>
+      fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`, {
+        method: 'PUT',
+        headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ uris: [uri], position_ms: 0 })
+      });
+
     const startPlayback = async () => {
       const token = await fetchSpotifyAccessToken();
       if (!token) {
@@ -638,11 +698,19 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
         return;
       }
       try {
-        const res = await fetch(`https://api.spotify.com/v1/me/player/play?device_id=${wp.deviceId}`, {
-          method: 'PUT',
-          headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-          body: JSON.stringify({ uris: [uri], position_ms: 0 })
-        });
+        let res = await requestPlay(wp.deviceId, token);
+        // 404 = das Gerät hinter dieser deviceId ist gerade nicht (mehr) verbunden
+        // (z.B. kurzer Spotify-Connect-Reconnect zwischen zwei Songs). Einmal auf
+        // ein frisch bereites Gerät warten und erneut versuchen, statt sofort auf
+        // die Vorschau zurückzufallen.
+        if (res.status === 404) {
+          window._spotifyWebPlayerDeviceId = undefined;
+          const retryWp = await ensureSpotifyWebPlayer();
+          if (cancelled) return;
+          if (!retryWp) throw new Error('play-failed-404-no-device');
+          webPlayerRef.current = retryWp;
+          res = await requestPlay(retryWp.deviceId, token);
+        }
         if (!res.ok && res.status !== 204) throw new Error(`play-failed-${res.status}`);
         if (cancelled) return;
         setIsPlaying(true);
