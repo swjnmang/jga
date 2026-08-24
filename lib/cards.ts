@@ -11,6 +11,9 @@ import { essentrinkenCards } from './essentrinkenCards';
 import { gamingEsportsCards } from './gamingEsportsCards';
 import { gzszCards } from './gzszCards';
 import { fussballCards } from './fussballCards';
+import { sportfreizeitExtraCards } from './sportfreizeitExtraCards';
+import { religionglaubeExtraCards } from './religionglaubeExtraCards';
+import { geogeschichteExtraCards } from './geogeschichteExtraCards';
 
 const baseCards: Card[] = [
   {
@@ -700,6 +703,9 @@ const baseNonMusicCards = [
   ...gamingEsportsCards,
   ...gzszCards,
   ...fussballCards,
+  ...sportfreizeitExtraCards,
+  ...religionglaubeExtraCards,
+  ...geogeschichteExtraCards,
 ];
 
 const playlistTaggedCards = playlistCards.map((card) => {
