@@ -11,11 +11,32 @@ function AppSettingsContent() {
   const searchParams = useSearchParams();
   const authError = searchParams.get('authError');
   const authSuccess = searchParams.get('authSuccess');
+  // Direkt nach dem OAuth-Redirect ist der Status schon aus der URL bekannt,
+  // damit kein kurzer "nicht verbunden"-Flash vor dem ersten Session-Fetch auftritt.
+  const [spotifyLinked, setSpotifyLinked] = useState(authSuccess === '1');
 
   useEffect(() => {
     const initialTheme = loadTheme('urban');
     setTheme(initialTheme);
     applyTheme(initialTheme);
+  }, []);
+
+  // Spotify-Verbindungsstatus laden und bei Rückkehr aus dem OAuth-Redirect
+  // (Tab-Fokus-Wechsel) neu prüfen, damit der Status hier nicht nur einmalig
+  // per authSuccess-Banner, sondern dauerhaft sichtbar ist.
+  useEffect(() => {
+    const checkSpotifySession = async () => {
+      try {
+        const res = await fetch('/api/spotify/session');
+        const data = await res.json();
+        setSpotifyLinked(data.authenticated);
+      } catch (err) {
+        console.error('Failed to check Spotify session:', err);
+      }
+    };
+    checkSpotifySession();
+    window.addEventListener('focus', checkSpotifySession);
+    return () => window.removeEventListener('focus', checkSpotifySession);
   }, []);
 
   const handleThemeChange = (value: ThemeId) => {
@@ -82,11 +103,19 @@ function AppSettingsContent() {
 
       <section className="card-surface rounded-2xl p-6 space-y-4">
         <div className="flex flex-col gap-2">
-          <p className="text-xs uppercase tracking-wide text-ink/60">Spotify</p>
+          <div className="flex items-center gap-2 flex-wrap">
+            <p className="text-xs uppercase tracking-wide text-ink/60">Spotify</p>
+            {spotifyLinked && (
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-green-500/15 text-green-700 dark:text-green-300 px-2.5 py-0.5 text-xs font-semibold">
+                ✓ Verbunden
+              </span>
+            )}
+          </div>
           <h2 className="text-xl font-semibold">Spotify Premium verknüpfen</h2>
           <p className="text-sm text-ink/70">
-            Starte den Login, um Premium-Wiedergabe ohne Werbung zu ermöglichen. Falls du bereits eingeloggt bist, kannst du hier erneut
-            verbinden, um die Session aufzufrischen.
+            {spotifyLinked
+              ? 'Dein Spotify-Premium-Konto ist verbunden, Songs können in voller Länge abgespielt werden. Bei Problemen kannst du hier erneut verbinden, um die Session aufzufrischen.'
+              : 'Starte den Login, um Premium-Wiedergabe ohne Werbung zu ermöglichen. Falls du bereits eingeloggt bist, kannst du hier erneut verbinden, um die Session aufzufrischen.'}
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
@@ -94,7 +123,7 @@ function AppSettingsContent() {
             href="/api/spotify/authorize?return=/app-settings"
             className="rounded-full bg-[#1DB954] hover:bg-[#17a74a] text-white px-5 py-2.5 text-sm font-semibold shadow-md transition-colors"
           >
-            Spotify-Login starten
+            {spotifyLinked ? 'Erneut verbinden' : 'Spotify-Login starten'}
           </a>
         </div>
       </section>
