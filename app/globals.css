@@ -164,24 +164,3 @@ body[data-theme='urban'] .btn-primary:hover {
     font-size: 1.75rem;
   }
 }
-
-@media print {
-  body {
-    background: white;
-  }
-
-  .no-print {
-    display: none;
-  }
-
-  .print-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 0.5in;
-    padding: 0;
-  }
-
-  .print-card {
-    page-break-inside: avoid;
-  }
-}
