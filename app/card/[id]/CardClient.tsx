@@ -103,9 +103,6 @@ export function CardClient({ card }: Props) {
         <Link className="underline" href={`/api/qr/${card.id}`}>
           QR als PNG laden
         </Link>
-        <Link className="underline" href="/print">
-          Alle Karten drucken
-        </Link>
       </div>
     </div>
   );
