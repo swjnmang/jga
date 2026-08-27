@@ -6,6 +6,7 @@ import {
   familienduellQuestions,
   type FamilienduellQuestion,
 } from '@/lib/familienduellQuestions';
+import { playBuzzerSound, playCorrectSound } from '@/lib/familienduellSounds';
 
 const MAX_STRIKES = 3;
 const MIN_GROUPS = 2;
@@ -213,6 +214,7 @@ export default function FamilienduellPage() {
       return;
     }
 
+    playCorrectSound();
     setRevealed((prev) => prev.map((r, i) => (i === index ? true : r)));
     setRoundPoints((prev) => prev + points);
     setGroups((prev) =>
@@ -227,6 +229,7 @@ export default function FamilienduellPage() {
 
   function registerStrike() {
     if (phase !== 'playing') return;
+    playBuzzerSound();
     const next = strikes + 1;
     setStrikes(next);
     if (next >= MAX_STRIKES) {
@@ -239,6 +242,7 @@ export default function FamilienduellPage() {
     if (!currentQuestion || revealed[index] || phase !== 'steal' || stealGroupIndex === null) return;
     const points = currentQuestion.answers[index].points;
 
+    playCorrectSound();
     setRevealed((prev) => prev.map((r, i) => (i === index ? true : r)));
     setGroups((prev) =>
       prev.map((g, i) => (i === stealGroupIndex ? { ...g, score: g.score + points } : g))
@@ -250,6 +254,7 @@ export default function FamilienduellPage() {
 
   function stealMiss() {
     if (phase !== 'steal') return;
+    playBuzzerSound();
     setStealResult('fail');
     setPhase('roundEnd');
   }
