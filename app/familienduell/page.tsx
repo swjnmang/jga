@@ -184,9 +184,19 @@ export default function FamilienduellPage() {
     setPhase('playing');
   }
 
-  function revealAnswer(index: number) {
-    if (!currentQuestion || revealed[index] || phase !== 'playing') return;
+  function toggleAnswer(index: number) {
+    if (!currentQuestion || phase !== 'playing') return;
     const points = currentQuestion.answers[index].points;
+
+    if (revealed[index]) {
+      // Versehentlich abgehakte Antwort per erneutem Klick rückgängig machen.
+      setRevealed((prev) => prev.map((r, i) => (i === index ? false : r)));
+      setRoundPoints((prev) => prev - points);
+      setGroups((prev) =>
+        prev.map((g, i) => (i === currentGroupIndex ? { ...g, score: g.score - points } : g))
+      );
+      return;
+    }
 
     setRevealed((prev) => prev.map((r, i) => (i === index ? true : r)));
     setRoundPoints((prev) => prev + points);
@@ -370,8 +380,8 @@ export default function FamilienduellPage() {
               {currentQuestion.answers.map((answer, i) => (
                 <button
                   key={i}
-                  onClick={() => (phase === 'steal' ? stealAnswer(i) : revealAnswer(i))}
-                  disabled={revealed[i] || (phase !== 'playing' && phase !== 'steal')}
+                  onClick={() => (phase === 'steal' ? stealAnswer(i) : toggleAnswer(i))}
+                  disabled={phase === 'steal' ? revealed[i] : phase !== 'playing'}
                   className={`w-full flex items-center gap-4 rounded-xl border px-4 py-3.5 text-left transition ${
                     revealed[i]
                       ? 'bg-ink/10 border-ink/20'
