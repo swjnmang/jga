@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   familienduellQuestions,
   type FamilienduellQuestion,
@@ -10,6 +10,7 @@ import {
 const MAX_STRIKES = 3;
 const MIN_GROUPS = 2;
 const MAX_GROUPS = 6;
+const STORAGE_KEY = 'familienduell-game-state';
 
 type Group = {
   id: string;
@@ -18,6 +19,22 @@ type Group = {
 };
 
 type Phase = 'setup' | 'playing' | 'steal' | 'roundEnd' | 'finished';
+
+type PersistedState = {
+  phase: Phase;
+  groupCount: number;
+  groupNames: string[];
+  groups: Group[];
+  currentGroupIndex: number;
+  questionQueue: FamilienduellQuestion[];
+  currentQuestion: FamilienduellQuestion | null;
+  revealed: boolean[];
+  strikes: number;
+  roundPoints: number;
+  stealGroupIndex: number | null;
+  stealResult: 'success' | 'fail' | null;
+  stealPoints: number;
+};
 
 function shuffle<T>(items: T[]): T[] {
   const copy = [...items];
@@ -44,6 +61,75 @@ export default function FamilienduellPage() {
   const [stealGroupIndex, setStealGroupIndex] = useState<number | null>(null);
   const [stealResult, setStealResult] = useState<'success' | 'fail' | null>(null);
   const [stealPoints, setStealPoints] = useState(0);
+  const [hydrated, setHydrated] = useState(false);
+
+  // Gespeicherten Spielstand einmalig beim Laden wiederherstellen, damit ein
+  // Browser-Refresh die aktive Gruppe nicht aus dem Spiel wirft.
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        const saved = JSON.parse(raw) as Partial<PersistedState>;
+        if (saved.phase) setPhase(saved.phase);
+        if (typeof saved.groupCount === 'number') setGroupCount(saved.groupCount);
+        if (Array.isArray(saved.groupNames)) setGroupNames(saved.groupNames);
+        if (Array.isArray(saved.groups)) setGroups(saved.groups);
+        if (typeof saved.currentGroupIndex === 'number') setCurrentGroupIndex(saved.currentGroupIndex);
+        if (Array.isArray(saved.questionQueue)) setQuestionQueue(saved.questionQueue);
+        if (saved.currentQuestion) setCurrentQuestion(saved.currentQuestion);
+        if (Array.isArray(saved.revealed)) setRevealed(saved.revealed);
+        if (typeof saved.strikes === 'number') setStrikes(saved.strikes);
+        if (typeof saved.roundPoints === 'number') setRoundPoints(saved.roundPoints);
+        if (saved.stealGroupIndex !== undefined) setStealGroupIndex(saved.stealGroupIndex);
+        if (saved.stealResult !== undefined) setStealResult(saved.stealResult);
+        if (typeof saved.stealPoints === 'number') setStealPoints(saved.stealPoints);
+      }
+    } catch {
+      // Beschädigter oder gesperrter Storage: einfach mit dem Standardzustand starten.
+    }
+    setHydrated(true);
+  }, []);
+
+  // Spielstand nach jeder Änderung sichern (erst nachdem die Wiederherstellung
+  // abgeschlossen ist, sonst würde der Default-Zustand den Storage überschreiben).
+  useEffect(() => {
+    if (!hydrated) return;
+    const snapshot: PersistedState = {
+      phase,
+      groupCount,
+      groupNames,
+      groups,
+      currentGroupIndex,
+      questionQueue,
+      currentQuestion,
+      revealed,
+      strikes,
+      roundPoints,
+      stealGroupIndex,
+      stealResult,
+      stealPoints,
+    };
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(snapshot));
+    } catch {
+      // Storage voll oder nicht verfügbar (z.B. privates Fenster): Spiel läuft trotzdem weiter.
+    }
+  }, [
+    hydrated,
+    phase,
+    groupCount,
+    groupNames,
+    groups,
+    currentGroupIndex,
+    questionQueue,
+    currentQuestion,
+    revealed,
+    strikes,
+    roundPoints,
+    stealGroupIndex,
+    stealResult,
+    stealPoints,
+  ]);
 
   const currentGroup = groups[currentGroupIndex];
   const stealGroup = stealGroupIndex !== null ? groups[stealGroupIndex] : null;
@@ -91,6 +177,9 @@ export default function FamilienduellPage() {
     setRevealed(new Array(question.answers.length).fill(false));
     setStrikes(0);
     setRoundPoints(0);
+    setStealGroupIndex(null);
+    setStealResult(null);
+    setStealPoints(0);
     setPhase('playing');
   }
 
