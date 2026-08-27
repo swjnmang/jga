@@ -17,7 +17,7 @@ type Group = {
   score: number;
 };
 
-type Phase = 'setup' | 'playing' | 'roundEnd' | 'finished';
+type Phase = 'setup' | 'playing' | 'steal' | 'roundEnd' | 'finished';
 
 function shuffle<T>(items: T[]): T[] {
   const copy = [...items];
@@ -41,9 +41,17 @@ export default function FamilienduellPage() {
   const [strikes, setStrikes] = useState(0);
   const [roundPoints, setRoundPoints] = useState(0);
   const [confirmEnd, setConfirmEnd] = useState(false);
+  const [stealGroupIndex, setStealGroupIndex] = useState<number | null>(null);
+  const [stealResult, setStealResult] = useState<'success' | 'fail' | null>(null);
+  const [stealPoints, setStealPoints] = useState(0);
 
   const currentGroup = groups[currentGroupIndex];
+  const stealGroup = stealGroupIndex !== null ? groups[stealGroupIndex] : null;
   const boardCleared = currentQuestion ? revealed.every(Boolean) : false;
+  const nextGroupIndex =
+    stealGroupIndex !== null
+      ? (stealGroupIndex + 1) % groups.length
+      : (currentGroupIndex + 1) % groups.length;
 
   function updateGroupCount(next: number) {
     const clamped = Math.max(MIN_GROUPS, Math.min(MAX_GROUPS, next));
@@ -107,18 +115,41 @@ export default function FamilienduellPage() {
     const next = strikes + 1;
     setStrikes(next);
     if (next >= MAX_STRIKES) {
-      setPhase('roundEnd');
+      setStealGroupIndex((currentGroupIndex + 1) % groups.length);
+      setPhase('steal');
     }
+  }
+
+  function stealAnswer(index: number) {
+    if (!currentQuestion || revealed[index] || phase !== 'steal' || stealGroupIndex === null) return;
+    const points = currentQuestion.answers[index].points;
+
+    setRevealed((prev) => prev.map((r, i) => (i === index ? true : r)));
+    setGroups((prev) =>
+      prev.map((g, i) => (i === stealGroupIndex ? { ...g, score: g.score + points } : g))
+    );
+    setStealPoints(points);
+    setStealResult('success');
+    setPhase('roundEnd');
+  }
+
+  function stealMiss() {
+    if (phase !== 'steal') return;
+    setStealResult('fail');
+    setPhase('roundEnd');
   }
 
   function nextRound() {
     const [question, restQueue] = drawQuestion(questionQueue);
-    setCurrentGroupIndex((prev) => (prev + 1) % groups.length);
+    setCurrentGroupIndex(nextGroupIndex);
     setQuestionQueue(restQueue);
     setCurrentQuestion(question);
     setRevealed(new Array(question.answers.length).fill(false));
     setStrikes(0);
     setRoundPoints(0);
+    setStealGroupIndex(null);
+    setStealResult(null);
+    setStealPoints(0);
     setPhase('playing');
   }
 
@@ -215,7 +246,7 @@ export default function FamilienduellPage() {
           </div>
         )}
 
-        {(phase === 'playing' || phase === 'roundEnd') && currentQuestion && (
+        {(phase === 'playing' || phase === 'steal' || phase === 'roundEnd') && currentQuestion && (
           <div className="space-y-6">
             {/* Scoreboard */}
             <div className="flex flex-wrap gap-2">
@@ -223,7 +254,7 @@ export default function FamilienduellPage() {
                 <div
                   key={g.id}
                   className={`flex items-center gap-2 rounded-xl px-3 py-2 border text-sm transition ${
-                    i === currentGroupIndex
+                    i === (phase === 'steal' ? stealGroupIndex : currentGroupIndex)
                       ? 'bg-ink text-inkDark border-ink font-semibold'
                       : 'border-ink/15 text-ink/70'
                   }`}
@@ -249,8 +280,8 @@ export default function FamilienduellPage() {
               {currentQuestion.answers.map((answer, i) => (
                 <button
                   key={i}
-                  onClick={() => revealAnswer(i)}
-                  disabled={revealed[i] || phase !== 'playing'}
+                  onClick={() => (phase === 'steal' ? stealAnswer(i) : revealAnswer(i))}
+                  disabled={revealed[i] || (phase !== 'playing' && phase !== 'steal')}
                   className={`w-full flex items-center gap-4 rounded-xl border px-4 py-3.5 text-left transition ${
                     revealed[i]
                       ? 'bg-ink/10 border-ink/20'
@@ -318,21 +349,58 @@ export default function FamilienduellPage() {
               </div>
             )}
 
-            {phase === 'roundEnd' && (
-              <div className="space-y-4 rounded-2xl bg-ink/5 border border-ink/10 p-5">
+            {phase === 'steal' && stealGroup && (
+              <div className="space-y-4 rounded-2xl bg-sand/10 border border-sand/30 p-5">
                 <p className="text-ink font-semibold">
-                  {boardCleared
-                    ? `${currentGroup.name} hat alle Antworten gefunden! 🎉`
-                    : `3 falsche Antworten – Runde vorbei.`}
+                  🕵️ Diebstahl-Chance für {stealGroup.name}!
                 </p>
                 <p className="text-sm text-ink/60">
-                  {roundPoints} Punkte für {currentGroup.name} in dieser Runde.
+                  {currentGroup.name} hat nicht alle Antworten gefunden. {stealGroup.name} darf
+                  einen der übrigen Begriffe erraten – ein Treffer sichert die Punkte.
                 </p>
+                <button
+                  onClick={stealMiss}
+                  className="w-full inline-flex items-center justify-center rounded-xl border border-ink/20 text-ink/70 font-semibold px-5 py-3.5 hover:border-ink/40 transition"
+                >
+                  Kein Treffer – weiter
+                </button>
+              </div>
+            )}
+
+            {phase === 'roundEnd' && (
+              <div className="space-y-4 rounded-2xl bg-ink/5 border border-ink/10 p-5">
+                {stealGroup ? (
+                  <>
+                    <p className="text-ink font-semibold">
+                      {stealResult === 'success'
+                        ? `${stealGroup.name} hat den Diebstahl geschafft! 🎉`
+                        : `${stealGroup.name} konnte nicht stehlen.`}
+                    </p>
+                    <p className="text-sm text-ink/60">
+                      {roundPoints} Punkte für {currentGroup.name}
+                      {stealResult === 'success'
+                        ? ` · ${stealPoints} Punkte für ${stealGroup.name} (Diebstahl)`
+                        : ''}
+                      {' '}in dieser Runde.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-ink font-semibold">
+                      {boardCleared
+                        ? `${currentGroup.name} hat alle Antworten gefunden! 🎉`
+                        : `3 falsche Antworten – Runde vorbei.`}
+                    </p>
+                    <p className="text-sm text-ink/60">
+                      {roundPoints} Punkte für {currentGroup.name} in dieser Runde.
+                    </p>
+                  </>
+                )}
                 <button
                   onClick={nextRound}
                   className="w-full inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-3.5 shadow-lg shadow-black/10 transition hover:-translate-y-0.5"
                 >
-                  Weiter zu {groups[(currentGroupIndex + 1) % groups.length].name} →
+                  Weiter zu {groups[nextGroupIndex].name} →
                 </button>
               </div>
             )}
