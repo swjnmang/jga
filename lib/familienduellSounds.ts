@@ -41,32 +41,41 @@ export function playCorrectSound() {
   playTone(ctx, 783.99, now + 0.18, 0.32, 'triangle', 0.28); // G5
 }
 
-/** Harscher, leicht fallender Buzzer für eine falsche Antwort. */
+/**
+ * Klassischer Summer für eine falsche Antwort: ein sägezahnförmiger Träger,
+ * dessen Amplitude von einem zweiten Oszillator moduliert wird – dadurch
+ * entsteht die authentische "BZZZT"-Textur eines echten Türsummers, statt
+ * eines einfachen fallenden Tons.
+ */
 export function playBuzzerSound() {
   const ctx = getAudioContext();
   if (!ctx) return;
   const now = ctx.currentTime;
-  const osc1 = ctx.createOscillator();
-  const osc2 = ctx.createOscillator();
-  const gain = ctx.createGain();
+  const duration = 0.72;
 
-  osc1.type = 'sawtooth';
-  osc2.type = 'square';
-  osc1.frequency.setValueAtTime(150, now);
-  osc1.frequency.exponentialRampToValueAtTime(90, now + 0.6);
-  osc2.frequency.setValueAtTime(148, now);
-  osc2.frequency.exponentialRampToValueAtTime(88, now + 0.6);
+  const carrier = ctx.createOscillator();
+  carrier.type = 'sawtooth';
+  carrier.frequency.setValueAtTime(184, now);
 
-  gain.gain.setValueAtTime(0, now);
-  gain.gain.linearRampToValueAtTime(0.3, now + 0.03);
-  gain.gain.setValueAtTime(0.3, now + 0.45);
-  gain.gain.exponentialRampToValueAtTime(0.001, now + 0.65);
+  const carrierGain = ctx.createGain();
+  carrierGain.gain.setValueAtTime(0, now);
+  carrierGain.gain.linearRampToValueAtTime(0.32, now + 0.015);
+  carrierGain.gain.setValueAtTime(0.32, now + duration - 0.08);
+  carrierGain.gain.exponentialRampToValueAtTime(0.001, now + duration);
 
-  osc1.connect(gain);
-  osc2.connect(gain);
-  gain.connect(ctx.destination);
-  osc1.start(now);
-  osc2.start(now);
-  osc1.stop(now + 0.7);
-  osc2.stop(now + 0.7);
+  const lfo = ctx.createOscillator();
+  lfo.type = 'square';
+  lfo.frequency.setValueAtTime(46, now);
+  const lfoGain = ctx.createGain();
+  lfoGain.gain.setValueAtTime(0.5, now);
+  lfo.connect(lfoGain);
+  lfoGain.connect(carrierGain.gain);
+
+  carrier.connect(carrierGain);
+  carrierGain.connect(ctx.destination);
+
+  carrier.start(now);
+  lfo.start(now);
+  carrier.stop(now + duration + 0.05);
+  lfo.stop(now + duration + 0.05);
 }
