@@ -162,8 +162,9 @@ export default function FamilienduellPage() {
         {phase === 'setup' && (
           <div className="space-y-8">
             <p className="text-sm text-ink/70 leading-relaxed">
-              Ein Spielleiter liest die Frage vor ("Wir haben 100 Leute befragt…") und deckt die
-              genannten Top-Antworten auf. Nach 3 falschen Antworten kommt die nächste Gruppe mit
+              Ein Spielleiter liest die Frage vor ("Wir haben 100 Leute befragt…") und sieht dabei
+              direkt die Top-5-Antworten. Wird eine Antwort von der Gruppe genannt, hakt der
+              Spielleiter sie per Klick ab. Nach 3 falschen Antworten kommt die nächste Gruppe mit
               einer neuen Frage dran.
             </p>
 
@@ -256,17 +257,29 @@ export default function FamilienduellPage() {
                       : 'border-ink/15 hover:border-ink/35 hover:bg-ink/5 disabled:hover:bg-transparent'
                   }`}
                 >
-                  <span className="flex-shrink-0 h-7 w-7 rounded-full bg-ink/10 border border-ink/20 grid place-items-center text-xs font-semibold text-ink">
-                    {i + 1}
+                  <span
+                    className={`flex-shrink-0 h-7 w-7 rounded-full border grid place-items-center text-xs font-semibold transition ${
+                      revealed[i]
+                        ? 'bg-mint/80 border-mint text-inkDark'
+                        : 'bg-ink/10 border-ink/20 text-ink'
+                    }`}
+                  >
+                    {revealed[i] ? '✓' : i + 1}
                   </span>
-                  {revealed[i] ? (
-                    <>
-                      <span className="flex-1 font-semibold text-ink">{answer.text}</span>
-                      <span className="text-ink font-display font-bold">{answer.points}</span>
-                    </>
-                  ) : (
-                    <span className="flex-1 text-ink/30">???????????</span>
-                  )}
+                  <span
+                    className={`flex-1 transition ${
+                      revealed[i] ? 'font-semibold text-ink' : 'text-ink/70'
+                    }`}
+                  >
+                    {answer.text}
+                  </span>
+                  <span
+                    className={`font-display font-bold transition ${
+                      revealed[i] ? 'text-ink' : 'text-ink/40'
+                    }`}
+                  >
+                    {answer.points}
+                  </span>
                 </button>
               ))}
             </div>
