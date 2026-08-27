@@ -1,12 +1,20 @@
 'use client';
 
 import Link from 'next/link';
+import { Fredoka } from 'next/font/google';
 import { useEffect, useMemo, useState } from 'react';
 import {
   familienduellQuestions,
   type FamilienduellQuestion,
 } from '@/lib/familienduellQuestions';
 import { playBuzzerSound, playCorrectSound } from '@/lib/familienduellSounds';
+import styles from './familienduell.module.css';
+
+const fredoka = Fredoka({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  variable: '--font-fredoka',
+});
 
 const MAX_STRIKES = 3;
 const MIN_GROUPS = 2;
@@ -298,91 +306,78 @@ export default function FamilienduellPage() {
   const topScore = ranking[0]?.score ?? 0;
 
   return (
-    <main className="min-h-screen bg-grid flex items-start justify-center px-4 sm:px-6 py-10 sm:py-16">
-      <div className="w-full max-w-2xl rounded-3xl bg-glass border border-ink/10 shadow-2xl backdrop-blur-xl p-6 sm:p-10 space-y-8">
-        <div className="space-y-1">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-1.5 text-sm text-ink/50 hover:text-ink/80 transition mb-2"
-          >
+    <main className={`${styles.page} ${fredoka.variable}`}>
+      <div className={styles.panel}>
+        <div className={styles.headBlock}>
+          <Link href="/" className={styles.back}>
             ← Zurück
           </Link>
-          <h1 className="text-3xl font-display font-semibold text-ink">🎉 Familienduell</h1>
+          <h1 className={styles.title}>🎉 Familienduell</h1>
         </div>
 
         {phase === 'setup' && (
-          <div className="space-y-8">
-            <p className="text-sm text-ink/70 leading-relaxed">
-              Ein Spielleiter liest die Frage vor ("Wir haben 100 Leute befragt…") und sieht dabei
-              direkt die Top-5-Antworten. Wird eine Antwort von der Gruppe genannt, hakt der
-              Spielleiter sie per Klick ab. Nach 3 falschen Antworten kommt die nächste Gruppe mit
-              einer neuen Frage dran.
+          <>
+            <p className={styles.intro}>
+              Ein Spielleiter liest die Frage vor (&bdquo;Wir haben 100 Leute befragt…&ldquo;) und
+              sieht dabei direkt die Top-5-Antworten. Wird eine Antwort von der Gruppe genannt, hakt
+              der Spielleiter sie per Klick ab. Nach 3 falschen Antworten kommt die nächste Gruppe
+              mit einer neuen Frage dran.
             </p>
 
-            <div className="space-y-3">
-              <p className="text-sm font-semibold text-ink">Anzahl Gruppen</p>
-              <div className="flex items-center gap-4">
+            <div className={styles.section}>
+              <p className={styles.label}>Anzahl Gruppen</p>
+              <div className={styles.stepperRow}>
                 <button
                   onClick={() => updateGroupCount(groupCount - 1)}
                   disabled={groupCount <= MIN_GROUPS}
-                  className="h-11 w-11 rounded-xl border border-ink/20 text-ink text-xl font-semibold disabled:opacity-30 hover:border-ink/40 transition"
+                  className={styles.stepperBtn}
                 >
                   −
                 </button>
-                <span className="text-2xl font-display font-semibold text-ink w-8 text-center">
-                  {groupCount}
-                </span>
+                <span className={styles.stepperVal}>{groupCount}</span>
                 <button
                   onClick={() => updateGroupCount(groupCount + 1)}
                   disabled={groupCount >= MAX_GROUPS}
-                  className="h-11 w-11 rounded-xl border border-ink/20 text-ink text-xl font-semibold disabled:opacity-30 hover:border-ink/40 transition"
+                  className={styles.stepperBtn}
                 >
                   +
                 </button>
               </div>
             </div>
 
-            <div className="space-y-3">
-              <p className="text-sm font-semibold text-ink">Gruppennamen</p>
-              <div className="space-y-2">
+            <div className={styles.section}>
+              <p className={styles.label}>Gruppennamen</p>
+              <div className={styles.fieldList}>
                 {groupNames.map((name, i) => (
                   <input
                     key={i}
                     value={name}
                     onChange={(e) => updateGroupName(i, e.target.value)}
                     placeholder={`Gruppe ${i + 1}`}
-                    className="w-full rounded-xl border border-ink/20 bg-ink/5 px-4 py-3 text-ink placeholder:text-ink/40 focus:outline-none focus:border-ink/50 transition"
+                    className={styles.field}
                   />
                 ))}
               </div>
             </div>
 
-            <div className="space-y-3">
-              <p className="text-sm font-semibold text-ink">Spielende</p>
-              <div className="flex gap-2">
+            <div className={styles.section}>
+              <p className={styles.label}>Spielende</p>
+              <div className={styles.toggleRow}>
                 <button
                   onClick={() => setPointLimitEnabled(true)}
-                  className={`flex-1 rounded-xl px-4 py-3 text-sm font-semibold border transition ${
-                    pointLimitEnabled
-                      ? 'bg-ink text-inkDark border-ink'
-                      : 'border-ink/20 text-ink/70 hover:border-ink/40'
-                  }`}
+                  className={pointLimitEnabled ? styles.toggleBtnOn : styles.toggleBtn}
                 >
                   Mit Punktelimit
                 </button>
                 <button
                   onClick={() => setPointLimitEnabled(false)}
-                  className={`flex-1 rounded-xl px-4 py-3 text-sm font-semibold border transition ${
-                    !pointLimitEnabled
-                      ? 'bg-ink text-inkDark border-ink'
-                      : 'border-ink/20 text-ink/70 hover:border-ink/40'
-                  }`}
+                  className={!pointLimitEnabled ? styles.toggleBtnOn : styles.toggleBtn}
                 >
                   Ohne Punktelimit
                 </button>
               </div>
               {pointLimitEnabled ? (
-                <div className="space-y-1.5">
+                <>
                   <input
                     type="number"
                     min={1}
@@ -391,45 +386,43 @@ export default function FamilienduellPage() {
                       const parsed = parseInt(e.target.value, 10);
                       setPointLimit(Number.isFinite(parsed) && parsed > 0 ? parsed : 0);
                     }}
-                    className="w-full rounded-xl border border-ink/20 bg-ink/5 px-4 py-3 text-ink focus:outline-none focus:border-ink/50 transition"
+                    className={styles.field}
                   />
-                  <p className="text-xs text-ink/50">
-                    Die Gruppe mit den meisten Punkten gewinnt, sobald das Limit erreicht ist –
-                    aber erst, wenn jede Gruppe gleich oft dran war.
+                  <p className={styles.hint}>
+                    Die Gruppe mit den meisten Punkten gewinnt, sobald das Limit erreicht ist – aber
+                    erst, wenn jede Gruppe gleich oft dran war.
                   </p>
-                </div>
+                </>
               ) : (
-                <p className="text-xs text-ink/50">
-                  Das Spiel läuft, bis der Spielleiter es manuell beendet.
-                </p>
+                <p className={styles.hint}>Das Spiel läuft, bis der Spielleiter es manuell beendet.</p>
               )}
             </div>
 
             <button
               onClick={startGame}
               disabled={pointLimitEnabled && (!pointLimit || pointLimit <= 0)}
-              className="w-full inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20 disabled:opacity-40"
+              className={styles.primaryBtn}
             >
               Spiel starten →
             </button>
-          </div>
+          </>
         )}
 
         {(phase === 'playing' || phase === 'steal' || phase === 'roundEnd') && currentQuestion && (
-          <div className="space-y-6">
+          <div className={styles.gameArea}>
             {/* Scoreboard */}
-            <div className="flex flex-wrap gap-2">
+            <div className={styles.scoreRow}>
               {groups.map((g, i) => (
                 <div
                   key={g.id}
-                  className={`flex items-center gap-2 rounded-xl px-3 py-2 border text-sm transition ${
+                  className={
                     i === (phase === 'steal' ? stealGroupIndex : currentGroupIndex)
-                      ? 'bg-ink text-inkDark border-ink font-semibold'
-                      : 'border-ink/15 text-ink/70'
-                  }`}
+                      ? styles.scorePillActive
+                      : styles.scorePill
+                  }
                 >
                   <span>{g.name}</span>
-                  <span className="opacity-70">
+                  <span className={styles.scoreNum}>
                     {g.score}
                     {pointLimitEnabled ? ` / ${pointLimit}` : ''}
                   </span>
@@ -438,49 +431,27 @@ export default function FamilienduellPage() {
             </div>
 
             {/* Question card */}
-            <div className="rounded-2xl bg-ink/5 border border-ink/10 p-5 space-y-1">
-              <p className="text-xs uppercase tracking-widest text-ink/50">
-                Wir haben 100 Leute befragt:
-              </p>
-              <p className="text-lg font-display font-semibold text-ink">
-                {currentQuestion.question}
-              </p>
+            <div className={styles.questionCard}>
+              <p className={styles.questionLabel}>Wir haben 100 Leute befragt:</p>
+              <p className={styles.questionText}>{currentQuestion.question}</p>
             </div>
 
             {/* Answer board */}
-            <div className="space-y-2">
+            <div className={styles.answerList}>
               {currentQuestion.answers.map((answer, i) => (
                 <button
                   key={i}
                   onClick={() => (phase === 'steal' ? stealAnswer(i) : toggleAnswer(i))}
                   disabled={phase === 'steal' ? revealed[i] : phase !== 'playing'}
-                  className={`w-full flex items-center gap-4 rounded-xl border px-4 py-3.5 text-left transition ${
-                    revealed[i]
-                      ? 'bg-ink/10 border-ink/20'
-                      : 'border-ink/15 hover:border-ink/35 hover:bg-ink/5 disabled:hover:bg-transparent'
-                  }`}
+                  className={revealed[i] ? styles.answerRowRevealed : styles.answerRow}
                 >
-                  <span
-                    className={`flex-shrink-0 h-7 w-7 rounded-full border grid place-items-center text-xs font-semibold transition ${
-                      revealed[i]
-                        ? 'bg-mint/80 border-mint text-inkDark'
-                        : 'bg-ink/10 border-ink/20 text-ink'
-                    }`}
-                  >
+                  <span className={revealed[i] ? styles.answerBadgeRevealed : styles.answerBadge}>
                     {revealed[i] ? '✓' : i + 1}
                   </span>
-                  <span
-                    className={`flex-1 transition ${
-                      revealed[i] ? 'font-semibold text-ink' : 'text-ink/70'
-                    }`}
-                  >
+                  <span className={revealed[i] ? styles.answerTextRevealed : styles.answerText}>
                     {answer.text}
                   </span>
-                  <span
-                    className={`font-display font-bold transition ${
-                      revealed[i] ? 'text-ink' : 'text-ink/40'
-                    }`}
-                  >
+                  <span className={revealed[i] ? styles.answerPointsRevealed : styles.answerPoints}>
                     {answer.points}
                   </span>
                 </button>
@@ -489,97 +460,73 @@ export default function FamilienduellPage() {
 
             {/* Strikes + controls */}
             {phase === 'playing' && (
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-2">
+              <div className={styles.section}>
+                <div className={styles.strikesRow}>
+                  <div className={styles.strikes}>
                     {Array.from({ length: MAX_STRIKES }).map((_, i) => (
-                      <span
-                        key={i}
-                        className={`h-9 w-9 rounded-lg grid place-items-center text-lg font-bold border ${
-                          i < strikes
-                            ? 'bg-coral/80 border-coral text-inkDark'
-                            : 'border-ink/15 text-ink/20'
-                        }`}
-                      >
+                      <span key={i} className={i < strikes ? styles.strikeOn : styles.strike}>
                         ✕
                       </span>
                     ))}
                   </div>
-                  <button
-                    onClick={skipQuestion}
-                    className="text-xs text-ink/40 hover:text-ink/70 transition underline underline-offset-2"
-                  >
+                  <button onClick={skipQuestion} className={styles.skipLink}>
                     Frage überspringen
                   </button>
                 </div>
-                <button
-                  onClick={registerStrike}
-                  className="w-full inline-flex items-center justify-center rounded-xl border border-coral/50 text-coral font-semibold px-5 py-3.5 hover:bg-coral/10 transition"
-                >
+                <button onClick={registerStrike} className={styles.buzzBtn}>
                   ✕ Falsche Antwort
                 </button>
               </div>
             )}
 
             {phase === 'steal' && stealGroup && (
-              <div className="space-y-4 rounded-2xl bg-sand/10 border border-sand/30 p-5">
-                <p className="text-ink font-semibold">
-                  🕵️ Diebstahl-Chance für {stealGroup.name}!
+              <div className={styles.stealBox}>
+                <p className={styles.stealTitle}>🕵️ Diebstahl-Chance für {stealGroup.name}!</p>
+                <p className={styles.stealDesc}>
+                  {currentGroup.name} hat nicht alle Antworten gefunden. {stealGroup.name} darf einen
+                  der übrigen Begriffe erraten – ein Treffer sichert die Punkte.
                 </p>
-                <p className="text-sm text-ink/60">
-                  {currentGroup.name} hat nicht alle Antworten gefunden. {stealGroup.name} darf
-                  einen der übrigen Begriffe erraten – ein Treffer sichert die Punkte.
-                </p>
-                <button
-                  onClick={stealMiss}
-                  className="w-full inline-flex items-center justify-center rounded-xl border border-ink/20 text-ink/70 font-semibold px-5 py-3.5 hover:border-ink/40 transition"
-                >
+                <button onClick={stealMiss} className={styles.missBtn}>
                   Kein Treffer – weiter
                 </button>
               </div>
             )}
 
             {phase === 'roundEnd' && (
-              <div className="space-y-4 rounded-2xl bg-ink/5 border border-ink/10 p-5">
+              <div className={styles.roundEndBox}>
                 {stealGroup ? (
                   <>
-                    <p className="text-ink font-semibold">
+                    <p className={styles.roundTitle}>
                       {stealResult === 'success'
                         ? `${stealGroup.name} hat den Diebstahl geschafft! 🎉`
                         : `${stealGroup.name} konnte nicht stehlen.`}
                     </p>
-                    <p className="text-sm text-ink/60">
+                    <p className={styles.roundSub}>
                       {roundPoints} Punkte für {currentGroup.name}
                       {stealResult === 'success'
                         ? ` · ${stealPoints} Punkte für ${stealGroup.name} (Diebstahl)`
-                        : ''}
-                      {' '}in dieser Runde.
+                        : ''}{' '}
+                      in dieser Runde.
                     </p>
                   </>
                 ) : (
                   <>
-                    <p className="text-ink font-semibold">
+                    <p className={styles.roundTitle}>
                       {boardCleared
                         ? `${currentGroup.name} hat alle Antworten gefunden! 🎉`
                         : `3 falsche Antworten – Runde vorbei.`}
                     </p>
-                    <p className="text-sm text-ink/60">
+                    <p className={styles.roundSub}>
                       {roundPoints} Punkte für {currentGroup.name} in dieser Runde.
                     </p>
                   </>
                 )}
                 {gameOverPending ? (
-                  <button
-                    onClick={endGame}
-                    className="w-full inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-3.5 shadow-lg shadow-black/10 transition hover:-translate-y-0.5"
-                  >
+                  <button onClick={endGame} className={styles.primaryBtn}>
                     🏆 Punktelimit erreicht – Endstand anzeigen
                   </button>
                 ) : (
-                  <button
-                    onClick={nextRound}
-                    className="w-full inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-3.5 shadow-lg shadow-black/10 transition hover:-translate-y-0.5"
-                  >
+                  <button onClick={nextRound} className={styles.primaryBtn}>
                     Weiter zu {groups[nextGroupIndex].name} →
                   </button>
                 )}
@@ -587,27 +534,18 @@ export default function FamilienduellPage() {
             )}
 
             {/* End game */}
-            <div className="pt-2 border-t border-ink/10">
+            <div className={styles.footerRow}>
               {!confirmEnd ? (
-                <button
-                  onClick={() => setConfirmEnd(true)}
-                  className="text-xs text-ink/40 hover:text-ink/70 transition"
-                >
+                <button onClick={() => setConfirmEnd(true)} className={styles.endLink}>
                   Spiel beenden
                 </button>
               ) : (
-                <div className="flex items-center gap-3">
-                  <span className="text-xs text-ink/60">Spiel wirklich beenden?</span>
-                  <button
-                    onClick={endGame}
-                    className="text-xs font-semibold text-coral hover:underline"
-                  >
+                <div className={styles.confirmRow}>
+                  <span className={styles.confirmText}>Spiel wirklich beenden?</span>
+                  <button onClick={endGame} className={styles.confirmYes}>
                     Ja, beenden
                   </button>
-                  <button
-                    onClick={() => setConfirmEnd(false)}
-                    className="text-xs text-ink/40 hover:text-ink/70"
-                  >
+                  <button onClick={() => setConfirmEnd(false)} className={styles.confirmNo}>
                     Abbrechen
                   </button>
                 </div>
@@ -617,41 +555,28 @@ export default function FamilienduellPage() {
         )}
 
         {phase === 'finished' && (
-          <div className="space-y-6">
-            <h2 className="text-xl font-display font-semibold text-ink">🏆 Endstand</h2>
-            <div className="space-y-2">
+          <>
+            <h2 className={styles.finishedTitle}>🏆 Endstand</h2>
+            <div className={styles.rankList}>
               {ranking.map((g, i) => (
-                <div
-                  key={g.id}
-                  className={`flex items-center justify-between rounded-xl px-4 py-3.5 border ${
-                    g.score === topScore
-                      ? 'bg-ink text-inkDark border-ink font-semibold'
-                      : 'border-ink/15 text-ink/80'
-                  }`}
-                >
+                <div key={g.id} className={g.score === topScore ? styles.rankRowTop : styles.rankRow}>
                   <span>
                     {i === 0 && g.score === topScore ? '🥇 ' : `${i + 1}. `}
                     {g.name}
                   </span>
-                  <span className="font-display font-bold">{g.score}</span>
+                  <span className={styles.rankScore}>{g.score}</span>
                 </div>
               ))}
             </div>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <button
-                onClick={resetToSetup}
-                className="inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-3.5 shadow-lg shadow-black/10 transition hover:-translate-y-0.5"
-              >
+            <div className={styles.resultGrid}>
+              <button onClick={resetToSetup} className={styles.primaryBtn}>
                 Neues Spiel
               </button>
-              <Link
-                href="/"
-                className="inline-flex items-center justify-center rounded-xl border border-ink/30 text-ink font-semibold px-5 py-3.5 hover:border-ink/60 transition"
-              >
+              <Link href="/" className={styles.secondaryBtn}>
                 Zur Startseite
               </Link>
             </div>
-          </div>
+          </>
         )}
       </div>
     </main>
