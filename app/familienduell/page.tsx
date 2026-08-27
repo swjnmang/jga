@@ -134,10 +134,11 @@ export default function FamilienduellPage() {
   const currentGroup = groups[currentGroupIndex];
   const stealGroup = stealGroupIndex !== null ? groups[stealGroupIndex] : null;
   const boardCleared = currentQuestion ? revealed.every(Boolean) : false;
-  const nextGroupIndex =
-    stealGroupIndex !== null
-      ? (stealGroupIndex + 1) % groups.length
-      : (currentGroupIndex + 1) % groups.length;
+  // Die Diebstahl-Gruppe ist immer die nächste Gruppe in der Reihenfolge (siehe
+  // registerStrike). Die neue Frage geht danach ebenfalls an genau diese nächste
+  // Gruppe – niemals zurück an die soeben bestohlene Gruppe, auch nicht bei nur
+  // zwei Gruppen im Spiel.
+  const nextGroupIndex = (currentGroupIndex + 1) % groups.length;
 
   function updateGroupCount(next: number) {
     const clamped = Math.max(MIN_GROUPS, Math.min(MAX_GROUPS, next));
