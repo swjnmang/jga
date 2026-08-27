@@ -24,6 +24,8 @@ type PersistedState = {
   phase: Phase;
   groupCount: number;
   groupNames: string[];
+  pointLimitEnabled: boolean;
+  pointLimit: number;
   groups: Group[];
   currentGroupIndex: number;
   questionQueue: FamilienduellQuestion[];
@@ -49,6 +51,8 @@ export default function FamilienduellPage() {
   const [phase, setPhase] = useState<Phase>('setup');
   const [groupCount, setGroupCount] = useState(3);
   const [groupNames, setGroupNames] = useState<string[]>(['Gruppe 1', 'Gruppe 2', 'Gruppe 3']);
+  const [pointLimitEnabled, setPointLimitEnabled] = useState(true);
+  const [pointLimit, setPointLimit] = useState(500);
 
   const [groups, setGroups] = useState<Group[]>([]);
   const [currentGroupIndex, setCurrentGroupIndex] = useState(0);
@@ -73,6 +77,8 @@ export default function FamilienduellPage() {
         if (saved.phase) setPhase(saved.phase);
         if (typeof saved.groupCount === 'number') setGroupCount(saved.groupCount);
         if (Array.isArray(saved.groupNames)) setGroupNames(saved.groupNames);
+        if (typeof saved.pointLimitEnabled === 'boolean') setPointLimitEnabled(saved.pointLimitEnabled);
+        if (typeof saved.pointLimit === 'number') setPointLimit(saved.pointLimit);
         if (Array.isArray(saved.groups)) setGroups(saved.groups);
         if (typeof saved.currentGroupIndex === 'number') setCurrentGroupIndex(saved.currentGroupIndex);
         if (Array.isArray(saved.questionQueue)) setQuestionQueue(saved.questionQueue);
@@ -98,6 +104,8 @@ export default function FamilienduellPage() {
       phase,
       groupCount,
       groupNames,
+      pointLimitEnabled,
+      pointLimit,
       groups,
       currentGroupIndex,
       questionQueue,
@@ -119,6 +127,8 @@ export default function FamilienduellPage() {
     phase,
     groupCount,
     groupNames,
+    pointLimitEnabled,
+    pointLimit,
     groups,
     currentGroupIndex,
     questionQueue,
@@ -139,6 +149,11 @@ export default function FamilienduellPage() {
   // Gruppe – niemals zurück an die soeben bestohlene Gruppe, auch nicht bei nur
   // zwei Gruppen im Spiel.
   const nextGroupIndex = (currentGroupIndex + 1) % groups.length;
+  // Ein Sieger steht erst fest, wenn alle Gruppen gleich oft dran waren: das ist
+  // exakt der Moment, in dem der nächste Zug wieder bei Gruppe 0 beginnen würde
+  // (= ein voller Rotationszyklus ist abgeschlossen).
+  const gameOverPending =
+    pointLimitEnabled && nextGroupIndex === 0 && groups.some((g) => g.score >= pointLimit);
 
   function updateGroupCount(next: number) {
     const clamped = Math.max(MIN_GROUPS, Math.min(MAX_GROUPS, next));
@@ -337,9 +352,58 @@ export default function FamilienduellPage() {
               </div>
             </div>
 
+            <div className="space-y-3">
+              <p className="text-sm font-semibold text-ink">Spielende</p>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setPointLimitEnabled(true)}
+                  className={`flex-1 rounded-xl px-4 py-3 text-sm font-semibold border transition ${
+                    pointLimitEnabled
+                      ? 'bg-ink text-inkDark border-ink'
+                      : 'border-ink/20 text-ink/70 hover:border-ink/40'
+                  }`}
+                >
+                  Mit Punktelimit
+                </button>
+                <button
+                  onClick={() => setPointLimitEnabled(false)}
+                  className={`flex-1 rounded-xl px-4 py-3 text-sm font-semibold border transition ${
+                    !pointLimitEnabled
+                      ? 'bg-ink text-inkDark border-ink'
+                      : 'border-ink/20 text-ink/70 hover:border-ink/40'
+                  }`}
+                >
+                  Ohne Punktelimit
+                </button>
+              </div>
+              {pointLimitEnabled ? (
+                <div className="space-y-1.5">
+                  <input
+                    type="number"
+                    min={1}
+                    value={pointLimit}
+                    onChange={(e) => {
+                      const parsed = parseInt(e.target.value, 10);
+                      setPointLimit(Number.isFinite(parsed) && parsed > 0 ? parsed : 0);
+                    }}
+                    className="w-full rounded-xl border border-ink/20 bg-ink/5 px-4 py-3 text-ink focus:outline-none focus:border-ink/50 transition"
+                  />
+                  <p className="text-xs text-ink/50">
+                    Die Gruppe mit den meisten Punkten gewinnt, sobald das Limit erreicht ist –
+                    aber erst, wenn jede Gruppe gleich oft dran war.
+                  </p>
+                </div>
+              ) : (
+                <p className="text-xs text-ink/50">
+                  Das Spiel läuft, bis der Spielleiter es manuell beendet.
+                </p>
+              )}
+            </div>
+
             <button
               onClick={startGame}
-              className="w-full inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20"
+              disabled={pointLimitEnabled && (!pointLimit || pointLimit <= 0)}
+              className="w-full inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20 disabled:opacity-40"
             >
               Spiel starten →
             </button>
@@ -360,7 +424,10 @@ export default function FamilienduellPage() {
                   }`}
                 >
                   <span>{g.name}</span>
-                  <span className="opacity-70">{g.score}</span>
+                  <span className="opacity-70">
+                    {g.score}
+                    {pointLimitEnabled ? ` / ${pointLimit}` : ''}
+                  </span>
                 </div>
               ))}
             </div>
@@ -496,12 +563,21 @@ export default function FamilienduellPage() {
                     </p>
                   </>
                 )}
-                <button
-                  onClick={nextRound}
-                  className="w-full inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-3.5 shadow-lg shadow-black/10 transition hover:-translate-y-0.5"
-                >
-                  Weiter zu {groups[nextGroupIndex].name} →
-                </button>
+                {gameOverPending ? (
+                  <button
+                    onClick={endGame}
+                    className="w-full inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-3.5 shadow-lg shadow-black/10 transition hover:-translate-y-0.5"
+                  >
+                    🏆 Punktelimit erreicht – Endstand anzeigen
+                  </button>
+                ) : (
+                  <button
+                    onClick={nextRound}
+                    className="w-full inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-3.5 shadow-lg shadow-black/10 transition hover:-translate-y-0.5"
+                  >
+                    Weiter zu {groups[nextGroupIndex].name} →
+                  </button>
+                )}
               </div>
             )}
 
