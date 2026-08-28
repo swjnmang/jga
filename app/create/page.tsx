@@ -96,6 +96,21 @@ export default function CreatePage() {
             <span className="ml-auto text-ink/30 group-hover:translate-x-0.5 transition self-center">→</span>
           </Link>
 
+          {/* Begriffe-Topf – echtes Multiplayer über Firebase, mehrere Geräte */}
+          <Link
+            href="/begriffe-topf"
+            className="group w-full flex items-start gap-4 rounded-2xl border border-ink/10 bg-ink/5 hover:bg-ink/10 hover:border-ink/25 px-6 py-5 transition text-left"
+          >
+            <span className="text-2xl mt-0.5">🫙</span>
+            <div>
+              <p className="font-semibold text-ink group-hover:text-ink/90">Begriffe-Topf</p>
+              <p className="text-sm text-ink/60 mt-0.5">
+                Eigene Begriffe einreichen, dann erklären, Pantomime, ein Wort
+              </p>
+            </div>
+            <span className="ml-auto text-ink/30 group-hover:translate-x-0.5 transition self-center">→</span>
+          </Link>
+
           {/* Solo – coming soon */}
           <div className="w-full flex items-start gap-4 rounded-2xl border border-ink/5 bg-ink/[0.03] px-6 py-5 opacity-40 cursor-not-allowed select-none">
             <span className="text-2xl mt-0.5">🎯</span>
