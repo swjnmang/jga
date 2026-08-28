@@ -461,19 +461,6 @@ export default function BegriffeTopfLokalPage() {
               </div>
             )}
 
-            {collectingGroupWords.length > 0 && (
-              <div className={styles.myWordsList}>
-                {collectingGroupWords.map((w, i) => (
-                  <div key={w.id} className={styles.myWordRow}>
-                    <span>
-                      <span className={styles.myWordIndex}>{i + 1}.</span>
-                      {w.text}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            )}
-
             <button
               onClick={continueCollecting}
               disabled={collectingGroupWords.length < wordsPerGroup}
