@@ -36,7 +36,7 @@ function shuffle<T>(items: T[]): T[] {
 
 export async function checkPinExists(pin: string): Promise<boolean> {
   checkFirebase();
-  const snap = await get(ref(database!, `wordpot/${pin}`));
+  const snap = await get(ref(database!, `games/${pin}`));
   return snap.exists();
 }
 
@@ -98,13 +98,13 @@ export async function createWordPotGame(
     turnScore: 0,
   };
 
-  await set(ref(database!, `wordpot/${pin}`), game);
+  await set(ref(database!, `games/${pin}`), game);
   return { pin, hostPlayerId };
 }
 
 export async function joinWordPotGame(params: JoinWordPotParams): Promise<{ playerId: string }> {
   checkFirebase();
-  const gameRef = ref(database!, `wordpot/${params.pin}`);
+  const gameRef = ref(database!, `games/${params.pin}`);
   const snap = await get(gameRef);
   if (!snap.exists()) throw new Error('Spiel nicht gefunden.');
   const game = snap.val() as WordPotGame;
@@ -119,7 +119,7 @@ export async function joinWordPotGame(params: JoinWordPotParams): Promise<{ play
     wordsSubmitted: 0,
     joinedAt: Date.now(),
   };
-  await set(ref(database!, `wordpot/${params.pin}/players/${playerId}`), player);
+  await set(ref(database!, `games/${params.pin}/players/${playerId}`), player);
   return { playerId };
 }
 
@@ -128,7 +128,7 @@ export function subscribeToWordPotGame(
   callback: (game: WordPotGame | null) => void
 ): () => void {
   checkFirebase();
-  const gameRef = ref(database!, `wordpot/${pin}`);
+  const gameRef = ref(database!, `games/${pin}`);
   const listener = onValue(gameRef, (snap) => {
     callback(snap.exists() ? (snap.val() as WordPotGame) : null);
   });
@@ -146,7 +146,7 @@ export async function submitWordPotWord(
   const trimmed = text.trim();
   if (!trimmed) return;
 
-  const gameRef = ref(database!, `wordpot/${pin}`);
+  const gameRef = ref(database!, `games/${pin}`);
   const snap = await get(gameRef);
   if (!snap.exists()) return;
   const game = snap.val() as WordPotGame;
@@ -157,15 +157,15 @@ export async function submitWordPotWord(
   const word: WordPotWord = { id: wordId, text: trimmed, groupId, playerId };
 
   await update(ref(database!), {
-    [`wordpot/${pin}/words/${wordId}`]: word,
-    [`wordpot/${pin}/players/${playerId}/wordsSubmitted`]: player.wordsSubmitted + 1,
+    [`games/${pin}/words/${wordId}`]: word,
+    [`games/${pin}/players/${playerId}/wordsSubmitted`]: player.wordsSubmitted + 1,
   });
 }
 
 /** Host startet das Spiel: Topf für Runde 1 wird mit allen eingereichten Wörtern gefüllt. */
 export async function startWordPotGame(pin: string): Promise<void> {
   checkFirebase();
-  const gameRef = ref(database!, `wordpot/${pin}`);
+  const gameRef = ref(database!, `games/${pin}`);
   const snap = await get(gameRef);
   if (!snap.exists()) return;
   const game = snap.val() as WordPotGame;
@@ -190,7 +190,7 @@ export async function startWordPotGame(pin: string): Promise<void> {
 /** Ein Mitglied der aktiven Gruppe startet den eigenen Zug und wird zum Erklärenden. */
 export async function startWordPotTurn(pin: string, playerId: string): Promise<void> {
   checkFirebase();
-  const gameRef = ref(database!, `wordpot/${pin}`);
+  const gameRef = ref(database!, `games/${pin}`);
   const snap = await get(gameRef);
   if (!snap.exists()) return;
   const game = snap.val() as WordPotGame;
@@ -210,7 +210,7 @@ export async function startWordPotTurn(pin: string, playerId: string): Promise<v
 /** Begriff wurde erraten: Punkt für die aktive Gruppe, Begriff raus aus dem Topf für diese Runde. */
 export async function markWordPotCorrect(pin: string): Promise<void> {
   checkFirebase();
-  const gameRef = ref(database!, `wordpot/${pin}`);
+  const gameRef = ref(database!, `games/${pin}`);
   const snap = await get(gameRef);
   if (!snap.exists()) return;
   const game = snap.val() as WordPotGame;
@@ -249,7 +249,7 @@ export async function markWordPotCorrect(pin: string): Promise<void> {
 /** Begriff wird zurückgelegt: bleibt im Topf, ein neuer (zufällig auch derselbe) Begriff wird gezogen. */
 export async function putBackWordPotWord(pin: string): Promise<void> {
   checkFirebase();
-  const gameRef = ref(database!, `wordpot/${pin}`);
+  const gameRef = ref(database!, `games/${pin}`);
   const snap = await get(gameRef);
   if (!snap.exists()) return;
   const game = snap.val() as WordPotGame;
@@ -262,7 +262,7 @@ export async function putBackWordPotWord(pin: string): Promise<void> {
 /** Timer abgelaufen: Zug endet, nächste Gruppe ist an der Reihe. Von jedem Client aufrufbar (idempotent). */
 export async function endWordPotTurn(pin: string): Promise<void> {
   checkFirebase();
-  const gameRef = ref(database!, `wordpot/${pin}`);
+  const gameRef = ref(database!, `games/${pin}`);
   const snap = await get(gameRef);
   if (!snap.exists()) return;
   const game = snap.val() as WordPotGame;
@@ -283,7 +283,7 @@ export async function endWordPotTurn(pin: string): Promise<void> {
 /** Nach der Zug-/Rundenzusammenfassung: weiter zum nächsten Zug oder zur nächsten Runde/Spielende. */
 export async function continueAfterWordPotTurn(pin: string): Promise<void> {
   checkFirebase();
-  const gameRef = ref(database!, `wordpot/${pin}`);
+  const gameRef = ref(database!, `games/${pin}`);
   const snap = await get(gameRef);
   if (!snap.exists()) return;
   const game = snap.val() as WordPotGame;
@@ -317,7 +317,7 @@ export async function continueAfterWordPotTurn(pin: string): Promise<void> {
 /** Host beendet das Spiel manuell vorzeitig. */
 export async function endWordPotGameEarly(pin: string, hostPlayerId: string): Promise<void> {
   checkFirebase();
-  const gameRef = ref(database!, `wordpot/${pin}`);
+  const gameRef = ref(database!, `games/${pin}`);
   const snap = await get(gameRef);
   if (!snap.exists()) return;
   const game = snap.val() as WordPotGame;
