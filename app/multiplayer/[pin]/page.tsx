@@ -2873,7 +2873,7 @@ export default function MultiplayerGamePage() {
     }
 
     return (
-      <main className="relative mx-auto max-w-4xl lg:max-w-6xl px-4 sm:px-5 py-3 sm:py-5 space-y-3">
+      <main className="relative mx-auto max-w-4xl lg:max-w-6xl xl:max-w-7xl px-4 sm:px-5 py-3 sm:py-5 space-y-3">
 
         {/* ═══════════════════════════════════════════════════════════
             ERGEBNISSEITE — wird angezeigt sobald Host "Auswertung"
@@ -2998,12 +2998,12 @@ export default function MultiplayerGamePage() {
           )}
           {game.currentTurnGroupId && (
             isActiveTurn ? (
-              <div className="mt-1 w-full px-3 py-1.5 rounded-xl bg-green-500 text-white font-bold text-sm animate-pulse shadow-lg shadow-green-500/30">
+              <div className="mt-1 w-full px-3 py-1.5 md:py-2 rounded-xl bg-green-500 text-white font-bold text-sm md:text-base animate-pulse shadow-lg shadow-green-500/30">
                 ⚡ Eure Gruppe ist am Zug!
               </div>
             ) : (
               <div className="mt-1 w-full px-3 py-2 rounded-xl bg-ink/15">
-                <div className="flex flex-wrap items-center justify-center gap-1 text-xs font-semibold">
+                <div className="flex flex-wrap items-center justify-center gap-1 text-xs md:text-sm font-semibold">
                   {groupList.map((g, i) => (
                     <span key={g.id} className="flex items-center gap-1">
                       {i > 0 && <span className="text-ink/40">→</span>}
@@ -3023,34 +3023,34 @@ export default function MultiplayerGamePage() {
           )}
         </div>
 
-        <div className="md:grid md:grid-cols-[1fr_300px] md:gap-4 md:items-start space-y-2 md:space-y-0">
+        <div className="lg:grid lg:grid-cols-[1fr_340px] lg:gap-4 xl:gap-6 lg:items-start space-y-2 lg:space-y-0">
         <div className="space-y-3">
         {/* Aktuelle Karte */}
         {currentCard && (() => {
           const categoryLabel = catLabelMeta(currentCard.category);
           const categoryIcon = catIcon(currentCard.category);
           return (
-          <div className={`card-surface rounded-2xl p-3 sm:p-4 space-y-2 ${(!isActiveTurn && !isHostSession) ? 'opacity-70 pointer-events-none select-none' : ''}`}>
+          <div className={`card-surface rounded-2xl p-3 sm:p-4 md:p-5 space-y-2 md:space-y-3 ${(!isActiveTurn && !isHostSession) ? 'opacity-70 pointer-events-none select-none' : ''}`}>
             <div className="flex items-center justify-between">
-              <h2 className="text-sm font-semibold flex items-center gap-2">
+              <h2 className="text-sm md:text-base font-semibold flex items-center gap-2">
                 <span>{categoryIcon} {categoryLabel}</span>
                 {quoteSourceBadge(currentCard)}
               </h2>
               <div className="flex items-center gap-2">
                 {timeLeft !== null && (
-                  <span className={`text-sm font-mono font-bold px-3 py-1 rounded-full ${
+                  <span className={`text-sm md:text-base font-mono font-bold px-3 py-1 rounded-full ${
                     timeLeft <= 10 ? 'bg-red-500/20 text-red-600 animate-pulse' : 'bg-ink/10'
                   }`}>
                     ⏱ {Math.floor(timeLeft / 60).toString().padStart(2, '0')}:{(timeLeft % 60).toString().padStart(2, '0')}
                   </span>
                 )}
-                <span className="text-sm px-3 py-1 rounded-full bg-ink/10">
+                <span className="text-sm md:text-base px-3 py-1 rounded-full bg-ink/10">
                   {currentCard.difficulty}
                 </span>
               </div>
             </div>
 
-            <p className="text-sm">{currentCard.category === 'quote' ? 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?' : currentCard.category === 'filmserien' ? currentCard.cue + ' – Und in welchem Jahr war das?' : currentCard.cue}</p>
+            <p className="text-sm md:text-base lg:text-lg">{currentCard.category === 'quote' ? 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?' : currentCard.category === 'filmserien' ? currentCard.cue + ' – Und in welchem Jahr war das?' : currentCard.cue}</p>
 
             {currentCard.sources && (
               <div className="relative">
@@ -3115,7 +3115,7 @@ export default function MultiplayerGamePage() {
                   try { await skipCard(pin); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
                 }}
                 disabled={isProcessing}
-                className="w-full px-4 py-2 bg-ink/10 text-ink rounded-xl font-semibold text-sm hover:bg-ink/20 disabled:opacity-50"
+                className="w-full px-4 py-2 md:py-2.5 bg-ink/10 text-ink rounded-xl font-semibold text-sm md:text-base hover:bg-ink/20 disabled:opacity-50"
               >
                 ⏭ Frage überspringen (gleiche Gruppe bleibt dran)
               </button>
@@ -3127,10 +3127,10 @@ export default function MultiplayerGamePage() {
                 type="button"
                 onClick={handleUseFlex}
                 disabled={isProcessing}
-                className="w-full px-4 py-2 rounded-xl border-2 border-blue-400 text-blue-300 bg-blue-500/10 hover:bg-blue-500/20 font-semibold text-sm flex items-center justify-center gap-2 disabled:opacity-50"
+                className="w-full px-4 py-2 md:py-2.5 rounded-xl border-2 border-blue-400 text-blue-300 bg-blue-500/10 hover:bg-blue-500/20 font-semibold text-sm md:text-base flex items-center justify-center gap-2 disabled:opacity-50"
               >
                 🔵 Flex-Button einsetzen — neue Frage aus gleicher Kategorie
-                <span className="ml-1 text-xs bg-blue-400/30 px-2 py-0.5 rounded-full">
+                <span className="ml-1 text-xs md:text-sm bg-blue-400/30 px-2 py-0.5 rounded-full">
                   {currentGroup.flexButtons}× verfügbar
                 </span>
               </button>
@@ -3154,19 +3154,19 @@ export default function MultiplayerGamePage() {
           };
 
           return (
-            <div className="card-surface rounded-2xl p-3 sm:p-4 space-y-2 border-2 border-green-500">
-              <h3 className="text-sm font-semibold text-center">
+            <div className="card-surface rounded-2xl p-3 sm:p-4 md:p-5 space-y-2 md:space-y-3 border-2 border-green-500">
+              <h3 className="text-sm md:text-base font-semibold text-center">
                 Timeline von Gruppe: <span className="text-ink">{currentGroup.name}</span>
               </h3>
 
               {/* Timeline + Positions-Buttons */}
-              <div className="flex items-center gap-1 overflow-x-auto pb-2 justify-start">
+              <div className="flex items-center gap-1 md:gap-2 overflow-x-auto pb-2 md:pb-3 justify-start">
                 {/* Button vor Position 0 */}
                 <button
                   type="button"
                   onClick={() => handleSelectPosition(0)}
                   disabled={isProcessing}
-                  className={`flex-shrink-0 rounded-lg border-2 px-2 py-1.5 text-xs font-semibold transition-all disabled:opacity-50 ${
+                  className={`flex-shrink-0 rounded-lg border-2 px-2 py-1.5 md:px-3 md:py-3 text-xs md:text-sm font-semibold transition-all disabled:opacity-50 ${
                     selectedPosition === 0
                       ? 'border-ink bg-ink text-inkDark scale-105'
                       : 'border-dashed border-ink/30 bg-ink/5 hover:border-ink hover:bg-ink/10'
@@ -3176,20 +3176,20 @@ export default function MultiplayerGamePage() {
                 </button>
 
                 {displayTimeline.map((item: any, idx: number) => (
-                  <div key={idx} className="flex items-center gap-1 flex-shrink-0">
+                  <div key={idx} className="flex items-center gap-1 md:gap-2 flex-shrink-0">
                     {/* Karte */}
-                    <div className={`flex-shrink-0 rounded-lg border-2 px-3 py-2 min-w-[110px] ${
+                    <div className={`flex-shrink-0 rounded-lg border-2 px-3 py-2 md:px-4 md:py-3 min-w-[110px] md:min-w-[130px] lg:min-w-[150px] ${
                       item.id === game.referenceCard?.id
                         ? 'border-yellow-500 bg-yellow-100 text-yellow-900'
                         : 'border-ink/60 bg-ink/10'
                     }`}>
-                      <p className="text-xs font-bold">{item.year}</p>
+                      <p className="text-xs md:text-sm font-bold">{item.year}</p>
                       {item.id === game.referenceCard?.id ? (
-                        <p className="text-xs text-yellow-700 mt-0.5">Referenz</p>
+                        <p className="text-xs md:text-sm text-yellow-700 mt-0.5">Referenz</p>
                       ) : (
                         <>
-                          <p className="text-xs truncate text-ink/70">{item.hint || ''}</p>
-                          <p className="text-xs truncate text-ink/50">{item.title || ''}</p>
+                          <p className="text-xs md:text-sm truncate text-ink/70">{item.hint || ''}</p>
+                          <p className="text-xs md:text-sm truncate text-ink/50">{item.title || ''}</p>
                         </>
                       )}
                     </div>
@@ -3199,7 +3199,7 @@ export default function MultiplayerGamePage() {
                       type="button"
                       onClick={() => handleSelectPosition(idx + 1)}
                       disabled={isProcessing}
-                      className={`flex-shrink-0 rounded-lg border-2 px-2 py-1.5 text-xs font-semibold transition-all disabled:opacity-50 ${
+                      className={`flex-shrink-0 rounded-lg border-2 px-2 py-1.5 md:px-3 md:py-3 text-xs md:text-sm font-semibold transition-all disabled:opacity-50 ${
                         selectedPosition === idx + 1
                           ? 'border-ink bg-ink text-inkDark scale-105'
                           : 'border-dashed border-ink/30 bg-ink/5 hover:border-ink hover:bg-ink/10'
@@ -3214,8 +3214,8 @@ export default function MultiplayerGamePage() {
               {/* Platzierungs-Fehler */}
               {placementError && (
                 <div className="rounded-xl border-2 border-red-500/50 bg-red-50/10 p-3">
-                  <p className="text-red-600 text-sm font-semibold">⚠️ {placementError}</p>
-                  <button onClick={() => setPlacementError(null)} className="text-xs text-red-500 underline mt-1">
+                  <p className="text-red-600 text-sm md:text-base font-semibold">⚠️ {placementError}</p>
+                  <button onClick={() => setPlacementError(null)} className="text-xs md:text-sm text-red-500 underline mt-1">
                     Schließen
                   </button>
                 </div>
@@ -3225,7 +3225,7 @@ export default function MultiplayerGamePage() {
               <button
                 onClick={() => selectedPosition !== null && handlePlaceCard(selectedPosition)}
                 disabled={selectedPosition === null || isProcessing}
-                className="w-full py-2.5 rounded-xl bg-ink text-inkDark font-bold text-sm hover:opacity-90 transition-opacity disabled:opacity-40 disabled:cursor-not-allowed"
+                className="w-full py-2.5 md:py-3.5 rounded-xl bg-ink text-inkDark font-bold text-sm md:text-base hover:opacity-90 transition-opacity disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 {isProcessing ? '⏳ Wird geprüft...' : '✅ Ergebnis einreichen'}
               </button>
@@ -3253,11 +3253,22 @@ export default function MultiplayerGamePage() {
 
           // Fix: Falsch gelegte Karte landet NICHT in activeGroup.timeline (nur korrekte werden dort gespeichert).
           // In der Flex-Phase trotzdem an der gelegten Position als "NEU" anzeigen, damit alle sie sehen.
+          // Das Einfügen verschiebt aber die Anzeige-Indizes hinter der neuen Karte um +1 gegenüber der
+          // Original-Timeline, gegen die der Server flexPhaseCorrectPosition/activeGroupPlacedPosition berechnet.
+          // spliceIdx merkt sich, wo eingefügt wurde, damit wir Anzeige-Positionen zurück in Server-Positionen
+          // umrechnen können (siehe toServerPosition) — sonst werden korrekt getippte Flex-Buttons als falsch gewertet.
+          let spliceIdx: number | null = null;
           if (isFlexPhase && blockedPosition !== null && game.flexPhaseCard &&
               !displayTimeline.some((c: any) => c.id === game.currentCardId)) {
-            const insertIdx = Math.max(0, Math.min(blockedPosition, displayTimeline.length));
-            displayTimeline.splice(insertIdx, 0, game.flexPhaseCard);
+            spliceIdx = Math.max(0, Math.min(blockedPosition, displayTimeline.length));
+            displayTimeline.splice(spliceIdx, 0, game.flexPhaseCard);
           }
+
+          // Rechnet eine Anzeige-Position (Index in der ggf. um die neue Karte erweiterten displayTimeline)
+          // zurück in die Server-Position (Index in der Original-Timeline ohne die neue Karte), wie sie
+          // in game.flexPhaseCorrectPosition / game.activeGroupPlacedPosition / game.flexTips verwendet wird.
+          const toServerPosition = (displayPos: number) =>
+            spliceIdx !== null && displayPos > spliceIdx ? displayPos - 1 : displayPos;
 
           // Live-Vorschau: pendingPosition der spielenden Gruppe — sichtbar für alle (Host + nicht-spielende Gruppen)
           const pendingPos = activeGroup?.pendingPosition ?? null;
@@ -3266,9 +3277,9 @@ export default function MultiplayerGamePage() {
           const renderGhost = () => (
             <div id="obs-ghost-card" className="flex items-center flex-shrink-0">
               <div className="text-ink/30 mx-1">↔</div>
-              <div className="flex-shrink-0 rounded-lg border-2 border-dashed border-blue-400 bg-blue-400/10 px-4 py-3 min-w-[120px] animate-pulse">
-                <p className="text-xs font-bold text-blue-400">???</p>
-                <p className="text-xs truncate text-blue-400/80">???</p>
+              <div className="flex-shrink-0 rounded-lg border-2 border-dashed border-blue-400 bg-blue-400/10 px-4 py-3 md:px-5 md:py-4 min-w-[120px] md:min-w-[140px] lg:min-w-[160px] animate-pulse">
+                <p className="text-xs md:text-sm font-bold text-blue-400">???</p>
+                <p className="text-xs md:text-sm truncate text-blue-400/80">???</p>
               </div>
             </div>
           );
@@ -3287,14 +3298,14 @@ export default function MultiplayerGamePage() {
           // sind gesperrt – denn ein Flex-Button dort würde dieselbe Lücke wie die gespielte Karte bedeuten.
           const isBlocked = (pos: number) =>
             blockedPosition !== null && (pos === blockedPosition || pos === blockedPosition + 1);
-          const isTaken = (pos: number) => takenPositions.has(pos) && !isBlocked(pos);
+          const isTaken = (pos: number) => takenPositions.has(toServerPosition(pos)) && !isBlocked(pos);
 
           // Host: Live-Marker für jeden eingereichten Flex-Tipp direkt in der Timeline
           const flexTipsMap: Record<string, string> = (isHostSession && isFlexPhase)
             ? (game.flexTips ?? {})
             : {};
           const renderFlexTipMarker = (pos: number) => {
-            const tippingGroupId = flexTipsMap[String(pos)];
+            const tippingGroupId = flexTipsMap[String(toServerPosition(pos))];
             if (!tippingGroupId) return null;
             const tippingGroup = game.groups[tippingGroupId];
             return (
@@ -3314,31 +3325,31 @@ export default function MultiplayerGamePage() {
           };
 
           return (
-            <div className={`card-surface rounded-2xl p-3 sm:p-4 space-y-2 border-2 ${isActiveTurn ? 'border-green-500' : 'border-red-500'}`}>
-              <h3 className="text-sm font-semibold text-center">
+            <div className={`card-surface rounded-2xl p-3 sm:p-4 md:p-5 space-y-2 md:space-y-3 border-2 ${isActiveTurn ? 'border-green-500' : 'border-red-500'}`}>
+              <h3 className="text-sm md:text-base font-semibold text-center">
                 Timeline von <span className="font-bold">{activeGroup.name}</span>
                 {isFlexPhase && canFlex && (
-                  <span className="ml-2 text-blue-400 text-xs">(Flex-Tipp möglich!)</span>
+                  <span className="ml-2 text-blue-400 text-xs md:text-sm">(Flex-Tipp möglich!)</span>
                 )}
                 {isFlexPhase && flexTipSubmitted && (
-                  <span className="ml-2 text-green-400 text-xs">✓ Tipp eingereicht</span>
+                  <span className="ml-2 text-green-400 text-xs md:text-sm">✓ Tipp eingereicht</span>
                 )}
                 {isHostSession && pendingPos !== null && (
-                  <span className="ml-2 text-blue-400 text-xs">(wählt Position…)</span>
+                  <span className="ml-2 text-blue-400 text-xs md:text-sm">(wählt Position…)</span>
                 )}
                 {!isHostSession && pendingPos !== null && !isFlexPhase && (
-                  <span className="ml-2 text-blue-400 text-xs">(wählt Position…)</span>
+                  <span className="ml-2 text-blue-400 text-xs md:text-sm">(wählt Position…)</span>
                 )}
               </h3>
 
               {/* Flex-Phase Countdown Banner — sichtbar für alle */}
               {isFlexPhase && !game.resultRevealed && flexTimer !== null && (
-                <div className={`rounded-xl border-2 px-4 py-3 flex items-center justify-between ${
+                <div className={`rounded-xl border-2 px-4 py-3 md:py-4 flex items-center justify-between ${
                   flexTimer <= 5
                     ? 'bg-red-500/15 border-red-500/60 animate-pulse'
                     : 'bg-blue-500/10 border-blue-400/40'
                 }`}>
-                  <span className={`text-sm font-semibold ${
+                  <span className={`text-sm md:text-base font-semibold ${
                     flexTimer <= 5 ? 'text-red-400' : 'text-blue-400'
                   }`}>
                     🔵 Flex-Phase — Jetzt Flex-Button einsetzen!
@@ -3351,24 +3362,24 @@ export default function MultiplayerGamePage() {
                 </div>
               )}
 
-              <div className="flex items-center gap-1 overflow-x-auto pb-2">
+              <div className="flex items-center gap-1 md:gap-2 overflow-x-auto pb-2 md:pb-3">
                 {/* Flex-Tipp Button vor Position 0 */}
-                {canFlex && !isBlocked(0) && !takenPositions.has(0) && (
+                {canFlex && !isBlocked(0) && !takenPositions.has(toServerPosition(0)) && (
                   <button
                     type="button"
-                    onClick={() => setFlexTipPosition(p => p === 0 ? null : 0)}
-                    className={`flex-shrink-0 rounded-lg border-2 px-2 py-2 text-xs font-semibold transition-all ${
-                      flexTipPosition === 0 ? 'border-blue-400 bg-blue-400 text-white scale-105' : 'border-dashed border-blue-400/50 bg-blue-400/10 hover:bg-blue-400/20 text-blue-400'
+                    onClick={() => setFlexTipPosition(p => p === toServerPosition(0) ? null : toServerPosition(0))}
+                    className={`flex-shrink-0 rounded-lg border-2 px-2 py-2 md:px-3 md:py-2.5 text-xs md:text-sm font-semibold transition-all ${
+                      flexTipPosition === toServerPosition(0) ? 'border-blue-400 bg-blue-400 text-white scale-105' : 'border-dashed border-blue-400/50 bg-blue-400/10 hover:bg-blue-400/20 text-blue-400'
                     }`}
                   >← FB</button>
                 )}
                 {canFlex && isBlocked(0) && (
-                  <div className="flex-shrink-0 rounded-lg border-2 border-red-400/30 px-2 py-2 text-xs text-red-400/50 cursor-not-allowed">
+                  <div className="flex-shrink-0 rounded-lg border-2 border-red-400/30 px-2 py-2 md:px-3 md:py-2.5 text-xs md:text-sm text-red-400/50 cursor-not-allowed">
                     ← ✗
                   </div>
                 )}
                 {canFlex && isTaken(0) && (
-                  <div className="flex-shrink-0 rounded-lg border-2 border-yellow-400/30 px-2 py-2 text-xs text-yellow-400/70 cursor-not-allowed">🔒</div>
+                  <div className="flex-shrink-0 rounded-lg border-2 border-yellow-400/30 px-2 py-2 md:px-3 md:py-2.5 text-xs md:text-sm text-yellow-400/70 cursor-not-allowed">🔒</div>
                 )}
 
                 {/* Flex-Tipp-Marker an Position 0 (Host-Live-Ansicht) */}
@@ -3378,7 +3389,7 @@ export default function MultiplayerGamePage() {
                 {ghostCard && pendingPos === 0 && renderGhost()}
 
                 {displayTimeline.map((item: any, idx: number) => (
-                  <div key={idx} className="flex items-center gap-1 flex-shrink-0">
+                  <div key={idx} className="flex items-center gap-1 md:gap-2 flex-shrink-0">
                     {idx > 0 && <div className="text-ink/30 mx-0.5">↔</div>}
                     <div className="relative">
                       {item.id === game.currentCardId && game.flexPhaseActive && (
@@ -3390,26 +3401,26 @@ export default function MultiplayerGamePage() {
                         return (
                           <div
                             id={item.id === game.currentCardId ? 'obs-new-card' : undefined}
-                            className={`flex-shrink-0 rounded-lg border-2 px-3 py-2 min-w-[110px] ${
+                            className={`flex-shrink-0 rounded-lg border-2 px-3 py-2 md:px-4 md:py-3 min-w-[110px] md:min-w-[130px] lg:min-w-[150px] ${
                             item.id === game.referenceCard?.id
                               ? 'border-yellow-500 bg-yellow-100 text-yellow-900'
                               : isNewCard
                                 ? 'border-green-500 bg-green-500/15 ring-2 ring-green-400/50'
                                 : 'border-ink/60 bg-ink/10'
                           }`}>
-                            <p className="text-xs font-bold">{masked ? '???' : item.year}</p>
+                            <p className="text-xs md:text-sm font-bold">{masked ? '???' : item.year}</p>
                             {item.id === game.referenceCard?.id ? (
-                              <p className="text-xs text-yellow-700 mt-0.5">Referenz</p>
+                              <p className="text-xs md:text-sm text-yellow-700 mt-0.5">Referenz</p>
                             ) : masked ? (
                               <>
-                                <p className="text-xs text-ink/40 italic">???</p>
-                                <p className="text-xs text-green-400 font-semibold mt-0.5">Neu platziert</p>
+                                <p className="text-xs md:text-sm text-ink/40 italic">???</p>
+                                <p className="text-xs md:text-sm text-green-400 font-semibold mt-0.5">Neu platziert</p>
                               </>
                             ) : (
                               <>
-                                <p className="text-xs truncate text-ink/70">{item.hint || ''}</p>
-                                <p className="text-xs truncate text-ink/50">{item.title || ''}</p>
-                                {isNewCard && <p className="text-xs text-green-400 font-semibold mt-0.5">Neu platziert</p>}
+                                <p className="text-xs md:text-sm truncate text-ink/70">{item.hint || ''}</p>
+                                <p className="text-xs md:text-sm truncate text-ink/50">{item.title || ''}</p>
+                                {isNewCard && <p className="text-xs md:text-sm text-green-400 font-semibold mt-0.5">Neu platziert</p>}
                               </>
                             )}
                           </div>
@@ -3424,20 +3435,20 @@ export default function MultiplayerGamePage() {
                     {renderFlexTipMarker(idx + 1)}
 
                     {/* Flex-Tipp Button nach dieser Karte */}
-                    {canFlex && !isBlocked(idx + 1) && !takenPositions.has(idx + 1) && (
+                    {canFlex && !isBlocked(idx + 1) && !takenPositions.has(toServerPosition(idx + 1)) && (
                       <button
                         type="button"
-                        onClick={() => setFlexTipPosition(p => p === idx + 1 ? null : idx + 1)}
-                        className={`flex-shrink-0 rounded-lg border-2 px-2 py-2 text-xs font-semibold transition-all ${
-                          flexTipPosition === idx + 1 ? 'border-blue-400 bg-blue-400 text-white scale-105' : 'border-dashed border-blue-400/50 bg-blue-400/10 hover:bg-blue-400/20 text-blue-400'
+                        onClick={() => setFlexTipPosition(p => p === toServerPosition(idx + 1) ? null : toServerPosition(idx + 1))}
+                        className={`flex-shrink-0 rounded-lg border-2 px-2 py-2 md:px-3 md:py-2.5 text-xs md:text-sm font-semibold transition-all ${
+                          flexTipPosition === toServerPosition(idx + 1) ? 'border-blue-400 bg-blue-400 text-white scale-105' : 'border-dashed border-blue-400/50 bg-blue-400/10 hover:bg-blue-400/20 text-blue-400'
                         }`}
                       >{idx === displayTimeline.length - 1 ? 'FB →' : 'FB'}</button>
                     )}
                     {canFlex && isBlocked(idx + 1) && (
-                      <div className="flex-shrink-0 rounded-lg border-2 border-red-400/30 px-2 py-2 text-xs text-red-400/50 cursor-not-allowed">✗</div>
+                      <div className="flex-shrink-0 rounded-lg border-2 border-red-400/30 px-2 py-2 md:px-3 md:py-2.5 text-xs md:text-sm text-red-400/50 cursor-not-allowed">✗</div>
                     )}
                     {canFlex && isTaken(idx + 1) && (
-                      <div className="flex-shrink-0 rounded-lg border-2 border-yellow-400/30 px-2 py-2 text-xs text-yellow-400/70 cursor-not-allowed">🔒</div>
+                      <div className="flex-shrink-0 rounded-lg border-2 border-yellow-400/30 px-2 py-2 md:px-3 md:py-2.5 text-xs md:text-sm text-yellow-400/70 cursor-not-allowed">🔒</div>
                     )}
                   </div>
                 ))}
@@ -3448,15 +3459,15 @@ export default function MultiplayerGamePage() {
                 <button
                   onClick={handleSubmitFlexTip}
                   disabled={isProcessing}
-                  className="w-full px-4 py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 disabled:opacity-50"
+                  className="w-full px-4 py-3 md:py-3.5 md:text-lg bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 disabled:opacity-50"
                 >
-                  {isProcessing ? '⏳…' : `🔵 Flex-Tipp einreichen (Position ${flexTipPosition})`}
+                  {isProcessing ? '⏳…' : '🔵 Flex-Tipp an gewählter Position einreichen'}
                 </button>
               )}
 
               {/* Noch kein Flex möglich */}
               {isFlexPhase && !isHostSession && !isActiveTurn && !flexTipSubmitted && (myGroup?.flexButtons ?? 0) < 1 && (
-                <p className="text-center text-xs text-ink/50">Kein Flex-Button verfügbar</p>
+                <p className="text-center text-xs md:text-sm text-ink/50">Kein Flex-Button verfügbar</p>
               )}
               {isFlexPhase && flexTipSubmitted && (
                 <p className="text-center text-sm text-green-400 font-semibold">
