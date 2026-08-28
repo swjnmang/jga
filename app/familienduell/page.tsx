@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { Fredoka } from 'next/font/google';
 import { useEffect, useMemo, useState } from 'react';
 import {
   familienduellQuestions,
@@ -9,12 +8,6 @@ import {
 } from '@/lib/familienduellQuestions';
 import { playBuzzerSound, playCorrectSound } from '@/lib/familienduellSounds';
 import styles from './familienduell.module.css';
-
-const fredoka = Fredoka({
-  subsets: ['latin'],
-  weight: ['500', '600', '700'],
-  variable: '--font-fredoka',
-});
 
 const MAX_STRIKES = 3;
 const MIN_GROUPS = 2;
@@ -306,7 +299,7 @@ export default function FamilienduellPage() {
   const topScore = ranking[0]?.score ?? 0;
 
   return (
-    <main className={`${styles.page} ${fredoka.variable}`}>
+    <main className={styles.page}>
       <div className={styles.panel}>
         <div className={styles.headBlock}>
           <Link href="/" className={styles.back}>
