@@ -17,6 +17,7 @@ const SECONDS_STEP = 5;
 export default function BegriffeTopfLandingPage() {
   const router = useRouter();
   const [tab, setTab] = useState<'create' | 'join'>('create');
+  const [deviceMode, setDeviceMode] = useState<'multi' | 'single'>('multi');
 
   const [groupCount, setGroupCount] = useState(3);
   const [groupNames, setGroupNames] = useState<string[]>(['Gruppe 1', 'Gruppe 2', 'Gruppe 3']);
@@ -89,7 +90,8 @@ export default function BegriffeTopfLandingPage() {
         <p className={styles.intro}>
           Jede Gruppe reicht vorher eigene Begriffe ein, die in einem gemeinsamen Topf landen.
           Danach wird in 3 Runden geraten – erst erklären, dann Pantomime, zum Schluss nur ein
-          Wort. Jeder Mitspieler tritt mit dem eigenen Handy über einen PIN bei.
+          Wort. Ihr könnt mit je einem eigenen Handy pro Person spielen oder alles auf einem
+          einzigen Gerät, das reihum weitergegeben wird.
         </p>
 
         <div className={styles.toggleRow}>
@@ -104,105 +106,137 @@ export default function BegriffeTopfLandingPage() {
         {tab === 'create' && (
           <>
             <div className={styles.section}>
-              <p className={styles.label}>Anzahl Gruppen</p>
-              <div className={styles.stepperRow}>
-                <button onClick={() => updateGroupCount(groupCount - 1)} disabled={groupCount <= MIN_GROUPS} className={styles.stepperBtn}>
-                  −
+              <p className={styles.label}>Spielmodus</p>
+              <div className={styles.toggleRow}>
+                <button
+                  onClick={() => setDeviceMode('multi')}
+                  className={deviceMode === 'multi' ? styles.toggleBtnOn : styles.toggleBtn}
+                >
+                  📱 Jeder mit eigenem Handy
                 </button>
-                <span className={styles.stepperVal}>{groupCount}</span>
-                <button onClick={() => updateGroupCount(groupCount + 1)} disabled={groupCount >= MAX_GROUPS} className={styles.stepperBtn}>
-                  +
+                <button
+                  onClick={() => setDeviceMode('single')}
+                  className={deviceMode === 'single' ? styles.toggleBtnOn : styles.toggleBtn}
+                >
+                  👥 Ein Gerät
                 </button>
               </div>
+              {deviceMode === 'single' && (
+                <p className={styles.hint}>
+                  Alles läuft auf diesem einen Handy: Jede Gruppe reicht ihre Begriffe hier
+                  ein und das Handy wird beim Erklären reihum weitergegeben.
+                </p>
+              )}
             </div>
 
-            <div className={styles.section}>
-              <p className={styles.label}>Gruppennamen</p>
-              <div className={styles.fieldList}>
-                {groupNames.map((name, i) => (
+            {deviceMode === 'single' ? (
+              <button onClick={() => router.push('/begriffe-topf/lokal')} className={styles.primaryBtn}>
+                Los geht&apos;s →
+              </button>
+            ) : (
+              <>
+                <div className={styles.section}>
+                  <p className={styles.label}>Anzahl Gruppen</p>
+                  <div className={styles.stepperRow}>
+                    <button onClick={() => updateGroupCount(groupCount - 1)} disabled={groupCount <= MIN_GROUPS} className={styles.stepperBtn}>
+                      −
+                    </button>
+                    <span className={styles.stepperVal}>{groupCount}</span>
+                    <button onClick={() => updateGroupCount(groupCount + 1)} disabled={groupCount >= MAX_GROUPS} className={styles.stepperBtn}>
+                      +
+                    </button>
+                  </div>
+                </div>
+
+                <div className={styles.section}>
+                  <p className={styles.label}>Gruppennamen</p>
+                  <div className={styles.fieldList}>
+                    {groupNames.map((name, i) => (
+                      <input
+                        key={i}
+                        value={name}
+                        onChange={(e) => updateGroupName(i, e.target.value)}
+                        placeholder={`Gruppe ${i + 1}`}
+                        className={styles.field}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                <div className={styles.section}>
+                  <p className={styles.label}>Begriffe pro Person</p>
+                  <div className={styles.stepperRow}>
+                    <button
+                      onClick={() => setWordsPerPlayer((n) => Math.max(MIN_WORDS, n - 1))}
+                      disabled={wordsPerPlayer <= MIN_WORDS}
+                      className={styles.stepperBtn}
+                    >
+                      −
+                    </button>
+                    <span className={styles.stepperVal}>{wordsPerPlayer}</span>
+                    <button
+                      onClick={() => setWordsPerPlayer((n) => Math.min(MAX_WORDS, n + 1))}
+                      disabled={wordsPerPlayer >= MAX_WORDS}
+                      className={styles.stepperBtn}
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+
+                <div className={styles.section}>
+                  <p className={styles.label}>Rundenzeit</p>
+                  <div className={styles.stepperRow}>
+                    <button
+                      onClick={() => setRoundSeconds((s) => Math.max(MIN_SECONDS, s - SECONDS_STEP))}
+                      disabled={roundSeconds <= MIN_SECONDS}
+                      className={styles.stepperBtn}
+                    >
+                      −
+                    </button>
+                    <span className={styles.stepperVal}>{roundSeconds}s</span>
+                    <button
+                      onClick={() => setRoundSeconds((s) => Math.min(MAX_SECONDS, s + SECONDS_STEP))}
+                      disabled={roundSeconds >= MAX_SECONDS}
+                      className={styles.stepperBtn}
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+
+                <div className={styles.section}>
+                  <p className={styles.label}>Dein Name</p>
                   <input
-                    key={i}
-                    value={name}
-                    onChange={(e) => updateGroupName(i, e.target.value)}
-                    placeholder={`Gruppe ${i + 1}`}
+                    value={hostName}
+                    onChange={(e) => setHostName(e.target.value)}
+                    placeholder="z.B. Anna"
                     className={styles.field}
                   />
-                ))}
-              </div>
-            </div>
+                </div>
 
-            <div className={styles.section}>
-              <p className={styles.label}>Begriffe pro Person</p>
-              <div className={styles.stepperRow}>
-                <button
-                  onClick={() => setWordsPerPlayer((n) => Math.max(MIN_WORDS, n - 1))}
-                  disabled={wordsPerPlayer <= MIN_WORDS}
-                  className={styles.stepperBtn}
-                >
-                  −
+                <div className={styles.section}>
+                  <p className={styles.label}>Deine Gruppe</p>
+                  <div className={styles.groupList}>
+                    {groupNames.map((name, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setHostGroupIndex(i)}
+                        className={i === hostGroupIndex ? styles.groupOptionActive : styles.groupOption}
+                      >
+                        <span className={styles.groupOptionName}>{name.trim() || `Gruppe ${i + 1}`}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {error && <p className={styles.errorText}>{error}</p>}
+
+                <button onClick={handleCreate} disabled={creating} className={styles.primaryBtn}>
+                  {creating ? 'Erstelle Spiel …' : 'Spiel erstellen →'}
                 </button>
-                <span className={styles.stepperVal}>{wordsPerPlayer}</span>
-                <button
-                  onClick={() => setWordsPerPlayer((n) => Math.min(MAX_WORDS, n + 1))}
-                  disabled={wordsPerPlayer >= MAX_WORDS}
-                  className={styles.stepperBtn}
-                >
-                  +
-                </button>
-              </div>
-            </div>
-
-            <div className={styles.section}>
-              <p className={styles.label}>Rundenzeit</p>
-              <div className={styles.stepperRow}>
-                <button
-                  onClick={() => setRoundSeconds((s) => Math.max(MIN_SECONDS, s - SECONDS_STEP))}
-                  disabled={roundSeconds <= MIN_SECONDS}
-                  className={styles.stepperBtn}
-                >
-                  −
-                </button>
-                <span className={styles.stepperVal}>{roundSeconds}s</span>
-                <button
-                  onClick={() => setRoundSeconds((s) => Math.min(MAX_SECONDS, s + SECONDS_STEP))}
-                  disabled={roundSeconds >= MAX_SECONDS}
-                  className={styles.stepperBtn}
-                >
-                  +
-                </button>
-              </div>
-            </div>
-
-            <div className={styles.section}>
-              <p className={styles.label}>Dein Name</p>
-              <input
-                value={hostName}
-                onChange={(e) => setHostName(e.target.value)}
-                placeholder="z.B. Anna"
-                className={styles.field}
-              />
-            </div>
-
-            <div className={styles.section}>
-              <p className={styles.label}>Deine Gruppe</p>
-              <div className={styles.groupList}>
-                {groupNames.map((name, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setHostGroupIndex(i)}
-                    className={i === hostGroupIndex ? styles.groupOptionActive : styles.groupOption}
-                  >
-                    <span className={styles.groupOptionName}>{name.trim() || `Gruppe ${i + 1}`}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {error && <p className={styles.errorText}>{error}</p>}
-
-            <button onClick={handleCreate} disabled={creating} className={styles.primaryBtn}>
-              {creating ? 'Erstelle Spiel …' : 'Spiel erstellen →'}
-            </button>
+              </>
+            )}
           </>
         )}
 
