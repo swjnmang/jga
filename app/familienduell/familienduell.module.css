@@ -388,6 +388,14 @@
   border-top: 1px solid var(--line);
 }
 
+.footerActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
 .endLink {
   font-size: 0.78rem;
   font-weight: 600;
@@ -398,6 +406,20 @@
   padding: 0;
 }
 .endLink:hover { color: var(--ink); }
+
+.undoLink {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-dim);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 0;
+}
+.undoLink:hover:not(:disabled) { color: var(--ink); }
+.undoLink:disabled { opacity: 0.35; cursor: not-allowed; text-decoration: none; }
 
 .confirmRow { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
 .confirmText { font-size: 0.78rem; color: var(--ink-dim); }
