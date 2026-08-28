@@ -38,6 +38,22 @@ type PersistedState = {
   stealGroupIndex: number | null;
   stealResult: 'success' | 'fail' | null;
   stealPoints: number;
+  lastSnapshot: UndoSnapshot | null;
+};
+
+/** Zustand direkt vor der letzten Eingabe des Spielleiters – für den Rückgängig-Button. */
+type UndoSnapshot = {
+  phase: Phase;
+  groups: Group[];
+  currentGroupIndex: number;
+  questionQueue: FamilienduellQuestion[];
+  currentQuestion: FamilienduellQuestion | null;
+  revealed: boolean[];
+  strikes: number;
+  roundPoints: number;
+  stealGroupIndex: number | null;
+  stealResult: 'success' | 'fail' | null;
+  stealPoints: number;
 };
 
 function shuffle<T>(items: T[]): T[] {
@@ -67,6 +83,7 @@ export default function FamilienduellPage() {
   const [stealGroupIndex, setStealGroupIndex] = useState<number | null>(null);
   const [stealResult, setStealResult] = useState<'success' | 'fail' | null>(null);
   const [stealPoints, setStealPoints] = useState(0);
+  const [lastSnapshot, setLastSnapshot] = useState<UndoSnapshot | null>(null);
   const [hydrated, setHydrated] = useState(false);
 
   // Gespeicherten Spielstand einmalig beim Laden wiederherstellen, damit ein
@@ -91,6 +108,7 @@ export default function FamilienduellPage() {
         if (saved.stealGroupIndex !== undefined) setStealGroupIndex(saved.stealGroupIndex);
         if (saved.stealResult !== undefined) setStealResult(saved.stealResult);
         if (typeof saved.stealPoints === 'number') setStealPoints(saved.stealPoints);
+        if (saved.lastSnapshot !== undefined) setLastSnapshot(saved.lastSnapshot);
       }
     } catch {
       // Beschädigter oder gesperrter Storage: einfach mit dem Standardzustand starten.
@@ -118,6 +136,7 @@ export default function FamilienduellPage() {
       stealGroupIndex,
       stealResult,
       stealPoints,
+      lastSnapshot,
     };
     try {
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(snapshot));
@@ -141,6 +160,7 @@ export default function FamilienduellPage() {
     stealGroupIndex,
     stealResult,
     stealPoints,
+    lastSnapshot,
   ]);
 
   const currentGroup = groups[currentGroupIndex];
@@ -171,6 +191,39 @@ export default function FamilienduellPage() {
     setGroupNames((prev) => prev.map((n, i) => (i === index ? name : n)));
   }
 
+  /** Merkt sich den Stand direkt vor einer Eingabe, damit sie per Klick rückgängig gemacht werden kann. */
+  function captureSnapshot() {
+    setLastSnapshot({
+      phase,
+      groups,
+      currentGroupIndex,
+      questionQueue,
+      currentQuestion,
+      revealed,
+      strikes,
+      roundPoints,
+      stealGroupIndex,
+      stealResult,
+      stealPoints,
+    });
+  }
+
+  function undoLast() {
+    if (!lastSnapshot) return;
+    setPhase(lastSnapshot.phase);
+    setGroups(lastSnapshot.groups);
+    setCurrentGroupIndex(lastSnapshot.currentGroupIndex);
+    setQuestionQueue(lastSnapshot.questionQueue);
+    setCurrentQuestion(lastSnapshot.currentQuestion);
+    setRevealed(lastSnapshot.revealed);
+    setStrikes(lastSnapshot.strikes);
+    setRoundPoints(lastSnapshot.roundPoints);
+    setStealGroupIndex(lastSnapshot.stealGroupIndex);
+    setStealResult(lastSnapshot.stealResult);
+    setStealPoints(lastSnapshot.stealPoints);
+    setLastSnapshot(null);
+  }
+
   function drawQuestion(queue: FamilienduellQuestion[]): [FamilienduellQuestion, FamilienduellQuestion[]] {
     if (queue.length === 0) {
       const reshuffled = shuffle(familienduellQuestions);
@@ -198,12 +251,14 @@ export default function FamilienduellPage() {
     setStealGroupIndex(null);
     setStealResult(null);
     setStealPoints(0);
+    setLastSnapshot(null);
     setPhase('playing');
   }
 
   function toggleAnswer(index: number) {
     if (!currentQuestion || phase !== 'playing') return;
     const points = currentQuestion.answers[index].points;
+    captureSnapshot();
 
     if (revealed[index]) {
       // Versehentlich abgehakte Antwort per erneutem Klick rückgängig machen.
@@ -230,6 +285,7 @@ export default function FamilienduellPage() {
 
   function registerStrike() {
     if (phase !== 'playing') return;
+    captureSnapshot();
     playBuzzerSound();
     const next = strikes + 1;
     setStrikes(next);
@@ -242,6 +298,7 @@ export default function FamilienduellPage() {
   function stealAnswer(index: number) {
     if (!currentQuestion || revealed[index] || phase !== 'steal' || stealGroupIndex === null) return;
     const points = currentQuestion.answers[index].points;
+    captureSnapshot();
 
     playCorrectSound();
     setRevealed((prev) => prev.map((r, i) => (i === index ? true : r)));
@@ -255,12 +312,14 @@ export default function FamilienduellPage() {
 
   function stealMiss() {
     if (phase !== 'steal') return;
+    captureSnapshot();
     playBuzzerSound();
     setStealResult('fail');
     setPhase('roundEnd');
   }
 
   function nextRound() {
+    captureSnapshot();
     const [question, restQueue] = drawQuestion(questionQueue);
     setCurrentGroupIndex(nextGroupIndex);
     setQuestionQueue(restQueue);
@@ -275,6 +334,7 @@ export default function FamilienduellPage() {
   }
 
   function skipQuestion() {
+    captureSnapshot();
     const [question, restQueue] = drawQuestion(questionQueue);
     setQuestionQueue(restQueue);
     setCurrentQuestion(question);
@@ -293,6 +353,7 @@ export default function FamilienduellPage() {
     setGroups([]);
     setCurrentQuestion(null);
     setConfirmEnd(false);
+    setLastSnapshot(null);
   }
 
   const ranking = useMemo(() => [...groups].sort((a, b) => b.score - a.score), [groups]);
@@ -528,21 +589,26 @@ export default function FamilienduellPage() {
 
             {/* End game */}
             <div className={styles.footerRow}>
-              {!confirmEnd ? (
-                <button onClick={() => setConfirmEnd(true)} className={styles.endLink}>
-                  Spiel beenden
+              <div className={styles.footerActions}>
+                <button onClick={undoLast} disabled={!lastSnapshot} className={styles.undoLink}>
+                  ↩ Letzte Eingabe rückgängig
                 </button>
-              ) : (
-                <div className={styles.confirmRow}>
-                  <span className={styles.confirmText}>Spiel wirklich beenden?</span>
-                  <button onClick={endGame} className={styles.confirmYes}>
-                    Ja, beenden
+                {!confirmEnd ? (
+                  <button onClick={() => setConfirmEnd(true)} className={styles.endLink}>
+                    Spiel beenden
                   </button>
-                  <button onClick={() => setConfirmEnd(false)} className={styles.confirmNo}>
-                    Abbrechen
-                  </button>
-                </div>
-              )}
+                ) : (
+                  <div className={styles.confirmRow}>
+                    <span className={styles.confirmText}>Spiel wirklich beenden?</span>
+                    <button onClick={endGame} className={styles.confirmYes}>
+                      Ja, beenden
+                    </button>
+                    <button onClick={() => setConfirmEnd(false)} className={styles.confirmNo}>
+                      Abbrechen
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         )}
