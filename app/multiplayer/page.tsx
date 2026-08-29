@@ -206,8 +206,8 @@ function MultiplayerLobbyContent() {
   }, []);
 
   const defaultSettings = useMemo(
-    () => getDefaultSettings(availableCategories, availableDecades, [], gameMode),
-    [availableCategories, availableDecades, gameMode]
+    () => getDefaultSettings(availableCategories, availableDecades, []),
+    [availableCategories, availableDecades]
   );
   
   const [settings, setSettings] = useState(defaultSettings);

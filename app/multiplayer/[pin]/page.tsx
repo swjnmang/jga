@@ -449,7 +449,7 @@ export default function MultiplayerGamePage() {
       } else {
         await broadcastPlacementResult(pin, null); // clear result flag
         await nextCard(pin);
-        await nextTurn(pin); // Trivia/solo: group rotation handled separately
+        await nextTurn(pin); // Trivia: group rotation handled separately
       }
     } catch (err) {
       console.error('Error going to next card:', err);
@@ -1314,7 +1314,7 @@ export default function MultiplayerGamePage() {
             <div className="card-surface rounded-2xl p-6">
               <h3 className="font-semibold mb-2">Spielmodus</h3>
               <p className="text-lg">
-                {game.mode === 'timeline' ? '🔢 Timeline' : game.mode === 'trivia' ? '🎓 Trivia' : '👤 Solo'}
+                {game.mode === 'timeline' ? '🔢 Timeline' : '🎓 Trivia'}
               </p>
             </div>
 

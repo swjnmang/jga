@@ -110,15 +110,6 @@ export default function CreatePage() {
             </div>
             <span className="ml-auto text-ink/30 group-hover:translate-x-0.5 transition self-center">→</span>
           </Link>
-
-          {/* Solo – coming soon */}
-          <div className="w-full flex items-start gap-4 rounded-2xl border border-ink/5 bg-ink/[0.03] px-6 py-5 opacity-40 cursor-not-allowed select-none">
-            <span className="text-2xl mt-0.5">🎯</span>
-            <div>
-              <p className="font-semibold text-ink">Solo Modus</p>
-              <p className="text-sm text-ink/60 mt-0.5">Bald verfügbar</p>
-            </div>
-          </div>
         </div>
       </div>
     </main>

@@ -2561,8 +2561,7 @@ export async function recordHighscoreIfNeeded(pin: string): Promise<void> {
   const snapshot = await get(ref(database!, `games/${pin}`));
   if (!snapshot.exists()) return;
   const game: GameSession = snapshot.val();
-  // Solo-Runden haben keinen Gegner und zählen nicht als "gewonnene Runde".
-  if (game.mode === 'solo' || game.state !== 'finished' || !game.winnerGroupId) return;
+  if (game.state !== 'finished' || !game.winnerGroupId) return;
 
   const winner = game.groups?.[game.winnerGroupId];
   if (!winner) return;

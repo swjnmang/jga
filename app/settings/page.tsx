@@ -29,7 +29,7 @@ function SettingsPageContent() {
   const searchParams = useSearchParams();
   const modeParam = searchParams.get('mode');
   const returnParam = searchParams.get('return');
-  const mode: 'timeline' | 'trivia' | 'solo' | null = modeParam === 'timeline' || modeParam === 'trivia' || modeParam === 'solo' ? modeParam : null;
+  const mode: 'timeline' | 'trivia' | null = modeParam === 'timeline' || modeParam === 'trivia' ? modeParam : null;
 
   const availableCategories = useMemo(() => {
     const base = getCategories(cards).filter((c) => c !== 'video');
@@ -48,8 +48,8 @@ function SettingsPageContent() {
     return order.filter((d) => set.has(d));
   }, []);
   const defaults = useMemo(
-    () => getDefaultSettings(availableCategories, availableDecades, [], mode),
-    [availableCategories, availableDecades, mode]
+    () => getDefaultSettings(availableCategories, availableDecades, []),
+    [availableCategories, availableDecades]
   );
   const [settings, setSettings] = useState<UserSettings>(defaults);
   const [loaded, setLoaded] = useState(false);
