@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { createWordPotGame } from '@/lib/wordPotService';
+import { WORD_POT_LOCAL_STORAGE_KEY } from '@/lib/wordPotTypes';
 import styles from './begriffetopf.module.css';
 
 const MIN_GROUPS = 2;
@@ -68,6 +69,19 @@ export default function BegriffeTopfLandingPage() {
     }
   }
 
+  function handleStartLocal() {
+    try {
+      const trimmedNames = groupNames.map((name, i) => name.trim() || `Gruppe ${i + 1}`);
+      window.localStorage.setItem(
+        WORD_POT_LOCAL_STORAGE_KEY,
+        JSON.stringify({ phase: 'setup', groupCount, groupNames: trimmedNames })
+      );
+    } catch {
+      // Storage nicht verfügbar: Ein-Geräte-Modus startet trotzdem mit Standardwerten.
+    }
+    router.push('/begriffe-topf/lokal');
+  }
+
   function handleJoin() {
     const pin = joinPin.trim().toUpperCase();
     if (!pin) {
@@ -129,40 +143,40 @@ export default function BegriffeTopfLandingPage() {
               )}
             </div>
 
+            <div className={styles.section}>
+              <p className={styles.label}>Anzahl Gruppen</p>
+              <div className={styles.stepperRow}>
+                <button onClick={() => updateGroupCount(groupCount - 1)} disabled={groupCount <= MIN_GROUPS} className={styles.stepperBtn}>
+                  −
+                </button>
+                <span className={styles.stepperVal}>{groupCount}</span>
+                <button onClick={() => updateGroupCount(groupCount + 1)} disabled={groupCount >= MAX_GROUPS} className={styles.stepperBtn}>
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div className={styles.section}>
+              <p className={styles.label}>Gruppennamen</p>
+              <div className={styles.fieldList}>
+                {groupNames.map((name, i) => (
+                  <input
+                    key={i}
+                    value={name}
+                    onChange={(e) => updateGroupName(i, e.target.value)}
+                    placeholder={`Gruppe ${i + 1}`}
+                    className={styles.field}
+                  />
+                ))}
+              </div>
+            </div>
+
             {deviceMode === 'single' ? (
-              <button onClick={() => router.push('/begriffe-topf/lokal')} className={styles.primaryBtn}>
+              <button onClick={handleStartLocal} className={styles.primaryBtn}>
                 Los geht&apos;s →
               </button>
             ) : (
               <>
-                <div className={styles.section}>
-                  <p className={styles.label}>Anzahl Gruppen</p>
-                  <div className={styles.stepperRow}>
-                    <button onClick={() => updateGroupCount(groupCount - 1)} disabled={groupCount <= MIN_GROUPS} className={styles.stepperBtn}>
-                      −
-                    </button>
-                    <span className={styles.stepperVal}>{groupCount}</span>
-                    <button onClick={() => updateGroupCount(groupCount + 1)} disabled={groupCount >= MAX_GROUPS} className={styles.stepperBtn}>
-                      +
-                    </button>
-                  </div>
-                </div>
-
-                <div className={styles.section}>
-                  <p className={styles.label}>Gruppennamen</p>
-                  <div className={styles.fieldList}>
-                    {groupNames.map((name, i) => (
-                      <input
-                        key={i}
-                        value={name}
-                        onChange={(e) => updateGroupName(i, e.target.value)}
-                        placeholder={`Gruppe ${i + 1}`}
-                        className={styles.field}
-                      />
-                    ))}
-                  </div>
-                </div>
-
                 <div className={styles.section}>
                   <p className={styles.label}>Begriffe pro Person</p>
                   <div className={styles.stepperRow}>
