@@ -12,6 +12,12 @@ import styles from './familienduell.module.css';
 const MAX_STRIKES = 3;
 const MIN_GROUPS = 2;
 const MAX_GROUPS = 6;
+const MIN_QUESTION_TIMER = 5;
+const MAX_QUESTION_TIMER = 60;
+const QUESTION_TIMER_STEP = 5;
+const MIN_STEAL_TIMER = 10;
+const MAX_STEAL_TIMER = 90;
+const STEAL_TIMER_STEP = 5;
 const STORAGE_KEY = 'familienduell-game-state';
 
 type Group = {
@@ -28,6 +34,9 @@ type PersistedState = {
   groupNames: string[];
   pointLimitEnabled: boolean;
   pointLimit: number;
+  timerEnabled: boolean;
+  questionTimerSeconds: number;
+  stealTimerSeconds: number;
   groups: Group[];
   currentGroupIndex: number;
   questionQueue: FamilienduellQuestion[];
@@ -38,6 +47,8 @@ type PersistedState = {
   stealGroupIndex: number | null;
   stealResult: 'success' | 'fail' | null;
   stealPoints: number;
+  timerRunning: boolean;
+  timerSecondsLeft: number;
   lastSnapshot: UndoSnapshot | null;
 };
 
@@ -54,6 +65,8 @@ type UndoSnapshot = {
   stealGroupIndex: number | null;
   stealResult: 'success' | 'fail' | null;
   stealPoints: number;
+  timerRunning: boolean;
+  timerSecondsLeft: number;
 };
 
 function shuffle<T>(items: T[]): T[] {
@@ -71,6 +84,9 @@ export default function FamilienduellPage() {
   const [groupNames, setGroupNames] = useState<string[]>(['Gruppe 1', 'Gruppe 2', 'Gruppe 3']);
   const [pointLimitEnabled, setPointLimitEnabled] = useState(true);
   const [pointLimit, setPointLimit] = useState(500);
+  const [timerEnabled, setTimerEnabled] = useState(true);
+  const [questionTimerSeconds, setQuestionTimerSeconds] = useState(15);
+  const [stealTimerSeconds, setStealTimerSeconds] = useState(30);
 
   const [groups, setGroups] = useState<Group[]>([]);
   const [currentGroupIndex, setCurrentGroupIndex] = useState(0);
@@ -83,6 +99,8 @@ export default function FamilienduellPage() {
   const [stealGroupIndex, setStealGroupIndex] = useState<number | null>(null);
   const [stealResult, setStealResult] = useState<'success' | 'fail' | null>(null);
   const [stealPoints, setStealPoints] = useState(0);
+  const [timerRunning, setTimerRunning] = useState(false);
+  const [timerSecondsLeft, setTimerSecondsLeft] = useState(0);
   const [lastSnapshot, setLastSnapshot] = useState<UndoSnapshot | null>(null);
   const [hydrated, setHydrated] = useState(false);
 
@@ -98,6 +116,9 @@ export default function FamilienduellPage() {
         if (Array.isArray(saved.groupNames)) setGroupNames(saved.groupNames);
         if (typeof saved.pointLimitEnabled === 'boolean') setPointLimitEnabled(saved.pointLimitEnabled);
         if (typeof saved.pointLimit === 'number') setPointLimit(saved.pointLimit);
+        if (typeof saved.timerEnabled === 'boolean') setTimerEnabled(saved.timerEnabled);
+        if (typeof saved.questionTimerSeconds === 'number') setQuestionTimerSeconds(saved.questionTimerSeconds);
+        if (typeof saved.stealTimerSeconds === 'number') setStealTimerSeconds(saved.stealTimerSeconds);
         if (Array.isArray(saved.groups)) setGroups(saved.groups);
         if (typeof saved.currentGroupIndex === 'number') setCurrentGroupIndex(saved.currentGroupIndex);
         if (Array.isArray(saved.questionQueue)) setQuestionQueue(saved.questionQueue);
@@ -108,6 +129,8 @@ export default function FamilienduellPage() {
         if (saved.stealGroupIndex !== undefined) setStealGroupIndex(saved.stealGroupIndex);
         if (saved.stealResult !== undefined) setStealResult(saved.stealResult);
         if (typeof saved.stealPoints === 'number') setStealPoints(saved.stealPoints);
+        if (typeof saved.timerRunning === 'boolean') setTimerRunning(saved.timerRunning);
+        if (typeof saved.timerSecondsLeft === 'number') setTimerSecondsLeft(saved.timerSecondsLeft);
         if (saved.lastSnapshot !== undefined) setLastSnapshot(saved.lastSnapshot);
       }
     } catch {
@@ -126,6 +149,9 @@ export default function FamilienduellPage() {
       groupNames,
       pointLimitEnabled,
       pointLimit,
+      timerEnabled,
+      questionTimerSeconds,
+      stealTimerSeconds,
       groups,
       currentGroupIndex,
       questionQueue,
@@ -136,6 +162,8 @@ export default function FamilienduellPage() {
       stealGroupIndex,
       stealResult,
       stealPoints,
+      timerRunning,
+      timerSecondsLeft,
       lastSnapshot,
     };
     try {
@@ -150,6 +178,9 @@ export default function FamilienduellPage() {
     groupNames,
     pointLimitEnabled,
     pointLimit,
+    timerEnabled,
+    questionTimerSeconds,
+    stealTimerSeconds,
     groups,
     currentGroupIndex,
     questionQueue,
@@ -160,8 +191,18 @@ export default function FamilienduellPage() {
     stealGroupIndex,
     stealResult,
     stealPoints,
+    timerRunning,
+    timerSecondsLeft,
     lastSnapshot,
   ]);
+
+  // Timer-Countdown: zählt jede Sekunde herunter, solange er läuft, und bleibt
+  // bei 0 stehen (kein automatischer Effekt, nur die rot blinkende Anzeige).
+  useEffect(() => {
+    if (!timerRunning || timerSecondsLeft <= 0) return;
+    const t = setTimeout(() => setTimerSecondsLeft((s) => s - 1), 1000);
+    return () => clearTimeout(t);
+  }, [timerRunning, timerSecondsLeft]);
 
   const currentGroup = groups[currentGroupIndex];
   const stealGroup = stealGroupIndex !== null ? groups[stealGroupIndex] : null;
@@ -205,6 +246,8 @@ export default function FamilienduellPage() {
       stealGroupIndex,
       stealResult,
       stealPoints,
+      timerRunning,
+      timerSecondsLeft,
     });
   }
 
@@ -221,7 +264,21 @@ export default function FamilienduellPage() {
     setStealGroupIndex(lastSnapshot.stealGroupIndex);
     setStealResult(lastSnapshot.stealResult);
     setStealPoints(lastSnapshot.stealPoints);
+    setTimerRunning(lastSnapshot.timerRunning);
+    setTimerSecondsLeft(lastSnapshot.timerSecondsLeft);
     setLastSnapshot(null);
+  }
+
+  /** Setzt den Timer für eine neue Frage zurück (noch nicht gestartet). */
+  function resetTimerForNewQuestion() {
+    setTimerRunning(false);
+    setTimerSecondsLeft(questionTimerSeconds);
+  }
+
+  function startQuestionTimer() {
+    if (!timerEnabled) return;
+    setTimerRunning(true);
+    setTimerSecondsLeft(questionTimerSeconds);
   }
 
   function drawQuestion(queue: FamilienduellQuestion[]): [FamilienduellQuestion, FamilienduellQuestion[]] {
@@ -252,6 +309,7 @@ export default function FamilienduellPage() {
     setStealResult(null);
     setStealPoints(0);
     setLastSnapshot(null);
+    resetTimerForNewQuestion();
     setPhase('playing');
   }
 
@@ -280,6 +338,7 @@ export default function FamilienduellPage() {
     const nextRevealedCount = revealed.filter(Boolean).length + 1;
     if (nextRevealedCount >= currentQuestion.answers.length) {
       setPhase('roundEnd');
+      setTimerRunning(false);
     }
   }
 
@@ -292,6 +351,11 @@ export default function FamilienduellPage() {
     if (next >= MAX_STRIKES) {
       setStealGroupIndex((currentGroupIndex + 1) % groups.length);
       setPhase('steal');
+      // Die Diebstahl-Chance hat einen eigenen, automatisch startenden Timer.
+      if (timerEnabled) {
+        setTimerRunning(true);
+        setTimerSecondsLeft(stealTimerSeconds);
+      }
     }
   }
 
@@ -308,6 +372,7 @@ export default function FamilienduellPage() {
     setStealPoints(points);
     setStealResult('success');
     setPhase('roundEnd');
+    setTimerRunning(false);
   }
 
   function stealMiss() {
@@ -316,6 +381,7 @@ export default function FamilienduellPage() {
     playBuzzerSound();
     setStealResult('fail');
     setPhase('roundEnd');
+    setTimerRunning(false);
   }
 
   function nextRound() {
@@ -330,6 +396,7 @@ export default function FamilienduellPage() {
     setStealGroupIndex(null);
     setStealResult(null);
     setStealPoints(0);
+    resetTimerForNewQuestion();
     setPhase('playing');
   }
 
@@ -341,6 +408,7 @@ export default function FamilienduellPage() {
     setRevealed(new Array(question.answers.length).fill(false));
     setStrikes(0);
     setRoundPoints(0);
+    resetTimerForNewQuestion();
   }
 
   function endGame() {
@@ -354,6 +422,7 @@ export default function FamilienduellPage() {
     setCurrentQuestion(null);
     setConfirmEnd(false);
     setLastSnapshot(null);
+    setTimerRunning(false);
   }
 
   const ranking = useMemo(() => [...groups].sort((a, b) => b.score - a.score), [groups]);
@@ -452,6 +521,74 @@ export default function FamilienduellPage() {
               )}
             </div>
 
+            <div className={styles.section}>
+              <p className={styles.label}>Timer</p>
+              <div className={styles.toggleRow}>
+                <button
+                  onClick={() => setTimerEnabled(true)}
+                  className={timerEnabled ? styles.toggleBtnOn : styles.toggleBtn}
+                >
+                  Mit Timer
+                </button>
+                <button
+                  onClick={() => setTimerEnabled(false)}
+                  className={!timerEnabled ? styles.toggleBtnOn : styles.toggleBtn}
+                >
+                  Ohne Timer
+                </button>
+              </div>
+              {timerEnabled ? (
+                <>
+                  <p className={styles.hint}>
+                    Der Spielleiter startet den Timer manuell pro Frage. Läuft die Zeit ab, passiert
+                    nichts automatisch – die Anzeige blinkt nur rot.
+                  </p>
+                  <p className={styles.label}>Zeit pro Frage</p>
+                  <div className={styles.stepperRow}>
+                    <button
+                      onClick={() =>
+                        setQuestionTimerSeconds((s) => Math.max(MIN_QUESTION_TIMER, s - QUESTION_TIMER_STEP))
+                      }
+                      disabled={questionTimerSeconds <= MIN_QUESTION_TIMER}
+                      className={styles.stepperBtn}
+                    >
+                      −
+                    </button>
+                    <span className={styles.stepperVal}>{questionTimerSeconds}s</span>
+                    <button
+                      onClick={() =>
+                        setQuestionTimerSeconds((s) => Math.min(MAX_QUESTION_TIMER, s + QUESTION_TIMER_STEP))
+                      }
+                      disabled={questionTimerSeconds >= MAX_QUESTION_TIMER}
+                      className={styles.stepperBtn}
+                    >
+                      +
+                    </button>
+                  </div>
+                  <p className={styles.label}>Zeit für Diebstahl-Chance</p>
+                  <div className={styles.stepperRow}>
+                    <button
+                      onClick={() => setStealTimerSeconds((s) => Math.max(MIN_STEAL_TIMER, s - STEAL_TIMER_STEP))}
+                      disabled={stealTimerSeconds <= MIN_STEAL_TIMER}
+                      className={styles.stepperBtn}
+                    >
+                      −
+                    </button>
+                    <span className={styles.stepperVal}>{stealTimerSeconds}s</span>
+                    <button
+                      onClick={() => setStealTimerSeconds((s) => Math.min(MAX_STEAL_TIMER, s + STEAL_TIMER_STEP))}
+                      disabled={stealTimerSeconds >= MAX_STEAL_TIMER}
+                      className={styles.stepperBtn}
+                    >
+                      +
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <p className={styles.hint}>Es wird keine Zeit angezeigt oder gemessen.</p>
+              )}
+            </div>
+
             <button
               onClick={startGame}
               disabled={pointLimitEnabled && (!pointLimit || pointLimit <= 0)}
@@ -511,6 +648,36 @@ export default function FamilienduellPage() {
                 </button>
               ))}
             </div>
+
+            {/* Timer */}
+            {timerEnabled && phase === 'playing' && (
+              <div className={styles.timerBox}>
+                <span className={styles.timerLabel}>⏱ Timer</span>
+                <div className={styles.timerRight}>
+                  <span
+                    className={
+                      timerRunning && timerSecondsLeft <= 0 ? styles.timerValueExpired : styles.timerValue
+                    }
+                  >
+                    {timerRunning ? timerSecondsLeft : questionTimerSeconds}
+                  </span>
+                  {!timerRunning && (
+                    <button onClick={startQuestionTimer} className={styles.timerStartBtn}>
+                      ▶ Timer starten
+                    </button>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {timerEnabled && phase === 'steal' && (
+              <div className={styles.timerBox}>
+                <span className={styles.timerLabel}>⏱ Diebstahl-Timer</span>
+                <span className={timerSecondsLeft <= 0 ? styles.timerValueExpired : styles.timerValue}>
+                  {timerSecondsLeft}
+                </span>
+              </div>
+            )}
 
             {/* Strikes + controls */}
             {phase === 'playing' && (
