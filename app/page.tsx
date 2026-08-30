@@ -14,8 +14,8 @@ export default function HomePage() {
 
   return (
     <>
-      <main className="min-h-screen bg-grid flex items-center justify-center px-6 py-16">
-        <div className="w-full max-w-4xl rounded-3xl bg-glass border border-ink/10 shadow-2xl backdrop-blur-xl p-10 md:p-14 space-y-10 text-center">
+      <main className="min-h-screen bg-grid flex items-center justify-center sm:px-6 sm:py-16">
+        <div className="w-full max-w-4xl min-h-screen sm:min-h-0 sm:rounded-3xl bg-glass border-0 sm:border sm:border-ink/10 shadow-none sm:shadow-2xl backdrop-blur-xl flex flex-col justify-center px-5 py-10 sm:p-10 md:p-14 space-y-8 sm:space-y-10 text-center">
           <div className="space-y-4">
             <div className="flex flex-col items-center gap-3">
               <LogoMark />
