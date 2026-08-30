@@ -294,6 +294,54 @@
   opacity: 1;
 }
 
+.timerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-radius: 16px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  padding: 0.7rem 1rem;
+}
+.timerLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+.timerRight { display: flex; align-items: center; gap: 0.75rem; }
+.timerValue {
+  composes: display;
+  font-variant-numeric: tabular-nums;
+  font-size: 1.6rem;
+  font-weight: 700;
+  min-width: 2.2rem;
+  text-align: center;
+}
+.timerValueExpired {
+  composes: timerValue;
+  color: var(--coral);
+  animation: timerBlink 1s step-start infinite;
+}
+@keyframes timerBlink {
+  50% { opacity: 0.25; }
+}
+.timerStartBtn {
+  composes: display;
+  border: none;
+  border-radius: 14px;
+  background: var(--coral);
+  color: #fff;
+  padding: 0.55rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.timerStartBtn:hover { opacity: 0.9; }
+
 .strikesRow { display: flex; align-items: center; justify-content: space-between; }
 .strikes { display: flex; gap: 0.4rem; }
 
