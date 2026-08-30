@@ -55,7 +55,7 @@ export interface GameSession {
   id: string; // PIN
   hostId: string;
   state: GameState;
-  mode: 'timeline' | 'trivia' | 'solo';
+  mode: 'timeline' | 'trivia';
   settings: UserSettings;
   currentCardIndex: number;
   currentCardId: string | null;
@@ -168,7 +168,7 @@ export interface GameSession {
     votes: Record<string, boolean>;    // groupId -> Stimme (true = beenden)
   } | null;
   // Highscores: true, sobald der Sieg dieser Runde in highscores/ aufgezeichnet wurde
-  // (oder feststeht, dass keine Aufzeichnung nötig ist, z.B. Solo-Modus).
+  // (oder feststeht, dass keine Aufzeichnung nötig ist).
   highscoreRecorded?: boolean;
 }
 
@@ -181,14 +181,14 @@ export interface HighscoreEntry {
   groupName: string;
   groupColor: string;
   avatar?: string | null;
-  mode: 'timeline' | 'trivia' | 'solo';
+  mode: 'timeline' | 'trivia';
   points: number;                 // group.score zum Zeitpunkt des Siegs (Timeline: korrekt platzierte Karten, Trivia: Punkte)
   completedCategories: number;    // Trivia (Kategorien-Modus): Anzahl gesammelter Kategorien
   finishedAt: number;
 }
 
 export interface CreateGameParams {
-  mode: 'timeline' | 'trivia' | 'solo';
+  mode: 'timeline' | 'trivia';
   settings: UserSettings;
   deck: Card[];
   hostGroupName: string;

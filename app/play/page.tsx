@@ -23,15 +23,8 @@ function PlayMenuContent() {
           </p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-3">
-          <ModeCard 
-            href="/app-settings?mode=solo&return=%2Fplay%3Fmode%3Dsolo%26start%3D1"
-            label="Solo Modus"
-            icon="🎮"
-            description="Trainiere allein"
-            disabled
-          />
-          <ModeCard 
+        <div className="grid gap-4 md:grid-cols-2">
+          <ModeCard
             href="/multiplayer?gameMode=timeline"
             label="Timeline Multiplayer"
             icon="⏳"
@@ -207,7 +200,7 @@ type TimerState = {
   running: boolean;
 };
 
-type GameMode = 'timeline' | 'trivia' | 'solo';
+type GameMode = 'timeline' | 'trivia';
 
 const triviaOnlySet = new Set<CardCategory>(TRIVIA_ONLY_CATEGORIES);
 
@@ -343,7 +336,7 @@ function QuizContent() {
   const searchParams = useSearchParams();
   const modeQuery = searchParams.get('mode');
   const startQuery = searchParams.get('start');
-  const preselectedMode: GameMode | null = modeQuery === 'timeline' || modeQuery === 'trivia' || modeQuery === 'solo' ? modeQuery : null;
+  const preselectedMode: GameMode | null = modeQuery === 'timeline' || modeQuery === 'trivia' ? modeQuery : null;
   const startFlag = startQuery === '1';
   const availableCategories = useMemo(() => getCategories(cards).filter((c) => c !== 'video'), []);
   const availableDecades = useMemo(() => {
@@ -447,7 +440,6 @@ function QuizContent() {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [mcOptions, setMcOptions] = useState<{ options: string[]; correctIndex: number } | null>(null);
   const mcCacheRef = useRef<Map<number, { options: string[]; correctIndex: number }>>(new Map());
-  // Solo mode scoring
   const [score, setScore] = useState(0);
   // Start with auth prompt open; will be hidden immediately if session is already valid.
   const [needsSpotifyAuth, setNeedsSpotifyAuth] = useState<boolean>(true);
@@ -648,16 +640,11 @@ function QuizContent() {
     }
   }, [filteredDeck.length, index, showSolution]);
 
-  const handleMultipleChoiceAnswer = useCallback((answerIndex: number, correctIndex: number) => {
+  const handleMultipleChoiceAnswer = useCallback((answerIndex: number) => {
     setSelectedAnswer(answerIndex);
     setShowSolution(true);
     setTimer((prev) => ({ ...prev, running: false }));
-    
-    // Award points in solo mode for correct answers
-    if (mode === 'solo' && answerIndex === correctIndex) {
-      setScore((prev) => prev + 1);
-    }
-  }, [mode]);
+  }, []);
 
   const markCardBlocked = useCallback(
     (id: string) => {
@@ -923,7 +910,7 @@ function QuizContent() {
         <main className="mx-auto max-w-3xl px-5 py-12 space-y-6 text-center">
           <h1 className="text-3xl font-display">Einstellungen vor dem Start</h1>
           <p className="text-ink/70">
-            Bitte zuerst die {preselectedMode === 'timeline' ? 'Timeline' : preselectedMode === 'solo' ? 'Solo' : 'Trivia'}-Einstellungen abschließen.
+            Bitte zuerst die {preselectedMode === 'timeline' ? 'Timeline' : 'Trivia'}-Einstellungen abschließen.
           </p>
           <div className="flex justify-center">
             <button
@@ -941,7 +928,7 @@ function QuizContent() {
     return (
       <main className="mx-auto max-w-3xl px-5 py-12 space-y-6 text-center">
         <h1 className="text-2xl sm:text-3xl font-display">Modus wählen</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 justify-center mt-8 sm:mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 justify-center mt-8 sm:mt-12">
           <button
             type="button"
             className={`rounded-2xl border-2 px-6 sm:px-8 py-6 sm:py-8 transition-all transform active:scale-95 sm:hover:scale-105 ${
@@ -967,15 +954,6 @@ function QuizContent() {
             <div className="text-4xl sm:text-5xl mb-2 sm:mb-3">🎓</div>
             <div className="text-lg sm:text-xl font-semibold">Trivia</div>
             <div className="text-xs opacity-60 mt-1 sm:mt-2">Wissen testen</div>
-          </button>
-          <button
-            type="button"
-            disabled
-            className="rounded-2xl border-2 px-6 sm:px-8 py-6 sm:py-8 border-ink/15 opacity-40 cursor-not-allowed relative"
-          >
-            <div className="text-4xl sm:text-5xl mb-2 sm:mb-3">👤</div>
-            <div className="text-lg sm:text-xl font-semibold">Solo</div>
-            <div className="text-xs opacity-60 mt-1 sm:mt-2">Demnächst verfügbar</div>
           </button>
         </div>
 
@@ -1023,22 +1001,6 @@ function QuizContent() {
               </>
             )}
 
-            {selectedMode === 'solo' && (
-              <>
-                <h2 className="text-xl font-semibold text-center">Solo Spielregeln</h2>
-                <p className="text-sm text-ink/70">
-                  Ziel: Alleine so viele Fragen wie möglich richtig beantworten und Punkte sammeln.
-                </p>
-                <ol className="list-decimal list-inside space-y-1 text-sm text-ink/80">
-                  <li>Aktiviere "Multiple-Choice Antworten" in den Einstellungen für automatische Punktezählung.</li>
-                  <li>Wähle aus 4 Antwortmöglichkeiten die richtige Antwort.</li>
-                  <li>Richtige Antwort = +1 Punkt (grün markiert).</li>
-                  <li>Falsche Antwort = 0 Punkte (rot markiert, richtige wird grün gezeigt).</li>
-                  <li>Deine Punktzahl wird oben angezeigt und bei jedem Neustart zurückgesetzt.</li>
-                </ol>
-              </>
-            )}
-
             <div className="flex justify-center pt-4">
               <button
                 type="button"
@@ -1060,8 +1022,7 @@ function QuizContent() {
         <div className="flex-1 min-w-0">
           <p className="text-xs sm:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] text-ink/60 truncate">Frage {index + 1} / {filteredDeck.length}</p>
           <h1 className="text-2xl sm:text-3xl font-display truncate">
-            {mode === 'timeline' ? 'Timeline' : mode === 'solo' ? 'Solo' : 'Trivia'}
-            {mode === 'solo' && settings.multipleChoice && <span className="text-lg ml-3 text-ink/70">• {score} Punkte</span>}
+            {mode === 'timeline' ? 'Timeline' : 'Trivia'}
           </h1>
           {digitalTimelineStarted && (
             <p className="text-sm text-ink/70 mt-1">
@@ -1098,7 +1059,7 @@ function QuizContent() {
       )}
 
       <section key={`card-${card.id}`} className="card-surface rounded-2xl p-4 sm:p-5 space-y-3 animate-slide-up">
-        {card.category === 'schaetzfragen' && mode !== 'solo' && (
+        {card.category === 'schaetzfragen' && (
           <div className="flex items-center gap-3 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-amber-900 animate-pulse">
             <span className="text-xl">🎯</span>
             <div className="leading-tight">
@@ -1156,7 +1117,7 @@ function QuizContent() {
               <button
                 key={idx}
                 type="button"
-                onClick={() => handleMultipleChoiceAnswer(idx, mcOptions.correctIndex)}
+                onClick={() => handleMultipleChoiceAnswer(idx)}
                 className="rounded-xl border-2 border-ink/20 px-4 py-3 text-sm text-left hover:border-ink/40 hover:bg-ink/5 transition-all"
               >
                 {option}

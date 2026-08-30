@@ -18,7 +18,6 @@ const SORT_OPTIONS: { key: SortKey; label: string }[] = [
 const MODE_LABEL: Record<HighscoreEntry['mode'], string> = {
   timeline: '🕰️ Timeline',
   trivia: '🎮 Trivia',
-  solo: 'Solo',
 };
 
 export default function HighscoresPage() {

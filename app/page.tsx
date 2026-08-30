@@ -38,16 +38,9 @@ export default function HomePage() {
           <div className="grid gap-4 sm:grid-cols-2">
             <Link
               href="/create"
-              className="group inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20"
+              className="group inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20 sm:col-span-2"
             >
               <span>Spiel erstellen</span>
-              <span className="ml-2 text-inkDark/60 transition group-hover:translate-x-0.5">→</span>
-            </Link>
-            <Link
-              href="/multiplayer?open=join"
-              className="group inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20"
-            >
-              <span>Spiel beitreten</span>
               <span className="ml-2 text-inkDark/60 transition group-hover:translate-x-0.5">→</span>
             </Link>
             <SecondaryButton href="/app-settings" label="Einstellungen" />
