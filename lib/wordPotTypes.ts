@@ -1,3 +1,5 @@
+export const WORD_POT_LOCAL_STORAGE_KEY = 'begriffetopf-lokal-state';
+
 export type WordPotPhase = 'lobby' | 'playing' | 'finished';
 
 export type WordPotRoundNumber = 1 | 2 | 3;

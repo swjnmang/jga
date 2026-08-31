@@ -2,7 +2,12 @@
 
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
-import { ROUND_LABELS, ROUND_DESCRIPTIONS, WordPotRoundNumber } from '@/lib/wordPotTypes';
+import {
+  ROUND_LABELS,
+  ROUND_DESCRIPTIONS,
+  WORD_POT_LOCAL_STORAGE_KEY,
+  WordPotRoundNumber,
+} from '@/lib/wordPotTypes';
 import styles from '../begriffetopf.module.css';
 
 const MIN_GROUPS = 2;
@@ -12,7 +17,7 @@ const MAX_WORDS = 20;
 const MIN_SECONDS = 20;
 const MAX_SECONDS = 90;
 const SECONDS_STEP = 5;
-const STORAGE_KEY = 'begriffetopf-lokal-state';
+const STORAGE_KEY = WORD_POT_LOCAL_STORAGE_KEY;
 
 type Group = { id: string; name: string; score: number };
 type LocalWord = { id: string; text: string; groupId: string };
