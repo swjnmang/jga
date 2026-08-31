@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   subscribeToWordPotGame,
   joinWordPotGame,
@@ -16,6 +16,7 @@ import {
   endWordPotGameEarly,
 } from '@/lib/wordPotService';
 import { WordPotGame, ROUND_LABELS, ROUND_DESCRIPTIONS } from '@/lib/wordPotTypes';
+import { playBuzzerSound } from '@/lib/familienduellSounds';
 import styles from '../begriffetopf.module.css';
 
 const STORAGE_KEY = 'wordpot_session';
@@ -70,9 +71,17 @@ export default function BegriffeTopfGamePage() {
     return () => clearInterval(interval);
   }, []);
 
+  // Verhindert, dass derselbe Ablauf-Zeitpunkt mehrfach den Signalton auslöst
+  // (der Watchdog läuft bei jedem Sekunden-Tick, bis der Server turnActive beendet).
+  const signaledTurnEndRef = useRef<number | null>(null);
+
   useEffect(() => {
     if (!game || !game.turnActive || !game.turnEndsAt) return;
     if (Date.now() >= game.turnEndsAt) {
+      if (signaledTurnEndRef.current !== game.turnEndsAt) {
+        signaledTurnEndRef.current = game.turnEndsAt;
+        playBuzzerSound();
+      }
       endWordPotTurn(pin);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

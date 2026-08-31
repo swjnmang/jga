@@ -8,6 +8,7 @@ import {
   WORD_POT_LOCAL_STORAGE_KEY,
   WordPotRoundNumber,
 } from '@/lib/wordPotTypes';
+import { playBuzzerSound } from '@/lib/familienduellSounds';
 import styles from '../begriffetopf.module.css';
 
 const MIN_GROUPS = 2;
@@ -222,6 +223,7 @@ export default function BegriffeTopfLokalPage() {
   useEffect(() => {
     if (phase !== 'playing') return;
     if (timeLeft <= 0) {
+      playBuzzerSound();
       setCurrentGroupIndex((i) => (i + 1) % groups.length);
       setCurrentWordId(null);
       setRoundComplete(false);
