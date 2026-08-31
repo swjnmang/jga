@@ -2,7 +2,16 @@
 
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
-import { partnerKannTasks, type PartnerKannTask } from '@/lib/partnerKannTasks';
+import {
+  partnerKannTasks,
+  partnerKannCategories,
+  partnerKannCategoryLabels,
+  partnerKannCategoryIcons,
+  getPartnerKannTimerConfig,
+  type PartnerKannTask,
+  type PartnerKannCategory,
+} from '@/lib/partnerKannTasks';
+import { playBuzzerSound } from '@/lib/familienduellSounds';
 import styles from './partnerkann.module.css';
 
 const MIN_GROUPS = 2;
@@ -15,14 +24,14 @@ type Group = {
   score: number;
 };
 
-type Phase = 'setup' | 'bidding' | 'attempt' | 'roundEnd' | 'finished';
+type Phase = 'setup' | 'pickTask' | 'bidding' | 'attempt' | 'roundEnd' | 'finished';
 
 type PersistedState = {
   phase: Phase;
   groupCount: number;
   groupNames: string[];
   groups: Group[];
-  taskQueue: PartnerKannTask[];
+  usedTaskIds: string[];
   currentTask: PartnerKannTask | null;
   winningGroupIndex: number | null;
   bidValueInput: string;
@@ -45,7 +54,7 @@ export default function PartnerKannPage() {
   const [groupNames, setGroupNames] = useState<string[]>(['Paar 1', 'Paar 2', 'Paar 3']);
 
   const [groups, setGroups] = useState<Group[]>([]);
-  const [taskQueue, setTaskQueue] = useState<PartnerKannTask[]>([]);
+  const [usedTaskIds, setUsedTaskIds] = useState<string[]>([]);
   const [currentTask, setCurrentTask] = useState<PartnerKannTask | null>(null);
   const [winningGroupIndex, setWinningGroupIndex] = useState<number | null>(null);
   const [bidValueInput, setBidValueInput] = useState('');
@@ -53,6 +62,16 @@ export default function PartnerKannPage() {
   const [roundOutcome, setRoundOutcome] = useState<'success' | 'fail' | null>(null);
   const [confirmEnd, setConfirmEnd] = useState(false);
   const [hydrated, setHydrated] = useState(false);
+
+  // Timer für zeitbasierte Aufgaben (Countdown mit fester Sekundenzahl, oder
+  // Stoppuhr für Aufgaben, deren erzielte Dauer selbst das Ergebnis ist).
+  const timerConfig = useMemo(
+    () => (currentTask ? getPartnerKannTimerConfig(currentTask.text) : null),
+    [currentTask]
+  );
+  const [timerValue, setTimerValue] = useState(0);
+  const [timerRunning, setTimerRunning] = useState(false);
+  const [timerDone, setTimerDone] = useState(false);
 
   // Gespeicherten Spielstand einmalig beim Laden wiederherstellen, damit ein
   // Browser-Refresh die laufende Runde nicht aus dem Spiel wirft.
@@ -65,7 +84,7 @@ export default function PartnerKannPage() {
         if (typeof saved.groupCount === 'number') setGroupCount(saved.groupCount);
         if (Array.isArray(saved.groupNames)) setGroupNames(saved.groupNames);
         if (Array.isArray(saved.groups)) setGroups(saved.groups);
-        if (Array.isArray(saved.taskQueue)) setTaskQueue(saved.taskQueue);
+        if (Array.isArray(saved.usedTaskIds)) setUsedTaskIds(saved.usedTaskIds);
         if (saved.currentTask) setCurrentTask(saved.currentTask);
         if (saved.winningGroupIndex !== undefined) setWinningGroupIndex(saved.winningGroupIndex);
         if (typeof saved.bidValueInput === 'string') setBidValueInput(saved.bidValueInput);
@@ -86,7 +105,7 @@ export default function PartnerKannPage() {
       groupCount,
       groupNames,
       groups,
-      taskQueue,
+      usedTaskIds,
       currentTask,
       winningGroupIndex,
       bidValueInput,
@@ -104,7 +123,7 @@ export default function PartnerKannPage() {
     groupCount,
     groupNames,
     groups,
-    taskQueue,
+    usedTaskIds,
     currentTask,
     winningGroupIndex,
     bidValueInput,
@@ -128,12 +147,69 @@ export default function PartnerKannPage() {
     setGroupNames((prev) => prev.map((n, i) => (i === index ? name : n)));
   }
 
-  function drawTask(queue: PartnerKannTask[]): [PartnerKannTask, PartnerKannTask[]] {
-    if (queue.length === 0) {
-      const reshuffled = shuffle(partnerKannTasks);
-      return [reshuffled[0], reshuffled.slice(1)];
+  // Timer zurücksetzen, sobald eine neue Aufgabe gezogen wird.
+  useEffect(() => {
+    setTimerRunning(false);
+    setTimerDone(false);
+    setTimerValue(timerConfig?.mode === 'countdown' ? timerConfig.seconds : 0);
+  }, [currentTask?.id, timerConfig]);
+
+  // Countdown: zählt herunter, solange der Timer läuft.
+  useEffect(() => {
+    if (!timerRunning || timerConfig?.mode !== 'countdown') return;
+    if (timerValue <= 0) {
+      setTimerRunning(false);
+      setTimerDone(true);
+      playBuzzerSound();
+      return;
     }
-    return [queue[0], queue.slice(1)];
+    const t = setTimeout(() => setTimerValue((v) => v - 1), 1000);
+    return () => clearTimeout(t);
+  }, [timerRunning, timerValue, timerConfig]);
+
+  // Stoppuhr: zählt hoch, solange sie läuft.
+  useEffect(() => {
+    if (!timerRunning || timerConfig?.mode !== 'stopwatch') return;
+    const t = setTimeout(() => setTimerValue((v) => v + 1), 1000);
+    return () => clearTimeout(t);
+  }, [timerRunning, timerValue, timerConfig]);
+
+  function resetTimer() {
+    setTimerRunning(false);
+    setTimerDone(false);
+    setTimerValue(timerConfig?.mode === 'countdown' ? timerConfig.seconds : 0);
+  }
+
+  /**
+   * Zieht eine Aufgabe aus der gewählten Kategorie (oder "random" für alle
+   * Kategorien zusammen) und schließt bereits gestellte Aufgaben aus. Ist der
+   * Pool erschöpft, wird nur dessen Historie zurückgesetzt, andere Kategorien
+   * bleiben unberührt.
+   */
+  function pickTask(category: PartnerKannCategory | 'random') {
+    const pool = category === 'random' ? partnerKannTasks : partnerKannTasks.filter((t) => t.category === category);
+    let available = pool.filter((t) => !usedTaskIds.includes(t.id));
+    if (available.length === 0) {
+      const poolIds = new Set(pool.map((t) => t.id));
+      setUsedTaskIds((prev) => prev.filter((id) => !poolIds.has(id)));
+      available = pool;
+    }
+    const task = shuffle(available)[0];
+    setUsedTaskIds((prev) => [...prev, task.id]);
+    setCurrentTask(task);
+    setWinningGroupIndex(null);
+    setBidValueInput('');
+    setConfirmedBid(null);
+    setRoundOutcome(null);
+    setPhase('bidding');
+  }
+
+  function goToPickTask() {
+    setWinningGroupIndex(null);
+    setBidValueInput('');
+    setConfirmedBid(null);
+    setRoundOutcome(null);
+    setPhase('pickTask');
   }
 
   function startGame() {
@@ -142,17 +218,15 @@ export default function PartnerKannPage() {
       name: name.trim() || `Paar ${i + 1}`,
       score: 0,
     }));
-    const shuffled = shuffle(partnerKannTasks);
-    const [task, restQueue] = drawTask(shuffled);
 
     setGroups(initialGroups);
-    setTaskQueue(restQueue);
-    setCurrentTask(task);
+    setUsedTaskIds([]);
+    setCurrentTask(null);
     setWinningGroupIndex(null);
     setBidValueInput('');
     setConfirmedBid(null);
     setRoundOutcome(null);
-    setPhase('bidding');
+    setPhase('pickTask');
   }
 
   function selectBidder(index: number) {
@@ -177,25 +251,6 @@ export default function PartnerKannPage() {
     );
     setRoundOutcome(success ? 'success' : 'fail');
     setPhase('roundEnd');
-  }
-
-  function nextTask() {
-    const [task, restQueue] = drawTask(taskQueue);
-    setTaskQueue(restQueue);
-    setCurrentTask(task);
-    setWinningGroupIndex(null);
-    setBidValueInput('');
-    setConfirmedBid(null);
-    setRoundOutcome(null);
-    setPhase('bidding');
-  }
-
-  function skipTask() {
-    const [task, restQueue] = drawTask(taskQueue);
-    setTaskQueue(restQueue);
-    setCurrentTask(task);
-    setWinningGroupIndex(null);
-    setBidValueInput('');
   }
 
   function endGame() {
@@ -226,9 +281,9 @@ export default function PartnerKannPage() {
         {phase === 'setup' && (
           <>
             <p className={styles.intro}>
-              Angelehnt an die SAT.1-Show „Mein Mann kann": Eine zufällige, messbare Aufgabe wird
-              gezogen (z.&nbsp;B. „Wie viele Wäscheklammern kann er/sie in 60 Sekunden anlegen?").
-              Die <strong>nicht antretenden</strong> Partner bieten reihum, wie gut ihr Partner/ihre
+              Angelehnt an die SAT.1-Show „Mein Mann kann": Eine messbare Aufgabe wird gestellt
+              (z.&nbsp;B. „Wie viele Wäscheklammern kann er/sie in 60 Sekunden anlegen?"). Die{' '}
+              <strong>nicht antretenden</strong> Partner bieten reihum, wie gut ihr Partner/ihre
               Partnerin abschneiden wird – wie bei einer Auktion. Wer am höchsten bietet, bekommt
               den Zuschlag: Der eigene Partner/die eigene Partnerin muss die Aufgabe jetzt erfüllen
               und mindestens die gebotene Zahl erreichen.
@@ -237,7 +292,8 @@ export default function PartnerKannPage() {
             <ol className={styles.rules}>
               <li className={styles.rule}>
                 <span className={styles.ruleNum}>1</span>
-                Aufgabe ziehen und laut vorlesen.
+                Wer das Handy hält, wählt eine Kategorie oder zieht eine zufällige Aufgabe – und
+                liest sie laut vor.
               </li>
               <li className={styles.rule}>
                 <span className={styles.ruleNum}>2</span>
@@ -247,7 +303,8 @@ export default function PartnerKannPage() {
               <li className={styles.rule}>
                 <span className={styles.ruleNum}>3</span>
                 Der antretende Partner/die antretende Partnerin versucht, die gebotene Zahl zu
-                erreichen oder zu übertreffen.
+                erreichen oder zu übertreffen. Bei zeitbasierten Aufgaben blendet die App direkt
+                einen passenden Timer ein.
               </li>
               <li className={styles.rule}>
                 <span className={styles.ruleNum}>4</span>
@@ -298,7 +355,7 @@ export default function PartnerKannPage() {
           </>
         )}
 
-        {(phase === 'bidding' || phase === 'attempt' || phase === 'roundEnd') && currentTask && (
+        {(phase === 'pickTask' || phase === 'bidding' || phase === 'attempt' || phase === 'roundEnd') && (
           <div className={styles.gameArea}>
             {/* Scoreboard */}
             <div className={styles.scoreRow}>
@@ -310,84 +367,138 @@ export default function PartnerKannPage() {
               ))}
             </div>
 
-            {/* Task card */}
-            <div className={styles.taskCard}>
-              <p className={styles.taskLabel}>Mein Partner/meine Partnerin kann…</p>
-              <p className={styles.taskText}>{currentTask.text}</p>
-            </div>
-
-            {phase === 'bidding' && (
+            {phase === 'pickTask' && (
               <div className={styles.section}>
-                <p className={styles.label}>Wer hat am höchsten geboten?</p>
-                <div className={styles.bidderRow}>
-                  {groups.map((g, i) => (
-                    <button
-                      key={g.id}
-                      onClick={() => selectBidder(i)}
-                      className={i === winningGroupIndex ? styles.bidderPillActive : styles.bidderPill}
-                    >
-                      {g.name}
+                <p className={styles.label}>Kategorie wählen oder zufällig ziehen</p>
+                <div className={styles.categoryGrid}>
+                  {partnerKannCategories.map((cat) => (
+                    <button key={cat} onClick={() => pickTask(cat)} className={styles.categoryBtn}>
+                      <span className={styles.categoryIcon}>{partnerKannCategoryIcons[cat]}</span>
+                      {partnerKannCategoryLabels[cat]}
                     </button>
                   ))}
                 </div>
-                <p className={styles.label}>Gebotene Zahl</p>
-                <input
-                  type="number"
-                  min={1}
-                  inputMode="numeric"
-                  value={bidValueInput}
-                  onChange={(e) => setBidValueInput(e.target.value)}
-                  placeholder="z.B. 15"
-                  className={styles.field}
-                />
-                <button
-                  onClick={confirmBid}
-                  disabled={winningGroupIndex === null || !bidValueInput || parseInt(bidValueInput, 10) <= 0}
-                  className={styles.primaryBtn}
-                >
-                  Zuschlag bestätigen →
-                </button>
-                <button onClick={skipTask} className={styles.skipLink}>
-                  Aufgabe überspringen
+                <button onClick={() => pickTask('random')} className={styles.primaryBtn}>
+                  🎲 Zufällige Aufgabe
                 </button>
               </div>
             )}
 
-            {phase === 'attempt' && winningGroup && (
-              <div className={styles.attemptBox}>
-                <p className={styles.attemptTitle}>
-                  🎯 {winningGroup.name} hat für {confirmedBid} geboten!
-                </p>
-                <p className={styles.attemptDesc}>
-                  Schafft der antretende Partner/die antretende Partnerin mindestens {confirmedBid}?
-                </p>
-                <div className={styles.attemptBtnRow}>
-                  <button onClick={() => markOutcome(true)} className={styles.successBtn}>
-                    ✅ Geschafft
-                  </button>
-                  <button onClick={() => markOutcome(false)} className={styles.failBtn}>
-                    ❌ Nicht geschafft
-                  </button>
+            {currentTask && (phase === 'bidding' || phase === 'attempt' || phase === 'roundEnd') && (
+              <>
+                {/* Task card */}
+                <div className={styles.taskCard}>
+                  <span className={styles.categoryChip}>{partnerKannCategoryLabels[currentTask.category]}</span>
+                  <p className={styles.taskLabel}>Mein Partner/meine Partnerin kann…</p>
+                  <p className={styles.taskText}>{currentTask.text}</p>
                 </div>
-              </div>
-            )}
 
-            {phase === 'roundEnd' && winningGroup && (
-              <div className={roundOutcome === 'success' ? styles.roundEndBoxSuccess : styles.roundEndBoxFail}>
-                <p className={styles.roundTitle}>
-                  {roundOutcome === 'success'
-                    ? `${winningGroup.name} hat es geschafft! 🎉`
-                    : `${winningGroup.name} hat die ${confirmedBid} nicht erreicht.`}
-                </p>
-                <p className={styles.roundSub}>
-                  {roundOutcome === 'success'
-                    ? `+2 Punkte für ${winningGroup.name}.`
-                    : `+1 Punkt für alle anderen Gruppen.`}
-                </p>
-                <button onClick={nextTask} className={styles.primaryBtn}>
-                  Nächste Aufgabe →
-                </button>
-              </div>
+                {phase === 'bidding' && (
+                  <div className={styles.section}>
+                    <p className={styles.label}>Wer hat am höchsten geboten?</p>
+                    <div className={styles.bidderRow}>
+                      {groups.map((g, i) => (
+                        <button
+                          key={g.id}
+                          onClick={() => selectBidder(i)}
+                          className={i === winningGroupIndex ? styles.bidderPillActive : styles.bidderPill}
+                        >
+                          {g.name}
+                        </button>
+                      ))}
+                    </div>
+                    <p className={styles.label}>Gebotene Zahl</p>
+                    <input
+                      type="number"
+                      min={1}
+                      inputMode="numeric"
+                      value={bidValueInput}
+                      onChange={(e) => setBidValueInput(e.target.value)}
+                      placeholder="z.B. 15"
+                      className={styles.field}
+                    />
+                    <button
+                      onClick={confirmBid}
+                      disabled={winningGroupIndex === null || !bidValueInput || parseInt(bidValueInput, 10) <= 0}
+                      className={styles.primaryBtn}
+                    >
+                      Zuschlag bestätigen →
+                    </button>
+                    <button onClick={goToPickTask} className={styles.skipLink}>
+                      Andere Aufgabe wählen
+                    </button>
+                  </div>
+                )}
+
+                {phase === 'attempt' && winningGroup && (
+                  <div className={styles.attemptBox}>
+                    <p className={styles.attemptTitle}>
+                      🎯 {winningGroup.name} hat für {confirmedBid} geboten!
+                    </p>
+                    <p className={styles.attemptDesc}>
+                      Schafft der antretende Partner/die antretende Partnerin mindestens {confirmedBid}?
+                    </p>
+
+                    {timerConfig && (
+                      <div className={styles.timerBox}>
+                        <p className={styles.timerLabel}>
+                          {timerConfig.mode === 'countdown' ? 'Countdown' : 'Stoppuhr'}
+                        </p>
+                        <p
+                          className={
+                            timerConfig.mode === 'countdown' && timerDone
+                              ? styles.timerValueDone
+                              : timerConfig.mode === 'countdown' && timerValue <= 10
+                              ? styles.timerValueWarning
+                              : styles.timerValue
+                          }
+                        >
+                          {Math.floor(timerValue / 60)}:{String(timerValue % 60).padStart(2, '0')}
+                        </p>
+                        <div className={styles.timerControls}>
+                          <button
+                            onClick={() => setTimerRunning((r) => !r)}
+                            disabled={timerConfig.mode === 'countdown' && timerDone}
+                            className={styles.timerBtnPrimary}
+                          >
+                            {timerRunning ? '⏸ Pause' : '▶ Start'}
+                          </button>
+                          <button onClick={resetTimer} className={styles.timerBtn}>
+                            ↺ Zurücksetzen
+                          </button>
+                        </div>
+                      </div>
+                    )}
+
+                    <div className={styles.attemptBtnRow}>
+                      <button onClick={() => markOutcome(true)} className={styles.successBtn}>
+                        ✅ Geschafft
+                      </button>
+                      <button onClick={() => markOutcome(false)} className={styles.failBtn}>
+                        ❌ Nicht geschafft
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {phase === 'roundEnd' && winningGroup && (
+                  <div className={roundOutcome === 'success' ? styles.roundEndBoxSuccess : styles.roundEndBoxFail}>
+                    <p className={styles.roundTitle}>
+                      {roundOutcome === 'success'
+                        ? `${winningGroup.name} hat es geschafft! 🎉`
+                        : `${winningGroup.name} hat die ${confirmedBid} nicht erreicht.`}
+                    </p>
+                    <p className={styles.roundSub}>
+                      {roundOutcome === 'success'
+                        ? `+2 Punkte für ${winningGroup.name}.`
+                        : `+1 Punkt für alle anderen Gruppen.`}
+                    </p>
+                    <button onClick={goToPickTask} className={styles.primaryBtn}>
+                      Nächste Aufgabe →
+                    </button>
+                  </div>
+                )}
+              </>
             )}
 
             {/* End game */}

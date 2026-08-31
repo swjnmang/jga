@@ -258,9 +258,9 @@ export default function RulesPage() {
             <section className={styles.section}>
               <h2 className={styles.sectionTitle}>Ablauf pro Runde</h2>
               <ol className={styles.rules}>
-                <li className={styles.rule}><span className={styles.ruleNum}>1</span><span>Eine zufällige, messbare Aufgabe wird gezogen und laut vorgelesen (z. B. „Wie viele Wäscheklammern kann er/sie in 60 Sekunden anlegen?").</span></li>
+                <li className={styles.rule}><span className={styles.ruleNum}>1</span><span>Wer das Handy hält, wählt eine Kategorie (Wissen &amp; Merken, Geschick &amp; Körper, Sinne, Talent &amp; Auftritt) oder zieht eine zufällige Aufgabe — und liest sie laut vor.</span></li>
                 <li className={styles.rule}><span className={styles.ruleNum}>2</span><span>Alle <strong className={styles.strong}>nicht antretenden</strong> Paare bieten reihum eine Zahl — „Mein Partner kann mindestens 15…". Wer am höchsten bietet, bekommt den Zuschlag.</span></li>
-                <li className={styles.rule}><span className={styles.ruleNum}>3</span><span>Der antretende Partner bzw. die antretende Partnerin versucht, die gebotene Zahl zu erreichen oder zu übertreffen.</span></li>
+                <li className={styles.rule}><span className={styles.ruleNum}>3</span><span>Der antretende Partner bzw. die antretende Partnerin versucht, die gebotene Zahl zu erreichen oder zu übertreffen. Bei zeitbasierten Aufgaben (z. B. „in 30 Sekunden") blendet die App direkt einen Timer ein.</span></li>
                 <li className={styles.rule}>
                   <span className={styles.ruleNum}>4</span>
                   <span>
@@ -272,10 +272,19 @@ export default function RulesPage() {
             </section>
 
             <section className={styles.section}>
+              <h2 className={styles.sectionTitle}>⏱️ Timer</h2>
+              <div className={styles.infoBox}>
+                <p><strong className={styles.strong}>Countdown:</strong> Bei Aufgaben mit fester Zeitvorgabe (z. B. „in 60 Sekunden") zählt ein Countdown herunter, mit Signalton beim Ablauf.</p>
+                <p><strong className={styles.strong}>Stoppuhr:</strong> Bei offenen Aufgaben, deren erzielte Dauer selbst das Ergebnis ist (z. B. „Wie lange kann er/sie … halten?"), zählt stattdessen eine Stoppuhr die Sekunden hoch.</p>
+              </div>
+            </section>
+
+            <section className={styles.section}>
               <h2 className={styles.sectionTitle}>Rahmen</h2>
               <ul className={styles.bulletList}>
                 <li><strong className={styles.strong}>2–6 Paare/Gruppen</strong>, alle spielen an einem Gerät.</li>
-                <li>Aufgaben lassen sich überspringen, falls eine nicht durchführbar ist.</li>
+                <li>240 Aufgaben in 4 Kategorien — bewusst mit möglichst wenig Material, gut geeignet auch unterwegs oder im Urlaub.</li>
+                <li>Aufgaben lassen sich vor dem Zuschlag überspringen, falls eine nicht durchführbar ist.</li>
               </ul>
             </section>
           </div>

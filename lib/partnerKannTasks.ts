@@ -13,6 +13,15 @@ export const partnerKannCategoryLabels: Record<PartnerKannCategory, string> = {
   talent: 'Talent & Auftritt',
 };
 
+export const partnerKannCategoryIcons: Record<PartnerKannCategory, string> = {
+  wissen: '🧠',
+  geschick: '🤸',
+  sinne: '👃',
+  talent: '🎭',
+};
+
+export const partnerKannCategories: PartnerKannCategory[] = ['wissen', 'geschick', 'sinne', 'talent'];
+
 export const partnerKannTasks: PartnerKannTask[] = [
   // ─── Wissen & Merken ───
   { id: 'wissen-1', category: 'wissen', text: 'Wie viele deutsche Bundesländer kann er/sie in 30 Sekunden nennen, ohne eines zu wiederholen?' },
@@ -65,6 +74,16 @@ export const partnerKannTasks: PartnerKannTask[] = [
   { id: 'wissen-48', category: 'wissen', text: 'Wie viele Elemente des Periodensystems kann er/sie in 60 Sekunden korrekt nennen?' },
   { id: 'wissen-49', category: 'wissen', text: 'Wie viele Wörter, die auf „-tion" enden, kann er/sie in 30 Sekunden nennen?' },
   { id: 'wissen-50', category: 'wissen', text: 'Wie viele Wörter mit einem Doppelbuchstaben (z. B. „Kaffee") kann er/sie in 30 Sekunden nennen?' },
+  { id: 'wissen-51', category: 'wissen', text: 'Wie viele Länder, die ans Mittelmeer grenzen, kann er/sie in 30 Sekunden nennen?' },
+  { id: 'wissen-52', category: 'wissen', text: 'Wie viele Hauptstädte Europas kann er/sie in 45 Sekunden richtig nennen?' },
+  { id: 'wissen-53', category: 'wissen', text: 'Wie viele Wörter, die rückwärts gelesen wieder ein Wort ergeben (Palindrome, z. B. „Anna"), fallen ihm/ihr in 45 Sekunden ein?' },
+  { id: 'wissen-54', category: 'wissen', text: 'Wie viele Redewendungen mit einem Tier darin fallen ihm/ihr in 45 Sekunden ein?' },
+  { id: 'wissen-55', category: 'wissen', text: 'Wie viele Wochentage kann er/sie rückwärts, von Sonntag bis Montag, in 10 Sekunden fehlerfrei aufsagen?' },
+  { id: 'wissen-56', category: 'wissen', text: 'Wie viele Wörter mit einem doppelten Vokal (z. B. „Boot") fallen ihm/ihr in 30 Sekunden ein?' },
+  { id: 'wissen-57', category: 'wissen', text: 'Wie hoch kann er/sie in 3er-Schritten in 20 Sekunden zählen, ohne einen Fehler zu machen?' },
+  { id: 'wissen-58', category: 'wissen', text: 'Wie viele zusammengesetzte Wörter mit dem Grundwort „Sonne" fallen ihm/ihr in 30 Sekunden ein?' },
+  { id: 'wissen-59', category: 'wissen', text: 'Wie viele Monate mit genau 31 Tagen kann er/sie in 20 Sekunden richtig nennen?' },
+  { id: 'wissen-60', category: 'wissen', text: 'Wie viele Wörter, die aus genau drei Buchstaben bestehen, fallen ihm/ihr in 30 Sekunden ein?' },
 
   // ─── Geschick & Körper ───
   { id: 'geschick-1', category: 'geschick', text: 'Wie lange kann er/sie ein Buch flach auf dem Kopf balancieren, während er/sie langsam durch den Raum geht, ohne dass es herunterfällt (in Sekunden)?' },
@@ -117,6 +136,16 @@ export const partnerKannTasks: PartnerKannTask[] = [
   { id: 'geschick-48', category: 'geschick', text: 'Wie oft kann er/sie in die Hände klatschen, bevor er/sie einen hochgeworfenen Tischtennisball mit derselben Hand wieder auffängt?' },
   { id: 'geschick-49', category: 'geschick', text: 'Wie oft kann er/sie in 30 Sekunden eine Münze von der Tischkante in ein Glas schnipsen?' },
   { id: 'geschick-50', category: 'geschick', text: 'Wie oft kann er/sie in 30 Sekunden eine Spielkarte aus der Hand fächerartig aufblättern und wieder zu einem Stapel zusammenschieben (volle Zyklen)?' },
+  { id: 'geschick-51', category: 'geschick', text: 'Wie lange kann er/sie auf einem Bein stehen, während er/sie gleichzeitig mit geschlossenen Augen beide Arme kreisen lässt, ohne den Fuß abzusetzen (in Sekunden)?' },
+  { id: 'geschick-52', category: 'geschick', text: 'Wie oft kann er/sie in 30 Sekunden abwechselnd mit dem rechten und dem linken Zeigefinger die Nasenspitze berühren?' },
+  { id: 'geschick-53', category: 'geschick', text: 'Wie viele Storchenschritte (großer Schritt mit hoch angezogenem Knie) kann er/sie in 20 Sekunden auf der Stelle machen?' },
+  { id: 'geschick-54', category: 'geschick', text: 'Wie lange kann er/sie mit ausgestreckten Armen ein unsichtbares Tablett balancieren, ohne die Arme absinken zu lassen (in Sekunden)?' },
+  { id: 'geschick-55', category: 'geschick', text: 'Wie oft kann er/sie in 30 Sekunden in die Hocke gehen und wieder aufstehen, ohne die Hände zu Hilfe zu nehmen?' },
+  { id: 'geschick-56', category: 'geschick', text: 'Wie lange kann er/sie im Zehenstand balancieren, ohne die Fersen abzusetzen (in Sekunden)?' },
+  { id: 'geschick-57', category: 'geschick', text: 'Wie oft kann er/sie in 20 Sekunden mit dem ausgestreckten Arm eine Acht in die Luft zeichnen, ohne den Rhythmus zu verlieren?' },
+  { id: 'geschick-58', category: 'geschick', text: 'Wie viele Ausfallschritte, abwechselnd mit links und rechts, kann er/sie in 30 Sekunden korrekt ausführen?' },
+  { id: 'geschick-59', category: 'geschick', text: 'Wie oft gelingt es ihm/ihr bei 5 Versuchen, mit verschränkten Armen aus der Hocke aufzustehen, ohne die Arme zu lösen?' },
+  { id: 'geschick-60', category: 'geschick', text: 'Wie lange kann er/sie rückwärtsgehen, ohne sich umzudrehen oder das Gleichgewicht zu verlieren (in Sekunden, bis maximal 30)?' },
 
   // ─── Sinne ───
   { id: 'sinne-1', category: 'sinne', text: 'Wie viele von 6 Gewürzen kann er/sie mit verbundenen Augen allein am Geruch richtig benennen?' },
@@ -169,6 +198,16 @@ export const partnerKannTasks: PartnerKannTask[] = [
   { id: 'sinne-48', category: 'sinne', text: 'Wie viele von 6 Gewürzmischungen kann er/sie blind verkostet richtig benennen?' },
   { id: 'sinne-49', category: 'sinne', text: 'Wie viele von 5 Textilproben (z. B. Seide, Wolle, Baumwolle) kann er/sie mit geschlossenen Augen allein durch Ertasten richtig benennen?' },
   { id: 'sinne-50', category: 'sinne', text: 'Wie viele von 5 unterschiedlich temperierten, aber ungefährlichen Gegenständen (z. B. Wasserflaschen) kann er/sie mit geschlossenen Augen allein durch Ertasten der Temperatur nach richtig von kühl bis warm sortieren?' },
+  { id: 'sinne-51', category: 'sinne', text: 'Wie viele unterschiedliche Umgebungsgeräusche kann er/sie in 30 Sekunden mit geschlossenen Augen erkennen und laut benennen?' },
+  { id: 'sinne-52', category: 'sinne', text: 'Wie nah kommt er/sie mit geschlossenen Augen an die tatsächliche Anzahl der gerade anwesenden Mitspieler, wenn er/sie sie nur an den Stimmen abzählt?' },
+  { id: 'sinne-53', category: 'sinne', text: 'Wie oft erkennt er/sie bei 8 Versuchen mit geschlossenen Augen richtig, aus welcher Richtung gerade in die Hände geklatscht wird?' },
+  { id: 'sinne-54', category: 'sinne', text: 'Wie genau kann er/sie mit geschlossenen Augen einschätzen, wie viel Zeit seit dem Startsignal vergangen ist, wenn man ihn/sie nach genau 45 Sekunden fragt (Abweichung in Sekunden)?' },
+  { id: 'sinne-55', category: 'sinne', text: 'Wie oft erkennt er/sie bei 8 Versuchen mit geschlossenen Augen richtig, ob er/sie gerade mit einem oder mit zwei Fingern am Arm berührt wird?' },
+  { id: 'sinne-56', category: 'sinne', text: 'Wie viele Schritte kann er/sie mit geschlossenen Augen möglichst geradeaus gehen, bevor er/sie merklich von der Linie abweicht?' },
+  { id: 'sinne-57', category: 'sinne', text: 'Wie oft erkennt er/sie bei 6 Versuchen mit geschlossenen Augen allein am Tonfall, ob ein vorgelesener Satz als Frage oder als Aussage gemeint war?' },
+  { id: 'sinne-58', category: 'sinne', text: 'Wie oft erkennt er/sie bei 6 Versuchen mit geschlossenen Augen, welche von zwei Personen gerade seine/ihre Hand berührt hat?' },
+  { id: 'sinne-59', category: 'sinne', text: 'Wie genau kann er/sie mit geschlossenen Augen die Entfernung zu einer sprechenden Person schätzen (Abweichung in Schritten)?' },
+  { id: 'sinne-60', category: 'sinne', text: 'Wie oft erkennt er/sie bei 8 Versuchen mit geschlossenen Augen allein am Klang des Fingerschnippens, welches Gruppenmitglied gerade geschnippt hat?' },
 
   // ─── Talent & Auftritt ───
   { id: 'talent-1', category: 'talent', text: 'Wie lange kann er/sie einen einzelnen Ton ohne Luftholen halten (in Sekunden)?' },
@@ -221,4 +260,35 @@ export const partnerKannTasks: PartnerKannTask[] = [
   { id: 'talent-48', category: 'talent', text: 'Wie schnell kann er/sie eine vorgegebene Abfolge aus 5 festgelegten Tanzschritten einmal komplett fehlerfrei vorführen (Zeit in Sekunden)?' },
   { id: 'talent-49', category: 'talent', text: 'Wie oft kann er/sie in 30 Sekunden hintereinander "Hallo" in einer jeweils anderen Sprache so sagen, dass die Gruppe die Sprache richtig erkennt?' },
   { id: 'talent-50', category: 'talent', text: 'Wie viele Ziffern einer vorgelesenen Zahlenfolge kann er/sie sich merken und anschließend in der richtigen Reihenfolge fehlerfrei aufsagen?' },
+  { id: 'talent-51', category: 'talent', text: 'Wie viele Tierarten kann er/sie in 30 Sekunden nur durch Nachahmen ihrer Bewegung, ohne Geräusche, so darstellen, dass die Gruppe sie errät (Treffer von 8 vorgegebenen Tieren)?' },
+  { id: 'talent-52', category: 'talent', text: 'Wie lange kann er/sie im Flüsterton sprechen, ohne unfreiwillig lauter zu werden (in Sekunden)?' },
+  { id: 'talent-53', category: 'talent', text: 'Wie viele Länder kann er/sie in 30 Sekunden nur durch eine typische Geste oder Pose darstellen, sodass die Gruppe sie errät (Treffer von 6 vorgegebenen Ländern)?' },
+  { id: 'talent-54', category: 'talent', text: 'Wie oft kann er/sie in 20 Sekunden zwischen einer hohen Fistelstimme und einer tiefen Stimme wechseln, ohne aus dem Takt zu kommen?' },
+  { id: 'talent-55', category: 'talent', text: 'Wie viele Berufe kann er/sie nur durch ein typisches Geräusch, ohne Wörter, so darstellen, dass die Gruppe sie errät (Treffer von 8 vorgegebenen Berufen)?' },
+  { id: 'talent-56', category: 'talent', text: 'Wie lange kann er/sie eine frei erfundene Geschichte zu einem vorgegebenen Stichwort ohne Stocken erzählen (in Sekunden bis zur ersten Pause über 3 Sekunden)?' },
+  { id: 'talent-57', category: 'talent', text: 'Wie viele Wetterlagen kann er/sie nur mit Körper und Mimik so darstellen, dass die Gruppe sie errät (Treffer von 6 vorgegebenen Wetterlagen)?' },
+  { id: 'talent-58', category: 'talent', text: 'Wie oft kann er/sie in 20 Sekunden denselben Satz mit jeweils anderem Akzent sagen, den die Gruppe richtig erkennt (Treffer von maximal 5 Varianten)?' },
+  { id: 'talent-59', category: 'talent', text: 'Wie lange kann er/sie eine erfundene Nachrichtensendung im Stil eines Nachrichtensprechers vortragen, ohne zu lachen (in Sekunden)?' },
+  { id: 'talent-60', category: 'talent', text: 'Wie viele Emotionen kann er/sie allein durch die Art zu gehen so darstellen, dass die Gruppe sie richtig errät (Treffer von 6 vorgegebenen Emotionen)?' },
 ];
+
+export type PartnerKannTimerConfig =
+  | { mode: 'countdown'; seconds: number }
+  | { mode: 'stopwatch' };
+
+/**
+ * Liest ein Zeitlimit aus dem Aufgabentext heraus, z.B. "in 30 Sekunden"
+ * oder "in 3 Minuten" → Countdown. Aufgaben, bei denen stattdessen die
+ * erzielte Dauer selbst das Ergebnis ist (z.B. "... halten (in Sekunden)?"),
+ * bekommen stattdessen eine Stoppuhr zum Mitzählen.
+ */
+export function getPartnerKannTimerConfig(text: string): PartnerKannTimerConfig | null {
+  const countdownMatch = text.match(/(\d+)\s*(Sekunden|Minuten)/i);
+  if (countdownMatch) {
+    const value = parseInt(countdownMatch[1], 10);
+    const seconds = /minuten/i.test(countdownMatch[2]) ? value * 60 : value;
+    if (seconds > 0 && seconds <= 600) return { mode: 'countdown', seconds };
+  }
+  if (/sekunden/i.test(text)) return { mode: 'stopwatch' };
+  return null;
+}
