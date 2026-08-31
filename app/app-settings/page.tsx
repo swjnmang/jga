@@ -5,6 +5,13 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import { applyTheme, loadTheme, saveTheme, themes, ThemeId } from '@/lib/theme';
+import styles from './appsettings.module.css';
+
+const THEME_SWATCH: Record<ThemeId, string> = {
+  aurora: 'linear-gradient(135deg, #0d1b2a, #6fd5ff)',
+  dark: 'linear-gradient(135deg, #0a0a0a, #2a2a2a)',
+  urban: 'linear-gradient(135deg, #f0f0f0, #cfcfcf)',
+};
 
 function AppSettingsContent() {
   const [theme, setTheme] = useState<ThemeId>('dark');
@@ -54,85 +61,64 @@ function AppSettingsContent() {
     : null;
 
   return (
-    <main className="mx-auto max-w-4xl px-6 py-10 space-y-8">
-      {errorMessage && (
-        <div className="rounded-xl bg-red-500/15 border border-red-500/40 px-4 py-3 text-sm text-red-700 dark:text-red-300">
-          ⚠️ {errorMessage}
+    <main className={styles.page}>
+      <div className={styles.panel}>
+        <div className={styles.headBlock}>
+          <Link href="/" className={styles.back}>
+            ← Zurück
+          </Link>
+          <h1 className={styles.title}>⚙️ Einstellungen</h1>
+          <p className={styles.intro}>
+            Diese Einstellungen gelten für die gesamte App-Oberfläche. Die Spiel-Einstellungen (Kategorien, Timer, Schwierigkeitsgrade)
+            findest du weiterhin im Bereich „Neues Spiel starten".
+          </p>
         </div>
-      )}
-      {authSuccess === '1' && (
-        <div className="rounded-xl bg-green-500/15 border border-green-500/40 px-4 py-3 text-sm text-green-700 dark:text-green-300">
-          ✅ Spotify erfolgreich verbunden!
-        </div>
-      )}
-      <div className="space-y-2">
-        <p className="text-xs uppercase tracking-[0.2em] text-ink/60">Einstellungen</p>
-        <h1 className="text-3xl font-display leading-tight">App-Design & Dienste</h1>
-        <p className="text-sm text-ink/70">
-          Diese Einstellungen gelten für die gesamte App-Oberfläche. Die Spiel-Einstellungen (Kategorien, Timer, Schwierigkeitsgrade)
-          findest du weiterhin im Bereich „Neues Spiel starten“.
-        </p>
-      </div>
 
-      <section className="card-surface rounded-2xl p-6 space-y-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-xs uppercase tracking-wide text-ink/60">Design</p>
-            <h2 className="text-xl font-semibold">Aussehen der App</h2>
-          </div>
-          <span className="text-xs rounded-full bg-ink/10 px-3 py-1 text-ink/80">3 Themes</span>
-        </div>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {themes.map((option) => (
-            <button
-              key={option.id}
-              type="button"
-              onClick={() => handleThemeChange(option.id)}
-              className={`rounded-2xl border px-4 py-4 text-center transition card-surface ${
-                theme === option.id ? 'border-sand bg-white/10 shadow-lg' : 'border-ink/20 hover:border-ink/40'
-              }`}
-            >
-              <div className="flex flex-col items-center gap-2">
-                <span className="font-semibold text-lg">{option.name}</span>
-                {theme === option.id && <span className="text-xs bg-ink text-inkDark rounded-full px-2 py-1">Aktiv</span>}
-              </div>
-            </button>
-          ))}
-        </div>
-      </section>
+        {errorMessage && <div className={styles.bannerError}>⚠️ {errorMessage}</div>}
+        {authSuccess === '1' && <div className={styles.bannerSuccess}>✅ Spotify erfolgreich verbunden!</div>}
 
-      <section className="card-surface rounded-2xl p-6 space-y-4">
-        <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2 flex-wrap">
-            <p className="text-xs uppercase tracking-wide text-ink/60">Spotify</p>
-            {spotifyLinked && (
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-green-500/15 text-green-700 dark:text-green-300 px-2.5 py-0.5 text-xs font-semibold">
-                ✓ Verbunden
-              </span>
-            )}
+        <section className={styles.section}>
+          <div className={styles.sectionHead}>
+            <div>
+              <p className={styles.sectionEyebrow}>Design</p>
+              <h2 className={styles.sectionTitle}>Aussehen der App</h2>
+            </div>
+            <span className={styles.badge}>{themes.length} Themes</span>
           </div>
-          <h2 className="text-xl font-semibold">Spotify Premium verknüpfen</h2>
-          <p className="text-sm text-ink/70">
+          <div className={styles.themeGrid}>
+            {themes.map((option) => (
+              <button
+                key={option.id}
+                type="button"
+                onClick={() => handleThemeChange(option.id)}
+                className={theme === option.id ? styles.themeBtnActive : styles.themeBtn}
+              >
+                <span className={styles.themeSwatch} style={{ background: THEME_SWATCH[option.id] }} />
+                {option.name}
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <div className={styles.sectionHead}>
+            <div>
+              <p className={styles.sectionEyebrow}>Spotify</p>
+              <h2 className={styles.sectionTitle}>Spotify Premium verknüpfen</h2>
+            </div>
+            {spotifyLinked && <span className={styles.badgeActive}>✓ Verbunden</span>}
+          </div>
+          <p className={styles.sectionDesc}>
             {spotifyLinked
               ? 'Dein Spotify-Premium-Konto ist verbunden, Songs können in voller Länge abgespielt werden. Bei Problemen kannst du hier erneut verbinden, um die Session aufzufrischen.'
               : 'Starte den Login, um Premium-Wiedergabe ohne Werbung zu ermöglichen. Falls du bereits eingeloggt bist, kannst du hier erneut verbinden, um die Session aufzufrischen.'}
           </p>
-        </div>
-        <div className="flex flex-wrap gap-3">
-          <a
-            href="/api/spotify/authorize?return=/app-settings"
-            className="rounded-full bg-[#1DB954] hover:bg-[#17a74a] text-white px-5 py-2.5 text-sm font-semibold shadow-md transition-colors"
-          >
+          <a href="/api/spotify/authorize?return=/app-settings" className={styles.spotifyBtn}>
             {spotifyLinked ? 'Erneut verbinden' : 'Spotify-Login starten'}
           </a>
-        </div>
-      </section>
+        </section>
 
-      <div className="flex justify-center">
-        <Link
-          href="/"
-          className="rounded-full bg-ink text-inkDark px-6 py-3 text-sm font-semibold shadow-md hover:-translate-y-0.5 transition"
-        >
+        <Link href="/" className={styles.primaryBtn}>
           Speichern und zurück ins Hauptmenü
         </Link>
       </div>

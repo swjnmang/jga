@@ -2,114 +2,76 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import styles from './create.module.css';
+
+const MODES = [
+  {
+    icon: '🕰️',
+    title: 'Timeline Multiplayer',
+    desc: 'Ordne Karten auf der Zeitachse ein',
+    href: '/multiplayer?gameMode=timeline',
+  },
+  {
+    icon: '🎮',
+    title: 'Trivia Multiplayer',
+    desc: 'Wissensfragen aus allen Kategorien',
+    href: '/multiplayer?gameMode=trivia',
+  },
+  {
+    icon: '🎉',
+    title: 'Familienduell',
+    desc: 'Ein Gerät, ein Spielleiter – Gruppen raten die Top-5-Antworten',
+    href: '/familienduell',
+  },
+  {
+    icon: '🤩',
+    title: 'Mein Partner/meine Partnerin kann…',
+    desc: 'Auktion um messbare Challenges – angelehnt an „Mein Mann kann"',
+    href: '/partner-kann',
+  },
+  {
+    icon: '🙊',
+    title: 'Tabu',
+    desc: 'Begriffe erklären gegen die Zeit – ohne die Tabu-Wörter zu sagen',
+    href: '/tabu',
+  },
+  {
+    icon: '🫙',
+    title: 'Begriffe-Topf',
+    desc: 'Eigene Begriffe einreichen, dann erklären, Pantomime, ein Wort',
+    href: '/begriffe-topf',
+  },
+] as const;
 
 export default function CreatePage() {
   const router = useRouter();
 
   return (
-    <main className="min-h-screen bg-grid flex items-center justify-center px-6 py-16">
-      <div className="w-full max-w-lg rounded-3xl bg-glass border border-ink/10 shadow-2xl backdrop-blur-xl p-10 space-y-8">
-        {/* Header */}
-        <div className="space-y-1">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-1.5 text-sm text-ink/50 hover:text-ink/80 transition mb-4"
-          >
+    <main className={styles.page}>
+      <div className={styles.panel}>
+        <div className={styles.headBlock}>
+          <Link href="/" className={styles.back}>
             ← Zurück
           </Link>
-          <h1 className="text-3xl font-display font-semibold text-ink">Spiel erstellen</h1>
-          <p className="text-sm text-ink/60">Wähle einen Spielmodus</p>
+          <h1 className={styles.title}>Spiel erstellen</h1>
+          <p className={styles.intro}>Wähle einen Spielmodus</p>
         </div>
 
-        {/* Mode cards */}
-        <div className="space-y-4">
-          {/* Timeline Multiplayer */}
-          <button
-            onClick={() => router.push('/multiplayer?gameMode=timeline')}
-            className="group w-full flex items-start gap-4 rounded-2xl border border-ink/10 bg-ink/5 hover:bg-ink/10 hover:border-ink/25 px-6 py-5 transition text-left"
-          >
-            <span className="text-2xl mt-0.5">🕰️</span>
-            <div>
-              <p className="font-semibold text-ink group-hover:text-ink/90">Timeline Multiplayer</p>
-              <p className="text-sm text-ink/60 mt-0.5">Ordne Karten auf der Zeitachse ein</p>
-            </div>
-            <span className="ml-auto text-ink/30 group-hover:translate-x-0.5 transition self-center">→</span>
-          </button>
-
-          {/* Trivia Multiplayer */}
-          <button
-            onClick={() => router.push('/multiplayer?gameMode=trivia')}
-            className="group w-full flex items-start gap-4 rounded-2xl border border-ink/10 bg-ink/5 hover:bg-ink/10 hover:border-ink/25 px-6 py-5 transition text-left"
-          >
-            <span className="text-2xl mt-0.5">🎮</span>
-            <div>
-              <p className="font-semibold text-ink group-hover:text-ink/90">Trivia Multiplayer</p>
-              <p className="text-sm text-ink/60 mt-0.5">Wissensfragen aus allen Kategorien</p>
-            </div>
-            <span className="ml-auto text-ink/30 group-hover:translate-x-0.5 transition self-center">→</span>
-          </button>
-
-          {/* Familienduell – lokal, ein Gerät */}
-          <Link
-            href="/familienduell"
-            className="group w-full flex items-start gap-4 rounded-2xl border border-ink/10 bg-ink/5 hover:bg-ink/10 hover:border-ink/25 px-6 py-5 transition text-left"
-          >
-            <span className="text-2xl mt-0.5">🎉</span>
-            <div>
-              <p className="font-semibold text-ink group-hover:text-ink/90">Familienduell</p>
-              <p className="text-sm text-ink/60 mt-0.5">
-                Ein Gerät, ein Spielleiter – Gruppen raten die Top-5-Antworten
-              </p>
-            </div>
-            <span className="ml-auto text-ink/30 group-hover:translate-x-0.5 transition self-center">→</span>
-          </Link>
-
-          {/* Mein Partner/meine Partnerin kann – lokal, ein Gerät */}
-          <Link
-            href="/partner-kann"
-            className="group w-full flex items-start gap-4 rounded-2xl border border-ink/10 bg-ink/5 hover:bg-ink/10 hover:border-ink/25 px-6 py-5 transition text-left"
-          >
-            <span className="text-2xl mt-0.5">🤩</span>
-            <div>
-              <p className="font-semibold text-ink group-hover:text-ink/90">
-                Mein Partner/meine Partnerin kann…
-              </p>
-              <p className="text-sm text-ink/60 mt-0.5">
-                Auktion um messbare Challenges – angelehnt an „Mein Mann kann"
-              </p>
-            </div>
-            <span className="ml-auto text-ink/30 group-hover:translate-x-0.5 transition self-center">→</span>
-          </Link>
-
-          {/* Tabu – lokal, ein Gerät */}
-          <Link
-            href="/tabu"
-            className="group w-full flex items-start gap-4 rounded-2xl border border-ink/10 bg-ink/5 hover:bg-ink/10 hover:border-ink/25 px-6 py-5 transition text-left"
-          >
-            <span className="text-2xl mt-0.5">🙊</span>
-            <div>
-              <p className="font-semibold text-ink group-hover:text-ink/90">Tabu</p>
-              <p className="text-sm text-ink/60 mt-0.5">
-                Begriffe erklären gegen die Zeit – ohne die Tabu-Wörter zu sagen
-              </p>
-            </div>
-            <span className="ml-auto text-ink/30 group-hover:translate-x-0.5 transition self-center">→</span>
-          </Link>
-
-          {/* Begriffe-Topf – echtes Multiplayer über Firebase, mehrere Geräte */}
-          <Link
-            href="/begriffe-topf"
-            className="group w-full flex items-start gap-4 rounded-2xl border border-ink/10 bg-ink/5 hover:bg-ink/10 hover:border-ink/25 px-6 py-5 transition text-left"
-          >
-            <span className="text-2xl mt-0.5">🫙</span>
-            <div>
-              <p className="font-semibold text-ink group-hover:text-ink/90">Begriffe-Topf</p>
-              <p className="text-sm text-ink/60 mt-0.5">
-                Eigene Begriffe einreichen, dann erklären, Pantomime, ein Wort
-              </p>
-            </div>
-            <span className="ml-auto text-ink/30 group-hover:translate-x-0.5 transition self-center">→</span>
-          </Link>
+        <div className={styles.modeList}>
+          {MODES.map((mode) => (
+            <button
+              key={mode.title}
+              onClick={() => router.push(mode.href)}
+              className={styles.modeCard}
+            >
+              <span className={styles.modeIcon}>{mode.icon}</span>
+              <span className={styles.modeText}>
+                <p className={styles.modeTitle}>{mode.title}</p>
+                <p className={styles.modeDesc}>{mode.desc}</p>
+              </span>
+              <span className={styles.modeArrow}>→</span>
+            </button>
+          ))}
         </div>
       </div>
     </main>
