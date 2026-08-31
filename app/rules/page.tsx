@@ -264,7 +264,7 @@ export default function RulesPage() {
                 <li className={styles.rule}>
                   <span className={styles.ruleNum}>4</span>
                   <span>
-                    <strong className={styles.strong}>Geschafft:</strong> Die bietende Gruppe bekommt <strong className={styles.strong}>+1 Punkt</strong>.<br />
+                    <strong className={styles.strong}>Geschafft:</strong> Die bietende Gruppe bekommt <strong className={styles.strong}>+2 Punkte</strong>.<br />
                     <strong className={styles.strong}>Nicht geschafft:</strong> Alle anderen Gruppen bekommen je <strong className={styles.strong}>+1 Punkt</strong>.
                   </span>
                 </li>

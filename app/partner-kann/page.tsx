@@ -171,7 +171,7 @@ export default function PartnerKannPage() {
     if (phase !== 'attempt' || winningGroupIndex === null) return;
     setGroups((prev) =>
       prev.map((g, i) => {
-        if (success) return i === winningGroupIndex ? { ...g, score: g.score + 1 } : g;
+        if (success) return i === winningGroupIndex ? { ...g, score: g.score + 2 } : g;
         return i === winningGroupIndex ? g : { ...g, score: g.score + 1 };
       })
     );
@@ -251,7 +251,7 @@ export default function PartnerKannPage() {
               </li>
               <li className={styles.rule}>
                 <span className={styles.ruleNum}>4</span>
-                Geschafft: Die bietende Gruppe bekommt einen Punkt. Nicht geschafft: Alle anderen
+                Geschafft: Die bietende Gruppe bekommt 2 Punkte. Nicht geschafft: Alle anderen
                 Gruppen bekommen je einen Punkt.
               </li>
             </ol>
@@ -381,7 +381,7 @@ export default function PartnerKannPage() {
                 </p>
                 <p className={styles.roundSub}>
                   {roundOutcome === 'success'
-                    ? `+1 Punkt für ${winningGroup.name}.`
+                    ? `+2 Punkte für ${winningGroup.name}.`
                     : `+1 Punkt für alle anderen Gruppen.`}
                 </p>
                 <button onClick={nextTask} className={styles.primaryBtn}>
