@@ -1407,7 +1407,7 @@ export default function MultiplayerGamePage() {
       return (
         <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
           <div className="text-center space-y-4">
-            <h1 className="text-3xl font-display">Timeline Multiplayer</h1>
+            <h1 className="text-3xl font-display">Timeline Quiz</h1>
             <div className="card-surface rounded-2xl p-6">
               <p className="text-lg text-ink/70">Spiel wird vorbereitet...</p>
               {game.currentTurnGroupId && (
@@ -1514,7 +1514,7 @@ export default function MultiplayerGamePage() {
         return (
           <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
             <div className="text-center space-y-4">
-              <h1 className="text-3xl font-display">Trivia Multiplayer</h1>
+              <h1 className="text-3xl font-display">Trivia Quiz</h1>
               <div className="card-surface rounded-2xl p-6">
                 <p className="text-lg text-ink/70">Nächste Frage wird geladen…</p>
                 {effectiveIsHost && (
@@ -2860,7 +2860,7 @@ export default function MultiplayerGamePage() {
       return (
         <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
           <div className="text-center space-y-4">
-            <h1 className="text-3xl font-display">Timeline Multiplayer</h1>
+            <h1 className="text-3xl font-display">Timeline Quiz</h1>
             <div className="card-surface rounded-2xl p-6">
               <p className="text-lg text-ink/70">Lade Karte...</p>
               <p className="text-sm text-ink/50 mt-2">
@@ -2994,7 +2994,7 @@ export default function MultiplayerGamePage() {
         {/* Header */}
         <div className="text-center space-y-1">
           {effectiveIsHost && (
-            <h1 className="text-2xl font-display">Timeline Multiplayer</h1>
+            <h1 className="text-2xl font-display">Timeline Quiz</h1>
           )}
           {game.currentTurnGroupId && (
             isActiveTurn ? (

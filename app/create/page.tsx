@@ -7,13 +7,13 @@ import styles from './create.module.css';
 const MODES = [
   {
     icon: '🕰️',
-    title: 'Timeline Multiplayer',
+    title: 'Timeline Quiz',
     desc: 'Ordne Karten auf der Zeitachse ein',
     href: '/multiplayer?gameMode=timeline',
   },
   {
     icon: '🎮',
-    title: 'Trivia Multiplayer',
+    title: 'Trivia Quiz',
     desc: 'Wissensfragen aus allen Kategorien',
     href: '/multiplayer?gameMode=trivia',
   },

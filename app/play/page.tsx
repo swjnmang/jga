@@ -26,13 +26,13 @@ function PlayMenuContent() {
         <div className="grid gap-4 md:grid-cols-2">
           <ModeCard
             href="/multiplayer?gameMode=timeline"
-            label="Timeline Multiplayer"
+            label="Timeline Quiz"
             icon="⏳"
             description="Antworten chronologisch einordnen"
           />
           <ModeCard 
             href="/multiplayer?gameMode=trivia"
-            label="Trivia Multiplayer"
+            label="Trivia Quiz"
             icon="📚"
             description="Klassisches Quiz"
           />
