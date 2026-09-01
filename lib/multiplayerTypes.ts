@@ -146,6 +146,10 @@ export interface GameSession {
     submissions: { groupId: string; groupName: string; value: string; isWinner: boolean; color: string; }[];
     jokerRestores?: { groupId: string; groupName: string; jokerKey: 'newQuestion' | 'next' | 'dice' | 'steal' }[];
   } | null;
+  // Endgeräte-Modus (Trivia): alle Gruppen spielen gemeinsam auf einem geteilten Gerät.
+  // Der Steal-Joker setzt voraus, dass andere Gruppen unbemerkt auf ihrem eigenen Gerät
+  // reagieren können — das entfällt hier, daher wird er in diesem Modus nie vergeben.
+  singleDeviceMode?: boolean;
   // ── Spielleitungsloser Modus ──────────────────────────────────────────────
   hostless?: boolean;                    // Spiel läuft ohne aktive Spielleitung (Trivia: Text+Abstimmung, Timeline: Auto-Advance)
   presence?: Record<string, Record<string, boolean>>; // groupId -> playerId -> online (RTDB onDisconnect-Tracking)
@@ -198,6 +202,7 @@ export interface CreateGameParams {
   triviaWinCondition?: 'categories' | 'points';
   timelineWinTarget?: number | null;
   jokersEnabled?: boolean;
+  singleDeviceMode?: boolean;
   hostless?: boolean;
   hostAvatar?: string;
   hostTextAnswersEnabled?: boolean;

@@ -168,6 +168,7 @@ export default function RulesPage() {
                 </div>
               </div>
               <p className={styles.hint}>Hinweis: Joker können nicht bei Schätzfragen eingesetzt werden. Wer eine Schätzfrage gewinnt, erhält einen zufällig gewählten bereits verbrauchten Joker zurück.</p>
+              <p className={styles.hint}>Im Modus &bdquo;Gemeinsam auf einem Gerät&ldquo; entfällt der STEAL-Joker, da er ein eigenes Gerät pro Gruppe voraussetzt.</p>
             </section>
 
             <section className={styles.section}>

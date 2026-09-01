@@ -108,6 +108,7 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     triviaWinCondition: params.mode === 'trivia' ? (params.triviaWinCondition ?? 'categories') : 'categories',
     timelineWinTarget: params.mode === 'timeline' ? (params.timelineWinTarget ?? 10) : null,
     jokersEnabled: params.mode === 'trivia' ? (params.jokersEnabled ?? true) : false,
+    singleDeviceMode: params.mode === 'trivia' ? (params.singleDeviceMode ?? false) : false,
     hostless: params.hostless ?? false,
     hostTextAnswersEnabled: params.mode === 'trivia' ? (params.hostTextAnswersEnabled ?? true) : false,
     groups: {
@@ -115,7 +116,7 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
         ...hostGroup,
         completedCategories: [],
         ...(params.hostless && params.mode === 'trivia' && (params.jokersEnabled ?? true)
-          ? { jokers: { newQuestion: true, next: true, dice: true, steal: true } }
+          ? { jokers: { newQuestion: true, next: true, dice: true, steal: !params.singleDeviceMode } }
           : {}),
       }
     },
@@ -193,7 +194,7 @@ export async function joinGame(params: JoinGameParams): Promise<{ groupId: strin
   };
 
   if (game.jokersEnabled) {
-    newGroup.jokers = { newQuestion: true, next: true, dice: true, steal: true };
+    newGroup.jokers = { newQuestion: true, next: true, dice: true, steal: !game.singleDeviceMode };
   }
 
   // Füge Gruppe hinzu
@@ -2350,6 +2351,7 @@ export async function activateJokerSteal(pin: string, groupId: string): Promise<
     if (!game) { abortReason = 'Spiel nicht gefunden.'; return game; }
     if (game.mode !== 'trivia') { abortReason = 'Joker nur im Trivia-Modus verfügbar.'; return; }
     if (!game.jokersEnabled) { abortReason = 'Joker sind deaktiviert.'; return; }
+    if (game.singleDeviceMode) { abortReason = 'Steal-Joker ist im Endgeräte-Modus nicht verfügbar.'; return; }
     if (game.currentTurnGroupId === groupId) { abortReason = 'Eigene Frage kann nicht geklaut werden.'; return; }
     if (game.jokerStealActive) { abortReason = 'Steal-Joker wurde bereits aktiviert (first come, first served).'; return; }
     if (game.jokerNextActive) { abortReason = 'NEXT-Joker ist gerade aktiv.'; return; }

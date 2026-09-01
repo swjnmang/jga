@@ -2533,8 +2533,8 @@ export default function MultiplayerGamePage() {
             );
           })()}
 
-          {/* Steal-Joker-Panel – nur für NICHT-aktive Gruppen, nicht für Host */}
-          {game.jokersEnabled && !isMyTurn && !effectiveIsHost && session && !game.jokerStealActive && !game.jokerNextActive && !game.jokerStealReturnActive && (() => {
+          {/* Steal-Joker-Panel – nur für NICHT-aktive Gruppen, nicht für Host, nicht im Endgeräte-Modus */}
+          {game.jokersEnabled && !game.singleDeviceMode && !isMyTurn && !effectiveIsHost && session && !game.jokerStealActive && !game.jokerNextActive && !game.jokerStealReturnActive && (() => {
             const myJokers = game.groups[session.groupId]?.jokers;
             if (!myJokers) return null;
             const deckMeta: Record<string, string> = (game as any).deckMeta ?? {};

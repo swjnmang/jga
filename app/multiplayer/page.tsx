@@ -158,6 +158,7 @@ function MultiplayerLobbyContent() {
   const [banMode, setBanMode] = useState(true);
   const [triviaWinCondition, setTriviaWinCondition] = useState<'categories' | 'points'>('categories');
   const [jokersEnabled, setJokersEnabled] = useState(true);
+  const [singleDeviceMode, setSingleDeviceMode] = useState(false);
   const [timelineWinTarget, setTimelineWinTarget] = useState(10); // range 8–20
   const [hostless, setHostless] = useState(false);
   const [hostTextAnswersEnabled, setHostTextAnswersEnabled] = useState(true);
@@ -390,6 +391,7 @@ function MultiplayerLobbyContent() {
         banModeEnabled: gameMode === 'trivia' ? banMode : false,
         triviaWinCondition: gameMode === 'trivia' ? triviaWinCondition : 'categories',
         jokersEnabled: gameMode === 'trivia' ? jokersEnabled : false,
+        singleDeviceMode: gameMode === 'trivia' ? singleDeviceMode : false,
         timelineWinTarget: gameMode === 'timeline' ? timelineWinTarget : undefined,
         hostless,
         hostAvatar: hostless ? creatorAvatar : undefined,
@@ -608,7 +610,7 @@ function MultiplayerLobbyContent() {
             <button
               key={m}
               type="button"
-              onClick={() => { setGameMode(m); if (m !== 'trivia') { setBanMode(false); setTriviaWinCondition('categories'); } }}
+              onClick={() => { setGameMode(m); if (m !== 'trivia') { setBanMode(false); setTriviaWinCondition('categories'); setSingleDeviceMode(false); } }}
               className={`px-4 py-3 rounded-lg border-2 transition-colors ${
                 gameMode === m
                   ? 'border-ink bg-ink text-inkDark'
@@ -696,7 +698,48 @@ function MultiplayerLobbyContent() {
           <p className="text-sm text-ink/70">
             🧠 <strong>Trivia</strong> – Klassische Quizfragen aus verschiedenen Kategorien. Jede Gruppe muss mindestens eine Frage pro Kategorie korrekt beantworten, um zu gewinnen.
           </p>
-          
+
+          {/* Endgeräte-Modus */}
+          <div>
+            <label className="block text-sm font-semibold mb-2">Wie spielt ihr?</label>
+            <div className="grid grid-cols-1 gap-2">
+              <button
+                type="button"
+                onClick={() => setSingleDeviceMode(false)}
+                className={`flex items-start gap-3 rounded-xl border-2 px-4 py-3 text-left transition-colors ${
+                  !singleDeviceMode ? 'border-ink bg-ink/10' : 'border-ink/20 bg-ink/5 hover:bg-ink/10'
+                }`}
+              >
+                <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
+                  !singleDeviceMode ? 'border-ink' : 'border-ink/40'
+                }`}>
+                  {!singleDeviceMode && <span className="w-2.5 h-2.5 rounded-full bg-ink block" />}
+                </span>
+                <span>
+                  <span className="text-sm font-semibold block">📱 Jede Gruppe mit eigenem Gerät</span>
+                  <span className="text-xs text-ink/60">Jede Gruppe hat ihr eigenes Handy dabei.</span>
+                </span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setSingleDeviceMode(true)}
+                className={`flex items-start gap-3 rounded-xl border-2 px-4 py-3 text-left transition-colors ${
+                  singleDeviceMode ? 'border-ink bg-ink/10' : 'border-ink/20 bg-ink/5 hover:bg-ink/10'
+                }`}
+              >
+                <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
+                  singleDeviceMode ? 'border-ink' : 'border-ink/40'
+                }`}>
+                  {singleDeviceMode && <span className="w-2.5 h-2.5 rounded-full bg-ink block" />}
+                </span>
+                <span>
+                  <span className="text-sm font-semibold block">👥 Gemeinsam auf einem Gerät</span>
+                  <span className="text-xs text-ink/60">Alle Gruppen spielen abwechselnd auf einem geteilten Handy/Tablet. Der Steal-Joker entfällt in diesem Modus, da er ein eigenes Gerät pro Gruppe voraussetzt.</span>
+                </span>
+              </button>
+            </div>
+          </div>
+
           {/* Ban-Modus */}
           <button
             type="button"
@@ -735,7 +778,11 @@ function MultiplayerLobbyContent() {
             </span>
             <span>
               <span className="text-sm font-semibold block">🃏 Joker aktivieren</span>
-              <span className="text-xs text-ink/60">Jede Gruppe erhält 4 Joker: Neue Frage, NEXT, Würfeln und STEAL.</span>
+              <span className="text-xs text-ink/60">
+                {singleDeviceMode
+                  ? 'Jede Gruppe erhält 3 Joker: Neue Frage, NEXT und Würfeln. Der STEAL-Joker entfällt im Modus "Gemeinsam auf einem Gerät".'
+                  : 'Jede Gruppe erhält 4 Joker: Neue Frage, NEXT, Würfeln und STEAL.'}
+              </span>
             </span>
           </button>
 
