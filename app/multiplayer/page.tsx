@@ -380,7 +380,10 @@ function MultiplayerLobbyContent() {
 
       // Mit Spielleitung: der Ersteller spielt nicht mit, nur Spielleiter-Status.
       // Ohne Spielleitung: der Ersteller ist eine ganz normale spielende Gruppe.
-      const hostName = hostless ? (creatorGroupName.trim() || 'Team 1') : 'Spielleiter';
+      // Im Endgeräte-Modus (Trivia) gibt es die Wahl gar nicht erst – dort läuft
+      // es immer mit Spielleitung, da wer das Gerät hält, ohnehin die Rolle übernimmt.
+      const effectiveHostless = gameMode === 'trivia' && singleDeviceMode ? false : hostless;
+      const hostName = effectiveHostless ? (creatorGroupName.trim() || 'Team 1') : 'Spielleiter';
 
       const { pin, groupId, playerId } = await createGame({
         mode: gameMode,
@@ -393,8 +396,8 @@ function MultiplayerLobbyContent() {
         jokersEnabled: gameMode === 'trivia' ? jokersEnabled : false,
         singleDeviceMode: gameMode === 'trivia' ? singleDeviceMode : false,
         timelineWinTarget: gameMode === 'timeline' ? timelineWinTarget : undefined,
-        hostless,
-        hostAvatar: hostless ? creatorAvatar : undefined,
+        hostless: effectiveHostless,
+        hostAvatar: effectiveHostless ? creatorAvatar : undefined,
         hostTextAnswersEnabled: gameMode === 'trivia' ? hostTextAnswersEnabled : false,
       });
 
@@ -405,7 +408,7 @@ function MultiplayerLobbyContent() {
         playerId,
         groupName: hostName,
         playerName: hostName,
-        avatar: hostless ? creatorAvatar : undefined,
+        avatar: effectiveHostless ? creatorAvatar : undefined,
         isHost: true
       }));
 
@@ -623,51 +626,55 @@ function MultiplayerLobbyContent() {
         </div>
       </div>
 
-      {/* Spielleitung */}
-      <div>
-        <label className="block text-sm font-semibold mb-2">Spielleitung</label>
-        <div className="grid grid-cols-1 gap-2">
-          <button
-            type="button"
-            onClick={() => setHostless(false)}
-            className={`flex items-start gap-3 rounded-xl border-2 px-4 py-3 text-left transition-colors ${
-              !hostless ? 'border-ink bg-ink/10' : 'border-ink/20 bg-ink/5 hover:bg-ink/10'
-            }`}
-          >
-            <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
-              !hostless ? 'border-ink' : 'border-ink/40'
-            }`}>
-              {!hostless && <span className="w-2.5 h-2.5 rounded-full bg-ink block" />}
-            </span>
-            <span>
-              <span className="text-sm font-semibold block">👑 Mit Spielleitung</span>
-              <span className="text-xs text-ink/60">Du (oder ein Gerät) leitet das Spiel, bewertest Antworten und steuerst das Tempo.</span>
-            </span>
-          </button>
-          <button
-            type="button"
-            onClick={() => setHostless(true)}
-            className={`flex items-start gap-3 rounded-xl border-2 px-4 py-3 text-left transition-colors ${
-              hostless ? 'border-ink bg-ink/10' : 'border-ink/20 bg-ink/5 hover:bg-ink/10'
-            }`}
-          >
-            <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
-              hostless ? 'border-ink' : 'border-ink/40'
-            }`}>
-              {hostless && <span className="w-2.5 h-2.5 rounded-full bg-ink block" />}
-            </span>
-            <span>
-              <span className="text-sm font-semibold block">🗳️ Ohne Spielleitung</span>
-              <span className="text-xs text-ink/60">
-                Bei Trivia-Fragen tippt die antwortende Gruppe ihre Antwort ein, die anderen Gruppen stimmen ab (≥50% = richtig). Timeline läuft automatisch weiter. Schätzfragen bleiben wie gewohnt.
+      {/* Spielleitung – im Endgeräte-Modus (Trivia) unnötig: die "ohne Spielleitung"-Abstimmung
+          setzt voraus, dass jede Gruppe auf ihrem eigenen Gerät abstimmt, und wer das geteilte
+          Gerät hält, ist ohnehin faktisch die Spielleitung. */}
+      {!(gameMode === 'trivia' && singleDeviceMode) && (
+        <div>
+          <label className="block text-sm font-semibold mb-2">Spielleitung</label>
+          <div className="grid grid-cols-1 gap-2">
+            <button
+              type="button"
+              onClick={() => setHostless(false)}
+              className={`flex items-start gap-3 rounded-xl border-2 px-4 py-3 text-left transition-colors ${
+                !hostless ? 'border-ink bg-ink/10' : 'border-ink/20 bg-ink/5 hover:bg-ink/10'
+              }`}
+            >
+              <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
+                !hostless ? 'border-ink' : 'border-ink/40'
+              }`}>
+                {!hostless && <span className="w-2.5 h-2.5 rounded-full bg-ink block" />}
               </span>
-            </span>
-          </button>
+              <span>
+                <span className="text-sm font-semibold block">👑 Mit Spielleitung</span>
+                <span className="text-xs text-ink/60">Du (oder ein Gerät) leitet das Spiel, bewertest Antworten und steuerst das Tempo.</span>
+              </span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setHostless(true)}
+              className={`flex items-start gap-3 rounded-xl border-2 px-4 py-3 text-left transition-colors ${
+                hostless ? 'border-ink bg-ink/10' : 'border-ink/20 bg-ink/5 hover:bg-ink/10'
+              }`}
+            >
+              <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
+                hostless ? 'border-ink' : 'border-ink/40'
+              }`}>
+                {hostless && <span className="w-2.5 h-2.5 rounded-full bg-ink block" />}
+              </span>
+              <span>
+                <span className="text-sm font-semibold block">🗳️ Ohne Spielleitung</span>
+                <span className="text-xs text-ink/60">
+                  Bei Trivia-Fragen tippt die antwortende Gruppe ihre Antwort ein, die anderen Gruppen stimmen ab (≥50% = richtig). Timeline läuft automatisch weiter. Schätzfragen bleiben wie gewohnt.
+                </span>
+              </span>
+            </button>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Ohne Spielleitung: Ersteller spielt mit und braucht einen Gruppennamen + Avatar */}
-      {hostless && (
+      {hostless && !(gameMode === 'trivia' && singleDeviceMode) && (
         <div className="space-y-3 border-t pt-4">
           <div>
             <label className="block text-sm font-semibold mb-2">Euer Gruppenname (ihr spielt selbst mit)</label>
@@ -722,7 +729,7 @@ function MultiplayerLobbyContent() {
               </button>
               <button
                 type="button"
-                onClick={() => setSingleDeviceMode(true)}
+                onClick={() => { setSingleDeviceMode(true); setHostless(false); }}
                 className={`flex items-start gap-3 rounded-xl border-2 px-4 py-3 text-left transition-colors ${
                   singleDeviceMode ? 'border-ink bg-ink/10' : 'border-ink/20 bg-ink/5 hover:bg-ink/10'
                 }`}
