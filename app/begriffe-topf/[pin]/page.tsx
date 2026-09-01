@@ -37,6 +37,7 @@ export default function BegriffeTopfGamePage() {
   const [confirmEnd, setConfirmEnd] = useState(false);
   const [tick, setTick] = useState(0);
   const [qrDataUrl, setQrDataUrl] = useState<string | null>(null);
+  const [linkCopied, setLinkCopied] = useState(false);
 
   useEffect(() => {
     try {
@@ -64,6 +65,25 @@ export default function BegriffeTopfGamePage() {
       .then(setQrDataUrl)
       .catch(() => setQrDataUrl(null));
   }, [pin]);
+
+  async function shareInviteLink() {
+    const inviteUrl = `${window.location.origin}/begriffe-topf/${pin}`;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: 'Begriffe-Topf – Einladung', text: `Tritt unserem Begriffe-Topf bei! PIN: ${pin}`, url: inviteUrl });
+      } catch {
+        // Nutzer hat den Teilen-Dialog abgebrochen – nichts weiter zu tun.
+      }
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(inviteUrl);
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 2000);
+    } catch {
+      // Zwischenablage nicht verfügbar (z.B. unsicherer Kontext) – Link bleibt über die QR-Anzeige verfügbar.
+    }
+  }
 
   // Sekunden-Tick treibt die Timer-Anzeige und den Timeout-Watchdog an.
   useEffect(() => {
@@ -253,6 +273,9 @@ export default function BegriffeTopfGamePage() {
               <span className={styles.pinLabel}>PIN zum Beitreten</span>
               <span className={styles.pinValue}>{pin}</span>
               {qrDataUrl && <img src={qrDataUrl} alt="QR-Code zum Beitreten" className={styles.qrImg} />}
+              <button onClick={shareInviteLink} className={styles.secondaryBtn}>
+                {linkCopied ? '✓ Link kopiert' : '🔗 Einladungslink teilen'}
+              </button>
             </div>
 
             <div className={styles.section}>
