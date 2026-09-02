@@ -65,6 +65,10 @@ export default function CodenamesLandingPage() {
           Zahl, die Ermittler tippen die passenden Begriffe an. Wer zuerst alle eigenen Wörter findet,
           gewinnt – aber Vorsicht vor dem Attentäter! Jeder spielt mit dem eigenen Handy.
         </p>
+        <p className={styles.hint}>
+          📱 Mindestens 4 Geräte nötig – pro Team 1 Geheimdienstchef + 1 Ermittler. Größere Teams mit
+          mehreren Ermittlern funktionieren genauso gut, wenn ihr im selben Raum zusammen ratet.
+        </p>
 
         <div className={styles.toggleRow}>
           <button onClick={() => setTab('create')} className={tab === 'create' ? styles.toggleBtnOn : styles.toggleBtn}>
