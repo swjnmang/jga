@@ -1,4 +1,4 @@
-import { database } from './firebase';
+import { database, isFirebaseEnabled } from './firebase';
 import { ref, set, get, update, onValue, off, push, serverTimestamp, remove, onDisconnect, runTransaction } from 'firebase/database';
 import { Card } from './types';
 import {
@@ -11,6 +11,7 @@ import {
   GameState,
   HighscoreEntry
 } from './multiplayerTypes';
+import { NextTurnResult, computeNextTurn, maybeInjectSchaetzfrage } from './triviaEngine';
 
 // Überprüfe ob Firebase verfügbar ist
 function checkFirebase() {
@@ -1388,134 +1389,6 @@ function shuffleArray<T>(arr: T[]): T[] {
   return a;
 }
 
-interface NextTurnResult {
-  nextGroupId: string;
-  nextCardId: string | null;
-  currentRoundCategory: string;
-  categoryRoundQueue: string[];
-  categoryGroupQueue: string[];
-}
-
-/**
- * Berechnet den nächsten Spielzustand nach einem Trivia-Zug.
- * - Gleiche Kategorie, nächste Gruppe, falls noch Gruppen übrig (und noch nicht gesammelt).
- * - Nächste Kategorie (zufällig), berechtigte Gruppen spielen, wenn Kategorie-Runde fertig.
- * - Schätzfragen-Ausnahme: alle Gruppen spielen stets mit.
- * - Im Punkte-Modus: keine Kategorie-Filterung.
- */
-function computeNextTurn(
-  playingGroupIds: string[],
-  currentRoundCat: string,
-  catGroupQueue: string[],    // [0] = active group, rest = pending
-  catRoundQueue: string[],    // remaining categories this round
-  triviaCategories: string[], // all categories
-  newAvailable: string[],
-  deckMeta: Record<string, string>,
-  groupCompletedCategories: Record<string, string[]>,  // gid -> completed cats (with updated active group)
-  winCondition: string        // 'categories' | 'points'
-): NextTurnResult {
-  // Eine Gruppe ist für eine Kategorie spielberechtigt wenn:
-  // - Modus ist Punkte, ODER
-  // - Die Gruppe hat diese Kategorie noch nicht gesammelt
-  // Hinweis: Die frühere Schätzfragen-Ausnahme ("immer spielberechtigt") wurde entfernt,
-  // da sie eine Endlosschleife verursachte: Gruppen, die Schätzfragen bereits gesammelt
-  // hatten, wurden trotzdem immer wieder in Schätzfragen-Runden geschickt und nie zu
-  // anderen Kategorien weitergeleitet.
-  const isEligible = (gid: string, cat: string): boolean => {
-    if (winCondition !== 'categories') return true;
-    return !(groupCompletedCategories[gid] ?? []).includes(cat);
-  };
-
-  // Finde die passende Kategorie + Karte für eine Gruppe:
-  // Bevorzuge preferredCat, weicht auf nächste unerledigte Kategorie aus.
-  const findCardForGroup = (gid: string, preferredCat: string, extraSearchOrder: string[]): { cardId: string; cat: string } | null => {
-    if (isEligible(gid, preferredCat)) {
-      const matches = newAvailable.filter(id => deckMeta[id] === preferredCat);
-      if (matches.length > 0) {
-        return { cardId: matches[Math.floor(Math.random() * matches.length)], cat: preferredCat };
-      }
-    }
-    const searchOrder = [...extraSearchOrder, ...triviaCategories.filter(c => !extraSearchOrder.includes(c) && c !== preferredCat)];
-    for (const cat of searchOrder) {
-      if (!isEligible(gid, cat)) continue;
-      const matches = newAvailable.filter(id => deckMeta[id] === cat);
-      if (matches.length > 0) {
-        return { cardId: matches[Math.floor(Math.random() * matches.length)], cat };
-      }
-    }
-    return null;
-  };
-
-  // Verbleibende Gruppen in dieser Kategorie – ALLE behalten (kein Skip!)
-  // Gruppen die currentRoundCat schon haben, bekommen eine andere Kategorie.
-  const remainingGroups = catGroupQueue.slice(1); // strict round-robin, never skip
-
-  if (remainingGroups.length > 0) {
-    const nextGroupId = remainingGroups[0];
-    const found = findCardForGroup(nextGroupId, currentRoundCat, catRoundQueue);
-    if (found !== null) {
-      return {
-        nextGroupId,
-        nextCardId: found.cardId,
-        // currentRoundCategory bleibt die Runden-Kategorie — auch wenn eine Gruppe
-        // eine Ersatz-Kategorie erhält, spielen die nachfolgenden Gruppen weiterhin
-        // aus der Runden-Kategorie.
-        currentRoundCategory: currentRoundCat,
-        categoryRoundQueue: catRoundQueue,
-        categoryGroupQueue: remainingGroups,
-      };
-    }
-    // Keine Karte mehr für diese Gruppe → Kategorie-Runde beenden
-  }
-
-  // Alle Gruppen fertig → nächste Kategorie
-  // Neue Runde startet bei der Gruppe NACH der zuletzt spielenden Gruppe (striktes Round-Robin)
-  const lastPlayedGroupId = catGroupQueue[0] ?? '';
-  const lastPlayedIdx = playingGroupIds.indexOf(lastPlayedGroupId);
-  // Rotierte Gruppen-Reihenfolge: beginnt bei der Gruppe nach der zuletzt spielenden
-  const rotatedGroupIds = lastPlayedIdx >= 0
-    ? [...playingGroupIds.slice(lastPlayedIdx + 1), ...playingGroupIds.slice(0, lastPlayedIdx + 1)]
-    : [...playingGroupIds];
-
-  // Alle Gruppen fertig → nächste Kategorie (striktes Round-Robin: rotiere ab aktueller Kategorie)
-  // Nie neu mischen — die einmalig beim Spielstart festgelegte Reihenfolge wird immer wiederholt.
-  const nextCatQueue = (() => {
-    if (catRoundQueue.length > 0) return catRoundQueue;
-    // Queue leer → nächste Runde: starte bei der Kategorie NACH der aktuellen
-    const lastCatIdx = triviaCategories.indexOf(currentRoundCat);
-    return lastCatIdx >= 0
-      ? [...triviaCategories.slice(lastCatIdx + 1), ...triviaCategories.slice(0, lastCatIdx + 1)]
-      : [...triviaCategories];
-  })();
-  const tryQueue = nextCatQueue;
-  for (let i = 0; i < tryQueue.length; i++) {
-    const nextCat = tryQueue[i];
-    const catPool = newAvailable.filter(id => deckMeta[id] === nextCat);
-    if (catPool.length === 0) continue;
-    const firstGroup = rotatedGroupIds[0];
-    // card for firstGroup (may fall back to different category if they completed nextCat)
-    const found = findCardForGroup(firstGroup, nextCat, tryQueue.slice(i + 1));
-    if (found !== null) {
-      return {
-        nextGroupId: firstGroup,
-        nextCardId: found.cardId,
-        currentRoundCategory: nextCat, // keep the round's category consistent for other groups
-        categoryRoundQueue: tryQueue.slice(i + 1),
-        categoryGroupQueue: [...rotatedGroupIds],
-      };
-    }
-  }
-
-  // Keine Karten mehr überhaupt
-  return {
-    nextGroupId: rotatedGroupIds[0],
-    nextCardId: null,
-    currentRoundCategory: currentRoundCat,
-    categoryRoundQueue: [],
-    categoryGroupQueue: [...rotatedGroupIds],
-  };
-}
-
 // ---------------------------------------------------------------------------
 // Helper: Kategorie-Modus – Gewinner auflösen (Punkte-Tiebreaker → Schätzfragen-Stechen)
 // ---------------------------------------------------------------------------
@@ -1800,33 +1673,24 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
   // ── Schätzfragen-Injektion: spätestens alle N normale Fragen ─────────────
   // Nur wenn das Spiel nicht gerade endet, kein STEAL läuft und kein Tiebreaker aktiv.
   if (!updates.state && !isJokerStealResolution && !game.triviaTiebreakerActive) {
-    const isCurrentSchaetz = currentCategory === 'schaetzfragen';
-    const currentCounter = game.triviaSchaetzCounter ?? 0;
-    const newCounter = isCurrentSchaetz ? 0 : currentCounter + 1;
-    const schaetzInterval = playingGroupIds.length; // N = Anzahl spielender Gruppen
-    const schaetzPool = newAvailable.filter(id => deckMeta[id] === 'schaetzfragen');
-    const firstQuestion = (game.currentCardIndex ?? 0) === 0;
-
-    if (!firstQuestion && newCounter >= schaetzInterval && schaetzPool.length > 0) {
-      // Schätzfrage einschleusen: echten nächsten Zug speichern, Schätzfrage setzen
-      const injectedCardId = schaetzPool[Math.floor(Math.random() * schaetzPool.length)];
-      updates.triviaSchaetzCounter = 0;
+    const injection = maybeInjectSchaetzfrage({
+      currentCategory,
+      triviaSchaetzCounter: game.triviaSchaetzCounter ?? 0,
+      playingGroupCount: playingGroupIds.length,
+      newAvailable,
+      deckMeta,
+      currentCardIndex: game.currentCardIndex ?? 0,
+      next,
+    });
+    updates.triviaSchaetzCounter = injection.triviaSchaetzCounter;
+    if (injection.schaetzInjected) {
       updates.schaetzInjected = true;
-      updates.schaetzInjectedNext = {
-        nextCardId: updates.currentCardId ?? null,
-        nextGroupId: next.nextGroupId,
-        currentRoundCategory: next.currentRoundCategory,
-        categoryRoundQueue: next.categoryRoundQueue ?? [],
-        categoryGroupQueue: next.categoryGroupQueue ?? [],
-      };
-      updates.currentCardId = injectedCardId;
-      updates.currentTurnGroupId = next.nextGroupId;
-      updates.currentRoundCategory = next.currentRoundCategory;
-      updates.categoryRoundQueue = next.categoryRoundQueue;
-      updates.categoryGroupQueue = next.categoryGroupQueue;
-    } else {
-      // Kein Schätzfragen verfügbar oder Intervall noch nicht erreicht
-      updates.triviaSchaetzCounter = newCounter >= schaetzInterval ? 0 : newCounter;
+      updates.schaetzInjectedNext = injection.schaetzInjectedNext;
+      updates.currentCardId = injection.currentCardId;
+      updates.currentTurnGroupId = injection.currentTurnGroupId;
+      updates.currentRoundCategory = injection.currentRoundCategory;
+      updates.categoryRoundQueue = injection.categoryRoundQueue;
+      updates.categoryGroupQueue = injection.categoryGroupQueue;
     }
   }
 
@@ -2584,6 +2448,21 @@ export async function recordHighscoreIfNeeded(pin: string): Promise<void> {
   };
 
   await set(push(ref(database!, 'highscores')), entry);
+}
+
+/**
+ * Trägt einen Highscore-Eintrag für ein rein lokales Spiel (Endgeräte-Modus, kein
+ * `games/{pin}`-Eintrag vorhanden) ein. Best effort: schlägt Firebase fehl oder ist
+ * nicht konfiguriert, wird still zurückgekehrt statt zu werfen — das lokale Spiel
+ * bleibt auch ohne Firebase vollständig spielbar.
+ */
+export async function recordLocalHighscore(entry: Omit<HighscoreEntry, 'id'>): Promise<void> {
+  if (!isFirebaseEnabled || !database) return;
+  try {
+    await set(push(ref(database, 'highscores')), entry);
+  } catch (error) {
+    console.error('Highscore konnte nicht gespeichert werden:', error);
+  }
 }
 
 /**

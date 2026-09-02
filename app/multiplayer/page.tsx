@@ -6,6 +6,7 @@ import { createGame, joinGame, subscribeToGame } from '@/lib/multiplayerService'
 import { cards, getCategories } from '@/lib/cards';
 import { getDefaultSettings, TIMELINE_CATEGORIES, toDecadeTag } from '@/lib/userSettings';
 import { isFirebaseEnabled } from '@/lib/firebase';
+import { TRIVIA_LOCAL_SETUP_KEY, TRIVIA_LOCAL_GAME_KEY, TriviaLocalSetupPayload } from '@/lib/triviaLocalTypes';
 import { CardCategory, DecadeTag, Difficulty, GenreTag } from '@/lib/types';
 import { catIcon, catLabel as catLabelMeta } from '@/lib/categoryMeta';
 import { compressImageToAvatar, isImageAvatar } from '@/lib/imageAvatar';
@@ -340,11 +341,6 @@ function MultiplayerLobbyContent() {
   }, []);
 
   const handleCreateGame = async () => {
-    if (!isFirebaseEnabled) {
-      setError('Firebase ist nicht konfiguriert. Bitte konfiguriere Firebase zuerst (siehe FIREBASE_SETUP.md).');
-      return;
-    }
-
     if (!validateStep3()) {
       return;
     }
@@ -374,6 +370,28 @@ function MultiplayerLobbyContent() {
       const deck = shuffled;
       if (deck.length === 0) {
         setError('Keine Karten für die ausgewählten Einstellungen verfügbar');
+        setLoading(false);
+        return;
+      }
+
+      // Endgeräte-Modus (Trivia): komplett lokal, kein Firebase/keine PIN-Lobby nötig.
+      // Gruppen werden erst auf der lokalen Seite selbst angelegt.
+      if (gameMode === 'trivia' && singleDeviceMode) {
+        const payload: TriviaLocalSetupPayload = {
+          deck,
+          banModeEnabled: banMode,
+          jokersEnabled,
+          triviaWinCondition,
+          hostTextAnswersEnabled,
+        };
+        localStorage.setItem(TRIVIA_LOCAL_SETUP_KEY, JSON.stringify(payload));
+        localStorage.removeItem(TRIVIA_LOCAL_GAME_KEY);
+        router.push('/multiplayer/lokal');
+        return;
+      }
+
+      if (!isFirebaseEnabled) {
+        setError('Firebase ist nicht konfiguriert. Bitte konfiguriere Firebase zuerst (siehe FIREBASE_SETUP.md).');
         setLoading(false);
         return;
       }
@@ -1172,10 +1190,12 @@ function MultiplayerLobbyContent() {
           {/* Host Info */}
           <div className="rounded-lg bg-slate-900/10 border-2 border-orange-500 p-4 space-y-2">
             <p className="text-sm font-semibold text-orange-600">
-              {hostless ? '🎮 Du spielst mit' : '👑 Du bist der Spielleiter'}
+              {gameMode === 'trivia' && singleDeviceMode ? '📱 Ein gemeinsames Gerät' : hostless ? '🎮 Du spielst mit' : '👑 Du bist der Spielleiter'}
             </p>
             <p className="text-sm text-gray-700">
-              {hostless
+              {gameMode === 'trivia' && singleDeviceMode
+                ? 'Alle Gruppen spielen gemeinsam auf diesem Gerät. Im nächsten Schritt legt ihr fest, wie viele Gruppen mitspielen und wie sie heißen.'
+                : hostless
                 ? 'Im spielleitungslosen Modus bist du eine ganz normale spielende Gruppe. Du startest nur zusätzlich das Spiel, sobald alle bereit sind — die Bewertung der Antworten übernehmen die Gruppen per Abstimmung.'
                 : 'Du leitest das Spiel, bestätigst Buttons und verwaltest die Punkte. Du spielst nicht mit, kannst dich aber nachher mit einem anderen Endgerät einklinken.'}
             </p>
