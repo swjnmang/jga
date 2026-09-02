@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import styles from './rules.module.css';
 
-type RuleTab = 'timeline' | 'trivia' | 'familienduell' | 'partnerkann' | 'tabu' | 'begriffetopf';
+type RuleTab = 'timeline' | 'trivia' | 'familienduell' | 'partnerkann' | 'tabu' | 'begriffetopf' | 'codenames';
 
 const TABS: { key: RuleTab; icon: string; label: string }[] = [
   { key: 'timeline', icon: '🕰️', label: 'Timeline' },
@@ -13,6 +13,7 @@ const TABS: { key: RuleTab; icon: string; label: string }[] = [
   { key: 'partnerkann', icon: '🤩', label: 'Partner kann' },
   { key: 'tabu', icon: '🙊', label: 'Tabu' },
   { key: 'begriffetopf', icon: '🫙', label: 'Begriffe-Topf' },
+  { key: 'codenames', icon: '🕵️', label: 'Codenames' },
 ];
 
 export default function RulesPage() {
@@ -378,6 +379,56 @@ export default function RulesPage() {
                 <li><strong className={styles.strong}>Mehrere Geräte:</strong> Über Firebase — Mitspieler treten per PIN oder QR-Code bei, jeder reicht seine Begriffe auf dem eigenen Handy ein.</li>
                 <li><strong className={styles.strong}>Ein Gerät:</strong> Alles läuft auf einem Handy, das reihum weitergegeben wird.</li>
                 <li>Rundenzeit einstellbar zwischen 20 und 90 Sekunden.</li>
+              </ul>
+            </section>
+          </div>
+        )}
+
+        {/* ─── CODENAMES ─── */}
+        {tab === 'codenames' && (
+          <div className={styles.content}>
+
+            <section className={styles.section}>
+              <h2 className={styles.sectionTitle}>Ziel</h2>
+              <p>
+                Zwei Teams (Rot/Blau) versuchen, über verdeckte Hinweise ihre eigenen Begriffe auf einem
+                <strong className={styles.strong}> 5×5-Raster</strong> zu finden. Wer zuerst alle eigenen Begriffe
+                aufgedeckt hat, gewinnt — wer den <strong className={styles.strong}>Attentäter</strong> aufdeckt, verliert sofort.
+              </p>
+            </section>
+
+            <section className={styles.section}>
+              <h2 className={styles.sectionTitle}>Rollen</h2>
+              <div className={styles.cardStack}>
+                <div className={styles.miniCard}>
+                  <p className={styles.miniCardTitle}>🕵️ Geheimdienstchef</p>
+                  <p>Sieht die Farbe aller 25 Begriffe und gibt reihum einen Hinweis: ein Wort plus eine Zahl (wie viele Begriffe damit gemeint sind).</p>
+                </div>
+                <div className={styles.miniCard}>
+                  <p className={styles.miniCardTitle}>🔎 Ermittler</p>
+                  <p>Kennt nur die Wörter, keine Farben. Tippt anhand des Hinweises die passenden Karten im Team an.</p>
+                </div>
+              </div>
+            </section>
+
+            <section className={styles.section}>
+              <h2 className={styles.sectionTitle}>Ablauf</h2>
+              <ol className={styles.rules}>
+                <li className={styles.rule}><span className={styles.ruleNum}>1</span><span>Das Startteam wird zufällig bestimmt und bekommt <strong className={styles.strong}>9 Begriffe</strong>, das andere Team <strong className={styles.strong}>8</strong>. Dazu kommen 7 neutrale Begriffe und 1 Attentäter.</span></li>
+                <li className={styles.rule}><span className={styles.ruleNum}>2</span><span>Der Geheimdienstchef des aktiven Teams gibt einen Hinweis (Wort + Zahl). Die Zahl 0 bedeutet „beliebig viele Tipps".</span></li>
+                <li className={styles.rule}><span className={styles.ruleNum}>3</span><span>Die Ermittler tippen nacheinander Karten an — sie dürfen bis zu <strong className={styles.strong}>Zahl + 1</strong> Mal raten oder jederzeit passen.</span></li>
+                <li className={styles.rule}><span className={styles.ruleNum}>4</span><span>Eigene Farbe getroffen: weiterraten. Neutrale oder gegnerische Farbe getroffen: Zug endet sofort, das andere Team ist dran.</span></li>
+                <li className={styles.rule}><span className={styles.ruleNum}>5</span><span>Der Attentäter wird aufgedeckt: Spiel vorbei, das <strong className={styles.strong}>andere</strong> Team gewinnt sofort — egal welches Team gerade dran war.</span></li>
+              </ol>
+            </section>
+
+            <section className={styles.section}>
+              <h2 className={styles.sectionTitle}>Rahmen</h2>
+              <ul className={styles.bulletList}>
+                <li><strong className={styles.strong}>2 Teams</strong>, je mindestens 1 Geheimdienstchef und 1 Ermittler.</li>
+                <li><strong className={styles.strong}>Mehrere Geräte:</strong> Über Firebase — Mitspieler treten per PIN oder QR-Code bei und wählen Team sowie Rolle auf dem eigenen Handy.</li>
+                <li>Pro Team ist immer nur <strong className={styles.strong}>ein</strong> Geheimdienstchef zugelassen.</li>
+                <li>Deutsches Wortset mit über 350 Begriffen, jede Partie mit neuer zufälliger Auswahl.</li>
               </ul>
             </section>
           </div>

@@ -41,6 +41,12 @@ const MODES = [
     desc: 'Eigene Begriffe einreichen, dann erklären, Pantomime, ein Wort',
     href: '/begriffe-topf',
   },
+  {
+    icon: '🕵️',
+    title: 'Codenames',
+    desc: 'Zwei Teams, ein Wortraster – Hinweise geben und die richtigen Begriffe finden',
+    href: '/codenames',
+  },
 ] as const;
 
 export default function CreatePage() {
