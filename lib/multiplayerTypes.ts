@@ -25,6 +25,10 @@ export interface GroupData {
   lastFlexRequest?: number; // Timestamp des letzten Flex-Requests
   pendingPosition?: number | null; // Live-Vorschau: gewählte Position (noch nicht eingereicht)
   completedCategories?: string[]; // Trivia: bereits korrekt beantwortete Kategorien
+  // Trivia: Fehlversuche pro Kategorie (kumulativ). Ab 3 wird die nächste Frage dieser
+  // Kategorie für diese Gruppe auf Schwierigkeit "leicht" gezogen (Frust-Vermeidung).
+  // Wird bei einer richtigen Antwort während dieser "leicht"-Phase auf 0 zurückgesetzt.
+  categoryFails?: Record<string, number>;
   schaetzSubmission?: string | null; // Trivia Schätzfrage: eingereichte Schätzung
   avatar?: string; // Avatar der Gruppe: Emoji oder Foto als Base64-Data-URL (data:image/...)
   jokers?: { newQuestion: boolean; next: boolean; dice: boolean; steal: boolean; }; // Trivia: verfügbare Joker
@@ -85,6 +89,7 @@ export interface GameSession {
   // Trivia-Modus
   triviaCategories?: string[];           // Alle Kategorien die im Deck vorhanden sind (einmalig beim Erstellen berechnet)
   deckMeta?: Record<string, string>;     // cardId → category (für Server-seitige Logik)
+  difficultyMeta?: Record<string, string>; // cardId → difficulty (für die "leicht"-Ausweich-Logik)
   availableDeck?: string[];              // Noch nicht gestellte Karten (cardIds)
   // Ban-Phase
   banModeEnabled?: boolean;              // Ob der Ban-Modus aktiviert ist (Gruppen können Kategorien sperren)

@@ -10,12 +10,44 @@ export interface NextTurnResult {
   categoryGroupQueue: string[];
 }
 
+// Fehlversuchs-Schwelle, ab der die nächste Frage einer Kategorie für eine Gruppe
+// bevorzugt aus Schwierigkeit "leicht" gezogen wird (Frust-Vermeidung).
+const CATEGORY_FAIL_EASY_THRESHOLD = 3;
+const EASY_DIFFICULTY = 'leicht';
+
+/**
+ * Wählt aus `matches` (bereits auf eine Kategorie gefilterte Karten-IDs) zufällig eine
+ * Karte aus. Hat die Gruppe in dieser Kategorie bereits `CATEGORY_FAIL_EASY_THRESHOLD`
+ * oder mehr Fehlversuche gesammelt, wird bevorzugt aus den "leicht"-Karten des Pools
+ * gezogen — sind keine vorhanden (z.B. weil "leicht" beim Erstellen abgewählt wurde),
+ * wird ganz normal aus dem vollen Pool gezogen.
+ */
+export function pickCardRespectingDifficulty(
+  matches: string[],
+  gid: string,
+  cat: string,
+  groupCategoryFails: Record<string, Record<string, number>>,
+  difficultyMeta: Record<string, string>
+): string | null {
+  if (matches.length === 0) return null;
+  const fails = groupCategoryFails[gid]?.[cat] ?? 0;
+  if (fails >= CATEGORY_FAIL_EASY_THRESHOLD) {
+    const easyMatches = matches.filter((id) => difficultyMeta[id] === EASY_DIFFICULTY);
+    if (easyMatches.length > 0) {
+      return easyMatches[Math.floor(Math.random() * easyMatches.length)];
+    }
+  }
+  return matches[Math.floor(Math.random() * matches.length)];
+}
+
 /**
  * Berechnet den nächsten Spielzustand nach einem Trivia-Zug.
  * - Gleiche Kategorie, nächste Gruppe, falls noch Gruppen übrig (und noch nicht gesammelt).
  * - Nächste Kategorie (zufällig), berechtigte Gruppen spielen, wenn Kategorie-Runde fertig.
  * - Schätzfragen-Ausnahme: alle Gruppen spielen stets mit.
  * - Im Punkte-Modus: keine Kategorie-Filterung.
+ * - Frust-Vermeidung: hat eine Gruppe in der gezogenen Kategorie ≥3 Fehlversuche,
+ *   wird bevorzugt eine "leicht"-Frage gezogen (siehe pickCardRespectingDifficulty).
  */
 export function computeNextTurn(
   playingGroupIds: string[],
@@ -26,7 +58,9 @@ export function computeNextTurn(
   newAvailable: string[],
   deckMeta: Record<string, string>,
   groupCompletedCategories: Record<string, string[]>,  // gid -> completed cats (with updated active group)
-  winCondition: string        // 'categories' | 'points'
+  winCondition: string,       // 'categories' | 'points'
+  groupCategoryFails: Record<string, Record<string, number>> = {}, // gid -> cat -> Fehlversuche
+  difficultyMeta: Record<string, string> = {} // cardId → difficulty
 ): NextTurnResult {
   // Eine Gruppe ist für eine Kategorie spielberechtigt wenn:
   // - Modus ist Punkte, ODER
@@ -45,16 +79,18 @@ export function computeNextTurn(
   const findCardForGroup = (gid: string, preferredCat: string, extraSearchOrder: string[]): { cardId: string; cat: string } | null => {
     if (isEligible(gid, preferredCat)) {
       const matches = newAvailable.filter(id => deckMeta[id] === preferredCat);
-      if (matches.length > 0) {
-        return { cardId: matches[Math.floor(Math.random() * matches.length)], cat: preferredCat };
+      const picked = pickCardRespectingDifficulty(matches, gid, preferredCat, groupCategoryFails, difficultyMeta);
+      if (picked !== null) {
+        return { cardId: picked, cat: preferredCat };
       }
     }
     const searchOrder = [...extraSearchOrder, ...triviaCategories.filter(c => !extraSearchOrder.includes(c) && c !== preferredCat)];
     for (const cat of searchOrder) {
       if (!isEligible(gid, cat)) continue;
       const matches = newAvailable.filter(id => deckMeta[id] === cat);
-      if (matches.length > 0) {
-        return { cardId: matches[Math.floor(Math.random() * matches.length)], cat };
+      const picked = pickCardRespectingDifficulty(matches, gid, cat, groupCategoryFails, difficultyMeta);
+      if (picked !== null) {
+        return { cardId: picked, cat };
       }
     }
     return null;
@@ -170,7 +206,10 @@ export function maybeInjectSchaetzfrage(params: SchaetzInjectionParams): Schaetz
   const { currentCategory, triviaSchaetzCounter, playingGroupCount, newAvailable, deckMeta, currentCardIndex, next } = params;
   const isCurrentSchaetz = currentCategory === 'schaetzfragen';
   const newCounter = isCurrentSchaetz ? 0 : triviaSchaetzCounter + 1;
-  const schaetzInterval = playingGroupCount; // N = Anzahl spielender Gruppen
+  // Frühestens alle 5 Fragen, bei mehr Gruppen entsprechend seltener (N = Anzahl
+  // spielender Gruppen), damit bei vielen Gruppen weiterhin jede einmal drankommt,
+  // bevor eine Schätzfrage dazwischenkommt.
+  const schaetzInterval = Math.max(5, playingGroupCount);
   const schaetzPool = newAvailable.filter(id => deckMeta[id] === 'schaetzfragen');
   const firstQuestion = currentCardIndex === 0;
 

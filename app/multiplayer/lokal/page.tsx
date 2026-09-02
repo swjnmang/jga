@@ -14,6 +14,7 @@ import {
   NextTurnResult,
   computeNextTurn,
   maybeInjectSchaetzfrage,
+  pickCardRespectingDifficulty,
 } from '@/lib/triviaEngine';
 import {
   recordLocalHighscore,
@@ -36,6 +37,9 @@ interface LocalGroup {
   color: string;
   score: number;
   completedCategories: string[];
+  // Fehlversuche pro Kategorie (kumulativ). Ab 3 wird die nächste Frage dieser
+  // Kategorie für diese Gruppe auf Schwierigkeit "leicht" gezogen (Frust-Vermeidung).
+  categoryFails: Record<string, number>;
   jokers: { newQuestion: boolean; next: boolean; dice: boolean };
 }
 
@@ -56,6 +60,7 @@ interface SchaetzResult {
 interface LocalGame {
   cardsById: Record<string, Card>;
   deckMeta: Record<string, string>;
+  difficultyMeta: Record<string, string>;
   triviaCategories: string[];
   bannedCategories: string[];
   banOrder: string[];
@@ -163,6 +168,22 @@ function winnersByMaxScore(groups: LocalGroup[]): string[] {
   return groups.filter((g) => g.score === max).map((g) => g.id);
 }
 
+// groupCategoryFails-Map für computeNextTurn bauen, optional mit einem aktualisierten
+// Wert für eine Gruppe/Kategorie (z.B. nach einer soeben beantworteten Frage).
+function buildGroupCategoryFails(
+  groups: LocalGroup[],
+  override?: { groupId: string; category: string; value: number }
+): Record<string, Record<string, number>> {
+  const result: Record<string, Record<string, number>> = {};
+  groups.forEach((g) => {
+    result[g.id] =
+      override && g.id === override.groupId
+        ? { ...g.categoryFails, [override.category]: override.value }
+        : g.categoryFails;
+  });
+  return result;
+}
+
 export default function TriviaLokalPage() {
   const router = useRouter();
 
@@ -267,15 +288,18 @@ export default function TriviaLokalPage() {
       color: GROUP_COLORS[i % GROUP_COLORS.length],
       score: 0,
       completedCategories: [],
+      categoryFails: {},
       jokers: { newQuestion: true, next: true, dice: true },
     }));
 
     const cardsById: Record<string, Card> = {};
     const deckMeta: Record<string, string> = {};
+    const difficultyMeta: Record<string, string> = {};
     const catSet = new Set<string>();
     setupPayload.deck.forEach((c) => {
       cardsById[c.id] = c;
       deckMeta[c.id] = c.category;
+      difficultyMeta[c.id] = c.difficulty;
       catSet.add(c.category);
     });
     const triviaCategoriesRaw = Array.from(catSet);
@@ -294,6 +318,7 @@ export default function TriviaLokalPage() {
     > = {
       cardsById,
       deckMeta,
+      difficultyMeta,
       bannedCategories: [],
       banIndex: 0,
       groups,
@@ -415,6 +440,23 @@ export default function TriviaLokalPage() {
       groupCompletedCategories[g.id] = g.id === scoringGroupId ? newCompleted : g.completedCategories;
     });
 
+    // Fehlversuche pro Kategorie (Frust-Vermeidung): zählt für die Gruppe, die die Frage
+    // tatsächlich beantwortet hat (activeGroupId) — unabhängig davon, wer bei NEXT den
+    // Punkt bekommt. Ab 3 Fehlversuchen wird die nächste Frage dieser Kategorie für
+    // diese Gruppe bevorzugt "leicht" gezogen; eine richtige Antwort während dieser
+    // Phase setzt den Zähler wieder auf 0.
+    const activeGroup = game.groups.find((g) => g.id === activeGroupId);
+    const prevFails = activeGroup?.categoryFails[currentCategory] ?? 0;
+    const newFails = !currentCategory || currentCategory === 'schaetzfragen'
+      ? prevFails
+      : correct
+      ? (prevFails >= 3 ? 0 : prevFails)
+      : prevFails + 1;
+    const groupCategoryFails =
+      currentCategory && currentCategory !== 'schaetzfragen'
+        ? buildGroupCategoryFails(game.groups, { groupId: activeGroupId, category: currentCategory, value: newFails })
+        : buildGroupCategoryFails(game.groups);
+
     const next = computeNextTurn(
       playingGroupIds,
       game.currentRoundCategory,
@@ -424,14 +466,21 @@ export default function TriviaLokalPage() {
       newAvailable,
       game.deckMeta,
       groupCompletedCategories,
-      winCondition
+      winCondition,
+      groupCategoryFails,
+      game.difficultyMeta
     );
 
-    const newGroups = game.groups.map((g) =>
-      g.id === scoringGroupId
-        ? { ...g, score: awardPoint ? g.score + 1 : g.score, completedCategories: newCompleted }
-        : g
-    );
+    const newGroups = game.groups.map((g) => {
+      let next = g;
+      if (g.id === scoringGroupId) {
+        next = { ...next, score: awardPoint ? next.score + 1 : next.score, completedCategories: newCompleted };
+      }
+      if (g.id === activeGroupId && currentCategory && currentCategory !== 'schaetzfragen') {
+        next = { ...next, categoryFails: { ...next.categoryFails, [currentCategory]: newFails } };
+      }
+      return next;
+    });
 
     const base: LocalGame = {
       ...game,
@@ -513,7 +562,13 @@ export default function TriviaLokalPage() {
     const sameCatPool = newAvailable.filter((id) => game.deckMeta[id] === currentCat);
     const nextCardId =
       sameCatPool.length > 0
-        ? sameCatPool[Math.floor(Math.random() * sameCatPool.length)]
+        ? pickCardRespectingDifficulty(
+            sameCatPool,
+            groupId,
+            currentCat,
+            { [groupId]: group.categoryFails },
+            game.difficultyMeta
+          )
         : newAvailable.length > 0
         ? newAvailable[Math.floor(Math.random() * newAvailable.length)]
         : null;
@@ -604,7 +659,9 @@ export default function TriviaLokalPage() {
       newAvailable,
       game.deckMeta,
       groupCompletedCategories,
-      winCondition
+      winCondition,
+      buildGroupCategoryFails(game.groups),
+      game.difficultyMeta
     );
 
     const base: LocalGame = {
@@ -758,7 +815,9 @@ export default function TriviaLokalPage() {
             newAvailable,
             game.deckMeta,
             groupCompletedCategories,
-            winCondition
+            winCondition,
+            buildGroupCategoryFails(newGroups),
+            game.difficultyMeta
           );
 
     const base: LocalGame = {

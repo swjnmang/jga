@@ -11,7 +11,7 @@ import {
   GameState,
   HighscoreEntry
 } from './multiplayerTypes';
-import { NextTurnResult, computeNextTurn, maybeInjectSchaetzfrage } from './triviaEngine';
+import { NextTurnResult, computeNextTurn, maybeInjectSchaetzfrage, pickCardRespectingDifficulty } from './triviaEngine';
 
 // Überprüfe ob Firebase verfügbar ist
 function checkFirebase() {
@@ -80,9 +80,11 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
 
   // Metadaten für alle Modi (für Ban-Phase und Trivia-Gewinnbedingung)
   const deckMeta: Record<string, string> = {};
+  const difficultyMeta: Record<string, string> = {};
   const deckCatSet = new Set<string>();
   for (const card of actualDeck) {
     deckMeta[card.id] = card.category;
+    difficultyMeta[card.id] = card.difficulty;
     deckCatSet.add(card.category);
   }
   const deckCategories = Array.from(deckCatSet);
@@ -100,6 +102,7 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     referenceCard,
     triviaCategories: deckCategories,
     deckMeta,
+    difficultyMeta,
     ...(params.mode === 'trivia' ? {
       availableDeck: actualDeck.map(c => c.id),
     } : {
@@ -1539,9 +1542,28 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
     groupCompletedCategories[gid] = gid === scoringGroupId ? newCompleted : completed;
   });
 
+  // Fehlversuche pro Kategorie (Frust-Vermeidung): zählt für die Gruppe, die die Frage
+  // tatsächlich beantwortet hat (activeGroupId) — unabhängig davon, wer bei NEXT/STEAL
+  // am Ende den Punkt bekommt. Ab 3 Fehlversuchen wird die nächste Frage dieser
+  // Kategorie für diese Gruppe bevorzugt aus Schwierigkeit "leicht" gezogen; eine
+  // richtige Antwort während dieser Phase setzt den Zähler wieder auf 0.
+  const prevFails = game.groups[activeGroupId]?.categoryFails?.[currentCategory] ?? 0;
+  const newFails = !currentCategory || currentCategory === 'schaetzfragen'
+    ? prevFails
+    : correct
+    ? (prevFails >= 3 ? 0 : prevFails)
+    : prevFails + 1;
+  const groupCategoryFails: Record<string, Record<string, number>> = {};
+  Object.entries(game.groups).forEach(([gid, g]) => {
+    const fails = g.categoryFails ?? {};
+    groupCategoryFails[gid] = gid === activeGroupId && currentCategory
+      ? { ...fails, [currentCategory]: newFails }
+      : fails;
+  });
+
   const next = computeNextTurn(
     playingGroupIds, currentRoundCat, catGroupQueue, catRoundQueue, triviaCategories, newAvailable, deckMeta,
-    groupCompletedCategories, winCondition
+    groupCompletedCategories, winCondition, groupCategoryFails, game.difficultyMeta ?? {}
   );
 
   const updates: Record<string, any> = {
@@ -1550,6 +1572,9 @@ export async function submitTriviaAnswer(pin: string, correct: boolean): Promise
       ? (game.groups[scoringGroupId]?.score ?? 0) + 1
       : (game.groups[scoringGroupId]?.score ?? 0),
     [`groups/${scoringGroupId}/completedCategories`]: newCompleted,
+    ...(currentCategory && currentCategory !== 'schaetzfragen'
+      ? { [`groups/${activeGroupId}/categoryFails/${currentCategory}`]: newFails }
+      : {}),
     availableDeck: newAvailable,
     currentTurnGroupId: next.nextGroupId,
     currentRoundCategory: next.currentRoundCategory,
@@ -2002,7 +2027,9 @@ export async function evaluateSchaetzfrage(pin: string, winnerGroupIds: string[]
       }
     : computeNextTurn(
         playingGroupIds, currentRoundCat, [], catRoundQueue, triviaCategories, newAvailable, deckMeta,
-        groupCompletedCatsS, winConditionS
+        groupCompletedCatsS, winConditionS,
+        Object.fromEntries(Object.entries(game.groups).map(([gid, g]) => [gid, g.categoryFails ?? {}])),
+        game.difficultyMeta ?? {}
       );
 
   // Punkte + completedCategories für ALLE Gewinnergruppen (Unentschieden)
@@ -2137,10 +2164,11 @@ export async function activateJokerNewQuestion(pin: string, groupId: string): Pr
     : Object.values(game.availableDeck ?? {});
   const newAvailable = prevAvailable.filter(id => id !== game.currentCardId);
 
-  // Neue Karte: gleiche Kategorie, sonst zufällig beliebig
+  // Neue Karte: gleiche Kategorie (bevorzugt "leicht" bei ≥3 Fehlversuchen der Gruppe
+  // in dieser Kategorie), sonst zufällig beliebig
   const sameCatPool = newAvailable.filter(id => deckMeta[id] === currentCat);
   const nextCardId = sameCatPool.length > 0
-    ? sameCatPool[Math.floor(Math.random() * sameCatPool.length)]
+    ? pickCardRespectingDifficulty(sameCatPool, groupId, currentCat, { [groupId]: game.groups[groupId]?.categoryFails ?? {} }, game.difficultyMeta ?? {})
     : (newAvailable.length > 0 ? newAvailable[Math.floor(Math.random() * newAvailable.length)] : null);
 
   await update(gameRef, {
@@ -2364,7 +2392,9 @@ export async function confirmJokerDice(pin: string): Promise<void> {
 
   const next = computeNextTurn(
     playingGroupIds, currentRoundCat, catGroupQueue, catRoundQueue, triviaCategories, newAvailable, deckMeta,
-    groupCompletedCategories, winCondition
+    groupCompletedCategories, winCondition,
+    Object.fromEntries(Object.entries(game.groups).map(([gid, g]) => [gid, g.categoryFails ?? {}])),
+    game.difficultyMeta ?? {}
   );
 
   const updates: Record<string, any> = {
