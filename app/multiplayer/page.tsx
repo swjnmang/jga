@@ -604,27 +604,7 @@ function MultiplayerLobbyContent() {
   // ===== RENDER FUNCTIONS FOR WIZARD STEPS =====
   const renderStep1 = () => (
     <div className="space-y-4">
-      <h2 className="text-lg font-semibold">Schritt 1 von 3: Spielmodus & Grundregeln</h2>
-      
-      <div>
-        <label className="block text-sm font-semibold mb-2">Spielmodus</label>
-        <div className="grid grid-cols-2 gap-2">
-          {(['timeline', 'trivia'] as const).map((m) => (
-            <button
-              key={m}
-              type="button"
-              onClick={() => { setGameMode(m); if (m !== 'trivia') { setBanMode(false); setTriviaWinCondition('categories'); setSingleDeviceMode(false); } }}
-              className={`px-4 py-3 rounded-lg border-2 transition-colors ${
-                gameMode === m
-                  ? 'border-ink bg-ink text-inkDark'
-                  : 'border-ink/30 hover:border-ink/60'
-              }`}
-            >
-              {m === 'timeline' ? '🔢 Timeline' : '🧠 Trivia'}
-            </button>
-          ))}
-        </div>
-      </div>
+      <h2 className="text-lg font-semibold">Schritt 1 von 3: Grundregeln</h2>
 
       {/* Spielleitung – im Endgeräte-Modus (Trivia) unnötig: die "ohne Spielleitung"-Abstimmung
           setzt voraus, dass jede Gruppe auf ihrem eigenen Gerät abstimmt, und wer das geteilte
