@@ -149,7 +149,7 @@ export default function MultiplayerGamePage() {
   const [schaetzSubmitted, setSchaetzSubmitted] = useState(false);
 
   const [isBanning, setIsBanning] = useState(false);
-  const [banTimeLeft, setBanTimeLeft] = useState<number>(20);
+  const [banTimeLeft, setBanTimeLeft] = useState<number>(60);
   const banAutoSkippedRef = useRef(false);
 
   // QR-Code für Einladungslink
@@ -724,10 +724,10 @@ export default function MultiplayerGamePage() {
     return () => clearTimeout(t);
   }, [game?.currentCardId, game?.state, game?.mode, session?.isHost, game?.hostId, session?.groupId, pin]);
 
-  // Ban-Phase Timer: 20 Sekunden pro Gruppe, danach automatisch überspringen
+  // Ban-Phase Timer: 60 Sekunden pro Gruppe, danach automatisch überspringen
   useEffect(() => {
     if (game?.state !== 'banning') {
-      setBanTimeLeft(20);
+      setBanTimeLeft(60);
       return;
     }
     const deadline = game.banPhaseDeadline;
