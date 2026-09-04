@@ -339,6 +339,10 @@ export default function FamilienduellPage() {
     if (nextRevealedCount >= currentQuestion.answers.length) {
       setPhase('roundEnd');
       setTimerRunning(false);
+    } else if (timerEnabled) {
+      // Nach jeder richtig aufgedeckten Antwort startet der Timer automatisch neu.
+      setTimerRunning(true);
+      setTimerSecondsLeft(questionTimerSeconds);
     }
   }
 
@@ -351,11 +355,16 @@ export default function FamilienduellPage() {
     if (next >= MAX_STRIKES) {
       setStealGroupIndex((currentGroupIndex + 1) % groups.length);
       setPhase('steal');
-      // Die Diebstahl-Chance hat einen eigenen, automatisch startenden Timer.
+      // Ausnahme: Die Diebstahl-Chance hat einen eigenen, automatisch startenden Timer.
       if (timerEnabled) {
         setTimerRunning(true);
         setTimerSecondsLeft(stealTimerSeconds);
       }
+    } else if (timerEnabled) {
+      // Nach jeder falschen Antwort (ohne Diebstahl-Auslösung) startet der
+      // Frage-Timer automatisch neu bei der vollen Zeit.
+      setTimerRunning(true);
+      setTimerSecondsLeft(questionTimerSeconds);
     }
   }
 
@@ -540,8 +549,10 @@ export default function FamilienduellPage() {
               {timerEnabled ? (
                 <>
                   <p className={styles.hint}>
-                    Der Spielleiter startet den Timer manuell pro Frage. Läuft die Zeit ab, passiert
-                    nichts automatisch – die Anzeige blinkt nur rot.
+                    Der Spielleiter startet den Timer einmal manuell zu Beginn einer Frage. Nach jeder
+                    richtig oder falsch gewählten Antwort startet er automatisch neu – außer bei der
+                    Diebstahl-Chance, die ihren eigenen Timer bekommt. Läuft die Zeit ab, passiert
+                    nichts automatisch, die Anzeige blinkt nur rot.
                   </p>
                   <p className={styles.label}>Zeit pro Frage</p>
                   <div className={styles.stepperRow}>
