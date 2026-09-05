@@ -31,7 +31,7 @@ const MODES = [
   },
   {
     icon: '🙊',
-    title: 'Tabu',
+    title: 'Halt Stop!',
     desc: 'Begriffe erklären gegen die Zeit – ohne die Tabu-Wörter zu sagen',
     href: '/tabu',
   },
@@ -43,7 +43,7 @@ const MODES = [
   },
   {
     icon: '🕵️',
-    title: 'Codenames',
+    title: 'Wortagenten',
     desc: 'Zwei Teams, ein Wortraster – Hinweise geben und die richtigen Begriffe finden',
     href: '/codenames',
   },

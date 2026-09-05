@@ -57,7 +57,7 @@ export default function CodenamesLandingPage() {
           <Link href="/create" className={styles.back}>
             ← Zurück
           </Link>
-          <h1 className={styles.title}>🕵️ Codenames</h1>
+          <h1 className={styles.title}>🕵️ Wortagenten</h1>
         </div>
 
         <p className={styles.intro}>

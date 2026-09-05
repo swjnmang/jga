@@ -11,9 +11,9 @@ const TABS: { key: RuleTab; icon: string; label: string }[] = [
   { key: 'trivia', icon: '🎮', label: 'Trivia' },
   { key: 'familienduell', icon: '🎉', label: 'Familienduell' },
   { key: 'partnerkann', icon: '🤩', label: 'Partner kann' },
-  { key: 'tabu', icon: '🙊', label: 'Tabu' },
+  { key: 'tabu', icon: '🙊', label: 'Halt Stop!' },
   { key: 'begriffetopf', icon: '🫙', label: 'Begriffe-Topf' },
-  { key: 'codenames', icon: '🕵️', label: 'Codenames' },
+  { key: 'codenames', icon: '🕵️', label: 'Wortagenten' },
 ];
 
 export default function RulesPage() {
@@ -292,7 +292,7 @@ export default function RulesPage() {
           </div>
         )}
 
-        {/* ─── TABU ─── */}
+        {/* ─── HALT STOP! ─── */}
         {tab === 'tabu' && (
           <div className={styles.content}>
 
@@ -315,7 +315,7 @@ export default function RulesPage() {
                   <span>
                     <strong className={styles.strong}>Erraten:</strong> „✓ Richtig" tippen (+1 Punkt).<br />
                     <strong className={styles.strong}>Kommt das Team nicht drauf:</strong> „Passen" — ohne Punkt, nächster Begriff.<br />
-                    <strong className={styles.strong}>Rutscht ein Tabu-Wort raus:</strong> „Tabu!" — ohne Punkt, nächster Begriff.
+                    <strong className={styles.strong}>Rutscht ein Tabu-Wort raus:</strong> „Halt Stop!" — ohne Punkt, nächster Begriff.
                   </span>
                 </li>
                 <li className={styles.rule}><span className={styles.ruleNum}>4</span><span>Wenn die Zeit abläuft, ist das nächste Team dran.</span></li>
@@ -384,7 +384,7 @@ export default function RulesPage() {
           </div>
         )}
 
-        {/* ─── CODENAMES ─── */}
+        {/* ─── WORTAGENTEN ─── */}
         {tab === 'codenames' && (
           <div className={styles.content}>
 

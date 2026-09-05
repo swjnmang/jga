@@ -256,7 +256,7 @@ export default function TabuPage() {
           <Link href="/" className={styles.back}>
             ← Zurück
           </Link>
-          <h1 className={styles.title}>🙊 Tabu</h1>
+          <h1 className={styles.title}>🙊 Halt Stop!</h1>
         </div>
 
         {phase === 'setup' && (
@@ -281,7 +281,7 @@ export default function TabuPage() {
               <li className={styles.rule}>
                 <span className={styles.ruleNum}>3</span>
                 Erraten: „✓ Richtig" tippen (+1 Punkt). Kommt das Team nicht drauf: „Passen".
-                Rutscht dem Erklärenden ein Tabu-Wort raus: „Tabu!" – beides ohne Punkt, nächster
+                Rutscht dem Erklärenden ein Tabu-Wort raus: „Halt Stop!" – beides ohne Punkt, nächster
                 Begriff.
               </li>
               <li className={styles.rule}>
@@ -448,7 +448,7 @@ export default function TabuPage() {
                     ⏭ Passen
                   </button>
                   <button onClick={markTabu} className={styles.tabuBtn}>
-                    ❌ Tabu!
+                    ❌ Halt Stop!
                   </button>
                 </div>
               </>
@@ -469,7 +469,7 @@ export default function TabuPage() {
                     <b className={styles.roundStatNum}>{roundPassed}</b>Gepasst
                   </span>
                   <span>
-                    <b className={styles.roundStatNum}>{roundTabu}</b>Tabu
+                    <b className={styles.roundStatNum}>{roundTabu}</b>Halt Stop!
                   </span>
                 </div>
                 {gameOverPending ? (

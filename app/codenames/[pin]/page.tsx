@@ -73,7 +73,7 @@ export default function CodenamesGamePage() {
     const inviteUrl = `${window.location.origin}/codenames/${pin}`;
     if (navigator.share) {
       try {
-        await navigator.share({ title: 'Codenames – Einladung', text: `Tritt unserer Codenames-Runde bei! PIN: ${pin}`, url: inviteUrl });
+        await navigator.share({ title: 'Wortagenten – Einladung', text: `Tritt unserer Wortagenten-Runde bei! PIN: ${pin}`, url: inviteUrl });
       } catch {
         // Nutzer hat den Teilen-Dialog abgebrochen.
       }
@@ -177,7 +177,7 @@ export default function CodenamesGamePage() {
             <Link href="/codenames" className={styles.back}>
               ← Zurück
             </Link>
-            <h1 className={styles.title}>🕵️ Codenames</h1>
+            <h1 className={styles.title}>🕵️ Wortagenten</h1>
           </div>
           <p className={styles.intro}>Kein Spiel mit dem PIN „{pin}“ gefunden.</p>
           <Link href="/codenames" className={styles.secondaryBtn}>
@@ -197,7 +197,7 @@ export default function CodenamesGamePage() {
           <Link href="/codenames" className={styles.back}>
             ← Zurück
           </Link>
-          <h1 className={styles.title}>🕵️ Codenames</h1>
+          <h1 className={styles.title}>🕵️ Wortagenten</h1>
         </div>
 
         {!hasJoined && game.phase !== 'lobby' && (
