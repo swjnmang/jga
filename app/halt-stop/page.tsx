@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import { tabuCards, type TabuCard } from '@/lib/tabuCards';
-import styles from './tabu.module.css';
+import styles from './halt-stop.module.css';
 
 const MIN_GROUPS = 2;
 const MAX_GROUPS = 6;

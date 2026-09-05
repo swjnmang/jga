@@ -33,7 +33,7 @@ const MODES = [
     icon: '🙊',
     title: 'Halt Stop!',
     desc: 'Begriffe erklären gegen die Zeit – ohne die Tabu-Wörter zu sagen',
-    href: '/tabu',
+    href: '/halt-stop',
   },
   {
     icon: '🫙',
@@ -45,7 +45,7 @@ const MODES = [
     icon: '🕵️',
     title: 'Wortagenten',
     desc: 'Zwei Teams, ein Wortraster – Hinweise geben und die richtigen Begriffe finden',
-    href: '/codenames',
+    href: '/wortagenten',
   },
 ] as const;
 

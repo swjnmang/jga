@@ -13,7 +13,7 @@ import {
   endCodenamesGameEarly,
 } from '@/lib/codenamesService';
 import { CodenamesGame, CodenamesTeam, CodenamesRole, CODENAMES_LOCAL_STORAGE_KEY } from '@/lib/codenamesTypes';
-import styles from '../codenames.module.css';
+import styles from '../wortagenten.module.css';
 
 const STORAGE_KEY = CODENAMES_LOCAL_STORAGE_KEY;
 
@@ -62,7 +62,7 @@ export default function CodenamesGamePage() {
 
   useEffect(() => {
     if (typeof window === 'undefined' || !pin) return;
-    const inviteUrl = `${window.location.origin}/codenames/${pin}`;
+    const inviteUrl = `${window.location.origin}/wortagenten/${pin}`;
     import('qrcode')
       .then((QRCode) => QRCode.toDataURL(inviteUrl, { width: 220, margin: 1 }))
       .then(setQrDataUrl)
@@ -70,7 +70,7 @@ export default function CodenamesGamePage() {
   }, [pin]);
 
   async function shareInviteLink() {
-    const inviteUrl = `${window.location.origin}/codenames/${pin}`;
+    const inviteUrl = `${window.location.origin}/wortagenten/${pin}`;
     if (navigator.share) {
       try {
         await navigator.share({ title: 'Wortagenten – Einladung', text: `Tritt unserer Wortagenten-Runde bei! PIN: ${pin}`, url: inviteUrl });
@@ -174,13 +174,13 @@ export default function CodenamesGamePage() {
       <main className={styles.page}>
         <div className={styles.panel}>
           <div className={styles.headBlock}>
-            <Link href="/codenames" className={styles.back}>
+            <Link href="/wortagenten" className={styles.back}>
               ← Zurück
             </Link>
             <h1 className={styles.title}>🕵️ Wortagenten</h1>
           </div>
           <p className={styles.intro}>Kein Spiel mit dem PIN „{pin}“ gefunden.</p>
-          <Link href="/codenames" className={styles.secondaryBtn}>
+          <Link href="/wortagenten" className={styles.secondaryBtn}>
             Zur Startseite
           </Link>
         </div>
@@ -194,7 +194,7 @@ export default function CodenamesGamePage() {
     <main className={styles.page}>
       <div className={panelClass}>
         <div className={styles.headBlock}>
-          <Link href="/codenames" className={styles.back}>
+          <Link href="/wortagenten" className={styles.back}>
             ← Zurück
           </Link>
           <h1 className={styles.title}>🕵️ Wortagenten</h1>
@@ -509,7 +509,7 @@ export default function CodenamesGamePage() {
             </div>
 
             <div className={styles.resultGrid}>
-              <Link href="/codenames" className={styles.primaryBtn}>
+              <Link href="/wortagenten" className={styles.primaryBtn}>
                 Neues Spiel
               </Link>
               <Link href="/" className={styles.secondaryBtn}>

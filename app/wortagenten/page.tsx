@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { createCodenamesGame } from '@/lib/codenamesService';
 import { CODENAMES_LOCAL_STORAGE_KEY } from '@/lib/codenamesTypes';
 import type { CodenamesTeam, CodenamesRole } from '@/lib/codenamesTypes';
-import styles from './codenames.module.css';
+import styles from './wortagenten.module.css';
 
 export default function CodenamesLandingPage() {
   const router = useRouter();
@@ -34,7 +34,7 @@ export default function CodenamesLandingPage() {
         hostRole,
       });
       window.localStorage.setItem(CODENAMES_LOCAL_STORAGE_KEY, JSON.stringify({ pin, playerId: hostPlayerId }));
-      router.push(`/codenames/${pin}`);
+      router.push(`/wortagenten/${pin}`);
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Spiel konnte nicht erstellt werden.');
       setCreating(false);
@@ -47,7 +47,7 @@ export default function CodenamesLandingPage() {
       setError('Bitte gib einen PIN ein.');
       return;
     }
-    router.push(`/codenames/${pin}`);
+    router.push(`/wortagenten/${pin}`);
   }
 
   return (
