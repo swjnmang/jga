@@ -16,8 +16,8 @@ const config: Config = {
         coral: '#ff9aa2'
       },
       fontFamily: {
-        display: ['"Space Grotesk"', 'sans-serif'],
-        body: ['"Inter"', 'sans-serif']
+        display: ['var(--font-display)', 'system-ui', 'sans-serif'],
+        body: ['var(--font-body)', 'system-ui', 'sans-serif']
       },
       keyframes: {
         'flip-in': {

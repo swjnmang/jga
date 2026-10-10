@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter, Space_Grotesk } from 'next/font/google';
+import { Figtree } from 'next/font/google';
 import './globals.css';
 import { ThemeBootstrap } from '@/components/ThemeBootstrap';
 
-const display = Space_Grotesk({ subsets: ['latin'], variable: '--font-display' });
-const body = Inter({ subsets: ['latin'], variable: '--font-body' });
+// Fokus-Design: eine Schriftfamilie für Überschriften und Text
+const display = Figtree({ subsets: ['latin'], weight: ['500', '600', '700', '800'], variable: '--font-display' });
+const body = Figtree({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'], variable: '--font-body' });
 
 export const metadata: Metadata = {
   title: 'Flex Quiz',

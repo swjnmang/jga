@@ -25,6 +25,7 @@ import {
 } from '@/lib/multiplayerService';
 import { catIcon, catLabel as catLabelMeta, catLabelWithIcon } from '@/lib/categoryMeta';
 import { MediaEmbed } from '@/components/MediaEmbed';
+import { ScoreStrip, CategoryChip, MetaChip, JokerButton } from '@/components/FocusUI';
 
 const MIN_GROUPS = 2;
 const MAX_GROUPS = 8;
@@ -1045,36 +1046,19 @@ export default function TriviaLokalPage() {
 
         return (
           <div className="space-y-3">
-            <div className="flex flex-wrap gap-2 justify-center">
-              {game.groups.map((g) => (
-                <div
-                  key={g.id}
-                  className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold"
-                  style={{
-                    backgroundColor: g.id === game.currentTurnGroupId ? g.color : `${g.color}20`,
-                    color: g.id === game.currentTurnGroupId ? '#fff' : undefined,
-                  }}
-                >
-                  <span>{g.name}</span>
-                  <span className="opacity-80">{g.score} Pkt</span>
-                </div>
-              ))}
-            </div>
+            <ScoreStrip
+              groups={game.groups}
+              activeGroupId={game.currentTurnGroupId}
+              value={(gid) => game.groups.find((g) => g.id === gid)?.score ?? 0}
+            />
 
-            <div className="card-surface rounded-2xl p-4 space-y-2">
-              <div className="flex items-center justify-between gap-2">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs px-2 py-0.5 rounded-full bg-ink/10 font-semibold">
-                    {categoryIcon} {categoryLabel}
-                  </span>
-                  {quoteSourceBadge(currentCard)}
-                </div>
-                <span className="text-xs px-2 py-0.5 rounded-full bg-ink/10">{currentCard.difficulty}</span>
+            <div className="card-surface rounded-[22px] p-5 sm:p-6 space-y-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <CategoryChip>{categoryIcon} {categoryLabel}</CategoryChip>
+                <MetaChip>{currentCard.difficulty}</MetaChip>
+                {quoteSourceBadge(currentCard)}
               </div>
-              <p className="text-center text-sm font-bold text-ink/80">
-                {activeGroup?.name ?? '…'} ist dran
-              </p>
-              <p className="text-base sm:text-lg font-semibold">{triviaDisplayCue(currentCard)}</p>
+              <p className="text-[22px] sm:text-[26px] leading-tight font-extrabold tracking-tight">{triviaDisplayCue(currentCard)}</p>
 
               {currentCard.sources && (
                 <MediaEmbed
@@ -1092,47 +1076,32 @@ export default function TriviaLokalPage() {
               if (!myJokers) return null;
               const hasAnyJoker = myJokers.newQuestion || myJokers.next || myJokers.dice;
               return (
-                <div className="card-surface rounded-2xl p-3 space-y-2 border-2 border-amber-400/40">
-                  <h3 className="text-xs font-bold text-amber-700">🃏 Joker</h3>
-                  <div className="grid grid-cols-3 gap-2">
-                    <button
-                      disabled={!myJokers.newQuestion}
-                      onClick={activateNewQuestionJoker}
-                      className={`flex flex-col items-center gap-0.5 rounded-lg px-2 py-2 text-center border-2 ${
-                        myJokers.newQuestion
-                          ? 'border-amber-400 bg-amber-500/10 hover:bg-amber-500/20 text-amber-900'
-                          : 'border-ink/10 bg-ink/5 opacity-40 text-ink/40'
-                      }`}
-                    >
-                      <span className="text-lg">🔄</span>
-                      <span className="text-[10px] font-semibold">Neue Frage</span>
-                    </button>
-                    <button
-                      disabled={!myJokers.next || game.groups.length < 2}
-                      onClick={activateNextJoker}
-                      className={`flex flex-col items-center gap-0.5 rounded-lg px-2 py-2 text-center border-2 ${
-                        myJokers.next
-                          ? 'border-amber-400 bg-amber-500/10 hover:bg-amber-500/20 text-amber-900'
-                          : 'border-ink/10 bg-ink/5 opacity-40 text-ink/40'
-                      }`}
-                    >
-                      <span className="text-lg">➡️</span>
-                      <span className="text-[10px] font-semibold">NEXT</span>
-                    </button>
-                    <button
-                      disabled={!myJokers.dice || game.jokerDicePending}
-                      onClick={activateDiceJoker}
-                      className={`flex flex-col items-center gap-0.5 rounded-lg px-2 py-2 text-center border-2 ${
-                        myJokers.dice
-                          ? 'border-amber-400 bg-amber-500/10 hover:bg-amber-500/20 text-amber-900'
-                          : 'border-ink/10 bg-ink/5 opacity-40 text-ink/40'
-                      }`}
-                    >
-                      <span className="text-lg">🎲</span>
-                      <span className="text-[10px] font-semibold">Würfeln</span>
-                    </button>
-                  </div>
-                  {!hasAnyJoker && <p className="text-[11px] text-ink/50 text-center">Alle Joker wurden verbraucht.</p>}
+                <div className="flex items-center gap-2">
+                  <span className="fq-section-label mr-1">Joker</span>
+                  <JokerButton
+                    kind="newQuestion"
+                    label="Neu"
+                    available={!!myJokers.newQuestion}
+                    title="Tauscht die aktuelle Frage gegen eine neue Frage aus derselben Kategorie."
+                    onClick={activateNewQuestionJoker}
+                  />
+                  <JokerButton
+                    kind="next"
+                    label="Next"
+                    available={!!myJokers.next}
+                    disabled={game.groups.length < 2}
+                    title="Gibt die Frage an die nächste Gruppe weiter. Antwortet diese falsch, bekommt ihr den Punkt."
+                    onClick={activateNextJoker}
+                  />
+                  <JokerButton
+                    kind="dice"
+                    label="Würfel"
+                    available={!!myJokers.dice}
+                    disabled={game.jokerDicePending}
+                    title="Würfeln: hohe Zahl = Punkt + Kategorie, eine 1 = Punkt + Kategorie verlieren."
+                    onClick={activateDiceJoker}
+                  />
+                  {!hasAnyJoker && <span className="sr-only">Alle Joker wurden verbraucht.</span>}
                 </div>
               );
             })()}
@@ -1171,29 +1140,30 @@ export default function TriviaLokalPage() {
             )}
 
             {!game.jokerDicePending && (
-              <div className="card-surface rounded-2xl p-3 space-y-2 border-2 border-green-500/30">
+              <div className="card-surface rounded-2xl p-4 space-y-3">
                 {setupPayload.hostTextAnswersEnabled && !game.pendingTextAnswer && (
                   <div className="space-y-2">
-                    <p className="text-sm font-semibold text-center text-ink/80">Antwort von {activeGroup?.name}:</p>
+                    <label className="fq-section-label block" htmlFor="fq-local-answer">Antwort von {activeGroup?.name}</label>
                     <input
                       type="text"
                       value={textAnswerInput}
                       onChange={(e) => setTextAnswerInput(e.target.value)}
                       onKeyDown={(e) => e.key === 'Enter' && submitTextAnswerLocal()}
+                      id="fq-local-answer"
                       placeholder="Antwort eingeben…"
-                      className="w-full rounded-xl border-2 border-ink/20 px-3 py-2 text-base font-semibold text-gray-900 focus:border-ink/60 outline-none"
+                      className="fq-input"
                     />
                     <button
                       onClick={submitTextAnswerLocal}
                       disabled={!textAnswerInput.trim()}
-                      className="w-full py-2 rounded-xl bg-ink text-inkDark font-bold text-base hover:opacity-90 disabled:opacity-40"
+                      className="fq-primary"
                     >
-                      📤 Antwort einreichen
+                      Antwort abgeben
                     </button>
                   </div>
                 )}
                 {setupPayload.hostTextAnswersEnabled && game.pendingTextAnswer && (
-                  <div className="rounded-xl bg-blue-500/10 border-2 border-blue-400/40 px-3 py-2 text-center">
+                  <div className="rounded-xl bg-ink/[0.05] border border-ink/10 px-3 py-2 text-center">
                     <p className="text-[11px] uppercase tracking-wide text-ink/50">Eingereichte Antwort</p>
                     <p className="text-base font-bold">{game.pendingTextAnswer.text}</p>
                   </div>
@@ -1218,11 +1188,11 @@ export default function TriviaLokalPage() {
                       </button>
                       <button
                         onClick={() => setShowAnswer((v) => !v)}
-                        className={`px-2 py-2 rounded-xl font-bold text-sm transition-colors ${
-                          showAnswer ? 'bg-sky-900 text-sky-200 hover:bg-sky-800' : 'bg-sky-700 text-white hover:bg-sky-600'
+                        className={`px-2 py-2 rounded-xl font-bold text-sm transition-colors border ${
+                          showAnswer ? 'bg-[#1C1C1E] text-white border-[#1C1C1E]' : 'card-surface text-ink hover:border-orange-500'
                         }`}
                       >
-                        {showAnswer ? '🙈 Verbergen' : '👁 Antwort'}
+                        {showAnswer ? 'Verbergen' : 'Antwort zeigen'}
                       </button>
                     </div>
                     {showAnswer && (
