@@ -798,8 +798,8 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
   }, [concealMetadata, choice?.type]);
 
   if (!choice) {
-    if (card.category === 'schaetzfragen') return null;
-    return <p className="text-sm text-ink/70">Keine Quelle hinterlegt.</p>;
+    // Ohne Medienquelle nichts anzeigen – der Hinweis wirkte im Spiel wie ein Fehler.
+    return null;
   }
 
   if (embedError) {
@@ -994,10 +994,10 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
       );
     case 'text':
       return (
-        <div className="card-surface rounded-2xl p-4 space-y-3">
-          <p className="text-lg font-semibold leading-relaxed">{choice.text}</p>
+        <div className="card-surface rounded-2xl px-5 py-5 sm:px-6 space-y-3 text-ink">
+          <p className="text-xl sm:text-2xl font-bold leading-snug">{choice.text}</p>
           {choice.textDe && (
-            <p className="text-base text-ink/80 leading-relaxed">Übersetzung: {choice.textDe}</p>
+            <p className="text-base text-ink/70 leading-relaxed">Übersetzung: {choice.textDe}</p>
           )}
         </div>
       );
