@@ -59,7 +59,7 @@ export async function createGame(params: CreateGameParams): Promise<{ pin: strin
     timeline: [],
     flexButtons: 1,
     score: 0,
-    isReady: !params.hostless,
+    isReady: true, // Wer in der Lobby ist, gilt automatisch als bereit
     flexActive: false,
     isHost: !params.hostless,
     ...(params.hostless ? { avatar: params.hostAvatar ?? '' } : {}),
@@ -190,7 +190,7 @@ export async function joinGame(params: JoinGameParams): Promise<{ groupId: strin
     timeline: [],
     flexButtons: 1,
     score: 0,
-    isReady: false,
+    isReady: true, // Wer in der Lobby ist, gilt automatisch als bereit
     flexActive: false,
     isHost: false,
     completedCategories: [],
@@ -228,12 +228,6 @@ export async function startGame(pin: string, hostGroupId: string): Promise<void>
 
   if (game.state !== 'lobby') {
     throw new Error('Das Spiel wurde bereits gestartet.');
-  }
-
-  // Überprüfe ob alle Gruppen bereit sind
-  const allReady = Object.values(game.groups).every(group => group.isReady);
-  if (!allReady) {
-    throw new Error('Nicht alle Gruppen sind bereit.');
   }
 
   // Reihenfolge der Gruppen für die Ban-Phase (alle Nicht-Host-Gruppen)
@@ -369,16 +363,6 @@ export async function banCategory(pin: string, groupId: string, category: string
       lastActivity: Date.now(),
     });
   }
-}
-
-/**
- * Markiert eine Gruppe als bereit
- */
-export async function setGroupReady(pin: string, groupId: string, ready: boolean): Promise<void> {
-  checkFirebase();
-  await update(ref(database!, `games/${pin}/groups/${groupId}`), {
-    isReady: ready
-  });
 }
 
 /**

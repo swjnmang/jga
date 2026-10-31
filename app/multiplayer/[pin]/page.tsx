@@ -5,7 +5,6 @@ import { useRouter, useParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import {
   subscribeToGame,
-  setGroupReady,
   startGame,
   banCategory,
   leaveGame,
@@ -345,19 +344,6 @@ export default function MultiplayerGamePage() {
     setFlexPhaseEvaluated(true);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [flexTimer]);
-
-  const handleToggleReady = async () => {
-    if (!session || !game) return;
-    
-    const group = game.groups[session.groupId];
-    if (!group) return;
-
-    try {
-      await setGroupReady(pin, session.groupId, !group.isReady);
-    } catch (err) {
-      console.error('Error toggling ready:', err);
-    }
-  };
 
   const handleStartGame = async () => {
     if (!session || !game) return;
@@ -1032,7 +1018,6 @@ export default function MultiplayerGamePage() {
   const isCreator = session.isHost || game.hostId === session.groupId;
   const effectiveIsHost = isCreator && !game.hostless;
   const groupList = Object.values(game.groups).filter(g => !g.isHost); // Spielleiter aus Liste entfernen
-  const allReady = groupList.every(g => g.isReady);
 
   // Kategorie-Label + Icon für Ban-Phase und allgemeine Anzeige
   const CATEGORY_LABEL_WITH_ICON = (cat: string) => catLabelWithIcon(cat);
@@ -1231,9 +1216,6 @@ export default function MultiplayerGamePage() {
                         style={{ backgroundColor: g.color }}
                       />
                       <span>{g.name}</span>
-                      <span className={g.isReady ? 'text-green-600' : 'text-red-600'}>
-                        {g.isReady ? '✓ Bereit' : '✗ Nicht bereit'}
-                      </span>
                     </div>
                   ))}
                 </div>
@@ -1250,8 +1232,8 @@ export default function MultiplayerGamePage() {
               </button>
               <button
                 onClick={handleStartGame}
-                disabled={!allReady || groupList.length < 2}
-                className="fq-primary flex-1 !w-auto"
+                disabled={groupList.length < 2}
+                className="fq-primary flex-[2] !w-auto whitespace-nowrap"
               >
                 Spiel starten
               </button>
@@ -1266,7 +1248,7 @@ export default function MultiplayerGamePage() {
             {game.hostless && isCreator && (
               <div className="card-surface rounded-2xl p-6 space-y-4">
                 <h2 className="text-xl font-extrabold">🎮 Ihr habt das Spiel erstellt</h2>
-                <p className="text-sm text-ink/60">Teilt die PIN mit den anderen Gruppen. Sobald alle bereit sind, könnt ihr starten — ihr spielt selbst mit.</p>
+                <p className="text-sm text-ink/60">Teilt die PIN mit den anderen Gruppen. Sobald mindestens zwei Gruppen da sind, könnt ihr starten — ihr spielt selbst mit.</p>
                 {qrCodeUrl && (
                   <div className="flex flex-col items-center gap-2 py-2">
                     <img
@@ -1279,7 +1261,7 @@ export default function MultiplayerGamePage() {
                 )}
                 <button
                   onClick={handleStartGame}
-                  disabled={!allReady || groupList.length < 2}
+                  disabled={groupList.length < 2}
                   className="fq-primary"
                 >
                   Spiel starten
@@ -1315,13 +1297,6 @@ export default function MultiplayerGamePage() {
                         </p>
                       </div>
                     </div>
-                    <div>
-                      {group.isReady ? (
-                        <span className="text-green-600 font-semibold">✓ Bereit</span>
-                      ) : (
-                        <span className="text-red-600 font-semibold">✗ Nicht bereit</span>
-                      )}
-                    </div>
                   </div>
                 ))}
               </div>
@@ -1343,18 +1318,9 @@ export default function MultiplayerGamePage() {
               >
                 Verlassen
               </button>
-              
-              {currentGroup && (
-                <button
-                  onClick={handleToggleReady}
-                  className={currentGroup.isReady ? 'fq-secondary flex-1 !w-auto !min-h-[56px]' : 'fq-primary flex-1 !w-auto'}
-                >
-                  {currentGroup.isReady ? 'Nicht mehr bereit' : 'Bereit'}
-                </button>
-              )}
             </div>
 
-            {!allReady && groupList.length >= 2 && !(game.hostless && isCreator) && (
+            {groupList.length >= 2 && !(game.hostless && isCreator) && (
               <p className="text-center text-sm text-ink/60">
                 {game.hostless
                   ? `Warte darauf, dass ${game.groups[game.hostId]?.name ?? 'die erstellende Gruppe'} das Spiel startet...`
