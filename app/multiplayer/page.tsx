@@ -754,10 +754,10 @@ function MultiplayerLobbyContent() {
             className="w-full flex items-start gap-3 rounded-xl border-2 border-ink/20 bg-ink/5 hover:bg-ink/10 transition-colors px-4 py-3 text-left"
           >
             <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-              banMode ? 'bg-green-600 border-green-600' : 'border-ink/40 bg-transparent'
+              banMode ? 'bg-[#F5B700] border-[#1B1B2F]' : 'border-ink/40 bg-transparent'
             }`}>
               {banMode && (
-                <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#1B1B2F" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="1,5 4.5,9 11,1" />
                 </svg>
               )}
@@ -775,10 +775,10 @@ function MultiplayerLobbyContent() {
             className="w-full flex items-start gap-3 rounded-xl border-2 border-ink/20 bg-ink/5 hover:bg-ink/10 transition-colors px-4 py-3 text-left"
           >
             <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-              jokersEnabled ? 'bg-green-600 border-green-600' : 'border-ink/40 bg-transparent'
+              jokersEnabled ? 'bg-[#F5B700] border-[#1B1B2F]' : 'border-ink/40 bg-transparent'
             }`}>
               {jokersEnabled && (
-                <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#1B1B2F" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="1,5 4.5,9 11,1" />
                 </svg>
               )}
@@ -801,10 +801,10 @@ function MultiplayerLobbyContent() {
               className="w-full flex items-start gap-3 rounded-xl border-2 border-ink/20 bg-ink/5 hover:bg-ink/10 transition-colors px-4 py-3 text-left"
             >
               <span className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-                hostTextAnswersEnabled ? 'bg-green-600 border-green-600' : 'border-ink/40 bg-transparent'
+                hostTextAnswersEnabled ? 'bg-[#F5B700] border-[#1B1B2F]' : 'border-ink/40 bg-transparent'
               }`}>
                 {hostTextAnswersEnabled && (
-                  <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#1B1B2F" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="1,5 4.5,9 11,1" />
                   </svg>
                 )}
@@ -886,7 +886,7 @@ function MultiplayerLobbyContent() {
       {/* Schwierigkeitsgrade */}
       <div>
         <label className="block text-sm font-semibold mb-2">Schwierigkeitsgrade</label>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           {(['leicht', 'mittel', 'schwer'] as Difficulty[]).map((diff) => {
             const checked = settings.difficulties.includes(diff);
             return (
@@ -896,10 +896,10 @@ function MultiplayerLobbyContent() {
                 className="flex items-center gap-2 px-3 py-2 rounded-lg border border-ink/20 hover:bg-ink/5 transition-colors text-sm"
               >
                 <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-                  checked ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
+                  checked ? 'bg-[#F5B700] border-[#1B1B2F]' : 'border-ink/40 bg-transparent'
                 }`}>
                   {checked && (
-                    <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#1B1B2F" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="1,5 4.5,9 11,1" />
                     </svg>
                   )}
@@ -916,7 +916,7 @@ function MultiplayerLobbyContent() {
         <label className="block text-sm font-semibold mb-2">
           Kategorien auswählen
         </label>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           {availableCategories.map((cat) => {
             const isActive = (settings.categoryWeights[cat] || 0) > 0;
             const isDisabled = cat === 'image';
@@ -941,10 +941,10 @@ function MultiplayerLobbyContent() {
                 className="flex items-center gap-2 cursor-pointer py-1.5 px-2 rounded-lg hover:bg-ink/5 transition-colors text-left w-full"
               >
                 <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-                  isActive ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
+                  isActive ? 'bg-[#F5B700] border-[#1B1B2F]' : 'border-ink/40 bg-transparent'
                 }`}>
                   {isActive && (
-                    <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#1B1B2F" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="1,5 4.5,9 11,1" />
                     </svg>
                   )}
@@ -963,7 +963,7 @@ function MultiplayerLobbyContent() {
             🎵 Musik-Genres
             <span className="text-xs text-ink/60 ml-1">(nur für Musikfragen)</span>
           </label>
-          <div className="grid grid-cols-3 gap-1">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-1">
             {[
               { key: 'pop', label: 'Pop' },
               { key: 'rock', label: 'Rock' },
@@ -981,10 +981,10 @@ function MultiplayerLobbyContent() {
                   className="flex items-center gap-2 py-1.5 px-2 rounded-lg border border-ink/20 hover:bg-ink/5 transition-colors text-sm text-left"
                 >
                   <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-                    checked ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
+                    checked ? 'bg-[#F5B700] border-[#1B1B2F]' : 'border-ink/40 bg-transparent'
                   }`}>
                     {checked && (
-                      <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#1B1B2F" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="1,5 4.5,9 11,1" />
                       </svg>
                     )}
@@ -1004,7 +1004,7 @@ function MultiplayerLobbyContent() {
             📅 Jahrzehnte
             <span className="text-xs text-ink/60 ml-1">(welche Jahrzehnte spielen?)</span>
           </label>
-          <div className="grid grid-cols-3 gap-1">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-1">
             {availableDecades.map((decade) => {
               const checked = settings.decades.includes(decade);
               return (
@@ -1014,10 +1014,10 @@ function MultiplayerLobbyContent() {
                   className="flex items-center gap-2 py-1.5 px-2 rounded-lg border border-ink/20 hover:bg-ink/5 transition-colors text-sm text-left"
                 >
                   <span className={`flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-                    checked ? 'bg-white border-white' : 'border-ink/40 bg-transparent'
+                    checked ? 'bg-[#F5B700] border-[#1B1B2F]' : 'border-ink/40 bg-transparent'
                   }`}>
                     {checked && (
-                      <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg viewBox="0 0 12 10" className="w-3 h-3" fill="none" stroke="#1B1B2F" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="1,5 4.5,9 11,1" />
                       </svg>
                     )}
@@ -1114,7 +1114,7 @@ function MultiplayerLobbyContent() {
   );
 
   return (
-    <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+    <main className="fq-table relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
       <div className="text-center space-y-2">
         <h1 className="text-3xl sm:text-4xl font-display">Multiplayer</h1>
         <p className="text-ink/70">Spiele gemeinsam mit mehreren Gruppen</p>
@@ -1122,14 +1122,14 @@ function MultiplayerLobbyContent() {
 
       {/* Rejoin-Banner */}
       {rejoinSession && (
-        <div className="rounded-2xl border-2 border-yellow-400 bg-yellow-100/10 p-5 space-y-3">
-          <p className="font-semibold text-yellow-700">
+        <div className="card-surface rounded-2xl p-5 space-y-3">
+          <p className="font-semibold">
             🔄 Du hast noch ein laufendes Spiel (PIN: <span className="font-mono">{rejoinSession.pin}</span>)
           </p>
           <div className="flex gap-3">
             <button
               onClick={() => router.push(`/multiplayer/${rejoinSession.pin}`)}
-              className="flex-1 px-4 py-2 bg-yellow-500 text-white rounded-lg font-semibold hover:bg-yellow-600"
+              className="fq-primary flex-1 !w-auto !min-h-[46px] !text-base"
             >
               Weiterspielen
             </button>
@@ -1138,7 +1138,7 @@ function MultiplayerLobbyContent() {
                 localStorage.removeItem('multiplayer_session');
                 setRejoinSession(null);
               }}
-              className="flex-1 px-4 py-2 rounded-lg border-2 border-ink/20 hover:border-ink/50 font-semibold"
+              className="fq-secondary flex-1 !w-auto"
             >
               Ignorieren
             </button>
@@ -1190,8 +1190,8 @@ function MultiplayerLobbyContent() {
           </div>
 
           {/* Host Info */}
-          <div className="rounded-lg bg-slate-900/10 border-2 border-orange-500 p-4 space-y-2">
-            <p className="text-sm font-semibold text-orange-600">
+          <div className="rounded-xl bg-[#FFF7DA] border-2 border-[#1B1B2F] p-4 space-y-2">
+            <p className="text-sm font-bold">
               {gameMode === 'trivia' && singleDeviceMode ? '📱 Ein gemeinsames Gerät' : hostless ? '🎮 Du spielst mit' : '👑 Du bist der Spielleiter'}
             </p>
             <p className="text-sm text-gray-700">
@@ -1234,7 +1234,7 @@ function MultiplayerLobbyContent() {
             <button
               onClick={handlePrevStep}
               disabled={createStep === 1}
-              className="px-4 py-3 rounded-lg border-2 border-ink/30 hover:border-ink/60 disabled:opacity-40 disabled:cursor-not-allowed font-semibold transition-colors"
+              className="flex-1 whitespace-nowrap px-4 py-3 rounded-xl border-2 border-ink/30 hover:border-ink/60 disabled:opacity-40 disabled:cursor-not-allowed font-semibold transition-colors"
             >
               ← Zurück
             </button>
@@ -1242,7 +1242,7 @@ function MultiplayerLobbyContent() {
             {createStep < 3 ? (
               <button
                 onClick={handleNextStep}
-                className="flex-1 px-4 py-3 rounded-lg bg-ink text-inkDark font-semibold hover:opacity-90 transition-opacity"
+                className="fq-primary flex-[2] !w-auto"
               >
                 Weiter →
               </button>
@@ -1250,7 +1250,7 @@ function MultiplayerLobbyContent() {
               <button
                 onClick={handleCreateGame}
                 disabled={loading}
-                className="flex-1 px-4 py-3 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 disabled:opacity-50 transition-colors"
+                className="fq-primary flex-[2] !w-auto whitespace-nowrap"
               >
                 {loading ? '🔄 Erstelle Spiel...' : '✓ Spiel erstellen'}
               </button>
@@ -1322,7 +1322,7 @@ function MultiplayerLobbyContent() {
             <button
               onClick={handleJoinGame}
               disabled={loading}
-              className="w-full bg-ink text-inkDark py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50"
+              className="fq-primary"
             >
               {loading ? 'Trete bei...' : 'Beitreten'}
             </button>
@@ -1336,7 +1336,7 @@ function MultiplayerLobbyContent() {
 export default function MultiplayerLobby() {
   return (
     <Suspense fallback={
-      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+      <main className="fq-table relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
         <div className="text-center space-y-2">
           <h1 className="text-3xl sm:text-4xl font-display">Multiplayer</h1>
           <p className="text-ink/70">Lade...</p>
