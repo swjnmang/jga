@@ -20,7 +20,7 @@ export default function RulesPage() {
   const [tab, setTab] = useState<RuleTab>('timeline');
 
   return (
-    <main className={styles.page}>
+    <main className={`${styles.page} fq-table`}>
       <div className={styles.panel}>
         <div className={styles.headBlock}>
           <Link href="/" className={styles.back}>

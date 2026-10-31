@@ -14,15 +14,15 @@ export default function HomePage() {
 
   return (
     <>
-      <main className="min-h-screen bg-grid flex items-center justify-center sm:px-6 sm:py-16">
-        <div className="w-full max-w-4xl min-h-screen sm:min-h-0 sm:rounded-3xl bg-glass border-0 sm:border sm:border-ink/10 shadow-none sm:shadow-2xl backdrop-blur-xl flex flex-col justify-center px-5 py-10 sm:p-10 md:p-14 space-y-8 sm:space-y-10 text-center">
+      <main className="fq-table min-h-screen flex items-center justify-center sm:px-6 sm:py-16">
+        <div className="w-full max-w-2xl min-h-screen sm:min-h-0 flex flex-col justify-center px-5 py-10 sm:p-10 space-y-8 sm:space-y-10 text-center">
           <div className="space-y-4">
             <div className="flex flex-col items-center gap-3">
               <LogoMark />
-              <p className="text-sm uppercase tracking-[0.3em] text-ink/70">Flex Quiz</p>
+              <p className="text-sm font-bold tracking-[0.3em] text-ink/80">FLEX QUIZ</p>
             </div>
             <div className="space-y-3">
-              <h1 className="text-4xl md:text-5xl font-display font-semibold text-ink leading-tight">
+              <h1 className="text-4xl md:text-6xl font-display text-ink leading-tight">
                 Dein Quiz. Deine Regeln.
               </h1>
               <p className="text-lg text-ink/80 max-w-2xl mx-auto">
@@ -31,17 +31,16 @@ export default function HomePage() {
               <p className="text-base text-ink/90 max-w-2xl mx-auto font-semibold">
                 Dann ist Flex Quiz genau das Richtige für dich! Dein Quiz. Deine Regeln.
               </p>
-              <p className="text-sm text-ink/60 tracking-wide uppercase mt-4">„Start. Flex. Win."</p>
+              <p className="text-base font-extrabold text-[#F5B700] mt-4">„Start. Flex. Win."</p>
             </div>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             <Link
               href="/create"
-              className="group inline-flex items-center justify-center rounded-xl btn-primary text-inkDark font-semibold px-5 py-4 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:shadow-black/20 sm:col-span-2"
+              className="fq-primary sm:col-span-2 !min-h-[60px] !text-xl"
             >
               <span>Spiel erstellen</span>
-              <span className="ml-2 text-inkDark/60 transition group-hover:translate-x-0.5">→</span>
             </Link>
             <SecondaryButton href="/app-settings" label="Einstellungen" />
             <SecondaryButton href="/rules" label="Spielregeln" />
@@ -58,7 +57,7 @@ export default function HomePage() {
             <div>
               <button
                 onClick={() => setShowImpressum(true)}
-                className="text-xs text-ink/30 hover:text-ink/60 transition underline underline-offset-2"
+                className="text-xs text-ink/60 hover:text-ink transition underline underline-offset-2"
               >
                 Impressum
               </button>
@@ -107,7 +106,7 @@ function SecondaryButton({ href, label, className = '' }: { href: string; label:
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-xl border border-ink/30 text-ink font-semibold px-5 py-4 bg-ink/10 backdrop-blur transition hover:-translate-y-0.5 hover:border-ink/60 ${className}`}
+      className={`inline-flex items-center justify-center rounded-xl border-2 border-white/40 text-white font-bold px-5 py-4 bg-black/15 transition hover:border-white/80 hover:bg-black/25 ${className}`}
     >
       <span>{label}</span>
     </Link>

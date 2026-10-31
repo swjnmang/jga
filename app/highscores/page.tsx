@@ -45,16 +45,16 @@ export default function HighscoresPage() {
   }) : [];
 
   return (
-    <main className="min-h-screen bg-grid flex items-start justify-center px-6 py-16">
-      <div className="w-full max-w-2xl rounded-3xl bg-glass border border-ink/10 shadow-2xl backdrop-blur-xl p-10 space-y-8">
+    <main className="fq-table min-h-screen flex items-start justify-center px-4 py-8 sm:px-6 sm:py-14">
+      <div className="w-full max-w-2xl space-y-6">
 
         {/* Back + Header */}
         <div className="space-y-1">
-          <Link href="/" className="inline-flex items-center gap-1.5 text-sm text-ink/50 hover:text-ink/80 transition mb-4">
+          <Link href="/" className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink/80 hover:text-ink transition mb-4">
             ← Zurück
           </Link>
-          <h1 className="text-3xl font-display font-semibold text-ink">🏆 Highscores</h1>
-          <p className="text-sm text-ink/60">Alle Gruppen, die bereits eine Runde gewonnen haben.</p>
+          <h1 className="text-3xl font-display text-ink">🏆 Highscores</h1>
+          <p className="text-sm text-ink/85">Alle Gruppen, die bereits eine Runde gewonnen haben.</p>
         </div>
 
         {/* Sortier-Umschalter */}
@@ -63,8 +63,11 @@ export default function HighscoresPage() {
             <button
               key={opt.key}
               onClick={() => setSortKey(opt.key)}
-              className={`flex-1 rounded-xl px-4 py-3 text-sm font-semibold border transition ${
-                sortKey === opt.key ? 'bg-ink text-inkDark border-ink' : 'border-ink/20 text-ink/70 hover:border-ink/40'
+              aria-pressed={sortKey === opt.key}
+              className={`flex-1 rounded-xl px-3 py-3 text-sm font-bold border-2 transition ${
+                sortKey === opt.key
+                  ? 'bg-[#F5B700] text-[#1B1B2F] border-[#1B1B2F] shadow-[0_4px_0_#1B1B2F]'
+                  : 'border-white/40 text-white hover:border-white/80'
               }`}
             >
               {opt.label}
@@ -74,7 +77,7 @@ export default function HighscoresPage() {
 
         {/* Inhalt */}
         {error && (
-          <p className="text-sm text-red-600 text-center py-8">{error}</p>
+          <p className="card-surface rounded-xl text-sm text-red-700 text-center py-6">{error}</p>
         )}
 
         {!error && entries === null && (
@@ -92,7 +95,7 @@ export default function HighscoresPage() {
             {sorted.map((entry, i) => (
               <li
                 key={entry.id}
-                className="flex items-center gap-3 rounded-xl border border-ink/10 bg-ink/5 px-4 py-3"
+                className="card-surface flex items-center gap-3 rounded-xl px-4 py-3"
               >
                 <span className="w-7 text-center text-sm font-bold text-ink/50 flex-shrink-0">
                   {i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `#${i + 1}`}

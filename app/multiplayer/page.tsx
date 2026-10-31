@@ -1075,7 +1075,7 @@ function MultiplayerLobbyContent() {
             ) : (
               <a
                 href={`/api/spotify/authorize?return=${spotifyReturnUrl}`}
-                className="rounded-lg bg-[#1DB954] hover:bg-[#17a74a] text-white px-4 py-2 text-sm font-semibold transition-colors"
+                className="rounded-lg bg-[#1DB954] hover:bg-[#17a74a] text-[#1B1B2F] border-2 border-[#1B1B2F] px-4 py-2 text-sm font-bold transition-colors"
                 onClick={() => {
                   try {
                     sessionStorage.setItem('jga_draft_settings', JSON.stringify({

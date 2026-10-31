@@ -1,14 +1,15 @@
 .page {
-  --bg: #fbf7f0;
+  /* Spieltisch-Design: Filz-Hintergrund kommt von body:has(.fq-table) */
+  --bg: transparent;
   --surface: #ffffff;
-  --surface-2: #fff3ee;
-  --line: rgba(43, 38, 32, 0.10);
-  --line-strong: rgba(43, 38, 32, 0.2);
-  --ink: #2b2620;
-  --ink-dim: #8b8072;
-  --coral: #ff6b5b;
-  --coral-dim: #e6503f;
-  --coral-bg: rgba(255, 107, 91, 0.1);
+  --surface-2: #F1F3F2;
+  --line: rgba(27, 27, 47, 0.15);
+  --line-strong: #1B1B2F;
+  --ink: #1B1B2F;
+  --ink-dim: #5B5B70;
+  --coral: #F5B700;
+  --coral-dim: #1B1B2F;
+  --coral-bg: #FFF7DA;
   --shadow: rgba(43, 38, 32, 0.12);
 
   min-height: 100vh;
@@ -114,3 +115,14 @@
   transition: transform 0.12s ease;
 }
 .modeCard:hover .modeArrow { transform: translateX(2px); color: var(--coral); }
+
+/* ── Spieltisch-Design ── Kopfbereich hell auf Filz, Karten mit Tintenrand */
+.page { color: #ffffff; }
+.display { font-family: var(--font-table), var(--font-display), sans-serif; }
+.back { color: rgba(255, 255, 255, 0.8); }
+.back:hover { color: #ffffff; }
+.title { color: #ffffff; font-weight: 900; font-stretch: 112%; }
+.intro { color: rgba(255, 255, 255, 0.85); }
+.modeCard { border-width: 2px; border-radius: 14px; box-shadow: 0 4px 0 rgba(0, 0, 0, 0.28); }
+.modeCard:hover { border-color: #1B1B2F; }
+.modeCard:hover .modeArrow { color: #1B1B2F; }

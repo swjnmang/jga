@@ -53,7 +53,7 @@ export default function CreatePage() {
   const router = useRouter();
 
   return (
-    <main className={styles.page}>
+    <main className={`${styles.page} fq-table`}>
       <div className={styles.panel}>
         <div className={styles.headBlock}>
           <Link href="/" className={styles.back}>

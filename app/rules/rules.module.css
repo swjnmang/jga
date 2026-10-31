@@ -1,14 +1,15 @@
 .page {
-  --bg: #fbf7f0;
+  /* Spieltisch-Design: Filz-Hintergrund kommt von body:has(.fq-table) */
+  --bg: transparent;
   --surface: #ffffff;
-  --surface-2: #fff3ee;
-  --line: rgba(43, 38, 32, 0.10);
-  --line-strong: rgba(43, 38, 32, 0.2);
-  --ink: #2b2620;
-  --ink-dim: #8b8072;
-  --coral: #ff6b5b;
-  --coral-dim: #e6503f;
-  --coral-bg: rgba(255, 107, 91, 0.1);
+  --surface-2: #F1F3F2;
+  --line: rgba(27, 27, 47, 0.15);
+  --line-strong: #1B1B2F;
+  --ink: #1B1B2F;
+  --ink-dim: #5B5B70;
+  --coral: #F5B700;
+  --coral-dim: #1B1B2F;
+  --coral-bg: #FFF7DA;
   --mint: #1fae87;
   --mint-dim: #178f6d;
   --mint-bg: rgba(31, 174, 135, 0.12);
@@ -172,3 +173,21 @@
 }
 
 .hint { font-size: 0.78rem; color: var(--ink-dim); margin: 0; }
+
+/* ── Spieltisch-Design ── Kopfbereich hell auf Filz, Karten mit Tintenrand */
+.page { color: #ffffff; }
+.display { font-family: var(--font-table), var(--font-display), sans-serif; }
+.back { color: rgba(255, 255, 255, 0.8); }
+.back:hover { color: #ffffff; }
+.title { color: #ffffff; font-weight: 900; font-stretch: 112%; }
+.tabBtn { border-width: 2px; border-radius: 12px; color: #1B1B2F; box-shadow: 0 3px 0 rgba(0, 0, 0, 0.25); }
+.tabBtnActive { color: #1B1B2F; border-color: #1B1B2F; }
+.ruleNum { color: #1B1B2F; border: 1.5px solid #1B1B2F; }
+/* Langer Regeltext liest sich besser auf einer weißen Karte als direkt auf dem Filz */
+.content {
+  background: #ffffff; color: var(--ink-dim); border: 2px solid #1B1B2F; border-radius: 14px;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.28); padding: 1.25rem;
+}
+@media (min-width: 640px) { .content { padding: 1.75rem; } }
+.infoBox { border-color: #1B1B2F; }
+.miniCard { border-width: 1.5px; }
