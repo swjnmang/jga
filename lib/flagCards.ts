@@ -2802,9 +2802,9 @@ export const flagCards: Card[] = [
     "id": "flag-tf",
     "title": "Flagge Französische Süd- und Antarktisgebiete",
     "category": "flag",
-    "year": 1961,
+    "year": 1955,
     "cue": "Zu welchem Land gehört diese Flagge und wann wurde es gegründet?",
-    "answer": "Antarktis – Inkrafttreten des Antarktis-Vertrags.",
+    "answer": "Französische Süd- und Antarktisgebiete – Gründung als französisches Überseegebiet.",
     "hint": "Französische Süd- und Antarktisgebiete",
     "difficulty": "schwer",
     "sources": {

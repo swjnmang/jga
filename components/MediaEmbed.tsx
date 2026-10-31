@@ -981,14 +981,17 @@ export const MediaEmbed = forwardRef<MediaEmbedHandle, Props>(function MediaEmbe
           <div className={`relative w-full max-h-[70vh] min-h-[240px] rounded-2xl card-surface overflow-hidden ${
             choice.url.includes('outline') ? '!bg-white' : 'bg-ink/40'
           }`}>
-            <Image
-              src={choice.url}
-              alt="Bildinhalt"
-              fill
-              sizes="(max-width: 640px) 100vw, 80vw"
-              className="object-contain"
-              unoptimized
-            />
+            {/* Innenabstand: Umriss-PNGs enden direkt am Bildrand und wirkten sonst abgeschnitten */}
+            <div className="absolute inset-3 sm:inset-4">
+              <Image
+                src={choice.url}
+                alt="Bildinhalt"
+                fill
+                sizes="(max-width: 640px) 100vw, 80vw"
+                className="object-contain"
+                unoptimized
+              />
+            </div>
           </div>
         </div>
       );

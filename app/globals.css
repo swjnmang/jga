@@ -124,90 +124,179 @@ body[data-theme='urban'] .btn-primary:hover {
   box-shadow: 0 8px 24px rgba(194, 65, 12, 0.36);
 }
 
-/* ── Fokus-Bausteine (Trivia / Timeline) ── */
-.fq-score-chip {
-  flex: 1 0 104px;
-  min-width: 104px;
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  padding: 7px 11px 8px;
-  border-radius: 14px;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
+/* ── Spieltisch-Design (Trivia / Timeline) ──
+   Spielseiten tragen .fq-table: grüner Filz als Tisch, darauf weiße Spielkarten
+   mit Tintenrand. Auf dem Filz ist Text hell, in Karten dunkel – dafür werden
+   --color-ink / --color-ink-dark umgedreht, sodass text-ink, bg-ink/10 usw.
+   auf beiden Flächen lesbar bleiben. */
+body:has(.fq-table) {
+  background: radial-gradient(130% 80% at 50% 0%, #1D7357 0%, #17614A 45%, #0F4635 100%) fixed, #0F4635;
 }
-.fq-score-chip--active {
-  border: 2px solid #ea580c;
-  padding: 6px 10px 7px;
+.fq-table {
+  --card-bg: #ffffff;
+  --card-border: #1B1B2F;
+  --color-ink: 255 255 255;
+  --color-ink-dark: 27 27 47;
+  color: #ffffff;
+  font-family: var(--font-table), var(--font-body), system-ui, sans-serif;
 }
+@layer components {
+  /* Helle Flächen (Karten, Hinweisboxen): dunkle Schrift */
+  .fq-table :where(.card-surface, .bg-white, .bg-orange-50, .bg-orange-100, .bg-amber-50, .bg-amber-100,
+    .bg-yellow-50, .bg-yellow-100, .bg-green-50, .bg-red-50, .bg-blue-50, .bg-purple-50, .bg-gray-50, .bg-gray-100, .fq-light) {
+    --color-ink: 27 27 47;
+    --color-ink-dark: 255 255 255;
+    color: #1B1B2F;
+  }
+}
+body .fq-table .card-surface {
+  background: #ffffff;
+  border: 2px solid #1B1B2F;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.28);
+  backdrop-filter: none;
+}
+.fq-table h1, .fq-table h2 { font-stretch: 112%; }
+.fq-table .font-display { font-family: var(--font-table), var(--font-display), sans-serif; font-weight: 900; }
+.fq-question { font-stretch: 110%; font-weight: 800; letter-spacing: -0.01em; text-wrap: balance; hyphens: auto; overflow-wrap: break-word; }
 
-.fq-joker {
-  flex: 1 1 0;
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 0 10px;
-  border-radius: 12px;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  font-size: 13px;
-  font-weight: 700;
-  color: rgb(var(--color-ink));
-  transition: border-color 0.15s, background-color 0.15s;
+/* Punkte als Pokerchips */
+.fq-chips { display: flex; gap: 8px; overflow-x: auto; padding: 2px 2px 6px; margin: 0 -2px; scrollbar-width: none; }
+.fq-chips::-webkit-scrollbar { display: none; }
+.fq-player {
+  flex: 1 0 150px; min-width: 150px; display: flex; align-items: center; gap: 8px;
+  padding: 6px 10px 6px 6px; border-radius: 999px; background: rgba(0, 0, 0, 0.2); color: #fff;
 }
-.fq-joker:hover:not(:disabled) { border-color: #ea580c; }
-.fq-joker--hot { border: 2px solid #ea580c; background: rgba(234, 88, 12, 0.08); }
+.fq-player b { display: block; font-size: 15px; font-weight: 800; line-height: 1.15; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fq-player-sub { display: block; font-size: 12.5px; opacity: 0.85; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fq-player--turn { background: #fff; color: #1B1B2F; box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3); }
+.fq-player--turn .fq-player-sub { color: #C7353A; opacity: 1; font-weight: 800; }
+.fq-chip {
+  width: 46px; height: 46px; flex: none; border-radius: 50%; display: grid; place-items: center; text-align: center;
+  background: var(--c, #E5484D); color: #fff; font-weight: 900; font-size: 18px; line-height: 0.95;
+  font-variant-numeric: tabular-nums; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  border: 3px dashed rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 3px var(--c, #E5484D), 0 3px 0 3px rgba(0, 0, 0, 0.25);
+  margin: 3px;
+}
+.fq-chip small { display: block; font-size: 10px; font-weight: 700; }
+
+/* Joker als Kartenrücken */
+.fq-joker {
+  flex: 1 1 0; min-height: 68px; display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 4px; padding: 6px 8px; border-radius: 10px; position: relative; overflow: hidden;
+  background: repeating-linear-gradient(45deg, #C7353A 0 6px, #D9444A 6px 12px);
+  border: 2px solid #fff; box-shadow: 0 0 0 2px #1B1B2F, 0 4px 0 2px rgba(0, 0, 0, 0.3);
+  color: #fff; font-size: 13px; font-weight: 800; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+  transition: transform 0.1s;
+}
+.fq-joker:active:not(:disabled) { transform: translateY(2px); }
+.fq-joker--hot { background: repeating-linear-gradient(45deg, #2463C9 0 6px, #2F7CF6 6px 12px); box-shadow: 0 0 0 2px #1B1B2F, 0 0 0 5px #F5B700, 0 4px 0 5px rgba(0, 0, 0, 0.3); }
 .fq-joker--used,
 .fq-joker:disabled {
-  background: transparent;
-  border: 1px dashed rgb(var(--color-ink) / 0.25);
-  color: rgb(var(--color-ink) / 0.5);
-  font-weight: 600;
-  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.15); border: 2px dashed rgba(255, 255, 255, 0.4); box-shadow: none;
+  color: rgba(255, 255, 255, 0.65); text-shadow: none; cursor: not-allowed;
 }
 .fq-joker--used span { text-decoration: line-through; }
+.fq-joker-wait { position: absolute; left: 0; bottom: 0; height: 5px; background: #F5B700; transition: width 1s linear; }
 
+/* Hauptaktion: gelber Spielstein-Button */
 .fq-primary {
-  width: 100%;
-  min-height: 54px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border-radius: 16px;
-  background: #c2410c;
-  color: #ffffff;
-  font-size: 17px;
-  font-weight: 800;
-  box-shadow: 0 6px 18px rgba(194, 65, 12, 0.28);
-  transition: background-color 0.15s, opacity 0.15s;
+  width: 100%; min-height: 56px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 0 16px; border-radius: 12px; background: #F5B700; color: #1B1B2F;
+  border: 2px solid #1B1B2F; box-shadow: 0 5px 0 #1B1B2F;
+  font-size: 18px; font-weight: 900; font-stretch: 112%;
+  transition: transform 0.1s, box-shadow 0.1s, opacity 0.15s;
 }
-.fq-primary:hover:not(:disabled) { background: #9a3412; }
-.fq-primary:disabled { opacity: 0.4; box-shadow: none; cursor: not-allowed; }
+.fq-primary:hover:not(:disabled) { background: #FFC21A; }
+.fq-primary:active:not(:disabled) { transform: translateY(3px); box-shadow: 0 2px 0 #1B1B2F; }
+.fq-primary:disabled { background: #D9D5C3; color: #5B5850; box-shadow: 0 3px 0 #1B1B2F; cursor: not-allowed; }
+.fq-secondary {
+  width: 100%; min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 0 14px; border-radius: 12px; background: #fff; color: #1B1B2F; border: 2px solid #1B1B2F;
+  font-size: 15px; font-weight: 800;
+}
+.fq-secondary:disabled { opacity: 0.5; cursor: not-allowed; }
+.fq-judge { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.fq-judge button {
+  min-height: 58px; border-radius: 12px; border: 2px solid #1B1B2F; box-shadow: 0 5px 0 #1B1B2F;
+  font-size: 19px; font-weight: 900; font-stretch: 110%; display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.fq-judge button:disabled { opacity: 0.45; cursor: not-allowed; }
+.fq-judge .fq-no { background: #E5484D; color: #fff; }
+.fq-judge .fq-yes { background: #3CCB7F; color: #1B1B2F; }
 
 .fq-input {
-  width: 100%;
-  min-height: 52px;
-  border-radius: 14px;
-  border: 1px solid var(--card-border);
-  background: #ffffff;
-  padding: 0 16px;
-  font-size: 17px;
-  font-weight: 600;
-  color: #1c1c1e;
-  outline: none;
+  width: 100%; min-height: 54px; border-radius: 12px; border: 2px solid #1B1B2F; background: #fff;
+  padding: 0 16px; font-size: 18px; font-weight: 600; color: #1B1B2F; outline: none;
 }
-.fq-input:focus { border: 2px solid #ea580c; padding: 0 15px; }
+.fq-input::placeholder { color: #6B6B80; font-weight: 500; }
+.fq-input:focus { box-shadow: 0 0 0 3px #F5B700; }
+.fq-table :focus-visible { outline: 3px solid #F5B700; outline-offset: 2px; }
 
-.fq-section-label {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: rgb(var(--color-ink) / 0.6);
+.fq-section-label { font-size: 15px; font-weight: 800; color: rgb(var(--color-ink) / 0.9); }
+
+/* Zeitleiste: ausgelegte Karten mit Jahres-Index */
+.fq-row-card {
+  display: grid; grid-template-columns: 76px 1fr; align-items: center; gap: 10px;
+  background: #fff; color: #1B1B2F; border: 2px solid #1B1B2F; border-radius: 12px;
+  padding: 9px 14px; box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25); min-height: 56px;
+  --color-ink: 27 27 47;
 }
+.fq-row-card .fq-year { font-size: 24px; font-weight: 900; font-stretch: 105%; color: #C7353A; font-variant-numeric: tabular-nums; }
+.fq-row-card--ref { background: #FFF7DA; }
+.fq-row-card--ref .fq-year { color: #1B1B2F; }
+.fq-row-card--new { box-shadow: 0 0 0 3px #2F7CF6, 0 4px 0 3px rgba(0, 0, 0, 0.25); }
+.fq-row-card--new .fq-year { color: #2F7CF6; }
+.fq-slot {
+  display: flex; width: 100%; min-height: 40px; margin: 8px 0; border-radius: 12px; align-items: center; justify-content: center; gap: 8px;
+  border: 2px dashed rgba(255, 255, 255, 0.45); color: rgba(255, 255, 255, 0.92); font-weight: 700; font-size: 14px; padding: 6px 12px;
+}
+.fq-slot:disabled { opacity: 0.5; }
+.fq-slot--tip { border-color: #F5B700; color: #F5B700; }
+.fq-slot--sel {
+  min-height: 52px; justify-content: space-between; border: 2px solid #1B1B2F; background: #F5B700; color: #1B1B2F;
+  box-shadow: 0 4px 0 #1B1B2F; transform: rotate(-0.6deg); font-weight: 900;
+}
+.fq-slot--locked { border-style: solid; border-color: transparent; background: rgba(0, 0, 0, 0.15); color: rgba(255, 255, 255, 0.7); }
+.fq-slot--ghost { border-color: #F5B700; color: #F5B700; animation: pulse-slow 2s infinite; }
+
+/* Flex-Phase-Leiste */
+.fq-flexbar { background: #F5B700; color: #1B1B2F; border: 2px solid #1B1B2F; border-radius: 12px; padding: 12px 14px; box-shadow: 0 4px 0 #1B1B2F; --color-ink: 27 27 47; }
+.fq-flexbar--hot { background: #E5484D; color: #fff; --color-ink: 255 255 255; }
+.fq-flexbar-track { height: 6px; border-radius: 3px; background: rgba(27, 27, 47, 0.2); margin-top: 8px; overflow: hidden; }
+.fq-flexbar-track i { display: block; height: 100%; background: currentColor; transition: width 1s linear; }
+
+/* Aktionsleiste unten (Daumenbereich). Auf Tablets normal im Fluss. */
+.fq-dock {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: grid; gap: 10px;
+  padding: 12px 16px calc(14px + env(safe-area-inset-bottom));
+  background: #0F4635; border-top: 2px solid rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 767px) {
+  .fq-dock { --color-ink: 255 255 255; color: #fff; }
+  /* Karte, die nur das (am Handy unten fixierte) Dock enthält, bliebe sonst als leere Fläche stehen */
+  .fq-table .card-surface:has(> .fq-dock:only-child) { display: contents; }
+}
+.fq-dock > * { width: 100%; max-width: 40rem; margin-inline: auto; }
+.fq-table:has(.fq-dock) { padding-bottom: 210px; }
+@media (min-width: 768px) {
+  .fq-dock { position: static; padding: 0; background: none; border: 0; }
+  .fq-dock > * { max-width: none; }
+  .fq-table:has(.fq-dock) { padding-bottom: 2rem; }
+}
+
+/* Tablet: Karte links, Aktionen rechts */
+@media (min-width: 768px) {
+  .fq-split { display: grid; grid-template-columns: 1.05fr 1fr; gap: 0 24px; align-items: start; }
+  .fq-split > * { grid-column: 2; min-width: 0; }
+  .fq-split > * + * { margin-top: 12px; }
+  .fq-split > .fq-split-main { grid-column: 1; grid-row: 1 / span 3; margin-top: 0; position: sticky; top: 16px; }
+  .fq-split > .fq-split-main + * { margin-top: 0; }
+}
+
+/* Bestätigungsdialog */
+.fq-dialog-backdrop { position: fixed; inset: 0; z-index: 60; background: rgba(15, 70, 53, 0.8); display: grid; place-items: center; padding: 16px; }
+.fq-dialog { width: 100%; max-width: 380px; background: #fff; color: #1B1B2F; border: 2px solid #1B1B2F; border-radius: 14px; box-shadow: 0 6px 0 rgba(0, 0, 0, 0.35); padding: 20px; --color-ink: 27 27 47; }
 
 :root[data-reduce-motion='true'] * {
   transition-duration: 0ms !important;

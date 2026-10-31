@@ -60,7 +60,7 @@ import type { Card } from '@/lib/types';
 import { MediaEmbed, MediaEmbedHandle, MediaProgressInfo } from '@/components/MediaEmbed';
 import { catIcon, catLabel as catLabelMeta, catLabelWithIcon, catShortLabel } from '@/lib/categoryMeta';
 import GroupAvatar from '@/components/GroupAvatar';
-import { ScoreStrip, TimerPill, CategoryChip, JokerButton } from '@/components/FocusUI';
+import { ScoreStrip, TimerPill, CategoryChip, JokerButton, ConfirmDialog } from '@/components/FocusUI';
 
 interface SessionInfo {
   pin: string;
@@ -124,15 +124,26 @@ export default function MultiplayerGamePage() {
 
   // Steal-Joker 20s-Cooldown: Button erst nach 20 Sekunden pro neuer Frage aktiv
   const [stealUnlocked, setStealUnlocked] = useState(false);
+  const [stealUnlockAt, setStealUnlockAt] = useState<number | null>(null);
+  const [stealNow, setStealNow] = useState(() => Date.now());
+  const [confirmEndOpen, setConfirmEndOpen] = useState(false);
   const stealCooldownRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
     const cardId = (game as GameSession | null)?.currentCardId;
     if (!cardId) return;
     setStealUnlocked(false);
+    setStealUnlockAt(Date.now() + 20000);
     if (stealCooldownRef.current) clearTimeout(stealCooldownRef.current);
     stealCooldownRef.current = setTimeout(() => setStealUnlocked(true), 20000);
     return () => { if (stealCooldownRef.current) clearTimeout(stealCooldownRef.current); };
   }, [(game as GameSession | null)?.currentCardId]);
+
+  // Sekundentakt nur solange die Steal-Sperre läuft – für den sichtbaren Countdown
+  useEffect(() => {
+    if (stealUnlocked || stealUnlockAt === null) return;
+    const id = setInterval(() => setStealNow(Date.now()), 1000);
+    return () => clearInterval(id);
+  }, [stealUnlocked, stealUnlockAt]);
 
   // Würfel-Joker Animation
   const [diceAnimating, setDiceAnimating] = useState(false);
@@ -565,11 +576,16 @@ export default function MultiplayerGamePage() {
     }
   };
 
-  const handleEndGame = async () => {
+  // "Spiel beenden" fragt per In-App-Dialog nach (window.confirm wirkt auf Handys
+  // fremd und wird in manchen eingebetteten Browsern einfach unterdrückt).
+  const handleEndGame = () => {
     if (!session) return;
-    
-    if (!window.confirm('Soll das Spiel wirklich beendet werden?')) return;
-    
+    setConfirmEndOpen(true);
+  };
+
+  const confirmEndGame = async () => {
+    setConfirmEndOpen(false);
+    if (!session) return;
     try {
       await endGame(pin, session.groupId);
     } catch (err) {
@@ -982,7 +998,7 @@ export default function MultiplayerGamePage() {
 
   if (loading) {
     return (
-      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10">
+      <main className="fq-table relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10">
         <div className="text-center">
           <p className="text-lg">Lade Spiel...</p>
         </div>
@@ -992,7 +1008,7 @@ export default function MultiplayerGamePage() {
 
   if (error || !game || !session) {
     return (
-      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10">
+      <main className="fq-table relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10">
         <div className="text-center space-y-4">
           <p className="text-lg text-red-600">{error || 'Fehler beim Laden'}</p>
           <button
@@ -1047,7 +1063,7 @@ export default function MultiplayerGamePage() {
     const banned = game.bannedCategories ?? [];
 
     return (
-      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+      <main className="fq-table relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
         <div className="text-center space-y-2">
           <h1 className="text-3xl font-display">🚫 Kategorie-Ban</h1>
           <p className="text-sm text-ink/60">
@@ -1154,9 +1170,9 @@ export default function MultiplayerGamePage() {
   // Lobby-Ansicht
   if (game.state === 'lobby') {
     return (
-      <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+      <main className="fq-table relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
         <div className="text-center space-y-2">
-          <h1 className="text-3xl font-display">Lobby</h1>
+          <h1 className="text-3xl font-black">Lobby</h1>
           <div className="inline-flex items-center gap-3 flex-wrap justify-center">
             <div className="inline-flex items-center gap-3 bg-ink text-inkDark px-6 py-3 rounded-xl">
               <span className="text-sm">PIN:</span>
@@ -1185,8 +1201,8 @@ export default function MultiplayerGamePage() {
 
         {/* Host-Panel - Nur wenn du der Spielleiter bist */}
         {effectiveIsHost && (
-          <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30 bg-green-50/10">
-            <h2 className="text-xl font-semibold text-green-700">👑 Spielleiter-Panel</h2>
+          <div className="card-surface rounded-2xl p-6 space-y-4">
+            <h2 className="text-xl font-extrabold">👑 Spielleitung</h2>
             <div className="space-y-4">
               <div className="space-y-2">
                 <p className="text-sm font-semibold">PIN zum Beitreten: <span className="font-mono text-lg">{pin}</span></p>
@@ -1235,7 +1251,7 @@ export default function MultiplayerGamePage() {
               <button
                 onClick={handleStartGame}
                 disabled={!allReady || groupList.length < 2}
-                className="flex-1 px-4 py-3 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                className="fq-primary flex-1 !w-auto"
               >
                 Spiel starten
               </button>
@@ -1248,8 +1264,8 @@ export default function MultiplayerGamePage() {
           <>
             {/* Ersteller im spielleitungslosen Modus: PIN/QR teilen + Spiel starten (spielt selbst mit) */}
             {game.hostless && isCreator && (
-              <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-green-500/30 bg-green-50/10">
-                <h2 className="text-xl font-semibold text-green-700">🎮 Ihr habt das Spiel erstellt</h2>
+              <div className="card-surface rounded-2xl p-6 space-y-4">
+                <h2 className="text-xl font-extrabold">🎮 Ihr habt das Spiel erstellt</h2>
                 <p className="text-sm text-ink/60">Teilt die PIN mit den anderen Gruppen. Sobald alle bereit sind, könnt ihr starten — ihr spielt selbst mit.</p>
                 {qrCodeUrl && (
                   <div className="flex flex-col items-center gap-2 py-2">
@@ -1264,7 +1280,7 @@ export default function MultiplayerGamePage() {
                 <button
                   onClick={handleStartGame}
                   disabled={!allReady || groupList.length < 2}
-                  className="w-full px-4 py-3 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                  className="fq-primary"
                 >
                   Spiel starten
                 </button>
@@ -1323,7 +1339,7 @@ export default function MultiplayerGamePage() {
             <div className="flex gap-3">
               <button
                 onClick={handleLeaveGame}
-                className="flex-1 px-6 py-4 rounded-lg border-2 border-ink/30 hover:border-ink/60 transition-colors"
+                className="flex-1 px-6 py-4 rounded-xl border-2 border-white/40 font-semibold hover:border-white/80 transition-colors"
               >
                 Verlassen
               </button>
@@ -1331,11 +1347,7 @@ export default function MultiplayerGamePage() {
               {currentGroup && (
                 <button
                   onClick={handleToggleReady}
-                  className={`flex-1 px-6 py-4 rounded-lg font-semibold transition-colors ${
-                    currentGroup.isReady
-                      ? 'bg-ink/10 border-2 border-ink/30 hover:bg-ink/20'
-                      : 'bg-ink text-inkDark hover:opacity-90'
-                  }`}
+                  className={currentGroup.isReady ? 'fq-secondary flex-1 !w-auto !min-h-[56px]' : 'fq-primary flex-1 !w-auto'}
                 >
                   {currentGroup.isReady ? 'Nicht mehr bereit' : 'Bereit'}
                 </button>
@@ -1360,8 +1372,8 @@ export default function MultiplayerGamePage() {
 
         {/* Joker-Übersicht: gleiche Icons wie im Spiel, für alle in der Lobby sichtbar */}
         {game.mode === 'trivia' && game.jokersEnabled && (
-          <div className="card-surface rounded-2xl p-6 space-y-4 border-2 border-amber-400/40">
-            <h2 className="text-xl font-semibold text-amber-700">🃏 Eure Joker</h2>
+          <div className="card-surface rounded-2xl p-6 space-y-4">
+            <h2 className="text-xl font-extrabold">🃏 Eure Joker</h2>
             <p className="text-sm text-ink/60">
               Jede Gruppe hat pro Spiel je einen dieser vier Joker. Sie sind während der Fragerunden nutzbar.
             </p>
@@ -1402,11 +1414,22 @@ export default function MultiplayerGamePage() {
   }
 
   // Spielansicht
+  const endGameDialog = (
+    <ConfirmDialog
+      open={confirmEndOpen}
+      title="Spiel jetzt beenden?"
+      message="Alle Gruppen sehen sofort den Endstand. Das lässt sich nicht rückgängig machen."
+      confirmLabel="Spiel beenden"
+      onConfirm={confirmEndGame}
+      onCancel={() => setConfirmEndOpen(false)}
+    />
+  );
+
   if (game.state === 'playing') {
     // Warte bis Karte geladen ist
     if (!game.currentCardId || game.currentCardIndex < 0) {
       return (
-        <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+        <main className="fq-table relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
           <div className="text-center space-y-4">
             <h1 className="text-3xl font-display">Timeline Quiz</h1>
             <div className="card-surface rounded-2xl p-6">
@@ -1462,9 +1485,9 @@ export default function MultiplayerGamePage() {
           <button
             onClick={handleStartEndGameVote}
             disabled={isProcessing}
-            className="w-full px-4 py-2.5 rounded-xl border-2 border-red-400 text-red-600 font-semibold text-sm hover:bg-red-500/10 disabled:opacity-50"
+            className="w-full px-4 py-1.5 text-sm font-semibold text-white/75 underline underline-offset-2 hover:text-white disabled:opacity-50"
           >
-            🗳️ Abstimmung: Spiel beenden starten
+            🗳️ Abstimmen: Spiel beenden?
           </button>
         );
       }
@@ -1513,7 +1536,7 @@ export default function MultiplayerGamePage() {
       // Karte nicht gefunden → Host kann überbrücken, Clients warten
       if (!currentCard) {
         return (
-          <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+          <main className="fq-table relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
             <div className="text-center space-y-4">
               <h1 className="text-3xl font-display">Trivia Quiz</h1>
               <div className="card-surface rounded-2xl p-6">
@@ -1636,7 +1659,7 @@ export default function MultiplayerGamePage() {
         const byGroup = game.groups[game.jokerNotification.byGroupId ?? ''];
         const newCatLabel = catLabelMeta(currentCard?.category ?? '');
         return (
-          <main className="relative mx-auto max-w-sm sm:max-w-md px-4 py-6 sm:py-10 flex flex-col items-center justify-center">
+          <main className="fq-table relative mx-auto max-w-sm sm:max-w-md px-4 py-6 sm:py-10 flex flex-col items-center justify-center">
             <div className="w-full card-surface rounded-2xl sm:rounded-3xl p-5 sm:p-7 flex flex-col items-center gap-3 sm:gap-4 border-4 border-amber-400 bg-amber-500/10">
               {/* Titel */}
               <div className="text-center space-y-1">
@@ -1690,7 +1713,7 @@ export default function MultiplayerGamePage() {
         const originGroup = game.groups[game.jokerNotification.byGroupId ?? ''];
         const targetGroup = game.groups[game.jokerNotification.targetGroupId ?? ''];
         return (
-          <main className="relative mx-auto max-w-sm sm:max-w-md px-4 py-6 sm:py-10 flex flex-col items-center justify-center">
+          <main className="fq-table relative mx-auto max-w-sm sm:max-w-md px-4 py-6 sm:py-10 flex flex-col items-center justify-center">
             <div className="w-full card-surface rounded-2xl sm:rounded-3xl p-5 sm:p-7 flex flex-col items-center gap-3 sm:gap-4 border-4 border-orange-400 bg-orange-500/10">
               {/* Titel */}
               <div className="text-center space-y-1">
@@ -1754,7 +1777,7 @@ export default function MultiplayerGamePage() {
         const stolenFromGroup = game.groups[game.jokerNotification.fromGroupId ?? ''];
         const currentCatLabel = catLabelMeta(currentCard?.category ?? '');
         return (
-          <main className="relative mx-auto max-w-sm sm:max-w-md px-4 py-6 sm:py-10 flex flex-col items-center justify-center">
+          <main className="fq-table relative mx-auto max-w-sm sm:max-w-md px-4 py-6 sm:py-10 flex flex-col items-center justify-center">
             <div className="w-full card-surface rounded-2xl sm:rounded-3xl p-5 sm:p-7 flex flex-col items-center gap-3 sm:gap-4 border-4 border-purple-500 bg-purple-500/10">
               {/* Titel */}
               <div className="text-center space-y-1">
@@ -1833,7 +1856,7 @@ export default function MultiplayerGamePage() {
         const textColor = isJackpot ? 'text-green-700' : isBad ? 'text-red-700' : 'text-amber-800';
 
         return (
-          <main className="relative mx-auto max-w-sm sm:max-w-md px-4 py-6 sm:py-10 flex flex-col items-center justify-center">
+          <main className="fq-table relative mx-auto max-w-sm sm:max-w-md px-4 py-6 sm:py-10 flex flex-col items-center justify-center">
             <div className={`w-full card-surface rounded-2xl sm:rounded-3xl p-5 sm:p-7 flex flex-col items-center gap-3 sm:gap-4 border-4 ${borderColor} ${bgGlow}`}>
               {/* Gruppe */}
               <div className="text-center space-y-1">
@@ -1893,13 +1916,20 @@ export default function MultiplayerGamePage() {
       }
 
       return (
-        <main className="relative mx-auto max-w-2xl px-4 sm:px-5 py-3 sm:py-6 space-y-3">
-          {/* Punkteleiste (Fokus-Design) */}
+        <main className="fq-table relative mx-auto max-w-2xl md:max-w-5xl px-4 sm:px-5 py-3 sm:py-6 space-y-3">
+          {endGameDialog}
+          {/* Punkte-Chips (Spieltisch-Design) */}
           <ScoreStrip
             groups={groupList}
             activeGroupId={game.currentTurnGroupId}
             myGroupId={effectiveIsHost ? null : session.groupId}
             value={gid => game.groups[gid]?.score ?? 0}
+            sub={gid => {
+              if ((game.triviaWinCondition ?? 'categories') !== 'categories' || triviaCategories.length === 0) return null;
+              const g = game.groups[gid];
+              const done = Array.isArray(g?.completedCategories) ? g.completedCategories.length : Object.values(g?.completedCategories ?? {}).length;
+              return `${done}/${triviaCategories.length} Kategorien`;
+            }}
           />
 
           {/* Details: Kategorien-Fortschritt + Joker je Gruppe */}
@@ -1968,8 +1998,8 @@ export default function MultiplayerGamePage() {
               : Object.values(game.triviaFinalRoundPending ?? {}) as string[];
             const pendingNames = pending.map(gid => game.groups[gid]?.name).filter(Boolean);
             return (
-              <div className="rounded-2xl border-2 border-orange-400 bg-orange-100/10 px-4 py-3 space-y-1">
-                <p className="font-bold text-orange-600">⏳ Finaler Zug läuft</p>
+              <div className="card-surface rounded-2xl px-4 py-3 space-y-1">
+                <p className="font-bold text-orange-700">⏳ Finaler Zug läuft</p>
                 <p className="text-sm text-ink/70">
                   Eine Gruppe hat alle Kategorien gesammelt.
                   {pendingNames.length > 0
@@ -1987,8 +2017,8 @@ export default function MultiplayerGamePage() {
               : Object.values(game.triviaTiebreakerGroupIds ?? {}) as string[];
             const names = ids.map(gid => game.groups[gid]?.name).filter(Boolean);
             return (
-              <div className="rounded-2xl border-2 border-yellow-400 bg-yellow-100/10 px-4 py-3 space-y-1">
-                <p className="font-bold text-yellow-600">🏆 Stechen — Schätzfragen-Finale</p>
+              <div className="card-surface rounded-2xl px-4 py-3 space-y-1">
+                <p className="font-bold text-amber-700">🏆 Stechen — Schätzfragen-Finale</p>
                 <p className="text-sm text-ink/70">
                   Gleichstand in Kategorien und Punkten! Das Stechen entscheidet: <strong>{names.join(' vs. ')}</strong>
                 </p>
@@ -2185,7 +2215,7 @@ export default function MultiplayerGamePage() {
                     <CategoryChip>{categoryIcon} {categoryLabel}</CategoryChip>
                     {timeLeft !== null && <TimerPill seconds={timeLeft} />}
                   </div>
-                  <p className="text-[22px] sm:text-[26px] leading-tight font-extrabold tracking-tight">{triviaDisplayCue(currentCard)}</p>
+                  <p className="fq-question text-[24px] sm:text-[28px] leading-tight">{triviaDisplayCue(currentCard)}</p>
 
                   {/* Spieler-Eingabe */}
                   {!effectiveIsHost && (() => {
@@ -2317,15 +2347,15 @@ export default function MultiplayerGamePage() {
             );
           })() : (
           <>
-          {/* ── STANDARD TRIVIA FRAGE ── */}
-          <div className="space-y-3">
-          <div className="space-y-2">
+          {/* ── STANDARD TRIVIA FRAGE ── (Tablet: Fragekarte links, Aktionen rechts) */}
+          <div className="fq-split space-y-3 md:space-y-0">
+          <div className="space-y-2 fq-split-main">
           {!isMyTurn && !effectiveIsHost && !game.hostless && (
-            <p className="px-1 text-sm font-semibold text-ink/60">
-              {activeGroup?.name ?? 'Die aktive Gruppe'} ist am Zug – ihr schaut zu.
+            <p className="px-1 text-sm font-semibold text-ink/80">
+              Am Zug: {activeGroup?.name ?? 'die andere Gruppe'} – ihr schaut zu.
             </p>
           )}
-          <div className={`card-surface rounded-[22px] p-5 sm:p-6 space-y-3 transition-opacity duration-300 ${!isMyTurn && !effectiveIsHost && !game.hostless ? 'opacity-80 pointer-events-none' : ''}`}>
+          <div className={`card-surface rounded-[22px] p-5 sm:p-6 space-y-3 ${!isMyTurn && !effectiveIsHost && !game.hostless ? 'pointer-events-none' : ''}`}>
             <div className="flex items-center justify-between gap-2">
               <div className="flex flex-wrap items-center gap-2">
                 <CategoryChip>{categoryIcon} {categoryLabel}</CategoryChip>
@@ -2333,7 +2363,7 @@ export default function MultiplayerGamePage() {
               </div>
               {timeLeft !== null && <TimerPill seconds={timeLeft} />}
             </div>
-            <p className="text-[22px] sm:text-[26px] leading-tight font-extrabold tracking-tight">{triviaDisplayCue(currentCard)}</p>
+            <p className="fq-question text-[24px] sm:text-[28px] leading-tight">{triviaDisplayCue(currentCard)}</p>
 
             {/* Medien-Einbettung */}
             {currentCard.sources && (
@@ -2425,7 +2455,7 @@ export default function MultiplayerGamePage() {
                   try { await skipCard(pin); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
                 }}
                 disabled={isProcessing}
-                className="w-full px-3 py-1.5 bg-ink/10 text-ink rounded-xl font-semibold text-xs hover:bg-ink/20 disabled:opacity-50"
+                className="fq-secondary !min-h-[40px] !text-sm"
               >
                 ⏭ Frage überspringen (gleiche Gruppe bleibt dran)
               </button>
@@ -2440,11 +2470,10 @@ export default function MultiplayerGamePage() {
             if (!myJokers) return null;
             const hasAnyJoker = myJokers.newQuestion || myJokers.next || myJokers.dice;
             return (
-              <div className="flex items-center gap-2">
-                <span className="fq-section-label mr-1">Joker</span>
+              <div className="grid grid-cols-3 gap-3 px-0.5 pt-1" role="group" aria-label="Eure Joker">
                 <JokerButton
                   kind="newQuestion"
-                  label="Neu"
+                  label="Neue Frage"
                   available={!!myJokers.newQuestion}
                   disabled={isProcessing}
                   title="Tauscht die aktuelle Frage gegen eine neue Frage aus derselben Kategorie."
@@ -2468,7 +2497,7 @@ export default function MultiplayerGamePage() {
                 />
                 <JokerButton
                   kind="dice"
-                  label="Würfel"
+                  label="Würfeln"
                   available={!!myJokers.dice}
                   disabled={isProcessing}
                   title="Würfle eine 6: Punkt + Kategorie kassieren. Eine 1: Punkt + Kategorie verlieren. 2–5: kein Effekt."
@@ -2496,18 +2525,22 @@ export default function MultiplayerGamePage() {
             // Punkt für eine bereits abgegebene, richtige Antwort aneignen (siehe activateJokerSteal).
             const answerPending = Boolean(game.pendingTextAnswer);
             const stealBlocked = !myJokers.steal || isProcessing || !stealUnlocked || answerPending;
+            const stealWaitSecs = !stealUnlocked && stealUnlockAt !== null
+              ? Math.max(1, Math.ceil((stealUnlockAt - stealNow) / 1000))
+              : 0;
             return (
               <div className="flex items-center gap-3">
-                <p className="flex-1 text-xs text-ink/60 leading-snug">
-                  Frage von <span className="font-semibold text-ink">{game.currentTurnGroupId ? (game.groups[game.currentTurnGroupId]?.name ?? '?') : '?'}</span> klauen? Wer zuerst drückt, spielt.
+                <p className="flex-1 text-sm text-ink/85 leading-snug">
+                  Frage von <span className="font-bold text-ink">{game.currentTurnGroupId ? (game.groups[game.currentTurnGroupId]?.name ?? '?') : '?'}</span> klauen? Wer zuerst drückt, spielt.
                 </p>
                 <div className="w-[140px] flex">
                   <JokerButton
                     kind="steal"
-                    label={!myJokers.steal ? 'Verbraucht' : answerPending ? 'Gesperrt' : 'Klauen'}
+                    label={!myJokers.steal ? 'Verbraucht' : answerPending ? 'Gesperrt' : stealWaitSecs > 0 ? `Klauen in ${stealWaitSecs} s` : 'Klauen'}
                     available={!!myJokers.steal}
                     disabled={stealBlocked}
                     highlight={!stealBlocked}
+                    waitProgress={myJokers.steal && !answerPending && stealWaitSecs > 0 ? 1 - stealWaitSecs / 20 : undefined}
                     title={
                       answerPending
                         ? 'Antwort liegt bereits vor – Steal ist jetzt gesperrt.'
@@ -2532,17 +2565,17 @@ export default function MultiplayerGamePage() {
             return (
               <div className="space-y-2">
                 {isMyTurn && !pending && (
-                  <div className="space-y-2">
-                    <label className="fq-section-label block px-1" htmlFor="fq-text-answer">Eure Antwort</label>
+                  <div className="fq-dock">
+                    <label className="sr-only" htmlFor="fq-text-answer">Eure Antwort</label>
                     <input
                       type="text"
                       value={textAnswerInput}
                       onChange={e => setTextAnswerInput(e.target.value)}
                       onKeyDown={e => e.key === 'Enter' && handleSubmitTextAnswer()}
                       id="fq-text-answer"
-                      placeholder="Antwort eingeben…"
+                      placeholder="Eure Antwort …"
                       className="fq-input"
-                      autoFocus
+                      autoComplete="off"
                     />
                     <button
                       onClick={handleSubmitTextAnswer}
@@ -2554,16 +2587,16 @@ export default function MultiplayerGamePage() {
                   </div>
                 )}
                 {pending && (
-                  <div className="card-surface rounded-2xl p-3 space-y-1 border-2 border-blue-400/40 text-center">
-                    <p className="text-[11px] uppercase tracking-wide text-ink/50">
+                  <div className="card-surface rounded-2xl p-4 space-y-1 text-center">
+                    <p className="text-sm text-ink/60">
                       {isAnswerer ? 'Eure Antwort' : `Antwort von ${game.groups[pending.groupId]?.name ?? '?'}`}
                     </p>
-                    <p className="text-base font-bold">{pending.text}</p>
-                    <p className="text-xs text-ink/60">⏳ Die Spielleitung wertet jetzt aus…</p>
+                    <p className="text-2xl font-extrabold">„{pending.text}“</p>
+                    <p className="text-sm text-ink/60">⏳ Die Spielleitung wertet jetzt aus…</p>
                   </div>
                 )}
                 {!isMyTurn && !pending && (
-                  <p className="text-center text-xs text-ink/60">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der aktiven Gruppe'}…</p>
+                  <p className="text-center text-sm text-ink/80">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der aktiven Gruppe'}…</p>
                 )}
               </div>
             );
@@ -2571,7 +2604,7 @@ export default function MultiplayerGamePage() {
 
           {/* Host-Steuerung (nur mit Spielleitung) */}
           {effectiveIsHost && !game.hostless && (
-            <div className="card-surface rounded-2xl p-3 space-y-2 border-2 border-green-500/30">
+            <div className="card-surface rounded-2xl p-4 space-y-3">
               {/* NEXT-Joker-Hinweis für Host */}
               {game.jokerNextActive && game.jokerNextOriginGroupId && game.jokerNextTargetGroupId && (
                 <div className="rounded-xl bg-orange-500/15 border-2 border-orange-400 px-3 py-2 text-xs">
@@ -2611,54 +2644,59 @@ export default function MultiplayerGamePage() {
               {/* Eingereichte Textantwort (falls Antwort-Eingabe für Gruppen aktiviert ist) */}
               {game.hostTextAnswersEnabled && (
                 game.pendingTextAnswer ? (
-                  <div className="rounded-xl bg-ink/[0.05] border border-ink/10 px-3 py-2 text-center">
-                    <p className="text-[11px] uppercase tracking-wide text-ink/50">Eingereichte Antwort von {activeGroup?.name ?? '?'}</p>
-                    <p className="text-base font-bold">{game.pendingTextAnswer.text}</p>
+                  <div className="px-1 py-1">
+                    <p className="text-sm text-ink/60">Antwort von {activeGroup?.name ?? '?'}</p>
+                    <p className="text-[28px] leading-tight font-extrabold break-words">„{game.pendingTextAnswer.text}“</p>
                   </div>
                 ) : (
-                  <p className="text-center text-xs text-ink/60">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der Gruppe'}…</p>
+                  <p className="text-center text-sm text-ink/70 py-1">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der Gruppe'}…</p>
                 )
               )}
 
-              {/* Bewertungs-Buttons */}
-              <p className="text-sm font-semibold text-center text-ink/80">
-                Hat Gruppe <span className="font-bold">&bdquo;{activeGroup?.name ?? '…'}&ldquo;</span> die Frage korrekt beantwortet?
-              </p>
-              <div className="grid grid-cols-3 gap-1.5">
-                <button
-                  onClick={() => handleTriviaAnswer(true)}
-                  disabled={isProcessing || (game.hostTextAnswersEnabled && !game.pendingTextAnswer)}
-                  className="px-2 py-2 bg-green-600 text-white rounded-xl font-bold text-sm hover:bg-green-700 disabled:opacity-50"
-                >
-                  ✅ Richtig
-                </button>
-                <button
-                  onClick={() => handleTriviaAnswer(false)}
-                  disabled={isProcessing || (game.hostTextAnswersEnabled && !game.pendingTextAnswer)}
-                  className="px-2 py-2 bg-red-600 text-white rounded-xl font-bold text-sm hover:bg-red-700 disabled:opacity-50"
-                >
-                  ❌ Falsch
-                </button>
-                <button
-                  onClick={() => setShowTriviaAnswer(v => !v)}
-                  className={`px-2 py-2 rounded-xl font-bold text-sm transition-colors border ${
-                    showTriviaAnswer
-                      ? 'bg-[#1C1C1E] text-white border-[#1C1C1E]'
-                      : 'card-surface text-ink hover:border-orange-500'
-                  }`}
-                >
-                  {showTriviaAnswer ? 'Verbergen' : 'Antwort zeigen'}
-                </button>
-              </div>
+              <button
+                onClick={() => setShowTriviaAnswer(v => !v)}
+                aria-expanded={showTriviaAnswer}
+                className="fq-secondary"
+              >
+                {showTriviaAnswer ? 'Lösung verbergen' : 'Lösung anzeigen'}
+              </button>
               {showTriviaAnswer && (
-                <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-400 px-3 py-2">
-                  <p className="text-xs font-semibold text-yellow-700 mb-0.5">Korrekte Antwort:</p>
+                <div className="rounded-xl bg-green-50 border-2 border-green-600/40 px-3 py-2">
+                  <p className="text-xs font-semibold text-green-800 mb-0.5">Lösung</p>
                   <p className="text-base font-bold">{currentCard.category === 'music' ? currentCard.answer.replace(/ [–—] -?\d+, /, ' — ') : currentCard.answer}</p>
-                  {currentCard.year && (
+                  {currentCard.year > 0 && (
                     <p className="text-xs text-ink/60 mt-0.5">Jahr: {currentCard.year}</p>
                   )}
                 </div>
               )}
+
+              {/* Bewertung: im Daumenbereich (Handy) bzw. direkt hier (Tablet) */}
+              <div className="fq-dock">
+                {game.hostTextAnswersEnabled && game.pendingTextAnswer && (
+                  <p className="text-sm text-center truncate md:hidden">
+                    {activeGroup?.name}: <span className="font-extrabold">„{game.pendingTextAnswer.text}“</span>
+                  </p>
+                )}
+                <p className="hidden md:block text-sm font-semibold text-center text-ink/80">
+                  Antwort von {activeGroup?.name ?? 'der Gruppe'} richtig?
+                </p>
+                <div className="fq-judge">
+                  <button
+                    onClick={() => handleTriviaAnswer(false)}
+                    disabled={isProcessing || (game.hostTextAnswersEnabled && !game.pendingTextAnswer)}
+                    className="fq-no"
+                  >
+                    ✕ Falsch
+                  </button>
+                  <button
+                    onClick={() => handleTriviaAnswer(true)}
+                    disabled={isProcessing || (game.hostTextAnswersEnabled && !game.pendingTextAnswer)}
+                    className="fq-yes"
+                  >
+                    ✓ Richtig
+                  </button>
+                </div>
+              </div>
 
               {renderAdminSettingsPanel()}
             </div>
@@ -2706,9 +2744,7 @@ export default function MultiplayerGamePage() {
                   const result = game.textAnswerResult;
                   const isResultForMe = !!session && result.groupId === session.groupId;
                   return (
-                    <div className={`card-surface rounded-2xl p-4 space-y-1.5 border-4 text-center ${
-                      result.correct ? 'border-green-500 bg-green-500/10' : 'border-red-500 bg-red-500/10'
-                    }`}>
+                    <div className="card-surface rounded-2xl p-4 space-y-1.5 text-center">
                       <div className="text-3xl">{result.correct ? '✅' : '❌'}</div>
                       <p className="text-base font-bold">
                         {isResultForMe
@@ -2722,17 +2758,17 @@ export default function MultiplayerGamePage() {
 
                 {/* Aktive Gruppe: Antwort eingeben */}
                 {isMyTurn && !pending && !game.textAnswerResult && (
-                  <div className="space-y-2">
-                    <label className="fq-section-label block px-1" htmlFor="fq-text-answer">Eure Antwort</label>
+                  <div className="fq-dock">
+                    <label className="sr-only" htmlFor="fq-text-answer">Eure Antwort</label>
                     <input
                       type="text"
                       value={textAnswerInput}
                       onChange={e => setTextAnswerInput(e.target.value)}
                       onKeyDown={e => e.key === 'Enter' && handleSubmitTextAnswer()}
                       id="fq-text-answer"
-                      placeholder="Antwort eingeben…"
+                      placeholder="Eure Antwort …"
                       className="fq-input"
-                      autoFocus
+                      autoComplete="off"
                     />
                     <button
                       onClick={handleSubmitTextAnswer}
@@ -2763,20 +2799,20 @@ export default function MultiplayerGamePage() {
                     ) : (
                       <div className="space-y-1.5">
                         <p className="text-xs font-semibold text-center text-ink/80">War die Antwort richtig?</p>
-                        <div className="grid grid-cols-2 gap-1.5">
-                          <button
-                            onClick={() => handleCastVote(true)}
-                            disabled={isProcessing}
-                            className="px-2 py-2 bg-green-600 text-white rounded-xl font-bold text-sm hover:bg-green-700 disabled:opacity-50"
-                          >
-                            ✅ Richtig
-                          </button>
+                        <div className="fq-judge">
                           <button
                             onClick={() => handleCastVote(false)}
                             disabled={isProcessing}
-                            className="px-2 py-2 bg-red-600 text-white rounded-xl font-bold text-sm hover:bg-red-700 disabled:opacity-50"
+                            className="fq-no"
                           >
-                            ❌ Falsch
+                            ✕ Falsch
+                          </button>
+                          <button
+                            onClick={() => handleCastVote(true)}
+                            disabled={isProcessing}
+                            className="fq-yes"
+                          >
+                            ✓ Richtig
                           </button>
                         </div>
                       </div>
@@ -2791,7 +2827,7 @@ export default function MultiplayerGamePage() {
                 )}
 
                 {!isMyTurn && !pending && !game.textAnswerResult && (
-                  <p className="text-center text-xs text-ink/60">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der aktiven Gruppe'}…</p>
+                  <p className="text-center text-sm text-ink/80">⏳ Warte auf die Antwort von {activeGroup?.name ?? 'der aktiven Gruppe'}…</p>
                 )}
               </div>
             );
@@ -2807,7 +2843,7 @@ export default function MultiplayerGamePage() {
     // Wenn keine Karte verfügbar ist, zeige Warnung
     if (!currentCard) {
       return (
-        <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+        <main className="fq-table relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
           <div className="text-center space-y-4">
             <h1 className="text-3xl font-display">Timeline Quiz</h1>
             <div className="card-surface rounded-2xl p-6">
@@ -2821,8 +2857,18 @@ export default function MultiplayerGamePage() {
       );
     }
 
+    // Während der Flex-Phase (vor der Auswertung) darf der Punktestand der ablegenden
+    // Gruppe nichts verraten: der Server zählt eine richtig gelegte Karte sofort.
+    const scoreMasked = (gid: string) =>
+      Boolean(game.flexPhaseActive && game.pendingResult && !game.resultRevealed && gid === game.currentTurnGroupId);
+    const visibleScore = (gid: string) => {
+      const sc = game.groups[gid]?.score ?? 0;
+      return scoreMasked(gid) && game.pendingResult === 'correct' ? sc - 1 : sc;
+    };
+
     return (
-      <main className="relative mx-auto max-w-2xl px-4 sm:px-5 py-3 sm:py-6 space-y-3">
+      <main className="fq-table relative mx-auto max-w-2xl md:max-w-5xl px-4 sm:px-5 py-3 sm:py-6 space-y-3">
+        {endGameDialog}
 
         {/* ═══════════════════════════════════════════════════════════
             ERGEBNISSEITE — wird angezeigt sobald Host "Auswertung"
@@ -2843,49 +2889,39 @@ export default function MultiplayerGamePage() {
           const tipEntries = Object.entries(tips);
 
           return (
-            <div className="space-y-3">
+            <div className="space-y-3 md:max-w-2xl md:mx-auto">
               {/* Korrekte Antwort */}
               <div className="card-surface rounded-2xl p-5 text-center space-y-1">
-                <p className="text-sm text-ink/60">Die korrekte Antwort ist:</p>
-                <p className="text-4xl font-bold">{currentCard.year}</p>
+                <p className="text-sm text-ink/60">Die richtige Jahreszahl</p>
+                <p className="text-5xl font-black text-[#C7353A] tabular-nums">{currentCard.year}</p>
                 <p className="text-base font-semibold text-ink/80">{answerLabel}</p>
               </div>
 
               {/* Wer erhält die Karte? */}
               {game.pendingResult === 'correct' ? (
-                <div className="rounded-2xl bg-green-500/10 border-2 border-green-500/40 p-4 text-center">
-                  <p className="text-lg font-bold text-green-700">✅ Team: <span>{activeGroupName}</span> erhält die Karte!</p>
+                <div className="card-surface rounded-2xl p-4 text-center">
+                  <p className="text-lg font-extrabold text-green-700">✅ Karte geht an {activeGroupName}!</p>
                 </div>
               ) : flexWinnerName ? (
-                <div className="rounded-2xl bg-orange-50 border-2 border-orange-200 p-4 text-center">
-                  <p className="text-lg font-bold text-orange-700">✅ Team: <span>{flexWinnerName}</span> wusste es besser und hat die Karte gestohlen - nice flex!</p>
+                <div className="card-surface rounded-2xl p-4 text-center">
+                  <p className="text-lg font-extrabold text-orange-700">⚡ Nice flex – Karte geht an {flexWinnerName}!</p>
                 </div>
               ) : (
-                <div className="rounded-2xl bg-red-500/10 border-2 border-red-400/40 p-4 text-center">
-                  <p className="text-lg font-bold text-red-400">❌ Keine Gruppe erhält die Karte.</p>
+                <div className="card-surface rounded-2xl p-4 text-center">
+                  <p className="text-lg font-extrabold text-red-700">❌ Keine Gruppe bekommt die Karte.</p>
                 </div>
               )}
 
               {/* Host: Flex-Button Vergabe (im spielleitungslosen Modus nicht verfügbar) */}
               {isHostSession && !game.hostless && (
                 !flexJudgmentDone ? (
-                  <div className="card-surface rounded-2xl border-2 border-orange-200 p-4 space-y-3">
-                    <p className="font-semibold text-center text-sm">
-                      Hat <span className="font-bold">{activeGroupName}</span> die Frage korrekt beantwortet (Titel / Person / Film — unabhängig von der Jahreszahl)?
+                  <div className="card-surface rounded-2xl p-4 space-y-3">
+                    <p className="font-semibold text-center text-[15px]">
+                      Titel, Person oder Film von <span className="font-bold">{activeGroupName}</span> auch richtig? (unabhängig von der Jahreszahl)
                     </p>
-                    <div className="flex gap-2">
-                      <button
-                        onClick={() => handleAwardFlex(true)}
-                        className="flex-1 px-4 py-3 bg-orange-700 text-white rounded-xl font-semibold hover:bg-orange-800 text-sm flex items-center justify-center gap-2"
-                      >
-                        Ja — +1 Flex-Button
-                      </button>
-                      <button
-                        onClick={() => handleAwardFlex(false)}
-                        className="flex-1 px-4 py-3 bg-ink/20 text-ink rounded-xl font-semibold hover:bg-ink/30 text-sm"
-                      >
-                        Nein
-                      </button>
+                    <div className="grid grid-cols-2 gap-2.5">
+                      <button onClick={() => handleAwardFlex(false)} className="fq-secondary">Nein</button>
+                      <button onClick={() => handleAwardFlex(true)} className="fq-primary !min-h-[46px] !text-base">Ja, +1 Flex</button>
                     </div>
                   </div>
                 ) : (
@@ -2895,14 +2931,14 @@ export default function MultiplayerGamePage() {
 
               {/* Eingegangene Flex-Tipps */}
               <div className="card-surface rounded-2xl p-4 space-y-1">
-                <p className="text-xs font-semibold text-orange-700">Eingegangene Flex-Tipps:</p>
+                <p className="text-sm font-bold">Flex-Tipps</p>
                 {tipEntries.length === 0 ? (
-                  <p className="text-xs text-ink/50">Kein Tipp abgegeben</p>
+                  <p className="text-sm text-ink/60">Kein Tipp abgegeben</p>
                 ) : (
                   tipEntries.map(([pos, gId]) => (
-                    <p key={pos} className="text-xs text-ink/80">
-                      <span className="font-semibold">{game.groups[gId]?.name ?? gId}</span>: Position {pos}
-                      {String(correctPos) === pos ? ' ✅' : ' ❌'}
+                    <p key={pos} className="text-sm text-ink/80">
+                      <span className="font-semibold">{game.groups[gId]?.name ?? gId}</span>
+                      {String(correctPos) === pos ? ': richtige Lücke ✅' : ': daneben ❌'}
                     </p>
                   ))
                 )}
@@ -2910,26 +2946,28 @@ export default function MultiplayerGamePage() {
 
               {/* Host: Weiter-Button (im spielleitungslosen Modus automatisch) */}
               {isHostSession && !game.hostless && (
-                <button
-                  onClick={handleNextCard}
-                  disabled={isProcessing}
-                  className="w-full px-6 py-4 bg-ink text-inkDark rounded-2xl font-bold text-lg hover:opacity-90 transition-opacity disabled:opacity-50"
-                >
-                  {isProcessing ? '⏳ Bitte warten…' : 'Weiter zum nächsten Team →'}
-                </button>
+                <div className="fq-dock">
+                  <button
+                    onClick={handleNextCard}
+                    disabled={isProcessing}
+                    className="fq-primary"
+                  >
+                    {isProcessing ? 'Bitte warten …' : 'Nächste Gruppe ist dran'}
+                  </button>
+                </div>
               )}
 
               {/* Nicht-Host: Warte-Meldung */}
               {!isHostSession && !game.hostless && (
                 <div className="text-center py-3">
-                  <p className="text-sm text-ink/60">⏳ Warte auf den Spielleiter…</p>
+                  <p className="text-sm text-ink/80">⏳ Warte auf die Spielleitung …</p>
                 </div>
               )}
 
               {/* Spielleitungsloser Modus: automatischer Weiter-Countdown */}
               {game.hostless && (
                 <div className="text-center py-3">
-                  <p className="text-sm text-ink/60">
+                  <p className="text-sm text-ink/80">
                     ⏳ Automatisch weiter{autoAdvanceCountdown !== null ? ` in ${autoAdvanceCountdown}s` : '…'}
                   </p>
                 </div>
@@ -2940,48 +2978,43 @@ export default function MultiplayerGamePage() {
 
         {/* Normale Spielansicht — nur wenn NICHT im Ergebnis-Modus */}
         {!game.resultRevealed && (<>
-        {/* Punkteleiste (Fokus-Design) */}
+        {/* Punkte-Chips (Spieltisch-Design) */}
         <ScoreStrip
           groups={groupList}
           activeGroupId={game.currentTurnGroupId}
           myGroupId={effectiveIsHost ? null : session.groupId}
           value={gid => (
-            <>
-              {game.groups[gid]?.score ?? 0}
-              <span className="text-xs font-semibold text-ink/50">/{game.timelineWinTarget ?? 10}</span>
-            </>
+            <span>
+              {scoreMasked(gid) ? '?' : visibleScore(gid)}
+              <small>/{game.timelineWinTarget ?? 10}</small>
+            </span>
           )}
+          sub={gid => {
+            const fb = game.groups[gid]?.flexButtons ?? 0;
+            return fb > 0 ? `${fb} Flex übrig` : 'Kein Flex';
+          }}
         />
 
-        <div className="space-y-3">
-        <div className="space-y-3">
+        <div className="fq-split space-y-3 md:space-y-0">
+        <div className="fq-split-main">
         {/* Aktuelle Karte */}
         {currentCard && (() => {
           const categoryLabel = catLabelMeta(currentCard.category);
           const categoryIcon = catIcon(currentCard.category);
           return (
-          <div className={`rounded-[22px] bg-[#1C1C1E] text-white p-5 sm:p-6 space-y-3 shadow-[0_10px_28px_rgba(0,0,0,0.16)] ${(!isActiveTurn && !isHostSession) ? 'opacity-80 pointer-events-none select-none' : ''}`}>
+          <div className={`card-surface rounded-2xl p-5 sm:p-6 space-y-3 ${(!isActiveTurn && !isHostSession) ? 'pointer-events-none select-none' : ''}`}>
             <div className="flex items-center justify-between gap-2">
-              <h2 className="text-[13px] font-bold text-orange-300 flex flex-wrap items-center gap-2">
-                <span className="whitespace-nowrap"><span className="hidden sm:inline">Neue Karte · </span>{categoryIcon} {categoryLabel}</span>
+              <h2 className="text-sm font-bold text-[#5B5B70] flex flex-wrap items-center gap-2">
+                <span className="whitespace-nowrap">{categoryIcon} {categoryLabel}</span>
                 {quoteSourceBadge(currentCard)}
               </h2>
               <div className="flex items-center gap-2">
-                {timeLeft !== null && (
-                  <span
-                    role="timer"
-                    className={`inline-flex h-8 items-center rounded-full px-3 text-sm font-bold tabular-nums ${
-                      timeLeft <= 10 ? 'bg-red-600 text-white animate-pulse' : 'bg-white/10 text-white'
-                    }`}
-                  >
-                    {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}
-                  </span>
-                )}
-                <span className="text-xl font-extrabold tracking-wider text-orange-300" aria-label="Jahr verdeckt">????</span>
+                <span className="text-xl font-black tracking-wider text-[#C7353A]" aria-label="Jahr verdeckt">????</span>
+                {timeLeft !== null && <TimerPill seconds={timeLeft} />}
               </div>
             </div>
 
-            <p className="text-xl sm:text-2xl leading-snug font-extrabold">{currentCard.category === 'quote' ? 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?' : currentCard.category === 'filmserien' ? currentCard.cue + ' – Und in welchem Jahr war das?' : currentCard.cue}</p>
+            <p className="fq-question text-[22px] sm:text-[26px] leading-tight">{currentCard.category === 'quote' ? 'Woher und aus welchem Jahr stammt das nachfolgende Zitat (Filme, Lieder, Personen)?' : currentCard.category === 'filmserien' ? currentCard.cue + ' – Und in welchem Jahr war das?' : currentCard.cue}</p>
 
             {currentCard.sources && (
               <div className="relative text-ink">
@@ -3046,9 +3079,9 @@ export default function MultiplayerGamePage() {
                   try { await skipCard(pin); } catch (err) { console.error(err); } finally { setIsProcessing(false); }
                 }}
                 disabled={isProcessing}
-                className="w-full px-4 py-2 bg-white/10 text-white rounded-xl font-semibold text-sm hover:bg-white/20 disabled:opacity-50"
+                className="fq-secondary !min-h-[40px] !text-sm"
               >
-                Frage überspringen (gleiche Gruppe bleibt dran)
+                ⏭ Frage überspringen (gleiche Gruppe bleibt dran)
               </button>
             )}
 
@@ -3058,18 +3091,20 @@ export default function MultiplayerGamePage() {
                 type="button"
                 onClick={handleUseFlex}
                 disabled={isProcessing}
-                className="w-full px-4 py-2 rounded-xl border border-white/25 text-white bg-white/5 hover:bg-white/10 font-semibold text-sm flex items-center justify-center gap-2 disabled:opacity-50"
+                className="fq-secondary !min-h-[42px] !text-sm"
               >
-                Flex-Button: neue Frage
-                <span className="ml-1 text-xs bg-orange-500 text-[#1C1C1E] font-bold px-2 py-0.5 rounded-full">
-                  {currentGroup.flexButtons}×
+                ⚡ Flex einsetzen: neue Karte ziehen
+                <span className="ml-1 text-xs bg-[#F5B700] text-[#1B1B2F] font-black px-2 py-0.5 rounded-full border border-[#1B1B2F]">
+                  {currentGroup.flexButtons} übrig
                 </span>
               </button>
             )}
           </div>
           );
         })()}
+        </div>
 
+        <div className="space-y-3">
         {/* Timeline mit Platzierungs-Optionen */}
         {placementResult === null && currentCard && isActiveTurn && (() => {
           const timeline = Array.isArray(currentGroup.timeline) ? currentGroup.timeline : Object.values(currentGroup.timeline ?? {});
@@ -3085,8 +3120,8 @@ export default function MultiplayerGamePage() {
           };
 
           return (
-            <div className="space-y-2">
-              <h3 className="fq-section-label px-1">Eure Zeitleiste – wo gehört die Karte hin?</h3>
+            <div>
+              <h3 className="fq-section-label px-1">Eure Zeitleiste – wohin gehört die Karte?</h3>
 
               <div className="flex flex-col">
                 {Array.from({ length: displayTimeline.length + 1 }).map((_, pos) => {
@@ -3105,24 +3140,21 @@ export default function MultiplayerGamePage() {
                         disabled={isProcessing}
                         aria-pressed={selected}
                         aria-label={slotLabel}
-                        className={`w-full rounded-[14px] text-sm font-semibold transition-all disabled:opacity-50 ${
-                          selected
-                            ? 'h-[52px] border-2 border-orange-600 bg-orange-50 text-orange-800 font-extrabold'
-                            : 'h-9 border border-dashed border-ink/25 text-ink/55 hover:border-orange-500 hover:text-orange-700'
-                        }`}
+                        className={`fq-slot ${selected ? 'fq-slot--sel' : ''}`}
                       >
-                        {selected ? `↓ ${currentCard.category === 'music' ? 'Song' : 'Karte'} hier ablegen` : '+ hier'}
+                        {selected ? (
+                          <>
+                            <span>Neue {currentCard.category === 'music' ? 'Song-Karte' : 'Karte'} hier</span>
+                            <span className="text-[13px] font-semibold">{slotLabel.replace(' einordnen', '').toLowerCase()}</span>
+                          </>
+                        ) : slotLabel.replace(' einordnen', '').replace(/^./, c => c.toLowerCase())}
                       </button>
                       {item && (
-                        <div className={`my-1.5 min-h-[56px] rounded-[14px] flex items-center gap-3.5 px-4 py-2 ${
-                          item.id === game.referenceCard?.id
-                            ? 'bg-amber-50 border border-amber-300 text-amber-950'
-                            : 'card-surface'
-                        }`}>
-                          <span className="w-[52px] flex-shrink-0 text-lg font-extrabold tabular-nums">{item.year}</span>
+                        <div className={`fq-row-card ${item.id === game.referenceCard?.id ? 'fq-row-card--ref' : ''}`}>
+                          <span className="fq-year">{item.year}</span>
                           <span className="min-w-0 flex flex-col">
                             {item.id === game.referenceCard?.id ? (
-                              <span className="text-sm font-semibold text-amber-800">Referenzkarte</span>
+                              <span className="text-[15px] font-semibold">Startkarte</span>
                             ) : (
                               <>
                                 <span className="truncate text-[15px] font-semibold">{item.hint || item.title || ''}</span>
@@ -3147,14 +3179,16 @@ export default function MultiplayerGamePage() {
                 </div>
               )}
 
-              {/* Bestätigen-Button */}
-              <button
-                onClick={() => selectedPosition !== null && handlePlaceCard(selectedPosition)}
-                disabled={selectedPosition === null || isProcessing}
-                className="fq-primary"
-              >
-                {isProcessing ? 'Wird geprüft…' : selectedPosition === null ? 'Lücke wählen' : 'Hier ablegen'}
-              </button>
+              {/* Bestätigen-Button (Handy: im Daumenbereich) */}
+              <div className="fq-dock">
+                <button
+                  onClick={() => selectedPosition !== null && handlePlaceCard(selectedPosition)}
+                  disabled={selectedPosition === null || isProcessing}
+                  className="fq-primary"
+                >
+                  {isProcessing ? 'Wird geprüft …' : selectedPosition === null ? 'Erst eine Lücke wählen' : 'Karte hier ablegen'}
+                </button>
+              </div>
             </div>
           );
         })()}
@@ -3200,16 +3234,6 @@ export default function MultiplayerGamePage() {
           const pendingPos = activeGroup?.pendingPosition ?? null;
           const ghostCard = pendingPos !== null && currentCard ? currentCard : null;
 
-          const renderGhost = () => (
-            <div id="obs-ghost-card" className="flex items-center flex-shrink-0">
-              <div className="text-ink/30 mx-1">↔</div>
-              <div className="flex-shrink-0 rounded-lg border-2 border-dashed border-orange-500 bg-orange-50 px-4 py-3 md:px-5 md:py-4 min-w-[120px] md:min-w-[140px] lg:min-w-[160px] animate-pulse">
-                <p className="text-xs md:text-sm font-bold text-orange-700">???</p>
-                <p className="text-xs md:text-sm truncate text-orange-700/80">???</p>
-              </div>
-            </div>
-          );
-
           const myGroup = session ? game.groups[session.groupId] : null;
           // Sobald der Spielleiter „Auswertung" drückt (resultRevealed = true), sind keine
           // neuen Flex-Tipps mehr möglich – erst nach „Nächste Gruppe" wird das Flag gelöscht.
@@ -3230,177 +3254,145 @@ export default function MultiplayerGamePage() {
           const flexTipsMap: Record<string, string> = (isHostSession && isFlexPhase)
             ? (game.flexTips ?? {})
             : {};
-          const renderFlexTipMarker = (pos: number) => {
-            const tippingGroupId = flexTipsMap[String(toServerPosition(pos))];
-            if (!tippingGroupId) return null;
-            const tippingGroup = game.groups[tippingGroupId];
-            return (
-              <div
-                className="flex-shrink-0 flex flex-col items-center gap-0.5 px-1.5 py-1.5 rounded-lg border-2 border-orange-500 bg-orange-100 min-w-[52px]"
-                title={`Flex-Tipp von ${tippingGroup?.name ?? tippingGroupId}`}
-              >
-                <span className="text-[10px] font-bold text-orange-700">FB</span>
-                <span
-                  className="text-[9px] font-semibold truncate max-w-[48px] text-center"
-                  style={{ color: tippingGroup?.color ?? '#60a5fa' }}
+
+          // Beschriftung einer Lücke ("vor 1989", "zwischen 1989 und 1990", "nach 1990").
+          // Die verdeckte neue Karte liefert keine Jahreszahl – angrenzende Lücken sind ohnehin gesperrt.
+          const yearOf = (c: any) => (c.id === game.currentCardId && !game.resultRevealed ? null : c.year);
+          const gapLabel = (pos: number) => {
+            const prev = pos > 0 ? displayTimeline[pos - 1] : null;
+            const next = pos < displayTimeline.length ? displayTimeline[pos] : null;
+            if (prev && next) return `zwischen ${yearOf(prev)} und ${yearOf(next)}`;
+            if (next) return `vor ${yearOf(next)}`;
+            if (prev) return `nach ${yearOf(prev)}`;
+            return 'hier';
+          };
+          const selectedTipDisplayPos = flexTipPosition === null ? null
+            : Array.from({ length: displayTimeline.length + 1 }, (_, p) => p)
+                .find(p => toServerPosition(p) === flexTipPosition && !isBlocked(p)) ?? null;
+
+          const renderGap = (pos: number) => {
+            const serverPos = toServerPosition(pos);
+            if (ghostCard && pendingPos === pos) {
+              return (
+                <div id="obs-ghost-card" className="fq-slot fq-slot--ghost">
+                  Wird überlegt: {gapLabel(pos)}?
+                </div>
+              );
+            }
+            const tippingGroupId = flexTipsMap[String(serverPos)];
+            if (tippingGroupId && !isBlocked(pos)) {
+              return (
+                <div className="fq-slot fq-slot--locked">
+                  ⚡ Flex-Tipp von {game.groups[tippingGroupId]?.name ?? '?'}
+                </div>
+              );
+            }
+            if (canFlex && !isBlocked(pos) && !takenPositions.has(serverPos)) {
+              const selected = flexTipPosition === serverPos;
+              return (
+                <button
+                  type="button"
+                  onClick={() => setFlexTipPosition(p => p === serverPos ? null : serverPos)}
+                  aria-pressed={selected}
+                  className={`fq-slot ${selected ? 'fq-slot--sel' : 'fq-slot--tip'}`}
                 >
-                  {tippingGroup?.name ?? '?'}
-                </span>
-              </div>
-            );
+                  {selected ? (
+                    <>
+                      <span>Euer Tipp</span>
+                      <span className="text-[13px] font-semibold">{gapLabel(pos)}</span>
+                    </>
+                  ) : `Hier tippen: ${gapLabel(pos)}`}
+                </button>
+              );
+            }
+            if (canFlex && isTaken(pos)) {
+              return <div className="fq-slot fq-slot--locked">🔒 Schon von einer anderen Gruppe getippt</div>;
+            }
+            return <div className="h-2" aria-hidden="true" />;
           };
 
           return (
-            <div className="card-surface rounded-2xl p-3 sm:p-4 md:p-5 space-y-2 md:space-y-3">
-              <h3 className="fq-section-label">
-                Timeline von <span className="font-bold">{activeGroup.name}</span>
-                {isFlexPhase && canFlex && (
-                  <span className="ml-2 text-orange-700 text-xs md:text-sm">(Flex-Tipp möglich!)</span>
-                )}
-                {isFlexPhase && flexTipSubmitted && (
-                  <span className="ml-2 text-green-700 text-xs md:text-sm">✓ Tipp eingereicht</span>
-                )}
-                {isHostSession && pendingPos !== null && (
-                  <span className="ml-2 text-orange-700 text-xs md:text-sm">(wählt Position…)</span>
-                )}
-                {!isHostSession && pendingPos !== null && !isFlexPhase && (
-                  <span className="ml-2 text-orange-700 text-xs md:text-sm">(wählt Position…)</span>
-                )}
-              </h3>
-
-              {/* Flex-Phase Countdown Banner — sichtbar für alle */}
+            <div className="space-y-2">
+              {/* Flex-Phase: Countdown-Leiste — sichtbar für alle */}
               {isFlexPhase && !game.resultRevealed && flexTimer !== null && (
-                <div className={`rounded-xl border-2 px-4 py-3 md:py-4 flex items-center justify-between ${
-                  flexTimer <= 5
-                    ? 'bg-red-500/15 border-red-500/60 animate-pulse'
-                    : 'bg-orange-50 border-orange-200'
-                }`}>
-                  <span className={`text-sm md:text-base font-semibold ${
-                    flexTimer <= 5 ? 'text-red-400' : 'text-orange-700'
-                  }`}>
-                    Flex-Phase — Jetzt Flex-Button einsetzen!
-                  </span>
-                  <span className={`font-mono font-bold text-lg ${
-                    flexTimer <= 5 ? 'text-red-400' : 'text-orange-700'
-                  }`}>
-                    {flexTimer}s
-                  </span>
+                <div className={`fq-flexbar ${flexTimer <= 5 ? 'fq-flexbar--hot' : ''}`} role="status">
+                  <div className="flex items-baseline justify-between gap-3">
+                    <p className="text-[17px] font-black">
+                      {canFlex ? `Liegt die Karte von ${activeGroup.name} richtig?` : 'Flex-Phase läuft'}
+                    </p>
+                    <span className="text-2xl font-black tabular-nums">{flexTimer} s</span>
+                  </div>
+                  <div className="fq-flexbar-track"><i style={{ width: `${Math.min(100, (flexTimer / 25) * 100)}%` }} /></div>
+                  <p className="text-sm mt-1.5">
+                    {canFlex
+                      ? 'Wenn nicht: tippt mit einem Flex die richtige Lücke und holt euch die Karte.'
+                      : isHostSession
+                        ? 'Die anderen Gruppen können jetzt noch einen Flex-Tipp setzen.'
+                        : flexTipSubmitted
+                          ? `Euer Tipp ist abgegeben – ${game.hostless ? 'gleich wird ausgewertet' : 'die Spielleitung wertet gleich aus'}.`
+                          : 'Ihr habt keinen Flex übrig und könnt diesmal nur zuschauen.'}
+                  </p>
                 </div>
               )}
 
-              <div className="flex items-center gap-1 md:gap-2 overflow-x-auto pb-2 md:pb-3">
-                {/* Flex-Tipp Button vor Position 0 */}
-                {canFlex && !isBlocked(0) && !takenPositions.has(toServerPosition(0)) && (
-                  <button
-                    type="button"
-                    onClick={() => setFlexTipPosition(p => p === toServerPosition(0) ? null : toServerPosition(0))}
-                    className={`flex-shrink-0 rounded-lg border-2 px-2 py-2 md:px-3 md:py-2.5 text-xs md:text-sm font-semibold transition-all ${
-                      flexTipPosition === toServerPosition(0) ? 'border-orange-500 bg-orange-600 text-white scale-105' : 'border-dashed border-orange-200 bg-orange-50 hover:bg-orange-100 text-orange-700'
-                    }`}
-                  >← FB</button>
-                )}
-                {canFlex && isBlocked(0) && (
-                  <div className="flex-shrink-0 rounded-lg border-2 border-red-400/30 px-2 py-2 md:px-3 md:py-2.5 text-xs md:text-sm text-red-400/50 cursor-not-allowed">
-                    ← ✗
-                  </div>
-                )}
-                {canFlex && isTaken(0) && (
-                  <div className="flex-shrink-0 rounded-lg border-2 border-yellow-400/30 px-2 py-2 md:px-3 md:py-2.5 text-xs md:text-sm text-yellow-400/70 cursor-not-allowed">🔒</div>
-                )}
+              <h3 className="fq-section-label px-1">
+                Zeitleiste von {activeGroup.name}
+                {pendingPos !== null && !isFlexPhase && <span className="font-semibold text-ink/75"> – wählt gerade eine Lücke …</span>}
+              </h3>
 
-                {/* Flex-Tipp-Marker an Position 0 (Host-Live-Ansicht) */}
-                {renderFlexTipMarker(0)}
-
-                {/* Ghost vor Position 0 (Host-Vorschau) */}
-                {ghostCard && pendingPos === 0 && renderGhost()}
-
-                {displayTimeline.map((item: any, idx: number) => (
-                  <div key={idx} className="flex items-center gap-1 md:gap-2 flex-shrink-0">
-                    {idx > 0 && <div className="text-ink/30 mx-0.5">↔</div>}
-                    <div className="relative">
-                      {item.id === game.currentCardId && game.flexPhaseActive && (
-                        <span className="absolute -top-2 -right-1 z-10 text-[10px] font-bold bg-orange-600 text-white px-1.5 py-0.5 rounded-full leading-none">NEU</span>
-                      )}
-                      {(() => {
-                        const isNewCard = item.id === game.currentCardId && game.flexPhaseActive;
-                        const masked = isNewCard && !game.resultRevealed;
-                        return (
-                          <div
-                            id={item.id === game.currentCardId ? 'obs-new-card' : undefined}
-                            className={`flex-shrink-0 rounded-[14px] px-3 py-2 md:px-4 md:py-3 min-w-[110px] md:min-w-[130px] lg:min-w-[150px] ${
-                            item.id === game.referenceCard?.id
-                              ? 'border border-amber-300 bg-amber-50 text-amber-950'
-                              : isNewCard
-                                ? 'border-2 border-orange-600 bg-orange-50'
-                                : 'border border-[var(--card-border)] bg-[var(--card-bg)]'
-                          }`}>
-                            <p className="text-xs md:text-sm font-bold">{masked ? '???' : item.year}</p>
-                            {item.id === game.referenceCard?.id ? (
-                              <p className="text-xs md:text-sm text-amber-800 mt-0.5">Referenz</p>
+              <div className="flex flex-col">
+                {Array.from({ length: displayTimeline.length + 1 }).map((_, pos) => {
+                  const item: any = pos < displayTimeline.length ? displayTimeline[pos] : null;
+                  const isRef = item && item.id === game.referenceCard?.id;
+                  const isNewCard = item && item.id === game.currentCardId && game.flexPhaseActive;
+                  const masked = isNewCard && !game.resultRevealed;
+                  return (
+                    <React.Fragment key={pos}>
+                      {renderGap(pos)}
+                      {item && (
+                        <div
+                          id={item.id === game.currentCardId ? 'obs-new-card' : undefined}
+                          className={`fq-row-card ${isRef ? 'fq-row-card--ref' : isNewCard ? 'fq-row-card--new' : ''}`}
+                        >
+                          <span className="fq-year">{masked ? '?' : item.year}</span>
+                          <span className="min-w-0 flex flex-col">
+                            {isRef ? (
+                              <span className="text-[15px] font-semibold">Startkarte</span>
                             ) : masked ? (
-                              <>
-                                <p className="text-xs md:text-sm text-ink/40 italic">???</p>
-                                <p className="text-xs md:text-sm text-green-700 font-semibold mt-0.5">Neu platziert</p>
-                              </>
+                              <span className="text-[15px] font-semibold">Neue Karte von {activeGroup.name}</span>
                             ) : (
                               <>
-                                <p className="text-xs md:text-sm truncate text-ink/70">{item.hint || ''}</p>
-                                <p className="text-xs md:text-sm truncate text-ink/50">{item.title || ''}</p>
-                                {isNewCard && <p className="text-xs md:text-sm text-green-700 font-semibold mt-0.5">Neu platziert</p>}
+                                <span className="truncate text-[15px] font-semibold">{item.hint || item.title || ''}</span>
+                                {item.hint && item.title && <span className="truncate text-xs text-ink/60">{item.title}</span>}
+                                {isNewCard && <span className="text-xs font-bold text-[#2F7CF6]">Neu abgelegt</span>}
                               </>
                             )}
-                          </div>
-                        );
-                      })()}
-                    </div>
-
-                    {/* Ghost nach dieser Karte (Host-Vorschau) */}
-                    {ghostCard && pendingPos === idx + 1 && renderGhost()}
-
-                    {/* Flex-Tipp-Marker nach dieser Karte (Host-Live-Ansicht) */}
-                    {renderFlexTipMarker(idx + 1)}
-
-                    {/* Flex-Tipp Button nach dieser Karte */}
-                    {canFlex && !isBlocked(idx + 1) && !takenPositions.has(toServerPosition(idx + 1)) && (
-                      <button
-                        type="button"
-                        onClick={() => setFlexTipPosition(p => p === toServerPosition(idx + 1) ? null : toServerPosition(idx + 1))}
-                        className={`flex-shrink-0 rounded-lg border-2 px-2 py-2 md:px-3 md:py-2.5 text-xs md:text-sm font-semibold transition-all ${
-                          flexTipPosition === toServerPosition(idx + 1) ? 'border-orange-500 bg-orange-600 text-white scale-105' : 'border-dashed border-orange-200 bg-orange-50 hover:bg-orange-100 text-orange-700'
-                        }`}
-                      >{idx === displayTimeline.length - 1 ? 'FB →' : 'FB'}</button>
-                    )}
-                    {canFlex && isBlocked(idx + 1) && (
-                      <div className="flex-shrink-0 rounded-lg border-2 border-red-400/30 px-2 py-2 md:px-3 md:py-2.5 text-xs md:text-sm text-red-400/50 cursor-not-allowed">✗</div>
-                    )}
-                    {canFlex && isTaken(idx + 1) && (
-                      <div className="flex-shrink-0 rounded-lg border-2 border-yellow-400/30 px-2 py-2 md:px-3 md:py-2.5 text-xs md:text-sm text-yellow-400/70 cursor-not-allowed">🔒</div>
-                    )}
-                  </div>
-                ))}
+                          </span>
+                        </div>
+                      )}
+                    </React.Fragment>
+                  );
+                })}
               </div>
 
-              {/* Flex-Tipp bestätigen */}
+              {/* Flex-Tipp bestätigen (Handy: im Daumenbereich) */}
               {canFlex && flexTipPosition !== null && (
-                <button
-                  onClick={handleSubmitFlexTip}
-                  disabled={isProcessing}
-                  className="w-full px-4 py-3 md:py-3.5 md:text-lg bg-orange-700 text-white rounded-xl font-bold hover:bg-orange-800 disabled:opacity-50"
-                >
-                  {isProcessing ? '⏳…' : 'Flex-Tipp an gewählter Position einreichen'}
-                </button>
+                <div className="fq-dock">
+                  <button
+                    onClick={handleSubmitFlexTip}
+                    disabled={isProcessing}
+                    className="fq-primary"
+                  >
+                    {isProcessing ? 'Wird gesendet …' : `Flex setzen: ${selectedTipDisplayPos !== null ? gapLabel(selectedTipDisplayPos) : 'gewählte Lücke'}`}
+                  </button>
+                </div>
               )}
 
-              {/* Noch kein Flex möglich */}
-              {isFlexPhase && !isHostSession && !isActiveTurn && !flexTipSubmitted && (myGroup?.flexButtons ?? 0) < 1 && (
-                <p className="text-center text-xs md:text-sm text-ink/50">Kein Flex-Button verfügbar</p>
-              )}
               {isFlexPhase && flexTipSubmitted && (
-                <p className="text-center text-sm text-green-700 font-semibold">
-                  ✓ Flex-Tipp eingereicht — {game.hostless ? 'warte auf Auswertung' : 'warte auf Spielleiter'}
+                <p className="text-center text-sm font-bold text-[#F5B700]">
+                  ✓ Flex-Tipp abgegeben – {game.hostless ? 'warte auf die Auswertung' : 'warte auf die Spielleitung'}
                 </p>
               )}
-
             </div>
           );
         })()}
@@ -3474,13 +3466,13 @@ export default function MultiplayerGamePage() {
                   const tipEntries = Object.entries(tips);
                   return (
                     <div className="rounded-xl bg-orange-50 border border-orange-200 p-3 space-y-1">
-                      <p className="text-xs font-semibold text-orange-700">Flex-Tipps eingereicht:</p>
+                      <p className="text-sm font-bold">Flex-Tipps bisher</p>
                       {tipEntries.length === 0 ? (
-                        <p className="text-xs text-ink/50">Noch kein Tipp abgegeben</p>
+                        <p className="text-sm text-ink/60">Noch kein Tipp abgegeben</p>
                       ) : (
                         tipEntries.map(([pos, gId]) => (
-                          <p key={pos} className="text-xs text-ink/80">
-                            <span className="font-semibold">{game.groups[gId]?.name ?? gId}</span>: Position {pos}
+                          <p key={pos} className="text-sm text-ink/80">
+                            ⚡ <span className="font-semibold">{game.groups[gId]?.name ?? gId}</span> hat getippt
                           </p>
                         ))
                       )}
@@ -3488,14 +3480,16 @@ export default function MultiplayerGamePage() {
                   );
                 })()}
 
-                <button
-                  onClick={async () => { await revealResult(pin); setFlexPhaseEvaluated(true); }}
-                  className="w-full mt-2 px-6 py-4 bg-orange-700 text-white rounded-xl font-bold hover:bg-orange-800 transition-colors text-lg"
-                >
-                  {flexTimer !== null && flexTimer > 0
-                    ? `📊 Auswertung (auto in ${flexTimer}s)`
-                    : '📊 Auswertung'}
-                </button>
+                <div className="fq-dock">
+                  <button
+                    onClick={async () => { await revealResult(pin); setFlexPhaseEvaluated(true); }}
+                    className="fq-primary"
+                  >
+                    {flexTimer !== null && flexTimer > 0
+                      ? `Auswerten (auto in ${flexTimer} s)`
+                      : 'Auswerten'}
+                  </button>
+                </div>
               </>
             ) : (
               /* Phase 2: Lösung + wer die Karte erhält + Flex-Vergabe + Weiter */
@@ -3519,11 +3513,11 @@ export default function MultiplayerGamePage() {
                       </div>
                       {game.pendingResult === 'correct' ? (
                         <div className="rounded-xl bg-green-500/10 border border-green-500/30 p-3 text-center">
-                          <p className="font-semibold text-green-700">✅ Team: <span className="font-bold">{activeGroupName}</span> erhält die Karte!</p>
+                          <p className="font-semibold text-green-700">✅ Karte geht an <span className="font-bold">{activeGroupName}</span>!</p>
                         </div>
                       ) : flexWinnerName ? (
                         <div className="rounded-xl bg-orange-50 border border-orange-200 p-3 text-center">
-                          <p className="font-semibold text-orange-700">✅ Team: <span className="font-bold">{flexWinnerName}</span> wusste es besser und hat die Karte gestohlen - nice flex!</p>
+                          <p className="font-semibold text-orange-700">⚡ Nice flex – Karte geht an <span className="font-bold">{flexWinnerName}</span>!</p>
                         </div>
                       ) : (
                         <div className="rounded-xl bg-red-500/10 border border-red-400/30 p-3 text-center">
@@ -3538,21 +3532,11 @@ export default function MultiplayerGamePage() {
                 {!flexJudgmentDone ? (
                   <div className="rounded-xl bg-orange-50 border-2 border-orange-200 p-4 space-y-3">
                     <p className="font-semibold text-center text-sm">
-                      Hat <span className="font-bold">{game.groups[game.currentTurnGroupId!]?.name}</span> die Frage korrekt beantwortet (Titel / Person / Film — unabhängig von der Jahreszahl)?
+                      Titel, Person oder Film von <span className="font-bold">{game.groups[game.currentTurnGroupId!]?.name}</span> auch richtig? (unabhängig von der Jahreszahl)
                     </p>
-                    <div className="flex gap-2">
-                      <button
-                        onClick={() => handleAwardFlex(true)}
-                        className="flex-1 px-4 py-2 bg-orange-700 text-white rounded-lg font-semibold hover:bg-orange-800 text-sm"
-                      >
-                        Ja — +1 Flex-Button
-                      </button>
-                      <button
-                        onClick={() => handleAwardFlex(false)}
-                        className="flex-1 px-4 py-2 bg-ink/20 text-ink rounded-lg font-semibold hover:bg-ink/30 text-sm"
-                      >
-                        Nein
-                      </button>
+                    <div className="grid grid-cols-2 gap-2.5">
+                      <button onClick={() => handleAwardFlex(false)} className="fq-secondary">Nein</button>
+                      <button onClick={() => handleAwardFlex(true)} className="fq-primary !min-h-[46px] !text-base">Ja, +1 Flex</button>
                     </div>
                   </div>
                 ) : (
@@ -3565,13 +3549,14 @@ export default function MultiplayerGamePage() {
                   const tipEntries = Object.entries(tips);
                   return (
                     <div className="rounded-xl bg-orange-50 border border-orange-200 p-3 space-y-1">
-                      <p className="text-xs font-semibold text-orange-700">Eingegangene Flex-Tipps:</p>
+                      <p className="text-sm font-bold">Flex-Tipps</p>
                       {tipEntries.length === 0 ? (
-                        <p className="text-xs text-ink/50">Kein Tipp abgegeben</p>
+                        <p className="text-sm text-ink/60">Kein Tipp abgegeben</p>
                       ) : (
                         tipEntries.map(([pos, gId]) => (
-                          <p key={pos} className="text-xs text-ink/80">
-                            <span className="font-semibold">{game.groups[gId]?.name ?? gId}</span>: Position {pos}
+                          <p key={pos} className="text-sm text-ink/80">
+                            <span className="font-semibold">{game.groups[gId]?.name ?? gId}</span>
+                            {String(game.flexPhaseCorrectPosition) === pos ? ': richtige Lücke ✅' : ': daneben ❌'}
                           </p>
                         ))
                       )}
@@ -3579,13 +3564,15 @@ export default function MultiplayerGamePage() {
                   );
                 })()}
 
-                <button
-                  onClick={handleNextCard}
-                  disabled={isProcessing}
-                  className="w-full mt-2 px-6 py-4 bg-ink text-inkDark rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 text-lg"
-                >
-                  {isProcessing ? '⏳ Bitte warten…' : 'Weiter zum nächsten Team →'}
-                </button>
+                <div className="fq-dock">
+                  <button
+                    onClick={handleNextCard}
+                    disabled={isProcessing}
+                    className="fq-primary"
+                  >
+                    {isProcessing ? 'Bitte warten …' : 'Nächste Gruppe ist dran'}
+                  </button>
+                </div>
               </>
             )}
           </div>
@@ -3596,12 +3583,12 @@ export default function MultiplayerGamePage() {
         {/* Live Scoreboard */}
         <details className="card-surface rounded-2xl group">
           <summary className="px-4 py-3 cursor-pointer list-none flex items-center justify-between select-none">
-            <span className="font-semibold">🏆 Live Scoreboard</span>
+            <span className="font-semibold">🏆 Punktestand</span>
             <span className="text-ink/50 text-sm transition-transform group-open:rotate-180">▼</span>
           </summary>
           <div className="px-4 pb-4 space-y-2">
-          {groupList
-            .sort((a, b) => b.score - a.score)
+          {[...groupList]
+            .sort((a, b) => visibleScore(b.id) - visibleScore(a.id))
             .map((group, index) => (
               <div
                 key={group.id}
@@ -3623,7 +3610,7 @@ export default function MultiplayerGamePage() {
                       {group.flexButtons}×FB
                     </span>
                   )}
-                  <span className="text-xl font-bold">{group.score} / {game.timelineWinTarget ?? 10}</span>
+                  <span className="text-xl font-bold">{scoreMasked(group.id) ? '?' : visibleScore(group.id)} / {game.timelineWinTarget ?? 10}</span>
                 </div>
               </div>
             ))}
@@ -3702,13 +3689,18 @@ export default function MultiplayerGamePage() {
   // Endbildschirm
   if (game.state === 'finished') {
     const sorted = [...groupList].sort((a, b) => b.score - a.score);
-    const winner = sorted[0];
+    // Sieger kommt vom Server (bei Trivia-Kategorien nicht zwingend die meisten Punkte).
+    // Ohne Sieger nur dann die Spitze nehmen, wenn sie allein vorn liegt – sonst Gleichstand.
+    const winner = game.winnerGroupId
+      ? game.groups[game.winnerGroupId]
+      : sorted.length > 0 && (sorted.length === 1 || sorted[0].score > sorted[1].score) ? sorted[0] : null;
 
     // Podium order: 2nd (left), 1st (centre), 3rd (right)
     const podium = [sorted[1], sorted[0], sorted[2]].filter(Boolean);
     const podiumHeights = ['h-28', 'h-40', 'h-20'];
-    const podiumRanks  = ['🥈', '🥇', '🥉'];
-    const podiumLabels = ['2', '1', '3'];
+    // Platz nach Punkten: Gleichstand teilt sich denselben Platz
+    const rankOf = (score: number) => 1 + sorted.filter(g => g.score > score).length;
+    const rankMedal = (rank: number) => (rank === 1 ? '🥇' : rank === 2 ? '🥈' : '🥉');
 
     // Confetti particles (generated once)
     const confettiColors = ['#FF6B6B','#FFD93D','#6BCB77','#4D96FF','#C77DFF','#FF922B','#F06595','#74C0FC'];
@@ -3724,7 +3716,7 @@ export default function MultiplayerGamePage() {
     }));
 
     return (
-      <main className="relative overflow-hidden mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-8">
+      <main className="fq-table relative overflow-hidden mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-8">
         {/* Confetti layer */}
         <style>{`
           @keyframes confetti-fall {
@@ -3756,8 +3748,10 @@ export default function MultiplayerGamePage() {
         {/* Header */}
         <div className="text-center space-y-2 relative z-10">
           <div className="text-6xl">🎉</div>
-          <h1 className="text-4xl font-display">Spiel beendet!</h1>
-          <p className="text-2xl font-bold text-yellow-400">{winner?.name} gewinnt! 🏆</p>
+          <h1 className="text-4xl font-black">Spiel beendet!</h1>
+          <p className="text-2xl font-extrabold text-[#F5B700]">
+            {winner ? `${winner.name} gewinnt! 🏆` : 'Unentschieden – ihr teilt euch den Sieg! 🤝'}
+          </p>
         </div>
 
         {/* Podium */}
@@ -3766,16 +3760,16 @@ export default function MultiplayerGamePage() {
             <div key={group.id} className="flex flex-col items-center gap-2" style={{ width: '32%' }}>
               {/* Name + score above block */}
               <div className={`text-center ${i === 1 ? 'winner-card' : ''}`}>
-                <div className="text-2xl mb-1">{podiumRanks[i]}</div>
+                <div className="text-2xl mb-1">{rankMedal(rankOf(group.score))}</div>
                 <p className="font-bold text-sm sm:text-base leading-tight">{group.name}</p>
-                <p className="text-sm font-semibold text-ink/70">{group.score} Pkt.</p>
+                <p className="text-sm font-semibold text-ink/80">{group.score} Pkt.</p>
               </div>
               {/* Podium block */}
               <div
-                className={`w-full ${podiumHeights[i]} rounded-t-xl flex items-center justify-center text-4xl font-black text-white`}
-                style={{ backgroundColor: i === 1 ? '#FFD700' : i === 0 ? '#C0C0C0' : '#CD7F32' }}
+                className={`w-full ${podiumHeights[i]} rounded-t-xl border-2 border-b-0 border-[#1B1B2F] flex items-center justify-center text-4xl font-black text-[#1B1B2F]`}
+                style={{ backgroundColor: i === 1 ? '#F5B700' : i === 0 ? '#D9DCE3' : '#D99A5B' }}
               >
-                {podiumLabels[i]}
+                {rankOf(group.score)}
               </div>
             </div>
           ))}
@@ -3800,7 +3794,7 @@ export default function MultiplayerGamePage() {
         <div className="relative z-10">
           <button
             onClick={() => router.push('/')}
-            className="w-full px-6 py-4 bg-ink text-inkDark rounded-lg font-semibold hover:opacity-90"
+            className="fq-primary"
           >
             Zurück zum Hauptmenü
           </button>
@@ -3811,7 +3805,7 @@ export default function MultiplayerGamePage() {
 
   // Fallback
   return (
-    <main className="relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+    <main className="fq-table relative mx-auto max-w-4xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
       <div className="text-center">
         <h1 className="text-3xl font-display">Spiel läuft</h1>
         <p className="text-ink/70 mt-2">

@@ -25,7 +25,7 @@ import {
 } from '@/lib/multiplayerService';
 import { catIcon, catLabel as catLabelMeta, catLabelWithIcon } from '@/lib/categoryMeta';
 import { MediaEmbed } from '@/components/MediaEmbed';
-import { ScoreStrip, CategoryChip, MetaChip, JokerButton } from '@/components/FocusUI';
+import { ScoreStrip, CategoryChip, MetaChip, JokerButton, ConfirmDialog } from '@/components/FocusUI';
 
 const MIN_GROUPS = 2;
 const MAX_GROUPS = 8;
@@ -915,14 +915,14 @@ export default function TriviaLokalPage() {
 
   if (!hydrated || missingSetup || !setupPayload) {
     return (
-      <main className="min-h-screen flex items-center justify-center px-4">
+      <main className="fq-table min-h-screen flex items-center justify-center px-4">
         <p className="text-sm text-ink/60">Lade…</p>
       </main>
     );
   }
 
   return (
-    <main className="relative mx-auto max-w-3xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
+    <main className="fq-table relative mx-auto max-w-3xl md:max-w-5xl px-4 sm:px-5 py-6 sm:py-10 space-y-6">
       <div className="flex items-center justify-between">
         <Link href="/multiplayer?gameMode=trivia" className="text-sm text-ink/60 hover:text-ink">
           ← Zurück
@@ -974,7 +974,7 @@ export default function TriviaLokalPage() {
           </div>
           <button
             onClick={confirmGroups}
-            className="w-full py-3 rounded-xl bg-ink text-inkDark font-bold text-base hover:opacity-90"
+            className="fq-primary"
           >
             Los geht's →
           </button>
@@ -1052,13 +1052,16 @@ export default function TriviaLokalPage() {
               value={(gid) => game.groups.find((g) => g.id === gid)?.score ?? 0}
             />
 
+            {/* Tablet: Fragekarte links, Joker und Bewertung rechts */}
+            <div className="fq-split space-y-3 md:space-y-0">
+            <div className="fq-split-main">
             <div className="card-surface rounded-[22px] p-5 sm:p-6 space-y-3">
               <div className="flex flex-wrap items-center gap-2">
                 <CategoryChip>{categoryIcon} {categoryLabel}</CategoryChip>
                 <MetaChip>{currentCard.difficulty}</MetaChip>
                 {quoteSourceBadge(currentCard)}
               </div>
-              <p className="text-[22px] sm:text-[26px] leading-tight font-extrabold tracking-tight">{triviaDisplayCue(currentCard)}</p>
+              <p className="fq-question text-[24px] sm:text-[28px] leading-tight">{triviaDisplayCue(currentCard)}</p>
 
               {currentCard.sources && (
                 <MediaEmbed
@@ -1069,6 +1072,9 @@ export default function TriviaLokalPage() {
                 />
               )}
             </div>
+            </div>
+
+            <div className="space-y-3">
 
             {/* Joker-Panel */}
             {setupPayload.jokersEnabled && !game.jokerNextActive && (() => {
@@ -1076,11 +1082,10 @@ export default function TriviaLokalPage() {
               if (!myJokers) return null;
               const hasAnyJoker = myJokers.newQuestion || myJokers.next || myJokers.dice;
               return (
-                <div className="flex items-center gap-2">
-                  <span className="fq-section-label mr-1">Joker</span>
+                <div className="grid grid-cols-3 gap-3 px-0.5 pt-1" role="group" aria-label={`Joker von ${activeGroup?.name ?? 'der Gruppe'}`}>
                   <JokerButton
                     kind="newQuestion"
-                    label="Neu"
+                    label="Neue Frage"
                     available={!!myJokers.newQuestion}
                     title="Tauscht die aktuelle Frage gegen eine neue Frage aus derselben Kategorie."
                     onClick={activateNewQuestionJoker}
@@ -1095,7 +1100,7 @@ export default function TriviaLokalPage() {
                   />
                   <JokerButton
                     kind="dice"
-                    label="Würfel"
+                    label="Würfeln"
                     available={!!myJokers.dice}
                     disabled={game.jokerDicePending}
                     title="Würfeln: hohe Zahl = Punkt + Kategorie, eine 1 = Punkt + Kategorie verlieren."
@@ -1107,7 +1112,7 @@ export default function TriviaLokalPage() {
             })()}
 
             {game.jokerNextActive && game.jokerNextOriginGroupId && game.jokerNextTargetGroupId && (
-              <div className="rounded-xl bg-orange-500/15 border-2 border-orange-400 px-3 py-2 text-xs">
+              <div className="card-surface rounded-xl px-3 py-2 text-xs">
                 <p className="font-bold text-orange-700">⚡ Joker NEXT aktiv</p>
                 <p className="text-orange-600">
                   {game.groups.find((g) => g.id === game.jokerNextOriginGroupId)?.name} hat die Frage an{' '}
@@ -1121,7 +1126,7 @@ export default function TriviaLokalPage() {
             )}
 
             {game.jokerDicePending && (
-              <div className="card-surface rounded-2xl p-4 space-y-2 border-2 border-amber-400 text-center">
+              <div className="card-surface rounded-2xl p-4 space-y-2 text-center">
                 <p className="text-3xl">🎲 {game.jokerDiceResult}</p>
                 <p className="text-sm text-ink/70">
                   {game.jokerDiceResult && game.jokerDiceResult >= 5
@@ -1132,9 +1137,9 @@ export default function TriviaLokalPage() {
                 </p>
                 <button
                   onClick={confirmDice}
-                  className="w-full py-2 rounded-xl bg-ink text-inkDark font-bold text-sm hover:opacity-90"
+                  className="fq-primary"
                 >
-                  Weiter →
+                  Weiter
                 </button>
               </div>
             )}
@@ -1142,16 +1147,17 @@ export default function TriviaLokalPage() {
             {!game.jokerDicePending && (
               <div className="card-surface rounded-2xl p-4 space-y-3">
                 {setupPayload.hostTextAnswersEnabled && !game.pendingTextAnswer && (
-                  <div className="space-y-2">
-                    <label className="fq-section-label block" htmlFor="fq-local-answer">Antwort von {activeGroup?.name}</label>
+                  <div className="fq-dock">
+                    <label className="sr-only" htmlFor="fq-local-answer">Antwort von {activeGroup?.name}</label>
                     <input
                       type="text"
                       value={textAnswerInput}
                       onChange={(e) => setTextAnswerInput(e.target.value)}
                       onKeyDown={(e) => e.key === 'Enter' && submitTextAnswerLocal()}
                       id="fq-local-answer"
-                      placeholder="Antwort eingeben…"
+                      placeholder={`Antwort von ${activeGroup?.name ?? 'der Gruppe'} …`}
                       className="fq-input"
+                      autoComplete="off"
                     />
                     <button
                       onClick={submitTextAnswerLocal}
@@ -1163,55 +1169,48 @@ export default function TriviaLokalPage() {
                   </div>
                 )}
                 {setupPayload.hostTextAnswersEnabled && game.pendingTextAnswer && (
-                  <div className="rounded-xl bg-ink/[0.05] border border-ink/10 px-3 py-2 text-center">
-                    <p className="text-[11px] uppercase tracking-wide text-ink/50">Eingereichte Antwort</p>
-                    <p className="text-base font-bold">{game.pendingTextAnswer.text}</p>
+                  <div className="px-1 py-1">
+                    <p className="text-sm text-ink/60">Antwort von {activeGroup?.name}</p>
+                    <p className="text-[28px] leading-tight font-extrabold break-words">„{game.pendingTextAnswer.text}“</p>
                   </div>
                 )}
                 {(!setupPayload.hostTextAnswersEnabled || game.pendingTextAnswer) && (
                   <>
-                    <p className="text-sm font-semibold text-center text-ink/80">
-                      Hat <span className="font-bold">„{activeGroup?.name ?? '…'}“</span> richtig geantwortet?
-                    </p>
-                    <div className="grid grid-cols-3 gap-2">
-                      <button
-                        onClick={() => judgeAnswer(true)}
-                        className="px-2 py-2 bg-green-600 text-white rounded-xl font-bold text-sm hover:bg-green-700"
-                      >
-                        ✅ Richtig
-                      </button>
-                      <button
-                        onClick={() => judgeAnswer(false)}
-                        className="px-2 py-2 bg-red-600 text-white rounded-xl font-bold text-sm hover:bg-red-700"
-                      >
-                        ❌ Falsch
-                      </button>
-                      <button
-                        onClick={() => setShowAnswer((v) => !v)}
-                        className={`px-2 py-2 rounded-xl font-bold text-sm transition-colors border ${
-                          showAnswer ? 'bg-[#1C1C1E] text-white border-[#1C1C1E]' : 'card-surface text-ink hover:border-orange-500'
-                        }`}
-                      >
-                        {showAnswer ? 'Verbergen' : 'Antwort zeigen'}
-                      </button>
-                    </div>
+                    <button
+                      onClick={() => setShowAnswer((v) => !v)}
+                      aria-expanded={showAnswer}
+                      className="fq-secondary"
+                    >
+                      {showAnswer ? 'Lösung verbergen' : 'Lösung anzeigen'}
+                    </button>
                     {showAnswer && (
-                      <div className="rounded-xl bg-yellow-100/20 border-2 border-yellow-400 px-3 py-2">
-                        <p className="text-xs font-semibold text-yellow-700 mb-0.5">Korrekte Antwort:</p>
+                      <div className="rounded-xl bg-green-50 border-2 border-green-600/40 px-3 py-2">
+                        <p className="text-xs font-semibold text-green-800 mb-0.5">Lösung</p>
                         <p className="text-base font-bold">
                           {currentCard.category === 'music'
                             ? currentCard.answer.replace(/ [–—] -?\d+, /, ' — ')
                             : currentCard.answer}
                         </p>
-                        {currentCard.year && <p className="text-xs text-ink/60 mt-0.5">Jahr: {currentCard.year}</p>}
+                        {currentCard.year > 0 && <p className="text-xs text-ink/60 mt-0.5">Jahr: {currentCard.year}</p>}
                       </div>
                     )}
+                    <div className="fq-dock">
+                      <p className="text-sm font-semibold text-center text-ink/80">
+                        Antwort von {activeGroup?.name ?? 'der Gruppe'} richtig?
+                      </p>
+                      <div className="fq-judge">
+                        <button onClick={() => judgeAnswer(false)} className="fq-no">✕ Falsch</button>
+                        <button onClick={() => judgeAnswer(true)} className="fq-yes">✓ Richtig</button>
+                      </div>
+                    </div>
                   </>
                 )}
               </div>
             )}
 
             <EndGameFooter confirmEnd={confirmEnd} setConfirmEnd={setConfirmEnd} onEnd={endGameNow} />
+            </div>
+            </div>
           </div>
         );
       })()}
@@ -1249,7 +1248,7 @@ export default function TriviaLokalPage() {
                 <button
                   onClick={submitSchaetzGuessLocal}
                   disabled={!schaetzInput.trim()}
-                  className="w-full py-2 rounded-xl bg-ink text-inkDark font-bold text-base hover:opacity-90 disabled:opacity-40"
+                  className="fq-primary"
                 >
                   ✓ Einreichen, Handy weitergeben
                 </button>
@@ -1259,7 +1258,7 @@ export default function TriviaLokalPage() {
             {allSubmitted && !game.schaetzResult && (
               <button
                 onClick={revealSchaetzResult}
-                className="w-full py-3 rounded-xl bg-ink text-inkDark font-bold text-base hover:opacity-90"
+                className="fq-primary"
               >
                 👁 Alle Schätzungen aufdecken
               </button>
@@ -1283,7 +1282,7 @@ export default function TriviaLokalPage() {
                 </div>
                 <button
                   onClick={continueAfterSchaetz}
-                  className="w-full py-2 rounded-xl bg-ink text-inkDark font-bold text-sm hover:opacity-90"
+                  className="fq-primary"
                 >
                   Weiter →
                 </button>
@@ -1322,7 +1321,7 @@ export default function TriviaLokalPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <button
               onClick={resetToGroups}
-              className="py-3 rounded-xl bg-ink text-inkDark font-bold text-base hover:opacity-90"
+              className="fq-primary"
             >
               Neues Spiel
             </button>
@@ -1350,21 +1349,17 @@ function EndGameFooter({
 }) {
   return (
     <div className="text-center pt-1">
-      {!confirmEnd ? (
-        <button onClick={() => setConfirmEnd(true)} className="text-xs text-ink/50 hover:text-ink/80 underline">
-          Spiel beenden
-        </button>
-      ) : (
-        <div className="flex items-center justify-center gap-2 text-xs">
-          <span className="text-ink/60">Spiel wirklich beenden?</span>
-          <button onClick={onEnd} className="text-red-600 font-semibold hover:underline">
-            Ja, beenden
-          </button>
-          <button onClick={() => setConfirmEnd(false)} className="text-ink/60 hover:underline">
-            Abbrechen
-          </button>
-        </div>
-      )}
+      <button onClick={() => setConfirmEnd(true)} className="text-sm text-ink/70 hover:text-ink underline">
+        Spiel beenden
+      </button>
+      <ConfirmDialog
+        open={confirmEnd}
+        title="Spiel jetzt beenden?"
+        message="Der aktuelle Punktestand wird zum Endstand."
+        confirmLabel="Spiel beenden"
+        onConfirm={onEnd}
+        onCancel={() => setConfirmEnd(false)}
+      />
     </div>
   );
 }

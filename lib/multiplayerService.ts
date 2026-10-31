@@ -1233,17 +1233,12 @@ export async function endGame(pin: string, hostGroupId: string): Promise<void> {
     throw new Error('Das Spiel ist bereits beendet.');
   }
 
-  // Finde Gewinner (höchster Score)
-  const groups = Object.values(game.groups);
-  let winner: GroupData | null = null;
-  let maxScore = -1;
-
-  for (const group of groups) {
-    if (group.score > maxScore) {
-      maxScore = group.score;
-      winner = group;
-    }
-  }
+  // Finde Gewinner (höchster Score). Bei Gleichstand an der Spitze gibt es keinen
+  // Sieger – sonst würde einfach die zuerst beigetretene Gruppe gewinnen.
+  const groups = Object.values(game.groups).filter(g => !g.isHost);
+  const maxScore = Math.max(...groups.map(g => g.score ?? 0));
+  const leaders = groups.filter(g => (g.score ?? 0) === maxScore);
+  const winner: GroupData | null = leaders.length === 1 ? leaders[0] : null;
 
   await update(gameRef, {
     state: 'finished',
@@ -2402,6 +2397,12 @@ export async function confirmJokerDice(pin: string): Promise<void> {
     jokerDicePending: null,
     jokerDiceResult: null,
     jokerDiceGroupId: null,
+    // Der Würfel beendet den Zug – ein laufender Rückgabe- oder NEXT-Zug ist damit
+    // erledigt und darf nicht an der nächsten Gruppe hängen bleiben.
+    jokerStealReturnActive: false,
+    jokerNextActive: false,
+    jokerNextOriginGroupId: null,
+    jokerNextTargetGroupId: null,
     availableDeck: newAvailable,
     currentTurnGroupId: next.nextGroupId,
     currentRoundCategory: next.currentRoundCategory,

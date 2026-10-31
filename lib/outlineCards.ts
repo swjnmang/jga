@@ -3921,9 +3921,9 @@ export const outlineCards: Card[] = [
     "id": "outline-tf",
     "title": "Umriss Französische Süd- und Antarktisgebiete",
     "category": "outline",
-    "year": 1961,
+    "year": 1955,
     "cue": "Zu welchem Land gehört dieser Umriss und wann wurde es gegründet?",
-    "answer": "Antarktis – Antarktis-Vertrag.",
+    "answer": "Französische Süd- und Antarktisgebiete – Gründung als französisches Überseegebiet.",
     "hint": "Französische Süd- und Antarktisgebiete",
     "difficulty": "schwer",
     "sources": {
